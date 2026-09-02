@@ -72,7 +72,11 @@
   .float{position:absolute; z-index:1; font-size:38px; opacity:0;
          animation:appear .8s ease forwards;}
   @keyframes appear{to{opacity:1}}
-  @media (max-width:640px){ .float{display:none} }
+  @media (max-width:640px){
+    .float{font-size:22px; animation-name:appearM;}
+    .float:nth-of-type(4),.float:nth-of-type(5),.float:nth-of-type(9),.float:nth-of-type(10){display:none}
+  }
+  @keyframes appearM{to{opacity:.85}}
   @media (prefers-reduced-motion:reduce){ .float{animation:appear .5s ease forwards} }
   .badge{display:inline-block; background:var(--tint); color:var(--blue); font-weight:700;
          padding:8px 16px; border-radius:999px; font-size:14px;}
@@ -138,7 +142,7 @@
   /* final cta — il cartello blu */
   .final{background:var(--blue); text-align:center; color:#fff;}
   .final h2{color:#fff;}
-  .final .lead{color:rgba(255,255,255,.9);}
+  .final .lead{color:#fff;}
   .final form.signup input{border:none;}
   .final .btn{background:#fff; color:var(--blue);}
   .final .btn:hover{background:#fff8;}
@@ -169,6 +173,7 @@
       </label>
     </div>
     <nav class="drawer">
+      <a href="#join" style="color:var(--blue); font-weight:800">entra in lista d'attesa →</a>
       <a href="#how">come funziona</a>
       <a href="/blog.html">blog</a>
       <a href="/guidelines.html">linee guida</a>
@@ -281,7 +286,7 @@
 
 <section class="block final">
   <div class="wrap">
-    <h2>la tua città ha dei piani</h2>
+    <h2>la tua città ha dei piani?</h2>
     <p class="lead">partiamo da bergamo. entra in lista d'attesa e ci sarai quando lanciamo.</p>
     <form class="signup" onsubmit="return joinSimple(event)">
       <input id="email2" type="email" required placeholder="la tua email" autocomplete="email">
