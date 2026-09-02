@@ -1,0 +1,82 @@
+@font-face{
+  font-family:"Bricolage Grotesque";
+  src:url("/bricolage-grotesque-latin-800-normal.woff2") format("woff2");
+  font-weight:800; font-style:normal; font-display:swap;
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face{
+  font-family:"Bricolage Grotesque";
+  src:url("/bricolage-grotesque-latin-ext-800-normal.woff2") format("woff2");
+  font-weight:800; font-style:normal; font-display:swap;
+  unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1EFF,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+:root{
+  --blue:#1B4FD8; --blue-lo:#1440AF; --tint:#E9EEFB;
+  --ink:#191919; --grey:#6E6E73; --bg:#FBF9F5;
+  --round: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --display: "Bricolage Grotesque", var(--round);
+}
+*{box-sizing:border-box; margin:0; padding:0;}
+html,body{overflow-x:hidden;}
+body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.6;
+     -webkit-font-smoothing:antialiased;}
+a{color:inherit; text-decoration:none;}
+.wrap{max-width:760px; margin:0 auto; padding:0 22px;}
+h1,h2{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1;
+      text-transform:lowercase;}
+h3{font-weight:800; letter-spacing:-.01em;}
+.q{font-size:.92em;}
+
+/* header (bianco, link nel menu — come la home) */
+header{position:sticky; top:0; z-index:40; background:#fff; border-bottom:1px solid rgba(0,0,0,.06);}
+.nav{display:flex; align-items:center; gap:16px; height:64px; max-width:960px; margin:0 auto; padding:0 22px; position:relative;}
+.brand{display:flex; align-items:center; gap:10px; font-family:var(--display); font-weight:800;
+       font-size:21px; letter-spacing:-.045em; line-height:1; text-transform:lowercase; color:var(--ink);}
+.brand img{width:30px; height:30px; display:block;}
+.navright{margin-left:auto; display:flex; align-items:center; gap:12px;}
+.btn{display:inline-block; background:var(--blue); color:#fff; font-weight:700;
+     padding:11px 20px; border-radius:999px; border:none; cursor:pointer; font-size:15px;
+     font-family:var(--round);}
+.btn:hover{background:var(--blue-lo);}
+.burger{display:flex; align-items:center; justify-content:center; width:44px; height:44px;
+        border-radius:12px; cursor:pointer; color:var(--ink);}
+.burger:hover{background:rgba(0,0,0,.05);}
+.burger svg{width:24px; height:24px;}
+.drawer{position:absolute; top:60px; right:22px; display:none; flex-direction:column;
+        background:#fff; border:1px solid rgba(0,0,0,.08); border-radius:16px; padding:8px;
+        min-width:190px; box-shadow:0 14px 40px rgba(0,0,0,.12); z-index:50;}
+.drawer a{padding:11px 14px; border-radius:10px; color:var(--ink); font-weight:600; font-size:15px;}
+.drawer a:hover{background:var(--tint); color:var(--blue-lo);}
+.mtoggle:checked ~ .drawer{display:flex;}
+
+/* page hero band */
+.pagehero{background:var(--tint); padding:54px 0 40px; text-align:center;}
+.pagehero h1{font-size:clamp(32px,5vw,46px);}
+.pagehero p{color:var(--grey); font-size:18px; margin-top:8px;}
+
+/* content */
+main{padding:44px 0 90px;}
+main h2{font-size:22px; margin:34px 0 8px;}
+.muted{color:var(--grey);}
+main p,main li{margin-bottom:11px; font-size:17px;}
+main ul{padding-left:22px;}
+main a{color:var(--blue); font-weight:600;}
+
+/* cards / posts */
+.post{background:#fff; border-radius:22px; padding:26px; margin-bottom:18px;
+      box-shadow:0 6px 24px rgba(0,0,0,.05);}
+.post h3{font-size:21px; margin-bottom:4px;}
+.post .date{color:var(--grey); font-size:14px; margin-bottom:12px;}
+.chips{display:flex; flex-wrap:wrap; gap:8px; margin:6px 0 4px;}
+.chip{background:var(--tint); color:var(--blue); font-weight:700; font-size:14px;
+      padding:7px 13px; border-radius:999px;}
+
+/* footer (come la home) */
+footer{padding:44px 0 60px; border-top:1px solid rgba(0,0,0,.06); color:var(--grey); font-size:15px;}
+footer .wrap{max-width:960px;}
+footer .cols{display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between;}
+footer a{color:var(--grey);} footer a:hover{color:var(--ink);}
+footer h4{font-size:13px; text-transform:uppercase; letter-spacing:.05em; color:#999; margin-bottom:12px; font-weight:700;}
+footer li{list-style:none; margin-bottom:8px;}
+.copy{margin-top:32px; font-size:14px;}
+.pin{width:30px; height:30px; vertical-align:middle;}

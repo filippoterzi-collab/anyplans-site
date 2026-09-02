@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>anyplans · disiscrizione</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="stylesheet" href="style.css">
+<style>
+  .card{max-width:460px; margin:70px auto; background:#fff; border-radius:24px; padding:40px 32px;
+        box-shadow:0 8px 30px rgba(0,0,0,.06); text-align:center;}
+  .card .logo{width:56px;height:56px;border-radius:14px;margin:0 auto 18px;display:block}
+  .card h1{font-size:24px;margin-bottom:10px}
+  .card p{color:var(--grey);font-size:16px}
+  .card .btn{margin-top:22px}
+  .card a.home{display:inline-block;margin-top:18px;color:var(--blue);font-weight:600;font-size:15px}
+</style>
+</head>
+<body>
+<div class="card">
+  <img class="logo" src="email-logo.png" alt="anyplans">
+  <div id="body">
+    <h1>disiscriviti</h1>
+    <p id="msg">un tocco e sei fuori dalla lista d'attesa di anyplans.</p>
+    <button class="btn" id="go" type="button">disiscrivimi</button>
+    <div><a class="home" href="/">torna su anyplans</a></div>
+  </div>
+</div>
+<script>
+  const SB_URL = "https://uudccbzihhgoeaevkewr.supabase.co";
+  const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1ZGNjYnppaGhnb2VhZXZrZXdyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYzNzk0NzEsImV4cCI6MjEwMTk1NTQ3MX0.OHJC3vmT8eRLczFkH0QdZybbjudDfSi4VEX8Mc22ABQ";
+  const params = new URLSearchParams(location.search);
+  const token = params.get("t");
+  const msg = document.getElementById("msg");
+  const btn = document.getElementById("go");
+
+  if(!token){ btn.style.display="none"; msg.textContent = "a questo link manca il codice. apri il link di disiscrizione dalla tua email."; }
+
+  btn.addEventListener("click", async () => {
+    btn.disabled = true; msg.textContent = "…";
+    try{
+      const r = await fetch(SB_URL + "/rest/v1/rpc/unsubscribe_beta", {
+        method:"POST",
+        headers:{"apikey":SB_ANON,"Content-Type":"application/json"},
+        body: JSON.stringify({p_token: token})
+      });
+      const out = await r.json().catch(()=>null);
+      if(r.ok && out === "ok"){
+        document.querySelector("h1").textContent = "sei disiscritto";
+        msg.textContent = "non riceverai più email dalla lista d'attesa di anyplans. nessun rancore 🫶";
+        btn.style.display="none";
+      } else if(r.ok && out === "notfound"){
+        msg.textContent = "questo link non è più valido. forse sei già disiscritto.";
+        btn.style.display="none";
+      } else {
+        msg.textContent = "qualcosa è andato storto, riprova tra un attimo."; btn.disabled=false;
+      }
+    }catch(_){ msg.textContent = "non riesco a raggiungere il server, riprova."; btn.disabled=false; }
+  });
+</script>
+</body>
+</html>
