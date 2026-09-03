@@ -153,7 +153,7 @@ function mountTabbar(active){
   const tabs = [
     ["scopri",  "eventi.html",        '<svg viewBox="0 0 24 24"><path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20z"/><path d="M9 4v13.5M15 6.5V20"/></svg>'],
     ["crea",    "crea.html",          '<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>'],
-    ["i miei",  "miei.html",          '<svg viewBox="0 0 24 24"><path d="M5 5.5h14v15l-7-4-7 4z"/></svg>'],
+    ["miei eventi", "miei.html",          '<svg viewBox="0 0 24 24"><path d="M5 5.5h14v15l-7-4-7 4z"/></svg>'],
     ["profilo", "profilo.html?edit=1",'<svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-4 4-6 7.5-6s6.3 2 7.5 6"/></svg>']
   ];
   const st = document.createElement("style");
