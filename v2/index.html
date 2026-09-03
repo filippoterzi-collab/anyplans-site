@@ -163,7 +163,7 @@
   [hidden]{display:none !important;}
 
   /* landing v3: contatore vero, eventi veri, mappa teaser */
-  .pill{display:inline-flex; align-items:center; gap:6px; background:var(--tint); color:var(--blue);
+  .pill{display:inline-block; white-space:nowrap; background:var(--tint); color:var(--blue);
         font-weight:700; font-size:14px; padding:8px 16px; border-radius:999px; margin-bottom:18px;}
   a.card .go{margin-left:auto; font-weight:700; font-size:13.5px; color:var(--blue); white-space:nowrap;}
   a.card .m b{color:var(--blue);}
@@ -249,7 +249,7 @@
   <span class="float hide-m" style="animation-delay:1.05s,1.05s; top:64%; right:4%">⛰️</span>
   <span class="float hide-m" style="animation-delay:.55s,.55s; top:86%; right:13%">🎲</span>
   <div class="wrap">
-    <div class="pill" id="pill" hidden>📍 questa settimana: <b id="pill-n"></b>&nbsp;eventi a bergamo</div>
+    <div class="pill" id="pill" hidden>📍 questa settimana: <b id="pill-n"></b> eventi a bergamo</div>
     <h1>anyplans<br>
       <span class="rotwrap">
         <span class="rot" style="opacity:1">questa settimana?</span>
@@ -393,7 +393,7 @@
   </div>
 </div>
 
-<script src="/v2/app.js?v=1788474120"></script>
+<script src="/v2/app.js?v=1788474215"></script>
 <script>
   let quizCity = "";
 
