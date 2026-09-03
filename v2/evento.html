@@ -168,6 +168,9 @@
 
   <div class="row">
     <button class="btn ghost" onclick="shareEvent()">condividi l'evento</button>
+    <button id="btn-cancel" hidden onclick="cancelMyEvent()"
+      style="background:none; border:none; cursor:pointer; font-family:var(--round);
+             font-weight:700; font-size:14px; color:#B3261E; padding:12px 8px">annulla l'evento</button>
   </div>
 </main>
 
@@ -201,7 +204,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788466133"></script>
+<script src="app.js?v=1788466177"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -265,7 +268,7 @@
     }
     updateBoxes();
 
-    if (ev.is_mine) loadAnswers();
+    if (ev.is_mine) { loadAnswers(); document.getElementById("btn-cancel").hidden = false; }
 
     document.getElementById("loading").hidden = true;
     document.getElementById("page").hidden = false;
@@ -391,6 +394,13 @@
         `</div>`).join("");
       document.getElementById("answers-wrap").hidden = false;
     } catch (_) {}
+  }
+
+  async function cancelMyEvent(){
+    if (!confirm("vuoi annullare l'evento? chi partecipa non lo vedrà più.")) return;
+    const r = await rpc("cancel_activity", { p_activity_id: ev.id });
+    if (r && r.ok) { toast("evento annullato."); setTimeout(() => location.href = "miei.html", 900); }
+    else toast("non riesco ad annullare, riprova.");
   }
 
   async function shareEvent(){

@@ -262,13 +262,7 @@
       lat: x.lat, lng: x.lng
     }));
     buildMarkers();
-    function toggleMap(){
-    const show = document.body.classList.toggle("showmap");
-    document.getElementById("maptoggle").innerHTML = show ? "☰ lista" : "🗺️ mappa";
-    if (show) setTimeout(() => map.resize(), 60);
-  }
-
-  render();
+    render();
   }
 
   // helper date
@@ -314,13 +308,7 @@
   function setCat(btn){
     cat = btn.dataset.cat;
     document.querySelectorAll(".chip").forEach(c => c.classList.toggle("on", c === btn));
-    function toggleMap(){
-    const show = document.body.classList.toggle("showmap");
-    document.getElementById("maptoggle").innerHTML = show ? "☰ lista" : "🗺️ mappa";
-    if (show) setTimeout(() => map.resize(), 60);
-  }
-
-  render();
+    render();
   }
 
   function render(){
@@ -393,13 +381,7 @@
     if (r && r.ok) {
       e.my = leaving ? "left" : "going";
       e.going += leaving ? -1 : 1;
-      function toggleMap(){
-    const show = document.body.classList.toggle("showmap");
-    document.getElementById("maptoggle").innerHTML = show ? "☰ lista" : "🗺️ mappa";
-    if (show) setTimeout(() => map.resize(), 60);
-  }
-
-  render();
+      render();
       if (!leaving) toast("ci sei! l\u2019host e gli altri ti vedono tra i partecipanti.");
       return;
     }
@@ -417,6 +399,12 @@
 
   checkProfile();
   loadEvents();
+  function toggleMap(){
+    const show = document.body.classList.toggle("showmap");
+    document.getElementById("maptoggle").innerHTML = show ? "☰ lista" : "🗺️ mappa";
+    if (show) setTimeout(() => map.resize(), 60);
+  }
+
 </script>
 </body>
 </html>
