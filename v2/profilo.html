@@ -138,15 +138,24 @@
     return r;
   }
 
-  // se il profilo c'è già, dritto agli eventi
+  // ?edit=1 = modifica del profilo esistente; altrimenti chi ha già il profilo va agli eventi
+  const editMode = new URLSearchParams(location.search).get("edit") === "1";
   rpc("my_profile").then(async r => {
-    if (r && r.ok) {
-      const rows = await r.json().catch(() => []);
-      if (rows.length && rows[0].display_name) {
-        let next = "eventi.html";
-        try { next = sessionStorage.getItem("anyplans_next") || next; sessionStorage.removeItem("anyplans_next"); } catch (_) {}
-        location.replace(next);
-      }
+    if (!r || !r.ok) return;
+    const rows = await r.json().catch(() => []);
+    const me = rows[0];
+    if (me && me.display_name && !editMode) {
+      let next = "eventi.html";
+      try { next = sessionStorage.getItem("anyplans_next") || next; sessionStorage.removeItem("anyplans_next"); } catch (_) {}
+      location.replace(next);
+      return;
+    }
+    if (me && editMode) {
+      document.querySelector("h1").textContent = "il tuo profilo";
+      document.querySelector(".sub").textContent = "cambia quello che vuoi e salva.";
+      document.getElementById("btn").textContent = "salva le modifiche";
+      document.getElementById("name").value = me.display_name || "";
+      if (me.birth_date) document.getElementById("birth").value = me.birth_date;
     }
   });
 
