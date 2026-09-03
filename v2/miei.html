@@ -74,7 +74,7 @@
 <header>
   <div class="nav">
     <a class="brand" href="/v2/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
-    <a class="lnk" href="eventi.html">scopri</a>
+    <a class="lnk" href="eventi.html">eventi</a>
     <span class="lnk on">i miei eventi</span>
     <a class="cta" href="crea.html">crea evento</a>
   </div>
@@ -85,15 +85,15 @@
   <div id="list"><p style="color:var(--grey)">carico…</p></div>
 </main>
 
-<script src="app.js?v=1788472903"></script>
+<script src="app.js?v=1788473608"></script>
 <script>
   requireLogin();
-  mountTabbar("miei eventi");
+  mountTabbar("i miei");
 
   async function load(){
     const r = await rpc("my_activities", {});
     const list = document.getElementById("list");
-    if (!r || !r.ok) { list.innerHTML = '<p style="color:var(--grey)">non riesco a caricare, ricarica la pagina.</p>'; return; }
+    if (!r || !r.ok) { list.innerHTML = '<p style="color:var(--grey)">non riesco a caricare. ricarica la pagina.</p>'; return; }
     const rows = (await r.json())
       .filter(x => new Date(x.start_at) >= new Date(Date.now() - 3 * 3600 * 1000))
       .filter(x => x.my_status === "going" || x.my_status === "requested" || x.is_mine)
@@ -102,7 +102,7 @@
     if (!rows.length) {
       list.innerHTML = `<div class="empty" style="padding:34px 0 18px">
         <div style="font-size:48px">🫥</div>
-        <p style="color:var(--grey); max-width:300px">non hai ancora eventi in programma. i più vicini:</p>
+        <p style="color:var(--grey); max-width:300px">non sei ancora iscritto a nessun evento. ecco i prossimi:</p>
       </div><div id="suggest" style="display:flex; flex-direction:column; gap:12px"></div>
       <div style="text-align:center; margin-top:18px"><a class="btn" style="display:inline-block" href="eventi.html">vedi tutti gli eventi</a></div>`;
       suggest();
@@ -117,13 +117,13 @@
         const isToday = dayLabel(when) === "oggi";
         html += `<div class="day${isToday ? " today" : ""}"><span class="dot"></span><b>${dayLabel(when)}</b><span>${daySub(when)}</span></div>`;
       }
-      const badge = x.is_mine ? "sei l'host" : (x.my_status === "requested" ? "in attesa" : "ci sei ✓");
+      const badge = x.is_mine ? "lo organizzo io" : (x.my_status === "requested" ? "aspetto l'ok" : "ci vado ✓");
       html += `<a class="ev" href="evento.html?id=${x.id}">
         <div class="tile">${x.emoji || "📍"}</div>
         <div>
           <div class="time">${timeStr(when)} · ${relTime(when)}</div>
           <div class="t">${esc(x.title)}</div>
-          <div class="m">${esc(x.meeting_point_text || "posizione approssimativa")} · ${Number(x.going_count) || 0} ci vanno</div>
+          <div class="m">${esc(x.meeting_point_text || "zona indicativa")} · ${goingTxt(x.going_count)}</div>
         </div>
         <span class="badge">${badge}</span>
       </a>`;
@@ -143,7 +143,7 @@
         <div>
           <div class="time">${dayLabel(when)} ${timeStr(when)} · ${relTime(when)}</div>
           <div class="t">${esc(x.title)}</div>
-          <div class="m">${esc(x.meeting_point_text || "posizione approssimativa")} · ${Number(x.going_count) || 0} ci vanno</div>
+          <div class="m">${esc(x.meeting_point_text || "zona indicativa")} · ${goingTxt(x.going_count)}</div>
         </div>
         <span class="badge">ci sono →</span>
       </a>`;

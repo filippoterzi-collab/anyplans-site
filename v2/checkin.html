@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>check-in · anyplans</title>
+<title>presenze · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <meta name="robots" content="noindex">
 <style>
@@ -67,36 +67,36 @@
 <header>
   <div class="nav">
     <a class="brand" href="/v2/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
-    <a class="lnk" id="back" href="eventi.html">← l'evento</a>
+    <a class="lnk" id="back" href="eventi.html">← torna all'evento</a>
   </div>
 </header>
 
 <main>
   <div>
-    <h1 class="display">check-in</h1>
+    <h1 class="display">chi è arrivato</h1>
     <p class="sub" id="sub">carico…</p>
   </div>
-  <div class="stat"><b id="n-in">0</b><span id="n-tot">su 0 sono arrivati</span></div>
+  <div class="stat"><b id="n-in">0</b><span id="n-tot">su 0 iscritti</span></div>
   <div class="bar"><div id="bar"></div></div>
   <div style="display:flex; gap:10px; flex-wrap:wrap">
-    <button class="btn" onclick="openScanner()">📷 scansiona il biglietto</button>
+    <button class="btn" onclick="openScanner()">📷 inquadra il biglietto</button>
   </div>
   <div class="search">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6E6E73" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg>
-    <input id="q" placeholder="cerca per nome" oninput="render()">
+    <input id="q" placeholder="cerca un nome" oninput="render()">
   </div>
   <div id="list" style="display:flex; flex-direction:column; gap:8px"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
-  <p class="note">tocca il cerchio per segnare chi arriva · funziona anche senza scansionare</p>
+  <p class="note">tocca il cerchio accanto al nome per segnare chi è arrivato. la fotocamera non è obbligatoria.</p>
 </main>
 
 <div class="ov" id="scan" hidden>
   <video id="video" playsinline muted></video>
-  <div class="top"><span id="scan-title">inquadra il qr sul biglietto</span><button class="x" onclick="closeScanner()">×</button></div>
+  <div class="top"><span id="scan-title">inquadra il codice quadrato sul biglietto</span><button class="x" onclick="closeScanner()">×</button></div>
   <div class="frame"></div>
   <div class="res" id="res" hidden><div class="avatar" id="res-av"></div><div><div id="res-n"></div><div class="s" id="res-s"></div></div></div>
 </div>
 
-<script src="app.js?v=1788472903"></script>
+<script src="app.js?v=1788473608"></script>
 <script>
   requireLogin();
   const params = new URLSearchParams(location.search);
@@ -117,7 +117,7 @@
   }
   async function loadPeople(){
     const r = await rpc("get_participants", { p_activity_id: id });
-    if (!r || !r.ok) { document.getElementById("list").innerHTML = '<p class="note">non riesco a caricare i partecipanti: sei l\'host o un admin?</p>'; return; }
+    if (!r || !r.ok) { document.getElementById("list").innerHTML = '<p class="note">non riesco a caricare gli iscritti. questa pagina è solo per chi organizza.</p>'; return; }
     people = (await r.json().catch(() => [])).filter(p => p.status === "going");
     render();
   }
@@ -125,14 +125,14 @@
     const q = document.getElementById("q").value.trim().toLowerCase();
     const inN = people.filter(p => p.checked_in).length;
     document.getElementById("n-in").textContent = inN;
-    document.getElementById("n-tot").textContent = "su " + people.length + " sono arrivati";
+    document.getElementById("n-tot").textContent = "su " + people.length + " iscritti";
     document.getElementById("bar").style.width = (people.length ? Math.round(inN / people.length * 100) : 0) + "%";
     const rows = people.filter(p => !q || (p.display_name || "").toLowerCase().includes(q))
       .sort((a, b) => (a.display_name || "").localeCompare(b.display_name || ""));
     document.getElementById("list").innerHTML = rows.map(p =>
       `<div class="row${p.checked_in ? " in" : ""}" onclick="toggle('${p.user_id}')">
         <div class="avatar"${p.avatar_url ? ` style="background-image:url('${esc(p.avatar_url)}')"` : ""}>${p.avatar_url ? "" : esc((p.display_name || "?")[0].toLowerCase())}</div>
-        <div><div class="n">${esc(p.display_name || "qualcuno")}</div><div class="s">${p.role === "admin" ? "admin · " : ""}${p.checked_in ? "dentro ✓" : "non ancora"}</div></div>
+        <div><div class="n">${esc(p.display_name || "qualcuno")}</div><div class="s">${p.role === "admin" ? "collaboratore · " : ""}${p.checked_in ? "arrivato ✓" : "non ancora"}</div></div>
         <div class="circle">${p.checked_in ? "✓" : ""}</div>
       </div>`).join("") || '<p class="note">nessuno con questo nome.</p>';
   }
@@ -141,7 +141,7 @@
     const want = !p.checked_in;
     p.checked_in = want; render();
     const r = await rpc("check_in_user", { p_activity_id: id, p_user_id: uid, p_present: want });
-    if (!r || !r.ok) { p.checked_in = !want; render(); toast("non riesco a salvare, riprova."); }
+    if (!r || !r.ok) { p.checked_in = !want; render(); toast("non ha funzionato, riprova."); }
     else track("checkin_manual");
   }
 
@@ -152,7 +152,7 @@
     document.getElementById("res").hidden = true;
     try {
       stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: { ideal: "environment" } }, audio: false });
-    } catch (_) { toast("non riesco ad aprire la fotocamera: usa la lista qui sotto."); ov.hidden = true; return; }
+    } catch (_) { toast("non riesco ad aprire la fotocamera. segna le persone dalla lista qui sotto."); ov.hidden = true; return; }
     const v = document.getElementById("video"); v.srcObject = stream; await v.play();
     scanning = true;
     if ("BarcodeDetector" in window) { try { detector = new BarcodeDetector({ formats: ["qr_code"] }); } catch (_) { detector = null; } }
@@ -193,7 +193,7 @@
     if (!r || !r.ok) {
       const b = r ? await r.json().catch(() => ({})) : {};
       const code = b.message || "";
-      const msg = code.includes("invalid_ticket") ? "biglietto non valido" : code.includes("not_allowed") ? "non sei host o admin di questo evento" : "non riesco, riprova";
+      const msg = code.includes("invalid_ticket") ? "biglietto non valido" : code.includes("not_allowed") ? "solo chi organizza può segnare le presenze" : "non ha funzionato, riprova";
       if (fromUrl) toast(msg); else showRes(null, msg, false);
       return;
     }
@@ -201,13 +201,13 @@
     if (!row) return;
     track("checkin_scan");
     const p = people.find(x => x.user_id === row.user_id); if (p) p.checked_in = true; render();
-    const s = (row.already ? "era già dentro" : "check-in fatto") + " · " + row.checked_count + " su " + row.going_count + " arrivati";
-    if (fromUrl) toast(row.display_name + (row.already ? " era già dentro." : " è dentro!")); else showRes(row.display_name, s, true);
+    const s = (row.already ? "era già segnato" : "arrivato ✓") + " · " + row.checked_count + " arrivati su " + row.going_count;
+    if (fromUrl) toast(row.display_name + (row.already ? " era già segnato." : " è arrivato!")); else showRes(row.display_name, s, true);
   }
   function showRes(name, s, ok){
     const res = document.getElementById("res"); res.hidden = false; res.className = "res" + (ok ? " ok" : "");
     document.getElementById("res-av").textContent = name ? name[0].toLowerCase() : "!";
-    document.getElementById("res-n").textContent = name ? name + (s.startsWith("era") ? " era già dentro" : " è dentro") : "ops";
+    document.getElementById("res-n").textContent = name ? name + (s.startsWith("era") ? " era già segnato" : " è arrivato") : "ops";
     document.getElementById("res-s").textContent = s;
     if (navigator.vibrate) navigator.vibrate(ok ? 60 : [40, 60, 40]);
   }

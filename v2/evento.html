@@ -149,8 +149,8 @@
   <div class="chips">
     <span class="chip" id="chip-cat"></span>
     <span class="chip w" id="chip-price">gratis</span>
-    <span class="chip w" id="chip-req" hidden>su richiesta</span>
-    <span class="chip w" id="chip-agg" hidden>aggregato</span>
+    <span class="chip w" id="chip-req" hidden>con approvazione</span>
+    <span class="chip w" id="chip-agg" hidden>da un altro sito</span>
   </div>
   <h1 class="display" id="title"></h1>
 
@@ -165,16 +165,16 @@
   <!-- box azione -->
   <div class="box" id="box-guest" hidden>
     <h2>ci sei?</h2>
-    <p class="m">registrati o accedi per unirti. iscriverti qui è gratis, e gli altri partecipanti ti vedono.</p>
+    <p class="m">per iscriverti serve un account: è gratis e ci vuole un minuto. gli altri iscritti vedranno il tuo nome.</p>
     <div class="row">
-      <a class="btn" href="login.html" onclick="rememberNext()">registrati o accedi</a>
+      <a class="btn" href="login.html" onclick="rememberNext()">registrati (è gratis)</a>
       <span class="note" id="going-guest"></span>
     </div>
     <p class="pay" id="pay-guest" hidden></p>
   </div>
   <div class="box" id="box-join" hidden>
     <h2>ci sei?</h2>
-    <p class="m" id="join-hint" hidden>per questo evento l'host approva chi partecipa: mandi la richiesta e ti risponde.</p>
+    <p class="m" id="join-hint" hidden>qui decide chi organizza: gli mandi una richiesta e ti risponde.</p>
     <div class="row">
       <button class="btn" id="btn-join" onclick="joinEvent()">ci sono</button>
       <span class="note" id="going-join"></span>
@@ -182,31 +182,31 @@
     <p class="pay" id="pay-join" hidden></p>
   </div>
   <div class="box" id="box-requested" hidden>
-    <h2>richiesta inviata ⏳</h2>
-    <p class="m">l'host la vede e ti approva. quando sei dentro vedi anche l'indirizzo esatto.</p>
+    <h2>richiesta mandata ⏳</h2>
+    <p class="m">chi organizza la legge e ti risponde. se dice sì, vedi anche l'indirizzo preciso.</p>
     <div class="row">
-      <button class="btn ghost" onclick="leaveEvent()">ritira la richiesta</button>
+      <button class="btn ghost" onclick="leaveEvent()">annulla la richiesta</button>
       <span class="note" id="going-req"></span>
     </div>
     <p class="pay" id="pay-req" hidden></p>
   </div>
   <div class="box in" id="box-in" hidden>
     <h2>ci sei! 🫶</h2>
-    <p class="m">l'host e gli altri ti vedono tra i partecipanti.</p>
+    <p class="m">chi organizza e gli altri iscritti vedono il tuo nome.</p>
     <div class="row">
       <button class="btn" onclick="openTicket()">il mio biglietto</button>
-      <button class="btn ghost" onclick="leaveEvent()">annulla la partecipazione</button>
+      <button class="btn ghost" onclick="leaveEvent()">non ci vado più</button>
       <span class="note" id="going-in"></span>
     </div>
     <p class="pay" id="pay-in" hidden></p>
   </div>
   <div class="box in" id="box-host" hidden>
-    <h2>sei l'host</h2>
-    <p class="m">condividi il link, e qui sotto vedi chi arriva.</p>
+    <h2>lo organizzi tu</h2>
+    <p class="m">manda il link ai tuoi amici. qui sotto vedi chi si iscrive.</p>
     <div class="row">
       <button class="btn" onclick="shareEvent()">condividi l'evento</button>
       <a class="btn ghost" id="lnk-edit" href="#">modifica l'evento</a>
-      <a class="btn ghost" id="lnk-checkin" href="#">check-in</a>
+      <a class="btn ghost" id="lnk-checkin" href="#">segna chi arriva</a>
       <span class="note" id="going-host"></span>
     </div>
     <p class="pay" id="pay-host" hidden></p>
@@ -214,24 +214,24 @@
 
   <!-- richieste da approvare (solo host) -->
   <div id="req-wrap" hidden>
-    <div class="sec" style="margin-bottom:8px">richieste da approvare <span id="req-n"></span></div>
+    <div class="sec" style="margin-bottom:8px">chi chiede di partecipare <span id="req-n"></span></div>
     <div id="reqs" style="display:flex; flex-direction:column; gap:8px"></div>
   </div>
 
   <!-- host / fonte -->
   <div class="hostcard" id="host" hidden>
     <div class="avatar" id="host-avatar"></div>
-    <div><div class="n" id="host-name"></div><div class="s">host</div></div>
+    <div><div class="n" id="host-name"></div><div class="s">organizza</div></div>
   </div>
   <a class="comm" id="comm" hidden href="#">
     <div class="avatar" id="comm-emoji" style="background:var(--tint); font-size:20px"></div>
-    <div><div class="n" id="comm-name"></div><div class="s" id="comm-sub">community</div></div>
+    <div><div class="n" id="comm-name"></div><div class="s" id="comm-sub">organizza questa community</div></div>
     <div style="margin-left:auto; font-weight:700; font-size:13.5px; color:var(--blue)">vedi →</div>
   </a>
   <div class="hostcard" id="source" hidden>
     <div class="avatar" style="background:var(--tint); color:var(--blue)">↗</div>
-    <div><div class="n">evento aggregato da una fonte esterna</div>
-      <div class="s"><a id="source-link" style="color:var(--blue); font-weight:700" target="_blank" rel="noopener">vedi l'annuncio originale</a> · i dettagli possono cambiare, fa fede la fonte</div></div>
+    <div><div class="n">questo evento l'abbiamo trovato su un altro sito</div>
+      <div class="s"><a id="source-link" style="color:var(--blue); font-weight:700" target="_blank" rel="noopener">apri l'annuncio originale</a> · orari e prezzi possono cambiare: controlla lì</div></div>
   </div>
 
   <div id="desc-wrap" hidden>
@@ -248,7 +248,7 @@
   <div>
     <div class="sec" style="margin-bottom:8px">dove</div>
     <div id="map"></div>
-    <p class="note" id="map-note" style="margin-top:6px" hidden>posizione approssimativa · l'indirizzo esatto lo vedi quando partecipi</p>
+    <p class="note" id="map-note" style="margin-top:6px" hidden>qui vedi la zona. l'indirizzo preciso arriva quando ti iscrivi.</p>
   </div>
 
   <div id="answers-wrap" hidden>
@@ -262,10 +262,10 @@
     <button id="btn-cancel" class="textbtn" hidden onclick="cancelMyEvent()" style="color:var(--red)">annulla l'evento</button>
   </div>
   <div class="calmenu" id="calmenu" hidden>
-    <a id="cal-ics" href="#" download="evento.ics">📅 apple, outlook (.ics)</a>
+    <a id="cal-ics" href="#" download="evento.ics">📅 calendario del telefono (iphone, outlook)</a>
     <a id="cal-google" href="#" target="_blank" rel="noopener">📅 google calendar</a>
   </div>
-  <p class="note" id="people-note" hidden>gli admin possono approvare le richieste. la nomina la fa solo l'host.</p>
+  <p class="note" id="people-note" hidden>i collaboratori possono dire sì alle richieste. li scegli solo tu.</p>
   <p class="note"><a id="lnk-report" href="#" style="color:var(--grey); text-decoration:underline">segnala questo evento</a> · se qualcosa non va, ci pensiamo noi.</p>
 </main>
 
@@ -277,12 +277,12 @@
       <button class="x" onclick="document.getElementById('share-ov').hidden=true">×</button>
     </div>
     <div class="preview"><div class="em" id="sh-em"></div><div><div class="t" id="sh-t"></div><div class="m" id="sh-m"></div></div></div>
-    <p class="note">la card è pronta: su instagram va nelle storie con il link già dentro; su whatsapp arriva con l'anteprima e il link diretto.</p>
+    <p class="note">scegli dove mandarlo. su whatsapp arriva con il link, pronto da aprire.</p>
     <div class="sharegrid">
       <button onclick="shareWhatsapp()"><span>💬</span>whatsapp</button>
-      <button onclick="shareStory()"><span>📸</span>storie instagram</button>
-      <button onclick="copyLink()"><span>🔗</span>copia link</button>
-      <button onclick="shareCard()"><span>🖼️</span>scarica la card</button>
+      <button onclick="shareStory()"><span>📸</span>storia instagram</button>
+      <button onclick="copyLink()"><span>🔗</span>copia il link</button>
+      <button onclick="shareCard()"><span>🖼️</span>scarica l'immagine</button>
     </div>
     <p class="note" id="sh-note"></p>
   </div>
@@ -303,8 +303,8 @@
       <div class="who" id="tk-who"></div>
       <div class="m"><b>quando</b> <span id="tk-when"></span> · <b>dove</b> <span id="tk-where"></span></div>
       <div class="m" id="tk-pay" hidden></div>
-      <div class="m" id="tk-state">mostralo all'ingresso per il check-in · funziona anche offline</div>
-      <button class="btn" id="btn-wallet" hidden onclick="addToWallet()" style="margin-top:6px">aggiungi al wallet</button>
+      <div class="m" id="tk-state">mostralo a chi organizza quando arrivi · funziona anche senza internet</div>
+      <button class="btn" id="btn-wallet" hidden onclick="addToWallet()" style="margin-top:6px">salva in apple wallet (il portafoglio del telefono)</button>
     </div>
   </div>
 </div>
@@ -315,7 +315,7 @@
   <div style="width:100%; max-width:400px; background:var(--bg); border-radius:22px; padding:28px;
        display:flex; flex-direction:column; gap:16px; max-height:85vh; overflow-y:auto">
     <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px">
-      <h2 class="display" style="font-size:22px">prima di unirti, l'host ti chiede:</h2>
+      <h2 class="display" style="font-size:22px">prima di iscriverti, chi organizza ti chiede:</h2>
       <button onclick="document.getElementById('q-overlay').hidden = true"
         style="width:32px; height:32px; border-radius:999px; background:rgba(25,25,25,.08); border:none;
                cursor:pointer; font-size:16px; font-weight:700; color:var(--ink); flex-shrink:0">×</button>
@@ -340,7 +340,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788472903"></script>
+<script src="app.js?v=1788473608"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -352,7 +352,7 @@
 
   if (logged) {
     const cta = document.getElementById("nav-cta");
-    cta.textContent = "← gli eventi"; cta.href = "eventi.html";
+    cta.textContent = "← tutti gli eventi"; cta.href = "eventi.html";
     cta.className = "lnk";
   }
   function rememberNext(){
@@ -461,17 +461,17 @@
   function renderPay(){
     const paid = ev.price_cents != null && ev.price_cents > 0;
     const line1 = paid ? "<b>" + esc(fmtPrice(ev.price_cents)) + "</b> a persona" + (ev.price_note ? " · " + esc(ev.price_note) : "") : "";
-    const second = { guest: "si paga all'host, non su anyplans. unirsi qui è gratis.", join: "si paga all'host, non su anyplans. unirsi qui è gratis.",
-      req: "si paga all'host, non su anyplans. unirsi qui è gratis.", in: "ricordati di pagare l'host: all'evento, o con il suo link.",
+    const second = { guest: "si paga a chi organizza, non su anyplans. iscriversi qui è gratis.", join: "si paga a chi organizza, non su anyplans. iscriversi qui è gratis.",
+      req: "si paga a chi organizza, non su anyplans. iscriversi qui è gratis.", in: "ricordati di pagare chi organizza: sul posto, o come ti dice.",
       host: "lo incassi tu, direttamente. anyplans mostra solo il prezzo." };
     Object.keys(second).forEach(k => { const p = document.getElementById("pay-" + k); p.hidden = !paid; if (paid) p.innerHTML = line1 + "<span>" + second[k] + "</span>"; });
     const tk = document.getElementById("tk-pay"); tk.hidden = !paid;
-    if (paid) tk.textContent = "da pagare all'host: " + fmtPrice(ev.price_cents) + (ev.price_note ? " · " + ev.price_note : "");
+    if (paid) tk.textContent = "da pagare a chi organizza: " + fmtPrice(ev.price_cents) + (ev.price_note ? " · " + ev.price_note : "");
   }
   function renderCounts(){
     const going = Number(ev.going_count) || 0;
     const cap = ev.max_participants ? " · " + Math.max(0, ev.max_participants - going) + " posti liberi" : "";
-    const gtxt = (going === 1 ? "1 persona ci va" : going + " ci vanno") + cap;
+    const gtxt = (going === 0 ? "nessuno ancora, sei il primo?" : going === 1 ? "1 persona ci va" : going + " ci vanno") + cap;
     ["going-guest","going-join","going-in","going-req","going-host"].forEach(x => document.getElementById(x).textContent = gtxt);
     updateBoxes();
   }
@@ -493,9 +493,9 @@
         const isHost = p.user_id === ev.host_id;
         const isAdm = p.role === "admin" && !isHost;
         let act = "";
-        if (ev.is_mine && !isHost) act = `<button class="act" onclick="setAdmin('${p.user_id}', ${!isAdm})">${isAdm ? "togli admin" : "nomina admin"}</button>`;
+        if (ev.is_mine && !isHost) act = `<button class="act" onclick="setAdmin('${p.user_id}', ${!isAdm})">${isAdm ? "togli" : "rendi collaboratore"}</button>`;
         return `<div class="person"><div class="avatar"${avatarStyle(p.avatar_url)}>${p.avatar_url ? "" : esc((p.display_name || "?")[0].toLowerCase())}</div>` +
-          `<span>${esc(p.display_name || "qualcuno")}</span>${isHost ? '<span class="tag">host</span>' : ""}${isAdm ? '<span class="tag adm">admin</span>' : ""}${act}</div>`;
+          `<span>${esc(p.display_name || "qualcuno")}</span>${isHost ? '<span class="tag">organizza</span>' : ""}${isAdm ? '<span class="tag adm">collaboratore</span>' : ""}${act}</div>`;
       }).join("");
       document.getElementById("people-note").hidden = !ev.is_mine;
     }
@@ -506,7 +506,7 @@
         `<div class="req" id="req-${p.user_id}"><div class="avatar"${avatarStyle(p.avatar_url)}>${p.avatar_url ? "" : esc((p.display_name || "?")[0].toLowerCase())}</div>` +
         `<div class="n">${esc(p.display_name || "qualcuno")}</div>` +
         `<div class="acts"><button class="btn sm no" onclick="respond('${p.user_id}', false)">no</button>` +
-        `<button class="btn sm" onclick="respond('${p.user_id}', true)">approva</button></div></div>`).join("");
+        `<button class="btn sm" onclick="respond('${p.user_id}', true)">sì</button></div></div>`).join("");
     }
   }
   async function loadCommunity(){
@@ -519,7 +519,7 @@
     el.hidden = false; el.href = "community.html?slug=" + encodeURIComponent(c.slug);
     document.getElementById("comm-emoji").textContent = c.emoji || "🏷️";
     document.getElementById("comm-name").textContent = c.name;
-    document.getElementById("comm-sub").innerHTML = c.is_verified ? '<span class="v">community verificata</span>' : "community";
+    document.getElementById("comm-sub").innerHTML = c.is_verified ? '<span class="v">verificata da anyplans</span>' : "community";
   }
 
   // ---- biglietto: qr con il link di check-in (token per partecipazione, migrazione 0047) ----
@@ -528,7 +528,7 @@
     const ov = document.getElementById("ticket-ov");
     document.getElementById("tk-em").textContent = ev.emoji || "📍";
     document.getElementById("tk-t").textContent = ev.title;
-    document.getElementById("tk-host").textContent = ev.community ? ev.community.name + (ev.community.is_verified ? " · community verificata" : "") : (ev.host_name ? "di " + ev.host_name : "");
+    document.getElementById("tk-host").textContent = ev.community ? ev.community.name + (ev.community.is_verified ? " · verificata da anyplans" : "") : (ev.host_name ? "di " + ev.host_name : "");
     const when = new Date(ev.start_at);
     document.getElementById("tk-when").textContent = dayLabel(when) + " " + timeStr(when);
     document.getElementById("tk-where").textContent = ev.meeting_point_text || "posizione approssimativa";
@@ -538,9 +538,9 @@
       const r = await rpc("my_ticket", { p_activity_id: ev.id });
       const row = r && r.ok ? (await r.json().catch(() => []))[0] : null;
       if (row) { ticketToken = row.token; try { localStorage.setItem("anyplans_ticket_" + ev.id, row.token); } catch (_) {}
-        if (row.checked_in_at) document.getElementById("tk-state").textContent = "check-in fatto ✓ sei dentro"; }
+        if (row.checked_in_at) document.getElementById("tk-state").textContent = "presenza segnata ✓"; }
     }
-    if (!ticketToken) { document.getElementById("qr").textContent = "non riesco a caricare il biglietto, riprova con la rete."; return; }
+    if (!ticketToken) { document.getElementById("qr").textContent = "non riesco a caricare il biglietto. controlla internet e riprova."; return; }
     const name = await myName();
     document.getElementById("tk-who").textContent = name || "";
     document.getElementById("btn-wallet").hidden = !isApple;
@@ -552,7 +552,7 @@
   // apple wallet: pass firmato dalla edge function wallet-pass (solo su iphone/ipad)
   const isApple = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
   async function addToWallet(){
-    const btn = document.getElementById("btn-wallet"); btn.disabled = true; btn.textContent = "preparo il pass…";
+    const btn = document.getElementById("btn-wallet"); btn.disabled = true; btn.textContent = "un attimo…";
     try {
       const r = await fetch(SB_URL + "/functions/v1/wallet-pass?activity_id=" + ev.id, {
         headers: { "Authorization": "Bearer " + session.access_token, "apikey": SB_ANON } });
@@ -561,8 +561,8 @@
       const url = URL.createObjectURL(new Blob([blob], { type: "application/vnd.apple.pkpass" }));
       const a = document.createElement("a"); a.href = url; a.download = "anyplans.pkpass"; document.body.appendChild(a); a.click(); a.remove();
       track("wallet_add");
-    } catch (_) { toast("non riesco a creare il pass, riprova."); }
-    btn.disabled = false; btn.textContent = "aggiungi al wallet";
+    } catch (_) { toast("non riesco a salvarlo, riprova."); }
+    btn.disabled = false; btn.textContent = "salva in apple wallet (il portafoglio del telefono)";
   }
   let _me = null;
   async function myName(){
@@ -592,7 +592,7 @@
   }
   async function copyLink(){
     const s = shareTexts(); track("share_copy");
-    try { await navigator.clipboard.writeText(s.url); toast("link copiato, incollalo dove vuoi."); } catch (_) { prompt("copia il link:", s.url); }
+    try { await navigator.clipboard.writeText(s.url); toast("link copiato. incollalo su whatsapp o dove vuoi."); } catch (_) { prompt("copia il link:", s.url); }
   }
   function wrapText(ctx, text, x, y, maxW, lh, maxLines){
     const words = text.split(" "); let line = "", lines = [];
@@ -651,15 +651,15 @@
     }
     const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = name; document.body.appendChild(a); a.click(); a.remove();
     track("share_" + kind);
-    document.getElementById("sh-note").textContent = kind === "story" ? "immagine salvata: aprila in instagram → storie, e aggiungi il link con lo sticker." : "card salvata: mandala dove vuoi insieme al link.";
+    document.getElementById("sh-note").textContent = kind === "story" ? "immagine salvata nel telefono. aprila su instagram e mettila nella tua storia." : "immagine salvata. mandala a chi vuoi, insieme al link.";
   }
-  async function shareStory(){ toast("preparo la storia…"); shareImage(await drawStory(), "anyplans-storia.png", "story"); }
-  async function shareCard(){ toast("preparo la card…"); shareImage(await drawCard(), "anyplans-evento.png", "card"); }
+  async function shareStory(){ toast("un attimo…"); shareImage(await drawStory(), "anyplans-storia.png", "story"); }
+  async function shareCard(){ toast("un attimo…"); shareImage(await drawCard(), "anyplans-evento.png", "card"); }
 
   async function setAdmin(uid, on){
     const r = await rpc("make_admin", { p_activity_id: ev.id, p_user_id: uid, p_admin: on });
-    if (r && r.ok) { toast(on ? "nominato admin: può approvare le richieste." : "non è più admin."); track("make_admin"); loadPeople(); }
-    else toast("non riesco, riprova.");
+    if (r && r.ok) { toast(on ? "ora è collaboratore: può dire sì alle richieste." : "non è più collaboratore."); track("make_admin"); loadPeople(); }
+    else toast("non ha funzionato, riprova.");
   }
 
   // calendario: .ics per apple/outlook, link per google
@@ -688,14 +688,14 @@
     row.querySelectorAll("button").forEach(b => b.disabled = true);
     const r = await rpc("respond_to_request", { p_activity_id: ev.id, p_user_id: uid, p_approve: ok });
     if (r && r.ok) {
-      if (ok) { ev.going_count = Number(ev.going_count) + 1; renderCounts(); toast("approvato: ora è dentro."); }
-      else toast("richiesta rifiutata.");
+      if (ok) { ev.going_count = Number(ev.going_count) + 1; renderCounts(); toast("fatto, partecipa."); }
+      else toast("ok, non partecipa.");
       loadPeople();
       return;
     }
     row.querySelectorAll("button").forEach(b => b.disabled = false);
     const b = r ? await r.json().catch(() => ({})) : {};
-    toast((b.message || "").includes("activity_full") ? "posti finiti: alza il limite per approvare." : "non riesco, riprova.");
+    toast((b.message || "").includes("activity_full") ? "posti finiti. per accettare altre persone aumenta i posti da \"modifica l'evento\"." : "non ha funzionato, riprova.");
   }
 
   // ---- unirsi ----
@@ -756,12 +756,12 @@
       if (val) answers[d.dataset.q] = val;
       else if (d.dataset.req === "true") missing = true;
     });
-    if (missing) { document.getElementById("q-note").textContent = "rispondi alle domande con l'asterisco."; document.getElementById("q-note").style.color = "var(--red)"; return; }
+    if (missing) { document.getElementById("q-note").textContent = "manca qualche risposta obbligatoria (quelle con *)."; document.getElementById("q-note").style.color = "var(--red)"; return; }
     const btn = document.getElementById("q-send"); btn.disabled = true;
     const ok = await doJoin();
     if (ok && Object.keys(answers).length) {
       const ra = await rpc("answer_questions", { p_activity_id: ev.id, p_answers: answers });
-      if (!ra || !ra.ok) toast("sei dentro, ma le risposte non si sono salvate: riprova dal bottone.");
+      if (!ra || !ra.ok) toast("sei iscritto, ma le risposte non si sono salvate. riprova.");
     }
     btn.disabled = false;
     if (ok) document.getElementById("q-overlay").hidden = true;
@@ -783,9 +783,9 @@
     const code = b.message || "";
     if (code.includes("profile_required")) { rememberNext(); location.href = "profilo.html"; return false; }
     if (code.includes("activity_full")) { toast("posti finiti per questo evento."); return false; }
-    if (code.includes("age_not_allowed")) { toast("questo evento ha un limite di età."); return false; }
+    if (code.includes("age_not_allowed")) { toast("questo evento non è aperto alla tua età."); return false; }
     if (code.includes("already")) { ev.my_status = isReq ? "requested" : "going"; renderCounts(); return true; }
-    toast("non riesco, riprova.");
+    toast("non ha funzionato, riprova.");
     return false;
   }
   async function leaveEvent(){
@@ -796,7 +796,7 @@
       if (wasGoing) ev.going_count = Math.max(0, Number(ev.going_count) - 1);
       renderCounts(); loadPeople(); return;
     }
-    toast("non riesco, riprova.");
+    toast("non ha funzionato, riprova.");
   }
 
   async function loadAnswers(){
@@ -817,10 +817,10 @@
   }
 
   async function cancelMyEvent(){
-    if (!confirm("vuoi annullare l'evento? chi partecipa non lo vedrà più.")) return;
+    if (!confirm("vuoi annullare l'evento? sparisce anche per chi si era iscritto.")) return;
     const r = await rpc("cancel_activity", { p_activity_id: ev.id });
     if (r && r.ok) { toast("evento annullato."); setTimeout(() => location.href = "miei.html", 900); }
-    else toast("non riesco ad annullare, riprova.");
+    else toast("non ha funzionato, riprova.");
   }
 
   function shareEvent(){ track("share"); openShare(); }

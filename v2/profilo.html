@@ -114,7 +114,7 @@
   <form class="card" id="form" onsubmit="return saveProfile(event)">
     <div>
       <h1>raccontaci di te</h1>
-      <p class="sub">ci vuole un attimo, poi sei dentro.</p>
+      <p class="sub">tre cose e hai finito.</p>
     </div>
     <div style="display:flex; align-items:center; gap:16px">
       <div id="pic" onclick="document.getElementById('file').click()"
@@ -125,14 +125,14 @@
       </div>
       <div>
         <div style="font-weight:700; font-size:14.5px" id="pic-label">aggiungi una foto</div>
-        <div class="hint" style="margin-top:2px">se vuoi: aiuta gli altri a riconoscerti quando vi trovate.</div>
+        <div class="hint" style="margin-top:2px">se vuoi. così gli altri ti riconoscono quando vi trovate.</div>
       </div>
       <input id="file" type="file" accept="image/*" hidden onchange="pickPhoto(this)">
     </div>
     <div>
       <label for="name">come ti chiami?</label>
       <input id="name" type="text" required minlength="2" placeholder="il tuo nome" autocomplete="given-name">
-      <p class="hint">è il nome che vedono host e partecipanti.</p>
+      <p class="hint">lo vedono gli altri partecipanti e chi organizza.</p>
     </div>
     <div>
       <label for="city">la tua città</label>
@@ -152,7 +152,7 @@
       <div>
         <label for="ig">instagram <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
         <div class="prefix"><span>instagram.com/</span><input id="ig" type="text" maxlength="30" placeholder="nomeutente" autocomplete="off" autocapitalize="none"></div>
-        <p class="hint">lo vedono i partecipanti dei tuoi stessi eventi.</p>
+        <p class="hint">lo vedono solo le persone iscritte ai tuoi stessi eventi.</p>
       </div>
     </div>
     <button class="btn" id="btn" type="submit">entra su anyplans</button>
@@ -172,7 +172,7 @@
     <div class="nums">
       <div class="num"><div class="display v" id="n-done">…</div><div class="l">eventi fatti</div></div>
       <div class="num"><div class="display v" id="n-next">…</div><div class="l">in programma</div></div>
-      <div class="num"><div class="display v" id="n-comm">…</div><div class="l">community seguite</div></div>
+      <div class="num"><div class="display v" id="n-comm">…</div><div class="l">community che seguo</div></div>
     </div>
     <div class="menu">
       <a class="row" href="profilo.html?edit=1">
@@ -185,7 +185,7 @@
       </a>
       <a class="row" href="notifiche.html">
         <svg viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10 C 6 6.7, 8.7 4, 12 4 C 15.3 4, 18 6.7, 18 10 L18 15 L20 17.5 L4 17.5 L6 15 Z"/><path d="M10 20.5 C 10.5 21.3, 13.5 21.3, 14 20.5"/></svg>
-        <span class="lbl">notifiche</span><span class="chev">›</span>
+        <span class="lbl">avvisi</span><span class="chev">›</span>
       </a>
       <a class="row" href="impostazioni.html">
         <svg viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M19 12 a7 7 0 0 0 -.1 -1.2 l2 -1.5 -2 -3.4 -2.3 .9 a7 7 0 0 0 -2 -1.2 L14.2 3 h-4.4 l-.4 2.6 a7 7 0 0 0 -2 1.2 l-2.3 -.9 -2 3.4 2 1.5 a7 7 0 0 0 0 2.4 l-2 1.5 2 3.4 2.3 -.9 a7 7 0 0 0 2 1.2 l.4 2.6 h4.4 l.4 -2.6 a7 7 0 0 0 2 -1.2 l2.3 .9 2 -3.4 -2 -1.5 a7 7 0 0 0 .1 -1.2 Z"/></svg>
@@ -200,7 +200,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1788472903"></script>
+<script src="app.js?v=1788473608"></script>
 <script>
   requireLogin();
   mountTabbar("profilo");
@@ -247,10 +247,10 @@
     if (me.avatar_url) av.style.backgroundImage = "url('" + me.avatar_url.replace(/'/g, "") + "')";
     else av.textContent = (me.display_name || "?")[0].toLowerCase();
     document.getElementById("v-name").textContent = me.display_name;
-    // "bergamo · su anyplans da settembre 2026": la data solo se my_profile espone created_at
+    // "bergamo · qui da settembre 2026": la data solo se my_profile espone created_at
     const parts = [];
     if (me.base_city) parts.push(me.base_city);
-    if (me.created_at) { const d = new Date(me.created_at); parts.push("su anyplans da " + MONTHS[d.getMonth()] + " " + d.getFullYear()); }
+    if (me.created_at) { const d = new Date(me.created_at); parts.push("qui da " + MONTHS[d.getMonth()] + " " + d.getFullYear()); }
     document.getElementById("v-sub").textContent = parts.join(" · ");
     document.getElementById("view").hidden = false;
     track("profile_view");
@@ -374,12 +374,12 @@
     const note = document.getElementById("note");
     btn.disabled = true; note.textContent = "…"; note.className = "note";
     const r = await rpc("upsert_profile", { p_display_name: name, p_birth_date: birth });
-    if (!r) { note.className = "note err"; note.textContent = "non riesco a raggiungere il server, riprova."; btn.disabled = false; return false; }
+    if (!r) { note.className = "note err"; note.textContent = "non riesco a collegarmi. controlla internet e riprova."; btn.disabled = false; return false; }
     if (!r.ok) {
       const b = await r.json().catch(() => ({}));
       const code = b.message || "";
       note.className = "note err";
-      if (code.includes("must_be_adult")) note.textContent = "anyplans è solo per maggiorenni (18+).";
+      if (code.includes("must_be_adult")) note.textContent = "anyplans è solo per chi ha almeno 18 anni.";
       else if (code.includes("invalid_name")) note.textContent = "il nome deve avere almeno 2 lettere.";
       else note.textContent = "non riesco a salvare, riprova.";
       btn.disabled = false;

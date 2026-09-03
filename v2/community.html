@@ -141,7 +141,7 @@
     </div>
     <div class="more" id="more" hidden>
       <p class="desc" id="desc" hidden></p>
-      <a class="manage" id="manage" hidden href="#">gestisci la community →</a>
+      <a class="manage" id="manage" hidden href="#">gestisci la pagina →</a>
     </div>
     <div class="acts">
       <button class="btn" id="btn-follow" onclick="toggleFollow()">
@@ -149,7 +149,7 @@
         <span id="follow-label">segui</span>
       </button>
       <button class="btn ghost" onclick="shareCommunity()">condividi</button>
-      <p class="note">chi segue riceve una notifica a ogni nuovo evento</p>
+      <p class="note">se segui, ti avvisiamo a ogni nuovo evento</p>
     </div>
   </div>
 
@@ -185,7 +185,7 @@
   <a class="btn" href="eventi.html">guarda gli eventi a bergamo</a>
 </div>
 
-<script src="app.js?v=1788472903"></script>
+<script src="app.js?v=1788473608"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const wantId = params.get("id");
@@ -256,17 +256,17 @@
     const followers = Number(c.follower_count) || 0;
     const done = Number(c.events_done) || 0;
     const parts = [];
-    if (c.is_verified) parts.push('<span class="v">' + (mobile ? "verificata" : "community verificata") + "</span>");
+    if (c.is_verified) parts.push('<span class="v">' + (mobile ? "verificata" : "verificata da anyplans") + "</span>");
     if (!mobile && c.category) parts.push(esc((c.emoji ? c.emoji + " " : "") + c.category));
     if (c.city) parts.push(esc(c.city));
-    parts.push("<b>" + followers + " follower</b>");
+    parts.push("<b>" + (followers === 1 ? "1 persona la segue" : followers + " persone la seguono") + "</b>");
     if (!mobile) parts.push(done + (done === 1 ? " evento fatto" : " eventi fatti"));
     document.getElementById("meta").innerHTML = parts.join(" · ");
   }
   mobileMq.addEventListener("change", () => { if (c) renderMeta(); });
   function renderFollow(){
     const on = logged && !!c.is_following;
-    document.getElementById("follow-label").textContent = on ? "segui già ✓" : "segui";
+    document.getElementById("follow-label").textContent = on ? "la segui ✓" : "segui";
     const b = document.getElementById("btn-follow");
     b.classList.toggle("ghost", on);
   }
@@ -274,19 +274,19 @@
   async function loadEvents(){
     const wrap = document.getElementById("events");
     const r = await rpc("community_events", { p_id: c.id, p_past: false });
-    if (!r || !r.ok) { wrap.innerHTML = '<p class="empty">non riesco a caricare gli eventi, ricarica la pagina.</p>'; return; }
+    if (!r || !r.ok) { wrap.innerHTML = '<p class="empty">non riesco a caricare gli eventi. ricarica la pagina.</p>'; return; }
     const rows = (await r.json().catch(() => []))
       .sort((a, b) => new Date(a.start_at) - new Date(b.start_at));
-    if (!rows.length) { wrap.innerHTML = '<p class="empty">nessun evento in programma. segui la community: ti avvisiamo al prossimo.</p>'; return; }
+    if (!rows.length) { wrap.innerHTML = '<p class="empty">nessun evento in programma. se la segui, ti avvisiamo al prossimo.</p>'; return; }
     wrap.innerHTML = rows.map(x => {
       const when = new Date(x.start_at);
       const going = Number(x.going_count) || 0;
       const meta = [];
       if (x.meeting_point_text) meta.push('<span class="place">' + esc(x.meeting_point_text) + "</span>");
       meta.push(going === 1 ? "1 ci va" : going + " ci vanno");
-      if (x.max_participants) meta.push(Math.max(0, x.max_participants - going) + " posti rimasti");
+      if (x.max_participants) meta.push(Math.max(0, x.max_participants - going) + " posti liberi");
       if (x.price_cents > 0) meta.push('<b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(x.price_cents)) + "</b>");
-      const go = x.my_status === "going" ? "ci sei ✓" : (x.my_status === "requested" ? "in attesa" : "ci sono →");
+      const go = x.my_status === "going" ? "ci vado ✓" : (x.my_status === "requested" ? "aspetto l'ok" : "vedi →");
       return `<a class="ev" href="evento.html?id=${encodeURIComponent(x.id)}">
         <div class="tile">${esc(x.emoji || (CATALOG[x.sport] || {}).e || "📍")}</div>
         <div class="body">
@@ -309,7 +309,7 @@
     if (!r || !r.ok) {
       const b = r ? await r.json().catch(() => ({})) : {};
       if ((b.message || "").includes("profile_required")) { rememberNext(); location.href = "profilo.html"; return; }
-      toast("non riesco, riprova."); return;
+      toast("non ha funzionato, riprova."); return;
     }
     c.is_following = next;
     c.follower_count = Math.max(0, (Number(c.follower_count) || 0) + (next ? 1 : -1));
@@ -323,7 +323,7 @@
     const text = "c'è qualche piano? " + (c.emoji || "") + " " + c.name + " su anyplans";
     track("community_share");
     if (navigator.share) { try { await navigator.share({ title: c.name, text, url }); return; } catch (_) {} }
-    try { await navigator.clipboard.writeText(text + " " + url); toast("link copiato, incollalo dove vuoi."); }
+    try { await navigator.clipboard.writeText(text + " " + url); toast("link copiato. incollalo su whatsapp o dove vuoi."); }
     catch (_) { toast(url); }
   }
 

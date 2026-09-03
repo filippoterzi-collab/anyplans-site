@@ -76,7 +76,7 @@
 <header>
   <div class="nav">
     <a class="brand" href="/v2/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
-    <a class="lnk" href="eventi.html">← gli eventi</a>
+    <a class="lnk" href="eventi.html">← tutti gli eventi</a>
   </div>
 </header>
 
@@ -84,7 +84,7 @@
   <form class="card" onsubmit="return submitCommunity(event)">
     <div>
       <h1 class="display">crea la tua community</h1>
-      <p class="sub">un nome, una categoria, e il primo evento è a due tap.</p>
+      <p class="sub">un nome e una categoria. poi pubblichi il primo evento.</p>
     </div>
 
     <div style="display:flex; align-items:center; gap:16px">
@@ -93,14 +93,14 @@
       </div>
       <div>
         <div style="font-weight:700; font-size:15px" id="pic-label">logo o foto</div>
-        <div class="hint" style="margin-top:2px">se non ce l'hai, usiamo l'emoji della categoria.</div>
+        <div class="hint" style="margin-top:2px">se non ce l'hai, mettiamo il simbolo della categoria.</div>
       </div>
       <input id="file" type="file" accept="image/*" hidden onchange="pickPhoto(this)">
     </div>
 
     <div>
       <label for="name">nome della community</label>
-      <input id="name" type="text" required minlength="2" maxlength="60" placeholder="es. sara ceramica, runners bergamo…" autocomplete="off">
+      <input id="name" type="text" required minlength="2" maxlength="60" placeholder="es. sara ceramica, gruppo di cammino seriate, pro loco…" autocomplete="off">
     </div>
 
     <div>
@@ -118,12 +118,12 @@
       <input id="city" type="text" value="bergamo" autocomplete="address-level2">
     </div>
 
-    <button class="btn" id="btn" type="submit">crea la community</button>
+    <button class="btn" id="btn" type="submit">crea la pagina</button>
     <p class="note" id="note"></p>
   </form>
 </main>
 
-<script src="app.js?v=1788472903"></script>
+<script src="app.js?v=1788473608"></script>
 <script>
   requireLogin();
   mountTabbar("crea");
@@ -209,7 +209,7 @@
     let avatarUrl = null;
     if (avatarBlob) {
       avatarUrl = await uploadLogo();
-      if (!avatarUrl) toast("la foto non si è caricata: usiamo l'emoji, la cambi dopo.");
+      if (!avatarUrl) toast("la foto non si è caricata. mettiamo il simbolo, la cambi dopo.");
     }
     const r = await rpc("create_community", {
       p_name: name,
@@ -219,7 +219,7 @@
       p_avatar_url: avatarUrl,
       p_instagram_handle: null
     });
-    if (!r) return fail("non riesco a raggiungere il server, riprova.");
+    if (!r) return fail("non riesco a collegarmi. controlla internet e riprova.");
     if (!r.ok) {
       const b = await r.json().catch(() => ({}));
       const code = b.message || "";
@@ -227,7 +227,7 @@
         try { sessionStorage.setItem("anyplans_next", "crea-community.html"); } catch (_) {}
         location.href = "profilo.html"; return false;
       }
-      if (code.includes("too_many_communities")) return fail("hai già il massimo di community per un account.");
+      if (code.includes("too_many_communities")) return fail("hai già raggiunto il numero massimo di community.");
       if (code.includes("invalid_category")) return fail("scegli una categoria tra quelle proposte.");
       return fail("non riesco a creare la community, riprova.");
     }

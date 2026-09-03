@@ -130,11 +130,11 @@
 <header>
   <div class="nav">
     <a class="brand" href="/v2/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
-    <span class="lnk on">scopri</span>
+    <span class="lnk on">eventi</span>
     <a class="lnk" href="miei.html">i miei eventi</a>
     <div class="nav-right">
       <a href="crea.html" style="background:var(--blue); color:#fff; font-weight:700; font-size:13.5px; padding:9px 16px; border-radius:999px; white-space:nowrap">crea evento</a>
-      <a class="iconbtn" id="bell" href="notifiche.html" title="notifiche" style="position:relative">
+      <a class="iconbtn" id="bell" href="notifiche.html" title="avvisi" style="position:relative">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10 C 6 6.7, 8.7 4, 12 4 C 15.3 4, 18 6.7, 18 10 L18 15 L20 17.5 L4 17.5 L6 15 Z"/><path d="M10 20.5 C 10.5 21.3, 13.5 21.3, 14 20.5"/></svg>
         <span id="bell-dot" hidden style="position:absolute; right:1px; top:1px; width:8px; height:8px; border-radius:999px; background:var(--blue); border:1.5px solid var(--bg)"></span>
       </a>
@@ -163,13 +163,13 @@
   <div class="filters">
     <div class="search">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6E6E73" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg>
-      <input id="q" placeholder="cerca: ceramica, corsa, cucina…" oninput="render()">
+      <input id="q" placeholder="cerca un evento: ceramica, corsa, cucina…" oninput="render()">
     </div>
     <button class="chip day-chip" data-day="oggi" onclick="setDay(this)">oggi</button>
     <button class="chip day-chip" data-day="domani" onclick="setDay(this)">domani</button>
-    <button class="chip day-chip" data-day="weekend" onclick="setDay(this)">weekend</button>
+    <button class="chip day-chip" data-day="weekend" onclick="setDay(this)">fine settimana</button>
     <span style="width:1px; height:22px; background:rgba(25,25,25,.15); flex-shrink:0"></span>
-    <button class="chip on" data-cat="" onclick="setCat(this)">tutti</button>
+    <button class="chip on" data-cat="" onclick="setCat(this)">tutti i tipi</button>
     <button class="chip" data-cat="sport" onclick="setCat(this)">🏃 sport</button>
     <button class="chip" data-cat="cucina" onclick="setCat(this)">🍳 cucina</button>
     <button class="chip" data-cat="creatività" onclick="setCat(this)">🏺 creatività</button>
@@ -187,7 +187,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788472903"></script>
+<script src="app.js?v=1788473608"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -201,7 +201,7 @@
       if (!e.target.closest("#menu") && e.target.id !== "avatar") document.getElementById("menu").hidden = true;
     });
   }
-  mountTabbar("scopri");
+  mountTabbar("eventi");
 
   // categoria del sito per ogni slug non sportivo; tutto il resto è "sport"
   const CAT_BY_SLUG = { cooking:"cucina", ceramics:"creatività", painting:"creatività",
@@ -238,7 +238,7 @@
     const list = document.getElementById("list");
     list.innerHTML = '<div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div>';
     const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
-    if (!r || !r.ok) { list.innerHTML = '<div class="empty">non riesco a caricare gli eventi, ricarica la pagina.</div>'; return; }
+    if (!r || !r.ok) { list.innerHTML = '<div class="empty">non riesco a caricare gli eventi. ricarica la pagina.</div>'; return; }
     const rows = await r.json();
     EVENTS = rows.map(x => ({
       id: x.id,
@@ -248,7 +248,7 @@
       title: x.title,
       host: x.host_name || null,
       hostAvatar: x.host_avatar || null,
-      place: x.meeting_point_text || "posizione approssimativa",
+      place: x.meeting_point_text || "zona indicativa",
       when: new Date(x.start_at),
       going: Number(x.going_count) || 0,
       my: x.my_status,
@@ -308,10 +308,10 @@
   }
 
   function stateBtn(e){
-    if (e.mine) return ["ok", "sei l'host"];
-    if (e.my === "going") return ["ok", "ci sei ✓"];
-    if (e.my === "requested") return ["wait", "in attesa"];
-    return ["", "ci sono →"];
+    if (e.mine) return ["ok", "lo organizzi tu"];
+    if (e.my === "going") return ["ok", "ci vado ✓"];
+    if (e.my === "requested") return ["wait", "aspetto l'ok"];
+    return ["", e.request ? "chiedo di entrare →" : "ci sono →"];
   }
 
   function render(){
@@ -327,10 +327,10 @@
       })
       .sort((a, b) => a.when - b.when);
 
-    document.getElementById("count").textContent = "in programma · " + evs.length + (evs.length === 1 ? " evento" : " eventi");
+    document.getElementById("count").textContent = evs.length + (evs.length === 1 ? " evento" : " eventi") + " in programma";
     EVENTS.forEach(e => { const visible = evs.includes(e); markers[e.id].getElement().style.opacity = visible ? "1" : "0.25"; });
 
-    if (!evs.length) { list.innerHTML = '<div class="empty">' + (day ? "niente " + (day === "weekend" ? "nel weekend" : day) + " con questi filtri. " : "nessun evento trovato. ") + 'prova un\'altra ricerca, o <a href="crea.html" style="color:var(--blue); font-weight:700">crea tu il primo</a>.</div>'; return; }
+    if (!evs.length) { list.innerHTML = '<div class="empty">' + (day ? "niente " + (day === "weekend" ? "nel fine settimana" : day) + ". prova un altro giorno o un\'altra parola, " : "nessun evento trovato. prova un\'altra parola, ") + 'oppure <a href="crea.html" style="color:var(--blue); font-weight:700">pubblica tu il primo evento</a>.</div>'; return; }
 
     let html = "", lastDay = "";
     evs.forEach(e => {
@@ -346,7 +346,7 @@
         <div>
           <div class="time">${timeStr(e.when)} · ${relTime(e.when)}</div>
           <a class="t" href="evento.html?id=${e.id}" onclick="event.stopPropagation()" style="display:block">${esc(e.title)}</a>
-          <div class="m">${e.host ? (e.hostAvatar ? `<span class="ha" style="background-image:url('${esc(e.hostAvatar)}')"></span>` : "") + "di " + esc(e.host) : "aggregato"} · ${esc(e.place)} · ${e.going} ci vanno${e.request ? " · su richiesta" : ""}${e.price > 0 ? ' · <b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(e.price)) + "</b>" : ""}</div>
+          <div class="m">${e.host ? (e.hostAvatar ? `<span class="ha" style="background-image:url('${esc(e.hostAvatar)}')"></span>` : "") + "di " + esc(e.host) : "da un altro sito"} · ${esc(e.place)} · ${goingTxt(e.going)}${e.request ? " · con approvazione" : ""}${e.price > 0 ? ' · <b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(e.price)) + "</b>" : ""}</div>
         </div>
         <button class="go ${cls}" onclick="event.stopPropagation(); join('${e.id}')">${label}</button>
       </div>`;
@@ -373,7 +373,7 @@
     const e = EVENTS.find(x => x.id === id);
     if (e.mine) { location.href = "evento.html?id=" + id; return; }
     const leaving = e.my === "going" || e.my === "requested";
-    if (leaving && e.my === "requested" && !confirm("vuoi ritirare la richiesta?")) return;
+    if (leaving && e.my === "requested" && !confirm("vuoi annullare la richiesta?")) return;
     if (!leaving) {
       // se l'host ha messo delle domande si risponde nella pagina dell'evento
       const rq = await rpc("get_activity_questions", { p_activity_id: id });
@@ -386,18 +386,18 @@
     else r = await rpc("join_activity", { p_activity_id: id, p_status: "going" });
     if (r && r.ok) {
       if (leaving) { if (e.my === "going") e.going -= 1; e.my = "left"; }
-      else if (e.request) { e.my = "requested"; toast("richiesta inviata: l’host la vede e ti approva."); track("join_request"); }
-      else { e.my = "going"; e.going += 1; toast("ci sei! l’host e gli altri ti vedono tra i partecipanti."); track("join"); }
+      else if (e.request) { e.my = "requested"; toast("richiesta mandata. quando chi organizza dice sì, ti avvisiamo."); track("join_request"); }
+      else { e.my = "going"; e.going += 1; toast("fatto, ci vai! il tuo nome è nella lista dei partecipanti."); track("join"); }
       render();
       return;
     }
-    let msg = "non riesco, riprova.";
+    let msg = "non ha funzionato, riprova.";
     try {
       const b = r ? await r.json() : {};
       const code = b.message || "";
       if (code.includes("profile_required")) { location.href = "profilo.html"; return; }
       else if (code.includes("activity_full")) msg = "posti finiti per questo evento.";
-      else if (code.includes("age_not_allowed")) msg = "questo evento ha un limite di età.";
+      else if (code.includes("age_not_allowed")) msg = "questo evento non è aperto alla tua età.";
       else if (code.includes("not_authenticated")) { logout(); return; }
     } catch (_) {}
     toast(msg);

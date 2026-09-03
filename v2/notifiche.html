@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>notifiche · anyplans</title>
+<title>avvisi · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <meta name="robots" content="noindex">
 <style>
@@ -89,7 +89,7 @@
 <header>
   <div class="nav">
     <a class="brand" href="/v2/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
-    <a class="lnk" href="eventi.html">scopri</a>
+    <a class="lnk" href="eventi.html">eventi</a>
     <a class="lnk" href="miei.html">i miei eventi</a>
     <a class="cta" href="crea.html">crea evento</a>
   </div>
@@ -98,7 +98,7 @@
 <main>
   <div class="top">
     <h1 class="display">notifiche</h1>
-    <button class="textbtn" id="btn-seen" onclick="markAllSeen()" hidden>segna tutte come lette</button>
+    <button class="textbtn" id="btn-seen" onclick="markAllSeen()" hidden>segna tutto come letto</button>
   </div>
   <div class="box" id="list"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
   <div class="foot">
@@ -107,7 +107,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1788472903"></script>
+<script src="app.js?v=1788473608"></script>
 <script>
   requireLogin();
   mountTabbar("");
@@ -193,7 +193,7 @@
   async function load(){
     const list = document.getElementById("list");
     const r = await rpc("my_notifications", {});
-    if (!r || !r.ok) { list.innerHTML = '<div class="empty">non riesco a caricare, ricarica la pagina.</div>'; return; }
+    if (!r || !r.ok) { list.innerHTML = '<div class="empty">non riesco a caricare. ricarica la pagina.</div>'; return; }
     const rows = (await r.json().catch(() => []))
       .sort((a, b) => new Date(b.happened_at) - new Date(a.happened_at));
     if (!rows.length) { list.innerHTML = '<div class="empty">niente di nuovo. quando succede qualcosa lo trovi qui.</div>'; return; }
@@ -206,7 +206,7 @@
   async function markAllSeen(){
     const btn = document.getElementById("btn-seen"); btn.disabled = true;
     const r = await rpc("mark_notifications_seen", {});
-    if (!r || !r.ok) { btn.disabled = false; toast("non riesco, riprova."); return; }
+    if (!r || !r.ok) { btn.disabled = false; toast("non ha funzionato, riprova."); return; }
     document.querySelectorAll(".n.unread").forEach(x => x.classList.remove("unread"));
     btn.hidden = true;
   }

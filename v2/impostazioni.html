@@ -105,7 +105,7 @@
 <header>
   <div class="nav">
     <a class="brand" href="/v2/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
-    <a class="lnk" href="eventi.html">scopri</a>
+    <a class="lnk" href="eventi.html">eventi</a>
     <a class="lnk" href="miei.html">i miei eventi</a>
     <a class="cta" href="crea.html">crea evento</a>
   </div>
@@ -125,19 +125,19 @@
   <section id="tab-account" hidden>
     <div class="box">
       <h2>il tuo profilo</h2>
-      <p class="m">nome, foto, bio e instagram si cambiano dal profilo.</p>
+      <p class="m">nome, foto, due righe su di te e instagram li cambi dal profilo.</p>
       <!-- TODO committente: il design mostra anche "tiktok.com/@": non c'è nel modello dati (SCHEMA.md), va aggiunto lì prima -->
       <a class="lnk2" href="profilo.html?edit=1">modifica il profilo →</a>
     </div>
     <div class="box">
       <h2>email</h2>
-      <p class="m">è l'indirizzo con cui accedi e dove ricevi gli aggiornamenti sugli eventi.</p>
+      <p class="m">con questa email entri su anyplans e ricevi gli avvisi.</p>
       <div class="pill"><b id="email"></b><span class="tag">principale</span></div>
     </div>
     <div class="zone">
-      <button class="textbtn" onclick="if(confirm('vuoi uscire da questo dispositivo?')) logout()">esci da questo dispositivo</button>
-      <button class="textbtn" id="btn-all" onclick="logoutEverywhere()">esci da tutti i dispositivi</button>
-      <button class="textbtn red" id="btn-del" onclick="deleteAccount()">elimina l'account</button>
+      <button class="textbtn" onclick="if(confirm('vuoi uscire?')) logout()">esci</button>
+      <button class="textbtn" id="btn-all" onclick="logoutEverywhere()">esci da tutti i telefoni e computer</button>
+      <button class="textbtn red" id="btn-del" onclick="deleteAccount()">cancella il mio account</button>
     </div>
   </section>
 
@@ -146,7 +146,7 @@
     <div class="toggle-row" id="tg-notify" onclick="flip('tg-notify', 'p_notify_all')">
       <div>
         <div class="t">avvisami di quello che succede</div>
-        <div class="s">nuovi eventi delle community che segui, richieste e conferme sui tuoi eventi.</div>
+        <div class="s">nuovi eventi delle community che seguo, richieste e conferme sui tuoi eventi.</div>
       </div>
       <div class="sw"><div class="k"></div></div>
     </div>
@@ -157,17 +157,17 @@
       </div>
       <div class="sw"><div class="k"></div></div>
     </div>
-    <p class="empty">le preferenze si salvano da sole.</p>
+    <p class="empty">le scelte si salvano da sole.</p>
   </section>
 
   <!-- community -->
   <section id="tab-community" hidden>
     <div id="cm-mine-wrap" hidden>
-      <div class="sec" style="margin-bottom:8px">le community che gestisci</div>
+      <div class="sec" style="margin-bottom:8px">le community che gestisco</div>
       <div id="cm-mine" style="display:flex; flex-direction:column; gap:8px"></div>
     </div>
     <div>
-      <div class="sec" style="margin-bottom:8px">le community che segui <span id="cm-n"></span></div>
+      <div class="sec" style="margin-bottom:8px">le community che seguo <span id="cm-n"></span></div>
       <div id="cm-follow" style="display:flex; flex-direction:column; gap:8px"><div class="sk"></div><div class="sk"></div></div>
     </div>
     <a class="btn" href="crea-community.html">crea la tua community</a>
@@ -175,7 +175,7 @@
   </section>
 </main>
 
-<script src="app.js?v=1788472903"></script>
+<script src="app.js?v=1788473608"></script>
 <script>
   requireLogin();
   mountTabbar("profilo");
@@ -193,7 +193,7 @@
 
   // ---- account ----
   async function logoutEverywhere(){
-    if (!confirm("vuoi uscire da tutti i dispositivi? dovrai rientrare con l'email ovunque.")) return;
+    if (!confirm("vuoi uscire da tutti i telefoni e computer? per rientrare ti servirà un nuovo codice via email.")) return;
     const btn = document.getElementById("btn-all"); btn.disabled = true;
     try {
       await fetch(SB_URL + "/auth/v1/logout?scope=global", {
@@ -206,14 +206,14 @@
   }
 
   async function deleteAccount(){
-    if (!confirm("vuoi eliminare l'account? sparisce tutto: profilo, eventi, partecipazioni. non si torna indietro.")) return;
-    const word = prompt("per confermare scrivi: elimina");
-    if ((word || "").trim().toLowerCase() !== "elimina") { toast("ok, non ho eliminato niente."); return; }
+    if (!confirm("vuoi cancellare il tuo account? sparisce tutto: profilo, eventi, iscrizioni. non si torna indietro.")) return;
+    const word = prompt("per confermare scrivi: cancella");
+    if ((word || "").trim().toLowerCase() !== "cancella") { toast("ok, non ho cancellato niente."); return; }
     const btn = document.getElementById("btn-del"); btn.disabled = true;
     const r = await rpc("delete_my_account", {});
     if (!r || !r.ok) {
       btn.disabled = false;
-      let msg = "non riesco a eliminare l'account, riprova.";
+      let msg = "non riesco a cancellare l'account, riprova.";
       try { if (r) msg += " (" + ((await r.json()).message || "") + ")"; } catch (_) {}
       toast(msg); return;
     }
@@ -243,7 +243,7 @@
   // ---- community ----
   function cmRow(c, href, act){
     const sub = [c.is_verified ? "verificata" : null,
-                 Number(c.follower_count) ? Number(c.follower_count) + (Number(c.follower_count) === 1 ? " segue" : " seguono") : null,
+                 Number(c.follower_count) ? Number(c.follower_count) + (Number(c.follower_count) === 1 ? " persona la segue" : " persone la seguono") : null,
                  Number(c.upcoming_count) ? Number(c.upcoming_count) + " in programma" : null]
                 .filter(Boolean).join(" · ");
     return `<a class="cm" href="${esc(href)}"><div class="tile">${esc(c.emoji || "📍")}</div>` +
@@ -253,7 +253,7 @@
   async function loadCommunities(){
     const follow = document.getElementById("cm-follow");
     const r = await rpc("my_communities", {});
-    if (!r || !r.ok) { follow.innerHTML = '<p class="empty">non riesco a caricare le community, ricarica la pagina.</p>'; return; }
+    if (!r || !r.ok) { follow.innerHTML = '<p class="empty">non riesco a caricare le community. ricarica la pagina.</p>'; return; }
     const rows = await r.json().catch(() => []);
     const mine = rows.filter(c => c.role === "owner" || c.role === "admin");
     const followed = rows.filter(c => c.role === "follower");

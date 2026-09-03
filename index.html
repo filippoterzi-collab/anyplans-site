@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="canonical" href="https://anyplans.in/">
-<meta name="description" content="la mappa degli eventi veri della tua città. il corso di ceramica, la festa di paese, il giro in bici della domenica. ne vedi uno, ti unisci, ci andate insieme.">
+<meta name="description" content="gli eventi della tua città, tutti in un posto solo: la festa di paese, il corso di ceramica, il giro in bici della domenica. ne vedi uno, ti iscrivi, ci vai insieme ad altri.">
 <meta property="og:title" content="anyplans · eventi questa settimana nella tua città">
 <meta property="og:description" content="la mappa degli eventi veri della tua città. registrati per vedere gli eventi.">
 <meta property="og:url" content="https://anyplans.in/">
@@ -260,10 +260,10 @@
         <span class="rot" style="animation-delay:10s">nel weekend?</span>
       </span>
     </h1>
-    <p class="sub">la mappa degli eventi veri della tua città. il corso di ceramica, la festa di paese, il giro in bici della domenica. ne vedi uno, ti unisci, ci andate insieme.</p>
+    <p class="sub">gli eventi della tua città, tutti in un posto solo: la festa di paese, il corso di ceramica, il giro in bici della domenica. ne vedi uno, ti iscrivi, ci vai insieme ad altri.</p>
     <div class="cta">
       <a class="btn" href="/v2/login.html">registrati per vedere gli eventi della tua città</a>
-      <a class="btn ghost" href="/v2/login.html">crea la tua community</a>
+      <a class="btn ghost" href="/v2/login.html">organizzi eventi? crea la tua community</a>
     </div>
     <a class="heroscroll" href="#eventi">che eventi troverai ↓</a>
   </div>
@@ -272,7 +272,7 @@
 <section class="block band" id="eventi">
   <div class="wrap">
     <h2 id="ev-h2">che eventi troverai</h2>
-    <p class="lead" id="ev-lead">esempi di eventi intorno a bergamo. quelli veri li vedi sulla mappa quando ti registri, e chiunque può pubblicarne uno.</p>
+    <p class="lead" id="ev-lead">esempi di eventi intorno a bergamo. quelli veri li vedi sulla mappa dopo la registrazione.</p>
     <div class="cards" id="cards">
       <div class="card"><div class="em">🏺</div><div><div class="t">corso di ceramica, anche principianti</div><div class="m">giovedì, 19:00 · con la maestra</div></div></div>
       <div class="card"><div class="em">🎪</div><div><div class="t">c'è la festa di paese, chi viene?</div><div class="m">sabato, dalle 18:00 · piazza principale</div></div></div>
@@ -296,7 +296,7 @@
       <div class="city active"><h3>bergamo</h3><p>si parte da qui</p></div>
       <div class="city" onclick="openQuiz('milano')"><h3>milano</h3><p>in arrivo</p></div>
       <div class="city" onclick="openQuiz('brescia')"><h3>brescia</h3><p>in arrivo</p></div>
-      <div class="city you" onclick="openQuiz()"><h3>la tua città?</h3><p>dicci dove sei →</p></div>
+      <div class="city you" onclick="openQuiz()"><h3>la tua città?</h3><p>scrivici la tua città →</p></div>
     </div>
   </div>
 </section>
@@ -304,7 +304,7 @@
 <section class="block white">
   <div class="wrap">
     <h2>una mappa, tutti gli eventi</h2>
-    <p class="lead">stessa cornice, eventi diversi, come i cartelli veri. queste sono le prime sei categorie, e chiunque può pubblicare il suo evento.</p>
+    <p class="lead">sei tipi di eventi, un simbolo per ognuno. noi non organizziamo niente: raccogliamo gli eventi che ci sono già, dagli altri siti e da chi li pubblica qui.</p>
     <div class="cats">
       <div class="cat"><img src="/pittogrammi/sport-blu.svg" alt="" width="72" height="72"><div><div class="t">sport</div><div class="m">corse, giri, partite</div></div></div>
       <div class="cat"><img src="/pittogrammi/cucina-blu.svg" alt="" width="72" height="72"><div><div class="t">cucina</div><div class="m">corsi e cene</div></div></div>
@@ -319,11 +319,11 @@
 <section class="block final" id="registrati">
   <div class="wrap">
     <h2>anyplans <span>nella tua città?</span></h2>
-    <p class="lead">partiamo da bergamo. registrati e guarda cosa succede vicino a te.</p>
+    <p class="lead">partiamo da bergamo. prima di andare vedi chi organizza e chi ci va: niente appuntamenti al buio, c'è sempre qualcosa da fare insieme.</p>
     <div class="cta">
       <!-- TODO: collegare al flusso sign-in (email + codice via supabase) quando pronto -->
       <a class="btn" href="/v2/login.html">registrati per vedere gli eventi della tua città</a>
-      <a class="btn ghost" href="/v2/login.html">crea la tua community</a>
+      <a class="btn ghost" href="/v2/login.html">organizzi eventi? crea la tua community</a>
     </div>
   </div>
 </section>
@@ -342,11 +342,11 @@
         <a href="#eventi">che eventi troverai</a>
         <a href="/bergamo/">anyplans a bergamo</a>
         <a href="/blog.html">blog</a>
-        <a href="/guidelines.html">linee guida della community</a>
+        <a href="/guidelines.html">le regole di anyplans</a>
       </div>
       <div><h4>legale</h4>
-        <a href="/privacy-it.html">privacy policy</a>
-        <a href="/terms-it.html">termini di servizio</a>
+        <a href="/privacy-it.html">privacy</a>
+        <a href="/terms-it.html">condizioni d'uso</a>
       </div>
       <div><h4>seguici</h4>
         <a href="https://instagram.com/anyplans_bergamo" target="_blank" rel="noopener">instagram</a>
@@ -375,7 +375,7 @@
         <button class="qz-chip" type="button" onclick="document.getElementById('qz-city').focus()">un'altra città…</button>
       </div>
       <form onsubmit="return citySubmit(event)" style="display:flex; flex-direction:column; gap:10px">
-        <input id="qz-city" type="text" required placeholder="oppure scrivila qui" autocomplete="address-level2">
+        <input id="qz-city" type="text" required placeholder="oppure scrivi qui la tua città" autocomplete="address-level2">
         <button class="btn" type="submit">continua</button>
       </form>
     </div>
@@ -384,7 +384,7 @@
       <p class="m" id="qz-msg"></p>
       <input id="qz-email" type="email" required placeholder="la tua email" autocomplete="email">
       <button class="btn" type="submit">avvisami quando arrivate</button>
-      <p class="qz-note" id="qz-note">niente spam, mai · ti scriviamo solo per questo</p>
+      <p class="qz-note" id="qz-note">niente pubblicità, mai. ti scriviamo solo per dirti che siamo arrivati.</p>
     </form>
 
     <div id="qz-done" hidden>
@@ -393,7 +393,7 @@
   </div>
 </div>
 
-<script src="/v2/app.js?v=1788472903"></script>
+<script src="/v2/app.js?v=1788473608"></script>
 <script>
   let quizCity = "";
 
@@ -421,7 +421,7 @@
     document.getElementById("qz-step2").hidden = false;
     document.getElementById("qz-title").textContent = "presto saremo a " + quizCity;
     document.getElementById("qz-msg").textContent =
-      "lasciaci l'email: appena anyplans arriva a " + quizCity + " sei tra i primi a saperlo, e la tua città sale in classifica.";
+      "lasciaci la tua email: quando arriviamo a " + quizCity + " te lo diciamo per primo. più siete, prima arriviamo.";
     document.getElementById("qz-email").focus();
   }
 
@@ -439,7 +439,7 @@
       document.getElementById("qz-title").textContent = "fatto 🫶";
       document.getElementById("qz-bye").textContent = "ci vediamo a " + quizCity + ", ti scriviamo appena arriviamo.";
     } catch (_) {
-      note.textContent = "non riesco a raggiungere il server, riprova."; note.className = "qz-note err";
+      note.textContent = "non riesco a collegarmi. controlla internet e riprova."; note.className = "qz-note err";
     }
     return false;
   }
@@ -457,7 +457,7 @@
       t.textContent = logged ? "apri la mappa →" : "registrati per aprire la mappa →";
       t.href = logged ? "/v2/eventi.html" : "/v2/login.html";
       const cta = document.getElementById("nav-cta");
-      cta.textContent = logged ? "apri gli eventi" : "registrati";
+      cta.textContent = logged ? "vai agli eventi" : "registrati";
       cta.href = logged ? "/v2/eventi.html" : "/v2/login.html";
       document.querySelectorAll(".cta a.btn").forEach(a => {
         if (a.classList.contains("ghost")) {
@@ -466,7 +466,7 @@
           return;
         }
         a.href = logged ? "/v2/eventi.html" : "/v2/login.html";
-        a.textContent = logged ? "apri gli eventi della tua città" : "registrati per vedere gli eventi della tua città";
+        a.textContent = logged ? "vai agli eventi della tua città" : "registrati per vedere gli eventi della tua città";
       });
     } catch (_) {}
   }
@@ -490,11 +490,11 @@
       document.getElementById("pill").hidden = false;
     }
     document.getElementById("ev-h2").textContent = "eventi a bergamo, adesso";
-    document.getElementById("ev-lead").textContent = "presi dalla mappa in questo momento. registrati e ci vai insieme agli altri.";
+    document.getElementById("ev-lead").textContent = "presi dalla mappa in questo momento. registrati, scegline uno e ci vai insieme ad altri.";
     document.getElementById("cards").innerHTML = rows.slice(0, 6).map(x =>
       `<a class="card" href="/v2/evento.html?id=${x.id}"><div class="em">${esc(x.emoji || "📍")}</div>` +
-      `<div><div class="t">${esc(x.title)}</div><div class="m">${esc(dayLabel(x.when))}, ${timeStr(x.when)} · <b>${esc(relTime(x.when))}</b> · ${Number(x.going_count) || 0} ci vanno${x.price_cents > 0 ? " · " + esc(fmtPrice(x.price_cents)) : ""}</div></div>` +
-      `<span class="go">ci sono →</span></a>`).join("");
+      `<div><div class="t">${esc(x.title)}</div><div class="m">${esc(dayLabel(x.when))}, ${timeStr(x.when)} · <b>${esc(relTime(x.when))}</b> · ${goingTxt(x.going_count)}${x.price_cents > 0 ? " · " + esc(fmtPrice(x.price_cents)) : ""}</div></div>` +
+      `<span class="go">vedi →</span></a>`).join("");
     if (teaserReady) drawTeaser();
   }
   loadLanding();

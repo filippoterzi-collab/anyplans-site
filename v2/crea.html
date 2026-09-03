@@ -85,7 +85,7 @@
 <header>
   <div class="nav">
     <a class="brand" href="/v2/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
-    <a style="font-weight:700; font-size:14px; color:var(--blue)" href="eventi.html">← gli eventi</a>
+    <a style="font-weight:700; font-size:14px; color:var(--blue)" href="eventi.html">← tutti gli eventi</a>
   </div>
 </header>
 
@@ -98,9 +98,9 @@
   </div>
 
   <div id="as-wrap" hidden>
-    <label for="as">pubblica come</label>
-    <select id="as"><option value="">me stesso</option></select>
-    <p class="hint">chi segue la community riceve una notifica.</p>
+    <label for="as">chi lo organizza?</label>
+    <select id="as"><option value="">io</option></select>
+    <p class="hint">chi segue la community riceve un avviso.</p>
   </div>
 
   <div>
@@ -110,26 +110,26 @@
 
   <div class="grid2">
     <div>
-      <label for="date">giorno</label>
+      <label for="date">che giorno?</label>
       <input id="date" type="date" required>
     </div>
     <div>
-      <label for="time">ora</label>
+      <label for="time">a che ora?</label>
       <input id="time" type="time" required value="19:00">
     </div>
   </div>
 
   <div>
     <label for="place">punto di ritrovo</label>
-    <input id="place" type="text" required placeholder="cerca: parco, bar, via, paese…" autocomplete="off" oninput="placeSearch()">
+    <input id="place" type="text" required placeholder="scrivi un posto: parco, bar, via, paese…" autocomplete="off" oninput="placeSearch()">
     <div id="place-list" hidden style="margin-top:8px; background:#fff;
          border:1.5px solid rgba(25,25,25,.14); border-radius:14px; overflow:hidden"></div>
-    <p class="hint">scegli dalla lista, o tocca la mappa per mettere il punto a mano.</p>
+    <p class="hint">scegli dalla lista. oppure tocca la mappa nel punto giusto.</p>
   </div>
 
   <div>
     <div id="map"></div>
-    <p class="hint" id="map-hint">tocca la mappa per posizionare il punto di ritrovo</p>
+    <p class="hint" id="map-hint">tocca la mappa nel punto di ritrovo</p>
   </div>
 
   <div>
@@ -139,25 +139,25 @@
 
   <div class="grid2">
     <div>
-      <label for="maxp">posti <span style="color:var(--grey); font-weight:600">(vuoto = illimitati)</span></label>
+      <label for="maxp">quante persone al massimo? <span style="color:var(--grey); font-weight:600">(se lo lasci vuoto, nessun limite)</span></label>
       <input id="maxp" type="number" min="2" placeholder="es. 12">
     </div>
   </div>
 
   <div>
-    <label>domande per chi si iscrive <span style="color:var(--grey); font-weight:600">(se vuoi, max 5)</span></label>
+    <label>domande per chi si iscrive <span style="color:var(--grey); font-weight:600">(se vuoi, fino a 5)</span></label>
     <div id="qs" style="display:flex; flex-direction:column; gap:10px"></div>
     <button type="button" id="addq" onclick="addQuestion()"
       style="margin-top:8px; background:transparent; color:var(--blue); box-shadow:inset 0 0 0 2px var(--blue);
              font-weight:700; font-size:14px; padding:11px 18px; border-radius:999px; border:none;
              cursor:pointer; font-family:var(--round)">+ aggiungi una domanda</button>
-    <p class="hint">es. "hai mai fatto ceramica?". chi si unisce risponde, e le risposte le vedi solo tu.</p>
+    <p class="hint">es. "hai mai fatto ceramica?". chi si iscrive risponde, e le risposte le vedi solo tu.</p>
   </div>
 
   <div class="toggle-row" id="paid" onclick="togglePaid()">
     <div>
-      <div class="t">a pagamento</div>
-      <div class="s">spento = gratis. acceso: chi partecipa paga a te, in loco o con il tuo link</div>
+      <div class="t">si paga</div>
+      <div class="s">se lo accendi, chi partecipa paga a te, sul posto o come dici tu. se resta spento è gratis.</div>
     </div>
     <div class="sw"><div class="k"></div></div>
   </div>
@@ -168,26 +168,26 @@
     </div>
     <div>
       <label for="price-note">nota <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
-      <input id="price-note" type="text" maxlength="60" placeholder="es. si paga in loco, materiali inclusi">
+      <input id="price-note" type="text" maxlength="60" placeholder="es. si paga sul posto, materiali compresi">
     </div>
-    <p class="hint" style="grid-column:1/-1; margin-top:-4px">su anyplans non si paga niente: il prezzo lo vede chi partecipa, e paga a te. lo incassi direttamente, all'evento o con il tuo link.</p>
+    <p class="hint" style="grid-column:1/-1; margin-top:-4px">anyplans non incassa niente. chi partecipa vede il prezzo e paga direttamente a te, sul posto o come preferisci.</p>
   </div>
 
   <div class="toggle-row" id="vis" onclick="this.classList.toggle('on')">
     <div>
-      <div class="t">richiedi approvazione</div>
-      <div class="s">approvi tu chi partecipa, e l'indirizzo esatto lo vedono solo gli approvati</div>
+      <div class="t">decidi tu chi partecipa</div>
+      <div class="s">ogni persona ti manda una richiesta. l'indirizzo preciso lo vede solo chi accetti.</div>
     </div>
     <div class="sw"><div class="k"></div></div>
   </div>
 
-  <button class="btn" id="btn" onclick="submitNewEvent()">crea l'evento</button>
-  <a id="lnk-back" hidden href="#" style="text-align:center; font-weight:700; font-size:14px; color:var(--grey)">annulla, torna all'evento</a>
-  <p class="note" id="note">creare un evento è gratis, e lo sarà sempre. chi lo crea è dentro automaticamente.</p>
+  <button class="btn" id="btn" onclick="submitNewEvent()">pubblica l'evento</button>
+  <a id="lnk-back" hidden href="#" style="text-align:center; font-weight:700; font-size:14px; color:var(--grey)">lascia stare, torna all'evento</a>
+  <p class="note" id="note">pubblicare è gratis, sempre. il tuo nome è già nella lista dei partecipanti.</p>
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788472903"></script>
+<script src="app.js?v=1788473608"></script>
 <script>
   requireLogin();
   mountTabbar("crea");
@@ -286,12 +286,12 @@
         const r = await fetch("https://places.googleapis.com/v1/places/" + x.placeId + "?languageCode=it&sessionToken=" + gSession, {
           headers: {"X-Goog-Api-Key": GOOGLE_MAPS_KEY, "X-Goog-FieldMask": "location,formattedAddress,displayName"} });
         gSession = null;
-        if (!r.ok) return toast("non riesco a trovare il posto, tocca la mappa.");
+        if (!r.ok) return toast("non trovo questo posto. tocca la mappa nel punto giusto.");
         const d = await r.json();
         x.lat = d.location.latitude; x.lng = d.location.longitude;
         if (d.formattedAddress) document.getElementById("place").value =
           (d.displayName && d.displayName.text && !d.formattedAddress.startsWith(d.displayName.text) ? d.displayName.text + ", " : "") + d.formattedAddress.replace(/, Italia$/, "");
-      } catch (_) { return toast("non riesco a trovare il posto, tocca la mappa."); }
+      } catch (_) { return toast("non trovo questo posto. tocca la mappa nel punto giusto."); }
     }
     setPoint(x.lat, x.lng);
     map.easeTo({ center: [x.lng, x.lat], zoom: 15 });
@@ -313,7 +313,7 @@
     el.style.cssText = "width:38px;height:38px;background:#1B4FD8;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 1px 5px rgba(0,0,0,.2)";
     el.textContent = CATALOG[sel.value].e;
     marker = new maplibregl.Marker({ element: el }).setLngLat([lng, lat]).addTo(map);
-    document.getElementById("map-hint").textContent = "segnaposto messo. ritocca la mappa per spostarlo";
+    document.getElementById("map-hint").textContent = "punto messo. tocca un altro punto per spostarlo";
   }
   map.on("click", (e) => setPoint(e.lngLat.lat, e.lngLat.lng));
 
@@ -378,19 +378,19 @@
   function readPrice(){
     if (!document.getElementById("paid").classList.contains("on")) return { ok: true, cents: null, note: null };
     const raw = document.getElementById("price").value.trim();
-    if (!raw) return { ok: false, msg: 'scrivi il prezzo (es. 12,00), o spegni "a pagamento".' };
+    if (!raw) return { ok: false, msg: 'scrivi il prezzo (es. 12,00), oppure spegni "si paga".' };
     const cents = parsePrice(raw);
-    if (Number.isNaN(cents)) return { ok: false, msg: "il prezzo non torna: numeri e virgola, es. 12,50." };
+    if (Number.isNaN(cents)) return { ok: false, msg: "scrivi il prezzo solo con i numeri, es. 12,50." };
     return { ok: true, cents: cents > 0 ? cents : null, note: document.getElementById("price-note").value.trim() || null };
   }
   async function savePrice(activityId, p){
     const r = await rpc("set_activity_price", { p_activity_id: activityId, p_price_cents: p.cents, p_price_note: p.cents ? p.note : null });
-    if (!r || !r.ok) toast("evento salvato, ma il prezzo non si è salvato: riprova da modifica.");
+    if (!r || !r.ok) toast("evento salvato, ma non il prezzo. aprilo e riprova da \"modifica l'evento\".");
   }
 
   function addQuestion(){
     const qs = document.getElementById("qs");
-    if (qs.children.length >= 5) { toast("massimo 5 domande."); return; }
+    if (qs.children.length >= 5) { toast("puoi mettere al massimo 5 domande."); return; }
     const row = document.createElement("div");
     row.className = "qrow";
     row.style.cssText = "background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:14px; padding:12px 14px; display:flex; flex-direction:column; gap:8px";
@@ -426,7 +426,7 @@
     if (!place) return fail("scrivi il punto di ritrovo.");
     if (!date || !time) return fail("scegli giorno e ora.");
     const startAt = new Date(date + "T" + time);
-    if (startAt <= new Date()) return fail("l'evento deve essere nel futuro.");
+    if (startAt <= new Date()) return fail("questa data è già passata. scegli un giorno futuro.");
     const price = readPrice();
     if (!price.ok) return fail(price.msg);
     if (!point) {
@@ -457,13 +457,13 @@
       if (ru && ru.ok) {
         await savePrice(editId, price);
         const rq = await rpc("set_activity_questions", { p_activity_id: editId, p_questions: collectQuestions() });
-        if (!rq || !rq.ok) toast("salvato, ma le domande non si sono aggiornate.");
+        if (!rq || !rq.ok) toast("salvato, ma le domande no. riprova da \"modifica l'evento\".");
         track("event_edit");
         location.href = "evento.html?id=" + editId;
         return;
       }
       const bu = ru ? await ru.json().catch(() => ({})) : {};
-      return fail((bu.message || "").includes("start_in_past") ? "l'evento deve essere nel futuro." : "non riesco a salvare, riprova.");
+      return fail((bu.message || "").includes("start_in_past") ? "questa data è già passata. scegli un giorno futuro." : "non ha funzionato, riprova.");
     }
     const r = await rpc("create_activity", {
       p_sport: sel.value,
@@ -483,13 +483,13 @@
       const qs = collectQuestions();
       if (qs.length) {
         const rq = await rpc("set_activity_questions", { p_activity_id: newId, p_questions: qs });
-        if (!rq || !rq.ok) toast("evento creato, ma le domande non si sono salvate.");
+        if (!rq || !rq.ok) toast("evento pubblicato, ma le domande no. riprova da \"modifica l'evento\".");
       }
       if (price.cents) await savePrice(newId, price);
       const asC = document.getElementById("as").value;
       if (asC) {
         const rc = await rpc("set_activity_community", { p_activity_id: newId, p_community_id: asC });
-        if (!rc || !rc.ok) toast("evento creato, ma non sono riuscito a collegarlo alla community.");
+        if (!rc || !rc.ok) toast("evento pubblicato, ma non risulta della community. riprova da \"modifica l'evento\".");
       }
       track("event_create");
       location.href = "evento.html?id=" + newId;
@@ -500,8 +500,8 @@
     note.className = "note err";
     if (code.includes("profile_required")) { location.href = "profilo.html"; return; }
     else if (code.includes("invalid_title")) note.textContent = "dai un nome all'evento (almeno 3 lettere).";
-    else if (code.includes("start_in_past")) note.textContent = "l'evento deve essere nel futuro.";
-    else note.textContent = "non riesco a creare l'evento, riprova.";
+    else if (code.includes("start_in_past")) note.textContent = "questa data è già passata. scegli un giorno futuro.";
+    else note.textContent = "non riesco a pubblicare l'evento, riprova.";
   }
 </script>
 </body>

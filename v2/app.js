@@ -82,16 +82,16 @@ function toast(msg){
 // catalogo sport/attività (docs/UI.md §1) : slug -> {emoji, label it, cat sito}
 const CATALOG = {
   running:   { e:"🏃", l:"corsa",                     c:"sport" },
-  trail:     { e:"⛰️", l:"trail running",             c:"sport" },
-  hyrox:     { e:"🏋️", l:"hyrox",                     c:"sport" },
+  trail:     { e:"⛰️", l:"corsa in montagna",             c:"sport" },
+  hyrox:     { e:"🏋️", l:"hyrox (gara in palestra)",                     c:"sport" },
   walking:   { e:"🚶", l:"camminata",                 c:"sport" },
   cycling:   { e:"🚴", l:"bici da strada",            c:"sport" },
-  mtb:       { e:"🚵", l:"mtb / gravel",              c:"sport" },
+  mtb:       { e:"🚵", l:"mountain bike",              c:"sport" },
   moto:      { e:"🏍️", l:"moto",                      c:"sport" },
   hiking:    { e:"🥾", l:"escursionismo",             c:"sport" },
   climbing:  { e:"🧗", l:"arrampicata",               c:"sport" },
   skitouring:{ e:"🎿", l:"scialpinismo",              c:"sport" },
-  gym:       { e:"💪", l:"palestra / crossfit",       c:"sport" },
+  gym:       { e:"💪", l:"palestra",       c:"sport" },
   yoga:      { e:"🧘", l:"yoga / pilates",            c:"benessere" },
   football:  { e:"⚽", l:"calcio",                    c:"sport" },
   basketball:{ e:"🏀", l:"basket",                    c:"sport" },
@@ -108,7 +108,7 @@ const CATALOG = {
   cooking:   { e:"🍳", l:"cucina",                    c:"cucina" },
   painting:  { e:"🎨", l:"pittura / arte",            c:"creatività" },
   gardening: { e:"🌱", l:"giardinaggio / volontariato", c:"giardinaggio" },
-  festival:  { e:"🎪", l:"feste & eventi locali",     c:"cultura" }
+  festival:  { e:"🎪", l:"feste, sagre ed eventi di paese",     c:"cultura" }
 };
 
 // date in italiano
@@ -116,6 +116,7 @@ const DAYS = ["domenica","lunedì","martedì","mercoledì","giovedì","venerdì"
 const MONTHS = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
 function timeStr(d){ return d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0"); }
 function dayKey(d){ return d.toDateString(); }
+function goingTxt(n){ n = Number(n) || 0; return n === 0 ? "nessuno ancora" : n === 1 ? "1 ci va" : n + " ci vanno"; }
 // prezzo: null/0 = gratis; "12 €" oppure "12,50 €" (spazio non separabile)
 function fmtPrice(c){ if (c == null || c <= 0) return "gratis";
   const e = Math.floor(c / 100), r = c % 100;
@@ -133,11 +134,11 @@ function daySub(d){ return DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d
 // "tra 2h", "tra 3 giorni": quanto manca, a colpo d'occhio
 function relTime(d){
   const ms = d - Date.now(), min = Math.round(ms / 60000);
-  if (min < -180) return "passato";
+  if (min < -180) return "già passato";
   if (min <= 0) return "in corso";
-  if (min < 60) return "tra " + min + " min";
+  if (min < 60) return "tra " + min + " minuti";
   const h = Math.round(min / 60);
-  if (h < 24) return "tra " + h + "h";
+  if (h < 24) return "tra " + h + (h === 1 ? " ora" : " ore");
   const days = Math.round(h / 24);
   return "tra " + days + (days === 1 ? " giorno" : " giorni");
 }
@@ -161,9 +162,9 @@ track("page_view");
 // tab bar mobile (scopri · crea · i miei eventi · profilo), solo sotto i 700px
 function mountTabbar(active){
   const tabs = [
-    ["scopri",  "eventi.html",        '<svg viewBox="0 0 24 24"><path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20z"/><path d="M9 4v13.5M15 6.5V20"/></svg>'],
+    ["eventi",  "eventi.html",        '<svg viewBox="0 0 24 24"><path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20z"/><path d="M9 4v13.5M15 6.5V20"/></svg>'],
     ["crea",    "crea.html",          '<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>'],
-    ["miei eventi", "miei.html",          '<svg viewBox="0 0 24 24"><path d="M5 5.5h14v15l-7-4-7 4z"/></svg>'],
+    ["i miei", "miei.html",          '<svg viewBox="0 0 24 24"><path d="M5 5.5h14v15l-7-4-7 4z"/></svg>'],
     ["profilo", "profilo.html",'<svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-4 4-6 7.5-6s6.3 2 7.5 6"/></svg>']
   ];
   const st = document.createElement("style");
