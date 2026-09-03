@@ -112,3 +112,14 @@ function dayLabel(d){
   return DAYS[d.getDay()] + " " + d.getDate();
 }
 function daySub(d){ return DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()]; }
+
+// url carini: anyplans.in/bergamo/nome-evento
+function slugify(t){
+  return t.toLowerCase()
+    .replace(/[àáâä]/g,"a").replace(/[èéêë]/g,"e").replace(/[ìíîï]/g,"i")
+    .replace(/[òóôö]/g,"o").replace(/[ùúûü]/g,"u").replace(/[^a-z0-9]+/g,"-")
+    .replace(/^-+|-+$/g,"").slice(0, 60);
+}
+function eventUrl(ev, city){
+  return location.origin + "/" + (city || "bergamo") + "/" + slugify(ev.title);
+}

@@ -57,6 +57,11 @@
   .toggle-row.on .sw{background:var(--blue);}
   .toggle-row.on .sw .k{transform:translateX(17px);}
   .note{font-size:13.5px; color:var(--grey); min-height:1.3em;}
+  .place-item{padding:12px 15px; cursor:pointer; border-bottom:1px solid rgba(25,25,25,.07);}
+  .place-item:last-child{border-bottom:none;}
+  .place-item:hover{background:var(--tint);}
+  .place-item .p{font-weight:700; font-size:14.5px;}
+  .place-item .s{font-size:12.5px; color:var(--grey);}
   .note.err{color:#B3261E; font-weight:600;}
   @media (max-width:600px){ .grid2{grid-template-columns:1fr;} }
 </style>
@@ -94,10 +99,13 @@
     </div>
   </div>
 
-  <div>
+  <div style="position:relative">
     <label for="place">punto di ritrovo</label>
-    <input id="place" type="text" required placeholder="es. laboratorio in via gombito 12, città alta">
-    <p class="hint">poi tocca la mappa per mettere il segnaposto esatto.</p>
+    <input id="place" type="text" required placeholder="cerca: parco, bar, via, paese…" autocomplete="off" oninput="placeSearch()">
+    <div id="place-list" hidden style="position:absolute; left:0; right:0; top:100%; margin-top:6px;
+         background:#fff; border:1.5px solid rgba(25,25,25,.14); border-radius:14px; overflow:hidden; z-index:20;
+         box-shadow:0 8px 24px rgba(0,0,0,.08)"></div>
+    <p class="hint">scegli dalla lista, o tocca la mappa per mettere il punto a mano.</p>
   </div>
 
   <div>
@@ -160,20 +168,61 @@
   document.getElementById("date").min = today.toISOString().slice(0, 10);
   document.getElementById("date").value = today.toISOString().slice(0, 10);
 
+  // ricerca luoghi — photon (openstreetmap), gratis e senza chiave, bias su bergamo
+  let searchTimer = null;
+  function placeSearch(){
+    clearTimeout(searchTimer);
+    const q = document.getElementById("place").value.trim();
+    const list = document.getElementById("place-list");
+    if (q.length < 3) { list.hidden = true; return; }
+    searchTimer = setTimeout(async () => {
+      try {
+        const r = await fetch("https://photon.komoot.io/api?q=" + encodeURIComponent(q) +
+                              "&lat=45.698&lon=9.670&limit=6&lang=it");
+        if (!r.ok) return;
+        const d = await r.json();
+        const items = (d.features || []).map(f => {
+          const p = f.properties, c = f.geometry.coordinates;
+          const primary = p.name || [p.street, p.housenumber].filter(Boolean).join(" ") || p.city;
+          const secondary = [p.street && p.name ? p.street : null, p.district, p.city, p.state]
+                             .filter(x => x && x !== primary).slice(0, 2).join(" · ");
+          return { primary, secondary, lat: c[1], lng: c[0] };
+        }).filter(x => x.primary);
+        if (!items.length) { list.hidden = true; return; }
+        list.innerHTML = items.map((x, i) =>
+          `<div class="place-item" data-i="${i}"><div class="p">${x.primary}</div>` +
+          (x.secondary ? `<div class="s">${x.secondary}</div>` : "") + `</div>`).join("");
+        list.hidden = false;
+        Array.from(list.children).forEach((el, i) => el.onclick = () => pickPlace(items[i]));
+      } catch (_) { /* la ricerca è un aiuto: se non risponde resta la mappa */ }
+    }, 350);
+  }
+  function pickPlace(x){
+    document.getElementById("place").value = x.primary + (x.secondary ? ", " + x.secondary.split(" · ")[0] : "");
+    document.getElementById("place-list").hidden = true;
+    setPoint(x.lat, x.lng);
+    map.easeTo({ center: [x.lng, x.lat], zoom: 15 });
+  }
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("#place-list") && e.target.id !== "place")
+      document.getElementById("place-list").hidden = true;
+  });
+
   // mappa: tocca per piazzare il punto
   let point = null, marker = null;
   const map = new maplibregl.Map({ container: "map", style: "https://tiles.openfreemap.org/styles/liberty",
                                    center: [9.670, 45.698], zoom: 12.5 });
   map.addControl(new maplibregl.NavigationControl({ showCompass: false }));
-  map.on("click", (e) => {
-    point = { lat: e.lngLat.lat, lng: e.lngLat.lng };
+  function setPoint(lat, lng){
+    point = { lat, lng };
     if (marker) marker.remove();
     const el = document.createElement("div");
     el.style.cssText = "width:38px;height:38px;background:#1B4FD8;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 1px 5px rgba(0,0,0,.2)";
     el.textContent = CATALOG[sel.value].e;
-    marker = new maplibregl.Marker({ element: el }).setLngLat([point.lng, point.lat]).addTo(map);
-    document.getElementById("map-hint").textContent = "segnaposto messo — trascina la mappa e ritocca per spostarlo";
-  });
+    marker = new maplibregl.Marker({ element: el }).setLngLat([lng, lat]).addTo(map);
+    document.getElementById("map-hint").textContent = "segnaposto messo — ritocca la mappa per spostarlo";
+  }
+  map.on("click", (e) => setPoint(e.lngLat.lat, e.lngLat.lng));
 
   async function createEvent(){
     const note = document.getElementById("note");
@@ -181,13 +230,22 @@
     const place = document.getElementById("place").value.trim();
     const date = document.getElementById("date").value;
     const time = document.getElementById("time").value;
-    note.className = "note err";
-    if (title.length < 3) { note.textContent = "dai un nome all'evento (almeno 3 lettere)."; return; }
-    if (!place) { note.textContent = "scrivi il punto di ritrovo."; return; }
-    if (!point) { note.textContent = "tocca la mappa per mettere il segnaposto."; return; }
-    if (!date || !time) { note.textContent = "scegli giorno e ora."; return; }
+    function fail(msg){ note.className = "note err"; note.textContent = msg; toast(msg); }
+    if (title.length < 3) return fail("dai un nome all'evento (almeno 3 lettere).");
+    if (!place) return fail("scrivi il punto di ritrovo.");
+    if (!date || !time) return fail("scegli giorno e ora.");
     const startAt = new Date(date + "T" + time);
-    if (startAt <= new Date()) { note.textContent = "l'evento deve essere nel futuro."; return; }
+    if (startAt <= new Date()) return fail("l'evento deve essere nel futuro.");
+    if (!point) {
+      // niente pin: provo a trovare il posto dal testo
+      try {
+        const g = await fetch("https://photon.komoot.io/api?q=" + encodeURIComponent(place) +
+                              "&lat=45.698&lon=9.670&limit=1&lang=it").then(x => x.json());
+        const f = g.features && g.features[0];
+        if (f) setPoint(f.geometry.coordinates[1], f.geometry.coordinates[0]);
+      } catch (_) {}
+      if (!point) return fail("non trovo il posto: scegli dalla lista o tocca la mappa.");
+    }
 
     const btn = document.getElementById("btn");
     btn.disabled = true; note.className = "note"; note.textContent = "…";

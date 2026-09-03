@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>anyplans</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta name="robots" content="noindex">
+<script>
+  // router degli url per città: anyplans.in/<citta>/<nome-evento> → pagina evento
+  // (GitHub Pages serve questo 404 per i percorsi che non esistono come file)
+  (function(){
+    var m = location.pathname.match(/^\/([a-z][a-z-]*)\/([a-z0-9][a-z0-9-]*)\/?$/);
+    var riservati = ["v2", "en", "it", "pittogrammi", "assets"];
+    if (m && riservati.indexOf(m[1]) === -1) {
+      location.replace("/v2/evento.html?slug=" + encodeURIComponent(m[2]) + "&city=" + encodeURIComponent(m[1]));
+    }
+  })();
+</script>
+<style>
+  @font-face{
+    font-family:"Bricolage Grotesque";
+    src:url("/bricolage-grotesque-latin-800-normal.woff2") format("woff2");
+    font-weight:800; font-style:normal; font-display:swap;
+  }
+  :root{ --blue:#1B4FD8; --ink:#191919; --grey:#6E6E73; --bg:#FBF9F5;
+    --round: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif; }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:var(--round); color:var(--ink); background:var(--bg); min-height:100vh;
+       display:flex; align-items:center; justify-content:center; text-align:center; padding:22px;
+       -webkit-font-smoothing:antialiased;}
+  h1{font-family:"Bricolage Grotesque", var(--round); font-weight:800; letter-spacing:-.045em;
+     line-height:1; text-transform:lowercase; font-size:34px; margin:14px 0 8px;}
+  p{color:var(--grey); font-size:15px;}
+  a{display:inline-block; margin-top:18px; background:var(--blue); color:#fff; font-weight:700;
+    padding:13px 26px; border-radius:999px; text-decoration:none; font-size:15.5px;}
+</style>
+</head>
+<body>
+<div>
+  <div style="font-size:52px">🫥</div>
+  <h1>questa pagina non c'è</h1>
+  <p>forse il link non è giusto, o l'evento è già passato.</p>
+  <a href="/">torna su anyplans</a>
+</div>
+</body>
+</html>

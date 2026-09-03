@@ -166,7 +166,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="app.js"></script>
 <script>
-  const id = new URLSearchParams(location.search).get("id");
+  const params = new URLSearchParams(location.search);
+  const id = params.get("id");
+  const wantSlug = params.get("slug");
   let ev = null;
 
   if (session && session.access_token) {
@@ -178,11 +180,13 @@
   }
 
   async function load(){
-    if (!id) return notFound();
+    if (!id && !wantSlug) return notFound();
     const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
     if (!r || !r.ok) return notFound();
     const rows = await r.json();
-    ev = rows.find(x => x.id === id);
+    ev = id ? rows.find(x => x.id === id)
+            : rows.filter(x => slugify(x.title) === wantSlug)
+                  .sort((a, b) => new Date(a.start_at) - new Date(b.start_at))[0];
     if (!ev) return notFound();
     renderEvent();
   }
@@ -268,7 +272,7 @@
   }
 
   async function shareEvent(){
-    const url = location.origin + location.pathname + "?id=" + ev.id;
+    const url = eventUrl(ev);
     const text = "ci sei? " + (ev.emoji || "") + " " + ev.title + " · " + dayLabel(new Date(ev.start_at)) + " " + timeStr(new Date(ev.start_at));
     if (navigator.share) { try { await navigator.share({ title: ev.title, text, url }); return; } catch (_) {} }
     try { await navigator.clipboard.writeText(text + " " + url); toast("link copiato — incollalo dove vuoi."); }

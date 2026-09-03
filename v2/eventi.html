@@ -111,7 +111,15 @@
       <button class="iconbtn" title="notifiche — in costruzione">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10 C 6 6.7, 8.7 4, 12 4 C 15.3 4, 18 6.7, 18 10 L18 15 L20 17.5 L4 17.5 L6 15 Z"/><path d="M10 20.5 C 10.5 21.3, 13.5 21.3, 14 20.5"/></svg>
       </button>
-      <button class="iconbtn" id="avatar" title="esci" onclick="logout()">·</button>
+      <div style="position:relative">
+        <button class="iconbtn" id="avatar" title="il tuo profilo" onclick="document.getElementById('menu').hidden = !document.getElementById('menu').hidden">·</button>
+        <div id="menu" hidden style="position:absolute; right:0; top:44px; background:#fff;
+             border:1.5px solid rgba(25,25,25,.14); border-radius:14px; padding:8px; min-width:210px;
+             box-shadow:0 8px 24px rgba(0,0,0,.1); z-index:50">
+          <div id="menu-email" style="padding:9px 12px; font-size:12.5px; color:var(--grey); border-bottom:1px solid rgba(25,25,25,.08); margin-bottom:4px; overflow:hidden; text-overflow:ellipsis"></div>
+          <button onclick="if(confirm('vuoi uscire?')) logout()" style="display:block; width:100%; text-align:left; background:none; border:none; cursor:pointer; padding:10px 12px; border-radius:9px; font-family:var(--round); font-weight:600; font-size:14px; color:var(--ink)">esci</button>
+        </div>
+      </div>
     </div>
   </div>
 </header>
@@ -151,7 +159,13 @@
     try { session = JSON.parse(decodeURIComponent(location.hash.slice(3))); history.replaceState(null, "", location.pathname); } catch (_) {}
   }
   if (!session || !session.access_token) location.replace("login.html");
-  else document.getElementById("avatar").textContent = (session.email || "?")[0].toLowerCase();
+  else {
+    document.getElementById("avatar").textContent = (session.email || "?")[0].toLowerCase();
+    document.getElementById("menu-email").textContent = session.email || "";
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest("#menu") && e.target.id !== "avatar") document.getElementById("menu").hidden = true;
+    });
+  }
 
   function logout(){
     try { localStorage.removeItem("anyplans_session"); } catch (_) {}
