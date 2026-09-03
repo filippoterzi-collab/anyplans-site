@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eventi a bergamo · anyplans</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css">
+<style>
+  @font-face{
+    font-family:"Bricolage Grotesque";
+    src:url("/bricolage-grotesque-latin-800-normal.woff2") format("woff2");
+    font-weight:800; font-style:normal; font-display:swap;
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+  :root{
+    --blue:#1B4FD8; --blue-lo:#1440AF; --tint:#E9EEFB;
+    --ink:#191919; --grey:#6E6E73; --bg:#FBF9F5;
+    --round: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --display: "Bricolage Grotesque", var(--round);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
+       -webkit-font-smoothing:antialiased; height:100vh; display:flex; flex-direction:column; overflow:hidden;}
+  a{color:inherit; text-decoration:none;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1;
+           text-transform:lowercase;}
+  .q{font-size:.92em;}
+
+  header{padding:0 24px; flex-shrink:0;}
+  .nav{display:flex; align-items:center; gap:24px; height:60px;}
+  .brand{display:flex; align-items:center; gap:9px; font-family:var(--display); font-weight:800;
+         font-size:20px; letter-spacing:-.045em; line-height:1; text-transform:lowercase;}
+  .brand img{width:28px; height:28px; display:block;}
+  .nav .lnk{font-weight:600; font-size:15px; color:var(--grey);}
+  .nav .lnk.on{font-weight:700; color:var(--blue);}
+  .nav-right{margin-left:auto; display:flex; align-items:center; gap:12px;}
+  .iconbtn{width:36px; height:36px; border-radius:999px; background:var(--tint); border:none;
+           cursor:pointer; display:flex; align-items:center; justify-content:center;
+           font-weight:800; font-size:14px; color:var(--blue); font-family:var(--round);}
+
+  .topbar{padding:4px 24px 12px; display:flex; flex-direction:column; gap:12px; flex-shrink:0;}
+  .titlerow{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;}
+  .titlerow h1{font-size:30px;}
+  .titlerow h1 span{color:var(--blue);}
+  .count{font-weight:600; font-size:13.5px; color:var(--grey); margin-left:auto;}
+  .filters{display:flex; align-items:center; gap:10px; overflow-x:auto; padding-bottom:2px;
+           scrollbar-width:none;}
+  .filters::-webkit-scrollbar{display:none;}
+  .search{display:flex; align-items:center; gap:9px; min-width:230px; background:#fff;
+          border:1.5px solid rgba(25,25,25,.16); border-radius:999px; padding:9px 15px; flex-shrink:0;}
+  .search input{border:none; outline:none; font-size:14px; font-family:var(--round);
+                background:transparent; color:var(--ink); width:100%;}
+  .chip{background:#fff; border:1.5px solid rgba(25,25,25,.14); color:var(--ink); font-weight:600;
+        font-size:13.5px; padding:9px 14px; border-radius:999px; cursor:pointer;
+        font-family:var(--round); flex-shrink:0; white-space:nowrap;}
+  .chip.on{background:var(--blue); border-color:var(--blue); color:#fff; font-weight:700;}
+
+  .split{flex:1; display:flex; min-height:0;}
+  .list{width:46%; max-width:640px; overflow-y:auto; padding:6px 20px 40px 24px;
+        display:flex; flex-direction:column; gap:14px;}
+  .day{display:flex; align-items:center; gap:8px; margin-top:6px;}
+  .day .dot{width:8px; height:8px; border-radius:999px; background:rgba(25,25,25,.25);}
+  .day.today .dot{background:var(--blue);}
+  .day b{font-size:15px;}
+  .day span{font-weight:600; font-size:13px; color:var(--grey);}
+  .ev{display:flex; align-items:center; gap:14px; background:#fff;
+      border:1.5px solid rgba(25,25,25,.10); border-radius:16px; padding:14px 16px; cursor:pointer;}
+  .ev:hover, .ev.on{border-color:var(--blue);}
+  .ev .tile{width:52px; height:52px; background:var(--tint); border-radius:13px; display:flex;
+            align-items:center; justify-content:center; font-size:26px; flex-shrink:0;}
+  .ev .time{font-size:12.5px; font-weight:700; color:var(--blue);}
+  .ev .t{font-weight:700; font-size:15px;} .ev a.t:hover{color:var(--blue);}
+  .ev .m{font-size:12.5px; color:var(--grey);}
+  .ev .go{margin-left:auto; font-weight:700; font-size:13.5px; color:var(--blue);
+          white-space:nowrap; background:none; border:none; cursor:pointer; font-family:var(--round);}
+  .ev .go.ok{color:var(--ink);}
+  .empty{color:var(--grey); font-size:14.5px; padding:24px 4px;}
+
+  #map{flex:1; border-radius:22px 0 0 0; min-height:0;}
+  .pin{width:38px; height:38px; background:#fff; border:1.5px solid rgba(25,25,25,.2);
+       border-radius:999px; display:flex; align-items:center; justify-content:center; font-size:17px;
+       box-shadow:0 1px 4px rgba(0,0,0,.12); cursor:pointer;}
+  .pin.on{background:var(--blue); border-color:var(--blue);}
+  .maplibregl-popup-content{border-radius:14px; font-family:var(--round); padding:12px 14px;
+       box-shadow:0 2px 10px rgba(0,0,0,.12);}
+  .pop .t{font-weight:700; font-size:14px; color:var(--ink);}
+  .pop .m{font-size:12px; color:var(--grey); margin-top:2px;}
+
+  @media (max-width:700px){
+    body{overflow:auto; height:auto;}
+    .nav .lnk{display:none;}
+    .topbar{padding:4px 18px 10px;}
+    .titlerow h1{font-size:24px;}
+    .split{flex-direction:column;}
+    #map{order:-1; height:250px; flex:none; border-radius:16px; margin:0 18px;}
+    .list{width:100%; max-width:none; padding:12px 18px 40px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="/v2/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
+    <span class="lnk on">scopri</span>
+    <span class="lnk" title="in costruzione">i miei eventi</span>
+    <div class="nav-right">
+      <a href="crea.html" style="background:var(--blue); color:#fff; font-weight:700; font-size:13.5px; padding:9px 16px; border-radius:999px; white-space:nowrap">crea evento</a>
+      <button class="iconbtn" title="notifiche — in costruzione">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10 C 6 6.7, 8.7 4, 12 4 C 15.3 4, 18 6.7, 18 10 L18 15 L20 17.5 L4 17.5 L6 15 Z"/><path d="M10 20.5 C 10.5 21.3, 13.5 21.3, 14 20.5"/></svg>
+      </button>
+      <button class="iconbtn" id="avatar" title="esci" onclick="logout()">·</button>
+    </div>
+  </div>
+</header>
+
+<div class="topbar">
+  <div class="titlerow">
+    <h1 class="display">eventi a <span>bergamo</span></h1>
+    <span class="count" id="count"></span>
+  </div>
+  <div class="filters">
+    <div class="search">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6E6E73" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg>
+      <input id="q" placeholder="cerca: ceramica, corsa, cucina…" oninput="render()">
+    </div>
+    <button class="chip on" data-cat="" onclick="setCat(this)">tutti</button>
+    <button class="chip" data-cat="sport" onclick="setCat(this)">🏃 sport</button>
+    <button class="chip" data-cat="cucina" onclick="setCat(this)">🍳 cucina</button>
+    <button class="chip" data-cat="creatività" onclick="setCat(this)">🏺 creatività</button>
+    <button class="chip" data-cat="giardinaggio" onclick="setCat(this)">🌱 giardinaggio</button>
+    <button class="chip" data-cat="cultura" onclick="setCat(this)">🎪 cultura</button>
+    <button class="chip" data-cat="benessere" onclick="setCat(this)">🧘 benessere</button>
+  </div>
+</div>
+
+<div class="split">
+  <div class="list" id="list"></div>
+  <div id="map"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
+<script>
+  // sessione
+  let session = null;
+  try { session = JSON.parse(localStorage.getItem("anyplans_session")); } catch (_) {}
+  if (!session) { try { session = JSON.parse(sessionStorage.getItem("anyplans_session")); } catch (_) {} }
+  if (!session && location.hash.startsWith("#s=")) {
+    try { session = JSON.parse(decodeURIComponent(location.hash.slice(3))); history.replaceState(null, "", location.pathname); } catch (_) {}
+  }
+  if (!session || !session.access_token) location.replace("login.html");
+  else document.getElementById("avatar").textContent = (session.email || "?")[0].toLowerCase();
+
+  function logout(){
+    try { localStorage.removeItem("anyplans_session"); } catch (_) {}
+    try { sessionStorage.removeItem("anyplans_session"); } catch (_) {}
+    location.href = "login.html";
+  }
+
+  // ---- dati veri dal backend: RPC feed_activities (vedi supabase/migrations/0032) ----
+  const SB_URL = "https://uudccbzihhgoeaevkewr.supabase.co";
+  const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1ZGNjYnppaGhnb2VhZXZrZXdyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYzNzk0NzEsImV4cCI6MjEwMTk1NTQ3MX0.OHJC3vmT8eRLczFkH0QdZybbjudDfSi4VEX8Mc22ABQ";
+  // categoria del sito per ogni slug non sportivo; tutto il resto è "sport"
+  const CAT_BY_SLUG = { cooking:"cucina", ceramics:"creatività", painting:"creatività",
+                        gardening:"giardinaggio", festival:"cultura", yoga:"benessere" };
+  let EVENTS = [];
+
+  async function refreshSession(){
+    try {
+      const r = await fetch(SB_URL + "/auth/v1/token?grant_type=refresh_token", {
+        method: "POST", headers: {"apikey": SB_ANON, "Content-Type": "application/json"},
+        body: JSON.stringify({ refresh_token: session.refresh_token })
+      });
+      if (!r.ok) return false;
+      const b = await r.json();
+      session.access_token = b.access_token; session.refresh_token = b.refresh_token;
+      try { localStorage.setItem("anyplans_session", JSON.stringify(session)); } catch (_) {}
+      return true;
+    } catch (_) { return false; }
+  }
+
+  async function api(path, body, retry = true){
+    const r = await fetch(SB_URL + path, {
+      method: "POST",
+      headers: {"apikey": SB_ANON, "Content-Type": "application/json",
+                "Authorization": "Bearer " + (session.access_token || SB_ANON)},
+      body: JSON.stringify(body)
+    });
+    if (r.status === 401 && retry && session.refresh_token) {
+      if (await refreshSession()) return api(path, body, false);
+      logout(); return null;
+    }
+    return r;
+  }
+
+  async function checkProfile(){
+    const r = await api("/rest/v1/rpc/my_profile", {});
+    if (!r || !r.ok) return; // il feed funziona comunque
+    const rows = await r.json().catch(() => []);
+    if (!rows.length || !rows[0].display_name) location.replace("profilo.html");
+  }
+
+  async function loadEvents(){
+    const list = document.getElementById("list");
+    list.innerHTML = '<div class="empty">carico gli eventi…</div>';
+    const r = await api("/rest/v1/rpc/feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
+    if (!r || !r.ok) { list.innerHTML = '<div class="empty">non riesco a caricare gli eventi — ricarica la pagina.</div>'; return; }
+    const rows = await r.json();
+    EVENTS = rows.map(x => ({
+      id: x.id,
+      emoji: x.emoji || "📍",
+      cat: CAT_BY_SLUG[x.sport] || "sport",
+      title: x.title,
+      host: x.host_name || null,
+      place: x.meeting_point_text || "posizione approssimativa",
+      when: new Date(x.start_at),
+      going: Number(x.going_count) || 0,
+      my: x.my_status,
+      lat: x.lat, lng: x.lng
+    }));
+    buildMarkers();
+    render();
+  }
+
+  // helper date
+  const DAYS = ["domenica","lunedì","martedì","mercoledì","giovedì","venerdì","sabato"];
+  const MONTHS = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
+  function timeStr(d){ return d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0"); }
+  function dayKey(d){ return d.toDateString(); }
+  function dayLabel(d){
+    const today = new Date(); const tomorrow = new Date(); tomorrow.setDate(today.getDate() + 1);
+    if (dayKey(d) === dayKey(today)) return "oggi";
+    if (dayKey(d) === dayKey(tomorrow)) return "domani";
+    return DAYS[d.getDay()] + " " + d.getDate();
+  }
+  function daySub(d){ return DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()]; }
+
+
+  // mappa — stesso stile open source dell'app android (maplibre + openfreemap "liberty")
+  const map = new maplibregl.Map({
+    container: "map",
+    style: "https://tiles.openfreemap.org/styles/liberty",
+    center: [9.665, 45.7031],
+    zoom: 12.3
+  });
+  map.addControl(new maplibregl.NavigationControl({ showCompass: false }));
+
+  let markers = {};
+  function buildMarkers(){
+    Object.values(markers).forEach(m => m.remove());
+    markers = {};
+    EVENTS.forEach(ev => {
+    const el = document.createElement("div");
+    el.className = "pin"; el.id = "pin-" + ev.id; el.textContent = ev.emoji;
+    const popup = new maplibregl.Popup({ offset: 22, closeButton: false })
+      .setHTML(`<div class="pop"><div class="t">${ev.title}</div><div class="m">${dayLabel(ev.when)} · ${timeStr(ev.when)} · ${ev.place}</div></div>`);
+    const mk = new maplibregl.Marker({ element: el }).setLngLat([ev.lng, ev.lat]).setPopup(popup).addTo(map);
+    el.addEventListener("click", () => highlight(ev.id, false));
+    markers[ev.id] = mk;
+    });
+  }
+
+  // lista
+  let cat = "";
+  function setCat(btn){
+    cat = btn.dataset.cat;
+    document.querySelectorAll(".chip").forEach(c => c.classList.toggle("on", c === btn));
+    render();
+  }
+
+  function render(){
+    const q = document.getElementById("q").value.trim().toLowerCase();
+    const list = document.getElementById("list");
+    const evs = EVENTS
+      .filter(e => !cat || e.cat === cat)
+      .filter(e => !q || (e.title + " " + e.host + " " + e.place + " " + e.cat).toLowerCase().includes(q))
+      .sort((a, b) => a.when - b.when);
+
+    document.getElementById("count").textContent = "in programma · " + evs.length + (evs.length === 1 ? " evento" : " eventi");
+    EVENTS.forEach(e => { const visible = evs.includes(e); markers[e.id].getElement().style.opacity = visible ? "1" : "0.25"; });
+
+    if (!evs.length) { list.innerHTML = '<div class="empty">nessun evento trovato — prova un\'altra ricerca, o crea tu il primo.</div>'; return; }
+
+    let html = "", lastDay = "";
+    evs.forEach(e => {
+      const dk = dayKey(e.when);
+      if (dk !== lastDay) {
+        lastDay = dk;
+        const isToday = dayLabel(e.when) === "oggi";
+        html += `<div class="day${isToday ? " today" : ""}"><span class="dot"></span><b>${dayLabel(e.when)}</b><span>${daySub(e.when)}</span></div>`;
+      }
+      const isJoined = e.my === "going";
+      html += `<div class="ev" id="ev-${e.id}" onclick="highlight('${e.id}', true)">
+        <div class="tile">${e.emoji}</div>
+        <div>
+          <div class="time">${timeStr(e.when)}</div>
+          <a class="t" href="evento.html?id=${e.id}" onclick="event.stopPropagation()" style="display:block">${e.title}</a>
+          <div class="m">${e.host ? "di " + e.host : "aggregato"} · ${e.place} · ${e.going} ci vanno</div>
+        </div>
+        <button class="go${isJoined ? " ok" : ""}" onclick="event.stopPropagation(); join('${e.id}')">${isJoined ? "ci sei ✓" : "ci sono →"}</button>
+      </div>`;
+    });
+    list.innerHTML = html;
+  }
+
+  function highlight(id, pan){
+    document.querySelectorAll(".ev").forEach(x => x.classList.remove("on"));
+    document.querySelectorAll(".pin").forEach(x => x.classList.remove("on"));
+    const row = document.getElementById("ev-" + id);
+    const pin = document.getElementById("pin-" + id);
+    if (row) { row.classList.add("on"); row.scrollIntoView({ block: "nearest", behavior: "smooth" }); }
+    if (pin) pin.classList.add("on");
+    const ev = EVENTS.find(e => e.id === id);
+    if (pan) {
+      map.easeTo({ center: [ev.lng, ev.lat] });
+      Object.values(markers).forEach(m => { const p = m.getPopup(); if (p && p.isOpen()) m.togglePopup(); });
+      markers[id].togglePopup();
+    }
+  }
+
+  function toast(msg){
+    let t = document.getElementById("toast");
+    if (!t) {
+      t = document.createElement("div"); t.id = "toast";
+      t.style.cssText = "position:fixed; left:50%; bottom:26px; transform:translateX(-50%);" +
+        "background:#191919; color:#fff; font-size:14px; font-weight:600; padding:12px 18px;" +
+        "border-radius:999px; z-index:99; max-width:86vw; text-align:center;";
+      document.body.appendChild(t);
+    }
+    t.textContent = msg; t.hidden = false;
+    clearTimeout(t._h); t._h = setTimeout(() => { t.hidden = true; }, 4500);
+  }
+
+  async function join(id){
+    const e = EVENTS.find(x => x.id === id);
+    const leaving = e.my === "going";
+    const r = await api("/rest/v1/rpc/join_activity", { p_activity_id: id, p_status: leaving ? "left" : "going" });
+    if (r && r.ok) {
+      e.my = leaving ? "left" : "going";
+      e.going += leaving ? -1 : 1;
+      render();
+      if (!leaving) toast("ci sei! l\u2019host e gli altri ti vedono tra i partecipanti.");
+      return;
+    }
+    let msg = "non riesco, riprova.";
+    try {
+      const b = r ? await r.json() : {};
+      const code = b.message || "";
+      if (code.includes("profile_required")) { location.href = "profilo.html"; return; }
+      else if (code.includes("approval_required")) msg = "per questo evento l\u2019host approva le richieste \u2014 per ora dall\u2019app.";
+      else if (code.includes("age_not_allowed")) msg = "questo evento ha un limite di et\u00e0.";
+      else if (code.includes("not_authenticated")) { logout(); return; }
+    } catch (_) {}
+    toast(msg);
+  }
+
+  checkProfile();
+  loadEvents();
+</script>
+</body>
+</html>

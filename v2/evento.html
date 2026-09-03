@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>evento · anyplans</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta name="description" content="unisciti a questo evento su anyplans — la mappa degli eventi veri della tua città.">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css">
+<style>
+  @font-face{
+    font-family:"Bricolage Grotesque";
+    src:url("/bricolage-grotesque-latin-800-normal.woff2") format("woff2");
+    font-weight:800; font-style:normal; font-display:swap;
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+  :root{
+    --blue:#1B4FD8; --blue-lo:#1440AF; --tint:#E9EEFB;
+    --ink:#191919; --grey:#6E6E73; --bg:#FBF9F5;
+    --round: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --display: "Bricolage Grotesque", var(--round);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
+       -webkit-font-smoothing:antialiased;}
+  a{color:inherit; text-decoration:none;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;
+           text-transform:lowercase;}
+  .q{font-size:.92em;}
+  header{padding:0 22px;}
+  .nav{display:flex; align-items:center; justify-content:space-between; height:64px; max-width:860px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:9px; font-family:var(--display); font-weight:800;
+         font-size:20px; letter-spacing:-.045em; line-height:1; text-transform:lowercase;}
+  .brand img{width:28px; height:28px;}
+  .btn{display:inline-block; background:var(--blue); color:#fff; font-weight:700;
+       padding:12px 24px; border-radius:999px; border:none; cursor:pointer; font-size:15.5px;
+       font-family:var(--round); text-align:center;}
+  .btn:hover{background:var(--blue-lo);}
+  .btn.ghost{background:transparent; color:var(--blue); box-shadow:inset 0 0 0 2px var(--blue);}
+  .btn.ghost:hover{background:var(--tint); color:var(--blue-lo);}
+  .btn[disabled]{opacity:.55; cursor:default;}
+
+  main{max-width:860px; margin:0 auto; padding:16px 22px 70px; display:flex; flex-direction:column; gap:18px;}
+  .cover{width:100%; height:230px; background:var(--tint); border-radius:22px; display:flex;
+         align-items:center; justify-content:center; font-size:96px;}
+  .chips{display:flex; gap:8px;}
+  .chip{background:var(--tint); color:var(--blue); font-weight:700; font-size:13px;
+        padding:6px 12px; border-radius:999px;}
+  .chip.w{background:#fff; border:1.5px solid rgba(25,25,25,.12); color:var(--ink);}
+  h1{font-size:38px;}
+  .whenrow{display:flex; align-items:center; gap:14px; flex-wrap:wrap;}
+  .datebox{width:48px; border:1.5px solid rgba(25,25,25,.12); border-radius:10px; overflow:hidden;
+           text-align:center; background:#fff; flex-shrink:0;}
+  .datebox .m{background:var(--blue); color:#fff; font-size:10px; font-weight:700; padding:2px 0;
+              text-transform:uppercase;}
+  .datebox .d{font-weight:800; font-size:18px; padding:3px 0;}
+  .whenrow .t{font-weight:700; font-size:15px;}
+  .whenrow .s{font-size:13.5px; color:var(--grey);}
+  .box{background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:18px; padding:20px 22px;
+       display:flex; flex-direction:column; gap:12px;}
+  .box.in{background:var(--tint); border:2px solid var(--blue);}
+  .box h2{font-family:var(--display); font-weight:800; letter-spacing:-.045em; text-transform:lowercase;
+          font-size:20px;}
+  .box .m{font-size:14px; color:var(--grey);}
+  .row{display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
+  .hostcard{display:flex; align-items:center; gap:12px;}
+  .avatar{width:40px; height:40px; border-radius:999px; background:var(--blue); color:#fff;
+          font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .hostcard .n{font-weight:700; font-size:14.5px;}
+  .hostcard .s{font-size:12.5px; color:var(--grey);}
+  .desc{font-size:15px; line-height:1.6;}
+  #map{height:220px; border-radius:16px;}
+  .sec{font-weight:800; font-size:16px;}
+  .note{font-size:13px; color:var(--grey);}
+  .center{display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center; padding:60px 0;}
+  [hidden]{display:none !important;}
+  @media (max-width:600px){ h1{font-size:28px;} .cover{height:180px; font-size:72px;} }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="/v2/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
+    <a class="btn" id="nav-cta" href="login.html">registrati</a>
+  </div>
+</header>
+
+<main id="page" hidden>
+  <div class="cover" id="cover">📍</div>
+  <div class="chips">
+    <span class="chip" id="chip-cat"></span>
+    <span class="chip w">gratis</span>
+    <span class="chip w" id="chip-agg" hidden>aggregato</span>
+  </div>
+  <h1 class="display" id="title"></h1>
+
+  <div class="whenrow">
+    <div class="datebox"><div class="m" id="d-month"></div><div class="d" id="d-day"></div></div>
+    <div>
+      <div class="t" id="when"></div>
+      <div class="s" id="place"></div>
+    </div>
+  </div>
+
+  <!-- box azione -->
+  <div class="box" id="box-guest" hidden>
+    <h2>ci sei?</h2>
+    <p class="m">registrati o accedi per unirti — è gratis, e gli altri partecipanti ti vedono.</p>
+    <div class="row">
+      <a class="btn" href="login.html" onclick="rememberNext()">registrati o accedi</a>
+      <span class="note" id="going-guest"></span>
+    </div>
+  </div>
+  <div class="box" id="box-join" hidden>
+    <h2>ci sei?</h2>
+    <div class="row">
+      <button class="btn" id="btn-join" onclick="joinEvent()">ci sono</button>
+      <span class="note" id="going-join"></span>
+    </div>
+  </div>
+  <div class="box in" id="box-in" hidden>
+    <h2>ci sei! 🫶</h2>
+    <p class="m">l'host e gli altri ti vedono tra i partecipanti.</p>
+    <div class="row">
+      <button class="btn ghost" onclick="leaveEvent()">annulla la partecipazione</button>
+      <span class="note" id="going-in"></span>
+    </div>
+  </div>
+
+  <!-- host / fonte -->
+  <div class="hostcard" id="host" hidden>
+    <div class="avatar" id="host-avatar"></div>
+    <div><div class="n" id="host-name"></div><div class="s">host</div></div>
+  </div>
+  <div class="hostcard" id="source" hidden>
+    <div class="avatar" style="background:var(--tint); color:var(--blue)">↗</div>
+    <div><div class="n">evento aggregato da una fonte esterna</div>
+      <div class="s"><a id="source-link" style="color:var(--blue); font-weight:700" target="_blank" rel="noopener">vedi l'annuncio originale</a> · i dettagli possono cambiare, fa fede la fonte</div></div>
+  </div>
+
+  <div id="desc-wrap" hidden>
+    <div class="sec" style="margin-bottom:6px">di cosa si tratta</div>
+    <p class="desc" id="desc"></p>
+  </div>
+
+  <div>
+    <div class="sec" style="margin-bottom:8px">dove</div>
+    <div id="map"></div>
+    <p class="note" id="map-note" style="margin-top:6px" hidden>posizione approssimativa · l'indirizzo esatto lo vedi quando partecipi</p>
+  </div>
+
+  <div class="row">
+    <button class="btn ghost" onclick="shareEvent()">condividi l'evento</button>
+  </div>
+</main>
+
+<div class="center" id="loading"><p style="color:var(--grey)">carico l'evento…</p></div>
+<div class="center" id="notfound" hidden>
+  <div style="font-size:52px">🫥</div>
+  <h1 class="display" style="font-size:30px">evento non trovato</h1>
+  <p style="color:var(--grey); max-width:300px">forse è già passato, o il link non è giusto.</p>
+  <a class="btn" href="eventi.html">guarda gli eventi a bergamo</a>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
+<script src="app.js"></script>
+<script>
+  const id = new URLSearchParams(location.search).get("id");
+  let ev = null;
+
+  if (session && session.access_token) {
+    const cta = document.getElementById("nav-cta");
+    cta.textContent = "gli eventi"; cta.href = "eventi.html";
+  }
+  function rememberNext(){
+    try { sessionStorage.setItem("anyplans_next", location.pathname + location.search); } catch (_) {}
+  }
+
+  async function load(){
+    if (!id) return notFound();
+    const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
+    if (!r || !r.ok) return notFound();
+    const rows = await r.json();
+    ev = rows.find(x => x.id === id);
+    if (!ev) return notFound();
+    renderEvent();
+  }
+  function notFound(){
+    document.getElementById("loading").hidden = true;
+    document.getElementById("notfound").hidden = false;
+  }
+
+  function renderEvent(){
+    const cat = (CATALOG[ev.sport] || {});
+    const when = new Date(ev.start_at);
+    document.title = ev.title + " · anyplans";
+    document.getElementById("cover").textContent = ev.emoji || cat.e || "📍";
+    document.getElementById("chip-cat").textContent = (ev.emoji || cat.e || "") + " " + (cat.l || ev.sport);
+    document.getElementById("title").textContent = ev.title;
+    document.getElementById("d-month").textContent = MONTHS[when.getMonth()].slice(0, 3);
+    document.getElementById("d-day").textContent = when.getDate();
+    document.getElementById("when").textContent = dayLabel(when) + " · " + daySub(when) + " · " + timeStr(when);
+    document.getElementById("place").textContent = ev.meeting_point_text || "posizione approssimativa";
+    if (!ev.meeting_point_text) document.getElementById("map-note").hidden = false;
+
+    const going = Number(ev.going_count) || 0;
+    const gtxt = going === 1 ? "1 persona ci va" : going + " ci vanno";
+    ["going-guest","going-join","going-in"].forEach(x => document.getElementById(x).textContent = gtxt);
+
+    if (ev.host_name) {
+      document.getElementById("host").hidden = false;
+      document.getElementById("host-name").textContent = ev.host_name;
+      document.getElementById("host-avatar").textContent = ev.host_name[0].toLowerCase();
+    } else {
+      document.getElementById("source").hidden = false;
+      document.getElementById("chip-agg").hidden = false;
+      const l = document.getElementById("source-link");
+      if (ev.source_url) l.href = ev.source_url; else l.parentElement.textContent = "i dettagli possono cambiare";
+    }
+    if (ev.description) {
+      document.getElementById("desc-wrap").hidden = false;
+      document.getElementById("desc").textContent = ev.description;
+    }
+    updateBoxes();
+
+    document.getElementById("loading").hidden = true;
+    document.getElementById("page").hidden = false;
+
+    const map = new maplibregl.Map({ container: "map", style: "https://tiles.openfreemap.org/styles/liberty",
+                                     center: [ev.lng, ev.lat], zoom: 14, interactive: true });
+    map.addControl(new maplibregl.NavigationControl({ showCompass: false }));
+    const el = document.createElement("div");
+    el.style.cssText = "width:40px;height:40px;background:#1B4FD8;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:19px;box-shadow:0 1px 5px rgba(0,0,0,.2)";
+    el.textContent = ev.emoji || cat.e || "📍";
+    new maplibregl.Marker({ element: el }).setLngLat([ev.lng, ev.lat]).addTo(map);
+  }
+
+  function updateBoxes(){
+    const logged = session && session.access_token;
+    document.getElementById("box-guest").hidden = logged;
+    document.getElementById("box-join").hidden = !logged || ev.my_status === "going";
+    document.getElementById("box-in").hidden = !logged || ev.my_status !== "going";
+  }
+
+  async function joinEvent(){
+    const btn = document.getElementById("btn-join"); btn.disabled = true;
+    const r = await rpc("join_activity", { p_activity_id: ev.id, p_status: "going" });
+    btn.disabled = false;
+    if (r && r.ok) { ev.my_status = "going"; ev.going_count = Number(ev.going_count) + 1; return renderCounts(); }
+    const b = r ? await r.json().catch(() => ({})) : {};
+    const code = b.message || "";
+    if (code.includes("profile_required")) { rememberNext(); location.href = "profilo.html"; return; }
+    if (code.includes("approval_required")) return toast("per questo evento l'host approva le richieste — per ora dall'app.");
+    if (code.includes("age_not_allowed")) return toast("questo evento ha un limite di età.");
+    toast("non riesco, riprova.");
+  }
+  async function leaveEvent(){
+    const r = await rpc("join_activity", { p_activity_id: ev.id, p_status: "left" });
+    if (r && r.ok) { ev.my_status = "left"; ev.going_count = Math.max(0, Number(ev.going_count) - 1); return renderCounts(); }
+    toast("non riesco, riprova.");
+  }
+  function renderCounts(){
+    const going = Number(ev.going_count) || 0;
+    const gtxt = going === 1 ? "1 persona ci va" : going + " ci vanno";
+    ["going-guest","going-join","going-in"].forEach(x => document.getElementById(x).textContent = gtxt);
+    updateBoxes();
+  }
+
+  async function shareEvent(){
+    const url = location.origin + location.pathname + "?id=" + ev.id;
+    const text = "ci sei? " + (ev.emoji || "") + " " + ev.title + " · " + dayLabel(new Date(ev.start_at)) + " " + timeStr(new Date(ev.start_at));
+    if (navigator.share) { try { await navigator.share({ title: ev.title, text, url }); return; } catch (_) {} }
+    try { await navigator.clipboard.writeText(text + " " + url); toast("link copiato — incollalo dove vuoi."); }
+    catch (_) { toast(url); }
+  }
+
+  load();
+</script>
+</body>
+</html>
