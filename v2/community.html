@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>community · anyplans</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta name="description" content="una community su anyplans: segui la pagina e ricevi una notifica a ogni nuovo evento.">
+<meta property="og:title" content="una community su anyplans">
+<meta property="og:description" content="la mappa degli eventi veri della tua città. segui la community, ricevi una notifica a ogni nuovo evento.">
+<meta property="og:image" content="https://anyplans.in/og.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="anyplans">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+  @font-face{
+    font-family:"Bricolage Grotesque";
+    src:url("/bricolage-grotesque-latin-800-normal.woff2") format("woff2");
+    font-weight:800; font-style:normal; font-display:swap;
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+  :root{
+    --blue:#1B4FD8; --blue-lo:#1440AF; --tint:#E9EEFB;
+    --ink:#191919; --grey:#6E6E73; --bg:#FBF9F5; --red:#B3261E;
+    --round: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --display: "Bricolage Grotesque", var(--round);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
+       -webkit-font-smoothing:antialiased;}
+  a{color:inherit; text-decoration:none;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;
+           text-transform:lowercase;}
+  .q{font-size:.92em;}
+  header{padding:0 22px;}
+  .nav{display:flex; align-items:center; justify-content:space-between; height:64px; max-width:860px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:9px; font-family:var(--display); font-weight:800;
+         font-size:20px; letter-spacing:-.045em; line-height:1; text-transform:lowercase;}
+  .brand img{width:28px; height:28px;}
+  .btn{display:inline-flex; align-items:center; justify-content:center; gap:7px; background:var(--blue); color:#fff; font-weight:700;
+       padding:12px 24px; border-radius:999px; border:none; cursor:pointer; font-size:15px;
+       font-family:var(--round); text-align:center;}
+  .btn:hover{background:var(--blue-lo);}
+  .btn.ghost{background:transparent; color:var(--blue); box-shadow:inset 0 0 0 2px var(--blue);}
+  .btn.ghost:hover{background:var(--tint); color:var(--blue-lo);}
+  .btn[disabled]{opacity:.55; cursor:default;}
+  .btn svg{width:15px; height:15px; fill:none; stroke:currentColor; stroke-width:2.2; stroke-linecap:round; stroke-linejoin:round;}
+  .lnk{font-weight:700; font-size:14px; color:var(--blue);}
+
+  main{max-width:860px; margin:0 auto; padding:24px 22px 70px; display:flex; flex-direction:column; gap:24px;}
+  /* header: griglia logo | testo | azioni (su mobile si impila) */
+  .head{display:grid; grid-template-columns:120px minmax(0,1fr) 190px; grid-template-areas:"logo info acts" "logo more acts";
+        column-gap:24px; row-gap:8px; align-items:center;}
+  .logo{grid-area:logo; width:120px; height:120px; background:var(--blue); border-radius:26px; display:flex; align-items:center;
+        justify-content:center; font-size:56px; flex-shrink:0; background-size:cover; background-position:center; overflow:hidden;}
+  .head .info{grid-area:info; display:flex; flex-direction:column; gap:8px; min-width:0; align-self:end;}
+  .head .more{grid-area:more; display:flex; flex-direction:column; gap:8px; min-width:0; align-self:start;}
+  .namerow{display:flex; align-items:center; gap:10px;}
+  h1{font-size:40px; overflow-wrap:anywhere;}
+  .namerow svg{width:26px; height:26px; flex-shrink:0;}
+  .meta{font-size:15px; color:var(--grey);}
+  .meta .v{font-weight:700; color:var(--blue);}
+  .meta b{color:var(--ink);}
+  .desc{font-size:15px; line-height:1.5; max-width:540px; white-space:pre-line;}
+  .acts{grid-area:acts; display:flex; flex-direction:column; gap:10px; width:190px; align-self:center;}
+  .acts .btn{padding:12px 0; width:100%;}
+  .acts .btn.ghost{padding:10px 0; font-size:14px;}
+  .acts .note{text-align:center;}
+  .note{font-size:12px; color:var(--grey); line-height:1.4;}
+  .manage{font-weight:700; font-size:14px; color:var(--blue);}
+  hr{border:none; height:1px; background:rgba(25,25,25,.08);}
+  .sec{font-weight:800; font-size:18px;}
+  .list{display:flex; flex-direction:column; gap:14px;}
+  .ev{display:flex; align-items:center; gap:16px; background:#fff;
+      border:1.5px solid rgba(25,25,25,.10); border-radius:16px; padding:16px 18px;}
+  .ev:hover{border-color:var(--blue);}
+  .ev .tile{width:56px; height:56px; background:var(--tint); border-radius:14px; display:flex;
+            align-items:center; justify-content:center; font-size:28px; flex-shrink:0;}
+  .ev .body{flex:1; min-width:0; display:flex; flex-direction:column; gap:3px;}
+  .ev .time{font-size:13px; font-weight:700; color:var(--blue);}
+  .ev .t{font-weight:700; font-size:16px;}
+  .ev .m{font-size:13px; color:var(--grey);}
+  .ev .go{font-weight:700; font-size:14px; color:var(--blue); white-space:nowrap;}
+  .empty{font-size:14px; color:var(--grey);}
+  .past{display:flex; flex-direction:column; gap:10px;}
+  .past .m{font-size:14px; color:var(--grey);}
+  .past .m a{color:var(--blue); font-weight:700;}
+  .center{display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center; padding:60px 0;}
+  @keyframes sk{from{background-position:200% 0} to{background-position:-200% 0}}
+  .sk{border-radius:16px; background:linear-gradient(90deg,#F1EFE9 25%,#E9E6DE 50%,#F1EFE9 75%);
+      background-size:200% 100%; animation:sk 1.2s ease-in-out infinite;}
+  [hidden]{display:none !important;}
+
+  @media (max-width:700px){
+    main{padding:14px 18px 60px; gap:16px;}
+    .head{grid-template-columns:76px minmax(0,1fr); grid-template-areas:"logo info" "more more" "acts acts";
+          column-gap:14px; row-gap:14px;}
+    .logo{width:76px; height:76px; border-radius:20px; font-size:38px;}
+    .head .info{gap:4px; align-self:center;}
+    .namerow{gap:6px;}
+    h1{font-size:26px;}
+    .namerow svg{width:18px; height:18px;}
+    .meta{font-size:12.5px;}
+    .desc{font-size:13.5px; max-width:none;}
+    .acts{flex-direction:row; flex-wrap:wrap; width:100%; gap:8px;}
+    .acts .btn, .acts .btn.ghost{flex:1; padding:13px 0; font-size:14px;}
+    .acts .note{flex-basis:100%; font-size:11.5px; margin-top:4px;}
+    .sec{font-size:16px;}
+    .list{gap:10px;}
+    .ev{gap:12px; border-radius:14px; padding:13px 14px;}
+    .ev .tile{width:46px; height:46px; border-radius:11px; font-size:23px;}
+    .ev .time{font-size:12px;} .ev .t{font-size:14px;} .ev .m{font-size:12px;} .ev .go{font-size:13px;}
+    .past .m{font-size:12.5px;}
+  }
+  /* ux: transizioni e feedback al tocco */
+  .btn, .ev{transition: transform .12s ease, box-shadow .12s ease, background .15s ease,
+                        border-color .15s ease, color .15s ease;}
+  .btn:active{transform:scale(.96);}
+  .ev:hover{box-shadow:0 4px 16px rgba(25,25,25,.07); transform:translateY(-1px);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--blue); outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="/v2/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
+    <a class="btn" id="nav-cta" href="login.html" onclick="rememberNext()" style="padding:9px 16px; font-size:13.5px">registrati</a>
+  </div>
+</header>
+
+<main id="page" hidden>
+  <div class="head">
+    <div class="logo" id="logo"></div>
+    <div class="info">
+      <div class="namerow">
+        <h1 class="display" id="name"></h1>
+        <svg id="verified" hidden viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#1B4FD8"/><path d="M7.5 12.5 L10.7 15.7 L16.5 9" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </div>
+      <div class="meta" id="meta"></div>
+    </div>
+    <div class="more" id="more" hidden>
+      <p class="desc" id="desc" hidden></p>
+      <a class="manage" id="manage" hidden href="#">gestisci la community →</a>
+    </div>
+    <div class="acts">
+      <button class="btn" id="btn-follow" onclick="toggleFollow()">
+        <svg viewBox="0 0 24 24"><path d="M6 10 C 6 6.7, 8.7 4, 12 4 C 15.3 4, 18 6.7, 18 10 L18 15 L20 17.5 L4 17.5 L6 15 Z"/><path d="M10 20.5 C 10.5 21.3, 13.5 21.3, 14 20.5"/></svg>
+        <span id="follow-label">segui</span>
+      </button>
+      <button class="btn ghost" onclick="shareCommunity()">condividi</button>
+      <p class="note">chi segue riceve una notifica a ogni nuovo evento</p>
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="list">
+    <div class="sec">prossimi eventi</div>
+    <div id="events" class="list"><p class="empty">carico…</p></div>
+  </div>
+
+  <div class="past">
+    <div class="sec">eventi passati</div>
+    <p class="m" id="past"></p>
+  </div>
+</main>
+
+<div id="loading" style="max-width:860px; margin:0 auto; padding:24px 22px; display:flex; flex-direction:column; gap:16px">
+  <div style="display:flex; gap:20px; align-items:center">
+    <div class="sk" style="width:120px; height:120px; border-radius:26px; flex-shrink:0"></div>
+    <div style="flex:1; display:flex; flex-direction:column; gap:10px">
+      <div class="sk" style="height:36px; width:60%; border-radius:10px"></div>
+      <div class="sk" style="height:16px; width:80%; border-radius:8px"></div>
+      <div class="sk" style="height:16px; width:50%; border-radius:8px"></div>
+    </div>
+  </div>
+  <div class="sk" style="height:90px"></div>
+  <div class="sk" style="height:90px"></div>
+</div>
+<div class="center" id="notfound" hidden>
+  <div style="font-size:52px">🫥</div>
+  <h1 class="display" style="font-size:30px">community non trovata</h1>
+  <p style="color:var(--grey); max-width:300px">forse il link non è giusto, o la pagina non c'è più.</p>
+  <a class="btn" href="eventi.html">guarda gli eventi a bergamo</a>
+</div>
+
+<script src="app.js?v=1788472414"></script>
+<script>
+  const params = new URLSearchParams(location.search);
+  const wantId = params.get("id");
+  const wantSlug = params.get("slug");
+  const logged = !!(session && session.access_token);
+  let c = null;
+
+  if (logged) {
+    const cta = document.getElementById("nav-cta");
+    cta.textContent = "← gli eventi"; cta.href = "eventi.html"; cta.className = "lnk"; cta.onclick = null;
+    mountTabbar("scopri");
+  }
+  function rememberNext(){
+    try { sessionStorage.setItem("anyplans_next", location.pathname + location.search); } catch (_) {}
+  }
+  function communityUrl(){
+    return location.origin + "/v2/community.html?" + (c.slug ? "slug=" + encodeURIComponent(c.slug) : "id=" + encodeURIComponent(c.id));
+  }
+
+  async function load(){
+    if (!wantId && !wantSlug) return notFound();
+    const r = await rpc("get_community", wantId ? { p_id: wantId } : { p_slug: wantSlug });
+    if (!r || !r.ok) return notFound();
+    const rows = await r.json().catch(() => []);
+    c = Array.isArray(rows) ? rows[0] : rows;
+    if (!c || !c.id) return notFound();
+    render();
+    loadEvents();
+  }
+  function notFound(){
+    document.getElementById("loading").hidden = true;
+    document.getElementById("notfound").hidden = false;
+  }
+
+  function render(){
+    document.title = c.name + " · anyplans";
+    const logo = document.getElementById("logo");
+    if (c.avatar_url) logo.style.backgroundImage = "url('" + String(c.avatar_url).replace(/'/g, "") + "')";
+    else logo.textContent = c.emoji || "📍";
+    document.getElementById("name").textContent = c.name;
+    document.getElementById("verified").hidden = !c.is_verified;
+    const done = Number(c.events_done) || 0;
+    renderMeta();
+    const canManage = c.my_role === "owner" || c.my_role === "admin";
+    document.getElementById("more").hidden = !(c.description || canManage);
+    if (c.description) {
+      document.getElementById("desc").hidden = false;
+      document.getElementById("desc").textContent = c.description;
+    }
+    if (canManage) {
+      const m = document.getElementById("manage");
+      m.hidden = false; m.href = "dashboard.html?id=" + c.id;
+    }
+    renderFollow();
+    const past = document.getElementById("past");
+    past.innerHTML = done + (done === 1 ? " evento" : " eventi") +
+      (c.instagram_handle
+        ? ' · le foto le trovi sulla <a href="https://instagram.com/' + encodeURIComponent(String(c.instagram_handle).replace(/^@/, "")) + '" target="_blank" rel="noopener">pagina instagram della community</a>.'
+        : (done ? " · le foto le trovi sui canali della community." : " · il primo è in arrivo."));
+    document.getElementById("loading").hidden = true;
+    document.getElementById("page").hidden = false;
+    track("community_view", "/community/" + (c.slug || c.id));
+  }
+  // riga sotto il nome: su mobile (come nel design) solo "verificata · città · follower"
+  const mobileMq = window.matchMedia("(max-width:700px)");
+  function renderMeta(){
+    const mobile = mobileMq.matches;
+    const followers = Number(c.follower_count) || 0;
+    const done = Number(c.events_done) || 0;
+    const parts = [];
+    if (c.is_verified) parts.push('<span class="v">' + (mobile ? "verificata" : "community verificata") + "</span>");
+    if (!mobile && c.category) parts.push(esc((c.emoji ? c.emoji + " " : "") + c.category));
+    if (c.city) parts.push(esc(c.city));
+    parts.push("<b>" + followers + " follower</b>");
+    if (!mobile) parts.push(done + (done === 1 ? " evento fatto" : " eventi fatti"));
+    document.getElementById("meta").innerHTML = parts.join(" · ");
+  }
+  mobileMq.addEventListener("change", () => { if (c) renderMeta(); });
+  function renderFollow(){
+    const on = logged && !!c.is_following;
+    document.getElementById("follow-label").textContent = on ? "segui già ✓" : "segui";
+    const b = document.getElementById("btn-follow");
+    b.classList.toggle("ghost", on);
+  }
+
+  async function loadEvents(){
+    const wrap = document.getElementById("events");
+    const r = await rpc("community_events", { p_id: c.id, p_past: false });
+    if (!r || !r.ok) { wrap.innerHTML = '<p class="empty">non riesco a caricare gli eventi, ricarica la pagina.</p>'; return; }
+    const rows = (await r.json().catch(() => []))
+      .sort((a, b) => new Date(a.start_at) - new Date(b.start_at));
+    if (!rows.length) { wrap.innerHTML = '<p class="empty">nessun evento in programma. segui la community: ti avvisiamo al prossimo.</p>'; return; }
+    wrap.innerHTML = rows.map(x => {
+      const when = new Date(x.start_at);
+      const going = Number(x.going_count) || 0;
+      const meta = [];
+      if (x.meeting_point_text) meta.push('<span class="place">' + esc(x.meeting_point_text) + "</span>");
+      meta.push(going === 1 ? "1 ci va" : going + " ci vanno");
+      if (x.max_participants) meta.push(Math.max(0, x.max_participants - going) + " posti rimasti");
+      if (x.price_cents > 0) meta.push('<b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(x.price_cents)) + "</b>");
+      const go = x.my_status === "going" ? "ci sei ✓" : (x.my_status === "requested" ? "in attesa" : "ci sono →");
+      return `<a class="ev" href="evento.html?id=${encodeURIComponent(x.id)}">
+        <div class="tile">${esc(x.emoji || (CATALOG[x.sport] || {}).e || "📍")}</div>
+        <div class="body">
+          <div class="time">${esc(dayLabel(when))} · ${esc(timeStr(when))}</div>
+          <div class="t">${esc(x.title)}</div>
+          <div class="m">${meta.join(" · ")}</div>
+        </div>
+        <div class="go">${go}</div>
+      </a>`;
+    }).join("");
+  }
+
+  async function toggleFollow(){
+    if (!logged) { rememberNext(); location.href = "login.html"; return; }
+    const btn = document.getElementById("btn-follow");
+    const next = !c.is_following;
+    btn.disabled = true;
+    const r = await rpc("follow_community", { p_id: c.id, p_follow: next });
+    btn.disabled = false;
+    if (!r || !r.ok) {
+      const b = r ? await r.json().catch(() => ({})) : {};
+      if ((b.message || "").includes("profile_required")) { rememberNext(); location.href = "profilo.html"; return; }
+      toast("non riesco, riprova."); return;
+    }
+    c.is_following = next;
+    c.follower_count = Math.max(0, (Number(c.follower_count) || 0) + (next ? 1 : -1));
+    render();
+    track(next ? "community_follow" : "community_unfollow");
+    toast(next ? "ora segui " + c.name + ": ti avvisiamo a ogni nuovo evento." : "non segui più " + c.name + ".");
+  }
+
+  async function shareCommunity(){
+    const url = communityUrl();
+    const text = "c'è qualche piano? " + (c.emoji || "") + " " + c.name + " su anyplans";
+    track("community_share");
+    if (navigator.share) { try { await navigator.share({ title: c.name, text, url }); return; } catch (_) {} }
+    try { await navigator.clipboard.writeText(text + " " + url); toast("link copiato, incollalo dove vuoi."); }
+    catch (_) { toast(url); }
+  }
+
+  load();
+</script>
+</body>
+</html>

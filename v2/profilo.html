@@ -23,6 +23,8 @@
   body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
        -webkit-font-smoothing:antialiased; min-height:100vh; display:flex; flex-direction:column;}
   a{color:inherit; text-decoration:none;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;
+           text-transform:lowercase;}
   header{padding:0 22px;}
   .nav{display:flex; align-items:center; justify-content:space-between; height:64px; max-width:1000px; margin:0 auto;}
   .brand{display:flex; align-items:center; gap:10px; font-family:var(--display); font-weight:800;
@@ -56,11 +58,45 @@
   .note.err{color:#B3261E; font-weight:600;}
   .textbtn{background:none; border:none; cursor:pointer; font-family:var(--round); font-weight:700;
            font-size:14px; color:var(--grey); padding:6px;}
+  /* città: lista suggerimenti in-flow sotto il campo */
+  #city-list{margin-top:8px; background:#fff; border:1.5px solid rgba(25,25,25,.14); border-radius:14px; overflow:hidden;}
+  .place-item{padding:12px 15px; cursor:pointer; border-bottom:1px solid rgba(25,25,25,.07);}
+  .place-item:last-child{border-bottom:none;}
+  .place-item:hover{background:var(--tint);}
+  .place-item .p{font-weight:700; font-size:14.5px;}
+  .place-item .s{font-size:12.5px; color:var(--grey);}
+
+  /* vista profilo */
+  #view{width:100%; max-width:440px; display:flex; flex-direction:column; gap:16px;}
+  .head{display:flex; align-items:center; gap:16px; margin-top:6px;}
+  .avatar{width:84px; height:84px; border-radius:999px; background:var(--blue); color:#fff; font-weight:800;
+          font-size:34px; display:flex; align-items:center; justify-content:center; flex-shrink:0;
+          background-size:cover; background-position:center; overflow:hidden;}
+  .head .n{font-size:28px;}
+  .head .s{font-size:13.5px; color:var(--grey);}
+  .nums{display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:10px;}
+  .num{background:#fff; border:1.5px solid rgba(25,25,25,.10); border-radius:14px; padding:13px; text-align:center;}
+  .num .v{font-size:22px; color:var(--blue);}
+  .num .l{font-weight:600; font-size:11.5px; color:var(--grey);}
+  .menu{background:#fff; border:1.5px solid rgba(25,25,25,.10); border-radius:16px; display:flex; flex-direction:column;}
+  .row{display:flex; align-items:center; gap:12px; padding:15px 16px; border-bottom:1px solid rgba(25,25,25,.07);
+       font-weight:600; font-size:15px; cursor:pointer; background:none; border-left:none; border-right:none; border-top:none;
+       width:100%; text-align:left; font-family:var(--round); color:var(--ink);}
+  .row:last-child{border-bottom:none;}
+  .row svg{width:19px; height:19px; flex-shrink:0;}
+  .row .lbl{flex:1;}
+  .row .chev{color:var(--grey);}
+  .row .cnt{background:var(--tint); color:var(--blue); font-weight:700; font-size:11.5px; padding:3px 9px; border-radius:999px;}
+  .row.out{color:var(--grey);}
+  .foot{font-size:11.5px; color:#999; text-align:center;}
+  .foot a:hover{color:var(--blue);}
+  main.viewing{align-items:flex-start;}
   [hidden]{display:none !important;}
 
   /* ux: transizioni e feedback al tocco */
-  .btn, .textbtn{transition: transform .12s ease, background .15s ease, color .15s ease;}
+  .btn, .textbtn, .row, .place-item{transition: transform .12s ease, background .15s ease, color .15s ease;}
   .btn:active, .textbtn:active{transform:scale(.96);}
+  .row:hover{background:var(--tint);}
   a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
     outline:2px solid var(--blue); outline-offset:2px;}
 </style>
@@ -75,7 +111,7 @@
 </header>
 
 <main>
-  <form class="card" onsubmit="return saveProfile(event)">
+  <form class="card" id="form" onsubmit="return saveProfile(event)">
     <div>
       <h1>raccontaci di te</h1>
       <p class="sub">ci vuole un attimo, poi sei dentro.</p>
@@ -100,7 +136,8 @@
     </div>
     <div>
       <label for="city">la tua città</label>
-      <input id="city" type="text" value="bergamo" autocomplete="address-level2">
+      <input id="city" type="text" value="bergamo" autocomplete="off" placeholder="cerca la tua città" oninput="citySearch()">
+      <div id="city-list" hidden></div>
     </div>
     <div>
       <label for="birth">la tua data di nascita</label>
@@ -122,16 +159,55 @@
     <p class="note" id="note"></p>
     <button class="textbtn" id="btn-logout" type="button" hidden onclick="if(confirm('vuoi uscire?')) logout()">esci da anyplans</button>
   </form>
+
+  <!-- vista profilo (profilo.html senza ?edit=1) -->
+  <div id="view" hidden>
+    <div class="head">
+      <div class="avatar" id="v-avatar"></div>
+      <div>
+        <div class="display n" id="v-name"></div>
+        <div class="s" id="v-sub"></div>
+      </div>
+    </div>
+    <div class="nums">
+      <div class="num"><div class="display v" id="n-done">…</div><div class="l">eventi fatti</div></div>
+      <div class="num"><div class="display v" id="n-next">…</div><div class="l">in programma</div></div>
+      <div class="num"><div class="display v" id="n-comm">…</div><div class="l">community seguite</div></div>
+    </div>
+    <div class="menu">
+      <a class="row" href="profilo.html?edit=1">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20.5 C 4.5 16, 7.8 13.8, 12 13.8 C 16.2 13.8, 19.5 16, 19.5 20.5"/></svg>
+        <span class="lbl">modifica il profilo</span><span class="chev">›</span>
+      </a>
+      <a class="row" href="impostazioni.html#community">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect x="9" y="9" width="82" height="82" rx="13" fill="none" stroke="#1B4FD8" stroke-width="8.5"/><g fill="none" stroke="#1B4FD8" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"><path d="M38 51 L38 65"/><path d="M38 65 L32 79"/><path d="M38 65 L45 78"/><path d="M29 56 L38 53 L48 46"/><path d="M63 51 L63 65"/><path d="M63 65 L57 79"/><path d="M63 65 L70 78"/><path d="M54 56 L63 53 L73 46"/></g><circle cx="38" cy="40" r="7.5" fill="#1B4FD8"/><circle cx="63" cy="40" r="7.5" fill="#1B4FD8"/></svg>
+        <span class="lbl">le mie community</span><span class="cnt" id="v-comm-n" hidden></span><span class="chev">›</span>
+      </a>
+      <a class="row" href="notifiche.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10 C 6 6.7, 8.7 4, 12 4 C 15.3 4, 18 6.7, 18 10 L18 15 L20 17.5 L4 17.5 L6 15 Z"/><path d="M10 20.5 C 10.5 21.3, 13.5 21.3, 14 20.5"/></svg>
+        <span class="lbl">notifiche</span><span class="chev">›</span>
+      </a>
+      <a class="row" href="impostazioni.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M19 12 a7 7 0 0 0 -.1 -1.2 l2 -1.5 -2 -3.4 -2.3 .9 a7 7 0 0 0 -2 -1.2 L14.2 3 h-4.4 l-.4 2.6 a7 7 0 0 0 -2 1.2 l-2.3 -.9 -2 3.4 2 1.5 a7 7 0 0 0 0 2.4 l-2 1.5 2 3.4 2.3 -.9 a7 7 0 0 0 2 1.2 l.4 2.6 h4.4 l.4 -2.6 a7 7 0 0 0 2 -1.2 l2.3 .9 2 -3.4 -2 -1.5 a7 7 0 0 0 .1 -1.2 Z"/></svg>
+        <span class="lbl">impostazioni</span><span class="chev">›</span>
+      </a>
+    </div>
+    <div class="menu">
+      <button class="row" type="button" onclick="invite()"><span class="lbl">invita un amico</span><span class="chev">›</span></button>
+      <button class="row out" type="button" onclick="if(confirm('vuoi uscire?')) logout()"><span class="lbl">esci</span></button>
+    </div>
+    <p class="foot">anyplans · <a href="/terms-it.html">termini</a> · <a href="/privacy-it.html">privacy</a></p>
+  </div>
 </main>
 
-<script src="app.js?v=1788469965"></script>
+<script src="app.js?v=1788472414"></script>
 <script>
   requireLogin();
+  mountTabbar("profilo");
 
-  // ?edit=1 = modifica del profilo esistente; altrimenti chi ha già il profilo va agli eventi
+  // ?edit=1 = modifica del profilo esistente; senza parametri = vista profilo (o onboarding se manca)
   const editMode = new URLSearchParams(location.search).get("edit") === "1";
   if (editMode) {
-    mountTabbar("profilo");
     document.getElementById("lnk-events").hidden = false;
     document.getElementById("extra").hidden = false;
     document.getElementById("btn-logout").hidden = false;
@@ -141,9 +217,11 @@
     const rows = await r.json().catch(() => []);
     const me = rows[0];
     if (me && me.display_name && !editMode) {
-      let next = "eventi.html";
-      try { next = sessionStorage.getItem("anyplans_next") || next; sessionStorage.removeItem("anyplans_next"); } catch (_) {}
-      location.replace(next);
+      // arrivavo da un evento (login o profilo richiesto): torno lì, altrimenti mostro la vista
+      let next = null;
+      try { next = sessionStorage.getItem("anyplans_next"); sessionStorage.removeItem("anyplans_next"); } catch (_) {}
+      if (next) { location.replace(next); return; }
+      showView(me);
       return;
     }
     if (me && editMode) {
@@ -159,6 +237,93 @@
     }
   });
 
+  // ---- vista ----
+  function showView(me){
+    document.title = "il mio profilo · anyplans";
+    document.getElementById("form").hidden = true;
+    document.getElementById("lnk-events").hidden = false;
+    document.querySelector("main").classList.add("viewing");
+    const av = document.getElementById("v-avatar");
+    if (me.avatar_url) av.style.backgroundImage = "url('" + me.avatar_url.replace(/'/g, "") + "')";
+    else av.textContent = (me.display_name || "?")[0].toLowerCase();
+    document.getElementById("v-name").textContent = me.display_name;
+    // "bergamo · su anyplans da settembre 2026": la data solo se my_profile espone created_at
+    const parts = [];
+    if (me.base_city) parts.push(me.base_city);
+    if (me.created_at) { const d = new Date(me.created_at); parts.push("su anyplans da " + MONTHS[d.getMonth()] + " " + d.getFullYear()); }
+    document.getElementById("v-sub").textContent = parts.join(" · ");
+    document.getElementById("view").hidden = false;
+    track("profile_view");
+    loadNumbers();
+  }
+  async function loadNumbers(){
+    const now = Date.now();
+    const ra = await rpc("my_activities", {});
+    if (ra && ra.ok) {
+      const rows = (await ra.json().catch(() => [])).filter(x => x.my_status === "going" || x.is_mine);
+      document.getElementById("n-done").textContent = rows.filter(x => new Date(x.start_at) < now).length;
+      document.getElementById("n-next").textContent = rows.filter(x => new Date(x.start_at) >= now).length;
+    } else {
+      document.getElementById("n-done").textContent = "0";
+      document.getElementById("n-next").textContent = "0";
+    }
+    const rc = await rpc("my_communities", {});
+    let n = 0;
+    if (rc && rc.ok) n = (await rc.json().catch(() => [])).filter(c => c.role === "follower").length;
+    document.getElementById("n-comm").textContent = n;
+    const badge = document.getElementById("v-comm-n");
+    if (n) { badge.textContent = n; badge.hidden = false; }
+  }
+  async function invite(){
+    const url = "https://anyplans.in";
+    const text = "c'è qualche piano? guarda gli eventi di bergamo su anyplans";
+    track("invite");
+    if (navigator.share) { try { await navigator.share({ title: "anyplans", text, url }); return; } catch (_) {} }
+    try { await navigator.clipboard.writeText(text + " " + url); toast("link copiato, mandalo a chi vuoi."); }
+    catch (_) { toast(url); }
+  }
+
+  // ---- città: autocompletamento con photon (openstreetmap), solo città/paesi ----
+  let cityTimer = null;
+  function citySearch(){
+    clearTimeout(cityTimer);
+    const q = document.getElementById("city").value.trim();
+    const list = document.getElementById("city-list");
+    if (q.length < 2) { list.hidden = true; return; }
+    cityTimer = setTimeout(async () => {
+      try {
+        const items = await searchCities(q);
+        if (!items.length) { list.hidden = true; return; }
+        list.innerHTML = items.map(x =>
+          `<div class="place-item"><div class="p">${esc(x.name)}</div>` +
+          (x.area ? `<div class="s">${esc(x.area)}</div>` : "") + `</div>`).join("");
+        list.hidden = false;
+        Array.from(list.children).forEach((el, i) => el.onclick = () => pickCity(items[i]));
+      } catch (_) { /* la ricerca è un aiuto: si può sempre scrivere a mano */ }
+    }, 300);
+  }
+  async function searchCities(q){
+    // niente &lang: photon accetta solo en/de/fr. chiedo 12 risultati perché vie e negozi vanno scartati
+    const r = await fetch("https://photon.komoot.io/api?q=" + encodeURIComponent(q) + "&limit=12&lat=45.698&lon=9.670");
+    if (!r.ok) return [];
+    const d = await r.json();
+    const PLACE = ["city", "town", "village"];
+    const seen = new Set();
+    return (d.features || []).map(f => f.properties).filter(p =>
+        p.name && (PLACE.includes(p.type) || PLACE.includes(p.osm_value) || p.osm_value === "municipality"))
+      .map(p => ({ name: p.name, area: [p.county, p.state].filter(x => x && x !== p.name).join(", ") }))
+      .filter(x => { const k = (x.name + "|" + x.area).toLowerCase(); if (seen.has(k)) return false; seen.add(k); return true; })
+      .slice(0, 6);
+  }
+  function pickCity(x){
+    document.getElementById("city").value = x.name.toLowerCase();
+    document.getElementById("city-list").hidden = true;
+  }
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("#city-list") && e.target.id !== "city") document.getElementById("city-list").hidden = true;
+  });
+
+  // ---- foto ----
   function showPic(src){
     const pic = document.getElementById("pic");
     pic.style.backgroundImage = "url(" + src + ")";
@@ -199,6 +364,7 @@
     } catch (_) { /* la foto è opzionale: se fallisce si va avanti */ }
   }
 
+  // ---- salvataggio ----
   async function saveProfile(e){
     e.preventDefault();
     const name = document.getElementById("name").value.trim();
@@ -229,9 +395,10 @@
     if (avatarBlob) await uploadAvatar();
     track(editMode ? "profile_edit" : "profile_done");
     if (editMode) { toast("profilo salvato."); btn.disabled = false; note.textContent = ""; return false; }
-    let next = "eventi.html";
-    try { next = sessionStorage.getItem("anyplans_next") || next; sessionStorage.removeItem("anyplans_next"); } catch (_) {}
-    location.href = next;
+    // primo salvataggio: se arrivavo da un evento torno lì, altrimenti scelgo come usare anyplans
+    let next = null;
+    try { next = sessionStorage.getItem("anyplans_next"); sessionStorage.removeItem("anyplans_next"); } catch (_) {}
+    location.href = next || "tipo-account.html";
     return false;
   }
 </script>

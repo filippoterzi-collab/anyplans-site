@@ -393,7 +393,7 @@
   </div>
 </div>
 
-<script src="/v2/app.js?v=1788469965"></script>
+<script src="/v2/app.js?v=1788472414"></script>
 <script>
   let quizCity = "";
 
@@ -460,7 +460,11 @@
       cta.textContent = logged ? "apri gli eventi" : "registrati";
       cta.href = logged ? "/v2/eventi.html" : "/v2/login.html";
       document.querySelectorAll(".cta a.btn").forEach(a => {
-        if (a.classList.contains("ghost")) { a.href = logged ? "/v2/crea.html" : "/v2/login.html"; return; }
+        if (a.classList.contains("ghost")) {
+          a.href = logged ? "/v2/crea-community.html" : "/v2/login.html";
+          a.onclick = logged ? null : () => { try { sessionStorage.setItem("anyplans_next", "/v2/crea-community.html"); } catch (_) {} };
+          return;
+        }
         a.href = logged ? "/v2/eventi.html" : "/v2/login.html";
         a.textContent = logged ? "apri gli eventi della tua città" : "registrati per vedere gli eventi della tua città";
       });
@@ -489,7 +493,7 @@
     document.getElementById("ev-lead").textContent = "presi dalla mappa in questo momento. registrati e ci vai insieme agli altri.";
     document.getElementById("cards").innerHTML = rows.slice(0, 6).map(x =>
       `<a class="card" href="/v2/evento.html?id=${x.id}"><div class="em">${esc(x.emoji || "📍")}</div>` +
-      `<div><div class="t">${esc(x.title)}</div><div class="m">${esc(dayLabel(x.when))}, ${timeStr(x.when)} · <b>${esc(relTime(x.when))}</b> · ${Number(x.going_count) || 0} ci vanno</div></div>` +
+      `<div><div class="t">${esc(x.title)}</div><div class="m">${esc(dayLabel(x.when))}, ${timeStr(x.when)} · <b>${esc(relTime(x.when))}</b> · ${Number(x.going_count) || 0} ci vanno${x.price_cents > 0 ? " · " + esc(fmtPrice(x.price_cents)) : ""}</div></div>` +
       `<span class="go">ci sono →</span></a>`).join("");
     if (teaserReady) drawTeaser();
   }

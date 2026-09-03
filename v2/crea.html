@@ -63,6 +63,10 @@
   .place-item .p{font-weight:700; font-size:14.5px;}
   .place-item .s{font-size:12.5px; color:var(--grey);}
   .note.err{color:#B3261E; font-weight:600;}
+  .money{display:flex; align-items:center; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px; padding-left:16px;}
+  .money span{font-weight:700; font-size:16px; color:var(--grey);}
+  .money input{border:none; border-radius:0 12px 12px 0; padding-left:8px;}
+  .money input:focus{outline:none;}  .money:focus-within{outline:2px solid var(--blue); outline-offset:1px;}
   @media (max-width:600px){ .grid2{grid-template-columns:1fr;} }
 
   /* ux: transizioni e feedback al tocco */
@@ -91,6 +95,12 @@
   <div>
     <label for="sport">che tipo di evento è?</label>
     <select id="sport"></select>
+  </div>
+
+  <div id="as-wrap" hidden>
+    <label for="as">pubblica come</label>
+    <select id="as"><option value="">me stesso</option></select>
+    <p class="hint">chi segue la community riceve una notifica.</p>
   </div>
 
   <div>
@@ -144,6 +154,25 @@
     <p class="hint">es. "hai mai fatto ceramica?". chi si unisce risponde, e le risposte le vedi solo tu.</p>
   </div>
 
+  <div class="toggle-row" id="paid" onclick="togglePaid()">
+    <div>
+      <div class="t">a pagamento</div>
+      <div class="s">spento = gratis. acceso: chi partecipa paga a te, in loco o con il tuo link</div>
+    </div>
+    <div class="sw"><div class="k"></div></div>
+  </div>
+  <div class="grid2" id="price-wrap" hidden>
+    <div>
+      <label for="price">prezzo a persona</label>
+      <div class="money"><span>€</span><input id="price" type="text" inputmode="decimal" placeholder="12,00" autocomplete="off"></div>
+    </div>
+    <div>
+      <label for="price-note">nota <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
+      <input id="price-note" type="text" maxlength="60" placeholder="es. si paga in loco, materiali inclusi">
+    </div>
+    <p class="hint" style="grid-column:1/-1; margin-top:-4px">su anyplans non si paga niente: il prezzo lo vede chi partecipa, e paga a te. lo incassi direttamente, all'evento o con il tuo link.</p>
+  </div>
+
   <div class="toggle-row" id="vis" onclick="this.classList.toggle('on')">
     <div>
       <div class="t">richiedi approvazione</div>
@@ -158,7 +187,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788469965"></script>
+<script src="app.js?v=1788472414"></script>
 <script>
   requireLogin();
   mountTabbar("crea");
@@ -307,6 +336,11 @@
     document.getElementById("place").value = a.meeting_point_text || "";
     document.getElementById("desc").value = a.description || "";
     if (a.max_participants) document.getElementById("maxp").value = a.max_participants;
+    if (a.price_cents != null && a.price_cents > 0) {
+      document.getElementById("paid").classList.add("on"); document.getElementById("price-wrap").hidden = false;
+      document.getElementById("price").value = fmtAmount(a.price_cents);
+      document.getElementById("price-note").value = a.price_note || "";
+    }
     setPoint(a.lat, a.lng); map.jumpTo({ center: [a.lng, a.lat], zoom: 15 });
     const rq = await rpc("get_activity_questions", { p_activity_id: editId });
     const qs = rq && rq.ok ? await rq.json().catch(() => []) : [];
@@ -321,6 +355,38 @@
     window.scrollTo(0, 0);
   }
   if (editId) loadForEdit();
+
+  // pubblica come community (owner/admin): ?community=<id> preseleziona
+  const wantCommunity = new URLSearchParams(location.search).get("community");
+  rpc("my_communities").then(async r => {
+    if (!r || !r.ok || editId) return;
+    const mine = (await r.json().catch(() => [])).filter(x => x.role === "owner" || x.role === "admin");
+    if (!mine.length) return;
+    const selAs = document.getElementById("as");
+    mine.forEach(x => { const o = document.createElement("option"); o.value = x.id; o.textContent = (x.emoji || "") + "  " + x.name; selAs.appendChild(o); });
+    if (wantCommunity && mine.some(x => x.id === wantCommunity)) selAs.value = wantCommunity;
+    document.getElementById("as-wrap").hidden = false;
+  });
+
+  function togglePaid(){
+    const on = document.getElementById("paid").classList.toggle("on");
+    document.getElementById("price-wrap").hidden = !on;
+    if (on) document.getElementById("price").focus();
+    else { document.getElementById("price").value = ""; document.getElementById("price-note").value = ""; }
+  }
+  // prezzo: null = gratis; ritorna {ok, cents, note} o {ok:false, msg}
+  function readPrice(){
+    if (!document.getElementById("paid").classList.contains("on")) return { ok: true, cents: null, note: null };
+    const raw = document.getElementById("price").value.trim();
+    if (!raw) return { ok: false, msg: 'scrivi il prezzo (es. 12,00), o spegni "a pagamento".' };
+    const cents = parsePrice(raw);
+    if (Number.isNaN(cents)) return { ok: false, msg: "il prezzo non torna: numeri e virgola, es. 12,50." };
+    return { ok: true, cents: cents > 0 ? cents : null, note: document.getElementById("price-note").value.trim() || null };
+  }
+  async function savePrice(activityId, p){
+    const r = await rpc("set_activity_price", { p_activity_id: activityId, p_price_cents: p.cents, p_price_note: p.cents ? p.note : null });
+    if (!r || !r.ok) toast("evento salvato, ma il prezzo non si è salvato: riprova da modifica.");
+  }
 
   function addQuestion(){
     const qs = document.getElementById("qs");
@@ -361,6 +427,8 @@
     if (!date || !time) return fail("scegli giorno e ora.");
     const startAt = new Date(date + "T" + time);
     if (startAt <= new Date()) return fail("l'evento deve essere nel futuro.");
+    const price = readPrice();
+    if (!price.ok) return fail(price.msg);
     if (!point) {
       // niente pin: provo a trovare il posto dal testo
       try {
@@ -387,6 +455,7 @@
       });
       btn.disabled = false;
       if (ru && ru.ok) {
+        await savePrice(editId, price);
         const rq = await rpc("set_activity_questions", { p_activity_id: editId, p_questions: collectQuestions() });
         if (!rq || !rq.ok) toast("salvato, ma le domande non si sono aggiornate.");
         track("event_edit");
@@ -415,6 +484,12 @@
       if (qs.length) {
         const rq = await rpc("set_activity_questions", { p_activity_id: newId, p_questions: qs });
         if (!rq || !rq.ok) toast("evento creato, ma le domande non si sono salvate.");
+      }
+      if (price.cents) await savePrice(newId, price);
+      const asC = document.getElementById("as").value;
+      if (asC) {
+        const rc = await rpc("set_activity_community", { p_activity_id: newId, p_community_id: asC });
+        if (!rc || !rc.ok) toast("evento creato, ma non sono riuscito a collegarlo alla community.");
       }
       track("event_create");
       location.href = "evento.html?id=" + newId;

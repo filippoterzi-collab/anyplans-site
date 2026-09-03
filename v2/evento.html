@@ -96,6 +96,26 @@
   .calmenu{display:flex; gap:8px; flex-wrap:wrap; background:#fff; border:1.5px solid rgba(25,25,25,.12);
            border-radius:14px; padding:10px;}
   .calmenu a{font-weight:700; font-size:13.5px; color:var(--blue); padding:8px 12px; border-radius:999px; background:var(--tint);}
+  .ov{position:fixed; inset:0; background:rgba(25,25,25,.55); display:flex; align-items:center; justify-content:center; padding:22px; z-index:60;}
+  .sheet{width:100%; max-width:420px; background:var(--bg); border-radius:22px; padding:26px; display:flex; flex-direction:column; gap:14px; max-height:90vh; overflow-y:auto;}
+  .sheet h2{font-family:var(--display); font-weight:800; letter-spacing:-.045em; text-transform:lowercase; font-size:22px;}
+  .x{width:32px; height:32px; border-radius:999px; background:rgba(25,25,25,.08); border:none; cursor:pointer; font-size:16px; font-weight:700; color:var(--ink); flex-shrink:0;}
+  .sharegrid{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
+  .sharegrid button{display:flex; flex-direction:column; align-items:center; gap:6px; background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:16px; padding:14px 8px; font-family:var(--round); font-weight:700; font-size:13.5px; color:var(--ink); cursor:pointer;}
+  .sharegrid button span{font-size:26px;}
+  .sharegrid button:hover{border-color:var(--blue);}
+  .preview{display:flex; align-items:center; gap:12px; background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:16px; padding:12px 14px;}
+  .preview .em{font-size:34px;} .preview .t{font-weight:700; font-size:14.5px;} .preview .m{font-size:12.5px; color:var(--grey);}
+  .ticket{background:#fff; border:2px solid var(--blue); border-radius:22px; padding:22px; display:flex; flex-direction:column; align-items:center; gap:10px; text-align:center;}
+  .ticket #qr{padding:8px; background:#fff;} .ticket #qr img, .ticket #qr canvas{display:block;}
+  .ticket .t{font-weight:800; font-size:17px;} .ticket .m{font-size:13px; color:var(--grey);}
+  .ticket .who{font-family:var(--display); font-weight:800; letter-spacing:-.045em; font-size:22px; text-transform:lowercase;}
+  .comm{display:flex; align-items:center; gap:12px; background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:16px; padding:12px 14px;}
+  .comm .n{font-weight:700; font-size:14.5px;} .comm .s{font-size:12.5px; color:var(--grey);}
+  .comm .v{color:var(--blue); font-weight:700;}
+  .pay{font-size:13.5px; color:var(--grey); border-top:1px solid rgba(25,25,25,.08); padding-top:10px;}
+  .pay b{color:var(--ink); font-size:15px;}  .pay span{display:block; font-size:12.5px; margin-top:2px;}
+  .box.in .pay{border-top-color:rgba(27,79,216,.25);}
   .req{display:flex; align-items:center; gap:12px; background:#fff; border:1.5px solid rgba(25,25,25,.10);
        border-radius:14px; padding:12px 14px;}
   .req .n{font-weight:700; font-size:14.5px;}
@@ -128,7 +148,7 @@
   <div class="cover" id="cover">📍</div>
   <div class="chips">
     <span class="chip" id="chip-cat"></span>
-    <span class="chip w">gratis</span>
+    <span class="chip w" id="chip-price">gratis</span>
     <span class="chip w" id="chip-req" hidden>su richiesta</span>
     <span class="chip w" id="chip-agg" hidden>aggregato</span>
   </div>
@@ -145,11 +165,12 @@
   <!-- box azione -->
   <div class="box" id="box-guest" hidden>
     <h2>ci sei?</h2>
-    <p class="m">registrati o accedi per unirti. è gratis, e gli altri partecipanti ti vedono.</p>
+    <p class="m">registrati o accedi per unirti. iscriverti qui è gratis, e gli altri partecipanti ti vedono.</p>
     <div class="row">
       <a class="btn" href="login.html" onclick="rememberNext()">registrati o accedi</a>
       <span class="note" id="going-guest"></span>
     </div>
+    <p class="pay" id="pay-guest" hidden></p>
   </div>
   <div class="box" id="box-join" hidden>
     <h2>ci sei?</h2>
@@ -158,6 +179,7 @@
       <button class="btn" id="btn-join" onclick="joinEvent()">ci sono</button>
       <span class="note" id="going-join"></span>
     </div>
+    <p class="pay" id="pay-join" hidden></p>
   </div>
   <div class="box" id="box-requested" hidden>
     <h2>richiesta inviata ⏳</h2>
@@ -166,14 +188,17 @@
       <button class="btn ghost" onclick="leaveEvent()">ritira la richiesta</button>
       <span class="note" id="going-req"></span>
     </div>
+    <p class="pay" id="pay-req" hidden></p>
   </div>
   <div class="box in" id="box-in" hidden>
     <h2>ci sei! 🫶</h2>
     <p class="m">l'host e gli altri ti vedono tra i partecipanti.</p>
     <div class="row">
+      <button class="btn" onclick="openTicket()">il mio biglietto</button>
       <button class="btn ghost" onclick="leaveEvent()">annulla la partecipazione</button>
       <span class="note" id="going-in"></span>
     </div>
+    <p class="pay" id="pay-in" hidden></p>
   </div>
   <div class="box in" id="box-host" hidden>
     <h2>sei l'host</h2>
@@ -181,8 +206,10 @@
     <div class="row">
       <button class="btn" onclick="shareEvent()">condividi l'evento</button>
       <a class="btn ghost" id="lnk-edit" href="#">modifica l'evento</a>
+      <a class="btn ghost" id="lnk-checkin" href="#">check-in</a>
       <span class="note" id="going-host"></span>
     </div>
+    <p class="pay" id="pay-host" hidden></p>
   </div>
 
   <!-- richieste da approvare (solo host) -->
@@ -196,6 +223,11 @@
     <div class="avatar" id="host-avatar"></div>
     <div><div class="n" id="host-name"></div><div class="s">host</div></div>
   </div>
+  <a class="comm" id="comm" hidden href="#">
+    <div class="avatar" id="comm-emoji" style="background:var(--tint); font-size:20px"></div>
+    <div><div class="n" id="comm-name"></div><div class="s" id="comm-sub">community</div></div>
+    <div style="margin-left:auto; font-weight:700; font-size:13.5px; color:var(--blue)">vedi →</div>
+  </a>
   <div class="hostcard" id="source" hidden>
     <div class="avatar" style="background:var(--tint); color:var(--blue)">↗</div>
     <div><div class="n">evento aggregato da una fonte esterna</div>
@@ -237,6 +269,45 @@
   <p class="note"><a id="lnk-report" href="#" style="color:var(--grey); text-decoration:underline">segnala questo evento</a> · se qualcosa non va, ci pensiamo noi.</p>
 </main>
 
+<!-- condividi: whatsapp, storie instagram, link, card -->
+<div class="ov" id="share-ov" hidden onclick="if(event.target===this)this.hidden=true">
+  <div class="sheet">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:12px">
+      <h2>condividi l'evento</h2>
+      <button class="x" onclick="document.getElementById('share-ov').hidden=true">×</button>
+    </div>
+    <div class="preview"><div class="em" id="sh-em"></div><div><div class="t" id="sh-t"></div><div class="m" id="sh-m"></div></div></div>
+    <p class="note">la card è pronta: su instagram va nelle storie con il link già dentro; su whatsapp arriva con l'anteprima e il link diretto.</p>
+    <div class="sharegrid">
+      <button onclick="shareWhatsapp()"><span>💬</span>whatsapp</button>
+      <button onclick="shareStory()"><span>📸</span>storie instagram</button>
+      <button onclick="copyLink()"><span>🔗</span>copia link</button>
+      <button onclick="shareCard()"><span>🖼️</span>scarica la card</button>
+    </div>
+    <p class="note" id="sh-note"></p>
+  </div>
+</div>
+
+<!-- biglietto con qr -->
+<div class="ov" id="ticket-ov" hidden onclick="if(event.target===this)this.hidden=true">
+  <div class="sheet">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:12px">
+      <h2>il mio biglietto</h2>
+      <button class="x" onclick="document.getElementById('ticket-ov').hidden=true">×</button>
+    </div>
+    <div class="ticket">
+      <div style="font-size:40px" id="tk-em"></div>
+      <div class="t" id="tk-t"></div>
+      <div class="m" id="tk-host"></div>
+      <div id="qr"></div>
+      <div class="who" id="tk-who"></div>
+      <div class="m"><b>quando</b> <span id="tk-when"></span> · <b>dove</b> <span id="tk-where"></span></div>
+      <div class="m" id="tk-pay" hidden></div>
+      <div class="m" id="tk-state">mostralo all'ingresso per il check-in · funziona anche offline</div>
+    </div>
+  </div>
+</div>
+
 <!-- modale domande dell'host -->
 <div id="q-overlay" hidden style="position:fixed; inset:0; background:rgba(25,25,25,.55); display:flex;
      align-items:center; justify-content:center; padding:22px; z-index:60">
@@ -267,7 +338,8 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788469965"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script src="app.js?v=1788472414"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -319,6 +391,8 @@
     document.getElementById("cover").textContent = ev.emoji || cat.e || "📍";
     document.getElementById("chip-cat").textContent = (ev.emoji || cat.e || "") + " " + (cat.l || ev.sport);
     document.getElementById("chip-req").hidden = !isReq;
+    document.getElementById("chip-price").textContent = fmtPrice(ev.price_cents);
+    renderPay();
     document.getElementById("title").textContent = ev.title;
     document.getElementById("d-month").textContent = MONTHS[when.getMonth()].slice(0, 3);
     document.getElementById("d-day").textContent = when.getDate();
@@ -352,7 +426,9 @@
       document.getElementById("btn-cancel").hidden = false;
       document.getElementById("btn-share").hidden = true;
       document.getElementById("lnk-edit").href = "crea.html?edit=" + ev.id;
+      document.getElementById("lnk-checkin").href = "checkin.html?id=" + ev.id;
     }
+    loadCommunity();
     document.getElementById("lnk-report").href = "mailto:hello@anyplans.in?subject=" +
       encodeURIComponent("segnalazione evento: " + ev.title) +
       "&body=" + encodeURIComponent("evento: " + eventUrl(ev) + "\nid: " + ev.id + "\n\ncosa non va:\n");
@@ -380,6 +456,16 @@
     document.getElementById("box-join").hidden = !logged || ev.is_mine || st === "going" || st === "requested";
     document.getElementById("box-requested").hidden = !logged || ev.is_mine || st !== "requested";
     document.getElementById("box-in").hidden = !logged || ev.is_mine || st !== "going";
+  }
+  function renderPay(){
+    const paid = ev.price_cents != null && ev.price_cents > 0;
+    const line1 = paid ? "<b>" + esc(fmtPrice(ev.price_cents)) + "</b> a persona" + (ev.price_note ? " · " + esc(ev.price_note) : "") : "";
+    const second = { guest: "si paga all'host, non su anyplans. unirsi qui è gratis.", join: "si paga all'host, non su anyplans. unirsi qui è gratis.",
+      req: "si paga all'host, non su anyplans. unirsi qui è gratis.", in: "ricordati di pagare l'host: all'evento, o con il suo link.",
+      host: "lo incassi tu, direttamente. anyplans mostra solo il prezzo." };
+    Object.keys(second).forEach(k => { const p = document.getElementById("pay-" + k); p.hidden = !paid; if (paid) p.innerHTML = line1 + "<span>" + second[k] + "</span>"; });
+    const tk = document.getElementById("tk-pay"); tk.hidden = !paid;
+    if (paid) tk.textContent = "da pagare all'host: " + fmtPrice(ev.price_cents) + (ev.price_note ? " · " + ev.price_note : "");
   }
   function renderCounts(){
     const going = Number(ev.going_count) || 0;
@@ -422,6 +508,137 @@
         `<button class="btn sm" onclick="respond('${p.user_id}', true)">approva</button></div></div>`).join("");
     }
   }
+  async function loadCommunity(){
+    const r = await rpc("activity_community", { p_activity_id: ev.id });
+    if (!r || !r.ok) return;
+    const c = (await r.json().catch(() => []))[0];
+    if (!c) return;
+    ev.community = c;
+    const el = document.getElementById("comm");
+    el.hidden = false; el.href = "community.html?slug=" + encodeURIComponent(c.slug);
+    document.getElementById("comm-emoji").textContent = c.emoji || "🏷️";
+    document.getElementById("comm-name").textContent = c.name;
+    document.getElementById("comm-sub").innerHTML = c.is_verified ? '<span class="v">community verificata</span>' : "community";
+  }
+
+  // ---- biglietto: qr con il link di check-in (token per partecipazione, migrazione 0047) ----
+  let ticketToken = null;
+  async function openTicket(){
+    const ov = document.getElementById("ticket-ov");
+    document.getElementById("tk-em").textContent = ev.emoji || "📍";
+    document.getElementById("tk-t").textContent = ev.title;
+    document.getElementById("tk-host").textContent = ev.community ? ev.community.name + (ev.community.is_verified ? " · community verificata" : "") : (ev.host_name ? "di " + ev.host_name : "");
+    const when = new Date(ev.start_at);
+    document.getElementById("tk-when").textContent = dayLabel(when) + " " + timeStr(when);
+    document.getElementById("tk-where").textContent = ev.meeting_point_text || "posizione approssimativa";
+    ov.hidden = false;
+    if (!ticketToken) {
+      try { ticketToken = localStorage.getItem("anyplans_ticket_" + ev.id); } catch (_) {}
+      const r = await rpc("my_ticket", { p_activity_id: ev.id });
+      const row = r && r.ok ? (await r.json().catch(() => []))[0] : null;
+      if (row) { ticketToken = row.token; try { localStorage.setItem("anyplans_ticket_" + ev.id, row.token); } catch (_) {}
+        if (row.checked_in_at) document.getElementById("tk-state").textContent = "check-in fatto ✓ sei dentro"; }
+    }
+    if (!ticketToken) { document.getElementById("qr").textContent = "non riesco a caricare il biglietto, riprova con la rete."; return; }
+    const name = await myName();
+    document.getElementById("tk-who").textContent = name || "";
+    const url = location.origin + "/v2/checkin.html?id=" + ev.id + "&t=" + ticketToken;
+    document.getElementById("qr").innerHTML = "";
+    new QRCode(document.getElementById("qr"), { text: url, width: 200, height: 200, correctLevel: QRCode.CorrectLevel.M });
+    track("ticket_view");
+  }
+  let _me = null;
+  async function myName(){
+    if (_me) return _me;
+    const r = await rpc("my_profile");
+    const row = r && r.ok ? (await r.json().catch(() => []))[0] : null;
+    _me = row && row.display_name; return _me;
+  }
+
+  // ---- condividi: card 1200x630 e storia 1080x1920 disegnate in canvas ----
+  function shareTexts(){
+    const when = new Date(ev.start_at);
+    return { url: eventUrl(ev), line: dayLabel(when) + " " + timeStr(when) + " · " + (ev.meeting_point_text || "bergamo"),
+             text: "ci sei? " + (ev.emoji || "") + " " + ev.title + " · " + dayLabel(when) + " " + timeStr(when) };
+  }
+  function openShare(){
+    const s = shareTexts();
+    document.getElementById("sh-em").textContent = ev.emoji || "📍";
+    document.getElementById("sh-t").textContent = ev.title;
+    document.getElementById("sh-m").textContent = s.line + " · " + s.url.replace(/^https?:\/\//, "");
+    document.getElementById("sh-note").textContent = "";
+    document.getElementById("share-ov").hidden = false;
+  }
+  function shareWhatsapp(){
+    const s = shareTexts(); track("share_whatsapp");
+    window.open("https://wa.me/?text=" + encodeURIComponent(s.text + "\n" + s.url), "_blank", "noopener");
+  }
+  async function copyLink(){
+    const s = shareTexts(); track("share_copy");
+    try { await navigator.clipboard.writeText(s.url); toast("link copiato, incollalo dove vuoi."); } catch (_) { prompt("copia il link:", s.url); }
+  }
+  function wrapText(ctx, text, x, y, maxW, lh, maxLines){
+    const words = text.split(" "); let line = "", lines = [];
+    for (const w of words) { const t = line ? line + " " + w : w; if (ctx.measureText(t).width > maxW && line) { lines.push(line); line = w; } else line = t; }
+    if (line) lines.push(line);
+    if (lines.length > maxLines) { lines = lines.slice(0, maxLines); lines[maxLines - 1] = lines[maxLines - 1].replace(/\s*\S*$/, "") + "…"; }
+    lines.forEach((l, i) => ctx.fillText(l, x, y + i * lh));
+    return y + lines.length * lh;
+  }
+  async function fontsReady(){ try { await document.fonts.load('800 80px "Bricolage Grotesque"'); await document.fonts.load('700 40px ui-rounded'); } catch (_) {} }
+  const DISPLAY = '"Bricolage Grotesque", ui-rounded, "SF Pro Rounded", system-ui, sans-serif';
+  const ROUND = 'ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif';
+  async function drawStory(){
+    await fontsReady();
+    const c = document.createElement("canvas"); c.width = 1080; c.height = 1920; const x = c.getContext("2d");
+    x.fillStyle = "#1B4FD8"; x.fillRect(0, 0, 1080, 1920);
+    x.fillStyle = "#fff"; x.font = "800 52px " + DISPLAY; x.fillText("anyplans?", 90, 200);
+    x.font = "600 34px " + ROUND; x.fillStyle = "rgba(255,255,255,.85)"; x.fillText("anyplans · bergamo", 90, 260);
+    x.font = "300px system-ui"; x.textAlign = "center"; x.fillText(ev.emoji || "📍", 540, 700); x.textAlign = "left";
+    x.fillStyle = "#fff"; x.font = "800 84px " + DISPLAY;
+    let y = wrapText(x, ev.title.toLowerCase(), 90, 900, 900, 92, 3);
+    const when = new Date(ev.start_at);
+    x.font = "700 40px " + ROUND; y += 40;
+    x.fillText(daySub(when) + " · " + timeStr(when), 90, y); y += 56;
+    x.fillStyle = "rgba(255,255,255,.85)"; x.font = "600 36px " + ROUND;
+    y = wrapText(x, (ev.meeting_point_text || "bergamo") + (ev.host_name ? " · con " + ev.host_name : ""), 90, y, 900, 46, 2);
+    const going = Number(ev.going_count) || 0; y += 30;
+    x.fillText(going + (going === 1 ? " persona ci va" : " ci vanno") + (ev.max_participants ? " · " + Math.max(0, ev.max_participants - going) + " posti rimasti" : ""), 90, y);
+    // pill "ci sei?"
+    x.fillStyle = "#fff"; x.beginPath(); x.roundRect(90, 1560, 330, 110, 55); x.fill();
+    x.fillStyle = "#1B4FD8"; x.font = "800 52px " + DISPLAY; x.fillText("ci sei?", 150, 1634);
+    x.fillStyle = "#fff"; x.font = "700 34px " + ROUND; x.fillText(shareTexts().url.replace(/^https?:\/\//, ""), 90, 1760);
+    return c;
+  }
+  async function drawCard(){
+    await fontsReady();
+    const c = document.createElement("canvas"); c.width = 1200; c.height = 630; const x = c.getContext("2d");
+    x.fillStyle = "#FBF9F5"; x.fillRect(0, 0, 1200, 630);
+    x.fillStyle = "#1B4FD8"; x.fillRect(0, 0, 1200, 14);
+    x.font = "150px system-ui"; x.fillText(ev.emoji || "📍", 70, 260);
+    x.fillStyle = "#191919"; x.font = "800 62px " + DISPLAY;
+    let y = wrapText(x, ev.title.toLowerCase(), 290, 150, 840, 68, 3);
+    const when = new Date(ev.start_at);
+    x.fillStyle = "#6E6E73"; x.font = "600 30px " + ROUND; y += 24;
+    x.fillText(daySub(when) + ", " + timeStr(when) + " · " + (ev.meeting_point_text || "bergamo") + " · anyplans.in", 290, y);
+    x.fillStyle = "#1B4FD8"; x.beginPath(); x.roundRect(70, 470, 260, 84, 42); x.fill();
+    x.fillStyle = "#fff"; x.font = "800 40px " + DISPLAY; x.fillText("ci sei?", 130, 527);
+    x.fillStyle = "#1B4FD8"; x.font = "700 30px " + ROUND; x.fillText(shareTexts().url.replace(/^https?:\/\//, ""), 360, 525);
+    return c;
+  }
+  function canvasFile(c, name){ return new Promise(res => c.toBlob(b => res(new File([b], name, { type: "image/png" })), "image/png")); }
+  async function shareImage(c, name, kind){
+    const f = await canvasFile(c, name); const s = shareTexts();
+    if (navigator.canShare && navigator.canShare({ files: [f] })) {
+      try { await navigator.share({ files: [f], title: ev.title, text: s.text + " " + s.url }); track("share_" + kind); return; } catch (_) { return; }
+    }
+    const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = name; document.body.appendChild(a); a.click(); a.remove();
+    track("share_" + kind);
+    document.getElementById("sh-note").textContent = kind === "story" ? "immagine salvata: aprila in instagram → storie, e aggiungi il link con lo sticker." : "card salvata: mandala dove vuoi insieme al link.";
+  }
+  async function shareStory(){ toast("preparo la storia…"); shareImage(await drawStory(), "anyplans-storia.png", "story"); }
+  async function shareCard(){ toast("preparo la card…"); shareImage(await drawCard(), "anyplans-evento.png", "card"); }
+
   async function setAdmin(uid, on){
     const r = await rpc("make_admin", { p_activity_id: ev.id, p_user_id: uid, p_admin: on });
     if (r && r.ok) { toast(on ? "nominato admin: può approvare le richieste." : "non è più admin."); track("make_admin"); loadPeople(); }
@@ -589,14 +806,7 @@
     else toast("non riesco ad annullare, riprova.");
   }
 
-  async function shareEvent(){
-    const url = eventUrl(ev);
-    const text = "ci sei? " + (ev.emoji || "") + " " + ev.title + " · " + dayLabel(new Date(ev.start_at)) + " " + timeStr(new Date(ev.start_at));
-    track("share");
-    if (navigator.share) { try { await navigator.share({ title: ev.title, text, url }); return; } catch (_) {} }
-    try { await navigator.clipboard.writeText(text + " " + url); toast("link copiato, incollalo dove vuoi."); }
-    catch (_) { toast(url); }
-  }
+  function shareEvent(){ track("share"); openShare(); }
 
   load();
 </script>

@@ -1,4 +1,4 @@
-// anyplans — helper condivisi per le pagine /v2 (sessione, rpc, catalogo, date)
+// anyplans : helper condivisi per le pagine /v2 (sessione, rpc, catalogo, date)
 const SB_URL = "https://uudccbzihhgoeaevkewr.supabase.co";
 const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1ZGNjYnppaGhnb2VhZXZrZXdyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYzNzk0NzEsImV4cCI6MjEwMTk1NTQ3MX0.OHJC3vmT8eRLczFkH0QdZybbjudDfSi4VEX8Mc22ABQ";
 // google places (new) per il punto di ritrovo: chiave pubblica limitata al referrer anyplans.in.
@@ -79,7 +79,7 @@ function toast(msg){
   clearTimeout(t._h); t._h = setTimeout(() => { t.hidden = true; }, 4500);
 }
 
-// catalogo sport/attività (docs/UI.md §1) — slug -> {emoji, label it, cat sito}
+// catalogo sport/attività (docs/UI.md §1) : slug -> {emoji, label it, cat sito}
 const CATALOG = {
   running:   { e:"🏃", l:"corsa",                     c:"sport" },
   trail:     { e:"⛰️", l:"trail running",             c:"sport" },
@@ -116,6 +116,13 @@ const DAYS = ["domenica","lunedì","martedì","mercoledì","giovedì","venerdì"
 const MONTHS = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
 function timeStr(d){ return d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0"); }
 function dayKey(d){ return d.toDateString(); }
+// prezzo: null/0 = gratis; "12 €" oppure "12,50 €" (spazio non separabile)
+function fmtPrice(c){ if (c == null || c <= 0) return "gratis";
+  const e = Math.floor(c / 100), r = c % 100;
+  return (r ? e + "," + String(r).padStart(2, "0") : e) + "\u00a0€"; }
+function fmtAmount(c){ return fmtPrice(c).replace("\u00a0€", ""); }
+function parsePrice(s){ const t = String(s).trim().replace(/[\s€]/g, "").replace(",", ".");
+  if (!/^\d{1,4}(\.\d{1,2})?$/.test(t)) return NaN; return Math.round(parseFloat(t) * 100); }
 function dayLabel(d){
   const today = new Date(); const tomorrow = new Date(); tomorrow.setDate(today.getDate() + 1);
   if (dayKey(d) === dayKey(today)) return "oggi";
@@ -157,7 +164,7 @@ function mountTabbar(active){
     ["scopri",  "eventi.html",        '<svg viewBox="0 0 24 24"><path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20z"/><path d="M9 4v13.5M15 6.5V20"/></svg>'],
     ["crea",    "crea.html",          '<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>'],
     ["miei eventi", "miei.html",          '<svg viewBox="0 0 24 24"><path d="M5 5.5h14v15l-7-4-7 4z"/></svg>'],
-    ["profilo", "profilo.html?edit=1",'<svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-4 4-6 7.5-6s6.3 2 7.5 6"/></svg>']
+    ["profilo", "profilo.html",'<svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-4 4-6 7.5-6s6.3 2 7.5 6"/></svg>']
   ];
   const st = document.createElement("style");
   st.textContent = `

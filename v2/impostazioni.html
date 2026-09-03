@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>impostazioni · anyplans</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta name="robots" content="noindex">
+<style>
+  @font-face{
+    font-family:"Bricolage Grotesque";
+    src:url("/bricolage-grotesque-latin-800-normal.woff2") format("woff2");
+    font-weight:800; font-style:normal; font-display:swap;
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+  :root{
+    --blue:#1B4FD8; --blue-lo:#1440AF; --tint:#E9EEFB;
+    --ink:#191919; --grey:#6E6E73; --bg:#FBF9F5; --red:#B3261E;
+    --round: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --display: "Bricolage Grotesque", var(--round);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
+       -webkit-font-smoothing:antialiased;}
+  a{color:inherit; text-decoration:none;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;
+           text-transform:lowercase;}
+  .q{font-size:.92em;}
+  header{padding:0 24px;}
+  .nav{display:flex; align-items:center; gap:24px; height:60px; max-width:760px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:9px; font-family:var(--display); font-weight:800;
+         font-size:20px; letter-spacing:-.045em; line-height:1; text-transform:lowercase;}
+  .brand img{width:28px; height:28px;}
+  .nav .lnk{font-weight:600; font-size:15px; color:var(--grey);}
+  .nav .cta{margin-left:auto; background:var(--blue); color:#fff; font-weight:700; font-size:13.5px;
+            padding:9px 16px; border-radius:999px; white-space:nowrap;}
+
+  main{max-width:760px; margin:0 auto; padding:14px 24px 70px; display:flex; flex-direction:column; gap:20px;}
+  h1{font-size:34px;}
+  .tabs{display:flex; gap:22px; border-bottom:1.5px solid rgba(25,25,25,.10); margin-top:10px;}
+  .tabs a{font-weight:600; font-size:15px; color:var(--grey); padding-bottom:10px;}
+  .tabs a.on{font-weight:700; color:var(--blue); box-shadow:inset 0 -2.5px 0 var(--blue);}
+  section{display:flex; flex-direction:column; gap:16px;}
+  .box{background:#fff; border:1.5px solid rgba(25,25,25,.10); border-radius:18px; padding:22px 24px;
+       display:flex; flex-direction:column; gap:12px;}
+  .box h2{font-weight:800; font-size:17px;}
+  .box .m{font-size:14px; color:var(--grey);}
+  .lnk2{font-weight:700; font-size:14px; color:var(--blue);}
+  .pill{display:flex; align-items:center; gap:10px; background:#F3F1EA; border-radius:12px; padding:13px 16px;}
+  .pill b{font-weight:600; font-size:14.5px; overflow:hidden; text-overflow:ellipsis;}
+  .pill .tag{background:var(--tint); color:var(--blue); font-weight:700; font-size:11.5px; padding:3px 10px;
+             border-radius:999px; white-space:nowrap;}
+  .zone{display:flex; align-items:center; justify-content:space-between; gap:14px; padding:0 6px; flex-wrap:wrap;}
+  .textbtn{background:none; border:none; cursor:pointer; font-family:var(--round); font-weight:700;
+           font-size:14px; color:var(--grey); padding:8px 0;}
+  .textbtn.red{color:var(--red);}
+  .textbtn[disabled]{opacity:.55; cursor:default;}
+  .toggle-row{display:flex; align-items:center; gap:12px; background:#fff;
+    border:1.5px solid rgba(25,25,25,.12); border-radius:14px; padding:14px 16px; cursor:pointer;}
+  .toggle-row .t{font-weight:600; font-size:15px;}
+  .toggle-row .s{font-size:12.5px; color:var(--grey);}
+  .sw{margin-left:auto; width:42px; height:25px; background:rgba(25,25,25,.15); border-radius:999px;
+      display:flex; align-items:center; padding:0 3px; flex-shrink:0; transition:background .15s;}
+  .sw .k{width:19px; height:19px; background:#fff; border-radius:999px; transition:transform .15s;}
+  .toggle-row.on .sw{background:var(--blue);}
+  .toggle-row.on .sw .k{transform:translateX(17px);}
+  .toggle-row.busy{opacity:.6; pointer-events:none;}
+  .sec{font-weight:800; font-size:15px;}
+  .sec span{color:var(--grey); font-weight:600; font-size:13px;}
+  .cm{display:flex; align-items:center; gap:12px; background:#fff; border:1.5px solid rgba(25,25,25,.10);
+      border-radius:14px; padding:12px 14px;}
+  .cm .tile{width:42px; height:42px; border-radius:12px; background:var(--tint); display:flex;
+            align-items:center; justify-content:center; font-size:21px; flex-shrink:0;}
+  .cm .n{font-weight:700; font-size:14.5px;}
+  .cm .s{font-size:12.5px; color:var(--grey);}
+  .cm .act{margin-left:auto; font-weight:700; font-size:13.5px; color:var(--blue); white-space:nowrap;}
+  .btn{display:inline-block; background:var(--blue); color:#fff; font-weight:700;
+       padding:12px 24px; border-radius:999px; border:none; cursor:pointer; font-size:15px;
+       font-family:var(--round); text-align:center; align-self:flex-start;}
+  .btn:hover{background:var(--blue-lo);}
+  .empty{font-size:14px; color:var(--grey);}
+  .sk{height:66px; border-radius:14px; background:linear-gradient(90deg,#F1EFE9 25%,#E9E6DE 50%,#F1EFE9 75%);
+      background-size:200% 100%; animation:sk 1.2s ease-in-out infinite;}
+  @keyframes sk{from{background-position:200% 0} to{background-position:-200% 0}}
+  [hidden]{display:none !important;}
+  @media (max-width:700px){
+    .nav .lnk, .nav .cta{display:none;}
+    main{padding:8px 18px 90px;}
+    h1{font-size:28px;}
+    .box{padding:18px;}
+    .tabs{gap:18px;}
+  }
+
+  /* ux: transizioni e feedback al tocco */
+  .btn, .cm, .textbtn, .toggle-row, .tabs a{
+    transition: transform .12s ease, box-shadow .12s ease, background .15s ease,
+                border-color .15s ease, color .15s ease;}
+  .btn:active, .textbtn:active{transform:scale(.96);}
+  .cm:hover{box-shadow:0 4px 16px rgba(25,25,25,.07); transform:translateY(-1px);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--blue); outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="/v2/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
+    <a class="lnk" href="eventi.html">scopri</a>
+    <a class="lnk" href="miei.html">i miei eventi</a>
+    <a class="cta" href="crea.html">crea evento</a>
+  </div>
+</header>
+
+<main>
+  <div>
+    <h1 class="display">impostazioni</h1>
+    <div class="tabs">
+      <a href="#account" data-tab="account">account</a>
+      <a href="#notifiche" data-tab="notifiche">notifiche</a>
+      <a href="#community" data-tab="community">community</a>
+    </div>
+  </div>
+
+  <!-- account -->
+  <section id="tab-account" hidden>
+    <div class="box">
+      <h2>il tuo profilo</h2>
+      <p class="m">nome, foto, bio e instagram si cambiano dal profilo.</p>
+      <!-- TODO committente: il design mostra anche "tiktok.com/@": non c'è nel modello dati (SCHEMA.md), va aggiunto lì prima -->
+      <a class="lnk2" href="profilo.html?edit=1">modifica il profilo →</a>
+    </div>
+    <div class="box">
+      <h2>email</h2>
+      <p class="m">è l'indirizzo con cui accedi e dove ricevi gli aggiornamenti sugli eventi.</p>
+      <div class="pill"><b id="email"></b><span class="tag">principale</span></div>
+    </div>
+    <div class="zone">
+      <button class="textbtn" onclick="if(confirm('vuoi uscire da questo dispositivo?')) logout()">esci da questo dispositivo</button>
+      <button class="textbtn" id="btn-all" onclick="logoutEverywhere()">esci da tutti i dispositivi</button>
+      <button class="textbtn red" id="btn-del" onclick="deleteAccount()">elimina l'account</button>
+    </div>
+  </section>
+
+  <!-- notifiche -->
+  <section id="tab-notifiche" hidden>
+    <div class="toggle-row" id="tg-notify" onclick="flip('tg-notify', 'p_notify_all')">
+      <div>
+        <div class="t">avvisami di quello che succede</div>
+        <div class="s">nuovi eventi delle community che segui, richieste e conferme sui tuoi eventi.</div>
+      </div>
+      <div class="sw"><div class="k"></div></div>
+    </div>
+    <div class="toggle-row" id="tg-dist" onclick="flip('tg-dist', 'p_show_distance')">
+      <div>
+        <div class="t">mostra la distanza</div>
+        <div class="s">gli altri vedono quanto sei lontano dall'evento, mai dove sei di preciso.</div>
+      </div>
+      <div class="sw"><div class="k"></div></div>
+    </div>
+    <p class="empty">le preferenze si salvano da sole.</p>
+  </section>
+
+  <!-- community -->
+  <section id="tab-community" hidden>
+    <div id="cm-mine-wrap" hidden>
+      <div class="sec" style="margin-bottom:8px">le community che gestisci</div>
+      <div id="cm-mine" style="display:flex; flex-direction:column; gap:8px"></div>
+    </div>
+    <div>
+      <div class="sec" style="margin-bottom:8px">le community che segui <span id="cm-n"></span></div>
+      <div id="cm-follow" style="display:flex; flex-direction:column; gap:8px"><div class="sk"></div><div class="sk"></div></div>
+    </div>
+    <a class="btn" href="crea-community.html">crea la tua community</a>
+    <p class="empty">una community è chi organizza: un'associazione, un negozio, un gruppo. chi la segue riceve i suoi eventi.</p>
+  </section>
+</main>
+
+<script src="app.js?v=1788472414"></script>
+<script>
+  requireLogin();
+  mountTabbar("profilo");
+  document.getElementById("email").textContent = (session && session.email) || "";
+
+  // tab dall'hash (#account · #notifiche · #community)
+  const TABS = ["account", "notifiche", "community"];
+  function showTab(){
+    const t = TABS.includes(location.hash.slice(1)) ? location.hash.slice(1) : "account";
+    TABS.forEach(x => document.getElementById("tab-" + x).hidden = x !== t);
+    document.querySelectorAll(".tabs a").forEach(a => a.classList.toggle("on", a.dataset.tab === t));
+  }
+  window.addEventListener("hashchange", showTab);
+  showTab();
+
+  // ---- account ----
+  async function logoutEverywhere(){
+    if (!confirm("vuoi uscire da tutti i dispositivi? dovrai rientrare con l'email ovunque.")) return;
+    const btn = document.getElementById("btn-all"); btn.disabled = true;
+    try {
+      await fetch(SB_URL + "/auth/v1/logout?scope=global", {
+        method: "POST",
+        headers: {"apikey": SB_ANON, "Authorization": "Bearer " + session.access_token}
+      });
+    } catch (_) { /* anche se la rete cade, da qui si esce comunque */ }
+    track("logout_all");
+    logout();
+  }
+
+  async function deleteAccount(){
+    if (!confirm("vuoi eliminare l'account? sparisce tutto: profilo, eventi, partecipazioni. non si torna indietro.")) return;
+    const word = prompt("per confermare scrivi: elimina");
+    if ((word || "").trim().toLowerCase() !== "elimina") { toast("ok, non ho eliminato niente."); return; }
+    const btn = document.getElementById("btn-del"); btn.disabled = true;
+    const r = await rpc("delete_my_account", {});
+    if (!r || !r.ok) {
+      btn.disabled = false;
+      let msg = "non riesco a eliminare l'account, riprova.";
+      try { if (r) msg += " (" + ((await r.json()).message || "") + ")"; } catch (_) {}
+      toast(msg); return;
+    }
+    track("account_delete");
+    logout();
+  }
+
+  // ---- notifiche: i due toggle leggono e scrivono il profilo ----
+  async function loadPrefs(){
+    const r = await rpc("my_profile", {});
+    if (!r || !r.ok) return;
+    const me = (await r.json().catch(() => []))[0];
+    if (!me) return;
+    document.getElementById("tg-notify").classList.toggle("on", me.notify_all !== false);
+    document.getElementById("tg-dist").classList.toggle("on", me.show_distance !== false);
+  }
+  async function flip(id, field){
+    const row = document.getElementById(id);
+    const on = !row.classList.contains("on");
+    row.classList.toggle("on", on); row.classList.add("busy");
+    const r = await rpc("update_profile", { [field]: on });
+    row.classList.remove("busy");
+    if (!r || !r.ok) { row.classList.toggle("on", !on); toast("non riesco a salvare, riprova."); return; }
+    track("pref_" + field.replace(/^p_/, ""));
+  }
+
+  // ---- community ----
+  function cmRow(c, href, act){
+    const sub = [c.is_verified ? "verificata" : null,
+                 Number(c.follower_count) ? Number(c.follower_count) + (Number(c.follower_count) === 1 ? " segue" : " seguono") : null,
+                 Number(c.upcoming_count) ? Number(c.upcoming_count) + " in programma" : null]
+                .filter(Boolean).join(" · ");
+    return `<a class="cm" href="${esc(href)}"><div class="tile">${esc(c.emoji || "📍")}</div>` +
+      `<div><div class="n">${esc(c.name)}</div>${sub ? `<div class="s">${sub}</div>` : ""}</div>` +
+      `<span class="act">${act}</span></a>`;
+  }
+  async function loadCommunities(){
+    const follow = document.getElementById("cm-follow");
+    const r = await rpc("my_communities", {});
+    if (!r || !r.ok) { follow.innerHTML = '<p class="empty">non riesco a caricare le community, ricarica la pagina.</p>'; return; }
+    const rows = await r.json().catch(() => []);
+    const mine = rows.filter(c => c.role === "owner" || c.role === "admin");
+    const followed = rows.filter(c => c.role === "follower");
+    if (mine.length) {
+      document.getElementById("cm-mine-wrap").hidden = false;
+      document.getElementById("cm-mine").innerHTML = mine.map(c => cmRow(c, "dashboard.html?id=" + c.id, "gestisci →")).join("");
+    }
+    document.getElementById("cm-n").textContent = followed.length ? "(" + followed.length + ")" : "";
+    follow.innerHTML = followed.length
+      ? followed.map(c => cmRow(c, "community.html?slug=" + encodeURIComponent(c.slug), "vedi →")).join("")
+      : '<p class="empty">non segui ancora nessuna community. le trovi negli eventi: chi organizza ha la sua pagina.</p>';
+  }
+
+  loadPrefs();
+  loadCommunities();
+</script>
+</body>
+</html>
