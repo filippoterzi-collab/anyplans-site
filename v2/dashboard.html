@@ -198,24 +198,24 @@
   </div>
 
   <div class="stats">
-    <div class="stat"><div class="display n" id="st-followers">0</div><div class="l">vi seguono</div></div>
+    <div class="stat"><div class="display n" id="st-followers">0</div><div class="l">seguono il gruppo</div></div>
     <div class="stat"><div class="display n" id="st-upcoming">0</div><div class="l">eventi in programma</div></div>
     <div class="stat"><div class="display n" id="st-done">0</div><div class="l">eventi fatti</div></div>
   </div>
 
   <div class="tabs" id="tabs">
     <button class="on" data-tab="eventi" onclick="showTab('eventi')">eventi</button>
-    <button data-tab="follower" onclick="showTab('follower')">chi vi segue</button>
+    <button data-tab="follower" onclick="showTab('follower')">chi segue il gruppo</button>
     <button data-tab="admin" onclick="showTab('admin')">collaboratori</button>
     <button data-tab="modifica" onclick="showTab('modifica')">modifica la pagina</button>
     <div class="acts">
-      <button class="btn ghost sm" onclick="openBlast()">avvisa chi vi segue</button>
-      <a class="btn sm" id="lnk-new" href="#">+ nuovo evento</a>
+      <button class="btn ghost sm" onclick="openBlast()">avvisa chi segue il gruppo</button>
+      <a class="btn sm" id="lnk-new" href="#">+ pubblica un evento</a>
     </div>
   </div>
   <div class="acts-mob">
-    <button class="btn ghost" onclick="openBlast()">avvisa chi vi segue</button>
-    <a class="btn" id="lnk-new-mob" href="#">+ nuovo evento</a>
+    <button class="btn ghost" onclick="openBlast()">avvisa chi segue il gruppo</button>
+    <a class="btn" id="lnk-new-mob" href="#">+ pubblica un evento</a>
   </div>
 
   <!-- tab eventi -->
@@ -243,11 +243,11 @@
     <div class="box">
       <div class="sec" style="font-size:15px">collaboratori</div>
       <div id="admins" class="list" style="gap:8px"></div>
-      <p class="note" id="admin-note">i collaboratori possono pubblicare eventi e mandare avvisi. li scegli solo tu, tra chi vi segue.</p>
+      <p class="note" id="admin-note">i collaboratori del gruppo possono pubblicare eventi e mandare avvisi. li scegli solo tu, tra chi segue il gruppo.</p>
       <button class="textbtn" id="btn-add-admin" hidden style="align-self:flex-start; padding-left:0" onclick="openPicker()">+ aggiungi un collaboratore</button>
     </div>
     <div class="box" id="picker" hidden>
-      <div class="sec" style="font-size:15px">scegli tra chi vi segue</div>
+      <div class="sec" style="font-size:15px">scegli tra chi segue il gruppo</div>
       <div id="picker-list" class="list" style="gap:8px"><p class="empty">carico…</p></div>
     </div>
   </section>
@@ -274,13 +274,13 @@
         <div class="chips" id="cats"></div>
       </div>
       <div>
-        <label for="f-desc">di cosa vi occupate?</label>
+        <label for="f-desc">di cosa si occupa il gruppo?</label>
         <textarea id="f-desc" maxlength="500" placeholder="due righe per chi vi scopre sulla mappa…"></textarea>
       </div>
       <div>
         <label for="f-ig">instagram <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
         <div class="prefix"><span>instagram.com/</span><input id="f-ig" type="text" maxlength="30" placeholder="nomeutente" autocomplete="off" autocapitalize="none"></div>
-        <p class="hint">lo mostriamo nella vostra pagina, sotto gli eventi passati.</p>
+        <p class="hint">lo mostriamo nella pagina del gruppo, sotto gli eventi passati.</p>
       </div>
       <button class="btn" id="f-btn" type="submit" style="width:100%">salva le modifiche</button>
       <p class="note" id="f-note"></p>
@@ -292,7 +292,7 @@
 <div class="overlay" id="blast" hidden>
   <div class="modal">
     <div style="display:flex; align-items:center; justify-content:space-between; gap:12px">
-      <h2 class="display" style="font-size:26px">avvisa chi vi segue</h2>
+      <h2 class="display" style="font-size:26px">avvisa chi segue il gruppo</h2>
       <button class="x" onclick="closeBlast()">×</button>
     </div>
     <div class="from">
@@ -305,7 +305,7 @@
     </div>
     <div>
       <label for="b-body">messaggio</label>
-      <textarea id="b-body" maxlength="1000" style="min-height:120px" placeholder="due righe a chi vi segue: cosa succede, quando, come partecipare."></textarea>
+      <textarea id="b-body" maxlength="1000" style="min-height:120px" placeholder="due righe a chi segue il gruppo: cosa succede, quando, come partecipare."></textarea>
     </div>
     <div>
       <label for="b-event">collega un evento <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
@@ -335,7 +335,7 @@
   <div class="sk" style="height:90px"></div>
 </div>
 
-<script src="app.js?v=1788474291"></script>
+<script src="app.js?v=1788474486"></script>
 <script>
   requireLogin();
   mountTabbar();
@@ -371,7 +371,7 @@
     document.getElementById("name").textContent = c.name;
     document.getElementById("verified").hidden = !c.is_verified;
     document.getElementById("meta").textContent =
-      (c.is_verified ? "gruppo verificato · " : "") + "la vedi come " + (c.my_role === "owner" ? "owner" : "admin");
+      (c.is_verified ? "gruppo verificato · " : "") + (c.my_role === "owner" ? "sei il responsabile" : "sei collaboratore");
     const pub = "community.html?" + (c.slug ? "slug=" + encodeURIComponent(c.slug) : "id=" + c.id);
     document.getElementById("lnk-public").href = pub;
     const newHref = "crea.html?community=" + c.id;
@@ -437,7 +437,7 @@
     else {
       upcoming = (await ru.json().catch(() => [])).sort((a, b) => new Date(a.start_at) - new Date(b.start_at));
       up.innerHTML = upcoming.length ? upcoming.map(x => evRow(x, false)).join("")
-        : '<p class="empty">nessun evento in programma. il prossimo lo crei da "+ nuovo evento".</p>';
+        : '<p class="empty">nessun evento in programma. il prossimo lo pubblichi da "+ pubblica un evento".</p>';
       document.getElementById("st-upcoming").textContent = upcoming.length;
       const sel = document.getElementById("b-event");
       sel.innerHTML = '<option value="">nessun evento</option>' + upcoming.map(x => {
@@ -473,11 +473,11 @@
   async function loadFollowers(){
     const wrap = document.getElementById("followers");
     const r = await rpc("community_followers", { p_id: c.id });
-    if (!r || !r.ok) { followers = null; wrap.innerHTML = '<p class="empty">non riesco a caricare chi vi segue, riprova.</p>'; return; }
+    if (!r || !r.ok) { followers = null; wrap.innerHTML = '<p class="empty">non riesco a caricare chi segue il gruppo, riprova.</p>'; return; }
     followers = (await r.json().catch(() => [])).sort((a, b) => new Date(b.followed_at) - new Date(a.followed_at));
     document.getElementById("fol-n").textContent = "(" + followers.length + ")";
     wrap.innerHTML = followers.length ? followers.map(p => personRow(p)).join("")
-      : '<p class="empty">ancora nessuno vi segue. condividete la pagina: chi vi segue riceve un avviso a ogni nuovo evento.</p>';
+      : '<p class="empty">ancora nessuno segue il gruppo. condividi la pagina: chi lo segue riceve un avviso a ogni nuovo evento.</p>';
   }
 
   // ---- admin ----
@@ -508,7 +508,7 @@
     const list = document.getElementById("picker-list");
     const pool = (followers || []).filter(p => !adminsLocal.some(a => a.user_id === p.user_id) && p.user_id !== myUid());
     list.innerHTML = pool.length ? pool.map(p => personRow(p, `<button class="btn sm act" onclick="setAdmin('${esc(p.user_id)}', true)">rendi collaboratore</button>`)).join("")
-      : '<p class="empty">nessuno da scegliere: i collaboratori si scelgono tra chi vi segue.</p>';
+      : '<p class="empty">nessuno da scegliere: i collaboratori si scelgono tra chi segue il gruppo.</p>';
   }
   async function setAdmin(uid, on){
     const r = await rpc("set_community_admin", { p_id: c.id, p_user_id: uid, p_admin: on });
@@ -516,7 +516,7 @@
     if (on) {
       const p = (followers || []).find(x => x.user_id === uid);
       if (p && !adminsLocal.some(a => a.user_id === uid)) adminsLocal.push(p);
-      toast("ora è collaboratore: può pubblicare eventi e mandare avvisi.");
+      toast("ora è collaboratore del gruppo: può pubblicare eventi e mandare avvisi.");
       document.getElementById("picker").hidden = true;
     } else {
       const i = adminsLocal.findIndex(a => a.user_id === uid);
@@ -629,14 +629,14 @@
     function fail(msg){ note.className = "note err"; note.textContent = msg; btn.disabled = false; }
     if (subject.length < 3) return fail("scrivi un oggetto (almeno 3 lettere).");
     if (body.length < 10) return fail("scrivi un messaggio (almeno 10 lettere).");
-    if (!(Number(c.follower_count) || 0)) return fail("non c'è ancora nessuno da avvisare. condividete la pagina.");
+    if (!(Number(c.follower_count) || 0)) return fail("non c'è ancora nessuno da avvisare. condividi la pagina.");
     btn.disabled = true; note.className = "note"; note.textContent = "…";
     const r = await rpc("send_blast", { p_community_id: c.id, p_subject: subject, p_body: body, p_activity_id: evId || null });
     if (!r) return fail("non riesco a collegarmi. controlla internet e riprova.");
     if (!r.ok) {
       const b = await r.json().catch(() => ({}));
       const code = b.message || "";
-      if (code.includes("blast_limit")) return fail("avete già mandato 2 avvisi questa settimana. riprovate tra qualche giorno.");
+      if (code.includes("blast_limit")) return fail("hai già mandato 2 avvisi questa settimana. riprova tra qualche giorno.");
       return fail("non riesco a inviare, riprova.");
     }
     const n = Number(await r.json().catch(() => 0)) || 0;

@@ -107,7 +107,7 @@
     <img class="logo" src="/logo.png" alt="">
     <div>
       <h1>controlla la tua email</h1>
-      <p class="sub">abbiamo mandato un codice a 6 cifre a <b id="sent-to"></b>. scade tra 10 minuti. se non lo vedi, <b>controlla nello spam</b>.</p>
+      <p class="sub">ti abbiamo mandato un codice di 6 numeri a <b id="sent-to"></b>. vale 10 minuti. se non lo vedi, <b>guarda nella posta indesiderata (spam)</b>.</p>
     </div>
     <div class="otp" id="otp">
       <input inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="cifra 1">
@@ -117,7 +117,7 @@
       <input inputmode="numeric" maxlength="1" aria-label="cifra 5">
       <input inputmode="numeric" maxlength="1" aria-label="cifra 6">
     </div>
-    <button class="btn" id="btn-verify" type="submit">accedi</button>
+    <button class="btn" id="btn-verify" type="submit">entra</button>
     <p class="note" id="note-code"></p>
     <div class="row">
       <button type="button" id="btn-resend" onclick="resendCode()">non è arrivato? mandamelo di nuovo</button>
@@ -152,7 +152,7 @@
         method: "POST", headers: HEADERS,
         body: JSON.stringify({ email: email, create_user: true })
       });
-    } catch (_) { return "non riesco a raggiungere il server, controlla la connessione."; }
+    } catch (_) { return "non riesco a collegarmi. controlla internet e riprova."; }
     if (r.ok) return null;
     const body = await r.json().catch(() => ({}));
     if (r.status === 429) return "troppi tentativi, aspetta qualche minuto e riprova.";
@@ -181,7 +181,7 @@
     if (resendCooldown > 0) return;
     note("note-code", "…");
     const err = await requestOtp(currentEmail);
-    note("note-code", err || "rimandato. vale solo quest'ultimo codice, controlla anche lo spam.", err ? "err" : "ok");
+    note("note-code", err || "mandato. usa questo, il vecchio non vale più. guarda anche nella posta indesiderata.", err ? "err" : "ok");
     if (!err) startCooldown();
   }
 
@@ -191,7 +191,7 @@
     const t = setInterval(() => {
       resendCooldown--;
       b.textContent = resendCooldown > 0
-        ? `rimanda il codice (${resendCooldown}s)`
+        ? `puoi richiederlo tra ${resendCooldown} secondi`
         : "non è arrivato? mandamelo di nuovo";
       if (resendCooldown <= 0) clearInterval(t);
     }, 1000);
@@ -229,7 +229,7 @@
   async function verifyCode(e){
     if (e) e.preventDefault();
     const token = otpInputs.map(i => i.value).join("");
-    if (token.length < 6) { note("note-code", "inserisci tutte le 6 cifre.", "err"); return false; }
+    if (token.length < 6) { note("note-code", "scrivi tutti e 6 i numeri.", "err"); return false; }
     const btn = document.getElementById("btn-verify");
     btn.disabled = true; note("note-code", "…");
     try {
@@ -241,7 +241,7 @@
       btn.disabled = false;
       if (!r.ok) {
         otpInputs.forEach(i => i.value = ""); otpInputs[0].focus();
-        note("note-code", "codice sbagliato o scaduto. vale solo l'ultimo ricevuto, e dura 10 minuti. fattene mandare un altro.", "err");
+        note("note-code", "codice sbagliato o scaduto. chiedine uno nuovo qui sotto.", "err");
         return false;
       }
       const session = JSON.stringify({
@@ -259,8 +259,8 @@
       btn.disabled = false;
       const offline = err instanceof TypeError;
       note("note-code", offline
-        ? "non riesco a raggiungere il server, controlla la connessione e riprova."
-        : "qualcosa è andato storto (" + (err.name || "errore") + "), riprova.", "err");
+        ? "non riesco a collegarmi. controlla internet e riprova."
+        : "qualcosa non ha funzionato, riprova.", "err");
     }
     return false;
   }

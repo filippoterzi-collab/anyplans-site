@@ -97,17 +97,17 @@
 
 <main>
   <div class="top">
-    <h1 class="display">notifiche</h1>
+    <h1 class="display">avvisi</h1>
     <button class="textbtn" id="btn-seen" onclick="markAllSeen()" hidden>segna tutto come letto</button>
   </div>
   <div class="box" id="list"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
   <div class="foot">
-    <span>ricevi una notifica dalle gruppi che segui</span>
+    <span>ti avvisiamo quando i gruppi che segui pubblicano qualcosa</span>
     <a href="impostazioni.html#notifiche">gestisci →</a>
   </div>
 </main>
 
-<script src="app.js?v=1788474291"></script>
+<script src="app.js?v=1788474486"></script>
 <script>
   requireLogin();
   mountTabbar("");
@@ -148,7 +148,7 @@
     let icon = "", txt = "", sub = "", go = "", href = n.activity_id ? "evento.html?id=" + n.activity_id : "";
     if (kind === "join") {
       icon = avatarHtml(n);
-      txt = `<b>${who}</b> si è unita al tuo evento <b>${title}</b>`;
+      txt = `<b>${who}</b> viene al tuo evento <b>${title}</b>`;
     } else if (kind === "request") {
       icon = avatarHtml(n);
       txt = `<b>${who}</b> ha chiesto di unirsi a <b>${title}</b>`;

@@ -206,7 +206,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788474291"></script>
+<script src="app.js?v=1788474486"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -384,7 +384,7 @@
     document.getElementById("count").textContent = evs.length + (evs.length === 1 ? " evento" : " eventi") + " in programma";
     EVENTS.forEach(e => { const visible = evs.includes(e); markers[e.id].getElement().style.opacity = visible ? "1" : "0.25"; });
 
-    if (!evs.length) { list.innerHTML = '<div class="empty">' + (day ? "niente " + (day === "weekend" ? "nel fine settimana" : day) + ". prova un altro giorno o un\'altra parola, " : "nessun evento trovato. prova un\'altra parola, ") + 'oppure <a href="crea.html" style="color:var(--blue); font-weight:700">pubblica tu il primo evento</a>.</div>'; return; }
+    if (!evs.length) { list.innerHTML = '<div class="empty">' + (day ? "niente " + (day === "weekend" ? "nel fine settimana" : day) + ". prova un altro giorno o un\'altra parola, " : "nessun evento trovato. prova un\'altra parola, ") + 'oppure <a href="crea.html" style="color:var(--blue); font-weight:700">pubblica tu un evento</a>.</div>'; return; }
 
     let html = "", lastDay = "";
     evs.forEach(e => {

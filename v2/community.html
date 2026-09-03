@@ -185,7 +185,7 @@
   <a class="btn" href="eventi.html">guarda gli eventi a bergamo</a>
 </div>
 
-<script src="app.js?v=1788474291"></script>
+<script src="app.js?v=1788474486"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const wantId = params.get("id");
@@ -244,7 +244,7 @@
     past.innerHTML = done + (done === 1 ? " evento" : " eventi") +
       (c.instagram_handle
         ? ' · le foto le trovi sulla <a href="https://instagram.com/' + encodeURIComponent(String(c.instagram_handle).replace(/^@/, "")) + '" target="_blank" rel="noopener">pagina instagram del gruppo</a>.'
-        : (done ? " · le foto le trovi sui canali del gruppo." : " · il primo è in arrivo."));
+        : (done ? " · " : " · il primo è in arrivo."));
     document.getElementById("loading").hidden = true;
     document.getElementById("page").hidden = false;
     track("community_view", "/community/" + (c.slug || c.id));
@@ -256,7 +256,7 @@
     const followers = Number(c.follower_count) || 0;
     const done = Number(c.events_done) || 0;
     const parts = [];
-    if (c.is_verified) parts.push('<span class="v">' + (mobile ? "verificata" : "verificato da anyplans") + "</span>");
+    if (c.is_verified) parts.push('<span class="v">' + (mobile ? "verificato" : "verificato da anyplans") + "</span>");
     if (!mobile && c.category) parts.push(esc((c.emoji ? c.emoji + " " : "") + c.category));
     if (c.city) parts.push(esc(c.city));
     parts.push("<b>" + (followers === 1 ? "1 persona lo segue" : followers + " persone lo seguono") + "</b>");

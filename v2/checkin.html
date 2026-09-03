@@ -96,7 +96,7 @@
   <div class="res" id="res" hidden><div class="avatar" id="res-av"></div><div><div id="res-n"></div><div class="s" id="res-s"></div></div></div>
 </div>
 
-<script src="app.js?v=1788474291"></script>
+<script src="app.js?v=1788474486"></script>
 <script>
   requireLogin();
   const params = new URLSearchParams(location.search);
@@ -132,7 +132,7 @@
     document.getElementById("list").innerHTML = rows.map(p =>
       `<div class="row${p.checked_in ? " in" : ""}" onclick="toggle('${p.user_id}')">
         <div class="avatar"${p.avatar_url ? ` style="background-image:url('${esc(p.avatar_url)}')"` : ""}>${p.avatar_url ? "" : esc((p.display_name || "?")[0].toLowerCase())}</div>
-        <div><div class="n">${esc(p.display_name || "qualcuno")}</div><div class="s">${p.role === "admin" ? "collaboratore · " : ""}${p.checked_in ? "arrivato ✓" : "non ancora"}</div></div>
+        <div><div class="n">${esc(p.display_name || "qualcuno")}</div><div class="s">${p.role === "admin" ? "collaboratore · " : ""}${p.checked_in ? "presente ✓" : "non ancora"}</div></div>
         <div class="circle">${p.checked_in ? "✓" : ""}</div>
       </div>`).join("") || '<p class="note">nessuno con questo nome.</p>';
   }
@@ -201,13 +201,13 @@
     if (!row) return;
     track("checkin_scan");
     const p = people.find(x => x.user_id === row.user_id); if (p) p.checked_in = true; render();
-    const s = (row.already ? "era già segnato" : "arrivato ✓") + " · " + row.checked_count + " arrivati su " + row.going_count;
-    if (fromUrl) toast(row.display_name + (row.already ? " era già segnato." : " è arrivato!")); else showRes(row.display_name, s, true);
+    const s = (row.already ? "già presente" : "presente ✓") + " · " + row.checked_count + " arrivati su " + row.going_count;
+    if (fromUrl) toast(row.display_name + (row.already ? ": già presente." : " è qui!")); else showRes(row.display_name, s, true);
   }
   function showRes(name, s, ok){
     const res = document.getElementById("res"); res.hidden = false; res.className = "res" + (ok ? " ok" : "");
     document.getElementById("res-av").textContent = name ? name[0].toLowerCase() : "!";
-    document.getElementById("res-n").textContent = name ? name + (s.startsWith("era") ? " era già segnato" : " è arrivato") : "ops";
+    document.getElementById("res-n").textContent = name ? name + (s.startsWith("già") ? ": già presente" : " è qui") : "ops";
     document.getElementById("res-s").textContent = s;
     if (navigator.vibrate) navigator.vibrate(ok ? 60 : [40, 60, 40]);
   }
