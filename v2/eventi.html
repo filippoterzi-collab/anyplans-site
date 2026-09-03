@@ -300,7 +300,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788475735"></script>
+<script src="app.js?v=1788475849"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -332,21 +332,38 @@
                         gardening:"giardinaggio", festival:"cultura", yoga:"benessere" };
   // parole con cui la gente cerca ogni attività (il titolo da solo non basta: "corsa" vs "corro 10k")
   const SEARCH_WORDS = {
-    running: "corsa correre run running km", trail: "trail corsa montagna",
-    hyrox: "hyrox palestra gara", walking: "camminata passeggiata camminare",
-    cycling: "bici bicicletta ciclismo pedalare giro", mtb: "mtb gravel bici montagna",
-    moto: "moto motociclette giro", hiking: "escursione trekking camminata montagna gita",
-    climbing: "arrampicata climbing falesia", skitouring: "scialpinismo sci montagna",
-    gym: "palestra crossfit allenamento workout", yoga: "yoga pilates benessere rilassamento",
-    football: "calcio calcetto pallone partita", basketball: "basket pallacanestro partita",
-    volleyball: "volley pallavolo partita", tennis: "tennis racchetta partita",
-    padel: "padel racchetta partita", swimming: "nuoto piscina nuotare",
-    surf: "surf sup tavola", paddling: "canoa kayak pagaia",
-    skiing: "sci neve sciare", snowboard: "snowboard neve tavola", skating: "pattinaggio pattini",
-    ceramics: "ceramica argilla tornio corso creativo", cooking: "cucina cucinare corso pasta chef",
-    painting: "pittura disegno arte corso creativo", gardening: "giardinaggio orto volontariato verde",
-    festival: "festa sagra festival evento concerto paese"
+    running: "corsa correre corro run running jogging km parco allenamento",
+    trail: "trail corsa montagna sentiero sentieri running mountain",
+    hyrox: "hyrox palestra gara fitness workout crossfit",
+    walking: "camminata passeggiata camminare walk walking passeggio piedi",
+    cycling: "bici bicicletta ciclismo pedalare pedalata giro bike cycling ride road",
+    mtb: "mtb gravel bici montagna mountain bike ebike e-bike ciclismo",
+    moto: "moto motociclette motociclismo giro motorbike ride",
+    hiking: "escursione escursionismo trekking hiking hike camminata montagna gita sentiero rifugio cima trek",
+    climbing: "arrampicata scalata scalare climbing boulder bouldering falesia parete corda montagna",
+    skitouring: "scialpinismo sci alpinismo montagna neve ski touring",
+    gym: "palestra crossfit allenamento workout gym fitness pesi",
+    yoga: "yoga pilates benessere rilassamento meditazione stretching respiro wellness",
+    football: "calcio calcetto pallone partita football soccer",
+    basketball: "basket pallacanestro partita basketball canestro",
+    volleyball: "volley pallavolo beach partita volleyball",
+    tennis: "tennis racchetta partita",
+    padel: "padel racchetta partita paddle",
+    swimming: "nuoto piscina nuotare swim swimming lago mare",
+    surf: "surf sup tavola paddle board surfing onde",
+    paddling: "canoa kayak pagaia canoe paddling fiume lago rafting",
+    skiing: "sci neve sciare ski skiing pista montagna",
+    snowboard: "snowboard neve tavola snow",
+    skating: "pattinaggio pattini skate skating rollerblade ghiaccio",
+    ceramics: "ceramica argilla tornio corso creativo pottery clay laboratorio manuale",
+    cooking: "cucina cucinare corso pasta chef cooking cena pranzo ricetta food mangiare cibo aperitivo",
+    painting: "pittura disegno arte corso creativo painting drawing art acquerello quadro laboratorio",
+    gardening: "giardinaggio orto volontariato verde gardening garden piante natura pulizia ambiente",
+    festival: "festa sagra festival evento concerto paese party musica live serata fiera mercato"
   };
+  // parole simili: "corse" trova "corsa", "scalate" trova "scalata" (si confronta anche la radice)
+  const stem = w => w.length > 4 ? w.replace(/(ando|endo|are|ere|ire|ate|ata|ato|ati|ing|s|e|a|o|i)$/, "") : w;
+  const hit = (hay, w) => hay.includes(w) || (w.length > 3 && hay.includes(stem(w)));
   const norm = t => t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   let EVENTS = [];
 
@@ -485,7 +502,7 @@
       .filter(e => {
         if (!q) return true;
         const hay = norm([e.title, e.host, e.place, e.cat, SEARCH_WORDS[e.slug] || ""].join(" "));
-        return norm(q).split(/\s+/).every(w => hay.includes(w));
+        return norm(q).split(/\s+/).every(w => hit(hay, w));
       })
       .sort((a, b) => a.when - b.when);
 
