@@ -205,6 +205,24 @@
   // categoria del sito per ogni slug non sportivo; tutto il resto è "sport"
   const CAT_BY_SLUG = { cooking:"cucina", ceramics:"creatività", painting:"creatività",
                         gardening:"giardinaggio", festival:"cultura", yoga:"benessere" };
+  // parole con cui la gente cerca ogni attività (il titolo da solo non basta: "corsa" vs "corro 10k")
+  const SEARCH_WORDS = {
+    running: "corsa correre run running km", trail: "trail corsa montagna",
+    hyrox: "hyrox palestra gara", walking: "camminata passeggiata camminare",
+    cycling: "bici bicicletta ciclismo pedalare giro", mtb: "mtb gravel bici montagna",
+    moto: "moto motociclette giro", hiking: "escursione trekking camminata montagna gita",
+    climbing: "arrampicata climbing falesia", skitouring: "scialpinismo sci montagna",
+    gym: "palestra crossfit allenamento workout", yoga: "yoga pilates benessere rilassamento",
+    football: "calcio calcetto pallone partita", basketball: "basket pallacanestro partita",
+    volleyball: "volley pallavolo partita", tennis: "tennis racchetta partita",
+    padel: "padel racchetta partita", swimming: "nuoto piscina nuotare",
+    surf: "surf sup tavola", paddling: "canoa kayak pagaia",
+    skiing: "sci neve sciare", snowboard: "snowboard neve tavola", skating: "pattinaggio pattini",
+    ceramics: "ceramica argilla tornio corso creativo", cooking: "cucina cucinare corso pasta chef",
+    painting: "pittura disegno arte corso creativo", gardening: "giardinaggio orto volontariato verde",
+    festival: "festa sagra festival evento concerto paese"
+  };
+  const norm = t => t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   let EVENTS = [];
 
   async function refreshSession(){
@@ -257,6 +275,7 @@
       id: x.id,
       emoji: x.emoji || "📍",
       cat: CAT_BY_SLUG[x.sport] || "sport",
+      slug: x.sport,
       title: x.title,
       host: x.host_name || null,
       place: x.meeting_point_text || "posizione approssimativa",
@@ -320,7 +339,11 @@
     const list = document.getElementById("list");
     const evs = EVENTS
       .filter(e => !cat || e.cat === cat)
-      .filter(e => !q || (e.title + " " + e.host + " " + e.place + " " + e.cat).toLowerCase().includes(q))
+      .filter(e => {
+        if (!q) return true;
+        const hay = norm([e.title, e.host, e.place, e.cat, SEARCH_WORDS[e.slug] || ""].join(" "));
+        return norm(q).split(/\s+/).every(w => hay.includes(w));
+      })
       .sort((a, b) => a.when - b.when);
 
     document.getElementById("count").textContent = "in programma · " + evs.length + (evs.length === 1 ? " evento" : " eventi");
