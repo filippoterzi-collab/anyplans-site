@@ -225,7 +225,7 @@
   </div>
   <a class="comm" id="comm" hidden href="#">
     <div class="avatar" id="comm-emoji" style="background:var(--tint); font-size:20px"></div>
-    <div><div class="n" id="comm-name"></div><div class="s" id="comm-sub">organizza questa community</div></div>
+    <div><div class="n" id="comm-name"></div><div class="s" id="comm-sub">organizza questo gruppo</div></div>
     <div style="margin-left:auto; font-weight:700; font-size:13.5px; color:var(--blue)">vedi →</div>
   </a>
   <div class="hostcard" id="source" hidden>
@@ -340,7 +340,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788473608"></script>
+<script src="app.js?v=1788474120"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -519,7 +519,7 @@
     el.hidden = false; el.href = "community.html?slug=" + encodeURIComponent(c.slug);
     document.getElementById("comm-emoji").textContent = c.emoji || "🏷️";
     document.getElementById("comm-name").textContent = c.name;
-    document.getElementById("comm-sub").innerHTML = c.is_verified ? '<span class="v">verificata da anyplans</span>' : "community";
+    document.getElementById("comm-sub").innerHTML = c.is_verified ? '<span class="v">verificato da anyplans</span>' : "community";
   }
 
   // ---- biglietto: qr con il link di check-in (token per partecipazione, migrazione 0047) ----
@@ -528,7 +528,7 @@
     const ov = document.getElementById("ticket-ov");
     document.getElementById("tk-em").textContent = ev.emoji || "📍";
     document.getElementById("tk-t").textContent = ev.title;
-    document.getElementById("tk-host").textContent = ev.community ? ev.community.name + (ev.community.is_verified ? " · verificata da anyplans" : "") : (ev.host_name ? "di " + ev.host_name : "");
+    document.getElementById("tk-host").textContent = ev.community ? ev.community.name + (ev.community.is_verified ? " · verificato da anyplans" : "") : (ev.host_name ? "di " + ev.host_name : "");
     const when = new Date(ev.start_at);
     document.getElementById("tk-when").textContent = dayLabel(when) + " " + timeStr(when);
     document.getElementById("tk-where").textContent = ev.meeting_point_text || "posizione approssimativa";

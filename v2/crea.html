@@ -100,7 +100,7 @@
   <div id="as-wrap" hidden>
     <label for="as">chi lo organizza?</label>
     <select id="as"><option value="">io</option></select>
-    <p class="hint">chi segue la community riceve un avviso.</p>
+    <p class="hint">chi segue il gruppo riceve un avviso.</p>
   </div>
 
   <div>
@@ -187,7 +187,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788473608"></script>
+<script src="app.js?v=1788474120"></script>
 <script>
   requireLogin();
   mountTabbar("crea");
@@ -204,7 +204,7 @@
     }
   });
 
-  // select categorie dal catalogo (community prima, poi sport)
+  // select categorie dal catalogo (gruppo prima, poi sport)
   const sel = document.getElementById("sport");
   const first = ["ceramics","cooking","painting","gardening","festival","yoga"];
   const order = [...first, ...Object.keys(CATALOG).filter(s => !first.includes(s))];
@@ -356,7 +356,7 @@
   }
   if (editId) loadForEdit();
 
-  // pubblica come community (owner/admin): ?community=<id> preseleziona
+  // pubblica come gruppo (owner/admin): ?community=<id> preseleziona
   const wantCommunity = new URLSearchParams(location.search).get("community");
   rpc("my_communities").then(async r => {
     if (!r || !r.ok || editId) return;
@@ -489,7 +489,7 @@
       const asC = document.getElementById("as").value;
       if (asC) {
         const rc = await rpc("set_activity_community", { p_activity_id: newId, p_community_id: asC });
-        if (!rc || !rc.ok) toast("evento pubblicato, ma non risulta della community. riprova da \"modifica l'evento\".");
+        if (!rc || !rc.ok) toast("evento pubblicato, ma non risulta del gruppo. riprova da \"modifica l'evento\".");
       }
       track("event_create");
       location.href = "evento.html?id=" + newId;

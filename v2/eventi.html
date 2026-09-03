@@ -101,6 +101,7 @@
     .nav .lnk{display:none;}
     .nav-right a, .nav-right .iconbtn[title]{display:none;}
     .nav-right #avatar, .nav-right #bell{display:flex;}
+    .nav-right #nav-reg{display:inline-block;}
     .topbar{padding:4px 18px 10px;}
     .titlerow h1{font-size:24px;}
     .split{flex-direction:column;}
@@ -187,14 +188,23 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788473608"></script>
+<script src="app.js?v=1788474120"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
     try { saveSession(JSON.parse(decodeURIComponent(location.hash.slice(3)))); history.replaceState(null, "", location.pathname); } catch (_) {}
   }
-  requireLogin();
-  if (session && session.access_token) {
+  // la mappa si vede anche senza account: email e profilo li chiediamo al primo "ci sono"
+  const logged = !!(session && session.access_token);
+  if (!logged) {
+    document.getElementById("avatar").parentElement.hidden = true;
+    const bell = document.getElementById("bell"); if (bell) bell.style.display = "none";
+    const reg = document.createElement("a"); reg.href = "login.html"; reg.id = "nav-reg";
+    reg.style.cssText = "background:var(--blue); color:#fff; font-weight:700; font-size:13.5px; padding:9px 16px; border-radius:999px; white-space:nowrap";
+    reg.textContent = "registrati"; reg.onclick = () => { try { sessionStorage.setItem("anyplans_next", "eventi.html"); } catch (_) {} };
+    document.querySelector(".nav-right").prepend(reg);
+  }
+  if (logged) {
     document.getElementById("avatar").textContent = (session.email || "?")[0].toLowerCase();
     document.getElementById("menu-email").textContent = session.email || "";
     document.addEventListener("click", (e) => {
@@ -202,6 +212,7 @@
     });
   }
   mountTabbar("eventi");
+  if (!logged) document.querySelectorAll("#tabbar a").forEach(a => { if (!a.getAttribute("href").includes("eventi.html")) a.onclick = () => { try { sessionStorage.setItem("anyplans_next", a.getAttribute("href")); } catch (_) {} }; });
 
   // categoria del sito per ogni slug non sportivo; tutto il resto è "sport"
   const CAT_BY_SLUG = { cooking:"cucina", ceramics:"creatività", painting:"creatività",
@@ -341,7 +352,7 @@
         html += `<div class="day${isToday ? " today" : ""}"><span class="dot"></span><b>${dayLabel(e.when)}</b><span>${daySub(e.when)}</span></div>`;
       }
       const [cls, label] = stateBtn(e);
-      html += `<div class="ev" id="ev-${e.id}" onclick="highlight('${e.id}', true)">
+      html += `<div class="ev" id="ev-${e.id}" onclick="location.href='evento.html?id=${e.id}'" onmouseenter="highlight('${e.id}', false)">
         <div class="tile">${e.emoji}</div>
         <div>
           <div class="time">${timeStr(e.when)} · ${relTime(e.when)}</div>
@@ -369,7 +380,13 @@
     }
   }
 
+  function askLogin(id){
+    try { sessionStorage.setItem("anyplans_next", "evento.html?id=" + id + "&join=1"); } catch (_) {}
+    toast("per iscriverti serve un account: è gratis, ci vuole un minuto.");
+    setTimeout(() => location.href = "login.html", 900);
+  }
   async function join(id){
+    if (!logged) return askLogin(id);
     const e = EVENTS.find(x => x.id === id);
     if (e.mine) { location.href = "evento.html?id=" + id; return; }
     const leaving = e.my === "going" || e.my === "requested";
@@ -403,8 +420,9 @@
     toast(msg);
   }
 
-  checkProfile();
+  if (logged) checkProfile();
   loadEvents().then(() => {
+    if (!logged) return;
     // pallino sulla campanella: in silenzio se la rpc non c'è ancora
     rpc("unread_notifications", {}).then(async r => {
       if (!r || !r.ok) return;

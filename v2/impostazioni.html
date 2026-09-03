@@ -117,7 +117,7 @@
     <div class="tabs">
       <a href="#account" data-tab="account">account</a>
       <a href="#notifiche" data-tab="notifiche">notifiche</a>
-      <a href="#community" data-tab="community">community</a>
+      <a href="#gruppo" data-tab="community">gruppo</a>
     </div>
   </div>
 
@@ -146,7 +146,7 @@
     <div class="toggle-row" id="tg-notify" onclick="flip('tg-notify', 'p_notify_all')">
       <div>
         <div class="t">avvisami di quello che succede</div>
-        <div class="s">nuovi eventi delle community che seguo, richieste e conferme sui tuoi eventi.</div>
+        <div class="s">nuovi eventi deli gruppi che seguo, richieste e conferme sui tuoi eventi.</div>
       </div>
       <div class="sw"><div class="k"></div></div>
     </div>
@@ -160,31 +160,32 @@
     <p class="empty">le scelte si salvano da sole.</p>
   </section>
 
-  <!-- community -->
+  <!-- gruppo -->
   <section id="tab-community" hidden>
     <div id="cm-mine-wrap" hidden>
-      <div class="sec" style="margin-bottom:8px">le community che gestisco</div>
+      <div class="sec" style="margin-bottom:8px">i gruppi che gestisco</div>
       <div id="cm-mine" style="display:flex; flex-direction:column; gap:8px"></div>
     </div>
     <div>
-      <div class="sec" style="margin-bottom:8px">le community che seguo <span id="cm-n"></span></div>
+      <div class="sec" style="margin-bottom:8px">i gruppi che seguo <span id="cm-n"></span></div>
       <div id="cm-follow" style="display:flex; flex-direction:column; gap:8px"><div class="sk"></div><div class="sk"></div></div>
     </div>
-    <a class="btn" href="crea-community.html">crea la tua community</a>
-    <p class="empty">una community è chi organizza: un'associazione, un negozio, un gruppo. chi la segue riceve i suoi eventi.</p>
+    <a class="btn" href="crea-community.html">crea il tuo gruppo</a>
+    <p class="empty">un gruppo è chi organizza: un'associazione, un negozio, un gruppo. chi lo segue riceve i suoi eventi.</p>
   </section>
 </main>
 
-<script src="app.js?v=1788473608"></script>
+<script src="app.js?v=1788474120"></script>
 <script>
   requireLogin();
   mountTabbar("profilo");
   document.getElementById("email").textContent = (session && session.email) || "";
 
-  // tab dall'hash (#account · #notifiche · #community)
+  // tab dall'hash (#account · #notifiche · #gruppo)
   const TABS = ["account", "notifiche", "community"];
   function showTab(){
-    const t = TABS.includes(location.hash.slice(1)) ? location.hash.slice(1) : "account";
+    const h = location.hash.slice(1) === "gruppo" ? "community" : location.hash.slice(1);
+    const t = TABS.includes(h) ? h : "account";
     TABS.forEach(x => document.getElementById("tab-" + x).hidden = x !== t);
     document.querySelectorAll(".tabs a").forEach(a => a.classList.toggle("on", a.dataset.tab === t));
   }
@@ -240,10 +241,10 @@
     track("pref_" + field.replace(/^p_/, ""));
   }
 
-  // ---- community ----
+  // ---- gruppo ----
   function cmRow(c, href, act){
     const sub = [c.is_verified ? "verificata" : null,
-                 Number(c.follower_count) ? Number(c.follower_count) + (Number(c.follower_count) === 1 ? " persona la segue" : " persone la seguono") : null,
+                 Number(c.follower_count) ? Number(c.follower_count) + (Number(c.follower_count) === 1 ? " persona lo segue" : " persone lo seguono") : null,
                  Number(c.upcoming_count) ? Number(c.upcoming_count) + " in programma" : null]
                 .filter(Boolean).join(" · ");
     return `<a class="cm" href="${esc(href)}"><div class="tile">${esc(c.emoji || "📍")}</div>` +
@@ -253,7 +254,7 @@
   async function loadCommunities(){
     const follow = document.getElementById("cm-follow");
     const r = await rpc("my_communities", {});
-    if (!r || !r.ok) { follow.innerHTML = '<p class="empty">non riesco a caricare le community. ricarica la pagina.</p>'; return; }
+    if (!r || !r.ok) { follow.innerHTML = '<p class="empty">non riesco a caricare i gruppi. ricarica la pagina.</p>'; return; }
     const rows = await r.json().catch(() => []);
     const mine = rows.filter(c => c.role === "owner" || c.role === "admin");
     const followed = rows.filter(c => c.role === "follower");
@@ -264,7 +265,7 @@
     document.getElementById("cm-n").textContent = followed.length ? "(" + followed.length + ")" : "";
     follow.innerHTML = followed.length
       ? followed.map(c => cmRow(c, "community.html?slug=" + encodeURIComponent(c.slug), "vedi →")).join("")
-      : '<p class="empty">non segui ancora nessuna community. le trovi negli eventi: chi organizza ha la sua pagina.</p>';
+      : '<p class="empty">non segui ancora nessun gruppo. le trovi negli eventi: chi organizza ha la sua pagina.</p>';
   }
 
   loadPrefs();

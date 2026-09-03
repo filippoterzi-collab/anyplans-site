@@ -102,12 +102,12 @@
   </div>
   <div class="box" id="list"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
   <div class="foot">
-    <span>ricevi una notifica dalle community che segui</span>
+    <span>ricevi una notifica dalle gruppi che segui</span>
     <a href="impostazioni.html#notifiche">gestisci →</a>
   </div>
 </main>
 
-<script src="app.js?v=1788473608"></script>
+<script src="app.js?v=1788474120"></script>
 <script>
   requireLogin();
   mountTabbar("");
@@ -144,7 +144,7 @@
     const kind = KIND_ALIAS[n.kind] || n.kind;
     const who = esc(n.actor_name || "qualcuno");
     const title = esc(n.activity_title || "un evento");
-    const comm = esc(n.community_name || "una community");
+    const comm = esc(n.community_name || "un gruppo");
     let icon = "", txt = "", sub = "", go = "", href = n.activity_id ? "evento.html?id=" + n.activity_id : "";
     if (kind === "join") {
       icon = avatarHtml(n);

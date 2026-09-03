@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>community · anyplans</title>
+<title>gruppo · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<meta name="description" content="una community su anyplans: segui la pagina e ricevi una notifica a ogni nuovo evento.">
-<meta property="og:title" content="una community su anyplans">
-<meta property="og:description" content="la mappa degli eventi veri della tua città. segui la community, ricevi una notifica a ogni nuovo evento.">
+<meta name="description" content="un gruppo su anyplans: segui la pagina e ricevi una notifica a ogni nuovo evento.">
+<meta property="og:title" content="un gruppo su anyplans">
+<meta property="og:description" content="la mappa degli eventi veri della tua città. segui il gruppo, ricevi una notifica a ogni nuovo evento.">
 <meta property="og:image" content="https://anyplans.in/og.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="anyplans">
@@ -180,12 +180,12 @@
 </div>
 <div class="center" id="notfound" hidden>
   <div style="font-size:52px">🫥</div>
-  <h1 class="display" style="font-size:30px">community non trovata</h1>
+  <h1 class="display" style="font-size:30px">gruppo non trovato</h1>
   <p style="color:var(--grey); max-width:300px">forse il link non è giusto, o la pagina non c'è più.</p>
   <a class="btn" href="eventi.html">guarda gli eventi a bergamo</a>
 </div>
 
-<script src="app.js?v=1788473608"></script>
+<script src="app.js?v=1788474120"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const wantId = params.get("id");
@@ -243,8 +243,8 @@
     const past = document.getElementById("past");
     past.innerHTML = done + (done === 1 ? " evento" : " eventi") +
       (c.instagram_handle
-        ? ' · le foto le trovi sulla <a href="https://instagram.com/' + encodeURIComponent(String(c.instagram_handle).replace(/^@/, "")) + '" target="_blank" rel="noopener">pagina instagram della community</a>.'
-        : (done ? " · le foto le trovi sui canali della community." : " · il primo è in arrivo."));
+        ? ' · le foto le trovi sulla <a href="https://instagram.com/' + encodeURIComponent(String(c.instagram_handle).replace(/^@/, "")) + '" target="_blank" rel="noopener">pagina instagram del gruppo</a>.'
+        : (done ? " · le foto le trovi sui canali del gruppo." : " · il primo è in arrivo."));
     document.getElementById("loading").hidden = true;
     document.getElementById("page").hidden = false;
     track("community_view", "/community/" + (c.slug || c.id));
@@ -256,17 +256,17 @@
     const followers = Number(c.follower_count) || 0;
     const done = Number(c.events_done) || 0;
     const parts = [];
-    if (c.is_verified) parts.push('<span class="v">' + (mobile ? "verificata" : "verificata da anyplans") + "</span>");
+    if (c.is_verified) parts.push('<span class="v">' + (mobile ? "verificata" : "verificato da anyplans") + "</span>");
     if (!mobile && c.category) parts.push(esc((c.emoji ? c.emoji + " " : "") + c.category));
     if (c.city) parts.push(esc(c.city));
-    parts.push("<b>" + (followers === 1 ? "1 persona la segue" : followers + " persone la seguono") + "</b>");
+    parts.push("<b>" + (followers === 1 ? "1 persona lo segue" : followers + " persone lo seguono") + "</b>");
     if (!mobile) parts.push(done + (done === 1 ? " evento fatto" : " eventi fatti"));
     document.getElementById("meta").innerHTML = parts.join(" · ");
   }
   mobileMq.addEventListener("change", () => { if (c) renderMeta(); });
   function renderFollow(){
     const on = logged && !!c.is_following;
-    document.getElementById("follow-label").textContent = on ? "la segui ✓" : "segui";
+    document.getElementById("follow-label").textContent = on ? "lo segui ✓" : "segui";
     const b = document.getElementById("btn-follow");
     b.classList.toggle("ghost", on);
   }
@@ -277,7 +277,7 @@
     if (!r || !r.ok) { wrap.innerHTML = '<p class="empty">non riesco a caricare gli eventi. ricarica la pagina.</p>'; return; }
     const rows = (await r.json().catch(() => []))
       .sort((a, b) => new Date(a.start_at) - new Date(b.start_at));
-    if (!rows.length) { wrap.innerHTML = '<p class="empty">nessun evento in programma. se la segui, ti avvisiamo al prossimo.</p>'; return; }
+    if (!rows.length) { wrap.innerHTML = '<p class="empty">nessun evento in programma. se lo segui, ti avvisiamo al prossimo.</p>'; return; }
     wrap.innerHTML = rows.map(x => {
       const when = new Date(x.start_at);
       const going = Number(x.going_count) || 0;

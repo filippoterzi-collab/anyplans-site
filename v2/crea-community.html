@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>crea la tua community · anyplans</title>
+<title>crea il tuo gruppo · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <meta name="robots" content="noindex">
 <style>
@@ -83,7 +83,7 @@
 <main>
   <form class="card" onsubmit="return submitCommunity(event)">
     <div>
-      <h1 class="display">crea la tua community</h1>
+      <h1 class="display">crea il tuo gruppo</h1>
       <p class="sub">un nome e una categoria. poi pubblichi il primo evento.</p>
     </div>
 
@@ -99,7 +99,7 @@
     </div>
 
     <div>
-      <label for="name">nome della community</label>
+      <label for="name">nome del gruppo</label>
       <input id="name" type="text" required minlength="2" maxlength="60" placeholder="es. sara ceramica, gruppo di cammino seriate, pro loco…" autocomplete="off">
     </div>
 
@@ -123,12 +123,12 @@
   </form>
 </main>
 
-<script src="app.js?v=1788473608"></script>
+<script src="app.js?v=1788474120"></script>
 <script>
   requireLogin();
   mountTabbar("crea");
 
-  // profilo obbligatorio per creare una community
+  // profilo obbligatorio per creare un gruppo
   rpc("my_profile").then(async r => {
     if (r && r.ok) {
       const rows = await r.json().catch(() => []);
@@ -139,7 +139,7 @@
     }
   });
 
-  // categorie community (contratto 0047): l'emoji definitiva la assegna il backend
+  // categorie gruppo (contratto 0047): l'emoji definitiva la assegna il backend
   const CATS = [
     ["creatività", "🏺"], ["sport", "🏃"], ["cucina", "🍳"],
     ["giardinaggio", "🌱"], ["cultura", "🎪"], ["benessere", "🧘"]
@@ -202,7 +202,7 @@
     const desc = document.getElementById("desc").value.trim();
     const city = document.getElementById("city").value.trim().toLowerCase();
     function fail(msg){ note.className = "note err"; note.textContent = msg; btn.disabled = false; return false; }
-    if (name.length < 2) return fail("dai un nome alla community (almeno 2 lettere).");
+    if (name.length < 2) return fail("dai un nome al gruppo (almeno 2 lettere).");
     if (!category) return fail("scegli una categoria.");
 
     btn.disabled = true; note.className = "note"; note.textContent = "…";
@@ -227,9 +227,9 @@
         try { sessionStorage.setItem("anyplans_next", "crea-community.html"); } catch (_) {}
         location.href = "profilo.html"; return false;
       }
-      if (code.includes("too_many_communities")) return fail("hai già raggiunto il numero massimo di community.");
+      if (code.includes("too_many_communities")) return fail("hai già raggiunto il numero massimo di gruppi.");
       if (code.includes("invalid_category")) return fail("scegli una categoria tra quelle proposte.");
-      return fail("non riesco a creare la community, riprova.");
+      return fail("non riesco a creare il gruppo, riprova.");
     }
     const newId = await r.json();
     track("community_create");

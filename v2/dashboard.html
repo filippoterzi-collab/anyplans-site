@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>la mia community · anyplans</title>
+<title>il mio gruppo · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <meta name="robots" content="noindex">
 <style>
@@ -179,7 +179,7 @@
   <div class="nav">
     <a class="brand" href="/v2/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
     <a class="lnk" href="eventi.html">eventi</a>
-    <span class="lnk on">la mia community</span>
+    <span class="lnk on">il mio gruppo</span>
     <a class="cta" id="nav-new" href="crea.html">crea evento</a>
   </div>
 </header>
@@ -266,7 +266,7 @@
         <input id="file" type="file" accept="image/*" hidden onchange="pickPhoto(this)">
       </div>
       <div>
-        <label for="f-name">nome della community</label>
+        <label for="f-name">nome del gruppo</label>
         <input id="f-name" type="text" required minlength="2" maxlength="60" autocomplete="off">
       </div>
       <div>
@@ -312,7 +312,7 @@
       <select id="b-event"><option value="">nessun evento</option></select>
     </div>
     <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap">
-      <button class="btn" id="b-send" onclick="sendBlast()">invia</button>
+      <button class="btn" id="b-send" onclick="sendBlast()">manda</button>
       <span class="note" id="b-note"></span>
     </div>
     <p class="note">puoi mandare al massimo 2 avvisi a settimana, così non stanchi nessuno.</p>
@@ -335,7 +335,7 @@
   <div class="sk" style="height:90px"></div>
 </div>
 
-<script src="app.js?v=1788473608"></script>
+<script src="app.js?v=1788474120"></script>
 <script>
   requireLogin();
   mountTabbar();
@@ -353,7 +353,7 @@
   async function load(){
     if (!id) { location.replace("eventi.html"); return; }
     const r = await rpc("get_community", { p_id: id });
-    if (!r || !r.ok) { document.getElementById("loading").innerHTML = '<p class="empty">non riesco a caricare la community, ricarica la pagina.</p>'; return; }
+    if (!r || !r.ok) { document.getElementById("loading").innerHTML = '<p class="empty">non riesco a caricare il gruppo, ricarica la pagina.</p>'; return; }
     const rows = await r.json().catch(() => []);
     c = Array.isArray(rows) ? rows[0] : rows;
     if (!c || !c.id) { location.replace("eventi.html"); return; }
@@ -371,7 +371,7 @@
     document.getElementById("name").textContent = c.name;
     document.getElementById("verified").hidden = !c.is_verified;
     document.getElementById("meta").textContent =
-      (c.is_verified ? "community verificata · " : "") + "la vedi come " + (c.my_role === "owner" ? "owner" : "admin");
+      (c.is_verified ? "gruppo verificato · " : "") + "la vedi come " + (c.my_role === "owner" ? "owner" : "admin");
     const pub = "community.html?" + (c.slug ? "slug=" + encodeURIComponent(c.slug) : "id=" + c.id);
     document.getElementById("lnk-public").href = pub;
     const newHref = "crea.html?community=" + c.id;
@@ -495,7 +495,7 @@
       }
     }
     let html = `<div class="person"><div class="avatar">${esc((c.owner_name || "?")[0].toLowerCase())}</div>
-      <div class="n">${esc(c.owner_name || "chi ha creato la community")}</div><span class="tag">responsabile</span></div>`;
+      <div class="n">${esc(c.owner_name || "chi ha creato il gruppo")}</div><span class="tag">responsabile</span></div>`;
     html += adminsLocal.map(p => personRow(p, '<span class="tag">admin</span>' +
       (isOwner ? `<button class="textbtn act" onclick="setAdmin('${esc(p.user_id)}', false)">togli</button>` : ""))).join("");
     document.getElementById("admins").innerHTML = html;
@@ -568,7 +568,7 @@
     const note = document.getElementById("f-note"), btn = document.getElementById("f-btn");
     const name = document.getElementById("f-name").value.trim();
     function fail(msg){ note.className = "note err"; note.textContent = msg; btn.disabled = false; return false; }
-    if (name.length < 2) return fail("dai un nome alla community (almeno 2 lettere).");
+    if (name.length < 2) return fail("dai un nome al gruppo (almeno 2 lettere).");
     if (!category) return fail("scegli una categoria.");
     btn.disabled = true; note.className = "note"; note.textContent = "…";
     let avatarUrl = null;
