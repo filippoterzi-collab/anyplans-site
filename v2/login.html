@@ -131,20 +131,27 @@
   const HEADERS = {"apikey": SB_ANON, "Content-Type": "application/json"};
 
   // già loggato? niente form: dritto agli eventi (se il token è scaduto ci pensa il refresh lì)
-  try {
-    const existing = JSON.parse(localStorage.getItem("anyplans_session") || sessionStorage.getItem("anyplans_session"));
-    if (existing && existing.access_token && !location.hash.includes("switch")) location.replace("eventi.html");
-  } catch (_) {}
+  function skipIfLogged(){
+    try {
+      const existing = JSON.parse(localStorage.getItem("anyplans_session") || sessionStorage.getItem("anyplans_session"));
+      if (existing && existing.access_token && !location.hash.includes("switch")) location.replace("eventi.html");
+    } catch (_) {}
+  }
+  skipIfLogged();
+  window.addEventListener("pageshow", skipIfLogged);
   let currentEmail = "";
   let resendCooldown = 0;
 
   function note(id, text, cls){ const n = document.getElementById(id); n.textContent = text || ""; n.className = "note" + (cls ? " " + cls : ""); }
 
   async function requestOtp(email){
-    const r = await fetch(SB_URL + "/auth/v1/otp", {
-      method: "POST", headers: HEADERS,
-      body: JSON.stringify({ email: email, create_user: true })
-    });
+    let r;
+    try {
+      r = await fetch(SB_URL + "/auth/v1/otp", {
+        method: "POST", headers: HEADERS,
+        body: JSON.stringify({ email: email, create_user: true })
+      });
+    } catch (_) { return "non riesco a raggiungere il server, controlla la connessione."; }
     if (r.ok) return null;
     const body = await r.json().catch(() => ({}));
     if (r.status === 429) return "troppi tentativi, aspetta qualche minuto e riprova.";

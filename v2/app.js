@@ -40,14 +40,22 @@ async function refreshSession(){
   } catch (_) { return false; }
 }
 
-// rpc autenticata se c'è la sessione, altrimenti anonima
+// escape per tutto ciò che viene dal backend o da terzi e finisce in innerHTML
+function esc(t){
+  return String(t ?? "").replace(/[&<>"']/g, c =>
+    ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+
+// rpc autenticata se c'è la sessione, altrimenti anonima; null se la rete fallisce
 async function rpc(name, body, retry = true){
-  const token = (session && session.access_token) || SB_ANON;
-  const r = await fetch(SB_URL + "/rest/v1/rpc/" + name, {
-    method: "POST",
-    headers: {"apikey": SB_ANON, "Content-Type": "application/json", "Authorization": "Bearer " + token},
-    body: JSON.stringify(body || {})
-  });
+  let r;
+  try {
+    r = await fetch(SB_URL + "/rest/v1/rpc/" + name, {
+      method: "POST",
+      headers: {"apikey": SB_ANON, "Content-Type": "application/json", "Authorization": "Bearer " + ((session && session.access_token) || SB_ANON)},
+      body: JSON.stringify(body || {})
+    });
+  } catch (_) { return null; }
   if (r.status === 401 && retry && session && session.refresh_token) {
     if (await refreshSession()) return rpc(name, body, false);
     logout(); return null;
@@ -121,5 +129,7 @@ function slugify(t){
     .replace(/^-+|-+$/g,"").slice(0, 60);
 }
 function eventUrl(ev, city){
-  return location.origin + "/" + (city || "bergamo") + "/" + slugify(ev.title);
+  const s = slugify(ev.title);
+  return s ? location.origin + "/" + (city || "bergamo") + "/" + s
+           : location.origin + "/v2/evento.html?id=" + ev.id;
 }

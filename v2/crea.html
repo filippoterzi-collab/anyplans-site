@@ -158,7 +158,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788466177"></script>
+<script src="app.js?v=1788466308"></script>
 <script>
   requireLogin();
 
@@ -202,7 +202,7 @@
     searchTimer = setTimeout(async () => {
       try {
         const r = await fetch("https://photon.komoot.io/api?q=" + encodeURIComponent(q) +
-                              "&lat=45.698&lon=9.670&limit=6");
+                              "&lat=45.698&lon=9.670&limit=10&bbox=9.35,45.50,10.10,46.00");
         if (!r.ok) return;
         const d = await r.json();
         const items = (d.features || []).map(f => {
@@ -212,10 +212,17 @@
                              .filter(x => x && x !== primary).slice(0, 2).join(" · ");
           return { primary, secondary, lat: c[1], lng: c[0] };
         }).filter(x => x.primary);
+        // niente doppioni (photon spezza le vie in segmenti)
+        const seen = new Set();
+        const unici = items.filter(x => {
+          const k = (x.primary + "|" + x.secondary).toLowerCase();
+          if (seen.has(k)) return false; seen.add(k); return true;
+        }).slice(0, 6);
+        items.length = 0; items.push(...unici);
         if (!items.length) { list.hidden = true; return; }
         list.innerHTML = items.map((x, i) =>
-          `<div class="place-item" data-i="${i}"><div class="p">${x.primary}</div>` +
-          (x.secondary ? `<div class="s">${x.secondary}</div>` : "") + `</div>`).join("");
+          `<div class="place-item" data-i="${i}"><div class="p">${esc(x.primary)}</div>` +
+          (x.secondary ? `<div class="s">${esc(x.secondary)}</div>` : "") + `</div>`).join("");
         list.hidden = false;
         Array.from(list.children).forEach((el, i) => el.onclick = () => pickPlace(items[i]));
       } catch (_) { /* la ricerca è un aiuto: se non risponde resta la mappa */ }
@@ -317,7 +324,10 @@
     if (r && r.ok) {
       const newId = await r.json();
       const qs = collectQuestions();
-      if (qs.length) await rpc("set_activity_questions", { p_activity_id: newId, p_questions: qs });
+      if (qs.length) {
+        const rq = await rpc("set_activity_questions", { p_activity_id: newId, p_questions: qs });
+        if (!rq || !rq.ok) toast("evento creato, ma le domande non si sono salvate.");
+      }
       location.href = "evento.html?id=" + newId;
       return;
     }

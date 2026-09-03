@@ -216,18 +216,22 @@
       if (!r.ok) return false;
       const b = await r.json();
       session.access_token = b.access_token; session.refresh_token = b.refresh_token;
-      try { localStorage.setItem("anyplans_session", JSON.stringify(session)); } catch (_) {}
+      try { localStorage.setItem("anyplans_session", JSON.stringify(session)); }
+      catch (_) { try { sessionStorage.setItem("anyplans_session", JSON.stringify(session)); } catch (_) {} }
       return true;
     } catch (_) { return false; }
   }
 
   async function api(path, body, retry = true){
-    const r = await fetch(SB_URL + path, {
-      method: "POST",
-      headers: {"apikey": SB_ANON, "Content-Type": "application/json",
-                "Authorization": "Bearer " + (session.access_token || SB_ANON)},
-      body: JSON.stringify(body)
-    });
+    let r;
+    try {
+      r = await fetch(SB_URL + path, {
+        method: "POST",
+        headers: {"apikey": SB_ANON, "Content-Type": "application/json",
+                  "Authorization": "Bearer " + (session.access_token || SB_ANON)},
+        body: JSON.stringify(body)
+      });
+    } catch (_) { return null; }
     if (r.status === 401 && retry && session.refresh_token) {
       if (await refreshSession()) return api(path, body, false);
       logout(); return null;
@@ -296,7 +300,7 @@
     const el = document.createElement("div");
     el.className = "pin"; el.id = "pin-" + ev.id; el.textContent = ev.emoji;
     const popup = new maplibregl.Popup({ offset: 22, closeButton: false })
-      .setHTML(`<div class="pop"><div class="t">${ev.title}</div><div class="m">${dayLabel(ev.when)} · ${timeStr(ev.when)} · ${ev.place}</div></div>`);
+      .setHTML(`<div class="pop"><div class="t">${esc(ev.title)}</div><div class="m">${dayLabel(ev.when)} · ${timeStr(ev.when)} · ${esc(ev.place)}</div></div>`);
     const mk = new maplibregl.Marker({ element: el }).setLngLat([ev.lng, ev.lat]).setPopup(popup).addTo(map);
     el.addEventListener("click", () => highlight(ev.id, false));
     markers[ev.id] = mk;
@@ -337,8 +341,8 @@
         <div class="tile">${e.emoji}</div>
         <div>
           <div class="time">${timeStr(e.when)}</div>
-          <a class="t" href="evento.html?id=${e.id}" onclick="event.stopPropagation()" style="display:block">${e.title}</a>
-          <div class="m">${e.host ? "di " + e.host : "aggregato"} · ${e.place} · ${e.going} ci vanno</div>
+          <a class="t" href="evento.html?id=${e.id}" onclick="event.stopPropagation()" style="display:block">${esc(e.title)}</a>
+          <div class="m">${e.host ? "di " + esc(e.host) : "aggregato"} · ${esc(e.place)} · ${e.going} ci vanno</div>
         </div>
         <button class="go${isJoined ? " ok" : ""}" onclick="event.stopPropagation(); join('${e.id}')">${isJoined ? "ci sei ✓" : "ci sono →"}</button>
       </div>`;

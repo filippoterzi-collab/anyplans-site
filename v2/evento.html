@@ -204,7 +204,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788466177"></script>
+<script src="app.js?v=1788466308"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -306,7 +306,7 @@
       const req = q.required ? ' <span style="color:var(--blue)">*</span>' : "";
       if (q.kind === "yesno") {
         return `<div data-q="${q.id}" data-req="${q.required}" data-kind="yesno">
-          <div style="font-weight:700; font-size:14.5px; margin-bottom:8px">${q.prompt}${req}</div>
+          <div style="font-weight:700; font-size:14.5px; margin-bottom:8px">${esc(q.prompt)}${req}</div>
           <div style="display:flex; gap:8px">
             <button type="button" class="yn" data-v="sì" onclick="pickYn(this)"
               style="flex:1; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:999px;
@@ -317,7 +317,7 @@
           </div></div>`;
       }
       return `<div data-q="${q.id}" data-req="${q.required}" data-kind="text">
-        <div style="font-weight:700; font-size:14.5px; margin-bottom:8px">${q.prompt}${req}</div>
+        <div style="font-weight:700; font-size:14.5px; margin-bottom:8px">${esc(q.prompt)}${req}</div>
         <input type="text" maxlength="500" placeholder="la tua risposta"
           style="width:100%; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px;
                  padding:12px 15px; font-size:15px; font-family:var(--round)"></div>`;
@@ -349,7 +349,8 @@
     const btn = document.getElementById("q-send"); btn.disabled = true;
     const ok = await doJoin(true);
     if (ok && Object.keys(answers).length) {
-      await rpc("answer_questions", { p_activity_id: ev.id, p_answers: answers });
+      const ra = await rpc("answer_questions", { p_activity_id: ev.id, p_answers: answers });
+      if (!ra || !ra.ok) toast("sei dentro, ma le risposte non si sono salvate: riprova dal bottone.");
     }
     btn.disabled = false;
     if (ok) document.getElementById("q-overlay").hidden = true;
@@ -390,7 +391,7 @@
       document.getElementById("answers").innerHTML = Object.entries(byUser).map(([name, list]) =>
         `<div style="background:#fff; border:1.5px solid rgba(25,25,25,.10); border-radius:14px; padding:14px 16px">
           <div style="font-weight:700; font-size:14px; margin-bottom:6px">${name}</div>` +
-          list.map(x => `<div style="font-size:13.5px; margin-bottom:3px"><span style="color:var(--grey)">${x.prompt}</span>: <b>${x.answer}</b></div>`).join("") +
+          list.map(x => `<div style="font-size:13.5px; margin-bottom:3px"><span style="color:var(--grey)">${esc(x.prompt)}</span>: <b>${esc(x.answer)}</b></div>`).join("") +
         `</div>`).join("");
       document.getElementById("answers-wrap").hidden = false;
     } catch (_) {}

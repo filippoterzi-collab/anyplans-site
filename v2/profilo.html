@@ -129,23 +129,28 @@
       if (!r.ok) return false;
       const b = await r.json();
       session.access_token = b.access_token; session.refresh_token = b.refresh_token;
-      try { localStorage.setItem("anyplans_session", JSON.stringify(session)); } catch (_) {}
+      try { localStorage.setItem("anyplans_session", JSON.stringify(session)); }
+      catch (_) { try { sessionStorage.setItem("anyplans_session", JSON.stringify(session)); } catch (_) {} }
       return true;
     } catch (_) { return false; }
   }
 
   async function rpc(name, body, retry = true){
-    const r = await fetch(SB_URL + "/rest/v1/rpc/" + name, {
-      method: "POST",
-      headers: {"apikey": SB_ANON, "Content-Type": "application/json",
-                "Authorization": "Bearer " + session.access_token},
-      body: JSON.stringify(body || {})
-    });
+    let r;
+    try { r = await rpcFetch(name, body); } catch (_) { return null; }
     if (r.status === 401 && retry && session.refresh_token) {
       if (await refreshSession()) return rpc(name, body, false);
       logout(); return null;
     }
     return r;
+  }
+  async function rpcFetch(name, body){
+    return fetch(SB_URL + "/rest/v1/rpc/" + name, {
+      method: "POST",
+      headers: {"apikey": SB_ANON, "Content-Type": "application/json",
+                "Authorization": "Bearer " + session.access_token},
+      body: JSON.stringify(body || {})
+    });
   }
 
   // ?edit=1 = modifica del profilo esistente; altrimenti chi ha già il profilo va agli eventi

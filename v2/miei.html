@@ -84,7 +84,7 @@
   <div id="list"><p style="color:var(--grey)">carico…</p></div>
 </main>
 
-<script src="app.js?v=1788466177"></script>
+<script src="app.js?v=1788466308"></script>
 <script>
   requireLogin();
 
@@ -119,8 +119,8 @@
         <div class="tile">${x.emoji || "📍"}</div>
         <div>
           <div class="time">${timeStr(when)}</div>
-          <div class="t">${x.title}</div>
-          <div class="m">${x.meeting_point_text || "posizione approssimativa"} · ${Number(x.going_count) || 0} ci vanno</div>
+          <div class="t">${esc(x.title)}</div>
+          <div class="m">${esc(x.meeting_point_text || "posizione approssimativa")} · ${Number(x.going_count) || 0} ci vanno</div>
         </div>
         <span class="badge">${badge}</span>
       </a>`;
