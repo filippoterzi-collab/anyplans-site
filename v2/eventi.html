@@ -56,6 +56,13 @@
         font-size:13.5px; padding:9px 14px; border-radius:999px; cursor:pointer;
         font-family:var(--round); flex-shrink:0; white-space:nowrap;}
   .chip.on{background:var(--blue); border-color:var(--blue); color:#fff; font-weight:700;}
+  .fbtn{display:none; align-items:center; gap:5px; background:var(--tint); color:var(--blue); border:none; border-radius:999px;
+        padding:7px 11px; font-weight:700; font-size:13px; font-family:var(--round); cursor:pointer; white-space:nowrap; flex-shrink:0;}
+  .fbtn.on{background:var(--blue); color:#fff;}
+  .fpanel{background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:16px; padding:14px; display:flex; flex-direction:column; gap:10px;}
+  .fpanel .fsec{font-weight:800; font-size:14px;}
+  .fpanel .frow{display:flex; flex-wrap:wrap; gap:8px;}
+  .fpanel .done{margin-top:4px; background:var(--blue); color:#fff; font-weight:700; border:none; border-radius:999px; padding:12px; font-size:15px; font-family:var(--round); cursor:pointer;}
   .ev .m .ha{display:inline-block; width:18px; height:18px; border-radius:999px; background:var(--blue);
              background-size:cover; background-position:center; vertical-align:-4px; margin-right:3px;}
 
@@ -103,6 +110,9 @@
     .nav-right #avatar, .nav-right #bell{display:flex;}
     .nav-right #nav-reg{display:inline-block;}
     .topbar{padding:4px 18px 10px;}
+    .fbtn{display:flex;}
+    .filters .chip, .filters > span{display:none;}
+    .search{min-width:0; width:100%;}
     .titlerow h1{font-size:24px;}
     .split{flex-direction:column;}
     #map{display:none; height:calc(100vh - 330px); flex:none; border-radius:16px; margin:0 18px;}
@@ -165,6 +175,7 @@
     <div class="search">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6E6E73" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg>
       <input id="q" placeholder="cerca un evento: ceramica, corsa, cucina…" oninput="render()">
+      <button class="fbtn" id="fbtn" onclick="toggleFilters()">filtri</button>
     </div>
     <button class="chip day-chip" data-day="oggi" onclick="setDay(this)">oggi</button>
     <button class="chip day-chip" data-day="domani" onclick="setDay(this)">domani</button>
@@ -178,6 +189,13 @@
     <button class="chip" data-cat="cultura" onclick="setCat(this)">🎪 cultura</button>
     <button class="chip" data-cat="benessere" onclick="setCat(this)">🧘 benessere</button>
   </div>
+  <div class="fpanel" id="fpanel" hidden>
+    <div class="fsec">quando</div>
+    <div class="frow" id="fp-day"></div>
+    <div class="fsec">che tipo di evento</div>
+    <div class="frow" id="fp-cat"></div>
+    <button class="done" onclick="toggleFilters()">mostra gli eventi</button>
+  </div>
 </div>
 
 <button id="maptoggle" onclick="toggleMap()">🗺️ mappa</button>
@@ -188,7 +206,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788474215"></script>
+<script src="app.js?v=1788474291"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -297,16 +315,41 @@
   }
 
   // lista
-  let cat = "", day = "";
   function setCat(btn){
     cat = btn.dataset.cat;
     document.querySelectorAll(".chip[data-cat]").forEach(c => c.classList.toggle("on", c === btn));
-    render();
+    updateFbtn(); render();
   }
+  let cat = "", day = "";
+  // su telefono i chip vivono nel pannello "filtri" (stessi elementi, stesso stato)
+  const mobileFilters = window.matchMedia("(max-width:700px)");
+  function placeChips(){
+    const day = document.getElementById("fp-day"), cat = document.getElementById("fp-cat"), row = document.querySelector(".filters");
+    if (mobileFilters.matches) {
+      document.querySelectorAll(".filters .day-chip").forEach(c => day.appendChild(c));
+      document.querySelectorAll(".filters .chip[data-cat]").forEach(c => cat.appendChild(c));
+    } else {
+      const sep = row.querySelector("span");
+      Array.from(day.children).forEach(c => row.insertBefore(c, sep));
+      Array.from(cat.children).forEach(c => row.appendChild(c));
+      document.getElementById("fpanel").hidden = true;
+    }
+    updateFbtn();
+  }
+  function toggleFilters(){
+    const p = document.getElementById("fpanel"); p.hidden = !p.hidden;
+    if (!p.hidden) p.scrollIntoView({ block: "nearest", behavior: "smooth" });
+  }
+  function updateFbtn(){
+    const n = (day ? 1 : 0) + (cat ? 1 : 0);
+    const b = document.getElementById("fbtn");
+    b.textContent = n ? "filtri · " + n : "filtri"; b.classList.toggle("on", n > 0);
+  }
+  placeChips(); mobileFilters.addEventListener("change", placeChips);
   function setDay(btn){
     day = day === btn.dataset.day ? "" : btn.dataset.day;
     document.querySelectorAll(".day-chip").forEach(c => c.classList.toggle("on", c.dataset.day === day));
-    render();
+    updateFbtn(); render();
   }
   function inDay(d){
     if (!day) return true;
