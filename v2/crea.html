@@ -178,7 +178,7 @@
     searchTimer = setTimeout(async () => {
       try {
         const r = await fetch("https://photon.komoot.io/api?q=" + encodeURIComponent(q) +
-                              "&lat=45.698&lon=9.670&limit=6&lang=it");
+                              "&lat=45.698&lon=9.670&limit=6");
         if (!r.ok) return;
         const d = await r.json();
         const items = (d.features || []).map(f => {
@@ -240,7 +240,7 @@
       // niente pin: provo a trovare il posto dal testo
       try {
         const g = await fetch("https://photon.komoot.io/api?q=" + encodeURIComponent(place) +
-                              "&lat=45.698&lon=9.670&limit=1&lang=it").then(x => x.json());
+                              "&lat=45.698&lon=9.670&limit=1").then(x => x.json());
         const f = g.features && g.features[0];
         if (f) setPoint(f.geometry.coordinates[1], f.geometry.coordinates[0]);
       } catch (_) {}
