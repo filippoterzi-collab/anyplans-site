@@ -158,27 +158,32 @@
 
   /* mobile */
   @media (max-width:700px){
-    h1{font-size:38px;}
-    .hero{padding:36px 0 48px;}
-    .float{font-size:26px;}
+    h1{font-size:34px;}
+    .hero{padding:26px 0 38px;}
+    .float{font-size:21px;}
     .float.hide-m{display:none;}
-    .sub{font-size:15.5px; max-width:310px; margin-top:18px;}
-    .cta{width:100%; padding:0 12px;}
-    .cta .btn{width:100%; font-size:15.5px; padding:15px 0;}
-    .cta .btn.ghost{font-size:14.5px; padding:12px 0;}
-    .block{padding:32px 0;}
-    .block h2{font-size:26px;}
-    .lead{font-size:13.5px;}
+    .sub{font-size:14px; max-width:300px; margin-top:14px;}
+    .cta{width:100%; padding:0 26px; margin-top:20px;}
+    .cta .btn{width:100%; font-size:14px; padding:13px 0;}
+    .cta .btn.ghost{font-size:13.5px; padding:11px 0;}
+    .heroscroll{font-size:13.5px; margin-top:14px;}
+    .block{padding:28px 0;}
+    .block h2{font-size:22px;}
+    .lead{font-size:13px; margin-bottom:16px;}
     .cards{grid-template-columns:1fr; gap:12px;}
     .card .em{font-size:28px;}
     .card .t{font-size:14.5px;} .card .m{font-size:12.5px;}
     .cities{grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px;}
-    .city{padding:16px;} .city h3{font-size:20px;} .city p{font-size:12px; margin-top:4px;}
-    .cats{grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px;}
-    .cat img{width:52px; height:52px;}
-    .cat .t{font-size:13.5px;} .cat .m{display:none;}
-    .final h2{font-size:32px;}
-    .final .lead{font-size:14.5px;}
+    .city{padding:14px;} .city h3{font-size:18px;} .city p{font-size:11.5px; margin-top:3px;}
+    .cats{grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px;}
+    .cat img{width:46px; height:46px;}
+    .cat .t{font-size:12.5px;} .cat .m{display:none;}
+    .card{padding:13px 14px;}
+    .card .em{font-size:24px;}
+    .card .t{font-size:13.5px;} .card .m{font-size:12px;}
+    .final h2{font-size:27px;}
+    .final .lead{font-size:13.5px;}
+    footer{font-size:13px; padding:32px 0 44px;}
   }
 </style>
 </head>
@@ -205,6 +210,12 @@
   <span class="float" style="animation-delay:1s,1s; top:55%; right:10%">🌱</span>
   <span class="float hide-m" style="animation-delay:.4s,.4s; top:72%; right:18%">🎾</span>
   <span class="float" style="animation-delay:1.3s,1.3s; top:16%; right:22%">🧘</span>
+  <span class="float hide-m" style="animation-delay:.6s,.6s; top:40%; left:13%">⚽</span>
+  <span class="float" style="animation-delay:1.2s,1.2s; top:62%; left:5%">🧗</span>
+  <span class="float hide-m" style="animation-delay:.8s,.8s; top:84%; left:9%">🏊</span>
+  <span class="float" style="animation-delay:.35s,.35s; top:47%; right:6%">🎶</span>
+  <span class="float hide-m" style="animation-delay:1.05s,1.05s; top:64%; right:4%">⛰️</span>
+  <span class="float hide-m" style="animation-delay:.55s,.55s; top:86%; right:13%">🎲</span>
   <div class="wrap">
     <h1>anyplans<br>
       <span class="rotwrap">
@@ -324,6 +335,7 @@
         <button class="qz-chip" type="button" onclick="pickCity('brescia')">brescia</button>
         <button class="qz-chip" type="button" onclick="pickCity('torino')">torino</button>
         <button class="qz-chip" type="button" onclick="pickCity('roma')">roma</button>
+        <button class="qz-chip" type="button" onclick="document.getElementById('qz-city').focus()">un'altra città…</button>
       </div>
       <form onsubmit="return citySubmit(event)" style="display:flex; flex-direction:column; gap:10px">
         <input id="qz-city" type="text" required placeholder="oppure scrivila qui" autocomplete="address-level2">
