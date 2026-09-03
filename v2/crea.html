@@ -158,7 +158,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788469839"></script>
+<script src="app.js?v=1788469965"></script>
 <script>
   requireLogin();
   mountTabbar("crea");
@@ -194,8 +194,8 @@
   document.getElementById("date").value = localDate(start);
   document.getElementById("time").value = pad(start.getHours()) + ":00";
 
-  // ricerca luoghi: photon (openstreetmap), gratis e senza chiave, bias su bergamo
-  let searchTimer = null;
+  // ricerca luoghi: google places (new) se c'è la chiave, altrimenti photon (openstreetmap)
+  let searchTimer = null, gSession = null;
   function placeSearch(){
     clearTimeout(searchTimer);
     const q = document.getElementById("place").value.trim();
@@ -203,24 +203,7 @@
     if (q.length < 3) { list.hidden = true; return; }
     searchTimer = setTimeout(async () => {
       try {
-        const r = await fetch("https://photon.komoot.io/api?q=" + encodeURIComponent(q) +
-                              "&lat=45.698&lon=9.670&limit=10&bbox=9.35,45.50,10.10,46.00");
-        if (!r.ok) return;
-        const d = await r.json();
-        const items = (d.features || []).map(f => {
-          const p = f.properties, c = f.geometry.coordinates;
-          const primary = p.name || [p.street, p.housenumber].filter(Boolean).join(" ") || p.city;
-          const secondary = [p.street && p.name ? p.street : null, p.district, p.city, p.state]
-                             .filter(x => x && x !== primary).slice(0, 2).join(" · ");
-          return { primary, secondary, lat: c[1], lng: c[0] };
-        }).filter(x => x.primary);
-        // niente doppioni (photon spezza le vie in segmenti)
-        const seen = new Set();
-        const unici = items.filter(x => {
-          const k = (x.primary + "|" + x.secondary).toLowerCase();
-          if (seen.has(k)) return false; seen.add(k); return true;
-        }).slice(0, 6);
-        items.length = 0; items.push(...unici);
+        const items = GOOGLE_MAPS_KEY ? await searchGoogle(q) : await searchPhoton(q);
         if (!items.length) { list.hidden = true; return; }
         list.innerHTML = items.map((x, i) =>
           `<div class="place-item" data-i="${i}"><div class="p">${esc(x.primary)}</div>` +
@@ -230,9 +213,57 @@
       } catch (_) { /* la ricerca è un aiuto: se non risponde resta la mappa */ }
     }, 350);
   }
-  function pickPlace(x){
-    document.getElementById("place").value = x.primary + (x.secondary ? ", " + x.secondary.split(" · ")[0] : "");
+  async function searchGoogle(q){
+    if (!gSession) gSession = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()));
+    const r = await fetch("https://places.googleapis.com/v1/places:autocomplete", {
+      method: "POST",
+      headers: {"Content-Type": "application/json", "X-Goog-Api-Key": GOOGLE_MAPS_KEY},
+      body: JSON.stringify({ input: q, languageCode: "it", regionCode: "it", sessionToken: gSession,
+        locationBias: { circle: { center: { latitude: 45.698, longitude: 9.670 }, radius: 40000 } } })
+    });
+    if (!r.ok) return searchPhoton(q);
+    const d = await r.json();
+    return (d.suggestions || []).map(s => s.placePrediction).filter(Boolean).slice(0, 6).map(p => ({
+      primary: (p.structuredFormat && p.structuredFormat.mainText && p.structuredFormat.mainText.text) || p.text.text,
+      secondary: (p.structuredFormat && p.structuredFormat.secondaryText && p.structuredFormat.secondaryText.text) || "",
+      placeId: p.placeId
+    }));
+  }
+  async function searchPhoton(q){
+    const r = await fetch("https://photon.komoot.io/api?q=" + encodeURIComponent(q) +
+                          "&lat=45.698&lon=9.670&limit=10&bbox=9.35,45.50,10.10,46.00");
+    if (!r.ok) return [];
+    const d = await r.json();
+    const items = (d.features || []).map(f => {
+      const p = f.properties, c = f.geometry.coordinates;
+      const primary = p.name || [p.street, p.housenumber].filter(Boolean).join(" ") || p.city;
+      const secondary = [p.street && p.name ? p.street : null, p.district, p.city, p.state]
+                         .filter(x => x && x !== primary).slice(0, 2).join(" · ");
+      return { primary, secondary, lat: c[1], lng: c[0] };
+    }).filter(x => x.primary);
+    // niente doppioni (photon spezza le vie in segmenti)
+    const seen = new Set();
+    return items.filter(x => {
+      const k = (x.primary + "|" + x.secondary).toLowerCase();
+      if (seen.has(k)) return false; seen.add(k); return true;
+    }).slice(0, 6);
+  }
+  async function pickPlace(x){
+    document.getElementById("place").value = x.primary + (x.secondary ? ", " + x.secondary.split(" · ")[0].split(",")[0] : "");
     document.getElementById("place-list").hidden = true;
+    if (x.placeId) {
+      // dettagli google: coordinate + via esatta (chiude la sessione di autocomplete)
+      try {
+        const r = await fetch("https://places.googleapis.com/v1/places/" + x.placeId + "?languageCode=it&sessionToken=" + gSession, {
+          headers: {"X-Goog-Api-Key": GOOGLE_MAPS_KEY, "X-Goog-FieldMask": "location,formattedAddress,displayName"} });
+        gSession = null;
+        if (!r.ok) return toast("non riesco a trovare il posto, tocca la mappa.");
+        const d = await r.json();
+        x.lat = d.location.latitude; x.lng = d.location.longitude;
+        if (d.formattedAddress) document.getElementById("place").value =
+          (d.displayName && d.displayName.text && !d.formattedAddress.startsWith(d.displayName.text) ? d.displayName.text + ", " : "") + d.formattedAddress.replace(/, Italia$/, "");
+      } catch (_) { return toast("non riesco a trovare il posto, tocca la mappa."); }
+    }
     setPoint(x.lat, x.lng);
     map.easeTo({ center: [x.lng, x.lat], zoom: 15 });
   }

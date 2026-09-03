@@ -1,6 +1,9 @@
 // anyplans — helper condivisi per le pagine /v2 (sessione, rpc, catalogo, date)
 const SB_URL = "https://uudccbzihhgoeaevkewr.supabase.co";
 const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1ZGNjYnppaGhnb2VhZXZrZXdyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYzNzk0NzEsImV4cCI6MjEwMTk1NTQ3MX0.OHJC3vmT8eRLczFkH0QdZybbjudDfSi4VEX8Mc22ABQ";
+// google places (new) per il punto di ritrovo: chiave pubblica limitata al referrer anyplans.in.
+// vuota = si usa photon (openstreetmap). TODO Filippo: incollare qui la chiave creata su console.cloud.google.com
+const GOOGLE_MAPS_KEY = "";
 
 let session = null;
 try { session = JSON.parse(localStorage.getItem("anyplans_session")); } catch (_) {}
