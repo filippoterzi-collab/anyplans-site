@@ -304,6 +304,7 @@
       <div class="m"><b>quando</b> <span id="tk-when"></span> · <b>dove</b> <span id="tk-where"></span></div>
       <div class="m" id="tk-pay" hidden></div>
       <div class="m" id="tk-state">mostralo all'ingresso per il check-in · funziona anche offline</div>
+      <button class="btn" id="btn-wallet" hidden onclick="addToWallet()" style="margin-top:6px">aggiungi al wallet</button>
     </div>
   </div>
 </div>
@@ -339,7 +340,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788472820"></script>
+<script src="app.js?v=1788472903"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -542,10 +543,26 @@
     if (!ticketToken) { document.getElementById("qr").textContent = "non riesco a caricare il biglietto, riprova con la rete."; return; }
     const name = await myName();
     document.getElementById("tk-who").textContent = name || "";
+    document.getElementById("btn-wallet").hidden = !isApple;
     const url = location.origin + "/v2/checkin.html?id=" + ev.id + "&t=" + ticketToken;
     document.getElementById("qr").innerHTML = "";
     new QRCode(document.getElementById("qr"), { text: url, width: 200, height: 200, correctLevel: QRCode.CorrectLevel.M });
     track("ticket_view");
+  }
+  // apple wallet: pass firmato dalla edge function wallet-pass (solo su iphone/ipad)
+  const isApple = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  async function addToWallet(){
+    const btn = document.getElementById("btn-wallet"); btn.disabled = true; btn.textContent = "preparo il pass…";
+    try {
+      const r = await fetch(SB_URL + "/functions/v1/wallet-pass?activity_id=" + ev.id, {
+        headers: { "Authorization": "Bearer " + session.access_token, "apikey": SB_ANON } });
+      if (!r.ok) throw new Error(String(r.status));
+      const blob = await r.blob();
+      const url = URL.createObjectURL(new Blob([blob], { type: "application/vnd.apple.pkpass" }));
+      const a = document.createElement("a"); a.href = url; a.download = "anyplans.pkpass"; document.body.appendChild(a); a.click(); a.remove();
+      track("wallet_add");
+    } catch (_) { toast("non riesco a creare il pass, riprova."); }
+    btn.disabled = false; btn.textContent = "aggiungi al wallet";
   }
   let _me = null;
   async function myName(){
