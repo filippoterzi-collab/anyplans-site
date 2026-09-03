@@ -85,7 +85,7 @@
   <div id="list"><p style="color:var(--grey)">carico…</p></div>
 </main>
 
-<script src="app.js?v=1788469191"></script>
+<script src="app.js?v=1788469795"></script>
 <script>
   requireLogin();
   mountTabbar("i miei");
@@ -100,11 +100,12 @@
       .sort((a, b) => new Date(a.start_at) - new Date(b.start_at));
 
     if (!rows.length) {
-      list.innerHTML = `<div class="empty">
+      list.innerHTML = `<div class="empty" style="padding:34px 0 18px">
         <div style="font-size:48px">🫥</div>
-        <p style="color:var(--grey); max-width:300px">non hai ancora eventi in programma.</p>
-        <a class="btn" href="eventi.html">trova il prossimo evento</a>
-      </div>`;
+        <p style="color:var(--grey); max-width:300px">non hai ancora eventi in programma. i più vicini:</p>
+      </div><div id="suggest" style="display:flex; flex-direction:column; gap:12px"></div>
+      <div style="text-align:center; margin-top:18px"><a class="btn" style="display:inline-block" href="eventi.html">vedi tutti gli eventi</a></div>`;
+      suggest();
       return;
     }
 
@@ -128,6 +129,25 @@
       </a>`;
     });
     list.innerHTML = html;
+  }
+  async function suggest(){
+    const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
+    if (!r || !r.ok) return;
+    const evs = (await r.json().catch(() => []))
+      .filter(x => new Date(x.start_at) > new Date() && x.my_status !== "going")
+      .sort((a, b) => new Date(a.start_at) - new Date(b.start_at)).slice(0, 3);
+    document.getElementById("suggest").innerHTML = evs.map(x => {
+      const when = new Date(x.start_at);
+      return `<a class="ev" href="evento.html?id=${x.id}">
+        <div class="tile">${x.emoji || "📍"}</div>
+        <div>
+          <div class="time">${dayLabel(when)} ${timeStr(when)} · ${relTime(when)}</div>
+          <div class="t">${esc(x.title)}</div>
+          <div class="m">${esc(x.meeting_point_text || "posizione approssimativa")} · ${Number(x.going_count) || 0} ci vanno</div>
+        </div>
+        <span class="badge">ci sono →</span>
+      </a>`;
+    }).join("");
   }
   load();
 </script>

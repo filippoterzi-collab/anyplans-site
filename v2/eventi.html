@@ -56,6 +56,8 @@
         font-size:13.5px; padding:9px 14px; border-radius:999px; cursor:pointer;
         font-family:var(--round); flex-shrink:0; white-space:nowrap;}
   .chip.on{background:var(--blue); border-color:var(--blue); color:#fff; font-weight:700;}
+  .ev .m .ha{display:inline-block; width:18px; height:18px; border-radius:999px; background:var(--blue);
+             background-size:cover; background-position:center; vertical-align:-4px; margin-right:3px;}
 
   .split{flex:1; display:flex; min-height:0;}
   .list{width:46%; max-width:640px; overflow-y:auto; padding:6px 20px 40px 24px;
@@ -162,6 +164,10 @@
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6E6E73" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg>
       <input id="q" placeholder="cerca: ceramica, corsa, cucina…" oninput="render()">
     </div>
+    <button class="chip day-chip" data-day="oggi" onclick="setDay(this)">oggi</button>
+    <button class="chip day-chip" data-day="domani" onclick="setDay(this)">domani</button>
+    <button class="chip day-chip" data-day="weekend" onclick="setDay(this)">weekend</button>
+    <span style="width:1px; height:22px; background:rgba(25,25,25,.15); flex-shrink:0"></span>
     <button class="chip on" data-cat="" onclick="setCat(this)">tutti</button>
     <button class="chip" data-cat="sport" onclick="setCat(this)">🏃 sport</button>
     <button class="chip" data-cat="cucina" onclick="setCat(this)">🍳 cucina</button>
@@ -180,7 +186,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788469191"></script>
+<script src="app.js?v=1788469795"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -240,6 +246,7 @@
       slug: x.sport,
       title: x.title,
       host: x.host_name || null,
+      hostAvatar: x.host_avatar || null,
       place: x.meeting_point_text || "posizione approssimativa",
       when: new Date(x.start_at),
       going: Number(x.going_count) || 0,
@@ -277,11 +284,25 @@
   }
 
   // lista
-  let cat = "";
+  let cat = "", day = "";
   function setCat(btn){
     cat = btn.dataset.cat;
-    document.querySelectorAll(".chip").forEach(c => c.classList.toggle("on", c === btn));
+    document.querySelectorAll(".chip[data-cat]").forEach(c => c.classList.toggle("on", c === btn));
     render();
+  }
+  function setDay(btn){
+    day = day === btn.dataset.day ? "" : btn.dataset.day;
+    document.querySelectorAll(".day-chip").forEach(c => c.classList.toggle("on", c.dataset.day === day));
+    render();
+  }
+  function inDay(d){
+    if (!day) return true;
+    const lbl = dayLabel(d);
+    if (day === "weekend") {
+      const wd = d.getDay(), diff = (d - Date.now()) / 86400000;
+      return (wd === 0 || wd === 6) && diff < 7;
+    }
+    return lbl === day;
   }
 
   function stateBtn(e){
@@ -296,6 +317,7 @@
     const list = document.getElementById("list");
     const evs = EVENTS
       .filter(e => !cat || e.cat === cat)
+      .filter(e => inDay(e.when))
       .filter(e => {
         if (!q) return true;
         const hay = norm([e.title, e.host, e.place, e.cat, SEARCH_WORDS[e.slug] || ""].join(" "));
@@ -306,7 +328,7 @@
     document.getElementById("count").textContent = "in programma · " + evs.length + (evs.length === 1 ? " evento" : " eventi");
     EVENTS.forEach(e => { const visible = evs.includes(e); markers[e.id].getElement().style.opacity = visible ? "1" : "0.25"; });
 
-    if (!evs.length) { list.innerHTML = '<div class="empty">nessun evento trovato. prova un\'altra ricerca, o crea tu il primo.</div>'; return; }
+    if (!evs.length) { list.innerHTML = '<div class="empty">' + (day ? "niente " + (day === "weekend" ? "nel weekend" : day) + " con questi filtri. " : "nessun evento trovato. ") + 'prova un\'altra ricerca, o <a href="crea.html" style="color:var(--blue); font-weight:700">crea tu il primo</a>.</div>'; return; }
 
     let html = "", lastDay = "";
     evs.forEach(e => {
@@ -322,7 +344,7 @@
         <div>
           <div class="time">${timeStr(e.when)} · ${relTime(e.when)}</div>
           <a class="t" href="evento.html?id=${e.id}" onclick="event.stopPropagation()" style="display:block">${esc(e.title)}</a>
-          <div class="m">${e.host ? "di " + esc(e.host) : "aggregato"} · ${esc(e.place)} · ${e.going} ci vanno${e.request ? " · su richiesta" : ""}</div>
+          <div class="m">${e.host ? (e.hostAvatar ? `<span class="ha" style="background-image:url('${esc(e.hostAvatar)}')"></span>` : "") + "di " + esc(e.host) : "aggregato"} · ${esc(e.place)} · ${e.going} ci vanno${e.request ? " · su richiesta" : ""}</div>
         </div>
         <button class="go ${cls}" onclick="event.stopPropagation(); join('${e.id}')">${label}</button>
       </div>`;

@@ -30,7 +30,7 @@
   .brand img{width:30px; height:30px; display:block;}
   .q{font-size:.92em;}
 
-  main{flex:1; display:flex; align-items:center; justify-content:center; padding:24px 22px 64px;}
+  main{flex:1; min-height:calc(100dvh - 64px); display:flex; align-items:center; justify-content:center; padding:24px 22px 64px;}
   .card{width:100%; max-width:420px; background:#fff; border:1.5px solid rgba(25,25,25,.12);
         border-radius:22px; padding:36px; display:flex; flex-direction:column; gap:20px;}
   .card img.logo{width:48px; height:48px;}
@@ -55,10 +55,11 @@
   .note.ok{color:var(--blue); font-weight:600;}
 
   .otp{display:flex; gap:8px; justify-content:space-between;}
-  .otp input{width:48px; height:58px; text-align:center; font-weight:800; font-size:24px;
+  .otp input{flex:1; min-width:0; max-width:52px; height:58px; text-align:center; font-weight:800; font-size:24px;
              font-family:var(--round); background:#fff; border:1.5px solid rgba(25,25,25,.16);
              border-radius:12px; color:var(--ink);}
   .row{display:flex; align-items:center; justify-content:space-between; font-size:13.5px;}
+  @media (max-width:480px){ .card{padding:28px 22px;} .otp{gap:6px;} .otp input{font-size:22px; height:54px;} main{padding:16px 16px 40px;} }
   .row button{background:none; border:none; cursor:pointer; font-family:var(--round);
               font-weight:600; font-size:13.5px; color:var(--grey); padding:0;}
   .row button.blue{color:var(--blue);}

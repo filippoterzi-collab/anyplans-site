@@ -90,6 +90,12 @@
           border-radius:999px; padding:5px 14px 5px 5px; font-weight:700; font-size:13.5px;}
   .person .avatar{width:30px; height:30px; font-size:13px;}
   .person .tag{font-size:11px; color:var(--blue); font-weight:700;}
+  .person .tag.adm{background:var(--blue); color:#fff; padding:2px 8px; border-radius:999px;}
+  .person .act{font-size:11.5px; color:var(--blue); font-weight:700; background:none; border:none; cursor:pointer;
+               font-family:var(--round); padding:0 0 0 4px;}
+  .calmenu{display:flex; gap:8px; flex-wrap:wrap; background:#fff; border:1.5px solid rgba(25,25,25,.12);
+           border-radius:14px; padding:10px;}
+  .calmenu a{font-weight:700; font-size:13.5px; color:var(--blue); padding:8px 12px; border-radius:999px; background:var(--tint);}
   .req{display:flex; align-items:center; gap:12px; background:#fff; border:1.5px solid rgba(25,25,25,.10);
        border-radius:14px; padding:12px 14px;}
   .req .n{font-weight:700; font-size:14.5px;}
@@ -220,9 +226,14 @@
 
   <div class="row">
     <button class="btn ghost" id="btn-share" onclick="shareEvent()">condividi l'evento</button>
-    <button class="btn ghost" onclick="toast('arriva presto: aggiungi al calendario')">aggiungi al calendario</button>
+    <button class="btn ghost" onclick="document.getElementById('calmenu').hidden = !document.getElementById('calmenu').hidden">aggiungi al calendario</button>
     <button id="btn-cancel" class="textbtn" hidden onclick="cancelMyEvent()" style="color:var(--red)">annulla l'evento</button>
   </div>
+  <div class="calmenu" id="calmenu" hidden>
+    <a id="cal-ics" href="#" download="evento.ics">📅 apple, outlook (.ics)</a>
+    <a id="cal-google" href="#" target="_blank" rel="noopener">📅 google calendar</a>
+  </div>
+  <p class="note" id="people-note" hidden>gli admin possono approvare le richieste. la nomina la fa solo l'host.</p>
   <p class="note"><a id="lnk-report" href="#" style="color:var(--grey); text-decoration:underline">segnala questo evento</a> · se qualcosa non va, ci pensiamo noi.</p>
 </main>
 
@@ -256,7 +267,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788469191"></script>
+<script src="app.js?v=1788469795"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -264,6 +275,7 @@
   const wantJoin = params.get("join") === "1";
   const logged = !!(session && session.access_token);
   let ev = null;
+  let canManage = false;
 
   if (logged) {
     const cta = document.getElementById("nav-cta");
@@ -333,6 +345,8 @@
     }
     renderCounts();
 
+    canManage = !!ev.is_mine;
+    buildCalendar();
     if (ev.is_mine) {
       loadAnswers();
       document.getElementById("btn-cancel").hidden = false;
@@ -382,16 +396,23 @@
     const rows = await r.json().catch(() => []);
     const going = rows.filter(x => x.status === "going");
     const reqs = rows.filter(x => x.status === "requested");
+    const me = myUid();
+    const meRow = rows.find(x => x.user_id === me);
+    if (!ev.is_mine && meRow && meRow.role === "admin" && meRow.status === "going") canManage = true;
     if (going.length) {
       document.getElementById("people-wrap").hidden = false;
       document.getElementById("people-n").textContent = "(" + going.length + ")";
       document.getElementById("people").innerHTML = going.map(p => {
         const isHost = p.user_id === ev.host_id;
+        const isAdm = p.role === "admin" && !isHost;
+        let act = "";
+        if (ev.is_mine && !isHost) act = `<button class="act" onclick="setAdmin('${p.user_id}', ${!isAdm})">${isAdm ? "togli admin" : "nomina admin"}</button>`;
         return `<div class="person"><div class="avatar"${avatarStyle(p.avatar_url)}>${p.avatar_url ? "" : esc((p.display_name || "?")[0].toLowerCase())}</div>` +
-          `<span>${esc(p.display_name || "qualcuno")}</span>${isHost ? '<span class="tag">host</span>' : ""}</div>`;
+          `<span>${esc(p.display_name || "qualcuno")}</span>${isHost ? '<span class="tag">host</span>' : ""}${isAdm ? '<span class="tag adm">admin</span>' : ""}${act}</div>`;
       }).join("");
+      document.getElementById("people-note").hidden = !ev.is_mine;
     }
-    if (ev.is_mine) {
+    if (canManage) {
       document.getElementById("req-wrap").hidden = !reqs.length;
       document.getElementById("req-n").textContent = "(" + reqs.length + ")";
       document.getElementById("reqs").innerHTML = reqs.map(p =>
@@ -401,6 +422,33 @@
         `<button class="btn sm" onclick="respond('${p.user_id}', true)">approva</button></div></div>`).join("");
     }
   }
+  async function setAdmin(uid, on){
+    const r = await rpc("make_admin", { p_activity_id: ev.id, p_user_id: uid, p_admin: on });
+    if (r && r.ok) { toast(on ? "nominato admin: può approvare le richieste." : "non è più admin."); track("make_admin"); loadPeople(); }
+    else toast("non riesco, riprova.");
+  }
+
+  // calendario: .ics per apple/outlook, link per google
+  function buildCalendar(){
+    const start = new Date(ev.start_at), end = new Date(start.getTime() + 2 * 3600 * 1000);
+    const fmt = d => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
+    const url = eventUrl(ev);
+    const where = ev.meeting_point_text || "bergamo";
+    const desc = (ev.description ? ev.description + "\n\n" : "") + url;
+    const ics = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//anyplans//it","BEGIN:VEVENT",
+      "UID:" + ev.id + "@anyplans.in", "DTSTAMP:" + fmt(new Date()), "DTSTART:" + fmt(start), "DTEND:" + fmt(end),
+      "SUMMARY:" + ev.title.replace(/([,;])/g, "\\$1"), "LOCATION:" + where.replace(/([,;])/g, "\\$1"),
+      "DESCRIPTION:" + desc.replace(/\n/g, "\\n").replace(/([,;])/g, "\\$1"), "URL:" + url,
+      "END:VEVENT","END:VCALENDAR"].join("\r\n");
+    const a = document.getElementById("cal-ics");
+    a.href = "data:text/calendar;charset=utf-8," + encodeURIComponent(ics);
+    a.onclick = () => track("calendar");
+    const g = document.getElementById("cal-google");
+    g.href = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent(ev.title) +
+      "&dates=" + fmt(start) + "/" + fmt(end) + "&location=" + encodeURIComponent(where) + "&details=" + encodeURIComponent(desc);
+    g.onclick = () => track("calendar");
+  }
+
   async function respond(uid, ok){
     const row = document.getElementById("req-" + uid);
     row.querySelectorAll("button").forEach(b => b.disabled = true);
