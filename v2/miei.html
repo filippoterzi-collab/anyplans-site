@@ -56,6 +56,7 @@
   .empty{display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center; padding:50px 0;}
   .empty .btn{background:var(--blue); color:#fff; font-weight:700; padding:13px 26px;
               border-radius:999px; font-size:15.5px;}
+  @media (max-width:700px){ .nav .lnk{display:none;} }
 
   /* ux: transizioni e feedback al tocco */
   .btn, .chip, .ev, .iconbtn, .card, .city, .qz-chip, .place-item, .toggle-row{
@@ -84,9 +85,10 @@
   <div id="list"><p style="color:var(--grey)">carico…</p></div>
 </main>
 
-<script src="app.js?v=1788468131"></script>
+<script src="app.js?v=1788469191"></script>
 <script>
   requireLogin();
+  mountTabbar("i miei");
 
   async function load(){
     const r = await rpc("my_activities", {});
@@ -118,7 +120,7 @@
       html += `<a class="ev" href="evento.html?id=${x.id}">
         <div class="tile">${x.emoji || "📍"}</div>
         <div>
-          <div class="time">${timeStr(when)}</div>
+          <div class="time">${timeStr(when)} · ${relTime(when)}</div>
           <div class="t">${esc(x.title)}</div>
           <div class="m">${esc(x.meeting_point_text || "posizione approssimativa")} · ${Number(x.going_count) || 0} ci vanno</div>
         </div>

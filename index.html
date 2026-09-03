@@ -3,6 +3,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:title" content="anyplans? c'è qualche piano?">
+<meta property="og:description" content="la mappa degli eventi veri della tua città. ne vedi uno, ti unisci, ci andate insieme.">
+<meta property="og:image" content="https://anyplans.in/og.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="anyplans">
+<meta name="twitter:card" content="summary_large_image">
 <title>anyplans · eventi questa settimana nella tua città</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
@@ -156,6 +162,20 @@
   .qz-note.err{color:#B3261E; font-weight:600;}
   [hidden]{display:none !important;}
 
+  /* landing v3: contatore vero, eventi veri, mappa teaser */
+  .pill{display:inline-flex; align-items:center; gap:6px; background:var(--tint); color:var(--blue);
+        font-weight:700; font-size:14px; padding:8px 16px; border-radius:999px; margin-bottom:18px;}
+  a.card .go{margin-left:auto; font-weight:700; font-size:13.5px; color:var(--blue); white-space:nowrap;}
+  a.card .m b{color:var(--blue);}
+  .teaser{position:relative; height:360px; border-radius:22px; overflow:hidden; margin-top:22px; background:#E4E9F5;}
+  #teaser-map{position:absolute; inset:0;}
+  .teaser-ov{position:absolute; inset:0; display:flex; align-items:flex-end; justify-content:center; padding:26px;
+             background:linear-gradient(180deg, rgba(251,249,245,0) 45%, rgba(251,249,245,.95) 100%); pointer-events:none;}
+  .teaser-ov .btn{pointer-events:auto; font-size:16px; padding:15px 28px; box-shadow:0 6px 20px rgba(27,79,216,.28);}
+  .tpin{width:34px; height:34px; background:#fff; border:1.5px solid rgba(25,25,25,.2); border-radius:999px;
+        display:flex; align-items:center; justify-content:center; font-size:16px; box-shadow:0 1px 4px rgba(0,0,0,.12);}
+  .tpin.today{box-shadow:0 0 0 2.5px var(--blue), 0 1px 4px rgba(0,0,0,.12);}
+
   /* mobile */
   @media (max-width:700px){
     h1{font-size:34px;}
@@ -180,6 +200,8 @@
     .cat .t{font-size:12.5px;} .cat .m{display:none;}
     .card{padding:13px 14px;}
     .card .em{font-size:24px;}
+    .teaser{height:260px; margin-top:16px;}
+    .pill{font-size:12.5px; padding:7px 13px; margin-bottom:12px;}
     .card .t{font-size:13.5px;} .card .m{font-size:12px;}
     .final h2{font-size:27px;}
     .final .lead{font-size:13.5px;}
@@ -227,6 +249,7 @@
   <span class="float hide-m" style="animation-delay:1.05s,1.05s; top:64%; right:4%">⛰️</span>
   <span class="float hide-m" style="animation-delay:.55s,.55s; top:86%; right:13%">🎲</span>
   <div class="wrap">
+    <div class="pill" id="pill" hidden>📍 questa settimana: <b id="pill-n"></b>&nbsp;eventi a bergamo</div>
     <h1>anyplans<br>
       <span class="rotwrap">
         <span class="rot" style="opacity:1">questa settimana?</span>
@@ -248,15 +271,19 @@
 
 <section class="block band" id="eventi">
   <div class="wrap">
-    <h2>che eventi troverai</h2>
-    <p class="lead">esempi di eventi intorno a bergamo. quelli veri li vedi sulla mappa quando ti registri, e chiunque può pubblicarne uno.</p>
-    <div class="cards">
+    <h2 id="ev-h2">che eventi troverai</h2>
+    <p class="lead" id="ev-lead">esempi di eventi intorno a bergamo. quelli veri li vedi sulla mappa quando ti registri, e chiunque può pubblicarne uno.</p>
+    <div class="cards" id="cards">
       <div class="card"><div class="em">🏺</div><div><div class="t">corso di ceramica, anche principianti</div><div class="m">giovedì, 19:00 · con la maestra</div></div></div>
       <div class="card"><div class="em">🎪</div><div><div class="t">c'è la festa di paese, chi viene?</div><div class="m">sabato, dalle 18:00 · piazza principale</div></div></div>
       <div class="card"><div class="em">🏃</div><div><div class="t">corro 10k al parco</div><div class="m">sabato, 8:00 · ritmo tranquillo</div></div></div>
       <div class="card"><div class="em">🍳</div><div><div class="t">corso di cucina: pasta fresca</div><div class="m">mercoledì, 19:30 · gruppo piccolo</div></div></div>
       <div class="card"><div class="em">🌱</div><div><div class="t">mattinata di volontariato al parco</div><div class="m">domenica, 9:00 · guanti forniti</div></div></div>
       <div class="card"><div class="em">🚴</div><div><div class="t">giro in bici al lago, pausa caffè</div><div class="m">domenica, 7:00 · 65 km</div></div></div>
+    </div>
+    <div class="teaser" id="teaser">
+      <div id="teaser-map"></div>
+      <div class="teaser-ov"><a class="btn" id="teaser-cta" href="/v2/login.html">registrati per aprire la mappa →</a></div>
     </div>
   </div>
 </section>
@@ -366,9 +393,8 @@
   </div>
 </div>
 
+<script src="/v2/app.js?v=1788469191"></script>
 <script>
-  const SB_URL = "https://uudccbzihhgoeaevkewr.supabase.co";
-  const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1ZGNjYnppaGhnb2VhZXZrZXdyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYzNzk0NzEsImV4cCI6MjEwMTk1NTQ3MX0.OHJC3vmT8eRLczFkH0QdZybbjudDfSi4VEX8Mc22ABQ";
   let quizCity = "";
 
   function openQuiz(city){
@@ -405,11 +431,8 @@
     const note = document.getElementById("qz-note");
     note.textContent = "…"; note.className = "qz-note";
     try {
-      const r = await fetch(SB_URL + "/rest/v1/rpc/join_beta", {
-        method: "POST",
-        headers: {"apikey": SB_ANON, "Content-Type": "application/json"},
-        body: JSON.stringify({ p_email: email, p_source: "site-city", p_city: quizCity })
-      });
+      const r = await rpc("join_beta", { p_email: email, p_source: "site-city", p_city: quizCity });
+      if (!r) throw new Error("rete");
       if (!r.ok) { note.textContent = "controlla l'indirizzo email e riprova."; note.className = "qz-note err"; return false; }
       document.getElementById("qz-step2").hidden = true;
       document.getElementById("qz-done").hidden = false;
@@ -426,8 +449,13 @@
   // la pagina dalla cache senza rieseguire gli script, quindi si riascolta pageshow)
   function applySessionCta(){
     try {
-      const s = JSON.parse(localStorage.getItem("anyplans_session"));
+      let s = null;
+      try { s = JSON.parse(localStorage.getItem("anyplans_session")); } catch (_) {}
+      s = s || session;
       const logged = s && s.access_token;
+      const t = document.getElementById("teaser-cta");
+      t.textContent = logged ? "apri la mappa →" : "registrati per aprire la mappa →";
+      t.href = logged ? "/v2/eventi.html" : "/v2/login.html";
       const cta = document.getElementById("nav-cta");
       cta.textContent = logged ? "apri gli eventi" : "registrati";
       cta.href = logged ? "/v2/eventi.html" : "/v2/login.html";
@@ -440,6 +468,59 @@
   }
   applySessionCta();
   window.addEventListener("pageshow", applySessionCta);
+
+  // eventi veri: contatore della settimana, prime card, pin sulla mappa teaser
+  let LIVE = [];
+  async function loadLanding(){
+    const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
+    if (!r || !r.ok) return;
+    const rows = (await r.json().catch(() => []))
+      .map(x => ({ ...x, when: new Date(x.start_at) }))
+      .filter(x => x.when > new Date(Date.now() - 3 * 3600 * 1000))
+      .sort((a, b) => a.when - b.when);
+    if (!rows.length) return;
+    LIVE = rows;
+    const week = rows.filter(x => x.when < new Date(Date.now() + 7 * 86400 * 1000)).length;
+    if (week >= 3) {
+      document.getElementById("pill-n").textContent = week;
+      document.getElementById("pill").hidden = false;
+    }
+    document.getElementById("ev-h2").textContent = "eventi a bergamo, adesso";
+    document.getElementById("ev-lead").textContent = "presi dalla mappa in questo momento. registrati e ci vai insieme agli altri.";
+    document.getElementById("cards").innerHTML = rows.slice(0, 6).map(x =>
+      `<a class="card" href="/v2/evento.html?id=${x.id}"><div class="em">${esc(x.emoji || "📍")}</div>` +
+      `<div><div class="t">${esc(x.title)}</div><div class="m">${esc(dayLabel(x.when))}, ${timeStr(x.when)} · <b>${esc(relTime(x.when))}</b> · ${Number(x.going_count) || 0} ci vanno</div></div>` +
+      `<span class="go">ci sono →</span></a>`).join("");
+    if (teaserReady) drawTeaser();
+  }
+  loadLanding();
+
+  // mappa teaser: maplibre caricato solo quando la sezione entra in vista
+  let teaserReady = false, teaserDrawn = false;
+  function drawTeaser(){
+    if (teaserDrawn || !window.maplibregl) return;
+    teaserDrawn = true;
+    const map = new maplibregl.Map({ container: "teaser-map", style: "https://tiles.openfreemap.org/styles/liberty",
+      center: [9.670, 45.698], zoom: 11.6, interactive: false, attributionControl: false });
+    LIVE.slice(0, 40).forEach(x => {
+      const el = document.createElement("div");
+      el.className = "tpin" + (dayLabel(x.when) === "oggi" ? " today" : ""); el.textContent = x.emoji || "📍";
+      new maplibregl.Marker({ element: el }).setLngLat([x.lng, x.lat]).addTo(map);
+    });
+  }
+  function loadTeaser(){
+    const css = document.createElement("link"); css.rel = "stylesheet";
+    css.href = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css";
+    document.head.appendChild(css);
+    const js = document.createElement("script");
+    js.src = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js";
+    js.onload = () => { teaserReady = true; drawTeaser(); };
+    document.head.appendChild(js);
+  }
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { io.disconnect(); loadTeaser(); } }, { rootMargin: "400px" });
+    io.observe(document.getElementById("teaser"));
+  } else loadTeaser();
 </script>
 </body>
 </html>

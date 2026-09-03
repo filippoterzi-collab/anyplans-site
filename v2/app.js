@@ -120,6 +120,62 @@ function dayLabel(d){
   return DAYS[d.getDay()] + " " + d.getDate();
 }
 function daySub(d){ return DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()]; }
+// "tra 2h", "tra 3 giorni": quanto manca, a colpo d'occhio
+function relTime(d){
+  const ms = d - Date.now(), min = Math.round(ms / 60000);
+  if (min < -180) return "passato";
+  if (min <= 0) return "in corso";
+  if (min < 60) return "tra " + min + " min";
+  const h = Math.round(min / 60);
+  if (h < 24) return "tra " + h + "h";
+  const days = Math.round(h / 24);
+  return "tra " + days + (days === 1 ? " giorno" : " giorni");
+}
+
+// analytics first-party (supabase/migrations/0046): nessun cookie, nessun dato personale
+function track(name, path){
+  if (location.protocol === "file:") return;
+  let ref = "";
+  try { ref = document.referrer ? new URL(document.referrer).hostname : ""; } catch (_) {}
+  if (ref === location.hostname) ref = "";
+  try {
+    fetch(SB_URL + "/rest/v1/rpc/log_site_event", {
+      method: "POST", keepalive: true,
+      headers: {"apikey": SB_ANON, "Content-Type": "application/json"},
+      body: JSON.stringify({ p_name: name, p_path: path || location.pathname, p_ref: ref || null, p_city: "bergamo" })
+    }).catch(() => {});
+  } catch (_) {}
+}
+track("page_view");
+
+// tab bar mobile (scopri · crea · i miei eventi · profilo), solo sotto i 700px
+function mountTabbar(active){
+  const tabs = [
+    ["scopri",  "eventi.html",        '<svg viewBox="0 0 24 24"><path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20z"/><path d="M9 4v13.5M15 6.5V20"/></svg>'],
+    ["crea",    "crea.html",          '<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>'],
+    ["i miei",  "miei.html",          '<svg viewBox="0 0 24 24"><path d="M5 5.5h14v15l-7-4-7 4z"/></svg>'],
+    ["profilo", "profilo.html?edit=1",'<svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-4 4-6 7.5-6s6.3 2 7.5 6"/></svg>']
+  ];
+  const st = document.createElement("style");
+  st.textContent = `
+    #tabbar{display:none;}
+    @media (max-width:700px){
+      body{padding-bottom:calc(66px + env(safe-area-inset-bottom));}
+      #tabbar{display:flex; position:fixed; left:0; right:0; bottom:0; z-index:45; background:#fff;
+        border-top:1.5px solid rgba(25,25,25,.10); padding:6px 4px calc(6px + env(safe-area-inset-bottom));}
+      #tabbar a{flex:1; display:flex; flex-direction:column; align-items:center; gap:3px;
+        font-weight:700; font-size:10.5px; color:#6E6E73; text-decoration:none; padding:4px 0;}
+      #tabbar a svg{width:24px; height:24px; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round;}
+      #tabbar a.on{color:#1B4FD8;}
+      #tabbar a.crea svg{width:40px; height:40px; background:#1B4FD8; color:#fff; border-radius:999px; padding:9px; margin-top:-16px; box-shadow:0 4px 12px rgba(27,79,216,.35);}
+      #tabbar a.crea{color:#1B4FD8;}
+    }`;
+  document.head.appendChild(st);
+  const bar = document.createElement("nav"); bar.id = "tabbar";
+  bar.innerHTML = tabs.map(([l, h, i]) =>
+    `<a href="${h}" class="${l === "crea" ? "crea" : ""}${l === active ? " on" : ""}">${i}<span>${l}</span></a>`).join("");
+  document.body.appendChild(bar);
+}
 
 // url carini: anyplans.in/bergamo/nome-evento
 function slugify(t){

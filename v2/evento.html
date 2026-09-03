@@ -6,6 +6,12 @@
 <title>evento · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <meta name="description" content="unisciti a questo evento su anyplans, la mappa degli eventi veri della tua città.">
+<meta property="og:title" content="ci sei? un evento su anyplans">
+<meta property="og:description" content="la mappa degli eventi veri della tua città. ne vedi uno, ti unisci, ci andate insieme.">
+<meta property="og:image" content="https://anyplans.in/og.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="anyplans">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css">
 <style>
   @font-face{
@@ -16,7 +22,7 @@
   }
   :root{
     --blue:#1B4FD8; --blue-lo:#1440AF; --tint:#E9EEFB;
-    --ink:#191919; --grey:#6E6E73; --bg:#FBF9F5;
+    --ink:#191919; --grey:#6E6E73; --bg:#FBF9F5; --red:#B3261E;
     --round: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
     --display: "Bricolage Grotesque", var(--round);
   }
@@ -38,12 +44,16 @@
   .btn:hover{background:var(--blue-lo);}
   .btn.ghost{background:transparent; color:var(--blue); box-shadow:inset 0 0 0 2px var(--blue);}
   .btn.ghost:hover{background:var(--tint); color:var(--blue-lo);}
+  .btn.sm{padding:9px 16px; font-size:13.5px;}
   .btn[disabled]{opacity:.55; cursor:default;}
+  .lnk{font-weight:700; font-size:14px; color:var(--blue);}
+  .textbtn{background:none; border:none; cursor:pointer; font-family:var(--round);
+           font-weight:700; font-size:14px; padding:12px 8px;}
 
   main{max-width:860px; margin:0 auto; padding:16px 22px 70px; display:flex; flex-direction:column; gap:18px;}
   .cover{width:100%; height:230px; background:var(--tint); border-radius:22px; display:flex;
          align-items:center; justify-content:center; font-size:96px;}
-  .chips{display:flex; gap:8px;}
+  .chips{display:flex; gap:8px; flex-wrap:wrap;}
   .chip{background:var(--tint); color:var(--blue); font-weight:700; font-size:13px;
         padding:6px 12px; border-radius:999px;}
   .chip.w{background:#fff; border:1.5px solid rgba(25,25,25,.12); color:var(--ink);}
@@ -55,6 +65,7 @@
               text-transform:uppercase;}
   .datebox .d{font-weight:800; font-size:18px; padding:3px 0;}
   .whenrow .t{font-weight:700; font-size:15px;}
+  .whenrow .t b{color:var(--blue);}
   .whenrow .s{font-size:13.5px; color:var(--grey);}
   .box{background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:18px; padding:20px 22px;
        display:flex; flex-direction:column; gap:12px;}
@@ -65,25 +76,35 @@
   .row{display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
   .hostcard{display:flex; align-items:center; gap:12px;}
   .avatar{width:40px; height:40px; border-radius:999px; background:var(--blue); color:#fff;
-          font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+          font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center; flex-shrink:0;
+          background-size:cover; background-position:center; overflow:hidden;}
   .hostcard .n{font-weight:700; font-size:14.5px;}
   .hostcard .s{font-size:12.5px; color:var(--grey);}
-  .desc{font-size:15px; line-height:1.6;}
+  .desc{font-size:15px; line-height:1.6; white-space:pre-line;}
   #map{height:220px; border-radius:16px;}
   .sec{font-weight:800; font-size:16px;}
+  .sec span{color:var(--grey); font-weight:600; font-size:13px;}
   .note{font-size:13px; color:var(--grey);}
+  .people{display:flex; flex-wrap:wrap; gap:10px;}
+  .person{display:flex; align-items:center; gap:9px; background:#fff; border:1.5px solid rgba(25,25,25,.10);
+          border-radius:999px; padding:5px 14px 5px 5px; font-weight:700; font-size:13.5px;}
+  .person .avatar{width:30px; height:30px; font-size:13px;}
+  .person .tag{font-size:11px; color:var(--blue); font-weight:700;}
+  .req{display:flex; align-items:center; gap:12px; background:#fff; border:1.5px solid rgba(25,25,25,.10);
+       border-radius:14px; padding:12px 14px;}
+  .req .n{font-weight:700; font-size:14.5px;}
+  .req .acts{margin-left:auto; display:flex; gap:8px;}
+  .req .no{background:#fff; color:var(--ink); box-shadow:inset 0 0 0 1.5px rgba(25,25,25,.16);}
   @keyframes sk{from{background-position:200% 0} to{background-position:-200% 0}}
   .center{display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center; padding:60px 0;}
   [hidden]{display:none !important;}
   @media (max-width:600px){ h1{font-size:28px;} .cover{height:180px; font-size:72px;} }
 
   /* ux: transizioni e feedback al tocco */
-  .btn, .chip, .ev, .iconbtn, .card, .city, .qz-chip, .place-item, .toggle-row{
+  .btn, .chip, .person, .req, .textbtn{
     transition: transform .12s ease, box-shadow .12s ease, background .15s ease,
                 border-color .15s ease, color .15s ease;}
-  .btn:active, .chip:active, .iconbtn:active, .qz-chip:active{transform:scale(.96);}
-  .ev:hover{box-shadow:0 4px 16px rgba(25,25,25,.07); transform:translateY(-1px);}
-  .card:hover, .city:hover{box-shadow:0 4px 14px rgba(25,25,25,.06);}
+  .btn:active, .chip:active, .textbtn:active{transform:scale(.96);}
   a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible{
     outline:2px solid var(--blue); outline-offset:2px;}
 </style>
@@ -102,6 +123,7 @@
   <div class="chips">
     <span class="chip" id="chip-cat"></span>
     <span class="chip w">gratis</span>
+    <span class="chip w" id="chip-req" hidden>su richiesta</span>
     <span class="chip w" id="chip-agg" hidden>aggregato</span>
   </div>
   <h1 class="display" id="title"></h1>
@@ -125,9 +147,18 @@
   </div>
   <div class="box" id="box-join" hidden>
     <h2>ci sei?</h2>
+    <p class="m" id="join-hint" hidden>per questo evento l'host approva chi partecipa: mandi la richiesta e ti risponde.</p>
     <div class="row">
       <button class="btn" id="btn-join" onclick="joinEvent()">ci sono</button>
       <span class="note" id="going-join"></span>
+    </div>
+  </div>
+  <div class="box" id="box-requested" hidden>
+    <h2>richiesta inviata ⏳</h2>
+    <p class="m">l'host la vede e ti approva. quando sei dentro vedi anche l'indirizzo esatto.</p>
+    <div class="row">
+      <button class="btn ghost" onclick="leaveEvent()">ritira la richiesta</button>
+      <span class="note" id="going-req"></span>
     </div>
   </div>
   <div class="box in" id="box-in" hidden>
@@ -137,6 +168,21 @@
       <button class="btn ghost" onclick="leaveEvent()">annulla la partecipazione</button>
       <span class="note" id="going-in"></span>
     </div>
+  </div>
+  <div class="box in" id="box-host" hidden>
+    <h2>sei l'host</h2>
+    <p class="m">condividi il link, e qui sotto vedi chi arriva.</p>
+    <div class="row">
+      <button class="btn" onclick="shareEvent()">condividi l'evento</button>
+      <a class="btn ghost" id="lnk-edit" href="#">modifica l'evento</a>
+      <span class="note" id="going-host"></span>
+    </div>
+  </div>
+
+  <!-- richieste da approvare (solo host) -->
+  <div id="req-wrap" hidden>
+    <div class="sec" style="margin-bottom:8px">richieste da approvare <span id="req-n"></span></div>
+    <div id="reqs" style="display:flex; flex-direction:column; gap:8px"></div>
   </div>
 
   <!-- host / fonte -->
@@ -155,6 +201,12 @@
     <p class="desc" id="desc"></p>
   </div>
 
+  <!-- chi ci va -->
+  <div id="people-wrap" hidden>
+    <div class="sec" style="margin-bottom:8px">chi ci va <span id="people-n"></span></div>
+    <div class="people" id="people"></div>
+  </div>
+
   <div>
     <div class="sec" style="margin-bottom:8px">dove</div>
     <div id="map"></div>
@@ -162,16 +214,16 @@
   </div>
 
   <div id="answers-wrap" hidden>
-    <div class="sec" style="margin-bottom:8px">risposte dei partecipanti <span style="color:var(--grey); font-weight:600; font-size:13px">(le vedi solo tu)</span></div>
+    <div class="sec" style="margin-bottom:8px">risposte dei partecipanti <span>(le vedi solo tu)</span></div>
     <div id="answers" style="display:flex; flex-direction:column; gap:10px"></div>
   </div>
 
   <div class="row">
-    <button class="btn ghost" onclick="shareEvent()">condividi l'evento</button>
-    <button id="btn-cancel" hidden onclick="cancelMyEvent()"
-      style="background:none; border:none; cursor:pointer; font-family:var(--round);
-             font-weight:700; font-size:14px; color:#B3261E; padding:12px 8px">annulla l'evento</button>
+    <button class="btn ghost" id="btn-share" onclick="shareEvent()">condividi l'evento</button>
+    <button class="btn ghost" onclick="toast('arriva presto: aggiungi al calendario')">aggiungi al calendario</button>
+    <button id="btn-cancel" class="textbtn" hidden onclick="cancelMyEvent()" style="color:var(--red)">annulla l'evento</button>
   </div>
+  <p class="note"><a id="lnk-report" href="#" style="color:var(--grey); text-decoration:underline">segnala questo evento</a> · se qualcosa non va, ci pensiamo noi.</p>
 </main>
 
 <!-- modale domande dell'host -->
@@ -204,16 +256,19 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788468131"></script>
+<script src="app.js?v=1788469191"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
   const wantSlug = params.get("slug");
+  const wantJoin = params.get("join") === "1";
+  const logged = !!(session && session.access_token);
   let ev = null;
 
-  if (session && session.access_token) {
+  if (logged) {
     const cta = document.getElementById("nav-cta");
-    cta.textContent = "gli eventi"; cta.href = "eventi.html";
+    cta.textContent = "← gli eventi"; cta.href = "eventi.html";
+    cta.className = "lnk";
   }
   function rememberNext(){
     try { sessionStorage.setItem("anyplans_next", location.pathname + location.search); } catch (_) {}
@@ -221,12 +276,19 @@
 
   async function load(){
     if (!id && !wantSlug) return notFound();
-    const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
-    if (!r || !r.ok) return notFound();
-    const rows = await r.json();
-    ev = id ? rows.find(x => x.id === id)
-            : rows.filter(x => slugify(x.title) === wantSlug)
-                  .sort((a, b) => new Date(a.start_at) - new Date(b.start_at))[0];
+    // da loggati la riga singola (vale anche fuori dai 50 km); da sloggati il feed pubblico
+    if (id && logged) {
+      const r1 = await rpc("activity_by_id", { p_id: id });
+      if (r1 && r1.ok) { const rows = await r1.json().catch(() => []); ev = rows[0] || null; }
+    }
+    if (!ev) {
+      const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
+      if (!r || !r.ok) return notFound();
+      const rows = await r.json();
+      ev = id ? rows.find(x => x.id === id)
+              : rows.filter(x => slugify(x.title) === wantSlug)
+                    .sort((a, b) => new Date(a.start_at) - new Date(b.start_at))[0];
+    }
     if (!ev) return notFound();
     renderEvent();
   }
@@ -235,27 +297,30 @@
     document.getElementById("notfound").hidden = false;
   }
 
+  function avatarStyle(url){ return url ? ` style="background-image:url('${esc(url)}')"` : ""; }
+
   function renderEvent(){
     const cat = (CATALOG[ev.sport] || {});
     const when = new Date(ev.start_at);
+    const isReq = ev.visibility === "request";
     document.title = ev.title + " · anyplans";
     document.getElementById("cover").textContent = ev.emoji || cat.e || "📍";
     document.getElementById("chip-cat").textContent = (ev.emoji || cat.e || "") + " " + (cat.l || ev.sport);
+    document.getElementById("chip-req").hidden = !isReq;
     document.getElementById("title").textContent = ev.title;
     document.getElementById("d-month").textContent = MONTHS[when.getMonth()].slice(0, 3);
     document.getElementById("d-day").textContent = when.getDate();
-    document.getElementById("when").textContent = dayLabel(when) + " · " + daySub(when) + " · " + timeStr(when);
+    document.getElementById("when").innerHTML = esc(dayLabel(when) + " · " + daySub(when) + " · " + timeStr(when)) + " · <b>" + esc(relTime(when)) + "</b>";
     document.getElementById("place").textContent = ev.meeting_point_text || "posizione approssimativa";
     if (!ev.meeting_point_text) document.getElementById("map-note").hidden = false;
-
-    const going = Number(ev.going_count) || 0;
-    const gtxt = going === 1 ? "1 persona ci va" : going + " ci vanno";
-    ["going-guest","going-join","going-in"].forEach(x => document.getElementById(x).textContent = gtxt);
+    document.getElementById("join-hint").hidden = !isReq;
 
     if (ev.host_name) {
       document.getElementById("host").hidden = false;
       document.getElementById("host-name").textContent = ev.host_name;
-      document.getElementById("host-avatar").textContent = ev.host_name[0].toLowerCase();
+      const ha = document.getElementById("host-avatar");
+      if (ev.host_avatar) ha.style.backgroundImage = "url('" + ev.host_avatar.replace(/'/g, "") + "')";
+      else ha.textContent = ev.host_name[0].toLowerCase();
     } else {
       document.getElementById("source").hidden = false;
       document.getElementById("chip-agg").hidden = false;
@@ -266,12 +331,21 @@
       document.getElementById("desc-wrap").hidden = false;
       document.getElementById("desc").textContent = ev.description;
     }
-    updateBoxes();
+    renderCounts();
 
-    if (ev.is_mine) { loadAnswers(); document.getElementById("btn-cancel").hidden = false; }
+    if (ev.is_mine) {
+      loadAnswers();
+      document.getElementById("btn-cancel").hidden = false;
+      document.getElementById("btn-share").hidden = true;
+      document.getElementById("lnk-edit").href = "crea.html?edit=" + ev.id;
+    }
+    document.getElementById("lnk-report").href = "mailto:hello@anyplans.in?subject=" +
+      encodeURIComponent("segnalazione evento: " + ev.title) +
+      "&body=" + encodeURIComponent("evento: " + eventUrl(ev) + "\nid: " + ev.id + "\n\ncosa non va:\n");
 
     document.getElementById("loading").hidden = true;
     document.getElementById("page").hidden = false;
+    track("event_view", "/evento/" + ev.id);
 
     const map = new maplibregl.Map({ container: "map", style: "https://tiles.openfreemap.org/styles/liberty",
                                      center: [ev.lng, ev.lat], zoom: 14, interactive: true });
@@ -280,15 +354,69 @@
     el.style.cssText = "width:40px;height:40px;background:#1B4FD8;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:19px;box-shadow:0 1px 5px rgba(0,0,0,.2)";
     el.textContent = ev.emoji || cat.e || "📍";
     new maplibregl.Marker({ element: el }).setLngLat([ev.lng, ev.lat]).addTo(map);
+
+    loadPeople();
+    if (wantJoin && logged && !ev.is_mine && ev.my_status !== "going" && ev.my_status !== "requested") joinEvent();
   }
 
   function updateBoxes(){
-    const logged = session && session.access_token;
+    const st = ev.my_status;
     document.getElementById("box-guest").hidden = logged;
-    document.getElementById("box-join").hidden = !logged || ev.my_status === "going";
-    document.getElementById("box-in").hidden = !logged || ev.my_status !== "going";
+    document.getElementById("box-host").hidden = !(logged && ev.is_mine);
+    document.getElementById("box-join").hidden = !logged || ev.is_mine || st === "going" || st === "requested";
+    document.getElementById("box-requested").hidden = !logged || ev.is_mine || st !== "requested";
+    document.getElementById("box-in").hidden = !logged || ev.is_mine || st !== "going";
+  }
+  function renderCounts(){
+    const going = Number(ev.going_count) || 0;
+    const cap = ev.max_participants ? " · " + Math.max(0, ev.max_participants - going) + " posti liberi" : "";
+    const gtxt = (going === 1 ? "1 persona ci va" : going + " ci vanno") + cap;
+    ["going-guest","going-join","going-in","going-req","going-host"].forEach(x => document.getElementById(x).textContent = gtxt);
+    updateBoxes();
   }
 
+  // ---- partecipanti (get_participants è pubblica; le richieste le vede solo l'host) ----
+  async function loadPeople(){
+    const r = await rpc("get_participants", { p_activity_id: ev.id });
+    if (!r || !r.ok) return;
+    const rows = await r.json().catch(() => []);
+    const going = rows.filter(x => x.status === "going");
+    const reqs = rows.filter(x => x.status === "requested");
+    if (going.length) {
+      document.getElementById("people-wrap").hidden = false;
+      document.getElementById("people-n").textContent = "(" + going.length + ")";
+      document.getElementById("people").innerHTML = going.map(p => {
+        const isHost = p.user_id === ev.host_id;
+        return `<div class="person"><div class="avatar"${avatarStyle(p.avatar_url)}>${p.avatar_url ? "" : esc((p.display_name || "?")[0].toLowerCase())}</div>` +
+          `<span>${esc(p.display_name || "qualcuno")}</span>${isHost ? '<span class="tag">host</span>' : ""}</div>`;
+      }).join("");
+    }
+    if (ev.is_mine) {
+      document.getElementById("req-wrap").hidden = !reqs.length;
+      document.getElementById("req-n").textContent = "(" + reqs.length + ")";
+      document.getElementById("reqs").innerHTML = reqs.map(p =>
+        `<div class="req" id="req-${p.user_id}"><div class="avatar"${avatarStyle(p.avatar_url)}>${p.avatar_url ? "" : esc((p.display_name || "?")[0].toLowerCase())}</div>` +
+        `<div class="n">${esc(p.display_name || "qualcuno")}</div>` +
+        `<div class="acts"><button class="btn sm no" onclick="respond('${p.user_id}', false)">no</button>` +
+        `<button class="btn sm" onclick="respond('${p.user_id}', true)">approva</button></div></div>`).join("");
+    }
+  }
+  async function respond(uid, ok){
+    const row = document.getElementById("req-" + uid);
+    row.querySelectorAll("button").forEach(b => b.disabled = true);
+    const r = await rpc("respond_to_request", { p_activity_id: ev.id, p_user_id: uid, p_approve: ok });
+    if (r && r.ok) {
+      if (ok) { ev.going_count = Number(ev.going_count) + 1; renderCounts(); toast("approvato: ora è dentro."); }
+      else toast("richiesta rifiutata.");
+      loadPeople();
+      return;
+    }
+    row.querySelectorAll("button").forEach(b => b.disabled = false);
+    const b = r ? await r.json().catch(() => ({})) : {};
+    toast((b.message || "").includes("activity_full") ? "posti finiti: alza il limite per approvare." : "non riesco, riprova.");
+  }
+
+  // ---- unirsi ----
   let questions = null;
   async function joinEvent(){
     if (questions === null) {
@@ -322,6 +450,7 @@
           style="width:100%; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px;
                  padding:12px 15px; font-size:15px; font-family:var(--round)"></div>`;
     }).join("");
+    document.getElementById("q-send").textContent = ev.visibility === "request" ? "manda la richiesta" : "conferma: ci sono";
     document.getElementById("q-note").textContent = "";
     document.getElementById("q-overlay").hidden = false;
   }
@@ -345,9 +474,9 @@
       if (val) answers[d.dataset.q] = val;
       else if (d.dataset.req === "true") missing = true;
     });
-    if (missing) { document.getElementById("q-note").textContent = "rispondi alle domande con l'asterisco."; document.getElementById("q-note").style.color = "#B3261E"; return; }
+    if (missing) { document.getElementById("q-note").textContent = "rispondi alle domande con l'asterisco."; document.getElementById("q-note").style.color = "var(--red)"; return; }
     const btn = document.getElementById("q-send"); btn.disabled = true;
-    const ok = await doJoin(true);
+    const ok = await doJoin();
     if (ok && Object.keys(answers).length) {
       const ra = await rpc("answer_questions", { p_activity_id: ev.id, p_answers: answers });
       if (!ra || !ra.ok) toast("sei dentro, ma le risposte non si sono salvate: riprova dal bottone.");
@@ -358,26 +487,34 @@
 
   async function doJoin(){
     const btn = document.getElementById("btn-join"); btn.disabled = true;
-    const r = await rpc("join_activity", { p_activity_id: ev.id, p_status: "going" });
+    const isReq = ev.visibility === "request";
+    const r = isReq ? await rpc("request_to_join", { p_activity_id: ev.id })
+                    : await rpc("join_activity", { p_activity_id: ev.id, p_status: "going" });
     btn.disabled = false;
-    if (r && r.ok) { ev.my_status = "going"; ev.going_count = Number(ev.going_count) + 1; renderCounts(); return true; }
+    if (r && r.ok) {
+      if (isReq) { ev.my_status = "requested"; track("join_request"); }
+      else { ev.my_status = "going"; ev.going_count = Number(ev.going_count) + 1; track("join"); }
+      renderCounts(); loadPeople();
+      return true;
+    }
     const b = r ? await r.json().catch(() => ({})) : {};
     const code = b.message || "";
-    if (code.includes("profile_required")) { rememberNext(); location.href = "profilo.html"; return; }
-    if (code.includes("approval_required")) return toast("per questo evento l'host approva le richieste, per ora dall'app.");
-    if (code.includes("age_not_allowed")) return toast("questo evento ha un limite di età.");
+    if (code.includes("profile_required")) { rememberNext(); location.href = "profilo.html"; return false; }
+    if (code.includes("activity_full")) { toast("posti finiti per questo evento."); return false; }
+    if (code.includes("age_not_allowed")) { toast("questo evento ha un limite di età."); return false; }
+    if (code.includes("already")) { ev.my_status = isReq ? "requested" : "going"; renderCounts(); return true; }
     toast("non riesco, riprova.");
+    return false;
   }
   async function leaveEvent(){
+    const wasGoing = ev.my_status === "going";
     const r = await rpc("join_activity", { p_activity_id: ev.id, p_status: "left" });
-    if (r && r.ok) { ev.my_status = "left"; ev.going_count = Math.max(0, Number(ev.going_count) - 1); return renderCounts(); }
+    if (r && r.ok) {
+      ev.my_status = "left";
+      if (wasGoing) ev.going_count = Math.max(0, Number(ev.going_count) - 1);
+      renderCounts(); loadPeople(); return;
+    }
     toast("non riesco, riprova.");
-  }
-  function renderCounts(){
-    const going = Number(ev.going_count) || 0;
-    const gtxt = going === 1 ? "1 persona ci va" : going + " ci vanno";
-    ["going-guest","going-join","going-in"].forEach(x => document.getElementById(x).textContent = gtxt);
-    updateBoxes();
   }
 
   async function loadAnswers(){
@@ -407,6 +544,7 @@
   async function shareEvent(){
     const url = eventUrl(ev);
     const text = "ci sei? " + (ev.emoji || "") + " " + ev.title + " · " + dayLabel(new Date(ev.start_at)) + " " + timeStr(new Date(ev.start_at));
+    track("share");
     if (navigator.share) { try { await navigator.share({ title: ev.title, text, url }); return; } catch (_) {} }
     try { await navigator.clipboard.writeText(text + " " + url); toast("link copiato, incollalo dove vuoi."); }
     catch (_) { toast(url); }

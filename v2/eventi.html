@@ -76,6 +76,7 @@
   .ev .go{margin-left:auto; font-weight:700; font-size:13.5px; color:var(--blue);
           white-space:nowrap; background:none; border:none; cursor:pointer; font-family:var(--round);}
   .ev .go.ok{color:var(--ink);}
+  .ev .go.wait{color:var(--grey);}
   .empty{color:var(--grey); font-size:14.5px; padding:24px 4px;}
   .sk{height:84px; border-radius:16px; background:linear-gradient(90deg,#F1EFE9 25%,#E9E6DE 50%,#F1EFE9 75%);
       background-size:200% 100%; animation:sk 1.2s ease-in-out infinite;}
@@ -86,6 +87,7 @@
        border-radius:999px; display:flex; align-items:center; justify-content:center; font-size:17px;
        box-shadow:0 1px 4px rgba(0,0,0,.12); cursor:pointer;}
   .pin.on{background:var(--blue); border-color:var(--blue);}
+  .pin.today{box-shadow:0 0 0 2.5px var(--blue), 0 1px 4px rgba(0,0,0,.12);}
   .maplibregl-popup-content{border-radius:14px; font-family:var(--round); padding:12px 14px;
        box-shadow:0 2px 10px rgba(0,0,0,.12);}
   .pop .t{font-weight:700; font-size:14px; color:var(--ink);}
@@ -95,15 +97,17 @@
   @media (max-width:700px){
     body{overflow:auto; height:auto;}
     .nav .lnk{display:none;}
+    .nav-right a, .nav-right .iconbtn[title]{display:none;}
+    .nav-right #avatar{display:flex;}
     .topbar{padding:4px 18px 10px;}
     .titlerow h1{font-size:24px;}
     .split{flex-direction:column;}
-    #map{display:none; height:calc(100vh - 260px); flex:none; border-radius:16px; margin:0 18px;}
+    #map{display:none; height:calc(100vh - 330px); flex:none; border-radius:16px; margin:0 18px;}
     .list{width:100%; max-width:none; padding:12px 18px 90px;}
     body.showmap #map{display:block;}
     body.showmap .list{display:none;}
     #maptoggle{display:flex; align-items:center; gap:7px; position:fixed; left:50%;
-      transform:translateX(-50%); bottom:22px; z-index:40; background:var(--ink); color:#fff;
+      transform:translateX(-50%); bottom:84px; z-index:40; background:var(--ink); color:#fff;
       font-weight:700; font-size:14px; padding:13px 22px; border-radius:999px; border:none;
       cursor:pointer; font-family:var(--round); box-shadow:0 4px 16px rgba(0,0,0,.22);}
   }
@@ -176,32 +180,22 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
+<script src="app.js?v=1788469191"></script>
 <script>
-  // sessione
-  let session = null;
-  try { session = JSON.parse(localStorage.getItem("anyplans_session")); } catch (_) {}
-  if (!session) { try { session = JSON.parse(sessionStorage.getItem("anyplans_session")); } catch (_) {} }
+  // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
-    try { session = JSON.parse(decodeURIComponent(location.hash.slice(3))); history.replaceState(null, "", location.pathname); } catch (_) {}
+    try { saveSession(JSON.parse(decodeURIComponent(location.hash.slice(3)))); history.replaceState(null, "", location.pathname); } catch (_) {}
   }
-  if (!session || !session.access_token) location.replace("login.html");
-  else {
+  requireLogin();
+  if (session && session.access_token) {
     document.getElementById("avatar").textContent = (session.email || "?")[0].toLowerCase();
     document.getElementById("menu-email").textContent = session.email || "";
     document.addEventListener("click", (e) => {
       if (!e.target.closest("#menu") && e.target.id !== "avatar") document.getElementById("menu").hidden = true;
     });
   }
+  mountTabbar("scopri");
 
-  function logout(){
-    try { localStorage.removeItem("anyplans_session"); } catch (_) {}
-    try { sessionStorage.removeItem("anyplans_session"); } catch (_) {}
-    location.href = "login.html";
-  }
-
-  // ---- dati veri dal backend: RPC feed_activities (vedi supabase/migrations/0032) ----
-  const SB_URL = "https://uudccbzihhgoeaevkewr.supabase.co";
-  const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1ZGNjYnppaGhnb2VhZXZrZXdyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYzNzk0NzEsImV4cCI6MjEwMTk1NTQ3MX0.OHJC3vmT8eRLczFkH0QdZybbjudDfSi4VEX8Mc22ABQ";
   // categoria del sito per ogni slug non sportivo; tutto il resto è "sport"
   const CAT_BY_SLUG = { cooking:"cucina", ceramics:"creatività", painting:"creatività",
                         gardening:"giardinaggio", festival:"cultura", yoga:"benessere" };
@@ -225,40 +219,8 @@
   const norm = t => t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   let EVENTS = [];
 
-  async function refreshSession(){
-    try {
-      const r = await fetch(SB_URL + "/auth/v1/token?grant_type=refresh_token", {
-        method: "POST", headers: {"apikey": SB_ANON, "Content-Type": "application/json"},
-        body: JSON.stringify({ refresh_token: session.refresh_token })
-      });
-      if (!r.ok) return false;
-      const b = await r.json();
-      session.access_token = b.access_token; session.refresh_token = b.refresh_token;
-      try { localStorage.setItem("anyplans_session", JSON.stringify(session)); }
-      catch (_) { try { sessionStorage.setItem("anyplans_session", JSON.stringify(session)); } catch (_) {} }
-      return true;
-    } catch (_) { return false; }
-  }
-
-  async function api(path, body, retry = true){
-    let r;
-    try {
-      r = await fetch(SB_URL + path, {
-        method: "POST",
-        headers: {"apikey": SB_ANON, "Content-Type": "application/json",
-                  "Authorization": "Bearer " + (session.access_token || SB_ANON)},
-        body: JSON.stringify(body)
-      });
-    } catch (_) { return null; }
-    if (r.status === 401 && retry && session.refresh_token) {
-      if (await refreshSession()) return api(path, body, false);
-      logout(); return null;
-    }
-    return r;
-  }
-
   async function checkProfile(){
-    const r = await api("/rest/v1/rpc/my_profile", {});
+    const r = await rpc("my_profile");
     if (!r || !r.ok) return; // il feed funziona comunque
     const rows = await r.json().catch(() => []);
     if (!rows.length || !rows[0].display_name) location.replace("profilo.html");
@@ -268,7 +230,7 @@
   async function loadEvents(){
     const list = document.getElementById("list");
     list.innerHTML = '<div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div>';
-    const r = await api("/rest/v1/rpc/feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
+    const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
     if (!r || !r.ok) { list.innerHTML = '<div class="empty">non riesco a caricare gli eventi, ricarica la pagina.</div>'; return; }
     const rows = await r.json();
     EVENTS = rows.map(x => ({
@@ -282,25 +244,13 @@
       when: new Date(x.start_at),
       going: Number(x.going_count) || 0,
       my: x.my_status,
+      mine: x.is_mine,
+      request: x.visibility === "request",
       lat: x.lat, lng: x.lng
     }));
     buildMarkers();
     render();
   }
-
-  // helper date
-  const DAYS = ["domenica","lunedì","martedì","mercoledì","giovedì","venerdì","sabato"];
-  const MONTHS = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
-  function timeStr(d){ return d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0"); }
-  function dayKey(d){ return d.toDateString(); }
-  function dayLabel(d){
-    const today = new Date(); const tomorrow = new Date(); tomorrow.setDate(today.getDate() + 1);
-    if (dayKey(d) === dayKey(today)) return "oggi";
-    if (dayKey(d) === dayKey(tomorrow)) return "domani";
-    return DAYS[d.getDay()] + " " + d.getDate();
-  }
-  function daySub(d){ return DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()]; }
-
 
   // mappa: stesso stile open source dell'app android (maplibre + openfreemap "liberty")
   const map = new maplibregl.Map({
@@ -316,13 +266,13 @@
     Object.values(markers).forEach(m => m.remove());
     markers = {};
     EVENTS.forEach(ev => {
-    const el = document.createElement("div");
-    el.className = "pin"; el.id = "pin-" + ev.id; el.textContent = ev.emoji;
-    const popup = new maplibregl.Popup({ offset: 22, closeButton: false })
-      .setHTML(`<div class="pop"><div class="t">${esc(ev.title)}</div><div class="m">${dayLabel(ev.when)} · ${timeStr(ev.when)} · ${esc(ev.place)}</div></div>`);
-    const mk = new maplibregl.Marker({ element: el }).setLngLat([ev.lng, ev.lat]).setPopup(popup).addTo(map);
-    el.addEventListener("click", () => highlight(ev.id, false));
-    markers[ev.id] = mk;
+      const el = document.createElement("div");
+      el.className = "pin" + (dayLabel(ev.when) === "oggi" ? " today" : ""); el.id = "pin-" + ev.id; el.textContent = ev.emoji;
+      const popup = new maplibregl.Popup({ offset: 22, closeButton: false })
+        .setHTML(`<div class="pop"><div class="t">${esc(ev.title)}</div><div class="m">${dayLabel(ev.when)} · ${timeStr(ev.when)} · ${relTime(ev.when)} · ${esc(ev.place)}</div></div>`);
+      const mk = new maplibregl.Marker({ element: el }).setLngLat([ev.lng, ev.lat]).setPopup(popup).addTo(map);
+      el.addEventListener("click", () => highlight(ev.id, false));
+      markers[ev.id] = mk;
     });
   }
 
@@ -332,6 +282,13 @@
     cat = btn.dataset.cat;
     document.querySelectorAll(".chip").forEach(c => c.classList.toggle("on", c === btn));
     render();
+  }
+
+  function stateBtn(e){
+    if (e.mine) return ["ok", "sei l'host"];
+    if (e.my === "going") return ["ok", "ci sei ✓"];
+    if (e.my === "requested") return ["wait", "in attesa"];
+    return ["", "ci sono →"];
   }
 
   function render(){
@@ -359,15 +316,15 @@
         const isToday = dayLabel(e.when) === "oggi";
         html += `<div class="day${isToday ? " today" : ""}"><span class="dot"></span><b>${dayLabel(e.when)}</b><span>${daySub(e.when)}</span></div>`;
       }
-      const isJoined = e.my === "going";
+      const [cls, label] = stateBtn(e);
       html += `<div class="ev" id="ev-${e.id}" onclick="highlight('${e.id}', true)">
         <div class="tile">${e.emoji}</div>
         <div>
-          <div class="time">${timeStr(e.when)}</div>
+          <div class="time">${timeStr(e.when)} · ${relTime(e.when)}</div>
           <a class="t" href="evento.html?id=${e.id}" onclick="event.stopPropagation()" style="display:block">${esc(e.title)}</a>
-          <div class="m">${e.host ? "di " + esc(e.host) : "aggregato"} · ${esc(e.place)} · ${e.going} ci vanno</div>
+          <div class="m">${e.host ? "di " + esc(e.host) : "aggregato"} · ${esc(e.place)} · ${e.going} ci vanno${e.request ? " · su richiesta" : ""}</div>
         </div>
-        <button class="go${isJoined ? " ok" : ""}" onclick="event.stopPropagation(); join('${e.id}')">${isJoined ? "ci sei ✓" : "ci sono →"}</button>
+        <button class="go ${cls}" onclick="event.stopPropagation(); join('${e.id}')">${label}</button>
       </div>`;
     });
     list.innerHTML = html;
@@ -388,28 +345,26 @@
     }
   }
 
-  function toast(msg){
-    let t = document.getElementById("toast");
-    if (!t) {
-      t = document.createElement("div"); t.id = "toast";
-      t.style.cssText = "position:fixed; left:50%; bottom:26px; transform:translateX(-50%);" +
-        "background:#191919; color:#fff; font-size:14px; font-weight:600; padding:12px 18px;" +
-        "border-radius:999px; z-index:99; max-width:86vw; text-align:center;";
-      document.body.appendChild(t);
-    }
-    t.textContent = msg; t.hidden = false;
-    clearTimeout(t._h); t._h = setTimeout(() => { t.hidden = true; }, 4500);
-  }
-
   async function join(id){
     const e = EVENTS.find(x => x.id === id);
-    const leaving = e.my === "going";
-    const r = await api("/rest/v1/rpc/join_activity", { p_activity_id: id, p_status: leaving ? "left" : "going" });
+    if (e.mine) { location.href = "evento.html?id=" + id; return; }
+    const leaving = e.my === "going" || e.my === "requested";
+    if (leaving && e.my === "requested" && !confirm("vuoi ritirare la richiesta?")) return;
+    if (!leaving) {
+      // se l'host ha messo delle domande si risponde nella pagina dell'evento
+      const rq = await rpc("get_activity_questions", { p_activity_id: id });
+      const qs = rq && rq.ok ? await rq.json().catch(() => []) : [];
+      if (qs.length) { location.href = "evento.html?id=" + id + "&join=1"; return; }
+    }
+    let r;
+    if (leaving) r = await rpc("join_activity", { p_activity_id: id, p_status: "left" });
+    else if (e.request) r = await rpc("request_to_join", { p_activity_id: id });
+    else r = await rpc("join_activity", { p_activity_id: id, p_status: "going" });
     if (r && r.ok) {
-      e.my = leaving ? "left" : "going";
-      e.going += leaving ? -1 : 1;
+      if (leaving) { if (e.my === "going") e.going -= 1; e.my = "left"; }
+      else if (e.request) { e.my = "requested"; toast("richiesta inviata: l’host la vede e ti approva."); track("join_request"); }
+      else { e.my = "going"; e.going += 1; toast("ci sei! l’host e gli altri ti vedono tra i partecipanti."); track("join"); }
       render();
-      if (!leaving) toast("ci sei! l\u2019host e gli altri ti vedono tra i partecipanti.");
       return;
     }
     let msg = "non riesco, riprova.";
@@ -417,8 +372,8 @@
       const b = r ? await r.json() : {};
       const code = b.message || "";
       if (code.includes("profile_required")) { location.href = "profilo.html"; return; }
-      else if (code.includes("approval_required")) msg = "per questo evento l\u2019host approva le richieste \u2014 per ora dall\u2019app.";
-      else if (code.includes("age_not_allowed")) msg = "questo evento ha un limite di et\u00e0.";
+      else if (code.includes("activity_full")) msg = "posti finiti per questo evento.";
+      else if (code.includes("age_not_allowed")) msg = "questo evento ha un limite di età.";
       else if (code.includes("not_authenticated")) { logout(); return; }
     } catch (_) {}
     toast(msg);
@@ -431,7 +386,6 @@
     document.getElementById("maptoggle").innerHTML = show ? "☰ lista" : "🗺️ mappa";
     if (show) setTimeout(() => map.resize(), 60);
   }
-
 </script>
 </body>
 </html>
