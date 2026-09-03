@@ -64,6 +64,16 @@
   .place-item .s{font-size:12.5px; color:var(--grey);}
   .note.err{color:#B3261E; font-weight:600;}
   @media (max-width:600px){ .grid2{grid-template-columns:1fr;} }
+
+  /* ux: transizioni e feedback al tocco */
+  .btn, .chip, .ev, .iconbtn, .card, .city, .qz-chip, .place-item, .toggle-row{
+    transition: transform .12s ease, box-shadow .12s ease, background .15s ease,
+                border-color .15s ease, color .15s ease;}
+  .btn:active, .chip:active, .iconbtn:active, .qz-chip:active{transform:scale(.96);}
+  .ev:hover{box-shadow:0 4px 16px rgba(25,25,25,.07); transform:translateY(-1px);}
+  .card:hover, .city:hover{box-shadow:0 4px 14px rgba(25,25,25,.06);}
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible{
+    outline:2px solid var(--blue); outline-offset:2px;}
 </style>
 </head>
 <body>
@@ -148,7 +158,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788466019"></script>
+<script src="app.js?v=1788466133"></script>
 <script>
   requireLogin();
 

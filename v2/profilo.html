@@ -47,6 +47,16 @@
   .btn[disabled]{opacity:.55; cursor:default;}
   .note{font-size:13.5px; color:var(--grey); min-height:1.3em;}
   .note.err{color:#B3261E; font-weight:600;}
+
+  /* ux: transizioni e feedback al tocco */
+  .btn, .chip, .ev, .iconbtn, .card, .city, .qz-chip, .place-item, .toggle-row{
+    transition: transform .12s ease, box-shadow .12s ease, background .15s ease,
+                border-color .15s ease, color .15s ease;}
+  .btn:active, .chip:active, .iconbtn:active, .qz-chip:active{transform:scale(.96);}
+  .ev:hover{box-shadow:0 4px 16px rgba(25,25,25,.07); transform:translateY(-1px);}
+  .card:hover, .city:hover{box-shadow:0 4px 14px rgba(25,25,25,.06);}
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible{
+    outline:2px solid var(--blue); outline-offset:2px;}
 </style>
 </head>
 <body>

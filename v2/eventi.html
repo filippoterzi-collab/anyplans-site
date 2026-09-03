@@ -77,6 +77,9 @@
           white-space:nowrap; background:none; border:none; cursor:pointer; font-family:var(--round);}
   .ev .go.ok{color:var(--ink);}
   .empty{color:var(--grey); font-size:14.5px; padding:24px 4px;}
+  .sk{height:84px; border-radius:16px; background:linear-gradient(90deg,#F1EFE9 25%,#E9E6DE 50%,#F1EFE9 75%);
+      background-size:200% 100%; animation:sk 1.2s ease-in-out infinite;}
+  @keyframes sk{from{background-position:200% 0} to{background-position:-200% 0}}
 
   #map{flex:1; border-radius:22px 0 0 0; min-height:0;}
   .pin{width:38px; height:38px; background:#fff; border:1.5px solid rgba(25,25,25,.2);
@@ -88,15 +91,32 @@
   .pop .t{font-weight:700; font-size:14px; color:var(--ink);}
   .pop .m{font-size:12px; color:var(--grey); margin-top:2px;}
 
+  #maptoggle{display:none;}
   @media (max-width:700px){
     body{overflow:auto; height:auto;}
     .nav .lnk{display:none;}
     .topbar{padding:4px 18px 10px;}
     .titlerow h1{font-size:24px;}
     .split{flex-direction:column;}
-    #map{order:-1; height:250px; flex:none; border-radius:16px; margin:0 18px;}
-    .list{width:100%; max-width:none; padding:12px 18px 40px;}
+    #map{display:none; height:calc(100vh - 260px); flex:none; border-radius:16px; margin:0 18px;}
+    .list{width:100%; max-width:none; padding:12px 18px 90px;}
+    body.showmap #map{display:block;}
+    body.showmap .list{display:none;}
+    #maptoggle{display:flex; align-items:center; gap:7px; position:fixed; left:50%;
+      transform:translateX(-50%); bottom:22px; z-index:40; background:var(--ink); color:#fff;
+      font-weight:700; font-size:14px; padding:13px 22px; border-radius:999px; border:none;
+      cursor:pointer; font-family:var(--round); box-shadow:0 4px 16px rgba(0,0,0,.22);}
   }
+
+  /* ux: transizioni e feedback al tocco */
+  .btn, .chip, .ev, .iconbtn, .card, .city, .qz-chip, .place-item, .toggle-row{
+    transition: transform .12s ease, box-shadow .12s ease, background .15s ease,
+                border-color .15s ease, color .15s ease;}
+  .btn:active, .chip:active, .iconbtn:active, .qz-chip:active{transform:scale(.96);}
+  .ev:hover{box-shadow:0 4px 16px rgba(25,25,25,.07); transform:translateY(-1px);}
+  .card:hover, .city:hover{box-shadow:0 4px 14px rgba(25,25,25,.06);}
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible{
+    outline:2px solid var(--blue); outline-offset:2px;}
 </style>
 </head>
 <body>
@@ -147,6 +167,8 @@
     <button class="chip" data-cat="benessere" onclick="setCat(this)">🧘 benessere</button>
   </div>
 </div>
+
+<button id="maptoggle" onclick="toggleMap()">🗺️ mappa</button>
 
 <div class="split">
   <div class="list" id="list"></div>
@@ -223,7 +245,7 @@
 
   async function loadEvents(){
     const list = document.getElementById("list");
-    list.innerHTML = '<div class="empty">carico gli eventi…</div>';
+    list.innerHTML = '<div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div>';
     const r = await api("/rest/v1/rpc/feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
     if (!r || !r.ok) { list.innerHTML = '<div class="empty">non riesco a caricare gli eventi, ricarica la pagina.</div>'; return; }
     const rows = await r.json();
@@ -240,7 +262,13 @@
       lat: x.lat, lng: x.lng
     }));
     buildMarkers();
-    render();
+    function toggleMap(){
+    const show = document.body.classList.toggle("showmap");
+    document.getElementById("maptoggle").innerHTML = show ? "☰ lista" : "🗺️ mappa";
+    if (show) setTimeout(() => map.resize(), 60);
+  }
+
+  render();
   }
 
   // helper date
@@ -286,7 +314,13 @@
   function setCat(btn){
     cat = btn.dataset.cat;
     document.querySelectorAll(".chip").forEach(c => c.classList.toggle("on", c === btn));
-    render();
+    function toggleMap(){
+    const show = document.body.classList.toggle("showmap");
+    document.getElementById("maptoggle").innerHTML = show ? "☰ lista" : "🗺️ mappa";
+    if (show) setTimeout(() => map.resize(), 60);
+  }
+
+  render();
   }
 
   function render(){
@@ -359,7 +393,13 @@
     if (r && r.ok) {
       e.my = leaving ? "left" : "going";
       e.going += leaving ? -1 : 1;
-      render();
+      function toggleMap(){
+    const show = document.body.classList.toggle("showmap");
+    document.getElementById("maptoggle").innerHTML = show ? "☰ lista" : "🗺️ mappa";
+    if (show) setTimeout(() => map.resize(), 60);
+  }
+
+  render();
       if (!leaving) toast("ci sei! l\u2019host e gli altri ti vedono tra i partecipanti.");
       return;
     }

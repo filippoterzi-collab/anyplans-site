@@ -72,9 +72,20 @@
   #map{height:220px; border-radius:16px;}
   .sec{font-weight:800; font-size:16px;}
   .note{font-size:13px; color:var(--grey);}
+  @keyframes sk{from{background-position:200% 0} to{background-position:-200% 0}}
   .center{display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center; padding:60px 0;}
   [hidden]{display:none !important;}
   @media (max-width:600px){ h1{font-size:28px;} .cover{height:180px; font-size:72px;} }
+
+  /* ux: transizioni e feedback al tocco */
+  .btn, .chip, .ev, .iconbtn, .card, .city, .qz-chip, .place-item, .toggle-row{
+    transition: transform .12s ease, box-shadow .12s ease, background .15s ease,
+                border-color .15s ease, color .15s ease;}
+  .btn:active, .chip:active, .iconbtn:active, .qz-chip:active{transform:scale(.96);}
+  .ev:hover{box-shadow:0 4px 16px rgba(25,25,25,.07); transform:translateY(-1px);}
+  .card:hover, .city:hover{box-shadow:0 4px 14px rgba(25,25,25,.06);}
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible{
+    outline:2px solid var(--blue); outline-offset:2px;}
 </style>
 </head>
 <body>
@@ -177,7 +188,11 @@
   </div>
 </div>
 
-<div class="center" id="loading"><p style="color:var(--grey)">carico l'evento…</p></div>
+<div id="loading" style="max-width:860px; margin:0 auto; padding:20px 22px; display:flex; flex-direction:column; gap:16px">
+  <div style="height:200px; border-radius:22px; background:linear-gradient(90deg,#F1EFE9 25%,#E9E6DE 50%,#F1EFE9 75%); background-size:200% 100%; animation:sk 1.2s ease-in-out infinite"></div>
+  <div style="height:36px; width:70%; border-radius:10px; background:linear-gradient(90deg,#F1EFE9 25%,#E9E6DE 50%,#F1EFE9 75%); background-size:200% 100%; animation:sk 1.2s ease-in-out infinite"></div>
+  <div style="height:90px; border-radius:16px; background:linear-gradient(90deg,#F1EFE9 25%,#E9E6DE 50%,#F1EFE9 75%); background-size:200% 100%; animation:sk 1.2s ease-in-out infinite"></div>
+</div>
 <div class="center" id="notfound" hidden>
   <div style="font-size:52px">🫥</div>
   <h1 class="display" style="font-size:30px">evento non trovato</h1>
@@ -186,7 +201,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788466019"></script>
+<script src="app.js?v=1788466133"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");

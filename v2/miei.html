@@ -56,6 +56,16 @@
   .empty{display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center; padding:50px 0;}
   .empty .btn{background:var(--blue); color:#fff; font-weight:700; padding:13px 26px;
               border-radius:999px; font-size:15.5px;}
+
+  /* ux: transizioni e feedback al tocco */
+  .btn, .chip, .ev, .iconbtn, .card, .city, .qz-chip, .place-item, .toggle-row{
+    transition: transform .12s ease, box-shadow .12s ease, background .15s ease,
+                border-color .15s ease, color .15s ease;}
+  .btn:active, .chip:active, .iconbtn:active, .qz-chip:active{transform:scale(.96);}
+  .ev:hover{box-shadow:0 4px 16px rgba(25,25,25,.07); transform:translateY(-1px);}
+  .card:hover, .city:hover{box-shadow:0 4px 14px rgba(25,25,25,.06);}
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible{
+    outline:2px solid var(--blue); outline-offset:2px;}
 </style>
 </head>
 <body>
@@ -74,7 +84,7 @@
   <div id="list"><p style="color:var(--grey)">carico…</p></div>
 </main>
 
-<script src="app.js?v=1788466019"></script>
+<script src="app.js?v=1788466133"></script>
 <script>
   requireLogin();
 
