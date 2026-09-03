@@ -48,7 +48,9 @@
   .filters{display:flex; align-items:center; gap:10px; overflow-x:auto; padding-bottom:2px;
            scrollbar-width:none;}
   .filters::-webkit-scrollbar{display:none;}
-  .search{display:flex; align-items:center; gap:9px; min-width:230px; background:#fff;
+  .filters .chip, .filters > span{display:none;}
+  .fpanel{max-width:640px;}
+  .search{display:flex; align-items:center; gap:9px; min-width:230px; max-width:640px; width:100%; background:#fff;
           border:1.5px solid rgba(25,25,25,.16); border-radius:999px; padding:9px 15px; flex-shrink:0;}
   .search input{border:none; outline:none; font-size:14px; font-family:var(--round);
                 background:transparent; color:var(--ink); width:100%;}
@@ -56,7 +58,7 @@
         font-size:13.5px; padding:9px 14px; border-radius:999px; cursor:pointer;
         font-family:var(--round); flex-shrink:0; white-space:nowrap;}
   .chip.on{background:var(--blue); border-color:var(--blue); color:#fff; font-weight:700;}
-  .fbtn{display:none; align-items:center; gap:5px; background:var(--tint); color:var(--blue); border:none; border-radius:999px;
+  .fbtn{display:flex; align-items:center; gap:5px; background:var(--tint); color:var(--blue); border:none; border-radius:999px;
         padding:7px 11px; font-weight:700; font-size:13px; font-family:var(--round); cursor:pointer; white-space:nowrap; flex-shrink:0;}
   .fbtn.on{background:var(--blue); color:#fff;}
   .fpanel{background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:16px; padding:14px; display:flex; flex-direction:column; gap:10px;}
@@ -110,8 +112,6 @@
     .nav-right #avatar, .nav-right #bell{display:flex;}
     .nav-right #nav-reg{display:inline-block;}
     .topbar{padding:4px 18px 10px;}
-    .fbtn{display:flex;}
-    .filters .chip, .filters > span{display:none;}
     .search{min-width:0; width:100%;}
     .titlerow h1{font-size:24px;}
     .split{flex-direction:column;}
@@ -206,13 +206,14 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788474952"></script>
+<script src="app.js?v=1788475117"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
     try { saveSession(JSON.parse(decodeURIComponent(location.hash.slice(3)))); history.replaceState(null, "", location.pathname); } catch (_) {}
   }
-  // la mappa si vede anche senza account: email e profilo li chiediamo al primo "ci sono"
+  // deciso 04/09: prima ci si registra (basta l'email), poi si vede la mappa
+  requireLogin();
   const logged = !!(session && session.access_token);
   if (!logged) {
     document.getElementById("avatar").parentElement.hidden = true;
@@ -325,15 +326,8 @@
   const mobileFilters = window.matchMedia("(max-width:700px)");
   function placeChips(){
     const day = document.getElementById("fp-day"), cat = document.getElementById("fp-cat"), row = document.querySelector(".filters");
-    if (mobileFilters.matches) {
-      document.querySelectorAll(".filters .day-chip").forEach(c => day.appendChild(c));
-      document.querySelectorAll(".filters .chip[data-cat]").forEach(c => cat.appendChild(c));
-    } else {
-      const sep = row.querySelector("span");
-      Array.from(day.children).forEach(c => row.insertBefore(c, sep));
-      Array.from(cat.children).forEach(c => row.appendChild(c));
-      document.getElementById("fpanel").hidden = true;
-    }
+    document.querySelectorAll(".filters .day-chip").forEach(c => day.appendChild(c));
+    document.querySelectorAll(".filters .chip[data-cat]").forEach(c => cat.appendChild(c));
     updateFbtn();
   }
   function toggleFilters(){
@@ -345,7 +339,7 @@
     const b = document.getElementById("fbtn");
     b.textContent = n ? "filtri · " + n : "filtri"; b.classList.toggle("on", n > 0);
   }
-  placeChips(); mobileFilters.addEventListener("change", placeChips);
+  placeChips();
   function setDay(btn){
     day = day === btn.dataset.day ? "" : btn.dataset.day;
     document.querySelectorAll(".day-chip").forEach(c => c.classList.toggle("on", c.dataset.day === day));
