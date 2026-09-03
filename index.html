@@ -412,18 +412,24 @@
   }
 </script>
 <script>
-  // se sei già dentro, il sito lo sa
-  try {
-    const s = JSON.parse(localStorage.getItem("anyplans_session"));
-    if (s && s.access_token) {
+  // se sei già dentro, il sito lo sa (anche tornando indietro: safari ripristina
+  // la pagina dalla cache senza rieseguire gli script, quindi si riascolta pageshow)
+  function applySessionCta(){
+    try {
+      const s = JSON.parse(localStorage.getItem("anyplans_session"));
+      const logged = s && s.access_token;
       const cta = document.getElementById("nav-cta");
-      cta.textContent = "apri gli eventi"; cta.href = "/v2/eventi.html";
-      document.querySelectorAll('a.btn[href="/v2/login.html"]').forEach(a => {
-        a.href = "/v2/eventi.html";
-        if (a.textContent.startsWith("registrati")) a.textContent = "apri gli eventi della tua città";
+      cta.textContent = logged ? "apri gli eventi" : "registrati";
+      cta.href = logged ? "/v2/eventi.html" : "/v2/login.html";
+      document.querySelectorAll(".cta a.btn").forEach(a => {
+        if (a.classList.contains("ghost")) { a.href = logged ? "/v2/crea.html" : "/v2/login.html"; return; }
+        a.href = logged ? "/v2/eventi.html" : "/v2/login.html";
+        a.textContent = logged ? "apri gli eventi della tua città" : "registrati per vedere gli eventi della tua città";
       });
-    }
-  } catch (_) {}
+    } catch (_) {}
+  }
+  applySessionCta();
+  window.addEventListener("pageshow", applySessionCta);
 </script>
 </body>
 </html>
