@@ -96,7 +96,7 @@
     <img class="logo" src="/logo.png" alt="">
     <div>
       <h1>controlla la tua email</h1>
-      <p class="sub">abbiamo mandato un codice a 6 cifre a <b id="sent-to"></b>. scade tra 10 minuti — se non lo vedi, <b>controlla nello spam</b>.</p>
+      <p class="sub">abbiamo mandato un codice a 6 cifre a <b id="sent-to"></b>. scade tra 10 minuti. se non lo vedi, <b>controlla nello spam</b>.</p>
     </div>
     <div class="otp" id="otp">
       <input inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="cifra 1">
@@ -137,7 +137,7 @@
     });
     if (r.ok) return null;
     const body = await r.json().catch(() => ({}));
-    if (r.status === 429) return "troppi tentativi — aspetta qualche minuto e riprova.";
+    if (r.status === 429) return "troppi tentativi, aspetta qualche minuto e riprova.";
     return body.msg || body.error_description || "non riesco a mandare il codice, riprova.";
   }
 
@@ -163,7 +163,7 @@
     if (resendCooldown > 0) return;
     note("note-code", "…");
     const err = await requestOtp(currentEmail);
-    note("note-code", err || "rimandato — vale solo quest'ultimo codice, controlla anche lo spam.", err ? "err" : "ok");
+    note("note-code", err || "rimandato. vale solo quest'ultimo codice, controlla anche lo spam.", err ? "err" : "ok");
     if (!err) startCooldown();
   }
 
@@ -223,7 +223,7 @@
       btn.disabled = false;
       if (!r.ok) {
         otpInputs.forEach(i => i.value = ""); otpInputs[0].focus();
-        note("note-code", "codice sbagliato o scaduto — vale solo l'ultimo ricevuto, e dura 10 minuti. fattene mandare un altro.", "err");
+        note("note-code", "codice sbagliato o scaduto. vale solo l'ultimo ricevuto, e dura 10 minuti. fattene mandare un altro.", "err");
         return false;
       }
       const session = JSON.stringify({
@@ -241,7 +241,7 @@
       btn.disabled = false;
       const offline = err instanceof TypeError;
       note("note-code", offline
-        ? "non riesco a raggiungere il server — controlla la connessione e riprova."
+        ? "non riesco a raggiungere il server, controlla la connessione e riprova."
         : "qualcosa è andato storto (" + (err.name || "errore") + "), riprova.", "err");
     }
     return false;

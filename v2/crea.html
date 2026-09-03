@@ -125,6 +125,16 @@
     </div>
   </div>
 
+  <div>
+    <label>domande per chi si iscrive <span style="color:var(--grey); font-weight:600">(se vuoi, max 5)</span></label>
+    <div id="qs" style="display:flex; flex-direction:column; gap:10px"></div>
+    <button type="button" id="addq" onclick="addQuestion()"
+      style="margin-top:8px; background:transparent; color:var(--blue); box-shadow:inset 0 0 0 2px var(--blue);
+             font-weight:700; font-size:14px; padding:11px 18px; border-radius:999px; border:none;
+             cursor:pointer; font-family:var(--round)">+ aggiungi una domanda</button>
+    <p class="hint">es. "hai mai fatto ceramica?". chi si unisce risponde, e le risposte le vedi solo tu.</p>
+  </div>
+
   <div class="toggle-row" id="vis" onclick="this.classList.toggle('on')">
     <div>
       <div class="t">richiedi approvazione</div>
@@ -134,7 +144,7 @@
   </div>
 
   <button class="btn" id="btn" onclick="createEvent()">crea l'evento</button>
-  <p class="note" id="note">gratis · chi lo crea è dentro automaticamente</p>
+  <p class="note" id="note">creare un evento è gratis, e lo sarà sempre. chi lo crea è dentro automaticamente.</p>
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
@@ -168,7 +178,7 @@
   document.getElementById("date").min = today.toISOString().slice(0, 10);
   document.getElementById("date").value = today.toISOString().slice(0, 10);
 
-  // ricerca luoghi — photon (openstreetmap), gratis e senza chiave, bias su bergamo
+  // ricerca luoghi: photon (openstreetmap), gratis e senza chiave, bias su bergamo
   let searchTimer = null;
   function placeSearch(){
     clearTimeout(searchTimer);
@@ -220,9 +230,36 @@
     el.style.cssText = "width:38px;height:38px;background:#1B4FD8;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 1px 5px rgba(0,0,0,.2)";
     el.textContent = CATALOG[sel.value].e;
     marker = new maplibregl.Marker({ element: el }).setLngLat([lng, lat]).addTo(map);
-    document.getElementById("map-hint").textContent = "segnaposto messo — ritocca la mappa per spostarlo";
+    document.getElementById("map-hint").textContent = "segnaposto messo. ritocca la mappa per spostarlo";
   }
   map.on("click", (e) => setPoint(e.lngLat.lat, e.lngLat.lng));
+
+  function addQuestion(){
+    const qs = document.getElementById("qs");
+    if (qs.children.length >= 5) { toast("massimo 5 domande."); return; }
+    const row = document.createElement("div");
+    row.className = "qrow";
+    row.style.cssText = "background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:14px; padding:12px 14px; display:flex; flex-direction:column; gap:8px";
+    row.innerHTML =
+      '<input class="q-prompt" type="text" maxlength="200" placeholder="la domanda… (es. hai mai fatto ceramica?)" style="border:none; padding:4px 2px; font-size:15px; outline:none">' +
+      '<div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap">' +
+        '<select class="q-kind" style="width:auto; padding:8px 12px; font-size:13.5px; border-radius:9px">' +
+          '<option value="text">risposta libera</option><option value="yesno">sì o no</option></select>' +
+        '<label style="display:flex; align-items:center; gap:6px; font-weight:600; font-size:13px; color:var(--grey); margin:0; cursor:pointer">' +
+          '<input class="q-req" type="checkbox" style="width:auto"> obbligatoria</label>' +
+        '<button type="button" onclick="this.closest(\'.qrow\').remove()" ' +
+          'style="margin-left:auto; background:none; border:none; cursor:pointer; font-weight:700; font-size:16px; color:var(--grey)">×</button>' +
+      '</div>';
+    qs.appendChild(row);
+    row.querySelector(".q-prompt").focus();
+  }
+  function collectQuestions(){
+    return Array.from(document.querySelectorAll(".qrow")).map(r => ({
+      prompt: r.querySelector(".q-prompt").value.trim(),
+      kind: r.querySelector(".q-kind").value,
+      required: r.querySelector(".q-req").checked
+    })).filter(x => x.prompt.length >= 3);
+  }
 
   async function createEvent(){
     const note = document.getElementById("note");
@@ -265,6 +302,8 @@
     btn.disabled = false;
     if (r && r.ok) {
       const newId = await r.json();
+      const qs = collectQuestions();
+      if (qs.length) await rpc("set_activity_questions", { p_activity_id: newId, p_questions: qs });
       location.href = "evento.html?id=" + newId;
       return;
     }

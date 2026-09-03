@@ -108,7 +108,7 @@
     <a class="lnk" href="miei.html">i miei eventi</a>
     <div class="nav-right">
       <a href="crea.html" style="background:var(--blue); color:#fff; font-weight:700; font-size:13.5px; padding:9px 16px; border-radius:999px; white-space:nowrap">crea evento</a>
-      <button class="iconbtn" title="notifiche — in costruzione">
+      <button class="iconbtn" title="notifiche (in costruzione)">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10 C 6 6.7, 8.7 4, 12 4 C 15.3 4, 18 6.7, 18 10 L18 15 L20 17.5 L4 17.5 L6 15 Z"/><path d="M10 20.5 C 10.5 21.3, 13.5 21.3, 14 20.5"/></svg>
       </button>
       <div style="position:relative">
@@ -225,7 +225,7 @@
     const list = document.getElementById("list");
     list.innerHTML = '<div class="empty">carico gli eventi…</div>';
     const r = await api("/rest/v1/rpc/feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
-    if (!r || !r.ok) { list.innerHTML = '<div class="empty">non riesco a caricare gli eventi — ricarica la pagina.</div>'; return; }
+    if (!r || !r.ok) { list.innerHTML = '<div class="empty">non riesco a caricare gli eventi, ricarica la pagina.</div>'; return; }
     const rows = await r.json();
     EVENTS = rows.map(x => ({
       id: x.id,
@@ -257,7 +257,7 @@
   function daySub(d){ return DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()]; }
 
 
-  // mappa — stesso stile open source dell'app android (maplibre + openfreemap "liberty")
+  // mappa: stesso stile open source dell'app android (maplibre + openfreemap "liberty")
   const map = new maplibregl.Map({
     container: "map",
     style: "https://tiles.openfreemap.org/styles/liberty",
@@ -300,7 +300,7 @@
     document.getElementById("count").textContent = "in programma · " + evs.length + (evs.length === 1 ? " evento" : " eventi");
     EVENTS.forEach(e => { const visible = evs.includes(e); markers[e.id].getElement().style.opacity = visible ? "1" : "0.25"; });
 
-    if (!evs.length) { list.innerHTML = '<div class="empty">nessun evento trovato — prova un\'altra ricerca, o crea tu il primo.</div>'; return; }
+    if (!evs.length) { list.innerHTML = '<div class="empty">nessun evento trovato. prova un\'altra ricerca, o crea tu il primo.</div>'; return; }
 
     let html = "", lastDay = "";
     evs.forEach(e => {

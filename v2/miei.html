@@ -81,7 +81,7 @@
   async function load(){
     const r = await rpc("my_activities", {});
     const list = document.getElementById("list");
-    if (!r || !r.ok) { list.innerHTML = '<p style="color:var(--grey)">non riesco a caricare — ricarica la pagina.</p>'; return; }
+    if (!r || !r.ok) { list.innerHTML = '<p style="color:var(--grey)">non riesco a caricare, ricarica la pagina.</p>'; return; }
     const rows = (await r.json())
       .filter(x => new Date(x.start_at) >= new Date(Date.now() - 3 * 3600 * 1000))
       .filter(x => x.my_status === "going" || x.my_status === "requested" || x.is_mine)

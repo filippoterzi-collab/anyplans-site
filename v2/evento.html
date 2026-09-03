@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>evento · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<meta name="description" content="unisciti a questo evento su anyplans — la mappa degli eventi veri della tua città.">
+<meta name="description" content="unisciti a questo evento su anyplans, la mappa degli eventi veri della tua città.">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css">
 <style>
   @font-face{
@@ -106,7 +106,7 @@
   <!-- box azione -->
   <div class="box" id="box-guest" hidden>
     <h2>ci sei?</h2>
-    <p class="m">registrati o accedi per unirti — è gratis, e gli altri partecipanti ti vedono.</p>
+    <p class="m">registrati o accedi per unirti. è gratis, e gli altri partecipanti ti vedono.</p>
     <div class="row">
       <a class="btn" href="login.html" onclick="rememberNext()">registrati o accedi</a>
       <span class="note" id="going-guest"></span>
@@ -150,10 +150,32 @@
     <p class="note" id="map-note" style="margin-top:6px" hidden>posizione approssimativa · l'indirizzo esatto lo vedi quando partecipi</p>
   </div>
 
+  <div id="answers-wrap" hidden>
+    <div class="sec" style="margin-bottom:8px">risposte dei partecipanti <span style="color:var(--grey); font-weight:600; font-size:13px">(le vedi solo tu)</span></div>
+    <div id="answers" style="display:flex; flex-direction:column; gap:10px"></div>
+  </div>
+
   <div class="row">
     <button class="btn ghost" onclick="shareEvent()">condividi l'evento</button>
   </div>
 </main>
+
+<!-- modale domande dell'host -->
+<div id="q-overlay" hidden style="position:fixed; inset:0; background:rgba(25,25,25,.55); display:flex;
+     align-items:center; justify-content:center; padding:22px; z-index:60">
+  <div style="width:100%; max-width:400px; background:var(--bg); border-radius:22px; padding:28px;
+       display:flex; flex-direction:column; gap:16px; max-height:85vh; overflow-y:auto">
+    <div style="display:flex; align-items:flex-start; justify-content:space-between; gap:12px">
+      <h2 class="display" style="font-size:22px">prima di unirti, l'host ti chiede:</h2>
+      <button onclick="document.getElementById('q-overlay').hidden = true"
+        style="width:32px; height:32px; border-radius:999px; background:rgba(25,25,25,.08); border:none;
+               cursor:pointer; font-size:16px; font-weight:700; color:var(--ink); flex-shrink:0">×</button>
+    </div>
+    <div id="q-fields" style="display:flex; flex-direction:column; gap:14px"></div>
+    <button class="btn" id="q-send" onclick="sendAnswersAndJoin()">conferma: ci sono</button>
+    <p class="note" id="q-note"></p>
+  </div>
+</div>
 
 <div class="center" id="loading"><p style="color:var(--grey)">carico l'evento…</p></div>
 <div class="center" id="notfound" hidden>
@@ -228,6 +250,8 @@
     }
     updateBoxes();
 
+    if (ev.is_mine) loadAnswers();
+
     document.getElementById("loading").hidden = true;
     document.getElementById("page").hidden = false;
 
@@ -247,15 +271,81 @@
     document.getElementById("box-in").hidden = !logged || ev.my_status !== "going";
   }
 
+  let questions = null;
   async function joinEvent(){
+    if (questions === null) {
+      try {
+        const rq = await rpc("get_activity_questions", { p_activity_id: ev.id });
+        questions = rq && rq.ok ? await rq.json() : [];
+      } catch (_) { questions = []; }
+    }
+    if (questions.length) { openQuestions(); return; }
+    doJoin();
+  }
+  function openQuestions(){
+    const wrap = document.getElementById("q-fields");
+    wrap.innerHTML = questions.map(q => {
+      const req = q.required ? ' <span style="color:var(--blue)">*</span>' : "";
+      if (q.kind === "yesno") {
+        return `<div data-q="${q.id}" data-req="${q.required}" data-kind="yesno">
+          <div style="font-weight:700; font-size:14.5px; margin-bottom:8px">${q.prompt}${req}</div>
+          <div style="display:flex; gap:8px">
+            <button type="button" class="yn" data-v="sì" onclick="pickYn(this)"
+              style="flex:1; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:999px;
+                     padding:11px 0; font-weight:700; font-size:14px; cursor:pointer; font-family:var(--round)">sì</button>
+            <button type="button" class="yn" data-v="no" onclick="pickYn(this)"
+              style="flex:1; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:999px;
+                     padding:11px 0; font-weight:700; font-size:14px; cursor:pointer; font-family:var(--round)">no</button>
+          </div></div>`;
+      }
+      return `<div data-q="${q.id}" data-req="${q.required}" data-kind="text">
+        <div style="font-weight:700; font-size:14.5px; margin-bottom:8px">${q.prompt}${req}</div>
+        <input type="text" maxlength="500" placeholder="la tua risposta"
+          style="width:100%; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px;
+                 padding:12px 15px; font-size:15px; font-family:var(--round)"></div>`;
+    }).join("");
+    document.getElementById("q-note").textContent = "";
+    document.getElementById("q-overlay").hidden = false;
+  }
+  function pickYn(btn){
+    btn.parentElement.querySelectorAll(".yn").forEach(b => {
+      b.style.background = "#fff"; b.style.color = "var(--ink)"; b.dataset.on = "";
+    });
+    btn.style.background = "var(--blue)"; btn.style.color = "#fff"; btn.dataset.on = "1";
+  }
+  async function sendAnswersAndJoin(){
+    const answers = {};
+    let missing = false;
+    document.querySelectorAll("#q-fields > div").forEach(d => {
+      let val = "";
+      if (d.dataset.kind === "yesno") {
+        const on = d.querySelector('.yn[data-on="1"]');
+        val = on ? on.dataset.v : "";
+      } else {
+        val = d.querySelector("input").value.trim();
+      }
+      if (val) answers[d.dataset.q] = val;
+      else if (d.dataset.req === "true") missing = true;
+    });
+    if (missing) { document.getElementById("q-note").textContent = "rispondi alle domande con l'asterisco."; document.getElementById("q-note").style.color = "#B3261E"; return; }
+    const btn = document.getElementById("q-send"); btn.disabled = true;
+    const ok = await doJoin(true);
+    if (ok && Object.keys(answers).length) {
+      await rpc("answer_questions", { p_activity_id: ev.id, p_answers: answers });
+    }
+    btn.disabled = false;
+    if (ok) document.getElementById("q-overlay").hidden = true;
+  }
+
+  async function doJoin(){
     const btn = document.getElementById("btn-join"); btn.disabled = true;
     const r = await rpc("join_activity", { p_activity_id: ev.id, p_status: "going" });
     btn.disabled = false;
-    if (r && r.ok) { ev.my_status = "going"; ev.going_count = Number(ev.going_count) + 1; return renderCounts(); }
+    if (r && r.ok) { ev.my_status = "going"; ev.going_count = Number(ev.going_count) + 1; renderCounts(); return true; }
     const b = r ? await r.json().catch(() => ({})) : {};
     const code = b.message || "";
     if (code.includes("profile_required")) { rememberNext(); location.href = "profilo.html"; return; }
-    if (code.includes("approval_required")) return toast("per questo evento l'host approva le richieste — per ora dall'app.");
+    if (code.includes("approval_required")) return toast("per questo evento l'host approva le richieste, per ora dall'app.");
     if (code.includes("age_not_allowed")) return toast("questo evento ha un limite di età.");
     toast("non riesco, riprova.");
   }
@@ -271,11 +361,28 @@
     updateBoxes();
   }
 
+  async function loadAnswers(){
+    try {
+      const r = await rpc("get_activity_answers", { p_activity_id: ev.id });
+      if (!r || !r.ok) return;
+      const rows = await r.json();
+      if (!rows.length) return;
+      const byUser = {};
+      rows.forEach(x => { (byUser[x.display_name] = byUser[x.display_name] || []).push(x); });
+      document.getElementById("answers").innerHTML = Object.entries(byUser).map(([name, list]) =>
+        `<div style="background:#fff; border:1.5px solid rgba(25,25,25,.10); border-radius:14px; padding:14px 16px">
+          <div style="font-weight:700; font-size:14px; margin-bottom:6px">${name}</div>` +
+          list.map(x => `<div style="font-size:13.5px; margin-bottom:3px"><span style="color:var(--grey)">${x.prompt}</span>: <b>${x.answer}</b></div>`).join("") +
+        `</div>`).join("");
+      document.getElementById("answers-wrap").hidden = false;
+    } catch (_) {}
+  }
+
   async function shareEvent(){
     const url = eventUrl(ev);
     const text = "ci sei? " + (ev.emoji || "") + " " + ev.title + " · " + dayLabel(new Date(ev.start_at)) + " " + timeStr(new Date(ev.start_at));
     if (navigator.share) { try { await navigator.share({ title: ev.title, text, url }); return; } catch (_) {} }
-    try { await navigator.clipboard.writeText(text + " " + url); toast("link copiato — incollalo dove vuoi."); }
+    try { await navigator.clipboard.writeText(text + " " + url); toast("link copiato, incollalo dove vuoi."); }
     catch (_) { toast(url); }
   }
 
