@@ -143,7 +143,7 @@
     <div class="sw"><div class="k"></div></div>
   </div>
 
-  <button class="btn" id="btn" onclick="createEvent()">crea l'evento</button>
+  <button class="btn" id="btn" onclick="submitNewEvent()">crea l'evento</button>
   <p class="note" id="note">creare un evento è gratis, e lo sarà sempre. chi lo crea è dentro automaticamente.</p>
 </main>
 
@@ -173,10 +173,14 @@
     sel.appendChild(o);
   });
 
-  // data minima oggi
-  const today = new Date();
-  document.getElementById("date").min = today.toISOString().slice(0, 10);
-  document.getElementById("date").value = today.toISOString().slice(0, 10);
+  // default: la prossima ora tonda ad almeno 2 ore da adesso (sempre nel futuro)
+  const pad = n => String(n).padStart(2, "0");
+  const localDate = d => d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+  const start = new Date(Date.now() + 2 * 3600 * 1000);
+  start.setMinutes(0, 0, 0);
+  document.getElementById("date").min = localDate(new Date());
+  document.getElementById("date").value = localDate(start);
+  document.getElementById("time").value = pad(start.getHours()) + ":00";
 
   // ricerca luoghi: photon (openstreetmap), gratis e senza chiave, bias su bergamo
   let searchTimer = null;
@@ -261,13 +265,13 @@
     })).filter(x => x.prompt.length >= 3);
   }
 
-  async function createEvent(){
+  async function submitNewEvent(){
     const note = document.getElementById("note");
     const title = document.getElementById("title").value.trim();
     const place = document.getElementById("place").value.trim();
     const date = document.getElementById("date").value;
     const time = document.getElementById("time").value;
-    function fail(msg){ note.className = "note err"; note.textContent = msg; toast(msg); }
+    function fail(msg){ note.className = "note err"; note.textContent = msg; toast(msg); note.scrollIntoView({ block: "center", behavior: "smooth" }); }
     if (title.length < 3) return fail("dai un nome all'evento (almeno 3 lettere).");
     if (!place) return fail("scrivi il punto di ritrovo.");
     if (!date || !time) return fail("scegli giorno e ora.");
