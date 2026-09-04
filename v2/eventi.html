@@ -78,7 +78,7 @@
   .fl-clear{background:none; border:none; height:36px; padding:0 4px; color:var(--grey); font:600 13.5px var(--round);
             text-decoration:underline; text-underline-offset:3px; cursor:pointer;}
   .fl-clear:hover{color:var(--ink);}
-  @media (min-width:701px){ .fl-pill[data-kind="day"]{display:none;} }
+  .fl-pill[data-kind="day"]{display:none;}
   /* ── modale filtri ──────────────────────────────────────── */
   .fl-overlay{position:fixed; inset:0; z-index:60; background:rgba(25,25,25,.45);
               display:flex; align-items:center; justify-content:center; padding:24px;
@@ -165,9 +165,11 @@
     .nav-right #avatar, .nav-right #bell{display:flex;}
     .nav-right #nav-reg{display:inline-block;}
     .topbar{padding:4px 18px 10px;}
-    .fl-bar{gap:8px;}
-    .fl-bar .search{max-width:none; min-width:0; padding:11px 15px;}
-    .fl-days{display:none;}
+    .fl-bar{gap:8px; flex-wrap:wrap;}
+    .fl-bar .search{max-width:none; min-width:0; padding:11px 15px; flex:1 1 200px;}
+    .fl-days{order:3; width:100%; overflow-x:auto; scrollbar-width:none; padding-bottom:2px;}
+    .fl-days::-webkit-scrollbar{display:none;}
+    .fl-days .chip{flex-shrink:0;}
     .fl-btn{height:44px; padding:0 13px;}
     .fl-pill, .fl-clear{height:40px;}
     .fl-overlay{align-items:flex-end; padding:0;}
@@ -210,6 +212,7 @@
     <a class="brand" href="/v2/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
     <span class="lnk on">eventi</span>
     <a class="lnk" href="miei.html">i miei eventi</a>
+    <a class="lnk" href="gruppi.html">gruppi</a>
     <div class="nav-right">
       <a href="crea.html" style="background:var(--blue); color:#fff; font-weight:700; font-size:13.5px; padding:9px 16px; border-radius:999px; white-space:nowrap">crea evento</a>
       <a class="iconbtn" id="bell" href="notifiche.html" title="avvisi" style="position:relative">
@@ -300,7 +303,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788475849"></script>
+<script src="app.js?v=1788500970"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -433,10 +436,9 @@
   const isOpen = () => fl.classList.contains("fl-open");
   // chip giorno: in riga su computer, nella modale su telefono o quando la modale è aperta
   function placeChips(){
-    const dest = (mobileFilters.matches || isOpen()) ? document.getElementById("fl-day") : document.getElementById("fl-days");
+    const dest = isOpen() ? document.getElementById("fl-day") : document.getElementById("fl-days");
     document.querySelectorAll(".day-chip").forEach(c => dest.appendChild(c));
   }
-  mobileFilters.addEventListener("change", placeChips);
   function openFilters(){
     fl.classList.add("fl-open"); document.body.classList.add("fl-lock");
     placeChips(); fl.querySelector(".fl-x").focus();
@@ -463,7 +465,7 @@
     if (day) html += `<button class="fl-pill" data-kind="day" onclick="setDay(document.querySelector('.day-chip.on'))">${esc(document.querySelector(".day-chip.on").textContent)} <b>×</b></button>`;
     if (cat) html += `<button class="fl-pill" data-kind="cat" onclick="setCat(document.querySelector('.chip[data-cat=\'\']'))">${esc(document.querySelector(".chip[data-cat].on").textContent)} <b>×</b></button>`;
     if (n) html += `<button class="fl-clear" onclick="clearFilters()">cancella tutto</button>`;
-    act.innerHTML = html; act.classList.toggle("has", n > 0);
+    act.innerHTML = cat ? html : ""; act.classList.toggle("has", !!cat);
   }
   function setCat(btn){
     cat = btn.dataset.cat;
