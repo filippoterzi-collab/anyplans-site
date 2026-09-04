@@ -30,13 +30,12 @@
   body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
        -webkit-font-smoothing:antialiased;}
   a{color:inherit; text-decoration:none;}
-  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;
-           text-transform:lowercase;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;}
   .q{font-size:.92em;}
   header{padding:0 22px;}
   .nav{display:flex; align-items:center; justify-content:space-between; height:64px; max-width:860px; margin:0 auto;}
   .brand{display:flex; align-items:center; gap:9px; font-family:var(--display); font-weight:800;
-         font-size:20px; letter-spacing:-.045em; line-height:1; text-transform:lowercase;}
+         font-size:20px; letter-spacing:-.045em; line-height:1;}
   .brand img{width:28px; height:28px;}
   .btn{display:inline-block; background:var(--blue); color:#fff; font-weight:700;
        padding:12px 24px; border-radius:999px; border:none; cursor:pointer; font-size:15.5px;
@@ -70,7 +69,7 @@
   .box{background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:18px; padding:20px 22px;
        display:flex; flex-direction:column; gap:12px;}
   .box.in{background:var(--tint); border:2px solid var(--blue);}
-  .box h2{font-family:var(--display); font-weight:800; letter-spacing:-.045em; text-transform:lowercase;
+  .box h2{font-family:var(--display); font-weight:800; letter-spacing:-.045em;
           font-size:20px;}
   .box .m{font-size:14px; color:var(--grey);}
   .row{display:flex; align-items:center; gap:12px; flex-wrap:wrap;}
@@ -98,7 +97,7 @@
   .calmenu a{font-weight:700; font-size:13.5px; color:var(--blue); padding:8px 12px; border-radius:999px; background:var(--tint);}
   .ov{position:fixed; inset:0; background:rgba(25,25,25,.55); display:flex; align-items:center; justify-content:center; padding:22px; z-index:60;}
   .sheet{width:100%; max-width:420px; background:var(--bg); border-radius:22px; padding:26px; display:flex; flex-direction:column; gap:14px; max-height:90vh; overflow-y:auto;}
-  .sheet h2{font-family:var(--display); font-weight:800; letter-spacing:-.045em; text-transform:lowercase; font-size:22px;}
+  .sheet h2{font-family:var(--display); font-weight:800; letter-spacing:-.045em; font-size:22px;}
   .x{width:32px; height:32px; border-radius:999px; background:rgba(25,25,25,.08); border:none; cursor:pointer; font-size:16px; font-weight:700; color:var(--ink); flex-shrink:0;}
   .sharegrid{display:grid; grid-template-columns:1fr 1fr; gap:10px;}
   .sharegrid button{display:flex; flex-direction:column; align-items:center; gap:6px; background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:16px; padding:14px 8px; font-family:var(--round); font-weight:700; font-size:13.5px; color:var(--ink); cursor:pointer;}
@@ -109,7 +108,7 @@
   .ticket{background:#fff; border:2px solid var(--blue); border-radius:22px; padding:22px; display:flex; flex-direction:column; align-items:center; gap:10px; text-align:center;}
   .ticket #qr{padding:8px; background:#fff;} .ticket #qr img, .ticket #qr canvas{display:block;}
   .ticket .t{font-weight:800; font-size:17px;} .ticket .m{font-size:13px; color:var(--grey);}
-  .ticket .who{font-family:var(--display); font-weight:800; letter-spacing:-.045em; font-size:22px; text-transform:lowercase;}
+  .ticket .who{font-family:var(--display); font-weight:800; letter-spacing:-.045em; font-size:22px;}
   .comm{display:flex; align-items:center; gap:12px; background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:16px; padding:12px 14px;}
   .comm .n{font-weight:700; font-size:14.5px;} .comm .s{font-size:12.5px; color:var(--grey);}
   .comm .v{color:var(--blue); font-weight:700;}
@@ -262,14 +261,14 @@
   <div class="row">
     <button class="btn ghost" id="btn-share" onclick="shareEvent()">condividi l'evento</button>
     <button class="btn ghost" onclick="document.getElementById('calmenu').hidden = !document.getElementById('calmenu').hidden">aggiungi al calendario</button>
-    <button id="btn-cancel" class="textbtn" hidden onclick="cancelMyEvent()" style="color:var(--red)">annulla l'evento</button>
+    <button id="btn-cancel" class="textbtn" hidden onclick="cancelMyEvent()" style="color:var(--red)">Annulla l'evento</button>
   </div>
   <div class="calmenu" id="calmenu" hidden>
-    <a id="cal-ics" href="#" download="evento.ics">📅 calendario del telefono (iphone, outlook)</a>
-    <a id="cal-google" href="#" target="_blank" rel="noopener">📅 google calendar</a>
+    <a id="cal-ics" href="#" download="evento.ics">📅 calendario del telefono (iPhone, Outlook)</a>
+    <a id="cal-google" href="#" target="_blank" rel="noopener">📅 Google Calendar</a>
   </div>
   <p class="note" id="people-note" hidden>i collaboratori dell'evento possono dire sì alle richieste. li scegli solo tu.</p>
-  <p class="note"><a id="lnk-report" href="#" style="color:var(--grey); text-decoration:underline">segnala questo evento</a> · se qualcosa non va, ci pensiamo noi.</p>
+  <p class="note"><a id="lnk-report" href="#" style="color:var(--grey); text-decoration:underline">Segnala questo evento</a> · Se qualcosa non va, ci pensiamo noi.</p>
 </main>
 
 <!-- condividi: whatsapp, storie instagram, link, card -->
@@ -281,10 +280,10 @@
     </div>
     <div class="preview"><div class="em" id="sh-em"></div><div><div class="t" id="sh-t"></div><div class="m" id="sh-m"></div></div></div>
     <p class="note" id="sh-priv" hidden>🔒 questo evento è privato: lo vede solo chi riceve questo link.</p>
-    <p class="note">scegli dove mandarlo. su whatsapp arriva con il link, pronto da aprire.</p>
+    <p class="note">scegli dove mandarlo. su WhatsApp arriva con il link, pronto da aprire.</p>
     <div class="sharegrid">
-      <button onclick="shareWhatsapp()"><span>💬</span>whatsapp</button>
-      <button onclick="shareStory()"><span>📸</span>storia instagram</button>
+      <button onclick="shareWhatsapp()"><span>💬</span>WhatsApp</button>
+      <button onclick="shareStory()"><span>📸</span>storia Instagram</button>
       <button onclick="copyLink()"><span>🔗</span>copia il link</button>
       <button onclick="shareCard()"><span>🖼️</span>scarica l'immagine</button>
     </div>
@@ -308,7 +307,7 @@
       <div class="m"><b>quando</b> <span id="tk-when"></span> · <b>dove</b> <span id="tk-where"></span></div>
       <div class="m" id="tk-pay" hidden></div>
       <div class="m" id="tk-state">mostralo a chi organizza quando arrivi · funziona anche senza internet</div>
-      <button class="btn" id="btn-wallet" hidden onclick="addToWallet()" style="margin-top:6px">salva in apple wallet (il portafoglio del telefono)</button>
+      <button class="btn" id="btn-wallet" hidden onclick="addToWallet()" style="margin-top:6px">salva in Apple Wallet (il portafoglio del telefono)</button>
     </div>
   </div>
 </div>
@@ -339,12 +338,12 @@
   <div style="font-size:52px">🫥</div>
   <h1 class="display" style="font-size:30px">evento non trovato</h1>
   <p style="color:var(--grey); max-width:300px">forse è già passato, o il link non è giusto.</p>
-  <a class="btn" href="eventi.html">guarda gli eventi a bergamo</a>
+  <a class="btn" href="eventi.html">guarda gli eventi a Bergamo</a>
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788508505"></script>
+<script src="app.js?v=1788510790"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -477,12 +476,12 @@
   function renderPay(){
     const paid = ev.price_cents != null && ev.price_cents > 0;
     const line1 = paid ? "<b>" + esc(fmtPrice(ev.price_cents)) + "</b> a persona" + (ev.price_note ? " · " + esc(ev.price_note) : "") : "";
-    const second = { guest: "si paga a chi organizza, non su anyplans. iscriversi qui è gratis.", join: "si paga a chi organizza, non su anyplans. iscriversi qui è gratis.",
-      req: "si paga a chi organizza, non su anyplans. iscriversi qui è gratis.", in: "ricordati di pagare chi organizza: sul posto, o come ti dice.",
-      host: "lo incassi tu, direttamente. anyplans mostra solo il prezzo." };
+    const second = { guest: "Si paga a chi organizza, non su anyplans. Iscriversi qui è gratis.", join: "Si paga a chi organizza, non su anyplans. Iscriversi qui è gratis.",
+      req: "Si paga a chi organizza, non su anyplans. Iscriversi qui è gratis.", in: "Ricordati di pagare chi organizza: sul posto, o come ti dice.",
+      host: "Lo incassi tu, direttamente. anyplans mostra solo il prezzo." };
     Object.keys(second).forEach(k => { const p = document.getElementById("pay-" + k); p.hidden = !paid; if (paid) p.innerHTML = line1 + "<span>" + second[k] + "</span>"; });
     const tk = document.getElementById("tk-pay"); tk.hidden = !paid;
-    if (paid) tk.textContent = "da pagare a chi organizza: " + fmtPrice(ev.price_cents) + (ev.price_note ? " · " + ev.price_note : "");
+    if (paid) tk.textContent = "Da pagare a chi organizza: " + fmtPrice(ev.price_cents) + (ev.price_note ? " · " + ev.price_note : "");
   }
   function renderCounts(){
     const going = Number(ev.going_count) || 0;
@@ -578,7 +577,7 @@
       const a = document.createElement("a"); a.href = url; a.download = "anyplans.pkpass"; document.body.appendChild(a); a.click(); a.remove();
       track("wallet_add");
     } catch (_) { toast("non riesco a salvarlo, riprova."); }
-    btn.disabled = false; btn.textContent = "salva in apple wallet (il portafoglio del telefono)";
+    btn.disabled = false; btn.textContent = "salva in Apple Wallet (il portafoglio del telefono)";
   }
   let _me = null;
   async function myName(){
@@ -591,7 +590,7 @@
   // ---- condividi: card 1200x630 e storia 1080x1920 disegnate in canvas ----
   function shareTexts(){
     const when = new Date(ev.start_at);
-    return { url: eventUrl(ev), line: dayLabel(when) + " " + timeStr(when) + " · " + (ev.meeting_point_text || "bergamo"),
+    return { url: eventUrl(ev), line: dayLabel(when) + " " + timeStr(when) + " · " + (ev.meeting_point_text || "Bergamo"),
              text: "ci sei? " + (ev.emoji || "") + " " + ev.title + " · " + dayLabel(when) + " " + timeStr(when) };
   }
   function openShare(){
@@ -609,7 +608,7 @@
   }
   async function copyLink(){
     const s = shareTexts(); track("share_copy");
-    try { await navigator.clipboard.writeText(s.url); toast("link copiato. incollalo su whatsapp o dove vuoi."); } catch (_) { prompt("copia il link:", s.url); }
+    try { await navigator.clipboard.writeText(s.url); toast("link copiato. incollalo su WhatsApp o dove vuoi."); } catch (_) { prompt("copia il link:", s.url); }
   }
   function wrapText(ctx, text, x, y, maxW, lh, maxLines){
     const words = text.split(" "); let line = "", lines = [];
@@ -627,15 +626,15 @@
     const c = document.createElement("canvas"); c.width = 1080; c.height = 1920; const x = c.getContext("2d");
     x.fillStyle = "#1B4FD8"; x.fillRect(0, 0, 1080, 1920);
     x.fillStyle = "#fff"; x.font = "800 52px " + DISPLAY; x.fillText("anyplans?", 90, 200);
-    x.font = "600 34px " + ROUND; x.fillStyle = "rgba(255,255,255,.85)"; x.fillText("anyplans · bergamo", 90, 260);
+    x.font = "600 34px " + ROUND; x.fillStyle = "rgba(255,255,255,.85)"; x.fillText("anyplans · Bergamo", 90, 260);
     x.font = "300px system-ui"; x.textAlign = "center"; x.fillText(ev.emoji || "📍", 540, 700); x.textAlign = "left";
     x.fillStyle = "#fff"; x.font = "800 84px " + DISPLAY;
-    let y = wrapText(x, ev.title.toLowerCase(), 90, 900, 900, 92, 3);
+    let y = wrapText(x, ev.title, 90, 900, 900, 92, 3);
     const when = new Date(ev.start_at);
     x.font = "700 40px " + ROUND; y += 40;
     x.fillText(daySub(when) + " · " + timeStr(when), 90, y); y += 56;
     x.fillStyle = "rgba(255,255,255,.85)"; x.font = "600 36px " + ROUND;
-    y = wrapText(x, (ev.meeting_point_text || "bergamo") + (ev.host_name ? " · con " + ev.host_name : ""), 90, y, 900, 46, 2);
+    y = wrapText(x, (ev.meeting_point_text || "Bergamo") + (ev.host_name ? " · con " + ev.host_name : ""), 90, y, 900, 46, 2);
     const going = Number(ev.going_count) || 0; y += 30;
     x.fillText(going + (going === 1 ? " persona ci va" : " ci vanno") + (ev.max_participants ? " · " + Math.max(0, ev.max_participants - going) + " posti liberi" : ""), 90, y);
     // pill "ci sei?"
@@ -651,10 +650,10 @@
     x.fillStyle = "#1B4FD8"; x.fillRect(0, 0, 1200, 14);
     x.font = "150px system-ui"; x.fillText(ev.emoji || "📍", 70, 260);
     x.fillStyle = "#191919"; x.font = "800 62px " + DISPLAY;
-    let y = wrapText(x, ev.title.toLowerCase(), 290, 150, 840, 68, 3);
+    let y = wrapText(x, ev.title, 290, 150, 840, 68, 3);
     const when = new Date(ev.start_at);
     x.fillStyle = "#6E6E73"; x.font = "600 30px " + ROUND; y += 24;
-    x.fillText(daySub(when) + ", " + timeStr(when) + " · " + (ev.meeting_point_text || "bergamo") + " · anyplans.in", 290, y);
+    x.fillText(daySub(when) + ", " + timeStr(when) + " · " + (ev.meeting_point_text || "Bergamo") + " · anyplans.in", 290, y);
     x.fillStyle = "#1B4FD8"; x.beginPath(); x.roundRect(70, 470, 260, 84, 42); x.fill();
     x.fillStyle = "#fff"; x.font = "800 40px " + DISPLAY; x.fillText("ci sei?", 130, 527);
     x.fillStyle = "#1B4FD8"; x.font = "700 30px " + ROUND; x.fillText(shareTexts().url.replace(/^https?:\/\//, ""), 360, 525);
@@ -668,7 +667,7 @@
     }
     const a = document.createElement("a"); a.href = URL.createObjectURL(f); a.download = name; document.body.appendChild(a); a.click(); a.remove();
     track("share_" + kind);
-    document.getElementById("sh-note").textContent = kind === "story" ? "immagine salvata nel telefono. aprila su instagram e mettila nella tua storia." : "immagine salvata. mandala a chi vuoi, insieme al link.";
+    document.getElementById("sh-note").textContent = kind === "story" ? "immagine salvata nel telefono. aprila su Instagram e mettila nella tua storia." : "immagine salvata. mandala a chi vuoi, insieme al link.";
   }
   async function shareStory(){ toast("un attimo…"); shareImage(await drawStory(), "anyplans-storia.png", "story"); }
   async function shareCard(){ toast("un attimo…"); shareImage(await drawCard(), "anyplans-evento.png", "card"); }
@@ -684,7 +683,7 @@
     const start = new Date(ev.start_at), end = new Date(start.getTime() + 2 * 3600 * 1000);
     const fmt = d => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
     const url = eventUrl(ev);
-    const where = ev.meeting_point_text || "bergamo";
+    const where = ev.meeting_point_text || "Bergamo";
     const desc = (ev.description ? ev.description + "\n\n" : "") + url;
     const ics = ["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//anyplans//it","BEGIN:VEVENT",
       "UID:" + ev.id + "@anyplans.in", "DTSTAMP:" + fmt(new Date()), "DTSTART:" + fmt(start), "DTEND:" + fmt(end),
@@ -834,7 +833,7 @@
   }
 
   async function cancelMyEvent(){
-    if (!confirm("vuoi annullare l'evento? sparisce anche per chi si era iscritto.")) return;
+    if (!confirm("Vuoi annullare l'evento? Sparisce anche per chi si era iscritto.")) return;
     const r = await rpc("cancel_activity", { p_activity_id: ev.id });
     if (r && r.ok) { toast("evento annullato."); setTimeout(() => location.href = "miei.html", 900); }
     else toast("non ha funzionato, riprova.");

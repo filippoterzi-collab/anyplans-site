@@ -83,7 +83,7 @@ function toast(msg){
 const CATALOG = {
   running:   { e:"🏃", l:"corsa",                     c:"sport" },
   trail:     { e:"⛰️", l:"corsa in montagna",             c:"sport" },
-  hyrox:     { e:"🏋️", l:"hyrox (gara in palestra)",                     c:"sport" },
+  hyrox:     { e:"🏋️", l:"Hyrox (gara in palestra)",                     c:"sport" },
   walking:   { e:"🚶", l:"camminata",                 c:"sport" },
   cycling:   { e:"🚴", l:"bici da strada",            c:"sport" },
   mtb:       { e:"🚵", l:"mountain bike",              c:"sport" },
@@ -117,6 +117,11 @@ const DAYS = ["domenica","lunedì","martedì","mercoledì","giovedì","venerdì"
 const MONTHS = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
 function timeStr(d){ return d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0"); }
 function dayKey(d){ return d.toDateString(); }
+// città e luoghi salvati in minuscolo si mostrano con le maiuscole ("bergamo" → "Bergamo", "città alta" → "Città Alta")
+function cityCase(t){
+  const small = new Set(["di","del","della","dei","delle","da","in","a","al","alla","e","sul","sulla","con","per"]);
+  return String(t || "").split(/(\s+|-|')/).map((w, i) => (!w || /^\s+$|^[-']$/.test(w)) ? w : (i > 0 && small.has(w) ? w : w[0].toUpperCase() + w.slice(1))).join("");
+}
 function goingTxt(n){ n = Number(n) || 0; return n === 0 ? "nessuno ancora" : n === 1 ? "1 ci va" : n + " ci vanno"; }
 // prezzo: null/0 = gratis; "12 €" oppure "12,50 €" (spazio non separabile)
 function fmtPrice(c){ if (c == null || c <= 0) return "gratis";
@@ -169,7 +174,7 @@ function mountNav(active, opts){
     header.sn{padding:0 22px;}
     .sn .nav{display:flex; align-items:center; gap:22px; height:62px; max-width:${opts.wide ? "none" : "1000px"}; margin:0 auto;}
     .sn .brand{display:flex; align-items:center; gap:9px; font-family:"Bricolage Grotesque", ui-rounded, system-ui, sans-serif; font-weight:800;
-               font-size:20px; letter-spacing:-.045em; line-height:1; text-transform:lowercase; color:#191919; text-decoration:none;}
+               font-size:20px; letter-spacing:-.045em; line-height:1; color:#191919; text-decoration:none;}
     .sn .brand img{width:28px; height:28px; display:block;}
     .sn .lnk{font-weight:600; font-size:15px; color:#6E6E73; text-decoration:none;}
     .sn .lnk.on{font-weight:700; color:#1B4FD8;}

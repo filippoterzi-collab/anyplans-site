@@ -13,7 +13,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="canonical" href="https://anyplans.in/">
-<meta name="description" content="gli eventi di bergamo, tutti in un posto solo: feste di paese, corsi, volontariato, sport. ne vedi uno, ti iscrivi, ci vai insieme ad altri.">
+<meta name="description" content="gli eventi di Bergamo, tutti in un posto solo: feste di paese, corsi, volontariato, sport. ne vedi uno, ti iscrivi, ci vai insieme ad altri.">
 <meta property="og:url" content="https://anyplans.in/">
 <style>
   @font-face{
@@ -40,15 +40,14 @@
        -webkit-font-smoothing:antialiased;}
   a{color:inherit; text-decoration:none;}
   .wrap{max-width:1000px; margin:0 auto; padding:0 22px;}
-  h1,h2{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1;
-        text-transform:lowercase;}
+  h1,h2{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1;}
   .q{font-size:.92em;}
 
   /* header */
   header{background:var(--bg);}
   .nav{display:flex; align-items:center; justify-content:space-between; height:64px;}
   .brand{display:flex; align-items:center; gap:10px; font-family:var(--display); font-weight:800;
-         font-size:21px; letter-spacing:-.045em; line-height:1; text-transform:lowercase;}
+         font-size:21px; letter-spacing:-.045em; line-height:1;}
   .brand img{width:30px; height:30px; display:block;}
   .btn{display:inline-block; background:var(--blue); color:#fff; font-weight:700;
        padding:12px 22px; border-radius:999px; border:none; cursor:pointer; font-size:16px;
@@ -105,8 +104,7 @@
   /* città */
   .cities{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:16px;}
   .city{border-radius:14px; padding:22px 20px; background:#fff; border:1.5px solid rgba(25,25,25,.12);}
-  .city h3{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1;
-           text-transform:lowercase; font-size:24px;}
+  .city h3{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1; font-size:24px;}
   .city p{font-size:13.5px; color:var(--grey); margin-top:6px;}
   .city.active{background:var(--blue); border-color:var(--blue);}
   .city.active h3{color:#fff;} .city.active p{color:rgba(255,255,255,.85);}
@@ -142,8 +140,7 @@
               align-items:center; justify-content:center; padding:22px; z-index:60;}
   .qz{width:100%; max-width:400px; background:var(--bg); border-radius:22px; padding:30px;
       display:flex; flex-direction:column; gap:16px;}
-  .qz h3{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;
-         text-transform:lowercase; font-size:26px;}
+  .qz h3{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05; font-size:26px;}
   .qz .m{font-size:14px; color:var(--grey); line-height:1.5;}
   .qz input{width:100%; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px;
             padding:13px 16px; font-size:16px; font-family:var(--round); color:var(--ink);}
@@ -252,7 +249,7 @@
   <span class="float hide-m" style="animation-delay:1.05s,1.05s; top:64%; right:4%">⛰️</span>
   <span class="float hide-m" style="animation-delay:.55s,.55s; top:86%; right:13%">🎲</span>
   <div class="wrap">
-    <div class="pill" id="pill" hidden>📍 questa settimana: <b id="pill-n"></b> <span id="pill-w">eventi</span> a bergamo</div>
+    <div class="pill" id="pill" hidden>📍 questa settimana: <b id="pill-n"></b> <span id="pill-w">eventi</span> a Bergamo</div>
     <h1>anyplans<br>
       <span class="rotwrap">
         <span class="rot" style="opacity:1">questa settimana?</span>
@@ -275,7 +272,7 @@
 <section class="block band" id="eventi">
   <div class="wrap">
     <h2 id="ev-h2">che eventi troverai</h2>
-    <p class="lead" id="ev-lead">esempi di eventi intorno a bergamo. quelli veri li vedi sulla mappa: basta la tua email.</p>
+    <p class="lead" id="ev-lead">esempi di eventi intorno a Bergamo. quelli veri li vedi sulla mappa: basta la tua email.</p>
     <div class="cards" id="cards">
       <div class="card"><div class="em">🏺</div><div><div class="t">corso di ceramica, anche principianti</div><div class="m">giovedì, 19:00 · con la maestra</div></div></div>
       <div class="card"><div class="em">🎪</div><div><div class="t">c'è la festa di paese, chi viene?</div><div class="m">sabato, dalle 18:00 · piazza principale</div></div></div>
@@ -294,11 +291,11 @@
 <section class="block">
   <div class="wrap">
     <h2>una città alla volta</h2>
-    <p class="lead">partiamo da bergamo, con eventi veri fin dal primo giorno. poi tocca alle altre.</p>
+    <p class="lead">partiamo da Bergamo, con eventi veri fin dal primo giorno. poi tocca alle altre.</p>
     <div class="cities">
-      <div class="city active"><h3>bergamo</h3><p>si parte da qui</p></div>
-      <div class="city" onclick="openQuiz('milano')"><h3>milano</h3><p>in arrivo</p></div>
-      <div class="city" onclick="openQuiz('brescia')"><h3>brescia</h3><p>in arrivo</p></div>
+      <div class="city active"><h3>Bergamo</h3><p>si parte da qui</p></div>
+      <div class="city" onclick="openQuiz('milano')"><h3>Milano</h3><p>in arrivo</p></div>
+      <div class="city" onclick="openQuiz('brescia')"><h3>Brescia</h3><p>in arrivo</p></div>
       <div class="city you" onclick="openQuiz()"><h3>la tua città?</h3><p>scrivici la tua città →</p></div>
     </div>
   </div>
@@ -322,7 +319,7 @@
 <section class="block final" id="registrati">
   <div class="wrap">
     <h2>anyplans <span>nella tua città?</span></h2>
-    <p class="lead">partiamo da bergamo. ti registri con la tua email e prima di andare vedi chi organizza e chi ci va: niente appuntamenti al buio.</p>
+    <p class="lead">partiamo da Bergamo. ti registri con la tua email e prima di andare vedi chi organizza e chi ci va: niente appuntamenti al buio.</p>
     <div class="cta">
       <!-- TODO: collegare al flusso sign-in (email + codice via supabase) quando pronto -->
       <a class="btn" href="/v2/login.html">registrati per vedere gli eventi della tua città</a>
@@ -339,7 +336,7 @@
           <img src="/logo.png" alt="" width="28" height="28" style="width:28px;height:28px">
           <span>anyplans<span class="q">?</span></span>
         </a>
-        <p style="margin-top:12px">la mappa di quello che succede vicino a te. fatta a bergamo.</p>
+        <p style="margin-top:12px">la mappa di quello che succede vicino a te. fatta a Bergamo.</p>
       </div>
       <div><h4>app</h4>
         <a href="#eventi">che eventi troverai</a>
@@ -353,10 +350,10 @@
       </div>
       <div><h4>seguici</h4>
         <div class="social">
-          <a href="https://instagram.com/anyplans_bergamo" target="_blank" rel="noopener" aria-label="instagram" title="instagram">
+          <a href="https://instagram.com/anyplans_bergamo" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
           </a>
-          <a href="https://tiktok.com/@anyplans_bergamo" target="_blank" rel="noopener" aria-label="tiktok" title="tiktok">
+          <a href="https://tiktok.com/@anyplans_bergamo" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2.3 1.8 4 4.2 4.2v3.2c-1.6 0-3-.5-4.2-1.3v6.4c0 3.3-2.7 5.9-6 5.9S4.5 18.8 4.5 15.5s2.7-5.9 6-5.9c.3 0 .6 0 .9.1v3.3c-.3-.1-.6-.2-.9-.2-1.5 0-2.7 1.2-2.7 2.7s1.2 2.7 2.7 2.7 2.7-1.2 2.7-2.7V3h3.3z"/></svg>
           </a>
         </div>
@@ -377,10 +374,10 @@
 
     <div id="qz-step1">
       <div class="qz-chips" style="margin-bottom:12px">
-        <button class="qz-chip" type="button" onclick="pickCity('milano')">milano</button>
-        <button class="qz-chip" type="button" onclick="pickCity('brescia')">brescia</button>
-        <button class="qz-chip" type="button" onclick="pickCity('torino')">torino</button>
-        <button class="qz-chip" type="button" onclick="pickCity('roma')">roma</button>
+        <button class="qz-chip" type="button" onclick="pickCity('milano')">Milano</button>
+        <button class="qz-chip" type="button" onclick="pickCity('brescia')">Brescia</button>
+        <button class="qz-chip" type="button" onclick="pickCity('torino')">Torino</button>
+        <button class="qz-chip" type="button" onclick="pickCity('roma')">Roma</button>
         <button class="qz-chip" type="button" onclick="document.getElementById('qz-city').focus()">un'altra città…</button>
       </div>
       <form onsubmit="return citySubmit(event)" style="display:flex; flex-direction:column; gap:10px">
@@ -402,7 +399,7 @@
   </div>
 </div>
 
-<script src="/v2/app.js?v=1788508505"></script>
+<script src="/v2/app.js?v=1788510790"></script>
 <script>
   let quizCity = "";
 
@@ -428,9 +425,9 @@
   function showStep2(){
     document.getElementById("qz-step1").hidden = true;
     document.getElementById("qz-step2").hidden = false;
-    document.getElementById("qz-title").textContent = "presto saremo a " + quizCity;
+    document.getElementById("qz-title").textContent = "presto saremo a " + cityCase(quizCity);
     document.getElementById("qz-msg").textContent =
-      "lasciaci la tua email: quando arriviamo a " + quizCity + " te lo diciamo per primo. più siete, prima arriviamo.";
+      "lasciaci la tua email: quando arriviamo a " + cityCase(quizCity) + " te lo diciamo per primo. più siete, prima arriviamo.";
     document.getElementById("qz-email").focus();
   }
 
@@ -446,7 +443,7 @@
       document.getElementById("qz-step2").hidden = true;
       document.getElementById("qz-done").hidden = false;
       document.getElementById("qz-title").textContent = "fatto 🫶";
-      document.getElementById("qz-bye").textContent = "ci vediamo a " + quizCity + ", ti scriviamo appena arriviamo.";
+      document.getElementById("qz-bye").textContent = "ci vediamo a " + cityCase(quizCity) + ", ti scriviamo appena arriviamo.";
     } catch (_) {
       note.textContent = "non riesco a collegarmi. controlla internet e riprova."; note.className = "qz-note err";
     }
@@ -499,7 +496,7 @@
       document.getElementById("pill-w").textContent = week === 1 ? "evento" : "eventi";
       document.getElementById("pill").hidden = false;
     }
-    document.getElementById("ev-h2").textContent = "eventi a bergamo, adesso";
+    document.getElementById("ev-h2").textContent = "eventi a Bergamo, adesso";
     document.getElementById("ev-lead").textContent = "presi dalla mappa in questo momento. ti registri con la tua email, scegli, e ci vai insieme ad altri.";
     document.getElementById("cards").innerHTML = rows.slice(0, 6).map(x =>
       `<a class="card" href="/v2/evento.html?id=${x.id}"><div class="em">${esc(x.emoji || "📍")}</div>` +

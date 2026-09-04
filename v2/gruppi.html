@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>gruppi a bergamo · anyplans</title>
+<title>gruppi a Bergamo · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <meta name="robots" content="noindex">
 <style>
@@ -23,13 +23,12 @@
   body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
        -webkit-font-smoothing:antialiased;}
   a{color:inherit; text-decoration:none;}
-  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;
-           text-transform:lowercase;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;}
   .q{font-size:.92em;}
   header{padding:0 24px;}
   .nav{display:flex; align-items:center; gap:24px; height:60px; max-width:860px; margin:0 auto;}
   .brand{display:flex; align-items:center; gap:9px; font-family:var(--display); font-weight:800;
-         font-size:20px; letter-spacing:-.045em; line-height:1; text-transform:lowercase;}
+         font-size:20px; letter-spacing:-.045em; line-height:1;}
   .brand img{width:28px; height:28px;}
   .nav .lnk{font-weight:600; font-size:15px; color:var(--grey);}
   .nav .lnk.on{font-weight:700; color:var(--blue);}
@@ -116,7 +115,7 @@
 
 <main>
   <div class="titlerow">
-    <h1 class="display">gruppi a <span>bergamo</span></h1>
+    <h1 class="display">gruppi a <span>Bergamo</span></h1>
     <span class="count" id="count"></span>
   </div>
   <div class="search">
@@ -138,7 +137,7 @@
   <a class="invite" id="invite" href="crea-community.html" hidden>organizzi eventi? crea il tuo gruppo →</a>
 </main>
 
-<script src="app.js?v=1788508505"></script>
+<script src="app.js?v=1788510790"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 860 });
@@ -222,7 +221,7 @@
       <div class="body">
         <div class="name"><span>${esc(g.name)}</span>${vb}</div>
         ${g.is_verified ? '<div class="v">verificato da anyplans</div>' : ""}
-        <div class="m">${esc(CAT_EMOJI[g.category] || emojiOf(g))} ${esc(g.category || "")}${g.city ? " · " + esc(g.city) : ""}</div>
+        <div class="m">${esc(CAT_EMOJI[g.category] || emojiOf(g))} ${esc(g.category || "")}${g.city ? " · " + esc(cityCase(g.city)) : ""}</div>
         <div class="m">${followersTxt(g.follower_count)} · ${upcomingTxt(g.upcoming_count)}</div>
         ${next}
       </div>
@@ -268,7 +267,7 @@
     box.innerHTML =
       section(mine.length > 1 ? "i miei gruppi" : "il mio gruppo", mine) +
       section("i gruppi che seguo", following) +
-      section("tutti i gruppi a bergamo", listed);
+      section("tutti i gruppi a Bergamo", listed);
   }
 
   async function toggleFollow(id){

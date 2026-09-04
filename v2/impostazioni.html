@@ -23,13 +23,12 @@
   body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
        -webkit-font-smoothing:antialiased;}
   a{color:inherit; text-decoration:none;}
-  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;
-           text-transform:lowercase;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;}
   .q{font-size:.92em;}
   header{padding:0 24px;}
   .nav{display:flex; align-items:center; gap:24px; height:60px; max-width:760px; margin:0 auto;}
   .brand{display:flex; align-items:center; gap:9px; font-family:var(--display); font-weight:800;
-         font-size:20px; letter-spacing:-.045em; line-height:1; text-transform:lowercase;}
+         font-size:20px; letter-spacing:-.045em; line-height:1;}
   .brand img{width:28px; height:28px;}
   .nav .lnk{font-weight:600; font-size:15px; color:var(--grey);}
   .nav .cta{margin-left:auto; background:var(--blue); color:#fff; font-weight:700; font-size:13.5px;
@@ -129,8 +128,8 @@
     </div>
     <div class="zone">
       <button class="textbtn" onclick="if(confirm('vuoi uscire?')) logout()">esci</button>
-      <button class="textbtn" id="btn-all" onclick="logoutEverywhere()">esci da tutti i telefoni e computer</button>
-      <button class="textbtn red" id="btn-del" onclick="deleteAccount()">cancella il mio account</button>
+      <button class="textbtn" id="btn-all" onclick="logoutEverywhere()">Esci da tutti i telefoni e computer</button>
+      <button class="textbtn red" id="btn-del" onclick="deleteAccount()">Cancella il mio account</button>
     </div>
   </section>
 
@@ -167,7 +166,7 @@
   </section>
 </main>
 
-<script src="app.js?v=1788508505"></script>
+<script src="app.js?v=1788510790"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -187,7 +186,7 @@
 
   // ---- account ----
   async function logoutEverywhere(){
-    if (!confirm("vuoi uscire da tutti i telefoni e computer? per rientrare ti servirà un nuovo codice via email.")) return;
+    if (!confirm("Vuoi uscire da tutti i telefoni e computer? Per rientrare ti servirà un nuovo codice via email.")) return;
     const btn = document.getElementById("btn-all"); btn.disabled = true;
     try {
       await fetch(SB_URL + "/auth/v1/logout?scope=global", {
@@ -200,8 +199,8 @@
   }
 
   async function deleteAccount(){
-    if (!confirm("vuoi cancellare il tuo account? sparisce tutto: profilo, eventi, iscrizioni. non si torna indietro.")) return;
-    const word = prompt("per confermare scrivi: cancella");
+    if (!confirm("Vuoi cancellare il tuo account? Sparisce tutto: profilo, eventi, iscrizioni. Non si torna indietro.")) return;
+    const word = prompt("Per confermare scrivi: cancella");
     if ((word || "").trim().toLowerCase() !== "cancella") { toast("ok, non ho cancellato niente."); return; }
     const btn = document.getElementById("btn-del"); btn.disabled = true;
     const r = await rpc("delete_my_account", {});

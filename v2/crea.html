@@ -24,13 +24,12 @@
   body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
        -webkit-font-smoothing:antialiased;}
   a{color:inherit; text-decoration:none;}
-  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;
-           text-transform:lowercase;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;}
   .q{font-size:.92em;}
   header{padding:0 22px;}
   .nav{display:flex; align-items:center; justify-content:space-between; height:64px; max-width:720px; margin:0 auto;}
   .brand{display:flex; align-items:center; gap:9px; font-family:var(--display); font-weight:800;
-         font-size:20px; letter-spacing:-.045em; line-height:1; text-transform:lowercase;}
+         font-size:20px; letter-spacing:-.045em; line-height:1;}
   .brand img{width:28px; height:28px;}
   main{max-width:720px; margin:0 auto; padding:10px 22px 70px; display:flex; flex-direction:column; gap:18px;}
   h1{font-size:32px;}
@@ -108,7 +107,7 @@
       <button type="button" class="on" data-v="public" onclick="setVis('public')">pubblico</button>
       <button type="button" data-v="private" onclick="setVis('private')">privato</button>
     </div>
-    <p class="hint" id="vis-hint">pubblico: sulla mappa e nella lista, chiunque a bergamo lo trova.</p>
+    <p class="hint" id="vis-hint">pubblico: sulla mappa e nella lista, chiunque a Bergamo lo trova.</p>
   </div>
 
   <div>
@@ -180,7 +179,7 @@
   <div class="toggle-row" id="paid" onclick="togglePaid()">
     <div>
       <div class="t">si paga</div>
-      <div class="s">se lo accendi, chi partecipa paga a te. se resta spento è gratis.</div>
+      <div class="s">Se lo accendi, chi partecipa paga a te. Se resta spento è gratis.</div>
     </div>
     <div class="sw"><div class="k"></div></div>
   </div>
@@ -193,7 +192,7 @@
       <label for="price-note">nota <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
       <input id="price-note" type="text" maxlength="60" placeholder="es. si paga sul posto, materiali compresi">
     </div>
-    <p class="hint" style="grid-column:1/-1; margin-top:-4px">anyplans non incassa niente. chi partecipa vede il prezzo e paga direttamente a te, sul posto o come preferisci.</p>
+    <p class="hint" style="grid-column:1/-1; margin-top:-4px">Su anyplans non si paga niente. Chi partecipa vede il prezzo e paga direttamente a te, sul posto o come preferisci.</p>
   </div>
 
   <div class="toggle-row" id="vis" onclick="this.classList.toggle('on')">
@@ -210,7 +209,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788508505"></script>
+<script src="app.js?v=1788510790"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -405,7 +404,7 @@
     document.querySelectorAll("#seg-vis button").forEach(b => b.classList.toggle("on", b.dataset.v === v));
     document.getElementById("vis-hint").textContent = v === "private"
       ? "privato: non compare sulla mappa. lo vede solo chi riceve il link da te."
-      : "pubblico: sulla mappa e nella lista, chiunque a bergamo lo trova.";
+      : "pubblico: sulla mappa e nella lista, chiunque a Bergamo lo trova.";
     const vis = document.getElementById("vis");
     vis.hidden = v === "private";
     if (v === "private") vis.classList.remove("on");

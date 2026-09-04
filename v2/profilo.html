@@ -23,20 +23,18 @@
   body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
        -webkit-font-smoothing:antialiased; min-height:100vh; display:flex; flex-direction:column;}
   a{color:inherit; text-decoration:none;}
-  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;
-           text-transform:lowercase;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;}
   header{padding:0 22px;}
   .nav{display:flex; align-items:center; justify-content:space-between; height:64px; max-width:1000px; margin:0 auto;}
   .brand{display:flex; align-items:center; gap:10px; font-family:var(--display); font-weight:800;
-         font-size:21px; letter-spacing:-.045em; line-height:1; text-transform:lowercase;}
+         font-size:21px; letter-spacing:-.045em; line-height:1;}
   .brand img{width:30px; height:30px; display:block;}
   .q{font-size:.92em;}
   .lnk{font-weight:700; font-size:14px; color:var(--blue);}
   main{flex:1; display:flex; align-items:center; justify-content:center; padding:24px 22px 64px;}
   .card{width:100%; max-width:420px; background:#fff; border:1.5px solid rgba(25,25,25,.12);
         border-radius:22px; padding:36px; display:flex; flex-direction:column; gap:20px;}
-  h1{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1;
-     text-transform:lowercase; font-size:28px;}
+  h1{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1; font-size:28px;}
   .sub{font-size:15px; color:var(--grey); margin-top:8px;}
   label{font-weight:700; font-size:14px; display:block; margin-bottom:8px;}
   .hint{font-size:12.5px; color:var(--grey); margin-top:6px; line-height:1.4;}
@@ -137,13 +135,13 @@
     </div>
     <div>
       <label for="city">la tua città</label>
-      <input id="city" type="text" value="bergamo" autocomplete="off" placeholder="cerca la tua città" oninput="citySearch()">
+      <input id="city" type="text" value="Bergamo" autocomplete="off" placeholder="cerca la tua città" oninput="citySearch()">
       <div id="city-list" hidden></div>
     </div>
     <div>
       <label for="birth">la tua data di nascita <span style="color:var(--blue)">*</span></label>
       <input id="birth" type="date" required>
-      <p class="hint">serve solo per confermare che hai almeno 18 anni. non la mostriamo a nessuno.</p>
+      <p class="hint">Serve solo per confermare che hai almeno 18 anni. Non la mostriamo a nessuno.</p>
     </div>
     <div id="extra" hidden>
       <div style="margin-bottom:20px">
@@ -205,7 +203,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1788508505"></script>
+<script src="app.js?v=1788510790"></script>
 <script>
   requireLogin();
   mountTabbar("profilo");
@@ -255,7 +253,7 @@
     document.getElementById("v-name").textContent = me.display_name;
     // "bergamo · qui da settembre 2026": la data solo se my_profile espone created_at
     const parts = [];
-    if (me.base_city) parts.push(me.base_city);
+    if (me.base_city) parts.push(cityCase(me.base_city));
     if (me.created_at) { const d = new Date(me.created_at); parts.push("qui da " + MONTHS[d.getMonth()] + " " + d.getFullYear()); }
     document.getElementById("v-sub").textContent = parts.join(" · ");
     document.getElementById("view").hidden = false;
@@ -282,7 +280,7 @@
   }
   async function invite(){
     const url = "https://anyplans.in";
-    const text = "c'è qualche piano? guarda gli eventi di bergamo su anyplans";
+    const text = "c'è qualche piano? guarda gli eventi di Bergamo su anyplans";
     track("invite");
     if (navigator.share) { try { await navigator.share({ title: "anyplans", text, url }); return; } catch (_) {} }
     try { await navigator.clipboard.writeText(text + " " + url); toast("link copiato, mandalo a chi vuoi."); }
@@ -322,7 +320,7 @@
       .slice(0, 6);
   }
   function pickCity(x){
-    document.getElementById("city").value = x.name.toLowerCase();
+    document.getElementById("city").value = x.name;
     document.getElementById("city-list").hidden = true;
   }
   document.addEventListener("click", (e) => {
@@ -374,12 +372,12 @@
   async function saveProfile(e){
     e.preventDefault();
     const name = document.getElementById("name").value.trim();
-    const city = document.getElementById("city").value.trim().toLowerCase();
+    const city = document.getElementById("city").value.trim();
     const birth = document.getElementById("birth").value;
     const btn = document.getElementById("btn");
     const note = document.getElementById("note");
     if (name.length < 2) { note.className = "note err"; note.textContent = "scrivi il tuo nome (almeno 2 lettere)."; document.getElementById("name").focus(); return false; }
-    if (!birth) { note.className = "note err"; note.textContent = "serve la tua data di nascita: anyplans è solo per chi ha almeno 18 anni."; document.getElementById("birth").focus(); return false; }
+    if (!birth) { note.className = "note err"; note.textContent = "Serve la tua data di nascita: anyplans è solo per chi ha almeno 18 anni."; document.getElementById("birth").focus(); return false; }
     const btnLabel = btn.textContent;
     btn.disabled = true; btn.textContent = "un attimo…"; note.textContent = ""; note.className = "note";
     const restore = () => { btn.disabled = false; btn.textContent = btnLabel; };
@@ -389,7 +387,7 @@
       const b = await r.json().catch(() => ({}));
       const code = b.message || "";
       note.className = "note err";
-      if (code.includes("must_be_adult")) note.textContent = "anyplans è solo per chi ha almeno 18 anni.";
+      if (code.includes("must_be_adult")) note.textContent = "Solo per chi ha almeno 18 anni.";
       else if (code.includes("invalid_name")) note.textContent = "il nome deve avere almeno 2 lettere.";
       else note.textContent = "non riesco a salvare, riprova.";
       restore();
