@@ -252,7 +252,7 @@
   <span class="float hide-m" style="animation-delay:1.05s,1.05s; top:64%; right:4%">⛰️</span>
   <span class="float hide-m" style="animation-delay:.55s,.55s; top:86%; right:13%">🎲</span>
   <div class="wrap">
-    <div class="pill" id="pill" hidden>📍 questa settimana: <b id="pill-n"></b> eventi a bergamo</div>
+    <div class="pill" id="pill" hidden>📍 questa settimana: <b id="pill-n"></b> <span id="pill-w">eventi</span> a bergamo</div>
     <h1>anyplans<br>
       <span class="rotwrap">
         <span class="rot" style="opacity:1">questa settimana?</span>
@@ -402,7 +402,7 @@
   </div>
 </div>
 
-<script src="/v2/app.js?v=1788505430"></script>
+<script src="/v2/app.js?v=1788505477"></script>
 <script>
   let quizCity = "";
 
@@ -494,8 +494,9 @@
     if (!rows.length) return;
     LIVE = rows;
     const week = rows.filter(x => x.when < new Date(Date.now() + 7 * 86400 * 1000)).length;
-    if (week >= 3) {
+    if (week >= 1) {
       document.getElementById("pill-n").textContent = week;
+      document.getElementById("pill-w").textContent = week === 1 ? "evento" : "eventi";
       document.getElementById("pill").hidden = false;
     }
     document.getElementById("ev-h2").textContent = "eventi a bergamo, adesso";
