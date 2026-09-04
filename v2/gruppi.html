@@ -137,7 +137,7 @@
   <a class="invite" id="invite" href="crea-community.html" hidden>organizzi eventi? crea il tuo gruppo →</a>
 </main>
 
-<script src="app.js?v=1788511031"></script>
+<script src="app.js?v=1788511052"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 860 });
@@ -260,7 +260,7 @@
       let msg;
       if (cat) msg = "nessun gruppo di " + esc(cat) + '. <a href="#" onclick="clearCat(); return false">togli il filtro</a>.';
       else if (q) msg = 'nessun gruppo per "' + esc(document.getElementById("q").value.trim()) + '". prova un\'altra parola.';
-      else msg = 'a bergamo non c\'è ancora nessun gruppo. organizzi eventi? <a href="crea-community.html">crea il tuo gruppo →</a>';
+      else msg = 'a Bergamo non c\'è ancora nessun gruppo. organizzi eventi? <a href="crea-community.html">crea il tuo gruppo →</a>';
       box.innerHTML = '<div class="empty">' + msg + "</div>";
       return;
     }
