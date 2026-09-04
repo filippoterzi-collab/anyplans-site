@@ -200,15 +200,16 @@
   </div>
 </main>
 
-<script src="app.js?v=1788505164"></script>
+<script src="app.js?v=1788505430"></script>
 <script>
   requireLogin();
   mountTabbar("profilo");
 
   // ?edit=1 = modifica del profilo esistente; senza parametri = vista profilo (o onboarding se manca)
   const editMode = new URLSearchParams(location.search).get("edit") === "1";
+  if (editMode || !location.search) mountNav("");
   if (editMode) {
-    document.getElementById("lnk-events").hidden = false;
+    { const le = document.getElementById("lnk-events"); if (le) le.hidden = false; }
     document.getElementById("extra").hidden = false;
     document.getElementById("btn-logout").hidden = false;
   }
@@ -241,7 +242,7 @@
   function showView(me){
     document.title = "il mio profilo · anyplans";
     document.getElementById("form").hidden = true;
-    document.getElementById("lnk-events").hidden = false;
+    { const le = document.getElementById("lnk-events"); if (le) le.hidden = false; }
     document.querySelector("main").classList.add("viewing");
     const av = document.getElementById("v-avatar");
     if (me.avatar_url) av.style.backgroundImage = "url('" + me.avatar_url.replace(/'/g, "") + "')";

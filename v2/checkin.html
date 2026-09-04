@@ -64,12 +64,7 @@
 </head>
 <body>
 
-<header>
-  <div class="nav">
-    <a class="brand" href="/v2/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
-    <a class="lnk" id="back" href="eventi.html">← torna all'evento</a>
-  </div>
-</header>
+<header></header>
 
 <main>
   <div>
@@ -96,9 +91,10 @@
   <div class="res" id="res" hidden><div class="avatar" id="res-av"></div><div><div id="res-n"></div><div class="s" id="res-s"></div></div></div>
 </div>
 
-<script src="app.js?v=1788505164"></script>
+<script src="app.js?v=1788505430"></script>
 <script>
   requireLogin();
+  mountNav("");
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
   const tokenFromQr = params.get("t");
@@ -106,7 +102,7 @@
 
   async function load(){
     if (!id) { location.replace("miei.html"); return; }
-    document.getElementById("back").href = "evento.html?id=" + id;
+    { const bk = document.getElementById("back"); if (bk) bk.href = "evento.html?id=" + id; }
     const r = await rpc("activity_by_id", { p_id: id });
     ev = r && r.ok ? (await r.json().catch(() => []))[0] : null;
     if (!ev) { document.getElementById("sub").textContent = "evento non trovato."; return; }

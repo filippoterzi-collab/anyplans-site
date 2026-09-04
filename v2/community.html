@@ -185,16 +185,17 @@
   <a class="btn" href="eventi.html">guarda gli eventi a bergamo</a>
 </div>
 
-<script src="app.js?v=1788505164"></script>
+<script src="app.js?v=1788505430"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const wantId = params.get("id");
   const wantSlug = params.get("slug");
   const logged = !!(session && session.access_token);
+  if (logged) mountNav("gruppi");
   let c = null;
 
   if (logged) {
-    const cta = document.getElementById("nav-cta");
+    const cta = document.getElementById("nav-cta") || document.createElement("a");
     cta.textContent = "← gli eventi"; cta.href = "eventi.html"; cta.className = "lnk"; cta.onclick = null;
     mountTabbar("scopri");
   }

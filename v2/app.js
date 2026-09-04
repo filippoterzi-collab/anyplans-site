@@ -159,6 +159,79 @@ function track(name, path){
 }
 track("page_view");
 
+
+// menu unico in alto per le pagine da loggato: eventi · i miei eventi · gruppi · crea evento · avvisi · profilo
+function mountNav(active, opts){
+  opts = opts || {};
+  const st = document.createElement("style");
+  st.textContent = `
+    header.sn{padding:0 22px;}
+    .sn .nav{display:flex; align-items:center; gap:22px; height:62px; max-width:${opts.wide ? "none" : "1000px"}; margin:0 auto;}
+    .sn .brand{display:flex; align-items:center; gap:9px; font-family:"Bricolage Grotesque", ui-rounded, system-ui, sans-serif; font-weight:800;
+               font-size:20px; letter-spacing:-.045em; line-height:1; text-transform:lowercase; color:#191919; text-decoration:none;}
+    .sn .brand img{width:28px; height:28px; display:block;}
+    .sn .lnk{font-weight:600; font-size:15px; color:#6E6E73; text-decoration:none;}
+    .sn .lnk.on{font-weight:700; color:#1B4FD8;}
+    .sn .right{margin-left:auto; display:flex; align-items:center; gap:12px;}
+    .sn .cta{background:#1B4FD8; color:#fff; font-weight:700; font-size:13.5px; padding:9px 16px; border-radius:999px; white-space:nowrap; text-decoration:none;}
+    .sn .ib{width:36px; height:36px; border-radius:999px; background:#E9EEFB; border:none; cursor:pointer; display:flex; align-items:center;
+            justify-content:center; font-weight:800; font-size:14px; color:#1B4FD8; font-family:inherit; position:relative; text-decoration:none;
+            background-size:cover; background-position:center;}
+    .sn #bell-dot{position:absolute; top:6px; right:6px; width:8px; height:8px; border-radius:999px; background:#1B4FD8; display:none;}
+    .sn #menu{position:absolute; right:0; top:44px; background:#fff; border:1.5px solid rgba(25,25,25,.14); border-radius:14px; padding:8px;
+              min-width:220px; box-shadow:0 8px 24px rgba(0,0,0,.1); z-index:50;}
+    .sn #menu a, .sn #menu button{display:block; width:100%; text-align:left; background:none; border:none; cursor:pointer; padding:10px 12px;
+              border-radius:9px; font-family:inherit; font-weight:600; font-size:14px; color:#191919; text-decoration:none;}
+    .sn #menu a:hover, .sn #menu button:hover{background:#E9EEFB;}
+    @media (max-width:700px){ .sn .lnk, .sn .cta{display:none;} header.sn{padding:0 18px;} }`;
+  document.head.appendChild(st);
+  const links = [["eventi","eventi.html"],["i miei eventi","miei.html"],["gruppi","gruppi.html"]];
+  const initial = ((session && session.email) || "?")[0].toLowerCase();
+  const h = document.createElement("header"); h.className = "sn";
+  h.innerHTML = `<div class="nav">
+    <a class="brand" href="/v2/eventi.html"><img src="/logo.png" alt=""><span>anyplans<span style="font-size:.92em">?</span></span></a>
+    ${links.map(([l, href]) => `<a class="lnk${l === active ? " on" : ""}" href="${href}">${l}</a>`).join("")}
+    <div class="right">
+      <a class="cta" href="crea.html">crea evento</a>
+      <a class="ib" id="bell" href="notifiche.html" title="avvisi" aria-label="avvisi">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10 C 6 6.7, 8.7 4, 12 4 C 15.3 4, 18 6.7, 18 10 L18 15 L20 17.5 L4 17.5 L6 15 Z"/><path d="M10 20.5 C 10.5 21.3, 13.5 21.3, 14 20.5"/></svg>
+        <span id="bell-dot"></span>
+      </a>
+      <div style="position:relative">
+        <button class="ib" id="avatar" title="il tuo profilo" aria-label="il tuo profilo">${esc(initial)}</button>
+        <div id="menu" hidden>
+          <div style="padding:9px 12px; border-bottom:1px solid rgba(25,25,25,.08); margin-bottom:4px">
+            <div id="menu-name" style="font-weight:700; font-size:14px"></div>
+            <div id="menu-email" style="font-size:12px; color:#6E6E73; overflow:hidden; text-overflow:ellipsis">${esc((session && session.email) || "")}</div>
+          </div>
+          <a href="profilo.html">il mio profilo</a>
+          <a href="miei.html">i miei eventi</a>
+          <a href="gruppi.html">gruppi</a>
+          <a href="notifiche.html">avvisi</a>
+          <a href="impostazioni.html">impostazioni</a>
+          <button onclick="if(confirm('vuoi uscire?')) logout()">esci</button>
+        </div>
+      </div>
+    </div></div>`;
+  const old = document.querySelector("body > header");
+  if (old) old.replaceWith(h); else document.body.prepend(h);
+  document.getElementById("avatar").onclick = (e) => { e.stopPropagation(); const m = document.getElementById("menu"); m.hidden = !m.hidden; };
+  document.addEventListener("click", (e) => { if (!e.target.closest("#menu")) { const m = document.getElementById("menu"); if (m) m.hidden = true; } });
+  // nome e foto dal profilo, pallino avvisi: in silenzio se falliscono
+  rpc("my_profile").then(async r => {
+    if (!r || !r.ok) return;
+    const me = (await r.json().catch(() => []))[0];
+    if (!me) return;
+    if (me.display_name) { document.getElementById("menu-name").textContent = me.display_name; document.getElementById("avatar").textContent = me.display_name[0].toLowerCase(); }
+    if (me.avatar_url) { const av = document.getElementById("avatar"); av.style.backgroundImage = "url('" + me.avatar_url.replace(/'/g, "") + "')"; av.textContent = ""; }
+  }).catch(() => {});
+  rpc("unread_notifications").then(async r => {
+    if (!r || !r.ok) return;
+    const n = await r.json().catch(() => 0);
+    if (Number(n) > 0) document.getElementById("bell-dot").style.display = "block";
+  }).catch(() => {});
+}
+
 // tab bar mobile (scopri · crea · i miei eventi · profilo), solo sotto i 700px
 function mountTabbar(active){
   const tabs = [

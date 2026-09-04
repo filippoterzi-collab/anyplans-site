@@ -102,15 +102,7 @@
 </head>
 <body>
 
-<header>
-  <div class="nav">
-    <a class="brand" href="/v2/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
-    <a class="lnk" href="eventi.html">eventi</a>
-    <a class="lnk" href="miei.html">i miei eventi</a>
-    <a class="lnk" href="gruppi.html">gruppi</a>
-    <a class="cta" href="crea.html">crea evento</a>
-  </div>
-</header>
+<header></header>
 
 <main>
   <div>
@@ -176,9 +168,10 @@
   </section>
 </main>
 
-<script src="app.js?v=1788505164"></script>
+<script src="app.js?v=1788505430"></script>
 <script>
   requireLogin();
+  mountNav("");
   mountTabbar("profilo");
   document.getElementById("email").textContent = (session && session.email) || "";
 

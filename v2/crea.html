@@ -82,12 +82,7 @@
 </head>
 <body>
 
-<header>
-  <div class="nav">
-    <a class="brand" href="/v2/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
-    <a style="font-weight:700; font-size:14px; color:var(--blue)" href="eventi.html">← tutti gli eventi</a>
-  </div>
-</header>
+<header></header>
 
 <main>
   <h1 class="display" id="h1">pubblica un evento</h1>
@@ -187,9 +182,10 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788505164"></script>
+<script src="app.js?v=1788505430"></script>
 <script>
   requireLogin();
+  mountNav("");
   mountTabbar("crea");
   const editId = new URLSearchParams(location.search).get("edit");
 

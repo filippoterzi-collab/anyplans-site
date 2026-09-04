@@ -340,7 +340,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788505164"></script>
+<script src="app.js?v=1788505430"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -348,9 +348,10 @@
   const wantJoin = params.get("join") === "1";
   const logged = !!(session && session.access_token);
   let ev = null;
+  if (logged) mountNav("");
   let canManage = false;
 
-  if (logged) {
+  if (logged && document.getElementById("nav-cta")) {
     const cta = document.getElementById("nav-cta");
     cta.textContent = "← tutti gli eventi"; cta.href = "eventi.html";
     cta.className = "lnk";
