@@ -185,13 +185,13 @@
   <a class="btn" href="eventi.html">guarda gli eventi a bergamo</a>
 </div>
 
-<script src="app.js?v=1788505923"></script>
+<script src="app.js?v=1788506282"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const wantId = params.get("id");
   const wantSlug = params.get("slug");
   const logged = !!(session && session.access_token);
-  if (logged) mountNav("gruppi");
+  if (logged) mountNav("gruppi", { col: 860 });
   let c = null;
 
   if (logged) {

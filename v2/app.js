@@ -215,14 +215,19 @@ function mountNav(active, opts){
     </div></div>`;
   const old = document.querySelector("body > header");
   if (old) old.replaceWith(h); else document.body.prepend(h);
-  // stessa larghezza e stessi margini del contenuto della pagina (main), così menu e titolo sono allineati
-  const mainEl = document.querySelector("main");
-  if (!opts.wide && mainEl) {
-    const cs = getComputedStyle(mainEl), navEl = h.querySelector(".nav");
-    if (cs.maxWidth && cs.maxWidth !== "none") navEl.style.maxWidth = cs.maxWidth;
-    if (cs.paddingLeft) h.style.paddingLeft = cs.paddingLeft;
-    if (cs.paddingRight) h.style.paddingRight = cs.paddingRight;
-  }
+  // griglia unica (design/sito-landing/spec-griglia.md): menu a tutta larghezza, foglio centrato sotto
+  const grid = document.createElement("style");
+  grid.textContent = `
+    :root{ --nav-h:64px; --pad-x:32px; --gap-title:16px; --h1:36px; --h1-hero:44px; --col-form:760px; --col-list:860px; --col-detail:1000px; --card:480px; --pad-bottom:72px; }
+    @media (max-width:700px){ :root{ --nav-h:60px; --pad-x:18px; --gap-title:8px; --h1:28px; --h1-hero:28px; --pad-bottom:96px; } }
+    header.sn{padding:0 var(--pad-x);}
+    .sn .nav{height:var(--nav-h); max-width:none;}
+    ${opts.col ? `main{width:100%; max-width:calc(${opts.col}px + 2*var(--pad-x)); margin:0 auto; padding:var(--gap-title) var(--pad-x) var(--pad-bottom);}
+    main h1{font-size:${opts.hero ? "var(--h1-hero)" : "var(--h1)"};}` : `
+    .topbar{padding:8px var(--pad-x) 16px;} .list{padding-left:var(--pad-x);}
+    @media (max-width:700px){ .topbar{padding:4px var(--pad-x) 10px;} .list{padding:12px var(--pad-x) 96px;} }`}
+    ${opts.card ? `main .card, main #view{max-width:var(--card);}` : ""}`;
+  document.head.appendChild(grid);
   document.getElementById("avatar").onclick = (e) => { e.stopPropagation(); const m = document.getElementById("menu"); m.hidden = !m.hidden; };
   document.addEventListener("click", (e) => { if (!e.target.closest("#menu")) { const m = document.getElementById("menu"); if (m) m.hidden = true; } });
   // nome e foto dal profilo, pallino avvisi: in silenzio se falliscono

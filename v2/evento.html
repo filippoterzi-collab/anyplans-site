@@ -340,7 +340,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788505923"></script>
+<script src="app.js?v=1788506282"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -348,7 +348,7 @@
   const wantJoin = params.get("join") === "1";
   const logged = !!(session && session.access_token);
   let ev = null;
-  if (logged) mountNav("");
+  if (logged) mountNav("", { col: 1000, hero: true });
   let canManage = false;
 
   if (logged && document.getElementById("nav-cta")) {

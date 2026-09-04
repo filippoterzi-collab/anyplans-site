@@ -27,7 +27,7 @@
            text-transform:lowercase;}
   .lnk{font-weight:700; font-size:14px; color:var(--blue);}
 
-  .fw-main{max-width:560px; margin:0 auto; padding:14px 24px 70px; display:flex; flex-direction:column; gap:12px;}
+  .fw-main{margin:0 auto; display:flex; flex-direction:column; gap:12px;}
   .fw-h1{font-size:28px; margin-top:6px;} .fw-h1 span{color:var(--blue);}
   .fw-sub{font-size:14.5px; color:var(--grey); margin-top:-6px;}
   .fw-list{display:flex; flex-direction:column; gap:8px;}
@@ -50,7 +50,6 @@
          background-size:200% 100%; animation:fwsk 1.2s ease-in-out infinite;}
   @keyframes fwsk{from{background-position:200% 0} to{background-position:-200% 0}}
   @media (max-width:700px){
-    .fw-main{padding:12px 18px 90px;}
     .fw-row{grid-template-columns:48px 1fr;} .fw-name span{white-space:normal;}
     .fw-unfollow{grid-column:2; justify-self:start; margin-top:4px;}
   }
@@ -69,10 +68,10 @@
   <a class="fw-manage" id="manage" href="impostazioni.html#gruppo" hidden>i gruppi che gestisco →</a>
 </main>
 
-<script src="app.js?v=1788505923"></script>
+<script src="app.js?v=1788506282"></script>
 <script>
   requireLogin();
-  mountNav("");
+  mountNav("", { col: 860 });
   mountTabbar("profilo");
   track("following_view");
 

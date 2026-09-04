@@ -91,10 +91,10 @@
   <div class="res" id="res" hidden><div class="avatar" id="res-av"></div><div><div id="res-n"></div><div class="s" id="res-s"></div></div></div>
 </div>
 
-<script src="app.js?v=1788505923"></script>
+<script src="app.js?v=1788506282"></script>
 <script>
   requireLogin();
-  mountNav("");
+  mountNav("", { col: 760 });
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
   const tokenFromQr = params.get("t");

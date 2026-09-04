@@ -167,10 +167,10 @@
   </section>
 </main>
 
-<script src="app.js?v=1788505923"></script>
+<script src="app.js?v=1788506282"></script>
 <script>
   requireLogin();
-  mountNav("");
+  mountNav("", { col: 760 });
   mountTabbar("profilo");
   document.getElementById("email").textContent = (session && session.email) || "";
 

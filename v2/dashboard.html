@@ -328,10 +328,10 @@
   <div class="sk" style="height:90px"></div>
 </div>
 
-<script src="app.js?v=1788505923"></script>
+<script src="app.js?v=1788506282"></script>
 <script>
   requireLogin();
-  mountNav("gruppi");
+  mountNav("gruppi", { col: 1000 });
   mountTabbar();
   const id = new URLSearchParams(location.search).get("id");
   let c = null, upcoming = [], past = [], followers = null;
