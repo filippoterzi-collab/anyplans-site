@@ -81,7 +81,7 @@
   .hostcard .n{font-weight:700; font-size:14.5px;}
   .hostcard .s{font-size:12.5px; color:var(--grey);}
   .desc{font-size:15px; line-height:1.6; white-space:pre-line;}
-  #map{height:220px; border-radius:16px;}
+  #map{height:160px; border-radius:16px;}
   .sec{font-weight:800; font-size:16px;}
   .sec span{color:var(--grey); font-weight:600; font-size:13px;}
   .note{font-size:13px; color:var(--grey);}
@@ -240,18 +240,19 @@
     <p class="desc" id="desc"></p>
   </div>
 
-  <!-- chi ci va -->
-  <div id="people-wrap" hidden>
-    <div class="sec" style="margin-bottom:8px">chi ci va <span id="people-n"></span></div>
-    <div class="people" id="people"></div>
-  </div>
-
   <div>
     <div class="sec" style="margin-bottom:8px">dove</div>
     <div id="map"></div>
     <p class="note" style="margin-top:6px">tocca la mappa per aprire il percorso nell'app delle mappe.</p>
     <p class="note" id="map-note" hidden>qui vedi la zona. l'indirizzo preciso arriva quando ti iscrivi.</p>
   </div>
+
+  <!-- chi ci va -->
+  <div id="people-wrap" hidden>
+    <div class="sec" style="margin-bottom:8px">chi ci va <span id="people-n"></span></div>
+    <div class="people" id="people"></div>
+  </div>
+
 
   <div id="answers-wrap" hidden>
     <div class="sec" style="margin-bottom:8px">risposte dei partecipanti <span>(le vedi solo tu)</span></div>
@@ -343,7 +344,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788508295"></script>
+<script src="app.js?v=1788508411"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
