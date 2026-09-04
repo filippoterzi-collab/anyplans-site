@@ -150,6 +150,7 @@
     <span class="chip" id="chip-cat"></span>
     <span class="chip w" id="chip-price">gratis</span>
     <span class="chip w" id="chip-req" hidden>con approvazione</span>
+    <span class="chip w" id="chip-priv" hidden>🔒 privato · solo con il link</span>
     <span class="chip w" id="chip-agg" hidden>da un altro sito</span>
   </div>
   <h1 class="display" id="title"></h1>
@@ -277,6 +278,7 @@
       <button class="x" onclick="document.getElementById('share-ov').hidden=true">×</button>
     </div>
     <div class="preview"><div class="em" id="sh-em"></div><div><div class="t" id="sh-t"></div><div class="m" id="sh-m"></div></div></div>
+    <p class="note" id="sh-priv" hidden>🔒 questo evento è privato: lo vede solo chi riceve questo link.</p>
     <p class="note">scegli dove mandarlo. su whatsapp arriva con il link, pronto da aprire.</p>
     <div class="sharegrid">
       <button onclick="shareWhatsapp()"><span>💬</span>whatsapp</button>
@@ -340,7 +342,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788506716"></script>
+<script src="app.js?v=1788507331"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -362,8 +364,8 @@
 
   async function load(){
     if (!id && !wantSlug) return notFound();
-    // da loggati la riga singola (vale anche fuori dai 50 km); da sloggati il feed pubblico
-    if (id && logged) {
+    // prima la riga singola (vale anche per i privati e fuori dai 50 km), poi il feed come riserva
+    if (id) {
       const r1 = await rpc("activity_by_id", { p_id: id });
       if (r1 && r1.ok) { const rows = await r1.json().catch(() => []); ev = rows[0] || null; }
     }
@@ -393,6 +395,7 @@
     document.getElementById("cover").textContent = ev.emoji || cat.e || "📍";
     document.getElementById("chip-cat").textContent = (ev.emoji || cat.e || "") + " " + (cat.l || ev.sport);
     document.getElementById("chip-req").hidden = !isReq;
+    document.getElementById("chip-priv").hidden = ev.visibility !== "private";
     document.getElementById("chip-price").textContent = fmtPrice(ev.price_cents);
     renderPay();
     document.getElementById("title").textContent = ev.title;
@@ -585,6 +588,7 @@
     document.getElementById("sh-t").textContent = ev.title;
     document.getElementById("sh-m").textContent = s.line + " · " + s.url.replace(/^https?:\/\//, "");
     document.getElementById("sh-note").textContent = "";
+    document.getElementById("sh-priv").hidden = ev.visibility !== "private";
     document.getElementById("share-ov").hidden = false;
   }
   function shareWhatsapp(){

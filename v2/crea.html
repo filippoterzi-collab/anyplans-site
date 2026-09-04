@@ -63,6 +63,10 @@
   .place-item .p{font-weight:700; font-size:14.5px;}
   .place-item .s{font-size:12.5px; color:var(--grey);}
   .note.err{color:#B3261E; font-weight:600;}
+  .seg{display:flex; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:999px; padding:4px; gap:4px;}
+  .seg button{flex:1; border:none; background:transparent; border-radius:999px; padding:11px 0; font-family:var(--round);
+              font-weight:700; font-size:15px; color:var(--grey); cursor:pointer;}
+  .seg button.on{background:var(--blue); color:#fff;}
   .money{display:flex; align-items:center; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px; padding-left:16px;}
   .money span{font-weight:700; font-size:16px; color:var(--grey);}
   .money input{border:none; border-radius:0 12px 12px 0; padding-left:8px;}
@@ -96,6 +100,15 @@
     <label for="as">chi lo organizza?</label>
     <select id="as"><option value="">io</option></select>
     <p class="hint">chi segue il gruppo riceve un avviso.</p>
+  </div>
+
+  <div>
+    <label>chi lo può vedere?</label>
+    <div class="seg" id="seg-vis">
+      <button type="button" class="on" data-v="public" onclick="setVis('public')">pubblico</button>
+      <button type="button" data-v="private" onclick="setVis('private')">privato</button>
+    </div>
+    <p class="hint" id="vis-hint">pubblico: sulla mappa e nella lista, chiunque a bergamo lo trova.</p>
   </div>
 
   <div>
@@ -182,12 +195,13 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788506716"></script>
+<script src="app.js?v=1788507331"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
   mountTabbar("crea");
   const editId = new URLSearchParams(location.search).get("edit");
+  let editVisibility = "open";
 
   // profilo obbligatorio per creare
   rpc("my_profile").then(async r => {
@@ -322,7 +336,9 @@
     document.getElementById("h1").textContent = "modifica evento";
     document.getElementById("btn").textContent = "salva le modifiche";
     document.getElementById("note").textContent = "chi partecipa vede le modifiche subito.";
-    document.getElementById("vis").hidden = true;
+    setVis(a.visibility === "private" ? "private" : "public");
+    if (a.visibility === "request") document.getElementById("vis").classList.add("on");
+    editVisibility = a.visibility || "open";
     const back = document.getElementById("lnk-back"); back.hidden = false; back.href = "evento.html?id=" + editId;
     sel.value = a.sport; sel.disabled = true;
     document.getElementById("title").value = a.title || "";
@@ -364,6 +380,27 @@
     document.getElementById("as-wrap").hidden = false;
   });
 
+  // pubblico (mappa e lista) o privato (solo chi ha il link). se privato, niente approvazione: entra chi ha il link
+  let visChoice = "public";
+  function setVis(v){
+    visChoice = v;
+    document.querySelectorAll("#seg-vis button").forEach(b => b.classList.toggle("on", b.dataset.v === v));
+    document.getElementById("vis-hint").textContent = v === "private"
+      ? "privato: non compare sulla mappa. lo vede solo chi riceve il link da te."
+      : "pubblico: sulla mappa e nella lista, chiunque a bergamo lo trova.";
+    const vis = document.getElementById("vis");
+    vis.hidden = v === "private";
+    if (v === "private") vis.classList.remove("on");
+  }
+  function chosenVisibility(){
+    if (visChoice === "private") return "private";
+    return document.getElementById("vis").classList.contains("on") ? "request" : "open";
+  }
+  async function saveVisibility(activityId, wanted, current){
+    if (wanted === current) return;
+    const r = await rpc("set_activity_visibility", { p_activity_id: activityId, p_visibility: wanted });
+    if (!r || !r.ok) toast(wanted === "private" ? "evento pubblicato, ma non risulta privato: riprova da \"modifica l'evento\"." : "salvato, ma la visibilità no. riprova da \"modifica l'evento\".");
+  }
   function togglePaid(){
     const on = document.getElementById("paid").classList.toggle("on");
     document.getElementById("price-wrap").hidden = !on;
@@ -452,6 +489,7 @@
       btn.disabled = false;
       if (ru && ru.ok) {
         await savePrice(editId, price);
+        await saveVisibility(editId, chosenVisibility(), editVisibility);
         const rq = await rpc("set_activity_questions", { p_activity_id: editId, p_questions: collectQuestions() });
         if (!rq || !rq.ok) toast("salvato, ma le domande no. riprova da \"modifica l'evento\".");
         track("event_edit");
@@ -471,7 +509,7 @@
       p_timezone: "Europe/Rome",
       p_description: document.getElementById("desc").value.trim() || null,
       p_max_participants: Number.isFinite(maxp) ? maxp : null,
-      p_visibility: document.getElementById("vis").classList.contains("on") ? "request" : "open"
+      p_visibility: chosenVisibility() === "request" ? "request" : "open"
     });
     btn.disabled = false;
     if (r && r.ok) {
@@ -482,6 +520,7 @@
         if (!rq || !rq.ok) toast("evento pubblicato, ma le domande no. riprova da \"modifica l'evento\".");
       }
       if (price.cents) await savePrice(newId, price);
+      if (chosenVisibility() === "private") await saveVisibility(newId, "private", "open");
       const asC = document.getElementById("as").value;
       if (asC) {
         const rc = await rpc("set_activity_community", { p_activity_id: newId, p_community_id: asC });

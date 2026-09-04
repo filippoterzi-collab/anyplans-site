@@ -283,6 +283,7 @@ function slugify(t){
 }
 function eventUrl(ev, city){
   const s = slugify(ev.title);
+  if (ev.visibility === "private") return location.origin + "/v2/evento.html?id=" + ev.id;
   return s ? location.origin + "/" + (city || "bergamo") + "/" + s
            : location.origin + "/v2/evento.html?id=" + ev.id;
 }
