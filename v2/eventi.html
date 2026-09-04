@@ -276,7 +276,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788507610"></script>
+<script src="app.js?v=1788508133"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -374,6 +374,7 @@
       mine: x.is_mine,
       request: x.visibility === "request",
       price: x.price_cents ?? null,
+      photo: x.photo_url || null,
       lat: x.lat, lng: x.lng
     }));
     buildMarkers();
@@ -510,7 +511,7 @@
       }
       const [cls, label] = stateBtn(e);
       html += `<div class="ev" id="ev-${e.id}" onclick="location.href='evento.html?id=${e.id}'" onmouseenter="highlight('${e.id}', false)">
-        <div class="tile">${e.emoji}</div>
+        <div class="tile"${e.photo ? ` style="background-image:url('${esc(e.photo)}'); background-size:cover; background-position:center"` : ""}>${e.photo ? "" : e.emoji}</div>
         <div>
           <div class="time">${timeStr(e.when)} · ${relTime(e.when)}</div>
           <a class="t" href="evento.html?id=${e.id}" onclick="event.stopPropagation()" style="display:block">${esc(e.title)}</a>

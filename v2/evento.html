@@ -342,7 +342,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788507610"></script>
+<script src="app.js?v=1788508133"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -392,7 +392,9 @@
     const when = new Date(ev.start_at);
     const isReq = ev.visibility === "request";
     document.title = ev.title + " · anyplans";
-    document.getElementById("cover").textContent = ev.emoji || cat.e || "📍";
+    const cover = document.getElementById("cover");
+    if (ev.photo_url) { cover.textContent = ""; cover.style.backgroundImage = "url('" + String(ev.photo_url).replace(/'/g, "") + "')"; cover.style.backgroundSize = "cover"; cover.style.backgroundPosition = "center"; }
+    else cover.textContent = ev.emoji || cat.e || "📍";
     document.getElementById("chip-cat").textContent = (ev.emoji || cat.e || "") + " " + (cat.l || ev.sport);
     document.getElementById("chip-req").hidden = !isReq;
     document.getElementById("chip-priv").hidden = ev.visibility !== "private";

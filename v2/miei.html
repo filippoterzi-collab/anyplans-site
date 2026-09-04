@@ -79,7 +79,7 @@
   <div id="list"><p style="color:var(--grey)">carico…</p></div>
 </main>
 
-<script src="app.js?v=1788507610"></script>
+<script src="app.js?v=1788508133"></script>
 <script>
   requireLogin();
   mountNav("i miei eventi", { col: 860 });
@@ -114,7 +114,7 @@
       }
       const badge = x.is_mine ? "lo organizzo io" : (x.my_status === "requested" ? "aspetto l'ok" : "ci vado ✓");
       html += `<a class="ev" href="evento.html?id=${x.id}">
-        <div class="tile">${x.emoji || "📍"}</div>
+        <div class="tile"${x.photo_url ? ` style="background-image:url('${esc(x.photo_url)}'); background-size:cover; background-position:center"` : ""}>${x.photo_url ? "" : x.emoji || "📍"}</div>
         <div>
           <div class="time">${timeStr(when)} · ${relTime(when)}</div>
           <div class="t">${esc(x.title)}</div>
@@ -134,7 +134,7 @@
     document.getElementById("suggest").innerHTML = evs.map(x => {
       const when = new Date(x.start_at);
       return `<a class="ev" href="evento.html?id=${x.id}">
-        <div class="tile">${x.emoji || "📍"}</div>
+        <div class="tile"${x.photo_url ? ` style="background-image:url('${esc(x.photo_url)}'); background-size:cover; background-position:center"` : ""}>${x.photo_url ? "" : x.emoji || "📍"}</div>
         <div>
           <div class="time">${dayLabel(when)} ${timeStr(when)} · ${relTime(when)}</div>
           <div class="t">${esc(x.title)}</div>
