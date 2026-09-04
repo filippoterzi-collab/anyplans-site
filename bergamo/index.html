@@ -3,14 +3,18 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>anyplans · c’è qualche piano a bergamo?</title>
+<meta property="og:title" content="anyplans? c'è qualche piano?">
+<meta property="og:description" content="gli eventi della tua città, tutti in un posto solo. ne vedi uno, ti iscrivi, ci vai insieme ad altri.">
+<meta property="og:image" content="https://anyplans.in/og.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="anyplans">
+<meta name="twitter:card" content="summary_large_image">
+<title>anyplans · eventi questa settimana nella tua città</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-<link rel="canonical" href="https://anyplans.in/bergamo/">
-<meta name="description" content="la mappa dei piani veri di bergamo: feste di paese, corsi di ceramica e cucina, volontariato, corse al parco e giri in bici. bergamo è la prima città di anyplans.">
-<meta property="og:title" content="anyplans · c’è qualche piano a bergamo?">
-<meta property="og:description" content="bergamo è la prima città di anyplans. entra in lista d'attesa.">
-<meta property="og:url" content="https://anyplans.in/bergamo/">
+<link rel="canonical" href="https://anyplans.in/">
+<meta name="description" content="gli eventi di Bergamo, tutti in un posto solo: feste di paese, corsi, volontariato, sport. ne vedi uno, ti iscrivi, ci vai insieme ad altri.">
+<meta property="og:url" content="https://anyplans.in/">
 <style>
   @font-face{
     font-family:"Bricolage Grotesque";
@@ -37,96 +41,182 @@
   a{color:inherit; text-decoration:none;}
   .wrap{max-width:1000px; margin:0 auto; padding:0 22px;}
   h1,h2{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1;}
-  h3{font-weight:800; letter-spacing:-.01em;}
   .q{font-size:.92em;}
 
-  header{position:sticky; top:0; z-index:40; background:#fff;
-         border-bottom:1px solid rgba(0,0,0,.06);}
-  .nav{display:flex; align-items:center; gap:16px; height:64px; position:relative;}
+  /* header */
+  header{background:var(--bg);}
+  .nav{display:flex; align-items:center; justify-content:space-between; height:64px;}
   .brand{display:flex; align-items:center; gap:10px; font-family:var(--display); font-weight:800;
          font-size:21px; letter-spacing:-.045em; line-height:1;}
   .brand img{width:30px; height:30px; display:block;}
-  .navright{margin-left:auto; display:flex; align-items:center; gap:12px;}
   .btn{display:inline-block; background:var(--blue); color:#fff; font-weight:700;
        padding:12px 22px; border-radius:999px; border:none; cursor:pointer; font-size:16px;
-       font-family:var(--round);}
+       font-family:var(--round); text-align:center;}
   .btn:hover{background:var(--blue-lo);}
   .btn.ghost{background:transparent; color:var(--blue); box-shadow:inset 0 0 0 2px var(--blue);}
-  .burger{display:flex; align-items:center; justify-content:center; width:44px; height:44px;
-          border-radius:12px; cursor:pointer; color:var(--ink);}
-  .burger:hover{background:rgba(0,0,0,.05);}
-  .burger svg{width:24px; height:24px;}
-  .drawer{position:absolute; top:60px; right:0; display:none; flex-direction:column;
-          background:#fff; border:1px solid rgba(0,0,0,.08); border-radius:16px; padding:8px;
-          min-width:190px; box-shadow:0 14px 40px rgba(0,0,0,.12); z-index:50;}
-  .drawer a{padding:11px 14px; border-radius:10px; color:var(--ink); font-weight:600; font-size:15px;}
-  .drawer a:hover{background:var(--tint); color:var(--blue-lo);}
-  .mtoggle:checked ~ .drawer{display:flex;}
-  @media (max-width:520px){ .navright > .btn{display:none;} }
+  .btn.ghost:hover{background:var(--tint); color:var(--blue-lo);}
+  .nav .btn{padding:11px 22px; font-size:15px;}
 
-  .hero{padding:78px 0 88px; text-align:center; position:relative; overflow:hidden;}
-  .hero .wrap{position:relative; z-index:2;}
-  .float{position:absolute; z-index:1; font-size:38px; opacity:0;
-         animation:appear .8s ease forwards;}
+  /* hero */
+  .hero{padding:64px 0 80px; text-align:center; position:relative; overflow:hidden;}
+  .hero .wrap{position:relative; z-index:2; max-width:780px;}
+  .float{position:absolute; z-index:1; font-size:42px; line-height:1; opacity:0;
+         animation:appear .8s ease forwards, floaty 5.5s ease-in-out infinite alternate;}
   @keyframes appear{to{opacity:1}}
-  @media (max-width:640px){
-    .float{font-size:22px; animation-name:appearM;}
-    .float:nth-of-type(4),.float:nth-of-type(5),.float:nth-of-type(9),.float:nth-of-type(10){display:none}
+  @keyframes floaty{from{transform:translateY(-6px)} to{transform:translateY(7px)}}
+  .float:nth-of-type(2n){animation-duration:.8s, 6.5s;}
+  .float:nth-of-type(3n){animation-duration:.8s, 7.2s;}
+  @media (prefers-reduced-motion:reduce){ .float{animation:appear .5s ease forwards;} }
+  h1{font-size:76px;}
+  .rotwrap{color:var(--blue); position:relative; display:block; height:1em;}
+  .rot{position:absolute; left:0; right:0; top:0; opacity:0; white-space:nowrap;
+       animation:rotword 12s infinite;}
+  @keyframes rotword{
+    0%{opacity:0; transform:translateY(14px);}
+    4%{opacity:1; transform:translateY(0);}
+    16.6%{opacity:1; transform:translateY(0);}
+    20.6%{opacity:0; transform:translateY(-14px);}
+    100%{opacity:0;}
   }
-  @keyframes appearM{to{opacity:.85}}
-  @media (prefers-reduced-motion:reduce){ .float{animation:appear .5s ease forwards} }
-  .badge{display:inline-block; background:var(--tint); color:var(--blue); font-weight:700;
-         padding:8px 16px; border-radius:999px; font-size:14px;}
-  .hero h1{font-size:clamp(38px,7vw,66px); margin:22px auto 14px; max-width:760px;}
-  .hero p.sub{font-size:clamp(17px,2.4vw,21px); color:var(--grey); max-width:560px; margin:0 auto 30px;}
-  form.signup{display:flex; gap:10px; max-width:460px; margin:0 auto; flex-wrap:wrap; justify-content:center;}
-  form.signup input{flex:1; min-width:220px; padding:16px 20px; border-radius:999px;
-    border:1.5px solid rgba(0,0,0,.12); font-size:17px; font-family:var(--round); background:#fff;}
-  form.signup input:focus{outline:none; border-color:var(--blue);}
-  form.signup .btn{padding:16px 26px; font-size:17px;}
-  .note{font-size:14px; color:var(--grey); margin-top:12px;}
-  .ok{color:var(--blue); font-weight:700;}
-  .cta{max-width:520px; margin:0 auto;}
-  .prefs{margin-top:14px; background:#fff; border:1px solid rgba(0,0,0,.08); border-radius:22px;
-         padding:20px; box-shadow:0 10px 34px rgba(0,0,0,.08); text-align:left;}
-  .prefs .ptitle{font-weight:800; font-size:16px; margin-bottom:14px; text-align:center;}
-  .prow{display:flex; gap:10px; flex-wrap:wrap;}
-  .prow select{flex:1; min-width:150px; padding:14px 16px; border-radius:14px;
-    border:1.5px solid rgba(0,0,0,.12); font-size:15px; font-family:var(--round); background:#fff; color:var(--ink);}
-  .prow select:focus{outline:none; border-color:var(--blue);}
-  .pactions{display:flex; gap:10px; margin-top:14px;}
-  .pactions .btn{flex:1; padding:13px 20px; font-size:15px;}
+  @media (prefers-reduced-motion:reduce){
+    .rot{animation:none;}
+    .rot:first-child{opacity:1;}
+  }
+  .sub{font-size:19px; line-height:1.55; color:var(--grey); max-width:560px; margin:24px auto 0;}
+  .cta{display:flex; flex-direction:column; align-items:center; gap:12px; margin-top:28px;}
+  .cta .btn{font-size:17px; padding:16px 30px;}
+  .cta .btn.ghost{font-size:16px; padding:13px 26px;}
+  .heroscroll{display:inline-block; font-weight:700; font-size:15px; color:var(--blue); margin-top:22px;}
 
-  section.block{padding:70px 0;}
-  section.block h2{font-size:clamp(28px,4.5vw,42px); text-align:center; margin-bottom:12px;}
-  section.block .lead{text-align:center; color:var(--grey); max-width:560px; margin:0 auto 44px; font-size:18px;}
+  /* sezioni */
+  .block{padding:64px 0;}
+  .block h2{font-size:36px; margin-bottom:10px;}
+  .lead{font-size:17px; color:var(--grey); margin-bottom:22px;}
 
-  .cards{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(280px,1fr));}
-  .card{background:#fff; border-radius:22px; padding:20px; box-shadow:0 6px 24px rgba(0,0,0,.05);
-        display:flex; gap:14px; align-items:flex-start;}
-  .card .em{font-size:34px; line-height:1;}
-  .card .t{font-weight:700; font-size:17px;}
-  .card .m{color:var(--grey); font-size:14px; margin-top:3px;}
+  /* eventi d'esempio */
+  .band{background:var(--tint);}
+  .cards{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px;}
+  .card{display:flex; align-items:center; gap:14px; background:#fff; border-radius:14px; padding:16px 18px;}
+  .card .em{font-size:36px; line-height:1; flex-shrink:0;}
+  .card .t{font-weight:700; font-size:15px;}
+  .card .m{font-size:13px; color:var(--grey);}
 
-  .why{background:#fff; border-radius:32px; padding:44px; max-width:760px; margin:0 auto;
-       text-align:center; box-shadow:0 6px 24px rgba(0,0,0,.05);}
-  .why p{font-size:19px; color:#333; margin-bottom:14px;}
-  .why .sig{font-weight:800; color:var(--blue);}
+  /* città */
+  .cities{display:grid; grid-template-columns:repeat(4, minmax(0,1fr)); gap:16px;}
+  .city{border-radius:14px; padding:22px 20px; background:#fff; border:1.5px solid rgba(25,25,25,.12);}
+  .city h3{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1; font-size:24px;}
+  .city p{font-size:13.5px; color:var(--grey); margin-top:6px;}
+  .city.active{background:var(--blue); border-color:var(--blue);}
+  .city.active h3{color:#fff;} .city.active p{color:rgba(255,255,255,.85);}
+  .city.you{background:var(--tint); border-color:var(--tint);}
+  .city.you h3{color:var(--blue);} .city.you p{color:var(--blue); font-weight:700;}
 
-  .final{background:var(--blue); text-align:center; color:#fff;}
-  .final h2{color:#fff;}
-  .final .lead{color:#fff;}
-  .final form.signup input{border:none;}
-  .final .btn{background:#fff; color:var(--blue);}
-  .final .btn:hover{background:#fff8;}
-  .final .note{color:rgba(255,255,255,.85);}
+  /* categorie */
+  .white{background:#fff;}
+  .cats{display:grid; grid-template-columns:repeat(6, minmax(0,1fr)); gap:20px;}
+  .cat{display:flex; flex-direction:column; align-items:center; gap:10px; text-align:center;}
+  .cat img{width:72px; height:72px;}
+  .cat .t{font-weight:800; font-size:16px;}
+  .cat .m{font-size:13px; color:var(--grey);}
 
-  footer{padding:50px 0 60px; border-top:1px solid rgba(0,0,0,.06); color:var(--grey); font-size:15px;}
-  footer .cols{display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between;}
-  footer a{color:var(--grey);} footer a:hover{color:var(--ink);}
-  footer h4{font-size:13px; text-transform:uppercase; letter-spacing:.05em; color:#999; margin-bottom:12px; font-weight:700;}
-  footer li{list-style:none; margin-bottom:8px;}
-  .copy{margin-top:36px; font-size:14px;}
+  /* cta finale */
+  .final{text-align:center;}
+  .final h2{font-size:52px;}
+  .final h2 span{color:var(--blue);}
+  .final .lead{margin-top:14px;}
+  .final .cta{margin-top:18px;}
+
+  /* footer */
+  footer{border-top:1px solid rgba(0,0,0,.06); padding:48px 0 60px; color:var(--grey); font-size:14.5px;}
+  .cols{display:flex; flex-wrap:wrap; gap:40px; justify-content:space-between;}
+  .cols a{display:block; margin-bottom:8px; color:var(--grey);}
+  .cols a:hover{color:var(--ink);}
+  footer h4{font-size:12px; text-transform:uppercase; letter-spacing:.05em; color:#999; margin-bottom:12px; font-weight:700;}
+  .copy{margin-top:32px; font-size:14px;}
+
+  /* quiz città */
+  .city{cursor:pointer;}
+  .qz-overlay{position:fixed; inset:0; background:rgba(25,25,25,.55); display:flex;
+              align-items:center; justify-content:center; padding:22px; z-index:60;}
+  .qz{width:100%; max-width:400px; background:var(--bg); border-radius:22px; padding:30px;
+      display:flex; flex-direction:column; gap:16px;}
+  .qz h3{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05; font-size:26px;}
+  .qz .m{font-size:14px; color:var(--grey); line-height:1.5;}
+  .qz input{width:100%; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px;
+            padding:13px 16px; font-size:16px; font-family:var(--round); color:var(--ink);}
+  .qz input:focus{outline:2px solid var(--blue); outline-offset:1px;}
+  .qz .btn{width:100%; font-size:15.5px; padding:14px 0;}
+  .qz-top{display:flex; align-items:flex-start; justify-content:space-between; gap:12px;}
+  .qz-x{width:32px; height:32px; border-radius:999px; background:rgba(25,25,25,.08); border:none;
+        cursor:pointer; font-size:16px; font-weight:700; color:var(--ink); flex-shrink:0;}
+  .qz-chips{display:flex; flex-wrap:wrap; gap:8px;}
+  .qz-chip{background:#fff; border:1.5px solid rgba(25,25,25,.14); border-radius:999px;
+           padding:9px 15px; font-weight:600; font-size:13.5px; font-family:var(--round); cursor:pointer;}
+  .qz-chip:hover{border-color:var(--blue); color:var(--blue);}
+  .qz-note{font-size:12.5px; color:var(--grey); min-height:1.2em;}
+  .qz-note.err{color:#B3261E; font-weight:600;}
+  [hidden]{display:none !important;}
+
+  /* landing v3: contatore vero, eventi veri, mappa teaser */
+  .pill{display:inline-block; white-space:nowrap; background:var(--tint); color:var(--blue);
+        font-weight:700; font-size:14px; padding:8px 16px; border-radius:999px; margin-bottom:18px;}
+  a.card .go{margin-left:auto; font-weight:700; font-size:13.5px; color:var(--blue); white-space:nowrap;}
+  a.card .m b{color:var(--blue);}
+  .teaser{position:relative; height:360px; border-radius:22px; overflow:hidden; margin-top:22px; background:#E4E9F5;}
+  #teaser-map{position:absolute; inset:0;}
+  .teaser-ov{position:absolute; inset:0; display:flex; align-items:flex-end; justify-content:center; padding:26px;
+             background:linear-gradient(180deg, rgba(251,249,245,0) 45%, rgba(251,249,245,.95) 100%); pointer-events:none;}
+  .teaser-ov .btn{pointer-events:auto; font-size:16px; padding:15px 28px; box-shadow:0 6px 20px rgba(27,79,216,.28);}
+  .tpin{width:34px; height:34px; background:#fff; border:1.5px solid rgba(25,25,25,.2); border-radius:999px;
+        display:flex; align-items:center; justify-content:center; font-size:16px; box-shadow:0 1px 4px rgba(0,0,0,.12);}
+  .tpin.today{box-shadow:0 0 0 2.5px var(--blue), 0 1px 4px rgba(0,0,0,.12);}
+
+  .social{display:flex; gap:10px; margin-top:4px;}
+  .social a{width:38px; height:38px; border-radius:999px; background:var(--tint); color:var(--blue);
+            display:flex; align-items:center; justify-content:center; margin:0; padding:0;}
+  .social a:hover{background:var(--blue); color:#fff;}
+
+  /* mobile */
+  @media (max-width:700px){
+    h1{font-size:34px;}
+    .hero{padding:26px 0 38px;}
+    .float{font-size:21px;}
+    .float.hide-m{display:none;}
+    .sub{font-size:14px; max-width:300px; margin-top:14px;}
+    .cta{width:100%; padding:0 26px; margin-top:20px;}
+    .cta .btn{width:100%; font-size:14px; padding:13px 0;}
+    .cta .btn.ghost{font-size:13.5px; padding:11px 0;}
+    .heroscroll{font-size:13.5px; margin-top:14px;}
+    .block{padding:28px 0;}
+    .block h2{font-size:22px;}
+    .lead{font-size:13px; margin-bottom:16px;}
+    .cards{grid-template-columns:1fr; gap:12px;}
+    .card .em{font-size:28px;}
+    .card .t{font-size:14.5px;} .card .m{font-size:12.5px;}
+    .cities{grid-template-columns:repeat(2, minmax(0,1fr)); gap:10px;}
+    .city{padding:14px;} .city h3{font-size:18px;} .city p{font-size:11.5px; margin-top:3px;}
+    .cats{grid-template-columns:repeat(3, minmax(0,1fr)); gap:14px;}
+    .cat img{width:46px; height:46px;}
+    .cat .t{font-size:12.5px;} .cat .m{display:none;}
+    .card{padding:13px 14px;}
+    .card .em{font-size:24px;}
+    .teaser{height:260px; margin-top:16px;}
+    .pill{font-size:12.5px; padding:7px 13px; margin-bottom:12px;}
+    .card .t{font-size:13.5px;} .card .m{font-size:12px;}
+    .final h2{font-size:27px;}
+    .final .lead{font-size:13.5px;}
+    footer{font-size:13px; padding:32px 0 44px;}
+  }
+
+  /* ux: transizioni e feedback al tocco */
+  .btn, .chip, .ev, .iconbtn, .card, .city, .qz-chip, .place-item, .toggle-row{
+    transition: transform .12s ease, box-shadow .12s ease, background .15s ease,
+                border-color .15s ease, color .15s ease;}
+  .btn:active, .chip:active, .iconbtn:active, .qz-chip:active{transform:scale(.96);}
+  .ev:hover{box-shadow:0 4px 16px rgba(25,25,25,.07); transform:translateY(-1px);}
+  .card:hover, .city:hover{box-shadow:0 4px 14px rgba(25,25,25,.06);}
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible{
+    outline:2px solid var(--blue); outline-offset:2px;}
 </style>
 </head>
 <body>
@@ -137,187 +227,311 @@
       <img src="/logo.png" alt="" width="30" height="30">
       <span>anyplans<span class="q">?</span></span>
     </a>
-    <input type="checkbox" id="mnav" class="mtoggle" hidden>
-    <div class="navright">
-      <a href="#join" class="btn">entra in lista d'attesa</a>
-      <label for="mnav" class="burger" aria-label="menu">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
-      </label>
-    </div>
-    <nav class="drawer">
-      <a href="#join" style="color:var(--blue); font-weight:800">entra in lista d'attesa →</a>
-      <a href="/#how">come funziona</a>
-      <a href="/blog.html">blog</a>
-      <a href="/guidelines.html">linee guida</a>
-      <a href="/privacy-it.html">privacy</a>
-      <a href="/terms-it.html">termini</a>
-    </nav>
+    <a class="btn" id="nav-cta" href="/bergamo/login.html">registrati</a>
   </div>
 </header>
 
-<section class="hero" id="join">
-  <span class="float" style="top:8%;  left:7%;  animation-delay:.1s">🏺</span>
-  <span class="float" style="top:26%; left:4%;  animation-delay:.5s">🏃</span>
-  <span class="float" style="top:52%; left:9%;  animation-delay:.9s">🍳</span>
-  <span class="float" style="top:70%; left:16%; animation-delay:.3s">🎨</span>
-  <span class="float" style="top:14%; left:20%; animation-delay:1.1s">🚴</span>
-  <span class="float" style="top:10%; right:8%;  animation-delay:.2s">🎪</span>
-  <span class="float" style="top:30%; right:5%;  animation-delay:.7s">🥾</span>
-  <span class="float" style="top:55%; right:10%; animation-delay:1s">🌱</span>
-  <span class="float" style="top:72%; right:18%; animation-delay:.4s">🎾</span>
-  <span class="float" style="top:16%; right:22%; animation-delay:1.3s">🧘</span>
+<section class="hero">
+  <span class="float" style="animation-delay:.1s,.1s; top:8%; left:7%">🏺</span>
+  <span class="float hide-m" style="animation-delay:.5s,.5s; top:26%; left:4%">🏃</span>
+  <span class="float hide-m" style="animation-delay:.9s,.9s; top:52%; left:9%">🍳</span>
+  <span class="float hide-m" style="animation-delay:.3s,.3s; top:70%; left:16%">🎨</span>
+  <span class="float hide-m" style="animation-delay:1.1s,1.1s; top:14%; left:20%">🚴</span>
+  <span class="float" style="animation-delay:.2s,.2s; top:10%; right:8%">🎪</span>
+  <span class="float hide-m" style="animation-delay:.7s,.7s; top:30%; right:5%">🥾</span>
+  <span class="float" style="animation-delay:1s,1s; top:55%; right:10%">🌱</span>
+  <span class="float hide-m" style="animation-delay:.4s,.4s; top:72%; right:18%">🎾</span>
+  <span class="float" style="animation-delay:1.3s,1.3s; top:16%; right:22%">🧘</span>
+  <span class="float hide-m" style="animation-delay:.6s,.6s; top:40%; left:13%">⚽</span>
+  <span class="float" style="animation-delay:1.2s,1.2s; top:62%; left:5%">🧗</span>
+  <span class="float hide-m" style="animation-delay:.8s,.8s; top:84%; left:9%">🏊</span>
+  <span class="float" style="animation-delay:.35s,.35s; top:47%; right:6%">🎶</span>
+  <span class="float hide-m" style="animation-delay:1.05s,1.05s; top:64%; right:4%">⛰️</span>
+  <span class="float hide-m" style="animation-delay:.55s,.55s; top:86%; right:13%">🎲</span>
   <div class="wrap">
-    <span class="badge">📍 bergamo è la prima città di anyplans</span>
-    <h1>bergamo, c’è qualche piano?</h1>
-    <p class="sub">la mappa dei piani veri della città: il corso di ceramica del giovedì, la festa di paese, la corsa del sabato al parco, la mattinata di volontariato. ne vedi uno, ti unisci, ci andate insieme.</p>
+    <div class="pill" id="pill" hidden>📍 questa settimana: <b id="pill-n"></b> <span id="pill-w">eventi</span> a Bergamo</div>
+    <h1>anyplans<br>
+      <span class="rotwrap">
+        <span class="rot" style="opacity:1">questa settimana?</span>
+        <span class="rot" style="animation-delay:2s">oggi?</span>
+        <span class="rot" style="animation-delay:4s">domani?</span>
+        <span class="rot" style="animation-delay:6s">lunedì?</span>
+        <span class="rot" style="animation-delay:8s">martedì?</span>
+        <span class="rot" style="animation-delay:10s">nel weekend?</span>
+      </span>
+    </h1>
+    <p class="sub">gli eventi della tua città, tutti in un posto solo: la festa di paese, il corso di ceramica, il giro in bici della domenica. ne vedi uno, ti iscrivi, ci vai insieme ad altri.</p>
     <div class="cta">
-      <form class="signup" id="f1" onsubmit="return joinStep1(event)">
-        <input id="email" type="email" required placeholder="la tua email" autocomplete="email">
-        <button class="btn" type="submit">entra in lista d'attesa →</button>
-      </form>
-      <form class="prefs" id="f2" hidden onsubmit="return joinStep2(event)">
-        <p class="ptitle">sei nella lista 🎉 cosa ti piacerebbe fare a bergamo?</p>
-        <div class="prow">
-          <select id="sport" aria-label="cosa ti piacerebbe fare">
-            <option value="">scegli, se ti va (opzionale)</option>
-            <option value="ceramica / creatività">🏺 ceramica e creatività</option>
-            <option value="cucina">🍳 corsi di cucina</option>
-            <option value="sport">🏃 sport e uscite</option>
-            <option value="volontariato / giardinaggio">🌱 volontariato e giardinaggio</option>
-            <option value="cultura">🎭 cultura ed eventi</option>
-            <option value="benessere">🧘 benessere</option>
-            <option value="feste">🎪 feste di paese e festival</option>
-            <option value="other">➕ altro</option>
-          </select>
-        </div>
-        <div class="pactions">
-          <button class="btn" type="submit">fatto</button>
-          <button class="btn ghost" type="button" onclick="finishPrefs()">salta</button>
-        </div>
-      </form>
-      <p class="note" id="note">sii tra i primi quando apriamo a bergamo. niente spam, mai · 18+</p>
+      <a class="btn" href="/bergamo/login.html">registrati per vedere gli eventi della tua città</a>
+      <a class="btn ghost" href="/bergamo/login.html">organizzi eventi? crea il tuo gruppo</a>
     </div>
+    <a class="heroscroll" href="#eventi">che eventi troverai ↓</a>
   </div>
 </section>
 
-<section class="block" style="background:#fff">
+<section class="block band" id="eventi">
   <div class="wrap">
-    <h2>il tipo di piani che troverai a bergamo</h2>
-    <p class="lead">esempi di una settimana bergamasca. i piani veri compaiono sulla mappa quando lanciamo, e chiunque può pubblicarne uno.</p>
-    <div class="cards">
-      <div class="card"><div class="em">🏺</div><div><div class="t">corso di ceramica, anche principianti</div><div class="m">giovedì, 19:00 · in città · con la maestra</div></div></div>
-      <div class="card"><div class="em">🏃</div><div><div class="t">corro 10k al parco della trucca</div><div class="m">sabato, 8:00 · ritmo tranquillo</div></div></div>
-      <div class="card"><div class="em">🎪</div><div><div class="t">c’è la festa del paese, chi viene?</div><div class="m">sabato, dalle 18:00 · piazza principale</div></div></div>
-      <div class="card"><div class="em">🚴</div><div><div class="t">giro al lago d’endine, pausa caffè</div><div class="m">domenica, 7:00 · 65 km</div></div></div>
-      <div class="card"><div class="em">🥾</div><div><div class="t">camminata sui colli, su per città alta</div><div class="m">domenica, 9:30 · passo facile</div></div></div>
+    <h2 id="ev-h2">che eventi troverai</h2>
+    <p class="lead" id="ev-lead">esempi di eventi intorno a Bergamo. quelli veri li vedi sulla mappa: basta la tua email.</p>
+    <div class="cards" id="cards">
+      <div class="card"><div class="em">🏺</div><div><div class="t">corso di ceramica, anche principianti</div><div class="m">giovedì, 19:00 · con la maestra</div></div></div>
+      <div class="card"><div class="em">🎪</div><div><div class="t">c'è la festa di paese, chi viene?</div><div class="m">sabato, dalle 18:00 · piazza principale</div></div></div>
+      <div class="card"><div class="em">🏃</div><div><div class="t">corro 10k al parco</div><div class="m">sabato, 8:00 · ritmo tranquillo</div></div></div>
+      <div class="card"><div class="em">🍳</div><div><div class="t">corso di cucina: pasta fresca</div><div class="m">mercoledì, 19:30 · gruppo piccolo</div></div></div>
       <div class="card"><div class="em">🌱</div><div><div class="t">mattinata di volontariato al parco</div><div class="m">domenica, 9:00 · guanti forniti</div></div></div>
+      <div class="card"><div class="em">🚴</div><div><div class="t">giro in bici al lago, pausa caffè</div><div class="m">domenica, 7:00 · 65 km</div></div></div>
+    </div>
+    <div class="teaser" id="teaser">
+      <div id="teaser-map"></div>
+      <div class="teaser-ov"><a class="btn" id="teaser-cta" href="/bergamo/login.html">registrati per aprire la mappa →</a></div>
     </div>
   </div>
 </section>
 
 <section class="block">
   <div class="wrap">
-    <div class="why">
-      <p>partiamo da qui, e solo da qui: una città alla volta, fatta bene. a bergamo succede già tutto — corsi, feste, giri, volontariato — manca solo la mappa che lo tiene insieme.</p>
-      <p class="sig">anyplans, fatta a bergamo 🫶</p>
+    <h2>una città alla volta</h2>
+    <p class="lead">partiamo da Bergamo, con eventi veri fin dal primo giorno. poi tocca alle altre.</p>
+    <div class="cities">
+      <div class="city active"><h3>Bergamo</h3><p>si parte da qui</p></div>
+      <div class="city" onclick="openQuiz('milano')"><h3>Milano</h3><p>in arrivo</p></div>
+      <div class="city" onclick="openQuiz('brescia')"><h3>Brescia</h3><p>in arrivo</p></div>
+      <div class="city you" onclick="openQuiz()"><h3>la tua città?</h3><p>scrivici la tua città →</p></div>
     </div>
   </div>
 </section>
 
-<section class="block final">
+<section class="block white">
   <div class="wrap">
-    <h2>bergamo ha dei piani?</h2>
-    <p class="lead">entra in lista d'attesa e ci sarai quando apriamo.</p>
-    <form class="signup" onsubmit="return joinSimple(event)">
-      <input id="email2" type="email" required placeholder="la tua email" autocomplete="email">
-      <button class="btn" type="submit">entra in lista d'attesa</button>
-    </form>
-    <p class="note" id="note2">per maggiorenni (18+). niente spam, mai.</p>
+    <h2>una mappa, tutti gli eventi</h2>
+    <p class="lead">sei tipi di eventi, un simbolo per ognuno. noi non organizziamo niente: raccogliamo gli eventi che ci sono già, dagli altri siti e da chi li pubblica qui.</p>
+    <div class="cats">
+      <div class="cat"><img src="/pittogrammi/sport-blu.svg" alt="" width="72" height="72"><div><div class="t">sport</div><div class="m">corse, giri, partite</div></div></div>
+      <div class="cat"><img src="/pittogrammi/cucina-blu.svg" alt="" width="72" height="72"><div><div class="t">cucina</div><div class="m">corsi e cene</div></div></div>
+      <div class="cat"><img src="/pittogrammi/creativita-blu.svg" alt="" width="72" height="72"><div><div class="t">creatività</div><div class="m">ceramica, pittura</div></div></div>
+      <div class="cat"><img src="/pittogrammi/giardinaggio-blu.svg" alt="" width="72" height="72"><div><div class="t">giardinaggio</div><div class="m">orti e volontariato</div></div></div>
+      <div class="cat"><img src="/pittogrammi/cultura-blu.svg" alt="" width="72" height="72"><div><div class="t">cultura</div><div class="m">feste, musei, eventi</div></div></div>
+      <div class="cat"><img src="/pittogrammi/benessere-blu.svg" alt="" width="72" height="72"><div><div class="t">benessere</div><div class="m">yoga, camminate</div></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block final" id="registrati">
+  <div class="wrap">
+    <h2>anyplans <span>nella tua città?</span></h2>
+    <p class="lead">partiamo da Bergamo. ti registri con la tua email e prima di andare vedi chi organizza e chi ci va: niente appuntamenti al buio.</p>
+    <div class="cta">
+      <!-- TODO: collegare al flusso sign-in (email + codice via supabase) quando pronto -->
+      <a class="btn" href="/bergamo/login.html">registrati per vedere gli eventi della tua città</a>
+      <a class="btn ghost" href="/bergamo/login.html">organizzi eventi? crea il tuo gruppo</a>
+    </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
     <div class="cols">
-      <div>
+      <div style="max-width:260px">
         <a class="brand" href="/" style="font-size:20px">
           <img src="/logo.png" alt="" width="28" height="28" style="width:28px;height:28px">
           <span>anyplans<span class="q">?</span></span>
         </a>
-        <p style="margin-top:12px; max-width:260px">la mappa di quello che succede vicino a te. fatta a bergamo.</p>
+        <p style="margin-top:12px">la mappa di quello che succede vicino a te. fatta a Bergamo.</p>
       </div>
-      <div><h4>app</h4><ul>
-        <li><a href="/#how">come funziona</a></li>
-        <li><a href="/blog.html">blog</a></li>
-        <li><a href="/guidelines.html">linee guida della community</a></li>
-      </ul></div>
-      <div><h4>legale</h4><ul>
-        <li><a href="/privacy-it.html">privacy policy</a></li>
-        <li><a href="/terms-it.html">termini di servizio</a></li>
-      </ul></div>
-      <div><h4>seguici</h4><ul>
-        <li><a href="https://instagram.com/anyplans" target="_blank" rel="noopener">instagram</a></li>
-        <li><a href="https://tiktok.com/@anyplans" target="_blank" rel="noopener">tiktok</a></li>
-      </ul></div>
+      <div><h4>app</h4>
+        <a href="#eventi">che eventi troverai</a>
+        <a href="/bergamo/">anyplans a Bergamo</a>
+        <a href="/blog.html">blog</a>
+        <a href="/guidelines.html">le regole di anyplans</a>
+      </div>
+      <div><h4>legale</h4>
+        <a href="/privacy-it.html">Privacy</a>
+        <a href="/terms-it.html">Condizioni d'uso</a>
+      </div>
+      <div><h4>seguici</h4>
+        <div class="social">
+          <a href="https://instagram.com/anyplans_bergamo" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://tiktok.com/@anyplans_bergamo" target="_blank" rel="noopener" aria-label="TikTok" title="TikTok">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16.5 3c.3 2.3 1.8 4 4.2 4.2v3.2c-1.6 0-3-.5-4.2-1.3v6.4c0 3.3-2.7 5.9-6 5.9S4.5 18.8 4.5 15.5s2.7-5.9 6-5.9c.3 0 .6 0 .9.1v3.3c-.3-.1-.6-.2-.9-.2-1.5 0-2.7 1.2-2.7 2.7s1.2 2.7 2.7 2.7 2.7-1.2 2.7-2.7V3h3.3z"/></svg>
+          </a>
+        </div>
+      </div>
     </div>
     <div class="copy">© 2026 Filippo Terzi · anyplans</div>
   </div>
 </footer>
 
-<script>
-  const SB_URL = "https://uudccbzihhgoeaevkewr.supabase.co";
-  const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1ZGNjYnppaGhnb2VhZXZrZXdyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYzNzk0NzEsImV4cCI6MjEwMTk1NTQ3MX0.OHJC3vmT8eRLczFkH0QdZybbjudDfSi4VEX8Mc22ABQ";
 
-  function rpcJoin(payload){
-    return fetch(SB_URL + "/rest/v1/rpc/join_beta", {
-      method:"POST",
-      headers:{"apikey":SB_ANON,"Content-Type":"application/json"},
-      body: JSON.stringify(payload)
+<!-- quiz città -->
+<div class="qz-overlay" id="qz" hidden onclick="if(event.target===this)closeQuiz()">
+  <div class="qz">
+    <div class="qz-top">
+      <h3 id="qz-title">in che città sei?</h3>
+      <button class="qz-x" type="button" onclick="closeQuiz()" aria-label="chiudi">×</button>
+    </div>
+
+    <div id="qz-step1">
+      <div class="qz-chips" style="margin-bottom:12px">
+        <button class="qz-chip" type="button" onclick="pickCity('milano')">Milano</button>
+        <button class="qz-chip" type="button" onclick="pickCity('brescia')">Brescia</button>
+        <button class="qz-chip" type="button" onclick="pickCity('torino')">Torino</button>
+        <button class="qz-chip" type="button" onclick="pickCity('roma')">Roma</button>
+        <button class="qz-chip" type="button" onclick="document.getElementById('qz-city').focus()">un'altra città…</button>
+      </div>
+      <form onsubmit="return citySubmit(event)" style="display:flex; flex-direction:column; gap:10px">
+        <input id="qz-city" type="text" required placeholder="oppure scrivi qui la tua città" autocomplete="address-level2">
+        <button class="btn" type="submit">continua</button>
+      </form>
+    </div>
+
+    <form id="qz-step2" hidden onsubmit="return quizSubmit(event)" style="display:flex; flex-direction:column; gap:10px">
+      <p class="m" id="qz-msg"></p>
+      <input id="qz-email" type="email" required placeholder="la tua email" autocomplete="email">
+      <button class="btn" type="submit">avvisami quando arrivate</button>
+      <p class="qz-note" id="qz-note">niente pubblicità, mai. ti scriviamo solo per dirti che siamo arrivati.</p>
+    </form>
+
+    <div id="qz-done" hidden>
+      <p class="m" id="qz-bye" style="font-size:16px; color:var(--ink)"></p>
+    </div>
+  </div>
+</div>
+
+<script src="/bergamo/app.js?v=1788515406"></script>
+<script>
+  let quizCity = "";
+
+  function openQuiz(city){
+    quizCity = "";
+    document.getElementById("qz").hidden = false;
+    document.getElementById("qz-step1").hidden = false;
+    document.getElementById("qz-step2").hidden = true;
+    document.getElementById("qz-done").hidden = true;
+    document.getElementById("qz-title").textContent = "in che città sei?";
+    document.getElementById("qz-city").value = "";
+    if (city) { pickCity(city); } else { document.getElementById("qz-city").focus(); }
+  }
+  function closeQuiz(){ document.getElementById("qz").hidden = true; }
+
+  function pickCity(c){ quizCity = c; showStep2(); }
+  function citySubmit(e){
+    e.preventDefault();
+    const c = document.getElementById("qz-city").value.trim().toLowerCase();
+    if (c) { quizCity = c; showStep2(); }
+    return false;
+  }
+  function showStep2(){
+    document.getElementById("qz-step1").hidden = true;
+    document.getElementById("qz-step2").hidden = false;
+    document.getElementById("qz-title").textContent = "presto saremo a " + cityCase(quizCity);
+    document.getElementById("qz-msg").textContent =
+      "lasciaci la tua email: quando arriviamo a " + cityCase(quizCity) + " te lo diciamo per primo. più siete, prima arriviamo.";
+    document.getElementById("qz-email").focus();
+  }
+
+  async function quizSubmit(e){
+    e.preventDefault();
+    const email = document.getElementById("qz-email").value.trim();
+    const note = document.getElementById("qz-note");
+    note.textContent = "…"; note.className = "qz-note";
+    try {
+      const r = await rpc("join_beta", { p_email: email, p_source: "site-city", p_city: quizCity });
+      if (!r) throw new Error("rete");
+      if (!r.ok) { note.textContent = "controlla l'indirizzo email e riprova."; note.className = "qz-note err"; return false; }
+      document.getElementById("qz-step2").hidden = true;
+      document.getElementById("qz-done").hidden = false;
+      document.getElementById("qz-title").textContent = "fatto 🫶";
+      document.getElementById("qz-bye").textContent = "ci vediamo a " + cityCase(quizCity) + ", ti scriviamo appena arriviamo.";
+    } catch (_) {
+      note.textContent = "non riesco a collegarmi. controlla internet e riprova."; note.className = "qz-note err";
+    }
+    return false;
+  }
+</script>
+<script>
+  // se sei già dentro, il sito lo sa (anche tornando indietro: safari ripristina
+  // la pagina dalla cache senza rieseguire gli script, quindi si riascolta pageshow)
+  function applySessionCta(){
+    try {
+      let s = null;
+      try { s = JSON.parse(localStorage.getItem("anyplans_session")); } catch (_) {}
+      s = s || session;
+      const logged = s && s.access_token;
+      const t = document.getElementById("teaser-cta");
+      t.textContent = logged ? "apri la mappa →" : "registrati per aprire la mappa →";
+      t.href = logged ? "/bergamo/eventi.html" : "/bergamo/login.html";
+      const cta = document.getElementById("nav-cta");
+      cta.textContent = logged ? "vai agli eventi" : "registrati";
+      cta.href = logged ? "/bergamo/eventi.html" : "/bergamo/login.html";
+      document.querySelectorAll(".cta a.btn").forEach(a => {
+        if (a.classList.contains("ghost")) {
+          a.href = logged ? "/bergamo/crea-community.html" : "/bergamo/login.html";
+          a.onclick = logged ? null : () => { try { sessionStorage.setItem("anyplans_next", "/bergamo/crea-community.html"); } catch (_) {} };
+          return;
+        }
+        a.href = logged ? "/bergamo/eventi.html" : "/bergamo/login.html";
+        a.textContent = logged ? "vai agli eventi della tua città" : "registrati per vedere gli eventi della tua città";
+      });
+    } catch (_) {}
+  }
+  applySessionCta();
+  window.addEventListener("pageshow", applySessionCta);
+
+  // eventi veri: contatore della settimana, prime card, pin sulla mappa teaser
+  let LIVE = [];
+  async function loadLanding(){
+    const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
+    if (!r || !r.ok) return;
+    const rows = (await r.json().catch(() => []))
+      .map(x => ({ ...x, when: new Date(x.start_at) }))
+      .filter(x => x.when > new Date(Date.now() - 3 * 3600 * 1000))
+      .sort((a, b) => a.when - b.when);
+    if (!rows.length) return;
+    LIVE = rows;
+    const week = rows.filter(x => x.when < new Date(Date.now() + 7 * 86400 * 1000)).length;
+    if (week >= 1) {
+      document.getElementById("pill-n").textContent = week;
+      document.getElementById("pill-w").textContent = week === 1 ? "evento" : "eventi";
+      document.getElementById("pill").hidden = false;
+    }
+    document.getElementById("ev-h2").textContent = "eventi a Bergamo, adesso";
+    document.getElementById("ev-lead").textContent = "presi dalla mappa in questo momento. ti registri con la tua email, scegli, e ci vai insieme ad altri.";
+    document.getElementById("cards").innerHTML = rows.slice(0, 6).map(x =>
+      `<a class="card" href="/bergamo/evento.html?id=${x.id}"><div class="em">${esc(x.emoji || "📍")}</div>` +
+      `<div><div class="t">${esc(x.title)}</div><div class="m">${esc(dayLabel(x.when))}, ${timeStr(x.when)} · <b>${esc(relTime(x.when))}</b> · ${goingTxt(x.going_count)}${x.price_cents > 0 ? " · " + esc(fmtPrice(x.price_cents)) : ""}</div></div>` +
+      `<span class="go">vedi →</span></a>`).join("");
+    if (teaserReady) drawTeaser();
+  }
+  loadLanding();
+
+  // mappa teaser: maplibre caricato solo quando la sezione entra in vista
+  let teaserReady = false, teaserDrawn = false;
+  function drawTeaser(){
+    if (teaserDrawn || !window.maplibregl) return;
+    teaserDrawn = true;
+    const map = new maplibregl.Map({ container: "teaser-map", style: "https://tiles.openfreemap.org/styles/liberty",
+      center: [9.670, 45.698], zoom: 11.6, interactive: false, attributionControl: false });
+    LIVE.slice(0, 40).forEach(x => {
+      const el = document.createElement("div");
+      el.className = "tpin" + (dayLabel(x.when) === "oggi" ? " today" : ""); el.textContent = x.emoji || "📍";
+      new maplibregl.Marker({ element: el }).setLngLat([x.lng, x.lat]).addTo(map);
     });
   }
-
-  async function joinStep1(e){
-    e.preventDefault();
-    const email = document.getElementById('email').value.trim();
-    const note = document.getElementById('note');
-    note.textContent = "…";
-    try{
-      const r = await rpcJoin({p_email: email, p_source:"site-bergamo", p_city:"bergamo"});
-      if(r.ok){
-        document.getElementById('f1').hidden = true;
-        document.getElementById('f2').hidden = false;
-        note.innerHTML = "<span class='ok'>ci sei 🎉</span>";
-      } else { note.textContent = "controlla l’indirizzo email e riprova."; }
-    }catch(_){ note.textContent = "non riesco a raggiungere il server, riprova."; }
-    return false;
+  function loadTeaser(){
+    const css = document.createElement("link"); css.rel = "stylesheet";
+    css.href = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css";
+    document.head.appendChild(css);
+    const js = document.createElement("script");
+    js.src = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js";
+    js.onload = () => { teaserReady = true; drawTeaser(); };
+    document.head.appendChild(js);
   }
-
-  async function joinStep2(e){
-    e.preventDefault();
-    const email = document.getElementById('email').value.trim();
-    const sport = document.getElementById('sport').value;
-    try{ await rpcJoin({p_email: email, p_source:"site-bergamo", p_city:"bergamo", p_sport: sport}); }catch(_){}
-    finishPrefs();
-    return false;
-  }
-  function finishPrefs(){
-    document.getElementById('f2').hidden = true;
-    document.getElementById('note').innerHTML = "<span class='ok'>fatto — ci sentiamo prima del lancio 🫶</span>";
-  }
-
-  async function joinSimple(e){
-    e.preventDefault();
-    const input = e.target.querySelector('input');
-    const note = e.target.parentElement.querySelector('.note');
-    const email = input.value.trim();
-    note.textContent = "…";
-    try{
-      const r = await rpcJoin({p_email: email, p_source:"site-bergamo", p_city:"bergamo"});
-      if(r.ok){ input.value=""; note.innerHTML = "<span class='ok'>sei nella lista 🎉 ci sentiamo presto.</span>"; }
-      else{ note.textContent = "controlla l’indirizzo email e riprova."; }
-    }catch(_){ note.textContent = "non riesco a raggiungere il server, riprova."; }
-    return false;
-  }
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(es => { if (es.some(e => e.isIntersecting)) { io.disconnect(); loadTeaser(); } }, { rootMargin: "400px" });
+    io.observe(document.getElementById("teaser"));
+  } else loadTeaser();
 </script>
 </body>
 </html>

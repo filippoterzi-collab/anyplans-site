@@ -227,7 +227,7 @@
       <img src="/logo.png" alt="" width="30" height="30">
       <span>anyplans<span class="q">?</span></span>
     </a>
-    <a class="btn" id="nav-cta" href="/v2/login.html">registrati</a>
+    <a class="btn" id="nav-cta" href="/bergamo/login.html">registrati</a>
   </div>
 </header>
 
@@ -262,8 +262,8 @@
     </h1>
     <p class="sub">gli eventi della tua città, tutti in un posto solo: la festa di paese, il corso di ceramica, il giro in bici della domenica. ne vedi uno, ti iscrivi, ci vai insieme ad altri.</p>
     <div class="cta">
-      <a class="btn" href="/v2/login.html">registrati per vedere gli eventi della tua città</a>
-      <a class="btn ghost" href="/v2/login.html">organizzi eventi? crea il tuo gruppo</a>
+      <a class="btn" href="/bergamo/login.html">registrati per vedere gli eventi della tua città</a>
+      <a class="btn ghost" href="/bergamo/login.html">organizzi eventi? crea il tuo gruppo</a>
     </div>
     <a class="heroscroll" href="#eventi">che eventi troverai ↓</a>
   </div>
@@ -283,7 +283,7 @@
     </div>
     <div class="teaser" id="teaser">
       <div id="teaser-map"></div>
-      <div class="teaser-ov"><a class="btn" id="teaser-cta" href="/v2/login.html">registrati per aprire la mappa →</a></div>
+      <div class="teaser-ov"><a class="btn" id="teaser-cta" href="/bergamo/login.html">registrati per aprire la mappa →</a></div>
     </div>
   </div>
 </section>
@@ -322,8 +322,8 @@
     <p class="lead">partiamo da Bergamo. ti registri con la tua email e prima di andare vedi chi organizza e chi ci va: niente appuntamenti al buio.</p>
     <div class="cta">
       <!-- TODO: collegare al flusso sign-in (email + codice via supabase) quando pronto -->
-      <a class="btn" href="/v2/login.html">registrati per vedere gli eventi della tua città</a>
-      <a class="btn ghost" href="/v2/login.html">organizzi eventi? crea il tuo gruppo</a>
+      <a class="btn" href="/bergamo/login.html">registrati per vedere gli eventi della tua città</a>
+      <a class="btn ghost" href="/bergamo/login.html">organizzi eventi? crea il tuo gruppo</a>
     </div>
   </div>
 </section>
@@ -399,7 +399,7 @@
   </div>
 </div>
 
-<script src="/v2/app.js?v=1788511052"></script>
+<script src="/bergamo/app.js?v=1788515406"></script>
 <script>
   let quizCity = "";
 
@@ -461,17 +461,17 @@
       const logged = s && s.access_token;
       const t = document.getElementById("teaser-cta");
       t.textContent = logged ? "apri la mappa →" : "registrati per aprire la mappa →";
-      t.href = logged ? "/v2/eventi.html" : "/v2/login.html";
+      t.href = logged ? "/bergamo/eventi.html" : "/bergamo/login.html";
       const cta = document.getElementById("nav-cta");
       cta.textContent = logged ? "vai agli eventi" : "registrati";
-      cta.href = logged ? "/v2/eventi.html" : "/v2/login.html";
+      cta.href = logged ? "/bergamo/eventi.html" : "/bergamo/login.html";
       document.querySelectorAll(".cta a.btn").forEach(a => {
         if (a.classList.contains("ghost")) {
-          a.href = logged ? "/v2/crea-community.html" : "/v2/login.html";
-          a.onclick = logged ? null : () => { try { sessionStorage.setItem("anyplans_next", "/v2/crea-community.html"); } catch (_) {} };
+          a.href = logged ? "/bergamo/crea-community.html" : "/bergamo/login.html";
+          a.onclick = logged ? null : () => { try { sessionStorage.setItem("anyplans_next", "/bergamo/crea-community.html"); } catch (_) {} };
           return;
         }
-        a.href = logged ? "/v2/eventi.html" : "/v2/login.html";
+        a.href = logged ? "/bergamo/eventi.html" : "/bergamo/login.html";
         a.textContent = logged ? "vai agli eventi della tua città" : "registrati per vedere gli eventi della tua città";
       });
     } catch (_) {}
@@ -499,7 +499,7 @@
     document.getElementById("ev-h2").textContent = "eventi a Bergamo, adesso";
     document.getElementById("ev-lead").textContent = "presi dalla mappa in questo momento. ti registri con la tua email, scegli, e ci vai insieme ad altri.";
     document.getElementById("cards").innerHTML = rows.slice(0, 6).map(x =>
-      `<a class="card" href="/v2/evento.html?id=${x.id}"><div class="em">${esc(x.emoji || "📍")}</div>` +
+      `<a class="card" href="/bergamo/evento.html?id=${x.id}"><div class="em">${esc(x.emoji || "📍")}</div>` +
       `<div><div class="t">${esc(x.title)}</div><div class="m">${esc(dayLabel(x.when))}, ${timeStr(x.when)} · <b>${esc(relTime(x.when))}</b> · ${goingTxt(x.going_count)}${x.price_cents > 0 ? " · " + esc(fmtPrice(x.price_cents)) : ""}</div></div>` +
       `<span class="go">vedi →</span></a>`).join("");
     if (teaserReady) drawTeaser();

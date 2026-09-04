@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>crea il tuo gruppo · anyplans</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta name="robots" content="noindex">
+<style>
+  @font-face{
+    font-family:"Bricolage Grotesque";
+    src:url("/bricolage-grotesque-latin-800-normal.woff2") format("woff2");
+    font-weight:800; font-style:normal; font-display:swap;
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+  :root{
+    --blue:#1B4FD8; --blue-lo:#1440AF; --tint:#E9EEFB;
+    --ink:#191919; --grey:#6E6E73; --bg:#FBF9F5;
+    --round: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --display: "Bricolage Grotesque", var(--round);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
+       -webkit-font-smoothing:antialiased; min-height:100vh; display:flex; flex-direction:column;}
+  a{color:inherit; text-decoration:none;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;}
+  .q{font-size:.92em;}
+  header{padding:0 22px;}
+  .nav{display:flex; align-items:center; justify-content:space-between; height:64px; max-width:1000px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:var(--display); font-weight:800;
+         font-size:21px; letter-spacing:-.045em; line-height:1;}
+  .brand img{width:30px; height:30px; display:block;}
+  .lnk{font-weight:700; font-size:14px; color:var(--blue);}
+  main{flex:1; display:flex; align-items:center; justify-content:center; padding:24px 22px 64px;}
+  .card{width:100%; max-width:480px; background:#fff; border:1.5px solid rgba(25,25,25,.12);
+        border-radius:22px; padding:36px; display:flex; flex-direction:column; gap:20px;}
+  h1{font-size:28px;}
+  .sub{font-size:15px; color:var(--grey); margin-top:8px;}
+  label{font-weight:700; font-size:14px; display:block; margin-bottom:8px;}
+  .hint{font-size:12.5px; color:var(--grey); margin-top:6px; line-height:1.4;}
+  input, textarea{width:100%; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px;
+        padding:13px 16px; font-size:16px; font-family:var(--round); color:var(--ink);}
+  textarea{min-height:72px; resize:vertical;}
+  input:focus, textarea:focus{outline:2px solid var(--blue); outline-offset:1px;}
+  .chips{display:flex; gap:8px; flex-wrap:wrap;}
+  .chip{background:#fff; border:1.5px solid rgba(25,25,25,.14); color:var(--ink); font-weight:600;
+        font-size:13.5px; padding:9px 14px; border-radius:999px; cursor:pointer; font-family:var(--round);}
+  .chip.on{background:var(--blue); border-color:var(--blue); color:#fff; font-weight:700;}
+  #pic{width:76px; height:76px; border:2px dashed rgba(27,79,216,.5); border-radius:20px;
+       display:flex; align-items:center; justify-content:center; flex-shrink:0; cursor:pointer;
+       background-size:cover; background-position:center;}
+  .btn{display:block; width:100%; background:var(--blue); color:#fff; font-weight:700;
+       padding:14px 0; border-radius:999px; border:none; cursor:pointer; font-size:16px;
+       font-family:var(--round); text-align:center;}
+  .btn:hover{background:var(--blue-lo);}
+  .btn[disabled]{opacity:.55; cursor:default;}
+  .note{font-size:13.5px; color:var(--grey); min-height:1.3em;}
+  .note.err{color:#B3261E; font-weight:600;}
+  [hidden]{display:none !important;}
+  @media (max-width:700px){
+    main{align-items:flex-start; padding:16px 22px 40px;}
+    .card{border:none; background:transparent; padding:8px 0 0;}
+  }
+
+  /* ux: transizioni e feedback al tocco */
+  .btn, .chip{transition: transform .12s ease, box-shadow .12s ease, background .15s ease,
+                          border-color .15s ease, color .15s ease;}
+  .btn:active, .chip:active{transform:scale(.96);}
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible{
+    outline:2px solid var(--blue); outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="/bergamo/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
+    <a class="lnk" href="eventi.html">← tutti gli eventi</a>
+  </div>
+</header>
+
+<main>
+  <form class="card" onsubmit="return submitCommunity(event)">
+    <div>
+      <h1 class="display">crea il tuo gruppo</h1>
+      <p class="sub">un nome e una categoria. poi pubblichi il primo evento.</p>
+    </div>
+
+    <div style="display:flex; align-items:center; gap:16px">
+      <div id="pic" onclick="document.getElementById('file').click()">
+        <svg id="pic-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8 L7 8 L9 5.5 L15 5.5 L17 8 L20 8 L20 18.5 L4 18.5 Z"/><circle cx="12" cy="13" r="3.2"/></svg>
+      </div>
+      <div>
+        <div style="font-weight:700; font-size:15px" id="pic-label">logo o foto</div>
+        <div class="hint" style="margin-top:2px">se non ce l'hai, mettiamo il simbolo della categoria.</div>
+      </div>
+      <input id="file" type="file" accept="image/*" hidden onchange="pickPhoto(this)">
+    </div>
+
+    <div>
+      <label for="name">nome del gruppo</label>
+      <input id="name" type="text" required minlength="2" maxlength="60" placeholder="es. sara ceramica, gruppo di cammino seriate, pro loco…" autocomplete="off">
+    </div>
+
+    <div>
+      <label>categoria</label>
+      <div class="chips" id="cats"></div>
+    </div>
+
+    <div>
+      <label for="desc">di cosa si occupa il gruppo?</label>
+      <textarea id="desc" maxlength="500" placeholder="due righe per chi vi scopre sulla mappa…"></textarea>
+    </div>
+
+    <div>
+      <label for="city">città</label>
+      <input id="city" type="text" value="Bergamo" autocomplete="address-level2">
+    </div>
+
+    <button class="btn" id="btn" type="submit">crea il gruppo</button>
+    <p class="note" id="note"></p>
+  </form>
+</main>
+
+<script src="app.js?v=1788515406"></script>
+<script>
+  requireLogin();
+  mountTabbar("crea");
+
+  // profilo obbligatorio per creare un gruppo
+  rpc("my_profile").then(async r => {
+    if (r && r.ok) {
+      const rows = await r.json().catch(() => []);
+      if (!rows.length || !rows[0].display_name) {
+        try { sessionStorage.setItem("anyplans_next", "crea-community.html"); } catch (_) {}
+        location.replace("profilo.html");
+      }
+    }
+  });
+
+  // categorie gruppo (contratto 0047): l'emoji definitiva la assegna il backend
+  const CATS = [
+    ["creatività", "🏺"], ["sport", "🏃"], ["cucina", "🍳"],
+    ["giardinaggio", "🌱"], ["cultura", "🎪"], ["benessere", "🧘"]
+  ];
+  let category = null;
+  const wrap = document.getElementById("cats");
+  CATS.forEach(([slug, e]) => {
+    const b = document.createElement("button");
+    b.type = "button"; b.className = "chip"; b.dataset.cat = slug;
+    b.textContent = e + " " + slug;
+    b.onclick = () => {
+      category = slug;
+      wrap.querySelectorAll(".chip").forEach(c => c.classList.toggle("on", c.dataset.cat === slug));
+    };
+    wrap.appendChild(b);
+  });
+
+  function showPic(src){
+    const pic = document.getElementById("pic");
+    pic.style.backgroundImage = "url(" + src + ")";
+    pic.style.borderStyle = "solid";
+    document.getElementById("pic-icon").style.display = "none";
+    document.getElementById("pic-label").textContent = "cambia la foto";
+  }
+  let avatarBlob = null;
+  function pickPhoto(input){
+    const f = input.files && input.files[0];
+    if (!f) return;
+    const img = new Image();
+    img.onload = () => {
+      const side = Math.min(img.width, img.height);
+      const c = document.createElement("canvas"); c.width = 512; c.height = 512;
+      c.getContext("2d").drawImage(img, (img.width - side) / 2, (img.height - side) / 2, side, side, 0, 0, 512, 512);
+      c.toBlob(b => { avatarBlob = b; showPic(c.toDataURL("image/jpeg", 0.8)); }, "image/jpeg", 0.85);
+      URL.revokeObjectURL(img.src);
+    };
+    img.src = URL.createObjectURL(f);
+  }
+  // bucket "avatars": <uid>/community-<timestamp>.jpg, come profilo.html. null se fallisce (la foto è opzionale)
+  async function uploadLogo(){
+    try {
+      const uid = myUid(); if (!uid) return null;
+      const path = uid + "/community-" + Date.now() + ".jpg";
+      const r = await fetch(SB_URL + "/storage/v1/object/avatars/" + path, {
+        method: "POST",
+        headers: {"apikey": SB_ANON, "Authorization": "Bearer " + session.access_token,
+                  "Content-Type": "image/jpeg", "x-upsert": "true"},
+        body: avatarBlob
+      });
+      if (!r.ok) return null;
+      return SB_URL + "/storage/v1/object/public/avatars/" + path;
+    } catch (_) { return null; }
+  }
+
+  async function submitCommunity(e){
+    e.preventDefault();
+    const note = document.getElementById("note");
+    const btn = document.getElementById("btn");
+    const name = document.getElementById("name").value.trim();
+    const desc = document.getElementById("desc").value.trim();
+    const city = document.getElementById("city").value.trim();
+    function fail(msg){ note.className = "note err"; note.textContent = msg; btn.disabled = false; return false; }
+    if (name.length < 2) return fail("dai un nome al gruppo (almeno 2 lettere).");
+    if (!category) return fail("scegli una categoria.");
+
+    btn.disabled = true; note.className = "note"; note.textContent = "…";
+    let avatarUrl = null;
+    if (avatarBlob) {
+      avatarUrl = await uploadLogo();
+      if (!avatarUrl) toast("la foto non si è caricata. mettiamo il simbolo, la cambi dopo.");
+    }
+    const r = await rpc("create_community", {
+      p_name: name,
+      p_category: category,
+      p_description: desc || null,
+      p_city: city || "bergamo",
+      p_avatar_url: avatarUrl,
+      p_instagram_handle: null
+    });
+    if (!r) return fail("non riesco a collegarmi. controlla internet e riprova.");
+    if (!r.ok) {
+      const b = await r.json().catch(() => ({}));
+      const code = b.message || "";
+      if (code.includes("profile_required")) {
+        try { sessionStorage.setItem("anyplans_next", "crea-community.html"); } catch (_) {}
+        location.href = "profilo.html"; return false;
+      }
+      if (code.includes("too_many_communities")) return fail("hai già raggiunto il numero massimo di gruppi.");
+      if (code.includes("invalid_category")) return fail("scegli una categoria tra quelle proposte.");
+      return fail("non riesco a creare il gruppo, riprova.");
+    }
+    const newId = await r.json();
+    track("community_create");
+    location.href = "dashboard.html?id=" + newId;
+    return false;
+  }
+</script>
+</body>
+</html>

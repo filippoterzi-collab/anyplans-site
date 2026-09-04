@@ -196,7 +196,7 @@ function mountNav(active, opts){
   const initial = ((session && session.email) || "?")[0].toLowerCase();
   const h = document.createElement("header"); h.className = "sn";
   h.innerHTML = `<div class="nav">
-    <a class="brand" href="/v2/eventi.html"><img src="/logo.png" alt=""><span>anyplans<span style="font-size:.92em">?</span></span></a>
+    <a class="brand" href="/bergamo/eventi.html"><img src="/logo.png" alt=""><span>anyplans<span style="font-size:.92em">?</span></span></a>
     ${links.map(([l, href]) => `<a class="lnk${l === active ? " on" : ""}" href="${href}">${l}</a>`).join("")}
     <div class="right">
       <a class="cta" href="crea.html">crea evento</a>
@@ -290,7 +290,7 @@ function slugify(t){
 }
 function eventUrl(ev, city){
   const s = slugify(ev.title);
-  if (ev.visibility === "private") return location.origin + "/v2/evento.html?id=" + ev.id;
+  if (ev.visibility === "private") return location.origin + "/bergamo/evento.html?id=" + ev.id;
   return s ? location.origin + "/" + (city || "bergamo") + "/" + s
-           : location.origin + "/v2/evento.html?id=" + ev.id;
+           : location.origin + "/bergamo/evento.html?id=" + ev.id;
 }

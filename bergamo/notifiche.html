@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>avvisi · anyplans</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta name="robots" content="noindex">
+<style>
+  @font-face{
+    font-family:"Bricolage Grotesque";
+    src:url("/bricolage-grotesque-latin-800-normal.woff2") format("woff2");
+    font-weight:800; font-style:normal; font-display:swap;
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+  :root{
+    --blue:#1B4FD8; --blue-lo:#1440AF; --tint:#E9EEFB;
+    --ink:#191919; --grey:#6E6E73; --bg:#FBF9F5;
+    --round: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --display: "Bricolage Grotesque", var(--round);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
+       -webkit-font-smoothing:antialiased;}
+  a{color:inherit; text-decoration:none;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;}
+  .q{font-size:.92em;}
+  header{padding:0 24px;}
+  .nav{display:flex; align-items:center; gap:24px; height:60px; max-width:760px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:9px; font-family:var(--display); font-weight:800;
+         font-size:20px; letter-spacing:-.045em; line-height:1;}
+  .brand img{width:28px; height:28px;}
+  .nav .lnk{font-weight:600; font-size:15px; color:var(--grey);}
+  .nav .cta{margin-left:auto; background:var(--blue); color:#fff; font-weight:700; font-size:13.5px;
+            padding:9px 16px; border-radius:999px; white-space:nowrap;}
+
+  main{max-width:560px; margin:0 auto; padding:14px 24px 70px; display:flex; flex-direction:column; gap:14px;}
+  .top{display:flex; align-items:center; justify-content:space-between; gap:12px;}
+  h1{font-size:30px;}
+  .textbtn{background:none; border:none; cursor:pointer; font-family:var(--round); font-weight:700;
+           font-size:13px; color:var(--blue); padding:6px 0; white-space:nowrap;}
+  .textbtn[disabled]{color:var(--grey); cursor:default;}
+  .box{background:#fff; border:1.5px solid rgba(25,25,25,.10); border-radius:18px; padding:6px;
+       display:flex; flex-direction:column;}
+  .n{display:flex; gap:12px; padding:13px 14px; border-radius:14px; align-items:flex-start;}
+  .n.unread{background:var(--tint);}
+  .n .tile{width:40px; height:40px; border-radius:12px; background:var(--tint); display:flex;
+           align-items:center; justify-content:center; font-size:20px; flex-shrink:0;}
+  .n.unread .tile{background:var(--blue);}
+  .n .tile img{width:22px; height:22px; display:block;}
+  .n .avatar{width:40px; height:40px; border-radius:999px; background:var(--ink); color:#fff;
+             font-weight:800; font-size:16px; display:flex; align-items:center; justify-content:center;
+             flex-shrink:0; background-size:cover; background-position:center; overflow:hidden;}
+  .n .body{flex:1; display:flex; flex-direction:column; gap:3px; min-width:0;}
+  .n .txt{font-size:13.5px; line-height:1.4; overflow-wrap:anywhere;}
+  .n .txt b{font-weight:700;}
+  .n .sub{font-size:12px; color:var(--grey);}
+  .n .go{font-weight:700; font-size:12.5px; color:var(--blue); margin-top:2px;}
+  .n .when{font-size:11.5px; color:var(--grey); flex-shrink:0; display:flex; align-items:center; gap:6px;}
+  .n .dot{width:8px; height:8px; border-radius:999px; background:var(--blue); display:none;}
+  .n.unread .dot{display:block;}
+  .empty{color:var(--grey); font-size:14.5px; text-align:center; padding:40px 16px;}
+  .foot{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 4px 0;
+        border-top:1px solid rgba(25,25,25,.08); font-size:12.5px; color:var(--grey);}
+  .foot a{font-weight:700; color:var(--blue); white-space:nowrap;}
+  .sk{height:66px; border-radius:14px; margin:4px; background:linear-gradient(90deg,#F1EFE9 25%,#E9E6DE 50%,#F1EFE9 75%);
+      background-size:200% 100%; animation:sk 1.2s ease-in-out infinite;}
+  @keyframes sk{from{background-position:200% 0} to{background-position:-200% 0}}
+  [hidden]{display:none !important;}
+  @media (max-width:700px){
+    .nav .lnk, .nav .cta{display:none;}
+    main{padding:8px 18px 90px;}
+    h1{font-size:26px;}
+    .box{background:transparent; border:none; padding:0; gap:2px;}
+  }
+
+  /* ux: transizioni e feedback al tocco */
+  .n, .textbtn{
+    transition: transform .12s ease, box-shadow .12s ease, background .15s ease,
+                border-color .15s ease, color .15s ease;}
+  .textbtn:active{transform:scale(.96);}
+  a.n:hover{background:var(--tint);}
+  a:focus-visible, button:focus-visible{outline:2px solid var(--blue); outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header></header>
+
+<main>
+  <div class="top">
+    <h1 class="display">avvisi</h1>
+    <button class="textbtn" id="btn-seen" onclick="markAllSeen()" hidden>segna tutto come letto</button>
+  </div>
+  <div class="box" id="list"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
+  <div class="foot">
+    <span>ti avvisiamo quando i gruppi che segui pubblicano qualcosa</span>
+    <a href="impostazioni.html#notifiche">gestisci →</a>
+  </div>
+</main>
+
+<script src="app.js?v=1788515406"></script>
+<script>
+  requireLogin();
+  mountNav("", { col: 860 });
+  mountTabbar("");
+
+  // "2 min", "1 h", "ieri", "lun", "3 set": quanto tempo fa, a colpo d'occhio
+  const DAYS_SHORT = ["dom","lun","mar","mer","gio","ven","sab"];
+  function ago(d){
+    const min = Math.round((Date.now() - d) / 60000);
+    if (min < 1) return "adesso";
+    if (min < 60) return min + " min";
+    const h = Math.floor(min / 60);
+    if (h < 24) return h + " h";
+    const days = Math.floor((Date.now() - d) / 86400000);
+    if (days <= 1) return "ieri";
+    if (days < 7) return DAYS_SHORT[d.getDay()];
+    return d.getDate() + " " + MONTHS[d.getMonth()].slice(0, 3);
+  }
+
+  // kind: contratto 0047 ('join'|'request'|'approved'|'community_event'|'blast');
+  // accetto anche i nomi della v3 finché la migrazione non è applicata
+  const KIND_ALIAS = { join_request: "request", request_approved: "approved" };
+
+  function avatarHtml(n){
+    if (n.actor_avatar) return `<div class="avatar" style="background-image:url('${esc(n.actor_avatar)}')"></div>`;
+    return `<div class="avatar">${esc((n.actor_name || "?")[0].toLowerCase())}</div>`;
+  }
+  function communityHref(n){
+    // TODO committente: my_notifications espone community_id ma non lo slug; community.html accetta ?id=?
+    return n.community_slug ? "community.html?slug=" + encodeURIComponent(n.community_slug)
+                            : "community.html?id=" + encodeURIComponent(n.community_id || "");
+  }
+
+  function renderOne(n){
+    const kind = KIND_ALIAS[n.kind] || n.kind;
+    const who = esc(n.actor_name || "qualcuno");
+    const title = esc(n.activity_title || "un evento");
+    const comm = esc(n.community_name || "un gruppo");
+    let icon = "", txt = "", sub = "", go = "", href = n.activity_id ? "evento.html?id=" + n.activity_id : "";
+    if (kind === "join") {
+      icon = avatarHtml(n);
+      txt = `<b>${who}</b> viene al tuo evento <b>${title}</b>`;
+    } else if (kind === "request") {
+      icon = avatarHtml(n);
+      txt = `<b>${who}</b> ha chiesto di unirsi a <b>${title}</b>`;
+      go = "approva →";
+    } else if (kind === "approved") {
+      icon = `<div class="tile">${esc(n.activity_emoji || "✓")}</div>`;
+      txt = `la tua richiesta per <b>${title}</b> è stata approvata`;
+      go = "vai all'evento →";
+    } else if (kind === "community_event") {
+      icon = `<div class="tile">${esc(n.activity_emoji || "📍")}</div>`;
+      txt = `<b>${comm}</b> ha pubblicato un nuovo evento: <b>${title}</b>`;
+      // giorno e ora solo se la rpc li espone (il contratto 0047 non li prevede)
+      const st = n.activity_start_at || n.start_at;
+      if (st) { const d = new Date(st); sub = esc(dayLabel(d) + " · " + timeStr(d)); }
+      go = "ci sono →";
+    } else if (kind === "blast") {
+      icon = `<div class="tile"><img src="/logo.png" alt=""></div>`;
+      txt = `<b>${comm}</b>: ${esc(n.subject || "")}`;
+      sub = esc(n.body || "");
+      href = communityHref(n);
+    } else if (kind === "friend_request") {
+      // amicizie: esistono solo nell'app, sul sito si legge e basta
+      icon = avatarHtml(n);
+      txt = `<b>${who}</b> ti ha mandato una richiesta di amicizia`;
+      sub = "le amicizie si gestiscono dall'app";
+    } else if (kind === "friend_activity") {
+      icon = avatarHtml(n);
+      txt = `<b>${who}</b> partecipa a <b>${title}</b>`;
+    } else {
+      // tipo sconosciuto: testo generico, link all'evento se c'è
+      icon = n.actor_name ? avatarHtml(n) : `<div class="tile">${esc(n.activity_emoji || "📍")}</div>`;
+      txt = n.activity_title ? `<b>${who}</b> · <b>${title}</b>` : `<b>${who}</b>`;
+    }
+    const when = new Date(n.happened_at);
+    const cls = "n" + (n.unread ? " unread" : "");
+    const inner = `${icon}<div class="body"><div class="txt">${txt}</div>` +
+      (sub ? `<div class="sub">${sub}</div>` : "") + (go ? `<div class="go">${go}</div>` : "") +
+      `</div><div class="when"><span class="dot"></span>${ago(when)}</div>`;
+    return href ? `<a class="${cls}" href="${esc(href)}">${inner}</a>` : `<div class="${cls}">${inner}</div>`;
+  }
+
+  async function load(){
+    const list = document.getElementById("list");
+    const r = await rpc("my_notifications", {});
+    if (!r || !r.ok) { list.innerHTML = '<div class="empty">non riesco a caricare. ricarica la pagina.</div>'; return; }
+    const rows = (await r.json().catch(() => []))
+      .sort((a, b) => new Date(b.happened_at) - new Date(a.happened_at));
+    if (!rows.length) { list.innerHTML = '<div class="empty">niente di nuovo. quando succede qualcosa lo trovi qui.</div>'; return; }
+    list.innerHTML = rows.map(renderOne).join("");
+    document.getElementById("btn-seen").hidden = !rows.some(x => x.unread);
+    // viste: il pallino sulla campanella sparisce; le righe restano evidenziate fino al prossimo giro
+    rpc("mark_notifications_seen", {}).catch(() => {});
+  }
+
+  async function markAllSeen(){
+    const btn = document.getElementById("btn-seen"); btn.disabled = true;
+    const r = await rpc("mark_notifications_seen", {});
+    if (!r || !r.ok) { btn.disabled = false; toast("non ha funzionato, riprova."); return; }
+    document.querySelectorAll(".n.unread").forEach(x => x.classList.remove("unread"));
+    btn.hidden = true;
+  }
+
+  load();
+</script>
+</body>
+</html>

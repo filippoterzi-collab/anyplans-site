@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>pubblica un evento · anyplans</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css">
+<style>
+  @font-face{
+    font-family:"Bricolage Grotesque";
+    src:url("/bricolage-grotesque-latin-800-normal.woff2") format("woff2");
+    font-weight:800; font-style:normal; font-display:swap;
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+  :root{
+    --blue:#1B4FD8; --blue-lo:#1440AF; --tint:#E9EEFB;
+    --ink:#191919; --grey:#6E6E73; --bg:#FBF9F5;
+    --round: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --display: "Bricolage Grotesque", var(--round);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
+       -webkit-font-smoothing:antialiased;}
+  a{color:inherit; text-decoration:none;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;}
+  .q{font-size:.92em;}
+  header{padding:0 22px;}
+  .nav{display:flex; align-items:center; justify-content:space-between; height:64px; max-width:720px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:9px; font-family:var(--display); font-weight:800;
+         font-size:20px; letter-spacing:-.045em; line-height:1;}
+  .brand img{width:28px; height:28px;}
+  main{max-width:720px; margin:0 auto; padding:10px 22px 70px; display:flex; flex-direction:column; gap:18px;}
+  h1{font-size:32px;}
+  label{font-weight:700; font-size:14px; display:block; margin-bottom:8px;}
+  .hint{font-size:12.5px; color:var(--grey); margin-top:6px;}
+  input, select, textarea{width:100%; background:#fff; border:1.5px solid rgba(25,25,25,.16);
+    border-radius:12px; padding:13px 16px; font-size:16px; font-family:var(--round); color:var(--ink);}
+  textarea{min-height:90px; resize:vertical;}
+  input:focus, select:focus, textarea:focus{outline:2px solid var(--blue); outline-offset:1px;}
+  .grid2{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  .btn{display:block; width:100%; background:var(--blue); color:#fff; font-weight:700;
+       padding:15px 0; border-radius:999px; border:none; cursor:pointer; font-size:16.5px;
+       font-family:var(--round); text-align:center;}
+  .btn:hover{background:var(--blue-lo);}
+  .btn[disabled]{opacity:.55; cursor:default;}
+  #map{height:260px; border-radius:16px;}
+  .toggle-row{display:flex; align-items:center; gap:12px; background:#fff;
+    border:1.5px solid rgba(25,25,25,.12); border-radius:14px; padding:14px 16px; cursor:pointer;}
+  .toggle-row .t{font-weight:600; font-size:15px;}
+  .toggle-row .s{font-size:12.5px; color:var(--grey);}
+  .sw{margin-left:auto; width:42px; height:25px; background:rgba(25,25,25,.15); border-radius:999px;
+      display:flex; align-items:center; padding:0 3px; flex-shrink:0; transition:background .15s;}
+  .sw .k{width:19px; height:19px; background:#fff; border-radius:999px; transition:transform .15s;}
+  .toggle-row.on .sw{background:var(--blue);}
+  .toggle-row.on .sw .k{transform:translateX(17px);}
+  .note{font-size:13.5px; color:var(--grey); min-height:1.3em;}
+  .place-item{padding:12px 15px; cursor:pointer; border-bottom:1px solid rgba(25,25,25,.07);}
+  .place-item:last-child{border-bottom:none;}
+  .place-item:hover{background:var(--tint);}
+  .place-item .p{font-weight:700; font-size:14.5px;}
+  .place-item .s{font-size:12.5px; color:var(--grey);}
+  .note.err{color:#B3261E; font-weight:600;}
+  .seg{display:flex; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:999px; padding:4px; gap:4px;}
+  .seg button{flex:1; border:none; background:transparent; border-radius:999px; padding:11px 0; font-family:var(--round);
+              font-weight:700; font-size:15px; color:var(--grey); cursor:pointer;}
+  .seg button.on{background:var(--blue); color:#fff;}
+  .money{display:flex; align-items:center; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px; padding-left:16px;}
+  .money span{font-weight:700; font-size:16px; color:var(--grey);}
+  .money input{border:none; border-radius:0 12px 12px 0; padding-left:8px;}
+  .money input:focus{outline:none;}  .money:focus-within{outline:2px solid var(--blue); outline-offset:1px;}
+  @media (max-width:600px){ .grid2{grid-template-columns:1fr;} }
+
+  /* ux: transizioni e feedback al tocco */
+  .btn, .chip, .ev, .iconbtn, .card, .city, .qz-chip, .place-item, .toggle-row{
+    transition: transform .12s ease, box-shadow .12s ease, background .15s ease,
+                border-color .15s ease, color .15s ease;}
+  .btn:active, .chip:active, .iconbtn:active, .qz-chip:active{transform:scale(.96);}
+  .ev:hover{box-shadow:0 4px 16px rgba(25,25,25,.07); transform:translateY(-1px);}
+  .card:hover, .city:hover{box-shadow:0 4px 14px rgba(25,25,25,.06);}
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible{
+    outline:2px solid var(--blue); outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header></header>
+
+<main>
+  <h1 class="display" id="h1">pubblica un evento</h1>
+
+  <div>
+    <label for="sport">che tipo di evento è?</label>
+    <select id="sport"></select>
+  </div>
+
+  <div id="as-wrap" hidden>
+    <label for="as">chi lo organizza?</label>
+    <select id="as"><option value="">io</option></select>
+    <p class="hint">chi segue il gruppo riceve un avviso.</p>
+  </div>
+
+  <div>
+    <label>chi lo può vedere?</label>
+    <div class="seg" id="seg-vis">
+      <button type="button" class="on" data-v="public" onclick="setVis('public')">pubblico</button>
+      <button type="button" data-v="private" onclick="setVis('private')">privato</button>
+    </div>
+    <p class="hint" id="vis-hint">pubblico: sulla mappa e nella lista, chiunque a Bergamo lo trova.</p>
+  </div>
+
+  <div>
+    <label for="title">nome dell'evento</label>
+    <input id="title" type="text" required minlength="3" placeholder="es. corso di ceramica, anche principianti">
+  </div>
+
+  <div class="grid2">
+    <div>
+      <label for="date">che giorno?</label>
+      <input id="date" type="date" required>
+    </div>
+    <div>
+      <label for="time">a che ora?</label>
+      <input id="time" type="time" required value="19:00">
+    </div>
+  </div>
+
+  <div>
+    <label for="place">punto di ritrovo</label>
+    <input id="place" type="text" required placeholder="scrivi un posto: parco, bar, via, paese…" autocomplete="off" oninput="placeSearch()">
+    <div id="place-list" hidden style="margin-top:8px; background:#fff;
+         border:1.5px solid rgba(25,25,25,.14); border-radius:14px; overflow:hidden"></div>
+    <p class="hint">scegli dalla lista. oppure tocca la mappa nel punto giusto.</p>
+  </div>
+
+  <div>
+    <div id="map"></div>
+    <p class="hint" id="map-hint">tocca la mappa nel punto di ritrovo</p>
+  </div>
+
+  <div>
+    <label>foto dell'evento <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
+    <div style="display:flex; align-items:center; gap:14px">
+      <div id="ph" onclick="document.getElementById('phfile').click()"
+           style="width:96px; height:72px; border:2px dashed rgba(27,79,216,.5); border-radius:14px; display:flex; align-items:center;
+                  justify-content:center; flex-shrink:0; cursor:pointer; background-size:cover; background-position:center; font-size:26px">📷</div>
+      <div>
+        <div style="font-weight:700; font-size:14.5px" id="ph-label">aggiungi una foto</div>
+        <p class="hint" style="margin-top:2px">la vedono tutti nella pagina dell'evento. senza foto resta il simbolo.</p>
+        <button type="button" id="ph-remove" hidden onclick="removePhoto()" style="background:none; border:none; cursor:pointer; padding:4px 0; font-family:var(--round); font-weight:700; font-size:13px; color:var(--grey); text-decoration:underline">togli la foto</button>
+      </div>
+      <input id="phfile" type="file" accept="image/*" hidden onchange="pickEventPhoto(this)">
+    </div>
+  </div>
+
+  <div>
+    <label for="desc">descrizione <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
+    <textarea id="desc" placeholder="due righe per chi non ti conosce: cosa si fa, cosa portare…"></textarea>
+  </div>
+
+  <div class="grid2">
+    <div>
+      <label for="maxp">quante persone al massimo? <span style="color:var(--grey); font-weight:600">(se lo lasci vuoto, nessun limite)</span></label>
+      <input id="maxp" type="number" min="2" placeholder="es. 12">
+    </div>
+  </div>
+
+  <div>
+    <label>domande per chi si iscrive <span style="color:var(--grey); font-weight:600">(se vuoi, fino a 5)</span></label>
+    <div id="qs" style="display:flex; flex-direction:column; gap:10px"></div>
+    <button type="button" id="addq" onclick="addQuestion()"
+      style="margin-top:8px; background:transparent; color:var(--blue); box-shadow:inset 0 0 0 2px var(--blue);
+             font-weight:700; font-size:14px; padding:11px 18px; border-radius:999px; border:none;
+             cursor:pointer; font-family:var(--round)">+ aggiungi una domanda</button>
+    <p class="hint">es. "hai mai fatto ceramica?". chi si iscrive risponde, e le risposte le vedi solo tu.</p>
+  </div>
+
+  <div class="toggle-row" id="paid" onclick="togglePaid()">
+    <div>
+      <div class="t">Si paga</div>
+      <div class="s">Se lo accendi, chi partecipa paga a te. Se resta spento è gratis.</div>
+    </div>
+    <div class="sw"><div class="k"></div></div>
+  </div>
+  <div class="grid2" id="price-wrap" hidden>
+    <div>
+      <label for="price">Prezzo a persona</label>
+      <div class="money"><span>€</span><input id="price" type="text" inputmode="decimal" placeholder="12,00" autocomplete="off"></div>
+    </div>
+    <div>
+      <label for="price-note">nota <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
+      <input id="price-note" type="text" maxlength="60" placeholder="es. si paga sul posto, materiali compresi">
+    </div>
+    <p class="hint" style="grid-column:1/-1; margin-top:-4px">Su anyplans non si paga niente. Chi partecipa vede il prezzo e paga direttamente a te, sul posto o come preferisci.</p>
+  </div>
+
+  <div class="toggle-row" id="vis" onclick="this.classList.toggle('on')">
+    <div>
+      <div class="t">decidi tu chi partecipa</div>
+      <div class="s">ogni persona ti manda una richiesta. l'indirizzo preciso lo vede solo chi accetti.</div>
+    </div>
+    <div class="sw"><div class="k"></div></div>
+  </div>
+
+  <button class="btn" id="btn" onclick="submitNewEvent()">pubblica l'evento</button>
+  <a id="lnk-back" hidden href="#" style="text-align:center; font-weight:700; font-size:14px; color:var(--grey)">lascia stare, torna all'evento</a>
+  <p class="note" id="note">pubblicare è gratis, sempre. il tuo nome è già nella lista dei partecipanti.</p>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
+<script src="app.js?v=1788515406"></script>
+<script>
+  requireLogin();
+  mountNav("", { col: 760 });
+  mountTabbar("crea");
+  const editId = new URLSearchParams(location.search).get("edit");
+  let editVisibility = "open", editSport = null;
+
+  // profilo obbligatorio per creare
+  rpc("my_profile").then(async r => {
+    if (r && r.ok) {
+      const rows = await r.json().catch(() => []);
+      if (!rows.length || !rows[0].display_name) {
+        try { sessionStorage.setItem("anyplans_next", "crea.html"); } catch (_) {}
+        location.replace("profilo.html");
+      }
+    }
+  });
+
+  // select categorie dal catalogo (gruppo prima, poi sport)
+  const sel = document.getElementById("sport");
+  const first = ["dinner","festival","ceramics","cooking","painting","gardening","yoga"];
+  const order = [...first, ...Object.keys(CATALOG).filter(s => !first.includes(s))];
+  order.forEach(slug => {
+    const o = document.createElement("option");
+    o.value = slug; o.textContent = CATALOG[slug].e + "  " + CATALOG[slug].l;
+    sel.appendChild(o);
+  });
+
+  // default: la prossima ora tonda ad almeno 2 ore da adesso (sempre nel futuro)
+  const pad = n => String(n).padStart(2, "0");
+  const localDate = d => d.getFullYear() + "-" + pad(d.getMonth() + 1) + "-" + pad(d.getDate());
+  const start = new Date(Date.now() + 2 * 3600 * 1000);
+  start.setMinutes(0, 0, 0);
+  document.getElementById("date").min = localDate(new Date());
+  document.getElementById("date").value = localDate(start);
+  document.getElementById("time").value = pad(start.getHours()) + ":00";
+
+  // ricerca luoghi: google places (new) se c'è la chiave, altrimenti photon (openstreetmap)
+  let searchTimer = null, gSession = null;
+  function placeSearch(){
+    clearTimeout(searchTimer);
+    const q = document.getElementById("place").value.trim();
+    const list = document.getElementById("place-list");
+    if (q.length < 3) { list.hidden = true; return; }
+    searchTimer = setTimeout(async () => {
+      try {
+        const items = GOOGLE_MAPS_KEY ? await searchGoogle(q) : await searchPhoton(q);
+        if (!items.length) { list.hidden = true; return; }
+        list.innerHTML = items.map((x, i) =>
+          `<div class="place-item" data-i="${i}"><div class="p">${esc(x.primary)}</div>` +
+          (x.secondary ? `<div class="s">${esc(x.secondary)}</div>` : "") + `</div>`).join("");
+        list.hidden = false;
+        Array.from(list.children).forEach((el, i) => el.onclick = () => pickPlace(items[i]));
+      } catch (_) { /* la ricerca è un aiuto: se non risponde resta la mappa */ }
+    }, 350);
+  }
+  async function searchGoogle(q){
+    if (!gSession) gSession = (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()));
+    const r = await fetch("https://places.googleapis.com/v1/places:autocomplete", {
+      method: "POST",
+      headers: {"Content-Type": "application/json", "X-Goog-Api-Key": GOOGLE_MAPS_KEY},
+      body: JSON.stringify({ input: q, languageCode: "it", regionCode: "it", sessionToken: gSession,
+        locationBias: { circle: { center: { latitude: 45.698, longitude: 9.670 }, radius: 40000 } } })
+    });
+    if (!r.ok) return searchPhoton(q);
+    const d = await r.json();
+    return (d.suggestions || []).map(s => s.placePrediction).filter(Boolean).slice(0, 6).map(p => ({
+      primary: (p.structuredFormat && p.structuredFormat.mainText && p.structuredFormat.mainText.text) || p.text.text,
+      secondary: (p.structuredFormat && p.structuredFormat.secondaryText && p.structuredFormat.secondaryText.text) || "",
+      placeId: p.placeId
+    }));
+  }
+  async function searchPhoton(q){
+    const r = await fetch("https://photon.komoot.io/api?q=" + encodeURIComponent(q) +
+                          "&lat=45.698&lon=9.670&limit=10&bbox=9.35,45.50,10.10,46.00");
+    if (!r.ok) return [];
+    const d = await r.json();
+    const items = (d.features || []).map(f => {
+      const p = f.properties, c = f.geometry.coordinates;
+      const primary = p.name || [p.street, p.housenumber].filter(Boolean).join(" ") || p.city;
+      const secondary = [p.street && p.name ? p.street : null, p.district, p.city, p.state]
+                         .filter(x => x && x !== primary).slice(0, 2).join(" · ");
+      return { primary, secondary, lat: c[1], lng: c[0] };
+    }).filter(x => x.primary);
+    // niente doppioni (photon spezza le vie in segmenti)
+    const seen = new Set();
+    return items.filter(x => {
+      const k = (x.primary + "|" + x.secondary).toLowerCase();
+      if (seen.has(k)) return false; seen.add(k); return true;
+    }).slice(0, 6);
+  }
+  async function pickPlace(x){
+    document.getElementById("place").value = x.primary;
+    document.getElementById("place-list").hidden = true;
+    if (x.placeId) {
+      // dettagli google: coordinate + via esatta (chiude la sessione di autocomplete)
+      try {
+        const r = await fetch("https://places.googleapis.com/v1/places/" + x.placeId + "?languageCode=it&sessionToken=" + gSession, {
+          headers: {"X-Goog-Api-Key": GOOGLE_MAPS_KEY, "X-Goog-FieldMask": "location,formattedAddress,displayName"} });
+        gSession = null;
+        if (!r.ok) return toast("non trovo questo posto. tocca la mappa nel punto giusto.");
+        const d = await r.json();
+        x.lat = d.location.latitude; x.lng = d.location.longitude;
+        // nel campo resta solo il nome del posto (o la via, se è un indirizzo): il punto esatto è sulla mappa
+        const nm = d.displayName && d.displayName.text;
+        if (nm) document.getElementById("place").value = nm;
+        else if (d.formattedAddress) document.getElementById("place").value = d.formattedAddress.replace(/, \d{5} .*$/, "").replace(/, Italia$/, "");
+      } catch (_) { return toast("non trovo questo posto. tocca la mappa nel punto giusto."); }
+    }
+    setPoint(x.lat, x.lng);
+    map.easeTo({ center: [x.lng, x.lat], zoom: 15 });
+  }
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("#place-list") && e.target.id !== "place")
+      document.getElementById("place-list").hidden = true;
+  });
+
+  // mappa: tocca per piazzare il punto
+  let point = null, marker = null;
+  const map = new maplibregl.Map({ container: "map", style: "https://tiles.openfreemap.org/styles/liberty",
+                                   center: [9.670, 45.698], zoom: 12.5 });
+  map.addControl(new maplibregl.NavigationControl({ showCompass: false }));
+  function setPoint(lat, lng){
+    point = { lat, lng };
+    if (marker) marker.remove();
+    const el = document.createElement("div");
+    el.style.cssText = "width:38px;height:38px;background:#1B4FD8;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 1px 5px rgba(0,0,0,.2)";
+    el.textContent = CATALOG[sel.value].e;
+    marker = new maplibregl.Marker({ element: el }).setLngLat([lng, lat]).addTo(map);
+    document.getElementById("map-hint").textContent = "punto messo. tocca un altro punto per spostarlo";
+  }
+  map.on("click", (e) => setPoint(e.lngLat.lat, e.lngLat.lng));
+
+  // ?edit=<id>: stessa pagina, precompilata (update_activity non cambia categoria né visibilità)
+  async function loadForEdit(){
+    const r = await rpc("activity_by_id", { p_id: editId });
+    const rows = r && r.ok ? await r.json().catch(() => []) : [];
+    const a = rows[0];
+    if (!a || !a.is_mine) { location.replace("evento.html?id=" + editId); return; }
+    document.getElementById("h1").textContent = "modifica evento";
+    document.getElementById("btn").textContent = "salva le modifiche";
+    document.getElementById("note").textContent = "chi partecipa vede le modifiche subito.";
+    setVis(a.visibility === "private" ? "private" : "public");
+    if (a.visibility === "request") document.getElementById("vis").classList.add("on");
+    editVisibility = a.visibility || "open";
+    const back = document.getElementById("lnk-back"); back.hidden = false; back.href = "evento.html?id=" + editId;
+    sel.value = a.sport; editSport = a.sport;
+    document.getElementById("title").value = a.title || "";
+    const d = new Date(a.start_at);
+    document.getElementById("date").value = localDate(d);
+    document.getElementById("time").value = pad(d.getHours()) + ":" + pad(d.getMinutes());
+    document.getElementById("place").value = a.meeting_point_text || "";
+    document.getElementById("desc").value = a.description || "";
+    if (a.max_participants) document.getElementById("maxp").value = a.max_participants;
+    if (a.photo_url) { showEventPhoto(a.photo_url); photoState = "keep"; }
+    if (a.price_cents != null && a.price_cents > 0) {
+      document.getElementById("paid").classList.add("on"); document.getElementById("price-wrap").hidden = false;
+      document.getElementById("price").value = fmtAmount(a.price_cents);
+      document.getElementById("price-note").value = a.price_note || "";
+    }
+    setPoint(a.lat, a.lng); map.jumpTo({ center: [a.lng, a.lat], zoom: 15 });
+    const rq = await rpc("get_activity_questions", { p_activity_id: editId });
+    const qs = rq && rq.ok ? await rq.json().catch(() => []) : [];
+    qs.forEach(q => {
+      addQuestion();
+      const row = document.querySelector(".qrow:last-child");
+      row.querySelector(".q-prompt").value = q.prompt;
+      row.querySelector(".q-kind").value = q.kind;
+      row.querySelector(".q-req").checked = !!q.required;
+    });
+    document.activeElement && document.activeElement.blur();
+    window.scrollTo(0, 0);
+  }
+  if (editId) loadForEdit();
+
+  // pubblica come gruppo (owner/admin): ?community=<id> preseleziona
+  const wantCommunity = new URLSearchParams(location.search).get("community");
+  rpc("my_communities").then(async r => {
+    if (!r || !r.ok || editId) return;
+    const mine = (await r.json().catch(() => [])).filter(x => x.role === "owner" || x.role === "admin");
+    if (!mine.length) return;
+    const selAs = document.getElementById("as");
+    mine.forEach(x => { const o = document.createElement("option"); o.value = x.id; o.textContent = (x.emoji || "") + "  " + x.name; selAs.appendChild(o); });
+    if (wantCommunity && mine.some(x => x.id === wantCommunity)) selAs.value = wantCommunity;
+    document.getElementById("as-wrap").hidden = false;
+  });
+
+  // pubblico (mappa e lista) o privato (solo chi ha il link). se privato, niente approvazione: entra chi ha il link
+  let visChoice = "public";
+  function setVis(v){
+    visChoice = v;
+    document.querySelectorAll("#seg-vis button").forEach(b => b.classList.toggle("on", b.dataset.v === v));
+    document.getElementById("vis-hint").textContent = v === "private"
+      ? "privato: non compare sulla mappa. lo vede solo chi riceve il link da te."
+      : "pubblico: sulla mappa e nella lista, chiunque a Bergamo lo trova.";
+    const vis = document.getElementById("vis");
+    vis.hidden = v === "private";
+    if (v === "private") vis.classList.remove("on");
+  }
+  function chosenVisibility(){
+    if (visChoice === "private") return "private";
+    return document.getElementById("vis").classList.contains("on") ? "request" : "open";
+  }
+  async function saveVisibility(activityId, wanted, current){
+    if (wanted === current) return;
+    const r = await rpc("set_activity_visibility", { p_activity_id: activityId, p_visibility: wanted });
+    if (!r || !r.ok) toast(wanted === "private" ? "evento pubblicato, ma non risulta privato: riprova da \"modifica l'evento\"." : "salvato, ma la visibilità no. riprova da \"modifica l'evento\".");
+  }
+  // foto dell'evento: ridotta a 1600px, caricata nel bucket event-photos sotto <uid>/<evento>.jpg
+  let photoBlob = null, photoState = "none"; // none | new | keep | remove
+  function pickEventPhoto(input){
+    const f = input.files && input.files[0]; if (!f) return;
+    const img = new Image();
+    img.onload = () => {
+      const scale = Math.min(1, 1600 / img.width);
+      const cv = document.createElement("canvas"); cv.width = Math.round(img.width * scale); cv.height = Math.round(img.height * scale);
+      cv.getContext("2d").drawImage(img, 0, 0, cv.width, cv.height);
+      cv.toBlob(b => { photoBlob = b; photoState = "new"; showEventPhoto(cv.toDataURL("image/jpeg", 0.7)); }, "image/jpeg", 0.85);
+      URL.revokeObjectURL(img.src);
+    };
+    img.src = URL.createObjectURL(f);
+  }
+  function showEventPhoto(src){
+    const ph = document.getElementById("ph");
+    ph.style.backgroundImage = "url(" + src + ")"; ph.style.borderStyle = "solid"; ph.textContent = "";
+    document.getElementById("ph-label").textContent = "cambia la foto";
+    document.getElementById("ph-remove").hidden = false;
+  }
+  function removePhoto(){
+    photoBlob = null; photoState = "remove";
+    const ph = document.getElementById("ph"); ph.style.backgroundImage = ""; ph.style.borderStyle = "dashed"; ph.textContent = "📷";
+    document.getElementById("ph-label").textContent = "aggiungi una foto";
+    document.getElementById("ph-remove").hidden = true;
+    document.getElementById("phfile").value = "";
+  }
+  async function savePhoto(activityId){
+    if (photoState === "new" && photoBlob) {
+      try {
+        const uid = myUid(); if (!uid) return;
+        const path = uid + "/" + activityId + ".jpg";
+        const r = await fetch(SB_URL + "/storage/v1/object/event-photos/" + path, {
+          method: "POST", headers: {"apikey": SB_ANON, "Authorization": "Bearer " + session.access_token, "Content-Type": "image/jpeg", "x-upsert": "true"}, body: photoBlob });
+        if (!r.ok) { toast("evento salvato, ma la foto non si è caricata. riprova da \"modifica l'evento\"."); return; }
+        const url = SB_URL + "/storage/v1/object/public/event-photos/" + path + "?v=" + Date.now();
+        const rs = await rpc("set_activity_photo", { p_activity_id: activityId, p_url: url });
+        if (!rs || !rs.ok) toast("evento salvato, ma la foto non si è collegata. riprova da \"modifica l'evento\".");
+      } catch (_) { toast("evento salvato, ma la foto non si è caricata."); }
+    } else if (photoState === "remove") {
+      await rpc("set_activity_photo", { p_activity_id: activityId, p_url: null });
+    }
+  }
+  function togglePaid(){
+    const on = document.getElementById("paid").classList.toggle("on");
+    document.getElementById("price-wrap").hidden = !on;
+    if (on) document.getElementById("price").focus();
+    else { document.getElementById("price").value = ""; document.getElementById("price-note").value = ""; }
+  }
+  // prezzo: null = gratis; ritorna {ok, cents, note} o {ok:false, msg}
+  function readPrice(){
+    if (!document.getElementById("paid").classList.contains("on")) return { ok: true, cents: null, note: null };
+    const raw = document.getElementById("price").value.trim();
+    if (!raw) return { ok: false, msg: 'Scrivi il prezzo (es. 12,00), oppure spegni "Si paga".' };
+    const cents = parsePrice(raw);
+    if (Number.isNaN(cents)) return { ok: false, msg: "Scrivi il prezzo solo con i numeri, es. 12,50." };
+    return { ok: true, cents: cents > 0 ? cents : null, note: document.getElementById("price-note").value.trim() || null };
+  }
+  async function savePrice(activityId, p){
+    const r = await rpc("set_activity_price", { p_activity_id: activityId, p_price_cents: p.cents, p_price_note: p.cents ? p.note : null });
+    if (!r || !r.ok) toast("Evento salvato, ma non il prezzo. Aprilo e riprova da \"modifica l'evento\".");
+  }
+
+  function addQuestion(){
+    const qs = document.getElementById("qs");
+    if (qs.children.length >= 5) { toast("puoi mettere al massimo 5 domande."); return; }
+    const row = document.createElement("div");
+    row.className = "qrow";
+    row.style.cssText = "background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:14px; padding:12px 14px; display:flex; flex-direction:column; gap:8px";
+    row.innerHTML =
+      '<input class="q-prompt" type="text" maxlength="200" placeholder="la domanda… (es. hai mai fatto ceramica?)" style="border:none; padding:4px 2px; font-size:15px; outline:none">' +
+      '<div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap">' +
+        '<select class="q-kind" style="width:auto; padding:8px 12px; font-size:13.5px; border-radius:9px">' +
+          '<option value="text">risposta libera</option><option value="yesno">sì o no</option></select>' +
+        '<label style="display:flex; align-items:center; gap:6px; font-weight:600; font-size:13px; color:var(--grey); margin:0; cursor:pointer">' +
+          '<input class="q-req" type="checkbox" style="width:auto"> obbligatoria</label>' +
+        '<button type="button" onclick="this.closest(\'.qrow\').remove()" ' +
+          'style="margin-left:auto; background:none; border:none; cursor:pointer; font-weight:700; font-size:16px; color:var(--grey)">×</button>' +
+      '</div>';
+    qs.appendChild(row);
+    row.querySelector(".q-prompt").focus();
+  }
+  function collectQuestions(){
+    return Array.from(document.querySelectorAll(".qrow")).map(r => ({
+      prompt: r.querySelector(".q-prompt").value.trim(),
+      kind: r.querySelector(".q-kind").value,
+      required: r.querySelector(".q-req").checked
+    })).filter(x => x.prompt.length >= 3);
+  }
+
+  async function submitNewEvent(){
+    const note = document.getElementById("note");
+    const title = document.getElementById("title").value.trim();
+    const place = document.getElementById("place").value.trim();
+    const date = document.getElementById("date").value;
+    const time = document.getElementById("time").value;
+    function fail(msg){ note.className = "note err"; note.textContent = msg; toast(msg); note.scrollIntoView({ block: "center", behavior: "smooth" }); }
+    if (title.length < 3) return fail("dai un nome all'evento (almeno 3 lettere).");
+    if (!place) return fail("scrivi il punto di ritrovo.");
+    if (!date || !time) return fail("scegli giorno e ora.");
+    const startAt = new Date(date + "T" + time);
+    if (startAt <= new Date()) return fail("questa data è già passata. scegli un giorno futuro.");
+    const price = readPrice();
+    if (!price.ok) return fail(price.msg);
+    if (!point) {
+      // niente pin: provo a trovare il posto dal testo
+      try {
+        const g = await fetch("https://photon.komoot.io/api?q=" + encodeURIComponent(place) +
+                              "&lat=45.698&lon=9.670&limit=1").then(x => x.json());
+        const f = g.features && g.features[0];
+        if (f) setPoint(f.geometry.coordinates[1], f.geometry.coordinates[0]);
+      } catch (_) {}
+      if (!point) return fail("non trovo il posto: scegli dalla lista o tocca la mappa.");
+    }
+
+    const btn = document.getElementById("btn");
+    btn.disabled = true; note.className = "note"; note.textContent = "…";
+    const maxp = parseInt(document.getElementById("maxp").value, 10);
+    if (editId) {
+      const ru = await rpc("update_activity", {
+        p_activity_id: editId,
+        p_title: title,
+        p_description: document.getElementById("desc").value.trim() || null,
+        p_start_at: startAt.toISOString(),
+        p_lat: point.lat, p_lng: point.lng,
+        p_meeting_point_text: place,
+        p_max_participants: Number.isFinite(maxp) ? maxp : null
+      });
+      btn.disabled = false;
+      if (ru && ru.ok) {
+        await savePrice(editId, price);
+        await savePhoto(editId);
+        await saveVisibility(editId, chosenVisibility(), editVisibility);
+        if (editSport && sel.value !== editSport) {
+          const rsp = await rpc("set_activity_sport", { p_activity_id: editId, p_sport: sel.value });
+          if (!rsp || !rsp.ok) toast("salvato, ma il tipo di evento no. riprova.");
+        }
+        const rq = await rpc("set_activity_questions", { p_activity_id: editId, p_questions: collectQuestions() });
+        if (!rq || !rq.ok) toast("salvato, ma le domande no. riprova da \"modifica l'evento\".");
+        track("event_edit");
+        location.href = "evento.html?id=" + editId;
+        return;
+      }
+      const bu = ru ? await ru.json().catch(() => ({})) : {};
+      return fail((bu.message || "").includes("start_in_past") ? "questa data è già passata. scegli un giorno futuro." : "non ha funzionato, riprova.");
+    }
+    const r = await rpc("create_activity", {
+      p_sport: sel.value,
+      p_activity_kind: "uscita",
+      p_title: title,
+      p_lat: point.lat, p_lng: point.lng,
+      p_meeting_point_text: place,
+      p_start_at: startAt.toISOString(),
+      p_timezone: "Europe/Rome",
+      p_description: document.getElementById("desc").value.trim() || null,
+      p_max_participants: Number.isFinite(maxp) ? maxp : null,
+      p_visibility: chosenVisibility() === "request" ? "request" : "open"
+    });
+    btn.disabled = false;
+    if (r && r.ok) {
+      const newId = await r.json();
+      const qs = collectQuestions();
+      if (qs.length) {
+        const rq = await rpc("set_activity_questions", { p_activity_id: newId, p_questions: qs });
+        if (!rq || !rq.ok) toast("evento pubblicato, ma le domande no. riprova da \"modifica l'evento\".");
+      }
+      if (price.cents) await savePrice(newId, price);
+      await savePhoto(newId);
+      if (chosenVisibility() === "private") await saveVisibility(newId, "private", "open");
+      const asC = document.getElementById("as").value;
+      if (asC) {
+        const rc = await rpc("set_activity_community", { p_activity_id: newId, p_community_id: asC });
+        if (!rc || !rc.ok) toast("evento pubblicato, ma non risulta del gruppo. riprova da \"modifica l'evento\".");
+      }
+      track("event_create");
+      location.href = "evento.html?id=" + newId;
+      return;
+    }
+    const b = r ? await r.json().catch(() => ({})) : {};
+    const code = b.message || "";
+    note.className = "note err";
+    if (code.includes("profile_required")) { location.href = "profilo.html"; return; }
+    else if (code.includes("invalid_title")) note.textContent = "dai un nome all'evento (almeno 3 lettere).";
+    else if (code.includes("start_in_past")) note.textContent = "questa data è già passata. scegli un giorno futuro.";
+    else note.textContent = "non riesco a pubblicare l'evento, riprova.";
+  }
+</script>
+</body>
+</html>

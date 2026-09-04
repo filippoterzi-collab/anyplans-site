@@ -18,7 +18,7 @@
     var m = location.pathname.match(/^\/([a-z][a-z-]*)\/([a-z0-9][a-z0-9-]*)\/?$/);
     var riservati = ["v2", "en", "it", "pittogrammi", "assets"];
     if (m && riservati.indexOf(m[1]) === -1) {
-      location.replace("/v2/evento.html?slug=" + encodeURIComponent(m[2]) + "&city=" + encodeURIComponent(m[1]));
+      location.replace("/bergamo/evento.html?slug=" + encodeURIComponent(m[2]) + "&city=" + encodeURIComponent(m[1]));
     }
   })();
 </script>

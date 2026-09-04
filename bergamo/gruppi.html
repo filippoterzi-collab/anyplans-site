@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>gruppi a Bergamo · anyplans</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta name="robots" content="noindex">
+<style>
+  @font-face{
+    font-family:"Bricolage Grotesque";
+    src:url("/bricolage-grotesque-latin-800-normal.woff2") format("woff2");
+    font-weight:800; font-style:normal; font-display:swap;
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+  :root{
+    --blue:#1B4FD8; --blue-lo:#1440AF; --tint:#E9EEFB;
+    --ink:#191919; --grey:#6E6E73; --bg:#FBF9F5;
+    --round: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --display: "Bricolage Grotesque", var(--round);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
+       -webkit-font-smoothing:antialiased;}
+  a{color:inherit; text-decoration:none;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;}
+  .q{font-size:.92em;}
+  header{padding:0 24px;}
+  .nav{display:flex; align-items:center; gap:24px; height:60px; max-width:860px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:9px; font-family:var(--display); font-weight:800;
+         font-size:20px; letter-spacing:-.045em; line-height:1;}
+  .brand img{width:28px; height:28px;}
+  .nav .lnk{font-weight:600; font-size:15px; color:var(--grey);}
+  .nav .lnk.on{font-weight:700; color:var(--blue);}
+  .nav .cta{margin-left:auto; background:var(--blue); color:#fff; font-weight:700; font-size:13.5px;
+            padding:9px 16px; border-radius:999px; white-space:nowrap;}
+
+  main{max-width:860px; margin:0 auto; padding:14px 24px 70px; display:flex; flex-direction:column; gap:14px;}
+  .titlerow{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;}
+  .titlerow h1{font-size:30px;}
+  .titlerow h1 span{color:var(--blue);}
+  .count{font-weight:600; font-size:13.5px; color:var(--grey); margin-left:auto;}
+  .search{display:flex; align-items:center; gap:9px; background:#fff;
+          border:1.5px solid rgba(25,25,25,.16); border-radius:999px; padding:9px 15px; flex-shrink:0;
+          max-width:440px;}
+  .search input{border:none; outline:none; font-size:14px; font-family:var(--round);
+                background:transparent; color:var(--ink); width:100%;}
+  .chips{display:flex; gap:8px; overflow-x:auto; scrollbar-width:none; -webkit-overflow-scrolling:touch;}
+  .chips::-webkit-scrollbar{display:none;}
+  .chip{background:#fff; border:1.5px solid rgba(25,25,25,.14); color:var(--ink); font-weight:600;
+        font-size:13.5px; height:40px; padding:0 14px; border-radius:999px; cursor:pointer;
+        font-family:var(--round); flex-shrink:0; white-space:nowrap; display:inline-flex; align-items:center;}
+  .chip.on{background:var(--blue); border-color:var(--blue); color:#fff; font-weight:700;}
+
+  .sec{font-size:17px; font-weight:800; margin-top:8px;}
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  .g:active{transform:scale(.985); background:var(--tint); transition:transform .08s ease, background .08s ease;}
+  .g{display:grid; grid-template-columns:56px 1fr auto; gap:6px 14px; align-items:center;
+     background:#fff; border:1.5px solid rgba(25,25,25,.10); border-radius:16px; padding:14px 16px;
+     cursor:pointer; min-width:0;}
+  .g:hover{border-color:var(--blue);}
+  .g .logo{width:56px; height:56px; border-radius:14px; background:var(--tint) center/cover no-repeat;
+           display:flex; align-items:center; justify-content:center; font-size:28px; flex-shrink:0; overflow:hidden;}
+  .g .body{min-width:0;}
+  .g .name{display:flex; align-items:center; gap:5px; font-weight:700; font-size:16px; min-width:0;}
+  .g .name span{overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+  .g .name svg{width:16px; height:16px; flex-shrink:0;}
+  .g .v{font-size:12.5px; font-weight:700; color:var(--blue);}
+  .g .m{font-size:13px; color:var(--grey);}
+  .g .next{font-size:13px; font-weight:700; color:var(--blue); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+  .g .follow{height:40px; min-width:96px; padding:0 16px; border-radius:999px; border:1.5px solid var(--blue);
+             background:var(--blue); color:#fff; font:700 14px var(--round); cursor:pointer; white-space:nowrap;
+             transition:background .15s ease, color .15s ease, transform .12s ease;}
+  .g .follow:hover{background:var(--blue-lo); border-color:var(--blue-lo);}
+  .g .follow:active{transform:scale(.96);}
+  .g .follow.ghost{background:#fff; color:var(--blue);}
+  .g .follow.ghost:hover{background:var(--tint);}
+  .g .follow:disabled{opacity:.6; cursor:default;}
+  .g .manage{font-weight:700; font-size:13.5px; color:var(--blue); white-space:nowrap;}
+  .empty{color:var(--grey); font-size:14.5px; padding:24px 4px;}
+  .empty a{color:var(--blue); font-weight:700;}
+  .invite{display:block; background:var(--tint); color:var(--blue); font-weight:700; font-size:15px;
+          border-radius:16px; padding:18px 20px; margin-top:10px;}
+  .invite:hover{background:#DCE4F8;}
+  .invite[hidden]{display:none;}
+  .sk{height:96px; border-radius:16px; background:linear-gradient(90deg,#F1EFE9 25%,#E9E6DE 50%,#F1EFE9 75%);
+      background-size:200% 100%; animation:sk 1.2s ease-in-out infinite;}
+  @keyframes sk{from{background-position:200% 0} to{background-position:-200% 0}}
+
+  @media (max-width:700px){
+    .nav .lnk{display:none;}
+    main{padding:12px 18px 90px;}
+    .titlerow h1{font-size:24px;}
+    .search{max-width:none; padding:11px 15px;}
+    .chips{margin:0 -18px; padding:0 18px;}
+    .grid{grid-template-columns:1fr;}
+    .g{grid-template-columns:56px 1fr;}
+    .g .follow, .g .manage{grid-column:1 / -1; justify-self:start; margin-top:4px;}
+  }
+
+  /* ux: transizioni e feedback al tocco */
+  .btn, .chip, .ev, .iconbtn, .card, .city, .qz-chip, .place-item, .toggle-row, .g, .invite{
+    transition: transform .12s ease, box-shadow .12s ease, background .15s ease,
+                border-color .15s ease, color .15s ease;}
+  .btn:active, .chip:active, .iconbtn:active, .qz-chip:active{transform:scale(.96);}
+  .g:hover{box-shadow:0 4px 16px rgba(25,25,25,.07); transform:translateY(-1px);}
+  .card:hover, .city:hover{box-shadow:0 4px 14px rgba(25,25,25,.06);}
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, [role="link"]:focus-visible{
+    outline:2px solid var(--blue); outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header></header>
+
+<main>
+  <div class="titlerow">
+    <h1 class="display">gruppi a <span>Bergamo</span></h1>
+    <span class="count" id="count"></span>
+  </div>
+  <div class="search">
+    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6E6E73" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg>
+    <input id="q" placeholder="cerca un gruppo: pro loco, ceramica, corsa…" oninput="render()" aria-label="cerca un gruppo">
+  </div>
+  <div class="chips" id="chips">
+    <button class="chip on" data-cat="" aria-pressed="true" onclick="setCat(this)">tutti</button>
+    <button class="chip" data-cat="sport" aria-pressed="false" onclick="setCat(this)">🏃 sport</button>
+    <button class="chip" data-cat="cucina" aria-pressed="false" onclick="setCat(this)">🍳 cucina</button>
+    <button class="chip" data-cat="creatività" aria-pressed="false" onclick="setCat(this)">🏺 creatività</button>
+    <button class="chip" data-cat="giardinaggio" aria-pressed="false" onclick="setCat(this)">🌱 giardinaggio</button>
+    <button class="chip" data-cat="cultura" aria-pressed="false" onclick="setCat(this)">🎪 cultura</button>
+    <button class="chip" data-cat="benessere" aria-pressed="false" onclick="setCat(this)">🧘 benessere</button>
+  </div>
+  <div id="sections">
+    <div class="grid"><div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
+  </div>
+  <a class="invite" id="invite" href="crea-community.html" hidden>organizzi eventi? crea il tuo gruppo →</a>
+</main>
+
+<script src="app.js?v=1788515406"></script>
+<script>
+  requireLogin();
+  mountNav("gruppi", { col: 860 });
+  mountTabbar("gruppi");
+  track("groups_view");
+
+  const CAT_EMOJI = { sport:"🏃", cucina:"🍳", "creatività":"🏺", giardinaggio:"🌱", cultura:"🎪", benessere:"🧘" };
+  const norm = t => String(t ?? "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  let GROUPS = [];          // gruppi uniti da list_communities + my_communities
+  let loaded = false;       // false finché non arriva la lista (o l'errore)
+  let failed = false;
+  let cat = "";
+  const pending = new Set(); // id con un segui in corso
+
+  const managed = g => g.my_role === "owner" || g.my_role === "admin";
+  const emojiOf = g => g.emoji || CAT_EMOJI[g.category] || "📍";
+  const followersTxt = n => { n = Number(n) || 0; return n === 0 ? "nessuno ancora" : n === 1 ? "1 persona lo segue" : n + " persone lo seguono"; };
+  const upcomingTxt = n => { n = Number(n) || 0; return n === 0 ? "nessun evento in programma" : n === 1 ? "1 evento in programma" : n + " eventi in programma"; };
+
+  async function load(){
+    const [rl, rm] = await Promise.all([
+      rpc("list_communities", { p_city: "bergamo" }),
+      rpc("my_communities", {})
+    ]);
+    loaded = true;
+    if (!rl || !rl.ok) { failed = true; render(); return; }
+    const rows = await rl.json().catch(() => []);
+    const byId = new Map();
+    rows.forEach(x => byId.set(x.id, { ...x, listed: true, follower_count: Number(x.follower_count) || 0, upcoming_count: Number(x.upcoming_count) || 0 }));
+    // i gruppi che gestisco in un'altra città arrivano solo da my_communities: la card usa i campi che ha
+    if (rm && rm.ok) {
+      const mine = await rm.json().catch(() => []);
+      mine.forEach(m => {
+        if (!(m.role === "owner" || m.role === "admin")) return;
+        const g = byId.get(m.id);
+        if (g) { g.my_role = m.role; return; }
+        byId.set(m.id, { id: m.id, slug: m.slug, name: m.name, emoji: m.emoji, category: m.category, listed: false,
+          is_verified: !!m.is_verified, my_role: m.role, city: null, avatar_url: null, description: null,
+          follower_count: Number(m.follower_count) || 0, upcoming_count: Number(m.upcoming_count) || 0,
+          next_event_at: null, next_event_title: null, is_following: false });
+      });
+    }
+    GROUPS = [...byId.values()];
+    render();
+  }
+
+  function setCat(btn){
+    cat = btn.dataset.cat;
+    document.querySelectorAll(".chip[data-cat]").forEach(c => { const on = c === btn; c.classList.toggle("on", on); c.setAttribute("aria-pressed", String(on)); });
+    render();
+  }
+  function clearCat(){ setCat(document.querySelector('.chip[data-cat=""]')); }
+
+  function sortGroups(a, b){
+    if (!!a.is_verified !== !!b.is_verified) return a.is_verified ? -1 : 1;
+    if (a.follower_count !== b.follower_count) return b.follower_count - a.follower_count;
+    return String(a.name || "").localeCompare(String(b.name || ""), "it");
+  }
+
+  function card(g){
+    const manage = managed(g);
+    const href = manage ? "dashboard.html?id=" + encodeURIComponent(g.id) : "community.html?slug=" + encodeURIComponent(g.slug || "");
+    const logo = g.avatar_url
+      ? `<div class="logo" style="background-image:url('${esc(String(g.avatar_url).replace(/'/g, ""))}')"></div>`
+      : `<div class="logo">${esc(emojiOf(g))}</div>`;
+    const vb = g.is_verified
+      ? '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10" fill="#1B4FD8"/><path d="M7.5 12.5 L10.7 15.7 L16.5 9" fill="none" stroke="#FFFFFF" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+      : "";
+    let next = "";
+    if (g.next_event_at) {
+      const when = new Date(g.next_event_at);
+      next = `<div class="next">${esc(dayLabel(when))} · ${esc(timeStr(when))} · ${esc(g.next_event_title || "")}</div>`;
+    }
+    const on = !!g.is_following;
+    const action = manage
+      ? '<span class="manage">gestisci →</span>'
+      : `<button class="follow${on ? " ghost" : ""}" aria-pressed="${on}" aria-label="${on ? "non seguire più" : "segui"} ${esc(g.name)}"
+           ${pending.has(g.id) ? "disabled" : ""} onclick="event.stopPropagation(); toggleFollow('${esc(g.id)}')">${on ? "lo segui ✓" : "segui"}</button>`;
+    return `<div class="g" role="link" tabindex="0" data-href="${esc(href)}" onclick="go(this)" onkeydown="if(event.key==='Enter') go(this)">
+      ${logo}
+      <div class="body">
+        <div class="name"><span>${esc(g.name)}</span>${vb}</div>
+        ${g.is_verified ? '<div class="v">verificato da anyplans</div>' : ""}
+        <div class="m">${esc(CAT_EMOJI[g.category] || emojiOf(g))} ${esc(g.category || "")}${g.city ? " · " + esc(cityCase(g.city)) : ""}</div>
+        <div class="m">${followersTxt(g.follower_count)} · ${upcomingTxt(g.upcoming_count)}</div>
+        ${next}
+      </div>
+      ${action}
+    </div>`;
+  }
+  function go(el){ location.href = el.dataset.href; }
+
+  function section(title, list){
+    if (!list.length) return "";
+    return `<div class="sec">${title}</div><div class="grid">${list.map(card).join("")}</div>`;
+  }
+
+  function render(){
+    const box = document.getElementById("sections");
+    const invite = document.getElementById("invite");
+    const count = document.getElementById("count");
+    if (!loaded) return;
+    if (failed) { box.innerHTML = '<div class="empty">non riesco a caricare i gruppi. ricarica la pagina.</div>'; count.textContent = ""; invite.hidden = true; return; }
+
+    const q = norm(document.getElementById("q").value.trim());
+    const words = q ? q.split(/\s+/) : [];
+    const all = GROUPS
+      .filter(g => !cat || g.category === cat)
+      .filter(g => !words.length || words.every(w => norm([g.name, g.category, g.description].join(" ")).includes(w)))
+      .sort(sortGroups);
+    const listed = all.filter(g => g.listed); // solo i gruppi della città
+    const mine = all.filter(managed);
+    const following = all.filter(g => g.is_following && !managed(g));
+    const manageAny = GROUPS.some(managed);
+
+    count.textContent = listed.length + (listed.length === 1 ? " gruppo" : " gruppi");
+    invite.hidden = manageAny || !GROUPS.length;
+
+    if (!all.length) {
+      let msg;
+      if (cat) msg = "nessun gruppo di " + esc(cat) + '. <a href="#" onclick="clearCat(); return false">togli il filtro</a>.';
+      else if (q) msg = 'nessun gruppo per "' + esc(document.getElementById("q").value.trim()) + '". prova un\'altra parola.';
+      else msg = 'a Bergamo non c\'è ancora nessun gruppo. organizzi eventi? <a href="crea-community.html">crea il tuo gruppo →</a>';
+      box.innerHTML = '<div class="empty">' + msg + "</div>";
+      return;
+    }
+    box.innerHTML =
+      section(mine.length > 1 ? "i miei gruppi" : "il mio gruppo", mine) +
+      section("i gruppi che seguo", following) +
+      section("tutti i gruppi a Bergamo", listed);
+  }
+
+  async function toggleFollow(id){
+    const g = GROUPS.find(x => x.id === id);
+    if (!g || pending.has(id)) return;
+    if (g.is_following && !confirm("vuoi smettere di seguire " + g.name + "?")) return;
+    const next = !g.is_following;
+    // subito il nuovo stato, poi si aspetta la risposta
+    g.is_following = next;
+    g.follower_count = Math.max(0, g.follower_count + (next ? 1 : -1));
+    pending.add(id); render();
+    const r = await rpc("follow_community", { p_id: id, p_follow: next });
+    pending.delete(id);
+    if (!r || !r.ok) {
+      g.is_following = !next;
+      g.follower_count = Math.max(0, g.follower_count + (next ? -1 : 1));
+      render();
+      const b = r ? await r.json().catch(() => ({})) : {};
+      if ((b.message || "").includes("profile_required")) { location.href = "profilo.html"; return; }
+      toast("non ha funzionato, riprova."); return;
+    }
+    render();
+    track(next ? "follow" : "unfollow");
+    toast(next ? "ora segui " + g.name + ": ti avvisiamo a ogni nuovo evento." : "non segui più " + g.name + ".");
+  }
+
+  load();
+</script>
+</body>
+</html>

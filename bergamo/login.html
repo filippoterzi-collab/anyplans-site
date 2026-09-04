@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>accedi · anyplans</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta name="robots" content="noindex">
+<style>
+  @font-face{
+    font-family:"Bricolage Grotesque";
+    src:url("/bricolage-grotesque-latin-800-normal.woff2") format("woff2");
+    font-weight:800; font-style:normal; font-display:swap;
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+  :root{
+    --blue:#1B4FD8; --blue-lo:#1440AF; --tint:#E9EEFB;
+    --ink:#191919; --grey:#6E6E73; --bg:#FBF9F5;
+    --round: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --display: "Bricolage Grotesque", var(--round);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
+       -webkit-font-smoothing:antialiased; min-height:100vh; display:flex; flex-direction:column;}
+  a{color:inherit; text-decoration:none;}
+  header{padding:0 22px;}
+  .nav{display:flex; align-items:center; height:64px; max-width:1000px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:var(--display); font-weight:800;
+         font-size:21px; letter-spacing:-.045em; line-height:1;}
+  .brand img{width:30px; height:30px; display:block;}
+  .q{font-size:.92em;}
+
+  main{flex:1; min-height:calc(100dvh - 64px); display:flex; align-items:center; justify-content:center; padding:24px 22px 64px;}
+  .card{width:100%; max-width:480px; background:#fff; border:1.5px solid rgba(25,25,25,.12);
+        border-radius:22px; padding:36px; display:flex; flex-direction:column; gap:20px;}
+  .card img.logo{width:48px; height:48px;}
+  h1{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1; font-size:28px;}
+  .sub{font-size:15px; color:var(--grey); margin-top:8px;}
+  .sub b{color:var(--ink);}
+  label{font-weight:700; font-size:14px; display:block; margin-bottom:8px;}
+  input[type=email]{width:100%; background:#fff; border:1.5px solid rgba(25,25,25,.16);
+        border-radius:12px; padding:13px 16px; font-size:16px; font-family:var(--round); color:var(--ink);}
+  input:focus{outline:2px solid var(--blue); outline-offset:1px;}
+  .btn{display:block; width:100%; background:var(--blue); color:#fff; font-weight:700;
+       padding:14px 0; border-radius:999px; border:none; cursor:pointer; font-size:16px;
+       font-family:var(--round); text-align:center;}
+  .btn:hover{background:var(--blue-lo);}
+  .btn[disabled]{opacity:.55; cursor:default;}
+  .legal{font-size:12.5px; color:var(--grey); text-align:center; line-height:1.5;
+         border-top:1px solid rgba(25,25,25,.08); padding-top:20px;}
+  .legal a{font-weight:700; color:var(--blue);}
+  .note{font-size:13.5px; color:var(--grey); min-height:1.3em;}
+  .note.err{color:#B3261E; font-weight:600;}
+  .note.ok{color:var(--blue); font-weight:600;}
+
+  .otp{display:flex; gap:8px; justify-content:space-between;}
+  .otp input{flex:1; min-width:0; max-width:52px; height:58px; text-align:center; font-weight:800; font-size:24px;
+             font-family:var(--round); background:#fff; border:1.5px solid rgba(25,25,25,.16);
+             border-radius:12px; color:var(--ink);}
+  .row{display:flex; align-items:center; justify-content:space-between; font-size:13.5px;}
+  @media (max-width:480px){ .card{padding:28px 22px;} .otp{gap:6px;} .otp input{font-size:22px; height:54px;} main{padding:16px 16px 40px;} }
+  .row button{background:none; border:none; cursor:pointer; font-family:var(--round);
+              font-weight:600; font-size:13.5px; color:var(--grey); padding:0;}
+  .row button.blue{color:var(--blue);}
+  [hidden]{display:none !important;}
+
+  /* ux: transizioni e feedback al tocco */
+  .btn, .chip, .ev, .iconbtn, .card, .city, .qz-chip, .place-item, .toggle-row{
+    transition: transform .12s ease, box-shadow .12s ease, background .15s ease,
+                border-color .15s ease, color .15s ease;}
+  .btn:active, .chip:active, .iconbtn:active, .qz-chip:active{transform:scale(.96);}
+  .ev:hover{box-shadow:0 4px 16px rgba(25,25,25,.07); transform:translateY(-1px);}
+  .card:hover, .city:hover{box-shadow:0 4px 14px rgba(25,25,25,.06);}
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible{
+    outline:2px solid var(--blue); outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="/bergamo/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
+  </div>
+</header>
+
+<main>
+  <!-- step 1: email -->
+  <form class="card" id="step-email" onsubmit="return sendCode(event)">
+    <img class="logo" src="/logo.png" alt="">
+    <div>
+      <h1>benvenuto su anyplans<span class="q">?</span></h1>
+      <p class="sub">scrivi la tua email: ti mandiamo un codice di 6 numeri. niente password da ricordare.</p>
+    </div>
+    <div>
+      <label for="email">email</label>
+      <input id="email" type="email" required placeholder="tu@email.com" autocomplete="email">
+    </div>
+    <button class="btn" id="btn-send" type="submit">mandami il codice</button>
+    <p class="note" id="note-email"></p>
+    <!-- TODO: "accedi con google" (provider già attivo su supabase, manca il flusso oauth web) -->
+    <p class="legal">Andando avanti accetti le <a href="/terms-it.html">Condizioni d'uso</a> e la <a href="/privacy-it.html">Privacy</a></p>
+  </form>
+
+  <!-- step 2: codice -->
+  <form class="card" id="step-code" hidden onsubmit="return verifyCode(event)">
+    <img class="logo" src="/logo.png" alt="">
+    <div>
+      <h1>controlla la tua email</h1>
+      <p class="sub">ti abbiamo mandato un codice di 6 numeri a <b id="sent-to"></b>. vale 10 minuti. se non lo vedi, <b>guarda nella posta indesiderata (spam)</b>.</p>
+    </div>
+    <div class="otp" id="otp">
+      <input inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="cifra 1">
+      <input inputmode="numeric" maxlength="1" aria-label="cifra 2">
+      <input inputmode="numeric" maxlength="1" aria-label="cifra 3">
+      <input inputmode="numeric" maxlength="1" aria-label="cifra 4">
+      <input inputmode="numeric" maxlength="1" aria-label="cifra 5">
+      <input inputmode="numeric" maxlength="1" aria-label="cifra 6">
+    </div>
+    <button class="btn" id="btn-verify" type="submit">entra</button>
+    <p class="note" id="note-code"></p>
+    <div class="row">
+      <button type="button" id="btn-resend" onclick="resendCode()">non è arrivato? mandamelo di nuovo</button>
+      <button type="button" class="blue" onclick="changeEmail()">cambia email</button>
+    </div>
+  </form>
+</main>
+
+<script>
+  const SB_URL = "https://uudccbzihhgoeaevkewr.supabase.co";
+  const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV1ZGNjYnppaGhnb2VhZXZrZXdyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYzNzk0NzEsImV4cCI6MjEwMTk1NTQ3MX0.OHJC3vmT8eRLczFkH0QdZybbjudDfSi4VEX8Mc22ABQ";
+  const HEADERS = {"apikey": SB_ANON, "Content-Type": "application/json"};
+
+  // già loggato? niente form: dritto agli eventi (se il token è scaduto ci pensa il refresh lì)
+  function skipIfLogged(){
+    try {
+      const existing = JSON.parse(localStorage.getItem("anyplans_session") || sessionStorage.getItem("anyplans_session"));
+      if (existing && existing.access_token && !location.hash.includes("switch")) location.replace("eventi.html");
+    } catch (_) {}
+  }
+  skipIfLogged();
+  window.addEventListener("pageshow", skipIfLogged);
+  let currentEmail = "";
+  let resendCooldown = 0;
+
+  function note(id, text, cls){ const n = document.getElementById(id); n.textContent = text || ""; n.className = "note" + (cls ? " " + cls : ""); }
+
+  async function requestOtp(email){
+    let r;
+    try {
+      r = await fetch(SB_URL + "/auth/v1/otp", {
+        method: "POST", headers: HEADERS,
+        body: JSON.stringify({ email: email, create_user: true })
+      });
+    } catch (_) { return "non riesco a collegarmi. controlla internet e riprova."; }
+    if (r.ok) return null;
+    const body = await r.json().catch(() => ({}));
+    if (r.status === 429) return "troppi tentativi, aspetta qualche minuto e riprova.";
+    return body.msg || body.error_description || "non riesco a mandare il codice, riprova.";
+  }
+
+  async function sendCode(e){
+    e.preventDefault();
+    const email = document.getElementById("email").value.trim();
+    const btn = document.getElementById("btn-send");
+    btn.disabled = true; note("note-email", "…");
+    const err = await requestOtp(email);
+    btn.disabled = false;
+    if (err) { note("note-email", err, "err"); return false; }
+    currentEmail = email;
+    document.getElementById("sent-to").textContent = email;
+    document.getElementById("step-email").hidden = true;
+    document.getElementById("step-code").hidden = false;
+    note("note-email"); note("note-code");
+    otpInputs[0].focus();
+    startCooldown();
+    return false;
+  }
+
+  async function resendCode(){
+    if (resendCooldown > 0) return;
+    note("note-code", "…");
+    const err = await requestOtp(currentEmail);
+    note("note-code", err || "mandato. usa questo, il vecchio non vale più. guarda anche nella posta indesiderata.", err ? "err" : "ok");
+    if (!err) startCooldown();
+  }
+
+  function startCooldown(){
+    resendCooldown = 30;
+    const b = document.getElementById("btn-resend");
+    const t = setInterval(() => {
+      resendCooldown--;
+      b.textContent = resendCooldown > 0
+        ? `puoi richiederlo tra ${resendCooldown} secondi`
+        : "non è arrivato? mandamelo di nuovo";
+      if (resendCooldown <= 0) clearInterval(t);
+    }, 1000);
+  }
+
+  function changeEmail(){
+    document.getElementById("step-code").hidden = true;
+    document.getElementById("step-email").hidden = false;
+    otpInputs.forEach(i => i.value = "");
+    document.getElementById("email").focus();
+  }
+
+  // caselle codice: avanzamento automatico + incolla
+  const otpInputs = Array.from(document.querySelectorAll("#otp input"));
+  otpInputs.forEach((inp, i) => {
+    inp.addEventListener("input", () => {
+      inp.value = inp.value.replace(/\D/g, "").slice(0, 1);
+      if (inp.value && i < 5) otpInputs[i + 1].focus();
+      if (otpInputs.every(x => x.value)) verifyCode();
+    });
+    inp.addEventListener("keydown", (e) => {
+      if (e.key === "Backspace" && !inp.value && i > 0) otpInputs[i - 1].focus();
+    });
+    inp.addEventListener("paste", (e) => {
+      const digits = (e.clipboardData.getData("text").match(/\d/g) || []).slice(0, 6);
+      if (digits.length) {
+        e.preventDefault();
+        digits.forEach((d, j) => { if (otpInputs[j]) otpInputs[j].value = d; });
+        otpInputs[Math.min(digits.length, 5)].focus();
+        if (digits.length === 6) verifyCode();
+      }
+    });
+  });
+
+  async function verifyCode(e){
+    if (e) e.preventDefault();
+    const token = otpInputs.map(i => i.value).join("");
+    if (token.length < 6) { note("note-code", "scrivi tutti e 6 i numeri.", "err"); return false; }
+    const btn = document.getElementById("btn-verify");
+    btn.disabled = true; note("note-code", "…");
+    try {
+      const r = await fetch(SB_URL + "/auth/v1/verify", {
+        method: "POST", headers: HEADERS,
+        body: JSON.stringify({ type: "email", email: currentEmail, token: token })
+      });
+      const body = await r.json().catch(() => ({}));
+      btn.disabled = false;
+      if (!r.ok) {
+        otpInputs.forEach(i => i.value = ""); otpInputs[0].focus();
+        note("note-code", "codice sbagliato o scaduto. chiedine uno nuovo qui sotto.", "err");
+        return false;
+      }
+      const session = JSON.stringify({
+        access_token: body.access_token, refresh_token: body.refresh_token,
+        expires_at: body.expires_at, email: currentEmail
+      });
+      // localStorage può essere bloccato (es. pagina aperta come file://): non è un errore fatale
+      let saved = false;
+      try { localStorage.setItem("anyplans_session", session); saved = true; } catch (_) {}
+      if (!saved) { try { sessionStorage.setItem("anyplans_session", session); saved = true; } catch (_) {} }
+      let next = "eventi.html";
+      try { next = sessionStorage.getItem("anyplans_next") || next; } catch (_) {}
+      // senza profilo si va dritti a "raccontaci di te" (niente lampo della mappa); la destinazione resta salvata
+      let hasProfile = true;
+      try {
+        const rp = await fetch(SB_URL + "/rest/v1/rpc/my_profile", { method: "POST", headers: { ...HEADERS, "Authorization": "Bearer " + body.access_token }, body: "{}" });
+        const rows = rp.ok ? await rp.json().catch(() => []) : [];
+        hasProfile = !!(rows.length && rows[0].display_name);
+      } catch (_) {}
+      if (hasProfile) { try { sessionStorage.removeItem("anyplans_next"); } catch (_) {} }
+      else { try { if (next !== "eventi.html") sessionStorage.setItem("anyplans_next", next); } catch (_) {} next = "profilo.html"; }
+      location.href = saved ? next : next + "#s=" + encodeURIComponent(session);
+    } catch (err) {
+      btn.disabled = false;
+      const offline = err instanceof TypeError;
+      note("note-code", offline
+        ? "non riesco a collegarmi. controlla internet e riprova."
+        : "qualcosa non ha funzionato, riprova.", "err");
+    }
+    return false;
+  }
+</script>
+</body>
+</html>
