@@ -82,6 +82,7 @@
   .invite{display:block; background:var(--tint); color:var(--blue); font-weight:700; font-size:15px;
           border-radius:16px; padding:18px 20px; margin-top:10px;}
   .invite:hover{background:#DCE4F8;}
+  .invite[hidden]{display:none;}
   .sk{height:96px; border-radius:16px; background:linear-gradient(90deg,#F1EFE9 25%,#E9E6DE 50%,#F1EFE9 75%);
       background-size:200% 100%; animation:sk 1.2s ease-in-out infinite;}
   @keyframes sk{from{background-position:200% 0} to{background-position:-200% 0}}
@@ -144,7 +145,7 @@
   <a class="invite" id="invite" href="crea-community.html" hidden>organizzi eventi? crea il tuo gruppo →</a>
 </main>
 
-<script src="app.js?v=1788500970"></script>
+<script src="app.js?v=1788501375"></script>
 <script>
   requireLogin();
   mountTabbar("gruppi");
@@ -172,7 +173,7 @@
     if (!rl || !rl.ok) { failed = true; render(); return; }
     const rows = await rl.json().catch(() => []);
     const byId = new Map();
-    rows.forEach(x => byId.set(x.id, { ...x, follower_count: Number(x.follower_count) || 0, upcoming_count: Number(x.upcoming_count) || 0 }));
+    rows.forEach(x => byId.set(x.id, { ...x, listed: true, follower_count: Number(x.follower_count) || 0, upcoming_count: Number(x.upcoming_count) || 0 }));
     // i gruppi che gestisco in un'altra città arrivano solo da my_communities: la card usa i campi che ha
     if (rm && rm.ok) {
       const mine = await rm.json().catch(() => []);
@@ -180,7 +181,7 @@
         if (!(m.role === "owner" || m.role === "admin")) return;
         const g = byId.get(m.id);
         if (g) { g.my_role = m.role; return; }
-        byId.set(m.id, { id: m.id, slug: m.slug, name: m.name, emoji: m.emoji, category: m.category,
+        byId.set(m.id, { id: m.id, slug: m.slug, name: m.name, emoji: m.emoji, category: m.category, listed: false,
           is_verified: !!m.is_verified, my_role: m.role, city: null, avatar_url: null, description: null,
           follower_count: Number(m.follower_count) || 0, upcoming_count: Number(m.upcoming_count) || 0,
           next_event_at: null, next_event_title: null, is_following: false });
@@ -227,7 +228,7 @@
       <div class="body">
         <div class="name"><span>${esc(g.name)}</span>${vb}</div>
         ${g.is_verified ? '<div class="v">verificato da anyplans</div>' : ""}
-        <div class="m">${esc(CAT_EMOJI[g.category] || emojiOf(g))} ${esc(g.category || "")} · ${esc(g.city || "bergamo")}</div>
+        <div class="m">${esc(CAT_EMOJI[g.category] || emojiOf(g))} ${esc(g.category || "")}${g.city ? " · " + esc(g.city) : ""}</div>
         <div class="m">${followersTxt(g.follower_count)} · ${upcomingTxt(g.upcoming_count)}</div>
         ${next}
       </div>
@@ -254,11 +255,12 @@
       .filter(g => !cat || g.category === cat)
       .filter(g => !words.length || words.every(w => norm([g.name, g.category, g.description].join(" ")).includes(w)))
       .sort(sortGroups);
+    const listed = all.filter(g => g.listed); // solo i gruppi della città
     const mine = all.filter(managed);
     const following = all.filter(g => g.is_following && !managed(g));
     const manageAny = GROUPS.some(managed);
 
-    count.textContent = all.length + (all.length === 1 ? " gruppo" : " gruppi");
+    count.textContent = listed.length + (listed.length === 1 ? " gruppo" : " gruppi");
     invite.hidden = manageAny || !GROUPS.length;
 
     if (!all.length) {
@@ -272,7 +274,7 @@
     box.innerHTML =
       section(mine.length > 1 ? "i miei gruppi" : "il mio gruppo", mine) +
       section("i gruppi che seguo", following) +
-      section("tutti i gruppi a bergamo", all);
+      section("tutti i gruppi a bergamo", listed);
   }
 
   async function toggleFollow(id){
