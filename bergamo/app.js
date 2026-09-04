@@ -81,39 +81,39 @@ function toast(msg){
 
 // catalogo sport/attività (docs/UI.md §1) : slug -> {emoji, label it, cat sito}
 const CATALOG = {
-  running:   { e:"🏃", l:"corsa",                     c:"sport" },
-  trail:     { e:"⛰️", l:"corsa in montagna",             c:"sport" },
+  running:   { e:"🏃", l:"Corsa",                     c:"sport" },
+  trail:     { e:"⛰️", l:"Corsa in montagna",             c:"sport" },
   hyrox:     { e:"🏋️", l:"Hyrox (gara in palestra)",                     c:"sport" },
-  walking:   { e:"🚶", l:"camminata",                 c:"sport" },
-  cycling:   { e:"🚴", l:"bici da strada",            c:"sport" },
-  mtb:       { e:"🚵", l:"mountain bike",              c:"sport" },
-  moto:      { e:"🏍️", l:"moto",                      c:"sport" },
-  hiking:    { e:"🥾", l:"escursionismo",             c:"sport" },
-  climbing:  { e:"🧗", l:"arrampicata",               c:"sport" },
-  skitouring:{ e:"🎿", l:"scialpinismo",              c:"sport" },
-  gym:       { e:"💪", l:"palestra",       c:"sport" },
-  yoga:      { e:"🧘", l:"yoga / pilates",            c:"benessere" },
-  football:  { e:"⚽", l:"calcio",                    c:"sport" },
-  basketball:{ e:"🏀", l:"basket",                    c:"sport" },
-  volleyball:{ e:"🏐", l:"volley",                    c:"sport" },
-  tennis:    { e:"🎾", l:"tennis",                    c:"sport" },
-  padel:     { e:"🏸", l:"padel",                     c:"sport" },
-  swimming:  { e:"🏊", l:"nuoto",                     c:"sport" },
-  surf:      { e:"🏄", l:"surf / sup",                c:"sport" },
-  paddling:  { e:"🚣", l:"canoa / kayak",             c:"sport" },
-  skiing:    { e:"⛷️", l:"sci",                       c:"sport" },
-  snowboard: { e:"🏂", l:"snowboard",                 c:"sport" },
-  skating:   { e:"⛸️", l:"pattinaggio",               c:"sport" },
-  ceramics:  { e:"🏺", l:"ceramica",                  c:"creatività" },
-  cooking:   { e:"🍳", l:"cucina",                    c:"cucina" },
-  dinner:    { e:"🍽️", l:"cena / aperitivo",          c:"cucina" },
-  painting:  { e:"🎨", l:"pittura / arte",            c:"creatività" },
-  gardening: { e:"🌱", l:"giardinaggio / volontariato", c:"giardinaggio" },
-  festival:  { e:"🎪", l:"feste, sagre ed eventi di paese",     c:"cultura" }
+  walking:   { e:"🚶", l:"Camminata",                 c:"sport" },
+  cycling:   { e:"🚴", l:"Bici da strada",            c:"sport" },
+  mtb:       { e:"🚵", l:"Mountain bike",              c:"sport" },
+  moto:      { e:"🏍️", l:"Moto",                      c:"sport" },
+  hiking:    { e:"🥾", l:"Escursionismo",             c:"sport" },
+  climbing:  { e:"🧗", l:"Arrampicata",               c:"sport" },
+  skitouring:{ e:"🎿", l:"Scialpinismo",              c:"sport" },
+  gym:       { e:"💪", l:"Palestra",       c:"sport" },
+  yoga:      { e:"🧘", l:"Yoga / pilates",            c:"benessere" },
+  football:  { e:"⚽", l:"Calcio",                    c:"sport" },
+  basketball:{ e:"🏀", l:"Basket",                    c:"sport" },
+  volleyball:{ e:"🏐", l:"Volley",                    c:"sport" },
+  tennis:    { e:"🎾", l:"Tennis",                    c:"sport" },
+  padel:     { e:"🏸", l:"Padel",                     c:"sport" },
+  swimming:  { e:"🏊", l:"Nuoto",                     c:"sport" },
+  surf:      { e:"🏄", l:"Surf / sup",                c:"sport" },
+  paddling:  { e:"🚣", l:"Canoa / kayak",             c:"sport" },
+  skiing:    { e:"⛷️", l:"Sci",                       c:"sport" },
+  snowboard: { e:"🏂", l:"Snowboard",                 c:"sport" },
+  skating:   { e:"⛸️", l:"Pattinaggio",               c:"sport" },
+  ceramics:  { e:"🏺", l:"Ceramica",                  c:"creatività" },
+  cooking:   { e:"🍳", l:"Cucina",                    c:"cucina" },
+  dinner:    { e:"🍽️", l:"Cena / aperitivo",          c:"cucina" },
+  painting:  { e:"🎨", l:"Pittura / arte",            c:"creatività" },
+  gardening: { e:"🌱", l:"Giardinaggio / volontariato", c:"giardinaggio" },
+  festival:  { e:"🎪", l:"Feste, sagre ed eventi di paese",     c:"cultura" }
 };
 
 // date in italiano
-const DAYS = ["domenica","lunedì","martedì","mercoledì","giovedì","venerdì","sabato"];
+const DAYS = ["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"];
 const MONTHS = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
 function timeStr(d){ return d.getHours() + ":" + String(d.getMinutes()).padStart(2, "0"); }
 function dayKey(d){ return d.toDateString(); }
@@ -125,16 +125,23 @@ function cityCase(t){
 }
 function goingTxt(n){ n = Number(n) || 0; return n === 0 ? "nessuno ancora" : n === 1 ? "1 ci va" : n + " ci vanno"; }
 // prezzo: null/0 = gratis; "12 €" oppure "12,50 €" (spazio non separabile)
-function fmtPrice(c){ if (c == null || c <= 0) return "gratis";
+function fmtPrice(c){ if (c == null || c <= 0) return "Gratis";
   const e = Math.floor(c / 100), r = c % 100;
   return (r ? e + "," + String(r).padStart(2, "0") : e) + "\u00a0€"; }
 function fmtAmount(c){ return fmtPrice(c).replace("\u00a0€", ""); }
 function parsePrice(s){ const t = String(s).trim().replace(/[\s€]/g, "").replace(",", ".");
   if (!/^\d{1,4}(\.\d{1,2})?$/.test(t)) return NaN; return Math.round(parseFloat(t) * 100); }
-function dayLabel(d){
+// "oggi" | "domani" | "" (valore tecnico per i confronti; il testo visibile è dayLabel)
+function dayKind(d){
   const today = new Date(); const tomorrow = new Date(); tomorrow.setDate(today.getDate() + 1);
   if (dayKey(d) === dayKey(today)) return "oggi";
   if (dayKey(d) === dayKey(tomorrow)) return "domani";
+  return "";
+}
+function dayLabel(d){
+  const k = dayKind(d);
+  if (k === "oggi") return "Oggi";
+  if (k === "domani") return "Domani";
   return DAYS[d.getDay()] + " " + d.getDate();
 }
 function daySub(d){ return DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()]; }
@@ -192,31 +199,31 @@ function mountNav(active, opts){
     .sn #menu a:hover, .sn #menu button:hover{background:#E9EEFB;}
     @media (max-width:700px){ .sn .lnk, .sn .cta{display:none;} header.sn{padding:0 18px;} }`;
   document.head.appendChild(st);
-  const links = [["eventi","eventi.html"],["i miei eventi","miei.html"],["gruppi","gruppi.html"]];
-  const initial = ((session && session.email) || "?")[0].toLowerCase();
+  const links = [["eventi","Eventi","eventi.html"],["i miei eventi","I miei eventi","miei.html"],["gruppi","Gruppi","gruppi.html"]];
+  const initial = ((session && session.email) || "?")[0].toUpperCase();
   const h = document.createElement("header"); h.className = "sn";
   h.innerHTML = `<div class="nav">
     <a class="brand" href="/bergamo/eventi.html"><img src="/logo.png" alt=""><span>anyplans<span style="font-size:.92em">?</span></span></a>
-    ${links.map(([l, href]) => `<a class="lnk${l === active ? " on" : ""}" href="${href}">${l}</a>`).join("")}
+    ${links.map(([k, l, href]) => `<a class="lnk${k === active ? " on" : ""}" href="${href}">${l}</a>`).join("")}
     <div class="right">
-      <a class="cta" href="crea.html">crea evento</a>
-      <a class="ib" id="bell" href="notifiche.html" title="avvisi" aria-label="avvisi">
+      <a class="cta" href="crea.html">Crea evento</a>
+      <a class="ib" id="bell" href="notifiche.html" title="Avvisi" aria-label="Avvisi">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 10 C 6 6.7, 8.7 4, 12 4 C 15.3 4, 18 6.7, 18 10 L18 15 L20 17.5 L4 17.5 L6 15 Z"/><path d="M10 20.5 C 10.5 21.3, 13.5 21.3, 14 20.5"/></svg>
         <span id="bell-dot"></span>
       </a>
       <div style="position:relative">
-        <button class="ib" id="avatar" title="il tuo profilo" aria-label="il tuo profilo">${esc(initial)}</button>
+        <button class="ib" id="avatar" title="Il tuo profilo" aria-label="Il tuo profilo">${esc(initial)}</button>
         <div id="menu" hidden>
           <div style="padding:9px 12px; border-bottom:1px solid rgba(25,25,25,.08); margin-bottom:4px">
             <div id="menu-name" style="font-weight:700; font-size:14px"></div>
             <div id="menu-email" style="font-size:12px; color:#6E6E73; overflow:hidden; text-overflow:ellipsis">${esc((session && session.email) || "")}</div>
           </div>
-          <a href="profilo.html">il mio profilo</a>
-          <a href="miei.html">i miei eventi</a>
-          <a href="gruppi.html">gruppi</a>
-          <a href="notifiche.html">avvisi</a>
-          <a href="impostazioni.html">impostazioni</a>
-          <button onclick="if(confirm('vuoi uscire?')) logout()">esci</button>
+          <a href="profilo.html">Il mio profilo</a>
+          <a href="miei.html">I miei eventi</a>
+          <a href="gruppi.html">Gruppi</a>
+          <a href="notifiche.html">Avvisi</a>
+          <a href="impostazioni.html">Impostazioni</a>
+          <button onclick="if(confirm('Vuoi uscire?')) logout()">Esci</button>
         </div>
       </div>
     </div></div>`;
@@ -242,7 +249,7 @@ function mountNav(active, opts){
     if (!r || !r.ok) return;
     const me = (await r.json().catch(() => []))[0];
     if (!me) return;
-    if (me.display_name) { document.getElementById("menu-name").textContent = me.display_name; document.getElementById("avatar").textContent = me.display_name[0].toLowerCase(); }
+    if (me.display_name) { document.getElementById("menu-name").textContent = me.display_name; document.getElementById("avatar").textContent = me.display_name[0].toUpperCase(); }
     if (me.avatar_url) { const av = document.getElementById("avatar"); av.style.backgroundImage = "url('" + me.avatar_url.replace(/'/g, "") + "')"; av.textContent = ""; }
   }).catch(() => {});
   rpc("unread_notifications").then(async r => {
@@ -255,10 +262,10 @@ function mountNav(active, opts){
 // tab bar mobile (scopri · crea · i miei eventi · profilo), solo sotto i 700px
 function mountTabbar(active){
   const tabs = [
-    ["eventi",  "eventi.html",        '<svg viewBox="0 0 24 24"><path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20z"/><path d="M9 4v13.5M15 6.5V20"/></svg>'],
-    ["crea",    "crea.html",          '<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>'],
-    ["i miei eventi", "miei.html",          '<svg viewBox="0 0 24 24"><path d="M5 5.5h14v15l-7-4-7 4z"/></svg>'],
-    ["profilo", "profilo.html",'<svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-4 4-6 7.5-6s6.3 2 7.5 6"/></svg>']
+    ["eventi", "Eventi", "eventi.html",        '<svg viewBox="0 0 24 24"><path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20z"/><path d="M9 4v13.5M15 6.5V20"/></svg>'],
+    ["crea", "Crea", "crea.html",          '<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>'],
+    ["i miei eventi", "I miei eventi", "miei.html",          '<svg viewBox="0 0 24 24"><path d="M5 5.5h14v15l-7-4-7 4z"/></svg>'],
+    ["profilo", "Profilo", "profilo.html",'<svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-4 4-6 7.5-6s6.3 2 7.5 6"/></svg>']
   ];
   const st = document.createElement("style");
   st.textContent = `
@@ -276,8 +283,8 @@ function mountTabbar(active){
     }`;
   document.head.appendChild(st);
   const bar = document.createElement("nav"); bar.id = "tabbar";
-  bar.innerHTML = tabs.map(([l, h, i]) =>
-    `<a href="${h}" class="${l === "crea" ? "crea" : ""}${l === active ? " on" : ""}">${i}<span>${l}</span></a>`).join("");
+  bar.innerHTML = tabs.map(([k, l, h, i]) =>
+    `<a href="${h}" class="${k === "crea" ? "crea" : ""}${k === active ? " on" : ""}">${i}<span>${l}</span></a>`).join("");
   document.body.appendChild(bar);
 }
 

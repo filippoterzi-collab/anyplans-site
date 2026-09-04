@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>pubblica un evento · anyplans</title>
+<title>Pubblica un evento · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <meta name="robots" content="noindex">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css">
@@ -40,6 +40,7 @@
   textarea{min-height:90px; resize:vertical;}
   input:focus, select:focus, textarea:focus{outline:2px solid var(--blue); outline-offset:1px;}
   .grid2{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
+  .grid2[hidden]{display:none;}
   .btn{display:block; width:100%; background:var(--blue); color:#fff; font-weight:700;
        padding:15px 0; border-radius:999px; border:none; cursor:pointer; font-size:16.5px;
        font-family:var(--round); text-align:center;}
@@ -88,92 +89,92 @@
 <header></header>
 
 <main>
-  <h1 class="display" id="h1">pubblica un evento</h1>
+  <h1 class="display" id="h1">Pubblica un evento</h1>
 
   <div>
-    <label for="sport">che tipo di evento è?</label>
+    <label for="sport">Che tipo di evento è?</label>
     <select id="sport"></select>
   </div>
 
   <div id="as-wrap" hidden>
-    <label for="as">chi lo organizza?</label>
-    <select id="as"><option value="">io</option></select>
-    <p class="hint">chi segue il gruppo riceve un avviso.</p>
+    <label for="as">Chi lo organizza?</label>
+    <select id="as"><option value="">Io</option></select>
+    <p class="hint">Chi segue il gruppo riceve un avviso.</p>
   </div>
 
   <div>
-    <label>chi lo può vedere?</label>
+    <label>Chi lo può vedere?</label>
     <div class="seg" id="seg-vis">
-      <button type="button" class="on" data-v="public" onclick="setVis('public')">pubblico</button>
-      <button type="button" data-v="private" onclick="setVis('private')">privato</button>
+      <button type="button" class="on" data-v="public" onclick="setVis('public')">Pubblico</button>
+      <button type="button" data-v="private" onclick="setVis('private')">Privato</button>
     </div>
-    <p class="hint" id="vis-hint">pubblico: sulla mappa e nella lista, chiunque a Bergamo lo trova.</p>
+    <p class="hint" id="vis-hint">Pubblico: sulla mappa e nella lista, chiunque a Bergamo lo trova.</p>
   </div>
 
   <div>
-    <label for="title">nome dell'evento</label>
-    <input id="title" type="text" required minlength="3" placeholder="es. corso di ceramica, anche principianti">
+    <label for="title">Nome dell'evento</label>
+    <input id="title" type="text" required minlength="3" placeholder="Es. corso di ceramica, anche principianti">
   </div>
 
   <div class="grid2">
     <div>
-      <label for="date">che giorno?</label>
+      <label for="date">Che giorno?</label>
       <input id="date" type="date" required>
     </div>
     <div>
-      <label for="time">a che ora?</label>
+      <label for="time">A che ora?</label>
       <input id="time" type="time" required value="19:00">
     </div>
   </div>
 
   <div>
-    <label for="place">punto di ritrovo</label>
-    <input id="place" type="text" required placeholder="scrivi un posto: parco, bar, via, paese…" autocomplete="off" oninput="placeSearch()">
+    <label for="place">Punto di ritrovo</label>
+    <input id="place" type="text" required placeholder="Scrivi un posto: parco, bar, via, paese…" autocomplete="off" oninput="placeSearch()">
     <div id="place-list" hidden style="margin-top:8px; background:#fff;
          border:1.5px solid rgba(25,25,25,.14); border-radius:14px; overflow:hidden"></div>
-    <p class="hint">scegli dalla lista. oppure tocca la mappa nel punto giusto.</p>
+    <p class="hint">Scegli dalla lista. Oppure tocca la mappa nel punto giusto.</p>
   </div>
 
   <div>
     <div id="map"></div>
-    <p class="hint" id="map-hint">tocca la mappa nel punto di ritrovo</p>
+    <p class="hint" id="map-hint">Tocca la mappa nel punto di ritrovo</p>
   </div>
 
   <div>
-    <label>foto dell'evento <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
+    <label>Foto dell'evento <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
     <div style="display:flex; align-items:center; gap:14px">
       <div id="ph" onclick="document.getElementById('phfile').click()"
            style="width:96px; height:72px; border:2px dashed rgba(27,79,216,.5); border-radius:14px; display:flex; align-items:center;
                   justify-content:center; flex-shrink:0; cursor:pointer; background-size:cover; background-position:center; font-size:26px">📷</div>
       <div>
-        <div style="font-weight:700; font-size:14.5px" id="ph-label">aggiungi una foto</div>
-        <p class="hint" style="margin-top:2px">la vedono tutti nella pagina dell'evento. senza foto resta il simbolo.</p>
-        <button type="button" id="ph-remove" hidden onclick="removePhoto()" style="background:none; border:none; cursor:pointer; padding:4px 0; font-family:var(--round); font-weight:700; font-size:13px; color:var(--grey); text-decoration:underline">togli la foto</button>
+        <div style="font-weight:700; font-size:14.5px" id="ph-label">Aggiungi una foto</div>
+        <p class="hint" style="margin-top:2px">La vedono tutti nella pagina dell'evento. Senza foto resta il simbolo.</p>
+        <button type="button" id="ph-remove" hidden onclick="removePhoto()" style="background:none; border:none; cursor:pointer; padding:4px 0; font-family:var(--round); font-weight:700; font-size:13px; color:var(--grey); text-decoration:underline">Togli la foto</button>
       </div>
       <input id="phfile" type="file" accept="image/*" hidden onchange="pickEventPhoto(this)">
     </div>
   </div>
 
   <div>
-    <label for="desc">descrizione <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
-    <textarea id="desc" placeholder="due righe per chi non ti conosce: cosa si fa, cosa portare…"></textarea>
+    <label for="desc">Descrizione <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
+    <textarea id="desc" placeholder="Due righe per chi non ti conosce: cosa si fa, cosa portare…"></textarea>
   </div>
 
   <div class="grid2">
     <div>
-      <label for="maxp">quante persone al massimo? <span style="color:var(--grey); font-weight:600">(se lo lasci vuoto, nessun limite)</span></label>
-      <input id="maxp" type="number" min="2" placeholder="es. 12">
+      <label for="maxp">Quante persone al massimo? <span style="color:var(--grey); font-weight:600">(se lo lasci vuoto, nessun limite)</span></label>
+      <input id="maxp" type="number" min="2" placeholder="Es. 12">
     </div>
   </div>
 
   <div>
-    <label>domande per chi si iscrive <span style="color:var(--grey); font-weight:600">(se vuoi, fino a 5)</span></label>
+    <label>Domande per chi si iscrive <span style="color:var(--grey); font-weight:600">(se vuoi, fino a 5)</span></label>
     <div id="qs" style="display:flex; flex-direction:column; gap:10px"></div>
     <button type="button" id="addq" onclick="addQuestion()"
       style="margin-top:8px; background:transparent; color:var(--blue); box-shadow:inset 0 0 0 2px var(--blue);
              font-weight:700; font-size:14px; padding:11px 18px; border-radius:999px; border:none;
-             cursor:pointer; font-family:var(--round)">+ aggiungi una domanda</button>
-    <p class="hint">es. "hai mai fatto ceramica?". chi si iscrive risponde, e le risposte le vedi solo tu.</p>
+             cursor:pointer; font-family:var(--round)">+ Aggiungi una domanda</button>
+    <p class="hint">Es. "hai mai fatto ceramica?". Chi si iscrive risponde, e le risposte le vedi solo tu.</p>
   </div>
 
   <div class="toggle-row" id="paid" onclick="togglePaid()">
@@ -189,27 +190,27 @@
       <div class="money"><span>€</span><input id="price" type="text" inputmode="decimal" placeholder="12,00" autocomplete="off"></div>
     </div>
     <div>
-      <label for="price-note">nota <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
-      <input id="price-note" type="text" maxlength="60" placeholder="es. si paga sul posto, materiali compresi">
+      <label for="price-note">Nota <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
+      <input id="price-note" type="text" maxlength="60" placeholder="Es. si paga sul posto, materiali compresi">
     </div>
     <p class="hint" style="grid-column:1/-1; margin-top:-4px">Su anyplans non si paga niente. Chi partecipa vede il prezzo e paga direttamente a te, sul posto o come preferisci.</p>
   </div>
 
   <div class="toggle-row" id="vis" onclick="this.classList.toggle('on')">
     <div>
-      <div class="t">decidi tu chi partecipa</div>
-      <div class="s">ogni persona ti manda una richiesta. l'indirizzo preciso lo vede solo chi accetti.</div>
+      <div class="t">Decidi tu chi partecipa</div>
+      <div class="s">Ogni persona ti manda una richiesta. L'indirizzo preciso lo vede solo chi accetti.</div>
     </div>
     <div class="sw"><div class="k"></div></div>
   </div>
 
-  <button class="btn" id="btn" onclick="submitNewEvent()">pubblica l'evento</button>
-  <a id="lnk-back" hidden href="#" style="text-align:center; font-weight:700; font-size:14px; color:var(--grey)">lascia stare, torna all'evento</a>
-  <p class="note" id="note">pubblicare è gratis, sempre. il tuo nome è già nella lista dei partecipanti.</p>
+  <button class="btn" id="btn" onclick="submitNewEvent()">Pubblica l'evento</button>
+  <a id="lnk-back" hidden href="#" style="text-align:center; font-weight:700; font-size:14px; color:var(--grey)">Lascia stare, torna all'evento</a>
+  <p class="note" id="note">Pubblicare è gratis, sempre. Il tuo nome è già nella lista dei partecipanti.</p>
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788518411"></script>
+<script src="app.js?v=1788528706"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -310,14 +311,14 @@
         const r = await fetch("https://places.googleapis.com/v1/places/" + x.placeId + "?languageCode=it&sessionToken=" + gSession, {
           headers: {"X-Goog-Api-Key": GOOGLE_MAPS_KEY, "X-Goog-FieldMask": "location,formattedAddress,displayName"} });
         gSession = null;
-        if (!r.ok) return toast("non trovo questo posto. tocca la mappa nel punto giusto.");
+        if (!r.ok) return toast("Non trovo questo posto. Tocca la mappa nel punto giusto.");
         const d = await r.json();
         x.lat = d.location.latitude; x.lng = d.location.longitude;
         // nel campo resta solo il nome del posto (o la via, se è un indirizzo): il punto esatto è sulla mappa
         const nm = d.displayName && d.displayName.text;
         if (nm) document.getElementById("place").value = nm;
         else if (d.formattedAddress) document.getElementById("place").value = d.formattedAddress.replace(/, \d{5} .*$/, "").replace(/, Italia$/, "");
-      } catch (_) { return toast("non trovo questo posto. tocca la mappa nel punto giusto."); }
+      } catch (_) { return toast("Non trovo questo posto. Tocca la mappa nel punto giusto."); }
     }
     setPoint(x.lat, x.lng);
     map.easeTo({ center: [x.lng, x.lat], zoom: 15 });
@@ -339,7 +340,7 @@
     el.style.cssText = "width:38px;height:38px;background:#1B4FD8;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:18px;box-shadow:0 1px 5px rgba(0,0,0,.2)";
     el.textContent = CATALOG[sel.value].e;
     marker = new maplibregl.Marker({ element: el }).setLngLat([lng, lat]).addTo(map);
-    document.getElementById("map-hint").textContent = "punto messo. tocca un altro punto per spostarlo";
+    document.getElementById("map-hint").textContent = "Punto messo. Tocca un altro punto per spostarlo";
   }
   map.on("click", (e) => setPoint(e.lngLat.lat, e.lngLat.lng));
 
@@ -349,9 +350,9 @@
     const rows = r && r.ok ? await r.json().catch(() => []) : [];
     const a = rows[0];
     if (!a || !a.is_mine) { location.replace("evento.html?id=" + editId); return; }
-    document.getElementById("h1").textContent = "modifica evento";
-    document.getElementById("btn").textContent = "salva le modifiche";
-    document.getElementById("note").textContent = "chi partecipa vede le modifiche subito.";
+    document.getElementById("h1").textContent = "Modifica evento";
+    document.getElementById("btn").textContent = "Salva le modifiche";
+    document.getElementById("note").textContent = "Chi partecipa vede le modifiche subito.";
     setVis(a.visibility === "private" ? "private" : "public");
     if (a.visibility === "request") document.getElementById("vis").classList.add("on");
     editVisibility = a.visibility || "open";
@@ -403,8 +404,8 @@
     visChoice = v;
     document.querySelectorAll("#seg-vis button").forEach(b => b.classList.toggle("on", b.dataset.v === v));
     document.getElementById("vis-hint").textContent = v === "private"
-      ? "privato: non compare sulla mappa. lo vede solo chi riceve il link da te."
-      : "pubblico: sulla mappa e nella lista, chiunque a Bergamo lo trova.";
+      ? "Privato: non compare sulla mappa. Lo vede solo chi riceve il link da te."
+      : "Pubblico: sulla mappa e nella lista, chiunque a Bergamo lo trova.";
     const vis = document.getElementById("vis");
     vis.hidden = v === "private";
     if (v === "private") vis.classList.remove("on");
@@ -416,7 +417,7 @@
   async function saveVisibility(activityId, wanted, current){
     if (wanted === current) return;
     const r = await rpc("set_activity_visibility", { p_activity_id: activityId, p_visibility: wanted });
-    if (!r || !r.ok) toast(wanted === "private" ? "evento pubblicato, ma non risulta privato: riprova da \"modifica l'evento\"." : "salvato, ma la visibilità no. riprova da \"modifica l'evento\".");
+    if (!r || !r.ok) toast(wanted === "private" ? "Evento pubblicato, ma non risulta privato: riprova da \"Modifica l'evento\"." : "Salvato, ma la visibilità no. Riprova da \"Modifica l'evento\".");
   }
   // foto dell'evento: ridotta a 1600px, caricata nel bucket event-photos sotto <uid>/<evento>.jpg
   let photoBlob = null, photoState = "none"; // none | new | keep | remove
@@ -435,13 +436,13 @@
   function showEventPhoto(src){
     const ph = document.getElementById("ph");
     ph.style.backgroundImage = "url(" + src + ")"; ph.style.borderStyle = "solid"; ph.textContent = "";
-    document.getElementById("ph-label").textContent = "cambia la foto";
+    document.getElementById("ph-label").textContent = "Cambia la foto";
     document.getElementById("ph-remove").hidden = false;
   }
   function removePhoto(){
     photoBlob = null; photoState = "remove";
     const ph = document.getElementById("ph"); ph.style.backgroundImage = ""; ph.style.borderStyle = "dashed"; ph.textContent = "📷";
-    document.getElementById("ph-label").textContent = "aggiungi una foto";
+    document.getElementById("ph-label").textContent = "Aggiungi una foto";
     document.getElementById("ph-remove").hidden = true;
     document.getElementById("phfile").value = "";
   }
@@ -452,11 +453,11 @@
         const path = uid + "/" + activityId + ".jpg";
         const r = await fetch(SB_URL + "/storage/v1/object/event-photos/" + path, {
           method: "POST", headers: {"apikey": SB_ANON, "Authorization": "Bearer " + session.access_token, "Content-Type": "image/jpeg", "x-upsert": "true"}, body: photoBlob });
-        if (!r.ok) { toast("evento salvato, ma la foto non si è caricata. riprova da \"modifica l'evento\"."); return; }
+        if (!r.ok) { toast("Evento salvato, ma la foto non si è caricata. Riprova da \"Modifica l'evento\"."); return; }
         const url = SB_URL + "/storage/v1/object/public/event-photos/" + path + "?v=" + Date.now();
         const rs = await rpc("set_activity_photo", { p_activity_id: activityId, p_url: url });
-        if (!rs || !rs.ok) toast("evento salvato, ma la foto non si è collegata. riprova da \"modifica l'evento\".");
-      } catch (_) { toast("evento salvato, ma la foto non si è caricata."); }
+        if (!rs || !rs.ok) toast("Evento salvato, ma la foto non si è collegata. Riprova da \"Modifica l'evento\".");
+      } catch (_) { toast("Evento salvato, ma la foto non si è caricata."); }
     } else if (photoState === "remove") {
       await rpc("set_activity_photo", { p_activity_id: activityId, p_url: null });
     }
@@ -483,17 +484,17 @@
 
   function addQuestion(){
     const qs = document.getElementById("qs");
-    if (qs.children.length >= 5) { toast("puoi mettere al massimo 5 domande."); return; }
+    if (qs.children.length >= 5) { toast("Puoi mettere al massimo 5 domande."); return; }
     const row = document.createElement("div");
     row.className = "qrow";
     row.style.cssText = "background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:14px; padding:12px 14px; display:flex; flex-direction:column; gap:8px";
     row.innerHTML =
-      '<input class="q-prompt" type="text" maxlength="200" placeholder="la domanda… (es. hai mai fatto ceramica?)" style="border:none; padding:4px 2px; font-size:15px; outline:none">' +
+      '<input class="q-prompt" type="text" maxlength="200" placeholder="La domanda… (es. hai mai fatto ceramica?)" style="border:none; padding:4px 2px; font-size:15px; outline:none">' +
       '<div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap">' +
         '<select class="q-kind" style="width:auto; padding:8px 12px; font-size:13.5px; border-radius:9px">' +
-          '<option value="text">risposta libera</option><option value="yesno">sì o no</option></select>' +
+          '<option value="text">Risposta libera</option><option value="yesno">Sì o no</option></select>' +
         '<label style="display:flex; align-items:center; gap:6px; font-weight:600; font-size:13px; color:var(--grey); margin:0; cursor:pointer">' +
-          '<input class="q-req" type="checkbox" style="width:auto"> obbligatoria</label>' +
+          '<input class="q-req" type="checkbox" style="width:auto"> Obbligatoria</label>' +
         '<button type="button" onclick="this.closest(\'.qrow\').remove()" ' +
           'style="margin-left:auto; background:none; border:none; cursor:pointer; font-weight:700; font-size:16px; color:var(--grey)">×</button>' +
       '</div>';
@@ -515,11 +516,11 @@
     const date = document.getElementById("date").value;
     const time = document.getElementById("time").value;
     function fail(msg){ note.className = "note err"; note.textContent = msg; toast(msg); note.scrollIntoView({ block: "center", behavior: "smooth" }); }
-    if (title.length < 3) return fail("dai un nome all'evento (almeno 3 lettere).");
-    if (!place) return fail("scrivi il punto di ritrovo.");
-    if (!date || !time) return fail("scegli giorno e ora.");
+    if (title.length < 3) return fail("Dai un nome all'evento (almeno 3 lettere).");
+    if (!place) return fail("Scrivi il punto di ritrovo.");
+    if (!date || !time) return fail("Scegli giorno e ora.");
     const startAt = new Date(date + "T" + time);
-    if (startAt <= new Date()) return fail("questa data è già passata. scegli un giorno futuro.");
+    if (startAt <= new Date()) return fail("Questa data è già passata. Scegli un giorno futuro.");
     const price = readPrice();
     if (!price.ok) return fail(price.msg);
     if (!point) {
@@ -530,7 +531,7 @@
         const f = g.features && g.features[0];
         if (f) setPoint(f.geometry.coordinates[1], f.geometry.coordinates[0]);
       } catch (_) {}
-      if (!point) return fail("non trovo il posto: scegli dalla lista o tocca la mappa.");
+      if (!point) return fail("Non trovo il posto: scegli dalla lista o tocca la mappa.");
     }
 
     const btn = document.getElementById("btn");
@@ -553,16 +554,16 @@
         await saveVisibility(editId, chosenVisibility(), editVisibility);
         if (editSport && sel.value !== editSport) {
           const rsp = await rpc("set_activity_sport", { p_activity_id: editId, p_sport: sel.value });
-          if (!rsp || !rsp.ok) toast("salvato, ma il tipo di evento no. riprova.");
+          if (!rsp || !rsp.ok) toast("Salvato, ma il tipo di evento no. Riprova.");
         }
         const rq = await rpc("set_activity_questions", { p_activity_id: editId, p_questions: collectQuestions() });
-        if (!rq || !rq.ok) toast("salvato, ma le domande no. riprova da \"modifica l'evento\".");
+        if (!rq || !rq.ok) toast("Salvato, ma le domande no. Riprova da \"Modifica l'evento\".");
         track("event_edit");
         location.href = "evento.html?id=" + editId;
         return;
       }
       const bu = ru ? await ru.json().catch(() => ({})) : {};
-      return fail((bu.message || "").includes("start_in_past") ? "questa data è già passata. scegli un giorno futuro." : "non ha funzionato, riprova.");
+      return fail((bu.message || "").includes("start_in_past") ? "Questa data è già passata. Scegli un giorno futuro." : "Non ha funzionato, riprova.");
     }
     const r = await rpc("create_activity", {
       p_sport: sel.value,
@@ -582,7 +583,7 @@
       const qs = collectQuestions();
       if (qs.length) {
         const rq = await rpc("set_activity_questions", { p_activity_id: newId, p_questions: qs });
-        if (!rq || !rq.ok) toast("evento pubblicato, ma le domande no. riprova da \"modifica l'evento\".");
+        if (!rq || !rq.ok) toast("Evento pubblicato, ma le domande no. Riprova da \"Modifica l'evento\".");
       }
       if (price.cents) await savePrice(newId, price);
       await savePhoto(newId);
@@ -590,7 +591,7 @@
       const asC = document.getElementById("as").value;
       if (asC) {
         const rc = await rpc("set_activity_community", { p_activity_id: newId, p_community_id: asC });
-        if (!rc || !rc.ok) toast("evento pubblicato, ma non risulta del gruppo. riprova da \"modifica l'evento\".");
+        if (!rc || !rc.ok) toast("Evento pubblicato, ma non risulta del gruppo. Riprova da \"Modifica l'evento\".");
       }
       track("event_create");
       location.href = "evento.html?id=" + newId;
@@ -600,9 +601,9 @@
     const code = b.message || "";
     note.className = "note err";
     if (code.includes("profile_required")) { location.href = "profilo.html"; return; }
-    else if (code.includes("invalid_title")) note.textContent = "dai un nome all'evento (almeno 3 lettere).";
-    else if (code.includes("start_in_past")) note.textContent = "questa data è già passata. scegli un giorno futuro.";
-    else note.textContent = "non riesco a pubblicare l'evento, riprova.";
+    else if (code.includes("invalid_title")) note.textContent = "Dai un nome all'evento (almeno 3 lettere).";
+    else if (code.includes("start_in_past")) note.textContent = "Questa data è già passata. Scegli un giorno futuro.";
+    else note.textContent = "Non riesco a pubblicare l'evento, riprova.";
   }
 </script>
 </body>

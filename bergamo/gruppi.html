@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>gruppi a Bergamo · anyplans</title>
+<title>Gruppi a Bergamo · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <meta name="robots" content="noindex">
 <style>
@@ -115,29 +115,29 @@
 
 <main>
   <div class="titlerow">
-    <h1 class="display">gruppi a <span>Bergamo</span></h1>
+    <h1 class="display">Gruppi a <span>Bergamo</span></h1>
     <span class="count" id="count"></span>
   </div>
   <div class="search">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6E6E73" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg>
-    <input id="q" placeholder="cerca un gruppo: pro loco, ceramica, corsa…" oninput="render()" aria-label="cerca un gruppo">
+    <input id="q" placeholder="Cerca un gruppo: pro loco, ceramica, corsa…" oninput="render()" aria-label="Cerca un gruppo">
   </div>
   <div class="chips" id="chips">
-    <button class="chip on" data-cat="" aria-pressed="true" onclick="setCat(this)">tutti</button>
-    <button class="chip" data-cat="sport" aria-pressed="false" onclick="setCat(this)">🏃 sport</button>
-    <button class="chip" data-cat="cucina" aria-pressed="false" onclick="setCat(this)">🍳 cucina</button>
-    <button class="chip" data-cat="creatività" aria-pressed="false" onclick="setCat(this)">🏺 creatività</button>
-    <button class="chip" data-cat="giardinaggio" aria-pressed="false" onclick="setCat(this)">🌱 giardinaggio</button>
-    <button class="chip" data-cat="cultura" aria-pressed="false" onclick="setCat(this)">🎪 cultura</button>
-    <button class="chip" data-cat="benessere" aria-pressed="false" onclick="setCat(this)">🧘 benessere</button>
+    <button class="chip on" data-cat="" aria-pressed="true" onclick="setCat(this)">Tutti</button>
+    <button class="chip" data-cat="sport" aria-pressed="false" onclick="setCat(this)">🏃 Sport</button>
+    <button class="chip" data-cat="cucina" aria-pressed="false" onclick="setCat(this)">🍳 Cucina</button>
+    <button class="chip" data-cat="creatività" aria-pressed="false" onclick="setCat(this)">🏺 Creatività</button>
+    <button class="chip" data-cat="giardinaggio" aria-pressed="false" onclick="setCat(this)">🌱 Giardinaggio</button>
+    <button class="chip" data-cat="cultura" aria-pressed="false" onclick="setCat(this)">🎪 Cultura</button>
+    <button class="chip" data-cat="benessere" aria-pressed="false" onclick="setCat(this)">🧘 Benessere</button>
   </div>
   <div id="sections">
     <div class="grid"><div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
   </div>
-  <a class="invite" id="invite" href="crea-community.html" hidden>organizzi eventi? crea il tuo gruppo →</a>
+  <a class="invite" id="invite" href="crea-community.html" hidden>Organizzi eventi? Crea il tuo gruppo →</a>
 </main>
 
-<script src="app.js?v=1788518411"></script>
+<script src="app.js?v=1788528706"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 860 });
@@ -156,8 +156,8 @@
   const emojiOf = g => g.emoji || CAT_EMOJI[g.category] || (CATALOG[g.category] || {}).e || "📍";
   const catLabel = g => (CATALOG[g.category] || {}).l || g.category || "";
   const catFamily = g => (CATALOG[g.category] || {}).c || g.category;
-  const followersTxt = n => { n = Number(n) || 0; return n === 0 ? "nessuno ancora" : n === 1 ? "1 persona lo segue" : n + " persone lo seguono"; };
-  const upcomingTxt = n => { n = Number(n) || 0; return n === 0 ? "nessun evento in programma" : n === 1 ? "1 evento in programma" : n + " eventi in programma"; };
+  const followersTxt = n => { n = Number(n) || 0; return n === 0 ? "Nessuno ancora" : n === 1 ? "1 persona lo segue" : n + " persone lo seguono"; };
+  const upcomingTxt = n => { n = Number(n) || 0; return n === 0 ? "Nessun evento in programma" : n === 1 ? "1 evento in programma" : n + " eventi in programma"; };
 
   async function load(){
     const [rl, rm] = await Promise.all([
@@ -215,14 +215,14 @@
     }
     const on = !!g.is_following;
     const action = manage
-      ? '<span class="manage">gestisci →</span>'
-      : `<button class="follow${on ? " ghost" : ""}" aria-pressed="${on}" aria-label="${on ? "non seguire più" : "segui"} ${esc(g.name)}"
-           ${pending.has(g.id) ? "disabled" : ""} onclick="event.stopPropagation(); toggleFollow('${esc(g.id)}')">${on ? "lo segui ✓" : "segui"}</button>`;
+      ? '<span class="manage">Gestisci →</span>'
+      : `<button class="follow${on ? " ghost" : ""}" aria-pressed="${on}" aria-label="${on ? "Non seguire più" : "Segui"} ${esc(g.name)}"
+           ${pending.has(g.id) ? "disabled" : ""} onclick="event.stopPropagation(); toggleFollow('${esc(g.id)}')">${on ? "Lo segui ✓" : "Segui"}</button>`;
     return `<div class="g" role="link" tabindex="0" data-href="${esc(href)}" onclick="go(this)" onkeydown="if(event.key==='Enter') go(this)">
       ${logo}
       <div class="body">
         <div class="name"><span>${esc(g.name)}</span>${vb}</div>
-        ${g.is_verified ? '<div class="v">verificato da anyplans</div>' : ""}
+        ${g.is_verified ? '<div class="v">Verificato da anyplans</div>' : ""}
         <div class="m">${esc(emojiOf(g))} ${esc(catLabel(g))}${g.city ? " · " + esc(cityCase(g.city)) : ""}</div>
         <div class="m">${followersTxt(g.follower_count)} · ${upcomingTxt(g.upcoming_count)}</div>
         ${next}
@@ -242,7 +242,7 @@
     const invite = document.getElementById("invite");
     const count = document.getElementById("count");
     if (!loaded) return;
-    if (failed) { box.innerHTML = '<div class="empty">non riesco a caricare i gruppi. ricarica la pagina.</div>'; count.textContent = ""; invite.hidden = true; return; }
+    if (failed) { box.innerHTML = '<div class="empty">Non riesco a caricare i gruppi. Ricarica la pagina.</div>'; count.textContent = ""; invite.hidden = true; return; }
 
     const q = norm(document.getElementById("q").value.trim());
     const words = q ? q.split(/\s+/) : [];
@@ -260,22 +260,22 @@
 
     if (!all.length) {
       let msg;
-      if (cat) msg = "nessun gruppo di " + esc(cat) + '. <a href="#" onclick="clearCat(); return false">togli il filtro</a>.';
-      else if (q) msg = 'nessun gruppo per "' + esc(document.getElementById("q").value.trim()) + '". prova un\'altra parola.';
-      else msg = 'a Bergamo non c\'è ancora nessun gruppo. organizzi eventi? <a href="crea-community.html">crea il tuo gruppo →</a>';
+      if (cat) msg = "Nessun gruppo di " + esc(cat) + '. <a href="#" onclick="clearCat(); return false">Togli il filtro</a>.';
+      else if (q) msg = 'Nessun gruppo per "' + esc(document.getElementById("q").value.trim()) + '". Prova un\'altra parola.';
+      else msg = 'A Bergamo non c\'è ancora nessun gruppo. Organizzi eventi? <a href="crea-community.html">Crea il tuo gruppo →</a>';
       box.innerHTML = '<div class="empty">' + msg + "</div>";
       return;
     }
     box.innerHTML =
-      section(mine.length > 1 ? "i miei gruppi" : "il mio gruppo", mine) +
-      section("i gruppi che seguo", following) +
-      section("tutti i gruppi a Bergamo", listed);
+      section(mine.length > 1 ? "I miei gruppi" : "Il mio gruppo", mine) +
+      section("I gruppi che seguo", following) +
+      section("Tutti i gruppi a Bergamo", listed);
   }
 
   async function toggleFollow(id){
     const g = GROUPS.find(x => x.id === id);
     if (!g || pending.has(id)) return;
-    if (g.is_following && !confirm("vuoi smettere di seguire " + g.name + "?")) return;
+    if (g.is_following && !confirm("Vuoi smettere di seguire " + g.name + "?")) return;
     const next = !g.is_following;
     // subito il nuovo stato, poi si aspetta la risposta
     g.is_following = next;
@@ -289,11 +289,11 @@
       render();
       const b = r ? await r.json().catch(() => ({})) : {};
       if ((b.message || "").includes("profile_required")) { location.href = "profilo.html"; return; }
-      toast("non ha funzionato, riprova."); return;
+      toast("Non ha funzionato, riprova."); return;
     }
     render();
     track(next ? "follow" : "unfollow");
-    toast(next ? "ora segui " + g.name + ": ti avvisiamo a ogni nuovo evento." : "non segui più " + g.name + ".");
+    toast(next ? "Ora segui " + g.name + ": ti avvisiamo a ogni nuovo evento." : "Non segui più " + g.name + ".");
   }
 
   load();

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>eventi a Bergamo · anyplans</title>
+<title>Eventi a Bergamo · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <meta name="robots" content="noindex">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css">
@@ -210,22 +210,22 @@
 
 <div class="topbar">
   <div class="titlerow">
-    <h1 class="display">eventi a <span>Bergamo</span></h1>
+    <h1 class="display">Eventi a <span>Bergamo</span></h1>
     <span class="count" id="count"></span>
   </div>
   <div class="fl-bar">
     <div class="search">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6E6E73" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg>
-      <input id="q" placeholder="cerca un evento: ceramica, corsa, cucina…" oninput="render()" aria-label="cerca un evento">
+      <input id="q" placeholder="Cerca un evento: ceramica, corsa, cucina…" oninput="render()" aria-label="Cerca un evento">
     </div>
     <div class="fl-days" id="fl-days">
-      <button class="chip day-chip" data-day="oggi" aria-pressed="false" onclick="setDay(this)">oggi</button>
-      <button class="chip day-chip" data-day="domani" aria-pressed="false" onclick="setDay(this)">domani</button>
-      <button class="chip day-chip" data-day="weekend" aria-pressed="false" onclick="setDay(this)">fine settimana</button>
+      <button class="chip day-chip" data-day="oggi" aria-pressed="false" onclick="setDay(this)">Oggi</button>
+      <button class="chip day-chip" data-day="domani" aria-pressed="false" onclick="setDay(this)">Domani</button>
+      <button class="chip day-chip" data-day="weekend" aria-pressed="false" onclick="setDay(this)">Fine settimana</button>
     </div>
     <button class="fl-btn" id="fbtn" onclick="openFilters()" aria-haspopup="dialog" aria-controls="fl">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.5"/><circle cx="10" cy="17" r="2.5"/></svg>
-      <span id="fbtn-label">filtri</span>
+      <span id="fbtn-label">Filtri</span>
     </button>
   </div>
   <div class="fl-active" id="fl-active" aria-live="polite"></div>
@@ -236,38 +236,38 @@
   <div class="fl-modal">
     <div class="fl-handle" aria-hidden="true"></div>
     <div class="fl-head">
-      <h2 class="display" id="fl-title">filtri</h2>
-      <button class="fl-x" onclick="closeFilters()" aria-label="chiudi">
+      <h2 class="display" id="fl-title">Filtri</h2>
+      <button class="fl-x" onclick="closeFilters()" aria-label="Chiudi">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
     </div>
     <div class="fl-body">
       <section class="fl-sec" aria-labelledby="fl-h-day">
-        <h3 id="fl-h-day">quando</h3>
-        <p>scegli un giorno. se non scegli niente li vedi tutti.</p>
+        <h3 id="fl-h-day">Quando</h3>
+        <p>Scegli un giorno. Se non scegli niente li vedi tutti.</p>
         <div class="fl-grid days" id="fl-day"></div>
       </section>
       <section class="fl-sec" aria-labelledby="fl-h-cat">
-        <h3 id="fl-h-cat">che tipo di evento</h3>
+        <h3 id="fl-h-cat">Che tipo di evento</h3>
         <div class="fl-grid" id="fl-cat">
-          <button class="chip on" data-cat="" aria-pressed="true" onclick="setCat(this)">tutti i tipi</button>
-          <button class="chip" data-cat="sport" aria-pressed="false" onclick="setCat(this)">🏃 sport</button>
-          <button class="chip" data-cat="cucina" aria-pressed="false" onclick="setCat(this)">🍳 cucina</button>
-          <button class="chip" data-cat="creatività" aria-pressed="false" onclick="setCat(this)">🏺 creatività</button>
-          <button class="chip" data-cat="giardinaggio" aria-pressed="false" onclick="setCat(this)">🌱 giardinaggio</button>
-          <button class="chip" data-cat="cultura" aria-pressed="false" onclick="setCat(this)">🎪 cultura</button>
-          <button class="chip" data-cat="benessere" aria-pressed="false" onclick="setCat(this)">🧘 benessere</button>
+          <button class="chip on" data-cat="" aria-pressed="true" onclick="setCat(this)">Tutti i tipi</button>
+          <button class="chip" data-cat="sport" aria-pressed="false" onclick="setCat(this)">🏃 Sport</button>
+          <button class="chip" data-cat="cucina" aria-pressed="false" onclick="setCat(this)">🍳 Cucina</button>
+          <button class="chip" data-cat="creatività" aria-pressed="false" onclick="setCat(this)">🏺 Creatività</button>
+          <button class="chip" data-cat="giardinaggio" aria-pressed="false" onclick="setCat(this)">🌱 Giardinaggio</button>
+          <button class="chip" data-cat="cultura" aria-pressed="false" onclick="setCat(this)">🎪 Cultura</button>
+          <button class="chip" data-cat="benessere" aria-pressed="false" onclick="setCat(this)">🧘 Benessere</button>
         </div>
       </section>
     </div>
     <div class="fl-foot">
-      <button class="fl-reset" id="fl-reset" onclick="clearFilters()" disabled>cancella tutto</button>
-      <button class="fl-show" id="fl-show" onclick="closeFilters()">mostra <span id="fl-count">…</span></button>
+      <button class="fl-reset" id="fl-reset" onclick="clearFilters()" disabled>Cancella tutto</button>
+      <button class="fl-show" id="fl-show" onclick="closeFilters()">Mostra <span id="fl-count">…</span></button>
     </div>
   </div>
 </div>
 
-<button id="maptoggle" onclick="toggleMap()">🗺️ mappa</button>
+<button id="maptoggle" onclick="toggleMap()">🗺️ Mappa</button>
 
 <div class="split">
   <div class="list" id="list"></div>
@@ -275,7 +275,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788518411"></script>
+<script src="app.js?v=1788528706"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -290,11 +290,11 @@
     const bell = document.getElementById("bell"); if (bell) bell.style.display = "none";
     const reg = document.createElement("a"); reg.href = "login.html"; reg.id = "nav-reg";
     reg.style.cssText = "background:var(--blue); color:#fff; font-weight:700; font-size:13.5px; padding:9px 16px; border-radius:999px; white-space:nowrap";
-    reg.textContent = "registrati"; reg.onclick = () => { try { sessionStorage.setItem("anyplans_next", "eventi.html"); } catch (_) {} };
+    reg.textContent = "Registrati"; reg.onclick = () => { try { sessionStorage.setItem("anyplans_next", "eventi.html"); } catch (_) {} };
     document.querySelector(".nav-right").prepend(reg);
   }
   if (logged) {
-    document.getElementById("avatar").textContent = (session.email || "?")[0].toLowerCase();
+    document.getElementById("avatar").textContent = (session.email || "?")[0].toUpperCase();
     document.getElementById("menu-email").textContent = session.email || "";
     document.addEventListener("click", (e) => {
       if (!e.target.closest("#menu") && e.target.id !== "avatar") document.getElementById("menu").hidden = true;
@@ -356,7 +356,7 @@
     const list = document.getElementById("list");
     list.innerHTML = '<div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div>';
     const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
-    if (!r || !r.ok) { list.innerHTML = '<div class="empty">non riesco a caricare gli eventi. ricarica la pagina.</div>'; return; }
+    if (!r || !r.ok) { list.innerHTML = '<div class="empty">Non riesco a caricare gli eventi. Ricarica la pagina.</div>'; return; }
     const rows = await r.json();
     EVENTS = rows.map(x => ({
       id: x.id,
@@ -366,7 +366,7 @@
       title: x.title,
       host: x.host_name || null,
       hostAvatar: x.host_avatar || null,
-      place: x.meeting_point_text || "zona indicativa",
+      place: x.meeting_point_text || "Zona indicativa",
       when: new Date(x.start_at),
       going: Number(x.going_count) || 0,
       my: x.my_status,
@@ -395,7 +395,7 @@
     markers = {};
     EVENTS.forEach(ev => {
       const el = document.createElement("div");
-      el.className = "pin" + (dayLabel(ev.when) === "oggi" ? " today" : ""); el.id = "pin-" + ev.id; el.textContent = ev.emoji;
+      el.className = "pin" + (dayKind(ev.when) === "oggi" ? " today" : ""); el.id = "pin-" + ev.id; el.textContent = ev.emoji;
       const popup = new maplibregl.Popup({ offset: 22, closeButton: false })
         .setHTML(`<div class="pop"><div class="t">${esc(ev.title)}</div><div class="m">${dayLabel(ev.when)} · ${timeStr(ev.when)} · ${relTime(ev.when)} · ${esc(ev.place)}${ev.price > 0 ? " · " + esc(fmtPrice(ev.price)) : ""}</div></div>`);
       const mk = new maplibregl.Marker({ element: el }).setLngLat([ev.lng, ev.lat]).setPopup(popup).addTo(map);
@@ -432,14 +432,14 @@
   }
   function updateFbtn(){
     const n = (day ? 1 : 0) + (cat ? 1 : 0);
-    document.getElementById("fbtn-label").textContent = n ? "filtri · " + n : "filtri";
+    document.getElementById("fbtn-label").textContent = n ? "Filtri · " + n : "Filtri";
     document.getElementById("fbtn").classList.toggle("on", n > 0);
     document.getElementById("fl-reset").disabled = !n;
     const act = document.getElementById("fl-active");
     let html = "";
     if (day) html += `<button class="fl-pill" data-kind="day" onclick="setDay(document.querySelector('.day-chip.on'))">${esc(document.querySelector(".day-chip.on").textContent)} <b>×</b></button>`;
     if (cat) html += `<button class="fl-pill" data-kind="cat" onclick="setCat(document.querySelector('.chip[data-cat=\'\']'))">${esc(document.querySelector(".chip[data-cat].on").textContent)} <b>×</b></button>`;
-    if (n) html += `<button class="fl-clear" onclick="clearFilters()">cancella tutto</button>`;
+    if (n) html += `<button class="fl-clear" onclick="clearFilters()">Cancella tutto</button>`;
     act.innerHTML = cat ? html : ""; act.classList.toggle("has", !!cat);
   }
   function setCat(btn){
@@ -455,7 +455,7 @@
   placeChips();
   function inDay(d){
     if (!day) return true;
-    const lbl = dayLabel(d);
+    const lbl = dayKind(d);
     if (day === "weekend") {
       const wd = d.getDay(), diff = (d - Date.now()) / 86400000;
       return (wd === 0 || wd === 6) && diff < 7;
@@ -464,10 +464,10 @@
   }
 
   function stateBtn(e){
-    if (e.mine) return ["ok", "lo organizzi tu"];
-    if (e.my === "going") return ["ok", "ci vado ✓"];
-    if (e.my === "requested") return ["wait", "aspetto l'ok"];
-    return ["", e.request ? "chiedo di entrare →" : "ci sono →"];
+    if (e.mine) return ["ok", "Lo organizzi tu"];
+    if (e.my === "going") return ["ok", "Ci vado ✓"];
+    if (e.my === "requested") return ["wait", "Aspetto l'ok"];
+    return ["", e.request ? "Chiedo di entrare →" : "Ci sono →"];
   }
 
   function render(){
@@ -486,7 +486,7 @@
     document.getElementById("count").textContent = evs.length + (evs.length === 1 ? " evento" : " eventi") + " in programma";
     const show = document.getElementById("fl-show");
     show.classList.toggle("zero", !evs.length);
-    show.innerHTML = evs.length ? 'mostra <span id="fl-count">' + (evs.length === 1 ? "1 evento" : evs.length + " eventi") + "</span>" : "nessun evento";
+    show.innerHTML = evs.length ? 'Mostra <span id="fl-count">' + (evs.length === 1 ? "1 evento" : evs.length + " eventi") + "</span>" : "Nessun evento";
     EVENTS.forEach(e => { const visible = evs.includes(e); markers[e.id].getElement().style.opacity = visible ? "1" : "0.25"; });
 
     if (!evs.length) {
@@ -494,9 +494,9 @@
       const dayTxt = day === "weekend" ? "nel fine settimana" : day;
       const pub = '<a href="crea.html" style="color:var(--blue); font-weight:700">pubblica tu un evento</a>';
       let msg;
-      if (day || cat) msg = "niente " + (day ? dayTxt + " " : "") + (cat ? "di " + CATN[cat] : "") + '. <a href="#" onclick="clearFilters(); return false" style="color:var(--blue); font-weight:700">togli i filtri</a> oppure ' + pub + ".";
-      else if (q) msg = 'nessun evento per "' + esc(q) + '". prova un\'altra parola, oppure ' + pub + ".";
-      else msg = 'per ora non c\'è nessun evento. <a href="crea.html" style="color:var(--blue); font-weight:700">pubblica tu il primo</a>.';
+      if (day || cat) msg = ("Niente " + (day ? dayTxt + " " : "") + (cat ? "di " + CATN[cat] : "")).trim() + '. <a href="#" onclick="clearFilters(); return false" style="color:var(--blue); font-weight:700">Togli i filtri</a> oppure ' + pub + ".";
+      else if (q) msg = 'Nessun evento per "' + esc(q) + '". Prova un\'altra parola, oppure ' + pub + ".";
+      else msg = 'Per ora non c\'è nessun evento. <a href="crea.html" style="color:var(--blue); font-weight:700">Pubblica tu il primo</a>.';
       list.innerHTML = '<div class="empty">' + msg + "</div>"; return;
     }
 
@@ -505,7 +505,7 @@
       const dk = dayKey(e.when);
       if (dk !== lastDay) {
         lastDay = dk;
-        const isToday = dayLabel(e.when) === "oggi";
+        const isToday = dayKind(e.when) === "oggi";
         html += `<div class="day${isToday ? " today" : ""}"><span class="dot"></span><b>${dayLabel(e.when)}</b><span>${daySub(e.when)}</span></div>`;
       }
       const [cls, label] = stateBtn(e);
@@ -514,7 +514,7 @@
         <div>
           <div class="time">${timeStr(e.when)} · ${relTime(e.when)}</div>
           <a class="t" href="evento.html?id=${e.id}" onclick="event.stopPropagation()" style="display:block">${esc(e.title)}</a>
-          <div class="m">${e.host ? (e.hostAvatar ? `<span class="ha" style="background-image:url('${esc(e.hostAvatar)}')"></span>` : "") + "di " + esc(e.host) : "da un altro sito"} · ${esc(e.place)} · ${goingTxt(e.going)}${e.request ? " · con approvazione" : ""}${e.price > 0 ? ' · <b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(e.price)) + "</b>" : ""}</div>
+          <div class="m">${e.host ? (e.hostAvatar ? `<span class="ha" style="background-image:url('${esc(e.hostAvatar)}')"></span>` : "") + "Di " + esc(e.host) : "Da un altro sito"} · ${esc(e.place)} · ${goingTxt(e.going)}${e.request ? " · con approvazione" : ""}${e.price > 0 ? ' · <b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(e.price)) + "</b>" : ""}</div>
         </div>
         <button class="go ${cls}" onclick="event.stopPropagation(); join('${e.id}')">${label}</button>
       </div>`;
@@ -539,7 +539,7 @@
 
   function askLogin(id){
     try { sessionStorage.setItem("anyplans_next", "evento.html?id=" + id + "&join=1"); } catch (_) {}
-    toast("per iscriverti serve un account: è gratis, ci vuole un minuto.");
+    toast("Per iscriverti serve un account: è gratis, ci vuole un minuto.");
     setTimeout(() => location.href = "login.html", 900);
   }
   async function join(id){
@@ -547,7 +547,7 @@
     const e = EVENTS.find(x => x.id === id);
     if (e.mine) { location.href = "evento.html?id=" + id; return; }
     const leaving = e.my === "going" || e.my === "requested";
-    if (leaving && e.my === "requested" && !confirm("vuoi annullare la richiesta?")) return;
+    if (leaving && e.my === "requested" && !confirm("Vuoi annullare la richiesta?")) return;
     if (!leaving) {
       // se l'host ha messo delle domande si risponde nella pagina dell'evento
       const rq = await rpc("get_activity_questions", { p_activity_id: id });
@@ -560,18 +560,18 @@
     else r = await rpc("join_activity", { p_activity_id: id, p_status: "going" });
     if (r && r.ok) {
       if (leaving) { if (e.my === "going") e.going -= 1; e.my = "left"; }
-      else if (e.request) { e.my = "requested"; toast("richiesta mandata. quando chi organizza dice sì, ti avvisiamo."); track("join_request"); }
-      else { e.my = "going"; e.going += 1; toast("fatto, ci vai! il tuo nome è nella lista dei partecipanti."); track("join"); }
+      else if (e.request) { e.my = "requested"; toast("Richiesta mandata. Quando chi organizza dice sì, ti avvisiamo."); track("join_request"); }
+      else { e.my = "going"; e.going += 1; toast("Fatto, ci vai! Il tuo nome è nella lista dei partecipanti."); track("join"); }
       render();
       return;
     }
-    let msg = "non ha funzionato, riprova.";
+    let msg = "Non ha funzionato, riprova.";
     try {
       const b = r ? await r.json() : {};
       const code = b.message || "";
       if (code.includes("profile_required")) { location.href = "profilo.html"; return; }
-      else if (code.includes("activity_full")) msg = "posti finiti per questo evento.";
-      else if (code.includes("age_not_allowed")) msg = "questo evento non è aperto alla tua età.";
+      else if (code.includes("activity_full")) msg = "Posti finiti per questo evento.";
+      else if (code.includes("age_not_allowed")) msg = "Questo evento non è aperto alla tua età.";
       else if (code.includes("not_authenticated")) { logout(); return; }
     } catch (_) {}
     toast(msg);
@@ -589,7 +589,7 @@
   });
   function toggleMap(){
     const show = document.body.classList.toggle("showmap");
-    document.getElementById("maptoggle").innerHTML = show ? "☰ lista" : "🗺️ mappa";
+    document.getElementById("maptoggle").innerHTML = show ? "☰ Lista" : "🗺️ Mappa";
     if (show) setTimeout(() => map.resize(), 60);
   }
 </script>

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>il mio gruppo · anyplans</title>
+<title>Il mio gruppo · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <meta name="robots" content="noindex">
 <style>
@@ -189,61 +189,61 @@
       </div>
       <div class="meta" id="meta"></div>
     </div>
-    <a class="btn w sm" id="lnk-public" href="#">come la vedono gli altri ↗</a>
+    <a class="btn w sm" id="lnk-public" href="#">Come la vedono gli altri ↗</a>
   </div>
 
   <div class="stats">
-    <div class="stat"><div class="display n" id="st-followers">0</div><div class="l">seguono il gruppo</div></div>
-    <div class="stat"><div class="display n" id="st-upcoming">0</div><div class="l">eventi in programma</div></div>
-    <div class="stat"><div class="display n" id="st-done">0</div><div class="l">eventi fatti</div></div>
+    <div class="stat"><div class="display n" id="st-followers">0</div><div class="l">Seguono il gruppo</div></div>
+    <div class="stat"><div class="display n" id="st-upcoming">0</div><div class="l">Eventi in programma</div></div>
+    <div class="stat"><div class="display n" id="st-done">0</div><div class="l">Eventi fatti</div></div>
   </div>
 
   <div class="tabs" id="tabs">
-    <button class="on" data-tab="eventi" onclick="showTab('eventi')">eventi</button>
-    <button data-tab="follower" onclick="showTab('follower')">chi segue il gruppo</button>
-    <button data-tab="admin" onclick="showTab('admin')">collaboratori</button>
-    <button data-tab="modifica" onclick="showTab('modifica')">modifica la pagina</button>
+    <button class="on" data-tab="eventi" onclick="showTab('eventi')">Eventi</button>
+    <button data-tab="follower" onclick="showTab('follower')">Chi segue il gruppo</button>
+    <button data-tab="admin" onclick="showTab('admin')">Collaboratori</button>
+    <button data-tab="modifica" onclick="showTab('modifica')">Modifica la pagina</button>
     <div class="acts">
-      <button class="btn ghost sm" onclick="openBlast()">avvisa chi segue il gruppo</button>
-      <a class="btn sm" id="lnk-new" href="#">+ pubblica un evento</a>
+      <button class="btn ghost sm" onclick="openBlast()">Avvisa chi segue il gruppo</button>
+      <a class="btn sm" id="lnk-new" href="#">+ Pubblica un evento</a>
     </div>
   </div>
   <div class="acts-mob">
-    <button class="btn ghost" onclick="openBlast()">avvisa chi segue il gruppo</button>
-    <a class="btn" id="lnk-new-mob" href="#">+ pubblica un evento</a>
+    <button class="btn ghost" onclick="openBlast()">Avvisa chi segue il gruppo</button>
+    <a class="btn" id="lnk-new-mob" href="#">+ Pubblica un evento</a>
   </div>
 
   <!-- tab eventi -->
   <section id="tab-eventi" class="list" style="gap:18px">
     <div class="list">
-      <div class="sec">in programma</div>
-      <div id="upcoming" class="list"><p class="empty">carico…</p></div>
+      <div class="sec">In programma</div>
+      <div id="upcoming" class="list"><p class="empty">Carico…</p></div>
     </div>
     <div class="box" id="past-box">
-      <div class="sec" style="font-size:15px">passati</div>
-      <p class="m" id="past-summary">carico…</p>
-      <button class="textbtn" id="past-more" hidden style="align-self:flex-start; padding-left:0" onclick="togglePast()">vedi tutti →</button>
+      <div class="sec" style="font-size:15px">Passati</div>
+      <p class="m" id="past-summary">Carico…</p>
+      <button class="textbtn" id="past-more" hidden style="align-self:flex-start; padding-left:0" onclick="togglePast()">Vedi tutti →</button>
       <div id="past-list" class="list" hidden style="gap:10px"></div>
     </div>
   </section>
 
   <!-- tab follower -->
   <section id="tab-follower" class="list" hidden>
-    <div class="sec">chi vi segue <span id="fol-n" style="color:var(--grey); font-weight:600; font-size:13px"></span></div>
-    <div id="followers" class="list" style="gap:8px"><p class="empty">carico…</p></div>
+    <div class="sec">Chi vi segue <span id="fol-n" style="color:var(--grey); font-weight:600; font-size:13px"></span></div>
+    <div id="followers" class="list" style="gap:8px"><p class="empty">Carico…</p></div>
   </section>
 
   <!-- tab admin -->
   <section id="tab-admin" class="list" hidden>
     <div class="box">
-      <div class="sec" style="font-size:15px">collaboratori</div>
+      <div class="sec" style="font-size:15px">Collaboratori</div>
       <div id="admins" class="list" style="gap:8px"></div>
-      <p class="note" id="admin-note">i collaboratori del gruppo possono pubblicare eventi e mandare avvisi. li scegli solo tu, tra chi segue il gruppo.</p>
-      <button class="textbtn" id="btn-add-admin" hidden style="align-self:flex-start; padding-left:0" onclick="openPicker()">+ aggiungi un collaboratore</button>
+      <p class="note" id="admin-note">I collaboratori del gruppo possono pubblicare eventi e mandare avvisi. Li scegli solo tu, tra chi segue il gruppo.</p>
+      <button class="textbtn" id="btn-add-admin" hidden style="align-self:flex-start; padding-left:0" onclick="openPicker()">+ Aggiungi un collaboratore</button>
     </div>
     <div class="box" id="picker" hidden>
-      <div class="sec" style="font-size:15px">scegli tra chi segue il gruppo</div>
-      <div id="picker-list" class="list" style="gap:8px"><p class="empty">carico…</p></div>
+      <div class="sec" style="font-size:15px">Scegli tra chi segue il gruppo</div>
+      <div id="picker-list" class="list" style="gap:8px"><p class="empty">Carico…</p></div>
     </div>
   </section>
 
@@ -255,29 +255,29 @@
           <svg id="pic-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8 L7 8 L9 5.5 L15 5.5 L17 8 L20 8 L20 18.5 L4 18.5 Z"/><circle cx="12" cy="13" r="3.2"/></svg>
         </div>
         <div>
-          <div style="font-weight:700; font-size:15px" id="pic-label">logo o foto</div>
-          <div class="hint" style="margin-top:2px">se non ce l'hai, mettiamo il simbolo della categoria.</div>
+          <div style="font-weight:700; font-size:15px" id="pic-label">Logo o foto</div>
+          <div class="hint" style="margin-top:2px">Se non ce l'hai, mettiamo il simbolo della categoria.</div>
         </div>
         <input id="file" type="file" accept="image/*" hidden onchange="pickPhoto(this)">
       </div>
       <div>
-        <label for="f-name">nome del gruppo</label>
+        <label for="f-name">Nome del gruppo</label>
         <input id="f-name" type="text" required minlength="2" maxlength="60" autocomplete="off">
       </div>
       <div>
-        <label>categoria</label>
+        <label>Categoria</label>
         <select id="cats" style="width:100%; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px; padding:13px 16px; font-size:16px; font-family:var(--round); color:var(--ink)"></select>
       </div>
       <div>
-        <label for="f-desc">di cosa si occupa il gruppo?</label>
-        <textarea id="f-desc" maxlength="500" placeholder="due righe per chi vi scopre sulla mappa…"></textarea>
+        <label for="f-desc">Di cosa si occupa il gruppo?</label>
+        <textarea id="f-desc" maxlength="500" placeholder="Due righe per chi vi scopre sulla mappa…"></textarea>
       </div>
       <div>
         <label for="f-ig">Instagram <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
-        <div class="igrow"><span onclick="this.nextElementSibling.focus()">instagram.com/</span><input id="f-ig" type="text" maxlength="30" placeholder="il tuo nome utente Instagram" autocomplete="off" autocapitalize="none"></div>
-        <p class="hint">lo mostriamo nella pagina del gruppo, sotto gli eventi passati.</p>
+        <div class="igrow"><span onclick="this.nextElementSibling.focus()">instagram.com/</span><input id="f-ig" type="text" maxlength="30" placeholder="Il tuo nome utente Instagram" autocomplete="off" autocapitalize="none"></div>
+        <p class="hint">Lo mostriamo nella pagina del gruppo, sotto gli eventi passati.</p>
       </div>
-      <button class="btn" id="f-btn" type="submit" style="width:100%">salva le modifiche</button>
+      <button class="btn" id="f-btn" type="submit" style="width:100%">Salva le modifiche</button>
       <p class="note" id="f-note"></p>
     </form>
   </section>
@@ -287,30 +287,30 @@
 <div class="overlay" id="blast" hidden>
   <div class="modal">
     <div style="display:flex; align-items:center; justify-content:space-between; gap:12px">
-      <h2 class="display" style="font-size:26px">avvisa chi segue il gruppo</h2>
+      <h2 class="display" style="font-size:26px">Avvisa chi segue il gruppo</h2>
       <button class="x" onclick="closeBlast()">×</button>
     </div>
     <div class="from">
       <div class="mini" id="b-mini"></div>
-      <div>da <b id="b-from"></b> a <b id="b-to"></b></div>
+      <div>Da <b id="b-from"></b> a <b id="b-to"></b></div>
     </div>
     <div>
-      <label for="b-subject">titolo dell'avviso</label>
-      <input id="b-subject" type="text" maxlength="80" placeholder="es. a settembre si riparte: ecco le date">
+      <label for="b-subject">Titolo dell'avviso</label>
+      <input id="b-subject" type="text" maxlength="80" placeholder="Es. a settembre si riparte: ecco le date">
     </div>
     <div>
-      <label for="b-body">messaggio</label>
-      <textarea id="b-body" maxlength="1000" style="min-height:120px" placeholder="due righe a chi segue il gruppo: cosa succede, quando, come partecipare."></textarea>
+      <label for="b-body">Messaggio</label>
+      <textarea id="b-body" maxlength="1000" style="min-height:120px" placeholder="Due righe a chi segue il gruppo: cosa succede, quando, come partecipare."></textarea>
     </div>
     <div>
-      <label for="b-event">collega un evento <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
-      <select id="b-event"><option value="">nessun evento</option></select>
+      <label for="b-event">Collega un evento <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
+      <select id="b-event"><option value="">Nessun evento</option></select>
     </div>
     <div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap">
-      <button class="btn" id="b-send" onclick="sendBlast()">manda</button>
+      <button class="btn" id="b-send" onclick="sendBlast()">Manda</button>
       <span class="note" id="b-note"></span>
     </div>
-    <p class="note">puoi mandare al massimo 2 avvisi a settimana, così non stanchi nessuno.</p>
+    <p class="note">Puoi mandare al massimo 2 avvisi a settimana, così non stanchi nessuno.</p>
   </div>
 </div>
 
@@ -330,7 +330,7 @@
   <div class="sk" style="height:90px"></div>
 </div>
 
-<script src="app.js?v=1788518411"></script>
+<script src="app.js?v=1788528706"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 1000 });
@@ -344,14 +344,14 @@
   const first = ["dinner","festival","ceramics","cooking","painting","gardening","yoga"];
   const order = [...first, ...Object.keys(CATALOG).filter(s => !first.includes(s))];
   const catSel = document.getElementById("cats");
-  catSel.innerHTML = '<option value="">scegli…</option>' + order.map(s => `<option value="${s}">${CATALOG[s].e}  ${CATALOG[s].l}</option>`).join("");
+  catSel.innerHTML = '<option value="">Scegli…</option>' + order.map(s => `<option value="${s}">${CATALOG[s].e}  ${CATALOG[s].l}</option>`).join("");
   let category = null;
   catSel.onchange = () => { category = catSel.value || null; };
 
   async function load(){
     if (!id) { location.replace("eventi.html"); return; }
     const r = await rpc("get_community", { p_id: id });
-    if (!r || !r.ok) { document.getElementById("loading").innerHTML = '<p class="empty">non riesco a caricare il gruppo, ricarica la pagina.</p>'; return; }
+    if (!r || !r.ok) { document.getElementById("loading").innerHTML = '<p class="empty">Non riesco a caricare il gruppo, ricarica la pagina.</p>'; return; }
     const rows = await r.json().catch(() => []);
     c = Array.isArray(rows) ? rows[0] : rows;
     if (!c || !c.id) { location.replace("eventi.html"); return; }
@@ -369,7 +369,7 @@
     document.getElementById("name").textContent = c.name;
     document.getElementById("verified").hidden = !c.is_verified;
     document.getElementById("meta").textContent =
-      (c.is_verified ? "gruppo verificato · " : "") + (c.my_role === "owner" ? "sei il responsabile" : "sei collaboratore");
+      (c.is_verified ? "Gruppo verificato · " : "") + (c.my_role === "owner" ? "Sei il responsabile" : "Sei collaboratore");
     const pub = "community.html?" + (c.slug ? "slug=" + encodeURIComponent(c.slug) : "id=" + c.id);
     (document.getElementById("lnk-public") || {}).href = pub;
     const newHref = "crea.html?community=" + c.id;
@@ -405,10 +405,10 @@
     const when = new Date(x.start_at);
     const going = Number(x.going_count) || 0;
     const meta = [going === 1 ? "1 ci va" : going + " ci vanno"];
-    if (!isPast) meta.push(x.max_participants ? x.max_participants + " posti" : "senza limite di posti");
+    if (!isPast) meta.push(x.max_participants ? x.max_participants + " posti" : "Senza limite di posti");
     if (x.meeting_point_text) meta.push(esc(x.meeting_point_text));
-    const pill = isPast ? '<span class="pill g">fatto</span>'
-               : (x.visibility === "request" ? '<span class="pill">su richiesta</span>' : '<span class="pill">pubblicato</span>');
+    const pill = isPast ? '<span class="pill g">Fatto</span>'
+               : (x.visibility === "request" ? '<span class="pill">Su richiesta</span>' : '<span class="pill">Pubblicato</span>');
     return `<a class="ev${isPast ? " past" : ""}" href="evento.html?id=${encodeURIComponent(x.id)}">
       <div class="tile">${esc(x.emoji || (CATALOG[x.sport] || {}).e || "📍")}</div>
       <div class="body">
@@ -416,7 +416,7 @@
         <div class="t">${esc(x.title)}</div>
         <div class="m">${meta.join(" · ")}</div>
       </div>
-      <div class="right">${pill}<span class="go">gestisci →</span></div>
+      <div class="right">${pill}<span class="go">Gestisci →</span></div>
     </a>`;
   }
   async function loadEvents(){
@@ -425,24 +425,24 @@
       rpc("community_events", { p_id: c.id, p_past: true })
     ]);
     const up = document.getElementById("upcoming");
-    if (!ru || !ru.ok) up.innerHTML = '<p class="empty">non riesco a caricare gli eventi, ricarica la pagina.</p>';
+    if (!ru || !ru.ok) up.innerHTML = '<p class="empty">Non riesco a caricare gli eventi, ricarica la pagina.</p>';
     else {
       upcoming = (await ru.json().catch(() => [])).sort((a, b) => new Date(a.start_at) - new Date(b.start_at));
       up.innerHTML = upcoming.length ? upcoming.map(x => evRow(x, false)).join("")
-        : '<p class="empty">nessun evento in programma. il prossimo lo pubblichi da "+ pubblica un evento".</p>';
+        : '<p class="empty">Nessun evento in programma. Il prossimo lo pubblichi da "+ Pubblica un evento".</p>';
       document.getElementById("st-upcoming").textContent = upcoming.length;
       const sel = document.getElementById("b-event");
-      sel.innerHTML = '<option value="">nessun evento</option>' + upcoming.map(x => {
+      sel.innerHTML = '<option value="">Nessun evento</option>' + upcoming.map(x => {
         const d = new Date(x.start_at);
         return `<option value="${esc(x.id)}">${esc((x.emoji || "") + " " + x.title + " · " + dayLabel(d) + " " + timeStr(d))}</option>`;
       }).join("");
     }
     const ps = document.getElementById("past-summary");
-    if (!rp || !rp.ok) { ps.textContent = "non riesco a caricare gli eventi passati."; return; }
+    if (!rp || !rp.ok) { ps.textContent = "Non riesco a caricare gli eventi passati."; return; }
     past = (await rp.json().catch(() => [])).sort((a, b) => new Date(b.start_at) - new Date(a.start_at));
-    if (!past.length) { ps.textContent = "ancora nessuno: il primo evento fatto lo vedi qui."; return; }
+    if (!past.length) { ps.textContent = "Ancora nessuno: il primo evento fatto lo vedi qui."; return; }
     const last = past[0], lg = Number(last.going_count) || 0;
-    ps.innerHTML = past.length + (past.length === 1 ? " evento" : " eventi") + " · l'ultimo: " + esc(last.title) + ", " +
+    ps.innerHTML = past.length + (past.length === 1 ? " evento" : " eventi") + " · L'ultimo: " + esc(last.title) + ", " +
       esc(daySub(new Date(last.start_at))) + " (" + lg + (lg === 1 ? " partecipante" : " partecipanti") + ")";
     document.getElementById("past-more").hidden = false;
     document.getElementById("past-list").innerHTML = past.map(x => evRow(x, true)).join("");
@@ -450,26 +450,26 @@
   function togglePast(){
     const l = document.getElementById("past-list");
     l.hidden = !l.hidden;
-    document.getElementById("past-more").textContent = l.hidden ? "vedi tutti →" : "nascondi";
+    document.getElementById("past-more").textContent = l.hidden ? "Vedi tutti →" : "Nascondi";
   }
 
   // ---- follower ----
   function personRow(p, extra){
-    const initial = esc((p.display_name || "?")[0].toLowerCase());
+    const initial = esc((p.display_name || "?")[0].toUpperCase());
     return `<div class="person" id="fol-${esc(p.user_id)}">
       <div class="avatar"${avatarStyle(p.avatar_url)}>${p.avatar_url ? "" : initial}</div>
-      <div><div class="n">${esc(p.display_name || "qualcuno")}</div>
-        ${p.followed_at ? '<div class="s">segue da ' + esc(daySub(new Date(p.followed_at))) + "</div>" : ""}</div>
+      <div><div class="n">${esc(p.display_name || "Qualcuno")}</div>
+        ${p.followed_at ? '<div class="s">Segue da ' + esc(daySub(new Date(p.followed_at))) + "</div>" : ""}</div>
       ${extra || ""}</div>`;
   }
   async function loadFollowers(){
     const wrap = document.getElementById("followers");
     const r = await rpc("community_followers", { p_id: c.id });
-    if (!r || !r.ok) { followers = null; wrap.innerHTML = '<p class="empty">non riesco a caricare chi segue il gruppo, riprova.</p>'; return; }
+    if (!r || !r.ok) { followers = null; wrap.innerHTML = '<p class="empty">Non riesco a caricare chi segue il gruppo, riprova.</p>'; return; }
     followers = (await r.json().catch(() => [])).sort((a, b) => new Date(b.followed_at) - new Date(a.followed_at));
     document.getElementById("fol-n").textContent = "(" + followers.length + ")";
     wrap.innerHTML = followers.length ? followers.map(p => personRow(p)).join("")
-      : '<p class="empty">ancora nessuno segue il gruppo. condividi la pagina: chi lo segue riceve un avviso a ogni nuovo evento.</p>';
+      : '<p class="empty">Ancora nessuno segue il gruppo. Condividi la pagina: chi lo segue riceve un avviso a ogni nuovo evento.</p>';
   }
 
   // ---- admin ----
@@ -486,10 +486,10 @@
         adminsLoaded = true;
       }
     }
-    let html = `<div class="person"><div class="avatar">${esc((c.owner_name || "?")[0].toLowerCase())}</div>
-      <div class="n">${esc(c.owner_name || "chi ha creato il gruppo")}</div><span class="tag">responsabile</span></div>`;
-    html += adminsLocal.map(p => personRow(p, '<span class="tag">admin</span>' +
-      (isOwner ? `<button class="textbtn act" onclick="setAdmin('${esc(p.user_id)}', false)">togli</button>` : ""))).join("");
+    let html = `<div class="person"><div class="avatar">${esc((c.owner_name || "?")[0].toUpperCase())}</div>
+      <div class="n">${esc(c.owner_name || "Chi ha creato il gruppo")}</div><span class="tag">Responsabile</span></div>`;
+    html += adminsLocal.map(p => personRow(p, '<span class="tag">Admin</span>' +
+      (isOwner ? `<button class="textbtn act" onclick="setAdmin('${esc(p.user_id)}', false)">Togli</button>` : ""))).join("");
     document.getElementById("admins").innerHTML = html;
     document.getElementById("btn-add-admin").hidden = !isOwner;
   }
@@ -499,21 +499,21 @@
     if (followers === null) await loadFollowers();
     const list = document.getElementById("picker-list");
     const pool = (followers || []).filter(p => !adminsLocal.some(a => a.user_id === p.user_id) && p.user_id !== myUid());
-    list.innerHTML = pool.length ? pool.map(p => personRow(p, `<button class="btn sm act" onclick="setAdmin('${esc(p.user_id)}', true)">rendi collaboratore</button>`)).join("")
-      : '<p class="empty">nessuno da scegliere: i collaboratori si scelgono tra chi segue il gruppo.</p>';
+    list.innerHTML = pool.length ? pool.map(p => personRow(p, `<button class="btn sm act" onclick="setAdmin('${esc(p.user_id)}', true)">Rendi collaboratore</button>`)).join("")
+      : '<p class="empty">Nessuno da scegliere: i collaboratori si scelgono tra chi segue il gruppo.</p>';
   }
   async function setAdmin(uid, on){
     const r = await rpc("set_community_admin", { p_id: c.id, p_user_id: uid, p_admin: on });
-    if (!r || !r.ok) { toast("non riesco, riprova."); return; }
+    if (!r || !r.ok) { toast("Non riesco, riprova."); return; }
     if (on) {
       const p = (followers || []).find(x => x.user_id === uid);
       if (p && !adminsLocal.some(a => a.user_id === uid)) adminsLocal.push(p);
-      toast("ora è collaboratore del gruppo: può pubblicare eventi e mandare avvisi.");
+      toast("Ora è collaboratore del gruppo: può pubblicare eventi e mandare avvisi.");
       document.getElementById("picker").hidden = true;
     } else {
       const i = adminsLocal.findIndex(a => a.user_id === uid);
       if (i >= 0) adminsLocal.splice(i, 1);
-      toast("non è più collaboratore.");
+      toast("Non è più collaboratore.");
     }
     track(on ? "community_admin_add" : "community_admin_remove");
     renderAdmins();
@@ -525,7 +525,7 @@
     pic.style.backgroundImage = "url(" + String(src).replace(/[()'"]/g, "") + ")";
     pic.style.borderStyle = "solid";
     document.getElementById("pic-icon").style.display = "none";
-    document.getElementById("pic-label").textContent = "cambia la foto";
+    document.getElementById("pic-label").textContent = "Cambia la foto";
   }
   let avatarBlob = null;
   function pickPhoto(input){
@@ -560,13 +560,13 @@
     const note = document.getElementById("f-note"), btn = document.getElementById("f-btn");
     const name = document.getElementById("f-name").value.trim();
     function fail(msg){ note.className = "note err"; note.textContent = msg; btn.disabled = false; return false; }
-    if (name.length < 2) return fail("dai un nome al gruppo (almeno 2 lettere).");
-    if (!category) return fail("scegli una categoria.");
+    if (name.length < 2) return fail("Dai un nome al gruppo (almeno 2 lettere).");
+    if (!category) return fail("Scegli una categoria.");
     btn.disabled = true; note.className = "note"; note.textContent = "…";
     let avatarUrl = null;
     if (avatarBlob) {
       avatarUrl = await uploadLogo();
-      if (!avatarUrl) toast("la foto non si è caricata: riprova più tardi.");
+      if (!avatarUrl) toast("La foto non si è caricata: riprova più tardi.");
     }
     const ig = document.getElementById("f-ig").value.trim().replace(/^@/, "").replace(/^.*instagram\.com\//, "").replace(/\/.*$/, "");
     const desc = document.getElementById("f-desc").value.trim();
@@ -579,12 +579,12 @@
       p_instagram_handle: ig || null,
       p_city: null
     });
-    if (!r) return fail("non riesco a collegarmi. controlla internet e riprova.");
+    if (!r) return fail("Non riesco a collegarmi. Controlla internet e riprova.");
     if (!r.ok) {
       const b = await r.json().catch(() => ({}));
       const code = b.message || "";
-      if (code.includes("invalid_category")) return fail("scegli una categoria dall'elenco.");
-      return fail("non riesco a salvare, riprova.");
+      if (code.includes("invalid_category")) return fail("Scegli una categoria dall'elenco.");
+      return fail("Non riesco a salvare, riprova.");
     }
     btn.disabled = false; note.textContent = "";
     // ricarico la riga: slug ed emoji li decide il backend
@@ -594,7 +594,7 @@
     avatarBlob = null;
     render();
     track("community_edit");
-    toast("pagina salvata.");
+    toast("Pagina salvata.");
     return false;
   }
 
@@ -607,7 +607,7 @@
     else mini.textContent = c.emoji || "📍";
     document.getElementById("b-from").textContent = c.name;
     document.getElementById("b-to").textContent = n + (n === 1 ? " persona" : " persone");
-    document.getElementById("b-send").textContent = "manda a " + n + (n === 1 ? " persona" : " persone");
+    document.getElementById("b-send").textContent = "Manda a " + n + (n === 1 ? " persona" : " persone");
     document.getElementById("b-note").textContent = ""; document.getElementById("b-note").className = "note";
     document.getElementById("blast").hidden = false;
     document.getElementById("b-subject").focus();
@@ -619,24 +619,24 @@
     const body = document.getElementById("b-body").value.trim();
     const evId = document.getElementById("b-event").value;
     function fail(msg){ note.className = "note err"; note.textContent = msg; btn.disabled = false; }
-    if (subject.length < 3) return fail("scrivi un oggetto (almeno 3 lettere).");
-    if (body.length < 10) return fail("scrivi un messaggio (almeno 10 lettere).");
-    if (!(Number(c.follower_count) || 0)) return fail("non c'è ancora nessuno da avvisare. condividi la pagina.");
+    if (subject.length < 3) return fail("Scrivi un oggetto (almeno 3 lettere).");
+    if (body.length < 10) return fail("Scrivi un messaggio (almeno 10 lettere).");
+    if (!(Number(c.follower_count) || 0)) return fail("Non c'è ancora nessuno da avvisare. Condividi la pagina.");
     btn.disabled = true; note.className = "note"; note.textContent = "…";
     const r = await rpc("send_blast", { p_community_id: c.id, p_subject: subject, p_body: body, p_activity_id: evId || null });
-    if (!r) return fail("non riesco a collegarmi. controlla internet e riprova.");
+    if (!r) return fail("Non riesco a collegarmi. Controlla internet e riprova.");
     if (!r.ok) {
       const b = await r.json().catch(() => ({}));
       const code = b.message || "";
-      if (code.includes("blast_limit")) return fail("hai già mandato 2 avvisi questa settimana. riprova tra qualche giorno.");
-      return fail("non riesco a inviare, riprova.");
+      if (code.includes("blast_limit")) return fail("Hai già mandato 2 avvisi questa settimana. Riprova tra qualche giorno.");
+      return fail("Non riesco a inviare, riprova.");
     }
     const n = Number(await r.json().catch(() => 0)) || 0;
     btn.disabled = false;
     track("community_blast");
     closeBlast();
     document.getElementById("b-subject").value = ""; document.getElementById("b-body").value = ""; document.getElementById("b-event").value = "";
-    toast(n === 1 ? "mandato a 1 persona." : "mandato a " + n + " persone.");
+    toast(n === 1 ? "Mandato a 1 persona." : "Mandato a " + n + " persone.");
   }
   document.getElementById("blast").addEventListener("click", e => { if (e.target.id === "blast") closeBlast(); });
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeBlast(); });

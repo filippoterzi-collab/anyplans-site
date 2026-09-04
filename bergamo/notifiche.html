@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>avvisi · anyplans</title>
+<title>Avvisi · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <meta name="robots" content="noindex">
 <style>
@@ -89,32 +89,32 @@
 
 <main>
   <div class="top">
-    <h1 class="display">avvisi</h1>
-    <button class="textbtn" id="btn-seen" onclick="markAllSeen()" hidden>segna tutto come letto</button>
+    <h1 class="display">Avvisi</h1>
+    <button class="textbtn" id="btn-seen" onclick="markAllSeen()" hidden>Segna tutto come letto</button>
   </div>
   <div class="box" id="list"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
   <div class="foot">
-    <span>ti avvisiamo quando i gruppi che segui pubblicano qualcosa</span>
-    <a href="impostazioni.html#notifiche">gestisci →</a>
+    <span>Ti avvisiamo quando i gruppi che segui pubblicano qualcosa</span>
+    <a href="impostazioni.html#notifiche">Gestisci →</a>
   </div>
 </main>
 
-<script src="app.js?v=1788518411"></script>
+<script src="app.js?v=1788528706"></script>
 <script>
   requireLogin();
   mountNav("", { col: 860 });
   mountTabbar("");
 
   // "2 min", "1 h", "ieri", "lun", "3 set": quanto tempo fa, a colpo d'occhio
-  const DAYS_SHORT = ["dom","lun","mar","mer","gio","ven","sab"];
+  const DAYS_SHORT = ["Dom","Lun","Mar","Mer","Gio","Ven","Sab"];
   function ago(d){
     const min = Math.round((Date.now() - d) / 60000);
-    if (min < 1) return "adesso";
+    if (min < 1) return "Adesso";
     if (min < 60) return min + " min";
     const h = Math.floor(min / 60);
     if (h < 24) return h + " h";
     const days = Math.floor((Date.now() - d) / 86400000);
-    if (days <= 1) return "ieri";
+    if (days <= 1) return "Ieri";
     if (days < 7) return DAYS_SHORT[d.getDay()];
     return d.getDate() + " " + MONTHS[d.getMonth()].slice(0, 3);
   }
@@ -125,7 +125,7 @@
 
   function avatarHtml(n){
     if (n.actor_avatar) return `<div class="avatar" style="background-image:url('${esc(n.actor_avatar)}')"></div>`;
-    return `<div class="avatar">${esc((n.actor_name || "?")[0].toLowerCase())}</div>`;
+    return `<div class="avatar">${esc((n.actor_name || "?")[0].toUpperCase())}</div>`;
   }
   function communityHref(n){
     // TODO committente: my_notifications espone community_id ma non lo slug; community.html accetta ?id=?
@@ -135,9 +135,9 @@
 
   function renderOne(n){
     const kind = KIND_ALIAS[n.kind] || n.kind;
-    const who = esc(n.actor_name || "qualcuno");
+    const who = esc(n.actor_name || "Qualcuno");
     const title = esc(n.activity_title || "un evento");
-    const comm = esc(n.community_name || "un gruppo");
+    const comm = esc(n.community_name || "Un gruppo");
     let icon = "", txt = "", sub = "", go = "", href = n.activity_id ? "evento.html?id=" + n.activity_id : "";
     if (kind === "join") {
       icon = avatarHtml(n);
@@ -145,18 +145,18 @@
     } else if (kind === "request") {
       icon = avatarHtml(n);
       txt = `<b>${who}</b> ha chiesto di unirsi a <b>${title}</b>`;
-      go = "approva →";
+      go = "Approva →";
     } else if (kind === "approved") {
       icon = `<div class="tile">${esc(n.activity_emoji || "✓")}</div>`;
-      txt = `la tua richiesta per <b>${title}</b> è stata approvata`;
-      go = "vai all'evento →";
+      txt = `La tua richiesta per <b>${title}</b> è stata approvata`;
+      go = "Vai all'evento →";
     } else if (kind === "community_event") {
       icon = `<div class="tile">${esc(n.activity_emoji || "📍")}</div>`;
       txt = `<b>${comm}</b> ha pubblicato un nuovo evento: <b>${title}</b>`;
       // giorno e ora solo se la rpc li espone (il contratto 0047 non li prevede)
       const st = n.activity_start_at || n.start_at;
       if (st) { const d = new Date(st); sub = esc(dayLabel(d) + " · " + timeStr(d)); }
-      go = "ci sono →";
+      go = "Ci sono →";
     } else if (kind === "blast") {
       icon = `<div class="tile"><img src="/logo.png" alt=""></div>`;
       txt = `<b>${comm}</b>: ${esc(n.subject || "")}`;
@@ -166,7 +166,7 @@
       // amicizie: esistono solo nell'app, sul sito si legge e basta
       icon = avatarHtml(n);
       txt = `<b>${who}</b> ti ha mandato una richiesta di amicizia`;
-      sub = "le amicizie si gestiscono dall'app";
+      sub = "Le amicizie si gestiscono dall'app";
     } else if (kind === "friend_activity") {
       icon = avatarHtml(n);
       txt = `<b>${who}</b> partecipa a <b>${title}</b>`;
@@ -186,10 +186,10 @@
   async function load(){
     const list = document.getElementById("list");
     const r = await rpc("my_notifications", {});
-    if (!r || !r.ok) { list.innerHTML = '<div class="empty">non riesco a caricare. ricarica la pagina.</div>'; return; }
+    if (!r || !r.ok) { list.innerHTML = '<div class="empty">Non riesco a caricare. Ricarica la pagina.</div>'; return; }
     const rows = (await r.json().catch(() => []))
       .sort((a, b) => new Date(b.happened_at) - new Date(a.happened_at));
-    if (!rows.length) { list.innerHTML = '<div class="empty">niente di nuovo. quando succede qualcosa lo trovi qui.</div>'; return; }
+    if (!rows.length) { list.innerHTML = '<div class="empty">Niente di nuovo. Quando succede qualcosa lo trovi qui.</div>'; return; }
     list.innerHTML = rows.map(renderOne).join("");
     document.getElementById("btn-seen").hidden = !rows.some(x => x.unread);
     // viste: il pallino sulla campanella sparisce; le righe restano evidenziate fino al prossimo giro
@@ -199,7 +199,7 @@
   async function markAllSeen(){
     const btn = document.getElementById("btn-seen"); btn.disabled = true;
     const r = await rpc("mark_notifications_seen", {});
-    if (!r || !r.ok) { btn.disabled = false; toast("non ha funzionato, riprova."); return; }
+    if (!r || !r.ok) { btn.disabled = false; toast("Non ha funzionato, riprova."); return; }
     document.querySelectorAll(".n.unread").forEach(x => x.classList.remove("unread"));
     btn.hidden = true;
   }

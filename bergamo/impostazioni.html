@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>impostazioni · anyplans</title>
+<title>Impostazioni · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <meta name="robots" content="noindex">
 <style>
@@ -105,30 +105,30 @@
 
 <main>
   <div>
-    <h1 class="display">impostazioni</h1>
+    <h1 class="display">Impostazioni</h1>
     <div class="tabs">
-      <a href="#account" data-tab="account">account</a>
-      <a href="#notifiche" data-tab="notifiche">avvisi</a>
-      <a href="#gruppo" data-tab="community">gruppo</a>
+      <a href="#account" data-tab="account">Account</a>
+      <a href="#notifiche" data-tab="notifiche">Avvisi</a>
+      <a href="#gruppo" data-tab="community">Gruppo</a>
     </div>
   </div>
 
   <!-- account -->
   <section id="tab-account" hidden>
     <div class="box">
-      <h2>il tuo profilo</h2>
-      <p class="m">nome, foto, due righe su di te e Instagram li cambi dal profilo.</p>
+      <h2>Il tuo profilo</h2>
+      <p class="m">Nome, foto, due righe su di te e Instagram li cambi dal profilo.</p>
       <!-- TODO committente: il design mostra anche "tiktok.com/@": non c'è nel modello dati (SCHEMA.md), va aggiunto lì prima -->
-      <a class="lnk2" href="profilo.html?edit=1">modifica il profilo →</a>
+      <a class="lnk2" href="profilo.html?edit=1">Modifica il profilo →</a>
     </div>
     <div class="box">
-      <h2>email</h2>
-      <p class="m">con questa email entri su anyplans e ricevi gli avvisi.</p>
-      <div class="pill"><b id="email"></b><span class="tag">principale</span></div>
+      <h2>Email</h2>
+      <p class="m">Con questa email entri su anyplans e ricevi gli avvisi.</p>
+      <div class="pill"><b id="email"></b><span class="tag">Principale</span></div>
     </div>
     <div class="zone">
-      <button class="textbtn" onclick="if(confirm('vuoi uscire?')) logout()">esci</button>
-      <button class="textbtn" id="btn-all" onclick="logoutEverywhere()">esci da tutti i telefoni e computer</button>
+      <button class="textbtn" onclick="if(confirm('Vuoi uscire?')) logout()">Esci</button>
+      <button class="textbtn" id="btn-all" onclick="logoutEverywhere()">Esci da tutti i telefoni e computer</button>
       <button class="textbtn red" id="btn-del" onclick="deleteAccount()">Cancella il mio account</button>
     </div>
   </section>
@@ -137,36 +137,36 @@
   <section id="tab-notifiche" hidden>
     <div class="toggle-row" id="tg-notify" onclick="flip('tg-notify', 'p_notify_all')">
       <div>
-        <div class="t">avvisami di quello che succede</div>
-        <div class="s">nuovi eventi dei gruppi che seguo, richieste e risposte sui miei eventi.</div>
+        <div class="t">Avvisami di quello che succede</div>
+        <div class="s">Nuovi eventi dei gruppi che seguo, richieste e risposte sui miei eventi.</div>
       </div>
       <div class="sw"><div class="k"></div></div>
     </div>
     <div class="toggle-row" id="tg-dist" onclick="flip('tg-dist', 'p_show_distance')">
       <div>
-        <div class="t">mostra la distanza</div>
-        <div class="s">gli altri vedono quanto sei lontano dall'evento, mai dove sei di preciso.</div>
+        <div class="t">Mostra la distanza</div>
+        <div class="s">Gli altri vedono quanto sei lontano dall'evento, mai dove sei di preciso.</div>
       </div>
       <div class="sw"><div class="k"></div></div>
     </div>
-    <p class="empty">le scelte si salvano da sole.</p>
+    <p class="empty">Le scelte si salvano da sole.</p>
   </section>
 
   <!-- gruppo -->
   <section id="tab-community" hidden>
     <div id="cm-mine-wrap" hidden>
-      <div class="sec" style="margin-bottom:8px">i gruppi che gestisco</div>
+      <div class="sec" style="margin-bottom:8px">I gruppi che gestisco</div>
       <div id="cm-mine" style="display:flex; flex-direction:column; gap:8px"></div>
     </div>
     <a class="cm" href="seguo.html"><div class="tile">📣</div>
-      <div><div class="n">i gruppi che seguo</div><div class="s" id="cm-follow-n">…</div></div>
-      <span class="act">vedi →</span></a>
-    <a class="btn" href="crea-community.html">crea il tuo gruppo</a>
-    <p class="empty">un gruppo è chi organizza gli eventi: un'associazione, un negozio, una pro loco, una squadra. chi lo segue riceve i suoi eventi.</p>
+      <div><div class="n">I gruppi che seguo</div><div class="s" id="cm-follow-n">…</div></div>
+      <span class="act">Vedi →</span></a>
+    <a class="btn" href="crea-community.html">Crea il tuo gruppo</a>
+    <p class="empty">Un gruppo è chi organizza gli eventi: un'associazione, un negozio, una pro loco, una squadra. Chi lo segue riceve i suoi eventi.</p>
   </section>
 </main>
 
-<script src="app.js?v=1788518411"></script>
+<script src="app.js?v=1788528706"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -186,7 +186,7 @@
 
   // ---- account ----
   async function logoutEverywhere(){
-    if (!confirm("vuoi uscire da tutti i telefoni e computer? per rientrare ti servirà un nuovo codice via email.")) return;
+    if (!confirm("Vuoi uscire da tutti i telefoni e computer? Per rientrare ti servirà un nuovo codice via email.")) return;
     const btn = document.getElementById("btn-all"); btn.disabled = true;
     try {
       await fetch(SB_URL + "/auth/v1/logout?scope=global", {
@@ -229,13 +229,13 @@
     row.classList.toggle("on", on); row.classList.add("busy");
     const r = await rpc("update_profile", { [field]: on });
     row.classList.remove("busy");
-    if (!r || !r.ok) { row.classList.toggle("on", !on); toast("non riesco a salvare, riprova."); return; }
+    if (!r || !r.ok) { row.classList.toggle("on", !on); toast("Non riesco a salvare, riprova."); return; }
     track("pref_" + field.replace(/^p_/, ""));
   }
 
   // ---- gruppo ----
   function cmRow(c, href, act){
-    const sub = [c.is_verified ? "verificata" : null,
+    const sub = [c.is_verified ? "Verificata" : null,
                  Number(c.follower_count) ? Number(c.follower_count) + (Number(c.follower_count) === 1 ? " persona lo segue" : " persone lo seguono") : null,
                  Number(c.upcoming_count) ? Number(c.upcoming_count) + " in programma" : null]
                 .filter(Boolean).join(" · ");
@@ -252,9 +252,9 @@
     const n = rows.filter(c => c.role === "follower").length;
     if (mine.length) {
       document.getElementById("cm-mine-wrap").hidden = false;
-      document.getElementById("cm-mine").innerHTML = mine.map(c => cmRow(c, "dashboard.html?id=" + c.id, "gestisci →")).join("");
+      document.getElementById("cm-mine").innerHTML = mine.map(c => cmRow(c, "dashboard.html?id=" + c.id, "Gestisci →")).join("");
     }
-    followN.textContent = n === 0 ? "nessuno ancora" : n === 1 ? "1 gruppo" : n + " gruppi";
+    followN.textContent = n === 0 ? "Nessuno ancora" : n === 1 ? "1 gruppo" : n + " gruppi";
   }
 
   loadPrefs();

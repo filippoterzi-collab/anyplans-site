@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>gruppo · anyplans</title>
+<title>Gruppo · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-<meta name="description" content="un gruppo su anyplans: segui la pagina e ricevi una notifica a ogni nuovo evento.">
-<meta property="og:title" content="un gruppo su anyplans">
-<meta property="og:description" content="la mappa degli eventi veri della tua città. segui il gruppo, ricevi una notifica a ogni nuovo evento.">
+<meta name="description" content="Un gruppo su anyplans: segui la pagina e ricevi una notifica a ogni nuovo evento.">
+<meta property="og:title" content="Un gruppo su anyplans">
+<meta property="og:description" content="La mappa degli eventi veri della tua città. Segui il gruppo, ricevi una notifica a ogni nuovo evento.">
 <meta property="og:image" content="https://anyplans.in/og.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="anyplans">
@@ -125,7 +125,7 @@
 <header>
   <div class="nav">
     <a class="brand" href="/bergamo/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
-    <a class="btn" id="nav-cta" href="login.html" onclick="rememberNext()" style="padding:9px 16px; font-size:13.5px">registrati</a>
+    <a class="btn" id="nav-cta" href="login.html" onclick="rememberNext()" style="padding:9px 16px; font-size:13.5px">Registrati</a>
   </div>
 </header>
 
@@ -141,27 +141,27 @@
     </div>
     <div class="more" id="more" hidden>
       <p class="desc" id="desc" hidden></p>
-      <a class="manage" id="manage" hidden href="#">gestisci la pagina →</a>
+      <a class="manage" id="manage" hidden href="#">Gestisci la pagina →</a>
     </div>
     <div class="acts">
       <button class="btn" id="btn-follow" onclick="toggleFollow()">
         <svg viewBox="0 0 24 24"><path d="M6 10 C 6 6.7, 8.7 4, 12 4 C 15.3 4, 18 6.7, 18 10 L18 15 L20 17.5 L4 17.5 L6 15 Z"/><path d="M10 20.5 C 10.5 21.3, 13.5 21.3, 14 20.5"/></svg>
-        <span id="follow-label">segui</span>
+        <span id="follow-label">Segui</span>
       </button>
-      <button class="btn ghost" onclick="shareCommunity()">condividi</button>
-      <p class="note">se segui, ti avvisiamo a ogni nuovo evento</p>
+      <button class="btn ghost" onclick="shareCommunity()">Condividi</button>
+      <p class="note">Se segui, ti avvisiamo a ogni nuovo evento</p>
     </div>
   </div>
 
   <hr>
 
   <div class="list">
-    <div class="sec">prossimi eventi</div>
-    <div id="events" class="list"><p class="empty">carico…</p></div>
+    <div class="sec">Prossimi eventi</div>
+    <div id="events" class="list"><p class="empty">Carico…</p></div>
   </div>
 
   <div class="past">
-    <div class="sec">eventi passati</div>
+    <div class="sec">Eventi passati</div>
     <p class="m" id="past"></p>
   </div>
 </main>
@@ -180,12 +180,12 @@
 </div>
 <div class="center" id="notfound" hidden>
   <div style="font-size:52px">🫥</div>
-  <h1 class="display" style="font-size:30px">gruppo non trovato</h1>
-  <p style="color:var(--grey); max-width:300px">forse il link non è giusto, o la pagina non c'è più.</p>
-  <a class="btn" href="eventi.html">guarda gli eventi a Bergamo</a>
+  <h1 class="display" style="font-size:30px">Gruppo non trovato</h1>
+  <p style="color:var(--grey); max-width:300px">Forse il link non è giusto, o la pagina non c'è più.</p>
+  <a class="btn" href="eventi.html">Guarda gli eventi a Bergamo</a>
 </div>
 
-<script src="app.js?v=1788518411"></script>
+<script src="app.js?v=1788528706"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const wantId = params.get("id");
@@ -196,7 +196,7 @@
 
   if (logged) {
     const cta = document.getElementById("nav-cta") || document.createElement("a");
-    cta.textContent = "← gli eventi"; cta.href = "eventi.html"; cta.className = "lnk"; cta.onclick = null;
+    cta.textContent = "← Gli eventi"; cta.href = "eventi.html"; cta.className = "lnk"; cta.onclick = null;
     mountTabbar("scopri");
   }
   function rememberNext(){
@@ -244,8 +244,8 @@
     const past = document.getElementById("past");
     past.innerHTML = done + (done === 1 ? " evento" : " eventi") +
       (c.instagram_handle
-        ? ' · le foto le trovi sulla <a href="https://instagram.com/' + encodeURIComponent(String(c.instagram_handle).replace(/^@/, "")) + '" target="_blank" rel="noopener">pagina Instagram del gruppo</a>.'
-        : (done ? " · " : " · il primo è in arrivo."));
+        ? ' · Le foto le trovi sulla <a href="https://instagram.com/' + encodeURIComponent(String(c.instagram_handle).replace(/^@/, "")) + '" target="_blank" rel="noopener">pagina Instagram del gruppo</a>.'
+        : (done ? " · " : " · Il primo è in arrivo."));
     document.getElementById("loading").hidden = true;
     document.getElementById("page").hidden = false;
     track("community_view", "/community/" + (c.slug || c.id));
@@ -257,7 +257,7 @@
     const followers = Number(c.follower_count) || 0;
     const done = Number(c.events_done) || 0;
     const parts = [];
-    if (c.is_verified) parts.push('<span class="v">' + (mobile ? "verificato" : "verificato da anyplans") + "</span>");
+    if (c.is_verified) parts.push('<span class="v">' + (mobile ? "Verificato" : "Verificato da anyplans") + "</span>");
     if (!mobile && c.category) parts.push(esc((c.emoji ? c.emoji + " " : "") + ((CATALOG[c.category] || {}).l || c.category)));
     if (c.city) parts.push(esc(cityCase(c.city)));
     parts.push("<b>" + (followers === 1 ? "1 persona lo segue" : followers + " persone lo seguono") + "</b>");
@@ -267,7 +267,7 @@
   mobileMq.addEventListener("change", () => { if (c) renderMeta(); });
   function renderFollow(){
     const on = logged && !!c.is_following;
-    document.getElementById("follow-label").textContent = on ? "lo segui ✓" : "segui";
+    document.getElementById("follow-label").textContent = on ? "Lo segui ✓" : "Segui";
     const b = document.getElementById("btn-follow");
     b.classList.toggle("ghost", on);
   }
@@ -275,10 +275,10 @@
   async function loadEvents(){
     const wrap = document.getElementById("events");
     const r = await rpc("community_events", { p_id: c.id, p_past: false });
-    if (!r || !r.ok) { wrap.innerHTML = '<p class="empty">non riesco a caricare gli eventi. ricarica la pagina.</p>'; return; }
+    if (!r || !r.ok) { wrap.innerHTML = '<p class="empty">Non riesco a caricare gli eventi. Ricarica la pagina.</p>'; return; }
     const rows = (await r.json().catch(() => []))
       .sort((a, b) => new Date(a.start_at) - new Date(b.start_at));
-    if (!rows.length) { wrap.innerHTML = '<p class="empty">nessun evento in programma. se lo segui, ti avvisiamo al prossimo.</p>'; return; }
+    if (!rows.length) { wrap.innerHTML = '<p class="empty">Nessun evento in programma. Se lo segui, ti avvisiamo al prossimo.</p>'; return; }
     wrap.innerHTML = rows.map(x => {
       const when = new Date(x.start_at);
       const going = Number(x.going_count) || 0;
@@ -287,7 +287,7 @@
       meta.push(going === 1 ? "1 ci va" : going + " ci vanno");
       if (x.max_participants) meta.push(Math.max(0, x.max_participants - going) + " posti liberi");
       if (x.price_cents > 0) meta.push('<b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(x.price_cents)) + "</b>");
-      const go = x.my_status === "going" ? "ci vado ✓" : (x.my_status === "requested" ? "aspetto l'ok" : "vedi →");
+      const go = x.my_status === "going" ? "Ci vado ✓" : (x.my_status === "requested" ? "Aspetto l'ok" : "Vedi →");
       return `<a class="ev" href="evento.html?id=${encodeURIComponent(x.id)}">
         <div class="tile">${esc(x.emoji || (CATALOG[x.sport] || {}).e || "📍")}</div>
         <div class="body">
@@ -302,7 +302,7 @@
 
   async function toggleFollow(){
     if (!logged) { rememberNext(); location.href = "login.html"; return; }
-    if (c.is_following && !confirm("vuoi smettere di seguire " + c.name + "?")) return;
+    if (c.is_following && !confirm("Vuoi smettere di seguire " + c.name + "?")) return;
     const btn = document.getElementById("btn-follow");
     const next = !c.is_following;
     btn.disabled = true;
@@ -311,21 +311,21 @@
     if (!r || !r.ok) {
       const b = r ? await r.json().catch(() => ({})) : {};
       if ((b.message || "").includes("profile_required")) { rememberNext(); location.href = "profilo.html"; return; }
-      toast("non ha funzionato, riprova."); return;
+      toast("Non ha funzionato, riprova."); return;
     }
     c.is_following = next;
     c.follower_count = Math.max(0, (Number(c.follower_count) || 0) + (next ? 1 : -1));
     render();
     track(next ? "community_follow" : "community_unfollow");
-    toast(next ? "ora segui " + c.name + ": ti avvisiamo a ogni nuovo evento." : "non segui più " + c.name + ".");
+    toast(next ? "Ora segui " + c.name + ": ti avvisiamo a ogni nuovo evento." : "Non segui più " + c.name + ".");
   }
 
   async function shareCommunity(){
     const url = communityUrl();
-    const text = "c'è qualche piano? " + (c.emoji || "") + " " + c.name + " su anyplans";
+    const text = "C'è qualche piano? " + (c.emoji || "") + " " + c.name + " su anyplans";
     track("community_share");
     if (navigator.share) { try { await navigator.share({ title: c.name, text, url }); return; } catch (_) {} }
-    try { await navigator.clipboard.writeText(text + " " + url); toast("link copiato. incollalo su WhatsApp o dove vuoi."); }
+    try { await navigator.clipboard.writeText(text + " " + url); toast("Link copiato. Incollalo su WhatsApp o dove vuoi."); }
     catch (_) { toast(url); }
   }
 

@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>i gruppi che seguo · anyplans</title>
+<title>I gruppi che seguo · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <meta name="robots" content="noindex">
 <style>
@@ -60,14 +60,14 @@
 <header></header>
 
 <main class="fw-main">
-  <a class="lnk" href="profilo.html">← il mio profilo</a>
-  <h1 class="display fw-h1">i gruppi che <span>seguo</span></h1>
-  <p class="fw-sub">ti avvisiamo a ogni loro nuovo evento.</p>
+  <a class="lnk" href="profilo.html">← Il mio profilo</a>
+  <h1 class="display fw-h1">I gruppi che <span>seguo</span></h1>
+  <p class="fw-sub">Ti avvisiamo a ogni loro nuovo evento.</p>
   <div class="fw-list" id="list"><div class="fw-sk"></div><div class="fw-sk"></div><div class="fw-sk"></div></div>
-  <a class="fw-manage" id="manage" href="impostazioni.html#gruppo" hidden>i gruppi che gestisco →</a>
+  <a class="fw-manage" id="manage" href="impostazioni.html#gruppo" hidden>I gruppi che gestisco →</a>
 </main>
 
-<script src="app.js?v=1788518411"></script>
+<script src="app.js?v=1788528706"></script>
 <script>
   requireLogin();
   mountNav("", { col: 860 });
@@ -76,13 +76,13 @@
 
   const CAT_EMOJI = { sport:"🏃", cucina:"🍳", "creatività":"🏺", giardinaggio:"🌱", cultura:"🎪", benessere:"🧘" };
   const emojiOf = c => c.emoji || CAT_EMOJI[c.category] || "📍";
-  const upcomingTxt = n => { n = Number(n) || 0; return n === 0 ? "nessun evento in programma" : n === 1 ? "1 evento in programma" : n + " eventi in programma"; };
+  const upcomingTxt = n => { n = Number(n) || 0; return n === 0 ? "Nessun evento in programma" : n === 1 ? "1 evento in programma" : n + " eventi in programma"; };
   let ROWS = []; // solo i gruppi che seguo (role === "follower"), in ordine di nome
 
   async function load(){
     const list = document.getElementById("list");
     const r = await rpc("my_communities", {});
-    if (!r || !r.ok) { list.innerHTML = '<div class="fw-empty">non riesco a caricare i gruppi. ricarica la pagina.</div>'; return; }
+    if (!r || !r.ok) { list.innerHTML = '<div class="fw-empty">Non riesco a caricare i gruppi. Ricarica la pagina.</div>'; return; }
     const rows = await r.json().catch(() => []);
     document.getElementById("manage").hidden = !rows.some(c => c.role === "owner" || c.role === "admin");
     ROWS = rows.filter(c => c.role === "follower")
@@ -101,13 +101,13 @@
         <a class="fw-name" href="${esc(href)}"><span>${esc(c.name)}</span>${vb}</a>
         <div class="fw-meta">${upcomingTxt(c.upcoming_count)}</div>
       </div>
-      <button class="fw-unfollow" type="button" aria-label="non seguire più ${esc(c.name)}" onclick="unfollow('${esc(c.id)}')">non seguire più</button>
+      <button class="fw-unfollow" type="button" aria-label="Non seguire più ${esc(c.name)}" onclick="unfollow('${esc(c.id)}')">Non seguire più</button>
     </div>`;
   }
 
   function render(){
     const list = document.getElementById("list");
-    if (!ROWS.length) { list.innerHTML = '<div class="fw-empty">non segui ancora nessun gruppo. <a href="gruppi.html">guarda i gruppi a Bergamo →</a></div>'; return; }
+    if (!ROWS.length) { list.innerHTML = '<div class="fw-empty">Non segui ancora nessun gruppo. <a href="gruppi.html">Guarda i gruppi a Bergamo →</a></div>'; return; }
     list.innerHTML = ROWS.map(row).join("");
   }
 
@@ -115,7 +115,7 @@
     const idx = ROWS.findIndex(x => x.id === id);
     if (idx < 0) return;
     const c = ROWS[idx];
-    if (!confirm("vuoi smettere di seguire " + c.name + "?")) return;
+    if (!confirm("Vuoi smettere di seguire " + c.name + "?")) return;
     // subito: bottone spento e riga via; se non va, la riga torna al suo posto
     const btn = document.querySelector('.fw-row[data-id="' + CSS.escape(id) + '"] .fw-unfollow');
     if (btn) btn.disabled = true;
@@ -123,9 +123,9 @@
     const r = await rpc("follow_community", { p_id: id, p_follow: false });
     if (!r || !r.ok) {
       ROWS.splice(idx, 0, c); render();
-      toast("non ha funzionato, riprova."); return;
+      toast("Non ha funzionato, riprova."); return;
     }
-    toast("non segui più " + c.name + ".");
+    toast("Non segui più " + c.name + ".");
     track("unfollow");
   }
 

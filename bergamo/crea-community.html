@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>crea il tuo gruppo · anyplans</title>
+<title>Crea il tuo gruppo · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <meta name="robots" content="noindex">
 <style>
@@ -75,15 +75,15 @@
 <header>
   <div class="nav">
     <a class="brand" href="/bergamo/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
-    <a class="lnk" href="eventi.html">← tutti gli eventi</a>
+    <a class="lnk" href="eventi.html">← Tutti gli eventi</a>
   </div>
 </header>
 
 <main>
   <form class="card" onsubmit="return submitCommunity(event)">
     <div>
-      <h1 class="display">crea il tuo gruppo</h1>
-      <p class="sub">un nome e una categoria. poi pubblichi il primo evento.</p>
+      <h1 class="display">Crea il tuo gruppo</h1>
+      <p class="sub">Un nome e una categoria. Poi pubblichi il primo evento.</p>
     </div>
 
     <div style="display:flex; align-items:center; gap:16px">
@@ -91,38 +91,38 @@
         <svg id="pic-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8 L7 8 L9 5.5 L15 5.5 L17 8 L20 8 L20 18.5 L4 18.5 Z"/><circle cx="12" cy="13" r="3.2"/></svg>
       </div>
       <div>
-        <div style="font-weight:700; font-size:15px" id="pic-label">logo o foto</div>
-        <div class="hint" style="margin-top:2px">se non ce l'hai, mettiamo il simbolo della categoria.</div>
+        <div style="font-weight:700; font-size:15px" id="pic-label">Logo o foto</div>
+        <div class="hint" style="margin-top:2px">Se non ce l'hai, mettiamo il simbolo della categoria.</div>
       </div>
       <input id="file" type="file" accept="image/*" hidden onchange="pickPhoto(this)">
     </div>
 
     <div>
-      <label for="name">nome del gruppo</label>
-      <input id="name" type="text" required minlength="2" maxlength="60" placeholder="es. sara ceramica, gruppo di cammino seriate, pro loco…" autocomplete="off">
+      <label for="name">Nome del gruppo</label>
+      <input id="name" type="text" required minlength="2" maxlength="60" placeholder="Es. Pro Loco Alzano, Gruppo di cammino Seriate…" autocomplete="off">
     </div>
 
     <div>
-      <label>categoria</label>
+      <label>Categoria</label>
       <select id="cats" style="width:100%; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px; padding:13px 16px; font-size:16px; font-family:var(--round); color:var(--ink)"></select>
     </div>
 
     <div>
-      <label for="desc">di cosa si occupa il gruppo?</label>
-      <textarea id="desc" maxlength="500" placeholder="due righe per chi vi scopre sulla mappa…"></textarea>
+      <label for="desc">Di cosa si occupa il gruppo?</label>
+      <textarea id="desc" maxlength="500" placeholder="Due righe per chi vi scopre sulla mappa…"></textarea>
     </div>
 
     <div>
-      <label for="city">città</label>
+      <label for="city">Città</label>
       <input id="city" type="text" value="Bergamo" autocomplete="address-level2">
     </div>
 
-    <button class="btn" id="btn" type="submit">crea il gruppo</button>
+    <button class="btn" id="btn" type="submit">Crea il gruppo</button>
     <p class="note" id="note"></p>
   </form>
 </main>
 
-<script src="app.js?v=1788518411"></script>
+<script src="app.js?v=1788528706"></script>
 <script>
   requireLogin();
   mountTabbar("crea");
@@ -142,7 +142,7 @@
   const first = ["dinner","festival","ceramics","cooking","painting","gardening","yoga"];
   const order = [...first, ...Object.keys(CATALOG).filter(s => !first.includes(s))];
   const catSel = document.getElementById("cats");
-  catSel.innerHTML = '<option value="">scegli…</option>' + order.map(s => `<option value="${s}">${CATALOG[s].e}  ${CATALOG[s].l}</option>`).join("");
+  catSel.innerHTML = '<option value="">Scegli…</option>' + order.map(s => `<option value="${s}">${CATALOG[s].e}  ${CATALOG[s].l}</option>`).join("");
   let category = null;
   catSel.onchange = () => { category = catSel.value || null; };
 
@@ -151,7 +151,7 @@
     pic.style.backgroundImage = "url(" + src + ")";
     pic.style.borderStyle = "solid";
     document.getElementById("pic-icon").style.display = "none";
-    document.getElementById("pic-label").textContent = "cambia la foto";
+    document.getElementById("pic-label").textContent = "Cambia la foto";
   }
   let avatarBlob = null;
   function pickPhoto(input){
@@ -191,14 +191,14 @@
     const desc = document.getElementById("desc").value.trim();
     const city = document.getElementById("city").value.trim();
     function fail(msg){ note.className = "note err"; note.textContent = msg; btn.disabled = false; return false; }
-    if (name.length < 2) return fail("dai un nome al gruppo (almeno 2 lettere).");
-    if (!category) return fail("scegli una categoria.");
+    if (name.length < 2) return fail("Dai un nome al gruppo (almeno 2 lettere).");
+    if (!category) return fail("Scegli una categoria.");
 
     btn.disabled = true; note.className = "note"; note.textContent = "…";
     let avatarUrl = null;
     if (avatarBlob) {
       avatarUrl = await uploadLogo();
-      if (!avatarUrl) toast("la foto non si è caricata. mettiamo il simbolo, la cambi dopo.");
+      if (!avatarUrl) toast("La foto non si è caricata. Mettiamo il simbolo, la cambi dopo.");
     }
     const r = await rpc("create_community", {
       p_name: name,
@@ -208,7 +208,7 @@
       p_avatar_url: avatarUrl,
       p_instagram_handle: null
     });
-    if (!r) return fail("non riesco a collegarmi. controlla internet e riprova.");
+    if (!r) return fail("Non riesco a collegarmi. Controlla internet e riprova.");
     if (!r.ok) {
       const b = await r.json().catch(() => ({}));
       const code = b.message || "";
@@ -216,9 +216,9 @@
         try { sessionStorage.setItem("anyplans_next", "crea-community.html"); } catch (_) {}
         location.href = "profilo.html"; return false;
       }
-      if (code.includes("too_many_communities")) return fail("hai già raggiunto il numero massimo di gruppi.");
-      if (code.includes("invalid_category")) return fail("scegli una categoria dall'elenco.");
-      return fail("non riesco a creare il gruppo, riprova.");
+      if (code.includes("too_many_communities")) return fail("Hai già raggiunto il numero massimo di gruppi.");
+      if (code.includes("invalid_category")) return fail("Scegli una categoria dall'elenco.");
+      return fail("Non riesco a creare il gruppo, riprova.");
     }
     const newId = await r.json();
     track("community_create");

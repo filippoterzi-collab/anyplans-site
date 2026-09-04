@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>accedi · anyplans</title>
+<title>Accedi · anyplans</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <meta name="robots" content="noindex">
 <style>
@@ -88,14 +88,14 @@
   <form class="card" id="step-email" onsubmit="return sendCode(event)">
     <img class="logo" src="/logo.png" alt="">
     <div>
-      <h1>benvenuto su anyplans<span class="q">?</span></h1>
-      <p class="sub">scrivi la tua email: ti mandiamo un codice di 6 numeri. niente password da ricordare.</p>
+      <h1>Benvenuto su anyplans<span class="q">?</span></h1>
+      <p class="sub">Scrivi la tua email: ti mandiamo un codice di 6 numeri. Niente password da ricordare.</p>
     </div>
     <div>
-      <label for="email">email</label>
+      <label for="email">Email</label>
       <input id="email" type="email" required placeholder="tu@email.com" autocomplete="email">
     </div>
-    <button class="btn" id="btn-send" type="submit">mandami il codice</button>
+    <button class="btn" id="btn-send" type="submit">Mandami il codice</button>
     <p class="note" id="note-email"></p>
     <!-- TODO: "accedi con google" (provider già attivo su supabase, manca il flusso oauth web) -->
     <p class="legal">Andando avanti accetti le <a href="/terms-it.html">Condizioni d'uso</a> e la <a href="/privacy-it.html">Privacy</a></p>
@@ -105,22 +105,22 @@
   <form class="card" id="step-code" hidden onsubmit="return verifyCode(event)">
     <img class="logo" src="/logo.png" alt="">
     <div>
-      <h1>controlla la tua email</h1>
-      <p class="sub">ti abbiamo mandato un codice di 6 numeri a <b id="sent-to"></b>. vale 10 minuti. se non lo vedi, <b>guarda nella posta indesiderata (spam)</b>.</p>
+      <h1>Controlla la tua email</h1>
+      <p class="sub">Ti abbiamo mandato un codice di 6 numeri a <b id="sent-to"></b>. Vale 10 minuti. Se non lo vedi, <b>guarda nella posta indesiderata (spam)</b>.</p>
     </div>
     <div class="otp" id="otp">
-      <input inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="cifra 1">
-      <input inputmode="numeric" maxlength="1" aria-label="cifra 2">
-      <input inputmode="numeric" maxlength="1" aria-label="cifra 3">
-      <input inputmode="numeric" maxlength="1" aria-label="cifra 4">
-      <input inputmode="numeric" maxlength="1" aria-label="cifra 5">
-      <input inputmode="numeric" maxlength="1" aria-label="cifra 6">
+      <input inputmode="numeric" maxlength="1" autocomplete="one-time-code" aria-label="Cifra 1">
+      <input inputmode="numeric" maxlength="1" aria-label="Cifra 2">
+      <input inputmode="numeric" maxlength="1" aria-label="Cifra 3">
+      <input inputmode="numeric" maxlength="1" aria-label="Cifra 4">
+      <input inputmode="numeric" maxlength="1" aria-label="Cifra 5">
+      <input inputmode="numeric" maxlength="1" aria-label="Cifra 6">
     </div>
-    <button class="btn" id="btn-verify" type="submit">entra</button>
+    <button class="btn" id="btn-verify" type="submit">Entra</button>
     <p class="note" id="note-code"></p>
     <div class="row">
-      <button type="button" id="btn-resend" onclick="resendCode()">non è arrivato? mandamelo di nuovo</button>
-      <button type="button" class="blue" onclick="changeEmail()">cambia email</button>
+      <button type="button" id="btn-resend" onclick="resendCode()">Non è arrivato? Mandamelo di nuovo</button>
+      <button type="button" class="blue" onclick="changeEmail()">Cambia email</button>
     </div>
   </form>
 </main>
@@ -151,11 +151,11 @@
         method: "POST", headers: HEADERS,
         body: JSON.stringify({ email: email, create_user: true })
       });
-    } catch (_) { return "non riesco a collegarmi. controlla internet e riprova."; }
+    } catch (_) { return "Non riesco a collegarmi. Controlla internet e riprova."; }
     if (r.ok) return null;
     const body = await r.json().catch(() => ({}));
-    if (r.status === 429) return "troppi tentativi, aspetta qualche minuto e riprova.";
-    return body.msg || body.error_description || "non riesco a mandare il codice, riprova.";
+    if (r.status === 429) return "Troppi tentativi, aspetta qualche minuto e riprova.";
+    return body.msg || body.error_description || "Non riesco a mandare il codice, riprova.";
   }
 
   async function sendCode(e){
@@ -180,7 +180,7 @@
     if (resendCooldown > 0) return;
     note("note-code", "…");
     const err = await requestOtp(currentEmail);
-    note("note-code", err || "mandato. usa questo, il vecchio non vale più. guarda anche nella posta indesiderata.", err ? "err" : "ok");
+    note("note-code", err || "Mandato. Usa questo, il vecchio non vale più. Guarda anche nella posta indesiderata.", err ? "err" : "ok");
     if (!err) startCooldown();
   }
 
@@ -190,8 +190,8 @@
     const t = setInterval(() => {
       resendCooldown--;
       b.textContent = resendCooldown > 0
-        ? `puoi richiederlo tra ${resendCooldown} secondi`
-        : "non è arrivato? mandamelo di nuovo";
+        ? `Puoi richiederlo tra ${resendCooldown} secondi`
+        : "Non è arrivato? Mandamelo di nuovo";
       if (resendCooldown <= 0) clearInterval(t);
     }, 1000);
   }
@@ -228,7 +228,7 @@
   async function verifyCode(e){
     if (e) e.preventDefault();
     const token = otpInputs.map(i => i.value).join("");
-    if (token.length < 6) { note("note-code", "scrivi tutti e 6 i numeri.", "err"); return false; }
+    if (token.length < 6) { note("note-code", "Scrivi tutti e 6 i numeri.", "err"); return false; }
     const btn = document.getElementById("btn-verify");
     btn.disabled = true; note("note-code", "…");
     try {
@@ -240,7 +240,7 @@
       btn.disabled = false;
       if (!r.ok) {
         otpInputs.forEach(i => i.value = ""); otpInputs[0].focus();
-        note("note-code", "codice sbagliato o scaduto. chiedine uno nuovo qui sotto.", "err");
+        note("note-code", "Codice sbagliato o scaduto. Chiedine uno nuovo qui sotto.", "err");
         return false;
       }
       const session = JSON.stringify({
@@ -267,8 +267,8 @@
       btn.disabled = false;
       const offline = err instanceof TypeError;
       note("note-code", offline
-        ? "non riesco a collegarmi. controlla internet e riprova."
-        : "qualcosa non ha funzionato, riprova.", "err");
+        ? "Non riesco a collegarmi. Controlla internet e riprova."
+        : "Qualcosa non ha funzionato, riprova.", "err");
     }
     return false;
   }
