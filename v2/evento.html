@@ -343,7 +343,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788510790"></script>
+<script src="app.js?v=1788511031"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -835,7 +835,7 @@
   async function cancelMyEvent(){
     if (!confirm("Vuoi annullare l'evento? Sparisce anche per chi si era iscritto.")) return;
     const r = await rpc("cancel_activity", { p_activity_id: ev.id });
-    if (r && r.ok) { toast("evento annullato."); setTimeout(() => location.href = "miei.html", 900); }
+    if (r && r.ok) { toast("Evento annullato."); setTimeout(() => location.href = "miei.html", 900); }
     else toast("non ha funzionato, riprova.");
   }
 

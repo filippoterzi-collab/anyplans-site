@@ -119,6 +119,7 @@ function timeStr(d){ return d.getHours() + ":" + String(d.getMinutes()).padStart
 function dayKey(d){ return d.toDateString(); }
 // città e luoghi salvati in minuscolo si mostrano con le maiuscole ("bergamo" → "Bergamo", "città alta" → "Città Alta")
 function cityCase(t){
+  if (/[A-ZÀ-Ý]/.test(String(t || ""))) return t;
   const small = new Set(["di","del","della","dei","delle","da","in","a","al","alla","e","sul","sulla","con","per"]);
   return String(t || "").split(/(\s+|-|')/).map((w, i) => (!w || /^\s+$|^[-']$/.test(w)) ? w : (i > 0 && small.has(w) ? w : w[0].toUpperCase() + w.slice(1))).join("");
 }

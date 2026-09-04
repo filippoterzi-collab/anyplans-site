@@ -117,7 +117,7 @@
   <section id="tab-account" hidden>
     <div class="box">
       <h2>il tuo profilo</h2>
-      <p class="m">nome, foto, due righe su di te e instagram li cambi dal profilo.</p>
+      <p class="m">nome, foto, due righe su di te e Instagram li cambi dal profilo.</p>
       <!-- TODO committente: il design mostra anche "tiktok.com/@": non c'è nel modello dati (SCHEMA.md), va aggiunto lì prima -->
       <a class="lnk2" href="profilo.html?edit=1">modifica il profilo →</a>
     </div>
@@ -128,7 +128,7 @@
     </div>
     <div class="zone">
       <button class="textbtn" onclick="if(confirm('vuoi uscire?')) logout()">esci</button>
-      <button class="textbtn" id="btn-all" onclick="logoutEverywhere()">Esci da tutti i telefoni e computer</button>
+      <button class="textbtn" id="btn-all" onclick="logoutEverywhere()">esci da tutti i telefoni e computer</button>
       <button class="textbtn red" id="btn-del" onclick="deleteAccount()">Cancella il mio account</button>
     </div>
   </section>
@@ -166,7 +166,7 @@
   </section>
 </main>
 
-<script src="app.js?v=1788510790"></script>
+<script src="app.js?v=1788511031"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -186,7 +186,7 @@
 
   // ---- account ----
   async function logoutEverywhere(){
-    if (!confirm("Vuoi uscire da tutti i telefoni e computer? Per rientrare ti servirà un nuovo codice via email.")) return;
+    if (!confirm("vuoi uscire da tutti i telefoni e computer? per rientrare ti servirà un nuovo codice via email.")) return;
     const btn = document.getElementById("btn-all"); btn.disabled = true;
     try {
       await fetch(SB_URL + "/auth/v1/logout?scope=global", {
@@ -201,12 +201,12 @@
   async function deleteAccount(){
     if (!confirm("Vuoi cancellare il tuo account? Sparisce tutto: profilo, eventi, iscrizioni. Non si torna indietro.")) return;
     const word = prompt("Per confermare scrivi: cancella");
-    if ((word || "").trim().toLowerCase() !== "cancella") { toast("ok, non ho cancellato niente."); return; }
+    if ((word || "").trim().toLowerCase() !== "cancella") { toast("Ok, non ho cancellato niente."); return; }
     const btn = document.getElementById("btn-del"); btn.disabled = true;
     const r = await rpc("delete_my_account", {});
     if (!r || !r.ok) {
       btn.disabled = false;
-      let msg = "non riesco a cancellare l'account, riprova.";
+      let msg = "Non riesco a cancellare l'account, riprova.";
       try { if (r) msg += " (" + ((await r.json()).message || "") + ")"; } catch (_) {}
       toast(msg); return;
     }

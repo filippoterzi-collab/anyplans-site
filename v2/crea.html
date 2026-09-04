@@ -178,14 +178,14 @@
 
   <div class="toggle-row" id="paid" onclick="togglePaid()">
     <div>
-      <div class="t">si paga</div>
+      <div class="t">Si paga</div>
       <div class="s">Se lo accendi, chi partecipa paga a te. Se resta spento è gratis.</div>
     </div>
     <div class="sw"><div class="k"></div></div>
   </div>
   <div class="grid2" id="price-wrap" hidden>
     <div>
-      <label for="price">prezzo a persona</label>
+      <label for="price">Prezzo a persona</label>
       <div class="money"><span>€</span><input id="price" type="text" inputmode="decimal" placeholder="12,00" autocomplete="off"></div>
     </div>
     <div>
@@ -209,7 +209,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788510790"></script>
+<script src="app.js?v=1788511031"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -471,14 +471,14 @@
   function readPrice(){
     if (!document.getElementById("paid").classList.contains("on")) return { ok: true, cents: null, note: null };
     const raw = document.getElementById("price").value.trim();
-    if (!raw) return { ok: false, msg: 'scrivi il prezzo (es. 12,00), oppure spegni "si paga".' };
+    if (!raw) return { ok: false, msg: 'Scrivi il prezzo (es. 12,00), oppure spegni "Si paga".' };
     const cents = parsePrice(raw);
-    if (Number.isNaN(cents)) return { ok: false, msg: "scrivi il prezzo solo con i numeri, es. 12,50." };
+    if (Number.isNaN(cents)) return { ok: false, msg: "Scrivi il prezzo solo con i numeri, es. 12,50." };
     return { ok: true, cents: cents > 0 ? cents : null, note: document.getElementById("price-note").value.trim() || null };
   }
   async function savePrice(activityId, p){
     const r = await rpc("set_activity_price", { p_activity_id: activityId, p_price_cents: p.cents, p_price_note: p.cents ? p.note : null });
-    if (!r || !r.ok) toast("evento salvato, ma non il prezzo. aprilo e riprova da \"modifica l'evento\".");
+    if (!r || !r.ok) toast("Evento salvato, ma non il prezzo. Aprilo e riprova da \"modifica l'evento\".");
   }
 
   function addQuestion(){

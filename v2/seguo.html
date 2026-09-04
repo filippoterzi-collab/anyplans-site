@@ -67,7 +67,7 @@
   <a class="fw-manage" id="manage" href="impostazioni.html#gruppo" hidden>i gruppi che gestisco →</a>
 </main>
 
-<script src="app.js?v=1788510790"></script>
+<script src="app.js?v=1788511031"></script>
 <script>
   requireLogin();
   mountNav("", { col: 860 });
@@ -107,7 +107,7 @@
 
   function render(){
     const list = document.getElementById("list");
-    if (!ROWS.length) { list.innerHTML = '<div class="fw-empty">non segui ancora nessun gruppo. <a href="gruppi.html">guarda i gruppi a bergamo →</a></div>'; return; }
+    if (!ROWS.length) { list.innerHTML = '<div class="fw-empty">non segui ancora nessun gruppo. <a href="gruppi.html">guarda i gruppi a Bergamo →</a></div>'; return; }
     list.innerHTML = ROWS.map(row).join("");
   }
 
