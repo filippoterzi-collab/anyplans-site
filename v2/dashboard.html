@@ -328,7 +328,7 @@
   <div class="sk" style="height:90px"></div>
 </div>
 
-<script src="app.js?v=1788507376"></script>
+<script src="app.js?v=1788507428"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 1000 });
@@ -369,7 +369,7 @@
     const pub = "community.html?" + (c.slug ? "slug=" + encodeURIComponent(c.slug) : "id=" + c.id);
     (document.getElementById("lnk-public") || {}).href = pub;
     const newHref = "crea.html?community=" + c.id;
-    ["lnk-new", "lnk-new-mob", "nav-new"].forEach(x => document.getElementById(x).href = newHref);
+    ["lnk-new", "lnk-new-mob", "nav-new"].forEach(x => (document.getElementById(x) || {}).href = newHref);
     document.getElementById("st-followers").textContent = Number(c.follower_count) || 0;
     document.getElementById("st-upcoming").textContent = Number(c.upcoming_count) || 0;
     document.getElementById("st-done").textContent = Number(c.events_done) || 0;
