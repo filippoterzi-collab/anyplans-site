@@ -215,6 +215,14 @@ function mountNav(active, opts){
     </div></div>`;
   const old = document.querySelector("body > header");
   if (old) old.replaceWith(h); else document.body.prepend(h);
+  // stessa larghezza e stessi margini del contenuto della pagina (main), così menu e titolo sono allineati
+  const mainEl = document.querySelector("main");
+  if (!opts.wide && mainEl) {
+    const cs = getComputedStyle(mainEl), navEl = h.querySelector(".nav");
+    if (cs.maxWidth && cs.maxWidth !== "none") navEl.style.maxWidth = cs.maxWidth;
+    if (cs.paddingLeft) h.style.paddingLeft = cs.paddingLeft;
+    if (cs.paddingRight) h.style.paddingRight = cs.paddingRight;
+  }
   document.getElementById("avatar").onclick = (e) => { e.stopPropagation(); const m = document.getElementById("menu"); m.hidden = !m.hidden; };
   document.addEventListener("click", (e) => { if (!e.target.closest("#menu")) { const m = document.getElementById("menu"); if (m) m.hidden = true; } });
   // nome e foto dal profilo, pallino avvisi: in silenzio se falliscono
