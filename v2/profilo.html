@@ -200,7 +200,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1788505064"></script>
+<script src="app.js?v=1788505099"></script>
 <script>
   requireLogin();
   mountTabbar("profilo");
@@ -374,9 +374,11 @@
     const note = document.getElementById("note");
     if (name.length < 2) { note.className = "note err"; note.textContent = "scrivi il tuo nome (almeno 2 lettere)."; document.getElementById("name").focus(); return false; }
     if (!birth) { note.className = "note err"; note.textContent = "serve la tua data di nascita: anyplans è solo per chi ha almeno 18 anni."; document.getElementById("birth").focus(); return false; }
-    btn.disabled = true; note.textContent = "…"; note.className = "note";
+    const btnLabel = btn.textContent;
+    btn.disabled = true; btn.textContent = "un attimo…"; note.textContent = ""; note.className = "note";
+    const restore = () => { btn.disabled = false; btn.textContent = btnLabel; };
     const r = await rpc("upsert_profile", { p_display_name: name, p_birth_date: birth });
-    if (!r) { note.className = "note err"; note.textContent = "non riesco a collegarmi. controlla internet e riprova."; btn.disabled = false; return false; }
+    if (!r) { note.className = "note err"; note.textContent = "non riesco a collegarmi. controlla internet e riprova."; restore(); return false; }
     if (!r.ok) {
       const b = await r.json().catch(() => ({}));
       const code = b.message || "";
@@ -384,7 +386,7 @@
       if (code.includes("must_be_adult")) note.textContent = "anyplans è solo per chi ha almeno 18 anni.";
       else if (code.includes("invalid_name")) note.textContent = "il nome deve avere almeno 2 lettere.";
       else note.textContent = "non riesco a salvare, riprova.";
-      btn.disabled = false;
+      restore();
       return false;
     }
     const extra = { p_base_city: city || null };
@@ -396,7 +398,7 @@
     await rpc("update_profile", extra);
     if (avatarBlob) await uploadAvatar();
     track(editMode ? "profile_edit" : "profile_done");
-    if (editMode) { toast("profilo salvato."); btn.disabled = false; note.textContent = ""; return false; }
+    if (editMode) { toast("profilo salvato."); restore(); return false; }
     // primo salvataggio: se arrivavo da un evento torno lì, altrimenti scelgo come usare anyplans
     let next = null;
     try { next = sessionStorage.getItem("anyplans_next"); sessionStorage.removeItem("anyplans_next"); } catch (_) {}
