@@ -137,7 +137,7 @@
   <a class="invite" id="invite" href="crea-community.html" hidden>organizzi eventi? crea il tuo gruppo →</a>
 </main>
 
-<script src="app.js?v=1788515406"></script>
+<script src="app.js?v=1788518091"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 860 });
@@ -153,7 +153,9 @@
   const pending = new Set(); // id con un segui in corso
 
   const managed = g => g.my_role === "owner" || g.my_role === "admin";
-  const emojiOf = g => g.emoji || CAT_EMOJI[g.category] || "📍";
+  const emojiOf = g => g.emoji || CAT_EMOJI[g.category] || (CATALOG[g.category] || {}).e || "📍";
+  const catLabel = g => (CATALOG[g.category] || {}).l || g.category || "";
+  const catFamily = g => (CATALOG[g.category] || {}).c || g.category;
   const followersTxt = n => { n = Number(n) || 0; return n === 0 ? "nessuno ancora" : n === 1 ? "1 persona lo segue" : n + " persone lo seguono"; };
   const upcomingTxt = n => { n = Number(n) || 0; return n === 0 ? "nessun evento in programma" : n === 1 ? "1 evento in programma" : n + " eventi in programma"; };
 
@@ -221,7 +223,7 @@
       <div class="body">
         <div class="name"><span>${esc(g.name)}</span>${vb}</div>
         ${g.is_verified ? '<div class="v">verificato da anyplans</div>' : ""}
-        <div class="m">${esc(CAT_EMOJI[g.category] || emojiOf(g))} ${esc(g.category || "")}${g.city ? " · " + esc(cityCase(g.city)) : ""}</div>
+        <div class="m">${esc(emojiOf(g))} ${esc(catLabel(g))}${g.city ? " · " + esc(cityCase(g.city)) : ""}</div>
         <div class="m">${followersTxt(g.follower_count)} · ${upcomingTxt(g.upcoming_count)}</div>
         ${next}
       </div>
@@ -245,8 +247,8 @@
     const q = norm(document.getElementById("q").value.trim());
     const words = q ? q.split(/\s+/) : [];
     const all = GROUPS
-      .filter(g => !cat || g.category === cat)
-      .filter(g => !words.length || words.every(w => norm([g.name, g.category, g.description].join(" ")).includes(w)))
+      .filter(g => !cat || g.category === cat || catFamily(g) === cat)
+      .filter(g => !words.length || words.every(w => norm([g.name, g.category, catLabel(g), catFamily(g), g.description].join(" ")).includes(w)))
       .sort(sortGroups);
     const listed = all.filter(g => g.listed); // solo i gruppi della città
     const mine = all.filter(managed);

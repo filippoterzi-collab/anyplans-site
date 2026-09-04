@@ -203,7 +203,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1788515406"></script>
+<script src="app.js?v=1788518091"></script>
 <script>
   requireLogin();
   mountTabbar("profilo");
@@ -403,10 +403,10 @@
     if (avatarBlob) await uploadAvatar();
     track(editMode ? "profile_edit" : "profile_done");
     if (editMode) { toast("profilo salvato."); restore(); return false; }
-    // primo salvataggio: se arrivavo da un evento torno lì, altrimenti scelgo come usare anyplans
+    // primo salvataggio: se arrivavo da un evento torno lì, altrimenti agli eventi
     let next = null;
     try { next = sessionStorage.getItem("anyplans_next"); sessionStorage.removeItem("anyplans_next"); } catch (_) {}
-    location.href = next || "tipo-account.html";
+    location.href = next || "eventi.html";
     return false;
   }
 </script>

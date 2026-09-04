@@ -104,7 +104,7 @@
 
     <div>
       <label>categoria</label>
-      <div class="chips" id="cats"></div>
+      <select id="cats" style="width:100%; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px; padding:13px 16px; font-size:16px; font-family:var(--round); color:var(--ink)"></select>
     </div>
 
     <div>
@@ -122,7 +122,7 @@
   </form>
 </main>
 
-<script src="app.js?v=1788515406"></script>
+<script src="app.js?v=1788518091"></script>
 <script>
   requireLogin();
   mountTabbar("crea");
@@ -138,23 +138,13 @@
     }
   });
 
-  // categorie gruppo (contratto 0047): l'emoji definitiva la assegna il backend
-  const CATS = [
-    ["creatività", "🏺"], ["sport", "🏃"], ["cucina", "🍳"],
-    ["giardinaggio", "🌱"], ["cultura", "🎪"], ["benessere", "🧘"]
-  ];
+  // categoria: tutto il catalogo attività (come "che tipo di evento è?"), gruppi/corsi prima
+  const first = ["dinner","festival","ceramics","cooking","painting","gardening","yoga"];
+  const order = [...first, ...Object.keys(CATALOG).filter(s => !first.includes(s))];
+  const catSel = document.getElementById("cats");
+  catSel.innerHTML = '<option value="">scegli…</option>' + order.map(s => `<option value="${s}">${CATALOG[s].e}  ${CATALOG[s].l}</option>`).join("");
   let category = null;
-  const wrap = document.getElementById("cats");
-  CATS.forEach(([slug, e]) => {
-    const b = document.createElement("button");
-    b.type = "button"; b.className = "chip"; b.dataset.cat = slug;
-    b.textContent = e + " " + slug;
-    b.onclick = () => {
-      category = slug;
-      wrap.querySelectorAll(".chip").forEach(c => c.classList.toggle("on", c.dataset.cat === slug));
-    };
-    wrap.appendChild(b);
-  });
+  catSel.onchange = () => { category = catSel.value || null; };
 
   function showPic(src){
     const pic = document.getElementById("pic");
@@ -227,7 +217,7 @@
         location.href = "profilo.html"; return false;
       }
       if (code.includes("too_many_communities")) return fail("hai già raggiunto il numero massimo di gruppi.");
-      if (code.includes("invalid_category")) return fail("scegli una categoria tra quelle proposte.");
+      if (code.includes("invalid_category")) return fail("scegli una categoria dall'elenco.");
       return fail("non riesco a creare il gruppo, riprova.");
     }
     const newId = await r.json();

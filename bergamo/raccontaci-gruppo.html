@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>raccontaci del tuo gruppo · anyplans</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta name="robots" content="noindex">
+<style>
+  @font-face{
+    font-family:"Bricolage Grotesque";
+    src:url("/bricolage-grotesque-latin-800-normal.woff2") format("woff2");
+    font-weight:800; font-style:normal; font-display:swap;
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+  :root{
+    --blue:#1B4FD8; --blue-lo:#1440AF; --tint:#E9EEFB;
+    --ink:#191919; --grey:#6E6E73; --bg:#FBF9F5;
+    --round: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --display: "Bricolage Grotesque", var(--round);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
+       -webkit-font-smoothing:antialiased; min-height:100vh; display:flex; flex-direction:column;}
+  a{color:inherit; text-decoration:none;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;}
+  .q{font-size:.92em;}
+  header{padding:0 22px;}
+  .nav{display:flex; align-items:center; justify-content:space-between; height:64px; max-width:1000px; margin:0 auto;}
+  .brand{display:flex; align-items:center; gap:10px; font-family:var(--display); font-weight:800;
+         font-size:21px; letter-spacing:-.045em; line-height:1;}
+  .brand img{width:30px; height:30px; display:block;}
+  main{flex:1; display:flex; align-items:center; justify-content:center; padding:24px 22px 64px;}
+  .card{width:100%; max-width:820px; background:#fff; border:1.5px solid rgba(25,25,25,.12);
+        border-radius:22px; padding:32px; display:flex; flex-direction:column; gap:16px;}
+  h1{font-size:28px;}
+  .sub{font-size:15px; color:var(--grey); margin-top:8px;}
+  label{font-weight:700; font-size:14px; display:block; margin-bottom:8px;}
+  label .opt{color:var(--grey); font-weight:600;}
+  .hint{font-size:12.5px; color:var(--grey); margin-top:6px; line-height:1.4;}
+  input, select, textarea{width:100%; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px;
+        padding:13px 16px; font-size:16px; font-family:var(--round); color:var(--ink);}
+  textarea{min-height:66px; resize:vertical;}
+  input:focus, select:focus, textarea:focus{outline:2px solid var(--blue); outline-offset:1px;}
+  .prefix{display:flex; align-items:center; border:1.5px solid rgba(25,25,25,.16); border-radius:12px; background:#fff; overflow:hidden;}
+  .prefix span{padding:13px 0 13px 16px; font-size:15px; color:var(--grey); white-space:nowrap;}
+  .prefix input{border:none; border-radius:0; padding-left:2px;}
+  .prefix:focus-within{outline:2px solid var(--blue); outline-offset:1px;}
+  .prefix input:focus{outline:none;}
+  #pic{width:76px; height:76px; border:2px dashed rgba(27,79,216,.5); border-radius:20px;
+       display:flex; align-items:center; justify-content:center; flex-shrink:0; cursor:pointer;
+       background-size:cover; background-position:center;}
+  .btn{display:block; width:100%; background:var(--blue); color:#fff; font-weight:700;
+       padding:14px 0; border-radius:999px; border:none; cursor:pointer; font-size:16px;
+       font-family:var(--round); text-align:center;}
+  .btn:hover{background:var(--blue-lo);}
+  .btn[disabled]{opacity:.55; cursor:default;}
+  .note{font-size:13.5px; color:var(--grey); min-height:1.3em; text-align:center; margin-top:-6px;}
+  .note.err{color:#B3261E; font-weight:600;}
+  /* città: lista suggerimenti in-flow sotto il campo */
+  #city-list{margin-top:8px; background:#fff; border:1.5px solid rgba(25,25,25,.14); border-radius:14px; overflow:hidden;}
+  .place-item{padding:12px 15px; cursor:pointer; border-bottom:1px solid rgba(25,25,25,.07);}
+  .place-item:last-child{border-bottom:none;}
+  .place-item:hover{background:var(--tint);}
+  .place-item .p{font-weight:700; font-size:14.5px;}
+  .place-item .s{font-size:12.5px; color:var(--grey);}
+  [hidden]{display:none !important;}
+
+  /* intestazioni di sezione, griglia a due colonne, riga logo + nome */
+  .sec{display:flex; align-items:center; gap:10px;}
+  .sec .ico{width:30px; height:30px; background:var(--tint); border-radius:9px; display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .sec .t{font-weight:800; font-size:16px;} .sec .s{font-size:12.5px; color:var(--grey);}
+  .sec.second{margin-top:6px;}
+  .two{display:grid; grid-template-columns:1fr 1fr; gap:16px;}
+  .logo-row{display:flex; align-items:center; gap:20px;}
+  .logo-row .fill{flex:1; min-width:0;}
+  .logo-col{display:flex; flex-direction:column; align-items:center; gap:4px; flex-shrink:0;}
+  .logo-col .a{font-weight:700; font-size:12.5px; color:var(--blue);} .logo-col .b{font-size:11.5px; color:var(--grey);}
+  @media (max-width:700px){
+    main{align-items:flex-start; padding:16px 22px 40px;}
+    .card{border:none; background:transparent; padding:8px 0 0; gap:18px;}
+    .sub{font-size:14px;}
+    .two{grid-template-columns:1fr; gap:18px;} .logo-row{gap:14px;} #pic{width:68px; height:68px; border-radius:18px;}
+  }
+
+  /* ux: transizioni e feedback al tocco */
+  .btn, .place-item{transition: transform .12s ease, box-shadow .12s ease, background .15s ease,
+                    border-color .15s ease, color .15s ease;}
+  .btn:active{transform:scale(.96);}
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, #pic:focus-visible{
+    outline:2px solid var(--blue); outline-offset:2px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="/bergamo/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
+  </div>
+</header>
+
+<main>
+  <form class="card" novalidate onsubmit="return submitAll(event)">
+    <div>
+      <h1 class="display">raccontaci del tuo gruppo</h1>
+      <p class="sub">così chi cerca eventi vi trova sulla mappa.</p>
+    </div>
+
+    <!-- sezione: il gruppo -->
+    <div class="sec">
+      <div class="ico"><svg width="20" height="20" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect x="9" y="9" width="82" height="82" rx="13" fill="none" stroke="#1B4FD8" stroke-width="8.5"/><g fill="none" stroke="#1B4FD8" stroke-width="7.5" stroke-linecap="round" stroke-linejoin="round"><path d="M38 51 L38 65"/><path d="M38 65 L32 79"/><path d="M38 65 L45 78"/><path d="M29 56 L38 53 L48 46"/><path d="M63 51 L63 65"/><path d="M63 65 L57 79"/><path d="M63 65 L70 78"/><path d="M54 56 L63 53 L73 46"/></g><circle cx="38" cy="40" r="7.5" fill="#1B4FD8"/><circle cx="63" cy="40" r="7.5" fill="#1B4FD8"/></svg></div>
+      <div>
+        <div class="t">il gruppo</div>
+        <div class="s">quello che vedono tutti sulla mappa.</div>
+      </div>
+    </div>
+
+    <div class="logo-row">
+      <div class="logo-col">
+        <div id="pic" role="button" tabindex="0" aria-label="aggiungi il logo"
+             onclick="document.getElementById('file').click()"
+             onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); document.getElementById('file').click();}">
+          <svg id="pic-icon" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8 L7 8 L9 5.5 L15 5.5 L17 8 L20 8 L20 18.5 L4 18.5 Z"/><circle cx="12" cy="13" r="3.2"/></svg>
+        </div>
+        <div class="a" id="pic-label">aggiungi il logo</div>
+        <div class="b">se vuoi</div>
+        <input id="file" type="file" accept="image/*" hidden onchange="pickPhoto(this)">
+      </div>
+      <div class="fill">
+        <label for="name">nome del gruppo</label>
+        <input id="name" type="text" required minlength="2" maxlength="60" placeholder="es. Pro Loco Alzano, Gruppo di cammino Seriate" autocomplete="off">
+      </div>
+    </div>
+
+    <div>
+      <label for="category">categoria</label>
+      <select id="category"><option value="">scegli una categoria</option></select>
+    </div>
+
+    <div class="two">
+      <div>
+        <label for="city">città del gruppo</label>
+        <input id="city" type="text" value="Bergamo" autocomplete="off" placeholder="cerca la città" oninput="citySearch()">
+        <div id="city-list" hidden></div>
+      </div>
+      <div>
+        <label for="ig">Instagram <span class="opt">(se vuoi)</span></label>
+        <div class="prefix"><span>instagram.com/</span><input id="ig" type="text" maxlength="30" placeholder="nomedelgruppo" autocomplete="off" autocapitalize="none"></div>
+      </div>
+    </div>
+
+    <div>
+      <label for="desc">di cosa vi occupate? <span class="opt">(se vuoi)</span></label>
+      <textarea id="desc" maxlength="200" placeholder="due righe per chi vi scopre sulla mappa. es. camminate la domenica mattina, aperte a tutti."></textarea>
+    </div>
+
+    <!-- sezione: chi lo gestisce -->
+    <div class="sec second">
+      <div class="ico"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1B4FD8" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="3.6"/><path d="M4.5 20.5 C 4.5 16, 7.8 13.8, 12 13.8 C 16.2 13.8, 19.5 16, 19.5 20.5"/></svg></div>
+      <div>
+        <div class="t">chi lo gestisce</div>
+        <div class="s">sei tu. ti chiediamo solo nome e data di nascita.</div>
+      </div>
+    </div>
+
+    <div class="two">
+      <div>
+        <label for="owner">il tuo nome</label>
+        <input id="owner" type="text" required minlength="2" placeholder="nome e cognome" autocomplete="name">
+      </div>
+      <div>
+        <label for="birth">La tua data di nascita</label>
+        <input id="birth" type="date" required>
+        <p class="hint">Serve solo per confermare che hai almeno 18 anni. Non la mostriamo a nessuno.</p>
+      </div>
+    </div>
+
+    <button class="btn" id="btn" type="submit">crea il gruppo</button>
+    <p class="note" id="note">puoi cambiare tutto dopo, dalla pagina del gruppo.</p>
+  </form>
+</main>
+
+<script src="app.js?v=1788518091"></script>
+<script>
+  requireLogin();
+
+  // guardia: chi ha già il profilo non deve rifare "chi lo gestisce", va dritto a crea-community.html
+  rpc("my_profile").then(async r => {
+    if (!r || !r.ok) return;
+    const rows = await r.json().catch(() => []);
+    if (rows.length && rows[0].display_name) location.replace("crea-community.html");
+  });
+
+  // select categorie dal catalogo, come "che tipo di evento è?" in crea.html (gruppo prima, poi sport).
+  // p_category riceve lo slug del catalogo (es. "running", "ceramics"); l'emoji la assegna il backend
+  const sel = document.getElementById("category");
+  const first = ["dinner","festival","ceramics","cooking","painting","gardening","yoga"];
+  const order = [...first, ...Object.keys(CATALOG).filter(s => !first.includes(s))];
+  order.forEach(slug => {
+    const o = document.createElement("option");
+    o.value = slug; o.textContent = CATALOG[slug].e + "  " + CATALOG[slug].l;
+    sel.appendChild(o);
+  });
+
+  // ---- città: autocompletamento con photon (openstreetmap), solo città/paesi (come profilo.html) ----
+  let cityTimer = null;
+  function citySearch(){
+    clearTimeout(cityTimer);
+    const q = document.getElementById("city").value.trim();
+    const list = document.getElementById("city-list");
+    if (q.length < 2) { list.hidden = true; return; }
+    cityTimer = setTimeout(async () => {
+      try {
+        const items = await searchCities(q);
+        if (!items.length) { list.hidden = true; return; }
+        list.innerHTML = items.map(x =>
+          `<div class="place-item"><div class="p">${esc(x.name)}</div>` +
+          (x.area ? `<div class="s">${esc(x.area)}</div>` : "") + `</div>`).join("");
+        list.hidden = false;
+        Array.from(list.children).forEach((el, i) => el.onclick = () => pickCity(items[i]));
+      } catch (_) { /* la ricerca è un aiuto: si può sempre scrivere a mano */ }
+    }, 300);
+  }
+  async function searchCities(q){
+    const r = await fetch("https://photon.komoot.io/api?q=" + encodeURIComponent(q) + "&limit=12&lat=45.698&lon=9.670");
+    if (!r.ok) return [];
+    const d = await r.json();
+    const PLACE = ["city", "town", "village"];
+    const seen = new Set();
+    return (d.features || []).map(f => f.properties).filter(p =>
+        p.name && (PLACE.includes(p.type) || PLACE.includes(p.osm_value) || p.osm_value === "municipality"))
+      .map(p => ({ name: p.name, area: [p.county, p.state].filter(x => x && x !== p.name).join(", ") }))
+      .filter(x => { const k = (x.name + "|" + x.area).toLowerCase(); if (seen.has(k)) return false; seen.add(k); return true; })
+      .slice(0, 6);
+  }
+  function pickCity(x){
+    document.getElementById("city").value = x.name;
+    document.getElementById("city-list").hidden = true;
+  }
+  document.addEventListener("click", (e) => {
+    if (!e.target.closest("#city-list") && e.target.id !== "city") document.getElementById("city-list").hidden = true;
+  });
+
+  // ---- logo (quadrato con angoli: i gruppi sono squadrati, le persone tonde) ----
+  function showPic(src){
+    const pic = document.getElementById("pic");
+    pic.style.backgroundImage = "url(" + src + ")";
+    pic.style.borderStyle = "solid";
+    document.getElementById("pic-icon").style.display = "none";
+    document.getElementById("pic-label").textContent = "cambia il logo";
+    pic.setAttribute("aria-label", "cambia il logo");
+  }
+  let avatarBlob = null;
+  let logoUrl = null; // url già caricato: non si ricarica se si riprova dopo un errore
+  function pickPhoto(input){
+    const f = input.files && input.files[0];
+    if (!f) return;
+    const img = new Image();
+    img.onload = () => {
+      const side = Math.min(img.width, img.height);
+      const c = document.createElement("canvas"); c.width = 512; c.height = 512;
+      c.getContext("2d").drawImage(img, (img.width - side) / 2, (img.height - side) / 2, side, side, 0, 0, 512, 512);
+      c.toBlob(b => { avatarBlob = b; logoUrl = null; showPic(c.toDataURL("image/jpeg", 0.8)); }, "image/jpeg", 0.85);
+      URL.revokeObjectURL(img.src);
+    };
+    img.src = URL.createObjectURL(f);
+  }
+  // bucket "avatars": <uid>/community-<timestamp>.jpg, come crea-community.html. null se fallisce (il logo è opzionale)
+  async function uploadLogo(){
+    try {
+      const uid = myUid(); if (!uid) return null;
+      const path = uid + "/community-" + Date.now() + ".jpg";
+      const r = await fetch(SB_URL + "/storage/v1/object/avatars/" + path, {
+        method: "POST",
+        headers: {"apikey": SB_ANON, "Authorization": "Bearer " + session.access_token,
+                  "Content-Type": "image/jpeg", "x-upsert": "true"},
+        body: avatarBlob
+      });
+      if (!r.ok) return null;
+      return SB_URL + "/storage/v1/object/public/avatars/" + path;
+    } catch (_) { return null; }
+  }
+
+  // ---- salvataggio: prima il referente (upsert_profile + update_profile), poi il gruppo ----
+  let profileSaved = false; // se il gruppo fallisce dopo il profilo, al secondo tentativo si salta il passo 1
+  async function submitAll(e){
+    e.preventDefault();
+    const note = document.getElementById("note");
+    const btn = document.getElementById("btn");
+    const name = document.getElementById("name").value.trim();
+    const category = sel.value;
+    const owner = document.getElementById("owner").value.trim();
+    const birth = document.getElementById("birth").value;
+    const city = document.getElementById("city").value.trim();
+    const desc = document.getElementById("desc").value.trim();
+    const ig = document.getElementById("ig").value.trim().replace(/^@/, "").replace(/^.*instagram\.com\//, "").replace(/\/.*$/, "").slice(0, 30);
+    function fail(msg, focusId){
+      note.className = "note err"; note.textContent = msg;
+      btn.disabled = false; btn.textContent = "crea il gruppo";
+      if (focusId) { const el = document.getElementById(focusId); if (el) el.focus(); }
+      return false;
+    }
+    if (name.length < 2) return fail("dai un nome al gruppo (almeno 2 lettere).", "name");
+    if (!category) return fail("scegli una categoria.", "category");
+    if (owner.length < 2) return fail("scrivi il tuo nome (almeno 2 lettere).", "owner");
+    if (!birth) return fail("Serve la tua data di nascita: anyplans è solo per chi ha almeno 18 anni.", "birth");
+
+    btn.disabled = true; btn.textContent = "un attimo…"; note.className = "note"; note.textContent = "";
+
+    // 1. chi lo gestisce
+    if (!profileSaved) {
+      const rp = await rpc("upsert_profile", { p_display_name: owner, p_birth_date: birth });
+      if (!rp) return fail("non riesco a collegarmi. controlla internet e riprova.");
+      if (!rp.ok) {
+        const b = await rp.json().catch(() => ({}));
+        const code = b.message || "";
+        if (code.includes("must_be_adult")) return fail("Solo per chi ha almeno 18 anni.", "birth");
+        if (code.includes("invalid_name")) return fail("il nome deve avere almeno 2 lettere.", "owner");
+        return fail("non riesco a salvare, riprova.");
+      }
+      profileSaved = true;
+      await rpc("update_profile", { p_base_city: city || "bergamo" });
+    }
+
+    // 2. il gruppo
+    if (avatarBlob && !logoUrl) {
+      logoUrl = await uploadLogo();
+      if (!logoUrl) toast("il logo non si è caricato. mettiamo il simbolo, lo cambi dopo.");
+    }
+    const r = await rpc("create_community", {
+      p_name: name,
+      p_category: category,
+      p_description: desc || null,
+      p_city: city || "bergamo",
+      p_avatar_url: logoUrl,
+      p_instagram_handle: ig || null
+    });
+    if (!r) return fail("non riesco a collegarmi. controlla internet e riprova.");
+    if (!r.ok) {
+      const b = await r.json().catch(() => ({}));
+      const code = b.message || "";
+      if (code.includes("profile_required")) { profileSaved = false; return fail("non riesco a creare il gruppo, riprova."); }
+      if (code.includes("too_many_communities")) return fail("hai già raggiunto il numero massimo di gruppi.");
+      if (code.includes("invalid_category")) return fail("scegli una categoria tra quelle proposte.");
+      return fail("non riesco a creare il gruppo, riprova.");
+    }
+    const newId = await r.json();
+    track("community_create");
+    track("group_onboarding_done");
+    location.href = "dashboard.html?id=" + newId;
+    return false;
+  }
+</script>
+</body>
+</html>

@@ -253,7 +253,7 @@
       if (!saved) { try { sessionStorage.setItem("anyplans_session", session); saved = true; } catch (_) {} }
       let next = "eventi.html";
       try { next = sessionStorage.getItem("anyplans_next") || next; } catch (_) {}
-      // senza profilo si va dritti a "raccontaci di te" (niente lampo della mappa); la destinazione resta salvata
+      // senza profilo si va dritti a "cosa vuoi fare su anyplans?" (niente lampo della mappa); la destinazione resta salvata
       let hasProfile = true;
       try {
         const rp = await fetch(SB_URL + "/rest/v1/rpc/my_profile", { method: "POST", headers: { ...HEADERS, "Authorization": "Bearer " + body.access_token }, body: "{}" });
@@ -261,7 +261,7 @@
         hasProfile = !!(rows.length && rows[0].display_name);
       } catch (_) {}
       if (hasProfile) { try { sessionStorage.removeItem("anyplans_next"); } catch (_) {} }
-      else { try { if (next !== "eventi.html") sessionStorage.setItem("anyplans_next", next); } catch (_) {} next = "profilo.html"; }
+      else { try { if (next !== "eventi.html") sessionStorage.setItem("anyplans_next", next); } catch (_) {} next = "tipo-account.html"; }
       location.href = saved ? next : next + "#s=" + encodeURIComponent(session);
     } catch (err) {
       btn.disabled = false;

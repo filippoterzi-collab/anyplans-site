@@ -111,10 +111,17 @@
   </div>
 </main>
 
-<script src="app.js?v=1788515406"></script>
+<script src="app.js?v=1788518091"></script>
 <script>
   requireLogin();
   let kind = "user";
+
+  // chi ha già il profilo (utente che torna) non deve riscegliere: dritto agli eventi
+  rpc("my_profile").then(async r => {
+    if (!r || !r.ok) return;
+    const rows = await r.json().catch(() => []);
+    if (rows.length && rows[0].display_name) location.replace("eventi.html");
+  });
 
   function pick(el){
     document.querySelectorAll(".opt").forEach(o => { o.classList.remove("on"); o.setAttribute("aria-pressed", "false"); });
@@ -123,7 +130,7 @@
   }
   function go(){
     track("account_type_" + kind);
-    location.href = kind === "community" ? "crea-community.html" : "eventi.html";
+    location.href = kind === "community" ? "raccontaci-gruppo.html" : "profilo.html";
   }
 </script>
 </body>
