@@ -170,6 +170,9 @@
   .ev:hover{box-shadow:0 4px 16px rgba(25,25,25,.07); transform:translateY(-1px);}
   a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible{
     outline:2px solid var(--blue); outline-offset:2px;}
+  .igrow{display:flex; align-items:center; gap:8px;}
+  .igrow span{color:var(--grey); font-size:15px; white-space:nowrap; cursor:text;}
+  .igrow input{flex:1; min-width:0;}
 </style>
 </head>
 <body>
@@ -271,7 +274,7 @@
       </div>
       <div>
         <label for="f-ig">Instagram <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
-        <div class="prefix"><span>instagram.com/</span><input id="f-ig" type="text" maxlength="30" placeholder="nomeutente" autocomplete="off" autocapitalize="none"></div>
+        <div class="igrow"><span onclick="this.nextElementSibling.focus()">instagram.com/</span><input id="f-ig" type="text" maxlength="30" placeholder="il tuo nome utente Instagram" autocomplete="off" autocapitalize="none"></div>
         <p class="hint">lo mostriamo nella pagina del gruppo, sotto gli eventi passati.</p>
       </div>
       <button class="btn" id="f-btn" type="submit" style="width:100%">salva le modifiche</button>
@@ -327,7 +330,7 @@
   <div class="sk" style="height:90px"></div>
 </div>
 
-<script src="app.js?v=1788518118"></script>
+<script src="app.js?v=1788518381"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 1000 });

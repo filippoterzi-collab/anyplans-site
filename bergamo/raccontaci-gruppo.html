@@ -89,6 +89,9 @@
   .btn:active{transform:scale(.96);}
   a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, #pic:focus-visible{
     outline:2px solid var(--blue); outline-offset:2px;}
+  .igrow{display:flex; align-items:center; gap:8px;}
+  .igrow span{color:var(--grey); font-size:15px; white-space:nowrap; cursor:text;}
+  .igrow input{flex:1; min-width:0;}
 </style>
 </head>
 <body>
@@ -145,7 +148,7 @@
       </div>
       <div>
         <label for="ig">Instagram <span class="opt">(se vuoi)</span></label>
-        <div class="prefix"><span>instagram.com/</span><input id="ig" type="text" maxlength="30" placeholder="nomedelgruppo" autocomplete="off" autocapitalize="none"></div>
+        <div class="igrow"><span onclick="this.nextElementSibling.focus()">instagram.com/</span><input id="ig" type="text" maxlength="30" placeholder="il tuo nome utente Instagram" autocomplete="off" autocapitalize="none"></div>
       </div>
     </div>
 
@@ -180,7 +183,7 @@
   </form>
 </main>
 
-<script src="app.js?v=1788518118"></script>
+<script src="app.js?v=1788518381"></script>
 <script>
   requireLogin();
 
