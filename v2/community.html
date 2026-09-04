@@ -185,7 +185,7 @@
   <a class="btn" href="eventi.html">guarda gli eventi a bergamo</a>
 </div>
 
-<script src="app.js?v=1788505477"></script>
+<script src="app.js?v=1788505751"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const wantId = params.get("id");
@@ -302,6 +302,7 @@
 
   async function toggleFollow(){
     if (!logged) { rememberNext(); location.href = "login.html"; return; }
+    if (c.is_following && !confirm("vuoi smettere di seguire " + c.name + "?")) return;
     const btn = document.getElementById("btn-follow");
     const next = !c.is_following;
     btn.disabled = true;

@@ -137,7 +137,7 @@
   <a class="invite" id="invite" href="crea-community.html" hidden>organizzi eventi? crea il tuo gruppo →</a>
 </main>
 
-<script src="app.js?v=1788505477"></script>
+<script src="app.js?v=1788505751"></script>
 <script>
   requireLogin();
   mountNav("gruppi");
@@ -273,6 +273,7 @@
   async function toggleFollow(id){
     const g = GROUPS.find(x => x.id === id);
     if (!g || pending.has(id)) return;
+    if (g.is_following && !confirm("vuoi smettere di seguire " + g.name + "?")) return;
     const next = !g.is_following;
     // subito il nuovo stato, poi si aspetta la risposta
     g.is_following = next;

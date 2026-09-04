@@ -159,16 +159,15 @@
       <div class="sec" style="margin-bottom:8px">i gruppi che gestisco</div>
       <div id="cm-mine" style="display:flex; flex-direction:column; gap:8px"></div>
     </div>
-    <div>
-      <div class="sec" style="margin-bottom:8px">i gruppi che seguo <span id="cm-n"></span></div>
-      <div id="cm-follow" style="display:flex; flex-direction:column; gap:8px"><div class="sk"></div><div class="sk"></div></div>
-    </div>
+    <a class="cm" href="seguo.html"><div class="tile">📣</div>
+      <div><div class="n">i gruppi che seguo</div><div class="s" id="cm-follow-n">…</div></div>
+      <span class="act">vedi →</span></a>
     <a class="btn" href="crea-community.html">crea il tuo gruppo</a>
     <p class="empty">un gruppo è chi organizza gli eventi: un'associazione, un negozio, una pro loco, una squadra. chi lo segue riceve i suoi eventi.</p>
   </section>
 </main>
 
-<script src="app.js?v=1788505477"></script>
+<script src="app.js?v=1788505751"></script>
 <script>
   requireLogin();
   mountNav("");
@@ -246,20 +245,17 @@
       `<span class="act">${act}</span></a>`;
   }
   async function loadCommunities(){
-    const follow = document.getElementById("cm-follow");
+    const followN = document.getElementById("cm-follow-n");
     const r = await rpc("my_communities", {});
-    if (!r || !r.ok) { follow.innerHTML = '<p class="empty">non riesco a caricare i gruppi. ricarica la pagina.</p>'; return; }
+    if (!r || !r.ok) { followN.textContent = ""; return; }
     const rows = await r.json().catch(() => []);
     const mine = rows.filter(c => c.role === "owner" || c.role === "admin");
-    const followed = rows.filter(c => c.role === "follower");
+    const n = rows.filter(c => c.role === "follower").length;
     if (mine.length) {
       document.getElementById("cm-mine-wrap").hidden = false;
       document.getElementById("cm-mine").innerHTML = mine.map(c => cmRow(c, "dashboard.html?id=" + c.id, "gestisci →")).join("");
     }
-    document.getElementById("cm-n").textContent = followed.length ? "(" + followed.length + ")" : "";
-    follow.innerHTML = followed.length
-      ? followed.map(c => cmRow(c, "community.html?slug=" + encodeURIComponent(c.slug), "vedi →")).join("")
-      : '<p class="empty">non segui ancora nessun gruppo. le trovi negli eventi: chi organizza ha la sua pagina.</p>';
+    followN.textContent = n === 0 ? "nessuno ancora" : n === 1 ? "1 gruppo" : n + " gruppi";
   }
 
   loadPrefs();
