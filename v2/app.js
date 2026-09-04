@@ -106,6 +106,7 @@ const CATALOG = {
   skating:   { e:"⛸️", l:"pattinaggio",               c:"sport" },
   ceramics:  { e:"🏺", l:"ceramica",                  c:"creatività" },
   cooking:   { e:"🍳", l:"cucina",                    c:"cucina" },
+  dinner:    { e:"🍽️", l:"cena / aperitivo",          c:"cucina" },
   painting:  { e:"🎨", l:"pittura / arte",            c:"creatività" },
   gardening: { e:"🌱", l:"giardinaggio / volontariato", c:"giardinaggio" },
   festival:  { e:"🎪", l:"feste, sagre ed eventi di paese",     c:"cultura" }

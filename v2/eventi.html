@@ -276,7 +276,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788507428"></script>
+<script src="app.js?v=1788507610"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -305,7 +305,7 @@
   if (!logged) document.querySelectorAll("#tabbar a").forEach(a => { if (!a.getAttribute("href").includes("eventi.html")) a.onclick = () => { try { sessionStorage.setItem("anyplans_next", a.getAttribute("href")); } catch (_) {} }; });
 
   // categoria del sito per ogni slug non sportivo; tutto il resto è "sport"
-  const CAT_BY_SLUG = { cooking:"cucina", ceramics:"creatività", painting:"creatività",
+  const CAT_BY_SLUG = { cooking:"cucina", dinner:"cucina", ceramics:"creatività", painting:"creatività",
                         gardening:"giardinaggio", festival:"cultura", yoga:"benessere" };
   // parole con cui la gente cerca ogni attività (il titolo da solo non basta: "corsa" vs "corro 10k")
   const SEARCH_WORDS = {
@@ -334,6 +334,7 @@
     skating: "pattinaggio pattini skate skating rollerblade ghiaccio",
     ceramics: "ceramica argilla tornio corso creativo pottery clay laboratorio manuale",
     cooking: "cucina cucinare corso pasta chef cooking cena pranzo ricetta food mangiare cibo aperitivo",
+    dinner: "cena aperitivo pranzo mangiare ristorante pizzeria pizza dinner apericena bere birra vino compagnia tavolata",
     painting: "pittura disegno arte corso creativo painting drawing art acquerello quadro laboratorio",
     gardening: "giardinaggio orto volontariato verde gardening garden piante natura pulizia ambiente",
     festival: "festa sagra festival evento concerto paese party musica live serata fiera mercato"
