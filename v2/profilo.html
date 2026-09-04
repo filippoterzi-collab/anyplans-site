@@ -130,7 +130,7 @@
       <input id="file" type="file" accept="image/*" hidden onchange="pickPhoto(this)">
     </div>
     <div>
-      <label for="name">come ti chiami?</label>
+      <label for="name">come ti chiami? <span style="color:var(--blue)">*</span></label>
       <input id="name" type="text" required minlength="2" placeholder="il tuo nome" autocomplete="given-name">
       <p class="hint">lo vedono gli altri partecipanti e chi organizza.</p>
     </div>
@@ -140,7 +140,7 @@
       <div id="city-list" hidden></div>
     </div>
     <div>
-      <label for="birth">la tua data di nascita</label>
+      <label for="birth">la tua data di nascita <span style="color:var(--blue)">*</span></label>
       <input id="birth" type="date" required>
       <p class="hint">serve solo per confermare che hai almeno 18 anni. non la mostriamo a nessuno.</p>
     </div>
@@ -156,7 +156,7 @@
       </div>
     </div>
     <button class="btn" id="btn" type="submit">entra su anyplans</button>
-    <p class="note" id="note"></p>
+    <p class="note" id="note"><span style="color:var(--blue)">*</span> obbligatorio</p>
     <button class="textbtn" id="btn-logout" type="button" hidden onclick="if(confirm('vuoi uscire?')) logout()">esci da anyplans</button>
   </form>
 
@@ -200,7 +200,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1788504837"></script>
+<script src="app.js?v=1788505064"></script>
 <script>
   requireLogin();
   mountTabbar("profilo");
@@ -372,6 +372,8 @@
     const birth = document.getElementById("birth").value;
     const btn = document.getElementById("btn");
     const note = document.getElementById("note");
+    if (name.length < 2) { note.className = "note err"; note.textContent = "scrivi il tuo nome (almeno 2 lettere)."; document.getElementById("name").focus(); return false; }
+    if (!birth) { note.className = "note err"; note.textContent = "serve la tua data di nascita: anyplans è solo per chi ha almeno 18 anni."; document.getElementById("birth").focus(); return false; }
     btn.disabled = true; note.textContent = "…"; note.className = "note";
     const r = await rpc("upsert_profile", { p_display_name: name, p_birth_date: birth });
     if (!r) { note.className = "note err"; note.textContent = "non riesco a collegarmi. controlla internet e riprova."; btn.disabled = false; return false; }
