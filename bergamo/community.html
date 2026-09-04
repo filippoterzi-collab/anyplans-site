@@ -185,7 +185,7 @@
   <a class="btn" href="eventi.html">guarda gli eventi a Bergamo</a>
 </div>
 
-<script src="app.js?v=1788518091"></script>
+<script src="app.js?v=1788518118"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const wantId = params.get("id");
@@ -258,7 +258,7 @@
     const done = Number(c.events_done) || 0;
     const parts = [];
     if (c.is_verified) parts.push('<span class="v">' + (mobile ? "verificato" : "verificato da anyplans") + "</span>");
-    if (!mobile && c.category) parts.push(esc((c.emoji ? c.emoji + " " : "") + c.category));
+    if (!mobile && c.category) parts.push(esc((c.emoji ? c.emoji + " " : "") + ((CATALOG[c.category] || {}).l || c.category)));
     if (c.city) parts.push(esc(cityCase(c.city)));
     parts.push("<b>" + (followers === 1 ? "1 persona lo segue" : followers + " persone lo seguono") + "</b>");
     if (!mobile) parts.push(done + (done === 1 ? " evento fatto" : " eventi fatti"));
