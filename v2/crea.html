@@ -210,13 +210,13 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788508411"></script>
+<script src="app.js?v=1788508505"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
   mountTabbar("crea");
   const editId = new URLSearchParams(location.search).get("edit");
-  let editVisibility = "open";
+  let editVisibility = "open", editSport = null;
 
   // profilo obbligatorio per creare
   rpc("my_profile").then(async r => {
@@ -357,7 +357,7 @@
     if (a.visibility === "request") document.getElementById("vis").classList.add("on");
     editVisibility = a.visibility || "open";
     const back = document.getElementById("lnk-back"); back.hidden = false; back.href = "evento.html?id=" + editId;
-    sel.value = a.sport; sel.disabled = true;
+    sel.value = a.sport; editSport = a.sport;
     document.getElementById("title").value = a.title || "";
     const d = new Date(a.start_at);
     document.getElementById("date").value = localDate(d);
@@ -552,6 +552,10 @@
         await savePrice(editId, price);
         await savePhoto(editId);
         await saveVisibility(editId, chosenVisibility(), editVisibility);
+        if (editSport && sel.value !== editSport) {
+          const rsp = await rpc("set_activity_sport", { p_activity_id: editId, p_sport: sel.value });
+          if (!rsp || !rsp.ok) toast("salvato, ma il tipo di evento no. riprova.");
+        }
         const rq = await rpc("set_activity_questions", { p_activity_id: editId, p_questions: collectQuestions() });
         if (!rq || !rq.ok) toast("salvato, ma le domande no. riprova da \"modifica l'evento\".");
         track("event_edit");
