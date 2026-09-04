@@ -159,7 +159,7 @@
     <div class="datebox"><div class="m" id="d-month"></div><div class="d" id="d-day"></div></div>
     <div>
       <div class="t" id="when"></div>
-      <div class="s" id="place"></div>
+      <a class="s" id="place" href="#" target="_blank" rel="noopener" style="color:var(--blue); font-weight:700"></a>
     </div>
   </div>
 
@@ -249,7 +249,8 @@
   <div>
     <div class="sec" style="margin-bottom:8px">dove</div>
     <div id="map"></div>
-    <p class="note" id="map-note" style="margin-top:6px" hidden>qui vedi la zona. l'indirizzo preciso arriva quando ti iscrivi.</p>
+    <p class="note" style="margin-top:6px">tocca la mappa per aprire il percorso nell'app delle mappe.</p>
+    <p class="note" id="map-note" hidden>qui vedi la zona. l'indirizzo preciso arriva quando ti iscrivi.</p>
   </div>
 
   <div id="answers-wrap" hidden>
@@ -342,7 +343,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788508133"></script>
+<script src="app.js?v=1788508295"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -385,6 +386,12 @@
     document.getElementById("notfound").hidden = false;
   }
 
+  // tocco su "dove" o sulla mappa: si apre l'app delle mappe del telefono con il punto esatto
+  function mapsUrl(){
+    const q = ev.lat + "," + ev.lng, label = encodeURIComponent(ev.meeting_point_text || ev.title);
+    const apple = /iPhone|iPad|iPod|Macintosh/.test(navigator.userAgent);
+    return apple ? "https://maps.apple.com/?q=" + label + "&ll=" + q : "https://www.google.com/maps/search/?api=1&query=" + q;
+  }
   function avatarStyle(url){ return url ? ` style="background-image:url('${esc(url)}')"` : ""; }
 
   function renderEvent(){
@@ -404,7 +411,8 @@
     document.getElementById("d-month").textContent = MONTHS[when.getMonth()].slice(0, 3);
     document.getElementById("d-day").textContent = when.getDate();
     document.getElementById("when").innerHTML = esc(dayLabel(when) + " · " + daySub(when) + " · " + timeStr(when)) + " · <b>" + esc(relTime(when)) + "</b>";
-    document.getElementById("place").textContent = ev.meeting_point_text || "zona indicativa";
+    document.getElementById("place").textContent = (ev.meeting_point_text || "zona indicativa") + " · apri nelle mappe →";
+    document.getElementById("place").href = mapsUrl();
     if (!ev.meeting_point_text) document.getElementById("map-note").hidden = false;
     document.getElementById("join-hint").hidden = !isReq;
 
@@ -445,8 +453,9 @@
     track("event_view", "/evento/" + ev.id);
 
     const map = new maplibregl.Map({ container: "map", style: "https://tiles.openfreemap.org/styles/liberty",
-                                     center: [ev.lng, ev.lat], zoom: 14, interactive: true });
-    map.addControl(new maplibregl.NavigationControl({ showCompass: false }));
+                                     center: [ev.lng, ev.lat], zoom: 14.5, interactive: false, attributionControl: false });
+    document.getElementById("map").style.cursor = "pointer";
+    document.getElementById("map").addEventListener("click", () => { track("maps_open"); window.open(mapsUrl(), "_blank", "noopener"); });
     const el = document.createElement("div");
     el.style.cssText = "width:40px;height:40px;background:#1B4FD8;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:19px;box-shadow:0 1px 5px rgba(0,0,0,.2)";
     el.textContent = ev.emoji || cat.e || "📍";
