@@ -57,6 +57,9 @@
   .fl-bar .search{flex:1 1 260px; min-width:200px; max-width:440px;}
   .fl-days{display:flex; gap:8px; flex-shrink:0;}
   .fl-days .chip{height:40px; padding:0 14px; display:inline-flex; align-items:center;}
+  .day-chip{position:relative; cursor:pointer;}
+  .day-chip input[type=date]{position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:pointer;}
+  .day-chip b{margin-left:6px; font-weight:800; position:relative; z-index:1;}
   .fl-btn{display:inline-flex; align-items:center; gap:7px; height:40px; padding:0 14px; border-radius:999px;
           background:var(--tint); color:var(--blue); border:none; font:700 14px var(--round);
           cursor:pointer; white-space:nowrap; flex-shrink:0;
@@ -180,7 +183,8 @@
     .fl-body{padding:4px 20px 16px;}
     .fl-foot{position:sticky; bottom:0; padding:12px 20px calc(12px + env(safe-area-inset-bottom));}
     .fl-show{flex:1; min-width:0;}
-    .fl-grid.days .chip{font-size:14px; padding:0 8px;}
+    .fl-grid.days{flex-wrap:wrap;}
+    .fl-grid.days .chip{font-size:14px; padding:0 8px; flex:1 1 45%;}
     .titlerow h1{font-size:24px;}
     .split{flex-direction:column;}
     #map{display:none; height:calc(100vh - 330px); flex:none; border-radius:16px; margin:0 18px;}
@@ -222,6 +226,7 @@
       <button class="chip day-chip" data-day="oggi" aria-pressed="false" onclick="setDay(this)">Oggi</button>
       <button class="chip day-chip" data-day="domani" aria-pressed="false" onclick="setDay(this)">Domani</button>
       <button class="chip day-chip" data-day="weekend" aria-pressed="false" onclick="setDay(this)">Fine settimana</button>
+      <label class="chip day-chip" data-day="data" id="chip-date" aria-pressed="false"><span id="date-txt">Altra data</span><b id="date-x" hidden onclick="clearDate(event)">×</b><input type="date" id="fl-date" aria-label="Scegli un giorno" onchange="setDate(this.value)"></label>
     </div>
     <button class="fl-btn" id="fbtn" onclick="openFilters()" aria-haspopup="dialog" aria-controls="fl">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.5"/><circle cx="10" cy="17" r="2.5"/></svg>
@@ -275,7 +280,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788597883"></script>
+<script src="app.js?v=1788599665"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -382,6 +387,7 @@
       lat: x.lat, lng: x.lng
     }));
     buildMarkers();
+    refit = true;
     render();
   }
 
@@ -410,7 +416,8 @@
   }
 
   // lista
-  let cat = "", day = "";
+  let cat = "", day = "oggi", dateSel = null, refit = false, lastVisible = [];
+  const isoLocal = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
   const mobileFilters = window.matchMedia("(max-width:700px)");
   const fl = document.getElementById("fl");
   const isOpen = () => fl.classList.contains("fl-open");
@@ -429,9 +436,24 @@
     placeChips(); document.getElementById("fbtn").focus();
   }
   document.addEventListener("keydown", e => { if (e.key === "Escape") closeFilters(); });
+  // chip giorno: uno solo acceso; se non è "data", il chip data torna vuoto
+  function syncChips(){
+    document.querySelectorAll(".day-chip").forEach(c => { const on = c.dataset.day === day; c.classList.toggle("on", on); c.setAttribute("aria-pressed", String(on)); });
+    if (day !== "data") {
+      dateSel = null; document.getElementById("fl-date").value = "";
+      document.getElementById("date-txt").textContent = "Altra data"; document.getElementById("date-x").hidden = true;
+    }
+  }
+  function dayText(){
+    if (day === "oggi") return "oggi";
+    if (day === "domani") return "domani";
+    if (day === "weekend") return "nel fine settimana";
+    if (day === "data" && dateSel) return "il " + dateSel.getDate() + " " + MONTHS[dateSel.getMonth()];
+    return "";
+  }
   function clearFilters(){
     day = ""; cat = "";
-    document.querySelectorAll(".day-chip").forEach(c => { c.classList.remove("on"); c.setAttribute("aria-pressed", "false"); });
+    syncChips(); refit = true;
     document.querySelectorAll(".chip[data-cat]").forEach(c => { const on = c.dataset.cat === ""; c.classList.toggle("on", on); c.setAttribute("aria-pressed", String(on)); });
     updateFbtn(); render();
   }
@@ -442,7 +464,7 @@
     document.getElementById("fl-reset").disabled = !n;
     const act = document.getElementById("fl-active");
     let html = "";
-    if (day) html += `<button class="fl-pill" data-kind="day" onclick="setDay(document.querySelector('.day-chip.on'))">${esc(document.querySelector(".day-chip.on").textContent)} <b>×</b></button>`;
+    if (day) html += `<button class="fl-pill" data-kind="day" onclick="setDay(document.querySelector('.day-chip.on'))">${esc(dayText())} <b>×</b></button>`;
     if (cat) html += `<button class="fl-pill" data-kind="cat" onclick="setCat(document.querySelector('.chip[data-cat=\'\']'))">${esc(document.querySelector(".chip[data-cat].on").textContent)} <b>×</b></button>`;
     if (n) html += `<button class="fl-clear" onclick="clearFilters()">Cancella tutto</button>`;
     act.innerHTML = cat ? html : ""; act.classList.toggle("has", !!cat);
@@ -454,12 +476,29 @@
   }
   function setDay(btn){
     day = day === btn.dataset.day ? "" : btn.dataset.day;
-    document.querySelectorAll(".day-chip").forEach(c => { const on = c.dataset.day === day; c.classList.toggle("on", on); c.setAttribute("aria-pressed", String(on)); });
-    updateFbtn(); render();
+    syncChips(); refit = true; updateFbtn(); render();
+  }
+  function setDate(v){
+    if (!v) return;
+    const [y, m, d] = v.split("-").map(Number);
+    const picked = new Date(y, m - 1, d);
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    if (picked < today) { toast("Scegli un giorno da oggi in poi"); document.getElementById("fl-date").value = ""; return; }
+    day = "data"; syncChips(); dateSel = picked;
+    document.getElementById("date-txt").textContent = d + " " + MONTHS[m - 1].slice(0, 3);
+    document.getElementById("date-x").hidden = false;
+    refit = true; updateFbtn(); render();
+  }
+  function clearDate(ev){
+    ev.preventDefault(); ev.stopPropagation();
+    day = ""; syncChips(); refit = true; updateFbtn(); render();
   }
   placeChips();
+  document.getElementById("fl-date").min = isoLocal(new Date());
+  syncChips(); updateFbtn();
   function inDay(d){
     if (!day) return true;
+    if (day === "data") return !!dateSel && dayKey(d) === dayKey(dateSel);
     const lbl = dayKind(d);
     if (day === "weekend") {
       const wd = d.getDay(), diff = (d - Date.now()) / 86400000;
@@ -496,18 +535,27 @@
       })
       .sort((a, b) => a.when - b.when);
 
-    document.getElementById("count").textContent = evs.length + (evs.length === 1 ? " evento" : " eventi") + " in programma";
+    document.getElementById("count").textContent = evs.length + (evs.length === 1 ? " evento " : " eventi ") + (dayText() || "in programma");
     const show = document.getElementById("fl-show");
     show.classList.toggle("zero", !evs.length);
     show.innerHTML = evs.length ? 'Mostra <span id="fl-count">' + (evs.length === 1 ? "1 evento" : evs.length + " eventi") + "</span>" : "Nessun evento";
-    EVENTS.forEach(e => { const visible = evs.includes(e); markers[e.id].getElement().style.opacity = visible ? "1" : "0.25"; });
+    // i pin fuori filtro spariscono (non sbiaditi); il popup di un pin che sparisce si chiude
+    const vis = new Set(evs.map(e => e.id));
+    EVENTS.forEach(e => {
+      const m = markers[e.id], on = vis.has(e.id);
+      m.getElement().style.display = on ? "" : "none";
+      if (!on) { const p = m.getPopup(); if (p && p.isOpen()) m.togglePopup(); }
+    });
+    lastVisible = evs;
+    if (refit) { refit = false; fitVisible(); }
 
     if (!evs.length) {
       const CATN = { sport:"sport", cucina:"cucina", "creatività":"creatività", giardinaggio:"giardinaggio", cultura:"cultura", benessere:"benessere" };
-      const dayTxt = day === "weekend" ? "nel fine settimana" : day;
+      const dayTxt = dayText();
       const pub = '<a href="crea.html" style="color:var(--blue); font-weight:700">pubblica tu un evento</a>';
       let msg;
-      if (day || cat) msg = ("Niente " + (day ? dayTxt + " " : "") + (cat ? "di " + CATN[cat] : "")).trim() + '. <a href="#" onclick="clearFilters(); return false" style="color:var(--blue); font-weight:700">Togli i filtri</a> oppure ' + pub + ".";
+      if (day === "oggi" && !cat && !q) msg = 'Niente oggi. <a href="#" onclick="setDay(document.querySelector(\'.day-chip[data-day=domani]\')); return false" style="color:var(--blue); font-weight:700">Guarda domani</a> oppure <a href="#" onclick="clearFilters(); return false" style="color:var(--blue); font-weight:700">togli i filtri</a>.';
+      else if (day || cat) msg = ("Niente " + (day ? dayTxt + " " : "") + (cat ? "di " + CATN[cat] : "")).trim() + '. <a href="#" onclick="clearFilters(); return false" style="color:var(--blue); font-weight:700">Togli i filtri</a> oppure ' + pub + ".";
       else if (q) msg = 'Nessun evento per "' + esc(q) + '". Prova un\'altra parola, oppure ' + pub + ".";
       else msg = 'Per ora non c\'è nessun evento. <a href="crea.html" style="color:var(--blue); font-weight:700">Pubblica tu il primo</a>.';
       list.innerHTML = '<div class="empty">' + msg + "</div>"; return;
@@ -535,6 +583,14 @@
     list.innerHTML = html;
   }
 
+  // inquadra i pin visibili (solo quando cambia giorno/data; mai con la mappa nascosta su telefono)
+  function fitVisible(){
+    if (!lastVisible.length) return;
+    if (mobileFilters.matches && !document.body.classList.contains("showmap")) return;
+    const b = new maplibregl.LngLatBounds();
+    lastVisible.forEach(e => b.extend([e.lng, e.lat]));
+    map.fitBounds(b, { padding: 60, maxZoom: 14, duration: 500 });
+  }
   function highlight(id, pan){
     document.querySelectorAll(".ev").forEach(x => x.classList.remove("on"));
     document.querySelectorAll(".pin").forEach(x => x.classList.remove("on"));
@@ -605,7 +661,7 @@
   function toggleMap(){
     const show = document.body.classList.toggle("showmap");
     document.getElementById("maptoggle").innerHTML = show ? "☰ Lista" : "🗺️ Mappa";
-    if (show) setTimeout(() => map.resize(), 60);
+    if (show) setTimeout(() => { map.resize(); fitVisible(); }, 60);
   }
 </script>
 </body>
