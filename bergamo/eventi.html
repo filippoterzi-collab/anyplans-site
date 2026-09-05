@@ -24,6 +24,7 @@
   body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
        -webkit-font-smoothing:antialiased; height:100vh; display:flex; flex-direction:column; overflow:hidden;}
   a{color:inherit; text-decoration:none;}
+  [hidden]{display:none !important;}
   .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1;}
   .q{font-size:.92em;}
 
@@ -44,48 +45,61 @@
   .titlerow h1{font-size:30px;}
   .titlerow h1 span{color:var(--blue);}
   .count{font-weight:600; font-size:13.5px; color:var(--grey); margin-left:auto;}
-  .search{display:flex; align-items:center; gap:9px; background:#fff;
-          border:1.5px solid rgba(25,25,25,.16); border-radius:999px; padding:9px 15px; flex-shrink:0;}
-  .search input{border:none; outline:none; font-size:14px; font-family:var(--round);
-                background:transparent; color:var(--ink); width:100%;}
   .chip{background:#fff; border:1.5px solid rgba(25,25,25,.14); color:var(--ink); font-weight:600;
-        font-size:13.5px; padding:9px 14px; border-radius:999px; cursor:pointer;
-        font-family:var(--round); flex-shrink:0; white-space:nowrap;}
+        font-size:14px; height:40px; padding:0 15px; border-radius:999px; cursor:pointer;
+        font-family:var(--round); flex-shrink:0; white-space:nowrap; display:inline-flex; align-items:center; gap:7px;}
+  .chip:hover{border-color:var(--ink);}
   .chip.on{background:var(--blue); border-color:var(--blue); color:#fff; font-weight:700;}
-  /* ── ricerca + filtri (fl-) ─────────────────────────────── */
-  .fl-bar{display:flex; align-items:center; gap:10px;}
-  .fl-bar .search{flex:1 1 260px; min-width:200px; max-width:440px;}
-  .fl-days{display:flex; gap:8px; flex-shrink:0;}
-  .fl-days .chip{height:40px; padding:0 14px; display:inline-flex; align-items:center;}
+  .chip.on:hover{border-color:var(--blue);}
+  .chip svg{width:16px; height:16px; stroke:currentColor; flex-shrink:0;}
+  .chip .x{font-weight:800; font-size:16px; margin-left:2px; line-height:1;}
   .day-chip{position:relative; cursor:pointer;}
   .day-chip input[type=date]{position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:pointer;}
-  .day-chip b{margin-left:6px; font-weight:800; position:relative; z-index:1;}
-  .fl-btn{display:inline-flex; align-items:center; gap:7px; height:40px; padding:0 14px; border-radius:999px;
-          background:var(--tint); color:var(--blue); border:none; font:700 14px var(--round);
-          cursor:pointer; white-space:nowrap; flex-shrink:0;
-          transition:background .15s ease, color .15s ease, transform .12s ease;}
-  .fl-btn svg{width:16px; height:16px; stroke:currentColor;}
-  .fl-btn:hover{background:#DCE4F8;}
-  .fl-btn:active{transform:scale(.96);}
-  .fl-btn.on{background:var(--blue); color:#fff;}
-  .fl-btn.on:hover{background:var(--blue-lo);}
-  .fl-active{display:none; flex-wrap:wrap; align-items:center; gap:8px; margin-top:-2px;}
-  .fl-active.has{display:flex;}
-  .fl-pill{display:inline-flex; align-items:center; gap:6px; height:36px; padding:0 8px 0 13px; border-radius:999px;
-           background:var(--tint); color:var(--blue); border:none; font:700 13.5px var(--round); cursor:pointer;
-           transition:background .15s ease;}
-  .fl-pill b{width:20px; height:20px; border-radius:999px; display:flex; align-items:center; justify-content:center;
-             font-weight:800; font-size:15px; line-height:1;}
-  .fl-pill:hover b{background:rgba(27,79,216,.14);}
-  .fl-clear{background:none; border:none; height:36px; padding:0 4px; color:var(--grey); font:600 13.5px var(--round);
+  /* ── blocco "cosa cerchi" (design/sito-landing/spec-cosa-cerchi.md) ── */
+  .cc{background:#fff; border:1.5px solid rgba(25,25,25,.10); border-radius:20px; padding:24px 28px 22px;
+      display:flex; flex-direction:column; gap:20px;}
+  .cc-hi{font-size:28px;}
+  .cc-q{display:grid; grid-template-columns:1fr 1fr 1.25fr; gap:32px;}
+  .cc-q h2{font-size:16px; font-weight:800; margin-bottom:10px; font-family:var(--round); letter-spacing:0;}
+  .cc-col{display:flex; flex-direction:column; gap:10px;}
+  .chips{display:flex; flex-wrap:wrap; gap:8px;}
+  .cc-field{display:flex; align-items:center; gap:10px; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:999px;}
+  .cc-field input{border:none; outline:none; background:transparent; font:15px var(--round); color:var(--ink); flex:1; min-width:0; height:100%;}
+  .cc-field input::placeholder{color:var(--grey);}
+  .cc-field:focus-within, .cc-field.has{border-color:var(--blue);}
+  .cc-place{position:relative;}
+  .cc-place .cc-field{height:44px; padding:0 16px;}
+  .cc-sugg{position:absolute; top:50px; left:0; right:0; z-index:30; background:#fff; border:1.5px solid rgba(25,25,25,.14);
+           border-radius:14px; box-shadow:0 8px 24px rgba(0,0,0,.10); overflow:hidden;}
+  .cc-sugg [role=option]{height:44px; padding:0 14px; display:flex; align-items:center; gap:6px; font-size:14.5px; font-weight:600; cursor:pointer;}
+  .cc-sugg [role=option] span{font-weight:600; color:var(--grey);}
+  .cc-sugg [role=option]:hover, .cc-sugg [role=option].on{background:var(--tint);}
+  .cc-sugg .none{padding:11px 14px; font-size:13.5px; color:var(--grey);}
+  .cc-what{height:48px; padding:0 7px 0 16px;}
+  .cc-what svg.lens{width:17px; height:17px; flex-shrink:0;}
+  .cc-go{width:34px; height:34px; border-radius:999px; background:var(--blue); border:none; cursor:pointer; flex-shrink:0;
+         display:flex; align-items:center; justify-content:center; transition:background .15s ease, transform .12s ease;}
+  .cc-go:hover{background:var(--blue-lo);}
+  .cc-go:active{transform:scale(.94);}
+  .cc-ex{display:flex; flex-wrap:wrap; align-items:center; gap:8px; row-gap:10px;}
+  .cc-ex .lbl{font-weight:600; font-size:13px; color:var(--grey);}
+  .ex{display:inline-flex; align-items:center; gap:5px; height:34px; padding:0 13px; border-radius:999px; background:var(--tint); color:var(--blue);
+      border:none; font:700 13.5px var(--round); cursor:pointer; white-space:nowrap; transition:background .15s ease, transform .12s ease;}
+  .ex:hover{background:#DCE4F8;}
+  .ex:active{transform:scale(.96);}
+  .cc-foot{display:flex; justify-content:flex-end; margin-top:-6px;}
+  .fl-clear{background:none; border:none; height:36px; padding:0 4px; color:var(--grey); font:600 14px var(--round);
             text-decoration:underline; text-underline-offset:3px; cursor:pointer;}
   .fl-clear:hover{color:var(--ink);}
-  /* ingresso alla pagina "chiedi" (design/sito-landing/spec-chiedi.md) */
-  .ask{display:inline-flex; align-items:center; height:40px; padding:0 16px; border-radius:999px; background:var(--tint);
-       color:var(--blue); font-weight:700; font-size:14px; align-self:flex-start;}
-  .ask:hover{background:#DCE4F8;}
-  .fl-pill[data-kind="day"]{display:none;}
-  /* ── modale filtri ──────────────────────────────────────── */
+  /* riga compatta */
+  .cc-compact{display:flex; align-items:center; width:100%; height:48px; padding:0 6px 0 18px; background:#fff; text-align:left;
+              border:1.5px solid rgba(25,25,25,.14); border-radius:999px; cursor:pointer; font-family:var(--round);
+              transition:border-color .15s ease;}
+  .cc-compact:hover{border-color:var(--ink);}
+  .cc-compact .txt{flex:1; min-width:0; font-weight:600; font-size:15px; color:var(--ink); white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .cc-compact .chg{display:inline-flex; align-items:center; height:36px; padding:0 16px; border-radius:999px; background:var(--tint);
+                   color:var(--blue); font-weight:700; font-size:14px; flex-shrink:0; margin-left:8px;}
+  /* ── foglio dal basso su telefono (riuso della modale) ──────────── */
   .fl-overlay{position:fixed; inset:0; z-index:60; background:rgba(25,25,25,.45);
               display:flex; align-items:center; justify-content:center; padding:24px;
               opacity:0; visibility:hidden; transition:opacity .15s ease, visibility 0s linear .15s;}
@@ -101,17 +115,8 @@
         color:var(--ink); cursor:pointer; display:flex; align-items:center; justify-content:center;
         transition:background .15s ease;}
   .fl-x:hover{background:var(--tint);}
-  .fl-body{flex:1; min-height:0; overflow-y:auto; padding:6px 24px 10px; display:flex; flex-direction:column; gap:22px;}
-  .fl-sec h3{font-size:15px; font-weight:800; margin-bottom:10px;}
-  .fl-sec p{font-size:13px; color:var(--grey); margin:-8px 0 10px;}
-  .fl-grid{display:grid; grid-template-columns:1fr 1fr; gap:8px;}
-  .fl-grid.days{display:flex; gap:8px;}
-  .fl-grid.days .chip{flex:1 1 0; min-width:0;}
-  .fl-modal .chip{height:48px; width:100%; padding:0 14px; border-radius:12px; font-size:15px;
-                  display:flex; align-items:center; justify-content:center; gap:8px; white-space:nowrap;}
-  .fl-modal .chip:hover{border-color:var(--ink);}
-  .fl-modal .chip.on{background:var(--blue); border-color:var(--blue); color:#fff;}
-  .fl-modal .chip[data-cat=""]{grid-column:1 / -1;}
+  .fl-body{flex:1; min-height:0; overflow-y:auto; padding:6px 24px 10px; display:flex; flex-direction:column; gap:18px;}
+  .fl-body .cc-q{display:flex; flex-direction:column; gap:18px;}
   .fl-foot{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:14px 24px;
            border-top:1px solid rgba(25,25,25,.10); background:#fff; flex-shrink:0;}
   .fl-reset{background:none; border:none; height:44px; padding:0 4px; color:var(--ink); font:700 14.5px var(--round);
@@ -148,6 +153,30 @@
   .ev .go.ok{color:var(--ink);}
   .ev .go.wait{color:var(--grey);}
   .empty{color:var(--grey); font-size:14.5px; padding:24px 4px;}
+  .empty a{color:var(--blue); font-weight:700;}
+  /* nessun risultato (spec §5) */
+  .nores{background:#fff; border:1.5px solid rgba(25,25,25,.10); border-radius:16px; padding:22px 24px; display:flex; flex-direction:column; gap:14px;}
+  .nores .head{display:flex; gap:16px; align-items:flex-start;}
+  .nores .tile{width:56px; height:56px; background:var(--tint); border-radius:14px; display:flex; align-items:center; justify-content:center; font-size:28px; flex-shrink:0;}
+  .nores h3{font-weight:800; font-size:18px; line-height:1.25;}
+  .nores h3 span{font-weight:600; color:var(--grey);}
+  .nores p{font-size:15px; color:var(--grey);}
+  .nores .btns{display:flex; gap:10px; flex-wrap:wrap;}
+  .nores .note{font-size:13px; color:var(--grey);}
+  .nores .ev{padding:12px 14px;}
+  .nores .ev .tile{width:48px; height:48px; font-size:24px;}
+  .btn{display:inline-flex; align-items:center; justify-content:center; height:48px; padding:0 22px; border-radius:999px;
+       font:700 15px var(--round); cursor:pointer; white-space:nowrap; border:none; transition:background .15s ease, transform .12s ease;}
+  .btn:active{transform:scale(.98);}
+  .btn.blue{background:var(--blue); color:#fff;} .btn.blue:hover{background:var(--blue-lo);}
+  .btn.ghost{background:#fff; color:var(--blue); box-shadow:inset 0 0 0 2px var(--blue);} .btn.ghost:hover{background:var(--tint);}
+  .btn:disabled{opacity:.6; cursor:default;}
+  .saved{background:var(--tint); border-radius:16px; padding:20px 24px; display:flex; gap:14px; align-items:flex-start;}
+  .saved .bell{width:40px; height:40px; border-radius:999px; background:var(--blue); display:flex; align-items:center; justify-content:center; flex-shrink:0;}
+  .saved h3{font-weight:800; font-size:17px; line-height:1.25;}
+  .saved p{font-size:14px; color:var(--grey); margin-top:4px;}
+  .saved a, .saved button{color:var(--blue); font-weight:700; background:none; border:none; font-family:var(--round); font-size:inherit; cursor:pointer; padding:0;}
+  .meanwhile{font-weight:700; font-size:15px; margin-top:6px;}
   .sk{height:84px; border-radius:16px; background:linear-gradient(90deg,#F1EFE9 25%,#E9E6DE 50%,#F1EFE9 75%);
       background-size:200% 100%; animation:sk 1.2s ease-in-out infinite;}
   @keyframes sk{from{background-position:200% 0} to{background-position:-200% 0}}
@@ -158,6 +187,9 @@
        box-shadow:0 1px 4px rgba(0,0,0,.12); cursor:pointer;}
   .pin.on{background:var(--blue); border-color:var(--blue);}
   .pin.today{box-shadow:0 0 0 2.5px var(--blue), 0 1px 4px rgba(0,0,0,.12);}
+  .map-pill{position:absolute; top:14px; left:50%; transform:translateX(-50%); z-index:5; height:38px; padding:0 16px;
+            background:#fff; border:1.5px solid rgba(25,25,25,.14); border-radius:999px; font-weight:700; font-size:13.5px;
+            display:flex; align-items:center; white-space:nowrap; pointer-events:none;}
   .maplibregl-popup-content{border-radius:14px; font-family:var(--round); padding:12px 14px;
        box-shadow:0 2px 10px rgba(0,0,0,.12);}
   .pop .t{font-weight:700; font-size:14px; color:var(--ink);}
@@ -171,30 +203,32 @@
     .nav-right #avatar, .nav-right #bell{display:flex;}
     .nav-right #nav-reg{display:inline-block;}
     .topbar{padding:4px 18px 10px;}
-    .fl-bar{gap:8px; flex-wrap:wrap;}
-    .fl-bar .search{max-width:none; min-width:0; padding:11px 15px; flex:1 1 200px;}
-    .fl-days{order:3; width:100%; overflow-x:auto; scrollbar-width:none; padding-bottom:2px;}
-    .fl-days::-webkit-scrollbar{display:none;}
-    .fl-days .chip{flex-shrink:0;}
-    .fl-btn{height:44px; padding:0 13px;}
-    .fl-pill, .fl-clear{height:40px;}
+    .titlerow h1{font-size:24px;}
+    .cc{padding:18px; gap:18px;}
+    .cc-hi{font-size:24px;}
+    .cc-q{display:flex; flex-direction:column; gap:18px;}
+    .cc-field input{font-size:16px;}
+    .cc-compact .txt{font-size:14.5px;}
+    .nores{padding:18px;}
+    .nores .btns{flex-direction:column;}
+    .nores .btns .btn{width:100%;}
+    .saved{padding:16px 18px;}
     .fl-overlay{align-items:flex-end; padding:0;}
-    .fl-modal{max-width:none; height:calc(100dvh - 24px); max-height:none; border-radius:22px 22px 0 0;
+    .fl-modal{max-width:none; max-height:calc(100dvh - 24px); border-radius:22px 22px 0 0;
               box-shadow:none; transform:translateY(100%);}
     .fl-open .fl-modal{transform:none;}
     .fl-handle{display:block; width:36px; height:4px; border-radius:999px; background:rgba(25,25,25,.18); margin:10px auto 0;}
-    .fl-head{padding:8px 20px 8px;}
-    .fl-body{padding:4px 20px 16px;}
-    .fl-foot{position:sticky; bottom:0; padding:12px 20px calc(12px + env(safe-area-inset-bottom));}
+    .fl-head{padding:8px 18px 8px;}
+    .fl-body{padding:4px 18px 16px;}
+    .fl-foot{position:sticky; bottom:0; padding:12px 18px calc(12px + env(safe-area-inset-bottom));}
     .fl-show{flex:1; min-width:0;}
-    .fl-grid.days{flex-wrap:wrap;}
-    .fl-grid.days .chip{font-size:14px; padding:0 8px; flex:1 1 45%;}
-    .titlerow h1{font-size:24px;}
     .split{flex-direction:column;}
-    #map{display:none; height:calc(100vh - 330px); flex:none; border-radius:16px; margin:0 18px;}
+    #map{display:none; height:calc(100vh - 230px); flex:none; border-radius:16px; margin:0 18px;}
     .list{width:100%; max-width:none; padding:12px 18px 90px;}
     body.showmap #map{display:block;}
     body.showmap .list{display:none;}
+    body.showmap #cc{display:none !important;}
+    body.showmap #cc-compact{display:flex !important;}
     #maptoggle{display:flex; align-items:center; gap:7px; position:fixed; left:50%;
       transform:translateX(-50%); bottom:84px; z-index:40; background:var(--ink); color:#fff;
       font-weight:700; font-size:14px; padding:13px 22px; border-radius:999px; border:none;
@@ -219,60 +253,75 @@
 <div class="topbar">
   <div class="titlerow">
     <h1 class="display">Eventi a <span>Bergamo</span></h1>
-    <span class="count" id="count"></span>
+    <span class="count" id="count" aria-live="polite"></span>
   </div>
-  <div class="fl-bar">
-    <div class="search">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6E6E73" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg>
-      <input id="q" placeholder="Cerca un evento: ceramica, corsa, cucina…" oninput="render()" aria-label="Cerca un evento">
+
+  <section class="cc" id="cc" aria-label="Cosa cerchi">
+    <p class="display cc-hi" id="cc-hi">Ciao!</p>
+    <div class="cc-q" id="cc-q">
+      <div>
+        <h2 id="cc-h-when">Quando vuoi uscire?</h2>
+        <div class="chips" role="group" aria-labelledby="cc-h-when">
+          <button class="chip day-chip" data-day="oggi" aria-pressed="false" onclick="setDay(this)">Oggi</button>
+          <button class="chip day-chip" data-day="domani" aria-pressed="false" onclick="setDay(this)">Domani</button>
+          <button class="chip day-chip" data-day="weekend" aria-pressed="false" onclick="setDay(this)">Nel fine settimana</button>
+          <label class="chip day-chip" data-day="data" id="chip-date" aria-pressed="false" onclick="openDate(event)">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10 L20.5 10"/><path d="M8 3 L8 7"/><path d="M16 3 L16 7"/></svg><span id="date-txt">Scegli un giorno</span><b class="x" id="date-x" hidden onclick="clearDate(event)">×</b><input type="date" id="fl-date" aria-label="Scegli un giorno" onchange="setDate(this.value)"></label>
+        </div>
+      </div>
+      <div>
+        <h2 id="cc-h-where">Dove?</h2>
+        <div class="cc-col">
+          <div class="chips" role="group" aria-labelledby="cc-h-where">
+            <button class="chip" id="chip-me" aria-pressed="false" onclick="useMyLocation()">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 3 L10 13"/><path d="M21 3 L14.5 21 L10 13 L3 9.5 Z"/></svg><span id="chip-me-txt">Vicino a me</span>
+            </button>
+            <button class="chip" id="chip-bg" aria-pressed="false" onclick="setWhere(whereIs('bg') ? null : BG_CITY)">Bergamo città</button>
+            <button class="chip on" id="chip-place" aria-pressed="true" onclick="setWhere(null)" hidden><span id="chip-place-txt"></span><b class="x">×</b></button>
+          </div>
+          <div class="cc-place" id="cc-place">
+            <div class="cc-field">
+              <input id="place" placeholder="Scrivi un paese, per esempio Stezzano" aria-label="Scrivi un paese" autocomplete="off"
+                     role="combobox" aria-expanded="false" aria-controls="cc-sugg" aria-autocomplete="list"
+                     oninput="onPlaceInput()" onkeydown="onPlaceKey(event)">
+            </div>
+            <div class="cc-sugg" id="cc-sugg" role="listbox" aria-label="Paesi trovati" hidden></div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 id="cc-h-what">Oppure scrivi cosa cerchi</h2>
+        <div class="cc-col">
+          <form class="cc-field cc-what" id="cc-what" onsubmit="event.preventDefault(); search()">
+            <svg class="lens" viewBox="0 0 24 24" fill="none" stroke="#6E6E73" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg>
+            <input id="q" placeholder="Per esempio: c'è qualcuno che fa ceramica?" aria-labelledby="cc-h-what" autocomplete="off"
+                   enterkeyhint="search" oninput="document.getElementById('cc-what').classList.toggle('has', !!this.value.trim())">
+            <button type="submit" class="cc-go" aria-label="Cerca">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12 L19 12"/><path d="M13 6 L19 12 L13 18"/></svg>
+            </button>
+          </form>
+          <div class="cc-ex" id="cc-ex"></div>
+        </div>
+      </div>
     </div>
-    <div class="fl-days" id="fl-days">
-      <button class="chip day-chip" data-day="oggi" aria-pressed="false" onclick="setDay(this)">Oggi</button>
-      <button class="chip day-chip" data-day="domani" aria-pressed="false" onclick="setDay(this)">Domani</button>
-      <button class="chip day-chip" data-day="weekend" aria-pressed="false" onclick="setDay(this)">Fine settimana</button>
-      <label class="chip day-chip" data-day="data" id="chip-date" aria-pressed="false" onclick="openDate(event)"><span id="date-txt">Altra data</span><b id="date-x" hidden onclick="clearDate(event)">×</b><input type="date" id="fl-date" aria-label="Scegli un giorno" onchange="setDate(this.value)"></label>
-    </div>
-    <button class="fl-btn" id="fbtn" onclick="openFilters()" aria-haspopup="dialog" aria-controls="fl">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.5"/><circle cx="10" cy="17" r="2.5"/></svg>
-      <span id="fbtn-label">Filtri</span>
-    </button>
-  </div>
-  <div class="fl-active" id="fl-active" aria-live="polite"></div>
-  <a class="ask" href="chiedi.html">Non sai cosa fare? Chiedi qui →</a>
-</div>
+    <div class="cc-foot" id="cc-foot" hidden><button class="fl-clear" onclick="clearAll()">Cancella tutto</button></div>
+  </section>
+  <button class="cc-compact" id="cc-compact" onclick="openCard()" hidden><span class="txt" id="cc-compact-txt"></span><span class="chg">Cambia</span></button>
 </div>
 
-<div class="fl-overlay" id="fl" role="dialog" aria-modal="true" aria-labelledby="fl-title" onclick="if(event.target===this) closeFilters()">
+<div class="fl-overlay" id="fl" role="dialog" aria-modal="true" aria-labelledby="fl-title" onclick="if(event.target===this) closeSheet()">
   <div class="fl-modal">
     <div class="fl-handle" aria-hidden="true"></div>
     <div class="fl-head">
-      <h2 class="display" id="fl-title">Filtri</h2>
-      <button class="fl-x" onclick="closeFilters()" aria-label="Chiudi">
+      <h2 class="display" id="fl-title">Ciao!</h2>
+      <button class="fl-x" onclick="closeSheet()" aria-label="Chiudi">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
     </div>
-    <div class="fl-body">
-      <section class="fl-sec" aria-labelledby="fl-h-day">
-        <h3 id="fl-h-day">Quando</h3>
-        <p>Scegli un giorno. Se non scegli niente li vedi tutti.</p>
-        <div class="fl-grid days" id="fl-day"></div>
-      </section>
-      <section class="fl-sec" aria-labelledby="fl-h-cat">
-        <h3 id="fl-h-cat">Che tipo di evento</h3>
-        <div class="fl-grid" id="fl-cat">
-          <button class="chip on" data-cat="" aria-pressed="true" onclick="setCat(this)">Tutti i tipi</button>
-          <button class="chip" data-cat="sport" aria-pressed="false" onclick="setCat(this)">🏃 Sport</button>
-          <button class="chip" data-cat="cucina" aria-pressed="false" onclick="setCat(this)">🍳 Cucina</button>
-          <button class="chip" data-cat="creatività" aria-pressed="false" onclick="setCat(this)">🏺 Creatività</button>
-          <button class="chip" data-cat="giardinaggio" aria-pressed="false" onclick="setCat(this)">🌱 Giardinaggio</button>
-          <button class="chip" data-cat="cultura" aria-pressed="false" onclick="setCat(this)">🎪 Cultura</button>
-          <button class="chip" data-cat="benessere" aria-pressed="false" onclick="setCat(this)">🧘 Benessere</button>
-        </div>
-      </section>
-    </div>
+    <div class="fl-body" id="fl-body"></div>
     <div class="fl-foot">
-      <button class="fl-reset" id="fl-reset" onclick="clearFilters()" disabled>Cancella tutto</button>
-      <button class="fl-show" id="fl-show" onclick="closeFilters()">Mostra <span id="fl-count">…</span></button>
+      <button class="fl-reset" id="fl-reset" onclick="clearAll()" disabled>Cancella tutto</button>
+      <button class="fl-show" id="fl-show" onclick="closeSheet()">Mostra <span id="fl-count">…</span></button>
     </div>
   </div>
 </div>
@@ -285,7 +334,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788600043"></script>
+<script src="app.js?v=1788621070"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -314,21 +363,31 @@
   if (!logged) document.querySelectorAll("#tabbar a").forEach(a => { if (!a.getAttribute("href").includes("eventi.html")) a.onclick = () => { try { sessionStorage.setItem("anyplans_next", a.getAttribute("href")); } catch (_) {} }; });
 
   let EVENTS = [];
+  const BG = { lat: 45.698, lng: 9.670 };                                        // centro del feed (50 km)
+  const BG_CITY = { kind: "bg", name: "Bergamo città", lat: 45.6983, lng: 9.6773, km: 6 };
+  let feedCenter = BG;
 
   async function checkProfile(){
     const r = await rpc("my_profile");
     if (!r || !r.ok) return; // il feed funziona comunque
     const rows = await r.json().catch(() => []);
     if (!rows.length || !rows[0].display_name) location.replace("profilo.html");
-    else document.getElementById("menu-name").textContent = rows[0].display_name;
+    else {
+      document.getElementById("menu-name").textContent = rows[0].display_name;
+      const first = rows[0].display_name.trim().split(/\s+/)[0];
+      document.getElementById("cc-hi").textContent = "Ciao " + first + "!";
+      document.getElementById("fl-title").textContent = "Ciao " + first + "!";
+    }
   }
 
-  async function loadEvents(){
+  async function loadEvents(center){
+    center = center || BG;
     const list = document.getElementById("list");
     list.innerHTML = '<div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div>';
-    const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
+    const r = await rpc("feed_activities", { lat: center.lat, lng: center.lng, radius_m: 50000 });
     if (!r || !r.ok) { list.innerHTML = '<div class="empty">Non riesco a caricare gli eventi. Ricarica la pagina.</div>'; return; }
     const rows = await r.json();
+    feedCenter = center;
     EVENTS = rows.map(x => ({
       id: x.id,
       emoji: x.emoji || "📍",
@@ -349,7 +408,7 @@
       price: x.price_cents ?? null,
       photo: x.photo_url || null,
       lat: x.lat, lng: x.lng
-    }));
+    })).sort((a, b) => a.when - b.when);
     buildMarkers();
     refit = true;
     render();
@@ -363,6 +422,30 @@
     zoom: 12.3
   });
   map.addControl(new maplibregl.NavigationControl({ showCompass: false }));
+  // pill "Nessun evento con questa ricerca" e cerchio del raggio (solo quando la ricerca è vuota)
+  const mapPill = document.createElement("div"); mapPill.className = "map-pill"; mapPill.textContent = "Nessun evento con questa ricerca"; mapPill.hidden = true;
+  map.getContainer().appendChild(mapPill);
+  let mapReady = false;
+  map.on("load", () => {
+    map.addSource("radius", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+    map.addLayer({ id: "radius-fill", type: "fill", source: "radius", paint: { "fill-color": "#1B4FD8", "fill-opacity": .08 } });
+    map.addLayer({ id: "radius-line", type: "line", source: "radius", paint: { "line-color": "#1B4FD8", "line-width": 1.5, "line-dasharray": [2, 2] } });
+    mapReady = true; syncRadius();
+  });
+  function circleGeo(c){
+    const pts = [], n = 64;
+    for (let i = 0; i <= n; i++) {
+      const a = i / n * 2 * Math.PI;
+      const dLat = c.km / 111.32 * Math.cos(a), dLng = c.km / (111.32 * Math.cos(c.lat * Math.PI / 180)) * Math.sin(a);
+      pts.push([c.lng + dLng, c.lat + dLat]);
+    }
+    return { type: "FeatureCollection", features: [{ type: "Feature", geometry: { type: "Polygon", coordinates: [pts] } }] };
+  }
+  let showRadius = false;
+  function syncRadius(){
+    if (!mapReady) return;
+    map.getSource("radius").setData(showRadius && where ? circleGeo(where) : { type: "FeatureCollection", features: [] });
+  }
 
   let markers = {};
   function buildMarkers(){
@@ -379,35 +462,51 @@
     });
   }
 
-  // lista
-  let cat = "", day = "oggi", dateSel = null, refit = false, lastVisible = [];
+  // ── stato della ricerca ──────────────────────────────────────────
+  // day: "" | "oggi" | "domani" | "weekend" | "data" (+ dateSel); where: null | {kind:"me"|"bg"|"place", name, lat, lng, km}
+  // qText: quello che ha scritto; parsed: expandQuery(qText) o null; cardOpen: card riaperta da "Cambia"
+  let day = "", dateSel = null, where = null, qText = "", parsed = null, cardOpen = false, locating = false;
+  let refit = false, lastVisible = [], savedSearches = [], lastEmptyKey = "";
   const isoLocal = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
   const mobileFilters = window.matchMedia("(max-width:700px)");
   const fl = document.getElementById("fl");
-  const isOpen = () => fl.classList.contains("fl-open");
-  // chip giorno: in riga su computer, nella modale su telefono o quando la modale è aperta
-  function placeChips(){
-    const dest = isOpen() ? document.getElementById("fl-day") : document.getElementById("fl-days");
-    document.querySelectorAll(".day-chip").forEach(c => dest.appendChild(c));
+  const isSheetOpen = () => fl.classList.contains("fl-open");
+  const inMapView = () => mobileFilters.matches && document.body.classList.contains("showmap");
+  const hasChoice = () => !!(day || where || qText);
+  const whereIs = k => !!(where && where.kind === k);
+  const shortLabel = slug => ((CATALOG[slug] || {}).l || slug).split(/[,/]/)[0].trim();
+  const CAT_EMOJI = { sport:"🏃", cucina:"🍳", "creatività":"🏺", giardinaggio:"🌱", cultura:"🎪", benessere:"🧘" };
+  const EXAMPLES = ["Sport", "Cucina", "Ceramica", "Feste di paese", "Volontariato", "Gratis"];
+  const qInput = document.getElementById("q");
+
+  // ── card aperta / riga compatta / foglio su telefono ─────────────
+  function openCard(){
+    if (inMapView()) { openSheet(); return; }
+    cardOpen = true; syncCard();
+    if (qText) qInput.focus({ preventScroll: true });
   }
-  function openFilters(){
+  function compact(){ cardOpen = false; syncCard(); }
+  function openSheet(){
+    document.getElementById("fl-body").appendChild(document.getElementById("cc-q"));
     fl.classList.add("fl-open"); document.body.classList.add("fl-lock");
-    placeChips(); fl.querySelector(".fl-x").focus();
+    fl.querySelector(".fl-x").focus();
   }
-  function closeFilters(){
-    if (!isOpen()) return;
+  function closeSheet(){
+    if (!isSheetOpen()) return;
     fl.classList.remove("fl-open"); document.body.classList.remove("fl-lock");
-    placeChips(); document.getElementById("fbtn").focus();
+    document.getElementById("cc").insertBefore(document.getElementById("cc-q"), document.getElementById("cc-foot"));
+    cardOpen = false; syncCard();
+    document.getElementById("cc-compact").focus();
   }
-  document.addEventListener("keydown", e => { if (e.key === "Escape") closeFilters(); });
-  // chip giorno: uno solo acceso; se non è "data", il chip data torna vuoto
-  function syncChips(){
-    document.querySelectorAll(".day-chip").forEach(c => { const on = c.dataset.day === day; c.classList.toggle("on", on); c.setAttribute("aria-pressed", String(on)); });
-    if (day !== "data") {
-      dateSel = null; document.getElementById("fl-date").value = "";
-      document.getElementById("date-txt").textContent = "Altra data"; document.getElementById("date-x").hidden = true;
-    }
-  }
+  document.addEventListener("keydown", e => { if (e.key === "Escape") { closeSheet(); hideSugg(); } });
+  // tocco fuori dalla card riaperta: si richiude
+  document.addEventListener("click", e => {
+    if (!cardOpen || !hasChoice() || isSheetOpen()) return;
+    if (e.target.closest("#cc") || e.target.closest("#cc-compact") || !document.body.contains(e.target)) return;
+    compact();
+  });
+  mobileFilters.addEventListener("change", () => { if (!mobileFilters.matches) closeSheet(); syncCard(); });
+
   function dayText(){
     if (day === "oggi") return "oggi";
     if (day === "domani") return "domani";
@@ -415,32 +514,89 @@
     if (day === "data" && dateSel) return "il " + dateSel.getDate() + " " + MONTHS[dateSel.getMonth()];
     return "";
   }
-  function clearFilters(){
-    day = ""; cat = "";
-    syncChips(); refit = true;
-    document.querySelectorAll(".chip[data-cat]").forEach(c => { const on = c.dataset.cat === ""; c.classList.toggle("on", on); c.setAttribute("aria-pressed", String(on)); });
-    updateFbtn(); render();
+  function dayCompact(){
+    if (day === "oggi") return "Oggi";
+    if (day === "domani") return "Domani";
+    if (day === "weekend") return "Nel fine settimana";
+    if (day === "data" && dateSel) return dateSel.getDate() + " " + MONTHS[dateSel.getMonth()].slice(0, 3);
+    return "";
   }
-  function updateFbtn(){
-    const n = (day ? 1 : 0) + (cat ? 1 : 0);
-    document.getElementById("fbtn-label").textContent = n ? "Filtri · " + n : "Filtri";
-    document.getElementById("fbtn").classList.toggle("on", n > 0);
-    document.getElementById("fl-reset").disabled = !n;
-    const act = document.getElementById("fl-active");
-    let html = "";
-    if (day) html += `<button class="fl-pill" data-kind="day" onclick="setDay(document.querySelector('.day-chip.on'))">${esc(dayText())} <b>×</b></button>`;
-    if (cat) html += `<button class="fl-pill" data-kind="cat" onclick="setCat(document.querySelector('.chip[data-cat=\'\']'))">${esc(document.querySelector(".chip[data-cat].on").textContent)} <b>×</b></button>`;
-    if (n) html += `<button class="fl-clear" onclick="clearFilters()">Cancella tutto</button>`;
-    act.innerHTML = cat ? html : ""; act.classList.toggle("has", !!cat);
+  // "vicino a te" / "a Bergamo" / "vicino a Stezzano" (nelle frasi); per la riga compatta il nome del chip
+  function whereText(){
+    if (!where) return "";
+    if (where.kind === "me") return "vicino a te";
+    if (where.kind === "bg") return "a Bergamo";
+    return (/^[aeiou]/i.test(where.name) ? "vicino ad " : "vicino a ") + where.name;
   }
-  function setCat(btn){
-    cat = btn.dataset.cat;
-    document.querySelectorAll(".chip[data-cat]").forEach(c => { const on = c === btn; c.classList.toggle("on", on); c.setAttribute("aria-pressed", String(on)); });
-    updateFbtn(); render();
+  const whereCompact = () => !where ? "" : where.kind === "me" ? "Vicino a me" : where.name;
+  // il tipo capito ("ceramica", "sport", "gratis") oppure il testo tra virgolette
+  function understood(){ return !!(parsed && (parsed.slugs.length || parsed.category || parsed.free)); }
+  function whatText(){
+    if (!parsed) return "";
+    if (parsed.slugs.length) return parsed.slugs.map(s => shortLabel(s).toLowerCase()).slice(0, 2).join(" o ") + (parsed.free ? " gratis" : "");
+    if (parsed.category) return parsed.category + (parsed.free ? " gratis" : "");
+    if (parsed.free && !parsed.rest.length) return "gratis";
+    return "'" + (qText.length > 32 ? qText.slice(0, 32) + "…" : qText) + "'";
   }
+  // per il contatore: "di ceramica" / "gratis" / "per 'ballo'"
+  function whatPhrase(){
+    const w = whatText(); if (!w) return "";
+    if (w === "gratis") return "gratis";
+    return (understood() ? "di " : "per ") + w;
+  }
+  function compactText(){
+    const parts = [dayCompact(), whereCompact(), whatText()].filter(Boolean);
+    return parts.length ? parts.join(" · ") : "Tutti i prossimi giorni · Bergamo e dintorni";
+  }
+  function syncCard(){
+    const chosen = hasChoice();
+    const open = !inMapView() && (cardOpen || !chosen);
+    document.getElementById("cc").hidden = !open;
+    const cp = document.getElementById("cc-compact");
+    cp.hidden = open;
+    document.getElementById("cc-compact-txt").textContent = compactText();
+    const parts = [dayText(), whereText(), whatText()].filter(Boolean);
+    cp.setAttribute("aria-label", "Cambia cosa cerchi" + (parts.length ? ": " + parts.join(", ") : ""));
+    document.getElementById("cc-foot").hidden = !chosen;
+    document.getElementById("fl-reset").disabled = !chosen;
+    syncChips(); syncWhere(); syncExamples();
+  }
+  function syncChips(){
+    document.querySelectorAll(".day-chip").forEach(c => { const on = c.dataset.day === day; c.classList.toggle("on", on); c.setAttribute("aria-pressed", String(on)); });
+    if (day !== "data") {
+      dateSel = null; document.getElementById("fl-date").value = "";
+      document.getElementById("date-txt").textContent = "Scegli un giorno"; document.getElementById("date-x").hidden = true;
+    }
+  }
+  function syncWhere(){
+    const me = document.getElementById("chip-me"), bg = document.getElementById("chip-bg"), pl = document.getElementById("chip-place");
+    me.classList.toggle("on", whereIs("me")); me.setAttribute("aria-pressed", String(whereIs("me")));
+    document.getElementById("chip-me-txt").textContent = locating ? "Vicino a me…" : "Vicino a me";
+    me.disabled = locating;
+    bg.classList.toggle("on", whereIs("bg")); bg.setAttribute("aria-pressed", String(whereIs("bg")));
+    pl.hidden = !whereIs("place");
+    if (whereIs("place")) document.getElementById("chip-place-txt").textContent = where.name;
+    document.getElementById("cc-place").hidden = whereIs("place");
+  }
+  // sotto la casella: gli esempi, oppure "Ho capito: 🏺 Ceramica"
+  function syncExamples(){
+    const ex = document.getElementById("cc-ex");
+    if (understood()) {
+      const chips = [];
+      if (parsed.slugs.length) parsed.slugs.forEach(s => chips.push(((CATALOG[s] || {}).e || "📍") + " " + shortLabel(s)));
+      else if (parsed.category) chips.push(CAT_EMOJI[parsed.category] + " " + parsed.category[0].toUpperCase() + parsed.category.slice(1));
+      if (parsed.free) chips.push("Gratis");
+      ex.innerHTML = '<span class="lbl">Ho capito:</span>' + chips.map(c => `<span class="ex">${esc(c)}</span>`).join("");
+    } else {
+      ex.innerHTML = '<span class="lbl">Per esempio:</span>' + EXAMPLES.map(c => `<button class="ex" onclick="example(this.textContent)">${c}</button>`).join("");
+    }
+  }
+  function example(t){ qInput.value = t; document.getElementById("cc-what").classList.add("has"); search(); }
+
+  // ── quando ───────────────────────────────────────────────────────
   function setDay(btn){
     day = day === btn.dataset.day ? "" : btn.dataset.day;
-    syncChips(); refit = true; updateFbtn(); render();
+    refit = true; choose();
   }
   function setDate(v){
     if (!v) return;
@@ -451,7 +607,7 @@
     day = "data"; syncChips(); dateSel = picked;
     document.getElementById("date-txt").textContent = d + " " + MONTHS[m - 1].slice(0, 3);
     document.getElementById("date-x").hidden = false;
-    refit = true; updateFbtn(); render();
+    refit = true; choose();
   }
   // il chip apre il calendario nativo (l'input date invisibile da solo, su computer, apre il calendario solo dalla sua icona)
   function openDate(ev){
@@ -461,22 +617,241 @@
   }
   function clearDate(ev){
     ev.preventDefault(); ev.stopPropagation();
-    day = ""; syncChips(); refit = true; updateFbtn(); render();
+    day = ""; refit = true; choose();
   }
-  placeChips();
   document.getElementById("fl-date").min = isoLocal(new Date());
-  syncChips(); updateFbtn();
   function inDay(d){
     if (!day) return true;
     if (day === "data") return !!dateSel && dayKey(d) === dayKey(dateSel);
-    const lbl = dayKind(d);
     if (day === "weekend") {
       const wd = d.getDay(), diff = (d - Date.now()) / 86400000;
       return (wd === 0 || wd === 6) && diff < 7;
     }
-    return lbl === day;
+    return dayKind(d) === day;
+  }
+  // una scelta fatta: filtri subito e card compatta (nel foglio su telefono resta aperta fino a "Mostra")
+  function choose(){
+    if (!isSheetOpen()) cardOpen = false;
+    syncCard(); render();
   }
 
+  // ── dove ─────────────────────────────────────────────────────────
+  function setWhere(w){
+    const wasFar = where && distKm(BG, where) > 40;
+    where = w;
+    hideSugg(); document.getElementById("place").value = "";
+    refit = true; choose();
+    // un posto oltre 40 km dal centro: il feed si ricarica centrato lì (la chiamata copre 50 km)
+    if (where && distKm(BG, where) > 40) loadEvents({ lat: where.lat, lng: where.lng });
+    else if (wasFar && feedCenter !== BG) loadEvents(BG);
+  }
+  function useMyLocation(){
+    if (whereIs("me")) { setWhere(null); return; }
+    if (locating) return;
+    const fallback = () => { locating = false; toast("Non riesco a vedere dove sei. Ti mostro Bergamo."); setWhere(BG_CITY); };
+    if (!navigator.geolocation) return fallback();
+    locating = true; syncWhere();
+    navigator.geolocation.getCurrentPosition(pos => {
+      locating = false;
+      // arrotondata a ~100 m: non serve di più e non si salva il punto esatto
+      const lat = Math.round(pos.coords.latitude * 1000) / 1000, lng = Math.round(pos.coords.longitude * 1000) / 1000;
+      setWhere({ kind: "me", name: "vicino a te", lat, lng, km: 15 });
+      if (logged) rpc("set_home_location", { p_lat: lat, p_lng: lng }).catch(() => {});
+    }, fallback, { timeout: 8000, maximumAge: 300000 });
+  }
+  // suggerimenti da photon (openstreetmap): città, paesi, frazioni e quartieri entro 60 km da Bergamo
+  const PLACE_TYPES = ["city", "town", "village", "hamlet", "suburb", "locality", "neighbourhood", "municipality"];
+  async function geoSuggest(q){
+    if (q.length < 3) return [];
+    try {
+      const r = await fetch("https://photon.komoot.io/api?q=" + encodeURIComponent(q) + "&limit=12&lat=45.698&lon=9.670");
+      if (!r.ok) return [];
+      const d = await r.json();
+      const nq = norm(q), qw = nq.split(/[^a-z0-9]+/).filter(w => w.length >= 3);
+      const nameOk = name => { const nw = norm(name).split(/[^a-z0-9]+/); return qw.length && qw.every(w => nw.some(h => h === w || (w.length >= 4 && h.startsWith(w)))); };
+      const out = [], seen = new Set();
+      (d.features || []).forEach(f => {
+        const p = f.properties;
+        if (!p.name || !nameOk(p.name)) return;
+        if (!(PLACE_TYPES.includes(p.type) || PLACE_TYPES.includes(p.osm_value))) return;
+        const pt = { lat: f.geometry.coordinates[1], lng: f.geometry.coordinates[0] };
+        const km = distKm(BG, pt);
+        if (km > 60 || seen.has(norm(p.name))) return;
+        seen.add(norm(p.name));
+        out.push({ name: p.name, lat: pt.lat, lng: pt.lng, km });
+      });
+      return out.slice(0, 5);
+    } catch (_) { return []; }
+  }
+  let suggT = null, suggSeq = 0, sugg = [], suggIdx = -1;
+  function onPlaceInput(){
+    const q = document.getElementById("place").value.trim();
+    clearTimeout(suggT);
+    if (q.length < 3) { hideSugg(); return; }
+    suggT = setTimeout(async () => {
+      const seq = ++suggSeq;
+      const list = await geoSuggest(q);
+      if (seq !== suggSeq) return;
+      sugg = list; suggIdx = -1;
+      const box = document.getElementById("cc-sugg");
+      box.innerHTML = list.length
+        ? list.map((s, i) => `<div role="option" id="sugg-${i}" aria-selected="false" onmousedown="event.preventDefault()" onclick="pickPlace(${i})">${esc(s.name)} <span>· ${Math.round(s.km) < 1 ? "meno di 1" : Math.round(s.km)} km da Bergamo</span></div>`).join("")
+        : '<div class="none">Non trovo questo posto. Prova con il nome del paese.</div>';
+      box.hidden = false; document.getElementById("place").setAttribute("aria-expanded", "true");
+    }, 250);
+  }
+  function hideSugg(){
+    const box = document.getElementById("cc-sugg"); box.hidden = true; box.innerHTML = ""; sugg = []; suggIdx = -1;
+    document.getElementById("place").setAttribute("aria-expanded", "false");
+    document.getElementById("place").removeAttribute("aria-activedescendant");
+  }
+  function onPlaceKey(e){
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      if (!sugg.length) return;
+      e.preventDefault();
+      suggIdx = (suggIdx + (e.key === "ArrowDown" ? 1 : -1) + sugg.length) % sugg.length;
+      document.querySelectorAll("#cc-sugg [role=option]").forEach((o, i) => { o.classList.toggle("on", i === suggIdx); o.setAttribute("aria-selected", String(i === suggIdx)); });
+      document.getElementById("place").setAttribute("aria-activedescendant", "sugg-" + suggIdx);
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (sugg.length) pickPlace(suggIdx >= 0 ? suggIdx : 0);
+    } else if (e.key === "Escape") hideSugg();
+  }
+  function pickPlace(i){
+    const s = sugg[i]; if (!s) return;
+    track("cerca_posto", s.name);
+    setWhere({ kind: "place", name: s.name, lat: s.lat, lng: s.lng, km: 10 });
+  }
+  document.getElementById("place").addEventListener("blur", () => setTimeout(hideSugg, 150));
+
+  // ── cosa (testo libero) ──────────────────────────────────────────
+  // parole non capite: parola intera o inizio di parola su titolo, chi organizza e luogo; mai la radice ("seriate" non trova "Serio")
+  function byText(list, p){
+    return list.filter(e => {
+      if (p.sports.length && !p.sports.includes(e.slug)) return false;
+      if (p.free && e.price > 0) return false;
+      if (p.rest.length) {
+        const words = norm([e.title, e.host, e.place].join(" ")).split(/[^a-z0-9]+/);
+        if (!p.rest.every(w => words.some(h => h === w || (w.length >= 4 && h.startsWith(w))))) return false;
+      }
+      return true;
+    });
+  }
+  async function search(){
+    const text = qInput.value.trim();
+    qText = text.slice(0, 120); parsed = qText ? expandQuery(qText) : null;
+    if (parsed) {
+      if (parsed.day) { day = parsed.day === "all" ? "" : parsed.day; }
+      // solo parole vuote ("c'è qualcosa?") o solo un giorno ("domani sera"): nessun filtro sul testo
+      if (!parsed.sports.length && !parsed.rest.length && !parsed.free) {
+        qText = ""; parsed = null; qInput.value = ""; document.getElementById("cc-what").classList.remove("has");
+      }
+      // le parole non capite possono essere un posto ("calcetto a Seriate"): si prova se non trovano niente
+      else if (parsed.rest.length && !where && !byText(EVENTS, parsed).length) {
+        for (const w of parsed.rest) {
+          if (w.length < 4) continue;
+          const g = (await geoSuggest(w))[0];
+          if (g) {
+            parsed.rest = parsed.rest.filter(x => x !== w);
+            parsed.terms = [...new Set(parsed.rest.map(stem))].filter(x => /^[a-z0-9]{2,30}$/.test(x)).slice(0, 5);
+            track("cerca_posto", g.name);
+            where = { kind: "place", name: g.name, lat: g.lat, lng: g.lng, km: 10 };
+            document.getElementById("place").value = "";
+            break;
+          }
+        }
+      }
+    }
+    if (window.matchMedia("(pointer: coarse)").matches) qInput.blur();
+    refit = true; choose();
+  }
+  function clearAll(){
+    day = ""; where = null; qText = ""; parsed = null; locating = false;
+    qInput.value = ""; document.getElementById("cc-what").classList.remove("has");
+    document.getElementById("place").value = ""; hideSugg();
+    refit = true; syncCard(); render();
+    if (feedCenter !== BG) loadEvents(BG);
+  }
+  function dropDay(){ day = ""; refit = true; choose(); }
+  function dropWhere(){ setWhere(null); }
+
+  // ── ricerche salvate ("Avvisami quando c'è") ─────────────────────
+  function whenKind(){ return day === "weekend" ? "weekend" : (day === "data" && dateSel) ? "date" : "any"; }
+  // stessa ricerca già salvata? si confronta quello che manda save_search
+  function findSaved(){
+    const body = searchBody();
+    const same = (a, b) => JSON.stringify((a || []).slice().sort()) === JSON.stringify((b || []).slice().sort());
+    return savedSearches.find(s => same(s.sports, body.p_sports) && same(s.terms, body.p_terms) && (s.when_kind || "any") === body.p_when
+      && (s.on_date || null) === body.p_on_date && (s.place_label || null) === body.p_place_label && (s.radius_km || null) === body.p_radius_km) || null;
+  }
+  function searchBody(){
+    let sports = parsed ? parsed.sports : [], terms = parsed ? parsed.terms : [];
+    // niente tipo né parole ("qualsiasi cosa vicino a Stezzano"): vale per tutto il catalogo
+    if (!sports.length && !terms.length) sports = Object.keys(CATALOG);
+    return {
+      p_text: qText, p_sports: sports, p_terms: terms, p_category: parsed ? parsed.category : null,
+      p_when: whenKind(), p_on_date: whenKind() === "date" ? isoLocal(dateSel) : null,
+      p_lat: where ? where.lat : null, p_lng: where ? where.lng : null,
+      p_radius_km: where ? where.km : null, p_place_label: where ? where.name : null
+    };
+  }
+  async function loadSaved(){
+    const r = await rpc("my_saved_searches", {});
+    if (!r || !r.ok) return;
+    savedSearches = await r.json().catch(() => []);
+  }
+  async function saveSearch(btn){
+    if (!logged) { location.href = "login.html"; return; }
+    btn.disabled = true;
+    const body = searchBody();
+    const r = await rpc("save_search", body);
+    if (r && r.ok) {
+      const id = await r.json().catch(() => null);
+      const row = { id, query_text: body.p_text, category: body.p_category, sports: body.p_sports, terms: body.p_terms, when_kind: body.p_when,
+                    on_date: body.p_on_date, place_label: body.p_place_label, radius_km: body.p_radius_km, created_at: new Date().toISOString() };
+      if (!savedSearches.some(s => s.id === id)) savedSearches.push(row);
+      track("save_search", "q=" + qText + "|w=" + body.p_when + "|p=" + (body.p_place_label || "-"));
+      toast("Fatto. Ti avviso appena c'è.");
+      render(); return;
+    }
+    btn.disabled = false;
+    let msg = "Non ha funzionato, riprova.";
+    try {
+      const code = (r ? (await r.json()).message : "") || "";
+      if (code.includes("too_many_searches")) msg = "Puoi salvare al massimo 5 ricerche. Togline una da Avvisi.";
+      else if (code.includes("not_authenticated")) { logout(); return; }
+    } catch (_) {}
+    toast(msg);
+  }
+  async function unsaveSearch(id, btn){
+    if (btn) btn.disabled = true;
+    const r = await rpc("delete_saved_search", { p_id: id });
+    if (!r || !r.ok) { if (btn) btn.disabled = false; toast("Non ha funzionato, riprova."); return; }
+    savedSearches = savedSearches.filter(s => s.id !== id);
+    render();
+  }
+  // ?s=<id>: riapre una ricerca salvata (testo, giorno e posto; il centro si ritrova dall'etichetta)
+  async function openSavedFromUrl(){
+    const id = new URLSearchParams(location.search).get("s");
+    if (!id) return;
+    const s = savedSearches.find(x => x.id === id);
+    if (!s) { toast("Questa ricerca non c'è più."); return; }
+    qInput.value = s.query_text || ""; document.getElementById("cc-what").classList.toggle("has", !!s.query_text);
+    qText = s.query_text || ""; parsed = qText ? expandQuery(qText) : null;
+    day = s.when_kind === "weekend" ? "weekend" : "";
+    if (s.when_kind === "date" && s.on_date) { const [y, m, d] = s.on_date.split("-").map(Number); dateSel = new Date(y, m - 1, d); day = "data";
+      document.getElementById("date-txt").textContent = d + " " + MONTHS[m - 1].slice(0, 3); document.getElementById("date-x").hidden = false; }
+    where = null;
+    if (s.place_label === "Bergamo città") where = { ...BG_CITY, km: s.radius_km || 6 };
+    else if (s.place_label && s.place_label !== "vicino a te") {
+      const g = (await geoSuggest(s.place_label))[0];
+      if (g) where = { kind: "place", name: s.place_label, lat: g.lat, lng: g.lng, km: s.radius_km || 10 };
+    }
+    cardOpen = false; refit = true; syncCard(); render();
+    if (s.place_label === "vicino a te") useMyLocation();
+  }
+
+  // ── lista ────────────────────────────────────────────────────────
   // " · Pieno" / " · Pieno · 3 in lista d'attesa" nella riga meta, come il prezzo
   function fullHtml(e){ const t = fullTxt(e.going, e.cap, e.wl); return t ? ' · <b style="font-weight:600; color:var(--ink)">' + t + "</b>" : ""; }
   const isFull = e => !!e.cap && e.going >= e.cap;
@@ -491,24 +866,36 @@
     if (isFull(e)) return ["", "Lista d'attesa →"];
     return ["", "Ci sono →"];
   }
+  const kmTxt = km => km < 1 ? "a meno di 1 km" : "a " + Math.round(km) + " km";
+  // card di un evento; withDay: il giorno davanti all'ora (fuori dai gruppi per giorno)
+  function evCard(e, withDay){
+    const [cls, label] = stateBtn(e);
+    const time = (withDay ? dayLabel(e.when) + " · " : "") + timeStr(e.when) + (e.end && dayKey(e.end) === dayKey(e.when) ? " – " + timeStr(e.end) : "") + " · " + relTime(e.when);
+    return `<div class="ev" id="ev-${e.id}" onclick="location.href='evento.html?id=${e.id}'" onmouseenter="highlight('${e.id}', false)">
+        <div class="tile"${e.photo ? ` style="background-image:url('${esc(e.photo)}'); background-size:cover; background-position:center"` : ""}>${e.photo ? "" : e.emoji}</div>
+        <div>
+          <div class="time">${esc(time)}</div>
+          <a class="t" href="evento.html?id=${e.id}" onclick="event.stopPropagation()" style="display:block">${esc(e.title)}</a>
+          <div class="m">${e.host ? (e.hostAvatar ? `<span class="ha" style="background-image:url('${esc(e.hostAvatar)}')"></span>` : "") + "Di " + esc(e.host) : "Da un altro sito"} · ${esc(e.place)}${where ? " · " + kmTxt(distKm(where, e)) : ""} · ${goingTxt(e.going)}${fullHtml(e)}${e.request ? " · con approvazione" : ""}${e.price > 0 ? ' · <b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(e.price)) + "</b>" : ""}</div>
+        </div>
+        <button class="go ${cls}" onclick="event.stopPropagation(); join('${e.id}')">${label}</button>
+      </div>`;
+  }
+  const clean = s => s.replace(/\s+/g, " ").replace(/\s+([:.,?])/g, "$1").trim();
 
   function render(){
-    const q = document.getElementById("q").value.trim().toLowerCase();
     const list = document.getElementById("list");
-    const evs = EVENTS
-      .filter(e => !cat || e.cat === cat)
+    const byWhat = parsed ? byText(EVENTS, parsed) : EVENTS;
+    const evs = byWhat
       .filter(e => inDay(e.when))
-      .filter(e => {
-        if (!q) return true;
-        const hay = norm([e.title, e.host, e.place, e.cat, SEARCH_WORDS[e.slug] || ""].join(" "));
-        return norm(q).split(/\s+/).every(w => hit(hay, w));
-      })
-      .sort((a, b) => a.when - b.when);
+      .filter(e => !where || distKm(where, e) <= where.km);
 
-    document.getElementById("count").textContent = evs.length + (evs.length === 1 ? " evento " : " eventi ") + (dayText() || "in programma");
+    const n = evs.length;
+    document.getElementById("count").textContent = clean(n + (n === 1 ? " evento " : " eventi ") +
+      (hasChoice() ? whatPhrase() + " " + dayText() + " " + whereText() : "in programma"));
     const show = document.getElementById("fl-show");
-    show.classList.toggle("zero", !evs.length);
-    show.innerHTML = evs.length ? 'Mostra <span id="fl-count">' + (evs.length === 1 ? "1 evento" : evs.length + " eventi") + "</span>" : "Nessun evento";
+    show.classList.toggle("zero", !n);
+    show.innerHTML = n ? 'Mostra <span id="fl-count">' + (n === 1 ? "1 evento" : n + " eventi") + "</span>" : "Nessun evento";
     // i pin fuori filtro spariscono (non sbiaditi); il popup di un pin che sparisce si chiude
     const vis = new Set(evs.map(e => e.id));
     EVENTS.forEach(e => {
@@ -516,20 +903,12 @@
       m.getElement().style.display = on ? "" : "none";
       if (!on) { const p = m.getPopup(); if (p && p.isOpen()) m.togglePopup(); }
     });
+    mapPill.hidden = !!n || !EVENTS.length;
+    showRadius = !n && !!where; syncRadius();
     lastVisible = evs;
     if (refit) { refit = false; fitVisible(); }
 
-    if (!evs.length) {
-      const CATN = { sport:"sport", cucina:"cucina", "creatività":"creatività", giardinaggio:"giardinaggio", cultura:"cultura", benessere:"benessere" };
-      const dayTxt = dayText();
-      const pub = '<a href="crea.html" style="color:var(--blue); font-weight:700">pubblica tu un evento</a>';
-      let msg;
-      if (day === "oggi" && !cat && !q) msg = 'Niente oggi. <a href="#" onclick="setDay(document.querySelector(\'.day-chip[data-day=domani]\')); return false" style="color:var(--blue); font-weight:700">Guarda domani</a> oppure <a href="#" onclick="clearFilters(); return false" style="color:var(--blue); font-weight:700">togli i filtri</a>.';
-      else if (day || cat) msg = ("Niente " + (day ? dayTxt + " " : "") + (cat ? "di " + CATN[cat] : "")).trim() + '. <a href="#" onclick="clearFilters(); return false" style="color:var(--blue); font-weight:700">Togli i filtri</a> oppure ' + pub + ".";
-      else if (q) msg = 'Nessun evento per "' + esc(q) + '". Prova un\'altra parola, oppure ' + pub + ".";
-      else msg = 'Per ora non c\'è nessun evento. <a href="crea.html" style="color:var(--blue); font-weight:700">Pubblica tu il primo</a>.';
-      list.innerHTML = '<div class="empty">' + msg + "</div>"; return;
-    }
+    if (!n) { list.innerHTML = emptyHtml(byWhat); return; }
 
     let html = "", lastDay = "";
     evs.forEach(e => {
@@ -539,18 +918,54 @@
         const isToday = dayKind(e.when) === "oggi";
         html += `<div class="day${isToday ? " today" : ""}"><span class="dot"></span><b>${dayLabel(e.when)}</b><span>${daySub(e.when)}</span></div>`;
       }
-      const [cls, label] = stateBtn(e);
-      html += `<div class="ev" id="ev-${e.id}" onclick="location.href='evento.html?id=${e.id}'" onmouseenter="highlight('${e.id}', false)">
-        <div class="tile"${e.photo ? ` style="background-image:url('${esc(e.photo)}'); background-size:cover; background-position:center"` : ""}>${e.photo ? "" : e.emoji}</div>
-        <div>
-          <div class="time">${timeStr(e.when)}${e.end && dayKey(e.end) === dayKey(e.when) ? " – " + timeStr(e.end) : ""} · ${relTime(e.when)}</div>
-          <a class="t" href="evento.html?id=${e.id}" onclick="event.stopPropagation()" style="display:block">${esc(e.title)}</a>
-          <div class="m">${e.host ? (e.hostAvatar ? `<span class="ha" style="background-image:url('${esc(e.hostAvatar)}')"></span>` : "") + "Di " + esc(e.host) : "Da un altro sito"} · ${esc(e.place)} · ${goingTxt(e.going)}${fullHtml(e)}${e.request ? " · con approvazione" : ""}${e.price > 0 ? ' · <b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(e.price)) + "</b>" : ""}</div>
-        </div>
-        <button class="go ${cls}" onclick="event.stopPropagation(); join('${e.id}')">${label}</button>
-      </div>`;
+      html += evCard(e, false);
     });
     list.innerHTML = html;
+  }
+
+  // nessun risultato (spec §5): a) esiste in un altro giorno o posto; b) non esiste, "Avvisami quando c'è"
+  function emptyHtml(byWhat){
+    if (!EVENTS.length) return '<div class="empty">Per ora non c\'è nessun evento. <a href="crea.html">Pubblica tu il primo</a>.</div>';
+    const what = whatText(), subject = !what ? "Nessun evento" : what === "gratis" ? "Niente di gratis" : "Nessuno fa " + what;
+    // solo un giorno, niente altro: si resta sulla frase semplice
+    if (!qText && !where && day) {
+      return '<div class="empty">Niente ' + esc(dayText()) + ". " + (day !== "domani" ? '<a href="#" onclick="setDay(document.querySelector(\'.day-chip[data-day=domani]\')); return false">Guarda domani</a> oppure ' : "") +
+        '<a href="#" onclick="dropDay(); return false">' + (day !== "domani" ? "togli" : "Togli") + " il giorno</a>.</div>";
+    }
+    // a) la cosa cercata esiste, ma non nel giorno o nel posto scelto
+    if ((qText || day) && byWhat.length) {
+      const pool = byWhat.slice();
+      const byDist = where && !day;
+      if (byDist) pool.sort((a, b) => distKm(where, a) - distKm(where, b));
+      const next = pool.slice(0, 3), f = next[0];
+      const town = f.place.split(/,|·/)[0].trim();
+      const intro = byDist ? `Il più vicino è a ${esc(town)}, ${esc(dayLabel(f.when).toLowerCase())}:` : `Il prossimo è ${esc(dayLabel(f.when).toLowerCase())}${where ? " a " + esc(town) : ""}:`;
+      return `<div class="nores" role="status">
+        <h3>${esc(clean(subject + " " + dayText() + " " + whereText()))}. <span>${intro}</span></h3>
+        ${next.map(e => evCard(e, true)).join("")}
+        <div class="chips">${day ? '<button class="chip" onclick="dropDay()">Cambia giorno</button>' : ""}${where ? '<button class="chip" onclick="dropWhere()">Togli il posto</button>' : ""}</div>
+      </div>`;
+    }
+    // b) non esiste nei prossimi giorni, da nessuna parte
+    const key = "q=" + qText + "|d=" + (day || "-") + "|p=" + (where ? where.name : "-");
+    if (key !== lastEmptyKey) { lastEmptyKey = key; track("cerca_vuoto", key); }
+    const title = clean(subject + " " + whereText() + " nei prossimi giorni") + ".";
+    const emoji = parsed && parsed.slugs.length ? (CATALOG[parsed.slugs[0]] || {}).e : parsed && parsed.category ? CAT_EMOJI[parsed.category] : "";
+    const meanwhile = '<div class="meanwhile">Intanto, nei prossimi giorni:</div>' + EVENTS.slice(0, 3).map(e => evCard(e, true)).join("");
+    const s = findSaved();
+    if (s) {
+      const who = !what ? "qualcosa" : what === "gratis" ? "qualcosa gratis" : what;
+      return `<div class="saved" role="status">
+        <div class="bell"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 10 C 6 6.7, 8.7 4, 12 4 C 15.3 4, 18 6.7, 18 10 L18 15 L20 17.5 L4 17.5 L6 15 Z"/><path d="M10 20.5 C 10.5 21.3, 13.5 21.3, 14 20.5"/></svg></div>
+        <div><h3>${esc(clean("Ti avviso appena qualcuno propone " + who + " " + whereText()))}.</h3>
+        <p>Un avviso qui e una email. Le ricerche salvate le trovi in <a href="notifiche.html">Avvisi</a>. · <button onclick="unsaveSearch('${esc(s.id)}', this)">Non avvisarmi più</button></p></div>
+      </div>` + meanwhile;
+    }
+    return `<div class="nores" role="status">
+      <div class="head">${emoji ? `<div class="tile">${emoji}</div>` : ""}<div><h3>${esc(title)}</h3><p>Vuoi che ti avvisi quando qualcuno lo propone?</p></div></div>
+      <div class="btns"><button class="btn blue" onclick="saveSearch(this)">Avvisami quando c'è</button><a class="btn ghost" href="crea.html">Oppure proponilo tu →</a></div>
+      <div class="note">Ricevi un avviso qui e una email. Puoi toglierlo quando vuoi.</div>
+    </div>` + meanwhile;
   }
 
   // inquadra i pin visibili (solo quando cambia giorno/data; mai con la mappa nascosta su telefono)
@@ -618,9 +1033,11 @@
     toast(msg);
   }
 
+  syncCard();
   if (logged) checkProfile();
-  loadEvents().then(() => {
+  Promise.all([loadEvents(), logged ? loadSaved() : null]).then(() => {
     if (!logged) return;
+    openSavedFromUrl();
     // pallino sulla campanella: in silenzio se la rpc non c'è ancora
     rpc("unread_notifications", {}).then(async r => {
       if (!r || !r.ok) return;
@@ -631,6 +1048,8 @@
   function toggleMap(){
     const show = document.body.classList.toggle("showmap");
     document.getElementById("maptoggle").innerHTML = show ? "☰ Lista" : "🗺️ Mappa";
+    // in vista mappa la card è sempre compatta (con i valori di default se non c'è niente scelto)
+    cardOpen = false; syncCard();
     if (show) setTimeout(() => { map.resize(); fitVisible(); }, 60);
   }
 </script>

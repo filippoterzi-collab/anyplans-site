@@ -149,7 +149,7 @@ const SEARCH_WORDS = {
   dinner: "cena aperitivo pranzo mangiare ristorante pizzeria pizza dinner apericena bere birra vino compagnia tavolata",
   painting: "pittura disegno arte corso creativo painting drawing art acquerello quadro laboratorio",
   gardening: "giardinaggio orto volontariato verde gardening garden piante natura pulizia ambiente",
-  festival: "festa sagra festival evento concerto paese party musica live serata fiera mercato"
+  festival: "festa sagra festival evento concerto paese party musica live serata fiera mercato mercatino mercatini luna park fuochi"
 };
 // parole simili: "corse" trova "corsa", "scalate" trova "scalata" (si confronta anche la radice)
 const stem = w => w.length > 4 ? w.replace(/(ando|endo|are|ere|ire|ate|ata|ato|ati|ing|s|e|a|o|i)$/, "") : w;
@@ -164,8 +164,8 @@ const norm = t => String(t ?? "").toLowerCase().normalize("NFD").replace(/[\u030
 const DAY_WORDS = {
   oggi: "oggi stasera stamattina stanotte pomeriggio adesso subito",
   domani: "domani",
-  weekend: "weekend finesettimana sabato domenica",
-  all: "tutto tutti prossimi prossimamente qualsiasi quando sempre"
+  weekend: "weekend finesettimana sabato domenica venerdi",
+  all: "tutto tutti prossimi prossimamente qualsiasi quando sempre dopodomani settimana"
 };
 const CAT_WORDS = {
   sport: "sport sportivo sportiva muovermi allenarmi allenamento attivita",
@@ -182,13 +182,52 @@ const FREE_WORDS = "gratis gratuito gratuita gratuiti gratuite";
 // parole vuote: non dicono niente su cosa cerca la persona
 const STOP_WORDS = "c e ce che chi cosa cose fa fare fanno da di a in con per il la lo gli le un una uno qualcuno " +
                    "qualcosa qualche bergamo piano piani evento eventi vorrei voglio cerco cerca andare vado ci sono " +
-                   "sera mattina pomeriggio niente nessuno esiste non mi ti ma o oppure anche tipo come dove";
+                   "sera mattina pomeriggio niente nessuno esiste non mi ti ma o oppure anche tipo come dove " +
+                   "uscire esce usciamo gente persone nuove nuovi nuova amici amico conoscere conosco compagnia solo sola " +
+                   "giornata serata vicino vicina zona posto dintorni intorno programma succede consigli consigliate dite " +
+                   "sapete sai avete hai posso possiamo potrei vorremmo vogliamo cerchiamo organizzate organizza organizzato " +
+                   "fate fai ce ne ho hanno bello bella bellino divertente qualcosina roba cose ciao buongiorno buonasera grazie " +
+                   "nel nella nello nei negli nelle al allo alla ai agli alle dal dalla dallo dai dagli dalle sul sulla sui sulle " +
+                   "del della dello dei degli delle verso presso su tra fra qui li la ad ed frazione quartiere zona";
 // parole ambigue per gli sport: "corso" ha la stessa radice di "corsa" e accenderebbe la corsa
 const NOISE_WORDS = "corso corsi lezione lezioni";
 
 // parola per parola (non sottostringa): "corso" non trova "corsa", "escursioni" trova "escursione"
 const sameWord = (a, b) => a === b || (a.length > 3 && b.length > 3 && stem(a) === stem(b));
-const inWords = (list, w) => list.split(" ").some(x => sameWord(x, w));
+const NOISE = NOISE_WORDS.split(" ");
+// le parole ambigue ("corso") si confrontano solo intere: "corsa" non deve accendere ceramica o cucina per il loro "corso"
+const inWords = (list, w) => list.split(" ").some(x => NOISE.includes(x) ? x === w : sameWord(x, w));
+
+// distanza in km tra due punti {lat, lng} (formula di Haversine)
+function distKm(a, b){
+  if (a.lat == null || b.lat == null) return Infinity;
+  const R = 6371, dLat = (b.lat - a.lat) * Math.PI / 180, dLng = (b.lng - a.lng) * Math.PI / 180;
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * Math.PI / 180) * Math.cos(b.lat * Math.PI / 180) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
+
+// frase scritta → quello che serve a save_search (design/sito-landing/plan-avvisami.md §4):
+// sports = slug del catalogo (una categoria vale tutti i suoi slug), terms = parole non capite con la radice (max 5),
+// category = etichetta della categoria o null; in più day, free, slugs (solo quelli scritti) e rest (parole non capite com'erano)
+function expandQuery(text){
+  const p = parseQuery(text);
+  const sports = p.slugs.slice();
+  p.cats.forEach(c => Object.keys(CATALOG).forEach(s => { if (CATALOG[s].c === c && !sports.includes(s)) sports.push(s); }));
+  const cats = [...new Set(p.cats.concat(p.slugs.map(s => CAT_BY_SLUG[s] || "sport")))];
+  const category = p.cats[0] || (cats.length === 1 ? cats[0] : null);
+  const terms = [...new Set(p.rest.map(stem))].filter(w => /^[a-z0-9]{2,30}$/.test(w)).slice(0, 5);
+  return { sports, terms, category, day: p.day, free: p.free, slugs: p.slugs, rest: p.rest };
+}
+// ricerca salvata (riga di my_saved_searches) → "ceramica vicino a Stezzano, il 12 settembre" / "qualsiasi cosa a Bergamo"
+function searchLabel(s){
+  let t = (s.query_text || "").trim() || "qualsiasi cosa";
+  if (s.place_label === "vicino a te") t += " vicino a te";
+  else if (s.place_label === "Bergamo città") t += " a Bergamo";
+  else if (s.place_label) t += (/^[aeiou]/i.test(s.place_label) ? " vicino ad " : " vicino a ") + s.place_label;
+  if (s.when_kind === "weekend") t += ", nel fine settimana";
+  else if (s.when_kind === "date" && s.on_date) { const [y, m, d] = s.on_date.split("-").map(Number); t += ", il " + d + " " + MONTHS[m - 1]; }
+  return t;
+}
 
 // frase scritta → { day, slugs, cats, free, surprise, yes, no, rest }
 // day: "" | "oggi" | "domani" | "weekend" | "all"; rest: parole non capite (per la ricerca sui titoli)
@@ -203,9 +242,9 @@ function parseQuery(text){
     if (inWords(NO_WORDS, w)) { out.no = true; used = true; }
     if (inWords(SURPRISE_WORDS, w)) { out.surprise = true; used = true; }
     if (inWords(FREE_WORDS, w)) { out.free = true; used = true; }
-    if (inWords(NOISE_WORDS, w)) used = true;
-    else Object.keys(SEARCH_WORDS).forEach(s => { if (inWords(SEARCH_WORDS[s], w) && !out.slugs.includes(s)) { out.slugs.push(s); used = true; } });
-    Object.keys(CAT_WORDS).forEach(c => { if (inWords(CAT_WORDS[c], w) && !out.cats.includes(c)) { out.cats.push(c); used = true; } });
+    if (NOISE.includes(w)) used = true;
+    else Object.keys(SEARCH_WORDS).forEach(s => { if (inWords(SEARCH_WORDS[s], w)) { if (!out.slugs.includes(s)) out.slugs.push(s); used = true; } });
+    Object.keys(CAT_WORDS).forEach(c => { if (inWords(CAT_WORDS[c], w)) { if (!out.cats.includes(c)) out.cats.push(c); used = true; } });
     Object.keys(DAY_WORDS).forEach(d => { if (inWords(DAY_WORDS[d], w)) { if (!out.day) out.day = d; used = true; } });
     if (!used) out.rest.push(w);
   });
@@ -357,7 +396,8 @@ function mountNav(active, opts){
   document.head.appendChild(grid);
   document.getElementById("avatar").onclick = (e) => { e.stopPropagation(); const m = document.getElementById("menu"); m.hidden = !m.hidden; };
   document.addEventListener("click", (e) => { if (!e.target.closest("#menu")) { const m = document.getElementById("menu"); if (m) m.hidden = true; } });
-  // nome e foto dal profilo, pallino avvisi: in silenzio se falliscono
+  // nome e foto dal profilo, pallino avvisi: in silenzio se falliscono; senza sessione non si chiede niente
+  if (!(session && session.access_token)) return;
   rpc("my_profile").then(async r => {
     if (!r || !r.ok) return;
     const me = (await r.json().catch(() => []))[0];

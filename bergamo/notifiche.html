@@ -60,6 +60,17 @@
   .n .dot{width:8px; height:8px; border-radius:999px; background:var(--blue); display:none;}
   .n.unread .dot{display:block;}
   .empty{color:var(--grey); font-size:14.5px; text-align:center; padding:40px 16px;}
+  /* ricerche salvate: "Ti avviso quando c'è:" (design/sito-landing/spec-cosa-cerchi.md §5) */
+  .ss{background:#fff; border:1.5px solid rgba(25,25,25,.10); border-radius:18px; padding:16px 18px; display:flex; flex-direction:column; gap:10px;}
+  .ss h2{font-size:15px; font-weight:800;}
+  .ss .pills{display:flex; flex-wrap:wrap; gap:8px;}
+  .fl-pill{display:inline-flex; align-items:center; gap:6px; min-height:36px; padding:6px 8px 6px 13px; border-radius:999px;
+           background:var(--tint); color:var(--blue); border:none; font:700 13.5px var(--round); cursor:pointer; text-align:left;
+           transition:background .15s ease;}
+  .fl-pill b{width:20px; height:20px; border-radius:999px; display:flex; align-items:center; justify-content:center;
+             font-weight:800; font-size:15px; line-height:1; flex-shrink:0;}
+  .fl-pill:hover b{background:rgba(27,79,216,.14);}
+  .fl-pill:disabled{opacity:.6; cursor:default;}
   .foot{display:flex; align-items:center; justify-content:space-between; gap:12px; padding:12px 4px 0;
         border-top:1px solid rgba(25,25,25,.08); font-size:12.5px; color:var(--grey);}
   .foot a{font-weight:700; color:var(--blue); white-space:nowrap;}
@@ -72,6 +83,7 @@
     main{padding:8px 18px 90px;}
     h1{font-size:26px;}
     .box{background:transparent; border:none; padding:0; gap:2px;}
+    .fl-pill{min-height:40px;}
   }
 
   /* ux: transizioni e feedback al tocco */
@@ -92,6 +104,10 @@
     <h1 class="display">Avvisi</h1>
     <button class="textbtn" id="btn-seen" onclick="markAllSeen()" hidden>Segna tutto come letto</button>
   </div>
+  <section class="ss" id="ss" aria-labelledby="ss-h" hidden>
+    <h2 id="ss-h">Ti avviso quando c'è:</h2>
+    <div class="pills" id="ss-pills"></div>
+  </section>
   <div class="box" id="list"><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
   <div class="foot">
     <span>Ti avvisiamo quando i gruppi che segui pubblicano qualcosa</span>
@@ -99,7 +115,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1788600043"></script>
+<script src="app.js?v=1788621070"></script>
 <script>
   requireLogin();
   mountNav("", { col: 860 });
@@ -184,6 +200,16 @@
     } else if (kind === "friend_activity") {
       icon = avatarHtml(n);
       txt = `<b>${who}</b> partecipa a <b>${title}</b>`;
+    } else if (kind === "saved_search_match") {
+      // ricerca salvata (migrazione 0060): un avviso per invio, con il primo piano e quanti ne corrispondono
+      const cnt = Number(n.match_count) || 1;
+      const what = esc(n.subject || "quello che cerchi");
+      icon = `<div class="tile">${esc(n.activity_emoji || "🔔")}</div>`;
+      txt = cnt === 1 ? `Un nuovo piano per <b>${what}</b>: <b>${title}</b>` : `${cnt} nuovi piani per <b>${what}</b>`;
+      const st = n.activity_start_at || n.start_at;
+      if (cnt === 1 && st) { const d = new Date(st); sub = esc(dayLabel(d) + " · " + timeStr(d)); }
+      go = "Vedi →";
+      href = cnt === 1 && n.activity_id ? "evento.html?id=" + n.activity_id : n.search_id ? "eventi.html?s=" + encodeURIComponent(n.search_id) : "eventi.html";
     } else {
       // tipo sconosciuto: testo generico, link all'evento se c'è
       icon = n.actor_name ? avatarHtml(n) : `<div class="tile">${esc(n.activity_emoji || "📍")}</div>`;
@@ -210,6 +236,30 @@
     rpc("mark_notifications_seen", {}).catch(() => {});
   }
 
+  // ricerche salvate: pill con ×; il box non compare se non ce ne sono
+  let SAVED = [];
+  async function loadSaved(){
+    const r = await rpc("my_saved_searches", {});
+    if (!r || !r.ok) return; // in silenzio se la rpc non c'è ancora
+    SAVED = await r.json().catch(() => []);
+    renderSaved();
+  }
+  function renderSaved(){
+    const box = document.getElementById("ss");
+    box.hidden = !SAVED.length;
+    document.getElementById("ss-pills").innerHTML = SAVED.map(s =>
+      `<button class="fl-pill" onclick="unsave('${esc(s.id)}', this)" aria-label="Non avvisarmi più per ${esc(searchLabel(s))}">${esc(searchLabel(s))} <b aria-hidden="true">×</b></button>`).join("");
+  }
+  async function unsave(id, btn){
+    const s = SAVED.find(x => x.id === id); if (!s) return;
+    btn.disabled = true;
+    const r = await rpc("delete_saved_search", { p_id: id });
+    if (!r || !r.ok) { btn.disabled = false; toast("Non ha funzionato, riprova."); return; }
+    SAVED = SAVED.filter(x => x.id !== id);
+    renderSaved();
+    toast("Ok, non ti avviso più per " + searchLabel(s) + ".");
+  }
+
   async function markAllSeen(){
     const btn = document.getElementById("btn-seen"); btn.disabled = true;
     const r = await rpc("mark_notifications_seen", {});
@@ -219,6 +269,7 @@
   }
 
   load();
+  loadSaved();
 </script>
 </body>
 </html>

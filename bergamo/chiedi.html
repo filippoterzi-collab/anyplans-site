@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Chiedi cosa c'è da fare · anyplans</title>
+<title>Chiedi ad anyplans?</title>
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <meta name="robots" content="noindex">
 <style>
@@ -27,6 +27,7 @@
   main{display:flex; flex-direction:column; gap:14px;}
   .titlerow{display:flex; align-items:baseline; gap:10px;}
   .titlerow h1{font-size:30px;}
+  .titlerow h1 span{color:var(--blue);}
   .ck-reset{margin-left:auto; background:none; border:none; height:40px; padding:0 4px; color:var(--grey);
             font:600 13.5px var(--round); text-decoration:underline; text-underline-offset:3px; cursor:pointer;}
   .ck-reset:hover{color:var(--ink);}
@@ -42,11 +43,11 @@
 
   /* ── conversazione (ck-) ─────────────────────────────────────── */
   .ck-log{display:flex; flex-direction:column; gap:12px; padding-bottom:96px;}
-  .ck-row{display:flex; align-items:flex-end; gap:8px; max-width:88%; scroll-margin-top:12px; outline:none;
+  .ck-row{display:flex; align-items:flex-start; gap:8px; max-width:88%; scroll-margin-top:12px; outline:none;
           animation:ck-in .12s ease-out;}
   .ck-row.me{align-self:flex-end; max-width:78%;}
   @keyframes ck-in{from{opacity:0; transform:translateY(4px)} to{opacity:1; transform:none}}
-  .ck-av{width:24px; height:24px; flex-shrink:0; margin-bottom:4px;}
+  .ck-av{width:24px; height:24px; flex-shrink:0; margin-top:10px;}
   .ck-row.bot.cont{padding-left:32px;} .ck-row.bot.cont .ck-av{display:none;}
   .ck-msg{display:flex; flex-direction:column; gap:10px; min-width:0;}
   .ck-b{font-size:15.5px; line-height:1.4; padding:11px 15px; border-radius:18px; overflow-wrap:anywhere;}
@@ -116,7 +117,7 @@
 
 <main>
   <div class="titlerow">
-    <h1 class="display">Chiedi</h1>
+    <h1 class="display">Chiedi ad anyplans<span>?</span></h1>
     <button class="ck-reset" id="ck-reset" onclick="restart()" hidden>Ricomincia</button>
   </div>
   <div class="ck-log" id="ck-log" role="log" aria-live="polite" aria-relevant="additions"></div>
@@ -132,7 +133,7 @@
   </div>
 </form>
 
-<script src="app.js?v=1788600043"></script>
+<script src="app.js?v=1788621070"></script>
 <script>
   // pagina aperta anche senza account (si può linkare da Instagram): il login arriva quando si apre un piano
   mountNav("chiedi", { col: 640 });
@@ -149,13 +150,16 @@
 
   const CAT_EMOJI = { sport:"🏃", cucina:"🍳", "creatività":"🏺", giardinaggio:"🌱", cultura:"🎪", benessere:"🧘" };
   const CAT_LABEL = { sport:"Sport", cucina:"Cucina", "creatività":"Creatività", giardinaggio:"Giardinaggio", cultura:"Cultura", benessere:"Benessere" };
-  const GREETING = "Ciao! Dimmi quando vuoi uscire, oppure scrivi qui sotto cosa cerchi (per esempio: c'è qualcuno che fa ceramica?).";
+  // gioco di parole: la conversazione si apre con la domanda che è il nome del marchio ("anyplans?" = c'è qualche piano?)
+  const OPENER = "anyplans?";
+  const GREETING = "Sì! Dimmi quando vuoi uscire, oppure scrivi qui sotto cosa cerchi (per esempio: c'è qualcuno che fa ceramica?).";
   const MAX_CARDS = 4;
 
   let EVENTS = [];
   let loaded = false;
   // day: "" (non scelto) | "oggi" | "domani" | "weekend" | "all" | "date" (con date = dayKey)
-  const S = { day: "", date: null, cat: "", slugs: [], free: false, pending: null, skipType: false, skipSport: false, seen: new Set() };
+  // near: null oppure { name, lat, lng, km } quando la persona ha scritto un posto ("eventi a Seriate")
+  const S = { day: "", date: null, cat: "", slugs: [], free: false, near: null, pending: null, skipType: false, skipSport: false, seen: new Set() };
 
   const log = document.getElementById("ck-log");
   const input = document.getElementById("ck-q");
@@ -182,19 +186,48 @@
       cap: x.max_participants || null,
       wl: Number(x.waitlist_count) || 0,
       price: x.price_cents ?? null,
-      photo: x.photo_url || null
+      photo: x.photo_url || null,
+      lat: x.lat, lng: x.lng
     })).sort((a, b) => a.when - b.when);
     loaded = true;
-    input.disabled = false; input.placeholder = "Scrivi qui: oggi, sport, ceramica…";
+    input.disabled = false; input.placeholder = "Chiedi ad anyplans: oggi, sport, ceramica…";
     document.getElementById("ck-send").disabled = false;
     clearSkeleton();
     const q = new URLSearchParams(location.search).get("q");
-    if (q && q.trim()) { me(q.trim()); handle(q.trim()); }
-    else if (!EVENTS.length) say("Per ora non c'è nessun piano in programma a Bergamo. Vuoi pubblicare tu il primo?", [{ l:"Sì, lo pubblico io →", href:"crea.html" }]);
+    if (q && q.trim()) { me(q.trim()); handle(q.trim()); return; }
+    opener();
+    if (!EVENTS.length) say("Per ora non c'è nessun piano in programma a Bergamo. Vuoi pubblicare tu il primo?", [{ l:"Sì, lo pubblico io →", href:"crea.html" }]);
     else ask();
+  }
+  // distKm viene da app.js
+  const kmTxt = km => km < 1 ? "a meno di 1 km" : "a " + Math.round(km) + " km";
+  // "Seriate" → punto sulla mappa con photon (openstreetmap, gratis, già usato dal sito): solo città, paesi e quartieri entro 60 km da Bergamo
+  const BG = { lat: 45.698, lng: 9.670 };
+  async function geocode(q){
+    if (q.length < 3) return null;
+    try {
+      const r = await fetch("https://photon.komoot.io/api?q=" + encodeURIComponent(q) + "&limit=12&lat=45.698&lon=9.670");
+      if (!r.ok) return null;
+      const d = await r.json();
+      const PLACE = ["city", "town", "village", "hamlet", "suburb", "locality", "neighbourhood", "municipality"];
+      const nq = norm(q);
+      // il nome combacia per parole: "villaggio sposi" trova "Villaggio degli Sposi", "comonte" trova "Via Comonte"
+      const qw = nq.split(/[^a-z0-9]+/).filter(w => w.length >= 3);
+      const nameOk = name => { const nw = norm(name).split(/[^a-z0-9]+/); return qw.length && qw.every(w => nw.some(h => h === w || (w.length >= 4 && h.startsWith(w)))); };
+      const near = f => distKm(BG, { lat: f.geometry.coordinates[1], lng: f.geometry.coordinates[0] }) <= 60;
+      const feats = (d.features || []).filter(f => f.properties.name && nameOk(f.properties.name) && near(f));
+      // prima città, paesi, frazioni e quartieri; se non c'è, una via con quel nome (Comonte esiste solo come "Via Comonte")
+      const f = feats.find(f => PLACE.includes(f.properties.type) || PLACE.includes(f.properties.osm_value))
+             || feats.find(f => f.properties.osm_key === "highway");
+      if (!f) return null;
+      // "Milano" resta "Milano" (photon risponde "Milan"); "citta alta" prende gli accenti da photon ("Città Alta")
+      const name = norm(f.properties.name) === nq ? f.properties.name : cityCase(q);
+      return { name, lat: f.geometry.coordinates[1], lng: f.geometry.coordinates[0] };
+    } catch (_) { return null; }
   }
   function scope(o){
     return EVENTS
+      .filter(e => !o.near || distKm(o.near, e) <= o.near.km)
       .filter(e => o.day === "date" ? dayKey(e.when) === o.date : inDayKind(e.when, o.day))
       .filter(e => !o.cat || e.cat === o.cat)
       .filter(e => !o.slugs || !o.slugs.length || o.slugs.includes(e.slug))
@@ -224,12 +257,14 @@
   function whatTxt(){                      // "di escursionismo" / "di sport" / "di questo tipo" / "" (+ " gratis")
     let w = "";
     if (S.slugs.length === 1) w = "di " + shortLabel(S.slugs[0]).toLowerCase();
-    else if (S.slugs.length > 1) w = "di questo tipo";
+    else if (S.slugs.length > 3) w = "di questo tipo";
+    else if (S.slugs.length) w = "di " + S.slugs.map(x => shortLabel(x).toLowerCase()).join(" o ");
     else if (S.cat) w = "di " + S.cat;
     if (S.free) w += " gratis";
     return w.trim();
   }
   const piani = n => n === 1 ? "un piano" : n + " piani";
+  const nearTxt = () => S.near ? (/^[aeiou]/i.test(S.near.name) ? "vicino ad " : "vicino a ") + S.near.name : "";
 
   // ── bolle ──────────────────────────────────────────────────────
   function say(text, chips, opts){
@@ -250,13 +285,14 @@
     scrollTo(row);
     if (opts.focus !== false) row.focus({ preventScroll: true });
   }
-  function me(text){
+  function opener(){ me(OPENER, true); }
+  function me(text, quiet){
     const chips = log.querySelector(".ck-row:last-child .ck-chips"); if (chips) chips.remove();
     const row = document.createElement("div");
     row.className = "ck-row me"; row.setAttribute("aria-hidden", "true");
     row.innerHTML = `<div class="ck-b">${esc(text)}</div>`;
     log.appendChild(row);
-    document.getElementById("ck-reset").hidden = false;
+    if (!quiet) document.getElementById("ck-reset").hidden = false;
   }
   function chipsHtml(chips){
     if (!chips || !chips.length) return "";
@@ -267,18 +303,19 @@
     }).join("") + `</div>`;
   }
   function skeleton(){
+    if (!new URLSearchParams(location.search).get("q")) opener();
     const row = document.createElement("div"); row.className = "ck-row bot"; row.id = "ck-skel";
     row.innerHTML = `<img class="ck-av" src="/logo.png" alt="" width="24" height="24">
       <div class="ck-msg"><div class="ck-b">${esc(GREETING)}</div><div class="ck-sk" aria-hidden="true"><span></span><span></span><span></span></div></div>`;
     log.appendChild(row);
   }
-  function clearSkeleton(){ const s = document.getElementById("ck-skel"); if (s) s.remove(); }
+  function clearSkeleton(){ const s = document.getElementById("ck-skel"); if (s) s.remove(); const o = log.querySelector(".ck-row.me"); if (o && !log.querySelector(".ck-row.bot")) o.remove(); }
   function card(e, big){
     const meta = [ "Di " + (e.host || "un altro sito"), e.place, goingTxt(e.going) ];
     const full = fullTxt(e.going, e.cap, e.wl); if (full) meta.push(full);
     if (e.price > 0) meta.push(fmtPrice(e.price));
     const tile = e.photo ? `<div class="tile" style="background-image:url('${esc(e.photo.replace(/'/g, ""))}')"></div>` : `<div class="tile">${esc(e.emoji)}</div>`;
-    const time = `${dayLabel(e.when)} · ${timeStr(e.when)} · ${relTime(e.when)}`;
+    const time = `${dayLabel(e.when)} · ${timeStr(e.when)} · ${relTime(e.when)}` + (S.near ? ` · ${kmTxt(distKm(S.near, e))}` : "");
     return `<a class="ck-ev${big ? " big" : ""}" href="evento.html?id=${esc(e.id)}" onclick="track('chiedi_click','evento.html?id=${esc(e.id)}')">
       ${tile}
       <div class="body"><div class="time">${esc(time)}</div><div class="t">${esc(e.title)}</div><div class="m">${esc(meta.join(" · "))}</div></div>
@@ -322,7 +359,9 @@
     out.push({ l: "Tutti e " + evs.length, kind: "all-slug" });
     return out;
   }
-  const tailChips = () => [{ l: "Un altro giorno", kind: "day-reset" }, { l: "Un altro tipo", kind: "cat-reset" }, { l: "Sorprendimi", kind: "surprise" }];
+  const tailChips = () => [{ l: "Un altro giorno", kind: "day-reset" }, { l: "Un altro tipo", kind: "cat-reset" }]
+    .concat(S.near ? [{ l: "Un altro posto", kind: "near-reset" }] : [])
+    .concat([{ l: "Sorprendimi", kind: "surprise" }]);
 
   function pick(btn){
     const kind = btn.dataset.kind, v = btn.dataset.value;
@@ -340,6 +379,7 @@
     else if (kind === "all-slug") { S.slugs = []; S.skipSport = true; }
     else if (kind === "day-reset") { S.day = ""; S.date = null; }
     else if (kind === "cat-reset") { S.cat = ""; S.slugs = []; S.free = false; }
+    else if (kind === "near-reset") { S.near = null; }
     ask();
   }
 
@@ -347,11 +387,11 @@
   function ask(prefix){
     prefix = prefix ? prefix + " " : "";
     if (!S.day) {
-      const all = scope({ day: "all", cat: S.cat, slugs: S.slugs, free: S.free });
+      const all = scope({ day: "all", cat: S.cat, slugs: S.slugs, free: S.free, near: S.near });
       if (!all.length) return empty();
-      const first = !log.querySelector(".ck-row");
+      const first = !log.querySelector(".ck-row.bot");
       const what = whatTxt();
-      const text = first && !what ? GREETING : what ? `Ho ${piani(all.length)} ${what}. Quando vuoi uscire?` : "Quando vuoi uscire?";
+      const text = first && !what && !S.near ? GREETING : what || S.near ? `Ho ${piani(all.length)} ${what} ${nearTxt()}. Quando vuoi uscire?` : "Quando vuoi uscire?";
       return say(clean(prefix + text), dayChips(all));
     }
     const evs = scope(S);
@@ -359,33 +399,47 @@
     if (evs.length <= MAX_CARDS) return list(evs);
     const cats = counts(evs, "cat");
     if (!S.cat && !S.skipType && Object.keys(cats).length > 1) {
-      return say(clean(`${prefix}${capTxt()} ci sono ${piani(evs.length)}. Che tipo?`), catChips(evs));
+      return say(clean(`${prefix}${capTxt()} ${nearTxt()} ci sono ${piani(evs.length)}. Che tipo?`), catChips(evs));
     }
     const cat = S.cat || (Object.keys(cats).length === 1 ? Object.keys(cats)[0] : "");
     if (cat === "sport" && !S.slugs.length && !S.skipSport && Object.keys(counts(evs, "slug")).length > 1) {
       return say(clean(`${prefix}Sport ${perTxt()}: quale?`), slugChips(evs));
     }
-    list(evs);
+    // un solo tipo presente: lo si dice nella frase anche se nessuno l'ha scelto
+    const slugs = Object.keys(counts(evs, "slug"));
+    list(evs, S.cat || S.slugs.length ? {} : { what: slugs.length === 1 ? "di " + shortLabel(slugs[0]).toLowerCase() : cat ? "di " + cat : "" });
   }
   function list(evs, opts){
     opts = opts || {};
     S.skipType = false; S.skipSport = false;
-    const n = evs.length, what = opts.what != null ? opts.what : whatTxt(), per = opts.what != null ? "" : perTxt();
+    const n = evs.length, what = opts.what != null ? opts.what : whatTxt(), per = opts.per != null ? opts.per : perTxt();
     let text;
-    if (n === 1) text = `C'è un piano ${what} ${per}:`;
-    else if (!per) text = `Ecco i prossimi ${n} piani ${what}:`;
-    else text = `Ecco ${n} piani ${what} ${per}:`;
+    const near = opts.title ? "" : nearTxt();
+    if (n === 1) text = `C'è un piano ${what} ${near} ${per}:`;
+    else if (!per) text = `Ecco i prossimi ${n} piani ${what} ${near}:`;
+    else text = `Ecco ${n} piani ${what} ${near} ${per}:`;
     say(clean(text), tailChips(), { cards: evs });
   }
-  function empty(){
-    const anyDay = scope({ day: "all", cat: S.cat, slugs: S.slugs, free: S.free });
+  function empty(prefix){
+    prefix = prefix ? prefix + " " : "";
     const what = whatTxt();
+    if (S.near) {
+      // prima si allarga il raggio (10 → 25 km), poi si lascia perdere il posto
+      if (S.near.km < 25) {
+        const wider = scope({ day: S.day, date: S.date, cat: S.cat, slugs: S.slugs, free: S.free, near: { ...S.near, km: 25 } });
+        if (wider.length) { S.near.km = 25; return say(clean(`${prefix}${capTxt()} niente ${what} proprio vicino a ${S.near.name}. Entro 25 km:`), tailChips(), { cards: wider }); }
+      }
+      const name = S.near.name; S.near = null;
+      return empty(clean(`Vicino a ${name} non trovo niente ${what}${S.day && S.day !== "all" ? " " + perTxt() : ""}, allargo a tutta la zona.`));
+    }
+    const anyDay = scope({ day: "all", cat: S.cat, slugs: S.slugs, free: S.free });
+    if (!S.day && anyDay.length) return ask(prefix.trim());
     track("chiedi_empty", "d=" + (S.day || "-") + "|c=" + (S.cat || "-") + "|s=" + S.slugs.join(",") + (S.free ? "|free" : ""));
     S.skipType = false; S.skipSport = false;
     if (!anyDay.length) {
       // questo tipo non c'è mai: si propone di crearlo
       if (!EVENTS.length) return say("Per ora non c'è nessun piano in programma a Bergamo. Vuoi pubblicare tu il primo?", [{ l:"Sì, lo pubblico io →", href:"crea.html" }]);
-      return say(clean(`Non c'è nessun piano ${what} in programma. Vuoi crearlo tu?`),
+      return say(clean(`${prefix}Non c'è nessun piano ${what} in programma. Vuoi crearlo tu?`),
         [{ l:"Sì, lo creo io →", href:"crea.html" }, { l:"Un altro tipo", kind:"cat-reset" }, { l:"Sorprendimi", kind:"surprise" }]);
     }
     if (what) {
@@ -394,7 +448,7 @@
       const chips = [];
       if (anyDay.length > 1) chips.push({ l: "Altri " + what, kind: "day", v: "all", n: anyDay.length - 1 });
       chips.push({ l: clean("Un altro tipo " + perTxt()), kind: "cat-reset" }, { l: "Un altro giorno", kind: "day-reset" });
-      return say(clean(`${capTxt()} niente ${what}. Il prossimo è ${dayLabel(next.when).toLowerCase()}:`), chips, { cards: [next] });
+      return say(clean(`${prefix}${capTxt()} niente ${what}. Il prossimo è ${dayLabel(next.when).toLowerCase()}:`), chips, { cards: [next] });
     }
     // solo il giorno è vuoto: si propone il primo giorno con qualcosa
     const dom = scope({ day: "domani" }).length, wk = scope({ day: "weekend" }).length;
@@ -405,7 +459,7 @@
     S.pending = pending;
     const n = pending.day === "date" ? scope(pending).length : (pending.day === "domani" ? dom : wk);
     const chips = [{ l: acceptLabel, kind: "accept", n }].concat(dayChips(EVENTS, skip));
-    say(clean(`${capTxt()} non c'è niente. ${text}`), chips);
+    say(clean(`${prefix}${capTxt()} non c'è niente. ${text}`), chips);
   }
   function surprise(){
     const now = Date.now();
@@ -422,10 +476,10 @@
   }
   function restart(){
     log.innerHTML = "";
-    Object.assign(S, { day: "", date: null, cat: "", slugs: [], free: false, pending: null, skipType: false, skipSport: false });
+    Object.assign(S, { day: "", date: null, cat: "", slugs: [], free: false, near: null, pending: null, skipType: false, skipSport: false });
     document.getElementById("ck-reset").hidden = true;
     input.value = "";
-    if (!EVENTS.length) { skeleton(); loadEvents(); } else ask();
+    if (!EVENTS.length) { skeleton(); loadEvents(); } else { opener(); ask(); }
   }
 
   // ── frase scritta ──────────────────────────────────────────────
@@ -436,15 +490,26 @@
     input.value = "";
     me(text);
     handle(text);
-    input.focus();
+    // sul telefono la tastiera si chiude dopo l'invio, così si vede la risposta; sul computer il cursore resta nel campo
+    if (window.matchMedia("(pointer: coarse)").matches) input.blur(); else input.focus();
   }
-  function handle(text){
+  async function handle(text){
     const p = parseQuery(text);
     const short = text.slice(0, 120);
     if (p.yes && S.pending) { const q = S.pending; S.pending = null; Object.assign(S, q); track("chiedi_text_ok", "q=" + short + "|yes"); return ask(); }
     if (p.no) { S.pending = null; S.day = ""; S.date = null; track("chiedi_text_ok", "q=" + short + "|no"); return ask("Va bene."); }
     if (p.surprise) { S.pending = null; track("chiedi_text_ok", "q=" + short + "|surprise"); return surprise(); }
-    const found = p.day || p.slugs.length || p.cats.length || p.free;
+    // le parole rimaste possono essere un posto ("eventi a Seriate"): si prova prima quello
+    let geo = null;
+    if (p.rest.length) {
+      geo = await geocode(p.rest.join(" "));
+      if (geo) p.rest = [];
+      else for (const w of p.rest) { if (w.length >= 4 && (geo = await geocode(w))) { p.rest = p.rest.filter(x => x !== w); break; } }
+      if (geo) S.near = { ...geo, km: 10 };
+    }
+    const found = p.day || p.slugs.length || p.cats.length || p.free || geo;
+    // frase tutta di parole vuote ("c'è qualcosa?", "voglio conoscere gente"): si va avanti con le domande
+    if (!found && !p.rest.length) { S.pending = null; track("chiedi_text_ok", "q=" + short + "|generic"); return ask(); }
     if (found) {
       S.pending = null; S.skipType = false; S.skipSport = false;
       if (p.slugs.length) {
@@ -454,16 +519,17 @@
       } else if (p.cats.length) { S.cat = p.cats[0]; S.slugs = []; }
       if (p.day) { S.day = p.day; S.date = null; }
       if (p.free) S.free = true;
-      track("chiedi_text_ok", "q=" + short + "|d=" + (S.day || "-") + "|c=" + (S.cat || "-") + "|s=" + S.slugs.join(","));
+      track("chiedi_text_ok", "q=" + short + "|d=" + (S.day || "-") + "|c=" + (S.cat || "-") + "|s=" + S.slugs.join(",") + (geo ? "|near=" + geo.name : ""));
       return ask();
     }
     // niente di noto: si cerca sui titoli, come la ricerca di eventi.html
     if (p.rest.length) {
-      const evs = scope({ day: S.day, date: S.date }).filter(e => {
-        const hay = norm([e.title, e.host, e.place].join(" "));
-        return p.rest.every(w => hit(hay, w));
+      // parola intera o inizio di parola ("canto" trova "Canto Alto"), mai la radice: "seriate" non deve trovare "Serio"
+      const evs = scope({ day: S.day, date: S.date, near: S.near }).filter(e => {
+        const words = norm([e.title, e.host, e.place].join(" ")).split(/[^a-z0-9]+/);
+        return p.rest.every(w => words.some(h => h === w || (w.length >= 4 && h.startsWith(w))));
       });
-      if (evs.length) { track("chiedi_text_ok", "q=" + short + "|title"); return list(evs, { what: `per "${text}"` }); }
+      if (evs.length) { track("chiedi_text_ok", "q=" + short + "|title"); return list(evs, { what: `per "${text}"`, per: "", title: true }); }
     }
     track("chiedi_text_miss", "q=" + short);
     help();
