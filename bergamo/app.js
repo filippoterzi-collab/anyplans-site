@@ -111,7 +111,7 @@ const CATALOG = {
   dinner:    { e:"🍽️", l:"Cena / aperitivo",          c:"cucina" },
   painting:  { e:"🎨", l:"Pittura / arte",            c:"creatività" },
   gardening: { e:"🌱", l:"Giardinaggio / volontariato", c:"giardinaggio" },
-  festival:  { e:"🎪", l:"Feste, sagre ed eventi di paese",     c:"cultura" }
+  festival:  { e:"🎉", l:"Feste, sagre ed eventi di paese",     c:"cultura" }
 };
 
 // date in italiano

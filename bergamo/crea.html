@@ -127,6 +127,18 @@
     </div>
   </div>
 
+  <div class="grid2">
+    <div>
+      <label for="end-date">Quando finisce? (facoltativo)</label>
+      <input id="end-date" type="date">
+    </div>
+    <div>
+      <label for="end-time">A che ora finisce?</label>
+      <input id="end-time" type="time">
+    </div>
+  </div>
+  <p class="hint" style="margin-top:-6px">Lascia vuoto se non sai quando finisce. Solo l'ora = finisce lo stesso giorno.</p>
+
   <div>
     <label for="place">Punto di ritrovo</label>
     <input id="place" type="text" required placeholder="Scrivi un posto: parco, bar, via, paese…" autocomplete="off" oninput="placeSearch()">
@@ -217,7 +229,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788597017"></script>
+<script src="app.js?v=1788597883"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -226,6 +238,7 @@
   let editVisibility = "open", editSport = null;
   // in modifica: stato attuale dell'evento per lista d'attesa e validazione dei posti
   let editWaitlist = true, editCap = null, editGoing = 0, editWaitCount = 0;
+  let editHadEnd = false;
 
   // profilo obbligatorio per creare
   rpc("my_profile").then(async r => {
@@ -371,6 +384,12 @@
     const d = new Date(a.start_at);
     document.getElementById("date").value = localDate(d);
     document.getElementById("time").value = pad(d.getHours()) + ":" + pad(d.getMinutes());
+    if (a.end_at) {
+      const e = new Date(a.end_at);
+      document.getElementById("end-date").value = localDate(e);
+      document.getElementById("end-time").value = pad(e.getHours()) + ":" + pad(e.getMinutes());
+      editHadEnd = true;
+    }
     document.getElementById("place").value = a.meeting_point_text || "";
     document.getElementById("desc").value = a.description || "";
     if (a.max_participants) document.getElementById("maxp").value = a.max_participants;
@@ -570,6 +589,12 @@
     if (!date || !time) return fail("Scegli giorno e ora.");
     const startAt = new Date(date + "T" + time);
     if (startAt <= new Date()) return fail("Questa data è già passata. Scegli un giorno futuro.");
+    const endDate = document.getElementById("end-date").value, endTime = document.getElementById("end-time").value;
+    let endAt = null;
+    if (endDate || endTime) {
+      endAt = new Date((endDate || date) + "T" + (endTime || "23:59"));
+      if (endAt <= startAt) return fail("La fine deve venire dopo l'inizio.");
+    }
     const price = readPrice();
     if (!price.ok) return fail(price.msg);
     if (!point) {
@@ -605,6 +630,8 @@
         p_title: title,
         p_description: document.getElementById("desc").value.trim() || null,
         p_start_at: startAt.toISOString(),
+        p_end_at: endAt ? endAt.toISOString() : null,
+        p_clear_end: !endAt && editHadEnd,
         p_lat: point.lat, p_lng: point.lng,
         p_meeting_point_text: place,
         p_max_participants: Number.isFinite(maxp) ? maxp : null
@@ -626,7 +653,7 @@
         return;
       }
       const bu = ru ? await ru.json().catch(() => ({})) : {};
-      return fail((bu.message || "").includes("start_in_past") ? "Questa data è già passata. Scegli un giorno futuro." : "Non ha funzionato, riprova.");
+      return fail((bu.message || "").includes("start_in_past") ? "Questa data è già passata. Scegli un giorno futuro." : (bu.message || "").includes("invalid_end") ? "La fine deve venire dopo l'inizio." : "Non ha funzionato, riprova.");
     }
     const r = await rpc("create_activity", {
       p_sport: sel.value,
@@ -635,6 +662,7 @@
       p_lat: point.lat, p_lng: point.lng,
       p_meeting_point_text: place,
       p_start_at: startAt.toISOString(),
+      p_end_at: endAt ? endAt.toISOString() : null,
       p_timezone: "Europe/Rome",
       p_description: document.getElementById("desc").value.trim() || null,
       p_max_participants: Number.isFinite(maxp) ? maxp : null,

@@ -388,7 +388,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788597017"></script>
+<script src="app.js?v=1788597883"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -456,7 +456,9 @@
     document.getElementById("title").textContent = ev.title;
     document.getElementById("d-month").textContent = MONTHS[when.getMonth()].slice(0, 3);
     document.getElementById("d-day").textContent = when.getDate();
-    document.getElementById("when").innerHTML = esc((dayKind(when) ? dayLabel(when) + " · " : "") + daySub(when) + " · " + timeStr(when)) + " · <b>" + esc(relTime(when)) + "</b>";
+    const endAt = ev.end_at ? new Date(ev.end_at) : null;
+    const endTxt = !endAt ? "" : (dayKey(endAt) === dayKey(when) ? " – " + timeStr(endAt) : " → fino a " + daySub(endAt) + " " + timeStr(endAt));
+    document.getElementById("when").innerHTML = esc((dayKind(when) ? dayLabel(when) + " · " : "") + daySub(when) + " · " + timeStr(when) + endTxt) + " · <b>" + esc(relTime(when)) + "</b>";
     document.getElementById("place").textContent = (ev.meeting_point_text || "Zona indicativa") + " · apri nelle mappe →";
     document.getElementById("place").href = mapsUrl();
     if (!ev.meeting_point_text) document.getElementById("map-note").hidden = false;
@@ -469,6 +471,12 @@
       if (ev.host_avatar) ha.style.backgroundImage = "url('" + ev.host_avatar.replace(/'/g, "") + "')";
       else ha.textContent = ev.host_name[0].toUpperCase();
     } else {
+      if (ev.club_name) {
+        // aggregata con organizzatore (es. il paese della festa): stessa card dell'host, senza link
+        document.getElementById("host").hidden = false;
+        document.getElementById("host-name").textContent = ev.club_name;
+        document.getElementById("host-avatar").textContent = ev.club_name[0].toUpperCase();
+      }
       document.getElementById("source").hidden = false;
       document.getElementById("chip-agg").hidden = false;
       const l = document.getElementById("source-link");

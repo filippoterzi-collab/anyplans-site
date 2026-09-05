@@ -275,7 +275,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788597017"></script>
+<script src="app.js?v=1788597883"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -366,10 +366,11 @@
       cat: CAT_BY_SLUG[x.sport] || "sport",
       slug: x.sport,
       title: x.title,
-      host: x.host_name || null,
+      host: x.host_name || x.club_name || null,
       hostAvatar: x.host_avatar || null,
       place: x.meeting_point_text || "Zona indicativa",
       when: new Date(x.start_at),
+      end: x.end_at ? new Date(x.end_at) : null,
       going: Number(x.going_count) || 0,
       cap: x.max_participants || null,
       wl: Number(x.waitlist_count) || 0,
@@ -524,7 +525,7 @@
       html += `<div class="ev" id="ev-${e.id}" onclick="location.href='evento.html?id=${e.id}'" onmouseenter="highlight('${e.id}', false)">
         <div class="tile"${e.photo ? ` style="background-image:url('${esc(e.photo)}'); background-size:cover; background-position:center"` : ""}>${e.photo ? "" : e.emoji}</div>
         <div>
-          <div class="time">${timeStr(e.when)} · ${relTime(e.when)}</div>
+          <div class="time">${timeStr(e.when)}${e.end && dayKey(e.end) === dayKey(e.when) ? " – " + timeStr(e.end) : ""} · ${relTime(e.when)}</div>
           <a class="t" href="evento.html?id=${e.id}" onclick="event.stopPropagation()" style="display:block">${esc(e.title)}</a>
           <div class="m">${e.host ? (e.hostAvatar ? `<span class="ha" style="background-image:url('${esc(e.hostAvatar)}')"></span>` : "") + "Di " + esc(e.host) : "Da un altro sito"} · ${esc(e.place)} · ${goingTxt(e.going)}${fullHtml(e)}${e.request ? " · con approvazione" : ""}${e.price > 0 ? ' · <b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(e.price)) + "</b>" : ""}</div>
         </div>
