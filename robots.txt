@@ -1,0 +1,18 @@
+User-agent: *
+Disallow: /bergamo/login.html
+Disallow: /bergamo/profilo.html
+Disallow: /bergamo/crea.html
+Disallow: /bergamo/crea-community.html
+Disallow: /bergamo/dashboard.html
+Disallow: /bergamo/checkin.html
+Disallow: /bergamo/notifiche.html
+Disallow: /bergamo/impostazioni.html
+Disallow: /bergamo/miei.html
+Disallow: /bergamo/seguo.html
+Disallow: /bergamo/chiedi.html
+Disallow: /bergamo/tipo-account.html
+Disallow: /bergamo/raccontaci-gruppo.html
+Disallow: /v2/
+Disallow: /index-waitlist.html
+
+Sitemap: https://anyplans.in/sitemap.xml
