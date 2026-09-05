@@ -42,4 +42,5 @@ jobs:
           git add -A
           if git diff --cached --quiet; then echo "niente di nuovo"; exit 0; fi
           git commit -m "seo: pagine aggiornate"
+          git pull --rebase origin main
           git push
