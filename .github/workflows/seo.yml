@@ -1,0 +1,45 @@
+# anyplans: rigenera le pagine statiche per Google (tools/generate.mjs) e le committa.
+# Sorgente di verità: branding/seo/anyplans-site.yml nel repo Sweatmate (deploy-site.sh lo copia in .github/workflows/seo.yml).
+# Secrets richiesti nel repo: SUPABASE_URL, SUPABASE_ANON_KEY (la anon key è pubblica, ma resta nei secrets).
+name: seo
+
+on:
+  schedule:
+    # 03:30 Europe/Rome = 01:30 UTC con l'ora legale, 02:30 UTC con l'ora solare (GitHub usa solo UTC)
+    - cron: "30 1 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "bergamo/*/**"
+      - "sitemap.xml"
+      - "robots.txt"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo
+  cancel-in-progress: false
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Genera le pagine
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: node tools/generate.mjs --out .
+      - name: Commit e push se è cambiato qualcosa
+        run: |
+          git config user.name "anyplans seo"
+          git config user.email "ciao@anyplans.in"
+          git add -A
+          if git diff --cached --quiet; then echo "niente di nuovo"; exit 0; fi
+          git commit -m "seo: pagine aggiornate"
+          git push

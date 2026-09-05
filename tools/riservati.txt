@@ -1,0 +1,31 @@
+# Nomi che un indice (tipo o paese) non può usare sotto /bergamo/: il generatore si ferma con errore.
+# Un evento con questo slug prende il suffisso data. Una riga per nome, senza estensione.
+# File in /bergamo/ (branding/legal/bergamo/*.html) e cartelle di primo livello del sito.
+app
+checkin
+chiedi
+community
+crea-community
+crea
+dashboard
+eventi
+evento
+gruppi
+impostazioni
+index
+login
+miei
+notifiche
+profilo
+raccontaci-gruppo
+seguo
+tipo-account
+# cartelle generate o fisse
+cosa-fare
+# cartelle di primo livello del sito (il router 404 le tratta come riservate)
+v2
+en
+it
+wallet
+pittogrammi
+assets
