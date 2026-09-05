@@ -112,6 +112,11 @@
   .comm{display:flex; align-items:center; gap:12px; background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:16px; padding:12px 14px;}
   .comm .n{font-weight:700; font-size:14.5px;} .comm .s{font-size:12.5px; color:var(--grey);}
   .comm .v{color:var(--blue); font-weight:700;}
+  .comm .star{color:var(--blue);}
+  .lbl{font-weight:700; font-size:14.5px;}
+  .inp{width:100%; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px;
+       padding:12px 15px; font-size:16px; font-family:var(--round); color:var(--ink);}
+  .btn svg{width:14px; height:14px; vertical-align:-2px; margin-right:4px;}
   .pay{font-size:13.5px; color:var(--grey); border-top:1px solid rgba(25,25,25,.08); padding-top:10px;}
   .pay b{color:var(--ink); font-size:15px;}  .pay span{display:block; font-size:12.5px; margin-top:2px;}
   .box.in .pay{border-top-color:rgba(27,79,216,.25);}
@@ -196,6 +201,7 @@
     <div class="row">
       <button class="btn" onclick="openTicket()">Il mio biglietto</button>
       <button class="btn ghost" onclick="leaveEvent()">Non ci vado più</button>
+      <button class="btn ghost" id="btn-guest-adm" hidden onclick="openGuest()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Aggiungi una persona</button>
       <span class="note" id="going-in"></span>
     </div>
     <p class="pay" id="pay-in" hidden></p>
@@ -207,6 +213,7 @@
       <button class="btn" onclick="shareEvent()">Condividi l'evento</button>
       <a class="btn ghost" id="lnk-edit" href="#">Modifica l'evento</a>
       <a class="btn ghost" id="lnk-checkin" href="#">Segna chi arriva</a>
+      <button class="btn ghost" onclick="openGuest()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Aggiungi una persona</button>
       <span class="note" id="going-host"></span>
     </div>
     <p class="pay" id="pay-host" hidden></p>
@@ -225,7 +232,7 @@
   </div>
   <a class="comm" id="comm" hidden href="#">
     <div class="avatar" id="comm-emoji" style="background:var(--tint); font-size:20px"></div>
-    <div><div class="n" id="comm-name"></div><div class="s" id="comm-sub">Organizza questo gruppo</div></div>
+    <div><div class="n" id="comm-name"></div><div class="s" id="comm-sub">Organizza questo gruppo</div><div class="s" id="comm-age" hidden></div></div>
     <div style="margin-left:auto; font-weight:700; font-size:13.5px; color:var(--blue)">Vedi →</div>
   </a>
   <div class="hostcard" id="source" hidden>
@@ -312,6 +319,20 @@
   </div>
 </div>
 
+<!-- ospite senza account (solo chi gestisce l'evento) -->
+<div class="ov" id="guest-ov" hidden onclick="if(event.target===this)this.hidden=true">
+  <form class="sheet" onsubmit="event.preventDefault(); addGuest()">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:12px">
+      <h2>Aggiungi una persona senza account</h2>
+      <button type="button" class="x" onclick="document.getElementById('guest-ov').hidden=true">×</button>
+    </div>
+    <label class="lbl" for="guest-name">Nome</label>
+    <input class="inp" id="guest-name" type="text" maxlength="60" placeholder="Es. Mario Rossi" autocomplete="off">
+    <p class="note">Per chi non ha il telefono o l'app: lo segni tu, lo vedi nella lista e al check-in.</p>
+    <button class="btn" id="guest-send" type="submit">Aggiungi</button>
+  </form>
+</div>
+
 <!-- modale domande dell'host -->
 <div id="q-overlay" hidden style="position:fixed; inset:0; background:rgba(25,25,25,.55); display:flex;
      align-items:center; justify-content:center; padding:22px; z-index:60">
@@ -343,7 +364,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788592152"></script>
+<script src="app.js?v=1788593462"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -492,6 +513,7 @@
   }
 
   // ---- partecipanti (get_participants è pubblica; le richieste le vede solo l'host) ----
+  let guests = [];
   async function loadPeople(){
     const r = await rpc("get_participants", { p_activity_id: ev.id });
     if (!r || !r.ok) return;
@@ -501,9 +523,16 @@
     const me = myUid();
     const meRow = rows.find(x => x.user_id === me);
     if (!ev.is_mine && meRow && meRow.role === "admin" && meRow.status === "going") canManage = true;
-    if (going.length) {
+    document.getElementById("btn-guest-adm").hidden = !(canManage && !ev.is_mine);
+    // ospiti senza account: li vedono solo chi gestisce e chi partecipa, agli altri non chiediamo nulla
+    guests = [];
+    if (logged && (canManage || (meRow && meRow.status === "going"))) {
+      const rg = await rpc("activity_guests", { p_activity_id: ev.id });
+      if (rg && rg.ok) guests = await rg.json().catch(() => []);
+    }
+    if (going.length || guests.length) {
       document.getElementById("people-wrap").hidden = false;
-      document.getElementById("people-n").textContent = "(" + going.length + ")";
+      document.getElementById("people-n").textContent = "(" + (going.length + guests.length) + ")";
       document.getElementById("people").innerHTML = going.map(p => {
         const isHost = p.user_id === ev.host_id;
         const isAdm = p.role === "admin" && !isHost;
@@ -511,7 +540,9 @@
         if (ev.is_mine && !isHost) act = `<button class="act" onclick="setAdmin('${p.user_id}', ${!isAdm})">${isAdm ? "Togli collaboratore" : "Rendi collaboratore"}</button>`;
         return `<div class="person"><div class="avatar"${avatarStyle(p.avatar_url)}>${p.avatar_url ? "" : esc((p.display_name || "?")[0].toUpperCase())}</div>` +
           `<span>${esc(p.display_name || "Qualcuno")}</span>${isHost ? '<span class="tag">Organizza</span>' : ""}${isAdm ? '<span class="tag adm">Collaboratore</span>' : ""}${act}</div>`;
-      }).join("");
+      }).join("") + guests.map(g =>
+        `<div class="person"><div class="avatar">${esc((g.name || "?")[0].toUpperCase())}</div><span>${esc(g.name)}</span><span class="tag">Ospite</span>` +
+        (canManage ? `<button class="act" onclick="removeGuest('${esc(g.id)}')">Togli</button>` : "") + `</div>`).join("");
       document.getElementById("people-note").hidden = !ev.is_mine;
     }
     if (canManage) {
@@ -534,7 +565,50 @@
     el.hidden = false; el.href = "community.html?slug=" + encodeURIComponent(c.slug);
     document.getElementById("comm-emoji").textContent = c.emoji || "🏷️";
     document.getElementById("comm-name").textContent = c.name;
-    document.getElementById("comm-sub").innerHTML = c.is_verified ? '<span class="v">Verificato da anyplans</span>' : "Community";
+    // recensioni e fascia d'età: arrivano con l'evento (design/sito-landing/spec-recensioni.md, "pagina evento")
+    const n = Number(ev.community_review_count) || 0;
+    const avg = ev.community_review_avg;
+    const rev = (n < 3 || avg == null) ? "Nuovo su anyplans"
+      : '<span class="star" aria-hidden="true">★</span> <span aria-label="' + esc(fmtAvg(avg) + " su 5, " + n + " recensioni") + '">' + esc(fmtAvg(avg)) + " · " + n + " recensioni</span>";
+    document.getElementById("comm-sub").innerHTML = rev + (c.is_verified ? ' · <span class="v">Verificato da anyplans</span>' : "");
+    const band = ev.community_age_band;
+    const age = document.getElementById("comm-age");
+    age.hidden = !band;
+    if (band) age.textContent = "Chi partecipa: " + band[0].toLowerCase() + band.slice(1);
+  }
+  function fmtAvg(v){ return Number(v).toFixed(1).replace(".", ","); }
+
+  // ---- ospiti senza account (add_guest / remove_guest, solo chi gestisce) ----
+  function openGuest(){
+    const ov = document.getElementById("guest-ov"); ov.hidden = false;
+    const inp = document.getElementById("guest-name"); inp.value = ""; inp.focus();
+  }
+  async function addGuest(){
+    const inp = document.getElementById("guest-name");
+    const name = inp.value.trim().replace(/\s+/g, " ");
+    if (name.length < 2) { toast("Scrivi il nome, almeno 2 lettere."); inp.focus(); return; }
+    const btn = document.getElementById("guest-send"); btn.disabled = true;
+    const r = await rpc("add_guest", { p_activity_id: ev.id, p_name: name });
+    btn.disabled = false;
+    if (r && r.ok) {
+      document.getElementById("guest-ov").hidden = true;
+      ev.going_count = Number(ev.going_count) + 1; renderCounts();
+      toast("Aggiunto: " + name); track("guest_add");
+      loadPeople(); return;
+    }
+    const code = r ? ((await r.json().catch(() => ({}))).message || "") : "";
+    toast(code.includes("activity_full") ? "Posti finiti: aumenta i posti da Modifica l'evento."
+        : code.includes("too_many_guests") ? "Puoi aggiungere al massimo 20 persone." : "Non ha funzionato, riprova.");
+  }
+  async function removeGuest(gid){
+    const g = guests.find(x => x.id === gid); if (!g) return;
+    if (!confirm("Vuoi togliere " + g.name + "?")) return;
+    const r = await rpc("remove_guest", { p_guest_id: gid });
+    if (r && r.ok) {
+      ev.going_count = Math.max(0, Number(ev.going_count) - 1); renderCounts();
+      toast("Tolto: " + g.name); track("guest_remove"); loadPeople(); return;
+    }
+    toast("Non ha funzionato, riprova.");
   }
 
   // ---- biglietto: qr con il link di check-in (token per partecipazione, migrazione 0047) ----

@@ -99,7 +99,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1788592152"></script>
+<script src="app.js?v=1788593462"></script>
 <script>
   requireLogin();
   mountNav("", { col: 860 });
@@ -162,6 +162,12 @@
       txt = `<b>${comm}</b>: ${esc(n.subject || "")}`;
       sub = esc(n.body || "");
       href = communityHref(n);
+    } else if (kind === "review_invite") {
+      // il giorno dopo un evento: invito a recensire il gruppo, apre la pagina del gruppo con la modale già su quell'evento
+      icon = `<div class="tile">${esc(n.activity_emoji || "⭐")}</div>`;
+      txt = `Com'è andata a <b>${title}</b>? Lascia una recensione a <b>${comm}</b>`;
+      go = "Scrivi una recensione →";
+      href = communityHref(n) + "&review=" + encodeURIComponent(n.activity_id || "");
     } else if (kind === "friend_request") {
       // amicizie: esistono solo nell'app, sul sito si legge e basta
       icon = avatarHtml(n);

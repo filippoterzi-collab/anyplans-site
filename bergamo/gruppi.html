@@ -68,6 +68,12 @@
   .g .v{font-size:12.5px; font-weight:700; color:var(--blue);}
   .g .m{font-size:13px; color:var(--grey);}
   .g .next{font-size:13px; font-weight:700; color:var(--blue); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+  /* recensioni: "★ 4,8 · 23 recensioni" (stella blu, mai gialla) o "Nuovo su anyplans" sotto le 3 */
+  .g .rating{display:flex; align-items:center; gap:5px; font-size:13px; color:var(--ink);}
+  .g .rating svg{width:14px; height:14px; fill:var(--blue); flex-shrink:0;}
+  .g .rating b{font-weight:800;}
+  .g .rating .rc{font-weight:700; color:var(--blue);}
+  .g .rating .dot{color:var(--grey);}
   .g .follow{height:40px; min-width:96px; padding:0 16px; border-radius:999px; border:1.5px solid var(--blue);
              background:var(--blue); color:#fff; font:700 14px var(--round); cursor:pointer; white-space:nowrap;
              transition:background .15s ease, color .15s ease, transform .12s ease;}
@@ -137,7 +143,7 @@
   <a class="invite" id="invite" href="crea-community.html" hidden>Organizzi eventi? Crea il tuo gruppo →</a>
 </main>
 
-<script src="app.js?v=1788592152"></script>
+<script src="app.js?v=1788593462"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 860 });
@@ -213,6 +219,14 @@
       const when = new Date(g.next_event_at);
       next = `<div class="next">${esc(dayLabel(when))} · ${esc(timeStr(when))} · ${esc(g.next_event_title || "")}</div>`;
     }
+    // riga recensioni: media solo dalle 3 in su; i gruppi arrivati solo da my_communities non hanno il dato
+    let rating = "";
+    const rc = Number(g.review_count) || 0;
+    if (rc >= 3 && g.review_avg != null) {
+      rating = `<div class="rating"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6.1 6.6.8-4.9 4.6 1.3 6.6L12 17.3l-5.9 3.3 1.3-6.6L2.5 9.4l6.6-.8z"/></svg>` +
+        `<b>${Number(g.review_avg).toFixed(1).replace(".", ",")}</b><span class="dot">·</span><span class="rc">${rc} recensioni</span></div>`;
+    } else if (g.review_count != null) rating = '<div class="m">Nuovo su anyplans</div>';
+    const band = g.age_band ? `<div class="m">${esc(g.age_band)}</div>` : "";
     const on = !!g.is_following;
     const action = manage
       ? '<span class="manage">Gestisci →</span>'
@@ -225,6 +239,7 @@
         ${g.is_verified ? '<div class="v">Verificato da anyplans</div>' : ""}
         <div class="m">${esc(emojiOf(g))} ${esc(catLabel(g))}${g.city ? " · " + esc(cityCase(g.city)) : ""}</div>
         <div class="m">${followersTxt(g.follower_count)} · ${upcomingTxt(g.upcoming_count)}</div>
+        ${rating}${band}
         ${next}
       </div>
       ${action}

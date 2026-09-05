@@ -57,6 +57,15 @@
   .ov .res{position:absolute; left:16px; right:16px; bottom:28px; background:#fff; border-radius:18px; padding:16px 18px; font-weight:700; display:flex; align-items:center; gap:12px;}
   .ov .res .s{font-weight:600; font-size:13px; color:var(--grey);}
   .ov .res.ok{border:2px solid var(--blue);}
+  .row .tag{font-size:11px; color:var(--blue); font-weight:700; margin-left:6px;}
+  .btn svg{width:14px; height:14px; flex-shrink:0;}
+  .mov{position:fixed; inset:0; background:rgba(25,25,25,.55); display:flex; align-items:center; justify-content:center; padding:22px; z-index:60;}
+  .sheet{width:100%; max-width:420px; background:var(--bg); border-radius:22px; padding:26px; display:flex; flex-direction:column; gap:14px;}
+  .sheet h2{font-family:var(--display); font-weight:800; letter-spacing:-.045em; font-size:22px;}
+  .x{width:32px; height:32px; border-radius:999px; background:rgba(25,25,25,.08); border:none; cursor:pointer; font-size:16px; font-weight:700; color:var(--ink); flex-shrink:0;}
+  .lbl{font-weight:700; font-size:14.5px;}
+  .inp{width:100%; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px; padding:12px 15px; font-size:16px; font-family:var(--round); color:var(--ink);}
+  .btn[disabled]{opacity:.55; cursor:default;}
   [hidden]{display:none !important;}
   @keyframes sk{from{background-position:200% 0} to{background-position:-200% 0}}
   .sk{height:64px; border-radius:16px; background:linear-gradient(90deg,#F1EFE9 25%,#E9E6DE 50%,#F1EFE9 75%); background-size:200% 100%; animation:sk 1.2s ease-in-out infinite;}
@@ -75,6 +84,7 @@
   <div class="bar"><div id="bar"></div></div>
   <div style="display:flex; gap:10px; flex-wrap:wrap">
     <button class="btn" onclick="openScanner()">📷 Inquadra il biglietto</button>
+    <button class="btn ghost" onclick="openGuest()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Aggiungi una persona</button>
   </div>
   <div class="search">
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6E6E73" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg>
@@ -91,14 +101,28 @@
   <div class="res" id="res" hidden><div class="avatar" id="res-av"></div><div><div id="res-n"></div><div class="s" id="res-s"></div></div></div>
 </div>
 
-<script src="app.js?v=1788592152"></script>
+<!-- ospite senza account: si aggiunge all'ingresso e risulta già presente -->
+<div class="mov" id="guest-ov" hidden onclick="if(event.target===this)this.hidden=true">
+  <form class="sheet" onsubmit="event.preventDefault(); addGuest()">
+    <div style="display:flex; align-items:center; justify-content:space-between; gap:12px">
+      <h2>Aggiungi una persona senza account</h2>
+      <button type="button" class="x" onclick="document.getElementById('guest-ov').hidden=true">×</button>
+    </div>
+    <label class="lbl" for="guest-name">Nome</label>
+    <input class="inp" id="guest-name" type="text" maxlength="60" placeholder="Es. Mario Rossi" autocomplete="off">
+    <p class="note">Per chi non ha il telefono o l'app: lo segni tu, lo vedi nella lista e al check-in.</p>
+    <button class="btn" id="guest-send" type="submit">Aggiungi</button>
+  </form>
+</div>
+
+<script src="app.js?v=1788593462"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
   const tokenFromQr = params.get("t");
-  let ev = null, people = [];
+  let ev = null, people = [], guests = [];
 
   async function load(){
     if (!id) { location.replace("miei.html"); return; }
@@ -115,22 +139,67 @@
     const r = await rpc("get_participants", { p_activity_id: id });
     if (!r || !r.ok) { document.getElementById("list").innerHTML = '<p class="note">Non riesco a caricare gli iscritti. Questa pagina è solo per chi organizza.</p>'; return; }
     people = (await r.json().catch(() => [])).filter(p => p.status === "going");
+    // ospiti senza account (aggiunti da chi organizza): dopo gli iscritti
+    const rg = await rpc("activity_guests", { p_activity_id: id });
+    guests = rg && rg.ok ? await rg.json().catch(() => []) : [];
     render();
   }
   function render(){
     const q = document.getElementById("q").value.trim().toLowerCase();
-    const inN = people.filter(p => p.checked_in).length;
+    const tot = people.length + guests.length;
+    const inN = people.filter(p => p.checked_in).length + guests.filter(g => g.checked_in_at).length;
     document.getElementById("n-in").textContent = inN;
-    document.getElementById("n-tot").textContent = "su " + people.length + " iscritti";
-    document.getElementById("bar").style.width = (people.length ? Math.round(inN / people.length * 100) : 0) + "%";
+    document.getElementById("n-tot").textContent = "su " + tot + " iscritti";
+    document.getElementById("bar").style.width = (tot ? Math.round(inN / tot * 100) : 0) + "%";
     const rows = people.filter(p => !q || (p.display_name || "").toLowerCase().includes(q))
       .sort((a, b) => (a.display_name || "").localeCompare(b.display_name || ""));
+    const grows = guests.filter(g => !q || (g.name || "").toLowerCase().includes(q))
+      .sort((a, b) => (a.name || "").localeCompare(b.name || ""));
     document.getElementById("list").innerHTML = rows.map(p =>
       `<div class="row${p.checked_in ? " in" : ""}" onclick="toggle('${p.user_id}')">
         <div class="avatar"${p.avatar_url ? ` style="background-image:url('${esc(p.avatar_url)}')"` : ""}>${p.avatar_url ? "" : esc((p.display_name || "?")[0].toUpperCase())}</div>
         <div><div class="n">${esc(p.display_name || "Qualcuno")}</div><div class="s">${p.role === "admin" ? "Collaboratore · " : ""}${p.checked_in ? "Presente ✓" : "Non ancora"}</div></div>
         <div class="circle">${p.checked_in ? "✓" : ""}</div>
+      </div>`).join("") + grows.map(g =>
+      `<div class="row${g.checked_in_at ? " in" : ""}" onclick="toggleGuest('${esc(g.id)}')">
+        <div class="avatar">${esc((g.name || "?")[0].toUpperCase())}</div>
+        <div><div class="n">${esc(g.name)}<span class="tag">Ospite</span></div><div class="s">${g.checked_in_at ? "Presente ✓" : "Non ancora"}</div></div>
+        <div class="circle">${g.checked_in_at ? "✓" : ""}</div>
       </div>`).join("") || '<p class="note">Nessuno con questo nome.</p>';
+  }
+  async function toggleGuest(gid){
+    const g = guests.find(x => x.id === gid); if (!g) return;
+    const was = g.checked_in_at, want = !was;
+    g.checked_in_at = want ? new Date().toISOString() : null; render();
+    const r = await rpc("check_in_guest", { p_guest_id: gid, p_present: want });
+    if (!r || !r.ok) { g.checked_in_at = was; render(); toast("Non ha funzionato, riprova."); }
+    else track("checkin_manual");
+  }
+  // ospite aggiunto all'ingresso: compare già presente
+  function openGuest(){
+    document.getElementById("guest-ov").hidden = false;
+    const inp = document.getElementById("guest-name"); inp.value = ""; inp.focus();
+  }
+  async function addGuest(){
+    const inp = document.getElementById("guest-name");
+    const name = inp.value.trim().replace(/\s+/g, " ");
+    if (name.length < 2) { toast("Scrivi il nome, almeno 2 lettere."); inp.focus(); return; }
+    const btn = document.getElementById("guest-send"); btn.disabled = true;
+    const r = await rpc("add_guest", { p_activity_id: id, p_name: name });
+    btn.disabled = false;
+    if (!r || !r.ok) {
+      const code = r ? ((await r.json().catch(() => ({}))).message || "") : "";
+      toast(code.includes("activity_full") ? "Posti finiti: aumenta i posti da Modifica l'evento."
+          : code.includes("too_many_guests") ? "Puoi aggiungere al massimo 20 persone." : "Non ha funzionato, riprova.");
+      return;
+    }
+    const gid = await r.json().catch(() => null);
+    document.getElementById("guest-ov").hidden = true;
+    const g = { id: gid, name: name, checked_in_at: null };
+    guests.push(g); render();
+    toast("Aggiunto: " + name); track("guest_add");
+    const rc = await rpc("check_in_guest", { p_guest_id: gid, p_present: true });
+    if (rc && rc.ok) { g.checked_in_at = new Date().toISOString(); render(); }
   }
   async function toggle(uid){
     const p = people.find(x => x.user_id === uid); if (!p) return;
