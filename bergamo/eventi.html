@@ -275,7 +275,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788593462"></script>
+<script src="app.js?v=1788597017"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -371,6 +371,8 @@
       place: x.meeting_point_text || "Zona indicativa",
       when: new Date(x.start_at),
       going: Number(x.going_count) || 0,
+      cap: x.max_participants || null,
+      wl: Number(x.waitlist_count) || 0,
       my: x.my_status,
       mine: x.is_mine,
       request: x.visibility === "request",
@@ -399,7 +401,7 @@
       const el = document.createElement("div");
       el.className = "pin" + (dayKind(ev.when) === "oggi" ? " today" : ""); el.id = "pin-" + ev.id; el.textContent = ev.emoji;
       const popup = new maplibregl.Popup({ offset: 22, closeButton: false })
-        .setHTML(`<div class="pop"><div class="t">${esc(ev.title)}</div><div class="m">${dayLabel(ev.when)} · ${timeStr(ev.when)} · ${relTime(ev.when)} · ${esc(ev.place)}${ev.price > 0 ? " · " + esc(fmtPrice(ev.price)) : ""}</div></div>`);
+        .setHTML(`<div class="pop"><div class="t">${esc(ev.title)}</div><div class="m">${dayLabel(ev.when)} · ${timeStr(ev.when)} · ${relTime(ev.when)} · ${esc(ev.place)}${ev.price > 0 ? " · " + esc(fmtPrice(ev.price)) : ""}${fullHtml(ev)}</div></div>`);
       const mk = new maplibregl.Marker({ element: el }).setLngLat([ev.lng, ev.lat]).setPopup(popup).addTo(map);
       el.addEventListener("click", () => highlight(ev.id, false));
       markers[ev.id] = mk;
@@ -465,11 +467,19 @@
     return lbl === day;
   }
 
+  // " · Pieno" / " · Pieno · 3 in lista d'attesa" nella riga meta, come il prezzo
+  function fullHtml(e){ const t = fullTxt(e.going, e.cap, e.wl); return t ? ' · <b style="font-weight:600; color:var(--ink)">' + t + "</b>" : ""; }
+  const isFull = e => !!e.cap && e.going >= e.cap;
   function stateBtn(e){
     if (e.mine) return ["ok", "Lo organizzi tu"];
     if (e.my === "going") return ["ok", "Ci vado ✓"];
     if (e.my === "requested") return ["wait", "Aspetto l'ok"];
-    return ["", e.request ? "Chiedo di entrare →" : "Ci sono →"];
+    if (e.my === "waitlisted") return ["wait", "In lista d'attesa"];
+    if (e.request) return ["", "Chiedo di entrare →"];
+    // pieno: in fila ci si mette dalla pagina dell'evento, dove c'è la spiegazione
+    // (il feed non dice se la lista d'attesa è accesa: assumo di sì, è il default; se è spenta la pagina lo spiega)
+    if (isFull(e)) return ["", "Lista d'attesa →"];
+    return ["", "Ci sono →"];
   }
 
   function render(){
@@ -516,7 +526,7 @@
         <div>
           <div class="time">${timeStr(e.when)} · ${relTime(e.when)}</div>
           <a class="t" href="evento.html?id=${e.id}" onclick="event.stopPropagation()" style="display:block">${esc(e.title)}</a>
-          <div class="m">${e.host ? (e.hostAvatar ? `<span class="ha" style="background-image:url('${esc(e.hostAvatar)}')"></span>` : "") + "Di " + esc(e.host) : "Da un altro sito"} · ${esc(e.place)} · ${goingTxt(e.going)}${e.request ? " · con approvazione" : ""}${e.price > 0 ? ' · <b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(e.price)) + "</b>" : ""}</div>
+          <div class="m">${e.host ? (e.hostAvatar ? `<span class="ha" style="background-image:url('${esc(e.hostAvatar)}')"></span>` : "") + "Di " + esc(e.host) : "Da un altro sito"} · ${esc(e.place)} · ${goingTxt(e.going)}${fullHtml(e)}${e.request ? " · con approvazione" : ""}${e.price > 0 ? ' · <b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(e.price)) + "</b>" : ""}</div>
         </div>
         <button class="go ${cls}" onclick="event.stopPropagation(); join('${e.id}')">${label}</button>
       </div>`;
@@ -549,6 +559,8 @@
     const e = EVENTS.find(x => x.id === id);
     if (e.mine) { location.href = "evento.html?id=" + id; return; }
     const leaving = e.my === "going" || e.my === "requested";
+    // in lista d'attesa, o pieno: tutto dalla pagina dell'evento
+    if (e.my === "waitlisted" || (!leaving && !e.request && isFull(e))) { location.href = "evento.html?id=" + id; return; }
     if (leaving && e.my === "requested" && !confirm("Vuoi annullare la richiesta?")) return;
     if (!leaving) {
       // se l'host ha messo delle domande si risponde nella pagina dell'evento
@@ -572,7 +584,7 @@
       const b = r ? await r.json() : {};
       const code = b.message || "";
       if (code.includes("profile_required")) { location.href = "profilo.html"; return; }
-      else if (code.includes("activity_full")) msg = "Posti finiti per questo evento.";
+      else if (code.includes("activity_full")) { msg = "Posti finiti per questo evento."; if (e.cap) { e.going = e.cap; render(); } }
       else if (code.includes("age_not_allowed")) msg = "Questo evento non è aperto alla tua età.";
       else if (code.includes("not_authenticated")) { logout(); return; }
     } catch (_) {}

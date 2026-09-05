@@ -40,7 +40,7 @@
   textarea{min-height:90px; resize:vertical;}
   input:focus, select:focus, textarea:focus{outline:2px solid var(--blue); outline-offset:1px;}
   .grid2{display:grid; grid-template-columns:1fr 1fr; gap:12px;}
-  .grid2[hidden]{display:none;}
+  .grid2[hidden], .toggle-row[hidden]{display:none;}
   .btn{display:block; width:100%; background:var(--blue); color:#fff; font-weight:700;
        padding:15px 0; border-radius:999px; border:none; cursor:pointer; font-size:16.5px;
        font-family:var(--round); text-align:center;}
@@ -163,7 +163,14 @@
   <div class="grid2">
     <div>
       <label for="maxp">Quante persone al massimo? <span style="color:var(--grey); font-weight:600">(se lo lasci vuoto, nessun limite)</span></label>
-      <input id="maxp" type="number" min="2" placeholder="Es. 12">
+      <input id="maxp" type="number" min="2" placeholder="Es. 12" oninput="syncWaitlistRow()">
+    </div>
+    <div class="toggle-row on" id="wl" hidden style="grid-column:1/-1" onclick="toggleWaitlist()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); toggleWaitlist()}" role="switch" aria-checked="true" tabindex="0">
+      <div>
+        <div class="t">Lista d'attesa quando è pieno</div>
+        <div class="s" id="wl-s">Quando i posti finiscono, chi vuole venire si mette in fila. Se qualcuno rinuncia, il primo della fila entra e lo avvisiamo.</div>
+      </div>
+      <div class="sw"><div class="k"></div></div>
     </div>
   </div>
 
@@ -196,7 +203,7 @@
     <p class="hint" style="grid-column:1/-1; margin-top:-4px">Su anyplans non si paga niente. Chi partecipa vede il prezzo e paga direttamente a te, sul posto o come preferisci.</p>
   </div>
 
-  <div class="toggle-row" id="vis" onclick="this.classList.toggle('on')">
+  <div class="toggle-row" id="vis" onclick="this.classList.toggle('on'); syncWaitlistRow()">
     <div>
       <div class="t">Decidi tu chi partecipa</div>
       <div class="s">Ogni persona ti manda una richiesta. L'indirizzo preciso lo vede solo chi accetti.</div>
@@ -210,13 +217,15 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788593462"></script>
+<script src="app.js?v=1788597017"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
   mountTabbar("crea");
   const editId = new URLSearchParams(location.search).get("edit");
   let editVisibility = "open", editSport = null;
+  // in modifica: stato attuale dell'evento per lista d'attesa e validazione dei posti
+  let editWaitlist = true, editCap = null, editGoing = 0, editWaitCount = 0;
 
   // profilo obbligatorio per creare
   rpc("my_profile").then(async r => {
@@ -365,6 +374,11 @@
     document.getElementById("place").value = a.meeting_point_text || "";
     document.getElementById("desc").value = a.description || "";
     if (a.max_participants) document.getElementById("maxp").value = a.max_participants;
+    editCap = a.max_participants || null; editGoing = Number(a.going_count) || 0;
+    editWaitlist = a.waitlist_enabled !== false; editWaitCount = Number(a.waitlist_count) || 0;
+    setWaitlist(editWaitlist);
+    if (editWaitCount > 0) lockWaitlist();
+    syncWaitlistRow();
     if (a.photo_url) { showEventPhoto(a.photo_url); photoState = "keep"; }
     if (a.price_cents != null && a.price_cents > 0) {
       document.getElementById("paid").classList.add("on"); document.getElementById("price-wrap").hidden = false;
@@ -409,6 +423,41 @@
     const vis = document.getElementById("vis");
     vis.hidden = v === "private";
     if (v === "private") vis.classList.remove("on");
+    syncWaitlistRow();
+  }
+  // lista d'attesa quando è pieno: la riga c'è solo con un numero di posti (>= 2) e senza approvazione
+  // (con "Decidi tu chi partecipa" la fila è già la lista delle richieste)
+  const WL_ON = "Quando i posti finiscono, chi vuole venire si mette in fila. Se qualcuno rinuncia, il primo della fila entra e lo avvisiamo.";
+  const WL_OFF = "Quando i posti finiscono, nessuno può più iscriversi. Puoi sempre aumentare i posti da \"Modifica l'evento\".";
+  function syncWaitlistRow(){
+    const n = parseInt(document.getElementById("maxp").value, 10);
+    const approval = document.getElementById("vis").classList.contains("on");
+    document.getElementById("wl").hidden = !(Number.isFinite(n) && n >= 2) || approval;
+  }
+  function setWaitlist(on){
+    const row = document.getElementById("wl");
+    row.classList.toggle("on", on); row.setAttribute("aria-checked", String(on));
+    document.getElementById("wl-s").textContent = on ? WL_ON : WL_OFF;
+  }
+  function toggleWaitlist(){
+    const row = document.getElementById("wl");
+    if (row.getAttribute("aria-disabled") === "true") return;
+    setWaitlist(!row.classList.contains("on"));
+  }
+  function lockWaitlist(){
+    const row = document.getElementById("wl");
+    row.classList.add("on"); row.setAttribute("aria-checked", "true");
+    row.setAttribute("aria-disabled", "true"); row.style.opacity = ".6"; row.style.cursor = "default";
+    document.getElementById("wl-s").textContent = "Non puoi spegnerla finché c'è qualcuno in fila: dalla pagina dell'evento puoi farli entrare o toglierli.";
+  }
+  function chosenWaitlist(){ return document.getElementById("wl").classList.contains("on"); }
+  async function saveWaitlist(activityId, wanted, current){
+    if (wanted === current) return;
+    const r = await rpc("set_activity_waitlist", { p_activity_id: activityId, p_enabled: wanted });
+    if (r && r.ok) return;
+    const code = r ? ((await r.json().catch(() => ({}))).message || "") : "";
+    toast(code.includes("waitlist_not_empty") ? "Non puoi spegnere la lista d'attesa finché c'è qualcuno in fila: dalla pagina dell'evento puoi farli entrare o toglierli."
+        : "Salvato, ma la lista d'attesa no. Riprova da \"Modifica l'evento\".");
   }
   function chosenVisibility(){
     if (visChoice === "private") return "private";
@@ -534,9 +583,22 @@
       if (!point) return fail("Non trovo il posto: scegli dalla lista o tocca la mappa.");
     }
 
+    const maxp = parseInt(document.getElementById("maxp").value, 10);
+    const hasCap = Number.isFinite(maxp);
+    if (editId) {
+      // mai sotto gli iscritti (going + ospiti): nessuno viene buttato fuori
+      if (hasCap && maxp < editGoing) return fail("Ci sono già " + editGoing + " iscritti: i posti non possono essere meno di " + editGoing + ".");
+      // più posti (o nessun limite) con gente in fila: entrano subito, in ordine
+      if (editWaitCount > 0 && editCap && (!hasCap || maxp > editCap)) {
+        const n = hasCap ? Math.min(editWaitCount, maxp - Math.max(editCap, editGoing)) : editWaitCount;
+        const who = n === 1 ? "1 persona" : n + " persone";
+        const msg = hasCap ? "Con più posti " + (n === 1 ? "entra subito la prima persona" : "entrano subito le prime " + who) + " in lista d'attesa. Vuoi continuare?"
+                           : "Senza limite di posti " + (n === 1 ? "entra subito la persona" : "entrano subito tutte le " + who) + " in lista d'attesa. Vuoi continuare?";
+        if (n > 0 && !confirm(msg)) return;
+      }
+    }
     const btn = document.getElementById("btn");
     btn.disabled = true; note.className = "note"; note.textContent = "…";
-    const maxp = parseInt(document.getElementById("maxp").value, 10);
     if (editId) {
       const ru = await rpc("update_activity", {
         p_activity_id: editId,
@@ -552,6 +614,7 @@
         await savePrice(editId, price);
         await savePhoto(editId);
         await saveVisibility(editId, chosenVisibility(), editVisibility);
+        if (hasCap && chosenVisibility() !== "request") await saveWaitlist(editId, chosenWaitlist(), editWaitlist);
         if (editSport && sel.value !== editSport) {
           const rsp = await rpc("set_activity_sport", { p_activity_id: editId, p_sport: sel.value });
           if (!rsp || !rsp.ok) toast("Salvato, ma il tipo di evento no. Riprova.");
@@ -588,6 +651,7 @@
       if (price.cents) await savePrice(newId, price);
       await savePhoto(newId);
       if (chosenVisibility() === "private") await saveVisibility(newId, "private", "open");
+      if (hasCap && chosenVisibility() !== "request" && !chosenWaitlist()) await saveWaitlist(newId, false, true);
       const asC = document.getElementById("as").value;
       if (asC) {
         const rc = await rpc("set_activity_community", { p_activity_id: newId, p_community_id: asC });

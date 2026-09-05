@@ -123,7 +123,9 @@
   .req{display:flex; align-items:center; gap:12px; background:#fff; border:1.5px solid rgba(25,25,25,.10);
        border-radius:14px; padding:12px 14px;}
   .req .n{font-weight:700; font-size:14.5px;}
+  .req .num{width:20px; font-size:13px; font-weight:800; color:var(--blue); flex-shrink:0;}
   .req .acts{margin-left:auto; display:flex; gap:8px;}
+  #waits .req{flex-wrap:wrap;}
   .req .no{background:#fff; color:var(--ink); box-shadow:inset 0 0 0 1.5px rgba(25,25,25,.16);}
   @keyframes sk{from{background-position:200% 0} to{background-position:-200% 0}}
   .center{display:flex; flex-direction:column; align-items:center; gap:14px; text-align:center; padding:60px 0;}
@@ -153,6 +155,7 @@
   <div class="chips">
     <span class="chip" id="chip-cat"></span>
     <span class="chip w" id="chip-price">Gratis</span>
+    <span class="chip w" id="chip-full" hidden></span>
     <span class="chip w" id="chip-req" hidden>Con approvazione</span>
     <span class="chip w" id="chip-priv" hidden>🔒 Privato · solo con il link</span>
     <span class="chip w" id="chip-agg" hidden>Da un altro sito</span>
@@ -171,6 +174,7 @@
   <div class="box" id="box-guest" hidden>
     <h2>Ci sei?</h2>
     <p class="m">Per iscriverti serve un account: è gratis e ci vuole un minuto. Gli altri iscritti vedranno il tuo nome.</p>
+    <p class="m" id="guest-full" hidden>È pieno, ma con un account puoi metterti in lista d'attesa.</p>
     <div class="row">
       <a class="btn" href="login.html" onclick="rememberNext()">Registrati (è gratis)</a>
       <span class="note" id="going-guest"></span>
@@ -178,13 +182,25 @@
     <p class="pay" id="pay-guest" hidden></p>
   </div>
   <div class="box" id="box-join" hidden>
-    <h2>Ci sei?</h2>
+    <h2 id="join-h2">Ci sei?</h2>
     <p class="m" id="join-hint" hidden>Qui decide chi organizza: gli mandi una richiesta e ti risponde.</p>
+    <p class="m" id="full-hint" hidden></p>
     <div class="row">
       <button class="btn" id="btn-join" onclick="joinEvent()">Ci sono</button>
+      <button class="btn" id="btn-wait" hidden onclick="joinWaitlist()">Mettimi in lista d'attesa</button>
+      <a class="lnk" id="lnk-others" hidden href="eventi.html">Guarda gli altri eventi →</a>
       <span class="note" id="going-join"></span>
     </div>
     <p class="pay" id="pay-join" hidden></p>
+  </div>
+  <div class="box" id="box-wait" hidden>
+    <h2>Sei in lista d'attesa</h2>
+    <p class="m"><b id="wait-pos" style="color:var(--ink)"></b><br>Se si libera un posto, entri in automatico e ti avvisiamo. Non devi fare niente.</p>
+    <div class="row">
+      <button class="btn ghost" onclick="leaveEvent()">Esci dalla lista d'attesa</button>
+      <span class="note" id="going-wait"></span>
+    </div>
+    <p class="pay" id="pay-wait" hidden></p>
   </div>
   <div class="box" id="box-requested" hidden>
     <h2>Richiesta mandata ⏳</h2>
@@ -196,8 +212,8 @@
     <p class="pay" id="pay-req" hidden></p>
   </div>
   <div class="box in" id="box-in" hidden>
-    <h2>Ci sei! 🫶</h2>
-    <p class="m">Chi organizza e gli altri iscritti vedono il tuo nome.</p>
+    <h2 id="in-h2">Ci sei! 🫶</h2>
+    <p class="m" id="in-m">Chi organizza e gli altri iscritti vedono il tuo nome.</p>
     <div class="row">
       <button class="btn" onclick="openTicket()">Il mio biglietto</button>
       <button class="btn ghost" onclick="leaveEvent()">Non ci vado più</button>
@@ -209,6 +225,7 @@
   <div class="box in" id="box-host" hidden>
     <h2>Lo organizzi tu</h2>
     <p class="m">Manda il link ai tuoi amici. Qui sotto vedi chi si iscrive.</p>
+    <p class="m" id="host-full" hidden>È pieno. Per far entrare altre persone aumenta i posti da "Modifica l'evento".</p>
     <div class="row">
       <button class="btn" onclick="shareEvent()">Condividi l'evento</button>
       <a class="btn ghost" id="lnk-edit" href="#">Modifica l'evento</a>
@@ -257,6 +274,13 @@
   <div id="people-wrap" hidden>
     <div class="sec" style="margin-bottom:8px">Chi ci va <span id="people-n"></span></div>
     <div class="people" id="people"></div>
+  </div>
+
+  <!-- in lista d'attesa (solo chi organizza e i collaboratori) -->
+  <div id="wait-wrap" hidden>
+    <div class="sec" style="margin-bottom:4px">In lista d'attesa <span id="wait-n"></span></div>
+    <p class="note" style="margin-bottom:8px">In ordine di arrivo. Quando si libera un posto entra chi è in cima, da solo.</p>
+    <div id="waits" style="display:flex; flex-direction:column; gap:8px"></div>
   </div>
 
 
@@ -364,12 +388,13 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788593462"></script>
+<script src="app.js?v=1788597017"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
   const wantSlug = params.get("slug");
   const wantJoin = params.get("join") === "1";
+  const promoted = params.get("promoted") === "1"; // arrivo dall'avviso "si è liberato un posto"
   const logged = !!(session && session.access_token);
   let ev = null;
   if (logged) mountNav("", { col: 1000, hero: true });
@@ -472,6 +497,7 @@
     document.getElementById("loading").hidden = true;
     document.getElementById("page").hidden = false;
     track("event_view", "/evento/" + ev.id);
+    if (promoted && ev.my_status === "going") track("waitlist_promoted_view");
 
     const map = new maplibregl.Map({ container: "map", style: "https://tiles.openfreemap.org/styles/liberty",
                                      center: [ev.lng, ev.lat], zoom: 14.5, interactive: false, attributionControl: false });
@@ -483,33 +509,78 @@
     new maplibregl.Marker({ element: el }).setLngLat([ev.lng, ev.lat]).addTo(map);
 
     loadPeople();
-    if (wantJoin && logged && !ev.is_mine && ev.my_status !== "going" && ev.my_status !== "requested") joinEvent();
+    if (wantJoin && logged && !ev.is_mine && ev.my_status !== "going" && ev.my_status !== "requested" && ev.my_status !== "waitlisted") joinEvent();
   }
 
+  // pieno = iscritti (con ospiti) >= posti massimi; la lista d'attesa vale solo senza approvazione
+  function isFull(){ return !!ev.max_participants && (Number(ev.going_count) || 0) >= ev.max_participants; }
+  function waitOn(){ return ev.waitlist_enabled !== false && ev.visibility !== "request"; }
   function updateBoxes(){
-    const st = ev.my_status;
+    const st = ev.my_status, full = isFull(), isReq = ev.visibility === "request";
     document.getElementById("box-guest").hidden = logged;
     document.getElementById("box-host").hidden = !(logged && ev.is_mine);
-    document.getElementById("box-join").hidden = !logged || ev.is_mine || st === "going" || st === "requested";
+    document.getElementById("box-join").hidden = !logged || ev.is_mine || st === "going" || st === "requested" || st === "waitlisted";
     document.getElementById("box-requested").hidden = !logged || ev.is_mine || st !== "requested";
     document.getElementById("box-in").hidden = !logged || ev.is_mine || st !== "going";
+    document.getElementById("box-wait").hidden = !logged || ev.is_mine || st !== "waitlisted";
+    // box "ci sei?" quando è pieno: lista d'attesa, oppure niente da fare; con approvazione resta la richiesta
+    const hint = document.getElementById("full-hint");
+    document.getElementById("join-h2").textContent = full && !isReq ? "È pieno" : "Ci sei?";
+    document.getElementById("join-hint").textContent = full && isReq
+      ? "Qui decide chi organizza. I posti sono finiti, ma puoi mandare lo stesso la richiesta: se si libera un posto, chi organizza sceglie tra chi ha chiesto."
+      : "Qui decide chi organizza: gli mandi una richiesta e ti risponde.";
+    hint.hidden = !(full && !isReq);
+    hint.textContent = waitOn() ? "I posti sono finiti. Se ti metti in lista d'attesa e qualcuno rinuncia, entri in automatico e ti avvisiamo."
+                                : "I posti sono finiti e non c'è la lista d'attesa. Se qualcuno rinuncia, i posti tornano liberi qui.";
+    document.getElementById("btn-join").hidden = full && !isReq;
+    document.getElementById("btn-wait").hidden = !(full && !isReq && waitOn());
+    document.getElementById("lnk-others").hidden = !(full && !isReq && !waitOn());
+    document.getElementById("guest-full").hidden = !(full && waitOn());
+    document.getElementById("host-full").hidden = !(full && !waitOn());
+    // in lista: "Sei al 3° posto in fila."
+    const pos = Number(ev.my_waitlist_position) || 0;
+    const wp = document.getElementById("wait-pos");
+    wp.textContent = pos === 1 ? "Sei al 1° posto in fila: al primo posto che si libera, entri." : pos ? "Sei al " + ordinal(pos) + " posto in fila." : "Sei in fila.";
+    wp.setAttribute("aria-label", pos ? "Sei al posto numero " + pos + " in fila" : "Sei in fila");
+    // entrato dalla fila (link dell'avviso)
+    if (promoted && st === "going") {
+      document.getElementById("in-h2").textContent = "Si è liberato un posto: ci vai! 🫶";
+      document.getElementById("in-m").textContent = "Il tuo nome è nella lista dei partecipanti. Se non puoi più venire, dillo subito: il posto passa al prossimo in fila.";
+    }
   }
   function renderPay(){
     const paid = ev.price_cents != null && ev.price_cents > 0;
     const line1 = paid ? "<b>" + esc(fmtPrice(ev.price_cents)) + "</b> a persona" + (ev.price_note ? " · " + esc(ev.price_note) : "") : "";
     const second = { guest: "Si paga a chi organizza, non su anyplans. Iscriversi qui è gratis.", join: "Si paga a chi organizza, non su anyplans. Iscriversi qui è gratis.",
-      req: "Si paga a chi organizza, non su anyplans. Iscriversi qui è gratis.", in: "Ricordati di pagare chi organizza: sul posto, o come ti dice.",
+      req: "Si paga a chi organizza, non su anyplans. Iscriversi qui è gratis.", wait: "Si paga a chi organizza, non su anyplans. Iscriversi qui è gratis.",
+      in: "Ricordati di pagare chi organizza: sul posto, o come ti dice.",
       host: "Lo incassi tu, direttamente. anyplans mostra solo il prezzo." };
     Object.keys(second).forEach(k => { const p = document.getElementById("pay-" + k); p.hidden = !paid; if (paid) p.innerHTML = line1 + "<span>" + second[k] + "</span>"; });
     const tk = document.getElementById("tk-pay"); tk.hidden = !paid;
     if (paid) tk.textContent = "Da pagare a chi organizza: " + fmtPrice(ev.price_cents) + (ev.price_note ? " · " + ev.price_note : "");
   }
-  function renderCounts(){
+  // "20 ci vanno · Pieno · 3 in lista d'attesa" (contatore) e chip "Pieno · 3 in lista d'attesa"
+  function seatsTxt(){
     const going = Number(ev.going_count) || 0;
-    const cap = ev.max_participants ? " · " + Math.max(0, ev.max_participants - going) + " posti liberi" : "";
-    const gtxt = (going === 0 ? "Nessuno ancora, sei il primo?" : going === 1 ? "1 persona ci va" : going + " ci vanno") + cap;
-    ["going-guest","going-join","going-in","going-req","going-host"].forEach(x => document.getElementById(x).textContent = gtxt);
+    if (!ev.max_participants) return "";
+    const free = Math.max(0, ev.max_participants - going);
+    return free === 0 ? " · Pieno" : " · " + free + (free === 1 ? " posto libero" : " posti liberi");
+  }
+  function renderCounts(){
+    const going = Number(ev.going_count) || 0, wl = Number(ev.waitlist_count) || 0;
+    const fila = wl ? " · " + wl + " in lista d'attesa" : "";
+    const gtxt = (going === 0 ? "Nessuno ancora, sei il primo?" : going === 1 ? "1 persona ci va" : going + " ci vanno") + seatsTxt() + fila;
+    ["going-guest","going-join","going-in","going-req","going-host","going-wait"].forEach(x => document.getElementById(x).textContent = gtxt);
+    const chip = document.getElementById("chip-full");
+    chip.hidden = !isFull(); chip.textContent = fullTxt(going, ev.max_participants, wl);
     updateBoxes();
+  }
+  // dopo un'azione ricarico la riga (posizione in fila e contatori veri, non stimati)
+  async function reloadEvent(){
+    const r = await rpc("activity_by_id", { p_id: ev.id });
+    const row = r && r.ok ? (await r.json().catch(() => []))[0] : null;
+    if (row) Object.assign(ev, row);
+    renderCounts();
   }
 
   // ---- partecipanti (get_participants è pubblica; le richieste le vede solo l'host) ----
@@ -545,6 +616,7 @@
         (canManage ? `<button class="act" onclick="removeGuest('${esc(g.id)}')">Togli</button>` : "") + `</div>`).join("");
       document.getElementById("people-note").hidden = !ev.is_mine;
     }
+    if (canManage) loadWaitlist();
     if (canManage) {
       document.getElementById("req-wrap").hidden = !reqs.length;
       document.getElementById("req-n").textContent = "(" + reqs.length + ")";
@@ -554,6 +626,43 @@
         `<div class="acts"><button class="btn sm no" onclick="respond('${p.user_id}', false)">No</button>` +
         `<button class="btn sm" onclick="respond('${p.user_id}', true)">Sì</button></div></div>`).join("");
     }
+  }
+  // ---- lista d'attesa, lato chi organizza (activity_waitlist: agli altri 0 righe) ----
+  let waitRows = [];
+  async function loadWaitlist(){
+    const r = await rpc("activity_waitlist", { p_activity_id: ev.id });
+    if (!r || !r.ok) return;
+    waitRows = await r.json().catch(() => []);
+    document.getElementById("wait-wrap").hidden = !waitRows.length;
+    document.getElementById("wait-n").textContent = "(" + waitRows.length + ")";
+    document.getElementById("waits").innerHTML = waitRows.map((p, i) =>
+      `<div class="req" id="wl-${p.user_id}"><span class="num">${p.position || i + 1}</span><div class="avatar"${avatarStyle(p.avatar_url)}>${p.avatar_url ? "" : esc((p.display_name || "?")[0].toUpperCase())}</div>` +
+      `<div class="n">${esc(p.display_name || "Qualcuno")}</div>` +
+      `<div class="acts"><button class="btn sm no" onclick="removeWait('${p.user_id}')">Togli</button>` +
+      `<button class="btn sm" onclick="admitWait('${p.user_id}')">Fai entrare</button></div></div>`).join("");
+  }
+  // "fai entrare": la persona diventa going; se era pieno i posti massimi salgono di 1 (promote_from_waitlist ritorna il nuovo massimo)
+  async function admitWait(uid){
+    const p = waitRows.find(x => x.user_id === uid); if (!p) return;
+    const row = document.getElementById("wl-" + uid);
+    row.querySelectorAll("button").forEach(b => b.disabled = true);
+    const oldCap = ev.max_participants;
+    const r = await rpc("promote_from_waitlist", { p_activity_id: ev.id, p_user_id: uid });
+    if (r && r.ok) {
+      const newCap = Number(await r.json().catch(() => oldCap));
+      toast((p.display_name || "Qualcuno") + " entra." + (oldCap && newCap > oldCap ? " I posti ora sono " + newCap + "." : ""));
+      track("waitlist_admit"); await reloadEvent(); loadPeople(); return;
+    }
+    row.querySelectorAll("button").forEach(b => b.disabled = false);
+    toast("Non ha funzionato, riprova.");
+  }
+  async function removeWait(uid){
+    const p = waitRows.find(x => x.user_id === uid); if (!p) return;
+    const name = p.display_name || "questa persona";
+    if (!confirm("Vuoi togliere " + name + " dalla lista d'attesa?")) return;
+    const r = await rpc("remove_participant", { p_activity_id: ev.id, p_user_id: uid });
+    if (r && r.ok) { toast("Fatto: " + name + " non è più in lista d'attesa."); track("waitlist_remove"); await reloadEvent(); loadPeople(); return; }
+    toast("Non ha funzionato, riprova.");
   }
   async function loadCommunity(){
     const r = await rpc("activity_community", { p_activity_id: ev.id });
@@ -710,7 +819,7 @@
     x.fillStyle = "rgba(255,255,255,.85)"; x.font = "600 36px " + ROUND;
     y = wrapText(x, (ev.meeting_point_text || "Bergamo") + (ev.host_name ? " · con " + ev.host_name : ""), 90, y, 900, 46, 2);
     const going = Number(ev.going_count) || 0; y += 30;
-    x.fillText(going + (going === 1 ? " persona ci va" : " ci vanno") + (ev.max_participants ? " · " + Math.max(0, ev.max_participants - going) + " posti liberi" : ""), 90, y);
+    x.fillText(going + (going === 1 ? " persona ci va" : " ci vanno") + seatsTxt(), 90, y);
     // pill "ci sei?"
     x.fillStyle = "#fff"; x.beginPath(); x.roundRect(90, 1560, 330, 110, 55); x.fill();
     x.fillStyle = "#1B4FD8"; x.font = "800 52px " + DISPLAY; x.fillText("Ci sei?", 150, 1634);
@@ -789,16 +898,48 @@
   }
 
   // ---- unirsi ----
-  let questions = null;
+  let questions = null, pendingWait = false; // pendingWait: la modale delle domande chiude con la lista d'attesa
+  async function loadQuestions(){
+    if (questions !== null) return;
+    try {
+      const rq = await rpc("get_activity_questions", { p_activity_id: ev.id });
+      questions = rq && rq.ok ? await rq.json() : [];
+    } catch (_) { questions = []; }
+  }
   async function joinEvent(){
-    if (questions === null) {
-      try {
-        const rq = await rpc("get_activity_questions", { p_activity_id: ev.id });
-        questions = rq && rq.ok ? await rq.json() : [];
-      } catch (_) { questions = []; }
-    }
+    await loadQuestions();
+    pendingWait = false;
     if (questions.length) { openQuestions(); return; }
     doJoin();
+  }
+  async function joinWaitlist(){
+    await loadQuestions();
+    pendingWait = true;
+    if (questions.length) { openQuestions(); return; }
+    doJoinWaitlist();
+  }
+  // join_waitlist risponde 'going' (c'era posto) o 'waitlisted'
+  async function doJoinWaitlist(){
+    const btn = document.getElementById("btn-wait"); btn.disabled = true;
+    const r = await rpc("join_waitlist", { p_activity_id: ev.id });
+    btn.disabled = false;
+    if (r && r.ok) {
+      const res = String(await r.json().catch(() => "waitlisted")).replace(/"/g, "");
+      await reloadEvent();
+      if (res === "going" || ev.my_status === "going") { ev.my_status = "going"; renderCounts(); toast("C'era ancora un posto: ci vai!"); track("join"); }
+      else { ev.my_status = "waitlisted"; renderCounts(); track("waitlist_join");
+        toast("Sei in lista d'attesa" + (ev.my_waitlist_position ? ", al " + ordinal(ev.my_waitlist_position) + " posto" : "") + ". Se si libera un posto ti avvisiamo."); }
+      loadPeople();
+      return true;
+    }
+    const b = r ? await r.json().catch(() => ({})) : {};
+    const code = b.message || "";
+    if (code.includes("profile_required")) { rememberNext(); location.href = "profilo.html"; return false; }
+    if (code.includes("age_not_allowed")) { toast("Questo evento non è aperto alla tua età."); return false; }
+    if (code.includes("already")) { await reloadEvent(); return true; }
+    if (code.includes("waitlist_disabled") || code.includes("approval_required")) { await reloadEvent(); toast("Posti finiti per questo evento."); return false; }
+    toast("Non ha funzionato, riprova.");
+    return false;
   }
   function openQuestions(){
     const wrap = document.getElementById("q-fields");
@@ -822,7 +963,7 @@
           style="width:100%; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px;
                  padding:12px 15px; font-size:15px; font-family:var(--round)"></div>`;
     }).join("");
-    document.getElementById("q-send").textContent = ev.visibility === "request" ? "Manda la richiesta" : "Conferma: ci sono";
+    document.getElementById("q-send").textContent = pendingWait ? "Conferma: mettimi in lista d'attesa" : ev.visibility === "request" ? "Manda la richiesta" : "Conferma: ci sono";
     document.getElementById("q-note").textContent = "";
     document.getElementById("q-overlay").hidden = false;
   }
@@ -848,7 +989,7 @@
     });
     if (missing) { document.getElementById("q-note").textContent = "Manca qualche risposta obbligatoria (quelle con *)."; document.getElementById("q-note").style.color = "var(--red)"; return; }
     const btn = document.getElementById("q-send"); btn.disabled = true;
-    const ok = await doJoin();
+    const ok = pendingWait ? await doJoinWaitlist() : await doJoin();
     if (ok && Object.keys(answers).length) {
       const ra = await rpc("answer_questions", { p_activity_id: ev.id, p_answers: answers });
       if (!ra || !ra.ok) toast("Iscrizione fatta, ma le risposte non si sono salvate. Riprova.");
@@ -872,19 +1013,25 @@
     const b = r ? await r.json().catch(() => ({})) : {};
     const code = b.message || "";
     if (code.includes("profile_required")) { rememberNext(); location.href = "profilo.html"; return false; }
-    if (code.includes("activity_full")) { toast("Posti finiti per questo evento."); return false; }
+    if (code.includes("activity_full")) {
+      // i posti sono finiti mentre guardavo: contatori veri e box "è pieno" (con la lista d'attesa, se c'è)
+      await reloadEvent();
+      toast(waitOn() ? "I posti sono appena finiti. Puoi metterti in lista d'attesa." : "Posti finiti per questo evento.");
+      return false;
+    }
     if (code.includes("age_not_allowed")) { toast("Questo evento non è aperto alla tua età."); return false; }
     if (code.includes("already")) { ev.my_status = isReq ? "requested" : "going"; renderCounts(); return true; }
     toast("Non ha funzionato, riprova.");
     return false;
   }
   async function leaveEvent(){
-    const wasGoing = ev.my_status === "going";
+    const was = ev.my_status;
     const r = await rpc("join_activity", { p_activity_id: ev.id, p_status: "left" });
     if (r && r.ok) {
       ev.my_status = "left";
-      if (wasGoing) ev.going_count = Math.max(0, Number(ev.going_count) - 1);
-      renderCounts(); loadPeople(); return;
+      if (was === "waitlisted") { toast("Fatto, non sei più in lista d'attesa."); track("waitlist_leave"); }
+      // chi esce da going può far entrare il primo in fila: i numeri veri arrivano dalla riga ricaricata
+      await reloadEvent(); ev.my_status = "left"; renderCounts(); loadPeople(); return;
     }
     toast("Non ha funzionato, riprova.");
   }

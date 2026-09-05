@@ -91,7 +91,7 @@
   <div id="list"><p style="color:var(--grey)">Carico…</p></div>
 </main>
 
-<script src="app.js?v=1788593462"></script>
+<script src="app.js?v=1788597017"></script>
 <script>
   requireLogin();
   mountNav("i miei eventi", { col: 860 });
@@ -103,13 +103,13 @@
     if (!r || !r.ok) { list.innerHTML = '<p style="color:var(--grey)">Non riesco a caricare. Ricarica la pagina.</p>'; return; }
     const rows = (await r.json())
       .filter(x => new Date(x.start_at) >= new Date(Date.now() - 3 * 3600 * 1000))
-      .filter(x => x.my_status === "going" || x.my_status === "requested" || x.is_mine)
+      .filter(x => x.my_status === "going" || x.my_status === "requested" || x.my_status === "waitlisted" || x.is_mine)
       .sort((a, b) => new Date(a.start_at) - new Date(b.start_at));
 
     if (!rows.length) {
       list.innerHTML = `<div class="empty" style="padding:34px 0 18px">
         <div style="font-size:48px">🫥</div>
-        <p style="color:var(--grey); max-width:300px">Non hai ancora eventi in lista. Ecco i prossimi:</p>
+        <p style="color:var(--grey); max-width:300px">Non sei ancora iscritto a nessun evento. Ecco i prossimi:</p>
       </div><div id="suggest" style="display:flex; flex-direction:column; gap:12px"></div>
       <div style="text-align:center; margin-top:18px"><a class="btn" style="display:inline-block" href="eventi.html">Vedi tutti gli eventi</a></div>`;
       suggest();
@@ -124,13 +124,15 @@
         const isToday = dayKind(when) === "oggi";
         html += `<div class="day${isToday ? " today" : ""}"><span class="dot"></span><b>${dayLabel(when)}</b><span>${daySub(when)}</span></div>`;
       }
-      const badge = x.is_mine ? "Lo organizzo io" : (x.my_status === "requested" ? "Aspetto l'ok" : "Ci vado ✓");
+      const badge = x.is_mine ? "Lo organizzo io" : x.my_status === "requested" ? "Aspetto l'ok"
+        : x.my_status === "waitlisted" ? "In lista d'attesa" + (x.my_waitlist_position ? " (" + ordinal(x.my_waitlist_position) + ")" : "") : "Ci vado ✓";
+      const full = fullTxt(x.going_count, x.max_participants, x.waitlist_count);
       html += `<a class="ev" href="evento.html?id=${x.id}">
         <div class="tile"${x.photo_url ? ` style="background-image:url('${esc(x.photo_url)}'); background-size:cover; background-position:center"` : ""}>${x.photo_url ? "" : x.emoji || "📍"}</div>
         <div>
           <div class="time">${timeStr(when)} · ${relTime(when)}</div>
           <div class="t">${esc(x.title)}</div>
-          <div class="m">${esc(x.meeting_point_text || "Zona indicativa")} · ${goingTxt(x.going_count)}</div>
+          <div class="m">${esc(x.meeting_point_text || "Zona indicativa")} · ${goingTxt(x.going_count)}${full ? ' · <b style="font-weight:600; color:var(--ink)">' + full + "</b>" : ""}</div>
         </div>
         <span class="badge">${badge}</span>
       </a>`;

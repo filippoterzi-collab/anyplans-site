@@ -99,7 +99,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1788593462"></script>
+<script src="app.js?v=1788597017"></script>
 <script>
   requireLogin();
   mountNav("", { col: 860 });
@@ -121,7 +121,7 @@
 
   // kind: contratto 0047 ('join'|'request'|'approved'|'community_event'|'blast');
   // accetto anche i nomi della v3 finché la migrazione non è applicata
-  const KIND_ALIAS = { join_request: "request", request_approved: "approved" };
+  const KIND_ALIAS = { join_request: "request", request_approved: "approved", waitlist_in: "waitlist_promoted" };
 
   function avatarHtml(n){
     if (n.actor_avatar) return `<div class="avatar" style="background-image:url('${esc(n.actor_avatar)}')"></div>`;
@@ -150,6 +150,14 @@
       icon = `<div class="tile">${esc(n.activity_emoji || "✓")}</div>`;
       txt = `La tua richiesta per <b>${title}</b> è stata approvata`;
       go = "Vai all'evento →";
+    } else if (kind === "waitlist_promoted") {
+      // entrato dalla lista d'attesa (migrazione 0058): la pagina evento con ?promoted=1 lo spiega
+      icon = `<div class="tile">${esc(n.activity_emoji || "🫶")}</div>`;
+      txt = `Si è liberato un posto a <b>${title}</b>: ci vai!`;
+      const st = n.activity_start_at || n.start_at;
+      if (st) { const d = new Date(st); sub = esc(dayLabel(d) + " · " + timeStr(d)); }
+      go = "Vai all'evento →";
+      if (n.activity_id) href = "evento.html?id=" + n.activity_id + "&promoted=1";
     } else if (kind === "community_event") {
       icon = `<div class="tile">${esc(n.activity_emoji || "📍")}</div>`;
       txt = `<b>${comm}</b> ha pubblicato un nuovo evento: <b>${title}</b>`;

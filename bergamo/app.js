@@ -126,6 +126,13 @@ function cityCase(t){
   return String(t || "").split(/(\s+|-|')/).map((w, i) => (!w || /^\s+$|^[-']$/.test(w)) ? w : (i > 0 && small.has(w) ? w : w[0].toUpperCase() + w.slice(1))).join("");
 }
 function goingTxt(n){ n = Number(n) || 0; return n === 0 ? "nessuno ancora" : n === 1 ? "1 ci va" : n + " ci vanno"; }
+// lista d'attesa (design/sito-landing/spec-lista-attesa.md): "3°"; "Pieno · 3 in lista d'attesa" o "" se ci sono posti
+function ordinal(n){ return (Number(n) || 0) + "°"; }
+function fullTxt(going, cap, wl){
+  if (!cap || (Number(going) || 0) < cap) return "";
+  wl = Number(wl) || 0;
+  return "Pieno" + (wl ? " · " + wl + " in lista d'attesa" : "");
+}
 // prezzo: null/0 = gratis; "12 €" oppure "12,50 €" (spazio non separabile)
 function fmtPrice(c){ if (c == null || c <= 0) return "Gratis";
   const e = Math.floor(c / 100), r = c % 100;
