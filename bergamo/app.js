@@ -104,6 +104,8 @@ const CATALOG = {
   skiing:    { e:"⛷️", l:"Sci",                       c:"sport" },
   snowboard: { e:"🏂", l:"Snowboard",                 c:"sport" },
   skating:   { e:"⛸️", l:"Pattinaggio",               c:"sport" },
+  golf:      { e:"⛳", l:"Golf",                      c:"sport" },
+  bowling:   { e:"🎳", l:"Bowling",                   c:"sport" },
   ceramics:  { e:"🏺", l:"Ceramica",                  c:"creatività" },
   cooking:   { e:"🍳", l:"Cucina",                    c:"cucina" },
   dinner:    { e:"🍽️", l:"Cena / aperitivo",          c:"cucina" },
