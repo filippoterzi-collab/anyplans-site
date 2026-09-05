@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chiedi cosa c'è da fare · anyplans</title>
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta name="robots" content="noindex">
+<style>
+  @font-face{
+    font-family:"Bricolage Grotesque";
+    src:url("/bricolage-grotesque-latin-800-normal.woff2") format("woff2");
+    font-weight:800; font-style:normal; font-display:swap;
+    unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+  }
+  :root{
+    --blue:#1B4FD8; --blue-lo:#1440AF; --tint:#E9EEFB;
+    --ink:#191919; --grey:#6E6E73; --bg:#FBF9F5;
+    --round: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --display: "Bricolage Grotesque", var(--round);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5;
+       -webkit-font-smoothing:antialiased;}
+  a{color:inherit; text-decoration:none;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;}
+  main{display:flex; flex-direction:column; gap:14px;}
+  .titlerow{display:flex; align-items:baseline; gap:10px;}
+  .titlerow h1{font-size:30px;}
+  .ck-reset{margin-left:auto; background:none; border:none; height:40px; padding:0 4px; color:var(--grey);
+            font:600 13.5px var(--round); text-decoration:underline; text-underline-offset:3px; cursor:pointer;}
+  .ck-reset:hover{color:var(--ink);}
+  .chip{background:#fff; border:1.5px solid rgba(25,25,25,.14); color:var(--ink); font-weight:600;
+        font-size:13.5px; padding:0 14px; height:40px; border-radius:999px; cursor:pointer;
+        font-family:var(--round); display:inline-flex; align-items:center; gap:5px; white-space:nowrap;
+        transition:transform .12s ease, background .15s ease, border-color .15s ease, color .15s ease;}
+  .chip:hover{border-color:var(--ink);}
+  .chip:active{transform:scale(.96);}
+  .chip b{font-weight:600; color:var(--grey);}
+  .chip.go{background:var(--blue); border-color:var(--blue); color:#fff; font-weight:700;}
+  .chip.go:hover{background:var(--blue-lo);}
+
+  /* ── conversazione (ck-) ─────────────────────────────────────── */
+  .ck-log{display:flex; flex-direction:column; gap:12px; padding-bottom:96px;}
+  .ck-row{display:flex; align-items:flex-end; gap:8px; max-width:88%; scroll-margin-top:12px; outline:none;
+          animation:ck-in .12s ease-out;}
+  .ck-row.me{align-self:flex-end; max-width:78%;}
+  @keyframes ck-in{from{opacity:0; transform:translateY(4px)} to{opacity:1; transform:none}}
+  .ck-av{width:24px; height:24px; flex-shrink:0; margin-bottom:4px;}
+  .ck-row.bot.cont{padding-left:32px;} .ck-row.bot.cont .ck-av{display:none;}
+  .ck-msg{display:flex; flex-direction:column; gap:10px; min-width:0;}
+  .ck-b{font-size:15.5px; line-height:1.4; padding:11px 15px; border-radius:18px; overflow-wrap:anywhere;}
+  .bot .ck-b{background:#fff; border:1.5px solid rgba(25,25,25,.10); border-bottom-left-radius:6px; color:var(--ink);}
+  .me .ck-b{background:var(--blue); color:#fff; font-weight:600; border-bottom-right-radius:6px;}
+  .ck-chips{display:flex; flex-wrap:wrap; gap:8px;}
+  .ck-sk{display:flex; gap:8px;}
+  .ck-sk span{width:92px; height:40px; border-radius:999px;
+              background:linear-gradient(90deg,#F1EFE9 25%,#E9E6DE 50%,#F1EFE9 75%); background-size:200% 100%;
+              animation:sk 1.2s ease-in-out infinite;}
+  @keyframes sk{from{background-position:200% 0} to{background-position:-200% 0}}
+
+  /* card dentro la chat: metà peso di .ev di eventi.html */
+  .ck-cards{display:flex; flex-direction:column; gap:8px;}
+  .ck-ev{display:flex; align-items:center; gap:12px; background:#fff; border:1.5px solid rgba(25,25,25,.10);
+         border-radius:14px; padding:10px 12px; min-width:0; cursor:pointer;
+         transition:border-color .15s ease, box-shadow .12s ease, transform .12s ease;}
+  .ck-ev:hover{border-color:var(--blue); box-shadow:0 4px 16px rgba(25,25,25,.07); transform:translateY(-1px);}
+  .ck-ev:active{transform:scale(.985); background:var(--tint);}
+  .ck-ev .tile{width:40px; height:40px; border-radius:10px; background:var(--tint) center/cover no-repeat;
+               display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0;}
+  .ck-ev .body{min-width:0; flex:1;}
+  .ck-ev .time{font-size:12px; font-weight:700; color:var(--blue);}
+  .ck-ev .t{font-weight:700; font-size:14.5px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+  .ck-ev .m{font-size:12px; color:var(--grey); overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+  .ck-ev .arr{color:var(--blue); font-weight:700; flex-shrink:0;}
+  .ck-ev.big{flex-direction:column; align-items:stretch; gap:12px; padding:16px; border-radius:16px;}
+  .ck-ev.big .tile{width:64px; height:64px; border-radius:16px; font-size:32px;}
+  .ck-ev.big .t{font-size:17px; white-space:normal; line-height:1.25;}
+  .ck-ev.big .m{white-space:normal;}
+  .ck-ev.big .go{height:44px; border-radius:999px; background:var(--blue); color:#fff; font:700 15px var(--round);
+                 display:flex; align-items:center; justify-content:center;}
+  .ck-more{align-self:flex-start; background:none; border:none; height:40px; padding:0 4px; color:var(--blue);
+           font:700 14px var(--round); text-decoration:underline; text-underline-offset:3px; cursor:pointer;}
+
+  /* barra di scrittura fissa in basso */
+  .ck-bar{position:fixed; left:0; right:0; bottom:0; z-index:44; background:var(--bg);
+          border-top:1px solid rgba(25,25,25,.08);
+          padding:10px var(--pad-x, 24px) calc(10px + env(safe-area-inset-bottom)); display:flex; justify-content:center;}
+  .ck-in{width:100%; max-width:640px; display:flex; align-items:center; gap:8px;}
+  .ck-in input{flex:1; min-width:0; height:48px; border-radius:999px; border:1.5px solid rgba(25,25,25,.16);
+               background:#fff; padding:0 18px; font:16px var(--round); color:var(--ink);}
+  .ck-in input:focus{border-color:var(--blue); outline:none;}
+  .ck-in input:disabled{color:var(--grey); background:#F6F4EF;}
+  .ck-send{width:48px; height:48px; border-radius:999px; background:var(--blue); color:#fff; border:none;
+           display:flex; align-items:center; justify-content:center; cursor:pointer; flex-shrink:0;
+           transition:background .15s ease, transform .12s ease;}
+  .ck-send:hover{background:var(--blue-lo);}
+  .ck-send:active{transform:scale(.96);}
+  .ck-send:disabled{background:rgba(25,25,25,.12); color:var(--grey); cursor:default;}
+  a:focus-visible, button:focus-visible, input:focus-visible{outline:2px solid var(--blue); outline-offset:2px;}
+  @media (prefers-reduced-motion:reduce){ .ck-row{animation:none;} .ck-sk span{animation:none;} }
+
+  @media (max-width:700px){
+    .titlerow h1{font-size:28px;}
+    .ck-log{padding-bottom:84px;}
+    .ck-row{max-width:92%;} .ck-row.me{max-width:82%;}
+    .ck-b{font-size:15px;}
+    .ck-bar{bottom:calc(66px + env(safe-area-inset-bottom)); padding:8px var(--pad-x, 18px) 8px; border-top:none;
+            background:linear-gradient(to top, var(--bg) 70%, rgba(251,249,245,0));}
+  }
+</style>
+</head>
+<body>
+
+<header></header>
+
+<main>
+  <div class="titlerow">
+    <h1 class="display">Chiedi</h1>
+    <button class="ck-reset" id="ck-reset" onclick="restart()" hidden>Ricomincia</button>
+  </div>
+  <div class="ck-log" id="ck-log" role="log" aria-live="polite" aria-relevant="additions"></div>
+</main>
+
+<form class="ck-bar" id="ck-bar" onsubmit="send(event)">
+  <div class="ck-in">
+    <input id="ck-q" placeholder="Un attimo, carico i piani…" aria-label="Scrivi cosa cerchi"
+           autocomplete="off" enterkeyhint="send" disabled>
+    <button type="submit" class="ck-send" id="ck-send" aria-label="Invia" disabled>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+    </button>
+  </div>
+</form>
+
+<script src="app.js?v=1788600043"></script>
+<script>
+  // pagina aperta anche senza account (si può linkare da Instagram): il login arriva quando si apre un piano
+  mountNav("chiedi", { col: 640 });
+  const logged = !!(session && session.access_token);
+  if (!logged) {
+    document.getElementById("avatar").parentElement.hidden = true;
+    const bell = document.getElementById("bell"); if (bell) bell.style.display = "none";
+    const reg = document.createElement("a"); reg.href = "login.html"; reg.className = "cta";
+    reg.textContent = "Registrati"; reg.onclick = () => { try { sessionStorage.setItem("anyplans_next", "chiedi.html"); } catch (_) {} };
+    document.querySelector(".sn .right").prepend(reg);
+  }
+  mountTabbar("");
+  track("chiedi_view");
+
+  const CAT_EMOJI = { sport:"🏃", cucina:"🍳", "creatività":"🏺", giardinaggio:"🌱", cultura:"🎪", benessere:"🧘" };
+  const CAT_LABEL = { sport:"Sport", cucina:"Cucina", "creatività":"Creatività", giardinaggio:"Giardinaggio", cultura:"Cultura", benessere:"Benessere" };
+  const GREETING = "Ciao! Dimmi quando vuoi uscire, oppure scrivi qui sotto cosa cerchi (per esempio: c'è qualcuno che fa ceramica?).";
+  const MAX_CARDS = 4;
+
+  let EVENTS = [];
+  let loaded = false;
+  // day: "" (non scelto) | "oggi" | "domani" | "weekend" | "all" | "date" (con date = dayKey)
+  const S = { day: "", date: null, cat: "", slugs: [], free: false, pending: null, skipType: false, skipSport: false, seen: new Set() };
+
+  const log = document.getElementById("ck-log");
+  const input = document.getElementById("ck-q");
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const cap = s => s ? s[0].toUpperCase() + s.slice(1) : s;
+  const clean = s => s.replace(/\s+/g, " ").replace(/\s+([:.,?])/g, "$1").trim();
+  const shortLabel = slug => ((CATALOG[slug] || {}).l || slug).split(/[,/]/)[0].trim();
+
+  // ── dati ───────────────────────────────────────────────────────
+  async function loadEvents(){
+    const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
+    if (!r || !r.ok) { clearSkeleton(); say("Non riesco a caricare i piani.", [{ l:"Riprova", kind:"retry" }]); return; }
+    const rows = await r.json().catch(() => []);
+    EVENTS = rows.map(x => ({
+      id: x.id,
+      emoji: x.emoji || "📍",
+      cat: CAT_BY_SLUG[x.sport] || "sport",
+      slug: x.sport,
+      title: x.title,
+      host: x.host_name || x.club_name || null,
+      place: x.meeting_point_text || "Zona indicativa",
+      when: new Date(x.start_at),
+      going: Number(x.going_count) || 0,
+      cap: x.max_participants || null,
+      wl: Number(x.waitlist_count) || 0,
+      price: x.price_cents ?? null,
+      photo: x.photo_url || null
+    })).sort((a, b) => a.when - b.when);
+    loaded = true;
+    input.disabled = false; input.placeholder = "Scrivi qui: oggi, sport, ceramica…";
+    document.getElementById("ck-send").disabled = false;
+    clearSkeleton();
+    const q = new URLSearchParams(location.search).get("q");
+    if (q && q.trim()) { me(q.trim()); handle(q.trim()); }
+    else if (!EVENTS.length) say("Per ora non c'è nessun piano in programma a Bergamo. Vuoi pubblicare tu il primo?", [{ l:"Sì, lo pubblico io →", href:"crea.html" }]);
+    else ask();
+  }
+  function scope(o){
+    return EVENTS
+      .filter(e => o.day === "date" ? dayKey(e.when) === o.date : inDayKind(e.when, o.day))
+      .filter(e => !o.cat || e.cat === o.cat)
+      .filter(e => !o.slugs || !o.slugs.length || o.slugs.includes(e.slug))
+      .filter(e => !o.free || !(e.price > 0));
+  }
+  function counts(evs, key){
+    const m = {}; evs.forEach(e => { m[e[key]] = (m[e[key]] || 0) + 1; }); return m;
+  }
+  // ordine fisso delle categorie, come i filtri di eventi.html
+  const CAT_ORDER = ["sport", "cucina", "creatività", "giardinaggio", "cultura", "benessere"];
+
+  // ── testi ──────────────────────────────────────────────────────
+  function perTxt(){                       // "per oggi" / "per domani" / "per il fine settimana" / "per sabato 6" / ""
+    if (S.day === "oggi") return "per oggi";
+    if (S.day === "domani") return "per domani";
+    if (S.day === "weekend") return "per il fine settimana";
+    if (S.day === "date") return "per " + dayLabel(new Date(S.date)).toLowerCase();
+    return "";
+  }
+  function capTxt(){                       // "Oggi" / "Domani" / "Nel fine settimana" / "Sabato 6" / "In tutto"
+    if (S.day === "oggi") return "Oggi";
+    if (S.day === "domani") return "Domani";
+    if (S.day === "weekend") return "Nel fine settimana";
+    if (S.day === "date") return dayLabel(new Date(S.date));
+    return "In tutto";
+  }
+  function whatTxt(){                      // "di escursionismo" / "di sport" / "di questo tipo" / "" (+ " gratis")
+    let w = "";
+    if (S.slugs.length === 1) w = "di " + shortLabel(S.slugs[0]).toLowerCase();
+    else if (S.slugs.length > 1) w = "di questo tipo";
+    else if (S.cat) w = "di " + S.cat;
+    if (S.free) w += " gratis";
+    return w.trim();
+  }
+  const piani = n => n === 1 ? "un piano" : n + " piani";
+
+  // ── bolle ──────────────────────────────────────────────────────
+  function say(text, chips, opts){
+    opts = opts || {};
+    const prev = log.lastElementChild;
+    const cont = prev && prev.classList.contains("bot");
+    const row = document.createElement("div");
+    row.className = "ck-row bot" + (cont ? " cont" : ""); row.tabIndex = -1;
+    let cards = "";
+    if (opts.cards && opts.cards.length) {
+      const first = opts.cards.slice(0, opts.big ? 1 : MAX_CARDS), rest = opts.big ? [] : opts.cards.slice(MAX_CARDS);
+      cards = `<div class="ck-cards">${first.map(e => card(e, opts.big)).join("")}${rest.length ? `<button class="ck-more" onclick="more(this)">Mostrane altri ${rest.length}</button>` : ""}</div>`;
+      row._rest = rest;
+    }
+    row.innerHTML = `<img class="ck-av" src="/logo.png" alt="" width="24" height="24">
+      <div class="ck-msg">${text ? `<div class="ck-b">${esc(text)}</div>` : ""}${cards}${chipsHtml(chips)}</div>`;
+    log.appendChild(row);
+    scrollTo(row);
+    if (opts.focus !== false) row.focus({ preventScroll: true });
+  }
+  function me(text){
+    const chips = log.querySelector(".ck-row:last-child .ck-chips"); if (chips) chips.remove();
+    const row = document.createElement("div");
+    row.className = "ck-row me"; row.setAttribute("aria-hidden", "true");
+    row.innerHTML = `<div class="ck-b">${esc(text)}</div>`;
+    log.appendChild(row);
+    document.getElementById("ck-reset").hidden = false;
+  }
+  function chipsHtml(chips){
+    if (!chips || !chips.length) return "";
+    return `<div class="ck-chips" role="group" aria-label="Scegli">` + chips.map(c => {
+      const n = c.n != null ? ` <b>· ${c.n}</b>` : "";
+      if (c.href) return `<a class="chip go" href="${esc(c.href)}">${esc(c.l)}</a>`;
+      return `<button class="chip" data-kind="${esc(c.kind)}" data-value="${esc(c.v || "")}" data-label="${esc(c.l)}" onclick="pick(this)">${esc(c.l)}${n}</button>`;
+    }).join("") + `</div>`;
+  }
+  function skeleton(){
+    const row = document.createElement("div"); row.className = "ck-row bot"; row.id = "ck-skel";
+    row.innerHTML = `<img class="ck-av" src="/logo.png" alt="" width="24" height="24">
+      <div class="ck-msg"><div class="ck-b">${esc(GREETING)}</div><div class="ck-sk" aria-hidden="true"><span></span><span></span><span></span></div></div>`;
+    log.appendChild(row);
+  }
+  function clearSkeleton(){ const s = document.getElementById("ck-skel"); if (s) s.remove(); }
+  function card(e, big){
+    const meta = [ "Di " + (e.host || "un altro sito"), e.place, goingTxt(e.going) ];
+    const full = fullTxt(e.going, e.cap, e.wl); if (full) meta.push(full);
+    if (e.price > 0) meta.push(fmtPrice(e.price));
+    const tile = e.photo ? `<div class="tile" style="background-image:url('${esc(e.photo.replace(/'/g, ""))}')"></div>` : `<div class="tile">${esc(e.emoji)}</div>`;
+    const time = `${dayLabel(e.when)} · ${timeStr(e.when)} · ${relTime(e.when)}`;
+    return `<a class="ck-ev${big ? " big" : ""}" href="evento.html?id=${esc(e.id)}" onclick="track('chiedi_click','evento.html?id=${esc(e.id)}')">
+      ${tile}
+      <div class="body"><div class="time">${esc(time)}</div><div class="t">${esc(e.title)}</div><div class="m">${esc(meta.join(" · "))}</div></div>
+      ${big ? `<span class="go">Ci sono →</span>` : `<span class="arr" aria-hidden="true">→</span>`}
+    </a>`;
+  }
+  function more(btn){
+    const row = btn.closest(".ck-row");
+    btn.insertAdjacentHTML("beforebegin", (row._rest || []).map(e => card(e, false)).join(""));
+    btn.remove();
+  }
+  function scrollTo(row){
+    const behavior = reduceMotion ? "auto" : "smooth";
+    const free = window.innerHeight - 64 - 24;
+    requestAnimationFrame(() => {
+      if (row.offsetHeight > free) row.scrollIntoView({ block: "start", behavior });
+      else window.scrollTo({ top: document.body.scrollHeight, behavior });
+    });
+  }
+
+  // ── chip ───────────────────────────────────────────────────────
+  function dayChips(evs, skip){
+    const out = [];
+    [["oggi", "Oggi"], ["domani", "Domani"], ["weekend", "Fine settimana"], ["all", "Tutti i prossimi"]].forEach(([k, l]) => {
+      if (skip && skip.includes(k)) return;
+      const n = evs.filter(e => inDayKind(e.when, k)).length;
+      if (n) out.push({ l, kind: "day", v: k, n });
+    });
+    out.push({ l: "Sorprendimi", kind: "surprise" });
+    return out;
+  }
+  function catChips(evs){
+    const c = counts(evs, "cat");
+    const out = CAT_ORDER.filter(k => c[k]).map(k => ({ l: CAT_EMOJI[k] + " " + CAT_LABEL[k], kind: "cat", v: k, n: c[k] }));
+    out.push({ l: "Tutti e " + evs.length, kind: "all-cat" });
+    return out;
+  }
+  function slugChips(evs){
+    const c = counts(evs, "slug");
+    const out = Object.keys(c).sort((a, b) => c[b] - c[a]).map(k => ({ l: ((CATALOG[k] || {}).e || "📍") + " " + shortLabel(k), kind: "slug", v: k, n: c[k] }));
+    out.push({ l: "Tutti e " + evs.length, kind: "all-slug" });
+    return out;
+  }
+  const tailChips = () => [{ l: "Un altro giorno", kind: "day-reset" }, { l: "Un altro tipo", kind: "cat-reset" }, { l: "Sorprendimi", kind: "surprise" }];
+
+  function pick(btn){
+    const kind = btn.dataset.kind, v = btn.dataset.value;
+    me(btn.dataset.label);
+    track("chiedi_chip", kind + (v ? ":" + v : ""));
+    if (kind === "retry") { skeleton(); loadEvents(); return; }
+    if (kind === "restart") { restart(); return; }
+    if (kind === "accept") { const p = S.pending; S.pending = null; if (p) Object.assign(S, p); ask(); return; }
+    S.pending = null;
+    if (kind === "surprise" || kind === "again") { surprise(); return; }
+    if (kind === "day") { S.day = v; S.date = null; }
+    else if (kind === "cat") { S.cat = v; S.slugs = []; }
+    else if (kind === "slug") { S.slugs = [v]; S.cat = CAT_BY_SLUG[v] || "sport"; }
+    else if (kind === "all-cat") { S.cat = ""; S.slugs = []; S.skipType = true; }
+    else if (kind === "all-slug") { S.slugs = []; S.skipSport = true; }
+    else if (kind === "day-reset") { S.day = ""; S.date = null; }
+    else if (kind === "cat-reset") { S.cat = ""; S.slugs = []; S.free = false; }
+    ask();
+  }
+
+  // ── l'albero delle domande ─────────────────────────────────────
+  function ask(prefix){
+    prefix = prefix ? prefix + " " : "";
+    if (!S.day) {
+      const all = scope({ day: "all", cat: S.cat, slugs: S.slugs, free: S.free });
+      if (!all.length) return empty();
+      const first = !log.querySelector(".ck-row");
+      const what = whatTxt();
+      const text = first && !what ? GREETING : what ? `Ho ${piani(all.length)} ${what}. Quando vuoi uscire?` : "Quando vuoi uscire?";
+      return say(clean(prefix + text), dayChips(all));
+    }
+    const evs = scope(S);
+    if (!evs.length) return empty();
+    if (evs.length <= MAX_CARDS) return list(evs);
+    const cats = counts(evs, "cat");
+    if (!S.cat && !S.skipType && Object.keys(cats).length > 1) {
+      return say(clean(`${prefix}${capTxt()} ci sono ${piani(evs.length)}. Che tipo?`), catChips(evs));
+    }
+    const cat = S.cat || (Object.keys(cats).length === 1 ? Object.keys(cats)[0] : "");
+    if (cat === "sport" && !S.slugs.length && !S.skipSport && Object.keys(counts(evs, "slug")).length > 1) {
+      return say(clean(`${prefix}Sport ${perTxt()}: quale?`), slugChips(evs));
+    }
+    list(evs);
+  }
+  function list(evs, opts){
+    opts = opts || {};
+    S.skipType = false; S.skipSport = false;
+    const n = evs.length, what = opts.what != null ? opts.what : whatTxt(), per = opts.what != null ? "" : perTxt();
+    let text;
+    if (n === 1) text = `C'è un piano ${what} ${per}:`;
+    else if (!per) text = `Ecco i prossimi ${n} piani ${what}:`;
+    else text = `Ecco ${n} piani ${what} ${per}:`;
+    say(clean(text), tailChips(), { cards: evs });
+  }
+  function empty(){
+    const anyDay = scope({ day: "all", cat: S.cat, slugs: S.slugs, free: S.free });
+    const what = whatTxt();
+    track("chiedi_empty", "d=" + (S.day || "-") + "|c=" + (S.cat || "-") + "|s=" + S.slugs.join(",") + (S.free ? "|free" : ""));
+    S.skipType = false; S.skipSport = false;
+    if (!anyDay.length) {
+      // questo tipo non c'è mai: si propone di crearlo
+      if (!EVENTS.length) return say("Per ora non c'è nessun piano in programma a Bergamo. Vuoi pubblicare tu il primo?", [{ l:"Sì, lo pubblico io →", href:"crea.html" }]);
+      return say(clean(`Non c'è nessun piano ${what} in programma. Vuoi crearlo tu?`),
+        [{ l:"Sì, lo creo io →", href:"crea.html" }, { l:"Un altro tipo", kind:"cat-reset" }, { l:"Sorprendimi", kind:"surprise" }]);
+    }
+    if (what) {
+      // tipo scelto ma vuoto nel giorno: il prossimo di quel tipo
+      const next = anyDay[0];
+      const chips = [];
+      if (anyDay.length > 1) chips.push({ l: "Altri " + what, kind: "day", v: "all", n: anyDay.length - 1 });
+      chips.push({ l: clean("Un altro tipo " + perTxt()), kind: "cat-reset" }, { l: "Un altro giorno", kind: "day-reset" });
+      return say(clean(`${capTxt()} niente ${what}. Il prossimo è ${dayLabel(next.when).toLowerCase()}:`), chips, { cards: [next] });
+    }
+    // solo il giorno è vuoto: si propone il primo giorno con qualcosa
+    const dom = scope({ day: "domani" }).length, wk = scope({ day: "weekend" }).length;
+    let text, pending, acceptLabel, skip = [S.day];
+    if (S.day !== "domani" && dom) { text = `Domani ci sono ${piani(dom)}: li vedi?`; pending = { day: "domani", date: null }; acceptLabel = "Sì, domani"; skip.push("domani"); }
+    else if (S.day !== "weekend" && wk) { text = `Nel fine settimana ci sono ${piani(wk)}: li vedi?`; pending = { day: "weekend", date: null }; acceptLabel = "Sì, nel fine settimana"; skip.push("weekend"); }
+    else { const f = EVENTS[0]; text = `Il prossimo piano è ${dayLabel(f.when).toLowerCase()}: lo vedi?`; pending = { day: "date", date: dayKey(f.when) }; acceptLabel = "Sì, " + dayLabel(f.when).toLowerCase(); }
+    S.pending = pending;
+    const n = pending.day === "date" ? scope(pending).length : (pending.day === "domani" ? dom : wk);
+    const chips = [{ l: acceptLabel, kind: "accept", n }].concat(dayChips(EVENTS, skip));
+    say(clean(`${capTxt()} non c'è niente. ${text}`), chips);
+  }
+  function surprise(){
+    const now = Date.now();
+    let pool = EVENTS.filter(e => !S.seen.has(e.id) && e.when - now < 7 * 86400000);
+    if (!pool.length) pool = EVENTS.filter(e => !S.seen.has(e.id));
+    if (!pool.length) return say("Te li ho fatti vedere tutti.", [{ l:"Ricomincia", kind:"restart" }, { l:"Tutti i prossimi", kind:"day", v:"all", n: EVENTS.length }]);
+    const e = pool[Math.floor(Math.random() * pool.length)];
+    S.seen.add(e.id);
+    say("Che ne dici di questo?", [{ l:"Un altro", kind:"again" }, { l:"Dimmi quando", kind:"day-reset" }], { cards: [e], big: true });
+  }
+  function help(){
+    if (!S.day) return say("Non ho capito bene. Scegli da qui:", dayChips(EVENTS));
+    say("Non ho capito bene. Puoi scrivere un giorno (oggi, domani, fine settimana) o un tipo di piano (sport, cucina, ceramica…), oppure scegli da qui:", tailChips());
+  }
+  function restart(){
+    log.innerHTML = "";
+    Object.assign(S, { day: "", date: null, cat: "", slugs: [], free: false, pending: null, skipType: false, skipSport: false });
+    document.getElementById("ck-reset").hidden = true;
+    input.value = "";
+    if (!EVENTS.length) { skeleton(); loadEvents(); } else ask();
+  }
+
+  // ── frase scritta ──────────────────────────────────────────────
+  function send(e){
+    e.preventDefault();
+    const text = input.value.trim();
+    if (!text || !loaded) return;
+    input.value = "";
+    me(text);
+    handle(text);
+    input.focus();
+  }
+  function handle(text){
+    const p = parseQuery(text);
+    const short = text.slice(0, 120);
+    if (p.yes && S.pending) { const q = S.pending; S.pending = null; Object.assign(S, q); track("chiedi_text_ok", "q=" + short + "|yes"); return ask(); }
+    if (p.no) { S.pending = null; S.day = ""; S.date = null; track("chiedi_text_ok", "q=" + short + "|no"); return ask("Va bene."); }
+    if (p.surprise) { S.pending = null; track("chiedi_text_ok", "q=" + short + "|surprise"); return surprise(); }
+    const found = p.day || p.slugs.length || p.cats.length || p.free;
+    if (found) {
+      S.pending = null; S.skipType = false; S.skipSport = false;
+      if (p.slugs.length) {
+        S.slugs = p.slugs;
+        const cats = [...new Set(p.slugs.map(s => CAT_BY_SLUG[s] || "sport"))];
+        S.cat = cats.length === 1 ? cats[0] : "";
+      } else if (p.cats.length) { S.cat = p.cats[0]; S.slugs = []; }
+      if (p.day) { S.day = p.day; S.date = null; }
+      if (p.free) S.free = true;
+      track("chiedi_text_ok", "q=" + short + "|d=" + (S.day || "-") + "|c=" + (S.cat || "-") + "|s=" + S.slugs.join(","));
+      return ask();
+    }
+    // niente di noto: si cerca sui titoli, come la ricerca di eventi.html
+    if (p.rest.length) {
+      const evs = scope({ day: S.day, date: S.date }).filter(e => {
+        const hay = norm([e.title, e.host, e.place].join(" "));
+        return p.rest.every(w => hit(hay, w));
+      });
+      if (evs.length) { track("chiedi_text_ok", "q=" + short + "|title"); return list(evs, { what: `per "${text}"` }); }
+    }
+    track("chiedi_text_miss", "q=" + short);
+    help();
+  }
+
+  skeleton();
+  loadEvents();
+</script>
+</body>
+</html>

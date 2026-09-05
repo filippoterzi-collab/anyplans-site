@@ -80,6 +80,10 @@
   .fl-clear{background:none; border:none; height:36px; padding:0 4px; color:var(--grey); font:600 13.5px var(--round);
             text-decoration:underline; text-underline-offset:3px; cursor:pointer;}
   .fl-clear:hover{color:var(--ink);}
+  /* ingresso alla pagina "chiedi" (design/sito-landing/spec-chiedi.md) */
+  .ask{display:inline-flex; align-items:center; height:40px; padding:0 16px; border-radius:999px; background:var(--tint);
+       color:var(--blue); font-weight:700; font-size:14px; align-self:flex-start;}
+  .ask:hover{background:#DCE4F8;}
   .fl-pill[data-kind="day"]{display:none;}
   /* ── modale filtri ──────────────────────────────────────── */
   .fl-overlay{position:fixed; inset:0; z-index:60; background:rgba(25,25,25,.45);
@@ -226,7 +230,7 @@
       <button class="chip day-chip" data-day="oggi" aria-pressed="false" onclick="setDay(this)">Oggi</button>
       <button class="chip day-chip" data-day="domani" aria-pressed="false" onclick="setDay(this)">Domani</button>
       <button class="chip day-chip" data-day="weekend" aria-pressed="false" onclick="setDay(this)">Fine settimana</button>
-      <label class="chip day-chip" data-day="data" id="chip-date" aria-pressed="false"><span id="date-txt">Altra data</span><b id="date-x" hidden onclick="clearDate(event)">×</b><input type="date" id="fl-date" aria-label="Scegli un giorno" onchange="setDate(this.value)"></label>
+      <label class="chip day-chip" data-day="data" id="chip-date" aria-pressed="false" onclick="openDate(event)"><span id="date-txt">Altra data</span><b id="date-x" hidden onclick="clearDate(event)">×</b><input type="date" id="fl-date" aria-label="Scegli un giorno" onchange="setDate(this.value)"></label>
     </div>
     <button class="fl-btn" id="fbtn" onclick="openFilters()" aria-haspopup="dialog" aria-controls="fl">
       <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round"><path d="M4 7h10M18 7h2M4 17h4M12 17h8"/><circle cx="16" cy="7" r="2.5"/><circle cx="10" cy="17" r="2.5"/></svg>
@@ -234,6 +238,7 @@
     </button>
   </div>
   <div class="fl-active" id="fl-active" aria-live="polite"></div>
+  <a class="ask" href="chiedi.html">Non sai cosa fare? Chiedi qui →</a>
 </div>
 </div>
 
@@ -280,7 +285,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788599665"></script>
+<script src="app.js?v=1788600043"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -308,47 +313,6 @@
   mountTabbar("eventi");
   if (!logged) document.querySelectorAll("#tabbar a").forEach(a => { if (!a.getAttribute("href").includes("eventi.html")) a.onclick = () => { try { sessionStorage.setItem("anyplans_next", a.getAttribute("href")); } catch (_) {} }; });
 
-  // categoria del sito per ogni slug non sportivo; tutto il resto è "sport"
-  const CAT_BY_SLUG = { cooking:"cucina", dinner:"cucina", ceramics:"creatività", painting:"creatività",
-                        gardening:"giardinaggio", festival:"cultura", yoga:"benessere" };
-  // parole con cui la gente cerca ogni attività (il titolo da solo non basta: "corsa" vs "corro 10k")
-  const SEARCH_WORDS = {
-    running: "corsa correre corro run running jogging km parco allenamento",
-    trail: "trail corsa montagna sentiero sentieri running mountain",
-    hyrox: "hyrox palestra gara fitness workout crossfit",
-    walking: "camminata passeggiata camminare walk walking passeggio piedi",
-    cycling: "bici bicicletta ciclismo pedalare pedalata giro bike cycling ride road",
-    mtb: "mtb gravel bici montagna mountain bike ebike e-bike ciclismo",
-    moto: "moto motociclette motociclismo giro motorbike ride",
-    hiking: "escursione escursionismo trekking hiking hike camminata montagna gita sentiero rifugio cima trek",
-    climbing: "arrampicata scalata scalare climbing boulder bouldering falesia parete corda montagna",
-    skitouring: "scialpinismo sci alpinismo montagna neve ski touring",
-    gym: "palestra crossfit allenamento workout gym fitness pesi",
-    yoga: "yoga pilates benessere rilassamento meditazione stretching respiro wellness",
-    football: "calcio calcetto pallone partita football soccer",
-    basketball: "basket pallacanestro partita basketball canestro",
-    volleyball: "volley pallavolo beach partita volleyball",
-    tennis: "tennis racchetta partita",
-    padel: "padel racchetta partita paddle",
-    swimming: "nuoto piscina nuotare swim swimming lago mare",
-    surf: "surf sup tavola paddle board surfing onde",
-    paddling: "canoa kayak pagaia canoe paddling fiume lago rafting",
-    skiing: "sci neve sciare ski skiing pista montagna",
-    snowboard: "snowboard neve tavola snow",
-    skating: "pattinaggio pattini skate skating rollerblade ghiaccio",
-    golf: "golf green campo pratica buche driving range",
-    bowling: "bowling birilli boccia sala giochi",
-    ceramics: "ceramica argilla tornio corso creativo pottery clay laboratorio manuale",
-    cooking: "cucina cucinare corso pasta chef cooking cena pranzo ricetta food mangiare cibo aperitivo",
-    dinner: "cena aperitivo pranzo mangiare ristorante pizzeria pizza dinner apericena bere birra vino compagnia tavolata",
-    painting: "pittura disegno arte corso creativo painting drawing art acquerello quadro laboratorio",
-    gardening: "giardinaggio orto volontariato verde gardening garden piante natura pulizia ambiente",
-    festival: "festa sagra festival evento concerto paese party musica live serata fiera mercato"
-  };
-  // parole simili: "corse" trova "corsa", "scalate" trova "scalata" (si confronta anche la radice)
-  const stem = w => w.length > 4 ? w.replace(/(ando|endo|are|ere|ire|ate|ata|ato|ati|ing|s|e|a|o|i)$/, "") : w;
-  const hit = (hay, w) => hay.includes(w) || (w.length > 3 && hay.includes(stem(w)));
-  const norm = t => t.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   let EVENTS = [];
 
   async function checkProfile(){
@@ -488,6 +452,12 @@
     document.getElementById("date-txt").textContent = d + " " + MONTHS[m - 1].slice(0, 3);
     document.getElementById("date-x").hidden = false;
     refit = true; updateFbtn(); render();
+  }
+  // il chip apre il calendario nativo (l'input date invisibile da solo, su computer, apre il calendario solo dalla sua icona)
+  function openDate(ev){
+    ev.preventDefault();
+    const i = document.getElementById("fl-date");
+    try { i.showPicker(); } catch (_) { i.focus(); i.click(); }
   }
   function clearDate(ev){
     ev.preventDefault(); ev.stopPropagation();

@@ -114,6 +114,110 @@ const CATALOG = {
   festival:  { e:"🎉", l:"Feste, sagre ed eventi di paese",     c:"cultura" }
 };
 
+// categoria del sito per ogni slug non sportivo; tutto il resto è "sport"
+const CAT_BY_SLUG = { cooking:"cucina", dinner:"cucina", ceramics:"creatività", painting:"creatività",
+                      gardening:"giardinaggio", festival:"cultura", yoga:"benessere" };
+// parole con cui la gente cerca ogni attività (il titolo da solo non basta: "corsa" vs "corro 10k")
+const SEARCH_WORDS = {
+  running: "corsa correre corro run running jogging km parco allenamento",
+  trail: "trail corsa montagna sentiero sentieri running mountain",
+  hyrox: "hyrox palestra gara fitness workout crossfit",
+  walking: "camminata passeggiata camminare walk walking passeggio piedi",
+  cycling: "bici bicicletta ciclismo pedalare pedalata giro bike cycling ride road",
+  mtb: "mtb gravel bici montagna mountain bike ebike e-bike ciclismo",
+  moto: "moto motociclette motociclismo giro motorbike ride",
+  hiking: "escursione escursionismo trekking hiking hike camminata montagna gita sentiero rifugio cima trek",
+  climbing: "arrampicata scalata scalare climbing boulder bouldering falesia parete corda montagna",
+  skitouring: "scialpinismo sci alpinismo montagna neve ski touring",
+  gym: "palestra crossfit allenamento workout gym fitness pesi",
+  yoga: "yoga pilates benessere rilassamento meditazione stretching respiro wellness",
+  football: "calcio calcetto pallone partita football soccer",
+  basketball: "basket pallacanestro partita basketball canestro",
+  volleyball: "volley pallavolo beach partita volleyball",
+  tennis: "tennis racchetta partita",
+  padel: "padel racchetta partita paddle",
+  swimming: "nuoto piscina nuotare swim swimming lago mare",
+  surf: "surf sup tavola paddle board surfing onde",
+  paddling: "canoa kayak pagaia canoe paddling fiume lago rafting",
+  skiing: "sci neve sciare ski skiing pista montagna",
+  snowboard: "snowboard neve tavola snow",
+  skating: "pattinaggio pattini skate skating rollerblade ghiaccio",
+  golf: "golf green campo pratica buche driving range",
+  bowling: "bowling birilli boccia sala giochi",
+  ceramics: "ceramica argilla tornio corso creativo pottery clay laboratorio manuale",
+  cooking: "cucina cucinare corso pasta chef cooking cena pranzo ricetta food mangiare cibo aperitivo",
+  dinner: "cena aperitivo pranzo mangiare ristorante pizzeria pizza dinner apericena bere birra vino compagnia tavolata",
+  painting: "pittura disegno arte corso creativo painting drawing art acquerello quadro laboratorio",
+  gardening: "giardinaggio orto volontariato verde gardening garden piante natura pulizia ambiente",
+  festival: "festa sagra festival evento concerto paese party musica live serata fiera mercato"
+};
+// parole simili: "corse" trova "corsa", "scalate" trova "scalata" (si confronta anche la radice)
+const stem = w => w.length > 4 ? w.replace(/(ando|endo|are|ere|ire|ate|ata|ato|ati|ing|s|e|a|o|i)$/, "") : w;
+const hit = (hay, w) => hay.includes(w) || (w.length > 3 && hay.includes(stem(w)));
+const norm = t => String(t ?? "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+// ── PAROLE CHE LA GENTE USA ─────────────────────────────────────────────────
+// Filippo: per far capire una parola nuova alla pagina "chiedi" (e alla ricerca degli eventi)
+// aggiungila qui, minuscola, separata da spazio, senza accenti. Niente altro da toccare.
+// Le frasi che la pagina non capisce si leggono con:
+//   select path, count(*) from site_event where name = 'chiedi_text_miss' group by 1 order by 2 desc;
+const DAY_WORDS = {
+  oggi: "oggi stasera stamattina stanotte pomeriggio adesso subito",
+  domani: "domani",
+  weekend: "weekend finesettimana sabato domenica",
+  all: "tutto tutti prossimi prossimamente qualsiasi quando sempre"
+};
+const CAT_WORDS = {
+  sport: "sport sportivo sportiva muovermi allenarmi allenamento attivita",
+  cucina: "cucina cucinare mangiare cena aperitivo pranzo cibo",
+  "creatività": "creativo creativa creativita arte manuale laboratorio",
+  giardinaggio: "giardinaggio orto volontariato verde natura pulizia",
+  cultura: "festa feste sagra sagre cultura concerto musica paese",
+  benessere: "benessere rilassarmi rilassante rilassarsi meditazione"
+};
+const SURPRISE_WORDS = "sorprendimi sorpresa caso boh qualunque scegli consiglia consigliami consiglio";
+const YES_WORDS = "si ok okay vabene certo volentieri dai sisi";
+const NO_WORDS = "no nah";
+const FREE_WORDS = "gratis gratuito gratuita gratuiti gratuite";
+// parole vuote: non dicono niente su cosa cerca la persona
+const STOP_WORDS = "c e ce che chi cosa cose fa fare fanno da di a in con per il la lo gli le un una uno qualcuno " +
+                   "qualcosa qualche bergamo piano piani evento eventi vorrei voglio cerco cerca andare vado ci sono " +
+                   "sera mattina pomeriggio niente nessuno esiste non mi ti ma o oppure anche tipo come dove";
+// parole ambigue per gli sport: "corso" ha la stessa radice di "corsa" e accenderebbe la corsa
+const NOISE_WORDS = "corso corsi lezione lezioni";
+
+// parola per parola (non sottostringa): "corso" non trova "corsa", "escursioni" trova "escursione"
+const sameWord = (a, b) => a === b || (a.length > 3 && b.length > 3 && stem(a) === stem(b));
+const inWords = (list, w) => list.split(" ").some(x => sameWord(x, w));
+
+// frase scritta → { day, slugs, cats, free, surprise, yes, no, rest }
+// day: "" | "oggi" | "domani" | "weekend" | "all"; rest: parole non capite (per la ricerca sui titoli)
+function parseQuery(text){
+  let t = norm(text).replace(/[^a-z0-9\s]/g, " ");
+  const out = { day: "", slugs: [], cats: [], free: false, surprise: false, yes: false, no: false, rest: [] };
+  if (/\bfine ?settimana\b|\bweek ?end\b/.test(t)) { out.day = "weekend"; t = t.replace(/\bfine ?settimana\b|\bweek ?end\b/g, " "); }
+  const toks = t.split(/\s+/).filter(w => w.length > 1 && !inWords(STOP_WORDS, w));
+  toks.forEach(w => {
+    let used = false;
+    if (inWords(YES_WORDS, w)) { out.yes = true; used = true; }
+    if (inWords(NO_WORDS, w)) { out.no = true; used = true; }
+    if (inWords(SURPRISE_WORDS, w)) { out.surprise = true; used = true; }
+    if (inWords(FREE_WORDS, w)) { out.free = true; used = true; }
+    if (inWords(NOISE_WORDS, w)) used = true;
+    else Object.keys(SEARCH_WORDS).forEach(s => { if (inWords(SEARCH_WORDS[s], w) && !out.slugs.includes(s)) { out.slugs.push(s); used = true; } });
+    Object.keys(CAT_WORDS).forEach(c => { if (inWords(CAT_WORDS[c], w) && !out.cats.includes(c)) { out.cats.push(c); used = true; } });
+    Object.keys(DAY_WORDS).forEach(d => { if (inWords(DAY_WORDS[d], w)) { if (!out.day) out.day = d; used = true; } });
+    if (!used) out.rest.push(w);
+  });
+  return out;
+}
+// kind: "" | "all" (tutti) | "oggi" | "domani" | "weekend" (sabato o domenica entro 7 giorni)
+function inDayKind(d, kind){
+  if (!kind || kind === "all") return true;
+  if (kind === "weekend") { const wd = d.getDay(), diff = (d - Date.now()) / 86400000; return (wd === 0 || wd === 6) && diff < 7; }
+  return dayKind(d) === kind;
+}
+
 // date in italiano
 const DAYS = ["Domenica","Lunedì","Martedì","Mercoledì","Giovedì","Venerdì","Sabato"];
 const MONTHS = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"];
@@ -208,7 +312,7 @@ function mountNav(active, opts){
     .sn #menu a:hover, .sn #menu button:hover{background:#E9EEFB;}
     @media (max-width:700px){ .sn .lnk, .sn .cta{display:none;} header.sn{padding:0 18px;} }`;
   document.head.appendChild(st);
-  const links = [["eventi","Eventi","eventi.html"],["i miei eventi","I miei eventi","miei.html"],["gruppi","Gruppi","gruppi.html"]];
+  const links = [["eventi","Eventi","eventi.html"],["chiedi","Chiedi","chiedi.html"],["i miei eventi","I miei eventi","miei.html"],["gruppi","Gruppi","gruppi.html"]];
   const initial = ((session && session.email) || "?")[0].toUpperCase();
   const h = document.createElement("header"); h.className = "sn";
   h.innerHTML = `<div class="nav">

@@ -143,7 +143,7 @@
   <a class="invite" id="invite" href="crea-community.html" hidden>Organizzi eventi? Crea il tuo gruppo →</a>
 </main>
 
-<script src="app.js?v=1788599665"></script>
+<script src="app.js?v=1788600043"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 860 });
@@ -151,7 +151,6 @@
   track("groups_view");
 
   const CAT_EMOJI = { sport:"🏃", cucina:"🍳", "creatività":"🏺", giardinaggio:"🌱", cultura:"🎪", benessere:"🧘" };
-  const norm = t => String(t ?? "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   let GROUPS = [];          // gruppi uniti da list_communities + my_communities
   let loaded = false;       // false finché non arriva la lista (o l'errore)
   let failed = false;
