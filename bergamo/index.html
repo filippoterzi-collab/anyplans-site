@@ -100,6 +100,11 @@
   .cards{display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:16px;}
   .card{display:flex; align-items:center; gap:14px; background:#fff; border-radius:14px; padding:16px 18px;}
   .card .em{font-size:36px; line-height:1; flex-shrink:0;}
+  .card .em{display:inline-block; position:relative;}
+  .card.lock .em::after, .card.waiting .em::after{content:"🔒"; position:absolute; right:-5px; bottom:-3px; width:14px; height:14px; border-radius:999px; box-sizing:border-box;
+    display:flex; align-items:center; justify-content:center; font-size:9px; line-height:1; background:#fff; border:1.5px solid rgba(25,25,25,.4); pointer-events:none;}
+  .card.waiting .em::after{background:var(--blue); border-color:#fff;}
+  .card.closed .t{filter:blur(6px); user-select:none;}
   .card .t{font-weight:700; font-size:15px;}
   .card .m{font-size:13px; color:var(--grey);}
 
@@ -172,6 +177,11 @@
   .tpin{width:34px; height:34px; background:#fff; border:1.5px solid rgba(25,25,25,.2); border-radius:999px;
         display:flex; align-items:center; justify-content:center; font-size:16px; box-shadow:0 1px 4px rgba(0,0,0,.12);}
   .tpin.today{box-shadow:0 0 0 2.5px var(--blue), 0 1px 4px rgba(0,0,0,.12);}
+  .tpin.lock{border-style:dashed; border-color:rgba(25,25,25,.4);}
+  .tpin.waiting{border-style:solid;}
+  .tpin.lock::after, .tpin.waiting::after{content:"🔒"; position:absolute; right:-3px; bottom:-3px; width:14px; height:14px; border-radius:999px; box-sizing:border-box;
+    display:flex; align-items:center; justify-content:center; font-size:9px; line-height:1; background:#fff; border:1.5px solid rgba(25,25,25,.4); pointer-events:none;}
+  .tpin.waiting::after{background:var(--blue); border-color:#fff;}
 
   .social{display:flex; gap:10px; margin-top:4px;}
   .social a{width:38px; height:38px; border-radius:999px; background:var(--tint); color:var(--blue);
@@ -401,7 +411,7 @@
   </div>
 </div>
 
-<script src="/bergamo/app.js?v=1788683150"></script>
+<script src="/bergamo/app.js?v=1788688147"></script>
 <script>
   let quizCity = "";
 
@@ -501,8 +511,8 @@
     document.getElementById("ev-h2").textContent = "Eventi a Bergamo, adesso";
     document.getElementById("ev-lead").textContent = "Presi dalla mappa in questo momento. Ti registri con la tua email, scegli, e ci vai insieme ad altri.";
     document.getElementById("cards").innerHTML = rows.slice(0, 6).map(x =>
-      `<a class="card" href="/bergamo/evento.html?id=${x.id}"><div class="em">${esc(x.emoji || "📍")}</div>` +
-      `<div><div class="t">${esc(x.title)}</div><div class="m">${esc(dayLabel(x.when))}, ${timeStr(x.when)} · <b>${esc(relTime(x.when, x.end_at))}</b> · ${goingTxt(x.going_count)}${x.price_cents > 0 ? " · " + esc(fmtPrice(x.price_cents)) : ""}</div></div>` +
+      `<a class="card${lockState(x) === "open" ? "" : " lock"}${lockState(x) === "waiting" ? " waiting" : ""}${lockState(x) === "closed" ? " closed" : ""}" href="/bergamo/evento.html?id=${x.id}"><div class="em">${esc(x.emoji || "📍")}</div>` +
+      `<div><div class="t">${esc(x.title)}</div><div class="m">${esc(dayLabel(x.when))}, ${timeStr(x.when)} · <b>${esc(relTime(x.when, x.end_at))}</b> · ${lockTxt(x)}${x.price_cents > 0 ? " · " + esc(fmtPrice(x.price_cents)) : ""}</div></div>` +
       `<span class="go">Vedi →</span></a>`).join("");
     if (teaserReady) drawTeaser();
   }
@@ -517,7 +527,8 @@
       center: [9.670, 45.698], zoom: 11.6, interactive: false, attributionControl: false });
     LIVE.slice(0, 40).forEach(x => {
       const el = document.createElement("div");
-      el.className = "tpin" + (dayKind(x.when) === "oggi" ? " today" : ""); el.textContent = x.emoji || "📍";
+      const lk = lockState(x);
+      el.className = "tpin" + (dayKind(x.when) === "oggi" ? " today" : "") + (lk === "open" ? "" : " lock") + (lk === "waiting" ? " waiting" : ""); el.textContent = x.emoji || "📍";
       new maplibregl.Marker({ element: el }).setLngLat([x.lng, x.lat]).addTo(map);
     });
   }

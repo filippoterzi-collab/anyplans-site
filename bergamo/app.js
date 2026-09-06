@@ -269,6 +269,21 @@ function cityCase(t){
   return String(t || "").split(/(\s+|-|')/).map((w, i) => (!w || /^\s+$|^[-']$/.test(w)) ? w : (i > 0 && small.has(w) ? w : w[0].toUpperCase() + w.slice(1))).join("");
 }
 function goingTxt(n){ n = Number(n) || 0; return n === 0 ? "nessuno ancora" : n === 1 ? "1 ci va" : n + " ci vanno"; }
+// lucchetto (docs/UI.md §3.9, SCHEMA.md §2.17): l'evento si vede sempre, chiusa è la compagnia.
+// "closed" = nessun gruppo e nessuno ci va · "waiting" = nessun gruppo e una persona sola · "open" = due o più, o evento di un gruppo.
+// Calcolato qui e basta: nel database non c'è nessuno stato, è un confronto su going_count.
+function lockState(x){
+  if (x.community_id) return "open";
+  const n = Number(x.going_count) || 0;
+  return n === 0 ? "closed" : n === 1 ? "waiting" : "open";
+}
+// da chiuso si vede solo la città: ultimo pezzo dopo la virgola ("Oratorio, Via Roma 5, Nembro" → "Nembro")
+function cityOf(text){ const parts = String(text || "").split(",").map(x => x.trim()).filter(Boolean); return parts.length ? parts[parts.length - 1] : ""; }
+// testo al posto di goingTxt quando il piano non è ancora aperto
+function lockTxt(x){
+  const st = lockState(x);
+  return st === "closed" ? "🔒 nessuno ci va ancora" : st === "waiting" ? "🔒 manca una persona" : goingTxt(x.going_count);
+}
 // lista d'attesa (design/sito-landing/spec-lista-attesa.md): "3°"; "Pieno · 3 in lista d'attesa" o "" se ci sono posti
 function ordinal(n){ return (Number(n) || 0) + "°"; }
 function fullTxt(going, cap, wl){

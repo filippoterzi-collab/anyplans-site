@@ -103,6 +103,9 @@
   .igrow{display:flex; align-items:center; gap:8px;}
   .igrow span{color:var(--grey); font-size:15px; white-space:nowrap; cursor:text;}
   .igrow input{flex:1; min-width:0;}
+  .seg{display:flex; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:999px; padding:4px; gap:4px;}
+  .seg button{flex:1; border:none; background:transparent; border-radius:999px; padding:11px 0; font-family:var(--round); font-weight:700; font-size:14px; color:var(--ink); cursor:pointer;}
+  .seg button.on{background:var(--blue); color:#fff;}
 </style>
 </head>
 <body>
@@ -142,6 +145,15 @@
       <label for="city">La tua città</label>
       <input id="city" type="text" value="Bergamo" autocomplete="off" placeholder="Cerca la tua città" oninput="citySearch()">
       <div id="city-list" hidden></div>
+    </div>
+    <div>
+      <label>Sei <span style="color:var(--blue)">*</span></label>
+      <div class="seg" id="seg-gender">
+        <button type="button" data-g="donna" onclick="setGender('donna')">Donna</button>
+        <button type="button" data-g="uomo" onclick="setGender('uomo')">Uomo</button>
+        <button type="button" data-g="non_binary" onclick="setGender('non_binary')">Altro</button>
+      </div>
+      <p class="hint">Serve per i piani riservati alle donne o agli uomini. Non lo mostriamo a nessuno.</p>
     </div>
     <div>
       <label for="birth">La tua data di nascita <span style="color:var(--blue)">*</span></label>
@@ -208,7 +220,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1788683150"></script>
+<script src="app.js?v=1788688147"></script>
 <script>
   requireLogin();
   mountTabbar("profilo");
@@ -239,6 +251,7 @@
       document.getElementById("btn").textContent = "Salva le modifiche";
       document.getElementById("name").value = me.display_name || "";
       if (me.birth_date) document.getElementById("birth").value = me.birth_date;
+      if (me.gender) setGender(me.gender);
       if (me.base_city) document.getElementById("city").value = me.base_city;
       document.getElementById("bio").value = me.bio || "";
       document.getElementById("ig").value = (me.instagram_handle || "").replace(/^@/, "");
@@ -373,6 +386,12 @@
     } catch (_) { /* la foto è opzionale: se fallisce si va avanti */ }
   }
 
+  // ---- sesso (obbligatorio dal 06/09/2026: serve ai piani "solo donne" / "solo uomini") ----
+  let genderChoice = null;
+  function setGender(g){
+    genderChoice = g;
+    document.querySelectorAll("#seg-gender button").forEach(b => b.classList.toggle("on", b.dataset.g === g));
+  }
   // ---- salvataggio ----
   async function saveProfile(e){
     e.preventDefault();
@@ -383,6 +402,7 @@
     const note = document.getElementById("note");
     if (name.length < 2) { note.className = "note err"; note.textContent = "Scrivi il tuo nome (almeno 2 lettere)."; document.getElementById("name").focus(); return false; }
     if (!birth) { note.className = "note err"; note.textContent = "Serve la tua data di nascita: anyplans è solo per chi ha almeno 18 anni."; document.getElementById("birth").focus(); return false; }
+    if (!genderChoice) { note.className = "note err"; note.textContent = "Dicci se sei donna, uomo o altro: serve per i piani riservati."; document.getElementById("seg-gender").scrollIntoView({ block: "center", behavior: "smooth" }); return false; }
     const btnLabel = btn.textContent;
     btn.disabled = true; btn.textContent = "Un attimo…"; note.textContent = ""; note.className = "note";
     const restore = () => { btn.disabled = false; btn.textContent = btnLabel; };
@@ -398,7 +418,7 @@
       restore();
       return false;
     }
-    const extra = { p_base_city: city || null };
+    const extra = { p_base_city: city || null, p_gender: genderChoice };
     if (editMode) {
       extra.p_bio = document.getElementById("bio").value.trim() || null;
       const ig = document.getElementById("ig").value.trim().replace(/^@/, "").replace(/^.*instagram\.com\//, "").replace(/\/.*$/, "");

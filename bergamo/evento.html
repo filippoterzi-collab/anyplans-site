@@ -52,6 +52,7 @@
            font-weight:700; font-size:14px; padding:12px 8px;}
 
   main{max-width:860px; margin:0 auto; padding:16px 22px 70px; display:flex; flex-direction:column; gap:18px;}
+  .veil{filter:blur(7px); opacity:.6; user-select:none; pointer-events:none;}
   .cover{width:100%; height:230px; background:var(--tint); border-radius:22px; display:flex;
          align-items:center; justify-content:center; font-size:96px;}
   .chips{display:flex; gap:8px; flex-wrap:wrap;}
@@ -159,6 +160,7 @@
     <span class="chip w" id="chip-price">Gratis</span>
     <span class="chip w" id="chip-full" hidden></span>
     <span class="chip w" id="chip-req" hidden>Con approvazione</span>
+    <span class="chip w" id="chip-gender" hidden></span>
     <span class="chip w" id="chip-priv" hidden>🔒 Privato · solo con il link</span>
     <span class="chip w" id="chip-agg" hidden>Da un altro sito</span>
   </div>
@@ -174,8 +176,8 @@
 
   <!-- box azione -->
   <div class="box" id="box-guest" hidden>
-    <h2>Ci sei?</h2>
-    <p class="m">Per iscriverti serve un account: è gratis e ci vuole un minuto. Gli altri iscritti vedranno il tuo nome.</p>
+    <h2 id="guest-h2">Ci sei?</h2>
+    <p class="m" id="guest-m">Per iscriverti serve un account: è gratis e ci vuole un minuto. Gli altri iscritti vedranno il tuo nome.</p>
     <p class="m" id="guest-full" hidden>È pieno, ma con un account puoi metterti in lista d'attesa.</p>
     <div class="row">
       <a class="btn" href="login.html" onclick="rememberNext()">Registrati (è gratis)</a>
@@ -183,8 +185,18 @@
     </div>
     <p class="pay" id="pay-guest" hidden></p>
   </div>
+  <!-- lucchetto (UI.md §3.9): nessuno ci va ancora → aprirlo = creare il proprio piano -->
+  <div class="box" id="box-lock" hidden>
+    <h2>🔒 Evento da sbloccare</h2>
+    <p class="m">Non ci va ancora nessuno da qui. Sbloccalo tu: decidi chi può venire, gli altri si aggiungono, e quando arriva un'altra persona il piano si fa.</p>
+    <div class="row">
+      <button class="btn" onclick="claimEvent()">Sblocca l'evento</button>
+      <span class="note" id="going-lock"></span>
+    </div>
+  </div>
   <div class="box" id="box-join" hidden>
     <h2 id="join-h2">Ci sei?</h2>
+    <p class="m" id="wait-one" hidden>C'è già una persona. Se ci vai anche tu, il piano si fa.</p>
     <p class="m" id="join-hint" hidden>Qui decide chi organizza: gli mandi una richiesta e ti risponde.</p>
     <p class="m" id="full-hint" hidden></p>
     <div class="row">
@@ -219,6 +231,7 @@
     <div class="row">
       <button class="btn" onclick="openTicket()">Il mio biglietto</button>
       <button class="btn ghost" onclick="leaveEvent()">Non ci vado più</button>
+      <button class="btn ghost" id="btn-share-in" hidden onclick="shareEvent()">Condividi</button>
       <button class="btn ghost" id="btn-guest-adm" hidden onclick="openGuest()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Aggiungi una persona</button>
       <span class="note" id="going-in"></span>
     </div>
@@ -390,7 +403,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788683150"></script>
+<script src="app.js?v=1788688147"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -452,6 +465,8 @@
     else cover.textContent = ev.emoji || cat.e || "📍";
     document.getElementById("chip-cat").textContent = (ev.emoji || cat.e || "") + " " + (cat.l || ev.sport);
     document.getElementById("chip-req").hidden = !isReq;
+    const cg = document.getElementById("chip-gender"); cg.hidden = !ev.gender_allowed;
+    cg.textContent = ev.gender_allowed === "donna" ? "Solo donne" : ev.gender_allowed === "uomo" ? "Solo uomini" : "";
     document.getElementById("chip-priv").hidden = ev.visibility !== "private";
     document.getElementById("chip-price").textContent = fmtPrice(ev.price_cents);
     renderPay();
@@ -527,15 +542,30 @@
   function waitOn(){ return ev.waitlist_enabled !== false && ev.visibility !== "request"; }
   function updateBoxes(){
     const st = ev.my_status, full = isFull(), isReq = ev.visibility === "request";
+    const lock = lockState(ev), closed = lock === "closed", waiting = lock === "waiting";
     document.getElementById("box-guest").hidden = logged;
+    document.getElementById("guest-h2").textContent = closed ? "🔒 Evento da sbloccare" : "Ci sei?";
+    document.getElementById("guest-m").textContent = closed
+      ? "Non ci va ancora nessuno da qui. Con un account lo sblocchi tu: è gratis e ci vuole un minuto."
+      : "Per iscriverti serve un account: è gratis e ci vuole un minuto. Gli altri iscritti vedranno il tuo nome.";
     document.getElementById("box-host").hidden = !(logged && ev.is_mine);
-    document.getElementById("box-join").hidden = !logged || ev.is_mine || st === "going" || st === "requested" || st === "waitlisted";
+    const canAct = logged && !ev.is_mine && st !== "going" && st !== "requested" && st !== "waitlisted";
+    document.getElementById("box-lock").hidden = !(canAct && closed);
+    document.getElementById("box-join").hidden = !(canAct && !closed);
+    document.getElementById("wait-one").hidden = !(waiting && !isReq);
+    // chiuso e non sono dentro: nome, descrizione e indirizzo preciso non si leggono; restano categoria, città, giorno e ora
+    const veiled = closed && !ev.is_mine && st !== "going";
+    ["title", "desc", "map"].forEach(id => { const el = document.getElementById(id); if (el) el.classList.toggle("veil", veiled); });
+    const pl = document.getElementById("place");
+    if (veiled) { pl.textContent = (cityOf(ev.meeting_point_text) || "Zona indicativa") + " · l'indirizzo preciso quando lo sblocchi"; pl.removeAttribute("href"); }
+    document.title = veiled ? "Evento da sbloccare · anyplans" : ev.title + " · anyplans";
+
     document.getElementById("box-requested").hidden = !logged || ev.is_mine || st !== "requested";
     document.getElementById("box-in").hidden = !logged || ev.is_mine || st !== "going";
     document.getElementById("box-wait").hidden = !logged || ev.is_mine || st !== "waitlisted";
     // box "ci sei?" quando è pieno: lista d'attesa, oppure niente da fare; con approvazione resta la richiesta
     const hint = document.getElementById("full-hint");
-    document.getElementById("join-h2").textContent = full && !isReq ? "È pieno" : "Ci sei?";
+    document.getElementById("join-h2").textContent = full && !isReq ? "È pieno" : waiting ? "Manca una persona: ci sei?" : "Ci sei?";
     document.getElementById("join-hint").textContent = full && isReq
       ? "Qui decide chi organizza. I posti sono finiti, ma puoi mandare lo stesso la richiesta: se si libera un posto, chi organizza sceglie tra chi ha chiesto."
       : "Qui decide chi organizza: gli mandi una richiesta e ti risponde.";
@@ -552,6 +582,12 @@
     const wp = document.getElementById("wait-pos");
     wp.textContent = pos === 1 ? "Sei al 1° posto in fila: al primo posto che si libera, entri." : pos ? "Sei al " + ordinal(pos) + " posto in fila." : "Sei in fila.";
     wp.setAttribute("aria-label", pos ? "Sei al posto numero " + pos + " in fila" : "Sei in fila");
+    // il primo che ha aperto: aspetta la seconda persona
+    document.getElementById("btn-share-in").hidden = !(waiting && st === "going");
+    if (waiting && st === "going" && !promoted) {
+      document.getElementById("in-h2").textContent = "Sei il primo 🫶";
+      document.getElementById("in-m").textContent = "Quando arriva un'altra persona, il piano si fa. Intanto manda il link a chi vuoi.";
+    }
     // entrato dalla fila (link dell'avviso)
     if (promoted && st === "going") {
       document.getElementById("in-h2").textContent = "Si è liberato un posto: ci vai! 🫶";
@@ -579,8 +615,10 @@
   function renderCounts(){
     const going = Number(ev.going_count) || 0, wl = Number(ev.waitlist_count) || 0;
     const fila = wl ? " · " + wl + " in lista d'attesa" : "";
-    const gtxt = (going === 0 ? "Nessuno ancora, sei il primo?" : going === 1 ? "1 persona ci va" : going + " ci vanno") + seatsTxt() + fila;
-    ["going-guest","going-join","going-in","going-req","going-host","going-wait"].forEach(x => document.getElementById(x).textContent = gtxt);
+    const lk = lockState(ev);
+    const gtxt = (lk === "closed" ? "Nessuno ci va ancora" : lk === "waiting" ? "1 persona: ne manca una perché si faccia"
+                  : going === 0 ? "Nessuno ancora, sei il primo?" : going === 1 ? "1 persona ci va" : going + " ci vanno") + seatsTxt() + fila;
+    ["going-guest","going-join","going-in","going-req","going-host","going-wait","going-lock"].forEach(x => document.getElementById(x).textContent = gtxt);
     const chip = document.getElementById("chip-full");
     chip.hidden = !isFull(); chip.textContent = fullTxt(going, ev.max_participants, wl);
     updateBoxes();
@@ -604,6 +642,8 @@
     const me = myUid();
     const meRow = rows.find(x => x.user_id === me);
     if (!ev.is_mine && meRow && meRow.role === "admin" && meRow.status === "going") canManage = true;
+    // chi ha aperto il piano su un evento senza host (claimed_by, 0064) lo gestisce come un host
+    if (ev.claimed_by && ev.claimed_by === me) canManage = true;
     document.getElementById("btn-guest-adm").hidden = !(canManage && !ev.is_mine);
     // ospiti senza account: li vedono solo chi gestisce e chi partecipa, agli altri non chiediamo nulla
     guests = [];
@@ -611,16 +651,20 @@
       const rg = await rpc("activity_guests", { p_activity_id: ev.id });
       if (rg && rg.ok) guests = await rg.json().catch(() => []);
     }
-    if (going.length || guests.length) {
+    // lucchetto: le persone si vedono a piano aperto; prima solo chi è dentro o gestisce
+    const inside = canManage || ev.is_mine || (meRow && meRow.status === "going");
+    document.getElementById("people-wrap").hidden = true;
+    if ((going.length || guests.length) && (lockState(ev) === "open" || inside)) {
       document.getElementById("people-wrap").hidden = false;
       document.getElementById("people-n").textContent = "(" + (going.length + guests.length) + ")";
       document.getElementById("people").innerHTML = going.map(p => {
         const isHost = p.user_id === ev.host_id;
-        const isAdm = p.role === "admin" && !isHost;
+        const opened = !ev.host_id && p.user_id === ev.claimed_by;
+        const isAdm = p.role === "admin" && !isHost && !opened;
         let act = "";
         if (ev.is_mine && !isHost) act = `<button class="act" onclick="setAdmin('${p.user_id}', ${!isAdm})">${isAdm ? "Togli collaboratore" : "Rendi collaboratore"}</button>`;
         return `<div class="person"><div class="avatar"${avatarStyle(p.avatar_url)}>${p.avatar_url ? "" : esc((p.display_name || "?")[0].toUpperCase())}</div>` +
-          `<span>${esc(p.display_name || "Qualcuno")}</span>${isHost ? '<span class="tag">Organizza</span>' : ""}${isAdm ? '<span class="tag adm">Collaboratore</span>' : ""}${act}</div>`;
+          `<span>${esc(p.display_name || "Qualcuno")}</span>${isHost ? '<span class="tag">Organizza</span>' : ""}${opened ? '<span class="tag">Ha aperto il piano</span>' : ""}${isAdm ? '<span class="tag adm">Collaboratore</span>' : ""}${act}</div>`;
       }).join("") + guests.map(g =>
         `<div class="person"><div class="avatar">${esc((g.name || "?")[0].toUpperCase())}</div><span>${esc(g.name)}</span><span class="tag">Ospite</span>` +
         (canManage ? `<button class="act" onclick="removeGuest('${esc(g.id)}')">Togli</button>` : "") + `</div>`).join("");
@@ -916,6 +960,8 @@
       questions = rq && rq.ok ? await rq.json() : [];
     } catch (_) { questions = []; }
   }
+  // aprire il lucchetto = creare il proprio piano su questo evento (crea.html?from=)
+  function claimEvent(){ location.href = "crea.html?from=" + ev.id; }
   async function joinEvent(){
     await loadQuestions();
     pendingWait = false;
@@ -946,6 +992,8 @@
     const code = b.message || "";
     if (code.includes("profile_required")) { rememberNext(); location.href = "profilo.html"; return false; }
     if (code.includes("age_not_allowed")) { toast("Questo evento non è aperto alla tua età."); return false; }
+    if (code.includes("gender_required")) { toast("Prima dicci se sei donna o uomo, nel profilo."); rememberNext(); location.href = "profilo.html"; return false; }
+    if (code.includes("gender_not_allowed")) { toast(ev.gender_allowed === "donna" ? "Questo piano è solo per donne." : "Questo piano è solo per uomini."); return false; }
     if (code.includes("already")) { await reloadEvent(); return true; }
     if (code.includes("waitlist_disabled") || code.includes("approval_required")) { await reloadEvent(); toast("Posti finiti per questo evento."); return false; }
     toast("Non ha funzionato, riprova.");
@@ -1030,6 +1078,8 @@
       return false;
     }
     if (code.includes("age_not_allowed")) { toast("Questo evento non è aperto alla tua età."); return false; }
+    if (code.includes("gender_required")) { toast("Prima dicci se sei donna o uomo, nel profilo."); rememberNext(); location.href = "profilo.html"; return false; }
+    if (code.includes("gender_not_allowed")) { toast(ev.gender_allowed === "donna" ? "Questo piano è solo per donne." : "Questo piano è solo per uomini."); return false; }
     if (code.includes("already")) { ev.my_status = isReq ? "requested" : "going"; renderCounts(); return true; }
     toast("Non ha funzionato, riprova.");
     return false;

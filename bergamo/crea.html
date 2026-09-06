@@ -174,6 +174,28 @@
     <textarea id="desc" placeholder="Due righe per chi non ti conosce: cosa si fa, cosa portare…"></textarea>
   </div>
 
+  <div>
+    <label>Chi può venire?</label>
+    <div class="seg" id="seg-gender">
+      <button type="button" class="on" data-g="" onclick="setGender('')">Tutti</button>
+      <button type="button" data-g="donna" onclick="setGender('donna')">Solo donne</button>
+      <button type="button" data-g="uomo" onclick="setGender('uomo')">Solo uomini</button>
+    </div>
+    <p class="hint">Chi non rientra vede il piano ma non può iscriversi.</p>
+  </div>
+
+  <div class="grid2" id="age-wrap" hidden>
+    <div>
+      <label for="min-age">Chi può venire: da che età?</label>
+      <input id="min-age" type="number" min="18" max="99" value="18">
+    </div>
+    <div>
+      <label for="max-age">Fino a che età? <span style="color:var(--grey); font-weight:600">(vuoto = nessun limite)</span></label>
+      <input id="max-age" type="number" min="18" max="99" placeholder="Es. 35">
+    </div>
+    <p class="hint" style="grid-column:1/-1; margin-top:-4px">Chi è fuori fascia vede il piano ma non può iscriversi.</p>
+  </div>
+
   <div class="grid2">
     <div>
       <label for="maxp">Quante persone al massimo? <span style="color:var(--grey); font-weight:600">(se lo lasci vuoto, nessun limite)</span></label>
@@ -231,13 +253,24 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788683150"></script>
+<script src="app.js?v=1788688147"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
   mountTabbar("crea");
   const editId = new URLSearchParams(location.search).get("edit");
+  const fromId = new URLSearchParams(location.search).get("from");
   let editVisibility = "open", editSport = null;
+  let genderChoice = null, editGender = null; // null = tutti, 'donna', 'uomo'
+  function setGender(g){
+    genderChoice = g || null;
+    document.querySelectorAll("#seg-gender button").forEach(b => b.classList.toggle("on", (b.dataset.g || null) === genderChoice));
+  }
+  async function saveGender(activityId, wanted, current){
+    if (wanted === current) return;
+    const r = await rpc("set_activity_gender", { p_activity_id: activityId, p_gender: wanted });
+    if (!r || !r.ok) toast("Salvato, ma \"chi può venire\" no. Riprova da \"Modifica l'evento\".");
+  }
   // in modifica: stato attuale dell'evento per lista d'attesa e validazione dei posti
   let editWaitlist = true, editCap = null, editGoing = 0, editWaitCount = 0;
   let editHadEnd = false;
@@ -380,6 +413,7 @@
     setVis(a.visibility === "private" ? "private" : "public");
     if (a.visibility === "request") document.getElementById("vis").classList.add("on");
     editVisibility = a.visibility || "open";
+    editGender = a.gender_allowed || null; setGender(editGender);
     const back = document.getElementById("lnk-back"); back.hidden = false; back.href = "evento.html?id=" + editId;
     sel.value = a.sport; editSport = a.sport;
     document.getElementById("title").value = a.title || "";
@@ -421,6 +455,91 @@
   }
   if (editId) loadForEdit();
 
+  // ?from=<id>: apro il lucchetto (UI.md §3.9). L'evento è quello che è — si vede, non si cambia:
+  // si decide solo chi può venire (fascia d'età, posti, approvazione) e si va per primi.
+  async function loadForClaim(){
+    const r = await rpc("activity_by_id", { p_id: fromId });
+    const rows = r && r.ok ? await r.json().catch(() => []) : [];
+    const a = rows[0];
+    // già aperto, di un gruppo, o già iniziato: non c'è niente da aprire
+    if (!a || a.community_id || a.claimed_by || (Number(a.going_count) || 0) > 0 || new Date(a.start_at) <= new Date()) {
+      location.replace("evento.html?id=" + fromId); return;
+    }
+    document.getElementById("h1").textContent = "Sblocca l'evento";
+    document.getElementById("btn").textContent = "Sblocca l'evento: vado io";
+    document.getElementById("note").textContent = "Sbloccandolo ci vai. Quando arriva un'altra persona, il piano si fa.";
+    const back = document.getElementById("lnk-back"); back.hidden = false; back.href = "evento.html?id=" + fromId;
+    sel.value = a.sport; sel.disabled = true;
+    document.getElementById("title").value = a.title || "";
+    const d = new Date(a.start_at);
+    document.getElementById("date").value = localDate(d);
+    document.getElementById("time").value = pad(d.getHours()) + ":" + pad(d.getMinutes());
+    if (a.end_at) {
+      const e = new Date(a.end_at);
+      document.getElementById("end-date").value = localDate(e);
+      document.getElementById("end-time").value = pad(e.getHours()) + ":" + pad(e.getMinutes());
+    }
+    document.getElementById("place").value = a.meeting_point_text || "";
+    document.getElementById("place").oninput = null;
+    ["title", "date", "time", "end-date", "end-time", "place"].forEach(id => {
+      const el = document.getElementById(id); el.readOnly = true; el.tabIndex = -1; el.style.opacity = ".65";
+    });
+
+    if (a.lat != null && a.lng != null) setPoint(a.lat, a.lng);
+    // chiuso: nome e indirizzo preciso si leggono dopo lo sblocco; qui si vede la città
+    { const t = document.getElementById("title"), pl = document.getElementById("place");
+      t.value = ""; t.placeholder = "🔒 Il nome lo leggi dopo lo sblocco"; t.disabled = true;
+      pl.value = cityOf(a.meeting_point_text) || ""; pl.placeholder = "🔒 L'indirizzo preciso dopo lo sblocco"; }
+    // le parti che non riguardano "chi viene" non si vedono
+    ["as-wrap", "seg-vis", "ph", "desc", "qs", "map"].forEach(id => { const b = document.getElementById(id).closest("main > div"); if (b) b.hidden = true; });
+    // suggerimenti sui campi che qui sono bloccati
+    document.querySelectorAll("#place ~ p.hint, #end-time").forEach(el => { const h = el.id === "end-time" ? el.closest("main > div").nextElementSibling : el; if (h && h.classList.contains("hint")) h.hidden = true; });
+    document.getElementById("paid").hidden = true; document.getElementById("price-wrap").hidden = true;
+    document.getElementById("age-wrap").hidden = false;
+    document.activeElement && document.activeElement.blur();
+    window.scrollTo(0, 0);
+  }
+  if (fromId && !editId) loadForClaim();
+
+  async function submitClaim(){
+    const note = document.getElementById("note");
+    function fail(msg){ note.className = "note err"; note.textContent = msg; toast(msg); note.scrollIntoView({ block: "center", behavior: "smooth" }); }
+    const minA = parseInt(document.getElementById("min-age").value, 10);
+    const maxRaw = document.getElementById("max-age").value.trim();
+    const maxA = maxRaw === "" ? null : parseInt(maxRaw, 10);
+    if (!Number.isFinite(minA) || minA < 18) return fail("L'età minima è 18.");
+    if (maxA != null && (!Number.isFinite(maxA) || maxA < minA)) return fail("L'età massima deve essere almeno quella minima.");
+    const maxp = parseInt(document.getElementById("maxp").value, 10);
+    const hasCap = Number.isFinite(maxp);
+    if (hasCap && maxp < 2) return fail("Almeno 2 posti: il piano si fa in due.");
+    const btn = document.getElementById("btn");
+    btn.disabled = true; note.className = "note"; note.textContent = "…";
+    const r = await rpc("claim_activity", {
+      p_activity_id: fromId, p_min_age: minA, p_max_age: maxA,
+      p_max_participants: hasCap ? maxp : null,
+      p_visibility: chosenVisibility() === "request" ? "request" : "open",
+      p_gender_allowed: genderChoice
+    });
+    btn.disabled = false;
+    if (r && r.ok) {
+      if (hasCap && chosenVisibility() !== "request" && !chosenWaitlist()) await saveWaitlist(fromId, false, true);
+      track("event_claim");
+      location.href = "evento.html?id=" + fromId;
+      return;
+    }
+    const code = ((r ? await r.json().catch(() => ({})) : {}).message || "");
+    note.className = "note err";
+    if (code.includes("profile_required")) { location.href = "profilo.html"; return; }
+    if (code.includes("already_claimed") || code.includes("already_open") || code.includes("has_community")) {
+      toast("Qualcuno l'ha appena aperto: ci puoi andare anche tu."); location.href = "evento.html?id=" + fromId; return;
+    }
+    if (code.includes("age_not_allowed")) note.textContent = "Con questa fascia d'età resteresti fuori anche tu. Cambiala.";
+    else if (code.includes("gender_required")) { toast("Prima dicci se sei donna o uomo, nel profilo."); location.href = "profilo.html"; return; }
+    else if (code.includes("gender_not_allowed")) note.textContent = "Con questo filtro resteresti fuori anche tu. Cambialo.";
+    else if (code.includes("activity_past")) note.textContent = "Questo evento è già iniziato.";
+    else note.textContent = "Non riesco ad aprire il piano, riprova.";
+  }
+
   // pubblica come gruppo (owner/admin): ?community=<id> preseleziona
   const wantCommunity = new URLSearchParams(location.search).get("community");
   rpc("my_communities").then(async r => {
@@ -430,7 +549,7 @@
     const selAs = document.getElementById("as");
     mine.forEach(x => { const o = document.createElement("option"); o.value = x.id; o.textContent = (x.emoji || "") + "  " + x.name; selAs.appendChild(o); });
     if (wantCommunity && mine.some(x => x.id === wantCommunity)) selAs.value = wantCommunity;
-    document.getElementById("as-wrap").hidden = false;
+    document.getElementById("as-wrap").hidden = !!(fromId && !editId); // sbloccando un evento non si pubblica a nome di un gruppo
   });
 
   // pubblico (mappa e lista) o privato (solo chi ha il link). se privato, niente approvazione: entra chi ha il link
@@ -580,6 +699,7 @@
   }
 
   async function submitNewEvent(){
+    if (fromId && !editId) return submitClaim();
     const note = document.getElementById("note");
     const title = document.getElementById("title").value.trim();
     const place = document.getElementById("place").value.trim();
@@ -643,6 +763,7 @@
         await savePrice(editId, price);
         await savePhoto(editId);
         await saveVisibility(editId, chosenVisibility(), editVisibility);
+        await saveGender(editId, genderChoice, editGender);
         if (hasCap && chosenVisibility() !== "request") await saveWaitlist(editId, chosenWaitlist(), editWaitlist);
         if (editSport && sel.value !== editSport) {
           const rsp = await rpc("set_activity_sport", { p_activity_id: editId, p_sport: sel.value });
@@ -681,6 +802,7 @@
       if (price.cents) await savePrice(newId, price);
       await savePhoto(newId);
       if (chosenVisibility() === "private") await saveVisibility(newId, "private", "open");
+      if (genderChoice) await saveGender(newId, genderChoice, null);
       if (hasCap && chosenVisibility() !== "request" && !chosenWaitlist()) await saveWaitlist(newId, false, true);
       const asC = document.getElementById("as").value;
       if (asC) {
