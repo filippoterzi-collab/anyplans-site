@@ -105,12 +105,13 @@
   </div>
 
   <div>
-    <label>Chi lo può vedere?</label>
+    <label>Chi può partecipare?</label>
     <div class="seg" id="seg-vis">
-      <button type="button" class="on" data-v="public" onclick="setVis('public')">Pubblico</button>
+      <button type="button" class="on" data-v="public" onclick="setVis('public')">Tutti</button>
+      <button type="button" data-v="request" onclick="setVis('request')">Con approvazione</button>
       <button type="button" data-v="private" onclick="setVis('private')">Privato</button>
     </div>
-    <p class="hint" id="vis-hint">Pubblico: sulla mappa e nella lista, chiunque a Bergamo lo trova.</p>
+    <p class="hint" id="vis-hint">Tutti: sulla mappa e nella lista, chiunque a Bergamo entra subito.</p>
   </div>
 
   <div>
@@ -253,7 +254,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788702306"></script>
+<script src="app.js?v=1788704745"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -420,8 +421,7 @@
     document.getElementById("h1").textContent = "Modifica evento";
     document.getElementById("btn").textContent = "Salva le modifiche";
     document.getElementById("note").textContent = "Chi partecipa vede le modifiche subito.";
-    setVis(a.visibility === "private" ? "private" : "public");
-    if (a.visibility === "request") document.getElementById("vis").classList.add("on");
+    setVis(a.visibility === "private" ? "private" : a.visibility === "request" ? "request" : "public");
     editVisibility = a.visibility || "open";
     editGender = a.gender_allowed || null; setGender(editGender);
     const back = document.getElementById("lnk-back"); back.hidden = false; back.href = "evento.html?id=" + editId;
@@ -499,7 +499,8 @@
     if (a.lat != null && a.lng != null) setPoint(a.lat, a.lng);
 
     // le parti che non riguardano "chi viene" non si vedono
-    ["as-wrap", "seg-vis", "ph", "desc", "qs", "map"].forEach(id => { const b = document.getElementById(id).closest("main > div"); if (b) b.hidden = true; });
+    ["as-wrap", "ph", "desc", "qs", "map"].forEach(id => { const b = document.getElementById(id).closest("main > div"); if (b) b.hidden = true; });
+    document.querySelector('#seg-vis button[data-v="private"]').hidden = true;
     // suggerimenti sui campi che qui sono bloccati
     document.querySelectorAll("#place ~ p.hint, #end-time").forEach(el => { const h = el.id === "end-time" ? el.closest("main > div").nextElementSibling : el; if (h && h.classList.contains("hint")) h.hidden = true; });
     document.getElementById("paid").hidden = true; document.getElementById("price-wrap").hidden = true;
@@ -562,15 +563,17 @@
 
   // pubblico (mappa e lista) o privato (solo chi ha il link). se privato, niente approvazione: entra chi ha il link
   let visChoice = "public";
+  // deciso 06/09/2026: la scelta "con approvazione" sta qui in cima, non in un interruttore in fondo al modulo
   function setVis(v){
     visChoice = v;
     document.querySelectorAll("#seg-vis button").forEach(b => b.classList.toggle("on", b.dataset.v === v));
     document.getElementById("vis-hint").textContent = v === "private"
       ? "Privato: non compare sulla mappa. Lo vede solo chi riceve il link da te."
-      : "Pubblico: sulla mappa e nella lista, chiunque a Bergamo lo trova.";
+      : v === "request" ? "Con approvazione: ognuno ti manda una richiesta e decidi tu. L'indirizzo preciso lo vede solo chi accetti."
+      : "Tutti: sulla mappa e nella lista, chiunque a Bergamo entra subito.";
     const vis = document.getElementById("vis");
-    vis.hidden = v === "private";
-    if (v === "private") vis.classList.remove("on");
+    vis.hidden = true;
+    vis.classList.toggle("on", v === "request");
     syncWaitlistRow();
   }
   // lista d'attesa quando è pieno: la riga c'è solo con un numero di posti (>= 2) e senza approvazione
