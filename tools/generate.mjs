@@ -341,7 +341,7 @@ const listHtml = (list) => `<div class="list">${list.map(cardHtml).join("\n")}</
 
 // ── event page ────────────────────────────────────────────────────────────────
 function organizer(p) {
-  if (p.community_slug && p.community_name) return { name: p.community_name, url: groupUrl(p), kind: "gruppo" };
+  if (p.community_slug && p.community_name) return { name: p.community_name, url: groupUrl({ slug: p.community_slug }), kind: "gruppo" };   // slug del gruppo, non dell'evento
   if (p.club) return { name: p.club, url: null, kind: "club" };
   return { name: "Un utente di anyplans", url: null, kind: "utente" };
 }
