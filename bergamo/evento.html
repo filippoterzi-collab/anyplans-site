@@ -53,7 +53,6 @@
 
   main{max-width:860px; margin:0 auto; padding:16px 22px 70px; display:flex; flex-direction:column; gap:18px;}
   #when b.live{color:#1E8E3E;} #when b.soon{color:#B4530A;}
-  .veil{filter:blur(7px); opacity:.6; user-select:none; pointer-events:none;}
   .cover{width:100%; height:230px; background:var(--tint); border-radius:22px; display:flex;
          align-items:center; justify-content:center; font-size:96px;}
   .chips{display:flex; gap:8px; flex-wrap:wrap;}
@@ -404,7 +403,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788696862"></script>
+<script src="app.js?v=1788698143"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -555,12 +554,8 @@
     document.getElementById("box-lock").hidden = !(canAct && closed);
     document.getElementById("box-join").hidden = !(canAct && !closed);
     document.getElementById("wait-one").hidden = !(waiting && !isReq);
-    // chiuso e non sono dentro: nome, descrizione e indirizzo preciso non si leggono; restano categoria, città, giorno e ora
-    const veiled = closed && !ev.is_mine && st !== "going";
-    ["title", "desc", "map"].forEach(id => { const el = document.getElementById(id); if (el) el.classList.toggle("veil", veiled); });
-    const pl = document.getElementById("place");
-    if (veiled) { pl.textContent = (cityOf(ev.meeting_point_text) || "Zona indicativa") + " · l'indirizzo preciso quando lo sblocchi"; pl.removeAttribute("href"); }
-    document.title = veiled ? "Evento da sbloccare · anyplans" : ev.title + " · anyplans";
+    // nella pagina si vede tutto anche da chiuso (deciso 06/09/2026: "quando apro l'evento voglio vedere le cose");
+    // la sfocatura resta in lista e sulla mappa, il lucchetto qui è solo il blocco "Evento da sbloccare"
 
     document.getElementById("box-requested").hidden = !logged || ev.is_mine || st !== "requested";
     document.getElementById("box-in").hidden = !logged || ev.is_mine || st !== "going";

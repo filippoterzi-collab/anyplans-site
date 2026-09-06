@@ -253,7 +253,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788696862"></script>
+<script src="app.js?v=1788698143"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -486,10 +486,7 @@
     });
 
     if (a.lat != null && a.lng != null) setPoint(a.lat, a.lng);
-    // chiuso: nome e indirizzo preciso si leggono dopo lo sblocco; qui si vede la città
-    { const t = document.getElementById("title"), pl = document.getElementById("place");
-      t.value = ""; t.placeholder = "🔒 Il nome lo leggi dopo lo sblocco"; t.disabled = true;
-      pl.value = cityOf(a.meeting_point_text) || ""; pl.placeholder = "🔒 L'indirizzo preciso dopo lo sblocco"; }
+
     // le parti che non riguardano "chi viene" non si vedono
     ["as-wrap", "seg-vis", "ph", "desc", "qs", "map"].forEach(id => { const b = document.getElementById(id).closest("main > div"); if (b) b.hidden = true; });
     // suggerimenti sui campi che qui sono bloccati
