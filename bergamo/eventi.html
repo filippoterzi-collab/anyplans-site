@@ -366,7 +366,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788691654"></script>
+<script src="app.js?v=1788692162"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -505,7 +505,8 @@
   // ── stato della ricerca ──────────────────────────────────────────
   // day: "" | "oggi" | "domani" | "weekend" | "data" (+ dateSel); where: null | {kind:"me"|"bg"|"place", name, lat, lng, km}
   // qText: quello che ha scritto; parsed: expandQuery(qText) o null; cardOpen: card riaperta da "Cambia"
-  let day = "", dateSel = null, where = null, qText = "", parsed = null, cardOpen = false, locating = false;
+  // si parte da "Oggi" (deciso 06/09/2026): la domanda del marchio è "c'è qualcosa oggi?", non "nei prossimi mesi"
+  let day = "oggi", dateSel = null, where = null, qText = "", parsed = null, cardOpen = false, locating = false;
   let refit = false, lastVisible = [], savedSearches = [], lastEmptyKey = "";
   const isoLocal = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
   const mobileFilters = window.matchMedia("(max-width:700px)");
@@ -884,7 +885,7 @@
   function openChiediFromUrl(){
     const p = new URLSearchParams(location.search);
     const q = p.get("q");
-    if (q) { qInput.value = q.slice(0, 120); document.getElementById("cc-what").classList.add("has"); search(); return; }
+    if (q) { day = ""; qInput.value = q.slice(0, 120); document.getElementById("cc-what").classList.add("has"); search(); return; }
     if (p.get("chiedi") !== "1") return;
     if (inMapView()) document.body.classList.remove("showmap");
     cardOpen = true; syncCard();
