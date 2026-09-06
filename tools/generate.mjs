@@ -478,9 +478,9 @@ function runningHub() {
 ${crumbs([["anyplans", "/"], [CITY_NAME, `/${CITY}/cosa-fare/`], ["Gruppi", `/${CITY}/gruppi/`], ["Running club", null]])}
 <h1>${esc(T.titolo || `Running club a ${CITY_NAME} e provincia`)}</h1>
 <p class="lead">${esc(T.sotto || descr)}</p>
-<div class="rc-days">${byDay.map(x => `<a href="#${x.d.toLowerCase()}"${x.rows.length ? "" : ' aria-disabled="true"'}>${x.d}</a>`).join("")}${noDay.length ? `<a href="#altri">Senza giorno fisso</a>` : ""}</div>
+<div class="rc-days">${byDay.map(x => `<a href="${x.rows.length ? `/${CITY}/running-club/${DAY_SLUG[x.i]}/` : "#"}"${x.rows.length ? "" : ' aria-disabled="true"'}>${x.d}</a>`).join("")}${noDay.length ? `<a href="#altri">Senza giorno fisso</a>` : ""}</div>
 ${byDay.filter(x => x.rows.length).map(x => `
-<div class="rc-day" id="${x.d.toLowerCase()}"><h2>${x.d}</h2><span class="n">${x.rows.length} ${x.rows.length === 1 ? "ritrovo" : "ritrovi"}</span></div>
+<div class="rc-day" id="${x.d.toLowerCase()}"><h2><a href="/${CITY}/running-club/${DAY_SLUG[x.i]}/" style="color:inherit">${x.d}</a></h2><span class="n">${x.rows.length} ${x.rows.length === 1 ? "ritrovo" : "ritrovi"}</span></div>
 <div class="rc-grid">${x.rows.map(r => rcCard(runClubs.find(g => g.slug === r.community_slug), r)).join("\n")}</div>`).join("\n")}
 ${noDay.length ? `
 <div class="rc-day" id="altri"><h2>Senza giorno fisso</h2><span class="n">${noDay.length}</span></div>
@@ -495,6 +495,28 @@ ${FAQ.map(f => `<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>`).join("")}</div>
 `;
   const faqLd = jsonld({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQ.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) });
   return { html: layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld + "\n" + faqLd, body }), lastmod: NOW };
+}
+
+const DAY_SLUG = ["lunedi", "martedi", "mercoledi", "giovedi", "venerdi", "sabato", "domenica"];
+function runningDayPage(i) {
+  const d = WEEKDAYS[i], rows = schedules.filter(x => x.weekday === i && runClubs.some(g => g.slug === x.community_slug));
+  const url = `${SITE}/${CITY}/running-club/${DAY_SLUG[i]}/`;
+  const names = rows.map(r => r.community_name).join(", ");
+  const title = cut(`Run club a ${CITY_NAME} il ${d.toLowerCase()}: ${rows.length} ${rows.length === 1 ? "gruppo" : "gruppi"} con cui correre`, 60) + " | anyplans";
+  const descr = cut(`Correre in gruppo a ${CITY_NAME} il ${d.toLowerCase()}: ${names}. Orario, punto di ritrovo, Instagram e WhatsApp di ogni run club. Gratis, aperti a tutti, ogni settimana.`, 160);
+  const ld = jsonld({ "@context": "https://schema.org", "@type": "ItemList", name: `Run club a ${CITY_NAME} il ${d.toLowerCase()}`, url,
+    itemListElement: rows.map((r, k) => ({ "@type": "ListItem", position: k + 1, url: groupUrl({ slug: r.community_slug }), name: r.community_name })) });
+  const body = `
+${crumbs([["anyplans", "/"], [CITY_NAME, `/${CITY}/cosa-fare/`], ["Running club", `/${CITY}/running-club/`], [d, null]])}
+<h1>Run club a ${esc(CITY_NAME)} il <span>${d.toLowerCase()}</span></h1>
+<p class="lead">${rows.length} ${rows.length === 1 ? "gruppo esce" : "gruppi escono"} a correre insieme il ${d.toLowerCase()} a ${esc(CITY_NAME)} e provincia. Scegli l'orario e il posto più comodo, presentati al ritrovo con le scarpe da corsa: non serve iscriversi né essere allenati.</p>
+<div class="rc-days">${WEEKDAYS.map((x, k) => `<a href="/${CITY}/running-club/${DAY_SLUG[k]}/"${k === i ? ' class="on"' : ""}>${x}</a>`).join("")}</div>
+<div class="rc-grid">${rows.map(r => rcCard(runClubs.find(g => g.slug === r.community_slug), r)).join("\n")}</div>
+<div class="box"><h2>Correre il ${d.toLowerCase()} a ${esc(CITY_NAME)}</h2>
+<p>${rows.map(r => `<b>${esc(r.community_name)}</b> alle ${esc(hhmm(r.start_time))}${r.meeting_point_text ? ` a ${esc(r.meeting_point_text)}` : ""}${r.note ? ` (${esc(r.note.toLowerCase())})` : ""}`).join("; ")}. Ogni uscita dura circa un'ora; il ritmo lo fa il gruppo, e chi va piano non resta indietro. Se è la prima volta, scrivi sul gruppo WhatsApp o su Instagram del club per sapere se quella settimana si esce.</p>
+<p><a href="/${CITY}/running-club/">Tutti i running club di ${esc(CITY_NAME)}, per giorno →</a></p></div>
+`;
+  return { html: layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld, body }), lastmod: NOW };
 }
 
 // ── group pages ───────────────────────────────────────────────────────────────
@@ -638,7 +660,13 @@ addUrl(SITE + "/", NOW);
 const hub = hubPage(); await writePage(`${CITY}/cosa-fare`, hub.html); addUrl(`${SITE}/${CITY}/cosa-fare/`, hub.lastmod);
 for (const ix of [...types, ...towns]) { const r = indexPage(ix); await writePage(`${CITY}/${ix.slug}`, r.html); addUrl(`${SITE}/${CITY}/${ix.slug}/`, r.lastmod); }
 if (groups.length) { await writePage(`${CITY}/gruppi`, groupsIndex()); addUrl(`${SITE}/${CITY}/gruppi/`, NOW); }
-if (runClubs.length >= 3) { const r = runningHub(); await writePage(`${CITY}/running-club`, r.html); addUrl(`${SITE}/${CITY}/running-club/`, r.lastmod); }
+if (runClubs.length >= 3) {
+  const r = runningHub(); await writePage(`${CITY}/running-club`, r.html); addUrl(`${SITE}/${CITY}/running-club/`, r.lastmod);
+  for (let i = 0; i < 7; i++) {
+    if (!schedules.some(x => x.weekday === i && runClubs.some(g => g.slug === x.community_slug))) continue;
+    const d = runningDayPage(i); await writePage(`${CITY}/running-club/${DAY_SLUG[i]}`, d.html); addUrl(`${SITE}/${CITY}/running-club/${DAY_SLUG[i]}/`, d.lastmod);
+  }
+}
 for (const g of groups) { const r = groupPage(g); await writePage(`${CITY}/gruppi/${g.slug}`, r.html); addUrl(groupUrl(g), r.lastmod); }
 for (const p of pages) { await writePage(`${CITY}/${p.slug}`, eventPage(p)); addUrl(eventUrl(p), p.updated); }
 await writeFile(path.join(OUT, "sitemap.xml"), sitemapXml());
