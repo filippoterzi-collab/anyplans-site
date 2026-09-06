@@ -155,9 +155,7 @@
   .day.hot .dot{background:none; width:auto; height:auto;}
   .pin.hot{width:50px; height:50px; font-size:24px; box-shadow:0 0 0 3px var(--blue), 0 4px 14px rgba(27,79,216,.35);}
   .pin.hot::after{content:attr(data-n); position:absolute; right:-6px; top:-6px; min-width:20px; height:20px; padding:0 5px; border-radius:999px; background:var(--blue); color:#fff; font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center; font-family:var(--round);}
-  /* orario sopra il pin: sempre per i piani in evidenza; per tutti gli altri dallo zoom città in su (zoom ≥ 12) */
-  .pin .tm{display:none;}
-  .pin.hot .tm, body.map-zoomed .pin .tm{display:block;}
+  /* orario sopra ogni pin, sempre (deciso 06/09/2026: "così uno sulla mappa vede quanto manca") */
   .pin .tm{position:absolute; top:-26px; left:50%; transform:translateX(-50%); white-space:nowrap; background:#E8F5EC; color:#1E8E3E; font-size:11px; font-weight:800; padding:2px 8px; border-radius:999px; pointer-events:none;}
   .pin .tm.soon{background:#FDEEDC; color:#B4530A;}
   /* un evento già cominciato resta in lista finché non finisce: si vede a colpo d'occhio */
@@ -391,7 +389,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788696270"></script>
+<script src="app.js?v=1788696862"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -493,9 +491,6 @@
     map.addLayer({ id: "radius-fill", type: "fill", source: "radius", paint: { "fill-color": "#1B4FD8", "fill-opacity": .08 } });
     map.addLayer({ id: "radius-line", type: "line", source: "radius", paint: { "line-color": "#1B4FD8", "line-width": 1.5, "line-dasharray": [2, 2] } });
     mapReady = true; syncRadius();
-    // il timer sopra i pin si vede già allo zoom città (12.3 all'apertura); sparisce solo allontanando molto
-    const syncZoomed = () => document.body.classList.toggle("map-zoomed", map.getZoom() >= 12);
-    map.on("zoomend", syncZoomed); syncZoomed();
     // su telefono il contenitore prende l'altezza vera solo dopo il primo layout: il canvas va rimisurato
     map.resize(); requestAnimationFrame(() => map.resize());
   });
