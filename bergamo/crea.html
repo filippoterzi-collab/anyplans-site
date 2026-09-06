@@ -253,7 +253,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788700112"></script>
+<script src="app.js?v=1788700254"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -457,6 +457,7 @@
       const row = document.querySelector(".qrow:last-child");
       row.querySelector(".q-prompt").value = q.prompt;
       row.querySelector(".q-kind").value = q.kind;
+      if (q.kind === "choice") { row.querySelector(".q-opts").hidden = false; row.querySelector(".q-opts").value = (q.options || []).join("\n"); }
       row.querySelector(".q-req").checked = !!q.required;
     });
     document.activeElement && document.activeElement.blur();
@@ -687,21 +688,26 @@
       '<input class="q-prompt" type="text" maxlength="200" placeholder="La domanda… (es. hai mai fatto ceramica?)" style="border:none; padding:4px 2px; font-size:15px; outline:none">' +
       '<div style="display:flex; align-items:center; gap:14px; flex-wrap:wrap">' +
         '<select class="q-kind" style="width:auto; padding:8px 12px; font-size:13.5px; border-radius:9px">' +
-          '<option value="text">Risposta libera</option><option value="yesno">Sì o no</option></select>' +
+          '<option value="text">Risposta libera</option><option value="yesno">Sì o no</option><option value="choice">A scelta</option></select>' +
         '<label style="display:flex; align-items:center; gap:6px; font-weight:600; font-size:13px; color:var(--grey); margin:0; cursor:pointer">' +
           '<input class="q-req" type="checkbox" style="width:auto"> Obbligatoria</label>' +
         '<button type="button" onclick="this.closest(\'.qrow\').remove()" ' +
           'style="margin-left:auto; background:none; border:none; cursor:pointer; font-weight:700; font-size:16px; color:var(--grey)">×</button>' +
-      '</div>';
+      '</div>' +
+      '<textarea class="q-opts" hidden rows="3" maxlength="400" placeholder="Le risposte tra cui scegliere, una per riga (da 2 a 6)" ' +
+        'style="border:1.5px solid rgba(25,25,25,.12); border-radius:10px; padding:8px 10px; font-size:14px; font-family:var(--round)"></textarea>';
+    row.querySelector(".q-kind").addEventListener("change", e => { row.querySelector(".q-opts").hidden = e.target.value !== "choice"; });
     qs.appendChild(row);
     row.querySelector(".q-prompt").focus();
   }
+  const optsOf = r => r.querySelector(".q-opts").value.split("\n").map(x => x.trim()).filter(Boolean).slice(0, 6);
   function collectQuestions(){
     return Array.from(document.querySelectorAll(".qrow")).map(r => ({
       prompt: r.querySelector(".q-prompt").value.trim(),
       kind: r.querySelector(".q-kind").value,
-      required: r.querySelector(".q-req").checked
-    })).filter(x => x.prompt.length >= 3);
+      required: r.querySelector(".q-req").checked,
+      options: r.querySelector(".q-kind").value === "choice" ? optsOf(r) : undefined
+    })).filter(x => x.prompt.length >= 3 && (x.kind !== "choice" || x.options.length >= 2));
   }
 
   async function submitNewEvent(){
