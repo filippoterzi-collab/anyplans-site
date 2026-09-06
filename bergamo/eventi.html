@@ -155,6 +155,9 @@
   .day.hot .dot{background:none; width:auto; height:auto;}
   .pin.hot{width:50px; height:50px; font-size:24px; box-shadow:0 0 0 3px var(--blue), 0 4px 14px rgba(27,79,216,.35);}
   .pin.hot::after{content:attr(data-n); position:absolute; right:-6px; top:-6px; min-width:20px; height:20px; padding:0 5px; border-radius:999px; background:var(--blue); color:#fff; font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center; font-family:var(--round);}
+  /* orario sopra il pin: sempre per i piani in evidenza; per tutti gli altri quando la mappa è vicina (zoom ≥ 13) */
+  .pin .tm{display:none;}
+  .pin.hot .tm, body.map-zoomed .pin .tm{display:block;}
   .pin .tm{position:absolute; top:-26px; left:50%; transform:translateX(-50%); white-space:nowrap; background:#E8F5EC; color:#1E8E3E; font-size:11px; font-weight:800; padding:2px 8px; border-radius:999px; pointer-events:none;}
   .pin .tm.soon{background:#FDEEDC; color:#B4530A;}
   /* un evento già cominciato resta in lista finché non finisce: si vede a colpo d'occhio */
@@ -222,6 +225,7 @@
   .maplibregl-popup-content{border-radius:14px; font-family:var(--round); padding:12px 14px;
        box-shadow:0 2px 10px rgba(0,0,0,.12);}
   .pop .t{font-weight:700; font-size:14px; color:var(--ink);}
+  .pop .open{display:inline-flex; align-items:center; height:34px; padding:0 14px; margin-top:8px; border-radius:999px; background:var(--blue); color:#fff; font-weight:800; font-size:13px;}
   .pop .m{font-size:12px; color:var(--grey); margin-top:2px;}
 
   #maptoggle, #map-me{display:none;}
@@ -381,7 +385,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788694009"></script>
+<script src="app.js?v=1788695825"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -483,6 +487,8 @@
     map.addLayer({ id: "radius-fill", type: "fill", source: "radius", paint: { "fill-color": "#1B4FD8", "fill-opacity": .08 } });
     map.addLayer({ id: "radius-line", type: "line", source: "radius", paint: { "line-color": "#1B4FD8", "line-width": 1.5, "line-dasharray": [2, 2] } });
     mapReady = true; syncRadius();
+    const syncZoomed = () => document.body.classList.toggle("map-zoomed", map.getZoom() >= 13);
+    map.on("zoomend", syncZoomed); syncZoomed();
     // su telefono il contenitore prende l'altezza vera solo dopo il primo layout: il canvas va rimisurato
     map.resize(); requestAnimationFrame(() => map.resize());
   });
@@ -511,13 +517,10 @@
       el.className = "pin" + (dayKind(ev.when) === "oggi" ? " today" : "") + (open ? "" : " lock") + (lk === "waiting" ? " waiting" : ""); el.id = "pin-" + ev.id;
       paintPin(el, ev);
       const popup = new maplibregl.Popup({ offset: 22, closeButton: false })
-        .setHTML(`<a class="pop${lk === "closed" ? " closed" : ""}" href="evento.html?id=${ev.id}" style="display:block; color:inherit; text-decoration:none"><div class="t">${esc(ev.title)}</div><div class="m">${dayLabel(ev.when)} · ${timeStr(ev.when)} · ${relHtmlOf(ev)} · ${esc(lk === "closed" ? (cityOf(ev.place) || ev.place) : ev.place)}${ev.price > 0 ? " · " + esc(fmtPrice(ev.price)) : ""}${fullHtml(ev)}${open ? "" : " · " + esc(lockTxtOf(ev))}</div><div class="m" style="color:var(--blue); font-weight:700; margin-top:4px">Apri l'evento →</div></a>`);
+        .setHTML(`<a class="pop${lk === "closed" ? " closed" : ""}" href="evento.html?id=${ev.id}" style="display:block; color:inherit; text-decoration:none"><div class="t">${esc(ev.title)}</div><div class="m">${dayLabel(ev.when)} · ${timeStr(ev.when)} · ${relHtmlOf(ev)} · ${esc(lk === "closed" ? (cityOf(ev.place) || ev.place) : ev.place)}${ev.price > 0 ? " · " + esc(fmtPrice(ev.price)) : ""}${fullHtml(ev)}${open ? "" : " · " + esc(lockTxtOf(ev))}</div><span class="open">Apri l'evento →</span></a>`);
       const mk = new maplibregl.Marker({ element: el }).setLngLat([ev.lng, ev.lat]).setPopup(popup).addTo(map);
-      el.addEventListener("click", () => {
-        // su telefono la lista non è a fianco: il tap sul pin apre l'evento
-        if (typeof inMapView === "function" && inMapView()) { location.href = "evento.html?id=" + ev.id; return; }
-        highlight(ev.id, false);
-      });
+      // tocco sul pin: fumetto con nome, ora, città e "Apri l'evento →" (anche su telefono, deciso 06/09/2026)
+      el.addEventListener("click", () => highlight(ev.id, false));
       markers[ev.id] = mk;
     });
   }
@@ -950,7 +953,7 @@
   function paintPin(el, e){
     const hot = isHot(e);
     el.classList.toggle("hot", hot); el.setAttribute("data-n", e.going);
-    el.innerHTML = esc(e.emoji) + (hot ? `<span class="tm ${relClass(e.when, e.end)}">${esc(relTime(e.when, e.end) === "in corso" ? "in corso" : relTime(e.when, e.end))}</span>` : "");
+    el.innerHTML = esc(e.emoji) + `<span class="tm ${relClass(e.when, e.end)}">${esc(relTime(e.when, e.end))}</span>`;
   }
   function stateBtn(e){
     if (e.mine) return ["ok", "Lo organizzi tu"];
@@ -1154,7 +1157,7 @@
   // il timer corre: ogni minuto aggiorno le scritte "tra 2 h 14 min" delle card e dei pin, senza ridisegnare la lista
   setInterval(() => {
     document.querySelectorAll(".rel[data-id]").forEach(el => { const e = EVENTS.find(x => x.id === el.dataset.id); if (e) el.innerHTML = relHtmlOf(e); });
-    EVENTS.filter(isHot).forEach(e => { const m = markers[e.id]; if (m) paintPin(m.getElement(), e); });
+    EVENTS.forEach(e => { const m = markers[e.id]; if (m && m.getElement().style.display !== "none") paintPin(m.getElement(), e); });
   }, 60000);
   syncCard();
   if (logged) checkProfile();
