@@ -354,7 +354,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788688147"></script>
+<script src="app.js?v=1788688550"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -479,9 +479,13 @@
       const lk = lockOf(ev), open = lk === "open";
       el.className = "pin" + (dayKind(ev.when) === "oggi" ? " today" : "") + (open ? "" : " lock") + (lk === "waiting" ? " waiting" : ""); el.id = "pin-" + ev.id; el.textContent = ev.emoji;
       const popup = new maplibregl.Popup({ offset: 22, closeButton: false })
-        .setHTML(`<div class="pop${lk === "closed" ? " closed" : ""}"><div class="t">${esc(ev.title)}</div><div class="m">${dayLabel(ev.when)} · ${timeStr(ev.when)} · ${relTime(ev.when, ev.end) === "in corso" ? '<span class="live">in corso adesso</span>' : esc(relTime(ev.when, ev.end))} · ${esc(lk === "closed" ? (cityOf(ev.place) || ev.place) : ev.place)}${ev.price > 0 ? " · " + esc(fmtPrice(ev.price)) : ""}${fullHtml(ev)}${open ? "" : " · " + esc(lockTxtOf(ev))}</div></div>`);
+        .setHTML(`<a class="pop${lk === "closed" ? " closed" : ""}" href="evento.html?id=${ev.id}" style="display:block; color:inherit; text-decoration:none"><div class="t">${esc(ev.title)}</div><div class="m">${dayLabel(ev.when)} · ${timeStr(ev.when)} · ${relTime(ev.when, ev.end) === "in corso" ? '<span class="live">in corso adesso</span>' : esc(relTime(ev.when, ev.end))} · ${esc(lk === "closed" ? (cityOf(ev.place) || ev.place) : ev.place)}${ev.price > 0 ? " · " + esc(fmtPrice(ev.price)) : ""}${fullHtml(ev)}${open ? "" : " · " + esc(lockTxtOf(ev))}</div><div class="m" style="color:var(--blue); font-weight:700; margin-top:4px">Apri l'evento →</div></a>`);
       const mk = new maplibregl.Marker({ element: el }).setLngLat([ev.lng, ev.lat]).setPopup(popup).addTo(map);
-      el.addEventListener("click", () => highlight(ev.id, false));
+      el.addEventListener("click", () => {
+        // su telefono la lista non è a fianco: il tap sul pin apre l'evento
+        if (typeof inMapView === "function" && inMapView()) { location.href = "evento.html?id=" + ev.id; return; }
+        highlight(ev.id, false);
+      });
       markers[ev.id] = mk;
     });
   }
