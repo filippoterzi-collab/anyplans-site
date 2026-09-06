@@ -356,7 +356,7 @@
   <div class="sk" style="height:90px"></div>
 </div>
 
-<script src="app.js?v=1788726338"></script>
+<script src="app.js?v=1788726440"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 1000 });
@@ -623,7 +623,7 @@
     } catch (_) { return null; }
   }
   // ── ritrovi fissi (community_schedule, 0070/0080) ──
-  const DAYS = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"];
+  const SCH_DAYS = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"];
   let schRows = [];
   async function loadSch(){
     const r = await rpc("list_community_schedules", { p_community_id: c.id });
@@ -635,7 +635,7 @@
     const box = document.getElementById("sch-list");
     box.innerHTML = schRows.map((s, i) => `<div class="schrow" data-i="${i}" style="background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:14px; padding:12px 14px; display:flex; flex-direction:column; gap:8px">
         <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center">
-          <select class="s-day" style="width:auto; padding:8px 12px; font-size:14px; border-radius:9px" onchange="schRows[${i}].weekday = +this.value">${DAYS.map((d, k) => `<option value="${k}"${k === s.weekday ? " selected" : ""}>${d}</option>`).join("")}</select>
+          <select class="s-day" style="width:auto; padding:8px 12px; font-size:14px; border-radius:9px" onchange="schRows[${i}].weekday = +this.value">${SCH_DAYS.map((d, k) => `<option value="${k}"${k === s.weekday ? " selected" : ""}>${d}</option>`).join("")}</select>
           <input class="s-time" type="time" value="${esc(s.start_time)}" style="width:auto; padding:8px 12px" onchange="schRows[${i}].start_time = this.value">
           <button type="button" onclick="schRows.splice(${i}, 1); renderSch()" style="margin-left:auto; background:none; border:none; cursor:pointer; font-weight:700; font-size:16px; color:var(--grey)">×</button>
         </div>
