@@ -78,7 +78,12 @@ main{max-width:860px;margin:0 auto;padding:16px 22px 70px;display:flex;flex-dire
 .rc .go{grid-area:go;height:40px;min-width:132px;padding:0 16px;border-radius:999px;border:1.5px solid var(--blue);background:#fff;color:var(--blue);font-weight:700;font-size:14px;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;text-decoration:none}
 .ini{font-weight:800;letter-spacing:-.045em;line-height:1;color:var(--blue);font-size:28px}
 .cost{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:999px;font-size:12.5px;font-weight:700;background:var(--tint);color:var(--blue);white-space:nowrap}
-.ig{font-size:13px;font-weight:700;color:var(--blue);text-decoration:none}
+.ig{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:var(--blue);text-decoration:none}
+.ig svg{width:15px;height:15px}
+.ig.wa{color:#1E8E3E}
+.btn.ico{display:inline-flex;align-items:center;gap:7px}
+.btn.ico svg{width:16px;height:16px}
+.btn.ico.wa{color:#1E8E3E;border-color:#1E8E3E}
 .meet{display:flex;align-items:flex-start;gap:8px;font-size:15px;font-weight:600;margin:6px 0}
 .meet .n{color:var(--grey);font-weight:500}
 @media (max-width:700px){.rc-grid{grid-template-columns:1fr}.rc{grid-template-columns:56px minmax(0,1fr);grid-template-areas:"logo body" "foot foot" "go go"}.rc .go{justify-self:start}}
@@ -108,30 +113,30 @@ footer a:hover{color:var(--ink)}
 <h1>Gruppi a Bergamo</h1>
 <p class="lead">I gruppi di Bergamo su anyplans: associazioni, club e comunità che organizzano eventi aperti a tutti. Li segui e vedi i loro prossimi piani.</p>
 <div class="cta"><a class="btn" href="/bergamo/running-club/">🏃 Running club a Bergamo: 23 gruppi</a></div>
-<div class="list"><a class="card" href="https://anyplans.in/bergamo/gruppi/le-scalette-del-martedi/"><span class="em">🏃</span><span><span class="t">Le Scalette del Martedì</span><br><span class="m">Bergamo · 3 eventi in programma</span></span></a>
+<div class="list"><a class="card" href="https://anyplans.in/bergamo/gruppi/mrcbg/"><span class="em">🏃</span><span><span class="t">MRCBG</span><br><span class="m">Bergamo · 3 eventi in programma</span></span></a>
+<a class="card" href="https://anyplans.in/bergamo/gruppi/le-scalette-del-martedi/"><span class="em">🏃</span><span><span class="t">Le Scalette del Martedì</span><br><span class="m">Bergamo · 3 eventi in programma</span></span></a>
 <a class="card" href="https://anyplans.in/bergamo/gruppi/cor-run/"><span class="em">🏃</span><span><span class="t">Cor Run</span><br><span class="m">Bergamo · 3 eventi in programma</span></span></a>
-<a class="card" href="https://anyplans.in/bergamo/gruppi/mrcbg/"><span class="em">🏃</span><span><span class="t">MRCBG</span><br><span class="m">Bergamo · 3 eventi in programma</span></span></a>
 <a class="card" href="https://anyplans.in/bergamo/gruppi/ptrunbg/"><span class="em">🏃</span><span><span class="t">PTRUNBG</span><br><span class="m">Bergamo · 3 eventi in programma</span></span></a>
 <a class="card" href="https://anyplans.in/bergamo/gruppi/fun-run/"><span class="em">🏃</span><span><span class="t">Fun Run</span><br><span class="m">Bergamo · 3 eventi in programma</span></span></a>
 <a class="card" href="https://anyplans.in/bergamo/gruppi/filippo-social-club/"><span class="em">🎪</span><span><span class="t">filippo social club</span><br><span class="m">Bergamo · 1 evento in programma</span></span></a>
 <a class="card" href="https://anyplans.in/bergamo/gruppi/sabato-alla-trucca/"><span class="em">🏃</span><span><span class="t">Sabato alla Trucca</span><br><span class="m">Bergamo · 1 evento in programma</span></span></a>
-<a class="card" href="https://anyplans.in/bergamo/gruppi/girly-running-club/"><span class="em">🏃</span><span><span class="t">Girly Running Club</span><br><span class="m">Bergamo</span></span></a>
-<a class="card" href="https://anyplans.in/bergamo/gruppi/capanu-culture-club/"><span class="em">🏃</span><span><span class="t">Capanu Culture Club</span><br><span class="m">Bergamo</span></span></a>
-<a class="card" href="https://anyplans.in/bergamo/gruppi/asd-runners-bergamo/"><span class="em">🏃</span><span><span class="t">ASD Runners Bergamo</span><br><span class="m">Bergamo</span></span></a>
-<a class="card" href="https://anyplans.in/bergamo/gruppi/giovedipista/"><span class="em">🏃</span><span><span class="t">GiovedìPista</span><br><span class="m">Bergamo</span></span></a>
-<a class="card" href="https://anyplans.in/bergamo/gruppi/inpistaamozzo/"><span class="em">🏃</span><span><span class="t">InPistaAMozzo</span><br><span class="m">Bergamo</span></span></a>
-<a class="card" href="https://anyplans.in/bergamo/gruppi/adda-running-club/"><span class="em">🏃</span><span><span class="t">Adda Running Club</span><br><span class="m">Bergamo</span></span></a>
-<a class="card" href="https://anyplans.in/bergamo/gruppi/quelli-del-martedi/"><span class="em">🏃</span><span><span class="t">Quelli del Martedì</span><br><span class="m">Bergamo</span></span></a>
-<a class="card" href="https://anyplans.in/bergamo/gruppi/trust-running-club/"><span class="em">🏃</span><span><span class="t">Trust Running Club</span><br><span class="m">Bergamo</span></span></a>
-<a class="card" href="https://anyplans.in/bergamo/gruppi/bergamo-walking/"><span class="em">🏃</span><span><span class="t">Bergamo Walking</span><br><span class="m">Bergamo</span></span></a>
-<a class="card" href="https://anyplans.in/bergamo/gruppi/pazzi-del-mercoledi/"><span class="em">🏃</span><span><span class="t">Pazzi del Mercoledì</span><br><span class="m">Bergamo</span></span></a>
 <a class="card" href="https://anyplans.in/bergamo/gruppi/podisti-insonni/"><span class="em">🏃</span><span><span class="t">Podisti Insonni</span><br><span class="m">Bergamo</span></span></a>
 <a class="card" href="https://anyplans.in/bergamo/gruppi/potarun-club/"><span class="em">🏃</span><span><span class="t">Potarun Club</span><br><span class="m">Bergamo</span></span></a>
+<a class="card" href="https://anyplans.in/bergamo/gruppi/quelli-del-martedi/"><span class="em">🏃</span><span><span class="t">Quelli del Martedì</span><br><span class="m">Bergamo</span></span></a>
 <a class="card" href="https://anyplans.in/bergamo/gruppi/socialrunbergamo/"><span class="em">🏃</span><span><span class="t">SocialRunBergamo</span><br><span class="m">Bergamo</span></span></a>
+<a class="card" href="https://anyplans.in/bergamo/gruppi/trust-running-club/"><span class="em">🏃</span><span><span class="t">Trust Running Club</span><br><span class="m">Bergamo</span></span></a>
+<a class="card" href="https://anyplans.in/bergamo/gruppi/giovedipista/"><span class="em">🏃</span><span><span class="t">GiovedìPista</span><br><span class="m">Bergamo</span></span></a>
+<a class="card" href="https://anyplans.in/bergamo/gruppi/girly-running-club/"><span class="em">🏃</span><span><span class="t">Girly Running Club</span><br><span class="m">Bergamo</span></span></a>
+<a class="card" href="https://anyplans.in/bergamo/gruppi/inpistaamozzo/"><span class="em">🏃</span><span><span class="t">InPistaAMozzo</span><br><span class="m">Bergamo</span></span></a>
+<a class="card" href="https://anyplans.in/bergamo/gruppi/seriana-run-club/"><span class="em">🏃</span><span><span class="t">Seriana Run Club</span><br><span class="m">Bergamo</span></span></a>
+<a class="card" href="https://anyplans.in/bergamo/gruppi/adda-running-club/"><span class="em">🏃</span><span><span class="t">Adda Running Club</span><br><span class="m">Bergamo</span></span></a>
 <a class="card" href="https://anyplans.in/bergamo/gruppi/werunbergamo/"><span class="em">🏃</span><span><span class="t">WeRunBergamo</span><br><span class="m">Bergamo</span></span></a>
-<a class="card" href="https://anyplans.in/bergamo/gruppi/fast2gether-run-gang/"><span class="em">🏃</span><span><span class="t">Fast2Gether Run Gang</span><br><span class="m">Bergamo</span></span></a>
+<a class="card" href="https://anyplans.in/bergamo/gruppi/asd-runners-bergamo/"><span class="em">🏃</span><span><span class="t">ASD Runners Bergamo</span><br><span class="m">Bergamo</span></span></a>
+<a class="card" href="https://anyplans.in/bergamo/gruppi/capanu-culture-club/"><span class="em">🏃</span><span><span class="t">Capanu Culture Club</span><br><span class="m">Bergamo</span></span></a>
 <a class="card" href="https://anyplans.in/bergamo/gruppi/cus-bergamo/"><span class="em">🏃</span><span><span class="t">CUS Bergamo</span><br><span class="m">Bergamo</span></span></a>
-<a class="card" href="https://anyplans.in/bergamo/gruppi/seriana-run-club/"><span class="em">🏃</span><span><span class="t">Seriana Run Club</span><br><span class="m">Bergamo</span></span></a></div>
+<a class="card" href="https://anyplans.in/bergamo/gruppi/fast2gether-run-gang/"><span class="em">🏃</span><span><span class="t">Fast2Gether Run Gang</span><br><span class="m">Bergamo</span></span></a>
+<a class="card" href="https://anyplans.in/bergamo/gruppi/bergamo-walking/"><span class="em">🏃</span><span><span class="t">Bergamo Walking</span><br><span class="m">Bergamo</span></span></a>
+<a class="card" href="https://anyplans.in/bergamo/gruppi/pazzi-del-mercoledi/"><span class="em">🏃</span><span><span class="t">Pazzi del Mercoledì</span><br><span class="m">Bergamo</span></span></a></div>
 <div class="cta"><a class="btn ghost" href="/bergamo/login.html">Organizzi eventi? Crea il tuo gruppo</a></div>
 
 </main>
