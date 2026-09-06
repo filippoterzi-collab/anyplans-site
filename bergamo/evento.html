@@ -404,7 +404,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788704745"></script>
+<script src="app.js?v=1788705858"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -459,7 +459,7 @@
   function renderEvent(){
     const cat = (CATALOG[ev.sport] || {});
     const when = new Date(ev.start_at);
-    const isReq = ev.visibility === "request";
+    const isReq = needsApproval();
     document.title = ev.title + " · anyplans";
     const cover = document.getElementById("cover");
     if (ev.photo_url) { cover.textContent = ""; cover.style.backgroundImage = "url('" + String(ev.photo_url).replace(/'/g, "") + "')"; cover.style.backgroundSize = "cover"; cover.style.backgroundPosition = "center"; }
@@ -545,9 +545,11 @@
 
   // pieno = iscritti (con ospiti) >= posti massimi; la lista d'attesa vale solo senza approvazione
   function isFull(){ return !!ev.max_participants && (Number(ev.going_count) || 0) >= ev.max_participants; }
-  function waitOn(){ return ev.waitlist_enabled !== false && ev.visibility !== "request"; }
+  // approvazione: eventi "request", oppure privati con il flag (0069)
+  const needsApproval = () => ev.visibility === "request" || (ev.visibility === "private" && !!ev.approval_required);
+  function waitOn(){ return ev.waitlist_enabled !== false && !needsApproval(); }
   function updateBoxes(){
-    const st = ev.my_status, full = isFull(), isReq = ev.visibility === "request";
+    const st = ev.my_status, full = isFull(), isReq = needsApproval();
     const lock = lockState(ev), closed = lock === "closed", waiting = lock === "waiting";
     document.getElementById("box-guest").hidden = logged;
     document.getElementById("guest-h2").textContent = closed ? "🔒 Evento da sbloccare" : "Ci sei?";
@@ -1032,7 +1034,7 @@
           style="width:100%; background:#fff; border:1.5px solid rgba(25,25,25,.16); border-radius:12px;
                  padding:12px 15px; font-size:15px; font-family:var(--round)"></div>`;
     }).join("");
-    document.getElementById("q-send").textContent = pendingWait ? "Conferma: mettimi in lista d'attesa" : ev.visibility === "request" ? "Manda la richiesta" : "Conferma: ci sono";
+    document.getElementById("q-send").textContent = pendingWait ? "Conferma: mettimi in lista d'attesa" : needsApproval() ? "Manda la richiesta" : "Conferma: ci sono";
     document.getElementById("q-note").textContent = "";
     document.getElementById("q-overlay").hidden = false;
   }
@@ -1069,7 +1071,7 @@
 
   async function doJoin(){
     const btn = document.getElementById("btn-join"); btn.disabled = true;
-    const isReq = ev.visibility === "request";
+    const isReq = needsApproval();
     const r = isReq ? await rpc("request_to_join", { p_activity_id: ev.id })
                     : await rpc("join_activity", { p_activity_id: ev.id, p_status: "going" });
     btn.disabled = false;

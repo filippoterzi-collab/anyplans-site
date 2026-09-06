@@ -109,9 +109,15 @@
     <div class="seg" id="seg-vis">
       <button type="button" class="on" data-v="public" onclick="setVis('public')">Tutti</button>
       <button type="button" data-v="request" onclick="setVis('request')">Con approvazione</button>
-      <button type="button" data-v="private" onclick="setVis('private')">Privato</button>
     </div>
-    <p class="hint" id="vis-hint">Tutti: sulla mappa e nella lista, chiunque a Bergamo entra subito.</p>
+    <p class="hint" id="vis-hint">Tutti: chiunque entra subito.</p>
+    <div class="toggle-row" id="priv" style="margin-top:12px" onclick="togglePrivate()" role="switch" aria-checked="false" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); togglePrivate()}">
+      <div>
+        <div class="t">Privato: solo con il link</div>
+        <div class="s">Non compare sulla mappa né nella lista. Lo vede solo chi riceve il link da te.</div>
+      </div>
+      <div class="sw"><div class="k"></div></div>
+    </div>
   </div>
 
   <div>
@@ -254,14 +260,14 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788704745"></script>
+<script src="app.js?v=1788705858"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
   mountTabbar("crea");
   const editId = new URLSearchParams(location.search).get("edit");
   const fromId = new URLSearchParams(location.search).get("from");
-  let editVisibility = "open", editSport = null;
+  let editVisibility = "open", editSport = null, editApproval = false;
   let genderChoice = null, editGender = null; // null = tutti, 'donna', 'uomo'
   function setGender(g){
     genderChoice = g || null;
@@ -421,8 +427,9 @@
     document.getElementById("h1").textContent = "Modifica evento";
     document.getElementById("btn").textContent = "Salva le modifiche";
     document.getElementById("note").textContent = "Chi partecipa vede le modifiche subito.";
-    setVis(a.visibility === "private" ? "private" : a.visibility === "request" ? "request" : "public");
-    editVisibility = a.visibility || "open";
+    setPrivate(a.visibility === "private");
+    setVis(a.visibility === "request" || (a.visibility === "private" && a.approval_required) ? "request" : "public");
+    editVisibility = a.visibility || "open"; editApproval = !!a.approval_required;
     editGender = a.gender_allowed || null; setGender(editGender);
     const back = document.getElementById("lnk-back"); back.hidden = false; back.href = "evento.html?id=" + editId;
     sel.value = a.sport; editSport = a.sport;
@@ -500,7 +507,7 @@
 
     // le parti che non riguardano "chi viene" non si vedono
     ["as-wrap", "ph", "desc", "qs", "map"].forEach(id => { const b = document.getElementById(id).closest("main > div"); if (b) b.hidden = true; });
-    document.querySelector('#seg-vis button[data-v="private"]').hidden = true;
+    document.getElementById("priv").hidden = true;
     // suggerimenti sui campi che qui sono bloccati
     document.querySelectorAll("#place ~ p.hint, #end-time").forEach(el => { const h = el.id === "end-time" ? el.closest("main > div").nextElementSibling : el; if (h && h.classList.contains("hint")) h.hidden = true; });
     document.getElementById("paid").hidden = true; document.getElementById("price-wrap").hidden = true;
@@ -563,18 +570,26 @@
 
   // pubblico (mappa e lista) o privato (solo chi ha il link). se privato, niente approvazione: entra chi ha il link
   let visChoice = "public";
-  // deciso 06/09/2026: la scelta "con approvazione" sta qui in cima, non in un interruttore in fondo al modulo
+  // deciso 06/09/2026: "con approvazione" e "privato" sono due scelte separate (un evento privato può volere l'approvazione)
+  let privateOn = false;
   function setVis(v){
-    visChoice = v;
-    document.querySelectorAll("#seg-vis button").forEach(b => b.classList.toggle("on", b.dataset.v === v));
-    document.getElementById("vis-hint").textContent = v === "private"
-      ? "Privato: non compare sulla mappa. Lo vede solo chi riceve il link da te."
-      : v === "request" ? "Con approvazione: ognuno ti manda una richiesta e decidi tu. L'indirizzo preciso lo vede solo chi accetti."
-      : "Tutti: sulla mappa e nella lista, chiunque a Bergamo entra subito.";
+    visChoice = v === "private" ? "public" : v;   // "private" arriva solo dal vecchio codice: ora è l'interruttore
+    document.querySelectorAll("#seg-vis button").forEach(b => b.classList.toggle("on", b.dataset.v === visChoice));
+    document.getElementById("vis-hint").textContent = visChoice === "request"
+      ? "Con approvazione: ognuno ti manda una richiesta e decidi tu. L'indirizzo preciso lo vede solo chi accetti."
+      : "Tutti: chiunque entra subito.";
     const vis = document.getElementById("vis");
     vis.hidden = true;
-    vis.classList.toggle("on", v === "request");
+    vis.classList.toggle("on", visChoice === "request");
     syncWaitlistRow();
+  }
+  function setPrivate(on){ privateOn = on; const r = document.getElementById("priv"); r.classList.toggle("on", on); r.setAttribute("aria-checked", String(on)); }
+  function togglePrivate(){ setPrivate(!privateOn); }
+  const chosenApproval = () => visChoice === "request";
+  async function saveApproval(activityId, wanted, current){
+    if (wanted === current) return;
+    const r = await rpc("set_activity_approval", { p_activity_id: activityId, p_required: wanted });
+    if (!r || !r.ok) toast("Salvato, ma l'approvazione no. Riprova da \"Modifica l'evento\".");
   }
   // lista d'attesa quando è pieno: la riga c'è solo con un numero di posti (>= 2) e senza approvazione
   // (con "Decidi tu chi partecipa" la fila è già la lista delle richieste)
@@ -582,7 +597,7 @@
   const WL_OFF = "Quando i posti finiscono, nessuno può più iscriversi. Puoi sempre aumentare i posti da \"Modifica l'evento\".";
   function syncWaitlistRow(){
     const n = parseInt(document.getElementById("maxp").value, 10);
-    const approval = document.getElementById("vis").classList.contains("on");
+    const approval = visChoice === "request";
     document.getElementById("wl").hidden = !(Number.isFinite(n) && n >= 2) || approval;
   }
   function setWaitlist(on){
@@ -610,9 +625,10 @@
     toast(code.includes("waitlist_not_empty") ? "Non puoi spegnere la lista d'attesa finché c'è qualcuno in fila: dalla pagina dell'evento puoi farli entrare o toglierli."
         : "Salvato, ma la lista d'attesa no. Riprova da \"Modifica l'evento\".");
   }
+  // il valore del database: privato vince (l'approvazione, se c'è, va nel flag approval_required)
   function chosenVisibility(){
-    if (visChoice === "private") return "private";
-    return document.getElementById("vis").classList.contains("on") ? "request" : "open";
+    if (privateOn) return "private";
+    return chosenApproval() ? "request" : "open";
   }
   async function saveVisibility(activityId, wanted, current){
     if (wanted === current) return;
@@ -779,8 +795,9 @@
         await savePrice(editId, price);
         await savePhoto(editId);
         await saveVisibility(editId, chosenVisibility(), editVisibility);
+        if (chosenVisibility() === "private") await saveApproval(editId, chosenApproval(), editApproval);
         await saveGender(editId, genderChoice, editGender);
-        if (hasCap && chosenVisibility() !== "request") await saveWaitlist(editId, chosenWaitlist(), editWaitlist);
+        if (hasCap && !chosenApproval()) await saveWaitlist(editId, chosenWaitlist(), editWaitlist);
         if (editSport && sel.value !== editSport) {
           const rsp = await rpc("set_activity_sport", { p_activity_id: editId, p_sport: sel.value });
           if (!rsp || !rsp.ok) toast("Salvato, ma il tipo di evento no. Riprova.");
@@ -817,9 +834,9 @@
       }
       if (price.cents) await savePrice(newId, price);
       await savePhoto(newId);
-      if (chosenVisibility() === "private") await saveVisibility(newId, "private", "open");
+      if (chosenVisibility() === "private") { await saveVisibility(newId, "private", "open"); if (chosenApproval()) await saveApproval(newId, true, false); }
       if (genderChoice) await saveGender(newId, genderChoice, null);
-      if (hasCap && chosenVisibility() !== "request" && !chosenWaitlist()) await saveWaitlist(newId, false, true);
+      if (hasCap && !chosenApproval() && !chosenWaitlist()) await saveWaitlist(newId, false, true);
       const asC = document.getElementById("as").value;
       if (asC) {
         const rc = await rpc("set_activity_community", { p_activity_id: newId, p_community_id: asC });
