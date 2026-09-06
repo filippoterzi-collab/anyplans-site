@@ -268,6 +268,10 @@
     <div><div class="n" id="comm-name"></div><div class="s" id="comm-sub">Organizza questo gruppo</div><div class="s" id="comm-age" hidden></div></div>
     <div style="margin-left:auto; font-weight:700; font-size:13.5px; color:var(--blue)">Vedi →</div>
   </a>
+  <div id="co-wrap" hidden style="margin:10px 0 4px">
+    <div class="sec" style="margin-bottom:8px">Insieme a</div>
+    <div id="co-list" style="display:flex; flex-wrap:wrap; gap:8px"></div>
+  </div>
   <div class="hostcard" id="source" hidden>
     <div class="avatar" style="background:var(--tint); color:var(--blue)">↗</div>
     <div><div class="n">Questo evento l'abbiamo trovato su un altro sito</div>
@@ -404,7 +408,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788724502"></script>
+<script src="app.js?v=1788725567"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -722,7 +726,18 @@
     if (r && r.ok) { toast("Fatto: " + name + " non è più in lista d'attesa."); track("waitlist_remove"); await reloadEvent(); loadPeople(); return; }
     toast("Non ha funzionato, riprova.");
   }
+  // gruppi che co-organizzano (activity_community, 0079)
+  async function loadCoorganizers(){
+    const r = await rpc("activity_coorganizers", { p_activity_id: ev.id });
+    const rows = r && r.ok ? await r.json().catch(() => []) : [];
+    if (!rows.length) return;
+    document.getElementById("co-wrap").hidden = false;
+    document.getElementById("co-list").innerHTML = rows.map(c =>
+      `<a href="community.html?slug=${encodeURIComponent(c.slug)}" style="display:inline-flex; align-items:center; gap:8px; background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:999px; padding:6px 12px 6px 6px; font-weight:700; font-size:13.5px; color:var(--ink)">` +
+      `<span class="avatar" style="width:26px; height:26px; font-size:12px; background:var(--tint); color:var(--blue)${c.avatar_url ? "; background-image:url('" + String(c.avatar_url).replace(/'/g, "") + "'); background-size:cover" : ""}">${c.avatar_url ? "" : esc((c.name || "?")[0].toUpperCase())}</span>${esc(c.name)}</a>`).join("");
+  }
   async function loadCommunity(){
+    loadCoorganizers();
     const r = await rpc("activity_community", { p_activity_id: ev.id });
     if (!r || !r.ok) return;
     const c = (await r.json().catch(() => []))[0];

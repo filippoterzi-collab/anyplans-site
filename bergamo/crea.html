@@ -98,6 +98,11 @@
     <select id="sport"></select>
   </div>
 
+  <div id="co-wrap" hidden>
+    <label>Insieme a <span style="color:var(--grey); font-weight:600">(altri gruppi che lo fanno con te, se vuoi)</span></label>
+    <div id="co-list" style="display:flex; flex-wrap:wrap; gap:8px"></div>
+    <p class="hint">L'evento compare anche nelle loro pagine.</p>
+  </div>
   <div id="as-wrap" hidden>
     <label for="as">Chi lo organizza?</label>
     <select id="as"><option value="">Io</option></select>
@@ -260,7 +265,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788724502"></script>
+<script src="app.js?v=1788725567"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -431,6 +436,9 @@
     setVis(a.visibility === "request" || (a.visibility === "private" && a.approval_required) ? "request" : "public");
     editVisibility = a.visibility || "open"; editApproval = !!a.approval_required;
     editGender = a.gender_allowed || null; setGender(editGender);
+    const rco = await rpc("activity_coorganizers", { p_activity_id: editId });
+    editCo = rco && rco.ok ? (await rco.json().catch(() => [])).map(x => x.id) : [];
+    coSel = new Set(editCo); syncCo();
     const back = document.getElementById("lnk-back"); back.hidden = false; back.href = "evento.html?id=" + editId;
     sel.value = a.sport; editSport = a.sport;
     document.getElementById("title").value = a.title || "";
@@ -557,6 +565,26 @@
   }
 
   // pubblica come gruppo (owner/admin): ?community=<id> preseleziona
+  // co-organizzatori (0079): chip di tutti i gruppi della città, si accendono/spengono
+  let coSel = new Set(), editCo = [];
+  (async () => {
+    if (fromId && !editId) return;   // nello sblocco di una sagra non serve
+    const r = await rpc("list_communities", { p_city: "bergamo" });
+    const rows = r && r.ok ? await r.json().catch(() => []) : [];
+    if (!rows.length) return;
+    const box = document.getElementById("co-list");
+    box.innerHTML = rows.map(c => `<button type="button" class="chip" data-id="${c.id}" aria-pressed="false" onclick="toggleCo(this)" style="height:36px; padding:0 12px; border-radius:999px; background:#fff; border:1.5px solid rgba(25,25,25,.14); font-weight:600; font-size:13.5px; cursor:pointer; font-family:var(--round)">${(c.emoji || "")} ${esc(c.name)}</button>`).join("");
+    document.getElementById("co-wrap").hidden = false;
+    syncCo();
+  })();
+  function toggleCo(btn){ const id = btn.dataset.id; if (coSel.has(id)) coSel.delete(id); else coSel.add(id); syncCo(); }
+  function syncCo(){ document.querySelectorAll("#co-list .chip").forEach(b => { const on = coSel.has(b.dataset.id); b.setAttribute("aria-pressed", String(on)); b.style.background = on ? "var(--blue)" : "#fff"; b.style.color = on ? "#fff" : "var(--ink)"; b.style.borderColor = on ? "var(--blue)" : "rgba(25,25,25,.14)"; }); }
+  async function saveCo(activityId){
+    const ids = [...coSel];
+    if (ids.length === 0 && editCo.length === 0) return;
+    const r = await rpc("set_activity_coorganizers", { p_activity_id: activityId, p_community_ids: ids });
+    if (!r || !r.ok) toast("Salvato, ma i gruppi \"insieme a\" no. Riprova da \"Modifica l'evento\".");
+  }
   const wantCommunity = new URLSearchParams(location.search).get("community");
   rpc("my_communities").then(async r => {
     if (!r || !r.ok || editId) return;
@@ -797,6 +825,7 @@
         await saveVisibility(editId, chosenVisibility(), editVisibility);
         if (chosenVisibility() === "private") await saveApproval(editId, chosenApproval(), editApproval);
         await saveGender(editId, genderChoice, editGender);
+        await saveCo(editId);
         if (hasCap && !chosenApproval()) await saveWaitlist(editId, chosenWaitlist(), editWaitlist);
         if (editSport && sel.value !== editSport) {
           const rsp = await rpc("set_activity_sport", { p_activity_id: editId, p_sport: sel.value });
@@ -836,6 +865,7 @@
       await savePhoto(newId);
       if (chosenVisibility() === "private") { await saveVisibility(newId, "private", "open"); if (chosenApproval()) await saveApproval(newId, true, false); }
       if (genderChoice) await saveGender(newId, genderChoice, null);
+      await saveCo(newId);
       if (hasCap && !chosenApproval() && !chosenWaitlist()) await saveWaitlist(newId, false, true);
       const asC = document.getElementById("as").value;
       if (asC) {

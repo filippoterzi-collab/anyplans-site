@@ -118,6 +118,7 @@ const rows = rawRows.map(r => {
     club: r.club_name || null, town: isFest && r.club_name ? String(r.club_name).trim() : null,
     community_slug: r.community_slug || null, community_name: r.community_name || null,
     community_avatar: r.community_avatar_url || null,
+    co: Array.isArray(r.co_communities) ? r.co_communities : [],
     source_url: r.source_url || null, source: r.source, visibility: r.visibility,
     updated: r.updated_at ? new Date(r.updated_at) : start
   };
@@ -418,6 +419,7 @@ ${p.description ? `<div class="box"><h2>Di cosa si tratta</h2><div class="desc">
   <h2>Organizza</h2>
   <div class="row">${org.kind === "gruppo" ? `<div class="avatar">${p.community_avatar ? `<img src="${esc(p.community_avatar)}" alt="" width="40" height="40" loading="lazy">` : esc(org.name[0].toUpperCase())}</div><div><a class="n" href="${esc(org.url)}">${esc(org.name)}</a><div class="s">Gruppo su anyplans</div></div>`
     : `<div><div class="n">${esc(org.name)}</div>${org.kind === "club" ? `<div class="s">Comune o associazione</div>` : ""}</div>`}</div>
+${p.co.length ? `<div class="box"><h2>Insieme a</h2><div class="tags">${p.co.map(slug => { const c = groups.find(x => x.slug === slug); return c ? `<a href="${esc(groupUrl(c))}">${c.emoji || "👥"} ${esc(c.name)}</a>` : ""; }).join("")}</div></div>` : ""}
 </div>
 <div class="cta">
   ${p.isPast ? "" : `<a class="btn" href="/${CITY}/evento.html?id=${esc(p.id)}&amp;join=1">Ci vado</a>`}
@@ -484,7 +486,7 @@ ${noDay.length ? `
 // ── group pages ───────────────────────────────────────────────────────────────
 function groupPage(g) {
   const url = groupUrl(g);
-  const evs = pages.filter(p => p.community_slug === g.slug).sort(byDate);
+  const evs = pages.filter(p => p.community_slug === g.slug || p.co.includes(g.slug)).sort(byDate);
   const up = evs.filter(p => !p.isPast), past = evs.filter(p => p.isPast).reverse().slice(0, 20);
   const t = tipo(g.category); // group category is a site category, not a sport: fall back to emoji from the group
   const emoji = g.emoji || "👥";
