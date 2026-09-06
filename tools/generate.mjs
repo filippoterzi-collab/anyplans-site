@@ -523,7 +523,6 @@ function groupPage(g) {
 ${crumbs([["anyplans", "/"], [CITY_NAME, `/${CITY}/cosa-fare/`], ["Gruppi", `/${CITY}/gruppi/`], [g.name, null]])}
 <div class="row"><div class="avatar" style="width:64px;height:64px;font-size:26px${g.avatar_url ? "" : ";background:var(--tint)"}">${g.avatar_url ? `<img src="${esc(g.avatar_url)}" alt="" width="64" height="64">` : isRunClub(g) ? initial(g) : emoji}</div>
   <div><h1>${esc(g.name)}</h1><div class="s">${esc(cap(g.city || CITY_NAME))}${g.is_verified ? " · Gruppo verificato" : ""}${g.review_count > 0 && g.review_avg != null ? ` · ${esc(String(g.review_avg).replace(".", ","))} su 5 (${g.review_count} ${g.review_count === 1 ? "recensione" : "recensioni"})` : ""}</div></div></div>
-// (06/09/2026) niente riquadro "Quando ci si trova": i ritrovi sono già in "Prossimi eventi" (materialize_schedules, 0073)
 ${g.description ? `<div class="box"><h2>Chi siamo</h2><div class="desc">${esc(g.description)}</div></div>` : ""}
 <div class="cta"><a class="btn" href="/${CITY}/community.html?slug=${esc(g.slug)}">Segui il gruppo</a>${g.instagram_handle ? `<a class="btn ghost ico" href="https://instagram.com/${esc(String(g.instagram_handle).replace(/^@/, ""))}" rel="noopener">${IG_SVG}Instagram</a>` : ""}${g.whatsapp_url ? `<a class="btn ghost ico wa" href="${esc(g.whatsapp_url)}" rel="noopener">${WA_SVG}Gruppo WhatsApp</a>` : ""}<a class="btn ghost" href="/${CITY}/eventi.html">Vedi tutti gli eventi</a></div>
 <h2>${up.length ? "Prossimi eventi" : "Nessun evento in programma"}</h2>
