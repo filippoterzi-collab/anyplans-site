@@ -155,7 +155,7 @@
   .day.hot .dot{background:none; width:auto; height:auto;}
   .pin.hot{width:50px; height:50px; font-size:24px; box-shadow:0 0 0 3px var(--blue), 0 4px 14px rgba(27,79,216,.35);}
   .pin.hot::after{content:attr(data-n); position:absolute; right:-6px; top:-6px; min-width:20px; height:20px; padding:0 5px; border-radius:999px; background:var(--blue); color:#fff; font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center; font-family:var(--round);}
-  /* orario sopra il pin: sempre per i piani in evidenza; per tutti gli altri quando la mappa è vicina (zoom ≥ 13) */
+  /* orario sopra il pin: sempre per i piani in evidenza; per tutti gli altri dallo zoom città in su (zoom ≥ 12) */
   .pin .tm{display:none;}
   .pin.hot .tm, body.map-zoomed .pin .tm{display:block;}
   .pin .tm{position:absolute; top:-26px; left:50%; transform:translateX(-50%); white-space:nowrap; background:#E8F5EC; color:#1E8E3E; font-size:11px; font-weight:800; padding:2px 8px; border-radius:999px; pointer-events:none;}
@@ -225,6 +225,9 @@
   .maplibregl-popup-content{border-radius:14px; font-family:var(--round); padding:12px 14px;
        box-shadow:0 2px 10px rgba(0,0,0,.12);}
   .pop .t{font-weight:700; font-size:14px; color:var(--ink);}
+  a.pop, a.pop:focus{outline:none; -webkit-tap-highlight-color:transparent;}
+  .maplibregl-popup-content{border-radius:16px; padding:14px 16px; box-shadow:0 8px 24px rgba(0,0,0,.14);}
+  .maplibregl-popup-close-button{display:none;}
   .pop .open{display:inline-flex; align-items:center; height:34px; padding:0 14px; margin-top:8px; border-radius:999px; background:var(--blue); color:#fff; font-weight:800; font-size:13px;}
   .pop .m{font-size:12px; color:var(--grey); margin-top:2px;}
 
@@ -257,7 +260,10 @@
     .fl-body{padding:4px 18px 16px;}
     .fl-foot{position:sticky; bottom:0; padding:12px 18px calc(12px + env(safe-area-inset-bottom));}
     .fl-show{flex:1; min-width:0;}
-    .split{position:relative;}
+    /* overflow:hidden: il foglio della lista, spostato sotto, non deve allungare la pagina (su iPhone Safari
+       altrimenti la pagina scorre e la lista spunta a metà sotto la mappa) */
+    .split{position:relative; overflow:hidden;}
+    html, body{overscroll-behavior:none; position:fixed; inset:0; width:100%;}
     #map{position:absolute; inset:0; border-radius:0; margin:0;}
     #map .maplibregl-ctrl-top-right{display:none;}   /* +/- non servono col pizzico */
     .list{position:absolute; inset:0; z-index:6; width:100%; max-width:none; padding:12px 18px 100px; background:var(--bg);
@@ -385,7 +391,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788695825"></script>
+<script src="app.js?v=1788696270"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -487,7 +493,8 @@
     map.addLayer({ id: "radius-fill", type: "fill", source: "radius", paint: { "fill-color": "#1B4FD8", "fill-opacity": .08 } });
     map.addLayer({ id: "radius-line", type: "line", source: "radius", paint: { "line-color": "#1B4FD8", "line-width": 1.5, "line-dasharray": [2, 2] } });
     mapReady = true; syncRadius();
-    const syncZoomed = () => document.body.classList.toggle("map-zoomed", map.getZoom() >= 13);
+    // il timer sopra i pin si vede già allo zoom città (12.3 all'apertura); sparisce solo allontanando molto
+    const syncZoomed = () => document.body.classList.toggle("map-zoomed", map.getZoom() >= 12);
     map.on("zoomend", syncZoomed); syncZoomed();
     // su telefono il contenitore prende l'altezza vera solo dopo il primo layout: il canvas va rimisurato
     map.resize(); requestAnimationFrame(() => map.resize());
