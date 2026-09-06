@@ -277,11 +277,10 @@ function lockState(x){
   const n = Number(x.going_count) || 0;
   return n === 0 ? "closed" : n === 1 ? "waiting" : "open";
 }
-// prima volta che si tocca "Sblocca l'evento": una finestra spiega il perché (richiesta 06/09/2026, UI.md §3.9),
-// poi si va a `next`. Si vede una volta sola per browser; il lessico è quello nostro (mai "conoscere gente").
+// tocco su "Sblocca l'evento": una finestra spiega il perché (richiesta 06/09/2026, UI.md §3.9), poi si va a `next`.
+// Il lessico è quello nostro (mai "conoscere gente").
 function explainLock(next){
-  let seen = false; try { seen = localStorage.getItem("anyplans_lock_seen") === "1"; } catch (_) {}
-  if (seen) { location.href = next; return; }
+  // si vede ogni volta (richiesta del committente 06/09/2026 sera: prima era una volta sola per telefono)
   const ov = document.createElement("div");
   ov.setAttribute("role", "dialog"); ov.setAttribute("aria-modal", "true"); ov.setAttribute("aria-labelledby", "lk-h");
   ov.style.cssText = "position:fixed; inset:0; z-index:60; background:rgba(25,25,25,.45); display:flex; align-items:flex-end; justify-content:center; padding:16px;";

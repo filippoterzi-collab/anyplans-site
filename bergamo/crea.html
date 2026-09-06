@@ -253,7 +253,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788700254"></script>
+<script src="app.js?v=1788702306"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -415,7 +415,8 @@
     const r = await rpc("activity_by_id", { p_id: editId });
     const rows = r && r.ok ? await r.json().catch(() => []) : [];
     const a = rows[0];
-    if (!a || !a.is_mine) { location.replace("evento.html?id=" + editId); return; }
+    // anche i collaboratori (admin) e chi ha sbloccato modificano (0068, can_manage in coda ad activity_by_id)
+    if (!a || !(a.is_mine || a.can_manage)) { location.replace("evento.html?id=" + editId); return; }
     document.getElementById("h1").textContent = "Modifica evento";
     document.getElementById("btn").textContent = "Salva le modifiche";
     document.getElementById("note").textContent = "Chi partecipa vede le modifiche subito.";

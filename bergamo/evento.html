@@ -232,6 +232,7 @@
       <button class="btn" onclick="openTicket()">Il mio biglietto</button>
       <button class="btn ghost" onclick="leaveEvent()">Non ci vado più</button>
       <button class="btn ghost" id="btn-share-in" hidden onclick="shareEvent()">Condividi</button>
+      <a class="btn ghost" id="lnk-edit-in" hidden href="#">Modifica l'evento</a>
       <button class="btn ghost" id="btn-guest-adm" hidden onclick="openGuest()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Aggiungi una persona</button>
       <span class="note" id="going-in"></span>
     </div>
@@ -403,7 +404,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788700254"></script>
+<script src="app.js?v=1788702306"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -506,8 +507,12 @@
     }
     renderCounts();
 
-    canManage = !!ev.is_mine;
+    canManage = !!(ev.is_mine || ev.can_manage);   // can_manage (0068): collaboratori e chi ha sbloccato
     buildCalendar();
+    if (ev.can_manage && !ev.is_mine) {
+      loadAnswers();
+      const le = document.getElementById("lnk-edit-in"); le.hidden = false; le.href = "crea.html?edit=" + ev.id;
+    }
     if (ev.is_mine) {
       loadAnswers();
       document.getElementById("btn-cancel").hidden = false;
