@@ -132,7 +132,8 @@
   </div>
   <div class="chips" id="chips">
     <button class="chip on" data-cat="" aria-pressed="true" onclick="setCat(this)">Tutti</button>
-    <button class="chip" data-cat="sport" aria-pressed="false" onclick="setCat(this)">🏃 Sport</button>
+    <button class="chip" data-cat="runclub" aria-pressed="false" onclick="setCat(this)">🏃 Run club</button>
+    <button class="chip" data-cat="sport" aria-pressed="false" onclick="setCat(this)">⚽ Sport</button>
     <button class="chip" data-cat="cucina" aria-pressed="false" onclick="setCat(this)">🍳 Cucina</button>
     <button class="chip" data-cat="creatività" aria-pressed="false" onclick="setCat(this)">🏺 Creatività</button>
     <button class="chip" data-cat="giardinaggio" aria-pressed="false" onclick="setCat(this)">🌱 Giardinaggio</button>
@@ -145,7 +146,7 @@
   <a class="invite" id="invite" href="crea-community.html" hidden>Organizzi eventi? Crea il tuo gruppo →</a>
 </main>
 
-<script src="app.js?v=1788705858"></script>
+<script src="app.js?v=1788723150"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 860 });
@@ -263,7 +264,7 @@
     const q = norm(document.getElementById("q").value.trim());
     const words = q ? q.split(/\s+/) : [];
     const all = GROUPS
-      .filter(g => !cat || g.category === cat || catFamily(g) === cat)
+      .filter(g => !cat || (cat === "runclub" ? (g.sport === "running" || g.sport === "walking") : (g.category === cat || catFamily(g) === cat)))
       .filter(g => !words.length || words.every(w => norm([g.name, g.category, catLabel(g), catFamily(g), g.description].join(" ")).includes(w)))
       .sort(sortGroups);
     const listed = all.filter(g => g.listed); // solo i gruppi della città

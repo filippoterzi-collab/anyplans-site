@@ -94,6 +94,10 @@ async function rpc(name, body) {
 // the RPC (migration 0061) takes no parameters and returns future + recent past rows: the 13-month window is applied here
 const rawRows = FIXTURE ? JSON.parse(await readFile(FIXTURE, "utf8")) : await rpc("public_activities_for_seo", {});
 const rawGroups = GROUPS_FIXTURE ? JSON.parse(await readFile(GROUPS_FIXTURE, "utf8")) : await rpc("list_communities", { p_city: CITY });
+// ritrovi fissi dei gruppi (migrazione 0070): "ogni mercoledì alle 18:45 al parco della Trucca"
+const SCHEDULES_FIXTURE = arg("--schedules");
+const rawSchedules = SCHEDULES_FIXTURE ? JSON.parse(await readFile(SCHEDULES_FIXTURE, "utf8")) : await rpc("list_community_schedules", { p_city: CITY }).catch(() => []);
+const schedules = Array.isArray(rawSchedules) ? rawSchedules : [];
 if (!Array.isArray(rawRows) || rawRows.length === 0) { console.error("nessun evento dalla RPC: non tocco niente"); process.exit(1); }
 
 // normalize rows; only the public columns of the contract are used
@@ -227,6 +231,30 @@ main{max-width:860px;margin:0 auto;padding:16px 22px 70px;display:flex;flex-dire
 .n{font-weight:700;font-size:14.5px}.s{font-size:12.5px;color:var(--grey)}
 .list{display:flex;flex-direction:column;gap:10px}
 .card{display:flex;align-items:center;gap:12px;background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:16px;padding:12px 14px}
+.rc-days{position:sticky;top:0;z-index:5;display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;background:var(--bg);padding:10px 0;margin:-4px 0 4px;border-bottom:1px solid rgba(25,25,25,.08)}
+.rc-days::-webkit-scrollbar{display:none}
+.rc-days a{flex-shrink:0;height:40px;padding:0 14px;border-radius:999px;background:#fff;border:1.5px solid rgba(25,25,25,.14);font-weight:600;font-size:13.5px;color:var(--ink);display:inline-flex;align-items:center;white-space:nowrap;text-decoration:none}
+.rc-days a:hover{border-color:var(--blue);color:var(--blue)}
+.rc-day{display:flex;align-items:baseline;gap:10px;margin-top:18px;scroll-margin-top:64px}
+.rc-day h2{margin:0}
+.rc-day .n{font-size:13.5px;font-weight:600;color:var(--grey)}
+.rc-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:10px}
+.rc{display:grid;grid-template-columns:56px minmax(0,1fr) auto;grid-template-areas:"logo body go" "logo foot go";gap:6px 14px;align-items:center;background:#fff;border:1.5px solid rgba(25,25,25,.10);border-radius:16px;padding:14px 16px;min-width:0}
+.rc .logo{grid-area:logo;width:56px;height:56px;border-radius:14px;background:var(--tint) center/cover no-repeat;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.rc .logo img{width:100%;height:100%;object-fit:cover}
+.rc .body{grid-area:body;min-width:0;display:flex;flex-direction:column;gap:3px}
+.rc .name{font-weight:700;font-size:16px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rc .when{font-size:13.5px;font-weight:600}
+.rc .when b{color:var(--blue)}
+.rc .when.unknown{color:var(--grey);font-weight:500}
+.rc .foot{grid-area:foot;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.rc .go{grid-area:go;height:40px;min-width:132px;padding:0 16px;border-radius:999px;border:1.5px solid var(--blue);background:#fff;color:var(--blue);font-weight:700;font-size:14px;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;text-decoration:none}
+.ini{font-weight:800;letter-spacing:-.045em;line-height:1;color:var(--blue);font-size:28px}
+.cost{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:999px;font-size:12.5px;font-weight:700;background:var(--tint);color:var(--blue);white-space:nowrap}
+.ig{font-size:13px;font-weight:700;color:var(--blue);text-decoration:none}
+.meet{display:flex;align-items:flex-start;gap:8px;font-size:15px;font-weight:600;margin:6px 0}
+.meet .n{color:var(--grey);font-weight:500}
+@media (max-width:700px){.rc-grid{grid-template-columns:1fr}.rc{grid-template-columns:56px minmax(0,1fr);grid-template-areas:"logo body" "foot foot" "go go"}.rc .go{justify-self:start}}
 .card:hover{border-color:var(--blue)}
 .card .em{font-size:28px;width:36px;text-align:center;flex-shrink:0}
 .card>span:last-child{min-width:0}.row>div{min-width:0}
@@ -279,6 +307,7 @@ ${body}
   <span>© 2026 Filippo Terzi · anyplans</span>
   <a href="/${CITY}/cosa-fare/">Cosa fare a ${CITY_NAME}</a>
   <a href="/${CITY}/gruppi/">Gruppi</a>
+  <a href="/${CITY}/running-club/">Running club</a>
   <a href="/${CITY}/">anyplans a ${CITY_NAME}</a>
   <a href="/guidelines.html">Le regole di anyplans</a>
   <a href="/privacy-it.html">Privacy</a>
@@ -395,6 +424,55 @@ ${sim.length ? `<h2>Eventi simili</h2>${listHtml(sim)}` : ""}
   return layout({ title, description: descr, url, image, jsonLd: eventJsonLd(p, url), body, ogType: "article" });
 }
 
+// ── run club (0070: community.sport = 'running' | 'walking', community_schedule) ────────────
+const WEEKDAYS = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"];
+const isRunClub = g => g.sport === "running" || g.sport === "walking";
+const runClubs = groups.filter(isRunClub);
+const hhmm = t => String(t || "").slice(0, 5);
+const initial = g => `<span class="ini">${esc((g.name || "?").trim()[0].toUpperCase())}</span>`;
+const logoHtml = g => g.avatar_url ? `<img src="${esc(g.avatar_url)}" alt="" width="56" height="56" loading="lazy">` : initial(g);
+function costChip(g, sch) {
+  const txt = ((sch || []).map(x => x.note || "").join(" ") + " " + (g.description || "")).toLowerCase();
+  if (/tesseramento|€|euro|a pagamento|rimborso/.test(txt)) return `<span class="cost">Tesseramento o quota</span>`;
+  if (/gratis|gratuit/.test(txt)) return `<span class="cost">Gratis</span>`;
+  return "";
+}
+const igLink = g => g.instagram_handle ? `<a class="ig" href="https://instagram.com/${esc(String(g.instagram_handle).replace(/^@/, ""))}" rel="noopener">@${esc(String(g.instagram_handle).replace(/^@/, ""))}</a>` : "";
+function meetLine(x) { return `${WEEKDAYS[x.weekday]} · <b>${esc(hhmm(x.start_time))}</b>${x.meeting_point_text ? ` · ${esc(x.meeting_point_text)}` : ""}`; }
+function rcCard(g, x) {
+  const sch = schedules.filter(s => s.community_slug === g.slug);
+  const when = x ? `<div class="when">${meetLine(x)}</div>`
+                 : sch.length ? `<div class="when">${sch.slice(0, 2).map(meetLine).join("<br>")}</div>`
+                 : `<div class="when unknown">Giorno e orario: chiedi su Instagram</div>`;
+  return `<div class="rc"><div class="logo">${logoHtml(g)}</div><div class="body"><div class="name">${esc(g.name)}</div>${when}</div><div class="foot">${costChip(g, sch)}${igLink(g)}</div><a class="go" href="${esc(groupUrl(g))}">Vedi il gruppo</a></div>`;
+}
+function runningHub() {
+  const url = `${SITE}/${CITY}/running-club/`;
+  const T = TESTI.running_club || {};
+  const title = cut(T.titolo || `Running club a ${CITY_NAME}: ${runClubs.length} gruppi di corsa`, 60) + " | anyplans";
+  const descr = cut(T.sotto || `${runClubs.length} run club a ${CITY_NAME} e provincia, uno quasi ogni sera: scegli il giorno, vai, corri insieme ad altri. Quasi tutti gratis.`, 160);
+  const byDay = WEEKDAYS.map((d, i) => ({ d, i, rows: schedules.filter(s => s.weekday === i && runClubs.some(g => g.slug === s.community_slug)) }));
+  const withDay = new Set(schedules.map(s => s.community_slug));
+  const noDay = runClubs.filter(g => !withDay.has(g.slug));
+  const ld = jsonld({ "@context": "https://schema.org", "@type": "ItemList", name: `Running club a ${CITY_NAME}`, url,
+    itemListElement: runClubs.map((g, i) => ({ "@type": "ListItem", position: i + 1, url: groupUrl(g), name: g.name })) });
+  const body = `
+${crumbs([["anyplans", "/"], [CITY_NAME, `/${CITY}/cosa-fare/`], ["Gruppi", `/${CITY}/gruppi/`], ["Running club", null]])}
+<h1>${esc(T.titolo || `Running club a ${CITY_NAME} e provincia`)}</h1>
+<p class="lead">${esc(T.sotto || descr)}</p>
+<div class="rc-days">${byDay.map(x => `<a href="#${x.d.toLowerCase()}"${x.rows.length ? "" : ' aria-disabled="true"'}>${x.d}</a>`).join("")}${noDay.length ? `<a href="#altri">Senza giorno fisso</a>` : ""}</div>
+${byDay.filter(x => x.rows.length).map(x => `
+<div class="rc-day" id="${x.d.toLowerCase()}"><h2>${x.d}</h2><span class="n">${x.rows.length} ${x.rows.length === 1 ? "ritrovo" : "ritrovi"}</span></div>
+<div class="rc-grid">${x.rows.map(r => rcCard(runClubs.find(g => g.slug === r.community_slug), r)).join("\n")}</div>`).join("\n")}
+${noDay.length ? `
+<div class="rc-day" id="altri"><h2>Senza giorno fisso</h2><span class="n">${noDay.length}</span></div>
+<p class="lead">Escono quando decidono sul momento: il giorno lo trovi sulla loro pagina Instagram.</p>
+<div class="rc-grid">${noDay.map(g => rcCard(g, null)).join("\n")}</div>` : ""}
+<div class="cta"><a class="btn" href="/${CITY}/eventi.html">Vedi tutti gli eventi</a><a class="btn ghost" href="/${CITY}/login.html">Organizzi un run club? Crea il tuo gruppo</a></div>
+`;
+  return { html: layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld, body }), lastmod: NOW };
+}
+
 // ── group pages ───────────────────────────────────────────────────────────────
 function groupPage(g) {
   const url = groupUrl(g);
@@ -405,18 +483,24 @@ function groupPage(g) {
   const title = cut(`${g.name}: gruppo a ${cap(g.city || CITY_NAME)}`, 60) + " | anyplans";
   const descr = cut(`${g.name} è un gruppo su anyplans a ${cap(g.city || CITY_NAME)}${up.length ? ` con ${up.length} ${up.length === 1 ? "evento in programma" : "eventi in programma"}` : ""}. ${g.description || ""}`, 160);
   const image = g.avatar_url || OG_DEFAULT;
-  const ld = jsonld({ "@context": "https://schema.org", "@type": "Organization", name: g.name, url,
+  const sch = schedules.filter(s => s.community_slug === g.slug);
+  const ld = jsonld({ "@context": "https://schema.org", "@type": isRunClub(g) ? "SportsOrganization" : "Organization", name: g.name, url,
+    ...(isRunClub(g) ? { sport: g.sport === "walking" ? "Walking" : "Running" } : {}),
     ...(g.avatar_url ? { logo: g.avatar_url } : {}), ...(g.description ? { description: cut(g.description, 300) } : {}),
+    ...(g.instagram_handle ? { sameAs: [`https://instagram.com/${String(g.instagram_handle).replace(/^@/, "")}`] } : {}),
     address: { "@type": "PostalAddress", addressLocality: cap(g.city || CITY_NAME), addressCountry: "IT" } });
   const body = `
 ${crumbs([["anyplans", "/"], [CITY_NAME, `/${CITY}/cosa-fare/`], ["Gruppi", `/${CITY}/gruppi/`], [g.name, null]])}
-<div class="row"><div class="avatar" style="width:64px;height:64px;font-size:26px">${g.avatar_url ? `<img src="${esc(g.avatar_url)}" alt="" width="64" height="64">` : emoji}</div>
+<div class="row"><div class="avatar" style="width:64px;height:64px;font-size:26px${g.avatar_url ? "" : ";background:var(--tint)"}">${g.avatar_url ? `<img src="${esc(g.avatar_url)}" alt="" width="64" height="64">` : isRunClub(g) ? initial(g) : emoji}</div>
   <div><h1>${esc(g.name)}</h1><div class="s">${esc(cap(g.city || CITY_NAME))}${g.is_verified ? " · Gruppo verificato" : ""}${g.review_count > 0 && g.review_avg != null ? ` · ${esc(String(g.review_avg).replace(".", ","))} su 5 (${g.review_count} ${g.review_count === 1 ? "recensione" : "recensioni"})` : ""}</div></div></div>
+${sch.length ? `<div class="box"><h2>Quando ci si trova</h2>${sch.map(x => `<div class="meet"><span>Ogni ${WEEKDAYS[x.weekday].toLowerCase()} alle <b>${esc(hhmm(x.start_time))}</b>${x.meeting_point_text ? ` · ${esc(x.meeting_point_text)}` : ""}${x.note ? ` <span class="n">· ${esc(x.note)}</span>` : ""}${x.starts_on && new Date(x.starts_on) > NOW ? ` <span class="n">· dal ${new Date(x.starts_on).toLocaleDateString("it-IT", { day: "numeric", month: "long" })}</span>` : ""}</span></div>`).join("")}</div>`
+  : isRunClub(g) ? `<div class="box"><h2>Quando ci si trova</h2><div class="meet"><span class="n">Giorno e orario: chiedi su Instagram.</span></div></div>` : ""}
 ${g.description ? `<div class="box"><h2>Chi siamo</h2><div class="desc">${esc(g.description)}</div></div>` : ""}
-<div class="cta"><a class="btn" href="/${CITY}/community.html?slug=${esc(g.slug)}">Segui il gruppo</a><a class="btn ghost" href="/${CITY}/eventi.html">Vedi tutti gli eventi</a></div>
+<div class="cta"><a class="btn" href="/${CITY}/community.html?slug=${esc(g.slug)}">Segui il gruppo</a>${g.instagram_handle ? `<a class="btn ghost" href="https://instagram.com/${esc(String(g.instagram_handle).replace(/^@/, ""))}" rel="noopener">Instagram</a>` : ""}<a class="btn ghost" href="/${CITY}/eventi.html">Vedi tutti gli eventi</a></div>
 <h2>${up.length ? "Prossimi eventi" : "Nessun evento in programma"}</h2>
 ${up.length ? listHtml(up) : `<p class="lead">Quando il gruppo pubblica un evento, compare qui.</p>`}
 ${past.length ? `<h2>Eventi già passati</h2>${listHtml(past)}` : ""}
+${isRunClub(g) && runClubs.length > 1 ? `<h2>Altri run club a ${esc(CITY_NAME)}</h2><div class="rc-grid">${runClubs.filter(o => o.slug !== g.slug).slice(0, 4).map(o => rcCard(o, null)).join("\n")}</div><div class="cta"><a class="btn ghost" href="/${CITY}/running-club/">Tutti i running club</a></div>` : ""}
 `;
   return { html: layout({ title, description: descr, url, image, jsonLd: ld, body }), lastmod: evs.length ? new Date(Math.max(...evs.map(p => p.updated))) : NOW };
 }
@@ -428,6 +512,7 @@ function groupsIndex() {
 ${crumbs([["anyplans", "/"], [CITY_NAME, `/${CITY}/cosa-fare/`], ["Gruppi", null]])}
 <h1>Gruppi a ${esc(CITY_NAME)}</h1>
 <p class="lead">${esc(descr)}</p>
+${runClubs.length >= 3 ? `<div class="cta"><a class="btn" href="/${CITY}/running-club/">🏃 Running club a ${esc(CITY_NAME)}: ${runClubs.length} gruppi</a></div>` : ""}
 <div class="list">${groups.map(g => `<a class="card" href="${esc(groupUrl(g))}"><span class="em">${g.emoji || "👥"}</span><span><span class="t">${esc(g.name)}</span><br><span class="m">${esc(cap(g.city || CITY_NAME))}${g.upcoming_count > 0 ? ` · ${g.upcoming_count} ${g.upcoming_count === 1 ? "evento in programma" : "eventi in programma"}` : ""}</span></span></a>`).join("\n")}</div>
 <div class="cta"><a class="btn ghost" href="/${CITY}/login.html">Organizzi eventi? Crea il tuo gruppo</a></div>
 `;
@@ -473,6 +558,7 @@ ${crumbs([["anyplans", "/"], [CITY_NAME, null]])}
 <div class="cta"><a class="btn" href="/${CITY}/eventi.html">Vedi tutti gli eventi</a><a class="btn ghost" href="/${CITY}/gruppi/">I gruppi</a></div>
 ${types.length ? `<h2>Per tipo</h2><div class="tags">${types.map(x => `<a href="/${CITY}/${x.slug}/">${x.t.e} ${esc(x.t.label)}</a>`).join("")}</div>` : ""}
 ${towns.length ? `<h2>Per paese</h2><div class="tags">${towns.slice().sort((a, b) => a.town.localeCompare(b.town, "it")).map(x => `<a href="/${CITY}/${x.slug}/">${esc(x.town)}</a>`).join("")}</div>` : ""}
+${runClubs.length >= 3 ? `<h2>Correre in compagnia</h2><div class="tags"><a href="/${CITY}/running-club/">🏃 Running club a ${esc(CITY_NAME)}</a></div>` : ""}
 ${groups.length ? `<h2>Gruppi</h2><div class="tags">${groups.map(g => `<a href="${esc(groupUrl(g))}">${g.emoji || "👥"} ${esc(g.name)}</a>`).join("")}</div>` : ""}
 <h2>Prossimi eventi</h2>
 ${next.length ? listHtml(next) : `<p class="lead">Niente in programma adesso.</p>`}
@@ -524,6 +610,7 @@ addUrl(SITE + "/", NOW);
 const hub = hubPage(); await writePage(`${CITY}/cosa-fare`, hub.html); addUrl(`${SITE}/${CITY}/cosa-fare/`, hub.lastmod);
 for (const ix of [...types, ...towns]) { const r = indexPage(ix); await writePage(`${CITY}/${ix.slug}`, r.html); addUrl(`${SITE}/${CITY}/${ix.slug}/`, r.lastmod); }
 if (groups.length) { await writePage(`${CITY}/gruppi`, groupsIndex()); addUrl(`${SITE}/${CITY}/gruppi/`, NOW); }
+if (runClubs.length >= 3) { const r = runningHub(); await writePage(`${CITY}/running-club`, r.html); addUrl(`${SITE}/${CITY}/running-club/`, r.lastmod); }
 for (const g of groups) { const r = groupPage(g); await writePage(`${CITY}/gruppi/${g.slug}`, r.html); addUrl(groupUrl(g), r.lastmod); }
 for (const p of pages) { await writePage(`${CITY}/${p.slug}`, eventPage(p)); addUrl(eventUrl(p), p.updated); }
 await writeFile(path.join(OUT, "sitemap.xml"), sitemapXml());
@@ -531,4 +618,4 @@ await writeFile(path.join(OUT, "robots.txt"), ROBOTS);
 
 console.log(`eventi: ${rows.length} righe, ${pages.length} pagine (${upcomingPages.length} futuri, ${pages.length - upcomingPages.length} passati)`);
 console.log(`indici: ${types.length} tipi (${types.map(x => x.slug).join(", ")}), ${towns.length} paesi`);
-console.log(`gruppi: ${groups.length}; sitemap: ${sitemapEntries.length} url → ${OUT}`);
+console.log(`gruppi: ${groups.length} (run club: ${runClubs.length}, ritrovi: ${schedules.length}); sitemap: ${sitemapEntries.length} url → ${OUT}`);

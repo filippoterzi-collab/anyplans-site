@@ -271,6 +271,10 @@
       <div class="meta" id="meta"></div>
       <a class="rating" id="rating" href="#recensioni" hidden></a>
     </div>
+    <div class="meetbox" id="meetbox" hidden>
+      <div class="sec" style="margin-bottom:6px">Quando ci si trova</div>
+      <div id="meets"></div>
+    </div>
     <div class="more" id="more" hidden>
       <p class="desc" id="desc" hidden></p>
       <a class="manage" id="manage" hidden href="#">Gestisci la pagina →</a>
@@ -280,6 +284,7 @@
         <svg viewBox="0 0 24 24"><path d="M6 10 C 6 6.7, 8.7 4, 12 4 C 15.3 4, 18 6.7, 18 10 L18 15 L20 17.5 L4 17.5 L6 15 Z"/><path d="M10 20.5 C 10.5 21.3, 13.5 21.3, 14 20.5"/></svg>
         <span id="follow-label">Segui</span>
       </button>
+      <a class="btn ghost" id="btn-ig" hidden href="#" target="_blank" rel="noopener">Instagram</a>
       <button class="btn ghost" onclick="shareCommunity()">Condividi</button>
       <p class="note">Se segui, ti avvisiamo a ogni nuovo evento</p>
     </div>
@@ -367,7 +372,7 @@
   </div>
 </div>
 
-<script src="app.js?v=1788705858"></script>
+<script src="app.js?v=1788723150"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const wantId = params.get("id");
@@ -400,6 +405,19 @@
     loadReviews();
     loadReviewable();
   }
+  // ritrovo fisso (community_schedule, 0070): "Ogni mercoledì alle 18:45 · Parco della Trucca"
+  const WEEKDAYS = ["lunedì", "martedì", "mercoledì", "giovedì", "venerdì", "sabato", "domenica"];
+  async function loadMeets(){
+    const r = await rpc("list_community_schedules", { p_community_id: c.id });
+    const rows = r && r.ok ? await r.json().catch(() => []) : [];
+    const box = document.getElementById("meetbox");
+    if (!rows.length) { box.hidden = !(c.sport === "running" || c.sport === "walking"); if (!box.hidden) document.getElementById("meets").innerHTML = '<p class="desc" style="color:var(--grey)">Giorno e orario: chiedi su Instagram.</p>'; return; }
+    box.hidden = false;
+    document.getElementById("meets").innerHTML = rows.map(x => {
+      const start = x.starts_on && new Date(x.starts_on) > new Date() ? " · dal " + new Date(x.starts_on).toLocaleDateString("it-IT", { day: "numeric", month: "long" }) : "";
+      return `<p class="desc" style="margin:4px 0"><b>Ogni ${WEEKDAYS[x.weekday]} alle ${esc(String(x.start_time).slice(0, 5))}</b>${x.meeting_point_text ? " · " + esc(x.meeting_point_text) : ""}${x.note ? ' <span style="color:var(--grey)">· ' + esc(x.note) + "</span>" : ""}${start ? '<span style="color:var(--grey)">' + start + "</span>" : ""}</p>`;
+    }).join("");
+  }
   function notFound(){
     document.getElementById("loading").hidden = true;
     document.getElementById("notfound").hidden = false;
@@ -409,7 +427,11 @@
     document.title = c.name + " · anyplans";
     const logo = document.getElementById("logo");
     if (c.avatar_url) logo.style.backgroundImage = "url('" + String(c.avatar_url).replace(/'/g, "") + "')";
+    else if (c.sport === "running" || c.sport === "walking") { logo.textContent = (c.name || "?").trim()[0].toUpperCase(); logo.style.fontFamily = "var(--display)"; logo.style.color = "var(--blue)"; logo.style.background = "var(--tint)"; }
     else logo.textContent = c.emoji || "📍";
+    const ig = document.getElementById("btn-ig");
+    if (c.instagram_handle) { ig.hidden = false; ig.href = "https://instagram.com/" + encodeURIComponent(String(c.instagram_handle).replace(/^@/, "")); }
+    loadMeets();
     document.getElementById("name").textContent = c.name;
     document.getElementById("verified").hidden = !c.is_verified;
     const done = Number(c.events_done) || 0;
