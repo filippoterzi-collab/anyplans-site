@@ -403,7 +403,7 @@
   </div>
 </div>
 
-<script src="/bergamo/app.js?v=1788624757"></script>
+<script src="/bergamo/app.js?v=1788683150"></script>
 <script>
   let quizCity = "";
 
@@ -490,7 +490,7 @@
     if (!r || !r.ok) return;
     const rows = (await r.json().catch(() => []))
       .map(x => ({ ...x, when: new Date(x.start_at) }))
-      .filter(x => x.when > new Date(Date.now() - 3 * 3600 * 1000))
+      .filter(x => isCurrent(x.when, x.end_at))
       .sort((a, b) => a.when - b.when);
     if (!rows.length) return;
     LIVE = rows;
@@ -504,7 +504,7 @@
     document.getElementById("ev-lead").textContent = "Presi dalla mappa in questo momento. Ti registri con la tua email, scegli, e ci vai insieme ad altri.";
     document.getElementById("cards").innerHTML = rows.slice(0, 6).map(x =>
       `<a class="card" href="/bergamo/evento.html?id=${x.id}"><div class="em">${esc(x.emoji || "📍")}</div>` +
-      `<div><div class="t">${esc(x.title)}</div><div class="m">${esc(dayLabel(x.when))}, ${timeStr(x.when)} · <b>${esc(relTime(x.when))}</b> · ${goingTxt(x.going_count)}${x.price_cents > 0 ? " · " + esc(fmtPrice(x.price_cents)) : ""}</div></div>` +
+      `<div><div class="t">${esc(x.title)}</div><div class="m">${esc(dayLabel(x.when))}, ${timeStr(x.when)} · <b>${esc(relTime(x.when, x.end_at))}</b> · ${goingTxt(x.going_count)}${x.price_cents > 0 ? " · " + esc(fmtPrice(x.price_cents)) : ""}</div></div>` +
       `<span class="go">Vedi →</span></a>`).join("");
     if (teaserReady) drawTeaser();
   }

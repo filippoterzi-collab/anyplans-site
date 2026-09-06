@@ -93,7 +93,7 @@
   <div id="list"><p style="color:var(--grey)">Carico…</p></div>
 </main>
 
-<script src="app.js?v=1788624757"></script>
+<script src="app.js?v=1788683150"></script>
 <script>
   requireLogin();
   mountNav("i miei eventi", { col: 860 });
@@ -104,7 +104,7 @@
     const list = document.getElementById("list");
     if (!r || !r.ok) { list.innerHTML = '<p style="color:var(--grey)">Non riesco a caricare. Ricarica la pagina.</p>'; return; }
     const rows = (await r.json())
-      .filter(x => new Date(x.start_at) >= new Date(Date.now() - 3 * 3600 * 1000))
+      .filter(x => isCurrent(x.start_at, x.end_at))
       .filter(x => x.my_status === "going" || x.my_status === "requested" || x.my_status === "waitlisted" || x.is_mine)
       .sort((a, b) => new Date(a.start_at) - new Date(b.start_at));
 
@@ -132,7 +132,7 @@
       html += `<a class="ev" href="evento.html?id=${x.id}">
         <div class="tile"${x.photo_url ? ` style="background-image:url('${esc(x.photo_url)}'); background-size:cover; background-position:center"` : ""}>${x.photo_url ? "" : x.emoji || "📍"}</div>
         <div>
-          <div class="time">${timeStr(when)} · ${relTime(when)}</div>
+          <div class="time">${timeStr(when)} · ${relTime(when, x.end_at)}</div>
           <div class="t">${esc(x.title)}</div>
           <div class="m">${esc(x.meeting_point_text || "Zona indicativa")} · ${goingTxt(x.going_count)}${full ? ' · <b style="font-weight:600; color:var(--ink)">' + full + "</b>" : ""}</div>
         </div>
@@ -181,7 +181,7 @@
       return `<a class="ev" href="evento.html?id=${x.id}">
         <div class="tile"${x.photo_url ? ` style="background-image:url('${esc(x.photo_url)}'); background-size:cover; background-position:center"` : ""}>${x.photo_url ? "" : x.emoji || "📍"}</div>
         <div>
-          <div class="time">${dayLabel(when)} ${timeStr(when)} · ${relTime(when)}</div>
+          <div class="time">${dayLabel(when)} ${timeStr(when)} · ${relTime(when, x.end_at)}</div>
           <div class="t">${esc(x.title)}</div>
           <div class="m">${esc(x.meeting_point_text || "Zona indicativa")} · ${goingTxt(x.going_count)}</div>
         </div>

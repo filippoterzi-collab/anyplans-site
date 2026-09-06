@@ -297,11 +297,19 @@ function dayLabel(d){
   return DAYS[d.getDay()] + " " + d.getDate();
 }
 function daySub(d){ return DAYS[d.getDay()] + " " + d.getDate() + " " + MONTHS[d.getMonth()]; }
-// "tra 2h", "tra 3 giorni": quanto manca, a colpo d'occhio
-function relTime(d){
+// Un evento resta "in programma" finché non finisce: fino a end_at se c'è, altrimenti 3 ore
+// dall'inizio. Stessa regola del database (migrazione 0062, activity_is_current): se cambia lì,
+// cambiare anche qui.
+function endsAt(start, end){
+  const s = start instanceof Date ? start : new Date(start);
+  if (end) return end instanceof Date ? end : new Date(end);
+  return new Date(s.getTime() + 3 * 3600 * 1000);
+}
+function isCurrent(start, end){ return endsAt(start, end) > new Date(); }
+// "tra 2h", "tra 3 giorni": quanto manca, a colpo d'occhio; passa anche la fine, se la conosci
+function relTime(d, end){
   const ms = d - Date.now(), min = Math.round(ms / 60000);
-  if (min < -180) return "già passato";
-  if (min <= 0) return "in corso";
+  if (min <= 0) return isCurrent(d, end) ? "in corso" : "già passato";
   if (min < 60) return "tra " + min + " minuti";
   const h = Math.round(min / 60);
   if (h < 24) return "tra " + h + (h === 1 ? " ora" : " ore");

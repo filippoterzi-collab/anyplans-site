@@ -135,7 +135,7 @@
   </div>
 </form>
 
-<script src="app.js?v=1788624757"></script>
+<script src="app.js?v=1788683150"></script>
 <script>
   // pagina aperta anche senza account (si può linkare da Instagram): il login arriva quando si apre un piano
   mountNav("chiedi", { col: 640 });
@@ -184,6 +184,7 @@
       host: x.host_name || x.club_name || null,
       place: x.meeting_point_text || "Zona indicativa",
       when: new Date(x.start_at),
+      end: x.end_at ? new Date(x.end_at) : null,
       going: Number(x.going_count) || 0,
       cap: x.max_participants || null,
       wl: Number(x.waitlist_count) || 0,
@@ -317,7 +318,7 @@
     const full = fullTxt(e.going, e.cap, e.wl); if (full) meta.push(full);
     if (e.price > 0) meta.push(fmtPrice(e.price));
     const tile = e.photo ? `<div class="tile" style="background-image:url('${esc(e.photo.replace(/'/g, ""))}')"></div>` : `<div class="tile">${esc(e.emoji)}</div>`;
-    const time = `${dayLabel(e.when)} · ${timeStr(e.when)} · ${relTime(e.when)}` + (S.near ? ` · ${kmTxt(distKm(S.near, e))}` : "");
+    const time = `${dayLabel(e.when)} · ${timeStr(e.when)} · ${relTime(e.when, e.end)}` + (S.near ? ` · ${kmTxt(distKm(S.near, e))}` : "");
     return `<a class="ck-ev${big ? " big" : ""}" href="evento.html?id=${esc(e.id)}" onclick="track('chiedi_click','evento.html?id=${esc(e.id)}')">
       ${tile}
       <div class="body"><div class="time">${esc(time)}</div><div class="t">${esc(e.title)}</div><div class="m">${esc(meta.join(" · "))}</div></div>

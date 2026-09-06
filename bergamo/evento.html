@@ -390,7 +390,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788624757"></script>
+<script src="app.js?v=1788683150"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -460,7 +460,7 @@
     document.getElementById("d-day").textContent = when.getDate();
     const endAt = ev.end_at ? new Date(ev.end_at) : null;
     const endTxt = !endAt ? "" : (dayKey(endAt) === dayKey(when) ? " – " + timeStr(endAt) : " → fino a " + daySub(endAt) + " " + timeStr(endAt));
-    document.getElementById("when").innerHTML = esc((dayKind(when) ? dayLabel(when) + " · " : "") + daySub(when) + " · " + timeStr(when) + endTxt) + " · <b>" + esc(relTime(when)) + "</b>";
+    document.getElementById("when").innerHTML = esc((dayKind(when) ? dayLabel(when) + " · " : "") + daySub(when) + " · " + timeStr(when) + endTxt) + " · <b>" + esc(relTime(when, endAt)) + "</b>";
     document.getElementById("place").textContent = (ev.meeting_point_text || "Zona indicativa") + " · apri nelle mappe →";
     document.getElementById("place").href = mapsUrl();
     if (!ev.meeting_point_text) document.getElementById("map-note").hidden = false;

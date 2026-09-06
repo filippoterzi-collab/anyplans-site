@@ -148,6 +148,8 @@
   .ev .tile{width:52px; height:52px; background:var(--tint); border-radius:13px; display:flex;
             align-items:center; justify-content:center; font-size:26px; flex-shrink:0;}
   .ev .time{font-size:12.5px; font-weight:700; color:var(--blue);}
+  /* un evento già cominciato resta in lista finché non finisce: si vede a colpo d'occhio */
+  .ev .time .live, .pop .live{color:#0E8A4A;}
   .ev .t{font-weight:700; font-size:15px;} .ev a.t:hover{color:var(--blue);}
   .ev .m{font-size:12.5px; color:var(--grey);}
   .ev .go{margin-left:auto; font-weight:700; font-size:13.5px; color:var(--blue);
@@ -336,7 +338,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788624757"></script>
+<script src="app.js?v=1788683150"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -457,7 +459,7 @@
       const el = document.createElement("div");
       el.className = "pin" + (dayKind(ev.when) === "oggi" ? " today" : ""); el.id = "pin-" + ev.id; el.textContent = ev.emoji;
       const popup = new maplibregl.Popup({ offset: 22, closeButton: false })
-        .setHTML(`<div class="pop"><div class="t">${esc(ev.title)}</div><div class="m">${dayLabel(ev.when)} · ${timeStr(ev.when)} · ${relTime(ev.when)} · ${esc(ev.place)}${ev.price > 0 ? " · " + esc(fmtPrice(ev.price)) : ""}${fullHtml(ev)}</div></div>`);
+        .setHTML(`<div class="pop"><div class="t">${esc(ev.title)}</div><div class="m">${dayLabel(ev.when)} · ${timeStr(ev.when)} · ${relTime(ev.when, ev.end) === "in corso" ? '<span class="live">in corso adesso</span>' : esc(relTime(ev.when, ev.end))} · ${esc(ev.place)}${ev.price > 0 ? " · " + esc(fmtPrice(ev.price)) : ""}${fullHtml(ev)}</div></div>`);
       const mk = new maplibregl.Marker({ element: el }).setLngLat([ev.lng, ev.lat]).setPopup(popup).addTo(map);
       el.addEventListener("click", () => highlight(ev.id, false));
       markers[ev.id] = mk;
@@ -872,11 +874,13 @@
   // card di un evento; withDay: il giorno davanti all'ora (fuori dai gruppi per giorno)
   function evCard(e, withDay){
     const [cls, label] = stateBtn(e);
-    const time = (withDay ? dayLabel(e.when) + " · " : "") + timeStr(e.when) + (e.end && dayKey(e.end) === dayKey(e.when) ? " – " + timeStr(e.end) : "") + " · " + relTime(e.when);
+    const rel = relTime(e.when, e.end);
+    const time = (withDay ? dayLabel(e.when) + " · " : "") + timeStr(e.when) + (e.end && dayKey(e.end) === dayKey(e.when) ? " – " + timeStr(e.end) : "");
+    const relHtml = rel === "in corso" ? '<span class="live">in corso adesso</span>' : esc(rel);
     return `<div class="ev" id="ev-${e.id}" onclick="location.href='evento.html?id=${e.id}'" onmouseenter="highlight('${e.id}', false)">
         <div class="tile"${e.photo ? ` style="background-image:url('${esc(e.photo)}'); background-size:cover; background-position:center"` : ""}>${e.photo ? "" : e.emoji}</div>
         <div>
-          <div class="time">${esc(time)}</div>
+          <div class="time">${esc(time)} · ${relHtml}</div>
           <a class="t" href="evento.html?id=${e.id}" onclick="event.stopPropagation()" style="display:block">${esc(e.title)}</a>
           <div class="m">${e.host ? (e.hostAvatar ? `<span class="ha" style="background-image:url('${esc(e.hostAvatar)}')"></span>` : "") + "Di " + esc(e.host) : "Da un altro sito"} · ${esc(e.place)}${where ? " · " + kmTxt(distKm(where, e)) : ""} · ${goingTxt(e.going)}${fullHtml(e)}${e.request ? " · con approvazione" : ""}${e.price > 0 ? ' · <b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(e.price)) + "</b>" : ""}</div>
         </div>
