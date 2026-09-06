@@ -240,6 +240,8 @@
     .fl-handle{display:block; width:36px; height:4px; border-radius:999px; background:rgba(25,25,25,.18); margin:10px auto 0;}
     .fl-head{padding:8px 18px 8px;}
     .fl-body{padding:4px 18px 16px;}
+    /* su telefono la casella "chiedi" viene prima di giorno e posto (plan-chiedi.md §2) */
+    .cc-q > div:nth-child(3){order:-1;}
     .fl-foot{position:sticky; bottom:0; padding:12px 18px calc(12px + env(safe-area-inset-bottom));}
     .fl-show{flex:1; min-width:0;}
     .split{flex-direction:column;}
@@ -310,11 +312,11 @@
         </div>
       </div>
       <div>
-        <h2 id="cc-h-what">Oppure scrivi cosa cerchi</h2>
+        <h2 id="cc-h-what">Oppure chiedi ad anyplans?</h2>
         <div class="cc-col">
           <form class="cc-field cc-what" id="cc-what" onsubmit="event.preventDefault(); search()">
             <svg class="lens" viewBox="0 0 24 24" fill="none" stroke="#6E6E73" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 L21 21"/></svg>
-            <input id="q" placeholder="Per esempio: c'è qualcuno che fa ceramica?" aria-labelledby="cc-h-what" autocomplete="off"
+            <input id="q" placeholder="C'è qualcosa di ceramica?" aria-labelledby="cc-h-what" autocomplete="off"
                    enterkeyhint="search" oninput="document.getElementById('cc-what').classList.toggle('has', !!this.value.trim())">
             <button type="submit" class="cc-go" aria-label="Cerca">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12 L19 12"/><path d="M13 6 L19 12 L13 18"/></svg>
@@ -354,7 +356,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788690793"></script>
+<script src="app.js?v=1788691310"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -379,7 +381,7 @@
       if (!e.target.closest("#menu") && e.target.id !== "avatar") document.getElementById("menu").hidden = true;
     });
   }
-  mountTabbar("eventi");
+  mountTabbar(new URLSearchParams(location.search).get("chiedi") === "1" ? "chiedi" : "eventi");
   if (!logged) document.querySelectorAll("#tabbar a").forEach(a => { if (!a.getAttribute("href").includes("eventi.html")) a.onclick = () => { try { sessionStorage.setItem("anyplans_next", a.getAttribute("href")); } catch (_) {} }; });
 
   let EVENTS = [];
@@ -574,7 +576,7 @@
   }
   function compactText(){
     const parts = [dayCompact(), whereCompact(), whatText()].filter(Boolean);
-    return parts.length ? parts.join(" · ") : "Tutti i prossimi giorni · Bergamo e dintorni";
+    return parts.length ? parts.join(" · ") : "Cosa cerchi? Per esempio: ceramica";
   }
   function syncCard(){
     const chosen = hasChoice();
@@ -584,7 +586,7 @@
     const cp = document.getElementById("cc-compact");
     cp.hidden = open;
     document.getElementById("cc-compact-txt").textContent = compactText();
-    cp.querySelector(".chg").textContent = chosen ? "Cambia" : "Cerca";
+    cp.querySelector(".chg").textContent = chosen ? "Cambia" : "Chiedi";
     const parts = [dayText(), whereText(), whatText()].filter(Boolean);
     cp.setAttribute("aria-label", "Cambia cosa cerchi" + (parts.length ? ": " + parts.join(", ") : ""));
     document.getElementById("cc-foot").hidden = !chosen;
@@ -861,6 +863,17 @@
     render();
   }
   // ?s=<id>: riapre una ricerca salvata (testo, giorno e posto; il centro si ritrova dall'etichetta)
+  // ?chiedi=1 (voce "Chiedi" della barra) apre la ricerca con la casella a fuoco; ?q=… (i vecchi link di chiedi.html) cerca subito
+  function openChiediFromUrl(){
+    const p = new URLSearchParams(location.search);
+    const q = p.get("q");
+    if (q) { qInput.value = q.slice(0, 120); document.getElementById("cc-what").classList.add("has"); search(); return; }
+    if (p.get("chiedi") !== "1") return;
+    if (inMapView()) document.body.classList.remove("showmap");
+    cardOpen = true; syncCard();
+    if (mobileFilters.matches) openSheet();
+    qInput.focus({ preventScroll: !mobileFilters.matches });
+  }
   async function openSavedFromUrl(){
     const id = new URLSearchParams(location.search).get("s");
     if (!id) return;
@@ -1083,6 +1096,7 @@
   syncCard();
   if (logged) checkProfile();
   Promise.all([loadEvents(), logged ? loadSaved() : null]).then(() => {
+    openChiediFromUrl();
     if (!logged) return;
     openSavedFromUrl();
     // pallino sulla campanella: in silenzio se la rpc non c'è ancora

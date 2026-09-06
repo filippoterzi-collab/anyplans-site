@@ -374,7 +374,8 @@ function mountNav(active, opts){
     .sn #menu a:hover, .sn #menu button:hover{background:#E9EEFB;}
     @media (max-width:700px){ .sn .lnk, .sn .cta{display:none;} header.sn{padding:0 18px;} }`;
   document.head.appendChild(st);
-  const links = [["eventi","Eventi","eventi.html"],["chiedi","Chiedi","chiedi.html"],["i miei eventi","I miei eventi","miei.html"],["gruppi","Gruppi","gruppi.html"]];
+  // "Chiedi" non è più una pagina: è la casella di Eventi (06/09/2026); chiedi.html rimanda lì
+  const links = [["eventi","Eventi","eventi.html"],["i miei eventi","I miei eventi","miei.html"],["gruppi","Gruppi","gruppi.html"]];
   const initial = ((session && session.email) || "?")[0].toUpperCase();
   const h = document.createElement("header"); h.className = "sn";
   h.innerHTML = `<div class="nav">
@@ -439,9 +440,12 @@ function mountNav(active, opts){
 function mountTabbar(active){
   const tabs = [
     ["eventi", "Eventi", "eventi.html",        '<svg viewBox="0 0 24 24"><path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20z"/><path d="M9 4v13.5M15 6.5V20"/></svg>'],
+    // "Chiedi" (deciso 06/09/2026, design/sito-landing/spec-chiedi-mobile.md + plan-chiedi.md): apre la ricerca di Eventi
+    // con la casella già a fuoco. Sta al posto di Profilo, che è già nel tondo in alto a destra su ogni pagina.
+    // Fumetto a contorno, senza "?": il punto di domanda del marchio non va mai in blu (kit, regola 5).
+    ["chiedi", "Chiedi", "eventi.html?chiedi=1", '<svg viewBox="0 0 24 24"><path d="M6.5 4.5h11A2.5 2.5 0 0 1 20 7v7.5a2.5 2.5 0 0 1-2.5 2.5H11l-4.5 3.5V17A2.5 2.5 0 0 1 4 14.5V7a2.5 2.5 0 0 1 2.5-2.5z"/></svg>'],
     ["crea", "Crea", "crea.html",          '<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>'],
-    ["i miei eventi", "I miei eventi", "miei.html",          '<svg viewBox="0 0 24 24"><path d="M5 5.5h14v15l-7-4-7 4z"/></svg>'],
-    ["profilo", "Profilo", "profilo.html",'<svg viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="4"/><path d="M4.5 20.5c1.2-4 4-6 7.5-6s6.3 2 7.5 6"/></svg>']
+    ["i miei eventi", "I miei eventi", "miei.html",          '<svg viewBox="0 0 24 24"><path d="M5 5.5h14v15l-7-4-7 4z"/></svg>']
   ];
   const st = document.createElement("style");
   st.textContent = `
