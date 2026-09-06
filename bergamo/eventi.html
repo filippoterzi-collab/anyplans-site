@@ -389,7 +389,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788723150"></script>
+<script src="app.js?v=1788723537"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -451,7 +451,7 @@
       cat: CAT_BY_SLUG[x.sport] || "sport",
       slug: x.sport,
       title: x.title,
-      host: x.host_name || x.club_name || null,
+      host: x.community_name || x.host_name || x.club_name || null,   // evento di un gruppo: il gruppo, non chi lo ha creato
       hostAvatar: x.host_avatar || null,
       place: x.meeting_point_text || "Zona indicativa",
       when: new Date(x.start_at),
