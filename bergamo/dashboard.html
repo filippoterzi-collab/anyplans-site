@@ -284,6 +284,16 @@
         <textarea id="f-desc" maxlength="500" placeholder="Due righe per chi vi scopre sulla mappa…"></textarea>
       </div>
       <div>
+        <label>Quando ci si trova <span style="color:var(--grey); font-weight:600">(ritrovo fisso, se c'è)</span></label>
+        <div id="sch-list" style="display:flex; flex-direction:column; gap:10px"></div>
+        <button class="textbtn" type="button" style="align-self:flex-start; padding-left:0" onclick="addSch()">+ Aggiungi un ritrovo</button>
+        <p class="hint">Giorno, ora e posto: finiscono nella pagina del gruppo e, se il posto si trova sulla mappa, diventano uscite sulla mappa per le prossime 3 settimane, ogni settimana.</p>
+      </div>
+      <div>
+        <label for="f-wa">Gruppo WhatsApp <span style="color:var(--grey); font-weight:600">(se vuoi, link pubblico)</span></label>
+        <input id="f-wa" type="url" placeholder="https://chat.whatsapp.com/…" autocomplete="off">
+      </div>
+      <div>
         <label for="f-ig">Instagram <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
         <div class="igrow"><span onclick="this.nextElementSibling.focus()">instagram.com/</span><input id="f-ig" type="text" maxlength="30" placeholder="Il tuo nome utente Instagram" autocomplete="off" autocapitalize="none"></div>
         <p class="hint">Lo mostriamo nella pagina del gruppo, sotto gli eventi passati.</p>
@@ -346,7 +356,7 @@
   <div class="sk" style="height:90px"></div>
 </div>
 
-<script src="app.js?v=1788725606"></script>
+<script src="app.js?v=1788726235"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 1000 });
@@ -611,6 +621,50 @@
       return SB_URL + "/storage/v1/object/public/avatars/" + path;
     } catch (_) { return null; }
   }
+  // ── ritrovi fissi (community_schedule, 0070/0080) ──
+  const DAYS = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"];
+  let schRows = [];
+  async function loadSch(){
+    const r = await rpc("list_community_schedules", { p_community_id: c.id });
+    schRows = r && r.ok ? (await r.json().catch(() => [])).map(x => ({ id: x.id, weekday: x.weekday, start_time: String(x.start_time).slice(0, 5), place: x.meeting_point_text || "", lat: x.lat, lng: x.lng, note: x.note || "", starts_on: x.starts_on || "" })) : [];
+    document.getElementById("f-wa").value = c.whatsapp_url || "";
+    renderSch();
+  }
+  function renderSch(){
+    const box = document.getElementById("sch-list");
+    box.innerHTML = schRows.map((s, i) => `<div class="schrow" data-i="${i}" style="background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:14px; padding:12px 14px; display:flex; flex-direction:column; gap:8px">
+        <div style="display:flex; gap:8px; flex-wrap:wrap; align-items:center">
+          <select class="s-day" style="width:auto; padding:8px 12px; font-size:14px; border-radius:9px" onchange="schRows[${i}].weekday = +this.value">${DAYS.map((d, k) => `<option value="${k}"${k === s.weekday ? " selected" : ""}>${d}</option>`).join("")}</select>
+          <input class="s-time" type="time" value="${esc(s.start_time)}" style="width:auto; padding:8px 12px" onchange="schRows[${i}].start_time = this.value">
+          <button type="button" onclick="schRows.splice(${i}, 1); renderSch()" style="margin-left:auto; background:none; border:none; cursor:pointer; font-weight:700; font-size:16px; color:var(--grey)">×</button>
+        </div>
+        <input class="s-place" type="text" maxlength="200" placeholder="Posto: parco, via, paese…" value="${esc(s.place)}" oninput="schRows[${i}].place = this.value; schRows[${i}].lat = null; schRows[${i}].lng = null" onblur="geoSch(${i}, this)">
+        <div class="hint s-geo" style="margin:0">${s.lat != null ? "📍 Sulla mappa" : s.place ? "Posto non trovato sulla mappa: resta scritto, ma senza uscite sulla mappa" : ""}</div>
+        <input class="s-note" type="text" maxlength="200" placeholder="Nota (es. gratis, ritmo tranquillo, dal 26 settembre)" value="${esc(s.note)}" oninput="schRows[${i}].note = this.value">
+      </div>`).join("");
+  }
+  function addSch(){ if (schRows.length >= 10) { toast("Al massimo 10 ritrovi."); return; } schRows.push({ id: null, weekday: 0, start_time: "19:00", place: "", lat: null, lng: null, note: "", starts_on: "" }); renderSch(); }
+  async function geoSch(i, el){
+    const s = schRows[i]; if (!s || !s.place.trim() || s.lat != null) return;
+    const hint = el.parentElement.querySelector(".s-geo"); hint.textContent = "Cerco il posto sulla mappa…";
+    try {
+      const r = await fetch("https://photon.komoot.io/api?q=" + encodeURIComponent(s.place + ", Bergamo") + "&limit=1&lat=45.698&lon=9.670&lang=it");
+      const f = ((await r.json()).features || [])[0];
+      if (f) { s.lng = f.geometry.coordinates[0]; s.lat = f.geometry.coordinates[1]; hint.textContent = "📍 Sulla mappa: " + [f.properties.name, f.properties.city || f.properties.locality].filter(Boolean).join(", "); }
+      else hint.textContent = "Posto non trovato sulla mappa: resta scritto, ma senza uscite sulla mappa. Prova con via e paese.";
+    } catch (_) { hint.textContent = "Non riesco a cercare il posto adesso."; }
+  }
+  async function saveSch(){
+    const rows = schRows.filter(s => s.start_time).map(s => ({ id: s.id, weekday: s.weekday, start_time: s.start_time, meeting_point_text: s.place.trim() || null, lat: s.lat, lng: s.lng, note: s.note.trim() || null, starts_on: s.starts_on || null }));
+    const r = await rpc("set_community_schedules", { p_community_id: c.id, p_rows: rows });
+    if (!r || !r.ok) { toast("Salvato, ma i ritrovi no. Riprova."); return; }
+    const wa = document.getElementById("f-wa").value.trim();
+    if ((wa || null) !== (c.whatsapp_url || null)) {
+      const w = await rpc("set_community_whatsapp", { p_id: c.id, p_url: wa || null });
+      if (!w || !w.ok) toast("Il link WhatsApp non è valido: deve iniziare con https://chat.whatsapp.com/");
+      else c.whatsapp_url = wa || null;
+    }
+  }
   async function saveCommunity(e){
     e.preventDefault();
     const note = document.getElementById("f-note"), btn = document.getElementById("f-btn");
@@ -626,6 +680,7 @@
     }
     const ig = document.getElementById("f-ig").value.trim().replace(/^@/, "").replace(/^.*instagram\.com\//, "").replace(/\/.*$/, "");
     const desc = document.getElementById("f-desc").value.trim();
+    await saveSch();
     const r = await rpc("update_community", {
       p_id: c.id,
       p_name: name,
