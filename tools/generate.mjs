@@ -456,6 +456,14 @@ function rcCard(g, x) {
                  : `<div class="when unknown">Giorno e orario: chiedi su Instagram</div>`;
   return `<div class="rc"><div class="logo">${logoHtml(g)}</div><div class="body"><div class="name">${esc(g.name)}</div>${when}</div><div class="foot">${costChip(g, sch)}${igLink(g)}${waLink(g)}</div><a class="go" href="${esc(groupUrl(g))}">Vedi il gruppo</a></div>`;
 }
+const FAQ = [
+  { q: "Devo essere allenato per correre con un run club a Bergamo?", a: "No. Quasi tutti i run club di Bergamo sono aperti a chiunque: si corre a ritmo tranquillo e spesso ci sono più gruppi per passo. Basta presentarsi al ritrovo con scarpe da corsa. Se non hai mai corso, Fun Run a Calcinate è un vero corso per imparare, e Sabato alla Trucca è pensato anche per chi cammina." },
+  { q: "Quanto costa entrare in un run club?", a: "Nella maggior parte dei casi niente: ci si presenta e si corre. Alcuni gruppi chiedono un tesseramento annuale (per esempio i Podisti Insonni, 35 euro) o una quota per l'assicurazione. Nella pagina di ogni club trovi scritto se è gratis." },
+  { q: "Che giorno e a che ora si corre?", a: "Ogni club ha il suo giorno fisso: il lunedì PTRUNBG alle 18:15 al parco della Trucca e MRCBG alle 18:45 a Osio Sotto, il martedì Le Scalette del Martedì alle 19, il mercoledì Cor Run alle 18:45 alla Trucca, il sabato mattina Sabato alla Trucca. L'elenco completo per giorno è in cima a questa pagina." },
+  { q: "Quanti chilometri si fanno?", a: "Di solito tra i 5 e i 10 chilometri, in un'ora circa. Le uscite in pista (giovedì ad Azzano, mercoledì a Mozzo) sono allenamenti più strutturati; le uscite del fine settimana possono essere più lunghe. Ogni club lo scrive nel ritrovo." },
+  { q: "Devo iscrivermi prima?", a: "Quasi mai. Per sapere se il gruppo esce davvero quella settimana, il posto giusto è il gruppo WhatsApp o la pagina Instagram del club, che trovi nella sua pagina qui su anyplans. Se ti registri su anyplans puoi dire che ci vai e vedere chi altro viene." },
+  { q: "Qual è il run club più grande di Bergamo?", a: "Dipende da cosa cerchi: Runners Bergamo è la società storica con più gruppi di allenamento e gare organizzate, Cor Run e WeRunBergamo sono i gruppi serali più frequentati in città, PTRUNBG e MRCBG i più regolari del lunedì. Tutti e ventiquattro sono in questa pagina." },
+];
 function runningHub() {
   const url = `${SITE}/${CITY}/running-club/`;
   const T = TESTI.running_club || {};
@@ -479,8 +487,14 @@ ${noDay.length ? `
 <p class="lead">Escono quando decidono sul momento: il giorno lo trovi sulla loro pagina Instagram.</p>
 <div class="rc-grid">${noDay.map(g => rcCard(g, null)).join("\n")}</div>` : ""}
 <div class="cta"><a class="btn" href="/${CITY}/eventi.html">Vedi tutti gli eventi</a><a class="btn ghost" href="/${CITY}/login.html">Organizzi un run club? Crea il tuo gruppo</a></div>
+<div class="box"><h2>Come funziona un run club</h2>
+<p>Un run club è un gruppo di persone che si trova a un'ora e in un posto fissi per correre insieme, di solito una volta a settimana. Non è una società sportiva: non ci sono gare, classifiche o tesseramenti obbligatori (salvo dove indicato), e non serve essere allenati. Si corre a ritmo tranquillo, spesso in più gruppi per passo, e chi va piano non resta indietro. Alla fine, quasi sempre, si beve qualcosa insieme.</p>
+<p>A ${esc(CITY_NAME)} e provincia i run club sono ${runClubs.length}: dal lunedì al parco della Trucca (PTRUNBG) e a Osio Sotto (MRCBG), al martedì sulle scalette di Città Alta, al mercoledì con Cor Run, fino al sabato mattina. Qui sopra li trovi per giorno; nella pagina di ogni club ci sono il ritrovo, le prossime uscite e i contatti Instagram e WhatsApp. Questa pagina si aggiorna da sola ogni notte.</p></div>
+<div class="box" id="domande"><h2>Domande frequenti</h2>
+${FAQ.map(f => `<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>`).join("")}</div>
 `;
-  return { html: layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld, body }), lastmod: NOW };
+  const faqLd = jsonld({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: FAQ.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) });
+  return { html: layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld + "\n" + faqLd, body }), lastmod: NOW };
 }
 
 // ── group pages ───────────────────────────────────────────────────────────────
