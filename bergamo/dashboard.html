@@ -356,7 +356,7 @@
   <div class="sk" style="height:90px"></div>
 </div>
 
-<script src="app.js?v=1788726235"></script>
+<script src="app.js?v=1788726338"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 1000 });
@@ -448,6 +448,7 @@
     renderAdmins();
     // form modifica
     document.getElementById("f-name").value = c.name || "";
+    loadSch();   // ritrovi fissi e WhatsApp (0080)
     document.getElementById("f-desc").value = c.description || "";
     document.getElementById("f-ig").value = (c.instagram_handle || "").replace(/^@/, "");
     category = c.category || null;

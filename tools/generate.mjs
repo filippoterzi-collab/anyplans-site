@@ -490,10 +490,16 @@ function groupPage(g) {
   const up = evs.filter(p => !p.isPast), past = evs.filter(p => p.isPast).reverse().slice(0, 20);
   const t = tipo(g.category); // group category is a site category, not a sport: fall back to emoji from the group
   const emoji = g.emoji || "👥";
-  const title = cut(`${g.name}: gruppo a ${cap(g.city || CITY_NAME)}`, 60) + " | anyplans";
-  const descr = cut(`${g.name} è un gruppo su anyplans a ${cap(g.city || CITY_NAME)}${up.length ? ` con ${up.length} ${up.length === 1 ? "evento in programma" : "eventi in programma"}` : ""}. ${g.description || ""}`, 160);
+  let title = cut(`${g.name}: gruppo a ${cap(g.city || CITY_NAME)}`, 60) + " | anyplans";
+  let descr = cut(`${g.name} è un gruppo su anyplans a ${cap(g.city || CITY_NAME)}${up.length ? ` con ${up.length} ${up.length === 1 ? "evento in programma" : "eventi in programma"}` : ""}. ${g.description || ""}`, 160);
   const image = g.avatar_url || OG_DEFAULT;
   const sch = schedules.filter(s => s.community_slug === g.slug);
+  // run club: titolo e descrizione con le parole che la gente cerca ("running club Bergamo", "run club Bergamo", "corsa di gruppo")
+  if (isRunClub(g)) {
+    const when = sch.length ? `ogni ${WEEKDAYS[sch[0].weekday].toLowerCase()} alle ${hhmm(sch[0].start_time)}${sch[0].meeting_point_text ? " · " + sch[0].meeting_point_text : ""}` : "";
+    title = cut(`${g.name}: ${g.sport === "walking" ? "camminate di gruppo" : "running club"} a ${CITY_NAME}${when ? ", " + when.split(" · ")[0] : ""}`, 60) + " | anyplans";
+    descr = cut(`${g.name}, ${g.sport === "walking" ? "gruppo di camminata" : "run club"} a ${CITY_NAME} e provincia${when ? ": si corre " + when : ""}. ${g.description || "Corsa di gruppo, nessuno corre da solo."} Tutti i running club di Bergamo su anyplans.`, 160);
+  }
   const ld = jsonld({ "@context": "https://schema.org", "@type": isRunClub(g) ? "SportsOrganization" : "Organization", name: g.name, url,
     ...(isRunClub(g) ? { sport: g.sport === "walking" ? "Walking" : "Running" } : {}),
     ...(g.avatar_url ? { logo: g.avatar_url } : {}), ...(g.description ? { description: cut(g.description, 300) } : {}),
