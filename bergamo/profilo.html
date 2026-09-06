@@ -220,7 +220,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1788724379"></script>
+<script src="app.js?v=1788724502"></script>
 <script>
   requireLogin();
   mountTabbar("profilo");
@@ -431,6 +431,12 @@
     // primo salvataggio: se arrivavo da un evento torno lì, altrimenti agli eventi
     let next = null;
     try { next = sessionStorage.getItem("anyplans_next"); sessionStorage.removeItem("anyplans_next"); } catch (_) {}
+    if (!next) {
+      // gli hanno passato una pagina (0076): il passaggio si è appena completato, lo porto lì
+      const rc = await rpc("my_communities");
+      const mine = rc && rc.ok ? (await rc.json().catch(() => [])).filter(x => x.role === "owner") : [];
+      if (mine.length === 1) next = "dashboard.html?id=" + mine[0].id + "&benvenuto=1";
+    }
     location.href = next || "eventi.html";
     return false;
   }

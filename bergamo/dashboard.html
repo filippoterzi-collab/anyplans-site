@@ -346,7 +346,7 @@
   <div class="sk" style="height:90px"></div>
 </div>
 
-<script src="app.js?v=1788724379"></script>
+<script src="app.js?v=1788724502"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 1000 });
@@ -410,6 +410,10 @@
     toast(code.includes("not_allowed") ? "Solo chi ha creato il gruppo può eliminarlo." : "Non ha funzionato, riprova.");
   }
   function render(){
+    if (new URLSearchParams(location.search).get("benvenuto") === "1" && c.my_role === "owner") {
+      toast("Questa pagina ora è tua: cambia logo e descrizione, pubblica le uscite, avvisa chi vi segue.");
+      history.replaceState(null, "", "dashboard.html?id=" + c.id);
+    }
     document.getElementById("del-box").hidden = c.my_role !== "owner";
     document.getElementById("transfer-box").hidden = c.my_role !== "owner";
     if (c.my_role === "owner") loadPendingTransfer();

@@ -113,7 +113,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1788724379"></script>
+<script src="app.js?v=1788724502"></script>
 <script>
   requireLogin();
   let kind = "user";
@@ -123,6 +123,12 @@
     if (!r || !r.ok) return;
     const rows = await r.json().catch(() => []);
     if (rows.length && rows[0].display_name) location.replace("eventi.html");
+  });
+  // qualcuno gli ha passato una pagina (0076/0077): niente "vuoi creare un gruppo?", il gruppo c'è già
+  rpc("my_pending_transfer").then(async r => {
+    if (!r || !r.ok) return;
+    const rows = await r.json().catch(() => []);
+    if (rows.length) { try { sessionStorage.setItem("anyplans_next", "dashboard.html?id=" + rows[0].community_id + "&benvenuto=1"); } catch (_) {} location.replace("profilo.html"); }
   });
 
   function pick(el){
