@@ -253,7 +253,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788698143"></script>
+<script src="app.js?v=1788700112"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -303,6 +303,15 @@
   start.setMinutes(0, 0, 0);
   document.getElementById("date").min = localDate(new Date());
   document.getElementById("date").value = localDate(start);
+  // la fine non può venire prima dell'inizio: il selettore di "Quando finisce?" parte dal giorno scelto
+  // (su iPhone, senza questo, proponeva oggi anche per un evento fra una settimana)
+  function syncEndMin(){
+    const d = document.getElementById("date"), e = document.getElementById("end-date");
+    e.min = d.value || e.min;
+    if (e.value && d.value && e.value < d.value) e.value = d.value;
+  }
+  syncEndMin();
+  document.getElementById("date").addEventListener("change", syncEndMin);
   document.getElementById("time").value = pad(start.getHours()) + ":00";
 
   // ricerca luoghi: google places (new) se c'è la chiave, altrimenti photon (openstreetmap)
