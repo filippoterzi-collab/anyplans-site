@@ -366,7 +366,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788692162"></script>
+<script src="app.js?v=1788692301"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -1078,7 +1078,7 @@
     const e = EVENTS.find(x => x.id === id);
     if (e.mine) { location.href = "evento.html?id=" + id; return; }
     // piano chiuso: aprirlo = creare il proprio piano (fascia d'età, posti), non un semplice "ci sono"
-    if (lockOf(e) === "closed" && e.my !== "going") { location.href = "crea.html?from=" + id; return; }
+    if (lockOf(e) === "closed" && e.my !== "going") { explainLock("crea.html?from=" + id); return; }
     const leaving = e.my === "going" || e.my === "requested";
     // in lista d'attesa, o pieno: tutto dalla pagina dell'evento
     if (e.my === "waitlisted" || (!leaving && !e.request && isFull(e))) { location.href = "evento.html?id=" + id; return; }

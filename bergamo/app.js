@@ -277,6 +277,32 @@ function lockState(x){
   const n = Number(x.going_count) || 0;
   return n === 0 ? "closed" : n === 1 ? "waiting" : "open";
 }
+// prima volta che si tocca "Sblocca l'evento": una finestra spiega il perché (richiesta 06/09/2026, UI.md §3.9),
+// poi si va a `next`. Si vede una volta sola per browser; il lessico è quello nostro (mai "conoscere gente").
+function explainLock(next){
+  let seen = false; try { seen = localStorage.getItem("anyplans_lock_seen") === "1"; } catch (_) {}
+  if (seen) { location.href = next; return; }
+  const ov = document.createElement("div");
+  ov.setAttribute("role", "dialog"); ov.setAttribute("aria-modal", "true"); ov.setAttribute("aria-labelledby", "lk-h");
+  ov.style.cssText = "position:fixed; inset:0; z-index:60; background:rgba(25,25,25,.45); display:flex; align-items:flex-end; justify-content:center; padding:16px;";
+  ov.innerHTML = `<div style="background:#fff; border-radius:22px; padding:22px 20px calc(18px + env(safe-area-inset-bottom)); width:100%; max-width:440px; font-family:var(--round, system-ui); color:#191919; box-shadow:0 12px 40px rgba(0,0,0,.18)">
+      <div style="font-size:34px; line-height:1; margin-bottom:10px">🔒</div>
+      <h2 id="lk-h" style="font:800 22px var(--display, var(--round, system-ui)); margin:0 0 10px">Perché il lucchetto?</h2>
+      <p style="margin:0 0 10px; font-size:15px; line-height:1.45">Gli eventi ci sono già: sagre, corsi, serate. Quello che manca è qualcuno con cui andarci.</p>
+      <p style="margin:0 0 10px; font-size:15px; line-height:1.45">Il lucchetto vuol dire che <b>non ci va ancora nessuno</b>. Se lo sblocchi tu, il piano è tuo: decidi chi può venire, gli altri lo vedono e si aggiungono.</p>
+      <p style="margin:0 0 18px; font-size:15px; line-height:1.45">Quando arriva un'altra persona, <b>il piano si fa: ci andate insieme.</b></p>
+      <div style="display:flex; gap:10px; flex-wrap:wrap">
+        <button id="lk-go" style="flex:1; min-width:160px; height:48px; border:none; border-radius:999px; background:#1B4FD8; color:#fff; font:700 15px var(--round, system-ui); cursor:pointer">Ho capito, sblocco</button>
+        <button id="lk-no" style="height:48px; padding:0 18px; border:none; border-radius:999px; background:#EEF2FC; color:#1B4FD8; font:700 15px var(--round, system-ui); cursor:pointer">Non ora</button>
+      </div>
+    </div>`;
+  document.body.appendChild(ov);
+  const done = () => { try { localStorage.setItem("anyplans_lock_seen", "1"); } catch (_) {} };
+  ov.querySelector("#lk-go").onclick = () => { done(); track("lock_explained_go"); location.href = next; };
+  ov.querySelector("#lk-no").onclick = () => { done(); track("lock_explained_no"); ov.remove(); };
+  ov.addEventListener("click", e => { if (e.target === ov) ov.remove(); });
+  ov.querySelector("#lk-go").focus();
+}
 // da chiuso si vede solo la città: ultimo pezzo dopo la virgola ("Oratorio, Via Roma 5, Nembro" → "Nembro")
 function cityOf(text){ const parts = String(text || "").split(",").map(x => x.trim()).filter(Boolean); return parts.length ? parts[parts.length - 1] : ""; }
 // testo al posto di goingTxt quando il piano non è ancora aperto
