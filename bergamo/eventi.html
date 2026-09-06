@@ -354,7 +354,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788688550"></script>
+<script src="app.js?v=1788690793"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -578,11 +578,13 @@
   }
   function syncCard(){
     const chosen = hasChoice();
-    const open = !inMapView() && (cardOpen || !chosen);
+    // su telefono la scheda parte chiusa anche senza scelte: prima gli eventi, la ricerca è una riga che apre il foglio
+    const open = !inMapView() && (cardOpen || (!chosen && !mobileFilters.matches));
     document.getElementById("cc").hidden = !open;
     const cp = document.getElementById("cc-compact");
     cp.hidden = open;
     document.getElementById("cc-compact-txt").textContent = compactText();
+    cp.querySelector(".chg").textContent = chosen ? "Cambia" : "Cerca";
     const parts = [dayText(), whereText(), whatText()].filter(Boolean);
     cp.setAttribute("aria-label", "Cambia cosa cerchi" + (parts.length ? ": " + parts.join(", ") : ""));
     document.getElementById("cc-foot").hidden = !chosen;
