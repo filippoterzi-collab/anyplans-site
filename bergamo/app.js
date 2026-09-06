@@ -351,11 +351,17 @@ function isCurrent(start, end){ return endsAt(start, end) > new Date(); }
 function relTime(d, end){
   const ms = d - Date.now(), min = Math.round(ms / 60000);
   if (min <= 0) return isCurrent(d, end) ? "in corso" : "già passato";
-  if (min < 60) return "tra " + min + " minuti";
-  const h = Math.round(min / 60);
-  if (h < 24) return "tra " + h + (h === 1 ? " ora" : " ore");
-  const days = Math.round(h / 24);
+  if (min < 60) return "tra " + min + " min";
+  // sotto le 24 ore il timer è preciso al minuto e corre (tick nelle pagine): "tra 2 h 14 min"
+  if (min < 24 * 60) { const h = Math.floor(min / 60), m = min % 60; return "tra " + h + " h" + (m ? " " + m + " min" : ""); }
+  const days = Math.round(min / 1440);
   return "tra " + days + (days === 1 ? " giorno" : " giorni");
+}
+// colore del timer: "live" in corso (verde), "soon" sotto le 6 ore (arancione), altrimenti niente
+function relClass(d, end){
+  const min = Math.round((d - Date.now()) / 60000);
+  if (min <= 0) return isCurrent(d, end) ? "live" : "";
+  return min < 6 * 60 ? "soon" : "";
 }
 
 // analytics first-party (supabase/migrations/0046): nessun cookie, nessun dato personale

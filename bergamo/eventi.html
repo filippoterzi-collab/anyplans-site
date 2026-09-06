@@ -148,6 +148,15 @@
   .ev .tile{width:52px; height:52px; background:var(--tint); border-radius:13px; display:flex;
             align-items:center; justify-content:center; font-size:26px; flex-shrink:0;}
   .ev .time{font-size:12.5px; font-weight:700; color:var(--blue);}
+  .ev .time .soon, .pop .soon{color:#B4530A;}
+  /* in evidenza (deciso 06/09/2026): i piani che si fanno già, 2+ persone */
+  .ev.hot{border-color:var(--blue); box-shadow:0 6px 18px rgba(27,79,216,.12);}
+  .ev .fa{display:inline-flex; align-items:center; gap:4px; background:var(--tint); color:var(--blue); font-weight:800; font-size:12px; padding:3px 9px; border-radius:999px; margin-top:6px;}
+  .day.hot .dot{background:none; width:auto; height:auto;}
+  .pin.hot{width:50px; height:50px; font-size:24px; box-shadow:0 0 0 3px var(--blue), 0 4px 14px rgba(27,79,216,.35);}
+  .pin.hot::after{content:attr(data-n); position:absolute; right:-6px; top:-6px; min-width:20px; height:20px; padding:0 5px; border-radius:999px; background:var(--blue); color:#fff; font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center; font-family:var(--round);}
+  .pin .tm{position:absolute; top:-26px; left:50%; transform:translateX(-50%); white-space:nowrap; background:#E8F5EC; color:#1E8E3E; font-size:11px; font-weight:800; padding:2px 8px; border-radius:999px; pointer-events:none;}
+  .pin .tm.soon{background:#FDEEDC; color:#B4530A;}
   /* un evento già cominciato resta in lista finché non finisce: si vede a colpo d'occhio */
   .ev .time .live, .pop .live{color:#0E8A4A;}
   .ev .t{font-weight:700; font-size:15px;} .ev a.t:hover{color:var(--blue);}
@@ -372,7 +381,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788692980"></script>
+<script src="app.js?v=1788694009"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -499,9 +508,10 @@
     EVENTS.forEach(ev => {
       const el = document.createElement("div");
       const lk = lockOf(ev), open = lk === "open";
-      el.className = "pin" + (dayKind(ev.when) === "oggi" ? " today" : "") + (open ? "" : " lock") + (lk === "waiting" ? " waiting" : ""); el.id = "pin-" + ev.id; el.textContent = ev.emoji;
+      el.className = "pin" + (dayKind(ev.when) === "oggi" ? " today" : "") + (open ? "" : " lock") + (lk === "waiting" ? " waiting" : ""); el.id = "pin-" + ev.id;
+      paintPin(el, ev);
       const popup = new maplibregl.Popup({ offset: 22, closeButton: false })
-        .setHTML(`<a class="pop${lk === "closed" ? " closed" : ""}" href="evento.html?id=${ev.id}" style="display:block; color:inherit; text-decoration:none"><div class="t">${esc(ev.title)}</div><div class="m">${dayLabel(ev.when)} · ${timeStr(ev.when)} · ${relTime(ev.when, ev.end) === "in corso" ? '<span class="live">in corso adesso</span>' : esc(relTime(ev.when, ev.end))} · ${esc(lk === "closed" ? (cityOf(ev.place) || ev.place) : ev.place)}${ev.price > 0 ? " · " + esc(fmtPrice(ev.price)) : ""}${fullHtml(ev)}${open ? "" : " · " + esc(lockTxtOf(ev))}</div><div class="m" style="color:var(--blue); font-weight:700; margin-top:4px">Apri l'evento →</div></a>`);
+        .setHTML(`<a class="pop${lk === "closed" ? " closed" : ""}" href="evento.html?id=${ev.id}" style="display:block; color:inherit; text-decoration:none"><div class="t">${esc(ev.title)}</div><div class="m">${dayLabel(ev.when)} · ${timeStr(ev.when)} · ${relHtmlOf(ev)} · ${esc(lk === "closed" ? (cityOf(ev.place) || ev.place) : ev.place)}${ev.price > 0 ? " · " + esc(fmtPrice(ev.price)) : ""}${fullHtml(ev)}${open ? "" : " · " + esc(lockTxtOf(ev))}</div><div class="m" style="color:var(--blue); font-weight:700; margin-top:4px">Apri l'evento →</div></a>`);
       const mk = new maplibregl.Marker({ element: el }).setLngLat([ev.lng, ev.lat]).setPopup(popup).addTo(map);
       el.addEventListener("click", () => {
         // su telefono la lista non è a fianco: il tap sul pin apre l'evento
@@ -933,6 +943,14 @@
     const m = markers[e.id]; if (!m) return;
     const el = m.getElement(), lk = lockOf(e);
     el.classList.toggle("lock", lk !== "open"); el.classList.toggle("waiting", lk === "waiting");
+    paintPin(el, e);
+  }
+  const isHot = e => e.going >= 2;
+  // emoji + (in evidenza) numero di chi ci va e timer sopra il pin
+  function paintPin(el, e){
+    const hot = isHot(e);
+    el.classList.toggle("hot", hot); el.setAttribute("data-n", e.going);
+    el.innerHTML = esc(e.emoji) + (hot ? `<span class="tm ${relClass(e.when, e.end)}">${esc(relTime(e.when, e.end) === "in corso" ? "in corso" : relTime(e.when, e.end))}</span>` : "");
   }
   function stateBtn(e){
     if (e.mine) return ["ok", "Lo organizzi tu"];
@@ -948,20 +966,23 @@
   }
   const kmTxt = km => km < 1 ? "a meno di 1 km" : "a " + Math.round(km) + " km";
   // card di un evento; withDay: il giorno davanti all'ora (fuori dai gruppi per giorno)
-  function evCard(e, withDay){
-    const [cls, label] = stateBtn(e);
+  function relHtmlOf(e){
     const rel = relTime(e.when, e.end);
+    return rel === "in corso" ? '<span class="live">in corso adesso</span>' : `<span class="${relClass(e.when, e.end)}">${esc(rel)}</span>`;
+  }
+  function evCard(e, withDay, hot){
+    const [cls, label] = stateBtn(e);
     const time = (withDay ? dayLabel(e.when) + " · " : "") + timeStr(e.when) + (e.end && dayKey(e.end) === dayKey(e.when) ? " – " + timeStr(e.end) : "");
-    const relHtml = rel === "in corso" ? '<span class="live">in corso adesso</span>' : esc(rel);
+    const relHtml = relHtmlOf(e);
     const lk = lockOf(e), locked = lk !== "open", closed = lk === "closed";
     // da chiuso: categoria e città al posto di chi organizza e dell'indirizzo
     const metaClosed = `${esc(catLabel(e))} · ${esc(cityOf(e.place) || e.place)}${where ? " · " + kmTxt(distKm(where, e)) : ""} · ${lockTxtOf(e)}${e.gender === "donna" ? " · solo donne" : e.gender === "uomo" ? " · solo uomini" : ""}`;
-    return `<div class="ev${locked ? " lock" : ""}${lk === "waiting" ? " waiting" : ""}${closed ? " closed" : ""}" id="ev-${e.id}" onclick="location.href='evento.html?id=${e.id}'" onmouseenter="highlight('${e.id}', false)">
+    return `<div class="ev${locked ? " lock" : ""}${lk === "waiting" ? " waiting" : ""}${closed ? " closed" : ""}${hot ? " hot" : ""}" id="ev-${e.id}" onclick="location.href='evento.html?id=${e.id}'" onmouseenter="highlight('${e.id}', false)">
         <div class="tile"${e.photo && !locked ? ` style="background-image:url('${esc(e.photo)}'); background-size:cover; background-position:center"` : ""}>${e.photo && !locked ? "" : e.emoji}</div>
         <div>
-          <div class="time">${esc(time)} · ${relHtml}</div>
+          <div class="time">${esc(time)} · <span class="rel" data-id="${e.id}">${relHtml}</span></div>
           <a class="t" href="evento.html?id=${e.id}" onclick="event.stopPropagation()" style="display:block">${esc(e.title)}</a>
-          <div class="m">${closed ? metaClosed : ""}${closed ? "" : `${e.host ? (e.hostAvatar ? `<span class="ha" style="background-image:url('${esc(e.hostAvatar)}')"></span>` : "") + "Di " + esc(e.host) : "Da un altro sito"} · ${esc(e.place)}${where ? " · " + kmTxt(distKm(where, e)) : ""} · ${lockTxtOf(e)}${fullHtml(e)}${e.request ? " · con approvazione" : ""}${e.gender === "donna" ? " · solo donne" : e.gender === "uomo" ? " · solo uomini" : ""}${e.price > 0 ? ' · <b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(e.price)) + "</b>" : ""}`}</div>
+          <div class="m">${closed ? metaClosed : ""}${closed ? "" : `${e.host ? (e.hostAvatar ? `<span class="ha" style="background-image:url('${esc(e.hostAvatar)}')"></span>` : "") + "Di " + esc(e.host) : "Da un altro sito"} · ${esc(e.place)}${where ? " · " + kmTxt(distKm(where, e)) : ""} · ${lockTxtOf(e)}${fullHtml(e)}${e.request ? " · con approvazione" : ""}${e.gender === "donna" ? " · solo donne" : e.gender === "uomo" ? " · solo uomini" : ""}${e.price > 0 ? ' · <b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(e.price)) + "</b>" : ""}`}</div>${hot ? `<span class="fa">✓ Si fa · ${e.going} ci vanno</span>` : ""}
         </div>
         <button class="go ${cls}" onclick="event.stopPropagation(); join('${e.id}')">${label}</button>
       </div>`;
@@ -999,8 +1020,15 @@
 
     if (!n) { list.innerHTML = emptyHtml(byWhat); return; }
 
+    // in evidenza: i piani che si fanno già (2+ persone), i primi 3 per quante persone ci vanno; poi i giorni, senza ripeterli
+    const hot = evs.filter(isHot).sort((a, b) => b.going - a.going || a.when - b.when).slice(0, 3);
+    const hotIds = new Set(hot.map(e => e.id));
     let html = "", lastDay = "";
-    evs.forEach(e => {
+    if (hot.length) {
+      html += `<div class="day hot"><span class="dot">🔥</span><b>In evidenza</b><span>si fanno già</span></div>`;
+      hot.forEach(e => { html += evCard(e, true, true); });
+    }
+    evs.filter(e => !hotIds.has(e.id)).forEach(e => {
       const dk = dayKey(e.when);
       if (dk !== lastDay) {
         lastDay = dk;
@@ -1123,6 +1151,11 @@
     toast(msg);
   }
 
+  // il timer corre: ogni minuto aggiorno le scritte "tra 2 h 14 min" delle card e dei pin, senza ridisegnare la lista
+  setInterval(() => {
+    document.querySelectorAll(".rel[data-id]").forEach(el => { const e = EVENTS.find(x => x.id === el.dataset.id); if (e) el.innerHTML = relHtmlOf(e); });
+    EVENTS.filter(isHot).forEach(e => { const m = markers[e.id]; if (m) paintPin(m.getElement(), e); });
+  }, 60000);
   syncCard();
   if (logged) checkProfile();
   Promise.all([loadEvents(), logged ? loadSaved() : null]).then(() => {
