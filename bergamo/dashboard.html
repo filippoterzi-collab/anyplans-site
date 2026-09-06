@@ -243,6 +243,15 @@
       <p class="note" id="admin-note">I collaboratori del gruppo possono pubblicare eventi e mandare avvisi. Li scegli solo tu, tra chi segue il gruppo.</p>
       <button class="textbtn" id="btn-add-admin" hidden style="align-self:flex-start; padding-left:0" onclick="openPicker()">+ Aggiungi un collaboratore</button>
     </div>
+    <div class="box" id="transfer-box" hidden>
+      <div class="sec" style="font-size:15px">Passa il gruppo a…</div>
+      <p class="note" style="margin:6px 0 10px">Scrivi l'email di chi lo gestirà. Se ha già un account, il gruppo è suo subito; se no, gli arriva una mail e diventa suo appena si registra con quella email. Tu resti collaboratore.</p>
+      <p class="note" id="transfer-pending" hidden style="color:var(--blue); font-weight:700"></p>
+      <div style="display:flex; gap:8px; flex-wrap:wrap">
+        <input id="transfer-email" type="email" placeholder="nome@esempio.it" style="flex:1; min-width:200px">
+        <button class="btn ghost" type="button" onclick="transferCommunity()">Passa il gruppo</button>
+      </div>
+    </div>
     <div class="box" id="picker" hidden>
       <div class="sec" style="font-size:15px">Scegli tra chi segue il gruppo</div>
       <div id="picker-list" class="list" style="gap:8px"><p class="empty">Carico…</p></div>
@@ -337,7 +346,7 @@
   <div class="sk" style="height:90px"></div>
 </div>
 
-<script src="app.js?v=1788723740"></script>
+<script src="app.js?v=1788724379"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 1000 });
@@ -367,6 +376,29 @@
     loadEvents();
   }
 
+  // passa il gruppo a un'altra persona (transfer_community, 0076): solo chi lo possiede
+  async function transferCommunity(){
+    const email = document.getElementById("transfer-email").value.trim();
+    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { toast("Scrivi un'email valida."); return; }
+    if (!confirm('Vuoi passare "' + c.name + '" a ' + email + '? Tu resti collaboratore.')) return;
+    const r = await rpc("transfer_community", { p_community_id: c.id, p_email: email });
+    if (r && r.ok) {
+      const res = await r.json().catch(() => "");
+      if (res === "done") { toast("Fatto: il gruppo ora è di " + email + "."); track("community_transfer"); setTimeout(() => location.href = "community.html?id=" + c.id, 900); }
+      else { toast("Mail mandata a " + email + ": il gruppo diventa suo appena si registra."); track("community_transfer_pending"); showPendingTransfer(email); }
+      return;
+    }
+    const code = r ? ((await r.json().catch(() => ({}))).message || "") : "";
+    toast(code.includes("same_user") ? "Quella è la tua email." : code.includes("invalid_email") ? "Email non valida." : code.includes("not_allowed") ? "Solo chi possiede il gruppo può passarlo." : "Non ha funzionato, riprova.");
+  }
+  function showPendingTransfer(email){
+    const p = document.getElementById("transfer-pending");
+    p.hidden = !email; if (email) p.textContent = "In sospeso: " + email + " deve ancora registrarsi. Se vuoi cambiare, scrivi un'altra email.";
+  }
+  async function loadPendingTransfer(){
+    const r = await rpc("pending_community_transfer", { p_community_id: c.id });
+    if (r && r.ok) showPendingTransfer(await r.json().catch(() => null));
+  }
   // elimina il gruppo (delete_community, 0072): solo chi l'ha creato, con doppia conferma
   async function deleteCommunity(){
     if (!confirm('Vuoi davvero eliminare "' + c.name + '"? Non si può annullare.')) return;
@@ -379,6 +411,8 @@
   }
   function render(){
     document.getElementById("del-box").hidden = c.my_role !== "owner";
+    document.getElementById("transfer-box").hidden = c.my_role !== "owner";
+    if (c.my_role === "owner") loadPendingTransfer();
     document.title = c.name + " · anyplans";
     const logo = document.getElementById("logo");
     logo.textContent = ""; logo.style.backgroundImage = "";
