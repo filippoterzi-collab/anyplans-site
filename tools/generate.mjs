@@ -251,7 +251,12 @@ main{max-width:860px;margin:0 auto;padding:16px 22px 70px;display:flex;flex-dire
 .rc .go{grid-area:go;height:40px;min-width:132px;padding:0 16px;border-radius:999px;border:1.5px solid var(--blue);background:#fff;color:var(--blue);font-weight:700;font-size:14px;display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;text-decoration:none}
 .ini{font-weight:800;letter-spacing:-.045em;line-height:1;color:var(--blue);font-size:28px}
 .cost{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:999px;font-size:12.5px;font-weight:700;background:var(--tint);color:var(--blue);white-space:nowrap}
-.ig{font-size:13px;font-weight:700;color:var(--blue);text-decoration:none}
+.ig{display:inline-flex;align-items:center;gap:5px;font-size:13px;font-weight:700;color:var(--blue);text-decoration:none}
+.ig svg{width:15px;height:15px}
+.ig.wa{color:#1E8E3E}
+.btn.ico{display:inline-flex;align-items:center;gap:7px}
+.btn.ico svg{width:16px;height:16px}
+.btn.ico.wa{color:#1E8E3E;border-color:#1E8E3E}
 .meet{display:flex;align-items:flex-start;gap:8px;font-size:15px;font-weight:600;margin:6px 0}
 .meet .n{color:var(--grey);font-weight:500}
 @media (max-width:700px){.rc-grid{grid-template-columns:1fr}.rc{grid-template-columns:56px minmax(0,1fr);grid-template-areas:"logo body" "foot foot" "go go"}.rc .go{justify-self:start}}
@@ -437,14 +442,17 @@ function costChip(g, sch) {
   if (/gratis|gratuit/.test(txt)) return `<span class="cost">Gratis</span>`;
   return "";
 }
-const igLink = g => g.instagram_handle ? `<a class="ig" href="https://instagram.com/${esc(String(g.instagram_handle).replace(/^@/, ""))}" rel="noopener">@${esc(String(g.instagram_handle).replace(/^@/, ""))}</a>` : "";
+const IG_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg>';
+const WA_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L5.3 15.9 A8.5 8.5 0 1 1 8.4 18.9 Z"/><path d="M9 9.5 c0 3 2.5 5.5 5.5 5.5 l1.2-1.4 -1.8-1 -0.9 0.9 c-1.2-0.5-2-1.3-2.5-2.5 l0.9-0.9 -1-1.8 Z" fill="currentColor" stroke="none"/></svg>';
+const igLink = g => g.instagram_handle ? `<a class="ig" href="https://instagram.com/${esc(String(g.instagram_handle).replace(/^@/, ""))}" rel="noopener" aria-label="Instagram di ${esc(g.name)}">${IG_SVG}@${esc(String(g.instagram_handle).replace(/^@/, ""))}</a>` : "";
+const waLink = g => g.whatsapp_url ? `<a class="ig wa" href="${esc(g.whatsapp_url)}" rel="noopener" aria-label="Gruppo WhatsApp di ${esc(g.name)}">${WA_SVG}WhatsApp</a>` : "";
 function meetLine(x) { return `${WEEKDAYS[x.weekday]} · <b>${esc(hhmm(x.start_time))}</b>${x.meeting_point_text ? ` · ${esc(x.meeting_point_text)}` : ""}`; }
 function rcCard(g, x) {
   const sch = schedules.filter(s => s.community_slug === g.slug);
   const when = x ? `<div class="when">${meetLine(x)}</div>`
                  : sch.length ? `<div class="when">${sch.slice(0, 2).map(meetLine).join("<br>")}</div>`
                  : `<div class="when unknown">Giorno e orario: chiedi su Instagram</div>`;
-  return `<div class="rc"><div class="logo">${logoHtml(g)}</div><div class="body"><div class="name">${esc(g.name)}</div>${when}</div><div class="foot">${costChip(g, sch)}${igLink(g)}</div><a class="go" href="${esc(groupUrl(g))}">Vedi il gruppo</a></div>`;
+  return `<div class="rc"><div class="logo">${logoHtml(g)}</div><div class="body"><div class="name">${esc(g.name)}</div>${when}</div><div class="foot">${costChip(g, sch)}${igLink(g)}${waLink(g)}</div><a class="go" href="${esc(groupUrl(g))}">Vedi il gruppo</a></div>`;
 }
 function runningHub() {
   const url = `${SITE}/${CITY}/running-club/`;
@@ -496,7 +504,7 @@ ${crumbs([["anyplans", "/"], [CITY_NAME, `/${CITY}/cosa-fare/`], ["Gruppi", `/${
 ${sch.length ? `<div class="box"><h2>Quando ci si trova</h2>${sch.map(x => `<div class="meet"><span>Ogni ${WEEKDAYS[x.weekday].toLowerCase()} alle <b>${esc(hhmm(x.start_time))}</b>${x.meeting_point_text ? ` · ${esc(x.meeting_point_text)}` : ""}${x.note ? ` <span class="n">· ${esc(x.note)}</span>` : ""}${x.starts_on && new Date(x.starts_on) > NOW ? ` <span class="n">· dal ${new Date(x.starts_on).toLocaleDateString("it-IT", { day: "numeric", month: "long" })}</span>` : ""}</span></div>`).join("")}</div>`
   : isRunClub(g) ? `<div class="box"><h2>Quando ci si trova</h2><div class="meet"><span class="n">Giorno e orario: chiedi su Instagram.</span></div></div>` : ""}
 ${g.description ? `<div class="box"><h2>Chi siamo</h2><div class="desc">${esc(g.description)}</div></div>` : ""}
-<div class="cta"><a class="btn" href="/${CITY}/community.html?slug=${esc(g.slug)}">Segui il gruppo</a>${g.instagram_handle ? `<a class="btn ghost" href="https://instagram.com/${esc(String(g.instagram_handle).replace(/^@/, ""))}" rel="noopener">Instagram</a>` : ""}<a class="btn ghost" href="/${CITY}/eventi.html">Vedi tutti gli eventi</a></div>
+<div class="cta"><a class="btn" href="/${CITY}/community.html?slug=${esc(g.slug)}">Segui il gruppo</a>${g.instagram_handle ? `<a class="btn ghost ico" href="https://instagram.com/${esc(String(g.instagram_handle).replace(/^@/, ""))}" rel="noopener">${IG_SVG}Instagram</a>` : ""}${g.whatsapp_url ? `<a class="btn ghost ico wa" href="${esc(g.whatsapp_url)}" rel="noopener">${WA_SVG}Gruppo WhatsApp</a>` : ""}<a class="btn ghost" href="/${CITY}/eventi.html">Vedi tutti gli eventi</a></div>
 <h2>${up.length ? "Prossimi eventi" : "Nessun evento in programma"}</h2>
 ${up.length ? listHtml(up) : `<p class="lead">Quando il gruppo pubblica un evento, compare qui.</p>`}
 ${past.length ? `<h2>Eventi già passati</h2>${listHtml(past)}` : ""}

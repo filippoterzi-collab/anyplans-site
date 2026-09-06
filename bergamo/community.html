@@ -284,7 +284,8 @@
         <svg viewBox="0 0 24 24"><path d="M6 10 C 6 6.7, 8.7 4, 12 4 C 15.3 4, 18 6.7, 18 10 L18 15 L20 17.5 L4 17.5 L6 15 Z"/><path d="M10 20.5 C 10.5 21.3, 13.5 21.3, 14 20.5"/></svg>
         <span id="follow-label">Segui</span>
       </button>
-      <a class="btn ghost" id="btn-ig" hidden href="#" target="_blank" rel="noopener">Instagram</a>
+      <a class="btn ghost" id="btn-ig" hidden href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a>
+      <a class="btn ghost" id="btn-wa" hidden href="#" target="_blank" rel="noopener" style="color:#1E8E3E; box-shadow:inset 0 0 0 2px #1E8E3E"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20 L5.3 15.9 A8.5 8.5 0 1 1 8.4 18.9 Z"/><path d="M9 9.5 c0 3 2.5 5.5 5.5 5.5 l1.2-1.4 -1.8-1 -0.9 0.9 c-1.2-0.5-2-1.3-2.5-2.5 l0.9-0.9 -1-1.8 Z" fill="currentColor" stroke="none"/></svg><span>Gruppo WhatsApp</span></a>
       <button class="btn ghost" onclick="shareCommunity()">Condividi</button>
       <p class="note">Se segui, ti avvisiamo a ogni nuovo evento</p>
     </div>
@@ -372,7 +373,7 @@
   </div>
 </div>
 
-<script src="app.js?v=1788723537"></script>
+<script src="app.js?v=1788723740"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const wantId = params.get("id");
@@ -431,6 +432,8 @@
     else logo.textContent = c.emoji || "📍";
     const ig = document.getElementById("btn-ig");
     if (c.instagram_handle) { ig.hidden = false; ig.href = "https://instagram.com/" + encodeURIComponent(String(c.instagram_handle).replace(/^@/, "")); }
+    const wa = document.getElementById("btn-wa");
+    if (c.whatsapp_url && /^https:\/\/(chat\.whatsapp\.com|wa\.me)\//.test(c.whatsapp_url)) { wa.hidden = false; wa.href = c.whatsapp_url; }
     loadMeets();
     document.getElementById("name").textContent = c.name;
     document.getElementById("verified").hidden = !c.is_verified;
