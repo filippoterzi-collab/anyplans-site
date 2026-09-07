@@ -44,5 +44,6 @@ jobs:
           git add -A
           if git diff --cached --quiet; then echo "niente di nuovo"; exit 0; fi
           git commit -m "seo: pagine aggiornate"
-          git pull --rebase origin main
+          # se nel frattempo è arrivato un altro commit (deploy o run parallelo), sulle pagine generate vincono le nostre, appena rigenerate
+          git pull --rebase -X theirs origin main
           git push
