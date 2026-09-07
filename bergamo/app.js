@@ -307,6 +307,7 @@ function cityOf(text){ const parts = String(text || "").split(",").map(x => x.tr
 // testo al posto di goingTxt quando il piano non è ancora aperto
 function lockTxt(x){
   const st = lockState(x);
+  if (st === "open" && x.community_id && !(Number(x.going_count) || 0)) return "già organizzato · aggiungiti";   // evento di un gruppo: c'è già chi lo fa
   return st === "closed" ? "🔒 nessuno ci va ancora" : st === "waiting" ? "🔒 manca una persona" : goingTxt(x.going_count);
 }
 // lista d'attesa (design/sito-landing/spec-lista-attesa.md): "3°"; "Pieno · 3 in lista d'attesa" o "" se ci sono posti

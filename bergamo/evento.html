@@ -408,7 +408,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788777914"></script>
+<script src="app.js?v=1788778431"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -556,7 +556,7 @@
     const st = ev.my_status, full = isFull(), isReq = needsApproval();
     const lock = lockState(ev), closed = lock === "closed", waiting = lock === "waiting";
     document.getElementById("box-guest").hidden = logged;
-    document.getElementById("guest-h2").textContent = closed ? "🔒 Evento da sbloccare" : "Ci sei?";
+    document.getElementById("guest-h2").textContent = closed ? "🔒 Evento da sbloccare" : joinTitle();
     document.getElementById("guest-m").textContent = closed
       ? "Non ci va ancora nessuno da qui. Con un account lo sblocchi tu: è gratis e ci vuole un minuto."
       : "Per iscriverti serve un account: è gratis e ci vuole un minuto. Gli altri iscritti vedranno il tuo nome.";
@@ -573,7 +573,7 @@
     document.getElementById("box-wait").hidden = !logged || ev.is_mine || st !== "waitlisted";
     // box "ci sei?" quando è pieno: lista d'attesa, oppure niente da fare; con approvazione resta la richiesta
     const hint = document.getElementById("full-hint");
-    document.getElementById("join-h2").textContent = full && !isReq ? "È pieno" : waiting ? "Manca una persona: ci sei?" : "Ci sei?";
+    document.getElementById("join-h2").textContent = full && !isReq ? "È pieno" : waiting ? "Manca una persona: ci sei?" : joinTitle();
     document.getElementById("join-hint").textContent = full && isReq
       ? "Qui decide chi organizza. I posti sono finiti, ma puoi mandare lo stesso la richiesta: se si libera un posto, chi organizza sceglie tra chi ha chiesto."
       : "Qui decide chi organizza: gli mandi una richiesta e ti risponde.";
@@ -620,12 +620,21 @@
     const free = Math.max(0, ev.max_participants - going);
     return free === 0 ? " · Pieno" : " · " + free + (free === 1 ? " posto libero" : " posti liberi");
   }
+  // titolo del riquadro: con gente "Aggiungiti a 23 persone"; evento di un gruppo senza iscritti "Aggiungiti: l'evento c'è già"
+  function joinTitle(){
+    const going = Number(ev.going_count) || 0;
+    if (going >= 2) return "Aggiungiti a " + going + " persone";
+    if (going === 1) return "Aggiungiti a 1 persona";
+    if (ev.community_id) return "Aggiungiti: l'evento c'è già";
+    return "Ci sei?";
+  }
   function renderCounts(){
     const going = Number(ev.going_count) || 0, wl = Number(ev.waitlist_count) || 0;
     const fila = wl ? " · " + wl + " in lista d'attesa" : "";
     const lk = lockState(ev);
     const gtxt = (lk === "closed" ? "Nessuno ci va ancora" : lk === "waiting" ? "1 persona: ne manca una perché si faccia"
-                  : going === 0 ? "Nessuno ancora, sei il primo?" : going === 1 ? "1 persona ci va" : going + " ci vanno") + seatsTxt() + fila;
+                  : going === 0 ? (ev.community_id ? "Organizzato da " + (ev.host_name || "un gruppo") + ": sei il primo ad aggiungerti" : "Nessuno ancora, sei il primo?")
+                  : going === 1 ? "1 persona ci va" : going + " ci vanno") + seatsTxt() + fila;
     ["going-guest","going-join","going-in","going-req","going-host","going-wait","going-lock"].forEach(x => document.getElementById(x).textContent = gtxt);
     const chip = document.getElementById("chip-full");
     chip.hidden = !isFull(); chip.textContent = fullTxt(going, ev.max_participants, wl);
