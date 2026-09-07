@@ -80,6 +80,12 @@ function mapsUrl(lat, lng, label) {
 const tipo = (sport) => TIPI[sport] || { key: slugify(sport), e: "📍", label: cap(sport || "Evento"), c: "altro", frase: "" };
 const jsonld = (o) => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, "\\u003c")}</script>`;
 const INSTAGRAM = "https://instagram.com/anyplans_bergamo";
+// the same Organization node as the home page (branding/legal/index.html): keep the two identical
+const ORG = { "@type": "Organization", "@id": SITE + "/#org", name: "anyplans", url: SITE + "/", email: "hello@anyplans.in",
+  logo: { "@type": "ImageObject", url: SITE + "/favicon-192.png", width: 192, height: 192 },
+  description: "La mappa degli eventi veri di Bergamo e provincia: feste di paese, corsi, volontariato, sport e running club. Ne scegli uno e ci vai insieme ad altri. Solo maggiorenni.",
+  foundingLocation: { "@type": "City", name: "Bergamo" }, areaServed: { "@type": "City", name: "Bergamo" }, sameAs: [INSTAGRAM],
+  founder: { "@type": "Person", name: "Filippo Terzi", image: SITE + "/founder.jpg", jobTitle: "Fondatore" } };
 const fmtDate = (d) => new Intl.DateTimeFormat("it-IT", { timeZone: DEFAULT_TZ, day: "numeric", month: "long", year: "numeric" }).format(d);
 // answer engines (ChatGPT, Perplexity, AI Overviews) lift question + short answer: every page gets a visible FAQ and its FAQPage schema
 const faqHtml = (faq) => `<div class="box" id="domande"><h2>Domande frequenti</h2>${faq.map(f => `<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>`).join("")}</div>`;
@@ -294,7 +300,7 @@ function layout({ title, description, url, image, jsonLd, body, ogType = "websit
   const pageLd = jsonld({ "@context": "https://schema.org", "@type": "WebPage", "@id": url, url, name: title, description, inLanguage: "it-IT",
     dateModified: modified.toISOString(), primaryImageOfPage: image,
     isPartOf: { "@type": "WebSite", "@id": SITE + "/#website", name: "anyplans", url: SITE + "/" },
-    publisher: { "@type": "Organization", "@id": SITE + "/#org", name: "anyplans", url: SITE + "/", logo: SITE + "/favicon-192.png", sameAs: [INSTAGRAM] } });
+    publisher: ORG });
   return `<!DOCTYPE html>
 <html lang="it">
 <head>
@@ -369,22 +375,34 @@ function organizer(p) {
   if (p.club) return { name: p.club, url: null, kind: "club" };
   return { name: "Un utente di anyplans", url: null, kind: "utente" };
 }
+// "Piazzale della Chiesa, Carvico" -> Carvico; a last segment with digits or the city name itself is not a locality
+function localityOf(p) {
+  if (p.town) return p.town === "Bergamo Città" ? CITY_NAME : p.town; // eventi.bergamo.it says "Bergamo Città" for the city itself
+  const parts = String(p.meeting || "").split(",").map(x => x.trim()).filter(Boolean);
+  const last = parts.length > 1 ? parts[parts.length - 1] : "";
+  return last && !/\d/.test(last) && last.length <= 40 ? last.replace(/\s*\(.*\)\s*$/, "") : CITY_NAME;
+}
 function eventJsonLd(p, url) {
+  // Google wants Event markup only for events still to come: past dates get no Event node at all
+  const dates = p.dates.filter(d => d.future);
+  if (!dates.length) return "";
   const org = organizer(p);
   const image = p.photo ? photoSrc(p.photo) : OG_DEFAULT;
   const location = { "@type": "Place", name: p.meeting || (p.town ? p.town : CITY_NAME + " e dintorni"),
-    address: { "@type": "PostalAddress", addressLocality: p.town || CITY_NAME, addressRegion: "BG", addressCountry: "IT",
+    address: { "@type": "PostalAddress", addressLocality: localityOf(p), addressRegion: "BG", addressCountry: "IT",
                ...(p.meeting ? { streetAddress: p.meeting } : {}) } };
+  // organizer only when we know who it really is: a group on anyplans (with its page) or a named association; never a town, never anyplans itself
+  const organizerNode = org.kind === "gruppo" ? { "@type": "Organization", name: org.name, url: org.url, ...(org.instagram ? { sameAs: [org.instagram] } : {}) }
+    : org.kind === "club" && !p.town ? { "@type": "Organization", name: org.name } : null;
   if (p.visibility === "open" && p.lat != null && p.lng != null) location.geo = { "@type": "GeoCoordinates", latitude: p.lat, longitude: p.lng };
   const offers = { "@type": "Offer", price: p.price_cents ? (p.price_cents / 100).toFixed(2) : "0", priceCurrency: "EUR", url, availability: "https://schema.org/InStock" };
-  const events = p.dates.map(d => ({
+  const events = dates.map(d => ({
     "@context": "https://schema.org", "@type": "Event",
     name: p.title, startDate: isoLocal(d.start, d.tz), ...(d.end ? { endDate: isoLocal(d.end, d.tz) } : {}),
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     location, image: [image], description: cut(p.description, 500) || `${p.tipo.label} a ${placeShort(p)}`,
-    offers, isAccessibleForFree: !(p.price_cents > 0),
-    organizer: { "@type": "Organization", name: org.name, url: org.url || SITE, ...(org.instagram ? { sameAs: [org.instagram] } : {}) }, url
+    offers, isAccessibleForFree: !(p.price_cents > 0), ...(organizerNode ? { organizer: organizerNode } : {}), url
   }));
   return jsonld(events.length === 1 ? events[0] : events);
 }
@@ -447,7 +465,10 @@ function eventPage(p) {
   const where = placeShort(p);
   const faq = eventFaq(p, org);
   const first = p.up[0] || p.dates[p.dates.length - 1];
-  const title = cut(`${p.title} a ${where}, ${fmtShort(first.start, tz)}`, 60) + " | anyplans";
+  const full = `${p.title} a ${where}, ${fmtShort(first.start, tz)}`;
+  // long titles from the sources ("Festa X, Oratorio Y – Paese"): keep the part before the first separator when it stands alone
+  const head = p.title.split(/ – |, /)[0];
+  const title = (full.length <= 49 ? full : head.length >= 12 && head.length <= 49 ? head : cut(p.title, 49)) + " | anyplans";
   const descr = p.isPast
     ? cut(`${t.label} a ${where}. Ultima data: ${fmtShort(first.start, tz)}. Questo evento è passato: su anyplans trovi le prossime date e gli eventi simili.`, 160)
     : cut(`${t.label} a ${where} ${fmtDay(first.start, tz).toLowerCase()} alle ${fmtTime(first.start, tz)}. ${cut(p.description, 100) || ""} ${fmtPrice(p.price_cents)}. Ci vai insieme ad altri.`.replace(/\s+/g, " ").replace(/\.\s*\./g, "."), 160);
@@ -495,7 +516,7 @@ ${p.co.length ? `<div class="box"><h2>Insieme a</h2><div class="tags">${p.co.map
 ${faqHtml(faq)}
 ${sim.length ? `<h2>Eventi simili</h2>${listHtml(sim)}` : ""}
 `;
-  return layout({ title, description: descr, url, image, jsonLd: eventJsonLd(p, url) + "\n" + faqLd(faq), body, ogType: "article", modified: p.updated });
+  return layout({ title, description: descr, url, image, jsonLd: [eventJsonLd(p, url), faqLd(faq)].filter(Boolean).join("\n"), body, ogType: "article", modified: p.updated });
 }
 
 // ── run club (0070: community.sport = 'running' | 'walking', community_schedule) ────────────
@@ -534,7 +555,7 @@ const FAQ = [
 function runningHub() {
   const url = `${SITE}/${CITY}/running-club/`;
   const T = TESTI.running_club || {};
-  const title = cut(T.titolo || `Running club a ${CITY_NAME}: ${runClubs.length} gruppi di corsa`, 60) + " | anyplans";
+  const title = cut(T.titolo || `Running club a ${CITY_NAME}: ${runClubs.length} gruppi di corsa`, 49) + " | anyplans";
   const descr = cut(T.sotto || `${runClubs.length} run club a ${CITY_NAME} e provincia, uno quasi ogni sera: scegli il giorno, vai, corri insieme ad altri. Quasi tutti gratis.`, 160);
   const byDay = WEEKDAYS.map((d, i) => ({ d, i, rows: schedules.filter(s => s.weekday === i && runClubs.some(g => g.slug === s.community_slug)) }));
   const withDay = new Set(schedules.map(s => s.community_slug));
@@ -567,7 +588,7 @@ function runningDayPage(i) {
   const d = WEEKDAYS[i], rows = schedules.filter(x => x.weekday === i && runClubs.some(g => g.slug === x.community_slug));
   const url = `${SITE}/${CITY}/running-club/${DAY_SLUG[i]}/`;
   const names = rows.map(r => r.community_name).join(", ");
-  const title = cut(`Run club a ${CITY_NAME} il ${d.toLowerCase()}: ${rows.length} ${rows.length === 1 ? "gruppo" : "gruppi"} con cui correre`, 60) + " | anyplans";
+  const title = `Run club a ${CITY_NAME} il ${d.toLowerCase()}: ${rows.length} ${rows.length === 1 ? "gruppo" : "gruppi"} | anyplans`;
   const descr = cut(`Correre in gruppo a ${CITY_NAME} il ${d.toLowerCase()}: ${names}. Orario, punto di ritrovo, Instagram e WhatsApp di ogni run club. Gratis, aperti a tutti, ogni settimana.`, 160);
   const ld = jsonld({ "@context": "https://schema.org", "@type": "ItemList", name: `Run club a ${CITY_NAME} il ${d.toLowerCase()}`, url,
     itemListElement: rows.map((r, k) => ({ "@type": "ListItem", position: k + 1, url: groupUrl({ slug: r.community_slug }), name: r.community_name })) });
@@ -598,7 +619,7 @@ function groupPage(g) {
   const up = evs.filter(p => !p.isPast), past = evs.filter(p => p.isPast).reverse().slice(0, 20);
   const t = tipo(g.category); // group category is a site category, not a sport: fall back to emoji from the group
   const emoji = g.emoji || "👥";
-  let title = cut(`${g.name}: gruppo a ${cap(g.city || CITY_NAME)}`, 60) + " | anyplans";
+  let title = cut(`${g.name}: gruppo a ${cap(g.city || CITY_NAME)}`, 49) + " | anyplans";
   let descr = cut(`${g.name} è un gruppo su anyplans a ${cap(g.city || CITY_NAME)}${up.length ? ` con ${up.length} ${up.length === 1 ? "evento in programma" : "eventi in programma"}` : ""}. ${g.description || ""}`, 160);
   const image = g.avatar_url || OG_DEFAULT;
   const sch = schedules.filter(s => s.community_slug === g.slug);
@@ -606,7 +627,8 @@ function groupPage(g) {
   // run club: titolo e descrizione con le parole che la gente cerca ("running club Bergamo", "run club Bergamo", "corsa di gruppo")
   if (isRunClub(g)) {
     const when = sch.length ? `ogni ${WEEKDAYS[sch[0].weekday].toLowerCase()} alle ${hhmm(sch[0].start_time)}${sch[0].meeting_point_text ? " · " + sch[0].meeting_point_text : ""}` : "";
-    title = cut(`${g.name}: ${g.sport === "walking" ? "camminate di gruppo" : "running club"} a ${CITY_NAME}${when ? ", " + when.split(" · ")[0] : ""}`, 60) + " | anyplans";
+    const base = `${g.name}: ${g.sport === "walking" ? "camminate di gruppo" : "running club"} a ${CITY_NAME}`, withDay = base + (when ? ", " + when.split(" · ")[0] : "");
+    title = (withDay.length <= 49 ? withDay : cut(base, 49)) + " | anyplans";
     descr = cut(`${g.name}, ${g.sport === "walking" ? "gruppo di camminata" : "run club"} a ${CITY_NAME} e provincia${when ? ": si corre " + when : ""}. ${g.description || "Corsa di gruppo, nessuno corre da solo."} Tutti i running club di Bergamo su anyplans.`, 160);
   }
   const ld = jsonld({ "@context": "https://schema.org", "@type": isRunClub(g) ? "SportsOrganization" : "Organization", name: g.name, url,
@@ -668,7 +690,7 @@ function groupFaq(g, sch, up) {
 }
 function groupsIndex() {
   const url = `${SITE}/${CITY}/gruppi/`;
-  const title = `Gruppi a ${CITY_NAME}: ${groups.length} ${groups.length === 1 ? "comunità" : "comunità"} a cui unirti | anyplans`;
+  const title = `Gruppi a ${CITY_NAME}: ${groups.length} comunità a cui unirti | anyplans`;
   const descr = cut(`I gruppi di ${CITY_NAME} su anyplans: associazioni, club e comunità che organizzano eventi aperti a tutti. Li segui e vedi i loro prossimi piani.`, 160);
   const ld = jsonld({ "@context": "https://schema.org", "@type": "ItemList", name: `Gruppi a ${CITY_NAME}`, url,
     itemListElement: groups.map((g, i) => ({ "@type": "ListItem", position: i + 1, url: groupUrl(g), name: g.name })) });
@@ -698,11 +720,11 @@ function indexPage(ix) {
   let h1, title, intro, emoji;
   if (ix.kind === "tipo") {
     h1 = `${ix.t.label} a ${CITY_NAME} e provincia`; emoji = ix.t.e;
-    title = cut(`${ix.t.label} a ${CITY_NAME}`, 44) + (up.length ? `: ${up.length} ${up.length === 1 ? "evento" : "eventi"}` : "") + " | anyplans";
+    title = cut(`${ix.sport === "festival" ? "Feste e sagre" : ix.t.label} a ${CITY_NAME}`, 36) + (up.length ? `: ${up.length} ${up.length === 1 ? "evento" : "eventi"}` : "") + " | anyplans";
     intro = `${up.length ? `A ${CITY_NAME} e provincia ci sono ${up.length} ${up.length === 1 ? "evento" : "eventi"} di ${ix.t.label.toLowerCase()} nei prossimi mesi.` : `Al momento non ci sono eventi di ${ix.t.label.toLowerCase()} in programma: qui sotto quelli già passati.`} ${ix.t.frase}`;
   } else {
     h1 = `Feste ed eventi a ${ix.town}`; emoji = "🎉";
-    title = cut(`Feste ed eventi a ${ix.town}${up.length ? ": " + up.length + " in programma" : ""}`, 60) + " | anyplans";
+    title = cut(`Feste ed eventi a ${ix.town}${up.length ? ": " + up.length + " in programma" : ""}`, 49) + " | anyplans";
     intro = `${up.length ? `A ${ix.town} ${up.length === 1 ? "c'è 1 evento" : "ci sono " + up.length + " eventi"} nei prossimi mesi.` : `A ${ix.town} non c'è niente in programma adesso: qui sotto le feste già passate, che spesso tornano ogni anno.`} ${TESTI.paese.frase.replace("{paese}", ix.town)}`;
   }
   const descr = cut(intro, 160);
@@ -732,7 +754,7 @@ ${faqHtml(faq)}
 function hubPage() {
   const url = `${SITE}/${CITY}/cosa-fare/`;
   const next = upcomingPages.slice(0, 30);
-  const title = `${TESTI.hub.titolo}: ${upcomingPages.length} eventi in programma | anyplans`;
+  const title = `${TESTI.hub.titolo}: ${upcomingPages.length} eventi | anyplans`;
   const descr = cut(`${TESTI.hub.sotto} ${upcomingPages.length} eventi in programma, ${types.length} tipi di attività, ${groups.length} gruppi.`, 160);
   // "cosa fare a Bergamo oggi / questo weekend": the page is rebuilt every night, so "today" is right at 03:30
   const today = dateKey(NOW, DEFAULT_TZ);
