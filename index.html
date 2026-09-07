@@ -15,6 +15,10 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="canonical" href="https://anyplans.in/">
+<link rel="alternate" hreflang="it" href="https://anyplans.in/">
+<link rel="alternate" hreflang="en" href="https://anyplans.in/en/">
+<link rel="alternate" hreflang="x-default" href="https://anyplans.in/">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="description" content="Gli eventi di Bergamo, tutti in un posto solo: feste di paese, corsi, volontariato, sport. Ne vedi uno, ti iscrivi, ci vai insieme ad altri.">
 <meta property="og:url" content="https://anyplans.in/">
 <style>
@@ -219,8 +223,12 @@
   .card:hover, .city:hover{box-shadow:0 4px 14px rgba(25,25,25,.06);}
   a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible{
     outline:2px solid var(--blue); outline-offset:2px;}
+  .faq{display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:18px 28px;}
+  .faq-i h3{font-size:17px; margin-bottom:6px;}
+  .faq-i p{font-size:15px; line-height:1.55; color:var(--grey);}
+  @media (max-width:700px){.faq{grid-template-columns:1fr; gap:14px;} .faq-i h3{font-size:15px;} .faq-i p{font-size:13.5px;}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://anyplans.in/#website","name":"anyplans","alternateName":"anyplans?","url":"https://anyplans.in/","inLanguage":"it-IT","publisher":{"@id":"https://anyplans.in/#org"}},{"@type":"Organization","@id":"https://anyplans.in/#org","name":"anyplans","url":"https://anyplans.in/","logo":"https://anyplans.in/favicon-192.png","email":"hello@anyplans.in","areaServed":{"@type":"City","name":"Bergamo"}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://anyplans.in/#website","name":"anyplans","alternateName":"anyplans?","url":"https://anyplans.in/","description":"Gli eventi di Bergamo e provincia in una mappa: feste di paese, corsi, volontariato, sport, running club. Ti iscrivi e ci vai insieme ad altri.","inLanguage":"it-IT","publisher":{"@id":"https://anyplans.in/#org"}},{"@type":"Organization","@id":"https://anyplans.in/#org","name":"anyplans","url":"https://anyplans.in/","logo":"https://anyplans.in/favicon-192.png","email":"hello@anyplans.in","description":"La mappa degli eventi veri di Bergamo e provincia: feste di paese, corsi, volontariato, sport e running club. Ne scegli uno e ci vai insieme ad altri. Solo maggiorenni.","foundingLocation":{"@type":"City","name":"Bergamo"},"areaServed":{"@type":"City","name":"Bergamo"},"sameAs":["https://instagram.com/anyplans_bergamo"],"founder":{"@type":"Person","name":"Filippo Terzi","image":"https://anyplans.in/founder.jpg","jobTitle":"Fondatore","worksFor":{"@id":"https://anyplans.in/#org"}}},{"@type": "FAQPage", "@id": "https://anyplans.in/#faq", "mainEntity": [{"@type": "Question", "name": "Cos'è anyplans?", "acceptedAnswer": {"@type": "Answer", "text": "anyplans è la mappa degli eventi di Bergamo e provincia: feste di paese e sagre, corsi di cucina e di ceramica, volontariato, uscite sportive e running club. Raccogliamo gli eventi che ci sono già, dai siti dei comuni e delle associazioni e dai gruppi che li pubblicano. Ne scegli uno, dici che ci vai e ci vai insieme ad altri."}}, {"@type": "Question", "name": "anyplans è gratis?", "acceptedAnswer": {"@type": "Answer", "text": "Sì: ti registri con la tua email e vedi gli eventi sulla mappa. Molti eventi sono gratis; quando c'è un biglietto o una quota lo trovi scritto nella pagina dell'evento."}}, {"@type": "Question", "name": "In quali città c'è anyplans?", "acceptedAnswer": {"@type": "Answer", "text": "Per ora solo a Bergamo e provincia, con eventi veri fin dal primo giorno. Milano e Brescia sono le prossime."}}, {"@type": "Question", "name": "Chi può usare anyplans?", "acceptedAnswer": {"@type": "Answer", "text": "Solo chi ha almeno 18 anni. Prima di andare a un evento vedi chi lo organizza e chi altro ci va: niente appuntamenti al buio con sconosciuti."}}, {"@type": "Question", "name": "Come funziona “ci vado”?", "acceptedAnswer": {"@type": "Answer", "text": "Apri un evento e premi “Ci vado”: da quel momento vedi chi organizza e chi altro viene, e loro vedono te. Così arrivi già sapendo con chi sarai."}}, {"@type": "Question", "name": "Organizzo eventi: come li pubblico su anyplans?", "acceptedAnswer": {"@type": "Answer", "text": "Ti registri, crei il tuo gruppo (associazione, club, run club, pro loco, oratorio) e pubblichi le date. Chi ti segue le vede sulla mappa e ogni gruppo ha una pagina pubblica su anyplans."}}]}]}</script>
 </head>
 <body>
 
@@ -319,6 +327,21 @@
   </div>
 </section>
 
+<section class="block white" id="domande">
+  <div class="wrap">
+    <h2>Domande frequenti</h2>
+    <p class="lead">Le risposte corte a quello che ci chiedono di più.</p>
+    <div class="faq">
+      <div class="faq-i"><h3>Cos'è anyplans?</h3><p>anyplans è la mappa degli eventi di Bergamo e provincia: feste di paese e sagre, corsi di cucina e di ceramica, volontariato, uscite sportive e running club. Raccogliamo gli eventi che ci sono già, dai siti dei comuni e delle associazioni e dai gruppi che li pubblicano. Ne scegli uno, dici che ci vai e ci vai insieme ad altri.</p></div>
+      <div class="faq-i"><h3>anyplans è gratis?</h3><p>Sì: ti registri con la tua email e vedi gli eventi sulla mappa. Molti eventi sono gratis; quando c'è un biglietto o una quota lo trovi scritto nella pagina dell'evento.</p></div>
+      <div class="faq-i"><h3>In quali città c'è anyplans?</h3><p>Per ora solo a Bergamo e provincia, con eventi veri fin dal primo giorno. Milano e Brescia sono le prossime.</p></div>
+      <div class="faq-i"><h3>Chi può usare anyplans?</h3><p>Solo chi ha almeno 18 anni. Prima di andare a un evento vedi chi lo organizza e chi altro ci va: niente appuntamenti al buio con sconosciuti.</p></div>
+      <div class="faq-i"><h3>Come funziona “ci vado”?</h3><p>Apri un evento e premi “Ci vado”: da quel momento vedi chi organizza e chi altro viene, e loro vedono te. Così arrivi già sapendo con chi sarai.</p></div>
+      <div class="faq-i"><h3>Organizzo eventi: come li pubblico su anyplans?</h3><p>Ti registri, crei il tuo gruppo (associazione, club, run club, pro loco, oratorio) e pubblichi le date. Chi ti segue le vede sulla mappa e ogni gruppo ha una pagina pubblica su anyplans.</p></div>
+    </div>
+  </div>
+</section>
+
 <section class="block final" id="registrati">
   <div class="wrap">
     <h2>anyplans <span>nella tua città?</span></h2>
@@ -403,7 +426,7 @@
   </div>
 </div>
 
-<script src="/bergamo/app.js?v=1788778431"></script>
+<script src="/bergamo/app.js?v=1788787889"></script>
 <script>
   let quizCity = "";
 
