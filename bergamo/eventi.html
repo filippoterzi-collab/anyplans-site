@@ -154,7 +154,7 @@
   .ev .fa{display:inline-flex; align-items:center; gap:4px; background:var(--tint); color:var(--blue); font-weight:800; font-size:12px; padding:3px 9px; border-radius:999px; margin-top:6px;}
   .day.hot .dot{background:none; width:auto; height:auto;}
   .pin.hot{width:50px; height:50px; font-size:24px; box-shadow:0 0 0 3px var(--blue), 0 4px 14px rgba(27,79,216,.35);}
-  .pin.hot::after{content:attr(data-n); position:absolute; right:-6px; top:-6px; min-width:20px; height:20px; padding:0 5px; border-radius:999px; background:var(--blue); color:#fff; font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center; font-family:var(--round);}
+  .pin.people::after, .pin.hot::after{content:attr(data-n); position:absolute; right:-6px; top:-6px; min-width:20px; height:20px; padding:0 5px; border-radius:999px; background:var(--blue); color:#fff; font-size:11px; font-weight:800; display:flex; align-items:center; justify-content:center; font-family:var(--round); border:2px solid #fff;}
   /* orario sopra ogni pin, sempre (deciso 06/09/2026: "così uno sulla mappa vede quanto manca") */
   .pin .tm{position:absolute; top:-26px; left:50%; transform:translateX(-50%); white-space:nowrap; background:#E8F5EC; color:#1E8E3E; font-size:11px; font-weight:800; padding:2px 8px; border-radius:999px; pointer-events:none;}
   .pin .tm.soon{background:#FDEEDC; color:#B4530A;}
@@ -389,7 +389,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788777077"></script>
+<script src="app.js?v=1788777914"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -942,7 +942,7 @@
   const isFull = e => !!e.cap && e.going >= e.cap;
   // lucchetto (app.js lockState/lockTxt): gli oggetti della lista usano going/community
   const lockOf = e => lockState({ community_id: e.community, going_count: e.going });
-  const lockTxtOf = e => lockTxt({ community_id: e.community, going_count: e.going });
+  const lockTxtOf = e => { const t = lockTxt({ community_id: e.community, going_count: e.going }); return e.going >= 1 && lockOf(e) === "open" ? `<b style="color:var(--ink); font-weight:700">👥 ${esc(t)}</b>` : t; };
   const catLabel = e => e.slug === "festival" ? "Sagra o festa di paese" : (CATALOG[e.slug] || {}).l || e.cat;
   function syncPin(e){
     const m = markers[e.id]; if (!m) return;
@@ -954,7 +954,7 @@
   // emoji + (in evidenza) numero di chi ci va e timer sopra il pin
   function paintPin(el, e){
     const hot = isHot(e);
-    el.classList.toggle("hot", hot); el.setAttribute("data-n", e.going);
+    el.classList.toggle("hot", hot); el.classList.toggle("people", !hot && e.going >= 1 && lockOf(e) === "open"); el.setAttribute("data-n", e.going);
     el.innerHTML = esc(e.emoji) + `<span class="tm ${relClass(e.when, e.end)}">${esc(relTime(e.when, e.end))}</span>`;
   }
   function stateBtn(e){
