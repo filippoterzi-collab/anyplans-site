@@ -390,7 +390,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788962821"></script>
+<script src="app.js?v=1788964960"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -988,7 +988,7 @@
         <div>
           <div class="time">${esc(time)} · <span class="rel" data-id="${e.id}">${relHtml}</span></div>
           <a class="t" href="evento.html?id=${e.id}" onclick="event.stopPropagation()" style="display:block">${esc(e.title)}</a>
-          <div class="m">${closed ? metaClosed : ""}${closed ? "" : `${e.host ? (e.hostAvatar ? `<span class="ha" style="background-image:url('${esc(e.hostAvatar)}')"></span>` : "") + "Di " + esc(e.host) : "Da un altro sito"} · ${esc(e.place)}${where ? " · " + kmTxt(distKm(where, e)) : ""} · ${lockTxtOf(e)}${fullHtml(e)}${e.request ? " · con approvazione" : ""}${e.gender === "donna" ? " · solo donne" : e.gender === "uomo" ? " · solo uomini" : ""}${e.price > 0 ? ' · <b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(e.price)) + "</b>" : ""}`}</div>${hot ? `<span class="fa">✓ Si fa · ${e.going} ci vanno</span>` : ""}
+          <div class="m">${closed ? metaClosed : ""}${closed ? "" : `${e.host ? (e.hostAvatar ? `<span class="ha" style="background-image:url('${esc(e.hostAvatar)}')"></span>` : "") + "Di " + (e.community ? `<a href="community.html?id=${esc(e.community)}" onclick="event.stopPropagation()" style="color:var(--blue); font-weight:700">${esc(e.host)}</a>` : esc(e.host)) : "Da un altro sito"} · ${esc(e.place)}${where ? " · " + kmTxt(distKm(where, e)) : ""} · ${lockTxtOf(e)}${fullHtml(e)}${e.request ? " · con approvazione" : ""}${e.gender === "donna" ? " · solo donne" : e.gender === "uomo" ? " · solo uomini" : ""}${e.price > 0 ? ' · <b style="font-weight:600; color:var(--ink)">' + esc(fmtPrice(e.price)) + "</b>" : ""}`}</div>${hot ? `<span class="fa">✓ Si fa · ${e.going} ci vanno</span>` : ""}
         </div>
         <button class="go ${cls}" onclick="event.stopPropagation(); join('${e.id}')">${label}</button>
       </div>`;
