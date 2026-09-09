@@ -91,6 +91,9 @@
   .gcount{display:flex; align-items:center; gap:8px; font-weight:700; font-size:14.5px; color:#1E8E3E;}
   .gcount .dot{width:8px; height:8px; border-radius:999px; background:#1E8E3E; flex-shrink:0;}
   .gcount .free{color:var(--grey); font-weight:600; font-size:13px;}
+  .faces{display:inline-flex; align-items:center; margin-right:2px;}
+  .faces .avatar{width:28px; height:28px; font-size:12px; border:2px solid #fff; margin-left:-9px; box-shadow:0 0 0 1px rgba(25,25,25,.06);}
+  .faces .avatar:first-child{margin-left:0;}
   .gbar{height:6px; border-radius:999px; background:rgba(25,25,25,.08); overflow:hidden;}
   .gbar i{display:block; height:100%; background:#1E8E3E; border-radius:999px; width:0; transition:width .4s ease;}
   .gbar.full i{background:#B4530A;}
@@ -310,7 +313,7 @@
   <!-- chi ci va -->
   <div id="people-wrap" hidden style="display:flex; flex-direction:column; gap:10px">
     <div class="sec">Chi ci va <span id="people-n"></span></div>
-    <div class="gcount"><span class="dot"></span><span id="people-going"></span><span class="free" id="people-free"></span></div>
+    <div class="gcount"><span class="faces" id="people-faces"></span><span class="dot" id="people-dot"></span><span id="people-going"></span><span class="free" id="people-free"></span></div>
     <div class="gbar" id="people-bar" hidden><i></i></div>
     <div class="sec2" id="people-head"><span>Ultimi iscritti</span><button class="textbtn" id="people-all" hidden onclick="showAllPeople()">Tutti →</button></div>
     <div class="plist" id="people"></div>
@@ -430,7 +433,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788961934"></script>
+<script src="app.js?v=1788962296"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -701,6 +704,10 @@
       document.getElementById("people-n").textContent = "(" + total + ")";
       // conteggio in verde + barra dei posti (solo se c'è un massimo), come il pannello ospiti dei siti di biglietti
       document.getElementById("people-going").textContent = total === 1 ? "1 ci va" : total + " ci vanno";
+      // le facce di chi ci va accanto al conteggio (come la riga "Going" di Luma): prima chi ha la foto, al massimo 5
+      const faced = going.slice().sort((a, b) => (b.avatar_url ? 1 : 0) - (a.avatar_url ? 1 : 0)).slice(0, 5);
+      document.getElementById("people-faces").innerHTML = faced.map(p => `<div class="avatar"${avatarStyle(p.avatar_url)} title="${esc(p.display_name || "")}">${p.avatar_url ? "" : esc((p.display_name || "?")[0].toUpperCase())}</div>`).join("");
+      document.getElementById("people-dot").hidden = faced.length > 0;
       const max = Number(ev.max_participants) || 0, bar = document.getElementById("people-bar");
       bar.hidden = !max;
       if (max) {
