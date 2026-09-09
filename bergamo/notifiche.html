@@ -117,7 +117,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1788962296"></script>
+<script src="app.js?v=1788962821"></script>
 <script>
   requireLogin();
   mountNav("", { col: 860 });
@@ -163,7 +163,7 @@
     } else if (kind === "request") {
       icon = avatarHtml(n);
       txt = `<b>${who}</b> ha chiesto di unirsi a <b>${title}</b>`;
-      go = "Approva →";
+      go = "Approva →"; if (n.activity_id) href = "gestisci.html?id=" + n.activity_id;
     } else if (kind === "approved") {
       icon = `<div class="tile">${esc(n.activity_emoji || "✓")}</div>`;
       txt = `La tua richiesta per <b>${title}</b> è stata approvata`;

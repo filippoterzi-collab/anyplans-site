@@ -251,33 +251,25 @@
       <button class="btn ghost" onclick="leaveEvent()">Non ci vado più</button>
       <button class="btn ghost" id="btn-share-in" hidden onclick="shareEvent()">Condividi</button>
       <a class="btn ghost" id="lnk-manage-in" hidden href="#">Gestisci l'evento</a>
-      <a class="btn ghost" id="lnk-edit-in" hidden href="#">Modifica l'evento</a>
-      <button class="btn ghost" id="btn-guest-adm" hidden onclick="openGuest()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Aggiungi una persona</button>
       <span class="note" id="going-in"></span>
     </div>
     <p class="pay" id="pay-in" hidden></p>
   </div>
   <div class="box in" id="box-host" hidden>
     <h2>Lo organizzi tu</h2>
-    <p class="m">Manda il link ai tuoi amici. Qui sotto vedi chi si iscrive.</p>
+    <p class="m">Manda il link ai tuoi amici. Chi si iscrive lo vedi qui sotto; per tutto il resto c'è "Gestisci l'evento".</p>
     <p class="m" id="host-full" hidden>È pieno. Per far entrare altre persone aumenta i posti da "Modifica l'evento".</p>
+    <p class="m" id="host-req" hidden style="font-weight:700"></p>
     <div class="row">
       <button class="btn" onclick="shareEvent()">Condividi l'evento</button>
       <a class="btn ghost" id="lnk-manage" href="#">Gestisci l'evento</a>
       <a class="btn ghost" id="lnk-edit" href="#">Modifica l'evento</a>
-      <a class="btn ghost" id="lnk-checkin" href="#">Segna chi arriva</a>
-      <button class="btn ghost" onclick="openGuest()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Aggiungi una persona</button>
       <span class="note" id="going-host"></span>
     </div>
     <p class="pay" id="pay-host" hidden></p>
   </div>
 
   <!-- richieste da approvare (solo host) -->
-  <div id="req-wrap" hidden>
-    <div class="sec" style="margin-bottom:8px">Chi chiede di partecipare <span id="req-n"></span></div>
-    <div id="reqs" style="display:flex; flex-direction:column; gap:8px"></div>
-  </div>
-
   <!-- host / fonte -->
   <div class="hostcard" id="host" hidden>
     <div class="avatar" id="host-avatar"></div>
@@ -322,28 +314,16 @@
   </div>
 
   <!-- in lista d'attesa (solo chi organizza e i collaboratori) -->
-  <div id="wait-wrap" hidden>
-    <div class="sec" style="margin-bottom:4px">In lista d'attesa <span id="wait-n"></span></div>
-    <p class="note" style="margin-bottom:8px">In ordine di arrivo. Quando si libera un posto entra chi è in cima, da solo.</p>
-    <div id="waits" style="display:flex; flex-direction:column; gap:8px"></div>
-  </div>
-
-
-  <div id="answers-wrap" hidden>
-    <div class="sec" style="margin-bottom:8px">Risposte dei partecipanti <span>(le vedi solo tu)</span></div>
-    <div id="answers" style="display:flex; flex-direction:column; gap:10px"></div>
-  </div>
-
   <div class="row">
     <button class="btn ghost" id="btn-share" onclick="shareEvent()">Condividi l'evento</button>
     <button class="btn ghost" onclick="document.getElementById('calmenu').hidden = !document.getElementById('calmenu').hidden">Aggiungi al calendario</button>
+    <a class="btn ghost" id="lnk-manage-2" hidden href="#">Gestisci l'evento</a>
     <button id="btn-cancel" class="textbtn" hidden onclick="cancelMyEvent()" style="color:var(--red)">Annulla l'evento</button>
   </div>
   <div class="calmenu" id="calmenu" hidden>
     <a id="cal-ics" href="#" download="evento.ics">📅 Calendario del telefono (iPhone, Outlook)</a>
     <a id="cal-google" href="#" target="_blank" rel="noopener">📅 Google Calendar</a>
   </div>
-  <p class="note" id="people-note" hidden>I collaboratori dell'evento possono dire sì alle richieste. Li scegli solo tu.</p>
   <p class="note"><a id="lnk-report" href="#" style="color:var(--grey); text-decoration:underline">Segnala questo evento</a> · Se qualcosa non va, ci pensiamo noi.</p>
 </main>
 
@@ -389,19 +369,6 @@
 </div>
 
 <!-- ospite senza account (solo chi gestisce l'evento) -->
-<div class="ov" id="guest-ov" hidden onclick="if(event.target===this)this.hidden=true">
-  <form class="sheet" onsubmit="event.preventDefault(); addGuest()">
-    <div style="display:flex; align-items:center; justify-content:space-between; gap:12px">
-      <h2>Aggiungi una persona senza account</h2>
-      <button type="button" class="x" onclick="document.getElementById('guest-ov').hidden=true">×</button>
-    </div>
-    <label class="lbl" for="guest-name">Nome</label>
-    <input class="inp" id="guest-name" type="text" maxlength="60" placeholder="Es. Mario Rossi" autocomplete="off">
-    <p class="note">Per chi non ha il telefono o l'app: lo segni tu, lo vedi nella lista e al check-in.</p>
-    <button class="btn" id="guest-send" type="submit">Aggiungi</button>
-  </form>
-</div>
-
 <!-- modale domande dell'host -->
 <div id="q-overlay" hidden style="position:fixed; inset:0; background:rgba(25,25,25,.55); display:flex;
      align-items:center; justify-content:center; padding:22px; z-index:60">
@@ -433,7 +400,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788962296"></script>
+<script src="app.js?v=1788962821"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -538,17 +505,12 @@
 
     canManage = !!(ev.is_mine || ev.can_manage);   // can_manage (0068): collaboratori e chi ha sbloccato
     buildCalendar();
-    if (ev.can_manage && !ev.is_mine) {
-      loadAnswers();
-      const le = document.getElementById("lnk-edit-in"); le.hidden = false; le.href = "crea.html?edit=" + ev.id;
-    }
     if (ev.is_mine) {
-      loadAnswers();
       document.getElementById("btn-cancel").hidden = false;
       document.getElementById("btn-share").hidden = true;
       document.getElementById("lnk-edit").href = "crea.html?edit=" + ev.id;
-      document.getElementById("lnk-checkin").href = "checkin.html?id=" + ev.id;
       document.getElementById("lnk-manage").href = "gestisci.html?id=" + ev.id;
+      const l2 = document.getElementById("lnk-manage-2"); l2.hidden = false; l2.href = "gestisci.html?id=" + ev.id;
     }
     loadCommunity();
     document.getElementById("lnk-report").href = "mailto:hello@anyplans.in?subject=" +
@@ -687,8 +649,11 @@
     if (!ev.is_mine && meRow && meRow.role === "admin" && meRow.status === "going") canManage = true;
     // chi ha aperto il piano su un evento senza host (claimed_by, 0064) lo gestisce come un host
     if (ev.claimed_by && ev.claimed_by === me) canManage = true;
-    document.getElementById("btn-guest-adm").hidden = !(canManage && !ev.is_mine);
     const lm = document.getElementById("lnk-manage-in"); lm.hidden = !(canManage && !ev.is_mine); lm.href = "gestisci.html?id=" + ev.id;
+    const l2 = document.getElementById("lnk-manage-2"); if (canManage && !ev.is_mine) { l2.hidden = false; l2.href = "gestisci.html?id=" + ev.id; }
+    const hr = document.getElementById("host-req");
+    hr.hidden = !(ev.is_mine && reqs.length);
+    if (ev.is_mine && reqs.length) hr.innerHTML = `${reqs.length === 1 ? "1 persona chiede di partecipare" : reqs.length + " persone chiedono di partecipare"}: <a href="gestisci.html?id=${esc(ev.id)}" style="color:var(--blue)">rispondi da Gestisci l'evento →</a>`;
     // ospiti senza account: li vedono solo chi gestisce e chi partecipa, agli altri non chiediamo nulla
     guests = [];
     if (logged && (canManage || (meRow && meRow.status === "going"))) {
@@ -722,31 +687,17 @@
       const managers = going.filter(p => roleOf(p)), others = going.filter(p => !roleOf(p));
       document.getElementById("hosts").innerHTML = managers.map(p => {
         const r = roleOf(p);
-        const act = ev.is_mine && r === "admin" ? `<button class="act" onclick="setAdmin('${p.user_id}', false)">Togli</button>` : "";
+        const act = "";
         const tag = r === "host" ? '<span class="tag">Organizza</span>' : r === "opened" ? '<span class="tag">Ha aperto il piano</span>' : '<span class="tag adm">Collaboratore</span>';
         return `<div class="person">${avatarOf(p.avatar_url, p.display_name)}<span class="n">${esc(p.display_name || "Qualcuno")}</span><span class="r">${tag}${act}</span></div>`;
       }).join("");
       document.getElementById("hosts-head").hidden = !managers.length;
       peopleRows = others.map(p =>
-        `<div class="person">${avatarOf(p.avatar_url, p.display_name)}<span class="n">${esc(p.display_name || "Qualcuno")}</span>` +
-        `<span class="r">${p.checked_in ? '<span class="tag in">Entrato</span>' : '<span class="tag ok">Ci va</span>'}` +
-        (ev.is_mine ? `<button class="act" onclick="setAdmin('${p.user_id}', true)">Rendi collaboratore</button>` : "") + `</span></div>`
+        `<div class="person">${avatarOf(p.avatar_url, p.display_name)}<span class="n">${esc(p.display_name || "Qualcuno")}</span></div>`
       ).concat(guests.map(g =>
-        `<div class="person">${avatarOf(null, g.name)}<span class="n">${esc(g.name)}</span><span class="s">ospite</span>` +
-        `<span class="r"><span class="tag ok">Ci va</span>` + (canManage ? `<button class="act" onclick="removeGuest('${esc(g.id)}')">Togli</button>` : "") + `</span></div>`));
+        `<div class="person">${avatarOf(null, g.name)}<span class="n">${esc(g.name)}</span><span class="s">ospite</span></div>`));
       document.getElementById("people-head").hidden = !peopleRows.length;
       renderPeople(false);
-      document.getElementById("people-note").hidden = !ev.is_mine;
-    }
-    if (canManage) loadWaitlist();
-    if (canManage) {
-      document.getElementById("req-wrap").hidden = !reqs.length;
-      document.getElementById("req-n").textContent = "(" + reqs.length + ")";
-      document.getElementById("reqs").innerHTML = reqs.map(p =>
-        `<div class="req" id="req-${p.user_id}"><div class="avatar"${avatarStyle(p.avatar_url)}>${p.avatar_url ? "" : esc((p.display_name || "?")[0].toUpperCase())}</div>` +
-        `<div class="n">${esc(p.display_name || "Qualcuno")}</div>` +
-        `<div class="acts"><button class="btn sm no" onclick="respond('${p.user_id}', false)">No</button>` +
-        `<button class="btn sm" onclick="respond('${p.user_id}', true)">Sì</button></div></div>`).join("");
     }
   }
   // ultimi iscritti: al massimo 6 righe, il bottone "Tutti →" apre tutta la lista
@@ -760,43 +711,6 @@
     b.textContent = "Tutti (" + peopleRows.length + ") →";
   }
   function showAllPeople(){ renderPeople(true); }
-  // ---- lista d'attesa, lato chi organizza (activity_waitlist: agli altri 0 righe) ----
-  let waitRows = [];
-  async function loadWaitlist(){
-    const r = await rpc("activity_waitlist", { p_activity_id: ev.id });
-    if (!r || !r.ok) return;
-    waitRows = await r.json().catch(() => []);
-    document.getElementById("wait-wrap").hidden = !waitRows.length;
-    document.getElementById("wait-n").textContent = "(" + waitRows.length + ")";
-    document.getElementById("waits").innerHTML = waitRows.map((p, i) =>
-      `<div class="req" id="wl-${p.user_id}"><span class="num">${p.position || i + 1}</span><div class="avatar"${avatarStyle(p.avatar_url)}>${p.avatar_url ? "" : esc((p.display_name || "?")[0].toUpperCase())}</div>` +
-      `<div class="n">${esc(p.display_name || "Qualcuno")}</div>` +
-      `<div class="acts"><button class="btn sm no" onclick="removeWait('${p.user_id}')">Togli</button>` +
-      `<button class="btn sm" onclick="admitWait('${p.user_id}')">Fai entrare</button></div></div>`).join("");
-  }
-  // "fai entrare": la persona diventa going; se era pieno i posti massimi salgono di 1 (promote_from_waitlist ritorna il nuovo massimo)
-  async function admitWait(uid){
-    const p = waitRows.find(x => x.user_id === uid); if (!p) return;
-    const row = document.getElementById("wl-" + uid);
-    row.querySelectorAll("button").forEach(b => b.disabled = true);
-    const oldCap = ev.max_participants;
-    const r = await rpc("promote_from_waitlist", { p_activity_id: ev.id, p_user_id: uid });
-    if (r && r.ok) {
-      const newCap = Number(await r.json().catch(() => oldCap));
-      toast((p.display_name || "Qualcuno") + " entra." + (oldCap && newCap > oldCap ? " I posti ora sono " + newCap + "." : ""));
-      track("waitlist_admit"); await reloadEvent(); loadPeople(); return;
-    }
-    row.querySelectorAll("button").forEach(b => b.disabled = false);
-    toast("Non ha funzionato, riprova.");
-  }
-  async function removeWait(uid){
-    const p = waitRows.find(x => x.user_id === uid); if (!p) return;
-    const name = p.display_name || "questa persona";
-    if (!confirm("Vuoi togliere " + name + " dalla lista d'attesa?")) return;
-    const r = await rpc("remove_participant", { p_activity_id: ev.id, p_user_id: uid });
-    if (r && r.ok) { toast("Fatto: " + name + " non è più in lista d'attesa."); track("waitlist_remove"); await reloadEvent(); loadPeople(); return; }
-    toast("Non ha funzionato, riprova.");
-  }
   // gruppi che co-organizzano (activity_community, 0079)
   async function loadCoorganizers(){
     const r = await rpc("activity_coorganizers", { p_activity_id: ev.id });
@@ -830,39 +744,6 @@
     if (band) age.textContent = "Chi partecipa: " + band[0].toLowerCase() + band.slice(1);
   }
   function fmtAvg(v){ return Number(v).toFixed(1).replace(".", ","); }
-
-  // ---- ospiti senza account (add_guest / remove_guest, solo chi gestisce) ----
-  function openGuest(){
-    const ov = document.getElementById("guest-ov"); ov.hidden = false;
-    const inp = document.getElementById("guest-name"); inp.value = ""; inp.focus();
-  }
-  async function addGuest(){
-    const inp = document.getElementById("guest-name");
-    const name = inp.value.trim().replace(/\s+/g, " ");
-    if (name.length < 2) { toast("Scrivi il nome, almeno 2 lettere."); inp.focus(); return; }
-    const btn = document.getElementById("guest-send"); btn.disabled = true;
-    const r = await rpc("add_guest", { p_activity_id: ev.id, p_name: name });
-    btn.disabled = false;
-    if (r && r.ok) {
-      document.getElementById("guest-ov").hidden = true;
-      ev.going_count = Number(ev.going_count) + 1; renderCounts();
-      toast("Aggiunto: " + name); track("guest_add");
-      loadPeople(); return;
-    }
-    const code = r ? ((await r.json().catch(() => ({}))).message || "") : "";
-    toast(code.includes("activity_full") ? "Posti finiti: aumenta i posti da Modifica l'evento."
-        : code.includes("too_many_guests") ? "Puoi aggiungere al massimo 20 persone." : "Non ha funzionato, riprova.");
-  }
-  async function removeGuest(gid){
-    const g = guests.find(x => x.id === gid); if (!g) return;
-    if (!confirm("Vuoi togliere " + g.name + "?")) return;
-    const r = await rpc("remove_guest", { p_guest_id: gid });
-    if (r && r.ok) {
-      ev.going_count = Math.max(0, Number(ev.going_count) - 1); renderCounts();
-      toast("Tolto: " + g.name); track("guest_remove"); loadPeople(); return;
-    }
-    toast("Non ha funzionato, riprova.");
-  }
 
   // ---- biglietto: qr con il link di check-in (token per partecipazione, migrazione 0047) ----
   let ticketToken = null;
@@ -999,12 +880,6 @@
   async function shareStory(){ toast("Un attimo…"); shareImage(await drawStory(), "anyplans-storia.png", "story"); }
   async function shareCard(){ toast("Un attimo…"); shareImage(await drawCard(), "anyplans-evento.png", "card"); }
 
-  async function setAdmin(uid, on){
-    const r = await rpc("make_admin", { p_activity_id: ev.id, p_user_id: uid, p_admin: on });
-    if (r && r.ok) { toast(on ? "Ora è collaboratore dell'evento: può dire sì alle richieste." : "Non è più collaboratore."); track("make_admin"); loadPeople(); }
-    else toast("Non ha funzionato, riprova.");
-  }
-
   // calendario: .ics per apple/outlook, link per google
   function buildCalendar(){
     const start = new Date(ev.start_at), end = new Date(start.getTime() + 2 * 3600 * 1000);
@@ -1024,21 +899,6 @@
     g.href = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent(ev.title) +
       "&dates=" + fmt(start) + "/" + fmt(end) + "&location=" + encodeURIComponent(where) + "&details=" + encodeURIComponent(desc);
     g.onclick = () => track("calendar");
-  }
-
-  async function respond(uid, ok){
-    const row = document.getElementById("req-" + uid);
-    row.querySelectorAll("button").forEach(b => b.disabled = true);
-    const r = await rpc("respond_to_request", { p_activity_id: ev.id, p_user_id: uid, p_approve: ok });
-    if (r && r.ok) {
-      if (ok) { ev.going_count = Number(ev.going_count) + 1; renderCounts(); toast("Fatto, partecipa."); }
-      else toast("Ok, non partecipa.");
-      loadPeople();
-      return;
-    }
-    row.querySelectorAll("button").forEach(b => b.disabled = false);
-    const b = r ? await r.json().catch(() => ({})) : {};
-    toast((b.message || "").includes("activity_full") ? "Posti finiti. Per accettare altre persone aumenta i posti da \"Modifica l'evento\"." : "Non ha funzionato, riprova.");
   }
 
   // ---- unirsi ----
@@ -1193,23 +1053,6 @@
       await reloadEvent(); ev.my_status = "left"; renderCounts(); loadPeople(); return;
     }
     toast("Non ha funzionato, riprova.");
-  }
-
-  async function loadAnswers(){
-    try {
-      const r = await rpc("get_activity_answers", { p_activity_id: ev.id });
-      if (!r || !r.ok) return;
-      const rows = await r.json();
-      if (!rows.length) return;
-      const byUser = {};
-      rows.forEach(x => { (byUser[x.display_name] = byUser[x.display_name] || []).push(x); });
-      document.getElementById("answers").innerHTML = Object.entries(byUser).map(([name, list]) =>
-        `<div style="background:#fff; border:1.5px solid rgba(25,25,25,.10); border-radius:14px; padding:14px 16px">
-          <div style="font-weight:700; font-size:14px; margin-bottom:6px">${esc(name)}</div>` +
-          list.map(x => `<div style="font-size:13.5px; margin-bottom:3px"><span style="color:var(--grey)">${esc(x.prompt)}</span>: <b>${esc(x.answer)}</b></div>`).join("") +
-        `</div>`).join("");
-      document.getElementById("answers-wrap").hidden = false;
-    } catch (_) {}
   }
 
   async function cancelMyEvent(){
