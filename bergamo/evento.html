@@ -400,7 +400,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788964960"></script>
+<script src="app.js?v=1788965129"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -458,7 +458,11 @@
     const isReq = needsApproval();
     document.title = ev.title + " · anyplans";
     const cover = document.getElementById("cover");
-    if (ev.photo_url) { cover.textContent = ""; cover.style.backgroundImage = "url('" + String(ev.photo_url).replace(/'/g, "") + "')"; cover.style.backgroundSize = "cover"; cover.style.backgroundPosition = "center"; }
+    if (ev.photo_url) {
+      cover.textContent = ""; cover.style.backgroundImage = "url('" + String(ev.photo_url).replace(/'/g, "") + "')"; cover.style.backgroundSize = "cover"; cover.style.backgroundPosition = "center";
+      // una foto piccola (es. il logo del gruppo) non si stira a tutta larghezza: si mostra intera, al centro, su fondo tinta
+      const probe = new Image(); probe.onload = () => { if (probe.naturalWidth < 700) { cover.style.backgroundSize = "auto 60%"; cover.style.backgroundRepeat = "no-repeat"; } }; probe.src = ev.photo_url;
+    }
     else cover.textContent = ev.emoji || cat.e || "📍";
     document.getElementById("chip-cat").textContent = (ev.emoji || cat.e || "") + " " + (cat.l || ev.sport);
     document.getElementById("chip-req").hidden = !isReq;
@@ -730,7 +734,12 @@
     ev.community = c;
     const el = document.getElementById("comm");
     el.hidden = false; el.href = "community.html?slug=" + encodeURIComponent(c.slug);
-    document.getElementById("comm-emoji").textContent = c.emoji || "🏷️";
+    const ce = document.getElementById("comm-emoji");
+    const logo = c.avatar_url || ev.host_avatar;   // per gli eventi del gruppo host_avatar è il logo del gruppo
+    if (logo) { ce.textContent = ""; ce.style.backgroundImage = "url('" + String(logo).replace(/'/g, "") + "')"; ce.style.backgroundSize = "cover"; ce.style.backgroundPosition = "center"; }
+    else ce.textContent = c.emoji || "🏷️";
+    // l'evento è del gruppo: la card "Organizza" con la persona sparisce, resta quella del gruppo (che porta alla sua pagina)
+    document.getElementById("host").hidden = true;
     document.getElementById("comm-name").textContent = c.name;
     // recensioni e fascia d'età: arrivano con l'evento (design/sito-landing/spec-recensioni.md, "pagina evento")
     const n = Number(ev.community_review_count) || 0;
