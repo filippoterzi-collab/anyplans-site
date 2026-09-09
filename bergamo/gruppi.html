@@ -133,6 +133,7 @@
   <div class="chips" id="chips">
     <button class="chip on" data-cat="" aria-pressed="true" onclick="setCat(this)">Tutti</button>
     <button class="chip" data-cat="runclub" aria-pressed="false" onclick="setCat(this)">🏃 Run club</button>
+    <button class="chip" data-cat="estivo" aria-pressed="false" onclick="setCat(this)">☀️ Estivi</button>
     <button class="chip" data-cat="sport" aria-pressed="false" onclick="setCat(this)">⚽ Sport</button>
     <button class="chip" data-cat="cucina" aria-pressed="false" onclick="setCat(this)">🍳 Cucina</button>
     <button class="chip" data-cat="creatività" aria-pressed="false" onclick="setCat(this)">🏺 Creatività</button>
@@ -146,14 +147,14 @@
   <a class="invite" id="invite" href="crea-community.html" hidden>Organizzi eventi? Crea il tuo gruppo →</a>
 </main>
 
-<script src="app.js?v=1788851877"></script>
+<script src="app.js?v=1788961934"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 860 });
   mountTabbar("gruppi");
   track("groups_view");
 
-  const CAT_EMOJI = { sport:"🏃", cucina:"🍳", "creatività":"🏺", giardinaggio:"🌱", cultura:"🎪", benessere:"🧘" };
+  const CAT_EMOJI = { sport:"🏃", cucina:"🍳", "creatività":"🏺", giardinaggio:"🌱", cultura:"🎪", benessere:"🧘", estivo:"☀️" };
   let GROUPS = [];          // gruppi uniti da list_communities + my_communities
   let loaded = false;       // false finché non arriva la lista (o l'errore)
   let failed = false;

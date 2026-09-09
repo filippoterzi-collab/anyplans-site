@@ -217,6 +217,13 @@
       "label": "Feste, sagre ed eventi di paese",
       "c": "cultura",
       "frase": "Le feste dell'oratorio, le sagre e gli eventi di paese della bergamasca, con le date di ogni sera."
+    },
+    "estivo": {
+      "key": "estivi",
+      "e": "☀️",
+      "label": "Estivo",
+      "c": "cultura",
+      "frase": "Gli estivi di Bergamo e provincia, sera per sera fino alla chiusura: bar all'aperto nei parchi, cucina, dj set e serate."
     }
   },
   "hub": {

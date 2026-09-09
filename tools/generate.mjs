@@ -391,18 +391,24 @@ function eventJsonLd(p, url) {
   const location = { "@type": "Place", name: p.meeting || (p.town ? p.town : CITY_NAME + " e dintorni"),
     address: { "@type": "PostalAddress", addressLocality: localityOf(p), addressRegion: "BG", addressCountry: "IT",
                ...(p.meeting ? { streetAddress: p.meeting } : {}) } };
-  // organizer only when we know who it really is: a group on anyplans (with its page) or a named association; never a town, never anyplans itself
+  // organizer (Search Console 08/09/2026: "missing field organizer/performer"): a group on anyplans (with its page), a named association,
+  // the town's Comune for the feste it publishes on its own portal (eventi.bergamo.it / app.bergamo.it), never anyplans itself.
+  // Events opened by a single user (no group) carry no organizer: the RPC exposes no host name (privacy, SCHEMA §5) and we don't invent one.
   const organizerNode = org.kind === "gruppo" ? { "@type": "Organization", name: org.name, url: org.url, ...(org.instagram ? { sameAs: [org.instagram] } : {}) }
-    : org.kind === "club" && !p.town ? { "@type": "Organization", name: org.name } : null;
+    : org.kind === "club" ? { "@type": "Organization", name: p.town ? `Comune di ${localityOf(p)}` : org.name } : null;
   if (p.visibility === "open" && p.lat != null && p.lng != null) location.geo = { "@type": "GeoCoordinates", latitude: p.lat, longitude: p.lng };
-  const offers = { "@type": "Offer", price: p.price_cents ? (p.price_cents / 100).toFixed(2) : "0", priceCurrency: "EUR", url, availability: "https://schema.org/InStock" };
+  // validFrom: since when one can join = when the event was published (updated_at is the closest date the public RPC exposes)
+  const validFrom = isoLocal(p.updated instanceof Date && !isNaN(p.updated) ? p.updated : NOW, p.tz || "Europe/Rome");
+  const offers = { "@type": "Offer", price: p.price_cents ? (p.price_cents / 100).toFixed(2) : "0", priceCurrency: "EUR", url, availability: "https://schema.org/InStock", validFrom };
   const events = dates.map(d => ({
     "@context": "https://schema.org", "@type": "Event",
     name: p.title, startDate: isoLocal(d.start, d.tz), ...(d.end ? { endDate: isoLocal(d.end, d.tz) } : {}),
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     location, image: [image], description: cut(p.description, 500) || `${p.tipo.label} a ${placeShort(p)}`,
-    offers, isAccessibleForFree: !(p.price_cents > 0), ...(organizerNode ? { organizer: organizerNode } : {}), url
+    offers, isAccessibleForFree: !(p.price_cents > 0),
+    // performer: who runs the evening = the organizer (a sagra or a run club has no separate act); Google recommends it and otherwise warns
+    ...(organizerNode ? { organizer: organizerNode, performer: organizerNode } : {}), url
   }));
   return jsonld(events.length === 1 ? events[0] : events);
 }

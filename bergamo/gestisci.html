@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gestisci l'evento · anyplans</title>
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta name="robots" content="noindex">
+<style>
+  @font-face{
+    font-family:"Bricolage Grotesque";
+    src:url("/bricolage-grotesque-latin-800-normal.woff2") format("woff2");
+    font-weight:800; font-style:normal; font-display:swap;
+  }
+  :root{
+    --blue:#1B4FD8; --blue-lo:#1440AF; --tint:#E9EEFB;
+    --ink:#191919; --grey:#6E6E73; --bg:#FBF9F5; --green:#1E8E3E; --red:#B3261E;
+    --round: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --display: "Bricolage Grotesque", var(--round);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{font-family:var(--round); color:var(--ink); background:var(--bg); line-height:1.5; -webkit-font-smoothing:antialiased;}
+  a{color:inherit; text-decoration:none;}
+  .display{font-family:var(--display); font-weight:800; letter-spacing:-.045em; line-height:1.05;}
+  main{max-width:860px; margin:0 auto; padding:16px 22px 80px; display:flex; flex-direction:column; gap:20px;}
+  h1{font-size:30px;}
+  .btn{display:inline-flex; align-items:center; gap:6px; background:var(--blue); color:#fff; font-weight:700; padding:11px 20px; border-radius:999px; border:none; cursor:pointer; font-size:14.5px; font-family:var(--round); white-space:nowrap;}
+  .btn:hover{background:var(--blue-lo);}
+  .btn.ghost{background:transparent; color:var(--blue); box-shadow:inset 0 0 0 2px var(--blue);}
+  .btn.ghost:hover{background:var(--tint); color:var(--blue-lo);}
+  .btn.sm{padding:8px 14px; font-size:13px;}
+  .btn[disabled]{opacity:.55; cursor:default;}
+  .card{background:#fff; border:1.5px solid rgba(25,25,25,.08); border-radius:18px; padding:16px 18px;}
+  .ev{display:flex; gap:14px; align-items:center;}
+  .tile{width:64px; height:64px; border-radius:16px; background:var(--tint); display:flex; align-items:center; justify-content:center; font-size:30px; flex-shrink:0; background-size:cover; background-position:center;}
+  .ev .t{font-weight:800; font-size:18px; line-height:1.2;}
+  .ev .m{font-size:13.5px; color:var(--grey); margin-top:2px;}
+  .ev .links{display:flex; gap:14px; margin-top:6px; font-size:13.5px; font-weight:700; color:var(--blue); flex-wrap:wrap;}
+  .sec{font-family:var(--display); font-weight:800; letter-spacing:-.045em; font-size:22px; display:flex; align-items:center; justify-content:space-between; gap:10px; flex-wrap:wrap;}
+  .sec small{font-family:var(--round); font-weight:600; font-size:13px; color:var(--grey); letter-spacing:0;}
+  .glance{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;}
+  .glance .big{font-family:var(--display); font-weight:800; letter-spacing:-.045em; font-size:34px; color:var(--green); line-height:1;}
+  .glance .sub{font-size:14px; color:var(--grey); font-weight:600;}
+  .bar{height:8px; border-radius:999px; background:#E6F4EA; overflow:hidden; margin-top:10px;}
+  .bar i{display:block; height:100%; background:var(--green); border-radius:999px;}
+  .bar.full i{background:var(--red);}
+  .stats{display:flex; gap:8px; flex-wrap:wrap; margin-top:12px;}
+  .stat{background:var(--tint); color:var(--blue); font-weight:700; font-size:13px; padding:6px 12px; border-radius:999px;}
+  .tiles{display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:10px;}
+  .tile-a{display:flex; align-items:center; gap:12px; background:#fff; border:1.5px solid rgba(25,25,25,.08); border-radius:16px; padding:14px; cursor:pointer; text-align:left; font-family:var(--round); font-size:14px; font-weight:700; color:var(--ink);}
+  .tile-a:hover{border-color:var(--blue);}
+  .tile-a .ic{width:40px; height:40px; border-radius:12px; background:var(--tint); display:flex; align-items:center; justify-content:center; font-size:20px; flex-shrink:0;}
+  .tile-a small{display:block; font-weight:500; color:var(--grey); font-size:12px;}
+  @media (max-width:600px){ .tiles{grid-template-columns:1fr;} h1{font-size:26px;} }
+  .tools{display:flex; gap:8px; align-items:center; flex-wrap:wrap;}
+  .tools input, .tools select{font-family:var(--round); font-size:14px; padding:10px 14px; border-radius:999px; border:1.5px solid rgba(25,25,25,.14); background:#fff; color:var(--ink);}
+  .tools input{flex:1; min-width:160px;}
+  .ibtn{width:40px; height:40px; border-radius:12px; border:1.5px solid rgba(25,25,25,.12); background:#fff; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; color:var(--ink); font-size:16px;}
+  .ibtn[aria-pressed="true"]{background:var(--tint); border-color:var(--blue); color:var(--blue);}
+  .plist{background:#fff; border:1.5px solid rgba(25,25,25,.08); border-radius:18px; overflow:hidden;}
+  .person{display:flex; align-items:center; gap:10px; padding:11px 14px; font-size:14px;}
+  .person + .person{border-top:1px solid rgba(25,25,25,.07);}
+  .avatar{width:32px; height:32px; border-radius:50%; background:var(--tint); color:var(--blue); font-weight:800; font-size:13px; display:flex; align-items:center; justify-content:center; flex-shrink:0; background-size:cover; background-position:center;}
+  .person .col{display:flex; flex-direction:column; min-width:0; gap:1px; flex:1;}
+  .person .n{font-weight:700; display:flex; align-items:center; gap:6px; flex-wrap:wrap;}
+  .person .ans{font-size:12.5px; color:var(--grey); line-height:1.4;}
+  .person .ans b{color:var(--ink); font-weight:700;}
+  .person .r{margin-left:auto; display:flex; align-items:center; gap:6px; flex-shrink:0; flex-wrap:wrap; justify-content:flex-end;}
+  .tag{font-size:11px; font-weight:700; padding:2px 8px; border-radius:999px; background:var(--tint); color:var(--blue); white-space:nowrap;}
+  .tag.ok{background:#E6F4EA; color:var(--green);}
+  .tag.in{background:var(--green); color:#fff;}
+  .tag.adm{background:var(--blue); color:#fff;}
+  .tag.wait{background:#FFF3E0; color:#B4530A;}
+  .act{font-size:12px; color:var(--blue); font-weight:700; background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:999px; padding:5px 10px; cursor:pointer; font-family:var(--round); white-space:nowrap;}
+  .act.on{background:var(--green); border-color:var(--green); color:#fff;}
+  .act.danger{color:var(--red);}
+  .empty{color:var(--grey); font-size:14px; padding:18px 14px;}
+  .tbl{overflow-x:auto; background:#fff; border:1.5px solid rgba(25,25,25,.08); border-radius:18px;}
+  table{border-collapse:collapse; width:100%; font-size:13.5px; min-width:560px;}
+  th, td{text-align:left; padding:10px 12px; border-bottom:1px solid rgba(25,25,25,.07); vertical-align:top;}
+  th{font-size:12px; color:var(--grey); font-weight:700; white-space:nowrap; background:#FBF9F5; position:sticky; top:0;}
+  tr:last-child td{border-bottom:none;}
+  .note{font-size:13px; color:var(--grey);}
+  #toast{position:fixed; left:50%; bottom:90px; transform:translateX(-50%); background:var(--ink); color:#fff; padding:10px 16px; border-radius:999px; font-size:14px; font-weight:600; opacity:0; transition:opacity .2s; pointer-events:none; z-index:50;}
+  #toast.show{opacity:1;}
+</style>
+</head>
+<body>
+<header></header>
+<main>
+  <div>
+    <a href="miei.html" class="note">← I miei eventi</a>
+    <h1 class="display" style="margin-top:6px">Gestisci l'evento</h1>
+  </div>
+  <div id="loading" class="note">Carico…</div>
+  <div id="denied" class="card" hidden>
+    <p style="font-weight:700">Questa pagina è per chi organizza l'evento.</p>
+    <p class="note" style="margin-top:4px">Se lo organizzi tu o sei collaboratore, entra con il tuo account. <a id="denied-link" href="#" style="color:var(--blue); font-weight:700">Vai alla pagina dell'evento →</a></p>
+  </div>
+  <div id="page" hidden style="display:flex; flex-direction:column; gap:20px">
+
+    <div class="card ev">
+      <div class="tile" id="ev-tile"></div>
+      <div style="min-width:0">
+        <div class="t" id="ev-title"></div>
+        <div class="m" id="ev-when"></div>
+        <div class="m" id="ev-where"></div>
+        <div class="links">
+          <a id="lnk-event" href="#">Vedi la pagina dell'evento →</a>
+          <a id="lnk-edit" href="#">Modifica</a>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="sec">In breve</div>
+      <div class="card" style="margin-top:8px">
+        <div class="glance"><span class="big" id="g-going">0</span><span class="sub" id="g-sub">ci vanno</span></div>
+        <div class="bar" id="g-bar" hidden><i></i></div>
+        <div class="stats" id="g-stats"></div>
+      </div>
+    </div>
+
+    <div class="tiles">
+      <button class="tile-a" onclick="copyLink()"><span class="ic">🔗</span><span>Condividi il link<small>lo copi e lo mandi in chat</small></span></button>
+      <a class="tile-a" id="lnk-checkin" href="#"><span class="ic">✅</span><span>Segna le presenze<small>con il telefono, all'ingresso</small></span></a>
+      <button class="tile-a" onclick="addGuest()"><span class="ic">➕</span><span>Aggiungi un ospite<small>chi non ha l'account</small></span></button>
+    </div>
+
+    <div id="req-wrap" hidden>
+      <div class="sec">Richieste <small id="req-n"></small></div>
+      <p class="note" style="margin:4px 0 8px">Vogliono partecipare: dì sì o no.</p>
+      <div class="plist" id="reqs"></div>
+    </div>
+
+    <div>
+      <div class="sec">Lista partecipanti <small>nomi, presenze e risposte: li vedi solo tu</small></div>
+      <div class="tools" style="margin-top:10px">
+        <input id="q" type="search" placeholder="Cerca per nome" oninput="draw()">
+        <select id="filter" onchange="draw()">
+          <option value="all">Tutti</option>
+          <option value="in">Entrati</option>
+          <option value="notin">Non ancora entrati</option>
+          <option value="guest">Ospiti senza account</option>
+          <option value="adm">Chi organizza</option>
+        </select>
+        <button class="ibtn" id="btn-table" aria-pressed="false" onclick="toggleTable()" title="Tabella completa">▦</button>
+        <button class="ibtn" onclick="exportCsv()" title="Scarica la lista (CSV)">⬇︎</button>
+      </div>
+      <div class="plist" id="list" style="margin-top:10px"></div>
+      <div class="tbl" id="table" hidden style="margin-top:10px"></div>
+      <p class="note" style="margin-top:8px">Il file scaricato si apre con Excel e Numeri. "Presente" lo segni anche dalla pagina "Segna le presenze".</p>
+    </div>
+
+    <div id="wait-wrap" hidden>
+      <div class="sec">In lista d'attesa <small id="wait-n"></small></div>
+      <p class="note" style="margin:4px 0 8px">In ordine di arrivo. Quando si libera un posto entra chi è in cima; puoi far entrare qualcuno anche subito.</p>
+      <div class="plist" id="waits"></div>
+    </div>
+
+  </div>
+</main>
+<div id="toast"></div>
+<script src="app.js?v=1788961934"></script>
+<script>
+  requireLogin();
+  mountNav("i miei eventi", { col: 860 });
+  mountTabbar("i miei eventi");
+  const id = new URLSearchParams(location.search).get("id");
+  let ev = null, going = [], reqs = [], guests = [], waits = [], answers = {}, questions = [], canManage = false, tableMode = false;
+  const avatarStyle = url => url ? ` style="background-image:url('${esc(url)}')"` : "";
+  const avatarOf = (url, name) => `<div class="avatar"${avatarStyle(url)}>${url ? "" : esc((name || "?")[0].toUpperCase())}</div>`;
+  const roleOf = p => p.user_id === ev.host_id ? "host" : (!ev.host_id && p.user_id === ev.claimed_by) ? "opened" : p.role === "admin" ? "admin" : "";
+  const roleTxt = p => ({ host: "organizza", opened: "ha aperto il piano", admin: "collaboratore" })[roleOf(p)] || "";
+
+  async function load(){
+    if (!id) { location.href = "miei.html"; return; }
+    const r = await rpc("activity_by_id", { p_id: id });
+    const rows = r && r.ok ? await r.json().catch(() => []) : [];
+    ev = rows[0];
+    if (!ev) { document.getElementById("loading").textContent = "Evento non trovato."; return; }
+    document.getElementById("denied-link").href = "evento.html?id=" + ev.id;
+    await loadPeople();
+    const me = myUid();
+    const meRow = going.find(x => x.user_id === me);
+    canManage = !!ev.is_mine || (meRow && meRow.role === "admin") || (ev.claimed_by && ev.claimed_by === me);
+    document.getElementById("loading").hidden = true;
+    if (!canManage) { document.getElementById("denied").hidden = false; return; }
+    document.title = "Gestisci: " + ev.title + " · anyplans";
+    const tile = document.getElementById("ev-tile");
+    if (ev.photo_url) tile.style.backgroundImage = "url('" + String(ev.photo_url).replace(/'/g, "") + "')"; else tile.textContent = ev.emoji || "📍";
+    document.getElementById("ev-title").textContent = ev.title;
+    const d = new Date(ev.start_at);
+    document.getElementById("ev-when").textContent = dayLabel(d) + " · " + daySub(d) + " · " + timeStr(d);
+    document.getElementById("ev-where").textContent = ev.meeting_point_text || "";
+    document.getElementById("lnk-event").href = "evento.html?id=" + ev.id;
+    document.getElementById("lnk-edit").href = "crea.html?edit=" + ev.id;
+    document.getElementById("lnk-checkin").href = "checkin.html?id=" + ev.id;
+    document.getElementById("page").hidden = false;
+    await Promise.all([loadGuests(), loadAnswers(), loadWaitlist()]);
+    draw();
+  }
+
+  async function loadPeople(){
+    const r = await rpc("get_participants", { p_activity_id: ev.id });
+    const rows = r && r.ok ? await r.json().catch(() => []) : [];
+    going = rows.filter(x => x.status === "going");
+    reqs = rows.filter(x => x.status === "requested");
+  }
+  async function loadGuests(){
+    const r = await rpc("activity_guests", { p_activity_id: ev.id });
+    guests = r && r.ok ? await r.json().catch(() => []) : [];
+  }
+  async function loadAnswers(){
+    answers = {};
+    const r = await rpc("get_activity_answers", { p_activity_id: ev.id });
+    if (r && r.ok) (await r.json().catch(() => [])).forEach(x => { (answers[x.user_id] = answers[x.user_id] || []).push(x); });
+    const rq = await rpc("get_activity_questions", { p_activity_id: ev.id });
+    questions = rq && rq.ok ? (await rq.json().catch(() => [])).sort((a, b) => a.pos - b.pos) : [];
+  }
+  async function loadWaitlist(){
+    const r = await rpc("activity_waitlist", { p_activity_id: ev.id });
+    waits = r && r.ok ? await r.json().catch(() => []) : [];
+  }
+  async function refresh(){ await loadPeople(); await Promise.all([loadGuests(), loadAnswers(), loadWaitlist()]); draw(); }
+
+  function draw(){
+    const total = going.length + guests.length, entered = going.filter(p => p.checked_in).length + guests.filter(g => g.checked_in_at).length;
+    document.getElementById("g-going").textContent = total;
+    document.getElementById("g-sub").textContent = total === 1 ? "ci va" : "ci vanno";
+    const max = Number(ev.max_participants) || 0, bar = document.getElementById("g-bar");
+    bar.hidden = !max;
+    if (max) { bar.querySelector("i").style.width = Math.min(100, Math.round(total / max * 100)) + "%"; bar.classList.toggle("full", total >= max); }
+    const stats = [];
+    if (max) stats.push(total >= max ? "pieno, " + max + " posti" : (max - total) + (max - total === 1 ? " posto libero" : " posti liberi") + " su " + max);
+    stats.push(entered + (entered === 1 ? " entrato" : " entrati"));
+    if (waits.length) stats.push(waits.length + " in lista d'attesa");
+    if (reqs.length) stats.push(reqs.length + (reqs.length === 1 ? " richiesta" : " richieste"));
+    if (guests.length) stats.push(guests.length + (guests.length === 1 ? " ospite" : " ospiti") + " senza account");
+    document.getElementById("g-stats").innerHTML = stats.map(s => `<span class="stat">${esc(s)}</span>`).join("");
+    // richieste
+    document.getElementById("req-wrap").hidden = !reqs.length;
+    document.getElementById("req-n").textContent = reqs.length ? "(" + reqs.length + ")" : "";
+    document.getElementById("reqs").innerHTML = reqs.map(p =>
+      `<div class="person" id="req-${p.user_id}">${avatarOf(p.avatar_url, p.display_name)}<span class="col"><span class="n">${esc(p.display_name || "Qualcuno")}</span>${ansHtml(p.user_id)}</span>` +
+      `<span class="r"><button class="act" onclick="respond('${p.user_id}', false)">No</button><button class="act on" onclick="respond('${p.user_id}', true)">Sì</button></span></div>`).join("");
+    // lista
+    const q = document.getElementById("q").value.trim().toLowerCase(), f = document.getElementById("filter").value;
+    const people = going.map(p => ({ kind: "user", id: p.user_id, name: p.display_name || "Qualcuno", avatar: p.avatar_url, in: !!p.checked_in, role: roleTxt(p), rk: roleOf(p), p }))
+      .concat(guests.map(g => ({ kind: "guest", id: g.id, name: g.name, avatar: null, in: !!g.checked_in_at, role: "ospite" + (g.added_by_name ? " di " + g.added_by_name : ""), rk: "guest", g })))
+      .filter(x => !q || x.name.toLowerCase().includes(q))
+      .filter(x => f === "all" || (f === "in" && x.in) || (f === "notin" && !x.in) || (f === "guest" && x.kind === "guest") || (f === "adm" && (x.rk === "host" || x.rk === "admin" || x.rk === "opened")));
+    const order = { host: 0, opened: 0, admin: 1 };
+    people.sort((a, b) => (order[a.rk] ?? 2) - (order[b.rk] ?? 2) || a.name.localeCompare(b.name, "it"));
+    const list = document.getElementById("list"), tbl = document.getElementById("table");
+    list.hidden = tableMode; tbl.hidden = !tableMode;
+    if (!people.length) { list.innerHTML = '<div class="empty">' + (q || f !== "all" ? "Nessuno con questi filtri." : "Nessun iscritto per ora. Condividi il link!") + "</div>"; tbl.innerHTML = ""; return; }
+    list.innerHTML = people.map(x => {
+      const tags = (x.rk === "host" ? '<span class="tag adm">organizza</span>' : x.rk === "opened" ? '<span class="tag adm">ha aperto il piano</span>' : x.rk === "admin" ? '<span class="tag adm">collaboratore</span>' : x.rk === "guest" ? '<span class="tag">' + esc(x.role) + '</span>' : "");
+      const status = x.in ? '<span class="tag in">Entrato</span>' : '<span class="tag ok">Ci va</span>';
+      let acts = `<button class="act${x.in ? " on" : ""}" onclick="togglePresent('${x.kind}','${x.id}', ${x.in ? "false" : "true"})">${x.in ? "Presente ✓" : "Presente"}</button>`;
+      if (x.kind === "user" && ev.is_mine && x.rk !== "host") acts += `<button class="act" onclick="setAdmin('${x.id}', ${x.rk === "admin" ? "false" : "true"})">${x.rk === "admin" ? "Non più collaboratore" : "Rendi collaboratore"}</button>`;
+      if (x.kind === "user" && ev.is_mine && x.rk !== "host") acts += `<button class="act danger" onclick="removeUser('${x.id}', '${esc(x.name)}')">Togli</button>`;
+      if (x.kind === "guest") acts += `<button class="act danger" onclick="removeGuest('${x.id}')">Togli</button>`;
+      return `<div class="person">${avatarOf(x.avatar, x.name)}<span class="col"><span class="n">${esc(x.name)}${tags}</span>${x.kind === "user" ? ansHtml(x.id) : ""}</span><span class="r">${status}${acts}</span></div>`;
+    }).join("");
+    // tabella completa: una colonna per domanda
+    tbl.innerHTML = `<table><thead><tr><th>Nome</th><th>Stato</th><th>Ruolo</th>${questions.map(qq => `<th>${esc(qq.prompt)}</th>`).join("")}</tr></thead><tbody>` +
+      people.map(x => `<tr><td><b>${esc(x.name)}</b></td><td>${x.in ? "entrato" : "ci va"}</td><td>${esc(x.role)}</td>${questions.map(qq => `<td>${x.kind === "user" ? esc(answerTo(x.id, qq)) : ""}</td>`).join("")}</tr>`).join("") + "</tbody></table>";
+    // lista d'attesa
+    document.getElementById("wait-wrap").hidden = !waits.length;
+    document.getElementById("wait-n").textContent = waits.length ? "(" + waits.length + ")" : "";
+    document.getElementById("waits").innerHTML = waits.map(w =>
+      `<div class="person">${avatarOf(w.avatar_url, w.display_name)}<span class="col"><span class="n">${esc(w.display_name || "Qualcuno")}<span class="tag wait">${ordinal(w.position)} in fila</span></span></span>` +
+      `<span class="r"><button class="act on" onclick="promote('${w.user_id}')">Fai entrare</button></span></div>`).join("");
+  }
+  function answerTo(uid, qq){ const a = (answers[uid] || []).find(x => x.question_id === qq.id || x.prompt === qq.prompt); return a ? a.answer : ""; }
+  function ansHtml(uid){ const list = answers[uid] || []; return list.length ? list.map(a => `<span class="ans">${esc(a.prompt)}: <b>${esc(a.answer)}</b></span>`).join("") : ""; }
+  function toggleTable(){ tableMode = !tableMode; document.getElementById("btn-table").setAttribute("aria-pressed", String(tableMode)); draw(); }
+
+  // scarica la lista: CSV con nome, stato, ruolo e una colonna per domanda (si apre con Excel e Numeri)
+  function exportCsv(){
+    const cell = v => '"' + String(v == null ? "" : v).replace(/"/g, '""') + '"';
+    const head = ["Nome", "Stato", "Ruolo"].concat(questions.map(q => q.prompt));
+    const rows = going.map(p => [p.display_name || "", p.checked_in ? "entrato" : "ci va", roleTxt(p)].concat(questions.map(q => answerTo(p.user_id, q))))
+      .concat(guests.map(g => [g.name, g.checked_in_at ? "entrato" : "ci va", "ospite" + (g.added_by_name ? " di " + g.added_by_name : "")].concat(questions.map(() => ""))));
+    const csv = "﻿" + [head].concat(rows).map(r => r.map(cell).join(";")).join("\r\n");
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(new Blob([csv], { type: "text/csv;charset=utf-8" }));
+    a.download = "partecipanti-" + String(ev.title).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 40) + ".csv";
+    document.body.appendChild(a); a.click(); a.remove();
+    toast("Lista scaricata: " + rows.length + (rows.length === 1 ? " persona" : " persone")); track("export_guests");
+  }
+  async function copyLink(){
+    const url = location.origin + "/bergamo/evento.html?id=" + ev.id;
+    try { await navigator.clipboard.writeText(url); toast("Link copiato, incollalo dove vuoi."); } catch (_) { prompt("Copia il link:", url); }
+    track("share");
+  }
+  async function togglePresent(kind, pid, present){
+    const r = kind === "guest" ? await rpc("check_in_guest", { p_guest_id: pid, p_present: present }) : await rpc("check_in_user", { p_activity_id: ev.id, p_user_id: pid, p_present: present });
+    if (r && r.ok) { toast(present ? "Segnato presente." : "Presenza tolta."); await refresh(); } else toast("Non ha funzionato, riprova.");
+  }
+  async function setAdmin(uid, on){
+    const r = await rpc("make_admin", { p_activity_id: ev.id, p_user_id: uid, p_admin: on });
+    if (r && r.ok) { toast(on ? "Ora è collaboratore: può dire sì alle richieste e segnare le presenze." : "Non è più collaboratore."); track("make_admin"); await refresh(); }
+    else toast("Non ha funzionato, riprova.");
+  }
+  async function removeUser(uid, name){
+    if (!confirm("Vuoi togliere " + name + " dall'evento?")) return;
+    const r = await rpc("remove_participant", { p_activity_id: ev.id, p_user_id: uid });
+    if (r && r.ok) { toast("Tolto: " + name); await refresh(); } else toast("Non ha funzionato, riprova.");
+  }
+  async function removeGuest(gid){
+    const g = guests.find(x => x.id === gid); if (!g) return;
+    if (!confirm("Vuoi togliere " + g.name + "?")) return;
+    const r = await rpc("remove_guest", { p_guest_id: gid });
+    if (r && r.ok) { toast("Tolto: " + g.name); track("guest_remove"); await refresh(); } else toast("Non ha funzionato, riprova.");
+  }
+  async function addGuest(){
+    const name = (prompt("Nome dell'ospite (chi non ha l'account):") || "").trim().replace(/\s+/g, " ");
+    if (!name) return;
+    if (name.length < 2) { toast("Scrivi il nome, almeno 2 lettere."); return; }
+    const r = await rpc("add_guest", { p_activity_id: ev.id, p_name: name });
+    if (r && r.ok) { toast("Aggiunto: " + name); track("guest_add"); await refresh(); return; }
+    const code = r ? ((await r.json().catch(() => ({}))).message || "") : "";
+    toast(code.includes("activity_full") ? "Posti finiti: aumenta i posti da Modifica." : code.includes("too_many_guests") ? "Puoi aggiungere al massimo 20 persone." : "Non ha funzionato, riprova.");
+  }
+  async function respond(uid, ok){
+    const r = await rpc("respond_to_request", { p_activity_id: ev.id, p_user_id: uid, p_approve: ok });
+    if (r && r.ok) { toast(ok ? "Fatto, partecipa." : "Ok, non partecipa."); await refresh(); return; }
+    const b = r ? await r.json().catch(() => ({})) : {};
+    toast((b.message || "").includes("activity_full") ? "Posti finiti. Per accettare altre persone aumenta i posti da Modifica." : "Non ha funzionato, riprova.");
+  }
+  async function promote(uid){
+    const r = await rpc("promote_from_waitlist", { p_activity_id: ev.id, p_user_id: uid });
+    if (r && r.ok) { toast("Fatto, è dentro."); await refresh(); } else toast("Non ha funzionato: forse è pieno.");
+  }
+  load();
+</script>
+</body>
+</html>

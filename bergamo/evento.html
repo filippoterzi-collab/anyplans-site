@@ -87,14 +87,29 @@
   .sec{font-weight:800; font-size:16px;}
   .sec span{color:var(--grey); font-weight:600; font-size:13px;}
   .note{font-size:13px; color:var(--grey);}
-  .people{display:flex; flex-wrap:wrap; gap:10px;}
-  .person{display:flex; align-items:center; gap:9px; background:#fff; border:1.5px solid rgba(25,25,25,.10);
-          border-radius:999px; padding:5px 14px 5px 5px; font-weight:700; font-size:13.5px;}
-  .person .avatar{width:30px; height:30px; font-size:13px;}
-  .person .tag{font-size:11px; color:var(--blue); font-weight:700;}
-  .person .tag.adm{background:var(--blue); color:#fff; padding:2px 8px; border-radius:999px;}
+  /* chi ci va: pannello con conteggio, barra dei posti, righe degli iscritti e blocco "chi organizza" */
+  .gcount{display:flex; align-items:center; gap:8px; font-weight:700; font-size:14.5px; color:#1E8E3E;}
+  .gcount .dot{width:8px; height:8px; border-radius:999px; background:#1E8E3E; flex-shrink:0;}
+  .gcount .free{color:var(--grey); font-weight:600; font-size:13px;}
+  .gbar{height:6px; border-radius:999px; background:rgba(25,25,25,.08); overflow:hidden;}
+  .gbar i{display:block; height:100%; background:#1E8E3E; border-radius:999px; width:0; transition:width .4s ease;}
+  .gbar.full i{background:#B4530A;}
+  .sec2{display:flex; align-items:center; justify-content:space-between; gap:10px; font-weight:800; font-size:15px; margin-top:6px;}
+  .sec2 .textbtn{font-size:13px; padding:6px 10px; color:var(--blue); background:#fff; border:1.5px solid rgba(25,25,25,.12); border-radius:999px;}
+  .plist{display:flex; flex-direction:column; background:#fff; border:1.5px solid rgba(25,25,25,.10); border-radius:14px; overflow:hidden;}
+  .plist:empty{display:none;}
+  .person{display:flex; align-items:center; gap:10px; padding:9px 12px; font-size:13.5px;}
+  .person + .person{border-top:1px solid rgba(25,25,25,.07);}
+  .person .avatar{width:28px; height:28px; font-size:12px;}
+  .person .n{font-weight:700; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .person .s{font-size:12.5px; color:var(--grey); min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}
+  .person .r{margin-left:auto; display:flex; align-items:center; gap:8px; flex-shrink:0;}
+  .person .tag{font-size:11px; font-weight:700; padding:2px 8px; border-radius:999px; background:var(--tint); color:var(--blue);}
+  .person .tag.ok{background:#E6F4EA; color:#1E8E3E;}
+  .person .tag.adm{background:var(--blue); color:#fff;}
+  .person .tag.in{background:#E6F4EA; color:#1E8E3E;}
   .person .act{font-size:11.5px; color:var(--blue); font-weight:700; background:none; border:none; cursor:pointer;
-               font-family:var(--round); padding:0 0 0 4px;}
+               font-family:var(--round); padding:0;}
   .calmenu{display:flex; gap:8px; flex-wrap:wrap; background:#fff; border:1.5px solid rgba(25,25,25,.12);
            border-radius:14px; padding:10px;}
   .calmenu a{font-weight:700; font-size:13.5px; color:var(--blue); padding:8px 12px; border-radius:999px; background:var(--tint);}
@@ -232,6 +247,7 @@
       <button class="btn" onclick="openTicket()">Il mio biglietto</button>
       <button class="btn ghost" onclick="leaveEvent()">Non ci vado più</button>
       <button class="btn ghost" id="btn-share-in" hidden onclick="shareEvent()">Condividi</button>
+      <a class="btn ghost" id="lnk-manage-in" hidden href="#">Gestisci l'evento</a>
       <a class="btn ghost" id="lnk-edit-in" hidden href="#">Modifica l'evento</a>
       <button class="btn ghost" id="btn-guest-adm" hidden onclick="openGuest()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Aggiungi una persona</button>
       <span class="note" id="going-in"></span>
@@ -244,6 +260,7 @@
     <p class="m" id="host-full" hidden>È pieno. Per far entrare altre persone aumenta i posti da "Modifica l'evento".</p>
     <div class="row">
       <button class="btn" onclick="shareEvent()">Condividi l'evento</button>
+      <a class="btn ghost" id="lnk-manage" href="#">Gestisci l'evento</a>
       <a class="btn ghost" id="lnk-edit" href="#">Modifica l'evento</a>
       <a class="btn ghost" id="lnk-checkin" href="#">Segna chi arriva</a>
       <button class="btn ghost" onclick="openGuest()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Aggiungi una persona</button>
@@ -291,9 +308,14 @@
   </div>
 
   <!-- chi ci va -->
-  <div id="people-wrap" hidden>
-    <div class="sec" style="margin-bottom:8px">Chi ci va <span id="people-n"></span></div>
-    <div class="people" id="people"></div>
+  <div id="people-wrap" hidden style="display:flex; flex-direction:column; gap:10px">
+    <div class="sec">Chi ci va <span id="people-n"></span></div>
+    <div class="gcount"><span class="dot"></span><span id="people-going"></span><span class="free" id="people-free"></span></div>
+    <div class="gbar" id="people-bar" hidden><i></i></div>
+    <div class="sec2" id="people-head"><span>Ultimi iscritti</span><button class="textbtn" id="people-all" hidden onclick="showAllPeople()">Tutti →</button></div>
+    <div class="plist" id="people"></div>
+    <div class="sec2" id="hosts-head" hidden><span>Chi organizza</span></div>
+    <div class="plist" id="hosts"></div>
   </div>
 
   <!-- in lista d'attesa (solo chi organizza e i collaboratori) -->
@@ -408,7 +430,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1788851877"></script>
+<script src="app.js?v=1788961934"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -523,6 +545,7 @@
       document.getElementById("btn-share").hidden = true;
       document.getElementById("lnk-edit").href = "crea.html?edit=" + ev.id;
       document.getElementById("lnk-checkin").href = "checkin.html?id=" + ev.id;
+      document.getElementById("lnk-manage").href = "gestisci.html?id=" + ev.id;
     }
     loadCommunity();
     document.getElementById("lnk-report").href = "mailto:hello@anyplans.in?subject=" +
@@ -662,6 +685,7 @@
     // chi ha aperto il piano su un evento senza host (claimed_by, 0064) lo gestisce come un host
     if (ev.claimed_by && ev.claimed_by === me) canManage = true;
     document.getElementById("btn-guest-adm").hidden = !(canManage && !ev.is_mine);
+    const lm = document.getElementById("lnk-manage-in"); lm.hidden = !(canManage && !ev.is_mine); lm.href = "gestisci.html?id=" + ev.id;
     // ospiti senza account: li vedono solo chi gestisce e chi partecipa, agli altri non chiediamo nulla
     guests = [];
     if (logged && (canManage || (meRow && meRow.status === "going"))) {
@@ -673,18 +697,38 @@
     document.getElementById("people-wrap").hidden = true;
     if ((going.length || guests.length) && (lockState(ev) === "open" || inside)) {
       document.getElementById("people-wrap").hidden = false;
-      document.getElementById("people-n").textContent = "(" + (going.length + guests.length) + ")";
-      document.getElementById("people").innerHTML = going.map(p => {
-        const isHost = p.user_id === ev.host_id;
-        const opened = !ev.host_id && p.user_id === ev.claimed_by;
-        const isAdm = p.role === "admin" && !isHost && !opened;
-        let act = "";
-        if (ev.is_mine && !isHost) act = `<button class="act" onclick="setAdmin('${p.user_id}', ${!isAdm})">${isAdm ? "Togli collaboratore" : "Rendi collaboratore"}</button>`;
-        return `<div class="person"><div class="avatar"${avatarStyle(p.avatar_url)}>${p.avatar_url ? "" : esc((p.display_name || "?")[0].toUpperCase())}</div>` +
-          `<span>${esc(p.display_name || "Qualcuno")}</span>${isHost ? '<span class="tag">Organizza</span>' : ""}${opened ? '<span class="tag">Ha aperto il piano</span>' : ""}${isAdm ? '<span class="tag adm">Collaboratore</span>' : ""}${act}</div>`;
-      }).join("") + guests.map(g =>
-        `<div class="person"><div class="avatar">${esc((g.name || "?")[0].toUpperCase())}</div><span>${esc(g.name)}</span><span class="tag">Ospite</span>` +
-        (canManage ? `<button class="act" onclick="removeGuest('${esc(g.id)}')">Togli</button>` : "") + `</div>`).join("");
+      const total = going.length + guests.length;
+      document.getElementById("people-n").textContent = "(" + total + ")";
+      // conteggio in verde + barra dei posti (solo se c'è un massimo), come il pannello ospiti dei siti di biglietti
+      document.getElementById("people-going").textContent = total === 1 ? "1 ci va" : total + " ci vanno";
+      const max = Number(ev.max_participants) || 0, bar = document.getElementById("people-bar");
+      bar.hidden = !max;
+      if (max) {
+        const pct = Math.min(100, Math.round(total / max * 100));
+        bar.querySelector("i").style.width = pct + "%";
+        bar.classList.toggle("full", total >= max);
+        document.getElementById("people-free").textContent = total >= max ? "· pieno" : "· " + (max - total) + (max - total === 1 ? " posto libero" : " posti liberi") + " su " + max;
+      } else document.getElementById("people-free").textContent = "";
+      // chi organizza (host, chi ha aperto il piano, collaboratori) sta in un blocco a parte; gli altri sono "ultimi iscritti"
+      const roleOf = p => p.user_id === ev.host_id ? "host" : (!ev.host_id && p.user_id === ev.claimed_by) ? "opened" : p.role === "admin" ? "admin" : "";
+      const avatarOf = (url, name) => `<div class="avatar"${avatarStyle(url)}>${url ? "" : esc((name || "?")[0].toUpperCase())}</div>`;
+      const managers = going.filter(p => roleOf(p)), others = going.filter(p => !roleOf(p));
+      document.getElementById("hosts").innerHTML = managers.map(p => {
+        const r = roleOf(p);
+        const act = ev.is_mine && r === "admin" ? `<button class="act" onclick="setAdmin('${p.user_id}', false)">Togli</button>` : "";
+        const tag = r === "host" ? '<span class="tag">Organizza</span>' : r === "opened" ? '<span class="tag">Ha aperto il piano</span>' : '<span class="tag adm">Collaboratore</span>';
+        return `<div class="person">${avatarOf(p.avatar_url, p.display_name)}<span class="n">${esc(p.display_name || "Qualcuno")}</span><span class="r">${tag}${act}</span></div>`;
+      }).join("");
+      document.getElementById("hosts-head").hidden = !managers.length;
+      peopleRows = others.map(p =>
+        `<div class="person">${avatarOf(p.avatar_url, p.display_name)}<span class="n">${esc(p.display_name || "Qualcuno")}</span>` +
+        `<span class="r">${p.checked_in ? '<span class="tag in">Entrato</span>' : '<span class="tag ok">Ci va</span>'}` +
+        (ev.is_mine ? `<button class="act" onclick="setAdmin('${p.user_id}', true)">Rendi collaboratore</button>` : "") + `</span></div>`
+      ).concat(guests.map(g =>
+        `<div class="person">${avatarOf(null, g.name)}<span class="n">${esc(g.name)}</span><span class="s">ospite</span>` +
+        `<span class="r"><span class="tag ok">Ci va</span>` + (canManage ? `<button class="act" onclick="removeGuest('${esc(g.id)}')">Togli</button>` : "") + `</span></div>`));
+      document.getElementById("people-head").hidden = !peopleRows.length;
+      renderPeople(false);
       document.getElementById("people-note").hidden = !ev.is_mine;
     }
     if (canManage) loadWaitlist();
@@ -698,6 +742,17 @@
         `<button class="btn sm" onclick="respond('${p.user_id}', true)">Sì</button></div></div>`).join("");
     }
   }
+  // ultimi iscritti: al massimo 6 righe, il bottone "Tutti →" apre tutta la lista
+  let peopleRows = [];
+  const PEOPLE_MAX = 6;
+  function renderPeople(all){
+    const rows = all ? peopleRows : peopleRows.slice(0, PEOPLE_MAX);
+    document.getElementById("people").innerHTML = rows.join("");
+    const b = document.getElementById("people-all");
+    b.hidden = all || peopleRows.length <= PEOPLE_MAX;
+    b.textContent = "Tutti (" + peopleRows.length + ") →";
+  }
+  function showAllPeople(){ renderPeople(true); }
   // ---- lista d'attesa, lato chi organizza (activity_waitlist: agli altri 0 righe) ----
   let waitRows = [];
   async function loadWaitlist(){

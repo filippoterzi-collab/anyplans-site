@@ -69,14 +69,14 @@
   <a class="fw-manage" id="manage" href="impostazioni.html#gruppo" hidden>I gruppi che gestisco →</a>
 </main>
 
-<script src="app.js?v=1788851877"></script>
+<script src="app.js?v=1788961934"></script>
 <script>
   requireLogin();
   mountNav("", { col: 860 });
   mountTabbar("profilo");
   track("following_view");
 
-  const CAT_EMOJI = { sport:"🏃", cucina:"🍳", "creatività":"🏺", giardinaggio:"🌱", cultura:"🎪", benessere:"🧘" };
+  const CAT_EMOJI = { sport:"🏃", cucina:"🍳", "creatività":"🏺", giardinaggio:"🌱", cultura:"🎪", benessere:"🧘", estivo:"☀️" };
   const emojiOf = c => c.emoji || CAT_EMOJI[c.category] || "📍";
   const upcomingTxt = n => { n = Number(n) || 0; return n === 0 ? "Nessun evento in programma" : n === 1 ? "1 evento in programma" : n + " eventi in programma"; };
   let ROWS = []; // solo i gruppi che seguo (role === "follower"), in ordine di nome

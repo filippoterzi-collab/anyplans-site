@@ -316,6 +316,7 @@
         <div class="chips" role="group" aria-labelledby="cc-h-cat">
           <button class="chip cat-chip on" data-cat="" aria-pressed="true" onclick="setCat(this)">Tutto</button>
           <button class="chip cat-chip" data-cat="festival" aria-pressed="false" onclick="setCat(this)">🎪 Sagre</button>
+          <button class="chip cat-chip" data-cat="estivo" aria-pressed="false" onclick="setCat(this)">☀️ Estivi</button>
           <button class="chip cat-chip" data-cat="sport" aria-pressed="false" onclick="setCat(this)">🏃 Sport</button>
           <button class="chip cat-chip" data-cat="cucina" aria-pressed="false" onclick="setCat(this)">🍳 Cucina</button>
           <button class="chip cat-chip" data-cat="creatività" aria-pressed="false" onclick="setCat(this)">🏺 Creatività</button>
@@ -389,7 +390,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1788851877"></script>
+<script src="app.js?v=1788961934"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -538,17 +539,17 @@
   const fl = document.getElementById("fl");
   const isSheetOpen = () => fl.classList.contains("fl-open");
   const inMapView = () => mobileFilters.matches && !document.body.classList.contains("showlist");
-  // filtro "Cosa?" (deciso 06/09/2026): "" = tutto, "festival" = solo sagre (slug), altrimenti una categoria
+  // filtro "Cosa?" (deciso 06/09/2026): "" = tutto, "festival" = solo sagre e "estivo" = solo estivi (slug), altrimenti una categoria
   let catSel = "";
-  const CAT_CHIP = { festival:"Sagre", sport:"Sport", cucina:"Cucina", "creatività":"Creatività", giardinaggio:"Volontariato", benessere:"Benessere" };
+  const CAT_CHIP = { festival:"Sagre", estivo:"Estivi", sport:"Sport", cucina:"Cucina", "creatività":"Creatività", giardinaggio:"Volontariato", benessere:"Benessere" };
   const catCompact = () => CAT_CHIP[catSel] || "";
-  const inCat = e => !catSel || (catSel === "festival" ? e.slug === "festival" : e.cat === catSel);
+  const inCat = e => !catSel || (catSel === "festival" || catSel === "estivo" ? e.slug === catSel : e.cat === catSel);
   function setCat(btn){ catSel = catSel === btn.dataset.cat ? "" : btn.dataset.cat; refit = true; choose(); }
   function syncCat(){ document.querySelectorAll(".cat-chip").forEach(c => { const on = c.dataset.cat === catSel; c.classList.toggle("on", on); c.setAttribute("aria-pressed", String(on)); }); }
   const hasChoice = () => !!(day || where || qText || catSel);
   const whereIs = k => !!(where && where.kind === k);
   const shortLabel = slug => ((CATALOG[slug] || {}).l || slug).split(/[,/]/)[0].trim();
-  const CAT_EMOJI = { sport:"🏃", cucina:"🍳", "creatività":"🏺", giardinaggio:"🌱", cultura:"🎪", benessere:"🧘" };
+  const CAT_EMOJI = { sport:"🏃", cucina:"🍳", "creatività":"🏺", giardinaggio:"🌱", cultura:"🎪", benessere:"🧘", estivo:"☀️" };
   const EXAMPLES = ["Sport", "Cucina", "Ceramica", "Feste di paese", "Volontariato", "Gratis"];
   const qInput = document.getElementById("q");
 

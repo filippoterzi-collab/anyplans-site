@@ -111,12 +111,13 @@ const CATALOG = {
   dinner:    { e:"🍽️", l:"Cena / aperitivo",          c:"cucina" },
   painting:  { e:"🎨", l:"Pittura / arte",            c:"creatività" },
   gardening: { e:"🌱", l:"Giardinaggio / volontariato", c:"giardinaggio" },
-  festival:  { e:"🎉", l:"Feste, sagre ed eventi di paese",     c:"cultura" }
+  festival:  { e:"🎉", l:"Feste, sagre ed eventi di paese",     c:"cultura" },
+  estivo:    { e:"☀️", l:"Estivo",                    c:"cultura" }
 };
 
 // categoria del sito per ogni slug non sportivo; tutto il resto è "sport"
 const CAT_BY_SLUG = { cooking:"cucina", dinner:"cucina", ceramics:"creatività", painting:"creatività",
-                      gardening:"giardinaggio", festival:"cultura", yoga:"benessere" };
+                      gardening:"giardinaggio", festival:"cultura", estivo:"cultura", yoga:"benessere" };
 // parole con cui la gente cerca ogni attività (il titolo da solo non basta: "corsa" vs "corro 10k")
 const SEARCH_WORDS = {
   running: "corsa correre corro run running jogging km parco allenamento",
@@ -149,7 +150,8 @@ const SEARCH_WORDS = {
   dinner: "cena aperitivo pranzo mangiare ristorante pizzeria pizza dinner apericena bere birra vino compagnia tavolata",
   painting: "pittura disegno arte corso creativo painting drawing art acquerello quadro laboratorio",
   gardening: "giardinaggio orto volontariato verde gardening garden piante natura pulizia ambiente",
-  festival: "festa sagra festival evento concerto paese party musica live serata fiera mercato mercatino mercatini luna park fuochi"
+  festival: "festa sagra festival evento concerto paese party musica live serata fiera mercato mercatino mercatini luna park fuochi",
+  estivo: "estivo estivi estate bar all'aperto parco serata aperitivo birra dj chiringuito"
 };
 // parole simili: "corse" trova "corsa", "scalate" trova "scalata" (si confronta anche la radice)
 const stem = w => w.length > 4 ? w.replace(/(ando|endo|are|ere|ire|ate|ata|ato|ati|ing|s|e|a|o|i)$/, "") : w;
