@@ -550,7 +550,10 @@ ${p.co.length ? `<div class="box"><h2>Insieme a</h2><div class="tags">${p.co.map
 ${faqHtml(faq)}
 ${sim.length ? `<h2>Eventi simili</h2>${listHtml(sim)}` : ""}
 `;
-  const mapHead = hasMap ? `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css">` : "";
+  // Logged-in visitors (session in storage, same key as app.js) jump to the app page, which has join state, faces and
+  // live counts; crawlers and visitors without an account have empty storage and stay on this static page.
+  const appScript = p.isPast ? "" : `<script>(function(){try{var s=JSON.parse(localStorage.getItem("anyplans_session")||sessionStorage.getItem("anyplans_session")||"null");if(s&&s.access_token)location.replace("/${CITY}/evento.html?id=${esc(p.id)}");}catch(_){}})();</script>`;
+  const mapHead = appScript + (hasMap ? `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css">` : "");
   const mapScript = hasMap ? `<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script>
   (function(){ var lat = ${Number(p.lat)}, lng = ${Number(p.lng)};

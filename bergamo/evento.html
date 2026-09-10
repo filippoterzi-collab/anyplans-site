@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, follow">
 <title>Evento · anyplans</title>
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
 <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
@@ -408,7 +409,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1789059563"></script>
+<script src="app.js?v=1789059750"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -550,6 +551,8 @@
     new maplibregl.Marker({ element: el }).setLngLat([ev.lng, ev.lat]).addTo(map);
 
     loadPeople();
+    // join=1 vale una volta sola: tolto dall'indirizzo, così un refresh dopo "Non vado più" non ti iscrive di nuovo
+    if (wantJoin) history.replaceState(null, "", location.pathname + "?id=" + encodeURIComponent(ev.id));
     if (wantJoin && logged && !ev.is_mine && ev.my_status !== "going" && ev.my_status !== "requested" && ev.my_status !== "waitlisted") joinEvent();
   }
 
