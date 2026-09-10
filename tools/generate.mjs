@@ -402,7 +402,8 @@ function eventJsonLd(p, url) {
   const offers = { "@type": "Offer", price: p.price_cents ? (p.price_cents / 100).toFixed(2) : "0", priceCurrency: "EUR", url, availability: "https://schema.org/InStock", validFrom };
   const events = dates.map(d => ({
     "@context": "https://schema.org", "@type": "Event",
-    name: p.title, startDate: isoLocal(d.start, d.tz), ...(d.end ? { endDate: isoLocal(d.end, d.tz) } : {}),
+    // Google wants endDate: without an end time we use the same rule as the "upcoming" logic above (3 hours after the start)
+    name: p.title, startDate: isoLocal(d.start, d.tz), endDate: isoLocal(d.end || new Date(d.start.getTime() + 3 * 3600e3), d.tz),
     eventStatus: "https://schema.org/EventScheduled",
     eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
     location, image: [image], description: cut(p.description, 500) || `${p.tipo.label} a ${placeShort(p)}`,
