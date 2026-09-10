@@ -118,6 +118,13 @@
       </div>
       <div class="sw"><div class="k"></div></div>
     </div>
+    <div class="toggle-row on" id="showp" style="margin-top:12px" onclick="toggleShowP()" role="switch" aria-checked="true" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); toggleShowP()}">
+      <div>
+        <div class="t">Chi partecipa si vede</div>
+        <div class="s" id="showp-s">Nella pagina dell'evento si vedono i nomi di chi ci va.</div>
+      </div>
+      <div class="sw"><div class="k"></div></div>
+    </div>
   </div>
 
   <div>
@@ -260,7 +267,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1789059750"></script>
+<script src="app.js?v=1789060122"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -430,6 +437,7 @@
     setPrivate(a.visibility === "private");
     setVis(a.visibility === "request" || (a.visibility === "private" && a.approval_required) ? "request" : "public");
     editVisibility = a.visibility || "open"; editApproval = !!a.approval_required;
+    editShowP = a.show_participants !== false; setShowP(editShowP);
     editGender = a.gender_allowed || null; setGender(editGender);
     const rco = await rpc("activity_coorganizers", { p_activity_id: editId });
     editCo = rco && rco.ok ? (await rco.json().catch(() => [])).map(x => x.id) : [];
@@ -599,6 +607,16 @@
   }
   function setPrivate(on){ privateOn = on; const r = document.getElementById("priv"); r.classList.toggle("on", on); r.setAttribute("aria-checked", String(on)); }
   function togglePrivate(){ setPrivate(!privateOn); }
+  // chi partecipa si vede (0083): spento, la lista la vedono solo host e collaboratori
+  let editShowP = true;
+  function setShowP(on){ const r = document.getElementById("showp"); r.classList.toggle("on", on); r.setAttribute("aria-checked", String(on)); document.getElementById("showp-s").textContent = on ? "Nella pagina dell'evento si vedono i nomi di chi ci va." : "I nomi di chi ci va li vedete solo tu e i collaboratori. Il numero resta visibile."; }
+  function toggleShowP(){ setShowP(!document.getElementById("showp").classList.contains("on")); }
+  const chosenShowP = () => document.getElementById("showp").classList.contains("on");
+  async function saveShowP(activityId, wanted, current){
+    if (wanted === current) return;
+    const r = await rpc("set_activity_show_participants", { p_activity_id: activityId, p_show: wanted });
+    if (!r || !r.ok) toast("Salvato, ma \"Chi partecipa si vede\" no. Riprova da \"Modifica l'evento\".");
+  }
   const chosenApproval = () => visChoice === "request";
   async function saveApproval(activityId, wanted, current){
     if (wanted === current) return;
@@ -811,6 +829,7 @@
         await saveVisibility(editId, chosenVisibility(), editVisibility);
         if (chosenVisibility() === "private") await saveApproval(editId, chosenApproval(), editApproval);
         await saveGender(editId, genderChoice, editGender);
+        await saveShowP(editId, chosenShowP(), editShowP);
         await saveCo(editId);
         if (hasCap && !chosenApproval()) await saveWaitlist(editId, chosenWaitlist(), editWaitlist);
         if (editSport && sel.value !== editSport) {
@@ -851,6 +870,7 @@
       await savePhoto(newId);
       if (chosenVisibility() === "private") { await saveVisibility(newId, "private", "open"); if (chosenApproval()) await saveApproval(newId, true, false); }
       if (genderChoice) await saveGender(newId, genderChoice, null);
+      if (!chosenShowP()) await saveShowP(newId, false, true);
       await saveCo(newId);
       if (hasCap && !chosenApproval() && !chosenWaitlist()) await saveWaitlist(newId, false, true);
       const asC = document.getElementById("as").value;

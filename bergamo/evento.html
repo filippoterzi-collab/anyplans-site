@@ -320,6 +320,7 @@
     <div class="plist" id="hosts"></div>
     <div class="sec2" id="people-head" hidden><span>Ultimi iscritti</span><button class="textbtn" id="people-all" hidden onclick="showAllPeople()">Tutti →</button></div>
     <div class="plist" id="people" hidden></div>
+    <p id="people-hidden" hidden style="font-size:14px; color:var(--grey)">I nomi di chi partecipa li vede solo chi organizza.</p>
   </div>
 
   <!-- in lista d'attesa (solo chi organizza e i collaboratori) -->
@@ -409,7 +410,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1789059750"></script>
+<script src="app.js?v=1789060122"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -720,6 +721,8 @@
         `<div class="person">${avatarOf(null, g.name)}<span class="n">${esc(g.name)}</span><span class="s">ospite</span></div>`));
       document.getElementById("people-head").hidden = !peopleRows.length;
       document.getElementById("people").hidden = !peopleRows.length;
+      // show_participants (0083): spento, chi non gestisce riceve solo host/collaboratori/sé stesso
+      document.getElementById("people-hidden").hidden = !(ev.show_participants === false && !canManage);
       renderPeople(false);
     }
   }
