@@ -131,6 +131,10 @@ const rows = rawRows.map(r => {
     community_slug: r.community_slug || null, community_name: r.community_name || null,
     community_avatar: r.community_avatar_url || null,
     co: Array.isArray(r.co_communities) ? r.co_communities : [],
+    // 0082: chi organizza con il nome (host + collaboratori) e posti massimi
+    host_name: r.host_name ? String(r.host_name).trim() : null,
+    admins: Array.isArray(r.organizer_names) ? r.organizer_names.filter(Boolean) : [],
+    max: Number(r.max_participants) || 0,
     source_url: r.source_url || null, source: r.source, visibility: r.visibility,
     updated: r.updated_at ? new Date(r.updated_at) : start
   };
@@ -373,6 +377,7 @@ function organizer(p) {
     return { name: p.community_name, url: groupUrl({ slug: p.community_slug }), kind: "gruppo", instagram: g?.instagram_handle ? `https://instagram.com/${String(g.instagram_handle).replace(/^@/, "")}` : null };   // slug del gruppo, non dell'evento
   }
   if (p.club) return { name: p.club, url: null, kind: "club" };
+  if (p.host_name) return { name: p.host_name, url: null, kind: "utente" };
   return { name: "Un utente di anyplans", url: null, kind: "utente" };
 }
 // "Piazzale della Chiesa, Carvico" -> Carvico; a last segment with digits or the city name itself is not a locality
@@ -457,6 +462,7 @@ function eventFaq(p, org) {
     : `${p.title} è gratis: non serve biglietto${p.price_note ? ` (${p.price_note})` : ""}.`;
   const who = org.kind === "gruppo" ? `Lo organizza ${org.name}, un gruppo che pubblica i suoi eventi su anyplans: nella sua pagina trovi le altre date e i contatti.`
     : org.kind === "club" ? (p.town ? `È un evento di paese a ${p.town}: anyplans lo raccoglie dal programma pubblicato dal comune, dall'oratorio o dall'associazione, e ti fa vedere chi altro ci va.` : `Lo organizza ${org.name}. anyplans raccoglie l'evento e ti fa vedere chi altro ci va.`)
+    : p.host_name ? `Lo organizza ${org.name}, una persona registrata su anyplans${p.admins.length ? `, insieme a ${p.admins.join(", ")}` : ""}.`
     : `Lo organizza una persona registrata su anyplans.`;
   return [
     { q: `Quando si tiene ${p.title}?`, a: when },
@@ -509,10 +515,18 @@ ${p.description ? `<div class="box"><h2>Di cosa si tratta</h2><div class="desc">
   <h2>Prezzo</h2>
   <div><b>${esc(fmtPrice(p.price_cents))}</b>${p.price_note ? ` <span class="m">${esc(p.price_note)}</span>` : ""}</div>
 </div>
+${p.going > 0 && !p.isPast ? `<div class="box">
+  <h2>Chi ci va <span class="s">(${p.going})</span></h2>
+  <div><b style="color:#1E8E3E">${p.going === 1 ? "1 ci va" : `${p.going} ci vanno`}</b>${p.max ? ` <span class="m">· ${p.going >= p.max ? "pieno" : `${p.max - p.going} ${p.max - p.going === 1 ? "posto libero" : "posti liberi"} su ${p.max}`}</span>` : ""}</div>
+  ${p.max ? `<div style="height:8px;border-radius:999px;background:#E6F4EA;overflow:hidden"><i style="display:block;height:100%;width:${Math.min(100, Math.round(p.going / p.max * 100))}%;background:${p.going >= p.max ? "#B3261E" : "#1E8E3E"};border-radius:999px"></i></div>` : ""}
+  <div class="m">Chi ci va lo vedi quando ti iscrivi.</div>
+</div>` : ""}
 <div class="box">
-  <h2>Organizza</h2>
+  <h2>Chi organizza</h2>
   <div class="row">${org.kind === "gruppo" ? `<div class="avatar">${p.community_avatar ? `<img src="${esc(p.community_avatar)}" alt="" width="40" height="40" loading="lazy">` : esc(org.name[0].toUpperCase())}</div><div><a class="n" href="${esc(org.url)}">${esc(org.name)}</a><div class="s">Gruppo su anyplans</div></div>`
-    : `<div><div class="n">${esc(org.name)}</div>${org.kind === "club" ? `<div class="s">Comune o associazione</div>` : ""}</div>`}</div>
+    : org.kind === "club" ? `<div><div class="n">${esc(org.name)}</div><div class="s">Comune o associazione</div></div>`
+    : `<div class="avatar">${esc(org.name[0].toUpperCase())}</div><div><div class="n">${esc(org.name)}</div><div class="s">Organizza</div></div>`}</div>
+  ${p.admins.map(n => `<div class="row"><div class="avatar" style="background:var(--tint);color:var(--blue)">${esc(n[0].toUpperCase())}</div><div><div class="n">${esc(n)}</div><div class="s">Collaboratore</div></div></div>`).join("\n  ")}
 ${p.co.length ? `<div class="box"><h2>Insieme a</h2><div class="tags">${p.co.map(slug => { const c = groups.find(x => x.slug === slug); return c ? `<a href="${esc(groupUrl(c))}">${c.emoji || "👥"} ${esc(c.name)}</a>` : ""; }).join("")}</div></div>` : ""}
 </div>
 <div class="cta">
