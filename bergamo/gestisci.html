@@ -59,7 +59,7 @@
   .tools input{flex:1; min-width:160px;}
   .ibtn{width:40px; height:40px; border-radius:12px; border:1.5px solid rgba(25,25,25,.12); background:#fff; cursor:pointer; display:inline-flex; align-items:center; justify-content:center; color:var(--ink); font-size:16px;}
   .ibtn[aria-pressed="true"]{background:var(--tint); border-color:var(--blue); color:var(--blue);}
-  .plist{background:#fff; border:1.5px solid rgba(25,25,25,.08); border-radius:18px; overflow:hidden;}
+  .plist{background:#fff; border:1.5px solid rgba(25,25,25,.08); border-radius:18px;}
   .person{display:flex; align-items:flex-start; gap:12px; padding:12px 14px; font-size:14px;}
   .person + .person{border-top:1px solid rgba(25,25,25,.07);}
   .avatar{width:36px; height:36px; border-radius:50%; background:var(--tint); color:var(--blue); font-weight:800; font-size:13px; display:flex; align-items:center; justify-content:center; flex-shrink:0; background-size:cover; background-position:center;}
@@ -80,6 +80,7 @@
   .more > button[aria-expanded="true"]{background:var(--tint); border-color:var(--blue); color:var(--blue);}
   .menu{position:absolute; right:0; top:40px; z-index:5; background:#fff; border:1.5px solid rgba(25,25,25,.10); border-radius:14px; box-shadow:0 8px 24px rgba(25,25,25,.12); min-width:200px; padding:6px; display:none;}
   .menu[data-open="true"]{display:block;}
+  .menu.up{top:auto; bottom:40px;}
   .menu button{display:block; width:100%; text-align:left; background:none; border:none; cursor:pointer; font-family:var(--round); font-size:14px; font-weight:700; color:var(--ink); padding:10px 12px; border-radius:10px;}
   .menu button:hover{background:var(--tint);}
   .menu button.danger{color:var(--red);}
@@ -172,7 +173,7 @@
   </div>
 </main>
 <div id="toast"></div>
-<script src="app.js?v=1789057912"></script>
+<script src="app.js?v=1789058375"></script>
 <script>
   requireLogin();
   mountNav("i miei eventi", { col: 860 });
@@ -295,7 +296,11 @@
   }
   function ansHtml(uid){ const list = answers[uid] || []; return list.length ? list.map(a => `<span class="ans">${esc(a.prompt)}: <b>${esc(a.answer)}</b></span>`).join("") : ""; }
   function closeMenus(except){ document.querySelectorAll(".more > button[aria-expanded=\"true\"]").forEach(b => { if (b !== except) { b.setAttribute("aria-expanded", "false"); b.nextElementSibling.dataset.open = "false"; } }); }
-  function toggleMenu(btn){ const open = btn.getAttribute("aria-expanded") === "true"; closeMenus(btn); btn.setAttribute("aria-expanded", String(!open)); btn.nextElementSibling.dataset.open = String(!open); }
+  function toggleMenu(btn){
+    const open = btn.getAttribute("aria-expanded") === "true", menu = btn.nextElementSibling; closeMenus(btn);
+    btn.setAttribute("aria-expanded", String(!open)); menu.dataset.open = String(!open);
+    if (!open) menu.classList.toggle("up", btn.getBoundingClientRect().bottom + menu.offsetHeight + 90 > window.innerHeight);
+  }
   document.addEventListener("click", e => { if (!e.target.closest(".more")) closeMenus(); });
   function toggleTable(){ tableMode = !tableMode; document.getElementById("btn-table").setAttribute("aria-pressed", String(tableMode)); draw(); }
 
