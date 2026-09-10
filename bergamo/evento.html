@@ -193,6 +193,14 @@
   </div>
 
   <!-- box azione -->
+  <!-- eventi Playtomic (10/09/2026): ci si iscrive sul loro sito, il bottone anyplans passa in secondo piano -->
+  <div class="box" id="box-ext" hidden>
+    <h2>Ti iscrivi su Playtomic</h2>
+    <p class="m">Posto e pagamento si prendono su Playtomic, dal club. Poi torna qui e dì che ci vai: così gli altri lo vedono.</p>
+    <div class="row">
+      <a class="btn" id="ext-link" target="_blank" rel="noopener" onclick="track('source_open')">Iscriviti su Playtomic →</a>
+    </div>
+  </div>
   <div class="box" id="box-guest" hidden>
     <h2 id="guest-h2">Ci sei?</h2>
     <p class="m" id="guest-m">Per iscriverti serve un account: è gratis e ci vuole un minuto. Gli altri iscritti vedranno il tuo nome.</p>
@@ -400,7 +408,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1789032864"></script>
+<script src="app.js?v=1789038459"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -500,6 +508,12 @@
       document.getElementById("chip-agg").hidden = false;
       const l = document.getElementById("source-link");
       if (ev.source_url) l.href = ev.source_url; else l.parentElement.textContent = "I dettagli possono cambiare";
+      if (/^https:\/\/playtomic\.com\//.test(ev.source_url || "")) {
+        document.getElementById("box-ext").hidden = false;
+        document.getElementById("ext-link").href = ev.source_url;
+        for (const id of ["box-guest", "box-lock", "box-join"])
+          document.querySelectorAll("#" + id + " .btn").forEach(b => b.classList.add("ghost"));
+      }
     }
     if (ev.description) {
       document.getElementById("desc-wrap").hidden = false;
