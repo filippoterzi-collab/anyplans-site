@@ -88,7 +88,8 @@ const ORG = { "@type": "Organization", "@id": SITE + "/#org", name: "anyplans", 
   founder: { "@type": "Person", name: "Filippo Terzi", image: SITE + "/founder.jpg", jobTitle: "Fondatore" } };
 const fmtDate = (d) => new Intl.DateTimeFormat("it-IT", { timeZone: DEFAULT_TZ, day: "numeric", month: "long", year: "numeric" }).format(d);
 // answer engines (ChatGPT, Perplexity, AI Overviews) lift question + short answer: every page gets a visible FAQ and its FAQPage schema
-const faqHtml = (faq) => `<div class="box" id="domande"><h2>Domande frequenti</h2>${faq.map(f => `<h3>${esc(f.q)}</h3><p>${esc(f.a)}</p>`).join("")}</div>`;
+// domande chiuse (details): si aprono al tocco, il testo resta nella pagina per Google (FAQPage in JSON-LD)
+const faqHtml = (faq) => `<div class="box" id="domande"><h2>Domande frequenti</h2>${faq.map(f => `<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("")}</div>`;
 const faqLd = (faq) => jsonld({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) });
 const joinIt = (a) => a.length <= 1 ? a.join("") : a.slice(0, -1).join(", ") + " e " + a[a.length - 1];
 
@@ -289,6 +290,9 @@ main{max-width:860px;margin:0 auto;padding:16px 22px 70px;display:flex;flex-dire
 .box h3{font-size:15.5px;font-weight:700;margin-top:6px}.box p{font-size:15px;line-height:1.6}
 .upd{font-size:12.5px;color:var(--grey)}
 .cta{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+.cover #map{display:block;width:100%;height:100%;cursor:pointer}
+.hero-when{align-items:flex-start}.hero-when .place{color:var(--blue);font-weight:700;display:block;margin-top:2px}.hero-when .t b.rel{color:#B4530A;margin-left:6px}.hero-when .t b.rel.now{color:#1E8E3E}
+#domande details{border-top:1px solid rgba(25,25,25,.08);padding:10px 0}#domande details:first-of-type{border-top:0}#domande summary{cursor:pointer;font-weight:700;font-size:15px;list-style:none;display:flex;justify-content:space-between;gap:10px}#domande summary::-webkit-details-marker{display:none}#domande summary::after{content:"+";color:var(--blue);font-weight:800}#domande details[open] summary::after{content:"–"}#domande details p{margin:8px 0 0;color:var(--grey);font-size:14.5px}
 footer{border-top:1px solid rgba(0,0,0,.06);padding:32px 22px 44px;color:var(--grey);font-size:13.5px}
 footer .wrap{max-width:860px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center}
 footer a:hover{color:var(--ink)}
@@ -296,7 +300,7 @@ footer a:hover{color:var(--ink)}
 `.trim();
 
 let lastCrumbs = null; // set by crumbs() while the body is built, read by layout() right after (pages are built one at a time)
-function layout({ title, description, url, image, jsonLd, body, ogType = "website", modified = NOW }) {
+function layout({ title, description, url, image, jsonLd, body, ogType = "website", modified = NOW, head = "" }) {
   const crumbLd = lastCrumbs ? jsonld({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: lastCrumbs.map(([l, h], i) =>
     ({ "@type": "ListItem", position: i + 1, name: l, ...(h ? { item: h.startsWith("http") ? h : SITE + h } : { item: url }) })) }) : "";
   lastCrumbs = null;
@@ -330,6 +334,7 @@ ${pageLd}
 ${crumbLd}
 ${jsonLd || ""}
 <style>${CSS}</style>
+${head}
 </head>
 <body>
 <header><div class="nav">
@@ -475,6 +480,7 @@ function eventFaq(p, org) {
 function eventPage(p) {
   const url = eventUrl(p);
   const tz = p.tz, t = p.tipo, org = organizer(p);
+  const hasMap = p.visibility === "open" && p.lat != null && p.lng != null && !p.isPast;
   const where = placeShort(p);
   const faq = eventFaq(p, org);
   const first = p.up[0] || p.dates[p.dates.length - 1];
@@ -495,21 +501,28 @@ function eventPage(p) {
 
   const body = `
 ${crumbs(crumbItems)}
-<div class="cover">${p.photo ? `<img src="${esc(photoSrc(p.photo))}" alt="${esc(p.title)}" width="800" height="230" loading="lazy" decoding="async">` : p.emoji}</div>
+<div class="cover">${hasMap ? `<a id="map" href="${esc(mapsUrl(p.lat, p.lng))}" rel="noopener" aria-label="Apri in Mappe"></a>` : p.photo ? `<img src="${esc(photoSrc(p.photo))}" alt="${esc(p.title)}" width="800" height="230" loading="lazy" decoding="async">` : p.emoji}</div>
 <div class="chips"><span class="chip">${p.emoji} ${esc(t.label)}</span><span class="chip w">${esc(fmtPrice(p.price_cents))}</span>${p.isPast ? `<span class="chip past">Evento passato</span>` : ""}${townIndex ? `<a class="chip w" href="/${CITY}/${townIndex.slug}/">${esc(p.town)}</a>` : ""}</div>
 <h1>${esc(p.title)}</h1>
+${p.isPast ? "" : `<div class="when hero-when"><div class="datebox"><div class="mo">${esc(cap(new Intl.DateTimeFormat("it-IT", { timeZone: tz, month: "short" }).format(first.start).replace(".", "")))}</div><div class="d">${esc(new Intl.DateTimeFormat("it-IT", { timeZone: tz, day: "numeric" }).format(first.start))}</div></div>
+  <div><div class="t"><span class="rel-day" data-start="${first.start.toISOString()}"></span>${esc(fmtDay(first.start, tz))} · <b>${esc(fmtTime(first.start, tz))}</b>${first.end ? ` <span class="s">(fino alle ${esc(fmtTime(first.end, tz))})</span>` : ""}<b class="rel" data-start="${first.start.toISOString()}"${first.end ? ` data-end="${first.end.toISOString()}"` : ""}></b></div>
+  ${hasMap ? `<a class="s place" href="${esc(mapsUrl(p.lat, p.lng))}" rel="noopener">${esc(p.meeting || "Zona indicativa")} · apri nelle mappe →</a>` : p.meeting ? `<div class="s">${esc(p.meeting)}</div>` : ""}</div></div>
+<div class="box">
+  <h2>${p.going >= 2 ? `Aggiungiti a ${p.going} persone` : p.going === 1 ? "Aggiungiti a 1 persona" : org.kind === "gruppo" ? "Aggiungiti: l'evento c'è già" : "Ci sei?"}</h2>
+  <div class="cta"><a class="btn" href="/${CITY}/evento.html?id=${esc(p.id)}&amp;join=1">Ci vado</a><span class="m">${p.going > 0 ? `${p.going === 1 ? "1 persona ci va" : `${p.going} ci vanno`}${p.max ? ` · ${p.going >= p.max ? "pieno" : `${p.max - p.going} ${p.max - p.going === 1 ? "posto libero" : "posti liberi"}`}` : ""}` : `Organizzato da ${esc(org.name)}: sei il primo ad aggiungerti`}</span></div>
+</div>`}
 <p class="lead">${esc(eventSummary(p, org, first))}</p>
 ${p.isPast ? `<div class="box in"><h2>Questo evento è passato</h2><div class="m">L'ultima data è stata ${esc(fmtLong(first.start, tz).toLowerCase())}. Se torna, le date nuove compaiono qui.</div><div class="cta"><a class="btn" href="/${CITY}/eventi.html">Vedi cosa c'è adesso</a></div></div>` : ""}
-<div class="box">
+${p.isPast || p.up.length > 1 || p.past.length ? `<div class="box">
   <h2>${p.up.length > 1 ? "Le date" : "Quando"}</h2>
   ${p.up.map(d => whenRow(d, tz, false)).join("\n")}
   ${p.past.length ? (p.up.length ? `<div class="m">Date già passate</div>` : "") + p.past.slice(-12).reverse().map(d => whenRow(d, tz, true)).join("\n") : ""}
-</div>
-<div class="box">
+</div>` : ""}
+${hasMap ? "" : `<div class="box">
   <h2>Dove</h2>
   ${p.meeting ? `<div>${esc(p.meeting)}${p.town && !norm(p.meeting).includes(norm(p.town)) ? `, ${esc(p.town)}` : ""}</div>` : `<div>Zona indicativa: ${esc(CITY_NAME)} e dintorni, luogo esatto dopo l'approvazione.</div>`}
   ${p.visibility === "open" && p.lat != null && p.lng != null ? `<div><a class="lnk" href="${esc(mapsUrl(p.lat, p.lng))}" rel="noopener">Apri in Mappe</a></div>` : ""}
-</div>
+</div>`}
 ${p.description ? `<div class="box"><h2>Di cosa si tratta</h2><div class="desc">${esc(p.description)}</div></div>` : ""}
 <div class="box">
   <h2>Prezzo</h2>
@@ -537,7 +550,31 @@ ${p.co.length ? `<div class="box"><h2>Insieme a</h2><div class="tags">${p.co.map
 ${faqHtml(faq)}
 ${sim.length ? `<h2>Eventi simili</h2>${listHtml(sim)}` : ""}
 `;
-  return layout({ title, description: descr, url, image, jsonLd: [eventJsonLd(p, url), faqLd(faq)].filter(Boolean).join("\n"), body, ogType: "article", modified: p.updated });
+  const mapHead = hasMap ? `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css">` : "";
+  const mapScript = hasMap ? `<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
+<script>
+  (function(){ var lat = ${Number(p.lat)}, lng = ${Number(p.lng)};
+    var map = new maplibregl.Map({ container: "map", style: "https://tiles.openfreemap.org/styles/liberty", center: [lng, lat], zoom: 14.5, interactive: false, attributionControl: false });
+    var el = document.createElement("div");
+    el.style.cssText = "width:40px;height:40px;background:#1B4FD8;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:19px;box-shadow:0 1px 5px rgba(0,0,0,.2)";
+    el.textContent = ${JSON.stringify(p.emoji || "📍")};
+    new maplibregl.Marker({ element: el }).setLngLat([lng, lat]).addTo(map);
+  })();
+</script>` : "";
+  const relScript = p.isPast ? "" : `<script>
+  (function(){ var el = document.querySelector(".rel"), day = document.querySelector(".rel-day"); if (!el) return;
+    var s = new Date(el.dataset.start), e = el.dataset.end ? new Date(el.dataset.end) : new Date(s.getTime() + 3 * 3600e3), now = new Date();
+    var d0 = new Date(now.getFullYear(), now.getMonth(), now.getDate()), diffDays = Math.round((new Date(s.getFullYear(), s.getMonth(), s.getDate()) - d0) / 864e5);
+    if (day) day.textContent = diffDays === 0 ? "Oggi · " : diffDays === 1 ? "Domani · " : "";
+    var min = Math.round((s - now) / 60000), txt = "";
+    if (now >= s && now <= e) { txt = "in corso adesso"; el.classList.add("now"); }
+    else if (min > 0 && min < 60) txt = "tra " + min + " min";
+    else if (min > 0 && min < 1440) { var h = Math.floor(min / 60), m = min % 60; txt = "tra " + h + " h" + (m ? " " + m + " min" : ""); }
+    else if (min > 0 && diffDays <= 7) txt = "tra " + diffDays + (diffDays === 1 ? " giorno" : " giorni");
+    el.textContent = txt ? "· " + txt : "";
+  })();
+</script>`;
+  return layout({ title, description: descr, url, image, jsonLd: [eventJsonLd(p, url), faqLd(faq)].filter(Boolean).join("\n"), body: body + mapScript + relScript, ogType: "article", modified: p.updated, head: mapHead });
 }
 
 // ── run club (0070: community.sport = 'running' | 'walking', community_schedule) ────────────
