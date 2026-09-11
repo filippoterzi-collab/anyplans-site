@@ -12,6 +12,7 @@ on:
     branches: [main]
     paths-ignore:
       - "bergamo/*/**"
+      - "en/bergamo/**"
       - "sitemap.xml"
       - "robots.txt"
       - "llms.txt"
