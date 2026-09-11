@@ -274,10 +274,13 @@ function goingTxt(n){ n = Number(n) || 0; return n === 0 ? "nessuno ancora" : n 
 // lucchetto (docs/UI.md §3.9, SCHEMA.md §2.17): l'evento si vede sempre, chiusa è la compagnia.
 // "closed" = nessun gruppo e nessuno ci va · "waiting" = nessun gruppo e una persona sola · "open" = due o più, o evento di un gruppo.
 // Calcolato qui e basta: nel database non c'è nessuno stato, è un confronto su going_count.
+// Lock switched off on 11/09/2026 (Filippo: "togli il lucchetto, non ha senso ora"): every event is open.
+// The states and the callers stay in place so it can be switched back on by restoring the three lines below.
 function lockState(x){
-  if (x.community_id) return "open";
-  const n = Number(x.going_count) || 0;
-  return n === 0 ? "closed" : n === 1 ? "waiting" : "open";
+  return "open";
+  // if (x.community_id) return "open";
+  // const n = Number(x.going_count) || 0;
+  // return n === 0 ? "closed" : n === 1 ? "waiting" : "open";
 }
 // tocco su "Sblocca l'evento": una finestra spiega il perché (richiesta 06/09/2026, UI.md §3.9), poi si va a `next`.
 // Il lessico è quello nostro (mai "conoscere gente").
