@@ -369,7 +369,15 @@ function relClass(d, end){
   return min < 6 * 60 ? "soon" : "";
 }
 
-// analytics first-party (supabase/migrations/0046): nessun cookie, nessun dato personale
+// analytics first-party (supabase/migrations/0046, 0084): nessun cookie, nessun dato personale.
+// visitor: id casuale del browser (localStorage) per contare chi torna; mai legato all'account
+function visitorId(){
+  try {
+    let v = localStorage.getItem("anyplans_visitor");
+    if (!v) { v = Math.random().toString(36).slice(2, 12) + Date.now().toString(36); localStorage.setItem("anyplans_visitor", v); }
+    return v;
+  } catch (_) { return null; }
+}
 function track(name, path){
   if (location.protocol === "file:") return;
   let ref = "";
@@ -379,7 +387,7 @@ function track(name, path){
     fetch(SB_URL + "/rest/v1/rpc/log_site_event", {
       method: "POST", keepalive: true,
       headers: {"apikey": SB_ANON, "Content-Type": "application/json"},
-      body: JSON.stringify({ p_name: name, p_path: path || location.pathname, p_ref: ref || null, p_city: "bergamo" })
+      body: JSON.stringify({ p_name: name, p_path: path || location.pathname, p_ref: ref || null, p_city: "bergamo", p_visitor: visitorId() })
     }).catch(() => {});
   } catch (_) {}
 }
