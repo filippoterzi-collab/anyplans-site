@@ -391,7 +391,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1789383717"></script>
+<script src="app.js?v=1789391244"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -437,20 +437,21 @@
     }
   }
 
-  let loadSeq = 0;
-  async function loadEvents(center, keepView){
+  let loadSeq = 0, feedRadius = 50000;
+  async function loadEvents(center, keepView, radiusM){
     center = center || BG;
+    radiusM = radiusM || 50000;
     const seq = ++loadSeq;
     const list = document.getElementById("list");
     list.innerHTML = '<div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div>';
-    const r = await rpc("feed_activities", { lat: center.lat, lng: center.lng, radius_m: 50000 });
+    const r = await rpc("feed_activities", { lat: center.lat, lng: center.lng, radius_m: radiusM });
     if (seq !== loadSeq) return;   // nel frattempo è partito un altro caricamento (mappa trascinata ancora)
     if (!r || !r.ok) { list.innerHTML = '<div class="empty">Non riesco a caricare gli eventi. Ricarica la pagina.</div>'; return; }
     const rows = await r.json();
     // su telefono, all'apertura, niente inquadratura a 50 km (i pin si sovrapponevano): resta lo zoom città;
     // con keepView (mappa trascinata verso un'altra città, 14/09/2026) l'inquadratura resta quella dell'utente
     refit = keepView ? false : (center !== BG || !mobileFilters.matches);
-    feedCenter = center;
+    feedCenter = center; feedRadius = radiusM;
     EVENTS = rows.map(x => ({
       id: x.id,
       emoji: x.emoji || "📍",
@@ -500,16 +501,24 @@
     // su telefono il contenitore prende l'altezza vera solo dopo il primo layout: il canvas va rimisurato
     map.resize(); requestAnimationFrame(() => map.resize());
   });
-  // altre città (14/09/2026, eventi anche fuori Bergamo): la chiamata copre 50 km intorno al centro del feed,
-  // quindi se la mappa viene trascinata oltre 40 km da lì si ricarica centrata dove si guarda, senza rinquadrare.
-  // Con un "dove" scelto (vicino a te / un posto) la lista è già filtrata su quel punto: non si ricarica.
+  // altre città (14/09/2026, eventi anche fuori Bergamo): la chiamata copre un raggio intorno al centro del feed
+  // (50 km di base, di più se la mappa è allargata fino a coprire l'inquadratura), quindi se la mappa viene
+  // trascinata oltre 40 km da lì, o allargata/stretta abbastanza da cambiare il raggio che serve, si ricarica
+  // centrata dove si guarda e senza rinquadrare. Con un "dove" scelto la lista è già filtrata su quel punto.
   let moveTimer = null;
+  function neededRadius(){
+    const c = map.getCenter(), b = map.getBounds();
+    const km = Math.max(...[b.getNorthEast(), b.getSouthWest(), b.getNorthWest(), b.getSouthEast()].map(p => distKm({ lat: c.lat, lng: c.lng }, { lat: p.lat, lng: p.lng })));
+    return Math.min(3000000, Math.max(50000, Math.round(km * 1000 * 1.1)));
+  }
   map.on("moveend", () => {
     if (where) return;
     clearTimeout(moveTimer);
     moveTimer = setTimeout(() => {
-      const c = map.getCenter();
-      if (distKm(feedCenter, { lat: c.lat, lng: c.lng }) > 40) loadEvents({ lat: c.lat, lng: c.lng }, true);
+      const c = map.getCenter(), need = neededRadius();
+      const moved = distKm(feedCenter, { lat: c.lat, lng: c.lng }) > Math.max(40, feedRadius / 1000 * 0.4);
+      const resized = need > feedRadius || need < feedRadius / 2;
+      if (moved || resized) loadEvents({ lat: c.lat, lng: c.lng }, true, need);
     }, 400);
   });
   function circleGeo(c){
