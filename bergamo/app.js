@@ -14,6 +14,7 @@ const EXT_SOURCES = [
   { rx: /^https:\/\/(www\.)?comehome\.fun\//, name: "comehome", how: "Posto e accredito si prendono su comehome, dall'host: l'indirizzo esatto lo vedi lì dopo l'iscrizione." },
   { rx: /^https:\/\/(www\.)?weroad\.(it|com)\/wemeet\//, name: "WeMeet", how: "Posto e pagamento si prendono su WeMeet (WeRoad), dal coordinatore." },
   { rx: /^https:\/\/(www\.)?meeters\.org\//, name: "Meeters", how: "Ci si iscrive su Meeters, dove l'evento è proposto da un membro della community." },
+  { rx: /^https:\/\/(www\.)?tabloapp\.com\//, name: "Tablo", how: "Ci si unisce al tavolo nell'app Tablo (dal loro sito scarichi l'app): al ristorante ognuno paga il suo." },
 ];
 function extSourceOf(url){ return EXT_SOURCES.find(x => x.rx.test(url || "")) || null; }
 try { session = JSON.parse(localStorage.getItem("anyplans_session")); } catch (_) {}

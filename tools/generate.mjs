@@ -26,7 +26,7 @@ const CITY_NAME = "Bergamo";
 const CITY_CENTER = { lat: 45.698, lng: 9.670 };
 const CITY_KM = 50;
 // multi-city sources (Milano is 45 km away, Monza 35): for them only the province core, 30 km
-const MULTI_CITY_SOURCES = [/^https:\/\/(www\.)?comehome\.fun\//, /^https:\/\/(www\.)?weroad\.(it|com)\/wemeet\//, /^https:\/\/(www\.)?meeters\.org\//];
+const MULTI_CITY_SOURCES = [/^https:\/\/(www\.)?comehome\.fun\//, /^https:\/\/(www\.)?weroad\.(it|com)\/wemeet\//, /^https:\/\/(www\.)?meeters\.org\//, /^https:\/\/(www\.)?tabloapp\.com\//];
 const MULTI_CITY_KM = 30;
 const DEFAULT_TZ = "Europe/Rome";
 const PAST_DAYS = 400;          // pages live ~13 months after the last date
