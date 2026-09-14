@@ -20,6 +20,11 @@ const HERE = path.dirname(fileURLToPath(import.meta.url));
 const SITE = "https://anyplans.in";
 const CITY = "bergamo";
 const CITY_NAME = "Bergamo";
+// the feed of the /bergamo/ pages is the same 50 km circle the site queries; since 14/09/2026 the
+// database also holds other cities (comehome.fun: Milano, Roma, Torino…), which must not become
+// "in the province of Bergamo" pages. Events without coordinates (request visibility) are kept.
+const CITY_CENTER = { lat: 45.698, lng: 9.670 };
+const CITY_KM = 50;
 const DEFAULT_TZ = "Europe/Rome";
 const PAST_DAYS = 400;          // pages live ~13 months after the last date
 const INDEX_WINDOW_DAYS = 365;  // indexes count future + past within 12 months
@@ -77,6 +82,13 @@ const EN_TYPES = {
   gardening: ["volunteering", "Gardening & volunteering", "Community gardens and volunteering mornings."],
   festival: ["festivals", "Town festivals & fairs", "The parish festivals (feste dell'oratorio), food fairs (sagre) and village events of the Bergamo area, with the dates of every evening."],
   estivo: ["summer-venues", "Summer venues", "The open-air summer venues (estivi) of Bergamo and the province, evening by evening until they close: bars in the parks, food, DJ sets and parties."],
+  concert: ["concerts", "Concerts & live music", "Concerts and live music nights in Bergamo and the province: bands, tribute acts and singer-songwriters, from village festivals to theatres."],
+  show: ["shows", "Shows & theatre", "Theatre, dialect comedies, cabaret and musicals in Bergamo and the province, with the dates of every performance."],
+  market: ["markets", "Markets", "The markets of Bergamo and the province: antiques, crafts, vintage and second-hand, weekend by weekend."],
+  karaoke: ["karaoke", "Karaoke", "Karaoke nights in the bars of Bergamo and the province: open mic, you sing with whoever is there."],
+  tour: ["guided-tours", "Guided tours", "Guided tours of churches, towers, museums and parks around Bergamo: you go with a guide and with others."],
+  culture: ["talks-and-culture", "Talks & culture", "Book presentations, talks and exhibitions in Bergamo and the province."],
+  fair: ["fairs", "Fairs", "The fairs of the Bergamo area: patron saint fairs, livestock and farming shows, model-making, with the dates of every day."],
 };
 const LOCALES = {
   it: { code: "it", tag: "it-IT", og: "it_IT", intl: "it-IT", prefix: "", hub: "cosa-fare", groups: "gruppi", running: "running-club",
@@ -198,7 +210,15 @@ const rows = rawRows.map(r => {
     updated: r.updated_at ? new Date(r.updated_at) : start
   };
 }).filter(r => r.title && !isNaN(r.start) && r.visibility !== "private"
-             && r.start >= new Date(NOW.getTime() - PAST_DAYS * 86400e3));
+             && r.start >= new Date(NOW.getTime() - PAST_DAYS * 86400e3)
+             && (r.lat == null || r.lng == null || distKm(CITY_CENTER, r) <= CITY_KM));
+
+function distKm(a, b) { // haversine, enough to keep or drop an event
+  const R = 6371, toRad = d => d * Math.PI / 180;
+  const dLat = toRad(b.lat - a.lat), dLng = toRad(b.lng - a.lng);
+  const h = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(a.lat)) * Math.cos(toRad(b.lat)) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(h));
+}
 
 const groups = (Array.isArray(rawGroups) ? rawGroups : []).filter(g => g.slug && g.name);
 

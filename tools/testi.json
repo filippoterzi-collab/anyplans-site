@@ -224,6 +224,55 @@
       "label": "Estivo",
       "c": "cultura",
       "frase": "Gli estivi di Bergamo e provincia, sera per sera fino alla chiusura: bar all'aperto nei parchi, cucina, dj set e serate."
+    },
+    "concert": {
+      "key": "concerti",
+      "e": "🎸",
+      "label": "Concerti e musica dal vivo",
+      "c": "cultura",
+      "frase": "I concerti e le serate di musica dal vivo a Bergamo e in provincia: band, tribute, cantautori, dalle feste di paese ai teatri."
+    },
+    "show": {
+      "key": "spettacoli",
+      "e": "🎭",
+      "label": "Spettacoli e teatro",
+      "c": "cultura",
+      "frase": "Teatro, commedie dialettali, cabaret e musical a Bergamo e in provincia, con le date di ogni replica."
+    },
+    "market": {
+      "key": "mercatini",
+      "e": "🛍️",
+      "label": "Mercatini",
+      "c": "cultura",
+      "frase": "I mercatini di Bergamo e provincia: antiquariato, hobbisti, artigianato, vintage e seconda mano, weekend per weekend."
+    },
+    "karaoke": {
+      "key": "karaoke",
+      "e": "🎤",
+      "label": "Karaoke",
+      "c": "cultura",
+      "frase": "Le serate karaoke nei locali di Bergamo e provincia: microfono aperto, si canta con chi c'è."
+    },
+    "tour": {
+      "key": "visite-guidate",
+      "e": "🏛️",
+      "label": "Visite guidate",
+      "c": "cultura",
+      "frase": "Visite guidate a chiese, torri, musei e parchi della bergamasca: si va con una guida e con altri, senza prenotare da soli."
+    },
+    "culture": {
+      "key": "incontri-culturali",
+      "e": "📚",
+      "label": "Incontri culturali",
+      "c": "cultura",
+      "frase": "Presentazioni di libri, conferenze e mostre a Bergamo e in provincia: ci si va, si ascolta, si parla dopo."
+    },
+    "fair": {
+      "key": "fiere",
+      "e": "🎡",
+      "label": "Fiere",
+      "c": "cultura",
+      "frase": "Le fiere della bergamasca: patronali, zootecniche, dell'agricoltura e del modellismo, con le date di ogni giornata."
     }
   },
   "hub": {

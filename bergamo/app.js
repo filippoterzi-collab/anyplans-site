@@ -112,12 +112,20 @@ const CATALOG = {
   painting:  { e:"🎨", l:"Pittura / arte",            c:"creatività" },
   gardening: { e:"🌱", l:"Giardinaggio / volontariato", c:"giardinaggio" },
   festival:  { e:"🎉", l:"Feste, sagre ed eventi di paese",     c:"cultura" },
-  estivo:    { e:"☀️", l:"Estivo",                    c:"cultura" }
+  estivo:    { e:"☀️", l:"Estivo",                    c:"cultura" },
+  concert:   { e:"🎸", l:"Concerti e musica dal vivo", c:"cultura" },
+  show:      { e:"🎭", l:"Spettacoli e teatro",        c:"cultura" },
+  market:    { e:"🛍️", l:"Mercatini",                 c:"cultura" },
+  karaoke:   { e:"🎤", l:"Karaoke",                   c:"cultura" },
+  tour:      { e:"🏛️", l:"Visite guidate",            c:"cultura" },
+  culture:   { e:"📚", l:"Incontri culturali",        c:"cultura" },
+  fair:      { e:"🎡", l:"Fiere",                     c:"cultura" }
 };
 
 // categoria del sito per ogni slug non sportivo; tutto il resto è "sport"
 const CAT_BY_SLUG = { cooking:"cucina", dinner:"cucina", ceramics:"creatività", painting:"creatività",
-                      gardening:"giardinaggio", festival:"cultura", estivo:"cultura", yoga:"benessere" };
+                      gardening:"giardinaggio", festival:"cultura", estivo:"cultura", yoga:"benessere",
+                      concert:"cultura", show:"cultura", market:"cultura", karaoke:"cultura", tour:"cultura", culture:"cultura", fair:"cultura" };
 // parole con cui la gente cerca ogni attività (il titolo da solo non basta: "corsa" vs "corro 10k")
 const SEARCH_WORDS = {
   running: "corsa correre corro run running jogging km parco allenamento",
@@ -150,8 +158,15 @@ const SEARCH_WORDS = {
   dinner: "cena aperitivo pranzo mangiare ristorante pizzeria pizza dinner apericena bere birra vino compagnia tavolata",
   painting: "pittura disegno arte corso creativo painting drawing art acquerello quadro laboratorio",
   gardening: "giardinaggio orto volontariato verde gardening garden piante natura pulizia ambiente",
-  festival: "festa sagra festival evento concerto paese party musica live serata fiera mercato mercatino mercatini luna park fuochi",
-  estivo: "estivo estivi estate bar all'aperto parco serata aperitivo birra dj chiringuito"
+  festival: "festa sagra festival evento paese party serata luna park oratorio alpini",
+  estivo: "estivo estivi estate bar all'aperto parco serata aperitivo birra dj chiringuito",
+  concert: "concerto concerti musica live band tribute cantautore suonare canzoni rock jazz cover",
+  show: "spettacolo spettacoli teatro commedia cabaret musical dialettale palco attori fuochi",
+  market: "mercatino mercatini mercato antiquariato hobbisti artigianato vintage usato seconda mano bancarelle natale",
+  karaoke: "karaoke cantare canta microfono serata bar",
+  tour: "visita guidata visite guidate guida museo chiesa torre castello borgo storia tour",
+  culture: "libro libri presentazione conferenza incontro mostra fotografica cultura scienza autore",
+  fair: "fiera fiere patronale zootecnica agricoltura modellismo sposi esposizione"
 };
 // parole simili: "corse" trova "corsa", "scalate" trova "scalata" (si confronta anche la radice)
 const stem = w => w.length > 4 ? w.replace(/(ando|endo|are|ere|ire|ate|ata|ato|ati|ing|s|e|a|o|i)$/, "") : w;
