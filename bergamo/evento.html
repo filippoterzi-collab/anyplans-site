@@ -194,20 +194,15 @@
   </div>
 
   <!-- box azione -->
-  <!-- eventi con iscrizione altrove (Playtomic 10/09/2026, comehome 14/09/2026): ci si iscrive sul loro sito/app, il bottone anyplans passa in secondo piano; testi riempiti da EXT_SOURCES -->
-  <div class="box" id="box-ext" hidden>
-    <h2 id="ext-h2">Ti iscrivi su Playtomic</h2>
-    <p class="m" id="ext-m">Posto e pagamento si prendono su Playtomic, dal club. Poi torna qui e dì che ci vai: così gli altri lo vedono.</p>
-    <div class="row">
-      <a class="btn" id="ext-link" target="_blank" rel="noopener" onclick="track('source_open')">Iscriviti su Playtomic →</a>
-    </div>
-  </div>
+  <!-- eventi con iscrizione altrove (Playtomic 10/09/2026, comehome 14/09/2026; un solo riquadro, deciso 14/09/2026): "Ci sono" apre il loro
+       sito/app (EXT_SOURCES in app.js); da loggati segna anche "ci vado" qui, così gli altri lo vedono -->
   <div class="box" id="box-guest" hidden>
     <h2 id="guest-h2">Ci sei?</h2>
     <p class="m" id="guest-m">Per iscriverti serve un account: è gratis e ci vuole un minuto. Gli altri iscritti vedranno il tuo nome.</p>
     <p class="m" id="guest-full" hidden>È pieno, ma con un account puoi metterti in lista d'attesa.</p>
     <div class="row">
-      <a class="btn" href="login.html" onclick="rememberNext()">Registrati (è gratis)</a>
+      <a class="btn" id="lnk-register" href="login.html" onclick="rememberNext()">Registrati (è gratis)</a>
+      <a class="btn" id="lnk-ext-guest" hidden target="_blank" rel="noopener" onclick="track('source_open')">Ci sono</a>
       <span class="note" id="going-guest"></span>
     </div>
     <p class="pay" id="pay-guest" hidden></p>
@@ -225,6 +220,7 @@
     <h2 id="join-h2">Ci sei?</h2>
     <p class="m" id="wait-one" hidden>C'è già una persona. Se ci vai anche tu, il piano si fa.</p>
     <p class="m" id="join-hint" hidden>Qui decide chi organizza: gli mandi una richiesta e ti risponde.</p>
+    <p class="m" id="ext-hint" hidden></p>
     <p class="m" id="full-hint" hidden></p>
     <div class="row">
       <button class="btn" id="btn-join" onclick="joinEvent()">Ci sono</button>
@@ -259,6 +255,7 @@
       <button class="btn" onclick="openTicket()">Il mio biglietto</button>
       <button class="btn ghost" onclick="leaveEvent()">Non ci vado più</button>
       <button class="btn ghost" id="btn-share-in" hidden onclick="shareEvent()">Condividi</button>
+      <a class="btn ghost" id="lnk-ext-in" hidden target="_blank" rel="noopener" onclick="track('source_open')">Apri su Playtomic →</a>
       <a class="btn ghost" id="lnk-manage-in" hidden href="#">Gestisci l'evento</a>
       <span class="note" id="going-in"></span>
     </div>
@@ -410,7 +407,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1789391556"></script>
+<script src="app.js?v=1789392398"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -418,7 +415,7 @@
   const wantJoin = params.get("join") === "1";
   const promoted = params.get("promoted") === "1"; // arrivo dall'avviso "si è liberato un posto"
   const logged = !!(session && session.access_token);
-  let ev = null;
+  let ev = null, extSrc = null;   // extSrc: fonte con iscrizione fuori da anyplans (Playtomic, comehome), vedi EXT_SOURCES
   if (logged) mountNav("", { col: 1000, hero: true });
   let canManage = false;
 
@@ -480,6 +477,7 @@
     cg.textContent = ev.gender_allowed === "donna" ? "Solo donne" : ev.gender_allowed === "uomo" ? "Solo uomini" : "";
     document.getElementById("chip-priv").hidden = ev.visibility !== "private";
     document.getElementById("chip-price").textContent = fmtPrice(ev.price_cents);
+    extSrc = extSourceOf(ev.source_url);   // lista in app.js; serve prima della riga del prezzo
     renderPay();
     document.getElementById("title").textContent = ev.title;
     document.getElementById("d-month").textContent = MONTHS[when.getMonth()].slice(0, 3);
@@ -510,15 +508,11 @@
       document.getElementById("chip-agg").hidden = false;
       const l = document.getElementById("source-link");
       if (ev.source_url) l.href = ev.source_url; else l.parentElement.textContent = "I dettagli possono cambiare";
-      const ext = extSourceOf(ev.source_url);   // lista in app.js
-      if (ext) {
-        document.getElementById("box-ext").hidden = false;
-        document.getElementById("ext-h2").textContent = "Ti iscrivi su " + ext.name;
-        document.getElementById("ext-m").textContent = ext.how + " Poi torna qui e dì che ci vai: così gli altri lo vedono.";
-        document.getElementById("ext-link").textContent = "Iscriviti su " + ext.name + " →";
-        document.getElementById("ext-link").href = ev.source_url;
-        for (const id of ["box-guest", "box-lock", "box-join"])
-          document.querySelectorAll("#" + id + " .btn").forEach(b => b.classList.add("ghost"));
+      if (extSrc) {
+        // "Ci sono" apre il loro sito (da ospite è un link; da loggato lo apre joinEvent); da iscritto resta il link per tornarci
+        const g = document.getElementById("lnk-ext-guest"); g.hidden = false; g.href = ev.source_url;
+        document.getElementById("lnk-register").hidden = true;
+        const i = document.getElementById("lnk-ext-in"); i.hidden = false; i.href = ev.source_url; i.textContent = "Apri su " + extSrc.name + " →";
       }
     }
     if (ev.description) {
@@ -571,9 +565,11 @@
     const lock = lockState(ev), closed = lock === "closed", waiting = lock === "waiting";
     document.getElementById("box-guest").hidden = logged;
     document.getElementById("guest-h2").textContent = closed ? "🔒 Evento da sbloccare" : joinTitle();
-    document.getElementById("guest-m").textContent = closed
-      ? "Non ci va ancora nessuno da qui. Con un account lo sblocchi tu: è gratis e ci vuole un minuto."
+    document.getElementById("guest-m").textContent = extSrc ? extSrc.how + " Con \"Ci sono\" si apre " + extSrc.name + "."
+      : closed ? "Non ci va ancora nessuno da qui. Con un account lo sblocchi tu: è gratis e ci vuole un minuto."
       : "Per iscriverti serve un account: è gratis e ci vuole un minuto. Gli altri iscritti vedranno il tuo nome.";
+    const eh = document.getElementById("ext-hint"); eh.hidden = !extSrc;
+    if (extSrc) eh.textContent = extSrc.how + " Con \"Ci sono\" si apre " + extSrc.name + " e qui gli altri vedono che ci vai.";
     document.getElementById("box-host").hidden = !(logged && ev.is_mine);
     const canAct = logged && !ev.is_mine && st !== "going" && st !== "requested" && st !== "waitlisted";
     document.getElementById("box-lock").hidden = !(canAct && closed);
@@ -619,9 +615,9 @@
   function renderPay(){
     const paid = ev.price_cents != null && ev.price_cents > 0;
     const line1 = paid ? "<b>" + esc(fmtPrice(ev.price_cents)) + "</b> a persona" + (ev.price_note ? " · " + esc(ev.price_note) : "") : "";
-    const second = { guest: "Si paga a chi organizza, non su anyplans. Iscriversi qui è gratis.", join: "Si paga a chi organizza, non su anyplans. Iscriversi qui è gratis.",
-      req: "Si paga a chi organizza, non su anyplans. Iscriversi qui è gratis.", wait: "Si paga a chi organizza, non su anyplans. Iscriversi qui è gratis.",
-      in: "Ricordati di pagare chi organizza: sul posto, o come ti dice.",
+    const onSite = extSrc ? "Si paga su " + extSrc.name + ", non su anyplans." : "Si paga a chi organizza, non su anyplans. Iscriversi qui è gratis.";
+    const second = { guest: onSite, join: onSite, req: onSite, wait: onSite,
+      in: extSrc ? "Il posto lo prendi su " + extSrc.name + ": se non l'hai ancora fatto, \"Apri su " + extSrc.name + "\"." : "Ricordati di pagare chi organizza: sul posto, o come ti dice.",
       host: "Lo incassi tu, direttamente. anyplans mostra solo il prezzo." };
     Object.keys(second).forEach(k => { const p = document.getElementById("pay-" + k); p.hidden = !paid; if (paid) p.innerHTML = line1 + "<span>" + second[k] + "</span>"; });
     const tk = document.getElementById("tk-pay"); tk.hidden = !paid;
@@ -948,6 +944,7 @@
   // aprire il lucchetto = creare il proprio piano su questo evento (crea.html?from=)
   function claimEvent(){ explainLock("crea.html?from=" + ev.id); }
   async function joinEvent(){
+    if (extSrc && ev.source_url) { window.open(ev.source_url, "_blank", "noopener"); track("source_open"); }
     await loadQuestions();
     pendingWait = false;
     if (questions.length) { openQuestions(); return; }
