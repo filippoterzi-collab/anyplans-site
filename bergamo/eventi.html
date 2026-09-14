@@ -391,7 +391,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1789382983"></script>
+<script src="app.js?v=1789383717"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -758,15 +758,19 @@
   async function geoSuggest(q){
     if (q.length < 3) return [];
     try {
-      const r = await fetch("https://photon.komoot.io/api?q=" + encodeURIComponent(q) + "&limit=12&lat=45.698&lon=9.670");
-      if (!r.ok) return [];
-      const d = await r.json();
+      // due ricerche insieme: una vicino a Bergamo (paesi e frazioni) e una centrata sull'Italia (le altre città:
+      // "Roma" con la sola ricerca vicina dava Romano di Lombardia e mai la capitale; senza centro dava Roma in Texas)
+      const base = "https://photon.komoot.io/api?q=" + encodeURIComponent(q) + "&limit=12";
+      const rs = await Promise.all([fetch(base + "&lat=45.698&lon=9.670"), fetch(base + "&lat=42.5&lon=12.5")]);
+      const ds = await Promise.all(rs.map(r => r.ok ? r.json() : { features: [] }));
+      const d = { features: [...(ds[0].features || []), ...(ds[1].features || [])] };
       const nq = norm(q), qw = nq.split(/[^a-z0-9]+/).filter(w => w.length >= 3);
       const nameOk = name => { const nw = norm(name).split(/[^a-z0-9]+/); return qw.length && qw.every(w => nw.some(h => h === w || (w.length >= 4 && h.startsWith(w)))); };
       const out = [], seen = new Set();
       (d.features || []).forEach(f => {
         const p = f.properties;
         if (!p.name || !nameOk(p.name)) return;
+        if (p.countrycode && p.countrycode !== "IT") return;   // per ora solo Italia (14/09/2026)
         if (!(PLACE_TYPES.includes(p.type) || PLACE_TYPES.includes(p.osm_value))) return;
         const pt = { lat: f.geometry.coordinates[1], lng: f.geometry.coordinates[0] };
         const km = distKm(BG, pt);
@@ -774,6 +778,8 @@
         seen.add(norm(p.name));
         out.push({ name: p.name, lat: pt.lat, lng: pt.lng, km });
       });
+      // il nome scritto per intero vince sulla vicinanza ("Roma" = la città, non Romano di Lombardia), poi i più vicini
+      out.sort((a, b) => (norm(b.name) === norm(q)) - (norm(a.name) === norm(q)) || a.km - b.km);
       return out.slice(0, 5);
     } catch (_) { return []; }
   }
