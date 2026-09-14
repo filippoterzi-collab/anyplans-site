@@ -252,10 +252,10 @@
     <h2 id="in-h2">Ci sei! 🫶</h2>
     <p class="m" id="in-m">Chi organizza e gli altri iscritti vedono il tuo nome.</p>
     <div class="row">
-      <button class="btn" onclick="openTicket()">Il mio biglietto</button>
+      <button class="btn" id="btn-ticket" onclick="openTicket()">Il mio biglietto</button>
+      <a class="btn" id="lnk-ext-in" hidden target="_blank" rel="noopener" onclick="track('source_open')">Apri su Playtomic →</a>
       <button class="btn ghost" onclick="leaveEvent()">Non ci vado più</button>
       <button class="btn ghost" id="btn-share-in" hidden onclick="shareEvent()">Condividi</button>
-      <a class="btn ghost" id="lnk-ext-in" hidden target="_blank" rel="noopener" onclick="track('source_open')">Apri su Playtomic →</a>
       <a class="btn ghost" id="lnk-manage-in" hidden href="#">Gestisci l'evento</a>
       <span class="note" id="going-in"></span>
     </div>
@@ -407,7 +407,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1789392414"></script>
+<script src="app.js?v=1789395941"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -513,6 +513,9 @@
         const g = document.getElementById("lnk-ext-guest"); g.hidden = false; g.href = ev.source_url;
         document.getElementById("lnk-register").hidden = true;
         const i = document.getElementById("lnk-ext-in"); i.hidden = false; i.href = ev.source_url; i.textContent = "Apri su " + extSrc.name + " →";
+        // niente biglietto (deciso 14/09/2026): il posto e il check-in sono sulla loro piattaforma; il link al loro sito diventa il bottone principale
+        document.getElementById("btn-ticket").hidden = true;
+        document.getElementById("in-m").textContent = "Gli altri vedono che ci vai. Il posto lo prendi su " + extSrc.name + ", e lì c'è tutto il resto.";
       }
     }
     if (ev.description) {
@@ -617,7 +620,7 @@
     const line1 = paid ? "<b>" + esc(fmtPrice(ev.price_cents)) + "</b> a persona" + (ev.price_note ? " · " + esc(ev.price_note) : "") : "";
     const onSite = extSrc ? "Si paga su " + extSrc.name + ", non su anyplans." : "Si paga a chi organizza, non su anyplans. Iscriversi qui è gratis.";
     const second = { guest: onSite, join: onSite, req: onSite, wait: onSite,
-      in: extSrc ? "Il posto lo prendi su " + extSrc.name + ": se non l'hai ancora fatto, \"Apri su " + extSrc.name + "\"." : "Ricordati di pagare chi organizza: sul posto, o come ti dice.",
+      in: extSrc ? "Si paga su " + extSrc.name + ", non su anyplans." : "Ricordati di pagare chi organizza: sul posto, o come ti dice.",
       host: "Lo incassi tu, direttamente. anyplans mostra solo il prezzo." };
     Object.keys(second).forEach(k => { const p = document.getElementById("pay-" + k); p.hidden = !paid; if (paid) p.innerHTML = line1 + "<span>" + second[k] + "</span>"; });
     const tk = document.getElementById("tk-pay"); tk.hidden = !paid;
