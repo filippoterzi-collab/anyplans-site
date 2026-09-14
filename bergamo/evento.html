@@ -407,7 +407,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1789399164"></script>
+<script src="app.js?v=1789412684"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -512,7 +512,7 @@
         // "Ci sono" apre il loro sito (da ospite è un link; da loggato lo apre joinEvent); da iscritto resta il link per tornarci
         const g = document.getElementById("lnk-ext-guest"); g.hidden = false; g.href = ev.source_url;
         document.getElementById("lnk-register").hidden = true;
-        const i = document.getElementById("lnk-ext-in"); i.hidden = false; i.href = ev.source_url; i.textContent = "Apri su " + extSrc.name + " →";
+        const i = document.getElementById("lnk-ext-in"); i.hidden = false; i.href = ev.source_url; i.textContent = extSrc.cta || ("Apri su " + extSrc.name + " →");
         // niente biglietto (deciso 14/09/2026): il posto e il check-in sono sulla loro piattaforma; il link al loro sito diventa il bottone principale
         document.getElementById("btn-ticket").hidden = true;
         document.getElementById("in-m").textContent = "Gli altri vedono che ci vai. Il posto lo prendi su " + extSrc.name + ", e lì c'è tutto il resto.";

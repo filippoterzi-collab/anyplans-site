@@ -16,7 +16,10 @@ const EXT_SOURCES = [
   { rx: /^https:\/\/(www\.)?meeters\.org\//, name: "Meeters", how: "Ci si iscrive su Meeters, dove l'evento è proposto da un membro della community." },
   { rx: /^https:\/\/(www\.)?tabloapp\.com\//, name: "Tablo", how: "Ci si unisce al tavolo nell'app Tablo (dal loro sito scarichi l'app): al ristorante ognuno paga il suo." },
   { rx: /^https:\/\/(www\.)?(lu\.ma|luma\.com)\//, name: "Luma", how: "Ci si registra su Luma, sulla pagina dell'evento della community che lo organizza." },
+  { rx: /^https:\/\/share\.nomadtable\.app\//, name: "Nomadtable", cta: "Join chat su Nomadtable →", how: "Il piano vive nella chat di nomadtable: con \"Join chat\" entri nell'app e lì si decidono ora e posto." },
 ];
+// label of the external button: "Iscriviti su X →" unless the source says otherwise (nomadtable: "Join chat")
+function extCta(src){ return src.cta || ("Iscriviti su " + src.name + " →"); }
 function extSourceOf(url){ return EXT_SOURCES.find(x => x.rx.test(url || "")) || null; }
 try { session = JSON.parse(localStorage.getItem("anyplans_session")); } catch (_) {}
 if (!session) { try { session = JSON.parse(sessionStorage.getItem("anyplans_session")); } catch (_) {} }
