@@ -6,6 +6,13 @@ const SB_ANON = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsIn
 const GOOGLE_MAPS_KEY = "AIzaSyDyIS3owtm8TQamqAN9wMKsJz-0Qg9UjqA";
 
 let session = null;
+// fonti dove ci si iscrive fuori da anyplans (Playtomic 10/09/2026, comehome 14/09/2026): card, fumetto del pin e
+// pagina evento portano dritti al loro sito (su telefono, all'app se c'è); "ci sono" su anyplans resta secondario
+const EXT_SOURCES = [
+  { rx: /^https:\/\/(app\.)?playtomic\.com\//, name: "Playtomic", how: "Posto e pagamento si prendono su Playtomic, dal club." },
+  { rx: /^https:\/\/(www\.)?comehome\.fun\//, name: "comehome", how: "Posto e accredito si prendono su comehome, dall'host: l'indirizzo esatto lo vedi lì dopo l'iscrizione." },
+];
+function extSourceOf(url){ return EXT_SOURCES.find(x => x.rx.test(url || "")) || null; }
 try { session = JSON.parse(localStorage.getItem("anyplans_session")); } catch (_) {}
 if (!session) { try { session = JSON.parse(sessionStorage.getItem("anyplans_session")); } catch (_) {} }
 

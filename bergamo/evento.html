@@ -410,13 +410,8 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1789391244"></script>
+<script src="app.js?v=1789391556"></script>
 <script>
-  // fonti dove ci si iscrive fuori da anyplans: il link della scheda apre il loro sito (su telefono, l'app se c'è)
-  const EXT_SOURCES = [
-    { rx: /^https:\/\/(app\.)?playtomic\.com\//, name: "Playtomic", how: "Posto e pagamento si prendono su Playtomic, dal club." },
-    { rx: /^https:\/\/(www\.)?comehome\.fun\//, name: "comehome", how: "Posto e accredito si prendono su comehome, dall'host: l'indirizzo esatto lo vedi lì dopo l'iscrizione." },
-  ];
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
   const wantSlug = params.get("slug");
@@ -515,7 +510,7 @@
       document.getElementById("chip-agg").hidden = false;
       const l = document.getElementById("source-link");
       if (ev.source_url) l.href = ev.source_url; else l.parentElement.textContent = "I dettagli possono cambiare";
-      const ext = EXT_SOURCES.find(x => x.rx.test(ev.source_url || ""));
+      const ext = extSourceOf(ev.source_url);   // lista in app.js
       if (ext) {
         document.getElementById("box-ext").hidden = false;
         document.getElementById("ext-h2").textContent = "Ti iscrivi su " + ext.name;
