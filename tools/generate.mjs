@@ -25,6 +25,9 @@ const CITY_NAME = "Bergamo";
 // "in the province of Bergamo" pages. Events without coordinates (request visibility) are kept.
 const CITY_CENTER = { lat: 45.698, lng: 9.670 };
 const CITY_KM = 50;
+// multi-city sources (Milano is 45 km away, Monza 35): for them only the province core, 30 km
+const MULTI_CITY_SOURCES = [/^https:\/\/(www\.)?comehome\.fun\//];
+const MULTI_CITY_KM = 30;
 const DEFAULT_TZ = "Europe/Rome";
 const PAST_DAYS = 400;          // pages live ~13 months after the last date
 const INDEX_WINDOW_DAYS = 365;  // indexes count future + past within 12 months
@@ -211,7 +214,8 @@ const rows = rawRows.map(r => {
   };
 }).filter(r => r.title && !isNaN(r.start) && r.visibility !== "private"
              && r.start >= new Date(NOW.getTime() - PAST_DAYS * 86400e3)
-             && (r.lat == null || r.lng == null || distKm(CITY_CENTER, r) <= CITY_KM));
+             && (r.lat == null || r.lng == null
+                 || distKm(CITY_CENTER, r) <= (MULTI_CITY_SOURCES.some(rx => rx.test(r.source_url || "")) ? MULTI_CITY_KM : CITY_KM)));
 
 function distKm(a, b) { // haversine, enough to keep or drop an event
   const R = 6371, toRad = d => d * Math.PI / 180;

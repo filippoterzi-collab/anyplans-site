@@ -194,10 +194,10 @@
   </div>
 
   <!-- box azione -->
-  <!-- eventi Playtomic (10/09/2026): ci si iscrive sul loro sito, il bottone anyplans passa in secondo piano -->
+  <!-- eventi con iscrizione altrove (Playtomic 10/09/2026, comehome 14/09/2026): ci si iscrive sul loro sito/app, il bottone anyplans passa in secondo piano; testi riempiti da EXT_SOURCES -->
   <div class="box" id="box-ext" hidden>
-    <h2>Ti iscrivi su Playtomic</h2>
-    <p class="m">Posto e pagamento si prendono su Playtomic, dal club. Poi torna qui e dì che ci vai: così gli altri lo vedono.</p>
+    <h2 id="ext-h2">Ti iscrivi su Playtomic</h2>
+    <p class="m" id="ext-m">Posto e pagamento si prendono su Playtomic, dal club. Poi torna qui e dì che ci vai: così gli altri lo vedono.</p>
     <div class="row">
       <a class="btn" id="ext-link" target="_blank" rel="noopener" onclick="track('source_open')">Iscriviti su Playtomic →</a>
     </div>
@@ -410,8 +410,13 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1789382186"></script>
+<script src="app.js?v=1789382676"></script>
 <script>
+  // fonti dove ci si iscrive fuori da anyplans: il link della scheda apre il loro sito (su telefono, l'app se c'è)
+  const EXT_SOURCES = [
+    { rx: /^https:\/\/(app\.)?playtomic\.com\//, name: "Playtomic", how: "Posto e pagamento si prendono su Playtomic, dal club." },
+    { rx: /^https:\/\/(www\.)?comehome\.fun\//, name: "comehome", how: "Posto e accredito si prendono su comehome, dall'host: l'indirizzo esatto lo vedi lì dopo l'iscrizione." },
+  ];
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
   const wantSlug = params.get("slug");
@@ -510,8 +515,12 @@
       document.getElementById("chip-agg").hidden = false;
       const l = document.getElementById("source-link");
       if (ev.source_url) l.href = ev.source_url; else l.parentElement.textContent = "I dettagli possono cambiare";
-      if (/^https:\/\/(app\.)?playtomic\.com\//.test(ev.source_url || "")) {
+      const ext = EXT_SOURCES.find(x => x.rx.test(ev.source_url || ""));
+      if (ext) {
         document.getElementById("box-ext").hidden = false;
+        document.getElementById("ext-h2").textContent = "Ti iscrivi su " + ext.name;
+        document.getElementById("ext-m").textContent = ext.how + " Poi torna qui e dì che ci vai: così gli altri lo vedono.";
+        document.getElementById("ext-link").textContent = "Iscriviti su " + ext.name + " →";
         document.getElementById("ext-link").href = ev.source_url;
         for (const id of ["box-guest", "box-lock", "box-join"])
           document.querySelectorAll("#" + id + " .btn").forEach(b => b.classList.add("ghost"));
