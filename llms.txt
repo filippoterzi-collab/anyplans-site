@@ -1,6 +1,6 @@
 # anyplans
 
-> La mappa degli eventi veri d'Italia: 6555 eventi in programma in 29 città. Feste di paese, concerti,
+> La mappa degli eventi veri d'Italia: 6556 eventi in programma in 29 città. Feste di paese, concerti,
 > mercati, cene con sconosciuti, uscite di corsa, partite di padel aperte. Di ognuno: data, luogo, prezzo,
 > chi organizza e come iscriversi. Si entra con l'email, solo maggiorenni. Aggiornato ogni notte.
 
@@ -9,7 +9,7 @@ riassunto e domande frequenti di ogni pagina.
 
 ## Le città
 
-- [Milano](https://anyplans.in/milano/): 1274 eventi in programma, 2728 pagine — testo completo: https://anyplans.in/llms-milano.txt
+- [Milano](https://anyplans.in/milano/): 1275 eventi in programma, 2730 pagine — testo completo: https://anyplans.in/llms-milano.txt
 - [Roma](https://anyplans.in/roma/): 817 eventi in programma, 1738 pagine — testo completo: https://anyplans.in/llms-roma.txt
 - [Bergamo](https://anyplans.in/bergamo/cosa-fare/): 729 eventi in programma, 1924 pagine — testo completo: https://anyplans.in/llms-full.txt
 - [Torino](https://anyplans.in/torino/): 695 eventi in programma, 1490 pagine — testo completo: https://anyplans.in/llms-torino.txt
