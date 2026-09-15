@@ -1,6 +1,6 @@
 # anyplans
 
-> La mappa degli eventi veri d'Italia: 6560 eventi in programma in 29 città. Feste di paese, concerti,
+> La mappa degli eventi veri d'Italia: 6555 eventi in programma in 29 città. Feste di paese, concerti,
 > mercati, cene con sconosciuti, uscite di corsa, partite di padel aperte. Di ognuno: data, luogo, prezzo,
 > chi organizza e come iscriversi. Si entra con l'email, solo maggiorenni. Aggiornato ogni notte.
 
@@ -17,8 +17,8 @@ riassunto e domande frequenti di ogni pagina.
 - [Napoli](https://anyplans.in/napoli/): 280 eventi in programma, 626 pagine — testo completo: https://anyplans.in/llms-napoli.txt
 - [Padova](https://anyplans.in/padova/): 222 eventi in programma, 472 pagine — testo completo: https://anyplans.in/llms-padova.txt
 - [Brescia](https://anyplans.in/brescia/): 217 eventi in programma, 540 pagine — testo completo: https://anyplans.in/llms-brescia.txt
-- [Firenze](https://anyplans.in/firenze/): 205 eventi in programma, 462 pagine — testo completo: https://anyplans.in/llms-firenze.txt
 - [Verona](https://anyplans.in/verona/): 204 eventi in programma, 450 pagine — testo completo: https://anyplans.in/llms-verona.txt
+- [Firenze](https://anyplans.in/firenze/): 200 eventi in programma, 452 pagine — testo completo: https://anyplans.in/llms-firenze.txt
 - [Genova](https://anyplans.in/genova/): 162 eventi in programma, 364 pagine — testo completo: https://anyplans.in/llms-genova.txt
 - [Varese](https://anyplans.in/varese/): 157 eventi in programma, 362 pagine — testo completo: https://anyplans.in/llms-varese.txt
 - [Bari](https://anyplans.in/bari/): 137 eventi in programma, 318 pagine — testo completo: https://anyplans.in/llms-bari.txt
