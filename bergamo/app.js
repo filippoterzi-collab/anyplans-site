@@ -9,6 +9,10 @@ let session = null;
 // fonti dove ci si iscrive fuori da anyplans (Playtomic 10/09/2026, comehome 14/09/2026): card e fumetto del pin portano
 // dritti al loro sito (su telefono, all'app se c'è); nella pagina evento "Ci sono" apre il loro sito e, da loggati, segna
 // anche "ci vado" qui (un solo bottone, deciso 14/09/2026)
+// centri delle citta con pagine sul sito (copia di branding/seo/citta.json: tenere allineato).
+// Serve quando si arriva da un link vecchio /<citta>/<slug>: il router di 404.html manda a
+// evento.html?slug=…&city=…, e l'evento va cercato intorno a QUELLA citta, non a Bergamo.
+const CITTA_CENTRI = { milano: [45.4642, 9.19], bergamo: [45.698, 9.67], torino: [45.0703, 7.6869], roma: [41.9028, 12.4964], bologna: [44.4949, 11.3426], brescia: [45.5416, 10.2118], napoli: [40.8518, 14.2681], verona: [45.4384, 10.9916], padova: [45.4064, 11.8768], varese: [45.8206, 8.8251], firenze: [43.7696, 11.2558], genova: [44.4056, 8.9463], bari: [41.1171, 16.8719], perugia: [43.1107, 12.3908], parma: [44.8015, 10.3279], cagliari: [39.2238, 9.1217], palermo: [38.1157, 13.3615], trieste: [45.6495, 13.7768], trento: [46.0748, 11.1217], pescara: [42.4618, 14.2161], catania: [37.5079, 15.083], ravenna: [44.4184, 12.2035], udine: [46.0711, 13.2346], rimini: [44.0678, 12.5695], bolzano: [46.4983, 11.3548], pisa: [43.7228, 10.4017], taranto: [40.4644, 17.247], salerno: [40.6824, 14.7681], lecce: [40.3515, 18.175] };
 const EXT_SOURCES = [
   { rx: /^https:\/\/(app\.)?playtomic\.com\//, name: "Playtomic", how: "Posto e pagamento si prendono su Playtomic, dal club." },
   { rx: /^https:\/\/(www\.)?comehome\.fun\//, name: "comehome", how: "Posto e accredito si prendono su comehome, dall'host: l'indirizzo esatto lo vedi lì dopo l'iscrizione." },

@@ -407,7 +407,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1789458453"></script>
+<script src="app.js?v=1789458659"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -436,7 +436,9 @@
       if (r1 && r1.ok) { const rows = await r1.json().catch(() => []); ev = rows[0] || null; }
     }
     if (!ev) {
-      const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
+      // l'evento non ha (ancora) una pagina statica: si cerca per slug intorno alla citta del link
+      const centro = (typeof CITTA_CENTRI !== "undefined" && CITTA_CENTRI[(params.get("city") || "").toLowerCase()]) || [45.698, 9.670];
+      const r = await rpc("feed_activities", { lat: centro[0], lng: centro[1], radius_m: 50000 });
       if (!r || !r.ok) return notFound();
       const rows = await r.json();
       ev = id ? rows.find(x => x.id === id)
