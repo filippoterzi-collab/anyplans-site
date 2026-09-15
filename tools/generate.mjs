@@ -1,16 +1,21 @@
 #!/usr/bin/env node
 // anyplans SEO: static public pages for Google (design/sito-landing/plan-seo.md).
 // Node 20, no dependencies. Reads Supabase with the anon key and writes into --out:
-//   /bergamo/<slug>/index.html            one page per event slug (all dates of a multi-day festa)
-//   /bergamo/gruppi/index.html            public list of groups
-//   /bergamo/gruppi/<slug>/index.html     one page per group
-//   /bergamo/<tipo>/ and /bergamo/<paese>/ flat indexes (>= MIN_INDEX events)
-//   /bergamo/cosa-fare/index.html         hub
-//   /en/bergamo/...                       the same pages in English (things-to-do, festivals, running-clubs, groups, events)
-//   /sitemap.xml, /robots.txt, /llms.txt, /llms-full.txt
-// Usage: node generate.mjs --out <dir> [--fixture <rows.json>] [--groups <groups.json>]
+//   /<citta>/<slug>/index.html            one page per event slug (all dates of a multi-day festa)
+//   /<citta>/gruppi/index.html            public list of groups (Bergamo only, for now)
+//   /<citta>/gruppi/<slug>/index.html     one page per group
+//   /<citta>/<tipo>/ and /<citta>/<paese>/ flat indexes (>= MIN_INDEX events)
+//   /<citta>/cosa-fare/index.html         hub, plus oggi / domani / weekend / months
+//   /en/<citta>/...                       the same pages in English (things-to-do, festivals, running-clubs, groups, events)
+//   /sitemap-<citta>.xml, /llms-<citta>.txt
+// and, with --indice: /sitemap.xml (indice), /robots.txt, /llms.txt, /citta/, /en/cities/
+// Usage: node generate.mjs --out <dir>                  tutte le citta, poi l'indice (quello che fa il workflow)
+//        node generate.mjs --out <dir> --citta milano   una citta sola
+//        node generate.mjs --out <dir> --indice         solo sitemap.xml, robots.txt, llms.txt, /citta/
+//        [--fixture <rows.json>] [--groups <groups.json>] per le prove
 // Env: SUPABASE_URL, SUPABASE_ANON_KEY.
-// Every subdirectory of <out>/bergamo/ and the whole <out>/en/bergamo/ are removed and regenerated: they must contain only generated pages.
+// UNA citta per run (le citta stanno in citta.json); il workflow le fa in fila e poi lancia --indice.
+// Every subdirectory of <out>/<citta>/ and the whole <out>/en/<citta>/ are removed and regenerated: they must contain only generated pages.
 
 import { mkdir, writeFile, readFile, readdir, rm, stat } from "node:fs/promises";
 import path from "node:path";
@@ -18,13 +23,24 @@ import { fileURLToPath } from "node:url";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const SITE = "https://anyplans.in";
-const CITY = "bergamo";
-const CITY_NAME = "Bergamo";
-// the feed of the /bergamo/ pages is the same 50 km circle the site queries; since 14/09/2026 the
-// database also holds other cities (comehome.fun: Milano, Roma, Torino…), which must not become
-// "in the province of Bergamo" pages. Events without coordinates (request visibility) are kept.
-const CITY_CENTER = { lat: 45.698, lng: 9.670 };
-const CITY_KM = 50;
+// ── le città del sito ─────────────────────────────────────────────────────────
+// Dal 15/09/2026 il database ha eventi in tutta Italia e il sito fa le pagine di 29 città (citta.json:
+// centro, raggio e sigla della provincia). Ogni run del generatore fa UNA città.
+// Un evento appartiene alla città PIÙ VICINA fra queste: così lo stesso evento non finisce sia in
+// /milano/ sia in /bergamo/ (pagine doppie = Google ne indicizza una sola e le conta come copie).
+// Gli eventi senza coordinate (visibilità "request") restano alla città del run.
+const CITTA = JSON.parse(await readFile(path.join(HERE, "citta.json"), "utf8"));
+const HOME_CITY = "bergamo";       // l'unica città con l'app web (mappa, iscrizioni) sotto /bergamo/*.html
+const argvCity = (() => { const i = process.argv.indexOf("--citta"); return i > 0 ? process.argv[i + 1] : HOME_CITY; })();
+const C = CITTA.find(c => c.slug === argvCity);
+if (!C) { console.error(`città sconosciuta: ${argvCity} (in citta.json: ${CITTA.map(c => c.slug).join(", ")})`); process.exit(2); }
+const INDICE = process.argv.includes("--indice");   // niente pagine: scrive sitemap, robots, llms e /citta/
+const CITY = C.slug;
+const CITY_NAME = C.nome;
+const PROV = C.prov;
+const CITY_CENTER = { lat: C.lat, lng: C.lng };
+const CITY_KM = C.km;
+const MIN_CITY = 40;              // sotto questa soglia una città (che non sia Bergamo) non ha pagine sue
 // multi-city sources (Milano is 45 km away, Monza 35): for them only the province core, 30 km
 const MULTI_CITY_SOURCES = [/^https:\/\/(www\.)?comehome\.fun\//, /^https:\/\/(www\.)?weroad\.(it|com)\/wemeet\//, /^https:\/\/(www\.)?meeters\.org\//, /^https:\/\/(www\.)?tabloapp\.com\//, /^https:\/\/(www\.)?(lu\.ma|luma\.com)\//, /^https:\/\/share\.nomadtable\.app\//, /^https:\/\/(www\.)?panesalamina\.com\//];
 const MULTI_CITY_KM = 30;
@@ -42,6 +58,21 @@ const OUT = arg("--out");
 if (!OUT) { console.error("uso: node generate.mjs --out <cartella> [--fixture rows.json] [--groups groups.json]"); process.exit(2); }
 const FIXTURE = arg("--fixture");
 const GROUPS_FIXTURE = arg("--groups");
+// ── senza --citta: le fa tutte, una per volta, e poi l'indice ─────────────────
+// Ogni città è un processo suo perché mezzo generatore (rows, pages, indici) è costruito una volta
+// sola, all'avvio, sulla città del run. Un processo per città costa qualche secondo e non rompe niente.
+if (!process.argv.includes("--citta") && !INDICE && !FIXTURE) {
+  const { spawnSync } = await import("node:child_process");
+  const self = fileURLToPath(import.meta.url);
+  // deno serve per provarlo qui sul mac (node non c'è); in GitHub Actions gira node
+  const base = globalThis.Deno ? [Deno.execPath(), "run", "-A", self] : [process.execPath, self];
+  for (const passo of [...CITTA.map(c => ["--citta", c.slug]), ["--indice"]]) {
+    const r = spawnSync(base[0], [...base.slice(1), "--out", OUT, ...passo], { stdio: "inherit" });
+    if (r.status !== 0) { console.error(`generate: "${passo.join(" ")}" è fallita, mi fermo`); process.exit(1); }
+  }
+  process.exit(0);
+}
+
 const SB_URL = process.env.SUPABASE_URL;
 const SB_ANON = process.env.SUPABASE_ANON_KEY;
 
@@ -98,12 +129,12 @@ const LOCALES = {
         when: { oggi: "cosa-fare-oggi", domani: "cosa-fare-domani", weekend: "cosa-fare-nel-weekend" },
         monthSlug: (label) => "eventi-" + slugify(label),
         days: ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"], daySlug: ["lunedi", "martedi", "mercoledi", "giovedi", "venerdi", "sabato", "domenica"],
-        and: " e ", free: "Gratis", privacy: "/privacy-it.html", terms: "/terms-it.html", home: "/" },
+        and: " e ", free: "Gratis", privacy: "/privacy-it.html", terms: "/terms-it.html", home: "/", citta: "citta" },
   en: { code: "en", tag: "en", og: "en_GB", intl: "en-GB", prefix: "/en", hub: "things-to-do", groups: "groups", running: "running-clubs",
         when: { oggi: "what-to-do-today", domani: "what-to-do-tomorrow", weekend: "what-to-do-this-weekend" },
         monthSlug: (label) => "events-" + slugify(label),
         days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], daySlug: ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"],
-        and: " and ", free: "Free", privacy: "/privacy.html", terms: "/terms.html", home: "/en/" },
+        and: " and ", free: "Free", privacy: "/privacy.html", terms: "/terms.html", home: "/en/", citta: "cities" },
 };
 let L = LOCALES.it;           // the locale of the page being built (the write loop at the bottom switches it)
 const en = () => L.code === "en";
@@ -153,7 +184,12 @@ const tipo = (sport) => ({ sport, ...(TIPI[sport] || { key: slugify(sport), e: "
 // label / slug / phrase of a type in the active language
 const tLabel = (t) => en() ? (EN_TYPES[t.sport]?.[1] || t.label) : t.label;
 const tSlug = (t) => en() ? (EN_TYPES[t.sport]?.[0] || t.key) : t.key;
-const tPhrase = (t) => en() ? (EN_TYPES[t.sport]?.[2] || "") : t.frase;
+// le frasi di testi.json e di EN_TYPES parlano di Bergamo ("le valli orobiche", "le sagre bergamasche"):
+// nelle altre citta sarebbero false, quindi li' l'indice vive di lead + lista + domande, senza frase
+const tPhrase = (t) => CITY !== HOME_CITY ? GENERIC_PHRASE() : en() ? (EN_TYPES[t.sport]?.[2] || "") : t.frase;
+const GENERIC_PHRASE = () => en()
+  ? "Each one has the date, the time, the place and the price; you sign up and go with other people."
+  : "Di ognuno trovi data, ora, posto e prezzo: scegli quello che ti va e ci vai insieme ad altre persone.";
 const catLabel = (c) => en() ? ({ sport: "Sports", cucina: "Food", creatività: "Creativity", giardinaggio: "Gardening", cultura: "Culture", benessere: "Wellbeing", altro: "Other" }[c] || cap(c)) : cap(c);
 const jsonld = (o) => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, "\\u003c")}</script>`;
 const INSTAGRAM = "https://instagram.com/anyplans_bergamo";
@@ -161,13 +197,14 @@ const INSTAGRAM = "https://instagram.com/anyplans_bergamo";
 const ORG = { "@type": "Organization", "@id": SITE + "/#org", name: "anyplans", url: SITE + "/", email: "hello@anyplans.in",
   logo: { "@type": "ImageObject", url: SITE + "/favicon-192.png", width: 192, height: 192 },
   description: "La mappa degli eventi veri di Bergamo e provincia: feste di paese, corsi, volontariato, sport e running club. Ne scegli uno e ci vai insieme ad altri. Solo maggiorenni.",
-  foundingLocation: { "@type": "City", name: "Bergamo" }, areaServed: { "@type": "City", name: "Bergamo" }, sameAs: [INSTAGRAM],
+  foundingLocation: { "@type": "City", name: "Bergamo" }, areaServed: { "@type": "Country", name: "Italia" }, sameAs: [INSTAGRAM],
   founder: { "@type": "Person", name: "Filippo Terzi", image: SITE + "/founder.jpg", jobTitle: "Fondatore" } };
 const fmtDate = (d) => new Intl.DateTimeFormat(L.intl, { timeZone: DEFAULT_TZ, day: "numeric", month: "long", year: "numeric" }).format(d);
 // answer engines (ChatGPT, Perplexity, AI Overviews) lift question + short answer: every page gets a visible FAQ and its FAQPage schema
 // domande chiuse (details): si aprono al tocco, il testo resta nella pagina per Google (FAQPage in JSON-LD)
 const faqHtml = (faq) => `<div class="box" id="domande"><h2>${en() ? "Frequently asked questions" : "Domande frequenti"}</h2>${faq.map(f => `<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("")}</div>`;
 const faqLd = (faq) => jsonld({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) });
+const nf = (n) => new Intl.NumberFormat(L.intl).format(n);   // 6.267, non 6267
 const joinIt = (a) => a.length <= 1 ? a.join("") : a.slice(0, -1).join(", ") + L.and + a[a.length - 1];
 
 // ── data ──────────────────────────────────────────────────────────────────────
@@ -197,14 +234,14 @@ async function rpcPaged(name, body, page = 1000, max = 20000) {
 // the RPC (migration 0061) takes no parameters and returns future + recent past rows: the 13-month window is applied here
 // dal 15/09/2026 (migrazione 0086) la RPC accetta centro e raggio: il sito fa le pagine di UNA città, e senza
 // filtro il limite di righe verrebbe mangiato dalle fonti nazionali (Tablo, comehome, Playtomic su tutta Italia)
-const rawRows = FIXTURE ? JSON.parse(await readFile(FIXTURE, "utf8"))
+const rawRows = INDICE ? [] : FIXTURE ? JSON.parse(await readFile(FIXTURE, "utf8"))
   : await rpcPaged("public_activities_for_seo", { p_lat: CITY_CENTER.lat, p_lng: CITY_CENTER.lng, p_radius_km: CITY_KM });
-const rawGroups = GROUPS_FIXTURE ? JSON.parse(await readFile(GROUPS_FIXTURE, "utf8")) : await rpc("list_communities", { p_city: CITY });
+const rawGroups = INDICE ? [] : GROUPS_FIXTURE ? JSON.parse(await readFile(GROUPS_FIXTURE, "utf8")) : await rpc("list_communities", { p_city: CITY });
 // ritrovi fissi dei gruppi (migrazione 0070): "ogni mercoledì alle 18:45 al parco della Trucca"
 const SCHEDULES_FIXTURE = arg("--schedules");
-const rawSchedules = SCHEDULES_FIXTURE ? JSON.parse(await readFile(SCHEDULES_FIXTURE, "utf8")) : await rpc("list_community_schedules", { p_city: CITY }).catch(() => []);
+const rawSchedules = INDICE ? [] : SCHEDULES_FIXTURE ? JSON.parse(await readFile(SCHEDULES_FIXTURE, "utf8")) : await rpc("list_community_schedules", { p_city: CITY }).catch(() => []);
 const schedules = Array.isArray(rawSchedules) ? rawSchedules : [];
-if (!Array.isArray(rawRows) || rawRows.length === 0) { console.error("nessun evento dalla RPC: non tocco niente"); process.exit(1); }
+if (!INDICE && (!Array.isArray(rawRows) || rawRows.length === 0)) { console.error("nessun evento dalla RPC: non tocco niente"); process.exit(1); }
 
 // normalize rows; only the public columns of the contract are used
 const rows = rawRows.map(r => {
@@ -235,7 +272,18 @@ const rows = rawRows.map(r => {
 }).filter(r => r.title && !isNaN(r.start) && r.visibility !== "private"
              && r.start >= new Date(NOW.getTime() - PAST_DAYS * 86400e3)
              && (r.lat == null || r.lng == null
-                 || distKm(CITY_CENTER, r) <= (MULTI_CITY_SOURCES.some(rx => rx.test(r.source_url || "")) ? MULTI_CITY_KM : CITY_KM)));
+                 || (distKm(CITY_CENTER, r) <= (MULTI_CITY_SOURCES.some(rx => rx.test(r.source_url || "")) ? MULTI_CITY_KM : CITY_KM)
+                     && cittaPiuVicina(r) === CITY)));
+
+// la città del sito più vicina all'evento (null se nessuna lo copre): decide di chi è la pagina
+function cittaPiuVicina(r) {
+  let best = null, bd = Infinity;
+  for (const c of CITTA) {
+    const d = distKm({ lat: c.lat, lng: c.lng }, r);
+    if (d <= c.km && d < bd) { bd = d; best = c.slug; }
+  }
+  return best;
+}
 
 function distKm(a, b) { // haversine, enough to keep or drop an event
   const R = 6371, toRad = d => d * Math.PI / 180;
@@ -316,9 +364,17 @@ for (const p of pages) {
 }
 // every public url depends on the active locale: /bergamo/gruppi/x/ vs /en/bergamo/groups/x/
 const base = () => `${SITE}${L.prefix}/${CITY}`;
+// L'app web (mappa, iscrizioni, login) sta solo sotto /bergamo/: e' una sola app, non una per citta.
+// Dalle pagine delle altre citta si arriva alla stessa mappa gia centrata li: ?luogo=Milano&lat=&lng=&km=
+const APP = `/${HOME_CITY}`;
+const MAP_URL = `${APP}/eventi.html` + (CITY === HOME_CITY ? ""
+  : `?luogo=${encodeURIComponent(CITY_NAME)}&amp;lat=${C.lat}&amp;lng=${C.lng}&amp;km=${Math.min(C.km, 30)}`);
 const eventUrl = (p) => `${base()}/${p.slug}/`;
 const groupUrl = (g) => `${base()}/${L.groups}/${g.slug}/`;
-const hubUrl = () => `${base()}/${L.hub}/`;
+// A Bergamo /bergamo/ e' la home dell'app web, quindi l'hub sta in /bergamo/cosa-fare/; nelle altre
+// citta l'indirizzo e' libero e l'hub sta li', che e' anche l'indirizzo che la gente prova a mano.
+const cittaUrl = () => `${SITE}${L.prefix}/${L.citta}/`;   // l'elenco delle città del sito
+const hubUrl = () => CITY === HOME_CITY ? `${base()}/${L.hub}/` : `${base()}/`;
 const groupsUrl = () => `${base()}/${L.groups}/`;
 const runningUrl = () => `${base()}/${L.running}/`;
 const dayUrl = (i) => `${runningUrl()}${L.daySlug[i]}/`;
@@ -433,6 +489,8 @@ main{max-width:860px;margin:0 auto;padding:16px 22px 70px;display:flex;flex-dire
 .tags{display:flex;gap:8px;flex-wrap:wrap}
 .tags a{background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:999px;padding:7px 14px;font-weight:700;font-size:13.5px}
 .tags a:hover{border-color:var(--blue);color:var(--blue)}
+.tags.citta a{display:inline-flex;align-items:center;gap:8px}
+.tags.citta .n{background:var(--sand,#F1ECE3);border-radius:999px;padding:1px 8px;font-size:12px;color:#555}
 .lead{font-size:16px;color:var(--grey);line-height:1.55}
 .box h3{font-size:15.5px;font-weight:700;margin-top:6px}.box p{font-size:15px;line-height:1.6}
 .upd{font-size:12.5px;color:var(--grey)}
@@ -447,7 +505,13 @@ footer a:hover{color:var(--ink)}
 `.trim();
 
 let lastCrumbs = null; // set by crumbs() while the body is built, read by layout() right after (pages are built one at a time)
-function layout({ title, description, url, image, jsonLd, body, ogType = "website", modified = NOW, head = "", alt = null }) {
+// la città come entità (non come parola): dice a Google e ai motori di risposta DI DOVE parla la pagina,
+// con coordinate e provincia. Le pagine che non parlano di una città sola passano about: ITALIA.
+const CITY_LD = { "@type": "City", name: CITY_NAME,
+  address: { "@type": "PostalAddress", addressLocality: CITY_NAME, addressRegion: PROV, addressCountry: "IT" },
+  geo: { "@type": "GeoCoordinates", latitude: C.lat, longitude: C.lng } };
+const ITALIA = { "@type": "Country", name: "Italia" };
+function layout({ title, description, url, image, jsonLd, body, ogType = "website", modified = NOW, head = "", alt = null, about = CITY_LD }) {
   // alt: the same page in the other language (hreflang); Italian is the default for everyone else
   const itUrl = en() ? alt : url, enUrl = en() ? url : alt;
   const crumbLd = lastCrumbs ? jsonld({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: lastCrumbs.map(([l, h], i) =>
@@ -455,8 +519,13 @@ function layout({ title, description, url, image, jsonLd, body, ogType = "websit
   lastCrumbs = null;
   // WebPage with dateModified: freshness signal for answer engines (Event/Organization have no modified date of their own)
   const pageLd = jsonld({ "@context": "https://schema.org", "@type": "WebPage", "@id": url, url, name: title, description, inLanguage: L.tag,
-    dateModified: modified.toISOString(), primaryImageOfPage: image,
-    isPartOf: { "@type": "WebSite", "@id": SITE + "/#website", name: "anyplans", url: SITE + "/" },
+    dateModified: modified.toISOString(), primaryImageOfPage: image, about,
+    // speakable: le due righe che rispondono alla domanda (titolo e primo paragrafo), quelle che un
+    // assistente vocale legge ad alta voce e che i motori di risposta citano per prime
+    speakable: { "@type": "SpeakableSpecification", cssSelector: ["h1", ".lead"] },
+    isPartOf: { "@type": "WebSite", "@id": SITE + "/#website", name: "anyplans", url: SITE + "/",
+                // la ricerca del sito: da qui Google può mostrare la casella di ricerca di anyplans nei risultati
+                potentialAction: { "@type": "SearchAction", target: { "@type": "EntryPoint", urlTemplate: `${SITE}/${HOME_CITY}/eventi.html?q={search_term_string}` }, "query-input": "required name=search_term_string" } },
     publisher: ORG });
   return `<!DOCTYPE html>
 <html lang="${L.code}">
@@ -491,7 +560,7 @@ ${head}
 <body>
 <header><div class="nav">
   <a class="brand" href="${L.home}"><img src="/logo.png" alt="" width="28" height="28"><span>anyplans<span class="q">?</span></span></a>
-  <span class="row" style="gap:10px">${alt ? `<a class="lnk" href="${esc(alt)}" hreflang="${en() ? "it" : "en"}" style="font-size:13.5px">${en() ? "Italiano" : "English"}</a>` : ""}<a class="btn sm" href="/${CITY}/eventi.html">${en() ? "See all events" : "Vedi tutti gli eventi"}</a></span>
+  <span class="row" style="gap:10px">${alt ? `<a class="lnk" href="${esc(alt)}" hreflang="${en() ? "it" : "en"}" style="font-size:13.5px">${en() ? "Italiano" : "English"}</a>` : ""}<a class="btn sm" href="${MAP_URL}">${en() ? "See all events" : "Vedi tutti gli eventi"}</a></span>
 </div></header>
 <main>
 ${body}
@@ -500,9 +569,10 @@ ${body}
   <span>© 2026 Filippo Terzi · anyplans</span>
   <span class="upd">${en() ? "Page updated on" : "Pagina aggiornata il"} ${esc(fmtDate(modified))}</span>
   <a href="${rel(hubUrl())}">${en() ? `Things to do in ${CITY_NAME}` : `Cosa fare a ${CITY_NAME}`}</a>
-  <a href="${rel(groupsUrl())}">${en() ? "Groups" : "Gruppi"}</a>
-  <a href="${rel(runningUrl())}">${en() ? "Running clubs" : "Running club"}</a>
-  <a href="/${CITY}/">anyplans ${en() ? "in" : "a"} ${CITY_NAME}</a>
+  ${groups.length ? `<a href="${rel(groupsUrl())}">${en() ? "Groups" : "Gruppi"}</a>` : ""}
+  ${runClubs.length >= 3 ? `<a href="${rel(runningUrl())}">${en() ? "Running clubs" : "Running club"}</a>` : ""}
+  <a href="${rel(cittaUrl())}">${en() ? "All the cities" : "Tutte le città"}</a>
+  <a href="${MAP_URL}">anyplans ${en() ? "in" : "a"} ${CITY_NAME}</a>
   <a href="/guidelines.html">${en() ? "Community guidelines" : "Le regole di anyplans"}</a>
   <a href="${L.privacy}">Privacy</a>
   <a href="${L.terms}">${en() ? "Terms of use" : "Condizioni d'uso"}</a>
@@ -556,7 +626,7 @@ function eventJsonLd(p, url) {
   const org = organizer(p);
   const image = p.photo ? photoSrc(p.photo) : OG_DEFAULT;
   const location = { "@type": "Place", name: p.meeting || (p.town ? p.town : CITY_NAME + " e dintorni"),
-    address: { "@type": "PostalAddress", addressLocality: localityOf(p), addressRegion: "BG", addressCountry: "IT",
+    address: { "@type": "PostalAddress", addressLocality: localityOf(p), addressRegion: PROV, addressCountry: "IT",
                ...(p.meeting ? { streetAddress: p.meeting } : {}) } };
   // organizer (Search Console 08/09/2026: "missing field organizer/performer"): a group on anyplans (with its page), a named association,
   // the town's Comune for the feste it publishes on its own portal (eventi.bergamo.it / app.bergamo.it), never anyplans itself.
@@ -624,9 +694,9 @@ function eventFaqEn(p, org) {
       ? `${p.title} takes place on ${dayAt(p.up[0])}, in ${where}.`
       : `${p.title} has ${p.up.length} dates, from ${fmtShort(p.up[0].start, tz)} to ${fmtShort(p.up[p.up.length - 1].start, tz)}: ${joinIt(p.up.slice(0, 6).map(dayAt))}${p.up.length > 6 ? " and more" : ""}.`;
   const place = p.meeting
-    ? `The meeting point is ${p.meeting}${p.town && !norm(p.meeting).includes(norm(p.town)) ? `, ${p.town}` : ""}${p.lat != null && p.lng != null ? ", in the province of Bergamo; the page has a link to the map" : ""}.`
-    : p.town ? `In ${p.town}, in the province of Bergamo. The organiser shares the exact place after you sign up.`
-    : `In the Bergamo area: the organiser shares the exact place after you sign up on anyplans.`;
+    ? `The meeting point is ${p.meeting}${p.town && !norm(p.meeting).includes(norm(p.town)) ? `, ${p.town}` : ""}${p.lat != null && p.lng != null ? `, in the province of ${CITY_NAME}; the page has a link to the map` : ""}.`
+    : p.town ? `In ${p.town}, in the province of ${CITY_NAME}. The organiser shares the exact place after you sign up.`
+    : `In the ${CITY_NAME} area: the organiser shares the exact place after you sign up on anyplans.`;
   const price = p.price_cents > 0
     ? `${p.title} costs ${fmtPrice(p.price_cents)}${p.price_note ? ` (${p.price_note})` : ""}.`
     : `${p.title} is free: no ticket needed${p.price_note ? ` (${p.price_note})` : ""}.`;
@@ -653,9 +723,9 @@ function eventFaqIt(p, org) {
       ? `${p.title} si tiene ${dayAt(p.up[0])}, a ${where}.`
       : `${p.title} ha ${p.up.length} date, ${dal(p.up[0])} al ${fmtShort(p.up[p.up.length - 1].start, tz)}: ${joinIt(p.up.slice(0, 6).map(dayAt))}${p.up.length > 6 ? " e altre" : ""}.`;
   const place = p.meeting
-    ? `Il ritrovo è a ${p.meeting}${p.town && !norm(p.meeting).includes(norm(p.town)) ? `, ${p.town}` : ""}${p.lat != null && p.lng != null ? ", in provincia di Bergamo; nella pagina c'è il collegamento alle mappe" : ""}.`
-    : p.town ? `A ${p.town}, in provincia di Bergamo. Il luogo esatto lo comunica chi organizza dopo che ti sei iscritto.`
-    : `Nella zona di Bergamo: il luogo esatto lo comunica chi organizza dopo che ti sei iscritto su anyplans.`;
+    ? `Il ritrovo è a ${p.meeting}${p.town && !norm(p.meeting).includes(norm(p.town)) ? `, ${p.town}` : ""}${p.lat != null && p.lng != null ? `, in provincia di ${CITY_NAME}; nella pagina c'è il collegamento alle mappe` : ""}.`
+    : p.town ? `A ${p.town}, in provincia di ${CITY_NAME}. Il luogo esatto lo comunica chi organizza dopo che ti sei iscritto.`
+    : `Nella zona di ${CITY_NAME}: il luogo esatto lo comunica chi organizza dopo che ti sei iscritto su anyplans.`;
   const price = p.price_cents > 0
     ? `${p.title} costa ${fmtPrice(p.price_cents)}${p.price_note ? ` (${p.price_note})` : ""}.`
     : `${p.title} è gratis: non serve biglietto${p.price_note ? ` (${p.price_note})` : ""}.`;
@@ -723,10 +793,10 @@ ${p.isPast ? "" : `<div class="when hero-when"><div class="datebox"><div class="
   ${hasMap ? `<a class="s place" href="${esc(mapsUrl(p.lat, p.lng))}" rel="noopener">${esc(p.meeting || S.zone)} · ${S.openMaps}</a>` : p.meeting ? `<div class="s">${esc(p.meeting)}</div>` : ""}</div></div>
 <div class="box">
   <h2>${joinTitle}</h2>
-  <div class="cta"><a class="btn" href="/${CITY}/evento.html?id=${esc(p.id)}&amp;join=1">${S.join}</a><span class="m">${p.going > 0 ? `${p.going === 1 ? S.going1 : S.goingN}${spots}` : S.first}</span></div>
+  <div class="cta"><a class="btn" href="${APP}/evento.html?id=${esc(p.id)}&amp;join=1">${S.join}</a><span class="m">${p.going > 0 ? `${p.going === 1 ? S.going1 : S.goingN}${spots}` : S.first}</span></div>
 </div>`}
 <p class="lead">${esc(eventSummary(p, org, first))}</p>
-${p.isPast ? `<div class="box in"><h2>${S.pastTitle}</h2><div class="m">${S.pastTxt}</div><div class="cta"><a class="btn" href="/${CITY}/eventi.html">${S.now}</a></div></div>` : ""}
+${p.isPast ? `<div class="box in"><h2>${S.pastTitle}</h2><div class="m">${S.pastTxt}</div><div class="cta"><a class="btn" href="${MAP_URL}">${S.now}</a></div></div>` : ""}
 ${p.isPast || p.up.length > 1 || p.past.length ? `<div class="box">
   <h2>${p.up.length > 1 ? S.dates : S.when}</h2>
   ${p.up.map(d => whenRow(d, tz, false)).join("\n")}
@@ -757,8 +827,8 @@ ${p.going > 0 && !p.isPast ? `<div class="box">
 ${p.co.length ? `<div class="box"><h2>${S.with}</h2><div class="tags">${p.co.map(slug => { const c = groups.find(x => x.slug === slug); return c ? `<a href="${esc(groupUrl(c))}">${c.emoji || "👥"} ${esc(c.name)}</a>` : ""; }).join("")}</div></div>` : ""}
 </div>
 <div class="cta">
-  ${p.isPast ? "" : `<a class="btn" href="/${CITY}/evento.html?id=${esc(p.id)}&amp;join=1">${S.join}</a>`}
-  <a class="btn ghost" href="/${CITY}/eventi.html">${S.allEvents}</a>
+  ${p.isPast ? "" : `<a class="btn" href="${APP}/evento.html?id=${esc(p.id)}&amp;join=1">${S.join}</a>`}
+  <a class="btn ghost" href="${MAP_URL}">${S.allEvents}</a>
   ${p.source_url && p.source !== "ugc" ? `<a class="lnk" href="${esc(p.source_url)}" rel="noopener nofollow">${S.official}</a>` : ""}
 </div>
 ${faqHtml(faq)}
@@ -766,7 +836,7 @@ ${sim.length ? `<h2>${S.similar}</h2>${listHtml(sim)}` : ""}
 `;
   // Logged-in visitors (session in storage, same key as app.js) jump to the app page, which has join state, faces and
   // live counts; crawlers and visitors without an account have empty storage and stay on this static page.
-  const appScript = p.isPast ? "" : `<script>(function(){try{var s=JSON.parse(localStorage.getItem("anyplans_session")||sessionStorage.getItem("anyplans_session")||"null");if(s&&s.access_token)location.replace("/${CITY}/evento.html?id=${esc(p.id)}");}catch(_){}})();</script>`;
+  const appScript = p.isPast ? "" : `<script>(function(){try{var s=JSON.parse(localStorage.getItem("anyplans_session")||sessionStorage.getItem("anyplans_session")||"null");if(s&&s.access_token)location.replace("${APP}/evento.html?id=${esc(p.id)}");}catch(_){}})();</script>`;
   const mapHead = appScript + (hasMap ? `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css">` : "");
   const mapScript = hasMap ? `<script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script>
@@ -861,7 +931,7 @@ ${noDay.length ? `
 <div class="rc-day" id="others"><h2>No fixed day</h2><span class="n">${noDay.length}</span></div>
 <p class="lead">They go out when they decide on the spot: the day is on their Instagram page.</p>
 <div class="rc-grid">${noDay.map(g => rcCard(g, null)).join("\n")}</div>` : ""}
-<div class="cta"><a class="btn" href="/${CITY}/eventi.html">See all events</a><a class="btn ghost" href="/${CITY}/login.html">Do you run a club? Create your group</a></div>
+<div class="cta"><a class="btn" href="${MAP_URL}">See all events</a><a class="btn ghost" href="${APP}/login.html">Do you run a club? Create your group</a></div>
 <div class="box"><h2>How a run club works</h2>
 <p>A run club is a group of people who meet at a fixed time and place to run together, usually once a week. It is not a sports club: no races, no rankings, no compulsory membership (unless stated), and you don't need to be trained. The pace is easy, often in several groups by speed, and nobody is left behind. At the end, almost always, a drink together.</p>
 <p>In ${esc(CITY_NAME)} and its province there are ${runClubs.length} run clubs: from Monday at Trucca park (PTRUNBG) and in Osio Sotto (MRCBG), to Tuesday on the steps of Città Alta, to Wednesday with Cor Run, up to Saturday morning. Above you find them by day; on each club's page there are the meeting point, the next runs and the Instagram and WhatsApp contacts. This page updates itself every night.</p></div>
@@ -891,7 +961,7 @@ ${noDay.length ? `
 <div class="rc-day" id="altri"><h2>Senza giorno fisso</h2><span class="n">${noDay.length}</span></div>
 <p class="lead">Escono quando decidono sul momento: il giorno lo trovi sulla loro pagina Instagram.</p>
 <div class="rc-grid">${noDay.map(g => rcCard(g, null)).join("\n")}</div>` : ""}
-<div class="cta"><a class="btn" href="/${CITY}/eventi.html">Vedi tutti gli eventi</a><a class="btn ghost" href="/${CITY}/login.html">Organizzi un run club? Crea il tuo gruppo</a></div>
+<div class="cta"><a class="btn" href="${MAP_URL}">Vedi tutti gli eventi</a><a class="btn ghost" href="${APP}/login.html">Organizzi un run club? Crea il tuo gruppo</a></div>
 <div class="box"><h2>Come funziona un run club</h2>
 <p>Un run club è un gruppo di persone che si trova a un'ora e in un posto fissi per correre insieme, di solito una volta a settimana. Non è una società sportiva: non ci sono gare, classifiche o tesseramenti obbligatori (salvo dove indicato), e non serve essere allenati. Si corre a ritmo tranquillo, spesso in più gruppi per passo, e chi va piano non resta indietro. Alla fine, quasi sempre, si beve qualcosa insieme.</p>
 <p>A ${esc(CITY_NAME)} e provincia i run club sono ${runClubs.length}: dal lunedì al parco della Trucca (PTRUNBG) e a Osio Sotto (MRCBG), al martedì sulle scalette di Città Alta, al mercoledì con Cor Run, fino al sabato mattina. Qui sopra li trovi per giorno; nella pagina di ogni club ci sono il ritrovo, le prossime uscite e i contatti Instagram e WhatsApp. Questa pagina si aggiorna da sola ogni notte.</p></div>
@@ -997,7 +1067,7 @@ ${crumbs([["anyplans", L.home], [CITY_NAME, rel(hubUrl())], [S.groups, rel(group
   <div><h1>${esc(g.name)}</h1><div class="s">${esc(city)}${g.is_verified ? ` · ${S.verified}` : ""}${g.review_count > 0 && g.review_avg != null ? ` · ${esc(E ? String(g.review_avg) : String(g.review_avg).replace(".", ","))} ${S.outOf} (${g.review_count} ${g.review_count === 1 ? S.rev1 : S.revN})` : ""}</div></div></div>
 <p class="lead">${esc(groupSummary(g, sch, up))}</p>
 ${g.description ? `<div class="box"><h2>${S.about}</h2>${S.descNote ? `<div class="m">${S.descNote}</div>` : ""}<div class="desc">${esc(g.description)}</div></div>` : ""}
-<div class="cta"><a class="btn" href="/${CITY}/community.html?slug=${esc(g.slug)}">${S.follow}</a>${g.instagram_handle ? `<a class="btn ghost ico" href="https://instagram.com/${esc(String(g.instagram_handle).replace(/^@/, ""))}" rel="noopener">${IG_SVG}Instagram</a>` : ""}${g.whatsapp_url ? `<a class="btn ghost ico wa" href="${esc(g.whatsapp_url)}" rel="noopener">${WA_SVG}${S.wa}</a>` : ""}<a class="btn ghost" href="/${CITY}/eventi.html">${S.all}</a></div>
+<div class="cta"><a class="btn" href="${APP}/community.html?slug=${esc(g.slug)}">${S.follow}</a>${g.instagram_handle ? `<a class="btn ghost ico" href="https://instagram.com/${esc(String(g.instagram_handle).replace(/^@/, ""))}" rel="noopener">${IG_SVG}Instagram</a>` : ""}${g.whatsapp_url ? `<a class="btn ghost ico wa" href="${esc(g.whatsapp_url)}" rel="noopener">${WA_SVG}${S.wa}</a>` : ""}<a class="btn ghost" href="${MAP_URL}">${S.all}</a></div>
 <h2>${up.length ? S.next : S.none}</h2>
 ${up.length ? listHtml(up) : `<p class="lead">${S.empty}</p>`}
 ${past.length ? `<h2>${S.past}</h2>${listHtml(past)}` : ""}
@@ -1103,7 +1173,7 @@ ${crumbs([["anyplans", L.home], [CITY_NAME, rel(hubUrl())], ["Groups", null]])}
 <p class="lead">${esc(descr)}</p>
 ${runClubs.length >= 3 ? `<div class="cta"><a class="btn" href="${rel(runningUrl())}">🏃 Running clubs in ${esc(CITY_NAME)}: ${runClubs.length} groups</a></div>` : ""}
 <div class="list">${groups.map(g => `<a class="card" href="${esc(groupUrl(g))}"><span class="em">${g.emoji || "👥"}</span><span><span class="t">${esc(g.name)}</span><br><span class="m">${esc(cap(g.city || CITY_NAME))}${g.upcoming_count > 0 ? ` · ${g.upcoming_count} upcoming ${g.upcoming_count === 1 ? "event" : "events"}` : ""}</span></span></a>`).join("\n")}</div>
-<div class="cta"><a class="btn ghost" href="/${CITY}/login.html">Do you organise events? Create your group</a></div>
+<div class="cta"><a class="btn ghost" href="${APP}/login.html">Do you organise events? Create your group</a></div>
 ${faqHtml(faq)}
 `;
   return layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld + "\n" + faqLd(faq), body, alt: inLocale("it", groupsUrl) });
@@ -1111,7 +1181,7 @@ ${faqHtml(faq)}
 function groupsIndexIt() {
   const url = groupsUrl();
   const title = `Gruppi a ${CITY_NAME}: ${groups.length} comunità a cui unirti | anyplans`;
-  const descr = cut(`I gruppi di ${CITY_NAME} su anyplans: associazioni, club e comunità che organizzano eventi aperti a tutti. Li segui e vedi i loro prossimi piani.`, 160);
+  const descr = cut(`I gruppi di ${CITY_NAME} su anyplans: associazioni, club e comunità che organizzano eventi aperti a tutti. Li segui e vedi i loro prossimi eventi.`, 160);
   const ld = jsonld({ "@context": "https://schema.org", "@type": "ItemList", name: `Gruppi a ${CITY_NAME}`, url,
     itemListElement: groups.map((g, i) => ({ "@type": "ListItem", position: i + 1, url: groupUrl(g), name: g.name })) });
   const active = groups.filter(g => g.upcoming_count > 0).length;
@@ -1126,7 +1196,7 @@ ${crumbs([["anyplans", "/"], [CITY_NAME, rel(hubUrl())], ["Gruppi", null]])}
 <p class="lead">${esc(descr)}</p>
 ${runClubs.length >= 3 ? `<div class="cta"><a class="btn" href="${rel(runningUrl())}">🏃 Running club a ${esc(CITY_NAME)}: ${runClubs.length} gruppi</a></div>` : ""}
 <div class="list">${groups.map(g => `<a class="card" href="${esc(groupUrl(g))}"><span class="em">${g.emoji || "👥"}</span><span><span class="t">${esc(g.name)}</span><br><span class="m">${esc(cap(g.city || CITY_NAME))}${g.upcoming_count > 0 ? ` · ${g.upcoming_count} ${g.upcoming_count === 1 ? "evento in programma" : "eventi in programma"}` : ""}</span></span></a>`).join("\n")}</div>
-<div class="cta"><a class="btn ghost" href="/${CITY}/login.html">Organizzi eventi? Crea il tuo gruppo</a></div>
+<div class="cta"><a class="btn ghost" href="${APP}/login.html">Organizzi eventi? Crea il tuo gruppo</a></div>
 ${faqHtml(faq)}
 `;
   return layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld + "\n" + faqLd(faq), body, alt: inLocale("en", groupsUrl) });
@@ -1169,7 +1239,7 @@ ${crumbs([["anyplans", L.home], [CITY_NAME, rel(hubUrl())], [ix.kind === "tipo" 
 <div class="chips"><span class="chip">${emoji} ${esc(ix.kind === "tipo" ? ix.t.c ? catLabel(ix.t.c) : "" : "Town")}</span></div>
 <h1>${esc(h1)}</h1>
 <p class="lead">${esc(intro)}</p>
-<div class="cta"><a class="btn" href="/${CITY}/eventi.html">See all events</a></div>
+<div class="cta"><a class="btn" href="${MAP_URL}">See all events</a></div>
 ${up.length ? `<h2>Upcoming</h2>${listHtml(up)}` : ""}
 ${past.length ? `<h2>Past</h2>${listHtml(past)}` : ""}
 ${faqHtml(faq)}
@@ -1185,7 +1255,7 @@ function indexPageIt(ix) {
   if (ix.kind === "tipo") {
     h1 = `${ix.t.label} a ${CITY_NAME} e provincia`; emoji = ix.t.e;
     title = cut(`${ix.sport === "festival" ? "Feste e sagre" : ix.t.label} a ${CITY_NAME}`, 36) + (up.length ? `: ${up.length} ${up.length === 1 ? "evento" : "eventi"}` : "") + " | anyplans";
-    intro = `${up.length ? `A ${CITY_NAME} e provincia ci sono ${up.length} ${up.length === 1 ? "evento" : "eventi"} di ${ix.t.label.toLowerCase()} nei prossimi mesi.` : `Al momento non ci sono eventi di ${ix.t.label.toLowerCase()} in programma: qui sotto quelli già passati.`} ${ix.t.frase}`;
+    intro = `${up.length ? `A ${CITY_NAME} e provincia ci sono ${up.length} ${up.length === 1 ? "evento" : "eventi"} di ${ix.t.label.toLowerCase()} nei prossimi mesi.` : `Al momento non ci sono eventi di ${ix.t.label.toLowerCase()} in programma: qui sotto quelli già passati.`} ${tPhrase(ix.t)}`;
   } else {
     h1 = `Feste ed eventi a ${ix.town}`; emoji = "🎉";
     title = cut(`Feste ed eventi a ${ix.town}${up.length ? ": " + up.length + " in programma" : ""}`, 49) + " | anyplans";
@@ -1207,7 +1277,7 @@ ${crumbs([["anyplans", "/"], [CITY_NAME, rel(hubUrl())], [ix.kind === "tipo" ? i
 <div class="chips"><span class="chip">${emoji} ${esc(ix.kind === "tipo" ? ix.t.c ? cap(ix.t.c) : "" : "Paese")}</span></div>
 <h1>${esc(h1)}</h1>
 <p class="lead">${esc(intro)}</p>
-<div class="cta"><a class="btn" href="/${CITY}/eventi.html">Vedi tutti gli eventi</a></div>
+<div class="cta"><a class="btn" href="${MAP_URL}">Vedi tutti gli eventi</a></div>
 ${up.length ? `<h2>Prossimi</h2>${listHtml(up)}` : ""}
 ${past.length ? `<h2>Già passati</h2>${listHtml(past)}` : ""}
 ${faqHtml(faq)}
@@ -1219,11 +1289,17 @@ function hubPage() { return en() ? hubPageEn() : hubPageIt(); }
 // "Spritz & Burger (Clusone, 12 September)": the town only, and nothing when the town is already in the title
 const lc1 = (t) => t && t.startsWith("From ") ? "from " + t.slice(5) : t; // "From 11 September" -> "from 11 September" mid-sentence; weekdays keep their capital
 const evTown = (p) => { const t = localityOf(p); return t && !norm(p.title).includes(norm(t)) ? t + ", " : ""; };
+// i tipi di evento più numerosi di QUESTA città: i testi dell'hub li elencavano a mano (quelli di
+// Bergamo), e a Milano o a Bari erano falsi. Adesso li dice il database.
+const topKinds = (n = 6) => [...types].sort((a, b) => b.list.length - a.list.length).slice(0, n).map(x => tLabel(x.t).toLowerCase());
+const hubTitolo = () => String(TESTI.hub.titolo).replace("{citta}", CITY_NAME);
+const hubSotto = () => CITY === HOME_CITY ? TESTI.hub.sotto
+  : `${cap(joinIt(topKinds(5)))}: quello che succede a ${CITY_NAME} e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.`;
 function hubPageEn() {
   const url = hubUrl();
   const next = upcomingPages.slice(0, 30);
-  const title = `Things to do in ${CITY_NAME} this week: ${upcomingPages.length} events | anyplans`;
-  const sotto = `What's on in ${CITY_NAME} and its province, today, tonight and this weekend: town festivals and sagre, running clubs, walks, cooking and pottery classes, volunteering, open-air summer venues. Pick a plan and go with others.`;
+  const title = `Things to do in ${CITY_NAME}: ${upcomingPages.length} events | anyplans`;
+  const sotto = `What's on in ${CITY_NAME} and its province, today, tonight and this weekend: ${joinIt(topKinds(6))}. Pick one and go with other people.`;
   const descr = cut(`Things to do in ${CITY_NAME} today and this weekend: ${upcomingPages.length} events, ${types.length} kinds of activity, ${groups.length} groups. Town festivals, run clubs, classes, sports. You sign up and go with others.`, 160);
   const today = dateKey(NOW, DEFAULT_TZ);
   const dow = (d) => new Intl.DateTimeFormat("en-US", { timeZone: DEFAULT_TZ, weekday: "short" }).format(d);
@@ -1236,7 +1312,7 @@ function hubPageEn() {
   const faq = [
     { q: `What to do in ${CITY_NAME} this weekend?`, a: weekend.length ? `This weekend in ${CITY_NAME} and its province there are ${weekend.length} events on anyplans: ${joinIt(weekend.slice(0, 6).map(evName))}${weekend.length > 6 ? " and more" : ""}. The full dates are in the list above.` : `Nothing is published yet for this weekend on anyplans: the next events are ${joinIt(next.slice(0, 4).map(evName))}.` },
     { q: `What's on in ${CITY_NAME} today and tonight?`, a: todayList.length ? `Today, ${fmtDate(NOW)}, in ${CITY_NAME} and its province there ${todayList.length === 1 ? "is 1 event" : `are ${todayList.length} events`} on anyplans: ${joinIt(todayList.slice(0, 6).map(p => p.title + (evTown(p) ? " in " + evTown(p).replace(/, $/, "") : "")))}.` : `Today, ${fmtDate(NOW)}, there is no event published on anyplans in ${CITY_NAME}. The next ones: ${joinIt(next.slice(0, 4).map(evName))}.` },
-    { q: `What kind of events are there in ${CITY_NAME} on anyplans?`, a: `Town festivals and food fairs (sagre), group runs and running clubs, walks, cooking and pottery classes, volunteering, summer venues and cultural events. Right now ${upcomingPages.length} events are scheduled, published by ${groups.length} groups or collected from the websites of the town councils and associations.` },
+    { q: `What kind of events are there in ${CITY_NAME} on anyplans?`, a: `${cap(joinIt(topKinds(8)))}. Right now ${upcomingPages.length} events are scheduled${groups.length ? `, published by ${groups.length} groups or` : ", "} collected every day from the organisers, the town councils and the platforms where they are announced.` },
     { q: `Are the events in ${CITY_NAME} on anyplans free?`, a: `${free} of the ${upcomingPages.length} upcoming events are free. When there is a ticket or a fee, the price is on the event's page. Signing up on anyplans is free and only needs your email; you must be 18 or older.` },
     { q: `I'm a tourist in ${CITY_NAME}: can I join?`, a: `Yes: run clubs, walks, festivals and dinners are open to everyone, for one evening too. Most descriptions are in Italian because the organisers write them, but times, places and prices are on every page in English, and you can see who else is going before you show up.` },
   ];
@@ -1246,7 +1322,7 @@ function hubPageEn() {
 ${crumbs([["anyplans", L.home], [CITY_NAME, null]])}
 <h1>Things to do in ${esc(CITY_NAME)}, today and this weekend</h1>
 <p class="lead">${esc(sotto)}</p>
-<div class="cta"><a class="btn" href="/${CITY}/eventi.html">See all events</a><a class="btn ghost" href="${rel(groupsUrl())}">The groups</a></div>
+<div class="cta"><a class="btn" href="${MAP_URL}">See all events</a>${groups.length ? `<a class="btn ghost" href="${rel(groupsUrl())}">The groups</a>` : `<a class="btn ghost" href="${rel(cittaUrl())}">Other cities</a>`}</div>
 ${whenLinksEn()}
 ${types.length ? `<h2>By kind</h2><div class="tags">${types.map(x => `<a href="${rel(indexUrl(x))}">${x.t.e} ${esc(tLabel(x.t))}</a>`).join("")}</div>` : ""}
 ${towns.length ? `<h2>By town</h2><div class="tags">${towns.slice().sort((a, b) => a.town.localeCompare(b.town, "it")).map(x => `<a href="${rel(indexUrl(x))}">${esc(x.town)}</a>`).join("")}</div>` : ""}
@@ -1261,8 +1337,8 @@ ${faqHtml(faq)}
 function hubPageIt() {
   const url = hubUrl();
   const next = upcomingPages.slice(0, 30);
-  const title = `${TESTI.hub.titolo}: ${upcomingPages.length} eventi | anyplans`;
-  const descr = cut(`${TESTI.hub.sotto} ${upcomingPages.length} eventi in programma, ${types.length} tipi di attività, ${groups.length} gruppi.`, 160);
+  const title = `${hubTitolo()}: ${upcomingPages.length} eventi | anyplans`;
+  const descr = cut(`${hubSotto()} ${upcomingPages.length} eventi in programma, ${types.length} tipi di attività${groups.length ? `, ${groups.length} gruppi` : ""}.`, 160);
   // "cosa fare a Bergamo oggi / questo weekend": the page is rebuilt every night, so "today" is right at 03:30
   const today = dateKey(NOW, DEFAULT_TZ);
   const dow = (d) => new Intl.DateTimeFormat("en-US", { timeZone: DEFAULT_TZ, weekday: "short" }).format(d);
@@ -1275,16 +1351,16 @@ function hubPageIt() {
   const faq = [
     { q: `Cosa fare a ${CITY_NAME} questo fine settimana?`, a: weekend.length ? `Questo fine settimana a ${CITY_NAME} e provincia ci sono ${weekend.length} eventi su anyplans: ${joinIt(weekend.slice(0, 6).map(evName))}${weekend.length > 6 ? " e altri" : ""}. Le date complete sono nella lista qui sopra.` : `Per questo fine settimana non c'è ancora niente pubblicato su anyplans: i prossimi eventi sono ${joinIt(next.slice(0, 4).map(evName))}.` },
     { q: `Cosa fare a ${CITY_NAME} oggi?`, a: todayList.length ? `Oggi, ${fmtDate(NOW)}, a ${CITY_NAME} e provincia ${todayList.length === 1 ? "c'è 1 evento" : `ci sono ${todayList.length} eventi`} su anyplans: ${joinIt(todayList.slice(0, 6).map(p => p.title + (evTown(p) ? " a " + evTown(p).replace(/, $/, "") : "")))}.` : `Oggi, ${fmtDate(NOW)}, non c'è nessun evento pubblicato su anyplans a ${CITY_NAME}. I prossimi: ${joinIt(next.slice(0, 4).map(evName))}.` },
-    { q: `Che tipo di eventi ci sono a ${CITY_NAME} su anyplans?`, a: `Feste di paese e sagre, uscite di corsa e running club, camminate, corsi di cucina e di ceramica, volontariato, eventi culturali. In questo momento sono in programma ${upcomingPages.length} eventi, pubblicati da ${groups.length} gruppi o raccolti dai siti dei comuni e delle associazioni.` },
+    { q: `Che tipo di eventi ci sono a ${CITY_NAME} su anyplans?`, a: `${cap(joinIt(topKinds(8)))}. In questo momento sono in programma ${upcomingPages.length} eventi${groups.length ? `, pubblicati da ${groups.length} gruppi o` : ","} raccolti ogni giorno da chi li organizza, dai comuni e dalle piattaforme dove vengono annunciati.` },
     { q: `Gli eventi a ${CITY_NAME} su anyplans sono gratis?`, a: `${free} dei ${upcomingPages.length} eventi in programma sono gratis. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento. Registrarsi su anyplans è gratis e serve solo la tua email; bisogna avere almeno 18 anni.` },
   ];
   const ld = jsonld({ "@context": "https://schema.org", "@type": "ItemList", name: `Prossimi eventi a ${CITY_NAME}`, url,
     itemListElement: next.map((p, i) => ({ "@type": "ListItem", position: i + 1, url: eventUrl(p), name: p.title })) });
   const body = `
 ${crumbs([["anyplans", "/"], [CITY_NAME, null]])}
-<h1>${esc(TESTI.hub.titolo)}</h1>
-<p class="lead">${esc(TESTI.hub.sotto)}</p>
-<div class="cta"><a class="btn" href="/${CITY}/eventi.html">Vedi tutti gli eventi</a><a class="btn ghost" href="${rel(groupsUrl())}">I gruppi</a></div>
+<h1>${esc(hubTitolo())}</h1>
+<p class="lead">${esc(hubSotto())}</p>
+<div class="cta"><a class="btn" href="${MAP_URL}">Vedi tutti gli eventi</a>${groups.length ? `<a class="btn ghost" href="${rel(groupsUrl())}">I gruppi</a>` : `<a class="btn ghost" href="${rel(cittaUrl())}">Le altre città</a>`}</div>
 ${whenLinksIt()}
 ${types.length ? `<h2>Per tipo</h2><div class="tags">${types.map(x => `<a href="${rel(indexUrl(x))}">${x.t.e} ${esc(x.t.label)}</a>`).join("")}</div>` : ""}
 ${towns.length ? `<h2>Per paese</h2><div class="tags">${towns.slice().sort((a, b) => a.town.localeCompare(b.town, "it")).map(x => `<a href="${rel(indexUrl(x))}">${esc(x.town)}</a>`).join("")}</div>` : ""}
@@ -1368,7 +1444,7 @@ function whenPage(kind) {
 ${crumbs([["anyplans", L.home], [CITY_NAME, rel(hubUrl())], [en() ? (kind === "weekend" ? "This weekend" : kind === "oggi" ? "Today" : "Tomorrow") : cap(whenName(kind)), null]])}
 <h1>${esc(h1)}</h1>
 <p class="lead">${esc(lead)}</p>
-<div class="cta"><a class="btn" href="/${CITY}/eventi.html">${en() ? "See them on the map" : "Vedili sulla mappa"}</a><a class="btn ghost" href="${rel(hubUrl())}">${en() ? "All events" : "Tutti gli eventi"}</a></div>
+<div class="cta"><a class="btn" href="${MAP_URL}">${en() ? "See them on the map" : "Vedili sulla mappa"}</a><a class="btn ghost" href="${rel(hubUrl())}">${en() ? "All events" : "Tutti gli eventi"}</a></div>
 ${list.length ? `<h2>${en() ? "By kind" : "Per tipo"}</h2><div class="tags">${typeChips(list)}</div>` : ""}
 <h2>${en() ? "The list" : "La lista"}</h2>
 ${listHtml(list.slice(0, 80))}
@@ -1409,7 +1485,7 @@ function monthPage(m) {
 ${crumbs([["anyplans", L.home], [CITY_NAME, rel(hubUrl())], [label, null]])}
 <h1>${esc(h1)}</h1>
 <p class="lead">${esc(lead)}</p>
-<div class="cta"><a class="btn" href="/${CITY}/eventi.html">${en() ? "See them on the map" : "Vedili sulla mappa"}</a><a class="btn ghost" href="${rel(hubUrl())}">${en() ? "All events" : "Tutti gli eventi"}</a></div>
+<div class="cta"><a class="btn" href="${MAP_URL}">${en() ? "See them on the map" : "Vedili sulla mappa"}</a><a class="btn ghost" href="${rel(hubUrl())}">${en() ? "All events" : "Tutti gli eventi"}</a></div>
 <h2>${en() ? "By kind" : "Per tipo"}</h2><div class="tags">${typeChips(list)}</div>
 <h2>${en() ? "The list" : "La lista"}</h2>
 ${listHtml(list.slice(0, 80))}
@@ -1462,7 +1538,7 @@ ${upcomingPages.slice(0, 40).map(p => line(p.title, eventUrl(p), `${whenLabel(p)
 
 ## Optional
 
-${line("Tutte le pagine in un file", `${SITE}/llms-full.txt`, "titolo, riassunto e domande frequenti di ogni pagina")}
+${line("Tutte le pagine in un file", `${SITE}/${LLMS_FILE}`, "titolo, riassunto e domande frequenti di ogni pagina")}
 ${line("Sitemap", `${SITE}/sitemap.xml`)}
 ${line("Versione inglese della home", `${SITE}/en/`)}
 
@@ -1477,19 +1553,19 @@ ${types.map(x => line(`${EN_TYPES[x.sport]?.[1] || x.t.label} in ${CITY_NAME}`, 
 
 // ── robots & sitemap ──────────────────────────────────────────────────────────
 const ROBOTS = `User-agent: *
-Disallow: /${CITY}/login.html
-Disallow: /${CITY}/profilo.html
-Disallow: /${CITY}/crea.html
-Disallow: /${CITY}/crea-community.html
-Disallow: /${CITY}/dashboard.html
-Disallow: /${CITY}/checkin.html
-Disallow: /${CITY}/notifiche.html
-Disallow: /${CITY}/impostazioni.html
-Disallow: /${CITY}/miei.html
-Disallow: /${CITY}/seguo.html
-Disallow: /${CITY}/chiedi.html
-Disallow: /${CITY}/tipo-account.html
-Disallow: /${CITY}/raccontaci-gruppo.html
+Disallow: ${APP}/login.html
+Disallow: ${APP}/profilo.html
+Disallow: ${APP}/crea.html
+Disallow: ${APP}/crea-community.html
+Disallow: ${APP}/dashboard.html
+Disallow: ${APP}/checkin.html
+Disallow: ${APP}/notifiche.html
+Disallow: ${APP}/impostazioni.html
+Disallow: ${APP}/miei.html
+Disallow: ${APP}/seguo.html
+Disallow: ${APP}/chiedi.html
+Disallow: ${APP}/tipo-account.html
+Disallow: ${APP}/raccontaci-gruppo.html
 Disallow: /v2/
 Disallow: /index-waitlist.html
 
@@ -1509,6 +1585,16 @@ Sitemap: ${SITE}/sitemap.xml
 `;
 const sitemapEntries = []; // {loc, lastmod}
 const addUrl = (loc, lastmod) => sitemapEntries.push({ loc, lastmod: (lastmod || NOW).toISOString().slice(0, 10) });
+const LLMS_FILE = CITY === HOME_CITY ? "llms-full.txt" : `llms-${CITY}.txt`;
+// una sitemap per citta (sitemap-milano.xml) e un indice che le tiene insieme: Google vuole al massimo
+// 50.000 url per file e, soprattutto, cosi si vede in Search Console quale citta e' indicizzata e quale no
+function sitemapIndexXml(files) {
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${files.map(f => `  <sitemap><loc>${SITE}/${f}</loc><lastmod>${NOW.toISOString().slice(0, 10)}</lastmod></sitemap>`).join("\n")}
+</sitemapindex>
+`;
+}
 function sitemapXml() {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -1529,13 +1615,118 @@ async function writePage(rel, html) {
   const faq = [...html.matchAll(/<h3>(.*?)<\/h3><p>(.*?)<\/p>/gs)].map(m => `**${unesc(m[1])}**\n${unesc(m[2])}`);
   fullTxt.push(`## ${title.replace(/ \| anyplans$/, "")}\n${SITE}/${rel}/\n\n${lead || descr}\n${faq.length ? "\n" + faq.join("\n\n") + "\n" : ""}`);
 }
+
+// ── /citta/ (e /en/cities/): l'elenco delle città, scritto dal run --indice ────
+// Serve a tre cose: dà a Google una porta d'ingresso unica verso tutte le città (senza, le pagine di
+// Torino sarebbero raggiungibili solo dalla sitemap), risponde da sola alla domanda "in che città c'è
+// anyplans" e tiene i numeri veri, aggiornati ogni notte.
+function cittaPage(stato) {
+  const url = cittaUrl();
+  const tot = stato.reduce((n, c) => n + c.eventi, 0);
+  const first = stato.slice(0, 6).map(c => c.nome);
+  const h1 = en() ? "Events in Italy, city by city" : "Gli eventi in Italia, città per città";
+  const title = (en() ? `Events in Italy: ${stato.length} cities` : `Eventi in Italia: ${stato.length} città`) + " | anyplans";
+  const lead = en()
+    ? `anyplans has ${nf(tot)} upcoming events in ${stato.length} Italian cities: ${first.join(", ")} and more. Concerts, town festivals, markets, dinners with strangers, group runs and open padel matches, each with date, place, price and how to sign up. Updated every night.`
+    : `Su anyplans ci sono ${nf(tot)} eventi in programma in ${stato.length} città italiane: ${first.join(", ")} e altre. Concerti, feste di paese, mercati, cene con sconosciuti, uscite di corsa e partite di padel aperte, ognuno con data, luogo, prezzo e come iscriversi. Aggiornato ogni notte.`;
+  const cards = stato.map(c => `<a href="/${en() ? "en/" : ""}${c.slug}${c.slug === HOME_CITY ? (en() ? "/things-to-do" : "/cosa-fare") : ""}/">${esc(c.nome)}<span class="n">${c.eventi}</span></a>`).join("");
+  const faq = en() ? [
+    { q: "Which cities is anyplans in?", a: `${stato.length} cities: ${joinIt(stato.map(c => `${c.nome} (${c.eventi} events)`))}.` },
+    { q: "My city is not here. Why?", a: "Because there are not enough events yet to make a page worth reading. The map covers the whole country: open it and drag it where you live, the events load as you go." },
+    { q: "Where do the events come from?", a: "From the people and groups who publish them on anyplans, and from public sources we read every day (town councils, venues, clubs and event platforms). Every page links back to the organiser." },
+    { q: "How much does it cost?", a: "anyplans is free. When an event has a ticket or a fee, the price is on its page and you pay the organiser, not us." },
+  ] : [
+    { q: "In che città c'è anyplans?", a: `In ${stato.length} città: ${joinIt(stato.map(c => `${c.nome} (${c.eventi} eventi)`))}.` },
+    { q: "La mia città non c'è, perché?", a: "Perché per ora non ci sono abbastanza eventi da farne una pagina che valga la pena leggere. La mappa però copre tutta Italia: aprila e trascinala dove vivi, gli eventi si caricano mentre ti sposti." },
+    { q: "Da dove arrivano gli eventi?", a: "Da chi li pubblica su anyplans (persone e gruppi) e da fonti pubbliche che leggiamo ogni giorno: comuni, locali, associazioni e piattaforme di eventi. In ogni pagina c'è il link a chi organizza." },
+    { q: "Quanto costa?", a: "anyplans è gratis. Quando un evento ha un biglietto o una quota il prezzo è scritto nella sua pagina e si paga a chi organizza, non a noi." },
+  ];
+  const ld = jsonld({ "@context": "https://schema.org", "@type": "ItemList", name: h1, url, numberOfItems: stato.length,
+    itemListElement: stato.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c.nome,
+      url: `${SITE}${en() ? "/en" : ""}/${c.slug}${c.slug === HOME_CITY ? (en() ? "/things-to-do" : "/cosa-fare") : ""}/` })) });
+  const body = `
+${crumbs([["anyplans", L.home], [en() ? "Cities" : "Città", null]])}
+<h1>${esc(h1)}</h1>
+<p class="lead">${esc(lead)}</p>
+<div class="cta"><a class="btn" href="${APP}/eventi.html">${en() ? "Open the map" : "Apri la mappa"}</a></div>
+<h2>${en() ? "The cities" : "Le città"}</h2>
+<div class="tags citta">${cards}</div>
+${faqHtml(faq)}
+`;
+  return layout({ title, description: cut(lead, 160), url, image: OG_DEFAULT, jsonLd: ld + "\n" + faqLd(faq), body,
+                  about: ITALIA, alt: inLocale(en() ? "it" : "en", () => cittaUrl()) });
+}
+
 const cityDir = path.join(OUT, CITY);
+const statoDir = path.join(OUT, "tools", "stato");
+
+// ── --indice: nessuna città, solo i file che tengono insieme il sito ──────────
+if (INDICE) {
+  const stato = [];
+  for (const c of CITTA) {
+    try { stato.push(JSON.parse(await readFile(path.join(statoDir, c.slug + ".json"), "utf8"))); } catch { /* città saltata */ }
+  }
+  if (!stato.length) { console.error("--indice: nessuna città generata, non tocco niente"); process.exit(1); }
+  stato.sort((a, b) => b.eventi - a.eventi);
+  const sitemaps = [];
+  for (const code of ["it", "en"]) {
+    L = LOCALES[code];
+    await writePage(rel(cittaUrl()).replace(/^\/|\/$/g, ""), cittaPage(stato));
+    addUrl(cittaUrl(), NOW);
+  }
+  L = LOCALES.it;
+  addUrl(SITE + "/", NOW);
+  addUrl(SITE + "/en/", NOW);
+  await writeFile(path.join(OUT, "sitemap-sito.xml"), sitemapXml());
+  sitemaps.push("sitemap-sito.xml", ...stato.map(c => `sitemap-${c.slug}.xml`));
+  await writeFile(path.join(OUT, "sitemap.xml"), sitemapIndexXml(sitemaps));
+  await writeFile(path.join(OUT, "robots.txt"), ROBOTS);
+  const tot = stato.reduce((n, c) => n + c.eventi, 0);
+  await writeFile(path.join(OUT, "llms.txt"), `# anyplans
+
+> La mappa degli eventi veri d'Italia: ${tot} eventi in programma in ${stato.length} città. Feste di paese, concerti,
+> mercati, cene con sconosciuti, uscite di corsa, partite di padel aperte. Di ognuno: data, luogo, prezzo,
+> chi organizza e come iscriversi. Si entra con l'email, solo maggiorenni. Aggiornato ogni notte.
+
+Le pagine sono statiche e leggibili senza javascript. Ogni città ha il suo file completo con titolo,
+riassunto e domande frequenti di ogni pagina.
+
+## Le città
+
+${stato.map(c => `- [${c.nome}](${SITE}/${c.slug}${c.slug === HOME_CITY ? "/cosa-fare" : ""}/): ${c.eventi} eventi in programma, ${c.pagine} pagine — testo completo: ${SITE}/${c.slug === HOME_CITY ? "llms-full.txt" : `llms-${c.slug}.txt`}`).join("\n")}
+
+## Il sito
+
+- [Tutte le città](${SITE}/citta/): l'elenco con quanti eventi ci sono in ognuna
+- [Sitemap](${SITE}/sitemap.xml): l'indice delle sitemap, una per città
+- [Le regole](${SITE}/guidelines.html) · [Privacy](${SITE}/privacy-it.html) · [Condizioni](${SITE}/terms-it.html)
+
+## Come citarci
+
+anyplans, ${SITE} — scrivere il nome dell'evento, la data e il link alla sua pagina su anyplans.
+I dati cambiano ogni notte: le pagine portano la data di aggiornamento in fondo.
+`);
+  console.log(`indice: ${stato.length} città, ${tot} eventi, ${sitemaps.length} sitemap → ${OUT}`);
+  process.exit(0);
+}
+
+// ── una città con pochi eventi non ha pagine sue ──────────────────────────────
+// Venti pagine con due righe l'una fanno male a tutto il sito (Google le legge come pagine vuote):
+// meglio che quella città viva solo sulla mappa finché non ha abbastanza roba. Bergamo è casa, resta sempre.
+if (CITY !== HOME_CITY && upcomingPages.length < MIN_CITY) {
+  await rm(cityDir, { recursive: true, force: true });
+  await rm(path.join(OUT, "en", CITY), { recursive: true, force: true });
+  await rm(path.join(OUT, `sitemap-${CITY}.xml`), { force: true });
+  await rm(path.join(OUT, `llms-${CITY}.txt`), { force: true });
+  await rm(path.join(statoDir, CITY + ".json"), { force: true });
+  console.log(`${CITY}: ${upcomingPages.length} eventi futuri, sotto la soglia di ${MIN_CITY}: niente pagine`);
+  process.exit(0);
+}
+
 await mkdir(cityDir, { recursive: true });
 for (const e of await readdir(cityDir, { withFileTypes: true })) if (e.isDirectory()) await rm(path.join(cityDir, e.name), { recursive: true, force: true });
 await rm(path.join(OUT, "en", CITY), { recursive: true, force: true }); // /en/index.html (the English home) stays
 
-addUrl(SITE + "/", NOW);
-addUrl(SITE + "/en/", NOW);
 // the same pages in Italian and in English: urls, labels and texts come from the active locale
 const relOf = (u) => rel(u).replace(/^\/|\/$/g, "");
 for (const code of ["it", "en"]) {
@@ -1561,12 +1752,13 @@ for (const code of ["it", "en"]) {
   for (const p of pages) { await writePage(relOf(eventUrl(p)), eventPage(p)); addUrl(eventUrl(p), p.updated); }
 }
 L = LOCALES.it;
-await writeFile(path.join(OUT, "sitemap.xml"), sitemapXml());
-await writeFile(path.join(OUT, "robots.txt"), ROBOTS);
-await writeFile(path.join(OUT, "llms.txt"), llmsTxt());
-await writeFile(path.join(OUT, "llms-full.txt"), llmsTxt() + "\n---\n\n# Tutte le pagine di anyplans a " + CITY_NAME + " (italiano, poi inglese)\n\n" + fullTxt.join("\n"));
+await writeFile(path.join(OUT, `sitemap-${CITY}.xml`), sitemapXml());
+await writeFile(path.join(OUT, LLMS_FILE), llmsTxt() + "\n---\n\n# Tutte le pagine di anyplans a " + CITY_NAME + " (italiano, poi inglese)\n\n" + fullTxt.join("\n"));
+await mkdir(statoDir, { recursive: true });
+await writeFile(path.join(statoDir, CITY + ".json"), JSON.stringify(
+  { slug: CITY, nome: CITY_NAME, eventi: upcomingPages.length, pagine: sitemapEntries.length, aggiornato: NOW.toISOString() }, null, 1));
 
-console.log(`eventi: ${rows.length} righe, ${pages.length} pagine (${upcomingPages.length} futuri, ${pages.length - upcomingPages.length} passati)`);
+console.log(`${CITY}: ${rows.length} righe, ${pages.length} pagine (${upcomingPages.length} futuri, ${pages.length - upcomingPages.length} passati)`);
 console.log(`indici: ${types.length} tipi (${types.map(x => x.slug).join(", ")}), ${towns.length} paesi`);
 console.log(`quando: oggi ${WHEN.oggi.list.length}, domani ${WHEN.domani.list.length}, weekend ${WHEN.weekend.list.length} (${weekendKeys.join(" + ")}); mesi: ${months.map(m => m + " (" + monthIdx.get(m).length + ")").join(", ") || "nessuno"}`);
 console.log(`gruppi: ${groups.length} (run club: ${runClubs.length}, ritrovi: ${schedules.length}); sitemap: ${sitemapEntries.length} url (it + en) → ${OUT}`);

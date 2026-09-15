@@ -1,0 +1,234 @@
+[
+ {
+  "slug": "milano",
+  "nome": "Milano",
+  "lat": 45.4642,
+  "lng": 9.19,
+  "km": 30,
+  "prov": "MI"
+ },
+ {
+  "slug": "bergamo",
+  "nome": "Bergamo",
+  "lat": 45.698,
+  "lng": 9.67,
+  "km": 50,
+  "prov": "BG"
+ },
+ {
+  "slug": "torino",
+  "nome": "Torino",
+  "lat": 45.0703,
+  "lng": 7.6869,
+  "km": 30,
+  "prov": "TO"
+ },
+ {
+  "slug": "roma",
+  "nome": "Roma",
+  "lat": 41.9028,
+  "lng": 12.4964,
+  "km": 30,
+  "prov": "RM"
+ },
+ {
+  "slug": "bologna",
+  "nome": "Bologna",
+  "lat": 44.4949,
+  "lng": 11.3426,
+  "km": 30,
+  "prov": "BO"
+ },
+ {
+  "slug": "brescia",
+  "nome": "Brescia",
+  "lat": 45.5416,
+  "lng": 10.2118,
+  "km": 30,
+  "prov": "BS"
+ },
+ {
+  "slug": "napoli",
+  "nome": "Napoli",
+  "lat": 40.8518,
+  "lng": 14.2681,
+  "km": 30,
+  "prov": "NA"
+ },
+ {
+  "slug": "verona",
+  "nome": "Verona",
+  "lat": 45.4384,
+  "lng": 10.9916,
+  "km": 30,
+  "prov": "VR"
+ },
+ {
+  "slug": "padova",
+  "nome": "Padova",
+  "lat": 45.4064,
+  "lng": 11.8768,
+  "km": 30,
+  "prov": "PD"
+ },
+ {
+  "slug": "varese",
+  "nome": "Varese",
+  "lat": 45.8206,
+  "lng": 8.8251,
+  "km": 30,
+  "prov": "VA"
+ },
+ {
+  "slug": "firenze",
+  "nome": "Firenze",
+  "lat": 43.7696,
+  "lng": 11.2558,
+  "km": 30,
+  "prov": "FI"
+ },
+ {
+  "slug": "genova",
+  "nome": "Genova",
+  "lat": 44.4056,
+  "lng": 8.9463,
+  "km": 30,
+  "prov": "GE"
+ },
+ {
+  "slug": "bari",
+  "nome": "Bari",
+  "lat": 41.1171,
+  "lng": 16.8719,
+  "km": 30,
+  "prov": "BA"
+ },
+ {
+  "slug": "perugia",
+  "nome": "Perugia",
+  "lat": 43.1107,
+  "lng": 12.3908,
+  "km": 30,
+  "prov": "PG"
+ },
+ {
+  "slug": "parma",
+  "nome": "Parma",
+  "lat": 44.8015,
+  "lng": 10.3279,
+  "km": 30,
+  "prov": "PR"
+ },
+ {
+  "slug": "cagliari",
+  "nome": "Cagliari",
+  "lat": 39.2238,
+  "lng": 9.1217,
+  "km": 30,
+  "prov": "CA"
+ },
+ {
+  "slug": "palermo",
+  "nome": "Palermo",
+  "lat": 38.1157,
+  "lng": 13.3615,
+  "km": 30,
+  "prov": "PA"
+ },
+ {
+  "slug": "trieste",
+  "nome": "Trieste",
+  "lat": 45.6495,
+  "lng": 13.7768,
+  "km": 30,
+  "prov": "TS"
+ },
+ {
+  "slug": "trento",
+  "nome": "Trento",
+  "lat": 46.0748,
+  "lng": 11.1217,
+  "km": 30,
+  "prov": "TN"
+ },
+ {
+  "slug": "pescara",
+  "nome": "Pescara",
+  "lat": 42.4618,
+  "lng": 14.2161,
+  "km": 30,
+  "prov": "PE"
+ },
+ {
+  "slug": "catania",
+  "nome": "Catania",
+  "lat": 37.5079,
+  "lng": 15.083,
+  "km": 30,
+  "prov": "CT"
+ },
+ {
+  "slug": "ravenna",
+  "nome": "Ravenna",
+  "lat": 44.4184,
+  "lng": 12.2035,
+  "km": 30,
+  "prov": "RA"
+ },
+ {
+  "slug": "udine",
+  "nome": "Udine",
+  "lat": 46.0711,
+  "lng": 13.2346,
+  "km": 30,
+  "prov": "UD"
+ },
+ {
+  "slug": "rimini",
+  "nome": "Rimini",
+  "lat": 44.0678,
+  "lng": 12.5695,
+  "km": 30,
+  "prov": "RN"
+ },
+ {
+  "slug": "bolzano",
+  "nome": "Bolzano",
+  "lat": 46.4983,
+  "lng": 11.3548,
+  "km": 30,
+  "prov": "BZ"
+ },
+ {
+  "slug": "pisa",
+  "nome": "Pisa",
+  "lat": 43.7228,
+  "lng": 10.4017,
+  "km": 30,
+  "prov": "PI"
+ },
+ {
+  "slug": "taranto",
+  "nome": "Taranto",
+  "lat": 40.4644,
+  "lng": 17.247,
+  "km": 30,
+  "prov": "TA"
+ },
+ {
+  "slug": "salerno",
+  "nome": "Salerno",
+  "lat": 40.6824,
+  "lng": 14.7681,
+  "km": 30,
+  "prov": "SA"
+ },
+ {
+  "slug": "lecce",
+  "nome": "Lecce",
+  "lat": 40.3515,
+  "lng": 18.175,
+  "km": 30,
+  "prov": "LE"
+ }
+]

@@ -276,8 +276,8 @@
     }
   },
   "hub": {
-    "titolo": "Cosa fare a Bergamo e provincia",
-    "sotto": "Feste di paese, uscite sportive, corsi e gruppi: tutto quello che succede vicino a te, in un posto solo. Scegli un piano e vai insieme ad altri."
+    "titolo": "Cosa fare a {citta} e provincia",
+    "sotto": "Feste di paese, uscite sportive, corsi e gruppi: tutto quello che succede vicino a te, in un posto solo. Scegli un evento e vai insieme ad altri."
   },
   "paese": {
     "frase": "Su anyplans trovi le feste e gli eventi di {paese} con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri."

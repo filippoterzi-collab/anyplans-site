@@ -391,7 +391,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1789453245"></script>
+<script src="app.js?v=1789458055"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -943,6 +943,17 @@
     savedSearches = savedSearches.filter(s => s.id !== id);
     render();
   }
+  // ?luogo=Milano&lat=45.4642&lng=9.19&km=25: si arriva dalle pagine di un'altra città (le pagine SEO di
+  // /milano/, /torino/… linkano qui). La mappa parte da lì invece che da Bergamo, con il posto già scelto.
+  function placeFromUrl(){
+    const p = new URLSearchParams(location.search);
+    const lat = parseFloat(p.get("lat")), lng = parseFloat(p.get("lng"));
+    if (!isFinite(lat) || !isFinite(lng) || Math.abs(lat) > 90 || Math.abs(lng) > 180) return null;
+    const km = parseInt(p.get("km"), 10);
+    return { kind: "place", name: (p.get("luogo") || "").replace(/[<>]/g, "").slice(0, 60) || "qui",
+             lat, lng, km: Math.min(100, Math.max(2, isFinite(km) ? km : 25)) };
+  }
+
   // ?s=<id>: riapre una ricerca salvata (testo, giorno e posto; il centro si ritrova dall'etichetta)
   // ?chiedi=1 (voce "Chiedi" della barra) apre la ricerca con la casella a fuoco; ?q=… (i vecchi link di chiedi.html) cerca subito
   function openChiediFromUrl(){
@@ -1201,7 +1212,9 @@
   }, 60000);
   syncCard();
   if (logged) checkProfile();
-  Promise.all([loadEvents(), logged ? loadSaved() : null]).then(() => {
+  const startWhere = placeFromUrl();
+  Promise.all([loadEvents(startWhere ? { lat: startWhere.lat, lng: startWhere.lng } : null), logged ? loadSaved() : null]).then(() => {
+    if (startWhere) { where = startWhere; refit = true; choose(); }   // niente seconda chiamata: il feed è già centrato lì
     openChiediFromUrl();
     if (!logged) return;
     openSavedFromUrl();
