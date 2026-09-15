@@ -517,7 +517,8 @@ function mountNav(active, opts){
     .sn #menu a:hover, .sn #menu button:hover{background:#E9EEFB;}
     @media (max-width:700px){ .sn .lnk, .sn .cta{display:none;} header.sn{padding:0 18px;} }`;
   document.head.appendChild(st);
-  const links = [["eventi","Eventi","eventi.html"],["chiedi","Chiedi","chiedi.html"],["i miei eventi","I miei eventi","miei.html"],["gruppi","Gruppi","gruppi.html"]];
+  // "Viaggi" al posto di "Chiedi" (15/09/2026: chiedi va rifatto; i viaggi di gruppo sono online)
+  const links = [["eventi","Eventi","eventi.html"],["viaggi","Viaggi di gruppo","/viaggi-di-gruppo/"],["i miei eventi","I miei eventi","miei.html"],["gruppi","Gruppi","gruppi.html"]];
   const initial = ((session && session.email) || "?")[0].toUpperCase();
   const h = document.createElement("header"); h.className = "sn";
   h.innerHTML = `<div class="nav">
@@ -585,7 +586,8 @@ function mountTabbar(active){
     // "Chiedi" (deciso 06/09/2026, design/sito-landing/spec-chiedi-mobile.md): la conversazione di chiedi.html.
     // Sta al posto di Profilo, che è già nel tondo in alto a destra su ogni pagina.
     // Fumetto a contorno, senza "?": il punto di domanda del marchio non va mai in blu (kit, regola 5).
-    ["chiedi", "Chiedi", "chiedi.html", '<svg viewBox="0 0 24 24"><path d="M6.5 4.5h11A2.5 2.5 0 0 1 20 7v7.5a2.5 2.5 0 0 1-2.5 2.5H11l-4.5 3.5V17A2.5 2.5 0 0 1 4 14.5V7a2.5 2.5 0 0 1 2.5-2.5z"/></svg>'],
+    // "Viaggi di gruppo" al posto di "Chiedi" (15/09/2026): aeroplanino a contorno
+    ["viaggi", "Viaggi", "/viaggi-di-gruppo/", '<svg viewBox="0 0 24 24"><path d="M2.5 16.5 21.5 8.5l-1-2.5-6.5 1.5-5-4-2 .7 3.5 4.5-4.5 1.5-2.5-2-1.5.5 2 4z"/><path d="M8 20h10"/></svg>'],
     ["crea", "Crea", "crea.html",          '<svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>'],
     ["i miei eventi", "I miei eventi", "miei.html",          '<svg viewBox="0 0 24 24"><path d="M5 5.5h14v15l-7-4-7 4z"/></svg>']
   ];
