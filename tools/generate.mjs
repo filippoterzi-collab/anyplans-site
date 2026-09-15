@@ -42,7 +42,7 @@ const CITY_CENTER = { lat: C.lat, lng: C.lng };
 const CITY_KM = C.km;
 const MIN_CITY = 40;              // sotto questa soglia una città (che non sia Bergamo) non ha pagine sue
 // multi-city sources (Milano is 45 km away, Monza 35): for them only the province core, 30 km
-const MULTI_CITY_SOURCES = [/^https:\/\/(www\.)?comehome\.fun\//, /^https:\/\/(www\.)?weroad\.(it|com)\/wemeet\//, /^https:\/\/(www\.)?meeters\.org\//, /^https:\/\/(www\.)?tabloapp\.com\//, /^https:\/\/(www\.)?(lu\.ma|luma\.com)\//, /^https:\/\/share\.nomadtable\.app\//, /^https:\/\/(www\.)?panesalamina\.com\//];
+const MULTI_CITY_SOURCES = [/^https:\/\/(www\.)?comehome\.fun\//, /^https:\/\/(www\.)?weroad\.(it|com)\/wemeet\//, /^https:\/\/(www\.)?meeters\.org\//, /^https:\/\/(www\.)?tabloapp\.com\//, /^https:\/\/(www\.)?(lu\.ma|luma\.com)\//, /^https:\/\/share\.nomadtable\.app\//, /^https:\/\/(www\.)?panesalamina\.com\//, /^https:\/\/(www\.)?play2match\.it\//];
 const MULTI_CITY_KM = 30;
 const DEFAULT_TZ = "Europe/Rome";
 const PAST_DAYS = 400;          // pages live ~13 months after the last date

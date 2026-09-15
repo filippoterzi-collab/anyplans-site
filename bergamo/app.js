@@ -21,6 +21,7 @@ const EXT_SOURCES = [
   { rx: /^https:\/\/(www\.)?tabloapp\.com\//, name: "Tablo", how: "Ci si unisce al tavolo nell'app Tablo (dal loro sito scarichi l'app): al ristorante ognuno paga il suo." },
   { rx: /^https:\/\/(www\.)?(lu\.ma|luma\.com)\//, name: "Luma", how: "Ci si registra su Luma, sulla pagina dell'evento della community che lo organizza." },
   { rx: /^https:\/\/(www\.)?eventbrite\.(it|com|co\.uk)\//, name: "Eventbrite", cta: "Biglietti su Eventbrite →", how: "Il biglietto si prende su Eventbrite, dalla pagina di chi organizza: orari e prezzo sono lì." },
+  { rx: /^https:\/\/(www\.)?play2match\.it\//, name: "play2match", how: "Ci si iscrive su play2match da soli: le squadre le fanno loro, miste ed equilibrate, e dopo la partita c'è il terzo tempo." },
   { rx: /^https:\/\/share\.nomadtable\.app\//, name: "Nomadtable", cta: "Join chat su Nomadtable →", how: "L'evento vive nella chat di nomadtable: con \"Join chat\" entri nell'app e lì si decidono ora e posto." },
 ];
 // label of the external button: "Iscriviti su X →" unless the source says otherwise (nomadtable: "Join chat")

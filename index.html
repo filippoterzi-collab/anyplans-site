@@ -187,8 +187,7 @@
   @media (max-width:700px){
     h1{font-size:34px;}
     .hero{padding:26px 0 38px;}
-    .float{font-size:21px;}
-    .float.hide-m{display:none;}
+    .float{display:none;}   /* a 375px non c'è margine: finivano sopra pill, titolo e bottoni */
     .sub{font-size:14px; max-width:300px; margin-top:14px;}
     .cta{width:100%; padding:0 26px; margin-top:20px;}
     .cta .btn{width:100%; font-size:14px; padding:13px 0;}
@@ -251,13 +250,13 @@
   <span class="float hide-m" style="animation-delay:1.1s,1.1s; top:14%; left:20%">🚴</span>
   <span class="float" style="animation-delay:.2s,.2s; top:10%; right:8%">🎪</span>
   <span class="float hide-m" style="animation-delay:.7s,.7s; top:30%; right:5%">🥾</span>
-  <span class="float" style="animation-delay:1s,1s; top:55%; right:10%">🌱</span>
+  <span class="float hide-m" style="animation-delay:1s,1s; top:55%; right:10%">🌱</span>
   <span class="float hide-m" style="animation-delay:.4s,.4s; top:72%; right:18%">🎾</span>
-  <span class="float" style="animation-delay:1.3s,1.3s; top:16%; right:22%">🧘</span>
+  <span class="float hide-m" style="animation-delay:1.3s,1.3s; top:16%; right:22%">🧘</span>
   <span class="float hide-m" style="animation-delay:.6s,.6s; top:40%; left:13%">⚽</span>
-  <span class="float" style="animation-delay:1.2s,1.2s; top:62%; left:5%">🧗</span>
+  <span class="float hide-m" style="animation-delay:1.2s,1.2s; top:62%; left:5%">🧗</span>
   <span class="float hide-m" style="animation-delay:.8s,.8s; top:84%; left:9%">🏊</span>
-  <span class="float" style="animation-delay:.35s,.35s; top:47%; right:6%">🎶</span>
+  <span class="float hide-m" style="animation-delay:.35s,.35s; top:47%; right:6%">🎶</span>
   <span class="float hide-m" style="animation-delay:1.05s,1.05s; top:64%; right:4%">⛰️</span>
   <span class="float hide-m" style="animation-delay:.55s,.55s; top:86%; right:13%">🎲</span>
   <div class="wrap">
@@ -438,7 +437,7 @@
   </div>
 </div>
 
-<script src="/bergamo/app.js?v=1789481528"></script>
+<script src="/bergamo/app.js?v=1789486092"></script>
 <script>
   let quizCity = "";
 

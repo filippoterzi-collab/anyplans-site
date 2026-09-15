@@ -391,7 +391,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1789481528"></script>
+<script src="app.js?v=1789486092"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -490,9 +490,14 @@
     container: "map",
     style: "https://tiles.openfreemap.org/styles/liberty",
     center: [9.665, 45.7031],
-    zoom: 12.3
+    zoom: 12.3,
+    attributionControl: false
   });
   map.addControl(new maplibregl.NavigationControl({ showCompass: false }));
+  // attribuzione compatta (icona ⓘ): a tutto schermo la riga di testo finiva sotto la pill "Lista"
+  map.addControl(new maplibregl.AttributionControl({ compact: true }), "bottom-left");
+  // parte chiusa (solo ⓘ): MapLibre la apre da sola al primo caricamento e il testo finisce sotto la pill
+  map.once("load", () => document.querySelectorAll("#map .maplibregl-ctrl-attrib").forEach(el => el.classList.remove("maplibregl-compact-show")));
   // pill "Nessun evento con questa ricerca" e cerchio del raggio (solo quando la ricerca è vuota)
   const mapPill = document.createElement("div"); mapPill.className = "map-pill"; mapPill.textContent = "Nessun evento con questa ricerca"; mapPill.hidden = true;
   map.getContainer().appendChild(mapPill);
