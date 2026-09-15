@@ -539,7 +539,7 @@ body.locked .cats{pointer-events:none}
           </div>
           <div class="srch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg><input id="tsearch" type="search" placeholder="Scrivi la città e premi Invio, per esempio Roma" autocomplete="off" aria-label="Scrivi una città o un paese"></div>
           <div class="cgroup" id="g-free" hidden><div class="chips" data-f="place" id="freecity"></div></div>
-          <div class="pfoot"><button class="lnk" data-clear="dove">Ovunque</button><button class="btn" data-next="quando">Avanti</button></div>
+          <div class="pfoot"><span></span><button class="btn" data-next="quando">Avanti</button></div>
         </div>
         <div class="panel" id="p-quando" hidden>
           <h2>Quando vuoi uscire?</h2>
@@ -676,7 +676,7 @@ body.locked .cats{pointer-events:none}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789504230"></script>
+<script src="/bergamo/app.js?v=1789504512"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // WALL = false per rimisurare senza muro: tutto visibile, email su "Ci sono" (site_event: home_view, wall_tap, join).
@@ -829,7 +829,7 @@ function syncBar(n){
   const active = Object.entries(F).filter(([k, v]) => v.size); const key = active.length === 1 && active[0][0] === "cat" ? [...active[0][1]][0] : active.length ? null : "";
   document.querySelectorAll(".cat").forEach(c => c.classList.toggle("on", c.dataset.cat === key));
 }
-function syncChips(){ document.querySelectorAll(".chip[data-v]").forEach(c => { const f = c.closest("[data-f]").dataset.f; c.setAttribute("aria-pressed", F[f] && F[f].has(c.dataset.v) ? "true" : "false"); }); const fl = document.querySelector("#freedate2") && document.querySelector("#freedate2").closest("label"); if (fl) { fl.setAttribute("aria-pressed", F.date.size ? "true" : "false"); document.getElementById("date-txt").textContent = F.date.size ? fmtDay.format(new Date([...F.date][0] + "T12:00:00Z")) : "Un altro giorno"; } }
+function syncChips(){ document.querySelectorAll(".chip[data-v]").forEach(c => { const f = c.closest("[data-f]").dataset.f; if (f === "place") return; c.setAttribute("aria-pressed", F[f] && F[f].has(c.dataset.v) ? "true" : "false"); }); const fl = document.querySelector("#freedate2") && document.querySelector("#freedate2").closest("label"); if (fl) { fl.setAttribute("aria-pressed", F.date.size ? "true" : "false"); document.getElementById("date-txt").textContent = F.date.size ? fmtDay.format(new Date([...F.date][0] + "T12:00:00Z")) : "Un altro giorno"; } }
 function clearAll(){ Object.values(F).forEach(s => s.clear()); PLACE = null; QTEXT = ""; document.getElementById("qsearch").value = ""; syncChips(); if (CENTER.slug !== HOME.slug || CENTER.kind) loadEvents(HOME); else render(); }
 function render(){
   if (loading) return;   // la città nuova sta arrivando: niente lista vecchia sotto i filtri nuovi
@@ -912,11 +912,12 @@ function bindAll(){
   document.getElementById("morebtn").onclick = () => { visibleN += 30; render(); };
   // segmenti e pannelli
   const segs = document.querySelectorAll(".seg"); let openSeg = null;
-  function closePanels(){ document.querySelectorAll(".panel").forEach(p => p.hidden = true); segs.forEach(x => x.classList.remove("open")); openSeg = null; }
+  function closePanels(){ applyPlace(); document.querySelectorAll(".panel").forEach(p => p.hidden = true); segs.forEach(x => x.classList.remove("open")); openSeg = null; }
   function openPanel(k){ closePanels(); openSeg = k; document.getElementById("p-" + k).hidden = false; document.querySelector(`.seg[data-seg="${k}"]`).classList.add("open"); }
   segs.forEach(sg => sg.addEventListener("click", e => { if (LOCKED) return; e.stopPropagation(); openSeg === sg.dataset.seg ? closePanels() : openPanel(sg.dataset.seg); }));
-  document.querySelectorAll("[data-next]").forEach(b => b.addEventListener("click", e => { e.stopPropagation(); const n = b.dataset.next; n === "close" ? closePanels() : openPanel(n); }));
-  document.querySelectorAll("[data-clear]").forEach(b => b.addEventListener("click", e => { e.stopPropagation(); const k = b.dataset.clear; if (k === "dove") { F.where.clear(); F.town.clear(); F.city.clear(); PLACE = null; syncChips(); loadEvents(HOME); return; } if (k === "quando") { F.day.clear(); F.date.clear(); } if (k === "cosa") { F.cat.clear(); QTEXT = ""; document.getElementById("qsearch").value = ""; } syncChips(); render(); }));
+  document.querySelectorAll("[data-next]").forEach(b => b.addEventListener("click", e => { e.stopPropagation(); applyPlace(); let n = b.dataset.next; if (n === "cosa" && window.innerWidth <= 600) n = "close"; n === "close" ? closePanels() : openPanel(n); }));
+  if (window.innerWidth <= 600) document.querySelector('#p-quando [data-next="cosa"]').textContent = "Cerca";
+  document.querySelectorAll("[data-clear]").forEach(b => b.addEventListener("click", e => { e.stopPropagation(); const k = b.dataset.clear; if (k === "dove") { PENDING = null; F.where.clear(); F.town.clear(); F.city.clear(); PLACE = null; syncChips(); loadEvents(HOME); return; } if (k === "quando") { F.day.clear(); F.date.clear(); } if (k === "cosa") { F.cat.clear(); QTEXT = ""; document.getElementById("qsearch").value = ""; } syncChips(); render(); }));
   document.querySelectorAll(".panel").forEach(p => p.addEventListener("click", e => e.stopPropagation()));
   document.addEventListener("click", closePanels);
   document.addEventListener("keydown", e => { if (e.key === "Escape") { closePanels(); closeModal(); } });
@@ -947,7 +948,7 @@ function bindAll(){
   }
   ts.addEventListener("input", filterPlaces);
   ts.addEventListener("click", e => e.stopPropagation());
-  ts.addEventListener("keydown", e => { if (e.key !== "Enter") return; e.preventDefault(); const first = document.querySelector("#freecity .chip"); if (first) first.click(); });
+  ts.addEventListener("keydown", e => { if (e.key !== "Enter") return; e.preventDefault(); const first = document.querySelector("#freecity .chip"); if (first) { first.click(); applyPlace(); closePanels(); } });
   // modale filtri
   const modal = document.getElementById("modal");
   function openModal(){ closePanels(); modal.hidden = false; document.body.style.overflow = "hidden"; }
@@ -959,7 +960,13 @@ function bindAll(){
   document.querySelector(".mbox").addEventListener("click", e => e.stopPropagation());
 }
 // posto da photon scelto a mano: una città grande = nuovo centro del feed; un paese = punto di riferimento dentro il feed
-function pickPlace(i){ const s = (window.SUGG || [])[i]; if (!s) return; F.city.clear(); F.town.clear(); F.where.clear(); document.getElementById("tsearch").value = ""; document.getElementById("g-free").hidden = true; track("cerca_posto", s.name);
+let PENDING = null;
+function pickPlace(i){ const s = (window.SUGG || [])[i]; if (!s) return; PENDING = s;
+  document.querySelectorAll("#freecity .chip").forEach((c, j) => c.setAttribute("aria-pressed", j === i ? "true" : "false"));
+  document.getElementById("v-dove").textContent = s.name; document.getElementById("v-dove").classList.add("set");
+}
+// si applica con "Avanti" (15/09/2026: "seleziono Milano, Avanti, poi si apre su Milano")
+function applyPlace(){ const s = PENDING; if (!s) return; PENDING = null; F.city.clear(); F.town.clear(); F.where.clear(); track("cerca_posto", s.name);
   if (s.city) { PLACE = null; F.city.add(s.city); syncChips(); loadEvents({ ...CITIES.find(c => c.slug === s.city) }); return; }
   PLACE = s;
   const nearest = CITIES.map(c => ({ c, km: distKm(c, s) })).sort((a, b) => a.km - b.km)[0];
