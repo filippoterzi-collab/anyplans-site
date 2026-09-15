@@ -229,6 +229,14 @@ body.locked .mk,body.locked .strip{display:none}
 .tcard .pr b small{font-weight:600;color:var(--grey);font-size:12px;margin-right:3px}
 .tcard .btn{height:38px;font-size:13px;margin-top:4px}
 .op{display:inline-flex;align-items:center;height:24px;padding:0 9px;border-radius:999px;background:var(--tint);color:var(--blue);font-weight:700;font-size:12px}
+/* riga della data, sempre in vista (15/09/2026: la gente non apriva il pannello) */
+.dates{display:flex;justify-content:center;margin:10px 0 2px}
+.dates .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;touch-action:pan-x}
+.dates .chips::-webkit-scrollbar{display:none}
+.dates .chip{flex:none;height:36px;font-size:13.5px}
+.dates .chip svg{width:16px;height:16px}
+.dates .chip input[type=date]{position:absolute;opacity:0;width:0;height:0}
+.dates label.chip{position:relative;cursor:pointer}
 /* barra alla Airbnb */
 .sbwrap{position:sticky;top:60px;z-index:30;background:var(--bg);padding:8px 0 4px}
 .sbrow{display:flex;align-items:center;gap:12px}
@@ -529,7 +537,7 @@ body.locked .cats{pointer-events:none}
           <div class="chips" data-f="where" style="margin-bottom:4px">
             <button class="chip" data-v="me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 L10 13"/><path d="M21 3 L14.5 21 L10 13 L3 9.5 Z"/></svg><span id="me-txt">Vicino a me</span></button>
           </div>
-          <div class="srch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg><input id="tsearch" type="search" placeholder="Scrivi una città o un paese, per esempio Ancona" autocomplete="off" aria-label="Scrivi una città o un paese"></div>
+          <div class="srch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg><input id="tsearch" type="search" placeholder="Scrivi la città e premi Invio, per esempio Roma" autocomplete="off" aria-label="Scrivi una città o un paese"></div>
           <div class="cgroup" id="g-free" hidden><div class="chips" data-f="place" id="freecity"></div></div>
           <div class="pfoot"><button class="lnk" data-clear="dove">Ovunque</button><button class="btn" data-next="quando">Avanti</button></div>
         </div>
@@ -550,6 +558,12 @@ body.locked .cats{pointer-events:none}
         </div>
       </div>
       <button class="fbtn" id="openfilters" data-gate="filtri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="9" cy="6" r="2.2" fill="#fff"/><circle cx="15" cy="12" r="2.2" fill="#fff"/><circle cx="7" cy="18" r="2.2" fill="#fff"/></svg><span>Filtri</span><b class="badge" id="fbadge" hidden>0</b></button>
+    </div>
+    <div class="dates" aria-label="Quando">
+      <div class="chips" data-f="day">
+        <button class="chip" data-v="oggi" data-gate="quando">Oggi</button><button class="chip" data-v="domani" data-gate="quando">Domani</button><button class="chip" data-v="weekend" data-gate="quando">Fine settimana</button>
+        <label class="chip" data-gate="quando"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10 L20.5 10"/><path d="M8 3 L8 7"/><path d="M16 3 L16 7"/></svg><span id="date-txt">Un altro giorno</span><input type="date" id="freedate2" aria-label="Scegli un giorno"></label>
+      </div>
     </div>
     <nav class="cats" id="cats" aria-label="Categorie"></nav>
   </div>
@@ -662,7 +676,7 @@ body.locked .cats{pointer-events:none}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789503980"></script>
+<script src="/bergamo/app.js?v=1789504112"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // WALL = false per rimisurare senza muro: tutto visibile, email su "Ci sono" (site_event: home_view, wall_tap, join).
@@ -760,6 +774,9 @@ let loadSeq = 0, loading = false;
 async function loadEvents(center){
   const seq = ++loadSeq; loading = true;
   CENTER = center; REF = { lat: center.lat, lng: center.lng };
+  // la città scelta si vede subito nel titolo e nella barra, senza aspettare il feed
+  window.CHOSEN = !!(center.slug !== HOME.slug || PLACE || F.city.size || F.where.size);
+  if (window.CHOSEN) { document.getElementById("hcity").textContent = center.nome; document.getElementById("v-dove").textContent = center.nome; document.getElementById("v-dove").classList.add("set"); }
   document.getElementById("list").innerHTML = '<div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div>';
   const r = await rpc("feed_activities", { lat: center.lat, lng: center.lng, radius_m: 50000 });
   if (seq !== loadSeq) return;
@@ -812,7 +829,7 @@ function syncBar(n){
   const active = Object.entries(F).filter(([k, v]) => v.size); const key = active.length === 1 && active[0][0] === "cat" ? [...active[0][1]][0] : active.length ? null : "";
   document.querySelectorAll(".cat").forEach(c => c.classList.toggle("on", c.dataset.cat === key));
 }
-function syncChips(){ document.querySelectorAll(".chip[data-v]").forEach(c => { const f = c.closest("[data-f]").dataset.f; c.setAttribute("aria-pressed", F[f] && F[f].has(c.dataset.v) ? "true" : "false"); }); }
+function syncChips(){ document.querySelectorAll(".chip[data-v]").forEach(c => { const f = c.closest("[data-f]").dataset.f; c.setAttribute("aria-pressed", F[f] && F[f].has(c.dataset.v) ? "true" : "false"); }); const fl = document.querySelector("#freedate2") && document.querySelector("#freedate2").closest("label"); if (fl) { fl.setAttribute("aria-pressed", F.date.size ? "true" : "false"); document.getElementById("date-txt").textContent = F.date.size ? fmtDay.format(new Date([...F.date][0] + "T12:00:00Z")) : "Un altro giorno"; } }
 function clearAll(){ Object.values(F).forEach(s => s.clear()); PLACE = null; QTEXT = ""; document.getElementById("qsearch").value = ""; syncChips(); if (CENTER.slug !== HOME.slug || CENTER.kind) loadEvents(HOME); else render(); }
 function render(){
   if (loading) return;   // la città nuova sta arrivando: niente lista vecchia sotto i filtri nuovi
@@ -855,8 +872,8 @@ function buildDynamic(){
   const dc = {}; EV.forEach(e => { dc[e.ymd] = (dc[e.ymd] || 0) + 1; });
   document.querySelectorAll("#dgrid .chip").forEach(c => { const n = dc[c.dataset.ymd] || 0; c.querySelector("small").textContent = n; c.disabled = !n; });
   const cc = {}; EV.forEach(e => { CATS.forEach(c => { if (c.s && c.s.includes(e.sport)) cc[c.k] = (cc[c.k] || 0) + 1; }); });
-  document.querySelectorAll("#catchips .chip").forEach(c => { const n = cc[c.dataset.v] || 0; c.querySelector("small").textContent = n; c.disabled = !n; });
-  document.querySelectorAll("#cats .cat").forEach(a => { const k = a.dataset.cat; a.hidden = !!(k && !k.startsWith("__") && !cc[k]); });
+  // tutte le categorie sempre in lista, anche a zero (15/09/2026: "cosa ti va di fare deve esserci tutto")
+  document.querySelectorAll("#catchips .chip").forEach(c => { const n = cc[c.dataset.v] || 0; c.querySelector("small").textContent = n; c.disabled = false; });
   document.querySelectorAll("#dgrid .chip, #catchips .chip").forEach(bindChip);
   // fine settimana ed eventi di gruppo
   const wk = EV.filter(e => WEEKEND.includes(e.ymd) && e.sport !== "market").slice(0, 12);
@@ -906,6 +923,9 @@ function bindAll(){
   document.getElementById("gobtn").addEventListener("click", e => { if (LOCKED) return; e.stopPropagation(); closePanels(); document.getElementById("list").scrollIntoView({ behavior: "smooth", block: "start" }); });
   // data libera
   document.getElementById("freedate").addEventListener("change", e => { const v = e.target.value; if (!v) return; F.day.clear(); F.date.clear(); F.date.add(v); syncChips(); render(); });
+  const fd2 = document.getElementById("freedate2"), fdl = fd2.closest("label");
+  fdl.addEventListener("click", e => { if (LOCKED) return; e.stopPropagation(); if (F.date.size && e.target !== fd2) { F.date.clear(); syncChips(); render(); return; } try { fd2.showPicker(); } catch (_) { fd2.click(); } });
+  fd2.addEventListener("change", e => { const v = e.target.value; if (!v) return; F.day.clear(); F.date.clear(); F.date.add(v); syncChips(); render(); });
   // ricerca libera
   const qs = document.getElementById("qsearch"); let qt = null;
   qs.addEventListener("input", () => { clearTimeout(qt); qt = setTimeout(() => { QTEXT = qs.value.trim(); F.cat.clear(); syncChips(); render(); }, 250); });
@@ -918,8 +938,12 @@ function bindAll(){
     const mine = CITIES.filter(c => c.nome.toLowerCase().startsWith(q)).slice(0, 3).map(c => ({ name: c.nome, lat: c.lat, lng: c.lng, km: distKm(CENTER, c), city: c.slug }));
     const show = list => { window.SUGG = list; fc.innerHTML = list.length ? list.map((s, i) => `<button class="chip" data-v="${i}" data-name="${esc(s.name.toLowerCase())}">📍 ${esc(s.name)}</button>`).join("") : `<span class="hint">Non trovo questo posto. Prova con il nome del paese.</span>`; free.hidden = false; fc.querySelectorAll(".chip").forEach(bindChip); };
     show(mine);
+    // scritta per intero una delle 29 città: si applica da sola, senza dover toccare il nome (15/09/2026)
+    const exact = mine.find(m => m.name.toLowerCase() === q); if (exact) { window.SUGG = [exact]; clearTimeout(tt); tt = setTimeout(() => pickPlace(0), 500); return; }
     if (q.length < 3) return;
-    tt = setTimeout(async () => { const seq = ++tseq; const list = await geoSuggest(q); if (seq !== tseq) return; const names = new Set(mine.map(m => m.name.toLowerCase())); show([...mine, ...list.filter(x => !names.has(x.name.toLowerCase()))].slice(0, 6)); }, 250);
+    tt = setTimeout(async () => { const seq = ++tseq; const list = await geoSuggest(q); if (seq !== tseq) return; const names = new Set(mine.map(m => m.name.toLowerCase())); const all = [...mine, ...list.filter(x => !names.has(x.name.toLowerCase()))].slice(0, 6); show(all);
+      // il primo risultato ha proprio il nome scritto: si applica da sola dopo un attimo
+      if (all.length && all[0].name.toLowerCase() === q) { window.SUGG = all; tt = setTimeout(() => { if (ts.value.trim().toLowerCase() === q) pickPlace(0); }, 900); } }, 250);
   }
   ts.addEventListener("input", filterPlaces);
   ts.addEventListener("click", e => e.stopPropagation());
