@@ -136,7 +136,7 @@
   function skipIfLogged(){
     try {
       const existing = JSON.parse(localStorage.getItem("anyplans_session") || sessionStorage.getItem("anyplans_session"));
-      if (existing && existing.access_token && !location.hash.includes("switch")) location.replace("eventi.html");
+      if (existing && existing.access_token && !location.hash.includes("switch")) location.replace("/");
     } catch (_) {}
   }
   skipIfLogged();
@@ -253,7 +253,7 @@
       let saved = false;
       try { localStorage.setItem("anyplans_session", session); saved = true; } catch (_) {}
       if (!saved) { try { sessionStorage.setItem("anyplans_session", session); saved = true; } catch (_) {} }
-      let next = "eventi.html";
+      let next = "/";
       try { next = sessionStorage.getItem("anyplans_next") || next; } catch (_) {}
       // senza profilo si va dritti a "cosa vuoi fare su anyplans?" (niente lampo della mappa); la destinazione resta salvata
       let hasProfile = true;
@@ -263,7 +263,7 @@
         hasProfile = !!(rows.length && rows[0].display_name);
       } catch (_) {}
       if (hasProfile) { try { sessionStorage.removeItem("anyplans_next"); } catch (_) {} }
-      else { try { if (next !== "eventi.html") sessionStorage.setItem("anyplans_next", next); } catch (_) {} next = "tipo-account.html"; }
+      else { try { if (next !== "/") sessionStorage.setItem("anyplans_next", next); } catch (_) {} next = "tipo-account.html"; }
       location.href = saved ? next : next + "#s=" + encodeURIComponent(session);
     } catch (err) {
       btn.disabled = false;

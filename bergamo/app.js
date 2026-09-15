@@ -518,7 +518,7 @@ function mountNav(active, opts){
     @media (max-width:700px){ .sn .lnk, .sn .cta{display:none;} header.sn{padding:0 18px;} }`;
   document.head.appendChild(st);
   // "Viaggi" al posto di "Chiedi" (15/09/2026: chiedi va rifatto; i viaggi di gruppo sono online)
-  const links = [["eventi","Eventi","eventi.html"],["viaggi","Viaggi di gruppo","/viaggi-di-gruppo/"],["i miei eventi","I miei eventi","miei.html"],["gruppi","Gruppi","gruppi.html"]];
+  const links = [["eventi","Eventi","/"],["viaggi","Viaggi di gruppo","/viaggi-di-gruppo/"],["i miei eventi","I miei eventi","miei.html"],["gruppi","Gruppi","gruppi.html"]];
   const initial = ((session && session.email) || "?")[0].toUpperCase();
   const h = document.createElement("header"); h.className = "sn";
   h.innerHTML = `<div class="nav">
@@ -582,7 +582,7 @@ function mountNav(active, opts){
 // tab bar mobile (scopri · crea · i miei eventi · profilo), solo sotto i 700px
 function mountTabbar(active){
   const tabs = [
-    ["eventi", "Eventi", "eventi.html",        '<svg viewBox="0 0 24 24"><path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20z"/><path d="M9 4v13.5M15 6.5V20"/></svg>'],
+    ["eventi", "Eventi", "/",        '<svg viewBox="0 0 24 24"><path d="M3 6.5 9 4l6 2.5L21 4v13.5L15 20l-6-2.5L3 20z"/><path d="M9 4v13.5M15 6.5V20"/></svg>'],
     // "Chiedi" (deciso 06/09/2026, design/sito-landing/spec-chiedi-mobile.md): la conversazione di chiedi.html.
     // Sta al posto di Profilo, che è già nel tondo in alto a destra su ogni pagina.
     // Fumetto a contorno, senza "?": il punto di domanda del marchio non va mai in blu (kit, regola 5).
