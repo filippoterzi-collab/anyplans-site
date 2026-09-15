@@ -529,13 +529,8 @@ body.locked .cats{pointer-events:none}
           <div class="chips" data-f="where" style="margin-bottom:4px">
             <button class="chip" data-v="me"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><path d="M21 3 L10 13"/><path d="M21 3 L14.5 21 L10 13 L3 9.5 Z"/></svg><span id="me-txt">Vicino a me</span></button>
           </div>
-          <div class="srch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg><input id="tsearch" type="search" placeholder="Scrivi una città o un paese, per esempio Milano o Clusone" autocomplete="off" aria-label="Scrivi una città o un paese"></div>
-          <div class="cscroll">
-            <div class="cgroup" id="g-free" hidden><h3>Quello che hai scritto</h3><div class="chips" data-f="place" id="freecity"></div></div>
-            <div class="cgroup" id="g-city"><h3>Città</h3><div class="chips" data-f="city" id="cities"></div></div>
-            <div class="cgroup" id="g-town"><h3 id="g-town-h">Paesi vicini <span>puntano sempre alla loro città</span></h3><div class="chips" data-f="town" id="towns"></div></div>
-          </div>
-          <p class="hint">Un paese punta sempre alla sua città: Clusone → Bergamo, e la lista e la mappa partono da lì.</p>
+          <div class="srch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg><input id="tsearch" type="search" placeholder="Scrivi una città o un paese, per esempio Ancona" autocomplete="off" aria-label="Scrivi una città o un paese"></div>
+          <div class="cgroup" id="g-free" hidden><div class="chips" data-f="place" id="freecity"></div></div>
           <div class="pfoot"><button class="lnk" data-clear="dove">Ovunque</button><button class="btn" data-next="quando">Avanti</button></div>
         </div>
         <div class="panel" id="p-quando" hidden>
@@ -667,7 +662,7 @@ body.locked .cats{pointer-events:none}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789503854"></script>
+<script src="/bergamo/app.js?v=1789503980"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // WALL = false per rimisurare senza muro: tutto visibile, email su "Ci sono" (site_event: home_view, wall_tap, join).
@@ -774,7 +769,7 @@ async function loadEvents(center){
   EV = rows.map(x => { const d = new Date(x.start_at); const rp = romeParts(d); const tw = cleanTown(cityOf(x.meeting_point_text)) || center.nome || ""; return { ...x, d, ymd: rp.ymd, h: rp.h, tw, emoji: x.emoji || EMOJI[x.sport] || "📍" }; })
     .filter(e => isCurrent(e.d, e.end_at)).sort((a, b) => a.d - b.d);
   buildDynamic(); render();
-  if (map) { fitMap(mapRows(lastRows)); }
+  if (map && mapReady) { if (lastRows.length) fitMap(mapRows(lastRows)); else map.jumpTo({ center: [center.lng, center.lat], zoom: 11.5 }); }
 }
 
 // ---------- filtri ----------
@@ -813,7 +808,7 @@ function syncBar(n){
   const nAdv = F.price.size + F.hour.size + F.who.size + F.going.size; const bd = document.getElementById("fbadge"); bd.hidden = !nAdv; bd.textContent = nAdv;
   const sb = document.getElementById("showbtn"); sb.textContent = n ? `Mostra ${n} event${n === 1 ? "o" : "i"}` : "Nessun evento"; sb.classList.toggle("zero", !n);
   window.CHOSEN = !!(F.city.size || F.town.size || F.where.size || PLACE);
-  if (window.CHOSEN) document.getElementById("hcity").textContent = F.town.size ? CENTER.nome : PLACE ? PLACE.name : CENTER.nome;
+  if (window.CHOSEN) document.getElementById("hcity").textContent = CENTER.slug ? CENTER.nome : (PLACE ? PLACE.name : CENTER.nome);
   const active = Object.entries(F).filter(([k, v]) => v.size); const key = active.length === 1 && active[0][0] === "cat" ? [...active[0][1]][0] : active.length ? null : "";
   document.querySelectorAll(".cat").forEach(c => c.classList.toggle("on", c.dataset.cat === key));
 }
@@ -843,11 +838,11 @@ function render(){
   drawPins(mapRows(rows));
 }
 // sulla mappa solo gli eventi di oggi (deciso 15/09/2026: "metti solo oggi"); con un giorno scelto, quelli del giorno
-function mapRows(rows){ if (F.day.size || F.date.size) return rows; const today = rows.filter(e => e.ymd === TODAY); return today.length ? today : rows.slice(0, 40); }
+let MAP_TODAY = true;
+function mapRows(rows){ if (F.day.size || F.date.size) { MAP_TODAY = false; return rows; } const today = rows.filter(e => e.ymd === TODAY); MAP_TODAY = today.length > 0; return today.length ? today : rows.slice(0, 40); }
 
 // ---------- pannelli, categorie, città ----------
 function buildStatic(){
-  document.getElementById("cities").innerHTML = CITIES.map(c => `<button class="chip" data-v="${c.slug}" data-name="${c.nome.toLowerCase()}">${c.nome}</button>`).join("");
   document.getElementById("citylinks").innerHTML = "Le città con la loro pagina: " + CITIES.map(c => `<a href="/${c.slug}/">${c.nome}</a>`).join(" · ");
   let h = ""; for (let i = 0; i < 14; i++) { const y = addDays(TODAY, i); const d = new Date(y + "T12:00:00Z"); h += `<button class="chip" data-v="${y}" data-ymd="${y}">${GG[d.getUTCDay()]} ${d.getUTCDate()}<small>0</small></button>`; }
   document.getElementById("dgrid").innerHTML = h;
@@ -862,12 +857,7 @@ function buildDynamic(){
   const cc = {}; EV.forEach(e => { CATS.forEach(c => { if (c.s && c.s.includes(e.sport)) cc[c.k] = (cc[c.k] || 0) + 1; }); });
   document.querySelectorAll("#catchips .chip").forEach(c => { const n = cc[c.dataset.v] || 0; c.querySelector("small").textContent = n; c.disabled = !n; });
   document.querySelectorAll("#cats .cat").forEach(a => { const k = a.dataset.cat; a.hidden = !!(k && !k.startsWith("__") && !cc[k]); });
-  const tc = {}; EV.forEach(e => { if (!e.tw) return; const t = tc[e.tw] || (tc[e.tw] = { n: 0, lat: 0, lng: 0 }); t.n++; t.lat += e.lat; t.lng += e.lng; });
-  const towns = Object.entries(tc).filter(([t]) => !norm(t).includes(norm(CENTER.nome))).map(([t, o]) => [t, { n: o.n, lat: o.lat / o.n, lng: o.lng / o.n }]).sort((a, b) => distKm(CENTER, a[1]) - distKm(CENTER, b[1]));
-  window.TOWNC = Object.fromEntries(towns.map(([t, o]) => [t, o]));
-  document.getElementById("g-town-h").innerHTML = `Paesi vicino a ${esc(CENTER.nome)} <span>puntano sempre a ${esc(CENTER.nome)}</span>`;
-  document.getElementById("towns").innerHTML = towns.slice(0, 40).map(([t, o]) => `<button class="chip" data-v="${esc(t)}" data-name="${esc(t.toLowerCase())}">${esc(t)}<small>${o.n}</small></button>`).join("");
-  document.querySelectorAll("#towns .chip, #dgrid .chip, #catchips .chip").forEach(bindChip);
+  document.querySelectorAll("#dgrid .chip, #catchips .chip").forEach(bindChip);
   // fine settimana ed eventi di gruppo
   const wk = EV.filter(e => WEEKEND.includes(e.ymd) && e.sport !== "market").slice(0, 12);
   document.getElementById("weekend").hidden = LOCKED || !wk.length;
@@ -923,19 +913,17 @@ function bindAll(){
   qs.addEventListener("click", e => e.stopPropagation());
   // città o paese scritto a mano: prima le nostre liste, poi photon (openstreetmap) come nella pagina eventi
   const ts = document.getElementById("tsearch"); let tt = null, tseq = 0;
-  function filterPlaces(){ const q = ts.value.trim().toLowerCase();
-    document.querySelectorAll("#towns .chip, #cities .chip").forEach(c => { c.style.display = !q || c.dataset.name.includes(q) ? "" : "none"; });
-    const anyCity = [...document.querySelectorAll("#cities .chip")].some(c => c.style.display !== "none"), anyTown = [...document.querySelectorAll("#towns .chip")].some(c => c.style.display !== "none");
-    document.getElementById("g-city").hidden = !anyCity; document.getElementById("g-town").hidden = !anyTown;
-    const free = document.getElementById("g-free"); const fc = document.getElementById("freecity");
-    clearTimeout(tt); if (q.length < 3 || anyCity || anyTown) { free.hidden = true; fc.innerHTML = ""; return; }
-    tt = setTimeout(async () => { const seq = ++tseq; const list = await geoSuggest(q); if (seq !== tseq) return; window.SUGG = list;
-      fc.innerHTML = list.length ? list.map((s, i) => `<button class="chip" data-v="${i}" data-name="${esc(s.name.toLowerCase())}">📍 ${esc(s.name)}<small>${Math.round(s.km) < 1 ? "qui" : Math.round(s.km) + " km"}</small></button>`).join("") : `<span class="hint">Non trovo questo posto. Prova con il nome del paese.</span>`;
-      free.hidden = false; fc.querySelectorAll(".chip").forEach(bindChip); }, 250);
+  function filterPlaces(){ const q = ts.value.trim().toLowerCase(); const free = document.getElementById("g-free"); const fc = document.getElementById("freecity");
+    clearTimeout(tt); if (q.length < 2) { free.hidden = true; fc.innerHTML = ""; return; }
+    const mine = CITIES.filter(c => c.nome.toLowerCase().startsWith(q)).slice(0, 3).map(c => ({ name: c.nome, lat: c.lat, lng: c.lng, km: distKm(CENTER, c), city: c.slug }));
+    const show = list => { window.SUGG = list; fc.innerHTML = list.length ? list.map((s, i) => `<button class="chip" data-v="${i}" data-name="${esc(s.name.toLowerCase())}">📍 ${esc(s.name)}</button>`).join("") : `<span class="hint">Non trovo questo posto. Prova con il nome del paese.</span>`; free.hidden = false; fc.querySelectorAll(".chip").forEach(bindChip); };
+    show(mine);
+    if (q.length < 3) return;
+    tt = setTimeout(async () => { const seq = ++tseq; const list = await geoSuggest(q); if (seq !== tseq) return; const names = new Set(mine.map(m => m.name.toLowerCase())); show([...mine, ...list.filter(x => !names.has(x.name.toLowerCase()))].slice(0, 6)); }, 250);
   }
   ts.addEventListener("input", filterPlaces);
   ts.addEventListener("click", e => e.stopPropagation());
-  ts.addEventListener("keydown", e => { if (e.key !== "Enter") return; e.preventDefault(); const first = [...document.querySelectorAll("#freecity .chip, #cities .chip, #towns .chip")].find(c => c.style.display !== "none" && !c.closest(".cgroup[hidden]")); if (first) first.click(); });
+  ts.addEventListener("keydown", e => { if (e.key !== "Enter") return; e.preventDefault(); const first = document.querySelector("#freecity .chip"); if (first) first.click(); });
   // modale filtri
   const modal = document.getElementById("modal");
   function openModal(){ closePanels(); modal.hidden = false; document.body.style.overflow = "hidden"; }
@@ -947,9 +935,11 @@ function bindAll(){
   document.querySelector(".mbox").addEventListener("click", e => e.stopPropagation());
 }
 // posto da photon scelto a mano: una città grande = nuovo centro del feed; un paese = punto di riferimento dentro il feed
-function pickPlace(i){ const s = (window.SUGG || [])[i]; if (!s) return; PLACE = s; F.city.clear(); F.town.clear(); F.where.clear(); document.getElementById("tsearch").value = ""; track("cerca_posto", s.name);
+function pickPlace(i){ const s = (window.SUGG || [])[i]; if (!s) return; F.city.clear(); F.town.clear(); F.where.clear(); document.getElementById("tsearch").value = ""; document.getElementById("g-free").hidden = true; track("cerca_posto", s.name);
+  if (s.city) { PLACE = null; F.city.add(s.city); syncChips(); loadEvents({ ...CITIES.find(c => c.slug === s.city) }); return; }
+  PLACE = s;
   const nearest = CITIES.map(c => ({ c, km: distKm(c, s) })).sort((a, b) => a.km - b.km)[0];
-  if (nearest.km <= 40) { REF = { lat: s.lat, lng: s.lng }; if (CENTER.slug !== nearest.c.slug) loadEvents({ ...nearest.c }).then(() => { REF = { lat: s.lat, lng: s.lng }; render(); }); else render(); if (map) map.flyTo({ center: [s.lng, s.lat], zoom: 12 }); }
+  if (nearest.km <= 25) { if (CENTER.slug !== nearest.c.slug) loadEvents({ ...nearest.c }).then(() => { REF = { lat: s.lat, lng: s.lng }; render(); if (map) map.flyTo({ center: [s.lng, s.lat], zoom: 12 }); }); else { REF = { lat: s.lat, lng: s.lng }; render(); if (map) map.flyTo({ center: [s.lng, s.lat], zoom: 12 }); } }
   else loadEvents({ slug: "", nome: s.name, lat: s.lat, lng: s.lng });
 }
 const PLACE_TYPES = ["city","town","village","hamlet","suburb","locality","neighbourhood","municipality"];
@@ -995,7 +985,8 @@ function initMap(){
   if (LOCKED) document.getElementById("maplock").hidden = false;
 }
 function fitMap(rows){
-  if (!map || !mapReady || !rows.length) return;
+  if (!map || !mapReady) return;
+  if (!rows.length) { map.jumpTo({ center: [CENTER.lng, CENTER.lat], zoom: 11.5 }); return; }
   const b = new maplibregl.LngLatBounds(); rows.slice(0, 200).forEach(e => b.extend([e.lng, e.lat]));
   map.fitBounds(b, { padding: 40, maxZoom: 13, duration: 0 });
 }
@@ -1011,7 +1002,7 @@ function drawPins(rows){
     el.addEventListener("click", () => { const c = document.querySelector(`.ev[data-id="${e.id}"]`); if (c && !document.body.classList.contains("mapmode")) c.scrollIntoView({ behavior: "smooth", block: "center" }); const mini = document.querySelector(`.carousel .mini[data-id="${e.id}"]`); if (mini) { document.querySelectorAll(".carousel .mini").forEach(m => m.classList.toggle("on", m === mini)); mini.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" }); } });
     markers.push(mk);
   });
-  document.getElementById("mapinfo").textContent = `${rows.length >= 1000 ? "Più di 1000" : rows.length} event${rows.length === 1 ? "o" : "i"}${F.day.size || F.date.size ? "" : " oggi"} sulla mappa`;
+  document.getElementById("mapinfo").textContent = `${rows.length >= 1000 ? "Più di 1000" : rows.length} event${rows.length === 1 ? "o" : "i"}${MAP_TODAY ? " oggi" : " in arrivo"} sulla mappa`;
   document.getElementById("carousel").innerHTML = rows.slice(0, 40).map(e => `<article class="mini" data-id="${e.id}"><div class="h"><div class="tile">${e.emoji}</div><a class="t" href="${EVURL(e)}" data-gate="evento">${esc(e.title)}</a></div><div class="m">${whenTxt(e)}</div><div class="m">${esc(e.tw)}${e.km > 1 ? ` · ${e.km.toFixed(0)} km` : ""} · ${e.price_cents > 0 ? esc(fmtPrice(e.price_cents)) : "gratis"}</div>${cta(e)}</article>`).join("");
 }
 function hl(id, on){ document.querySelectorAll(`.ev[data-id="${id}"]`).forEach(c => c.classList.toggle("hl", on)); }
