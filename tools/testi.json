@@ -1,289 +1,364 @@
 {
-  "_nota": "Catalogo tipi per le pagine pubbliche (copia di CATALOG in bergamo/app.js: tenere allineato). key = cartella /bergamo/<key>/; label = come in app.js; frase = testo fisso dell'indice, scritto a mano.",
-  "tipi": {
-    "running": {
-      "key": "corsa",
-      "e": "🏃",
-      "label": "Corsa",
-      "c": "sport",
-      "frase": "Uscite di corsa e gare podistiche in città e in provincia: ti iscrivi e corri insieme ad altri, al tuo passo."
-    },
-    "trail": {
-      "key": "corsa-in-montagna",
-      "e": "⛰️",
-      "label": "Corsa in montagna",
-      "c": "sport",
-      "frase": "Trail e corse sui sentieri delle valli bergamasche, dalle Orobie ai colli."
-    },
-    "hyrox": {
-      "key": "hyrox",
-      "e": "🏋️",
-      "label": "Hyrox (gara in palestra)",
-      "c": "sport",
-      "frase": "Allenamenti e gare Hyrox in palestra, per chi vuole prepararsi in gruppo."
-    },
-    "walking": {
-      "key": "camminata",
-      "e": "🚶",
-      "label": "Camminata",
-      "c": "sport",
-      "frase": "Camminate in compagnia, in città e sui colli: il modo più semplice per uscire di casa."
-    },
-    "cycling": {
-      "key": "bici",
-      "e": "🚴",
-      "label": "Bici da strada",
-      "c": "sport",
-      "frase": "Giri in bici da strada in pianura e sulle salite della provincia, a ritmo di gruppo."
-    },
-    "mtb": {
-      "key": "mountain-bike",
-      "e": "🚵",
-      "label": "Mountain bike",
-      "c": "sport",
-      "frase": "Uscite in mountain bike e gravel sui sentieri e sulle strade bianche della bergamasca."
-    },
-    "moto": {
-      "key": "moto",
-      "e": "🏍️",
-      "label": "Moto",
-      "c": "sport",
-      "frase": "Giri in moto di gruppo sui passi e nelle valli intorno a Bergamo."
-    },
-    "hiking": {
-      "key": "escursioni",
-      "e": "🥾",
-      "label": "Escursionismo",
-      "c": "sport",
-      "frase": "Escursioni e trekking sulle Orobie e sui sentieri della provincia, con un host che conosce la strada."
-    },
-    "climbing": {
-      "key": "arrampicata",
-      "e": "🧗",
-      "label": "Arrampicata",
-      "c": "sport",
-      "frase": "Arrampicata in falesia e in palestra, per iniziare o per trovare compagni di cordata."
-    },
-    "skitouring": {
-      "key": "scialpinismo",
-      "e": "🎿",
-      "label": "Scialpinismo",
-      "c": "sport",
-      "frase": "Uscite di scialpinismo sulle Orobie, in gruppo e con chi le conosce."
-    },
-    "gym": {
-      "key": "palestra",
-      "e": "💪",
-      "label": "Palestra",
-      "c": "sport",
-      "frase": "Allenamenti in palestra e a corpo libero, in gruppo, per tutti i livelli."
-    },
-    "yoga": {
-      "key": "yoga",
-      "e": "🧘",
-      "label": "Yoga / pilates",
-      "c": "benessere",
-      "frase": "Lezioni di yoga e pilates, al chiuso e all'aperto, per chi vuole rallentare."
-    },
-    "football": {
-      "key": "calcio",
-      "e": "⚽",
-      "label": "Calcio",
-      "c": "sport",
-      "frase": "Partite di calcio e calcetto: manca sempre qualcuno, e quel qualcuno puoi essere tu."
-    },
-    "basketball": {
-      "key": "basket",
-      "e": "🏀",
-      "label": "Basket",
-      "c": "sport",
-      "frase": "Partite di basket nei campetti e nelle palestre della città."
-    },
-    "volleyball": {
-      "key": "volley",
-      "e": "🏐",
-      "label": "Volley",
-      "c": "sport",
-      "frase": "Partite di pallavolo e beach volley, indoor e all'aperto."
-    },
-    "tennis": {
-      "key": "tennis",
-      "e": "🎾",
-      "label": "Tennis",
-      "c": "sport",
-      "frase": "Partite di tennis singole e in doppio: trovi chi gioca al tuo livello."
-    },
-    "padel": {
-      "key": "padel",
-      "e": "🏸",
-      "label": "Padel",
-      "c": "sport",
-      "frase": "Partite di padel in provincia: serve sempre un quarto."
-    },
-    "swimming": {
-      "key": "nuoto",
-      "e": "🏊",
-      "label": "Nuoto",
-      "c": "sport",
-      "frase": "Nuoto in piscina e nei laghi della provincia, in compagnia."
-    },
-    "surf": {
-      "key": "surf",
-      "e": "🏄",
-      "label": "Surf / sup",
-      "c": "sport",
-      "frase": "Uscite di surf e sup sui laghi e in trasferta al mare."
-    },
-    "paddling": {
-      "key": "canoa",
-      "e": "🚣",
-      "label": "Canoa / kayak",
-      "c": "sport",
-      "frase": "Canoa e kayak sul lago d'Iseo, sull'Adda e sui fiumi della provincia."
-    },
-    "skiing": {
-      "key": "sci",
-      "e": "⛷️",
-      "label": "Sci",
-      "c": "sport",
-      "frase": "Giornate sulla neve nelle stazioni delle Orobie, in gruppo."
-    },
-    "snowboard": {
-      "key": "snowboard",
-      "e": "🏂",
-      "label": "Snowboard",
-      "c": "sport",
-      "frase": "Uscite di snowboard sulle piste della provincia e dintorni."
-    },
-    "skating": {
-      "key": "pattinaggio",
-      "e": "⛸️",
-      "label": "Pattinaggio",
-      "c": "sport",
-      "frase": "Pattinaggio a rotelle e su ghiaccio, per tutti i livelli."
-    },
-    "golf": {
-      "key": "golf",
-      "e": "⛳",
-      "label": "Golf",
-      "c": "sport",
-      "frase": "Giornate di golf e prove sul campo pratica, anche per chi inizia."
-    },
-    "bowling": {
-      "key": "bowling",
-      "e": "🎳",
-      "label": "Bowling",
-      "c": "sport",
-      "frase": "Serate a bowling in gruppo: una pista, tante persone nuove."
-    },
-    "ceramics": {
-      "key": "ceramica",
-      "e": "🏺",
-      "label": "Ceramica",
-      "c": "creatività",
-      "frase": "Corsi e laboratori di ceramica a Bergamo: tornio, argilla e qualcosa da portare a casa."
-    },
-    "cooking": {
-      "key": "cucina",
-      "e": "🍳",
-      "label": "Cucina",
-      "c": "cucina",
-      "frase": "Corsi di cucina e serate ai fornelli, dove si cucina insieme e poi si mangia insieme."
-    },
-    "dinner": {
-      "key": "cene-e-aperitivi",
-      "e": "🍽️",
-      "label": "Cena / aperitivo",
-      "c": "cucina",
-      "frase": "Cene e aperitivi di gruppo in città: un tavolo prenotato, posti liberi, nessuno che conosce già tutti."
-    },
-    "painting": {
-      "key": "pittura",
-      "e": "🎨",
-      "label": "Pittura / arte",
-      "c": "creatività",
-      "frase": "Laboratori di pittura e disegno, per chi vuole provare o riprendere in mano i pennelli."
-    },
-    "gardening": {
-      "key": "volontariato",
-      "e": "🌱",
-      "label": "Giardinaggio / volontariato",
-      "c": "giardinaggio",
-      "frase": "Giornate di volontariato, orti condivisi e pulizia del verde: si fa qualcosa di utile, in compagnia."
-    },
-    "festival": {
-      "key": "feste",
-      "e": "🎉",
-      "label": "Feste, sagre ed eventi di paese",
-      "c": "cultura",
-      "frase": "Le feste dell'oratorio, le sagre e gli eventi di paese della bergamasca, con le date di ogni sera."
-    },
-    "estivo": {
-      "key": "estivi",
-      "e": "☀️",
-      "label": "Estivo",
-      "c": "cultura",
-      "frase": "Gli estivi di Bergamo e provincia, sera per sera fino alla chiusura: bar all'aperto nei parchi, cucina, dj set e serate."
-    },
-    "concert": {
-      "key": "concerti",
-      "e": "🎸",
-      "label": "Concerti e musica dal vivo",
-      "c": "cultura",
-      "frase": "I concerti e le serate di musica dal vivo a Bergamo e in provincia: band, tribute, cantautori, dalle feste di paese ai teatri."
-    },
-    "show": {
-      "key": "spettacoli",
-      "e": "🎭",
-      "label": "Spettacoli e teatro",
-      "c": "cultura",
-      "frase": "Teatro, commedie dialettali, cabaret e musical a Bergamo e in provincia, con le date di ogni replica."
-    },
-    "market": {
-      "key": "mercatini",
-      "e": "🛍️",
-      "label": "Mercatini",
-      "c": "cultura",
-      "frase": "I mercatini di Bergamo e provincia: antiquariato, hobbisti, artigianato, vintage e seconda mano, weekend per weekend."
-    },
-    "karaoke": {
-      "key": "karaoke",
-      "e": "🎤",
-      "label": "Karaoke",
-      "c": "cultura",
-      "frase": "Le serate karaoke nei locali di Bergamo e provincia: microfono aperto, si canta con chi c'è."
-    },
-    "tour": {
-      "key": "visite-guidate",
-      "e": "🏛️",
-      "label": "Visite guidate",
-      "c": "cultura",
-      "frase": "Visite guidate a chiese, torri, musei e parchi della bergamasca: si va con una guida e con altri, senza prenotare da soli."
-    },
-    "culture": {
-      "key": "incontri-culturali",
-      "e": "📚",
-      "label": "Incontri culturali",
-      "c": "cultura",
-      "frase": "Presentazioni di libri, conferenze e mostre a Bergamo e in provincia: ci si va, si ascolta, si parla dopo."
-    },
-    "fair": {
-      "key": "fiere",
-      "e": "🎡",
-      "label": "Fiere",
-      "c": "cultura",
-      "frase": "Le fiere della bergamasca: patronali, zootecniche, dell'agricoltura e del modellismo, con le date di ogni giornata."
-    }
+ "_nota": "Catalogo tipi per le pagine pubbliche (copia di CATALOG in bergamo/app.js: tenere allineato). key = cartella /bergamo/<key>/; label = come in app.js; frase = testo fisso dell'indice, scritto a mano.",
+ "tipi": {
+  "running": {
+   "key": "corsa",
+   "e": "🏃",
+   "label": "Corsa",
+   "c": "sport",
+   "frase": "Uscite di corsa e gare podistiche in città e in provincia: ti iscrivi e corri insieme ad altri, al tuo passo.",
+   "conta": "uscita di corsa|uscite di corsa"
   },
-  "hub": {
-    "titolo": "Cosa fare a {citta} e provincia",
-    "sotto": "Feste di paese, uscite sportive, corsi e gruppi: tutto quello che succede vicino a te, in un posto solo. Scegli un evento e vai insieme ad altri."
+  "trail": {
+   "key": "corsa-in-montagna",
+   "e": "⛰️",
+   "label": "Corsa in montagna",
+   "c": "sport",
+   "frase": "Trail e corse sui sentieri delle valli bergamasche, dalle Orobie ai colli."
   },
-  "paese": {
-    "frase": "Su anyplans trovi le feste e gli eventi di {paese} con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri."
+  "hyrox": {
+   "key": "hyrox",
+   "e": "🏋️",
+   "label": "Hyrox (gara in palestra)",
+   "c": "sport",
+   "frase": "Allenamenti e gare Hyrox in palestra, per chi vuole prepararsi in gruppo."
   },
-  "running_club": {
-    "titolo": "Running club a Bergamo e provincia",
-    "sotto": "Tutti i run club di Bergamo e provincia: gruppi di corsa che escono insieme, uno quasi ogni sera. Scegli il giorno, vai, corri con altri. Nessuno corre da solo, e quasi tutti sono gratis."
+  "walking": {
+   "key": "camminata",
+   "e": "🚶",
+   "label": "Camminata",
+   "c": "sport",
+   "frase": "Camminate in compagnia, in città e sui colli: il modo più semplice per uscire di casa.",
+   "conta": "camminata|camminate"
+  },
+  "cycling": {
+   "key": "bici",
+   "e": "🚴",
+   "label": "Bici da strada",
+   "c": "sport",
+   "frase": "Giri in bici da strada in pianura e sulle salite della provincia, a ritmo di gruppo."
+  },
+  "mtb": {
+   "key": "mountain-bike",
+   "e": "🚵",
+   "label": "Mountain bike",
+   "c": "sport",
+   "frase": "Uscite in mountain bike e gravel sui sentieri e sulle strade bianche della bergamasca."
+  },
+  "moto": {
+   "key": "moto",
+   "e": "🏍️",
+   "label": "Moto",
+   "c": "sport",
+   "frase": "Giri in moto di gruppo sui passi e nelle valli intorno a Bergamo."
+  },
+  "hiking": {
+   "key": "escursioni",
+   "e": "🥾",
+   "label": "Escursionismo",
+   "c": "sport",
+   "frase": "Escursioni e trekking sulle Orobie e sui sentieri della provincia, con un host che conosce la strada.",
+   "conta": "escursione|escursioni"
+  },
+  "climbing": {
+   "key": "arrampicata",
+   "e": "🧗",
+   "label": "Arrampicata",
+   "c": "sport",
+   "frase": "Arrampicata in falesia e in palestra, per iniziare o per trovare compagni di cordata."
+  },
+  "skitouring": {
+   "key": "scialpinismo",
+   "e": "🎿",
+   "label": "Scialpinismo",
+   "c": "sport",
+   "frase": "Uscite di scialpinismo sulle Orobie, in gruppo e con chi le conosce."
+  },
+  "gym": {
+   "key": "palestra",
+   "e": "💪",
+   "label": "Palestra",
+   "c": "sport",
+   "frase": "Allenamenti in palestra e a corpo libero, in gruppo, per tutti i livelli."
+  },
+  "yoga": {
+   "key": "yoga",
+   "e": "🧘",
+   "label": "Yoga / pilates",
+   "c": "benessere",
+   "frase": "Lezioni di yoga e pilates, al chiuso e all'aperto, per chi vuole rallentare.",
+   "conta": "lezione|lezioni"
+  },
+  "football": {
+   "key": "calcio",
+   "e": "⚽",
+   "label": "Calcio",
+   "c": "sport",
+   "frase": "Partite di calcio e calcetto: manca sempre qualcuno, e quel qualcuno puoi essere tu."
+  },
+  "basketball": {
+   "key": "basket",
+   "e": "🏀",
+   "label": "Basket",
+   "c": "sport",
+   "frase": "Partite di basket nei campetti e nelle palestre della città."
+  },
+  "volleyball": {
+   "key": "volley",
+   "e": "🏐",
+   "label": "Volley",
+   "c": "sport",
+   "frase": "Partite di pallavolo e beach volley, indoor e all'aperto."
+  },
+  "tennis": {
+   "key": "tennis",
+   "e": "🎾",
+   "label": "Tennis",
+   "c": "sport",
+   "frase": "Partite di tennis singole e in doppio: trovi chi gioca al tuo livello.",
+   "conta": "partita di tennis|partite di tennis"
+  },
+  "padel": {
+   "key": "padel",
+   "e": "🏸",
+   "label": "Padel",
+   "c": "sport",
+   "frase": "Partite di padel in provincia: serve sempre un quarto.",
+   "conta": "partita di padel|partite di padel"
+  },
+  "swimming": {
+   "key": "nuoto",
+   "e": "🏊",
+   "label": "Nuoto",
+   "c": "sport",
+   "frase": "Nuoto in piscina e nei laghi della provincia, in compagnia."
+  },
+  "surf": {
+   "key": "surf",
+   "e": "🏄",
+   "label": "Surf / sup",
+   "c": "sport",
+   "frase": "Uscite di surf e sup sui laghi e in trasferta al mare."
+  },
+  "paddling": {
+   "key": "canoa",
+   "e": "🚣",
+   "label": "Canoa / kayak",
+   "c": "sport",
+   "frase": "Canoa e kayak sul lago d'Iseo, sull'Adda e sui fiumi della provincia."
+  },
+  "skiing": {
+   "key": "sci",
+   "e": "⛷️",
+   "label": "Sci",
+   "c": "sport",
+   "frase": "Giornate sulla neve nelle stazioni delle Orobie, in gruppo."
+  },
+  "snowboard": {
+   "key": "snowboard",
+   "e": "🏂",
+   "label": "Snowboard",
+   "c": "sport",
+   "frase": "Uscite di snowboard sulle piste della provincia e dintorni."
+  },
+  "skating": {
+   "key": "pattinaggio",
+   "e": "⛸️",
+   "label": "Pattinaggio",
+   "c": "sport",
+   "frase": "Pattinaggio a rotelle e su ghiaccio, per tutti i livelli."
+  },
+  "golf": {
+   "key": "golf",
+   "e": "⛳",
+   "label": "Golf",
+   "c": "sport",
+   "frase": "Giornate di golf e prove sul campo pratica, anche per chi inizia."
+  },
+  "bowling": {
+   "key": "bowling",
+   "e": "🎳",
+   "label": "Bowling",
+   "c": "sport",
+   "frase": "Serate a bowling in gruppo: una pista, tante persone nuove."
+  },
+  "ceramics": {
+   "key": "ceramica",
+   "e": "🏺",
+   "label": "Ceramica",
+   "c": "creatività",
+   "frase": "Corsi e laboratori di ceramica a Bergamo: tornio, argilla e qualcosa da portare a casa.",
+   "conta": "corso di ceramica|corsi di ceramica"
+  },
+  "cooking": {
+   "key": "cucina",
+   "e": "🍳",
+   "label": "Cucina",
+   "c": "cucina",
+   "frase": "Corsi di cucina e serate ai fornelli, dove si cucina insieme e poi si mangia insieme.",
+   "conta": "corso di cucina|corsi di cucina"
+  },
+  "dinner": {
+   "key": "cene-e-aperitivi",
+   "e": "🍽️",
+   "label": "Cena / aperitivo",
+   "c": "cucina",
+   "frase": "Cene e aperitivi di gruppo in città: un tavolo prenotato, posti liberi, nessuno che conosce già tutti.",
+   "conta": "cena o aperitivo|cene e aperitivi"
+  },
+  "painting": {
+   "key": "pittura",
+   "e": "🎨",
+   "label": "Pittura / arte",
+   "c": "creatività",
+   "frase": "Laboratori di pittura e disegno, per chi vuole provare o riprendere in mano i pennelli.",
+   "conta": "laboratorio|laboratori"
+  },
+  "gardening": {
+   "key": "volontariato",
+   "e": "🌱",
+   "label": "Giardinaggio / volontariato",
+   "c": "giardinaggio",
+   "frase": "Giornate di volontariato, orti condivisi e pulizia del verde: si fa qualcosa di utile, in compagnia."
+  },
+  "festival": {
+   "key": "feste",
+   "e": "🎉",
+   "label": "Feste, sagre ed eventi di paese",
+   "c": "cultura",
+   "frase": "Le feste dell'oratorio, le sagre e gli eventi di paese della bergamasca, con le date di ogni sera.",
+   "conta": "festa|feste"
+  },
+  "estivo": {
+   "key": "estivi",
+   "e": "☀️",
+   "label": "Estivo",
+   "c": "cultura",
+   "frase": "Gli estivi di Bergamo e provincia, sera per sera fino alla chiusura: bar all'aperto nei parchi, cucina, dj set e serate.",
+   "conta": "serata all'aperto|serate all'aperto"
+  },
+  "concert": {
+   "key": "concerti",
+   "e": "🎸",
+   "label": "Concerti e musica dal vivo",
+   "c": "cultura",
+   "frase": "I concerti e le serate di musica dal vivo a Bergamo e in provincia: band, tribute, cantautori, dalle feste di paese ai teatri.",
+   "conta": "concerto|concerti"
+  },
+  "show": {
+   "key": "spettacoli",
+   "e": "🎭",
+   "label": "Spettacoli e teatro",
+   "c": "cultura",
+   "frase": "Teatro, commedie dialettali, cabaret e musical a Bergamo e in provincia, con le date di ogni replica.",
+   "conta": "spettacolo|spettacoli"
+  },
+  "market": {
+   "key": "mercatini",
+   "e": "🛍️",
+   "label": "Mercatini",
+   "c": "cultura",
+   "frase": "I mercatini di Bergamo e provincia: antiquariato, hobbisti, artigianato, vintage e seconda mano, weekend per weekend.",
+   "conta": "mercatino|mercatini"
+  },
+  "karaoke": {
+   "key": "karaoke",
+   "e": "🎤",
+   "label": "Karaoke",
+   "c": "cultura",
+   "frase": "Le serate karaoke nei locali di Bergamo e provincia: microfono aperto, si canta con chi c'è.",
+   "conta": "serata karaoke|serate karaoke"
+  },
+  "tour": {
+   "key": "visite-guidate",
+   "e": "🏛️",
+   "label": "Visite guidate",
+   "c": "cultura",
+   "frase": "Visite guidate a chiese, torri, musei e parchi della bergamasca: si va con una guida e con altri, senza prenotare da soli.",
+   "conta": "visita guidata|visite guidate"
+  },
+  "culture": {
+   "key": "incontri-culturali",
+   "e": "📚",
+   "label": "Incontri culturali",
+   "c": "cultura",
+   "frase": "Presentazioni di libri, conferenze e mostre a Bergamo e in provincia: ci si va, si ascolta, si parla dopo.",
+   "conta": "incontro|incontri"
+  },
+  "fair": {
+   "key": "fiere",
+   "e": "🎡",
+   "label": "Fiere",
+   "c": "cultura",
+   "frase": "Le fiere della bergamasca: patronali, zootecniche, dell'agricoltura e del modellismo, con le date di ogni giornata.",
+   "conta": "fiera|fiere"
+  },
+  "dancing": {
+   "key": "ballo",
+   "e": "💃",
+   "label": "Ballo e danza",
+   "c": "cultura",
+   "frase": "Milonghe, serate di salsa e bachata, lezioni di prova e corsi di ballo a Bergamo e provincia: si va anche da soli, si balla con chi c'è.",
+   "conta": "serata di ballo|serate di ballo"
+  },
+  "nightlife": {
+   "key": "serate",
+   "e": "🌙",
+   "label": "Serate e discoteca",
+   "c": "cultura",
+   "frase": "Dj set, feste nei locali e serate a tema a Bergamo e in provincia, sera per sera.",
+   "conta": "serata|serate"
+  },
+  "match": {
+   "key": "partite",
+   "e": "🏟️",
+   "label": "Partite da vedere",
+   "c": "sport",
+   "frase": "Le partite in casa delle squadre di Bergamo e dintorni: data, campo e come prendere il biglietto.",
+   "conta": "partita|partite"
+  },
+  "cinema": {
+   "key": "cinema",
+   "e": "🎬",
+   "label": "Cinema",
+   "c": "cultura",
+   "frase": "Proiezioni, rassegne e cinema all'aperto a Bergamo e in provincia, con le date di ogni replica.",
+   "conta": "proiezione|proiezioni"
+  },
+  "games": {
+   "key": "giochi",
+   "e": "🎲",
+   "label": "Giochi da tavolo",
+   "c": "cultura",
+   "frase": "Serate di giochi da tavolo, quiz, burraco e scacchi a Bergamo e provincia: ci si siede a un tavolo con chi c'è.",
+   "conta": "serata di giochi|serate di giochi"
+  },
+  "exhibition": {
+   "key": "mostre",
+   "e": "🖼️",
+   "label": "Mostre",
+   "c": "cultura",
+   "frase": "Le mostre aperte a Bergamo e in provincia: quadri, fotografia, archeologia e installazioni, con i giorni di apertura.",
+   "conta": "mostra|mostre"
+  },
+  "singles": {
+   "key": "single",
+   "e": "💘",
+   "label": "Serate per single",
+   "c": "cultura",
+   "frase": "Speed date e serate per single a Bergamo e provincia, divise per fascia d'età: ci si va da soli, è il senso.",
+   "conta": "serata per single|serate per single"
   }
+ },
+ "hub": {
+  "titolo": "Cosa fare a {citta} e provincia",
+  "sotto": "Feste di paese, uscite sportive, corsi e gruppi: tutto quello che succede vicino a te, in un posto solo. Scegli un evento e vai insieme ad altri."
+ },
+ "paese": {
+  "frase": "Su anyplans trovi le feste e gli eventi di {paese} con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri."
+ },
+ "running_club": {
+  "titolo": "Running club a Bergamo e provincia",
+  "sotto": "Tutti i run club di Bergamo e provincia: gruppi di corsa che escono insieme, uno quasi ogni sera. Scegli il giorno, vai, corri con altri. Nessuno corre da solo, e quasi tutti sono gratis."
+ }
 }

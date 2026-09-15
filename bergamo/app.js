@@ -138,13 +138,23 @@ const CATALOG = {
   karaoke:   { e:"🎤", l:"Karaoke",                   c:"cultura" },
   tour:      { e:"🏛️", l:"Visite guidate",            c:"cultura" },
   culture:   { e:"📚", l:"Incontri culturali",        c:"cultura" },
-  fair:      { e:"🎡", l:"Fiere",                     c:"cultura" }
+  fair:      { e:"🎡", l:"Fiere",                     c:"cultura" },
+  // 15/09/2026 (migrazione 0087): categorie nate con gli eventi di tutta Italia
+  dancing:   { e:"💃", l:"Ballo e danza",             c:"cultura" },
+  nightlife: { e:"🌙", l:"Serate e discoteca",        c:"cultura" },
+  match:     { e:"🏟️", l:"Partite da vedere",         c:"sport" },
+  cinema:    { e:"🎬", l:"Cinema",                    c:"cultura" },
+  games:     { e:"🎲", l:"Giochi da tavolo",          c:"cultura" },
+  exhibition:{ e:"🖼️", l:"Mostre",                    c:"cultura" },
+  singles:   { e:"💘", l:"Serate per single",         c:"cultura" }
 };
 
 // categoria del sito per ogni slug non sportivo; tutto il resto è "sport"
 const CAT_BY_SLUG = { cooking:"cucina", dinner:"cucina", ceramics:"creatività", painting:"creatività",
                       gardening:"giardinaggio", festival:"cultura", estivo:"cultura", yoga:"benessere",
-                      concert:"cultura", show:"cultura", market:"cultura", karaoke:"cultura", tour:"cultura", culture:"cultura", fair:"cultura" };
+                      concert:"cultura", show:"cultura", market:"cultura", karaoke:"cultura", tour:"cultura", culture:"cultura", fair:"cultura",
+                      dancing:"cultura", nightlife:"cultura", cinema:"cultura", games:"cultura", exhibition:"cultura",
+                      singles:"cultura", match:"sport" };
 // parole con cui la gente cerca ogni attività (il titolo da solo non basta: "corsa" vs "corro 10k")
 const SEARCH_WORDS = {
   running: "corsa correre corro run running jogging km parco allenamento",
@@ -185,7 +195,14 @@ const SEARCH_WORDS = {
   karaoke: "karaoke cantare canta microfono serata bar",
   tour: "visita guidata visite guidate guida museo chiesa torre castello borgo storia tour",
   culture: "libro libri presentazione conferenza incontro mostra fotografica cultura scienza autore",
-  fair: "fiera fiere patronale zootecnica agricoltura modellismo sposi esposizione"
+  fair: "fiera fiere patronale zootecnica agricoltura modellismo sposi esposizione",
+  dancing: "ballo ballare danza tango milonga salsa bachata kizomba swing burlesque discoteca latino",
+  nightlife: "serata serate discoteca club dj dj set party festa notte techno house after",
+  match: "partita partite stadio calcio serie a basket volley biglietto tifo squadra",
+  cinema: "cinema film proiezione rassegna corto documentario schermo arena estiva",
+  games: "giochi gioco tavolo board game quiz trivia burraco scacchi carte escape room bingo",
+  exhibition: "mostra mostre esposizione vernissage galleria quadri fotografia biennale museo",
+  singles: "single singles speed date speed dating cuori solitari conoscere gente appuntamento"
 };
 // parole simili: "corse" trova "corsa", "scalate" trova "scalata" (si confronta anche la radice)
 const stem = w => w.length > 4 ? w.replace(/(ando|endo|are|ere|ire|ate|ata|ato|ati|ing|s|e|a|o|i)$/, "") : w;

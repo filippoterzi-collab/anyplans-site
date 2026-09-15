@@ -123,6 +123,14 @@ const EN_TYPES = {
   tour: ["guided-tours", "Guided tours", "Guided tours of churches, towers, museums and parks around Bergamo: you go with a guide and with others."],
   culture: ["talks-and-culture", "Talks & culture", "Book presentations, talks and exhibitions in Bergamo and the province."],
   fair: ["fairs", "Fairs", "The fairs of the Bergamo area: patron saint fairs, livestock and farming shows, model-making, with the dates of every day."],
+  // 15/09/2026 (migrazione 0087): le categorie nate con gli eventi di tutta Italia
+  dancing: ["dancing", "Dancing", "Tango, salsa and swing nights, plus dance classes you can try out on your own."],
+  nightlife: ["nights-out", "Nights out", "Club nights, dj sets and theme nights, evening by evening."],
+  match: ["live-sport", "Live sport", "Home matches of the local teams: date, ground and how to get a ticket."],
+  cinema: ["cinema", "Cinema", "Screenings, festivals and open-air cinema, with every date."],
+  games: ["board-games", "Board games", "Board game nights, quizzes and chess: you sit at a table with whoever is there."],
+  exhibition: ["exhibitions", "Exhibitions", "The exhibitions open right now: paintings, photography, archaeology and installations, with opening days."],
+  singles: ["singles", "Singles nights", "Speed dates and singles nights, by age group: going alone is the point."],
 };
 const LOCALES = {
   it: { code: "it", tag: "it-IT", og: "it_IT", intl: "it-IT", prefix: "", hub: "cosa-fare", groups: "gruppi", running: "running-club",
@@ -189,7 +197,7 @@ const tSlug = (t) => en() ? (EN_TYPES[t.sport]?.[0] || t.key) : t.key;
 const tPhrase = (t) => CITY !== HOME_CITY ? GENERIC_PHRASE() : en() ? (EN_TYPES[t.sport]?.[2] || "") : t.frase;
 const GENERIC_PHRASE = () => en()
   ? "Each one has the date, the time, the place and the price; you sign up and go with other people."
-  : "Di ognuno trovi data, ora, posto e prezzo: scegli quello che ti va e ci vai insieme ad altre persone.";
+  : "In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.";
 const catLabel = (c) => en() ? ({ sport: "Sports", cucina: "Food", creatività: "Creativity", giardinaggio: "Gardening", cultura: "Culture", benessere: "Wellbeing", altro: "Other" }[c] || cap(c)) : cap(c);
 const jsonld = (o) => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, "\\u003c")}</script>`;
 const INSTAGRAM = "https://instagram.com/anyplans_bergamo";
@@ -1213,7 +1221,8 @@ function indexPageEn(ix) {
   if (ix.kind === "tipo") {
     h1 = ix.sport === "festival" ? `Town festivals and sagre in ${CITY_NAME} and its province` : ix.sport === "estivo" ? `Summer venues in ${CITY_NAME}: open-air bars and evenings` : `${label} in ${CITY_NAME} and its province`; emoji = ix.t.e;
     title = cut(`${ix.sport === "festival" ? "Festivals & sagre near" : label + " in"} ${CITY_NAME}`, 36) + (up.length ? `: ${up.length} ${up.length === 1 ? "event" : "events"}` : "") + " | anyplans";
-    const nounIntro = { festival: "town festivals and sagre", estivo: "summer venue evenings", dinner: "dinners and aperitivo", running: "group runs and races", padel: "padel matches and tournaments", walking: "group walks" }[ix.sport] || `${label.toLowerCase()} events`;
+    const nounIntro = { festival: "town festivals and sagre", estivo: "summer venue evenings", dinner: "dinners and aperitivo", running: "group runs and races", padel: "padel matches and tournaments", walking: "group walks",
+                        dancing: "dance nights and classes", nightlife: "club nights and dj sets", match: "matches to watch", cinema: "screenings", games: "board game nights", exhibition: "exhibitions", singles: "singles nights" }[ix.sport] || `${label.toLowerCase()} events`;
     intro = `${up.length ? `In ${CITY_NAME} and its province there are ${up.length} ${nounIntro} in the coming months.` : `There are no ${nounIntro} scheduled right now: below, the past ones.`} ${tPhrase(ix.t)}`;
   } else {
     h1 = `Festivals and events in ${ix.town} (Bergamo)`; emoji = "🎉";
@@ -1255,7 +1264,10 @@ function indexPageIt(ix) {
   if (ix.kind === "tipo") {
     h1 = `${ix.t.label} a ${CITY_NAME} e provincia`; emoji = ix.t.e;
     title = cut(`${ix.sport === "festival" ? "Feste e sagre" : ix.t.label} a ${CITY_NAME}`, 36) + (up.length ? `: ${up.length} ${up.length === 1 ? "evento" : "eventi"}` : "") + " | anyplans";
-    intro = `${up.length ? `A ${CITY_NAME} e provincia ci sono ${up.length} ${up.length === 1 ? "evento" : "eventi"} di ${ix.t.label.toLowerCase()} nei prossimi mesi.` : `Al momento non ci sono eventi di ${ix.t.label.toLowerCase()} in programma: qui sotto quelli già passati.`} ${tPhrase(ix.t)}`;
+    // "8 mostre", non "8 eventi di mostre": ogni tipo dice come si chiama quando lo si conta (testi.json "conta")
+    const [sing, plur] = String(ix.t.conta || `evento di ${ix.t.label.toLowerCase()}|eventi di ${ix.t.label.toLowerCase()}`).split("|");
+    const quanti = `${up.length} ${up.length === 1 ? sing : plur}`;
+    intro = `${up.length ? `A ${CITY_NAME} e provincia ci sono ${quanti} nei prossimi mesi.` : `Al momento non ci sono ${plur} in programma: qui sotto quelli già passati.`} ${tPhrase(ix.t)}`;
   } else {
     h1 = `Feste ed eventi a ${ix.town}`; emoji = "🎉";
     title = cut(`Feste ed eventi a ${ix.town}${up.length ? ": " + up.length + " in programma" : ""}`, 49) + " | anyplans";
