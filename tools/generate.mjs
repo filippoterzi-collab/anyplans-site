@@ -1291,6 +1291,15 @@ const lc1 = (t) => t && t.startsWith("From ") ? "from " + t.slice(5) : t; // "Fr
 const evTown = (p) => { const t = localityOf(p); return t && !norm(p.title).includes(norm(t)) ? t + ", " : ""; };
 // i tipi di evento più numerosi di QUESTA città: i testi dell'hub li elencavano a mano (quelli di
 // Bergamo), e a Milano o a Bari erano falsi. Adesso li dice il database.
+// le città del sito più vicine a questa: un lettore di Bergamo che non trova niente va a vedere
+// Milano o Brescia, e Google arriva a tutte le città anche senza passare dalla sitemap
+const vicine = (n = 5) => CITTA.filter(x => x.slug !== CITY)
+  .map(x => ({ ...x, d: distKm({ lat: x.lat, lng: x.lng }, { lat: C.lat, lng: C.lng }) }))
+  .sort((a, b) => a.d - b.d).slice(0, n);
+const cityHref = (x) => `/${en() ? "en/" : ""}${x.slug}${x.slug === HOME_CITY ? (en() ? "/things-to-do" : "/cosa-fare") : ""}/`;
+const vicineHtml = () => `<h2>${en() ? "Nearby cities" : "Qui vicino"}</h2><div class="tags">${
+  vicine().map(x => `<a href="${cityHref(x)}">${en() ? "Events in " : "Eventi a "}${esc(x.nome)}</a>`).join("")
+}<a href="${rel(cittaUrl())}">${en() ? "All the cities" : "Tutte le città"}</a></div>`;
 const topKinds = (n = 6) => [...types].sort((a, b) => b.list.length - a.list.length).slice(0, n).map(x => tLabel(x.t).toLowerCase());
 const hubTitolo = () => String(TESTI.hub.titolo).replace("{citta}", CITY_NAME);
 const hubSotto = () => CITY === HOME_CITY ? TESTI.hub.sotto
@@ -1328,6 +1337,7 @@ ${types.length ? `<h2>By kind</h2><div class="tags">${types.map(x => `<a href="$
 ${towns.length ? `<h2>By town</h2><div class="tags">${towns.slice().sort((a, b) => a.town.localeCompare(b.town, "it")).map(x => `<a href="${rel(indexUrl(x))}">${esc(x.town)}</a>`).join("")}</div>` : ""}
 ${runClubs.length >= 3 ? `<h2>Running with others</h2><div class="tags"><a href="${rel(runningUrl())}">🏃 Running clubs in ${esc(CITY_NAME)}</a></div>` : ""}
 ${groups.length ? `<h2>Groups</h2><div class="tags">${groups.map(g => `<a href="${esc(groupUrl(g))}">${g.emoji || "👥"} ${esc(g.name)}</a>`).join("")}</div>` : ""}
+${vicineHtml()}
 <h2>Upcoming events</h2>
 ${next.length ? listHtml(next) : `<p class="lead">Nothing scheduled right now.</p>`}
 ${faqHtml(faq)}
@@ -1366,6 +1376,7 @@ ${types.length ? `<h2>Per tipo</h2><div class="tags">${types.map(x => `<a href="
 ${towns.length ? `<h2>Per paese</h2><div class="tags">${towns.slice().sort((a, b) => a.town.localeCompare(b.town, "it")).map(x => `<a href="${rel(indexUrl(x))}">${esc(x.town)}</a>`).join("")}</div>` : ""}
 ${runClubs.length >= 3 ? `<h2>Correre in compagnia</h2><div class="tags"><a href="${rel(runningUrl())}">🏃 Running club a ${esc(CITY_NAME)}</a></div>` : ""}
 ${groups.length ? `<h2>Gruppi</h2><div class="tags">${groups.map(g => `<a href="${esc(groupUrl(g))}">${g.emoji || "👥"} ${esc(g.name)}</a>`).join("")}</div>` : ""}
+${vicineHtml()}
 <h2>Prossimi eventi</h2>
 ${next.length ? listHtml(next) : `<p class="lead">Niente in programma adesso.</p>`}
 ${faqHtml(faq)}
@@ -1710,18 +1721,12 @@ I dati cambiano ogni notte: le pagine portano la data di aggiornamento in fondo.
   process.exit(0);
 }
 
-// ── una città con pochi eventi non ha pagine sue ──────────────────────────────
-// Venti pagine con due righe l'una fanno male a tutto il sito (Google le legge come pagine vuote):
-// meglio che quella città viva solo sulla mappa finché non ha abbastanza roba. Bergamo è casa, resta sempre.
-if (CITY !== HOME_CITY && upcomingPages.length < MIN_CITY) {
-  await rm(cityDir, { recursive: true, force: true });
-  await rm(path.join(OUT, "en", CITY), { recursive: true, force: true });
-  await rm(path.join(OUT, `sitemap-${CITY}.xml`), { force: true });
-  await rm(path.join(OUT, `llms-${CITY}.txt`), { force: true });
-  await rm(path.join(statoDir, CITY + ".json"), { force: true });
-  console.log(`${CITY}: ${upcomingPages.length} eventi futuri, sotto la soglia di ${MIN_CITY}: niente pagine`);
-  process.exit(0);
-}
+// ── una città con pochi eventi tiene solo l'essenziale ────────────────────────
+// Sotto la soglia restano l'hub (l'indirizzo /torino/ non deve mai sparire: ci puntano i link delle
+// altre città) e le pagine degli eventi, che sono contenuto vero. Saltano gli indici per tipo e per
+// paese e le pagine oggi/domani/weekend/mese: con quattro eventi sarebbero pagine mezze vuote.
+const SOLO_HUB = CITY !== HOME_CITY && upcomingPages.length < MIN_CITY;
+if (SOLO_HUB) console.log(`${CITY}: ${upcomingPages.length} eventi futuri, sotto ${MIN_CITY}: solo hub e pagine evento`);
 
 await mkdir(cityDir, { recursive: true });
 for (const e of await readdir(cityDir, { withFileTypes: true })) if (e.isDirectory()) await rm(path.join(cityDir, e.name), { recursive: true, force: true });
@@ -1732,14 +1737,14 @@ const relOf = (u) => rel(u).replace(/^\/|\/$/g, "");
 for (const code of ["it", "en"]) {
   L = LOCALES[code];
   const hub = hubPage(); await writePage(relOf(hubUrl()), hub.html); addUrl(hubUrl(), hub.lastmod);
-  for (const k of ["oggi", "domani", "weekend"]) {                       // "cosa fare a Bergamo oggi/domani/nel weekend"
+  for (const k of SOLO_HUB ? [] : ["oggi", "domani", "weekend"]) {       // "cosa fare a Bergamo oggi/domani/nel weekend"
     if (WHEN[k].list.length < MIN_WHEN) continue;
     const r = whenPage(k); await writePage(relOf(whenUrl(k)), r.html); addUrl(whenUrl(k), r.lastmod);
   }
-  for (const m of months) {                                              // "eventi a Bergamo a ottobre"
+  for (const m of (SOLO_HUB ? [] : months)) {                            // "eventi a Bergamo a ottobre"
     const r = monthPage(m); await writePage(relOf(monthUrl(m)), r.html); addUrl(monthUrl(m), r.lastmod);
   }
-  for (const ix of [...types, ...towns]) { const r = indexPage(ix); await writePage(relOf(indexUrl(ix)), r.html); addUrl(indexUrl(ix), r.lastmod); }
+  for (const ix of (SOLO_HUB ? [] : [...types, ...towns])) { const r = indexPage(ix); await writePage(relOf(indexUrl(ix)), r.html); addUrl(indexUrl(ix), r.lastmod); }
   if (groups.length) { await writePage(relOf(groupsUrl()), groupsIndex()); addUrl(groupsUrl(), NOW); }
   if (runClubs.length >= 3) {
     const r = runningHub(); await writePage(relOf(runningUrl()), r.html); addUrl(runningUrl(), r.lastmod);

@@ -195,7 +195,7 @@
       <button type="button" data-g="donna" onclick="setGender('donna')">Solo donne</button>
       <button type="button" data-g="uomo" onclick="setGender('uomo')">Solo uomini</button>
     </div>
-    <p class="hint">Chi non rientra vede il piano ma non può iscriversi.</p>
+    <p class="hint">Chi non rientra vede l'evento ma non può iscriversi.</p>
   </div>
 
   <div class="grid2" id="age-wrap" hidden>
@@ -207,7 +207,7 @@
       <label for="max-age">Fino a che età? <span style="color:var(--grey); font-weight:600">(vuoto = nessun limite)</span></label>
       <input id="max-age" type="number" min="18" max="99" placeholder="Es. 35">
     </div>
-    <p class="hint" style="grid-column:1/-1; margin-top:-4px">Chi è fuori fascia vede il piano ma non può iscriversi.</p>
+    <p class="hint" style="grid-column:1/-1; margin-top:-4px">Chi è fuori fascia vede l'evento ma non può iscriversi.</p>
   </div>
 
   <div class="grid2">
@@ -267,7 +267,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1789458055"></script>
+<script src="app.js?v=1789458453"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -496,7 +496,7 @@
     }
     document.getElementById("h1").textContent = "Sblocca l'evento";
     document.getElementById("btn").textContent = "Sblocca l'evento: vado io";
-    document.getElementById("note").textContent = "Sbloccandolo ci vai. Quando arriva un'altra persona, il piano si fa.";
+    document.getElementById("note").textContent = "Sbloccandolo ci vai. Quando arriva un'altra persona, l'evento si fa.";
     const back = document.getElementById("lnk-back"); back.hidden = false; back.href = "evento.html?id=" + fromId;
     sel.value = a.sport; sel.disabled = true;
     document.getElementById("title").value = a.title || "";
@@ -538,7 +538,7 @@
     if (maxA != null && (!Number.isFinite(maxA) || maxA < minA)) return fail("L'età massima deve essere almeno quella minima.");
     const maxp = parseInt(document.getElementById("maxp").value, 10);
     const hasCap = Number.isFinite(maxp);
-    if (hasCap && maxp < 2) return fail("Almeno 2 posti: il piano si fa in due.");
+    if (hasCap && maxp < 2) return fail("Almeno 2 posti: l'evento si fa in due.");
     const btn = document.getElementById("btn");
     btn.disabled = true; note.className = "note"; note.textContent = "…";
     const r = await rpc("claim_activity", {
@@ -564,7 +564,7 @@
     else if (code.includes("gender_required")) { toast("Prima dicci se sei donna o uomo, nel profilo."); location.href = "profilo.html"; return; }
     else if (code.includes("gender_not_allowed")) note.textContent = "Con questo filtro resteresti fuori anche tu. Cambialo.";
     else if (code.includes("activity_past")) note.textContent = "Questo evento è già iniziato.";
-    else note.textContent = "Non riesco ad aprire il piano, riprova.";
+    else note.textContent = "Non riesco ad aprire l'evento, riprova.";
   }
 
   // pubblica come gruppo (owner/admin): ?community=<id> preseleziona

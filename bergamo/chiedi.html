@@ -132,7 +132,7 @@
 
 <form class="ck-bar" id="ck-bar" onsubmit="send(event)">
   <div class="ck-in">
-    <input id="ck-q" placeholder="Un attimo, carico i piani…" aria-label="Scrivi cosa cerchi"
+    <input id="ck-q" placeholder="Un attimo, carico gli eventi…" aria-label="Scrivi cosa cerchi"
            autocomplete="off" enterkeyhint="send" disabled>
     <button type="submit" class="ck-send" id="ck-send" aria-label="Invia" disabled>
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
@@ -140,9 +140,9 @@
   </div>
 </form>
 
-<script src="app.js?v=1789458055"></script>
+<script src="app.js?v=1789458453"></script>
 <script>
-  // pagina aperta anche senza account (si può linkare da Instagram): il login arriva quando si apre un piano
+  // pagina aperta anche senza account (si può linkare da Instagram): il login arriva quando si apre un evento
   mountNav("chiedi", { col: 640 });
   const logged = !!(session && session.access_token);
   if (!logged) {
@@ -178,7 +178,7 @@
   // ── dati ───────────────────────────────────────────────────────
   async function loadEvents(){
     const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
-    if (!r || !r.ok) { clearSkeleton(); say("Non riesco a caricare i piani.", [{ l:"Riprova", kind:"retry" }]); return; }
+    if (!r || !r.ok) { clearSkeleton(); say("Non riesco a caricare gli eventi.", [{ l:"Riprova", kind:"retry" }]); return; }
     const rows = await r.json().catch(() => []);
     EVENTS = rows.map(x => ({
       id: x.id,
@@ -204,7 +204,7 @@
     const q = new URLSearchParams(location.search).get("q");
     if (q && q.trim()) { me(q.trim()); handle(q.trim()); return; }
     opener();
-    if (!EVENTS.length) say("Per ora non c'è nessun piano in programma a Bergamo. Vuoi pubblicare tu il primo?", [{ l:"Sì, lo pubblico io →", href:"crea.html" }]);
+    if (!EVENTS.length) say("Per ora non c'è nessun evento in programma a Bergamo. Vuoi pubblicare tu il primo?", [{ l:"Sì, lo pubblico io →", href:"crea.html" }]);
     else ask();
   }
   // distKm viene da app.js
@@ -271,7 +271,7 @@
     if (S.free) w += " gratis";
     return w.trim();
   }
-  const piani = n => n === 1 ? "un piano" : n + " piani";
+  const piani = n => n === 1 ? "un evento" : n + " eventi";
   const nearTxt = () => S.near ? (/^[aeiou]/i.test(S.near.name) ? "vicino ad " : "vicino a ") + S.near.name : "";
 
   // ── bolle ──────────────────────────────────────────────────────
@@ -432,9 +432,9 @@
     const n = evs.length, what = opts.what != null ? opts.what : whatTxt(), per = opts.per != null ? opts.per : perTxt();
     let text;
     const near = opts.title ? "" : nearTxt();
-    if (n === 1) text = `C'è un piano ${what} ${near} ${per}:`;
-    else if (!per) text = `Ecco i prossimi ${n} piani ${what} ${near}:`;
-    else text = `Ecco ${n} piani ${what} ${near} ${per}:`;
+    if (n === 1) text = `C'è un evento ${what} ${near} ${per}:`;
+    else if (!per) text = `Ecco i prossimi ${n} eventi ${what} ${near}:`;
+    else text = `Ecco ${n} eventi ${what} ${near} ${per}:`;
     say(clean(text), tailChips(), { cards: evs });
   }
   function empty(prefix){
@@ -455,8 +455,8 @@
     S.skipType = false; S.skipSport = false;
     if (!anyDay.length) {
       // questo tipo non c'è mai: si propone di crearlo
-      if (!EVENTS.length) return say("Per ora non c'è nessun piano in programma a Bergamo. Vuoi pubblicare tu il primo?", [{ l:"Sì, lo pubblico io →", href:"crea.html" }]);
-      return say(clean(`${prefix}Non c'è nessun piano ${what} in programma. Vuoi crearlo tu?`),
+      if (!EVENTS.length) return say("Per ora non c'è nessun evento in programma a Bergamo. Vuoi pubblicare tu il primo?", [{ l:"Sì, lo pubblico io →", href:"crea.html" }]);
+      return say(clean(`${prefix}Non c'è nessun evento ${what} in programma. Vuoi crearlo tu?`),
         [{ l:"Sì, lo creo io →", href:"crea.html" }, { l:"Un altro tipo", kind:"cat-reset" }, { l:"Sorprendimi", kind:"surprise" }]);
     }
     if (what) {
@@ -472,7 +472,7 @@
     let text, pending, acceptLabel, skip = [S.day];
     if (S.day !== "domani" && dom) { text = `Domani ci sono ${piani(dom)}: li vedi?`; pending = { day: "domani", date: null }; acceptLabel = "Sì, domani"; skip.push("domani"); }
     else if (S.day !== "weekend" && wk) { text = `Nel fine settimana ci sono ${piani(wk)}: li vedi?`; pending = { day: "weekend", date: null }; acceptLabel = "Sì, nel fine settimana"; skip.push("weekend"); }
-    else { const f = EVENTS[0]; text = `Il prossimo piano è ${dayLabel(f.when).toLowerCase()}: lo vedi?`; pending = { day: "date", date: dayKey(f.when) }; acceptLabel = "Sì, " + dayLabel(f.when).toLowerCase(); }
+    else { const f = EVENTS[0]; text = `Il prossimo evento è ${dayLabel(f.when).toLowerCase()}: lo vedi?`; pending = { day: "date", date: dayKey(f.when) }; acceptLabel = "Sì, " + dayLabel(f.when).toLowerCase(); }
     S.pending = pending;
     const n = pending.day === "date" ? scope(pending).length : (pending.day === "domani" ? dom : wk);
     const chips = [{ l: acceptLabel, kind: "accept", n }].concat(dayChips(EVENTS, skip));
@@ -489,7 +489,7 @@
   }
   function help(){
     if (!S.day) return say("Non ho capito bene. Scegli da qui:", dayChips(EVENTS));
-    say("Non ho capito bene. Puoi scrivere un giorno (oggi, domani, fine settimana) o un tipo di piano (sport, cucina, ceramica…), oppure scegli da qui:", tailChips());
+    say("Non ho capito bene. Puoi scrivere un giorno (oggi, domani, fine settimana) o un tipo di evento (sport, cucina, ceramica…), oppure scegli da qui:", tailChips());
   }
   function restart(){
     log.innerHTML = "";

@@ -153,7 +153,7 @@
         <button type="button" data-g="uomo" onclick="setGender('uomo')">Uomo</button>
         <button type="button" data-g="non_binary" onclick="setGender('non_binary')">Altro</button>
       </div>
-      <p class="hint">Serve per i piani riservati alle donne o agli uomini. Non lo mostriamo a nessuno.</p>
+      <p class="hint">Serve per gli eventi riservati alle donne o agli uomini. Non lo mostriamo a nessuno.</p>
     </div>
     <div>
       <label for="birth">La tua data di nascita <span style="color:var(--blue)">*</span></label>
@@ -220,7 +220,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1789458055"></script>
+<script src="app.js?v=1789458453"></script>
 <script>
   requireLogin();
   mountTabbar("profilo");
@@ -427,7 +427,7 @@
     const note = document.getElementById("note");
     if (name.length < 2) { note.className = "note err"; note.textContent = "Scrivi il tuo nome (almeno 2 lettere)."; document.getElementById("name").focus(); return false; }
     if (!birth) { note.className = "note err"; note.textContent = "Serve la tua data di nascita: anyplans è solo per chi ha almeno 18 anni."; document.getElementById("birth").focus(); return false; }
-    if (!genderChoice) { note.className = "note err"; note.textContent = "Dicci se sei donna, uomo o altro: serve per i piani riservati."; document.getElementById("seg-gender").scrollIntoView({ block: "center", behavior: "smooth" }); return false; }
+    if (!genderChoice) { note.className = "note err"; note.textContent = "Dicci se sei donna, uomo o altro: serve per gli eventi riservati."; document.getElementById("seg-gender").scrollIntoView({ block: "center", behavior: "smooth" }); return false; }
     const btnLabel = btn.textContent;
     btn.disabled = true; btn.textContent = "Un attimo…"; note.textContent = ""; note.className = "note";
     const restore = () => { btn.disabled = false; btn.textContent = btnLabel; };

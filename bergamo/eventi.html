@@ -391,7 +391,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1789458055"></script>
+<script src="app.js?v=1789458453"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -1214,7 +1214,10 @@
   if (logged) checkProfile();
   const startWhere = placeFromUrl();
   Promise.all([loadEvents(startWhere ? { lat: startWhere.lat, lng: startWhere.lng } : null), logged ? loadSaved() : null]).then(() => {
-    if (startWhere) { where = startWhere; refit = true; choose(); }   // niente seconda chiamata: il feed è già centrato lì
+    if (startWhere) {
+      where = startWhere; refit = true; choose();                    // niente seconda chiamata: il feed è già centrato lì
+      if (startWhere.name && startWhere.name !== "qui") document.title = "Eventi a " + startWhere.name + " · anyplans";
+    }
     openChiediFromUrl();
     if (!logged) return;
     openSavedFromUrl();

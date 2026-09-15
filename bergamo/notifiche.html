@@ -117,7 +117,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1789458055"></script>
+<script src="app.js?v=1789458453"></script>
 <script>
   requireLogin();
   mountNav("", { col: 860 });
@@ -207,7 +207,7 @@
       const cnt = Number(n.match_count) || 1;
       const what = esc(n.subject || "quello che cerchi");
       icon = `<div class="tile">${esc(n.activity_emoji || "🔔")}</div>`;
-      txt = cnt === 1 ? `Un nuovo piano per <b>${what}</b>: <b>${title}</b>` : `${cnt} nuovi piani per <b>${what}</b>`;
+      txt = cnt === 1 ? `Un nuovo evento per <b>${what}</b>: <b>${title}</b>` : `${cnt} nuovi eventi per <b>${what}</b>`;
       const st = n.activity_start_at || n.start_at;
       if (cnt === 1 && st) { const d = new Date(st); sub = esc(dayLabel(d) + " · " + timeStr(d)); }
       go = "Vedi →";

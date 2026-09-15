@@ -16,7 +16,7 @@ const EXT_SOURCES = [
   { rx: /^https:\/\/(www\.)?meeters\.org\//, name: "Meeters", how: "Ci si iscrive su Meeters, dove l'evento è proposto da un membro della community." },
   { rx: /^https:\/\/(www\.)?tabloapp\.com\//, name: "Tablo", how: "Ci si unisce al tavolo nell'app Tablo (dal loro sito scarichi l'app): al ristorante ognuno paga il suo." },
   { rx: /^https:\/\/(www\.)?(lu\.ma|luma\.com)\//, name: "Luma", how: "Ci si registra su Luma, sulla pagina dell'evento della community che lo organizza." },
-  { rx: /^https:\/\/share\.nomadtable\.app\//, name: "Nomadtable", cta: "Join chat su Nomadtable →", how: "Il piano vive nella chat di nomadtable: con \"Join chat\" entri nell'app e lì si decidono ora e posto." },
+  { rx: /^https:\/\/share\.nomadtable\.app\//, name: "Nomadtable", cta: "Join chat su Nomadtable →", how: "L'evento vive nella chat di nomadtable: con \"Join chat\" entri nell'app e lì si decidono ora e posto." },
 ];
 // label of the external button: "Iscriviti su X →" unless the source says otherwise (nomadtable: "Join chat")
 function extCta(src){ return src.cta || ("Iscriviti su " + src.name + " →"); }
@@ -323,8 +323,8 @@ function explainLock(next){
       <div style="font-size:34px; line-height:1; margin-bottom:10px">🔒</div>
       <h2 id="lk-h" style="font:800 22px var(--display, var(--round, system-ui)); margin:0 0 10px">Perché il lucchetto?</h2>
       <p style="margin:0 0 10px; font-size:15px; line-height:1.45">Gli eventi ci sono già: sagre, corsi, serate. Quello che manca è qualcuno con cui andarci.</p>
-      <p style="margin:0 0 10px; font-size:15px; line-height:1.45">Il lucchetto vuol dire che <b>non ci va ancora nessuno</b>. Se lo sblocchi tu, il piano è tuo: decidi chi può venire, gli altri lo vedono e si aggiungono.</p>
-      <p style="margin:0 0 18px; font-size:15px; line-height:1.45">Quando arriva un'altra persona, <b>il piano si fa: ci andate insieme.</b></p>
+      <p style="margin:0 0 10px; font-size:15px; line-height:1.45">Il lucchetto vuol dire che <b>non ci va ancora nessuno</b>. Se lo sblocchi tu, l'evento è tuo: decidi chi può venire, gli altri lo vedono e si aggiungono.</p>
+      <p style="margin:0 0 18px; font-size:15px; line-height:1.45">Quando arriva un'altra persona, <b>l'evento si fa: ci andate insieme.</b></p>
       <div style="display:flex; gap:10px; flex-wrap:wrap">
         <button id="lk-go" style="flex:1; min-width:160px; height:48px; border:none; border-radius:999px; background:#1B4FD8; color:#fff; font:700 15px var(--round, system-ui); cursor:pointer">Ho capito, sblocco</button>
         <button id="lk-no" style="height:48px; padding:0 18px; border:none; border-radius:999px; background:#EEF2FC; color:#1B4FD8; font:700 15px var(--round, system-ui); cursor:pointer">Non ora</button>

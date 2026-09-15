@@ -218,7 +218,7 @@
   </div>
   <div class="box" id="box-join" hidden>
     <h2 id="join-h2">Ci sei?</h2>
-    <p class="m" id="wait-one" hidden>C'è già una persona. Se ci vai anche tu, il piano si fa.</p>
+    <p class="m" id="wait-one" hidden>C'è già una persona. Se ci vai anche tu, l'evento si fa.</p>
     <p class="m" id="join-hint" hidden>Qui decide chi organizza: gli mandi una richiesta e ti risponde.</p>
     <p class="m" id="ext-hint" hidden></p>
     <p class="m" id="full-hint" hidden></p>
@@ -407,7 +407,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1789458055"></script>
+<script src="app.js?v=1789458453"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -607,7 +607,7 @@
     document.getElementById("btn-share-in").hidden = !(waiting && st === "going");
     if (waiting && st === "going" && !promoted) {
       document.getElementById("in-h2").textContent = "Sei il primo 🫶";
-      document.getElementById("in-m").textContent = "Quando arriva un'altra persona, il piano si fa. Intanto manda il link a chi vuoi.";
+      document.getElementById("in-m").textContent = "Quando arriva un'altra persona, l'evento si fa. Intanto manda il link a chi vuoi.";
     }
     // entrato dalla fila (link dell'avviso)
     if (promoted && st === "going") {
@@ -714,7 +714,7 @@
       document.getElementById("hosts").innerHTML = managers.map(p => {
         const r = roleOf(p);
         const act = "";
-        const tag = r === "host" ? '<span class="tag">Organizza</span>' : r === "opened" ? '<span class="tag">Ha aperto il piano</span>' : '<span class="tag adm">Collaboratore</span>';
+        const tag = r === "host" ? '<span class="tag">Organizza</span>' : r === "opened" ? '<span class="tag">Ha aperto l'evento</span>' : '<span class="tag adm">Collaboratore</span>';
         return `<div class="person">${avatarOf(p.avatar_url, p.display_name)}<span class="n">${esc(p.display_name || "Qualcuno")}</span><span class="r">${tag}${act}</span></div>`;
       }).join("");
       document.getElementById("hosts-head").hidden = !managers.length;
@@ -978,7 +978,7 @@
     if (code.includes("profile_required")) { rememberNext(); location.href = "profilo.html"; return false; }
     if (code.includes("age_not_allowed")) { toast("Questo evento non è aperto alla tua età."); return false; }
     if (code.includes("gender_required")) { toast("Prima dicci se sei donna o uomo, nel profilo."); rememberNext(); location.href = "profilo.html"; return false; }
-    if (code.includes("gender_not_allowed")) { toast(ev.gender_allowed === "donna" ? "Questo piano è solo per donne." : "Questo piano è solo per uomini."); return false; }
+    if (code.includes("gender_not_allowed")) { toast(ev.gender_allowed === "donna" ? "Questo evento è solo per donne." : "Questo evento è solo per uomini."); return false; }
     if (code.includes("already")) { await reloadEvent(); return true; }
     if (code.includes("waitlist_disabled") || code.includes("approval_required")) { await reloadEvent(); toast("Posti finiti per questo evento."); return false; }
     toast("Non ha funzionato, riprova.");
@@ -1073,7 +1073,7 @@
     }
     if (code.includes("age_not_allowed")) { toast("Questo evento non è aperto alla tua età."); return false; }
     if (code.includes("gender_required")) { toast("Prima dicci se sei donna o uomo, nel profilo."); rememberNext(); location.href = "profilo.html"; return false; }
-    if (code.includes("gender_not_allowed")) { toast(ev.gender_allowed === "donna" ? "Questo piano è solo per donne." : "Questo piano è solo per uomini."); return false; }
+    if (code.includes("gender_not_allowed")) { toast(ev.gender_allowed === "donna" ? "Questo evento è solo per donne." : "Questo evento è solo per uomini."); return false; }
     if (code.includes("already")) { ev.my_status = isReq ? "requested" : "going"; renderCounts(); return true; }
     toast("Non ha funzionato, riprova.");
     return false;

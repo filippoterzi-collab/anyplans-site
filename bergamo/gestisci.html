@@ -173,7 +173,7 @@
   </div>
 </main>
 <div id="toast"></div>
-<script src="app.js?v=1789458055"></script>
+<script src="app.js?v=1789458453"></script>
 <script>
   requireLogin();
   mountNav("i miei eventi", { col: 860 });
@@ -183,7 +183,7 @@
   const avatarStyle = url => url ? ` style="background-image:url('${esc(url)}')"` : "";
   const avatarOf = (url, name) => `<div class="avatar"${avatarStyle(url)}>${url ? "" : esc((name || "?")[0].toUpperCase())}</div>`;
   const roleOf = p => p.user_id === ev.host_id ? "host" : (!ev.host_id && p.user_id === ev.claimed_by) ? "opened" : p.role === "admin" ? "admin" : "";
-  const roleTxt = p => ({ host: "organizza", opened: "ha aperto il piano", admin: "collaboratore" })[roleOf(p)] || "";
+  const roleTxt = p => ({ host: "organizza", opened: "ha aperto l'evento", admin: "collaboratore" })[roleOf(p)] || "";
 
   async function load(){
     if (!id) { location.href = "miei.html"; return; }
@@ -269,7 +269,7 @@
     list.hidden = tableMode; tbl.hidden = !tableMode;
     if (!people.length) { list.innerHTML = '<div class="empty">' + (q || f !== "all" ? "Nessuno con questi filtri." : "Nessun iscritto per ora. Condividi il link!") + "</div>"; tbl.innerHTML = ""; return; }
     list.innerHTML = people.map(x => {
-      const status = x.rk === "host" ? '<span class="tag adm">organizza</span>' : x.rk === "opened" ? '<span class="tag adm">ha aperto il piano</span>' : x.rk === "guest" ? '<span class="tag">' + esc(x.role) + '</span>' : '<span class="tag ok">Ci va</span>';
+      const status = x.rk === "host" ? '<span class="tag adm">organizza</span>' : x.rk === "opened" ? '<span class="tag adm">ha aperto l\'evento</span>' : x.rk === "guest" ? '<span class="tag">' + esc(x.role) + '</span>' : '<span class="tag ok">Ci va</span>';
       const chips = status + (x.rk === "admin" ? '<span class="tag adm">collaboratore ✓</span>' : "");
       const items = [];
       if (x.kind === "user" && ev.is_mine && x.rk !== "host" && x.rk !== "opened") items.push(`<button onclick="setAdmin('${x.id}', ${x.rk === "admin" ? "false" : "true"})">${x.rk === "admin" ? "Non più collaboratore" : "Rendi collaboratore"}</button>`);
