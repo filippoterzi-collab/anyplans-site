@@ -55,15 +55,17 @@ function saveSession(s){
     try { sessionStorage.setItem("anyplans_session", JSON.stringify(s)); } catch (_) {}
   }
 }
+// la pagina di accesso: relativa dentro /bergamo/, assoluta dalla home (15/09/2026, la home usa app.js)
+const LOGIN_URL = location.pathname.startsWith("/bergamo/") ? "login.html" : "/bergamo/login.html";
 function logout(){
   try { localStorage.removeItem("anyplans_session"); } catch (_) {}
   try { sessionStorage.removeItem("anyplans_session"); } catch (_) {}
-  location.href = "login.html";
+  location.href = LOGIN_URL;
 }
 function requireLogin(){
   if (!session || !session.access_token) {
     try { sessionStorage.setItem("anyplans_next", location.pathname + location.search); } catch (_) {}
-    location.replace("login.html");
+    location.replace(LOGIN_URL);
   }
 }
 function myUid(){
