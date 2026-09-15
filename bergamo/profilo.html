@@ -132,7 +132,7 @@
       </div>
       <div>
         <div style="font-weight:700; font-size:14.5px" id="pic-label">Aggiungi una foto</div>
-        <div class="hint" style="margin-top:2px">Se vuoi. Così gli altri ti riconoscono quando vi trovate.</div>
+        <div class="hint" style="margin-top:2px" id="pic-hint">Se vuoi. Così gli altri ti riconoscono quando vi trovate.</div>
       </div>
       <input id="file" type="file" accept="image/*" hidden onchange="pickPhoto(this)">
     </div>
@@ -220,7 +220,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1789450842"></script>
+<script src="app.js?v=1789453245"></script>
 <script>
   requireLogin();
   mountTabbar("profilo");
@@ -354,7 +354,15 @@
     document.getElementById("pic-label").textContent = "Cambia la foto";
   }
 
-  let avatarBlob = null;
+  const PIC_HINT = "Se vuoi. Così gli altri ti riconoscono quando vi trovate.";
+  function picHint(text, kind){
+    const h = document.getElementById("pic-hint");
+    h.textContent = text || PIC_HINT;
+    h.style.color = kind === "err" ? "#B3261E" : (kind === "ok" ? "var(--blue)" : "");
+  }
+
+  let avatarUrl = null;     // foto già su storage in questa sessione
+  let avatarUpload = null;  // caricamento in corso: il salvataggio del form lo aspetta
   function pickPhoto(input){
     const f = input.files && input.files[0];
     if (!f) return;
@@ -363,27 +371,44 @@
       const side = Math.min(img.width, img.height);
       const c = document.createElement("canvas"); c.width = 512; c.height = 512;
       c.getContext("2d").drawImage(img, (img.width - side) / 2, (img.height - side) / 2, side, side, 0, 0, 512, 512);
-      c.toBlob(b => { avatarBlob = b; showPic(c.toDataURL("image/jpeg", 0.8)); }, "image/jpeg", 0.85);
+      c.toBlob(b => { showPic(c.toDataURL("image/jpeg", 0.8)); avatarUpload = uploadAvatar(b); }, "image/jpeg", 0.85);
       URL.revokeObjectURL(img.src);
     };
+    input.value = "";  // così la stessa foto si può riscegliere dopo un errore
     img.src = URL.createObjectURL(f);
   }
 
-  async function uploadAvatar(){
+  // La foto si salva da sola appena scelta: per cambiare l'immagine non serve "Salva le modifiche".
+  // Al primo profilo la riga app_user non c'è ancora e update_profile risponde profile_required:
+  // il file è comunque già su storage, l'url lo scrive saveProfile insieme al resto.
+  async function uploadAvatar(blob){
+    const uid = myUid();
+    if (!uid || !session) { picHint("Accedi per salvare la foto.", "err"); return null; }
+    picHint("Sto salvando la foto…");
     try {
-      const uid = myUid(); if (!uid) return;
       const path = uid + "/avatar.jpg";
       const r = await fetch(SB_URL + "/storage/v1/object/avatars/" + path, {
         method: "POST",
         headers: {"apikey": SB_ANON, "Authorization": "Bearer " + session.access_token,
                   "Content-Type": "image/jpeg", "x-upsert": "true"},
-        body: avatarBlob
+        body: blob
       });
-      if (r.ok) {
-        const url = SB_URL + "/storage/v1/object/public/avatars/" + path + "?v=" + Date.now();
-        await rpc("update_profile", { p_avatar_url: url });
+      if (!r.ok) { picHint("Non sono riuscito a salvare la foto. Toccala di nuovo per riprovare.", "err"); return null; }
+      avatarUrl = SB_URL + "/storage/v1/object/public/avatars/" + path + "?v=" + Date.now();
+      const u = await rpc("update_profile", { p_avatar_url: avatarUrl });
+      if (u && u.ok) {
+        picHint("Foto salvata.", "ok");
+        const nav = document.getElementById("avatar");
+        if (nav) { nav.style.backgroundImage = "url('" + avatarUrl + "')"; nav.textContent = ""; }
+      } else {
+        // profilo non ancora creato: la foto è pronta, la scrive il bottone del form
+        picHint(editMode ? "Non sono riuscito a salvare la foto. Toccala di nuovo per riprovare." : "", editMode ? "err" : "");
       }
-    } catch (_) { /* la foto è opzionale: se fallisce si va avanti */ }
+      return avatarUrl;
+    } catch (_) {
+      picHint("Non sono riuscito a salvare la foto. Toccala di nuovo per riprovare.", "err");
+      return null;
+    }
   }
 
   // ---- sesso (obbligatorio dal 06/09/2026: serve ai piani "solo donne" / "solo uomini") ----
@@ -418,14 +443,15 @@
       restore();
       return false;
     }
+    if (avatarUpload) { await avatarUpload; avatarUpload = null; }
     const extra = { p_base_city: city || null, p_gender: genderChoice };
+    if (avatarUrl) extra.p_avatar_url = avatarUrl;
     if (editMode) {
       extra.p_bio = document.getElementById("bio").value.trim() || null;
       const ig = document.getElementById("ig").value.trim().replace(/^@/, "").replace(/^.*instagram\.com\//, "").replace(/\/.*$/, "");
       extra.p_instagram_handle = ig || null;
     }
     await rpc("update_profile", extra);
-    if (avatarBlob) await uploadAvatar();
     track(editMode ? "profile_edit" : "profile_done");
     if (editMode) { toast("Profilo salvato."); restore(); return false; }
     // primo salvataggio: se arrivavo da un evento torno lì, altrimenti agli eventi
