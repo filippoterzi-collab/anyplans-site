@@ -8,7 +8,9 @@ const GOOGLE_MAPS_KEY = "AIzaSyDyIS3owtm8TQamqAN9wMKsJz-0Qg9UjqA";
 let session = null;
 // fonti dove ci si iscrive fuori da anyplans (Playtomic 10/09/2026, comehome 14/09/2026): card e fumetto del pin portano
 // dritti al loro sito (su telefono, all'app se c'è); nella pagina evento "Ci sono" apre il loro sito e, da loggati, segna
-// anche "ci vado" qui (un solo bottone, deciso 14/09/2026)
+// anche "ci vado" qui (un solo bottone, deciso 14/09/2026).
+// Dal 15/09/2026 vale per OGNI evento aggregato (`source` diverso da 'ugc') con un link alla fonte, non solo per queste:
+// le fonti qui sotto hanno nome e copy propri, per le altre `extSourceFor` ricava il nome dal dominio (UI.md §4, regola 7).
 // centri delle citta con pagine sul sito (copia di branding/seo/citta.json: tenere allineato).
 // Serve quando si arriva da un link vecchio /<citta>/<slug>: il router di 404.html manda a
 // evento.html?slug=…&city=…, e l'evento va cercato intorno a QUELLA citta, non a Bergamo.
@@ -23,10 +25,27 @@ const EXT_SOURCES = [
   { rx: /^https:\/\/(www\.)?eventbrite\.(it|com|co\.uk)\//, name: "Eventbrite", cta: "Biglietti su Eventbrite →", how: "Il biglietto si prende su Eventbrite, dalla pagina di chi organizza: orari e prezzo sono lì." },
   { rx: /^https:\/\/(www\.)?play2match\.it\//, name: "play2match", how: "Ci si iscrive su play2match da soli: le squadre le fanno loro, miste ed equilibrate, e dopo la partita c'è il terzo tempo." },
   { rx: /^https:\/\/share\.nomadtable\.app\//, name: "Nomadtable", cta: "Join chat su Nomadtable →", how: "L'evento vive nella chat di nomadtable: con \"Join chat\" entri nell'app e lì si decidono ora e posto." },
+  { rx: /^https:\/\/(www\.)?allevents\.in\//, name: "AllEvents", cta: "Dettagli su AllEvents →", how: "L'evento è pubblicato su AllEvents: lì trovi i dettagli di chi organizza e, se servono, i biglietti." },
+  { rx: /^https:\/\/(www\.)?choruslife\.com\//, name: "ChorusLife", cta: "Biglietti su ChorusLife →", how: "Biglietti e dettagli sono sul sito di ChorusLife." },
+  { rx: /^https:\/\/(www\.)?eventi\.bergamo\.it\//, name: "eventi.bergamo.it", cta: "Programma su eventi.bergamo.it →", how: "L'evento è pubblicato su eventi.bergamo.it: programma, orari e contatti sono lì." },
+  { rx: /^https:\/\/(www\.)?berghinfest\.it\//, name: "Berghinfest", cta: "Programma su Berghinfest →", how: "La festa è pubblicata su Berghinfest: programma e orari sono lì." },
+  { rx: /^https:\/\/(www\.)?panesalamina\.com\//, name: "Pane & Salamina", cta: "Programma su Pane & Salamina →", how: "La festa è pubblicata su Pane & Salamina: programma, orari e contatti sono lì." },
+  { rx: /^https:\/\/storage\.ecodibergamo\.it\//, name: "L'Eco di Bergamo", cta: "Programma su L'Eco di Bergamo →", how: "Il programma (un pdf) è sul sito de L'Eco di Bergamo: orari e dettagli sono lì." },
 ];
 // label of the external button: "Iscriviti su X →" unless the source says otherwise (nomadtable: "Join chat")
 function extCta(src){ return src.cta || ("Iscriviti su " + src.name + " →"); }
 function extSourceOf(url){ return EXT_SOURCES.find(x => x.rx.test(url || "")) || null; }
+// the external source of an activity row (feed_activities / activity_by_id / public_activities_for_seo): a known one, or
+// for any aggregated event (source != 'ugc') a generic entry named after the domain. A user's own event that only links
+// an external race (source 'ugc' + source_url) is joined here, unless the link is a known sign-up platform.
+function extSourceFor(x){
+  if (!x || !x.source_url) return null;
+  const known = extSourceOf(x.source_url);
+  if (known || x.source === "ugc") return known;
+  let host = ""; try { host = new URL(x.source_url).hostname.replace(/^www\./, ""); } catch (_) { return null; }
+  if (!host) return null;
+  return { name: host, cta: "Apri su " + host + " →", how: "L'evento è pubblicato su " + host + ": dettagli e iscrizione sono lì." };
+}
 try { session = JSON.parse(localStorage.getItem("anyplans_session")); } catch (_) {}
 if (!session) { try { session = JSON.parse(sessionStorage.getItem("anyplans_session")); } catch (_) {} }
 

@@ -391,7 +391,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1789486092"></script>
+<script src="app.js?v=1789492037"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -478,7 +478,7 @@
       claimed: x.claimed_by || null,
       gender: x.gender_allowed || null,
       lat: x.lat, lng: x.lng,
-      ext: extSourceOf(x.source_url), extUrl: x.source_url || null   // iscrizione fuori da anyplans (app.js)
+      ext: extSourceFor(x), extUrl: x.source_url || null   // iscrizione fuori da anyplans: ogni aggregata con link (app.js)
     })).sort((a, b) => a.when - b.when);
     buildMarkers();
     render();

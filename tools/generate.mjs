@@ -42,7 +42,7 @@ const CITY_CENTER = { lat: C.lat, lng: C.lng };
 const CITY_KM = C.km;
 const MIN_CITY = 40;              // sotto questa soglia una città (che non sia Bergamo) non ha pagine sue
 // multi-city sources (Milano is 45 km away, Monza 35): for them only the province core, 30 km
-const MULTI_CITY_SOURCES = [/^https:\/\/(www\.)?comehome\.fun\//, /^https:\/\/(www\.)?weroad\.(it|com)\/wemeet\//, /^https:\/\/(www\.)?meeters\.org\//, /^https:\/\/(www\.)?tabloapp\.com\//, /^https:\/\/(www\.)?(lu\.ma|luma\.com)\//, /^https:\/\/share\.nomadtable\.app\//, /^https:\/\/(www\.)?panesalamina\.com\//, /^https:\/\/(www\.)?play2match\.it\//];
+const MULTI_CITY_SOURCES = [/^https:\/\/(www\.)?comehome\.fun\//, /^https:\/\/(www\.)?weroad\.(it|com)\/wemeet\//, /^https:\/\/(www\.)?meeters\.org\//, /^https:\/\/(www\.)?tabloapp\.com\//, /^https:\/\/(www\.)?(lu\.ma|luma\.com)\//, /^https:\/\/share\.nomadtable\.app\//, /^https:\/\/(www\.)?panesalamina\.com\//, /^https:\/\/(www\.)?play2match\.it\//, /^https:\/\/(www\.)?2d2web\.com\//];
 const MULTI_CITY_KM = 30;
 const DEFAULT_TZ = "Europe/Rome";
 const PAST_DAYS = 400;          // pages live ~13 months after the last date
@@ -853,6 +853,11 @@ function eventPage(p) {
   const joinTitle = E ? (p.going >= 2 ? `Join ${p.going} people` : p.going === 1 ? "Join 1 person" : org.kind === "gruppo" ? "Join: the event is already on" : "Are you in?")
     : (p.going >= 2 ? `Aggiungiti a ${p.going} persone` : p.going === 1 ? "Aggiungiti a 1 persona" : org.kind === "gruppo" ? "Aggiungiti: l'evento c'è già" : "Ci sei?");
   const spots = p.max ? ` · ${p.going >= p.max ? S.full : `${p.max - p.going} ${p.max - p.going === 1 ? S.free1 : S.freeN}`}` : "";
+  // aggregated events (15/09/2026): "Ci vado" goes straight to the source site, where the sign-up is; logged-in visitors
+  // are sent to the app page anyway (appScript below), where the same button also marks them as going here
+  const external = !!(p.source_url && p.source !== "ugc");
+  const joinBtn = external ? `<a class="btn" href="${esc(p.source_url)}" rel="noopener nofollow">${S.join}</a>`
+                           : `<a class="btn" href="${APP}/evento.html?id=${esc(p.id)}&amp;join=1">${S.join}</a>`;
 
   const body = `
 ${crumbs(crumbItems)}
@@ -864,7 +869,7 @@ ${p.isPast ? "" : `<div class="when hero-when"><div class="datebox"><div class="
   ${hasMap ? `<a class="s place" href="${esc(mapsUrl(p.lat, p.lng))}" rel="noopener">${esc(p.meeting || S.zone)} · ${S.openMaps}</a>` : p.meeting ? `<div class="s">${esc(p.meeting)}</div>` : ""}</div></div>
 <div class="box">
   <h2>${joinTitle}</h2>
-  <div class="cta"><a class="btn" href="${APP}/evento.html?id=${esc(p.id)}&amp;join=1">${S.join}</a><span class="m">${p.going > 0 ? `${p.going === 1 ? S.going1 : S.goingN}${spots}` : S.first}</span></div>
+  <div class="cta">${joinBtn}<span class="m">${p.going > 0 ? `${p.going === 1 ? S.going1 : S.goingN}${spots}` : S.first}</span></div>
 </div>`}
 <p class="lead">${esc(eventSummary(p, org, first))}</p>
 ${p.isPast ? `<div class="box in"><h2>${S.pastTitle}</h2><div class="m">${S.pastTxt}</div><div class="cta"><a class="btn" href="${MAP_URL}">${S.now}</a></div></div>` : ""}
@@ -898,9 +903,9 @@ ${p.going > 0 && !p.isPast ? `<div class="box">
 ${p.co.length ? `<div class="box"><h2>${S.with}</h2><div class="tags">${p.co.map(slug => { const c = groups.find(x => x.slug === slug); return c ? `<a href="${esc(groupUrl(c))}">${c.emoji || "👥"} ${esc(c.name)}</a>` : ""; }).join("")}</div></div>` : ""}
 </div>
 <div class="cta">
-  ${p.isPast ? "" : `<a class="btn" href="${APP}/evento.html?id=${esc(p.id)}&amp;join=1">${S.join}</a>`}
+  ${p.isPast ? "" : joinBtn}
   <a class="btn ghost" href="${MAP_URL}">${S.allEvents}</a>
-  ${p.source_url && p.source !== "ugc" ? `<a class="lnk" href="${esc(p.source_url)}" rel="noopener nofollow">${S.official}</a>` : ""}
+  ${external && p.isPast ? `<a class="lnk" href="${esc(p.source_url)}" rel="noopener nofollow">${S.official}</a>` : ""}
 </div>
 ${faqHtml(faq)}
 ${sim.length ? `<h2>${S.similar}</h2>${listHtml(sim)}` : ""}

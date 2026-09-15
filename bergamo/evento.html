@@ -194,8 +194,8 @@
   </div>
 
   <!-- box azione -->
-  <!-- eventi con iscrizione altrove (Playtomic 10/09/2026, comehome 14/09/2026; un solo riquadro, deciso 14/09/2026): "Ci sono" apre il loro
-       sito/app (EXT_SOURCES in app.js); da loggati segna anche "ci vado" qui, così gli altri lo vedono -->
+  <!-- eventi con iscrizione altrove (Playtomic 10/09/2026, comehome 14/09/2026; dal 15/09/2026 ogni aggregata con link; un solo riquadro,
+       deciso 14/09/2026): "Ci sono" apre il loro sito/app (extSourceFor in app.js); da loggati segna anche "ci vado" qui, così gli altri lo vedono -->
   <div class="box" id="box-guest" hidden>
     <h2 id="guest-h2">Ci sei?</h2>
     <p class="m" id="guest-m">Per iscriverti serve un account: è gratis e ci vuole un minuto. Gli altri iscritti vedranno il tuo nome.</p>
@@ -407,7 +407,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1789486092"></script>
+<script src="app.js?v=1789492037"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -415,7 +415,7 @@
   const wantJoin = params.get("join") === "1";
   const promoted = params.get("promoted") === "1"; // arrivo dall'avviso "si è liberato un posto"
   const logged = !!(session && session.access_token);
-  let ev = null, extSrc = null;   // extSrc: fonte con iscrizione fuori da anyplans (Playtomic, comehome), vedi EXT_SOURCES
+  let ev = null, extSrc = null;   // extSrc: fonte fuori da anyplans (ogni aggregata con link, dal 15/09/2026), vedi extSourceFor in app.js
   if (logged) mountNav("", { col: 1000, hero: true });
   let canManage = false;
 
@@ -479,7 +479,7 @@
     cg.textContent = ev.gender_allowed === "donna" ? "Solo donne" : ev.gender_allowed === "uomo" ? "Solo uomini" : "";
     document.getElementById("chip-priv").hidden = ev.visibility !== "private";
     document.getElementById("chip-price").textContent = fmtPrice(ev.price_cents);
-    extSrc = extSourceOf(ev.source_url);   // lista in app.js; serve prima della riga del prezzo
+    extSrc = extSourceFor(ev);   // app.js: nota, o generica dal dominio per ogni aggregata; serve prima della riga del prezzo
     renderPay();
     document.getElementById("title").textContent = ev.title;
     document.getElementById("d-month").textContent = MONTHS[when.getMonth()].slice(0, 3);
