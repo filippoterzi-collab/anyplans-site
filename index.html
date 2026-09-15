@@ -676,7 +676,7 @@ body.locked .cats{pointer-events:none}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789504512"></script>
+<script src="/bergamo/app.js?v=1789504893"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // WALL = false per rimisurare senza muro: tutto visibile, email su "Ci sono" (site_event: home_view, wall_tap, join).
@@ -1053,6 +1053,13 @@ function loadMapLib(){
   setInterval(() => { if (window.CHOSEN) return; i = (i + 1) % names.length; el.classList.remove("swap"); void el.offsetWidth; el.textContent = names[i]; el.classList.add("swap"); }, 1800); })();
 
 
+// ---------- righe che scorrono col dito (categorie, date, file): solo a destra e sinistra, mai la pagina ----------
+// touch-action:pan-x da solo non bastava su iPhone (15/09/2026): il dito sulle icone faceva salire e scendere la pagina.
+document.querySelectorAll(".cats, .dates .chips, .strip .row, .trips .row, .carousel").forEach(row => {
+  let x0 = 0, sl = 0;
+  row.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; sl = row.scrollLeft; }, { passive: true });
+  row.addEventListener("touchmove", e => { row.scrollLeft = sl - (e.touches[0].clientX - x0); e.preventDefault(); }, { passive: false });
+});
 // ---------- via ----------
 buildStatic();
 loadEvents(HOME);
