@@ -1,28 +1,27 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Torino e provincia: feste di paese e sagre, corsi di cucina e di ceramica, volontariato, uscite sportive, running club. Raccoglie gli eventi già esistenti dai siti dei comuni e delle associazioni e quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Per ora solo Torino; Milano e Brescia in arrivo.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Torino e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Torino: il sito copre 29 città italiane (Milano, Bergamo, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-15. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Torino](https://anyplans.in/torino/cosa-fare/): tutti gli eventi in programma (679), per tipo e per paese; risponde a "cosa fare a Torino oggi / questo weekend"
-- [Running club a Torino](https://anyplans.in/torino/running-club/): 0 run club per giorno della settimana, con ritrovo, orario e domande frequenti
-- [Gruppi a Torino](https://anyplans.in/torino/gruppi/): 0 associazioni, club e comunità che pubblicano eventi
+- [Cosa fare a Torino](https://anyplans.in/torino/): tutti gli eventi in programma (690), per tipo e per paese; risponde a "cosa fare a Torino oggi / questo weekend"
+- [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
 - [Condizioni d'uso](https://anyplans.in/terms-it.html)
 
 ## Eventi per tipo e per paese
 
-- [Padel a Torino](https://anyplans.in/torino/padel/): 51 in programma
-- [Cena / aperitivo a Torino](https://anyplans.in/torino/cene-e-aperitivi/): 79 in programma
-- [Incontri culturali a Torino](https://anyplans.in/torino/incontri-culturali/): 218 in programma
-- [Visite guidate a Torino](https://anyplans.in/torino/visite-guidate/): 61 in programma
+- [Padel a Torino](https://anyplans.in/torino/padel/): 52 in programma
+- [Cena / aperitivo a Torino](https://anyplans.in/torino/cene-e-aperitivi/): 83 in programma
+- [Incontri culturali a Torino](https://anyplans.in/torino/incontri-culturali/): 221 in programma
+- [Visite guidate a Torino](https://anyplans.in/torino/visite-guidate/): 63 in programma
 - [Pittura / arte a Torino](https://anyplans.in/torino/pittura/): 23 in programma
 - [Cinema a Torino](https://anyplans.in/torino/cinema/): 15 in programma
 - [Volley a Torino](https://anyplans.in/torino/volley/): 4 in programma
-- [Concerti e musica dal vivo a Torino](https://anyplans.in/torino/concerti/): 73 in programma
+- [Concerti e musica dal vivo a Torino](https://anyplans.in/torino/concerti/): 74 in programma
 - [Mostre a Torino](https://anyplans.in/torino/mostre/): 4 in programma
 - [Serate per single a Torino](https://anyplans.in/torino/single/): 5 in programma
 - [Spettacoli e teatro a Torino](https://anyplans.in/torino/spettacoli/): 20 in programma
@@ -40,20 +39,8 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Feste ed eventi a Fondazione Paideia](https://anyplans.in/torino/fondazione-paideia/): 3 in programma
 - [Feste ed eventi a Festival dell'Accoglienza - "E mi avete accolto"](https://anyplans.in/torino/festival-dell-accoglienza-e-mi-avete-accolto/): 4 in programma
 
-## Running club per giorno
-
-
-
-## Gruppi
-
-
-
 ## Prossimi eventi
 
-- [Lezione Promo con NACHO](https://anyplans.in/torino/lezione-promo-con-nacho/): Dal 15 settembre al 18 settembre, 3 date, Sporting Friends, Via Genova 62, 10098 Rivoli, 20 €
-- [LIVELLAMENTO CON LUCA CHIOATERO](https://anyplans.in/torino/livellamento-con-luca-chioatero/): Dal 15 settembre al 18 settembre, 2 date, GPADEL Torino Cenisia, Via Cesana 17, 10139  Torino, 20 €
-- [🔥 LUNCH BREAK – TORNEO MIDDAY | PADEL CITY🔥](https://anyplans.in/torino/lunch-break-torneo-midday-padel-city/): Dal 15 settembre al 12 novembre, 18 date, PadelCity Sport Friendly Leinì, Via Giuseppe Peano 70, 10040 Leini, 10 €
-- [☀️afternoon paradise☀️](https://anyplans.in/torino/afternoon-paradise/): Dal 15 settembre al 29 dicembre, 16 date, Paradise Padel Torino, VIA GIOACCHINO QUARELLO 43, 10135 Torino, 10 €
 - [Dolce Torino: Tour gastronomico dei dolci e del cioccolato](https://anyplans.in/torino/dolce-torino-tour-gastronomico-dei-dolci-e-del-cioccolato/): Martedì 15 settembre alle 15:00, Monumento a Emanuele Filiberto - "Cavàl 'd Brons", Piazza San Carlo, Torino, 10123, Turin, IT, Torino, Gratis
 - [PARTITA GUIDATA CON MANUEL](https://anyplans.in/torino/partita-guidata-con-manuel/): Martedì 15 settembre alle 17:00, Padelife Settimo Cielo, Via Niccolò Paganini SNC, 10036 Settimo Torinese, 25 €
 - [Uno smash da campione](https://anyplans.in/torino/uno-smash-da-campione/): Martedì 15 settembre alle 17:00, Sporting Friends, Via Genova 62, 10098 Rivoli, 20 €
@@ -69,27 +56,31 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Americana Siux-Hirostar🔥💣🎾](https://anyplans.in/torino/americana-siux-hirostar/): Dal 15 settembre al 6 ottobre, 4 date, Centro Sportivo Altessano, strada altessano 58A, 10151 Torino, 8 €
 - [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/torino/padel-manca-1-giocatore-amichevole/): Martedì 15 settembre alle 20:00, GPADEL Torino Cenisia, Via Cesana 17, 10139  Torino, 17 €
 - [ROYÀLdinner l'esperienza di classe](https://anyplans.in/torino/royaldinner-l-esperienza-di-classe/): Martedì 15 settembre alle 20:28, Torino, borgo pilonetto, 5 €
-- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-2-giocatori-competitiva/): Martedì 15 settembre alle 20:30, Promenade Padel Zone, Corso Moncalieri 390/A, 10133 Torino, 10 €
+- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-2-giocatori-competitiva/): Dal 15 settembre al 16 settembre, 2 date, Centro Sportivo Altessano, strada altessano 58A, 10151 Torino, 7,50 €
 - [Cinema in Giardino - “Flee”](https://anyplans.in/torino/cinema-in-giardino-flee/): Martedì 15 settembre alle 20:45, Via S. Giuseppe Benedetto Cottolengo, 24A, Torino, Gratis
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-3-giocatori-competitiva/): Martedì 15 settembre alle 21:00, Bunker ASD APS, Via Paganini 0/200, 10154 Torino, 12,50 €
 - [IO CAPITANO - cinema all'aperto](https://anyplans.in/torino/io-capitano-cinema-all-aperto/): Martedì 15 settembre alle 21:00, corso Francesco Ferrucci 65/a, 10137 Turin, Italy, Torino, Gratis
 - [Volleyball](https://anyplans.in/torino/volleyball/): Dal 15 settembre al 27 ottobre, 7 date, Torino, Lingotto, 12 €
-- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-3-giocatori-competitiva/): Dal 15 settembre al 16 settembre, 2 date, Centro Sportivo Altessano, strada altessano 58A, 10151 Torino, 7,50 €
-- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-3-giocatori-competitiva-2026-09-16/): Dal 16 settembre al 18 settembre, 4 date, Padelife Settimo Cielo, Via Niccolò Paganini SNC, 10036 Settimo Torinese, 16 €
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-3-giocatori-competitiva-2026-09-15/): Dal 15 settembre al 16 settembre, 2 date, Centro Sportivo Altessano, strada altessano 58A, 10151 Torino, 7,50 €
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-3-giocatori-competitiva-2026-09-16/): Dal 16 settembre al 18 settembre, 3 date, Padelife Settimo Cielo, Via Niccolò Paganini SNC, 10036 Settimo Torinese, 16 €
 - [LEZIONE PROMO con SAMUEL](https://anyplans.in/torino/lezione-promo-con-samuel/): Mercoledì 16 settembre alle 11:00, Sporting Friends, Via Genova 62, 10098 Rivoli, 20 €
 - [lunch coppie fisse int](https://anyplans.in/torino/lunch-coppie-fisse-int/): Mercoledì 16 settembre alle 12:30, GPADEL Leinì,  Via Volpiano 43, 10040 Leini, 12 €
 - [🔥🤠EL RODEO🤠🔥](https://anyplans.in/torino/el-rodeo/): Dal 16 settembre al 16 novembre, 32 date, PadelCity Sport Friendly Leinì, Via Giuseppe Peano 70, 10040 Leini, 10 €
 - [I colori dei sogni](https://anyplans.in/torino/i-colori-dei-sogni/): Mercoledì 16 settembre alle 14:30, Cascina Bert Pro Natura, Torino, Gratis
-- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-3-giocatori-competitiva-2026-09-16-2026-09-16/): Dal 16 settembre al 18 settembre, 2 date, Centro Sportivo Robilant, Piazza Generale di Robilant, 16, 10141 Torino, 12 €
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-3-giocatori-competitiva-2026-09-16-2/): Dal 16 settembre al 18 settembre, 2 date, Centro Sportivo Robilant, Piazza Generale di Robilant, 16, 10141 Torino, 12 €
 - [LIVELLAMENTO CON MARC](https://anyplans.in/torino/livellamento-con-marc/): Mercoledì 16 settembre alle 15:00, GPADEL Torino Cenisia, Via Cesana 17, 10139  Torino, 20 €
+- [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/torino/padel-manca-1-giocatore-amichevole-2026-09-16/): Mercoledì 16 settembre alle 15:30, Padel XXMIGLIA, via Ventimiglia 61, 10126 Torino, 5 €
 - [Cena da I Soliti Ignoti: 1 posto libero](https://anyplans.in/torino/cena-da-i-soliti-ignoti-1-posto-libero/): Mercoledì 16 settembre alle 17:00, I Soliti Ignoti, Torino, Gratis
 - [Partita Guidata con Lorenzo](https://anyplans.in/torino/partita-guidata-con-lorenzo/): Mercoledì 16 settembre alle 17:30, Sporting Friends, Via Genova 62, 10098 Rivoli, 22 €
-- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-2-giocatori-competitiva-2026-09-16/): Mercoledì 16 settembre alle 18:00, Centro Sportivo Altessano, strada altessano 58A, 10151 Torino, 10,67 €
 - [Cena da Il Tabisca: 5 posti liberi](https://anyplans.in/torino/cena-da-il-tabisca-5-posti-liberi/): Mercoledì 16 settembre alle 18:00, Il Tabisca, Torino, Gratis
-- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-2-giocatori-competitiva-2026-09-16-2026-09-16/): Mercoledì 16 settembre alle 18:30, Padel XXMIGLIA, via Ventimiglia 61, 10126 Torino, Gratis
+- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-2-giocatori-competitiva-2026-09-16/): Mercoledì 16 settembre alle 18:30, Padel XXMIGLIA, via Ventimiglia 61, 10126 Torino, Gratis
 - [GIORNO 1 - Festival delle Arti Popolari](https://anyplans.in/torino/giorno-1-festival-delle-arti-popolari/): Mercoledì 16 settembre alle 18:30, Kontiki, Torino, Gratis
 - [Opening : The City is a Garden, an exhibition by Sir Peter Cook](https://anyplans.in/torino/opening-the-city-is-a-garden-an-exhibition-by-sir-peter-cook/): Mercoledì 16 settembre alle 18:30, DORADO, Torino, Gratis
-- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-2-giocatori-competitiva-2026-09-16-2026-09-16-2/): Dal 16 settembre al 18 settembre, 2 date, Padelife Settimo Cielo, Via Niccolò Paganini SNC, 10036 Settimo Torinese, 16 €
+- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-2-giocatori-competitiva-2026-09-16-2/): Dal 16 settembre al 18 settembre, 2 date, Padelife Settimo Cielo, Via Niccolò Paganini SNC, 10036 Settimo Torinese, 16 €
 - [Cena da King Bowling Funmily: 11 posti liberi](https://anyplans.in/torino/cena-da-king-bowling-funmily-11-posti-liberi/): Mercoledì 16 settembre alle 19:00, King Bowling Funmily, Torino, Gratis
+- [16 Settembre - Degustazione con la Cantina Conte Leopardi!](https://anyplans.in/torino/16-settembre-degustazione-con-la-cantina-conte-leopardi/): Mercoledì 16 settembre alle 19:30, Via Maria Vittoria, 23b, Torino, Gratis
+- [Tavolo genitori single da La LLama: 11 posti liberi](https://anyplans.in/torino/tavolo-genitori-single-da-la-llama-11-posti-liberi/): Mercoledì 16 settembre alle 19:30, La LLama, Torino, Gratis
+- [Musica dal vivo, mood sofisticato, good vibes! Family groove](https://anyplans.in/torino/musica-dal-vivo-mood-sofisticato-good-vibes-family-groove/): Mercoledì 16 settembre alle 19:45, Torino, Centro, 5 €
 
 ## Optional
 
@@ -99,9 +90,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## English pages (same content, for visitors)
 
-- [Things to do in Torino](https://anyplans.in/en/torino/things-to-do/): all upcoming events, by kind and by town; answers "what to do in Bergamo today / this weekend"
-- [Running clubs in Torino](https://anyplans.in/en/torino/running-clubs/): 0 run clubs by weekday, open to visitors too
-- [Groups in Torino](https://anyplans.in/en/torino/groups/)
+- [Things to do in Torino](https://anyplans.in/en/torino/): all upcoming events, by kind and by town; answers "what to do in Torino today / this weekend"
 - [Padel in Torino](https://anyplans.in/en/torino/padel/)
 - [Dinners & aperitivo in Torino](https://anyplans.in/en/torino/dinners/)
 - [Talks & culture in Torino](https://anyplans.in/en/torino/talks-and-culture/)
@@ -128,60 +117,60 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 # Tutte le pagine di anyplans a Torino (italiano, poi inglese)
 
-## Cosa fare a Torino e provincia: 679 eventi
+## Cosa fare a Torino e provincia: 690 eventi
 https://anyplans.in/torino/
 
 Incontri culturali, cena / aperitivo, concerti e musica dal vivo, visite guidate e padel: quello che succede a Torino e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
 
-## Cosa fare a Torino oggi: 24 eventi
+## Cosa fare a Torino oggi: 21 eventi
 https://anyplans.in/torino/cosa-fare-oggi/
 
-24 eventi a Torino e provincia oggi, 15 settembre 2026: Torino, Rivalta di Torino, borgo pilonetto e Lingotto e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+21 eventi a Torino e provincia oggi, 15 settembre 2026: Torino, Rivalta di Torino, borgo pilonetto e Lingotto e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
 ## Cosa fare a Torino domani: 30 eventi
 https://anyplans.in/torino/cosa-fare-domani/
 
 30 eventi a Torino e provincia domani, 16 settembre 2026: Torino, Centro e Quadrilatero e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Torino nel weekend: 80 eventi
+## Cosa fare a Torino nel weekend: 85 eventi
 https://anyplans.in/torino/cosa-fare-nel-weekend/
 
-80 eventi a Torino e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Torino, Centro, Festival delle Arti Popolari e Fondazione Paideia e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+85 eventi a Torino e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Torino, Centro, Festival delle Arti Popolari e Fondazione Paideia e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Eventi a Torino a settembre 2026: 375
+## Eventi a Torino a settembre 2026: 384
 https://anyplans.in/torino/eventi-settembre-2026/
 
-375 eventi a Torino e provincia a settembre 2026: padel, visite guidate, cena / aperitivo, pittura / arte e incontri culturali. Giorno per giorno, con orari, luogo e prezzo, a Torino, Centro, Festival delle Arti Popolari e Santa Rita e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+384 eventi a Torino e provincia a settembre 2026: visite guidate, padel, cena / aperitivo, pittura / arte e incontri culturali. Giorno per giorno, con orari, luogo e prezzo, a Torino, Centro, Festival delle Arti Popolari e Santa Rita e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Torino a ottobre 2026: 232
+## Eventi a Torino a ottobre 2026: 234
 https://anyplans.in/torino/eventi-ottobre-2026/
 
-232 eventi a Torino e provincia a ottobre 2026: padel, volley, incontri culturali, pittura / arte e cena / aperitivo. Giorno per giorno, con orari, luogo e prezzo, a Torino, Centro, Santa Rita e Pozzo Strada e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+234 eventi a Torino e provincia a ottobre 2026: padel, volley, incontri culturali, pittura / arte e cena / aperitivo. Giorno per giorno, con orari, luogo e prezzo, a Torino, Centro, Santa Rita e Pozzo Strada e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 ## Eventi a Torino a novembre 2026: 52
 https://anyplans.in/torino/eventi-novembre-2026/
 
 52 eventi a Torino e provincia a novembre 2026: padel, concerti e musica dal vivo, visite guidate, incontri culturali e feste, sagre ed eventi di paese. Giorno per giorno, con orari, luogo e prezzo, a Torino, torino, Centro e Centro- Piazza Castello e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Padel a Torino: 51 eventi
+## Padel a Torino: 52 eventi
 https://anyplans.in/torino/padel/
 
-A Torino e provincia ci sono 51 partite di padel nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Torino e provincia ci sono 52 partite di padel nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Cena / aperitivo a Torino: 79 eventi
+## Cena / aperitivo a Torino: 83 eventi
 https://anyplans.in/torino/cene-e-aperitivi/
 
-A Torino e provincia ci sono 79 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Torino e provincia ci sono 83 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Incontri culturali a Torino: 218 eventi
+## Incontri culturali a Torino: 221 eventi
 https://anyplans.in/torino/incontri-culturali/
 
-A Torino e provincia ci sono 218 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Torino e provincia ci sono 221 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Visite guidate a Torino: 61 eventi
+## Visite guidate a Torino: 63 eventi
 https://anyplans.in/torino/visite-guidate/
 
-A Torino e provincia ci sono 61 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Torino e provincia ci sono 63 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Pittura / arte a Torino: 23 eventi
 https://anyplans.in/torino/pittura/
@@ -198,10 +187,10 @@ https://anyplans.in/torino/volley/
 
 A Torino e provincia ci sono 4 eventi di volley nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Concerti e musica dal vivo a Torino: 73 eventi
+## Concerti e musica dal vivo a Torino: 74 eventi
 https://anyplans.in/torino/concerti/
 
-A Torino e provincia ci sono 73 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Torino e provincia ci sono 74 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Mostre a Torino: 4 eventi
 https://anyplans.in/torino/mostre/
@@ -283,12 +272,12 @@ https://anyplans.in/torino/festival-dell-accoglienza-e-mi-avete-accolto/
 
 A Festival dell'Accoglienza - "E mi avete accolto" ci sono 4 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Festival dell'Accoglienza - "E mi avete accolto" con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore… – Centro Sportivo Robilant
 https://anyplans.in/torino/padel-manca-1-giocatore-competitiva/
 
 Padel a Centro Sportivo Robilant, Piazza Generale di Robilant, 16, 10141 Torino, mercoledì 16 settembre alle 21:30. 12 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore… – Paradise Padel Torino
 https://anyplans.in/torino/padel-manca-1-giocatore-competitiva-2026-09-14/
 
 Padel a Paradise Padel Torino, Torino: si è già svolto, l'ultima data è stata lunedì 14 settembre 2026.
@@ -308,30 +297,25 @@ https://anyplans.in/torino/house-of-games/
 
 Incontri culturali a Feat. House, Torino: si è già svolto, l'ultima data è stata lunedì 14 settembre 2026.
 
-## Padel: mancano 3 giocatori (competitiva)
+## Padel: mancano 3 giocatori (competitiva) – Bunker ASD APS
 https://anyplans.in/torino/padel-mancano-3-giocatori-competitiva/
+
+Padel a Bunker ASD APS, Via Paganini 0/200, 10154 Torino, martedì 15 settembre alle 21:00. 12,50 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Centro Sportivo Altessano
+https://anyplans.in/torino/padel-mancano-3-giocatori-competitiva-2026-09-15/
 
 Padel a Centro Sportivo Altessano, strada altessano 58A, 10151 Torino, martedì 15 settembre alle 21:30 (2 date, fino al 16 settembre). 7,50 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (competitiva)
+## Padel: mancano 3 giocatori… – Padelife Settimo Cielo
 https://anyplans.in/torino/padel-mancano-3-giocatori-competitiva-2026-09-16/
 
-Padel a Padelife Settimo Cielo, Via Niccolò Paganini SNC, 10036 Settimo Torinese, mercoledì 16 settembre alle 09:00 (4 date, fino al 18 settembre). 16 € (Si chiede il posto e si paga su Playtomic).
+Padel a Padelife Settimo Cielo, Via Niccolò Paganini SNC, 10036 Settimo Torinese, mercoledì 16 settembre alle 09:00 (3 date, fino al 18 settembre). 16 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/torino/padel-mancano-3-giocatori-competitiva-2026-09-16-2026-09-16/
+## Padel: mancano 3 giocatori… – Centro Sportivo Robilant
+https://anyplans.in/torino/padel-mancano-3-giocatori-competitiva-2026-09-16-2/
 
 Padel a Centro Sportivo Robilant, Piazza Generale di Robilant, 16, 10141 Torino, mercoledì 16 settembre alle 15:00 (2 date, fino al 18 settembre). 12 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/torino/padel-mancano-3-giocatori-competitiva-2026-09-16-2026-09-16-2/
-
-Padel a Sisport, Via Pier Domenico Olivero 40, 10135 Torino, mercoledì 16 settembre alle 21:00. 15 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/torino/padel-mancano-3-giocatori-competitiva-2026-09-14/
-
-Padel a Bunker ASD APS, Torino: si è già svolto, l'ultima data è stata lunedì 14 settembre 2026.
 
 ## LIVELLAMENTO INTERMEDIO
 https://anyplans.in/torino/livellamento-intermedio/
@@ -351,22 +335,22 @@ Padel a GPADEL Leinì,  Via Volpiano 43, 10040 Leini: si è già svolto, l'ultim
 ## Lezione Promo con NACHO
 https://anyplans.in/torino/lezione-promo-con-nacho/
 
-Padel a Sporting Friends, Via Genova 62, 10098 Rivoli, martedì 15 settembre alle 12:00 (3 date, fino al 18 settembre). 20 € (Iscrizione e pagamento su Playtomic).
+Padel a Sporting Friends, Via Genova 62, 10098 Rivoli, venerdì 18 settembre alle 12:00 (2 date, fino al 18 settembre). 20 € (Iscrizione e pagamento su Playtomic).
 
 ## LIVELLAMENTO CON LUCA CHIOATERO
 https://anyplans.in/torino/livellamento-con-luca-chioatero/
 
-Padel a GPADEL Torino Cenisia, Via Cesana 17, 10139  Torino, martedì 15 settembre alle 12:00 (2 date, fino al 18 settembre). 20 € (Iscrizione e pagamento su Playtomic).
+Padel a GPADEL Torino Cenisia, Via Cesana 17, 10139  Torino, venerdì 18 settembre alle 09:00. 20 € (Iscrizione e pagamento su Playtomic).
 
 ## 🔥 LUNCH BREAK
 https://anyplans.in/torino/lunch-break-torneo-midday-padel-city/
 
-Padel a PadelCity Sport Friendly Leinì, Via Giuseppe Peano 70, 10040 Leini, martedì 15 settembre alle 13:00 (18 date, fino al 12 novembre). 10 € (Iscrizione e pagamento su Playtomic).
+Padel a PadelCity Sport Friendly Leinì, Via Giuseppe Peano 70, 10040 Leini, giovedì 17 settembre alle 13:00 (17 date, fino al 12 novembre). 10 € (Iscrizione e pagamento su Playtomic).
 
 ## ☀️afternoon paradise☀️
 https://anyplans.in/torino/afternoon-paradise/
 
-Padel a Paradise Padel Torino, VIA GIOACCHINO QUARELLO 43, 10135 Torino, martedì 15 settembre alle 14:00 (16 date, fino al 29 dicembre). 10 € (Iscrizione e pagamento su Playtomic).
+Padel a Paradise Padel Torino, VIA GIOACCHINO QUARELLO 43, 10135 Torino, martedì 22 settembre alle 14:00 (15 date, fino al 29 dicembre). 15 € (Iscrizione e pagamento su Playtomic).
 
 ## Dolce Torino: Tour gastronomico dei dolci e del…
 https://anyplans.in/torino/dolce-torino-tour-gastronomico-dei-dolci-e-del-cioccolato/
@@ -438,12 +422,17 @@ https://anyplans.in/torino/americana-siux-hirostar-2026-09-26/
 
 Padel a Centro Sportivo Altessano, strada altessano 58A, 10151 Torino, sabato 26 settembre alle 10:30 (3 date, fino al 24 ottobre). 8 € (Iscrizione e pagamento su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore… – GPADEL Torino Cenisia
 https://anyplans.in/torino/padel-manca-1-giocatore-amichevole/
 
 Padel a GPADEL Torino Cenisia, Via Cesana 17, 10139  Torino, martedì 15 settembre alle 20:00. 17 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore (amichevole) – Padel XXMIGLIA
+https://anyplans.in/torino/padel-manca-1-giocatore-amichevole-2026-09-16/
+
+Padel a Padel XXMIGLIA, via Ventimiglia 61, 10126 Torino, mercoledì 16 settembre alle 15:30. 5 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (amichevole) – River Side Padel
 https://anyplans.in/torino/padel-manca-1-giocatore-amichevole-2026-09-18/
 
 Padel a River Side Padel, Corso Moncalieri 506/35, 10133 Torino, venerdì 18 settembre alle 19:30. 13 € (Si chiede il posto e si paga su Playtomic).
@@ -453,23 +442,18 @@ https://anyplans.in/torino/royaldinner-l-esperienza-di-classe/
 
 Cena / aperitivo a Torino, borgo pilonetto, martedì 15 settembre alle 20:28. 5 € (Accredito su comehome; il resto si paga in loco).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori… – Centro Sportivo Altessano
 https://anyplans.in/torino/padel-mancano-2-giocatori-competitiva/
 
-Padel a Promenade Padel Zone, Corso Moncalieri 390/A, 10133 Torino, martedì 15 settembre alle 20:30. 10 € (Si chiede il posto e si paga su Playtomic).
+Padel a Centro Sportivo Altessano, strada altessano 58A, 10151 Torino, martedì 15 settembre alle 20:30 (2 date, fino al 16 settembre). 7,50 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori (competitiva) – Padel XXMIGLIA
 https://anyplans.in/torino/padel-mancano-2-giocatori-competitiva-2026-09-16/
-
-Padel a Centro Sportivo Altessano, strada altessano 58A, 10151 Torino, mercoledì 16 settembre alle 18:00. 10,67 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/torino/padel-mancano-2-giocatori-competitiva-2026-09-16-2026-09-16/
 
 Padel a Padel XXMIGLIA, via Ventimiglia 61, 10126 Torino, mercoledì 16 settembre alle 18:30. Gratis (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/torino/padel-mancano-2-giocatori-competitiva-2026-09-16-2026-09-16-2/
+## Padel: mancano 2 giocatori… – Padelife Settimo Cielo
+https://anyplans.in/torino/padel-mancano-2-giocatori-competitiva-2026-09-16-2/
 
 Padel a Padelife Settimo Cielo, Via Niccolò Paganini SNC, 10036 Settimo Torinese, mercoledì 16 settembre alle 19:00 (2 date, fino al 18 settembre). 16 € (Si chiede il posto e si paga su Playtomic).
 
@@ -983,6 +967,11 @@ https://anyplans.in/torino/giornata-nazionale-dell-educazione-emozionale-torino/
 
 Incontri culturali a San Pietro in Vincoli, Torino, sabato 19 settembre alle 10:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## 19/09_SAGRA DELLA SALSICCIA E DEI PRODOTTI…
+https://anyplans.in/torino/19-09-sagra-della-salsiccia-e-dei-prodotti-tipici-di-bra/
+
+Cena / aperitivo a Bra, Torino, sabato 19 settembre alle 10:00. Gratis (Gratis, iscrizione su WeMeet (WeRoad)).
+
 ## Torino Nascosta: Cortili
 https://anyplans.in/torino/torino-nascosta-cortili-portoni-e-palazzi-segreti/
 
@@ -1007,6 +996,16 @@ Visite guidate a Piazza Carignano, Torino, sabato 19 settembre alle 11:00. 32 �
 https://anyplans.in/torino/fiabe-e-balocchi-come-una-volta-h-11-00-festival-arti-popola/
 
 Festa di paese a Festival delle Arti Popolari, sabato 19 settembre alle 11:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Padel: mancano 3 giocatori… – GPADEL Torino Cenisia
+https://anyplans.in/torino/padel-mancano-3-giocatori-amichevole/
+
+Padel a GPADEL Torino Cenisia, Via Cesana 17, 10139  Torino, sabato 19 settembre alle 13:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (amichevole) – Gar Sempione
+https://anyplans.in/torino/padel-mancano-3-giocatori-amichevole-2026-09-20/
+
+Padel a Gar Sempione, Via Gottardo 10, 10155 Torino, domenica 20 settembre alle 10:30. 9 € (Si chiede il posto e si paga su Playtomic).
 
 ## Decolonizing Bodies - Workshop a cura di Biloura
 https://anyplans.in/torino/decolonizing-bodies-workshop-a-cura-di-biloura/
@@ -1033,6 +1032,11 @@ https://anyplans.in/torino/paintball-sfida-a-squadre/
 
 Palestra a Paintball Village, San Gillio, sabato 19 settembre alle 15:00. 6 € (Si paga su WeMeet (WeRoad)).
 
+## Barriera Design District
+https://anyplans.in/torino/barriera-design-district/
+
+Pittura / arte a Via Valprato, 68, Torino, sabato 19 settembre alle 15:00. 25 € (Biglietti su AllEvents).
+
 ## Regine, Madame e Duchesse – Le donne che fecero…
 https://anyplans.in/torino/regine-madame-e-duchesse-le-donne-che-fecero-la-storia/
 
@@ -1047,6 +1051,11 @@ Visite guidate a Torino, Parco Valentino, sabato 19 settembre alle 15:00. 8 €
 https://anyplans.in/torino/viaggio-nel-distretto-sociale-barolo/
 
 Incontri culturali a Via S. Giuseppe Benedetto Cottolengo, 24A, Torino, sabato 19 settembre alle 15:30. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## VISITA GUIDATA ORTO BOTANICO DI TORINO La…
+https://anyplans.in/torino/visita-guidata-orto-botanico-di-torino-la-pianta-del-mese/
+
+Visite guidate a Viale Pier Andrea Mattioli, 25, Torino, sabato 19 settembre alle 16:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
 ## Passeggiata Culturale in Vanchiglia - h. 16:30…
 https://anyplans.in/torino/passeggiata-culturale-in-vanchiglia-h-16-30-festival-arti-po/
@@ -1127,6 +1136,11 @@ Concerti e musica dal vivo a Casa Fools | Teatro Vanchiglia, Torino, sabato 19 s
 https://anyplans.in/torino/cena-da-il-pacchero-11-posti-liberi/
 
 Cena / aperitivo a Il Pacchero, Rivoli, sabato 19 settembre alle 19:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## Exclusive 90s Party: Apericena Servito e DJ Set…
+https://anyplans.in/torino/exclusive-90s-party-apericena-servito-e-dj-set-by-marco-s/
+
+Cena / aperitivo a Collegno - Zona fermata Metrò Fermi, sabato 19 settembre alle 20:00. 6 € (Accredito su comehome; il resto si paga in loco).
 
 ## Candlelight: Queen & The Beatles
 https://anyplans.in/torino/candlelight-queen-the-beatles/
@@ -1212,11 +1226,6 @@ Incontri culturali a Officine S - Svago Sapori Sorprese, Torino, domenica 20 set
 https://anyplans.in/torino/matinee-suggestioni-romantiche-per-violoncello-e-pianoforte/
 
 Concerti e musica dal vivo a Torino, Centro, domenica 20 settembre alle 10:55. 5 € (Accredito su comehome; il resto si paga in loco).
-
-## Padel: mancano 3 giocatori (amichevole)
-https://anyplans.in/torino/padel-mancano-3-giocatori-amichevole/
-
-Padel a Gar Sempione, Via Gottardo 10, 10155 Torino, domenica 20 settembre alle 11:00. 9 € (Si chiede il posto e si paga su Playtomic).
 
 ## Grigliatona+concerto+dj set: salutiamo l'estate…
 https://anyplans.in/torino/grigliatona-concerto-dj-set-salutiamo-l-estate-epicamente/
@@ -1352,6 +1361,11 @@ Mercatini a Centro Giochi Educativi Torino (Negozio di giocattoli), Torino, lune
 https://anyplans.in/torino/governare-la-paura-costruire-fiducia/
 
 Festa di paese a Festival dell'Accoglienza - "E mi avete accolto", lunedì 21 settembre alle 18:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Coding Gym Torino - Settembre 2026
+https://anyplans.in/torino/coding-gym-torino-settembre-2026/
+
+Incontri culturali a Toolbox Coworking, Torino, lunedì 21 settembre alle 18:30. Gratis (Ingresso: vedi la pagina AllEvents).
 
 ## Product Torino Squad Event
 https://anyplans.in/torino/product-torino-squad-event/
@@ -1928,6 +1942,11 @@ https://anyplans.in/torino/wine-party-dj-set/
 
 Cena / aperitivo a Venaria Reale, sabato 26 settembre alle 20:00. 5 € (Accredito su comehome; il resto si paga in loco).
 
+## Mordi la Puglia: Panino Gourmet II Edizione!
+https://anyplans.in/torino/mordi-la-puglia-panino-gourmet-ii-edizione/
+
+Cena / aperitivo a Torino, Pozzo Strada (Borgata Lesna), sabato 26 settembre alle 20:00. 7 € (Accredito su comehome; il resto si paga in loco).
+
 ## HEAVENFALL (Heavy Metal) + HIGHLORD (Power…
 https://anyplans.in/torino/heavenfall-heavy-metal-highlord-power-metal-live-al-blah-bla/
 
@@ -2182,6 +2201,16 @@ Incontri culturali a Coworking Cafè - CLHUB, Torino, mercoledì 30 settembre al
 https://anyplans.in/torino/mediocrity-isn-t-worth-the-trip-leadership-masterclass-with-/
 
 Incontri culturali a ESCP Business School - Turin Campus, Torino, mercoledì 30 settembre alle 18:00. Gratis (Gratis, registrazione su Luma).
+
+## Velvet Creative Lab | Open Studio
+https://anyplans.in/torino/velvet-creative-lab-open-studio/
+
+Incontri culturali a Via Cagliari, 11, Torino, mercoledì 30 settembre alle 19:00. 17,22 € (Biglietti su AllEvents).
+
+## Dipingi & Spritz!
+https://anyplans.in/torino/dipingi-spritz/
+
+Cena / aperitivo a Torino, Zona Cenisia, mercoledì 30 settembre alle 19:15. 5 € (Accredito su comehome; il resto si paga in loco).
 
 ## KRANO + LAGUNA BOLLENTE / Hiroshima Sound Garden
 https://anyplans.in/torino/krano-laguna-bollente-hiroshima-sound-garden/
@@ -2778,6 +2807,11 @@ https://anyplans.in/torino/club-homecoming-summit-special-event-for-internationa
 
 Incontri culturali a Turin, Torino, venerdì 9 ottobre alle 09:30. Gratis (Gratis, registrazione su Luma).
 
+## Who teaches AI agents after they go live? -…
+https://anyplans.in/torino/who-teaches-ai-agents-after-they-go-live-syllotips-round-tab/
+
+Incontri culturali a OGR Torino, venerdì 9 ottobre alle 10:00. Gratis (Gratis, registrazione su Luma).
+
 ## Alla scoperta dei tesori di Torino: Museo Egizio
 https://anyplans.in/torino/alla-scoperta-dei-tesori-di-torino-museo-egizio-venaria-e-re/
 
@@ -3213,6 +3247,11 @@ https://anyplans.in/torino/torino-vs-monza-at-torino-stadio-olimpico/
 
 Partite da vedere a Torino Stadio Olimpico, Torino, sabato 24 ottobre alle 23:59. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## Torino Osè: amori proibiti e passioni nascoste…
+https://anyplans.in/torino/torino-ose-amori-proibiti-e-passioni-nascoste-nei-vicoli-del/
+
+Visite guidate a Giardino Bottero, angolo via Conte Verde, Torino, domenica 25 ottobre alle 10:30. 7,61 € (Biglietti su AllEvents).
+
 ## I Salotti del Tempo® - Cavour
 https://anyplans.in/torino/i-salotti-del-tempo-cavour-la-contessa-virginia-e-il-battesi/
 
@@ -3388,11 +3427,6 @@ https://anyplans.in/torino/cocktaillab-4-sparklingclassics/
 
 Cena / aperitivo a Torino, venerdì 13 novembre alle 21:00. 5 € (Accredito su comehome; il resto si paga in loco).
 
-## Barriera Design District
-https://anyplans.in/torino/barriera-design-district/
-
-Pittura / arte a Via Valprato, 68, Torino, sabato 14 novembre alle 15:00. 25 € (Biglietti su AllEvents).
-
 ## SABATO 14 NOVEMBRE / LIBidine '70 '80 / DJ…
 https://anyplans.in/torino/sabato-14-novembre-libidine-70-80-dj-marco-sottile-caffe-lib/
 
@@ -3482,6 +3516,11 @@ Visite guidate a Allianz Stadium, Torino, sabato 21 novembre alle 18:00. Gratis 
 https://anyplans.in/torino/2026-atp-world-tour-finals-saturday-evening-session-at-inalp/
 
 Visite guidate a Inalpi Arena, Torino, sabato 21 novembre alle 18:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## SONDRE LERCHE | sPAZIO211 (TO)
+https://anyplans.in/torino/sondre-lerche-spazio211-to/
+
+Concerti e musica dal vivo a Via Francesco Cigna 211, 10155 Turin, Italy, Torino, sabato 21 novembre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
 ## Juventus vs Venezia at Allianz Stadium - Turin
 https://anyplans.in/torino/juventus-vs-venezia-at-allianz-stadium-turin/
@@ -3718,60 +3757,60 @@ https://anyplans.in/torino/torino-vs-inter-at-torino-stadio-olimpico/
 
 Partite da vedere a Torino Stadio Olimpico, Torino, sabato 13 marzo alle 23:59. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Things to do in Torino: 679 events
+## Things to do in Torino: 690 events
 https://anyplans.in/en/torino/
 
 What's on in Torino and its province, today, tonight and this weekend: talks & culture, dinners & aperitivo, concerts & live music, guided tours, padel and town festivals & fairs. Pick one and go with other people.
 
-## What to do in Torino today: 24 events
+## What to do in Torino today: 21 events
 https://anyplans.in/en/torino/what-to-do-today/
 
-24 events in Torino and its province today, 15 September 2026: Torino, Rivalta di Torino, borgo pilonetto and Lingotto and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+21 events in Torino and its province today, 15 September 2026: Torino, Rivalta di Torino, borgo pilonetto and Lingotto and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
 ## What to do in Torino tomorrow: 30 events
 https://anyplans.in/en/torino/what-to-do-tomorrow/
 
 30 events in Torino and its province tomorrow, 16 September 2026: Torino, Centro and Quadrilatero and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Torino this weekend: 80 events
+## What to do in Torino this weekend: 85 events
 https://anyplans.in/en/torino/what-to-do-this-weekend/
 
-80 events in Torino and its province this weekend (Saturday 19 September and Sunday 20 September): Torino, Centro, Festival delle Arti Popolari and Fondazione Paideia and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+85 events in Torino and its province this weekend (Saturday 19 September and Sunday 20 September): Torino, Centro, Festival delle Arti Popolari and Fondazione Paideia and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## Events in Torino in September 2026: 375
+## Events in Torino in September 2026: 384
 https://anyplans.in/en/torino/events-september-2026/
 
-375 events in Torino and its province in September 2026: padel, guided tours, dinners & aperitivo, painting & art and talks & culture. Day by day, with times, place and price, in Torino, Centro, Festival delle Arti Popolari and Santa Rita and other towns. You sign up and go with other people.
+384 events in Torino and its province in September 2026: guided tours, padel, dinners & aperitivo, painting & art and talks & culture. Day by day, with times, place and price, in Torino, Centro, Festival delle Arti Popolari and Santa Rita and other towns. You sign up and go with other people.
 
-## Events in Torino in October 2026: 232
+## Events in Torino in October 2026: 234
 https://anyplans.in/en/torino/events-october-2026/
 
-232 events in Torino and its province in October 2026: padel, volleyball, talks & culture, painting & art and dinners & aperitivo. Day by day, with times, place and price, in Torino, Centro, Santa Rita and Pozzo Strada and other towns. You sign up and go with other people.
+234 events in Torino and its province in October 2026: padel, volleyball, talks & culture, painting & art and dinners & aperitivo. Day by day, with times, place and price, in Torino, Centro, Santa Rita and Pozzo Strada and other towns. You sign up and go with other people.
 
 ## Events in Torino in November 2026: 52
 https://anyplans.in/en/torino/events-november-2026/
 
 52 events in Torino and its province in November 2026: padel, concerts & live music, guided tours, talks & culture and town festivals & fairs. Day by day, with times, place and price, in Torino, torino, Centro and Centro- Piazza Castello and other towns. You sign up and go with other people.
 
-## Padel in Torino: 51 events
+## Padel in Torino: 52 events
 https://anyplans.in/en/torino/padel/
 
-In Torino and its province there are 51 padel matches and tournaments in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Torino and its province there are 52 padel matches and tournaments in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Dinners & aperitivo in Torino: 79 events
+## Dinners & aperitivo in Torino: 83 events
 https://anyplans.in/en/torino/dinners/
 
-In Torino and its province there are 79 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Torino and its province there are 83 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Talks & culture in Torino: 218 events
+## Talks & culture in Torino: 221 events
 https://anyplans.in/en/torino/talks-and-culture/
 
-In Torino and its province there are 218 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Torino and its province there are 221 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Guided tours in Torino: 61 events
+## Guided tours in Torino: 63 events
 https://anyplans.in/en/torino/guided-tours/
 
-In Torino and its province there are 61 guided tours events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Torino and its province there are 63 guided tours events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Painting & art in Torino: 23 events
 https://anyplans.in/en/torino/painting/
@@ -3788,10 +3827,10 @@ https://anyplans.in/en/torino/volleyball/
 
 In Torino and its province there are 4 volleyball events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Concerts & live music in Torino: 73 events
+## Concerts & live music in Torino: 74 events
 https://anyplans.in/en/torino/concerts/
 
-In Torino and its province there are 73 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Torino and its province there are 74 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Exhibitions in Torino: 4 events
 https://anyplans.in/en/torino/exhibitions/
@@ -3873,12 +3912,12 @@ https://anyplans.in/en/torino/festival-dell-accoglienza-e-mi-avete-accolto/
 
 In Festival dell'Accoglienza - "E mi avete accolto" there are 4 events in the coming months. On anyplans you find the festivals and events of Festival dell'Accoglienza - "E mi avete accolto" with dates, times and place. You sign up and go with others.
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore… – Centro Sportivo Robilant
 https://anyplans.in/en/torino/padel-manca-1-giocatore-competitiva/
 
 Padel in Centro Sportivo Robilant, Piazza Generale di Robilant, 16, 10141 Torino, Wednesday 16 September at 21:30. €12 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore… – Paradise Padel Torino
 https://anyplans.in/en/torino/padel-manca-1-giocatore-competitiva-2026-09-14/
 
 Padel in Paradise Padel Torino, Torino: it already took place, the last date was Monday, 14 September 2026.
@@ -3898,30 +3937,25 @@ https://anyplans.in/en/torino/house-of-games/
 
 Talks & culture in Feat. House, Torino: it already took place, the last date was Monday, 14 September 2026.
 
-## Padel: mancano 3 giocatori (competitiva)
+## Padel: mancano 3 giocatori (competitiva) – Bunker ASD APS
 https://anyplans.in/en/torino/padel-mancano-3-giocatori-competitiva/
+
+Padel in Bunker ASD APS, Via Paganini 0/200, 10154 Torino, Tuesday 15 September at 21:00. €12.50 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Centro Sportivo Altessano
+https://anyplans.in/en/torino/padel-mancano-3-giocatori-competitiva-2026-09-15/
 
 Padel in Centro Sportivo Altessano, strada altessano 58A, 10151 Torino, Tuesday 15 September at 21:30 (2 dates, until 16 September). €7.50 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (competitiva)
+## Padel: mancano 3 giocatori… – Padelife Settimo Cielo
 https://anyplans.in/en/torino/padel-mancano-3-giocatori-competitiva-2026-09-16/
 
-Padel in Padelife Settimo Cielo, Via Niccolò Paganini SNC, 10036 Settimo Torinese, Wednesday 16 September at 09:00 (4 dates, until 18 September). €16 (Si chiede il posto e si paga su Playtomic).
+Padel in Padelife Settimo Cielo, Via Niccolò Paganini SNC, 10036 Settimo Torinese, Wednesday 16 September at 09:00 (3 dates, until 18 September). €16 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/en/torino/padel-mancano-3-giocatori-competitiva-2026-09-16-2026-09-16/
+## Padel: mancano 3 giocatori… – Centro Sportivo Robilant
+https://anyplans.in/en/torino/padel-mancano-3-giocatori-competitiva-2026-09-16-2/
 
 Padel in Centro Sportivo Robilant, Piazza Generale di Robilant, 16, 10141 Torino, Wednesday 16 September at 15:00 (2 dates, until 18 September). €12 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/en/torino/padel-mancano-3-giocatori-competitiva-2026-09-16-2026-09-16-2/
-
-Padel in Sisport, Via Pier Domenico Olivero 40, 10135 Torino, Wednesday 16 September at 21:00. €15 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/en/torino/padel-mancano-3-giocatori-competitiva-2026-09-14/
-
-Padel in Bunker ASD APS, Torino: it already took place, the last date was Monday, 14 September 2026.
 
 ## LIVELLAMENTO INTERMEDIO
 https://anyplans.in/en/torino/livellamento-intermedio/
@@ -3941,22 +3975,22 @@ Padel in GPADEL Leinì,  Via Volpiano 43, 10040 Leini: it already took place, th
 ## Lezione Promo con NACHO
 https://anyplans.in/en/torino/lezione-promo-con-nacho/
 
-Padel in Sporting Friends, Via Genova 62, 10098 Rivoli, Tuesday 15 September at 12:00 (3 dates, until 18 September). €20 (Iscrizione e pagamento su Playtomic).
+Padel in Sporting Friends, Via Genova 62, 10098 Rivoli, Friday 18 September at 12:00 (2 dates, until 18 September). €20 (Iscrizione e pagamento su Playtomic).
 
 ## LIVELLAMENTO CON LUCA CHIOATERO
 https://anyplans.in/en/torino/livellamento-con-luca-chioatero/
 
-Padel in GPADEL Torino Cenisia, Via Cesana 17, 10139  Torino, Tuesday 15 September at 12:00 (2 dates, until 18 September). €20 (Iscrizione e pagamento su Playtomic).
+Padel in GPADEL Torino Cenisia, Via Cesana 17, 10139  Torino, Friday 18 September at 09:00. €20 (Iscrizione e pagamento su Playtomic).
 
 ## 🔥 LUNCH BREAK
 https://anyplans.in/en/torino/lunch-break-torneo-midday-padel-city/
 
-Padel in PadelCity Sport Friendly Leinì, Via Giuseppe Peano 70, 10040 Leini, Tuesday 15 September at 13:00 (18 dates, until 12 November). €10 (Iscrizione e pagamento su Playtomic).
+Padel in PadelCity Sport Friendly Leinì, Via Giuseppe Peano 70, 10040 Leini, Thursday 17 September at 13:00 (17 dates, until 12 November). €10 (Iscrizione e pagamento su Playtomic).
 
 ## ☀️afternoon paradise☀️
 https://anyplans.in/en/torino/afternoon-paradise/
 
-Padel in Paradise Padel Torino, VIA GIOACCHINO QUARELLO 43, 10135 Torino, Tuesday 15 September at 14:00 (16 dates, until 29 December). €10 (Iscrizione e pagamento su Playtomic).
+Padel in Paradise Padel Torino, VIA GIOACCHINO QUARELLO 43, 10135 Torino, Tuesday 22 September at 14:00 (15 dates, until 29 December). €15 (Iscrizione e pagamento su Playtomic).
 
 ## Dolce Torino: Tour gastronomico dei dolci e del…
 https://anyplans.in/en/torino/dolce-torino-tour-gastronomico-dei-dolci-e-del-cioccolato/
@@ -4028,12 +4062,17 @@ https://anyplans.in/en/torino/americana-siux-hirostar-2026-09-26/
 
 Padel in Centro Sportivo Altessano, strada altessano 58A, 10151 Torino, Saturday 26 September at 10:30 (3 dates, until 24 October). €8 (Iscrizione e pagamento su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore… – GPADEL Torino Cenisia
 https://anyplans.in/en/torino/padel-manca-1-giocatore-amichevole/
 
 Padel in GPADEL Torino Cenisia, Via Cesana 17, 10139  Torino, Tuesday 15 September at 20:00. €17 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore (amichevole) – Padel XXMIGLIA
+https://anyplans.in/en/torino/padel-manca-1-giocatore-amichevole-2026-09-16/
+
+Padel in Padel XXMIGLIA, via Ventimiglia 61, 10126 Torino, Wednesday 16 September at 15:30. €5 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (amichevole) – River Side Padel
 https://anyplans.in/en/torino/padel-manca-1-giocatore-amichevole-2026-09-18/
 
 Padel in River Side Padel, Corso Moncalieri 506/35, 10133 Torino, Friday 18 September at 19:30. €13 (Si chiede il posto e si paga su Playtomic).
@@ -4043,23 +4082,18 @@ https://anyplans.in/en/torino/royaldinner-l-esperienza-di-classe/
 
 Dinners & aperitivo in Torino, borgo pilonetto, Tuesday 15 September at 20:28. €5 (Accredito su comehome; il resto si paga in loco).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori… – Centro Sportivo Altessano
 https://anyplans.in/en/torino/padel-mancano-2-giocatori-competitiva/
 
-Padel in Promenade Padel Zone, Corso Moncalieri 390/A, 10133 Torino, Tuesday 15 September at 20:30. €10 (Si chiede il posto e si paga su Playtomic).
+Padel in Centro Sportivo Altessano, strada altessano 58A, 10151 Torino, Tuesday 15 September at 20:30 (2 dates, until 16 September). €7.50 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori (competitiva) – Padel XXMIGLIA
 https://anyplans.in/en/torino/padel-mancano-2-giocatori-competitiva-2026-09-16/
-
-Padel in Centro Sportivo Altessano, strada altessano 58A, 10151 Torino, Wednesday 16 September at 18:00. €10.67 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/en/torino/padel-mancano-2-giocatori-competitiva-2026-09-16-2026-09-16/
 
 Padel in Padel XXMIGLIA, via Ventimiglia 61, 10126 Torino, Wednesday 16 September at 18:30. Free (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/en/torino/padel-mancano-2-giocatori-competitiva-2026-09-16-2026-09-16-2/
+## Padel: mancano 2 giocatori… – Padelife Settimo Cielo
+https://anyplans.in/en/torino/padel-mancano-2-giocatori-competitiva-2026-09-16-2/
 
 Padel in Padelife Settimo Cielo, Via Niccolò Paganini SNC, 10036 Settimo Torinese, Wednesday 16 September at 19:00 (2 dates, until 18 September). €16 (Si chiede il posto e si paga su Playtomic).
 
@@ -4573,6 +4607,11 @@ https://anyplans.in/en/torino/giornata-nazionale-dell-educazione-emozionale-tori
 
 Talks & culture in San Pietro in Vincoli, Torino, Saturday 19 September at 10:00. Free (Ingresso: vedi la pagina AllEvents).
 
+## 19/09_SAGRA DELLA SALSICCIA E DEI PRODOTTI…
+https://anyplans.in/en/torino/19-09-sagra-della-salsiccia-e-dei-prodotti-tipici-di-bra/
+
+Dinners & aperitivo in Bra, Torino, Saturday 19 September at 10:00. Free (Gratis, iscrizione su WeMeet (WeRoad)).
+
 ## Torino Nascosta: Cortili
 https://anyplans.in/en/torino/torino-nascosta-cortili-portoni-e-palazzi-segreti/
 
@@ -4597,6 +4636,16 @@ Guided tours in Piazza Carignano, Torino, Saturday 19 September at 11:00. €32 
 https://anyplans.in/en/torino/fiabe-e-balocchi-come-una-volta-h-11-00-festival-arti-popola/
 
 Town festival in Festival delle Arti Popolari, Saturday 19 September at 11:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## Padel: mancano 3 giocatori… – GPADEL Torino Cenisia
+https://anyplans.in/en/torino/padel-mancano-3-giocatori-amichevole/
+
+Padel in GPADEL Torino Cenisia, Via Cesana 17, 10139  Torino, Saturday 19 September at 13:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (amichevole) – Gar Sempione
+https://anyplans.in/en/torino/padel-mancano-3-giocatori-amichevole-2026-09-20/
+
+Padel in Gar Sempione, Via Gottardo 10, 10155 Torino, Sunday 20 September at 10:30. €9 (Si chiede il posto e si paga su Playtomic).
 
 ## Decolonizing Bodies - Workshop a cura di Biloura
 https://anyplans.in/en/torino/decolonizing-bodies-workshop-a-cura-di-biloura/
@@ -4623,6 +4672,11 @@ https://anyplans.in/en/torino/paintball-sfida-a-squadre/
 
 Gym in Paintball Village, San Gillio, Saturday 19 September at 15:00. €6 (Si paga su WeMeet (WeRoad)).
 
+## Barriera Design District
+https://anyplans.in/en/torino/barriera-design-district/
+
+Painting & art in Via Valprato, 68, Torino, Saturday 19 September at 15:00. €25 (Biglietti su AllEvents).
+
 ## Regine, Madame e Duchesse – Le donne che fecero…
 https://anyplans.in/en/torino/regine-madame-e-duchesse-le-donne-che-fecero-la-storia/
 
@@ -4637,6 +4691,11 @@ Guided tours in Torino, Parco Valentino, Saturday 19 September at 15:00. €8 (A
 https://anyplans.in/en/torino/viaggio-nel-distretto-sociale-barolo/
 
 Talks & culture in Via S. Giuseppe Benedetto Cottolengo, 24A, Torino, Saturday 19 September at 15:30. Free (Ingresso: vedi la pagina AllEvents).
+
+## VISITA GUIDATA ORTO BOTANICO DI TORINO La…
+https://anyplans.in/en/torino/visita-guidata-orto-botanico-di-torino-la-pianta-del-mese/
+
+Guided tours in Viale Pier Andrea Mattioli, 25, Torino, Saturday 19 September at 16:00. Free (Ingresso: vedi la pagina AllEvents).
 
 ## Passeggiata Culturale in Vanchiglia - h. 16:30…
 https://anyplans.in/en/torino/passeggiata-culturale-in-vanchiglia-h-16-30-festival-arti-po/
@@ -4717,6 +4776,11 @@ Concerts & live music in Casa Fools | Teatro Vanchiglia, Torino, Saturday 19 Sep
 https://anyplans.in/en/torino/cena-da-il-pacchero-11-posti-liberi/
 
 Dinners & aperitivo in Il Pacchero, Rivoli, Saturday 19 September at 19:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## Exclusive 90s Party: Apericena Servito e DJ Set…
+https://anyplans.in/en/torino/exclusive-90s-party-apericena-servito-e-dj-set-by-marco-s/
+
+Dinners & aperitivo in Collegno - Zona fermata Metrò Fermi, Saturday 19 September at 20:00. €6 (Accredito su comehome; il resto si paga in loco).
 
 ## Candlelight: Queen & The Beatles
 https://anyplans.in/en/torino/candlelight-queen-the-beatles/
@@ -4802,11 +4866,6 @@ Talks & culture in Officine S - Svago Sapori Sorprese, Torino, Sunday 20 Septemb
 https://anyplans.in/en/torino/matinee-suggestioni-romantiche-per-violoncello-e-pianoforte/
 
 Concerts & live music in Torino, Centro, Sunday 20 September at 10:55. €5 (Accredito su comehome; il resto si paga in loco).
-
-## Padel: mancano 3 giocatori (amichevole)
-https://anyplans.in/en/torino/padel-mancano-3-giocatori-amichevole/
-
-Padel in Gar Sempione, Via Gottardo 10, 10155 Torino, Sunday 20 September at 11:00. €9 (Si chiede il posto e si paga su Playtomic).
 
 ## Grigliatona+concerto+dj set: salutiamo l'estate…
 https://anyplans.in/en/torino/grigliatona-concerto-dj-set-salutiamo-l-estate-epicamente/
@@ -4942,6 +5001,11 @@ Markets in Centro Giochi Educativi Torino (Negozio di giocattoli), Torino, Monda
 https://anyplans.in/en/torino/governare-la-paura-costruire-fiducia/
 
 Town festival in Festival dell'Accoglienza - "E mi avete accolto", Monday 21 September at 18:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## Coding Gym Torino - Settembre 2026
+https://anyplans.in/en/torino/coding-gym-torino-settembre-2026/
+
+Talks & culture in Toolbox Coworking, Torino, Monday 21 September at 18:30. Free (Ingresso: vedi la pagina AllEvents).
 
 ## Product Torino Squad Event
 https://anyplans.in/en/torino/product-torino-squad-event/
@@ -5518,6 +5582,11 @@ https://anyplans.in/en/torino/wine-party-dj-set/
 
 Dinners & aperitivo in Venaria Reale, Saturday 26 September at 20:00. €5 (Accredito su comehome; il resto si paga in loco).
 
+## Mordi la Puglia: Panino Gourmet II Edizione!
+https://anyplans.in/en/torino/mordi-la-puglia-panino-gourmet-ii-edizione/
+
+Dinners & aperitivo in Torino, Pozzo Strada (Borgata Lesna), Saturday 26 September at 20:00. €7 (Accredito su comehome; il resto si paga in loco).
+
 ## HEAVENFALL (Heavy Metal) + HIGHLORD (Power…
 https://anyplans.in/en/torino/heavenfall-heavy-metal-highlord-power-metal-live-al-blah-bla/
 
@@ -5772,6 +5841,16 @@ Talks & culture in Coworking Cafè - CLHUB, Torino, Wednesday 30 September at 18
 https://anyplans.in/en/torino/mediocrity-isn-t-worth-the-trip-leadership-masterclass-with-/
 
 Talks & culture in ESCP Business School - Turin Campus, Torino, Wednesday 30 September at 18:00. Free (Gratis, registrazione su Luma).
+
+## Velvet Creative Lab | Open Studio
+https://anyplans.in/en/torino/velvet-creative-lab-open-studio/
+
+Talks & culture in Via Cagliari, 11, Torino, Wednesday 30 September at 19:00. €17.22 (Biglietti su AllEvents).
+
+## Dipingi & Spritz!
+https://anyplans.in/en/torino/dipingi-spritz/
+
+Dinners & aperitivo in Torino, Zona Cenisia, Wednesday 30 September at 19:15. €5 (Accredito su comehome; il resto si paga in loco).
 
 ## KRANO + LAGUNA BOLLENTE / Hiroshima Sound Garden
 https://anyplans.in/en/torino/krano-laguna-bollente-hiroshima-sound-garden/
@@ -6368,6 +6447,11 @@ https://anyplans.in/en/torino/club-homecoming-summit-special-event-for-internati
 
 Talks & culture in Turin, Torino, Friday 9 October at 09:30. Free (Gratis, registrazione su Luma).
 
+## Who teaches AI agents after they go live? -…
+https://anyplans.in/en/torino/who-teaches-ai-agents-after-they-go-live-syllotips-round-tab/
+
+Talks & culture in OGR Torino, Friday 9 October at 10:00. Free (Gratis, registrazione su Luma).
+
 ## Alla scoperta dei tesori di Torino: Museo Egizio
 https://anyplans.in/en/torino/alla-scoperta-dei-tesori-di-torino-museo-egizio-venaria-e-re/
 
@@ -6803,6 +6887,11 @@ https://anyplans.in/en/torino/torino-vs-monza-at-torino-stadio-olimpico/
 
 Live sport in Torino Stadio Olimpico, Torino, Saturday 24 October at 23:59. Free (Ingresso: vedi la pagina AllEvents).
 
+## Torino Osè: amori proibiti e passioni nascoste…
+https://anyplans.in/en/torino/torino-ose-amori-proibiti-e-passioni-nascoste-nei-vicoli-del/
+
+Guided tours in Giardino Bottero, angolo via Conte Verde, Torino, Sunday 25 October at 10:30. €7.61 (Biglietti su AllEvents).
+
 ## I Salotti del Tempo® - Cavour
 https://anyplans.in/en/torino/i-salotti-del-tempo-cavour-la-contessa-virginia-e-il-battesi/
 
@@ -6978,11 +7067,6 @@ https://anyplans.in/en/torino/cocktaillab-4-sparklingclassics/
 
 Dinners & aperitivo in Torino, Friday 13 November at 21:00. €5 (Accredito su comehome; il resto si paga in loco).
 
-## Barriera Design District
-https://anyplans.in/en/torino/barriera-design-district/
-
-Painting & art in Via Valprato, 68, Torino, Saturday 14 November at 15:00. €25 (Biglietti su AllEvents).
-
 ## SABATO 14 NOVEMBRE / LIBidine '70 '80 / DJ…
 https://anyplans.in/en/torino/sabato-14-novembre-libidine-70-80-dj-marco-sottile-caffe-lib/
 
@@ -7072,6 +7156,11 @@ Guided tours in Allianz Stadium, Torino, Saturday 21 November at 18:00. Free (In
 https://anyplans.in/en/torino/2026-atp-world-tour-finals-saturday-evening-session-at-inalp/
 
 Guided tours in Inalpi Arena, Torino, Saturday 21 November at 18:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## SONDRE LERCHE | sPAZIO211 (TO)
+https://anyplans.in/en/torino/sondre-lerche-spazio211-to/
+
+Concerts & live music in Via Francesco Cigna 211, 10155 Turin, Italy, Torino, Saturday 21 November at 21:00. Free (Ingresso: vedi la pagina AllEvents).
 
 ## Juventus vs Venezia at Allianz Stadium - Turin
 https://anyplans.in/en/torino/juventus-vs-venezia-at-allianz-stadium-turin/

@@ -1,14 +1,13 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Verona e provincia: feste di paese e sagre, corsi di cucina e di ceramica, volontariato, uscite sportive, running club. Raccoglie gli eventi già esistenti dai siti dei comuni e delle associazioni e quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Per ora solo Verona; Milano e Brescia in arrivo.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Verona e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Verona: il sito copre 29 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-15. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Verona](https://anyplans.in/verona/cosa-fare/): tutti gli eventi in programma (199), per tipo e per paese; risponde a "cosa fare a Verona oggi / questo weekend"
-- [Running club a Verona](https://anyplans.in/verona/running-club/): 0 run club per giorno della settimana, con ritrovo, orario e domande frequenti
-- [Gruppi a Verona](https://anyplans.in/verona/gruppi/): 0 associazioni, club e comunità che pubblicano eventi
+- [Cosa fare a Verona](https://anyplans.in/verona/): tutti gli eventi in programma (209), per tipo e per paese; risponde a "cosa fare a Verona oggi / questo weekend"
+- [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
 - [Condizioni d'uso](https://anyplans.in/terms-it.html)
@@ -16,9 +15,9 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 ## Eventi per tipo e per paese
 
 - [Feste, sagre ed eventi di paese a Verona](https://anyplans.in/verona/feste/): 17 in programma
-- [Padel a Verona](https://anyplans.in/verona/padel/): 16 in programma
+- [Padel a Verona](https://anyplans.in/verona/padel/): 25 in programma
 - [Yoga / pilates a Verona](https://anyplans.in/verona/yoga/): 4 in programma
-- [Incontri culturali a Verona](https://anyplans.in/verona/incontri-culturali/): 59 in programma
+- [Incontri culturali a Verona](https://anyplans.in/verona/incontri-culturali/): 60 in programma
 - [Cena / aperitivo a Verona](https://anyplans.in/verona/cene-e-aperitivi/): 23 in programma
 - [Escursionismo a Verona](https://anyplans.in/verona/escursioni/): 5 in programma
 - [Spettacoli e teatro a Verona](https://anyplans.in/verona/spettacoli/): 17 in programma
@@ -30,25 +29,22 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Feste ed eventi a Verona](https://anyplans.in/verona/verona/): 5 in programma
 - [Feste ed eventi a Mantova](https://anyplans.in/verona/mantova/): 3 in programma
 
-## Running club per giorno
-
-
-
-## Gruppi
-
-
-
 ## Prossimi eventi
 
-- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/verona/padel-mancano-3-giocatori-amichevole/): Dal 15 settembre al 18 settembre, 13 date, GARDA PADEL, VIA 25 APRILE 80, 80, 37014 Castelnuovo del Garda, 10 €
-- [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/verona/padel-mancano-2-giocatori-amichevole/): Dal 15 settembre al 16 settembre, 2 date, GARDA PADEL, VIA 25 APRILE 80, 80, 37014 Castelnuovo del Garda, 14 €
+- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/verona/padel-mancano-3-giocatori-amichevole/): Dal 15 settembre al 18 settembre, 9 date, GARDA PADEL, VIA 25 APRILE 80, 80, 37014 Castelnuovo del Garda, 14 €
 - [Il Custoza in Festa](https://anyplans.in/verona/il-custoza-in-festa/): Martedì 15 settembre alle 19:00, Verona, Gratis
+- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/verona/padel-mancano-3-giocatori-amichevole-2026-09-15/): Dal 15 settembre al 18 settembre, 2 date, LE VIGNE PADEL CLUB, LOCALITA' POZZOMORETTO 34, 37069 Pozzomoretto, 14 €
 - [Nuovo CORSO ACROYOGA a Verona](https://anyplans.in/verona/nuovo-corso-acroyoga-a-verona/): Mercoledì 16 settembre alle 00:00, Centro Pilates, Yoga, Ginnastica posturale - Dhea, Via Breccia S. Giorgio, Verona, VR, Italia, Verona, 19 €
+- [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/verona/padel-mancano-2-giocatori-amichevole/): Dal 16 settembre al 17 settembre, 2 date, GARDA PADEL, VIA 25 APRILE 80, 80, 37014 Castelnuovo del Garda, 14 €
+- [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/verona/padel-manca-1-giocatore-amichevole/): Dal 16 settembre al 19 settembre, 3 date, Betty's Padel Club, Via Adamello 2, 37069 Villafranca di Verona, 14 €
 - [Aperitivo all'Argilla](https://anyplans.in/verona/aperitivo-all-argilla/): Mercoledì 16 settembre alle 17:00, SmArt Revolution Lab, Verona, 55 €
 - [Un ecosistema generativo](https://anyplans.in/verona/un-ecosistema-generativo/): Mercoledì 16 settembre alle 17:30, Convento di San Bernardino, Verona, Gratis
 - [Community Meetup di Startup Geeks a Verona](https://anyplans.in/verona/community-meetup-di-startup-geeks-a-verona/): Mercoledì 16 settembre alle 17:30, Officina 18, Verona, 11,88 €
+- [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/verona/padel-manca-1-giocatore-amichevole-2026-09-16/): Mercoledì 16 settembre alle 18:30, LE VIGNE PADEL CLUB, LOCALITA' POZZOMORETTO 34, 37069 Pozzomoretto, 14 €
 - [PRIVACY POLICY & AI ACT](https://anyplans.in/verona/privacy-policy-ai-act/): Mercoledì 16 settembre alle 20:00, Confesercenti Verona, Verona, 33,22 €
-- [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/verona/padel-mancano-2-giocatori-amichevole-2026-09-16/): Mercoledì 16 settembre alle 21:00, Karma Padel, Via Sorre, 11, 25010 Pozzolengo, 13 €
+- [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/verona/padel-manca-1-giocatore-amichevole-2026-09-17/): Giovedì 17 settembre alle 09:00, Karma Padel, Via Sorre, 11, 25010 Pozzolengo, 13 €
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/verona/padel-mancano-3-giocatori-competitiva/): Giovedì 17 settembre alle 11:30, Karma Padel, Via Sorre, 11, 25010 Pozzolengo, Gratis
+- [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/verona/padel-mancano-2-giocatori-amichevole-2026-09-17/): Giovedì 17 settembre alle 18:00, LE VIGNE PADEL CLUB, LOCALITA' POZZOMORETTO 34, 37069 Pozzomoretto, 14 €
 - [Cena da Mitiko - Ristorante sportivo, Pizzeria e Burger: 7 posti liberi](https://anyplans.in/verona/cena-da-mitiko-ristorante-sportivo-pizzeria-e-burger-7-posti/): Giovedì 17 settembre alle 18:00, Mitiko - Ristorante sportivo, Pizzeria e Burger, Verona, Gratis
 - [Uscita fuori porta da Pizzeria Olimpia: 10 posti liberi](https://anyplans.in/verona/uscita-fuori-porta-da-pizzeria-olimpia-10-posti-liberi/): Giovedì 17 settembre alle 18:00, Pizzeria Olimpia, Caprino Veronese, Gratis
 - [English Social Nights con inlingua Verona](https://anyplans.in/verona/english-social-nights-con-inlingua-verona/): Giovedì 17 settembre alle 19:00, Ristorante Bottiglieria Corsini, Verona, 16,02 €
@@ -60,6 +56,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Allenamento Maschile livello base/intermedio](https://anyplans.in/verona/allenamento-maschile-livello-base-intermedio/): Giovedì 17 settembre alle 20:00, Betty's Padel Club, Via Adamello 2, 37069 Villafranca di Verona, 18 €
 - [Food Lovers Verona - Good vibes - Great food - New friends](https://anyplans.in/verona/food-lovers-verona-good-vibes-great-food-new-friends/): Giovedì 17 settembre alle 20:30, Verona, Italy, Verona, Gratis
 - [Progettare cultura, sperimentare tecnologie](https://anyplans.in/verona/progettare-cultura-sperimentare-tecnologie/): Venerdì 18 settembre alle 10:00, Teatro Ristori, Verona, Gratis
+- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/verona/padel-mancano-3-giocatori-amichevole-2026-09-18/): Venerdì 18 settembre alle 11:00, Karma Padel, Via Sorre, 11, 25010 Pozzolengo, 13 €
 - [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/verona/padel-mancano-2-giocatori-amichevole-2026-09-18/): Venerdì 18 settembre alle 16:30, Punto Oro Padel Club, Via Enrico Fermi 4, 46040 Ponti Sul Mincio, Gratis
 - [MUSIC AWARDS 2026 - ARENA di VERONA - Venerdì 18 e Sabato 19 Settembre](https://anyplans.in/verona/music-awards-2026-arena-di-verona-venerdi-18-e-sabato-19-set/): Venerdì 18 settembre alle 16:30, Arena di Verona, Verona, Gratis
 - [Cena da Hosteria 17: 4 posti liberi](https://anyplans.in/verona/cena-da-hosteria-17-4-posti-liberi/): Venerdì 18 settembre alle 18:00, Hosteria 17, Verona, Gratis
@@ -72,14 +69,8 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Cena da FREKT RISTORANTE ABRUZZESE: 6 posti liberi](https://anyplans.in/verona/cena-da-frekt-ristorante-abruzzese-6-posti-liberi/): Venerdì 18 settembre alle 19:00, FREKT RISTORANTE ABRUZZESE, Verona, Gratis
 - [Tocatì Festival a Verona](https://anyplans.in/verona/tocati-festival-a-verona/): Dal 18 settembre al 20 settembre, 3 date, Verona, Gratis
 - [VERONA E MUSIC AWARDS ALL’ARENA](https://anyplans.in/verona/verona-e-music-awards-all-arena/): Sabato 19 settembre alle 07:00, GE.SA. Turismo, Gratis
+- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/verona/padel-mancano-3-giocatori-amichevole-2026-09-19/): Sabato 19 settembre alle 09:00, Punto Oro Padel Club, Via Enrico Fermi 4, 46040 Ponti Sul Mincio, 14 €
 - [32^ LUPATOTISSIMA 2026](https://anyplans.in/verona/32-lupatotissima-2026/): Sabato 19 settembre alle 09:30, Piste di atletica leggera impianto sportivo Consolini – Verona (Basso Acquar), Verona, Veneto, Verona, Gratis
-- [La via del tè](https://anyplans.in/verona/la-via-del-te/): Sabato 19 settembre alle 10:00, Via Santa Chiara, 7b, Verona, 54,56 €
-- [Oh Susanna! Mercatone fatato di libri usati, in omaggio a Susanna Morgante](https://anyplans.in/verona/oh-susanna-mercatone-fatato-di-libri-usati-in-omaggio-a-susa/): Sabato 19 settembre alle 10:00, Interrato Acqua Morta 38, 37129 Verona, Italy, Verona, Gratis
-- [Far passare le idee | TEDxVerona: The Labs](https://anyplans.in/verona/far-passare-le-idee-tedxverona-the-labs/): Sabato 19 settembre alle 10:00, IUSVE, Verona, 197,97 €
-- [livellamento da 0.5/1](https://anyplans.in/verona/livellamento-da-0-5-1/): Sabato 19 settembre alle 11:00, Pro Padel Verona, Via Della Tecnica 29, 37064 Madonna Dell'uva Secca, 15 €
-- [Pranzo da ALT Stazione del Gusto: 6 posti liberi](https://anyplans.in/verona/pranzo-da-alt-stazione-del-gusto-6-posti-liberi/): Sabato 19 settembre alle 11:45, ALT Stazione del Gusto, Verona, Gratis
-- [LIVELLAMENTO da 1 a  2](https://anyplans.in/verona/livellamento-da-1-a-2/): Sabato 19 settembre alle 12:00, Pro Padel Verona, Via Della Tecnica 29, 37064 Madonna Dell'uva Secca, 15 €
-- [livellamento da 3 a 4](https://anyplans.in/verona/livellamento-da-3-a-4/): Sabato 19 settembre alle 14:00, Pro Padel Verona, Via Della Tecnica 29, 37064 Madonna Dell'uva Secca, 15 €
 
 ## Optional
 
@@ -89,9 +80,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## English pages (same content, for visitors)
 
-- [Things to do in Verona](https://anyplans.in/en/verona/things-to-do/): all upcoming events, by kind and by town; answers "what to do in Bergamo today / this weekend"
-- [Running clubs in Verona](https://anyplans.in/en/verona/running-clubs/): 0 run clubs by weekday, open to visitors too
-- [Groups in Verona](https://anyplans.in/en/verona/groups/)
+- [Things to do in Verona](https://anyplans.in/en/verona/): all upcoming events, by kind and by town; answers "what to do in Verona today / this weekend"
 - [Town festivals & fairs in Verona](https://anyplans.in/en/verona/festivals/)
 - [Padel in Verona](https://anyplans.in/en/verona/padel/)
 - [Yoga & pilates in Verona](https://anyplans.in/en/verona/yoga/)
@@ -109,30 +98,30 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 # Tutte le pagine di anyplans a Verona (italiano, poi inglese)
 
-## Cosa fare a Verona e provincia: 199 eventi
+## Cosa fare a Verona e provincia: 209 eventi
 https://anyplans.in/verona/
 
-Incontri culturali, concerti e musica dal vivo, cena / aperitivo, feste, sagre ed eventi di paese e spettacoli e teatro: quello che succede a Verona e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
+Incontri culturali, concerti e musica dal vivo, padel, cena / aperitivo e feste, sagre ed eventi di paese: quello che succede a Verona e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
 
 ## Cosa fare a Verona oggi: 3 eventi
 https://anyplans.in/verona/cosa-fare-oggi/
 
 3 eventi a Verona e provincia oggi, 15 settembre 2026: Verona e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Verona domani: 8 eventi
+## Cosa fare a Verona domani: 9 eventi
 https://anyplans.in/verona/cosa-fare-domani/
 
-8 eventi a Verona e provincia domani, 16 settembre 2026: Verona e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+9 eventi a Verona e provincia domani, 16 settembre 2026: Verona e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Verona nel weekend: 31 eventi
+## Cosa fare a Verona nel weekend: 35 eventi
 https://anyplans.in/verona/cosa-fare-nel-weekend/
 
-31 eventi a Verona e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Verona, Peschiera del Garda, Mantova e GE.SA. Turismo e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+35 eventi a Verona e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Verona, Peschiera del Garda, Mantova e GE.SA. Turismo e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Eventi a Verona a settembre 2026: 117
+## Eventi a Verona a settembre 2026: 127
 https://anyplans.in/verona/eventi-settembre-2026/
 
-117 eventi a Verona e provincia a settembre 2026: padel, feste, sagre ed eventi di paese, yoga / pilates, incontri culturali e cena / aperitivo. Giorno per giorno, con orari, luogo e prezzo, a Verona, Mantova, Peschiera del Garda e Caprino Veronese e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+127 eventi a Verona e provincia a settembre 2026: padel, feste, sagre ed eventi di paese, yoga / pilates, incontri culturali e cena / aperitivo. Giorno per giorno, con orari, luogo e prezzo, a Verona, Mantova, Peschiera del Garda e Caprino Veronese e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 ## Eventi a Verona a ottobre 2026: 53
 https://anyplans.in/verona/eventi-ottobre-2026/
@@ -149,20 +138,20 @@ https://anyplans.in/verona/feste/
 
 A Verona e provincia ci sono 17 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Padel a Verona: 16 eventi
+## Padel a Verona: 25 eventi
 https://anyplans.in/verona/padel/
 
-A Verona e provincia ci sono 16 partite di padel nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Verona e provincia ci sono 25 partite di padel nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Yoga / pilates a Verona: 4 eventi
 https://anyplans.in/verona/yoga/
 
 A Verona e provincia ci sono 4 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Incontri culturali a Verona: 59 eventi
+## Incontri culturali a Verona: 60 eventi
 https://anyplans.in/verona/incontri-culturali/
 
-A Verona e provincia ci sono 59 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Verona e provincia ci sono 60 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Cena / aperitivo a Verona: 23 eventi
 https://anyplans.in/verona/cene-e-aperitivi/
@@ -219,30 +208,70 @@ https://anyplans.in/verona/il-custoza-in-festa/
 
 Festa di paese a Verona, martedì 15 settembre alle 19:00. Gratis.
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori (amichevole) – GARDA PADEL
 https://anyplans.in/verona/padel-mancano-2-giocatori-amichevole/
 
-Padel a GARDA PADEL, VIA 25 APRILE 80, 80, 37014 Castelnuovo del Garda, martedì 15 settembre alle 12:30 (2 date, fino al 16 settembre). 14 € (Si chiede il posto e si paga su Playtomic).
+Padel a GARDA PADEL, VIA 25 APRILE 80, 80, 37014 Castelnuovo del Garda, mercoledì 16 settembre alle 12:30 (2 date, fino al 17 settembre). 14 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
-https://anyplans.in/verona/padel-mancano-2-giocatori-amichevole-2026-09-16/
+## Padel: mancano 2 giocatori… – LE VIGNE PADEL CLUB
+https://anyplans.in/verona/padel-mancano-2-giocatori-amichevole-2026-09-17/
 
-Padel a Karma Padel, Via Sorre, 11, 25010 Pozzolengo, mercoledì 16 settembre alle 21:00. 13 € (Si chiede il posto e si paga su Playtomic).
+Padel a LE VIGNE PADEL CLUB, LOCALITA' POZZOMORETTO 34, 37069 Pozzomoretto, giovedì 17 settembre alle 18:00. 14 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori… – Punto Oro Padel Club
 https://anyplans.in/verona/padel-mancano-2-giocatori-amichevole-2026-09-18/
 
 Padel a Punto Oro Padel Club, Via Enrico Fermi 4, 46040 Ponti Sul Mincio, venerdì 18 settembre alle 16:30. Gratis (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (amichevole)
+## Padel: mancano 2 giocatori (amichevole) – Betty's Padel Club
+https://anyplans.in/verona/padel-mancano-2-giocatori-amichevole-2026-09-19/
+
+Padel a Betty's Padel Club, Via Adamello 2, 37069 Villafranca di Verona, sabato 19 settembre alle 12:00. 14 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (amichevole) – Karma Padel
+https://anyplans.in/verona/padel-mancano-2-giocatori-amichevole-2026-09-21/
+
+Padel a Karma Padel, Via Sorre, 11, 25010 Pozzolengo, lunedì 21 settembre alle 09:00. 13 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (amichevole) – GARDA PADEL
 https://anyplans.in/verona/padel-mancano-3-giocatori-amichevole/
 
-Padel a GARDA PADEL, VIA 25 APRILE 80, 80, 37014 Castelnuovo del Garda, martedì 15 settembre alle 11:30 (13 date, fino al 18 settembre). 10 € (Si chiede il posto e si paga su Playtomic).
+Padel a GARDA PADEL, VIA 25 APRILE 80, 80, 37014 Castelnuovo del Garda, martedì 15 settembre alle 16:30 (9 date, fino al 18 settembre). 14 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – LE VIGNE PADEL CLUB
+https://anyplans.in/verona/padel-mancano-3-giocatori-amichevole-2026-09-15/
+
+Padel a LE VIGNE PADEL CLUB, LOCALITA' POZZOMORETTO 34, 37069 Pozzomoretto, martedì 15 settembre alle 19:30 (2 date, fino al 18 settembre). 14 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (amichevole) – Karma Padel
+https://anyplans.in/verona/padel-mancano-3-giocatori-amichevole-2026-09-18/
+
+Padel a Karma Padel, Via Sorre, 11, 25010 Pozzolengo, venerdì 18 settembre alle 11:00. 13 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Punto Oro Padel Club
+https://anyplans.in/verona/padel-mancano-3-giocatori-amichevole-2026-09-19/
+
+Padel a Punto Oro Padel Club, Via Enrico Fermi 4, 46040 Ponti Sul Mincio, sabato 19 settembre alle 09:00. 14 € (Si chiede il posto e si paga su Playtomic).
 
 ## Nuovo CORSO ACROYOGA a Verona
 https://anyplans.in/verona/nuovo-corso-acroyoga-a-verona/
 
 Yoga / pilates a Centro Pilates, Yoga, Ginnastica posturale - Dhea, Via Breccia S. Giorgio, Verona, VR, Italia, Verona, mercoledì 16 settembre alle 00:00. 19 € (Biglietti su AllEvents).
+
+## Padel: manca 1 giocatore (amichevole) – Betty's Padel Club
+https://anyplans.in/verona/padel-manca-1-giocatore-amichevole/
+
+Padel a Betty's Padel Club, Via Adamello 2, 37069 Villafranca di Verona, mercoledì 16 settembre alle 17:00 (3 date, fino al 19 settembre). 14 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (amichevole) – LE VIGNE PADEL CLUB
+https://anyplans.in/verona/padel-manca-1-giocatore-amichevole-2026-09-16/
+
+Padel a LE VIGNE PADEL CLUB, LOCALITA' POZZOMORETTO 34, 37069 Pozzomoretto, mercoledì 16 settembre alle 18:30. 14 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (amichevole) – Karma Padel
+https://anyplans.in/verona/padel-manca-1-giocatore-amichevole-2026-09-17/
+
+Padel a Karma Padel, Via Sorre, 11, 25010 Pozzolengo, giovedì 17 settembre alle 09:00. 13 € (Si chiede il posto e si paga su Playtomic).
 
 ## Aperitivo all'Argilla
 https://anyplans.in/verona/aperitivo-all-argilla/
@@ -263,6 +292,11 @@ Incontri culturali a Officina 18, Verona, mercoledì 16 settembre alle 17:30. 11
 https://anyplans.in/verona/privacy-policy-ai-act/
 
 Incontri culturali a Confesercenti Verona, Verona, mercoledì 16 settembre alle 20:00. 33,22 € (Biglietti su AllEvents).
+
+## Padel: mancano 3 giocatori (competitiva)
+https://anyplans.in/verona/padel-mancano-3-giocatori-competitiva/
+
+Padel a Karma Padel, Via Sorre, 11, 25010 Pozzolengo, giovedì 17 settembre alle 11:30. Gratis (Si chiede il posto e si paga su Playtomic).
 
 ## Cena da Mitiko - Ristorante sportivo
 https://anyplans.in/verona/cena-da-mitiko-ristorante-sportivo-pizzeria-e-burger-7-posti/
@@ -488,6 +522,11 @@ Incontri culturali a LiveDog Park - Centro Cinofilo Città di Verona ASD, Verona
 https://anyplans.in/verona/corso-di-avvicinamento-alle-ferrate-con-guida-alpina/
 
 Escursionismo a Veneto, Italy, Verona, domenica 20 settembre alle 09:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## ELYT - Flight 01
+https://anyplans.in/verona/elyt-flight-01/
+
+Incontri culturali a Gardaland Hotel, Provincia di Verona, domenica 20 settembre alle 09:30. 49 € (Si paga su Luma).
 
 ## Uscita fuori porta da Vecchio Mulino Beach: 4…
 https://anyplans.in/verona/uscita-fuori-porta-da-vecchio-mulino-beach-4-posti-liberi/
@@ -1210,30 +1249,30 @@ https://anyplans.in/verona/7-weekend-porte-o-milongueando-en-verona/
 
 Incontri culturali a Via Carlo Alberto 26, 37136 Verona, Italy, Verona, sabato 6 febbraio alle 15:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Things to do in Verona: 199 events
+## Things to do in Verona: 209 events
 https://anyplans.in/en/verona/
 
-What's on in Verona and its province, today, tonight and this weekend: talks & culture, concerts & live music, dinners & aperitivo, town festivals & fairs, shows & theatre and padel. Pick one and go with other people.
+What's on in Verona and its province, today, tonight and this weekend: talks & culture, concerts & live music, padel, dinners & aperitivo, town festivals & fairs and shows & theatre. Pick one and go with other people.
 
 ## What to do in Verona today: 3 events
 https://anyplans.in/en/verona/what-to-do-today/
 
 3 events in Verona and its province today, 15 September 2026: Verona and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Verona tomorrow: 8 events
+## What to do in Verona tomorrow: 9 events
 https://anyplans.in/en/verona/what-to-do-tomorrow/
 
-8 events in Verona and its province tomorrow, 16 September 2026: Verona and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+9 events in Verona and its province tomorrow, 16 September 2026: Verona and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Verona this weekend: 31 events
+## What to do in Verona this weekend: 35 events
 https://anyplans.in/en/verona/what-to-do-this-weekend/
 
-31 events in Verona and its province this weekend (Saturday 19 September and Sunday 20 September): Verona, Peschiera del Garda, Mantova and GE.SA. Turismo and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+35 events in Verona and its province this weekend (Saturday 19 September and Sunday 20 September): Verona, Peschiera del Garda, Mantova and GE.SA. Turismo and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## Events in Verona in September 2026: 117
+## Events in Verona in September 2026: 127
 https://anyplans.in/en/verona/events-september-2026/
 
-117 events in Verona and its province in September 2026: padel, town festivals & fairs, yoga & pilates, talks & culture and dinners & aperitivo. Day by day, with times, place and price, in Verona, Mantova, Peschiera del Garda and Caprino Veronese and other towns. You sign up and go with other people.
+127 events in Verona and its province in September 2026: padel, town festivals & fairs, yoga & pilates, talks & culture and dinners & aperitivo. Day by day, with times, place and price, in Verona, Mantova, Peschiera del Garda and Caprino Veronese and other towns. You sign up and go with other people.
 
 ## Events in Verona in October 2026: 53
 https://anyplans.in/en/verona/events-october-2026/
@@ -1250,20 +1289,20 @@ https://anyplans.in/en/verona/festivals/
 
 In Verona and its province there are 17 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Padel in Verona: 16 events
+## Padel in Verona: 25 events
 https://anyplans.in/en/verona/padel/
 
-In Verona and its province there are 16 padel matches and tournaments in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Verona and its province there are 25 padel matches and tournaments in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Yoga & pilates in Verona: 4 events
 https://anyplans.in/en/verona/yoga/
 
 In Verona and its province there are 4 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Talks & culture in Verona: 59 events
+## Talks & culture in Verona: 60 events
 https://anyplans.in/en/verona/talks-and-culture/
 
-In Verona and its province there are 59 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Verona and its province there are 60 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Dinners & aperitivo in Verona: 23 events
 https://anyplans.in/en/verona/dinners/
@@ -1320,30 +1359,70 @@ https://anyplans.in/en/verona/il-custoza-in-festa/
 
 Town festival in Verona, Tuesday 15 September at 19:00. Free.
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori (amichevole) – GARDA PADEL
 https://anyplans.in/en/verona/padel-mancano-2-giocatori-amichevole/
 
-Padel in GARDA PADEL, VIA 25 APRILE 80, 80, 37014 Castelnuovo del Garda, Tuesday 15 September at 12:30 (2 dates, until 16 September). €14 (Si chiede il posto e si paga su Playtomic).
+Padel in GARDA PADEL, VIA 25 APRILE 80, 80, 37014 Castelnuovo del Garda, Wednesday 16 September at 12:30 (2 dates, until 17 September). €14 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
-https://anyplans.in/en/verona/padel-mancano-2-giocatori-amichevole-2026-09-16/
+## Padel: mancano 2 giocatori… – LE VIGNE PADEL CLUB
+https://anyplans.in/en/verona/padel-mancano-2-giocatori-amichevole-2026-09-17/
 
-Padel in Karma Padel, Via Sorre, 11, 25010 Pozzolengo, Wednesday 16 September at 21:00. €13 (Si chiede il posto e si paga su Playtomic).
+Padel in LE VIGNE PADEL CLUB, LOCALITA' POZZOMORETTO 34, 37069 Pozzomoretto, Thursday 17 September at 18:00. €14 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori… – Punto Oro Padel Club
 https://anyplans.in/en/verona/padel-mancano-2-giocatori-amichevole-2026-09-18/
 
 Padel in Punto Oro Padel Club, Via Enrico Fermi 4, 46040 Ponti Sul Mincio, Friday 18 September at 16:30. Free (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (amichevole)
+## Padel: mancano 2 giocatori (amichevole) – Betty's Padel Club
+https://anyplans.in/en/verona/padel-mancano-2-giocatori-amichevole-2026-09-19/
+
+Padel in Betty's Padel Club, Via Adamello 2, 37069 Villafranca di Verona, Saturday 19 September at 12:00. €14 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (amichevole) – Karma Padel
+https://anyplans.in/en/verona/padel-mancano-2-giocatori-amichevole-2026-09-21/
+
+Padel in Karma Padel, Via Sorre, 11, 25010 Pozzolengo, Monday 21 September at 09:00. €13 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (amichevole) – GARDA PADEL
 https://anyplans.in/en/verona/padel-mancano-3-giocatori-amichevole/
 
-Padel in GARDA PADEL, VIA 25 APRILE 80, 80, 37014 Castelnuovo del Garda, Tuesday 15 September at 11:30 (13 dates, until 18 September). €10 (Si chiede il posto e si paga su Playtomic).
+Padel in GARDA PADEL, VIA 25 APRILE 80, 80, 37014 Castelnuovo del Garda, Tuesday 15 September at 16:30 (9 dates, until 18 September). €14 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – LE VIGNE PADEL CLUB
+https://anyplans.in/en/verona/padel-mancano-3-giocatori-amichevole-2026-09-15/
+
+Padel in LE VIGNE PADEL CLUB, LOCALITA' POZZOMORETTO 34, 37069 Pozzomoretto, Tuesday 15 September at 19:30 (2 dates, until 18 September). €14 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (amichevole) – Karma Padel
+https://anyplans.in/en/verona/padel-mancano-3-giocatori-amichevole-2026-09-18/
+
+Padel in Karma Padel, Via Sorre, 11, 25010 Pozzolengo, Friday 18 September at 11:00. €13 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Punto Oro Padel Club
+https://anyplans.in/en/verona/padel-mancano-3-giocatori-amichevole-2026-09-19/
+
+Padel in Punto Oro Padel Club, Via Enrico Fermi 4, 46040 Ponti Sul Mincio, Saturday 19 September at 09:00. €14 (Si chiede il posto e si paga su Playtomic).
 
 ## Nuovo CORSO ACROYOGA a Verona
 https://anyplans.in/en/verona/nuovo-corso-acroyoga-a-verona/
 
 Yoga & pilates in Centro Pilates, Yoga, Ginnastica posturale - Dhea, Via Breccia S. Giorgio, Verona, VR, Italia, Verona, Wednesday 16 September at 00:00. €19 (Biglietti su AllEvents).
+
+## Padel: manca 1 giocatore (amichevole) – Betty's Padel Club
+https://anyplans.in/en/verona/padel-manca-1-giocatore-amichevole/
+
+Padel in Betty's Padel Club, Via Adamello 2, 37069 Villafranca di Verona, Wednesday 16 September at 17:00 (3 dates, until 19 September). €14 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (amichevole) – LE VIGNE PADEL CLUB
+https://anyplans.in/en/verona/padel-manca-1-giocatore-amichevole-2026-09-16/
+
+Padel in LE VIGNE PADEL CLUB, LOCALITA' POZZOMORETTO 34, 37069 Pozzomoretto, Wednesday 16 September at 18:30. €14 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (amichevole) – Karma Padel
+https://anyplans.in/en/verona/padel-manca-1-giocatore-amichevole-2026-09-17/
+
+Padel in Karma Padel, Via Sorre, 11, 25010 Pozzolengo, Thursday 17 September at 09:00. €13 (Si chiede il posto e si paga su Playtomic).
 
 ## Aperitivo all'Argilla
 https://anyplans.in/en/verona/aperitivo-all-argilla/
@@ -1364,6 +1443,11 @@ Talks & culture in Officina 18, Verona, Wednesday 16 September at 17:30. €11.8
 https://anyplans.in/en/verona/privacy-policy-ai-act/
 
 Talks & culture in Confesercenti Verona, Verona, Wednesday 16 September at 20:00. €33.22 (Biglietti su AllEvents).
+
+## Padel: mancano 3 giocatori (competitiva)
+https://anyplans.in/en/verona/padel-mancano-3-giocatori-competitiva/
+
+Padel in Karma Padel, Via Sorre, 11, 25010 Pozzolengo, Thursday 17 September at 11:30. Free (Si chiede il posto e si paga su Playtomic).
 
 ## Cena da Mitiko - Ristorante sportivo
 https://anyplans.in/en/verona/cena-da-mitiko-ristorante-sportivo-pizzeria-e-burger-7-posti/
@@ -1589,6 +1673,11 @@ Talks & culture in LiveDog Park - Centro Cinofilo Città di Verona ASD, Verona, 
 https://anyplans.in/en/verona/corso-di-avvicinamento-alle-ferrate-con-guida-alpina/
 
 Hiking in Veneto, Italy, Verona, Sunday 20 September at 09:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## ELYT - Flight 01
+https://anyplans.in/en/verona/elyt-flight-01/
+
+Talks & culture in Gardaland Hotel, Provincia di Verona, Sunday 20 September at 09:30. €49 (Si paga su Luma).
 
 ## Uscita fuori porta da Vecchio Mulino Beach: 4…
 https://anyplans.in/en/verona/uscita-fuori-porta-da-vecchio-mulino-beach-4-posti-liberi/

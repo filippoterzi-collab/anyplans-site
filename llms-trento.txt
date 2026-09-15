@@ -1,14 +1,13 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Trento e provincia: feste di paese e sagre, corsi di cucina e di ceramica, volontariato, uscite sportive, running club. Raccoglie gli eventi già esistenti dai siti dei comuni e delle associazioni e quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Per ora solo Trento; Milano e Brescia in arrivo.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Trento e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Trento: il sito copre 29 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-15. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Trento](https://anyplans.in/trento/cosa-fare/): tutti gli eventi in programma (62), per tipo e per paese; risponde a "cosa fare a Trento oggi / questo weekend"
-- [Running club a Trento](https://anyplans.in/trento/running-club/): 0 run club per giorno della settimana, con ritrovo, orario e domande frequenti
-- [Gruppi a Trento](https://anyplans.in/trento/gruppi/): 0 associazioni, club e comunità che pubblicano eventi
+- [Cosa fare a Trento](https://anyplans.in/trento/): tutti gli eventi in programma (64), per tipo e per paese; risponde a "cosa fare a Trento oggi / questo weekend"
+- [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
 - [Condizioni d'uso](https://anyplans.in/terms-it.html)
@@ -20,20 +19,13 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Cena / aperitivo a Trento](https://anyplans.in/trento/cene-e-aperitivi/): 3 in programma
 - [Visite guidate a Trento](https://anyplans.in/trento/visite-guidate/): 3 in programma
 
-
-## Running club per giorno
-
-
-
-## Gruppi
-
-
-
 ## Prossimi eventi
 
-- [Volti e Natura](https://anyplans.in/trento/volti-e-natura/): Martedì 15 settembre alle 10:00, Cantine di Torre Mirana, Trento, Gratis
+- [Caccia al tesoro](https://anyplans.in/trento/caccia-al-tesoro/): Martedì 15 settembre alle 16:00, Piazza del Duomo di Trento, Gratis
 - [CORSI DANZA TRENTO | LEZIONI DI PROVA](https://anyplans.in/trento/corsi-danza-trento-lezioni-di-prova/): Martedì 15 settembre alle 16:15, Centro Teatro - CTolmi24, Trento, Gratis
 - [Forum dell'Autonomia - IlT Quotidiano](https://anyplans.in/trento/forum-dell-autonomia-ilt-quotidiano/): Martedì 15 settembre alle 17:00, Sala inCooperazione, Trento, Gratis
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/trento/padel-mancano-3-giocatori-competitiva/): Dal 16 settembre al 19 settembre, 12 date, Hype Club Trento, Via 8 Marzo, 19, 38122 Trento, 17 €
+- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/trento/padel-mancano-2-giocatori-competitiva/): Dal 17 settembre al 18 settembre, 2 date, Hype Club Trento, Via 8 Marzo, 19, 38122 Trento, 12 €
 - [Torneo di Briscola](https://anyplans.in/trento/torneo-di-briscola/): Giovedì 17 settembre alle 16:00, Department of Sociology and Social Research, Trento, Gratis
 - [Torneo di pingpong](https://anyplans.in/trento/torneo-di-pingpong/): Dal 17 settembre al 21 settembre, 2 date, Polo Ferrari - Povo 1, Provincia autonoma di Trento, Gratis
 - [Pitch&Fix: tre startup, problemi reali, soluzioni condivise](https://anyplans.in/trento/pitch-fix-tre-startup-problemi-reali-soluzioni-condivise/): Giovedì 17 settembre alle 18:00, Impact Hub Trento, Trento, Gratis
@@ -69,8 +61,6 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Candlelight: Ennio Morricone e altre colonne sonore](https://anyplans.in/trento/candlelight-ennio-morricone-e-altre-colonne-sonore/): Domenica 11 ottobre alle 21:30, Sala Filarmonica Trento, Trento, 23 €
 - [Candlelight: Ennio Morricone e altre colonne sonore | Trento](https://anyplans.in/trento/candlelight-ennio-morricone-e-altre-colonne-sonore-trento/): Domenica 11 ottobre alle 21:30, Sala Filarmonica Trento, Via Giuseppe Verdi, 30, Trento, Trento, Gratis
 - [MEDITARE FA BENE con il Maestro Mario Thanavaro](https://anyplans.in/trento/meditare-fa-bene-con-il-maestro-mario-thanavaro/): Sabato 24 ottobre alle 09:00, Via C.Dordi, 15 - TRENTO, Trento, Trentino-Alto Adige, Trento, Gratis
-- [Candlelight: Coldplay vs Imagine Dragons](https://anyplans.in/trento/candlelight-coldplay-vs-imagine-dragons/): Sabato 24 ottobre alle 19:30, Sala Filarmonica Trento, Trento, 23 €
-- [Candlelight: Queen vs. ABBA](https://anyplans.in/trento/candlelight-queen-vs-abba/): Sabato 24 ottobre alle 21:30, Sala Filarmonica Trento, Trento, 23 €
 
 ## Optional
 
@@ -80,9 +70,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## English pages (same content, for visitors)
 
-- [Things to do in Trento](https://anyplans.in/en/trento/things-to-do/): all upcoming events, by kind and by town; answers "what to do in Bergamo today / this weekend"
-- [Running clubs in Trento](https://anyplans.in/en/trento/running-clubs/): 0 run clubs by weekday, open to visitors too
-- [Groups in Trento](https://anyplans.in/en/trento/groups/)
+- [Things to do in Trento](https://anyplans.in/en/trento/): all upcoming events, by kind and by town; answers "what to do in Trento today / this weekend"
 - [Talks & culture in Trento](https://anyplans.in/en/trento/talks-and-culture/)
 - [Concerts & live music in Trento](https://anyplans.in/en/trento/concerts/)
 - [Dinners & aperitivo in Trento](https://anyplans.in/en/trento/dinners/)
@@ -92,7 +80,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 # Tutte le pagine di anyplans a Trento (italiano, poi inglese)
 
-## Cosa fare a Trento e provincia: 62 eventi
+## Cosa fare a Trento e provincia: 64 eventi
 https://anyplans.in/trento/
 
 Incontri culturali, concerti e musica dal vivo, cena / aperitivo e visite guidate: quello che succede a Trento e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
@@ -102,15 +90,15 @@ https://anyplans.in/trento/cosa-fare-oggi/
 
 3 eventi a Trento e provincia oggi, 15 settembre 2026: Trento e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Trento nel weekend: 4 eventi
+## Cosa fare a Trento nel weekend: 5 eventi
 https://anyplans.in/trento/cosa-fare-nel-weekend/
 
-4 eventi a Trento e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Trento e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+5 eventi a Trento e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Trento e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Eventi a Trento a settembre 2026: 29
+## Eventi a Trento a settembre 2026: 31
 https://anyplans.in/trento/eventi-settembre-2026/
 
-29 eventi a Trento e provincia a settembre 2026: incontri culturali, ballo e danza, fiere, palestra e concerti e musica dal vivo. Giorno per giorno, con orari, luogo e prezzo, a Trento, Provincia autonoma di Trento, Ambientale e Meccanica e Trento Poetry Slam e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+31 eventi a Trento e provincia a settembre 2026: incontri culturali, ballo e danza, padel, fiere e palestra. Giorno per giorno, con orari, luogo e prezzo, a Trento, Provincia autonoma di Trento, Ambientale e Meccanica e Trento Poetry Slam e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 ## Eventi a Trento a ottobre 2026: 12
 https://anyplans.in/trento/eventi-ottobre-2026/
@@ -145,7 +133,12 @@ A Trento e provincia ci sono 3 visite guidate nei prossimi mesi. In ogni pagina 
 ## Volti e Natura
 https://anyplans.in/trento/volti-e-natura/
 
-Incontri culturali a Cantine di Torre Mirana, Trento, martedì 15 settembre alle 10:00. Gratis (Ingresso: vedi la pagina AllEvents).
+Incontri culturali a Cantine di Torre Mirana, Trento: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
+
+## Caccia al tesoro
+https://anyplans.in/trento/caccia-al-tesoro/
+
+Incontri culturali a Piazza del Duomo di Trento, martedì 15 settembre alle 16:00. Gratis (Gratis, registrazione su Luma).
 
 ## CORSI DANZA TRENTO | LEZIONI DI PROVA
 https://anyplans.in/trento/corsi-danza-trento-lezioni-di-prova/
@@ -156,6 +149,16 @@ Ballo e danza a Centro Teatro - CTolmi24, Trento, martedì 15 settembre alle 16:
 https://anyplans.in/trento/forum-dell-autonomia-ilt-quotidiano/
 
 Incontri culturali a Sala inCooperazione, Trento, martedì 15 settembre alle 17:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Padel: mancano 3 giocatori (competitiva)
+https://anyplans.in/trento/padel-mancano-3-giocatori-competitiva/
+
+Padel a Hype Club Trento, Via 8 Marzo, 19, 38122 Trento, mercoledì 16 settembre alle 12:30 (12 date, fino al 19 settembre). 17 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (competitiva)
+https://anyplans.in/trento/padel-mancano-2-giocatori-competitiva/
+
+Padel a Hype Club Trento, Via 8 Marzo, 19, 38122 Trento, giovedì 17 settembre alle 10:30 (2 date, fino al 18 settembre). 12 € (Si chiede il posto e si paga su Playtomic).
 
 ## Torneo di Briscola
 https://anyplans.in/trento/torneo-di-briscola/
@@ -452,7 +455,7 @@ https://anyplans.in/trento/candlelight-speciale-san-valentino/
 
 Concerti e musica dal vivo a Sala Filarmonica Trento, Trento, domenica 14 febbraio alle 19:30. 24 € (Biglietti su AllEvents).
 
-## Things to do in Trento: 62 events
+## Things to do in Trento: 64 events
 https://anyplans.in/en/trento/
 
 What's on in Trento and its province, today, tonight and this weekend: talks & culture, concerts & live music, dinners & aperitivo and guided tours. Pick one and go with other people.
@@ -462,15 +465,15 @@ https://anyplans.in/en/trento/what-to-do-today/
 
 3 events in Trento and its province today, 15 September 2026: Trento and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Trento this weekend: 4 events
+## What to do in Trento this weekend: 5 events
 https://anyplans.in/en/trento/what-to-do-this-weekend/
 
-4 events in Trento and its province this weekend (Saturday 19 September and Sunday 20 September): Trento and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+5 events in Trento and its province this weekend (Saturday 19 September and Sunday 20 September): Trento and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## Events in Trento in September 2026: 29
+## Events in Trento in September 2026: 31
 https://anyplans.in/en/trento/events-september-2026/
 
-29 events in Trento and its province in September 2026: talks & culture, dancing, fairs, gym and concerts & live music. Day by day, with times, place and price, in Trento, Provincia autonoma di Trento, Ambientale e Meccanica and Trento Poetry Slam and other towns. You sign up and go with other people.
+31 events in Trento and its province in September 2026: talks & culture, dancing, padel, fairs and gym. Day by day, with times, place and price, in Trento, Provincia autonoma di Trento, Ambientale e Meccanica and Trento Poetry Slam and other towns. You sign up and go with other people.
 
 ## Events in Trento in October 2026: 12
 https://anyplans.in/en/trento/events-october-2026/
@@ -505,7 +508,12 @@ In Trento and its province there are 3 guided tours events in the coming months.
 ## Volti e Natura
 https://anyplans.in/en/trento/volti-e-natura/
 
-Talks & culture in Cantine di Torre Mirana, Trento, Tuesday 15 September at 10:00. Free (Ingresso: vedi la pagina AllEvents).
+Talks & culture in Cantine di Torre Mirana, Trento: it already took place, the last date was Tuesday, 15 September 2026.
+
+## Caccia al tesoro
+https://anyplans.in/en/trento/caccia-al-tesoro/
+
+Talks & culture in Piazza del Duomo di Trento, Tuesday 15 September at 16:00. Free (Gratis, registrazione su Luma).
 
 ## CORSI DANZA TRENTO | LEZIONI DI PROVA
 https://anyplans.in/en/trento/corsi-danza-trento-lezioni-di-prova/
@@ -516,6 +524,16 @@ Dancing in Centro Teatro - CTolmi24, Trento, Tuesday 15 September at 16:15. Free
 https://anyplans.in/en/trento/forum-dell-autonomia-ilt-quotidiano/
 
 Talks & culture in Sala inCooperazione, Trento, Tuesday 15 September at 17:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## Padel: mancano 3 giocatori (competitiva)
+https://anyplans.in/en/trento/padel-mancano-3-giocatori-competitiva/
+
+Padel in Hype Club Trento, Via 8 Marzo, 19, 38122 Trento, Wednesday 16 September at 12:30 (12 dates, until 19 September). €17 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (competitiva)
+https://anyplans.in/en/trento/padel-mancano-2-giocatori-competitiva/
+
+Padel in Hype Club Trento, Via 8 Marzo, 19, 38122 Trento, Thursday 17 September at 10:30 (2 dates, until 18 September). €12 (Si chiede il posto e si paga su Playtomic).
 
 ## Torneo di Briscola
 https://anyplans.in/en/trento/torneo-di-briscola/

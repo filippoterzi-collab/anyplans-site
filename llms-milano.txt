@@ -1,37 +1,36 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Milano e provincia: feste di paese e sagre, corsi di cucina e di ceramica, volontariato, uscite sportive, running club. Raccoglie gli eventi già esistenti dai siti dei comuni e delle associazioni e quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Per ora solo Milano; Milano e Brescia in arrivo.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Milano e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Milano: il sito copre 29 città italiane (Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-15. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Milano](https://anyplans.in/milano/cosa-fare/): tutti gli eventi in programma (1190), per tipo e per paese; risponde a "cosa fare a Milano oggi / questo weekend"
-- [Running club a Milano](https://anyplans.in/milano/running-club/): 0 run club per giorno della settimana, con ritrovo, orario e domande frequenti
-- [Gruppi a Milano](https://anyplans.in/milano/gruppi/): 0 associazioni, club e comunità che pubblicano eventi
+- [Cosa fare a Milano](https://anyplans.in/milano/): tutti gli eventi in programma (1244), per tipo e per paese; risponde a "cosa fare a Milano oggi / questo weekend"
+- [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
 - [Condizioni d'uso](https://anyplans.in/terms-it.html)
 
 ## Eventi per tipo e per paese
 
-- [Padel a Milano](https://anyplans.in/milano/padel/): 282 in programma
-- [Cena / aperitivo a Milano](https://anyplans.in/milano/cene-e-aperitivi/): 251 in programma
-- [Visite guidate a Milano](https://anyplans.in/milano/visite-guidate/): 41 in programma
+- [Padel a Milano](https://anyplans.in/milano/padel/): 323 in programma
+- [Cena / aperitivo a Milano](https://anyplans.in/milano/cene-e-aperitivi/): 256 in programma
+- [Visite guidate a Milano](https://anyplans.in/milano/visite-guidate/): 40 in programma
 - [Pittura / arte a Milano](https://anyplans.in/milano/pittura/): 30 in programma
-- [Incontri culturali a Milano](https://anyplans.in/milano/incontri-culturali/): 185 in programma
+- [Incontri culturali a Milano](https://anyplans.in/milano/incontri-culturali/): 187 in programma
 - [Corsa a Milano](https://anyplans.in/milano/corsa/): 8 in programma
 - [Mostre a Milano](https://anyplans.in/milano/mostre/): 8 in programma
 - [Spettacoli e teatro a Milano](https://anyplans.in/milano/spettacoli/): 49 in programma
 - [Tennis a Milano](https://anyplans.in/milano/tennis/): 9 in programma
 - [Cinema a Milano](https://anyplans.in/milano/cinema/): 14 in programma
-- [Yoga / pilates a Milano](https://anyplans.in/milano/yoga/): 23 in programma
+- [Yoga / pilates a Milano](https://anyplans.in/milano/yoga/): 25 in programma
 - [Giochi da tavolo a Milano](https://anyplans.in/milano/giochi/): 31 in programma
 - [Volley a Milano](https://anyplans.in/milano/volley/): 5 in programma
-- [Concerti e musica dal vivo a Milano](https://anyplans.in/milano/concerti/): 123 in programma
+- [Concerti e musica dal vivo a Milano](https://anyplans.in/milano/concerti/): 124 in programma
 - [Feste, sagre ed eventi di paese a Milano](https://anyplans.in/milano/feste/): 34 in programma
-- [Escursionismo a Milano](https://anyplans.in/milano/escursioni/): 25 in programma
-- [Serate e discoteca a Milano](https://anyplans.in/milano/serate/): 27 in programma
+- [Escursionismo a Milano](https://anyplans.in/milano/escursioni/): 27 in programma
+- [Serate e discoteca a Milano](https://anyplans.in/milano/serate/): 29 in programma
 - [Karaoke a Milano](https://anyplans.in/milano/karaoke/): 7 in programma
 - [Cucina a Milano](https://anyplans.in/milano/cucina/): 3 in programma
 - [Bici da strada a Milano](https://anyplans.in/milano/bici/): 3 in programma
@@ -41,56 +40,48 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Ballo e danza a Milano](https://anyplans.in/milano/ballo/): 5 in programma
 - [Feste ed eventi a The LOFT 🌟 gourmet dinner&party](https://anyplans.in/milano/the-loft-gourmet-dinner-party/): 3 in programma
 
-## Running club per giorno
-
-
-
-## Gruppi
-
-
-
 ## Prossimi eventi
 
 - [GIOIA PADEL LEAGUE A](https://anyplans.in/milano/gioia-padel-league-a/): Lunedì 14 settembre alle 23:45, Gioia Padel, via risorgimento 14, 20016 Pero, 30 €
-- [Verona e Lago di Garda: Gita in giornata da Milano](https://anyplans.in/milano/verona-e-lago-di-garda-gita-in-giornata-da-milano/): Martedì 15 settembre alle 07:00, Milan Visitor Center, Largo Cairoli 18, Milano, 20121, Milan, IT, Milano, Gratis
-- [🔥🦁 BEST CORBETTA MORNING LEAGUE 🦁🔥](https://anyplans.in/milano/best-corbetta-morning-league/): Dal 15 settembre al 1 ottobre, 6 date, Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, 15 €
-- [Golden Match 🎾](https://anyplans.in/milano/golden-match/): Dal 15 settembre al 22 settembre, 2 date, Gesiolo - Alma Padel Milago Tennis, Via Casatico angolo Via dell'Oratorio, 27010 Siziano, 16 €
-- [ALLENAMENTO STRONG](https://anyplans.in/milano/allenamento-strong/): Martedì 15 settembre alle 11:00, MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano, 30 €
-- [Padel: manca 1 giocatore (competitiva)](https://anyplans.in/milano/padel-manca-1-giocatore-competitiva/): Martedì 15 settembre alle 11:00, Game Padel Center Villasanta, Via San Fiorano 54/B, 20852 Villasanta, 5 €
-- [LEZIONE](https://anyplans.in/milano/lezione/): Dal 15 settembre al 16 ottobre, 47 date, HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, 45 €
-- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva/): Dal 15 settembre al 16 settembre, 2 date, Murat4All, Via Gioacchino Murat 29, 20159 Milano, 11,66 €
-- [Lezione Individuale Con David 🇪🇸](https://anyplans.in/milano/lezione-individuale-con-david/): Dal 15 settembre al 17 settembre, 9 date, 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, 32 €
-- [Lezione Individuale con Michael Cosenza🎓](https://anyplans.in/milano/lezione-individuale-con-michael-cosenza/): Dal 15 settembre al 19 settembre, 8 date, 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, 32 €
-- [*Partita Guidata MBPOWER con M.BARNABA*](https://anyplans.in/milano/partita-guidata-mbpower-con-m-barnaba/): Dal 15 settembre al 28 settembre, 10 date, Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, 30 €
-- [The secrets of pasta and tiramisu in my family house](https://anyplans.in/milano/the-secrets-of-pasta-and-tiramisu-in-my-family-house/): Martedì 15 settembre alle 12:00, V. Giuseppe Dezza, 47, Milano, 75 €
-- [Padel: manca 1 giocatore (competitiva)](https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-15/): Martedì 15 settembre alle 12:30, Padel Cesano Maderno, Via po' 55, 20811 Cesano Maderno, 10 €
-- [AGONISTICA MARTEDI](https://anyplans.in/milano/agonistica-martedi/): Martedì 15 settembre alle 12:30, Easy Village, Via per Caronno, 6, 21040 Origgio VA, Italia, 21040 Origgio, 25 €
-- [🥇TORNEO MEDIUM LEVEL🥇](https://anyplans.in/milano/torneo-medium-level/): Dal 15 settembre al 29 settembre, 3 date, Mariano Sports Arena, VIA LAMBRO 15 , 22066 Mariano Comense, 15 €
-- [Silvia in Blues (acoustic duo)](https://anyplans.in/milano/silvia-in-blues-acoustic-duo/): Martedì 15 settembre alle 12:30, Hard Rock Cafe Milan, Milano, Gratis
-- [NRG Rodeo Lunch](https://anyplans.in/milano/nrg-rodeo-lunch/): Martedì 15 settembre alle 12:30, NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo, 15 €
-- [Lezione singola con coach SR](https://anyplans.in/milano/lezione-singola-con-coach-sr/): Dal 15 settembre al 16 ottobre, 13 date, Sport Promotion Comasina - Padel & Beach, Via Salemi 19, 20161 Milano, Gratis
-- [Lezione singola](https://anyplans.in/milano/lezione-singola/): Martedì 15 settembre alle 13:00, Milago Padel, Via Indipendenza, 3, 20090 Buccinasco MI, Italia, 20090 Buccinasco, 50 €
-- [*Lezione con M.BARNABA*](https://anyplans.in/milano/lezione-con-m-barnaba/): Dal 15 settembre al 28 settembre, 22 date, Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, 35 €
-- [Lezione con Claudio R.](https://anyplans.in/milano/lezione-con-claudio-r/): Dal 15 settembre al 24 settembre, 50 date, Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, 50 €
-- [🔥🎾 MOVING SMASH & LUNCH 🎾🔥](https://anyplans.in/milano/moving-smash-lunch/): Dal 15 settembre al 29 settembre, 3 date, Moving Padel Monza, Via della Birona, 56, 20900 Monza, 15 €
-- [LIVELLAMENTO PLAYTOMIC](https://anyplans.in/milano/livellamento-playtomic/): Dal 15 settembre al 17 settembre, 2 date, Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, 18 €
-- [🎾🎾🚹🚺🍀GIRO  MIX ENTRY MARTEDI DI COACH AURE](https://anyplans.in/milano/giro-mix-entry-martedi-di-coach-aure/): Dal 15 settembre al 29 settembre, 3 date, Clover Sport Village, Via Comasina 115, 20161 Milano, 10 €
-- [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole/): Martedì 15 settembre alle 13:30, Padel+, Via Enrico Toti 67, 20039 Canegrate, 11 €
-- [Promo lezioni singole](https://anyplans.in/milano/promo-lezioni-singole/): Dal 15 settembre al 16 novembre, 49 date, NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo, 28 €
-- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-15/): Martedì 15 settembre alle 15:00, PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, 12 €
-- [Padel: manca 1 giocatore (competitiva)](https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-15-2026-09-15/): Martedì 15 settembre alle 15:00, 3,90 € Centro Sportivo Burago di Molgora, Largo Saint Symphorien d'Ozon, 20875 Burago di Molgora, 3,90 €
+- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva/): Dal 15 settembre al 16 settembre, 2 date, PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, 12 €
+- [Padel: manca 1 giocatore (competitiva)](https://anyplans.in/milano/padel-manca-1-giocatore-competitiva/): Martedì 15 settembre alle 15:00, 3,90 € Centro Sportivo Burago di Molgora, Largo Saint Symphorien d'Ozon, 20875 Burago di Molgora, 3,90 €
+- [Promo lezioni singole](https://anyplans.in/milano/promo-lezioni-singole/): Dal 15 settembre al 16 novembre, 48 date, NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo, 28 €
 - [Rodeo Gioca con David🇪🇸🎓](https://anyplans.in/milano/rodeo-gioca-con-david/): Martedì 15 settembre alle 15:30, 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, 16 €
-- [Every Day Open Day Livello 0-1,5](https://anyplans.in/milano/every-day-open-day-livello-0-1-5/): Dal 15 settembre al 24 settembre, 8 date, Moving Padel Monza, Via della Birona, 56, 20900 Monza, Gratis
 - [Padel Accademy](https://anyplans.in/milano/padel-accademy/): Dal 15 settembre al 2 ottobre, 28 date, Palapadel Sacarla Por Tres, Via Sondrio 9, 20020 Lainate, 35 €
 - [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole/): Martedì 15 settembre alle 15:30, PADELLARO CLUBHOUSE, VIA VOLONTARI DEL SANGUE 30, 20851 Lissone, 13,66 €
+- [Lezione con Claudio R.](https://anyplans.in/milano/lezione-con-claudio-r/): Dal 15 settembre al 24 settembre, 47 date, Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, 50 €
 - [Lezione doppia con Michael Cosenza🎓](https://anyplans.in/milano/lezione-doppia-con-michael-cosenza/): Dal 15 settembre al 18 settembre, 6 date, 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, 21 €
 - [​🔥​AGONISTICA ENTRY LEVEL ​🔥​](https://anyplans.in/milano/agonistica-entry-level/): Dal 15 settembre al 27 ottobre, 7 date, PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, 35 €
 - [Every Day Open Day Livello 1,5-3](https://anyplans.in/milano/every-day-open-day-livello-1-5-3/): Dal 15 settembre al 24 settembre, 8 date, Moving Padel Monza, Via della Birona, 56, 20900 Monza, Gratis
 - [Every Day Open Day Over 60](https://anyplans.in/milano/every-day-open-day-over-60/): Dal 15 settembre al 24 settembre, 8 date, Moving Padel Monza, Via della Birona, 56, 20900 Monza, Gratis
 - [Partita guidata con 🇦🇷 Valentina Mago](https://anyplans.in/milano/partita-guidata-con-valentina-mago/): Dal 15 settembre al 30 settembre, 14 date, VAMOS PADEL PERO, Via Papa Giovanni XXIII, 10, 20016 Pero MI, Italia Pero (MI), 20016 Pero, 25 €
-- [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/milano/padel-manca-1-giocatore-amichevole/): Dal 15 settembre al 20 settembre, 3 date, Murat4All, Via Gioacchino Murat 29, 20159 Milano, 15 €
+- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-15/): Dal 15 settembre al 20 settembre, 4 date, Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, 13,66 €
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva/): Martedì 15 settembre alle 17:00, Club Ambrosiano – Padel, Via Feltre 33, 20134 Milano, 8,75 €
+- [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/milano/padel-manca-1-giocatore-amichevole/): Dal 15 settembre al 20 settembre, 2 date, Murat4All, Via Gioacchino Murat 29, 20159 Milano, 15 €
+- [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-15/): Martedì 15 settembre alle 17:30, ELLE PADEL CLUB, Via Monviso 25, 22066 Mariano Comense, 16 €
 - [Every Day Open Day Donne](https://anyplans.in/milano/every-day-open-day-donne/): Dal 15 settembre al 23 settembre, 7 date, Moving Padel Monza, Via della Birona, 56, 20900 Monza, Gratis
 - [Cena da Tomi sushi: 2 posti liberi](https://anyplans.in/milano/cena-da-tomi-sushi-2-posti-liberi/): Martedì 15 settembre alle 17:30, Tomi sushi, Verano Brianza, Gratis
+- [Tablo Picasso da La Bulle Enoteca con cucina: 2 posti liberi](https://anyplans.in/milano/tablo-picasso-da-la-bulle-enoteca-con-cucina-2-posti-liberi/): Martedì 15 settembre alle 18:00, La Bulle Enoteca con cucina, Legnano, Gratis
+- [*Livellamento PLAYTOMIC con M.BARNABA*](https://anyplans.in/milano/livellamento-playtomic-con-m-barnaba/): Dal 15 settembre al 27 settembre, 18 date, Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, 25 €
+- [Shopping and eat](https://anyplans.in/milano/shopping-and-eat/): Martedì 15 settembre alle 18:00, Milano (posto nella chat), Gratis
+- [Cena da Labocs: 5 posti liberi](https://anyplans.in/milano/cena-da-labocs-5-posti-liberi/): Martedì 15 settembre alle 18:00, Labocs, Pessano Con Bornago, Gratis
+- [Grab coffee/breakfast and walk aro...](https://anyplans.in/milano/grab-coffee-breakfast-and-walk-aro/): Martedì 15 settembre alle 18:00, Milano (posto nella chat), Gratis
+- [Cena da Ficus: 9 posti liberi](https://anyplans.in/milano/cena-da-ficus-9-posti-liberi/): Martedì 15 settembre alle 18:00, Ficus, Giussano, Gratis
+- [Cena da Brace Mia - Ristorante Pizzeria Griglieria Pugliese: 4 posti liberi](https://anyplans.in/milano/cena-da-brace-mia-ristorante-pizzeria-griglieria-pugliese-4-/): Martedì 15 settembre alle 18:00, Brace Mia - Ristorante Pizzeria Griglieria Pugliese, Badile, Gratis
+- [Open day MPC](https://anyplans.in/milano/open-day-mpc/): Martedì 15 settembre alle 18:00, Boschetto Village, Via Roggia Boschetto, 1, 20081 Abbiategrasso, Gratis
+- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-2/): Martedì 15 settembre alle 18:30, Centro Sportivo Take Care, Via Papa Giovanni XXXIII n° 23, 20093 Cologno Monzese, 15 €
+- [Padel: manca 1 giocatore (competitiva)](https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-15/): Martedì 15 settembre alle 18:30, PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, 19,50 €
+- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-15/): Martedì 15 settembre alle 18:30, MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano, 25 €
+- [OPEN DAY Flexx Club Milano: Crea Relazioni D'affari e Nuove Opportunità](https://anyplans.in/milano/open-day-flexx-club-milano-crea-relazioni-d-affari-e-nuove-o/): Martedì 15 settembre alle 18:30, Flexx Club, Milano, Gratis
+- [Opening | 2030: Collective Resonance](https://anyplans.in/milano/opening-2030-collective-resonance/): Martedì 15 settembre alle 18:30, MEET Digital Culture Center, Milano, Gratis
+- [Lezione con 🇦🇷 Valentina Mago](https://anyplans.in/milano/lezione-con-valentina-mago/): Dal 15 settembre al 30 settembre, 30 date, VAMOS PADEL PERO, Via Papa Giovanni XXIII, 10, 20016 Pero MI, Italia Pero (MI), 20016 Pero, 25 €
+- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-3/): Martedì 15 settembre alle 19:00, Padel Concorezzo, Via Libertà, 1, Concorezzo MB, Italia, 20863 Concorezzo, 13 €
+- [Knightcap da Altrimenti Mixology Art](https://anyplans.in/milano/knightcap-da-altrimenti-mixology-art/): Martedì 15 settembre alle 19:00, Altrimenti Mixology Art, Milano, Gratis
+- [Milano | Fertility & Pizza | MeggyCare x Dott.ssa Elisabetta Colonese](https://anyplans.in/milano/milano-fertility-pizza-meggycare-x-dott-ssa-elisabetta-colon/): Martedì 15 settembre alle 19:00, Centro Medico Turati, Milano, 20 €
+- [Aperitivi di Corso - Economia](https://anyplans.in/milano/aperitivi-di-corso-economia/): Martedì 15 settembre alle 19:00, Serendepico, Milano, 20 €
+- [Mad Money Club: Investing Intermediate: Growing your investment confidence (the event will be held in Italian)](https://anyplans.in/milano/mad-money-club-investing-intermediate-growing-your-investmen/): Martedì 15 settembre alle 19:00, Milano, 60 €
+- [Cena da Bowling Space Cerro Maggiore: 4 posti liberi](https://anyplans.in/milano/cena-da-bowling-space-cerro-maggiore-4-posti-liberi/): Martedì 15 settembre alle 19:00, Bowling Space Cerro Maggiore, Gratis
+- [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-15-2/): Martedì 15 settembre alle 19:30, PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, 16,25 €
 
 ## Optional
 
@@ -100,9 +91,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## English pages (same content, for visitors)
 
-- [Things to do in Milano](https://anyplans.in/en/milano/things-to-do/): all upcoming events, by kind and by town; answers "what to do in Bergamo today / this weekend"
-- [Running clubs in Milano](https://anyplans.in/en/milano/running-clubs/): 0 run clubs by weekday, open to visitors too
-- [Groups in Milano](https://anyplans.in/en/milano/groups/)
+- [Things to do in Milano](https://anyplans.in/en/milano/): all upcoming events, by kind and by town; answers "what to do in Milano today / this weekend"
 - [Padel in Milano](https://anyplans.in/en/milano/padel/)
 - [Dinners & aperitivo in Milano](https://anyplans.in/en/milano/dinners/)
 - [Guided tours in Milano](https://anyplans.in/en/milano/guided-tours/)
@@ -132,65 +121,65 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 # Tutte le pagine di anyplans a Milano (italiano, poi inglese)
 
-## Cosa fare a Milano e provincia: 1190 eventi
+## Cosa fare a Milano e provincia: 1244 eventi
 https://anyplans.in/milano/
 
 Padel, cena / aperitivo, incontri culturali, concerti e musica dal vivo e spettacoli e teatro: quello che succede a Milano e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
 
-## Cosa fare a Milano oggi: 76 eventi
+## Cosa fare a Milano oggi: 58 eventi
 https://anyplans.in/milano/cosa-fare-oggi/
 
-76 eventi a Milano e provincia oggi, 15 settembre 2026: Milano, Verano Brianza, Legnano e Pessano Con Bornago e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+58 eventi a Milano e provincia oggi, 15 settembre 2026: Milano, Verano Brianza, Legnano e Pessano Con Bornago e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Milano domani: 97 eventi
+## Cosa fare a Milano domani: 119 eventi
 https://anyplans.in/milano/cosa-fare-domani/
 
-97 eventi a Milano e provincia domani, 16 settembre 2026: Milano, Monza, Porta Romana e Burago di Molgora e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+119 eventi a Milano e provincia domani, 16 settembre 2026: Milano, Monza, Porta Romana e Grancia e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Milano nel weekend: 230 eventi
+## Cosa fare a Milano nel weekend: 248 eventi
 https://anyplans.in/milano/cosa-fare-nel-weekend/
 
-230 eventi a Milano e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Milano, Monza, Sesto San Giovanni e Cerro Maggiore e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+248 eventi a Milano e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Milano, Monza, Sesto San Giovanni e Cerro Maggiore e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Eventi a Milano a settembre 2026: 824
+## Eventi a Milano a settembre 2026: 875
 https://anyplans.in/milano/eventi-settembre-2026/
 
-824 eventi a Milano e provincia a settembre 2026: padel, visite guidate, incontri culturali, cena / aperitivo e mostre. Giorno per giorno, con orari, luogo e prezzo, a Milano, Monza, Porta Romana e Sesto San Giovanni e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+875 eventi a Milano e provincia a settembre 2026: padel, cena / aperitivo, visite guidate, incontri culturali e mostre. Giorno per giorno, con orari, luogo e prezzo, a Milano, Monza, Porta Romana e Sesto San Giovanni e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Milano a ottobre 2026: 371
+## Eventi a Milano a ottobre 2026: 375
 https://anyplans.in/milano/eventi-ottobre-2026/
 
-371 eventi a Milano e provincia a ottobre 2026: padel, cena / aperitivo, incontri culturali, concerti e musica dal vivo e pittura / arte. Giorno per giorno, con orari, luogo e prezzo, a Milano, Monza, Navigli e Porta Romana e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+375 eventi a Milano e provincia a ottobre 2026: padel, visite guidate, cena / aperitivo, incontri culturali e concerti e musica dal vivo. Giorno per giorno, con orari, luogo e prezzo, a Milano, Monza, Navigli e Porta Romana e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 ## Eventi a Milano a novembre 2026: 68
 https://anyplans.in/milano/eventi-novembre-2026/
 
 68 eventi a Milano e provincia a novembre 2026: padel, concerti e musica dal vivo, visite guidate, spettacoli e teatro e incontri culturali. Giorno per giorno, con orari, luogo e prezzo, a Milano, Monza, Selvanesco e Zona V giornate e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Padel a Milano: 282 eventi
+## Padel a Milano: 323 eventi
 https://anyplans.in/milano/padel/
 
-A Milano e provincia ci sono 282 partite di padel nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 323 partite di padel nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Cena / aperitivo a Milano: 251 eventi
+## Cena / aperitivo a Milano: 256 eventi
 https://anyplans.in/milano/cene-e-aperitivi/
 
-A Milano e provincia ci sono 251 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 256 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Visite guidate a Milano: 41 eventi
+## Visite guidate a Milano: 40 eventi
 https://anyplans.in/milano/visite-guidate/
 
-A Milano e provincia ci sono 41 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 40 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Pittura / arte a Milano: 30 eventi
 https://anyplans.in/milano/pittura/
 
 A Milano e provincia ci sono 30 laboratori nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Incontri culturali a Milano: 185 eventi
+## Incontri culturali a Milano: 187 eventi
 https://anyplans.in/milano/incontri-culturali/
 
-A Milano e provincia ci sono 185 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 187 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Corsa a Milano: 8 eventi
 https://anyplans.in/milano/corsa/
@@ -217,10 +206,10 @@ https://anyplans.in/milano/cinema/
 
 A Milano e provincia ci sono 14 proiezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Yoga / pilates a Milano: 23 eventi
+## Yoga / pilates a Milano: 25 eventi
 https://anyplans.in/milano/yoga/
 
-A Milano e provincia ci sono 23 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 25 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Giochi da tavolo a Milano: 31 eventi
 https://anyplans.in/milano/giochi/
@@ -232,25 +221,25 @@ https://anyplans.in/milano/volley/
 
 A Milano e provincia ci sono 5 eventi di volley nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Concerti e musica dal vivo a Milano: 123 eventi
+## Concerti e musica dal vivo a Milano: 124 eventi
 https://anyplans.in/milano/concerti/
 
-A Milano e provincia ci sono 123 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 124 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Feste e sagre a Milano: 34 eventi
 https://anyplans.in/milano/feste/
 
 A Milano e provincia ci sono 34 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Escursionismo a Milano: 25 eventi
+## Escursionismo a Milano: 27 eventi
 https://anyplans.in/milano/escursioni/
 
-A Milano e provincia ci sono 25 escursioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 27 escursioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Serate e discoteca a Milano: 27 eventi
+## Serate e discoteca a Milano: 29 eventi
 https://anyplans.in/milano/serate/
 
-A Milano e provincia ci sono 27 serate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 29 serate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Karaoke a Milano: 7 eventi
 https://anyplans.in/milano/karaoke/
@@ -292,97 +281,187 @@ https://anyplans.in/milano/the-loft-gourmet-dinner-party/
 
 A The LOFT 🌟 gourmet dinner&party ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di The LOFT 🌟 gourmet dinner&party con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori… – Padel Cesano Maderno
 https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole/
-
-Padel a Padel+, Via Enrico Toti 67, 20039 Canegrate, martedì 15 settembre alle 13:30. 11 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 2 giocatori (amichevole)
-https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-15/
 
 Padel a Padel Cesano Maderno, Via po' 55, 20811 Cesano Maderno, martedì 15 settembre alle 21:30. 13 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori… – Centro Scarioni Milano
 https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-16/
+
+Padel a Centro Scarioni Milano, Via Tucidide 10, 20134 Milano, mercoledì 16 settembre alle 17:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (amichevole) – Grancia Padel Club
+https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-16-2/
+
+Padel a Grancia Padel Club, Grancia, mercoledì 16 settembre alle 17:30. Gratis (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Centro Sportivo Tuberose
+https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-16-3/
+
+Padel a Centro Sportivo Tuberose, Via Giò Ponti 1, 20147 Milano, mercoledì 16 settembre alle 18:00 (2 date, fino al 18 settembre). 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Parco dei Gasometri - Bovisa
+https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-16-4/
+
+Padel a Parco dei Gasometri - Bovisa, via Giampietrino, 24, 20156 Milano, mercoledì 16 settembre alle 18:30. 12,50 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (amichevole) – ELLE PADEL CLUB
+https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-16-5/
+
+Padel a ELLE PADEL CLUB, Via Monviso 25, 22066 Mariano Comense, mercoledì 16 settembre alle 20:00 (3 date, fino al 21 settembre). 16 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Mariano Sports Arena
+https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-16-6/
+
+Padel a Mariano Sports Arena, VIA LAMBRO 15 , 22066 Mariano Comense, mercoledì 16 settembre alle 21:00 (2 date, fino al 18 settembre). 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Clover Sport Village
+https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-16-7/
 
 Padel a Clover Sport Village, Via Comasina 115, 20161 Milano, mercoledì 16 settembre alle 21:00. 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori… – Country Sport Village
 https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-17/
 
 Padel a Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, giovedì 17 settembre alle 17:30 (2 date, fino al 20 settembre). Gratis (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
-https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-17-2026-09-17/
+## Padel: mancano 2 giocatori… – PADEL ZENTER SEGRATE MILANO
+https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-17-2/
 
-Padel a PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, giovedì 17 settembre alle 19:30. 20,75 € (Si chiede il posto e si paga su Playtomic).
+Padel a PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, giovedì 17 settembre alle 19:30 (2 date, fino al 17 settembre). 20,75 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori… – Centro Sportivo Take Care
 https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-18/
 
 Padel a Centro Sportivo Take Care, Via Papa Giovanni XXXIII n° 23, 20093 Cologno Monzese, venerdì 18 settembre alle 17:00. 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
-https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-18-2026-09-18/
+## Padel: mancano 2 giocatori… – HANGAR PADEL SEGRATE
+https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-18-2/
 
 Padel a HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, venerdì 18 settembre alle 18:00. 13 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori (amichevole) – PadeLand Milano
+https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-18-3/
+
+Padel a PadeLand Milano, Via Vincenzo Toffetti, 17, 20139 Milano, venerdì 18 settembre alle 18:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (amichevole) – Murat4All
+https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-18-4/
+
+Padel a Murat4All, Via Gioacchino Murat 29, 20159 Milano, venerdì 18 settembre alle 19:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Racquet Club Milano
+https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-19/
+
+Padel a Racquet Club Milano, Viale Enrico Forlanini Centro Sportivo dell'AERONAUTICA MILITARE, 20090 Novegro-Tregarezzo, sabato 19 settembre alle 10:00. 12 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (amichevole) – Padel+
+https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-15/
+
+Padel a Padel+, Via Enrico Toti 67, 20039 Canegrate: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
+
+## Padel: mancano 2 giocatori (amichevole) – Levante Padel Club
 https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-11/
 
 Padel a Levante Padel Club, Vimercate: si è già svolto, l'ultima data è stata venerdì 11 settembre 2026.
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore (amichevole) – Murat4All
 https://anyplans.in/milano/padel-manca-1-giocatore-amichevole/
 
-Padel a Murat4All, Via Gioacchino Murat 29, 20159 Milano, martedì 15 settembre alle 17:30 (3 date, fino al 20 settembre). 15 € (Si chiede il posto e si paga su Playtomic).
+Padel a Murat4All, Via Gioacchino Murat 29, 20159 Milano, martedì 15 settembre alle 17:30 (2 date, fino al 20 settembre). 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore (amichevole) – ELLE PADEL CLUB
 https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-15/
 
-Padel a PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, martedì 15 settembre alle 19:30 (2 date, fino al 17 settembre). 16,25 € (Si chiede il posto e si paga su Playtomic).
+Padel a ELLE PADEL CLUB, Via Monviso 25, 22066 Mariano Comense, martedì 15 settembre alle 17:30. 16 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
-https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-15-2026-09-15/
+## Padel: manca 1 giocatore… – PADEL ZENTER SEGRATE MILANO
+https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-15-2/
+
+Padel a PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, martedì 15 settembre alle 19:30. 16,25 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – SPH - Monza Brugherio
+https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-15-3/
 
 Padel a SPH - Monza Brugherio, Via Ferdinando Magellano, 31, 20861 Brugherio, martedì 15 settembre alle 20:30. 16 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
-https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-15-2026-09-15-2/
+## Padel: manca 1 giocatore… – Padel San Siro Gescal Boys
+https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-15-4/
+
+Padel a Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, martedì 15 settembre alle 21:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (amichevole) – PADEL4ALL VILLASANTA
+https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-15-5/
 
 Padel a PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, martedì 15 settembre alle 21:30 (3 date, fino al 19 settembre). 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore (amichevole) – 3
 https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-16/
 
-Padel a 3,90 € Centro Sportivo Burago di Molgora, Burago di Molgora, mercoledì 16 settembre alle 11:30 (2 date, fino al 17 settembre). 3,90 € (Si chiede il posto e si paga su Playtomic).
+Padel a 3,90 € Centro Sportivo Burago di Molgora, Largo Saint Symphorien d'Ozon, 20875 Burago di Molgora, mercoledì 16 settembre alle 11:30 (2 date, fino al 17 settembre). 3,90 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
-https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-16-2026-09-16/
+## Padel: manca 1 giocatore… – Country Sport Village
+https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-16-2/
 
 Padel a Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, mercoledì 16 settembre alle 17:30. 13,50 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
-https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-16-2026-09-16-2/
+## Padel: manca 1 giocatore (amichevole) – Getfit via Pinerolo
+https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-16-3/
+
+Padel a Getfit via Pinerolo, Via Pinerolo 76, 20151 Milano, mercoledì 16 settembre alle 18:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Centro Sportivo Cambini Fossati
+https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-16-4/
 
 Padel a Centro Sportivo Cambini Fossati, via leonardo Cambini, 4, 20131 Milano, mercoledì 16 settembre alle 18:30. 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
-https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-16-2026-09-16-2-2/
+## Padel: manca 1 giocatore (amichevole) – PadeLand Milano
+https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-16-5/
+
+Padel a PadeLand Milano, Via Vincenzo Toffetti, 17, 20139 Milano, mercoledì 16 settembre alle 19:00 (2 date, fino al 19 settembre). 12 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Padel Arena Quintosole
+https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-16-6/
+
+Padel a Padel Arena Quintosole, Via Quintosole, 42/23, 20141 Milano, mercoledì 16 settembre alle 19:30. 13 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Corbetta Padel e Fitness
+https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-16-7/
+
+Padel a Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, mercoledì 16 settembre alle 19:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (amichevole) – Clover Sport Village
+https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-16-8/
 
 Padel a Clover Sport Village, Via Comasina 115, 20161 Milano, mercoledì 16 settembre alle 21:30. 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore (amichevole) – Moving Padel Monza
 https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-17/
 
 Padel a Moving Padel Monza, Via della Birona, 56, 20900 Monza, giovedì 17 settembre alle 14:00. 9,50 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
-https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-15-2026-09-15-2-2/
+## Padel: manca 1 giocatore (amichevole) – GOLARSA ACADEMY
+https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-17-2/
+
+Padel a GOLARSA ACADEMY, Via dei Ciclamini 18, 20147 Milano, giovedì 17 settembre alle 20:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (amichevole) – Padel 8
+https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-19/
+
+Padel a Padel 8, Via Diomede angolo piazzale Lotto, 20148 Milano, sabato 19 settembre alle 10:00. 12,50 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Centro Sportivo Tuberose
+https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-20/
+
+Padel a Centro Sportivo Tuberose, Via Giò Ponti 1, 20147 Milano, domenica 20 settembre alle 09:30. 13 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (amichevole) – Mamapadel Melzo
+https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-15-6/
 
 Padel a Mamapadel Melzo, Melzo: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore… – Game Padel Center Villasanta
 https://anyplans.in/milano/padel-manca-1-giocatore-amichevole-2026-09-14/
 
 Padel a Game Padel Center Villasanta, Villasanta: si è già svolto, l'ultima data è stata lunedì 14 settembre 2026.
@@ -450,7 +529,7 @@ Cena / aperitivo a Milano navigli: si è già svolto, l'ultima data è stata lun
 ## LEZIONE
 https://anyplans.in/milano/lezione/
 
-Padel a HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, martedì 15 settembre alle 11:30 (47 date, fino al 16 ottobre). 45 € (Iscrizione e pagamento su Playtomic).
+Padel a HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, mercoledì 16 settembre alle 10:30 (46 date, fino al 16 ottobre). 45 € (Iscrizione e pagamento su Playtomic).
 
 ## Let's Bowling!
 https://anyplans.in/milano/let-s-bowling/
@@ -465,7 +544,7 @@ Padel a Gioia Padel, via risorgimento 14, 20016 Pero, lunedì 14 settembre alle 
 ## Verona e Lago di Garda: Gita in giornata da…
 https://anyplans.in/milano/verona-e-lago-di-garda-gita-in-giornata-da-milano/
 
-Visite guidate a Milan Visitor Center, Largo Cairoli 18, Milano, 20121, Milan, IT, Milano, martedì 15 settembre alle 07:00. Gratis (Ingresso: vedi la pagina AllEvents).
+Visite guidate a Milan Visitor Center, Largo Cairoli 18, Milano, 20121, Milan, IT, Milano: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
 ## Colazione da Bar Cloe': 5 posti liberi
 https://anyplans.in/milano/colazione-da-bar-cloe-5-posti-liberi/
@@ -477,77 +556,112 @@ https://anyplans.in/milano/domina-il-campo/
 
 Padel a MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori… – PADEL ZENTER SEGRATE MILANO
 https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva/
 
-Padel a Murat4All, Via Gioacchino Murat 29, 20159 Milano, martedì 15 settembre alle 11:30 (2 date, fino al 16 settembre). 11,66 € (Si chiede il posto e si paga su Playtomic).
+Padel a PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, martedì 15 settembre alle 15:00 (2 date, fino al 16 settembre). 12 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori… – Padel Club Ripamonti…
 https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-15/
 
-Padel a PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, martedì 15 settembre alle 15:00. 12 € (Si chiede il posto e si paga su Playtomic).
+Padel a Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, martedì 15 settembre alle 17:00 (4 date, fino al 20 settembre). 13,66 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-2026-09-15/
+## Padel: mancano 2 giocatori… – Centro Sportivo Take Care
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-2/
 
 Padel a Centro Sportivo Take Care, Via Papa Giovanni XXXIII n° 23, 20093 Cologno Monzese, martedì 15 settembre alle 18:30. 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-2026-09-15-2/
+## Padel: mancano 2 giocatori (competitiva) – Padel Concorezzo
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-3/
 
 Padel a Padel Concorezzo, Via Libertà, 1, Concorezzo MB, Italia, 20863 Concorezzo, martedì 15 settembre alle 19:00. 13 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-2026-09-15-2-2/
+## Padel: mancano 2 giocatori… – Padel Extreme Tennis
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-4/
 
 Padel a Padel Extreme Tennis, Via Como, 15/5, 20825 Barlassina, martedì 15 settembre alle 20:00. 13 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-2026-09-15-2-2-2/
+## Padel: mancano 2 giocatori (competitiva) – Quanta Club
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-5/
 
 Padel a Quanta Club, Via Assietta 19, 20161 Milano, martedì 15 settembre alle 20:30. 13,50 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori (competitiva) – Murat4All
 https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-16/
 
-Padel a Game Padel Center Villasanta, Via San Fiorano 54/B, 20852 Villasanta, mercoledì 16 settembre alle 15:00. 5 € (Si chiede il posto e si paga su Playtomic).
+Padel a Murat4All, Via Gioacchino Murat 29, 20159 Milano, mercoledì 16 settembre alle 09:00. 10 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-16-2026-09-16/
+## Padel: mancano 2 giocatori (competitiva) – 3
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-16-2/
 
-Padel a ELLE PADEL CLUB, Via Monviso 25, 22066 Mariano Comense, mercoledì 16 settembre alle 17:30. 16 € (Si chiede il posto e si paga su Playtomic).
+Padel a 3,90 € Centro Sportivo Burago di Molgora, Largo Saint Symphorien d'Ozon, 20875 Burago di Molgora, mercoledì 16 settembre alle 16:30. 3,90 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori (competitiva) – ELLE PADEL CLUB
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-16-3/
+
+Padel a ELLE PADEL CLUB, Via Monviso 25, 22066 Mariano Comense, mercoledì 16 settembre alle 17:30 (3 date, fino al 20 settembre). 16 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (competitiva) – PADEL FeSt
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-16-4/
+
+Padel a PADEL FeSt, Via Enzo Ferrari 24, 20010 Arluno, mercoledì 16 settembre alle 22:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Mariano Sports Arena
 https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-17/
+
+Padel a Mariano Sports Arena, VIA LAMBRO 15 , 22066 Mariano Comense, giovedì 17 settembre alle 17:30. 14 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Moving Padel Monza
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-17-2/
 
 Padel a Moving Padel Monza, Via della Birona, 56, 20900 Monza, giovedì 17 settembre alle 18:00. 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-17-2026-09-17/
+## Padel: mancano 2 giocatori (competitiva) – Milago Padel
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-17-3/
+
+Padel a Milago Padel, Via Indipendenza, 3, 20090 Buccinasco MI, Italia, 20090 Buccinasco, giovedì 17 settembre alle 19:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – HANGAR PADEL SEGRATE
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-17-4/
 
 Padel a HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, giovedì 17 settembre alle 19:30. 13 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-17-2026-09-17-2/
+## Padel: mancano 2 giocatori… – Centro Sportivo Bonacossa
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-17-5/
+
+Padel a Centro Sportivo Bonacossa, Via Mecenate 74 , 20138 Milano, giovedì 17 settembre alle 20:00. 12,50 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Centro Sportivo Falcone E…
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-17-6/
 
 Padel a Centro Sportivo Falcone E Borsellino - Cormano, Via Europa 7, 20032 Cormano, giovedì 17 settembre alle 20:30. 14,50 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori… – PADEL4ALL VILLASANTA
 https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-18/
 
 Padel a PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, venerdì 18 settembre alle 15:30. 5 € (Si chiede il posto e si paga su Playtomic).
 
-## Partita guidata
+## Padel: mancano 2 giocatori (competitiva) – Padel Lorenteggio
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-21/
+
+Padel a Padel Lorenteggio, Via Francesco Gonin 16 -  Tel. 02.48300873 - Mob. 345 4689789, 20147 Milano, lunedì 21 settembre alle 19:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Centro Sportivo Palauno
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-21-2/
+
+Padel a Centro Sportivo Palauno, Largo Antonio Balestra, 5, 20146 Milano, lunedì 21 settembre alle 20:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Partita guidata – Palapadel Sacarla Por Tres
 https://anyplans.in/milano/partita-guidata/
 
 Padel a Palapadel Sacarla Por Tres, Via Sondrio 9, 20020 Lainate, mercoledì 16 settembre alle 17:30. 23 € (Iscrizione e pagamento su Playtomic).
 
-## PARTITA GUIDATA
+## PARTITA GUIDATA – MENEGHINO - LOCATE TRIULZI
 https://anyplans.in/milano/partita-guidata-2026-09-16/
 
 Padel a MENEGHINO - LOCATE TRIULZI, via carso 4, 20085 Locate di Triulzi, mercoledì 16 settembre alle 20:00. 25 € (Iscrizione e pagamento su Playtomic).
 
-## Partita Guidata
+## Partita Guidata – Moving Padel Monza
 https://anyplans.in/milano/partita-guidata-2026-09-22/
 
 Padel a Moving Padel Monza, Via della Birona, 56, 20900 Monza, martedì 22 settembre alle 09:30. 22 € (Iscrizione e pagamento su Playtomic).
@@ -560,12 +674,12 @@ Padel a Area Padel Club, via della Resistenza 31/1, 20068 Peschiera Borromeo, me
 ## Lezione Individuale con Michael Cosenza🎓
 https://anyplans.in/milano/lezione-individuale-con-michael-cosenza/
 
-Padel a 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, martedì 15 settembre alle 12:00 (8 date, fino al 19 settembre). 32 € (Iscrizione e pagamento su Playtomic).
+Padel a 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, giovedì 17 settembre alle 10:00 (7 date, fino al 19 settembre). 32 € (Iscrizione e pagamento su Playtomic).
 
 ## 🔥🦁 BEST CORBETTA MORNING LEAGUE 🦁🔥
 https://anyplans.in/milano/best-corbetta-morning-league/
 
-Padel a Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, martedì 15 settembre alle 10:00 (6 date, fino al 1 ottobre). 15 € (Iscrizione e pagamento su Playtomic).
+Padel a Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, giovedì 17 settembre alle 10:00 (5 date, fino al 1 ottobre). 15 € (Iscrizione e pagamento su Playtomic).
 
 ## Lezione doppia con David 🇪🇸
 https://anyplans.in/milano/lezione-doppia-con-david/
@@ -575,119 +689,154 @@ Padel a 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, mer
 ## Golden Match 🎾
 https://anyplans.in/milano/golden-match/
 
-Padel a Gesiolo - Alma Padel Milago Tennis, Via Casatico angolo Via dell'Oratorio, 27010 Siziano, martedì 15 settembre alle 10:30 (2 date, fino al 22 settembre). 16 € (Iscrizione e pagamento su Playtomic).
+Padel a Gesiolo - Alma Padel Milago Tennis, Via Casatico angolo Via dell'Oratorio, 27010 Siziano, martedì 22 settembre alle 10:30. 16 € (Iscrizione e pagamento su Playtomic).
 
 ## ALLENAMENTO STRONG
 https://anyplans.in/milano/allenamento-strong/
 
-Padel a MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano, martedì 15 settembre alle 11:00. 30 € (Iscrizione e pagamento su Playtomic).
+Padel a MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore (competitiva) – 3
 https://anyplans.in/milano/padel-manca-1-giocatore-competitiva/
-
-Padel a Game Padel Center Villasanta, Via San Fiorano 54/B, 20852 Villasanta, martedì 15 settembre alle 11:00. 5 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: manca 1 giocatore (competitiva)
-https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-15/
-
-Padel a Padel Cesano Maderno, Via po' 55, 20811 Cesano Maderno, martedì 15 settembre alle 12:30. 10 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: manca 1 giocatore (competitiva)
-https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-15-2026-09-15/
 
 Padel a 3,90 € Centro Sportivo Burago di Molgora, Largo Saint Symphorien d'Ozon, 20875 Burago di Molgora, martedì 15 settembre alle 15:00. 3,90 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (competitiva)
-https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-15-2026-09-15-2/
+## Padel: manca 1 giocatore… – PADEL ZENTER SEGRATE MILANO
+https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-15/
 
 Padel a PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, martedì 15 settembre alle 18:30. 19,50 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore (competitiva) – IL LOPE PADEL
+https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-15-2/
+
+Padel a IL LOPE PADEL, Lope de Vega 35, 20143 Milano, martedì 15 settembre alle 20:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Game Padel Center Villasanta
 https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-16/
 
+Padel a Game Padel Center Villasanta, Via San Fiorano 54/B, 20852 Villasanta, mercoledì 16 settembre alle 15:00. 5 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Centro Sportivo Palauno
+https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-16-2/
+
+Padel a Centro Sportivo Palauno, Largo Antonio Balestra, 5, 20146 Milano, mercoledì 16 settembre alle 18:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – SH PADEL GRAF
+https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-16-3/
+
+Padel a SH PADEL GRAF, Via Arturo Graf, 4, 20157 Milano, mercoledì 16 settembre alle 18:30. 10 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Centro Scarioni Milano
+https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-16-4/
+
+Padel a Centro Scarioni Milano, Via Tucidide 10, 20134 Milano, mercoledì 16 settembre alle 19:00 (2 date, fino al 18 settembre). 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – Centro Derby Monza
+https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-16-5/
+
 Padel a Centro Derby Monza, Viale Lombardia, 17, Monza MB, 20900 Monza, mercoledì 16 settembre alle 19:00. 13,50 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – Padel Lorenteggio
+https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-17/
+
+Padel a Padel Lorenteggio, Via Francesco Gonin 16 -  Tel. 02.48300873 - Mob. 345 4689789, 20147 Milano, giovedì 17 settembre alle 19:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – SPORTITALIA VILLAGE
+https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-17-2/
+
+Padel a SPORTITALIA VILLAGE, Via Dante Alighieri, 18, Verano Brianza, MB, Italia, 20843 Verano Brianza, giovedì 17 settembre alle 20:00. 14,50 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Padel Club Ripamonti…
+https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-19/
+
+Padel a Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, sabato 19 settembre alle 15:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Padel Cesano Maderno
+https://anyplans.in/milano/padel-manca-1-giocatore-competitiva-2026-09-15-3/
+
+Padel a Padel Cesano Maderno, Via po' 55, 20811 Cesano Maderno: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
 ## Lezione Individuale Con David 🇪🇸
 https://anyplans.in/milano/lezione-individuale-con-david/
 
-Padel a 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, martedì 15 settembre alle 11:30 (9 date, fino al 17 settembre). 32 € (Iscrizione e pagamento su Playtomic).
+Padel a 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, mercoledì 16 settembre alle 10:30 (6 date, fino al 17 settembre). 32 € (Iscrizione e pagamento su Playtomic).
 
 ## *Partita Guidata MBPOWER con M.BARNABA*
 https://anyplans.in/milano/partita-guidata-mbpower-con-m-barnaba/
 
-Padel a Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, martedì 15 settembre alle 12:00 (10 date, fino al 28 settembre). 30 € (Iscrizione e pagamento su Playtomic).
+Padel a Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, giovedì 17 settembre alle 18:00 (9 date, fino al 28 settembre). 40 € (Iscrizione e pagamento su Playtomic).
 
 ## The secrets of pasta and tiramisu in my family…
 https://anyplans.in/milano/the-secrets-of-pasta-and-tiramisu-in-my-family-house/
 
-Incontri culturali a V. Giuseppe Dezza, 47, Milano, martedì 15 settembre alle 12:00. 75 € (Biglietti su AllEvents).
+Incontri culturali a V. Giuseppe Dezza, 47, Milano: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
 ## AGONISTICA MARTEDI
 https://anyplans.in/milano/agonistica-martedi/
 
-Padel a Easy Village, Via per Caronno, 6, 21040 Origgio VA, Italia, 21040 Origgio, martedì 15 settembre alle 12:30. 25 € (Iscrizione e pagamento su Playtomic).
+Padel a Easy Village, Via per Caronno, 6, 21040 Origgio VA, Italia, 21040 Origgio: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
 ## 🥇TORNEO MEDIUM LEVEL🥇
 https://anyplans.in/milano/torneo-medium-level/
 
-Padel a Mariano Sports Arena, VIA LAMBRO 15 , 22066 Mariano Comense, martedì 15 settembre alle 12:30 (3 date, fino al 29 settembre). 15 € (Iscrizione e pagamento su Playtomic).
+Padel a Mariano Sports Arena, VIA LAMBRO 15 , 22066 Mariano Comense, martedì 22 settembre alle 12:30 (2 date, fino al 29 settembre). 15 € (Iscrizione e pagamento su Playtomic).
 
 ## Silvia in Blues (acoustic duo)
 https://anyplans.in/milano/silvia-in-blues-acoustic-duo/
 
-Incontri culturali a Hard Rock Cafe Milan, Milano, martedì 15 settembre alle 12:30. Gratis (Ingresso: vedi la pagina AllEvents).
+Incontri culturali a Hard Rock Cafe Milan, Milano: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
 ## NRG Rodeo Lunch
 https://anyplans.in/milano/nrg-rodeo-lunch/
 
-Padel a NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo, martedì 15 settembre alle 12:30. 15 € (Iscrizione e pagamento su Playtomic).
+Padel a NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
 ## Lezione singola con coach SR
 https://anyplans.in/milano/lezione-singola-con-coach-sr/
 
-Padel a Sport Promotion Comasina - Padel & Beach, Via Salemi 19, 20161 Milano, martedì 15 settembre alle 13:00 (13 date, fino al 16 ottobre). Gratis (Iscrizione su Playtomic).
-
-## Lezione singola
-https://anyplans.in/milano/lezione-singola/
-
-Padel a Milago Padel, Via Indipendenza, 3, 20090 Buccinasco MI, Italia, 20090 Buccinasco, martedì 15 settembre alle 13:00. 50 € (Iscrizione e pagamento su Playtomic).
+Padel a Sport Promotion Comasina - Padel & Beach, Via Salemi 19, 20161 Milano, giovedì 17 settembre alle 13:00 (12 date, fino al 16 ottobre). Gratis (Iscrizione su Playtomic).
 
 ## 🔥LEZIONE SINGOLA🎾
-https://anyplans.in/milano/lezione-singola-2026-09-16/
+https://anyplans.in/milano/lezione-singola/
 
 Padel a M3 PADEL - CORREZZANA, Via Principale 34 , 20856 Correzzana, mercoledì 16 settembre alle 11:00 (49 date, fino al 2 ottobre). 40 € (Iscrizione e pagamento su Playtomic).
+
+## Lezione singola
+https://anyplans.in/milano/lezione-singola-2026-09-15/
+
+Padel a Milago Padel, Via Indipendenza, 3, 20090 Buccinasco MI, Italia, 20090 Buccinasco: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
 ## *Lezione con M.BARNABA*
 https://anyplans.in/milano/lezione-con-m-barnaba/
 
-Padel a Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, martedì 15 settembre alle 13:00 (22 date, fino al 28 settembre). 35 € (Iscrizione e pagamento su Playtomic).
+Padel a Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, mercoledì 16 settembre alle 16:00 (21 date, fino al 28 settembre). 35 € (Iscrizione e pagamento su Playtomic).
 
 ## Lezione con Claudio R.
 https://anyplans.in/milano/lezione-con-claudio-r/
 
-Padel a Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, martedì 15 settembre alle 13:00 (50 date, fino al 24 settembre). 50 € (Iscrizione e pagamento su Playtomic).
+Padel a Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, martedì 15 settembre alle 16:00 (47 date, fino al 24 settembre). 50 € (Iscrizione e pagamento su Playtomic).
 
 ## 🔥🎾 MOVING SMASH & LUNCH 🎾🔥
 https://anyplans.in/milano/moving-smash-lunch/
 
-Padel a Moving Padel Monza, Via della Birona, 56, 20900 Monza, martedì 15 settembre alle 13:00 (3 date, fino al 29 settembre). 15 € (Iscrizione e pagamento su Playtomic).
+Padel a Moving Padel Monza, Via della Birona, 56, 20900 Monza, martedì 22 settembre alle 13:00 (2 date, fino al 29 settembre). 15 € (Iscrizione e pagamento su Playtomic).
 
-## LIVELLAMENTO PLAYTOMIC
+## Livellamento playtomic – Vamos Padel Cimiano
 https://anyplans.in/milano/livellamento-playtomic/
-
-Padel a Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, martedì 15 settembre alle 13:00 (2 date, fino al 17 settembre). 18 € (Iscrizione e pagamento su Playtomic).
-
-## Livellamento playtomic
-https://anyplans.in/milano/livellamento-playtomic-2026-09-16/
 
 Padel a Vamos Padel Cimiano, Via Don Giovanni Calabria, 16, 20132 Milano, mercoledì 16 settembre alle 16:30. 25 € (Iscrizione e pagamento su Playtomic).
 
-## Livellamento Playtomic
+## Livellamento Playtomic – Centro Scarioni Milano
 https://anyplans.in/milano/livellamento-playtomic-2026-09-17/
 
 Padel a Centro Scarioni Milano, Via Tucidide 10, 20134 Milano, giovedì 17 settembre alle 10:00 (7 date, fino al 29 ottobre). 25 € (Iscrizione e pagamento su Playtomic).
 
-## LIVELLAMENTO PLAYTOMIC
+## LIVELLAMENTO PLAYTOMIC – Country Sport Village
+https://anyplans.in/milano/livellamento-playtomic-2026-09-17-2/
+
+Padel a Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, giovedì 17 settembre alle 13:00. 18 € (Iscrizione e pagamento su Playtomic).
+
+## LIVELLAMENTO PLAYTOMIC – LIONS PADEL
 https://anyplans.in/milano/livellamento-playtomic-2026-09-18/
 
 Padel a LIONS PADEL, via marconi 33, 20048 Pantigliate, venerdì 18 settembre alle 17:30. 20 € (Iscrizione e pagamento su Playtomic).
@@ -697,20 +846,20 @@ https://anyplans.in/milano/livellamento-playtomic-2026-09-19/
 
 Padel a Padel Extreme Tennis, Via Como, 15/5, 20825 Barlassina, sabato 19 settembre alle 11:00. 25 € (Iscrizione e pagamento su Playtomic).
 
-## LIVELLAMENTO PLAYTOMIC
-https://anyplans.in/milano/livellamento-playtomic-2026-09-19-2026-09-19/
+## LIVELLAMENTO PLAYTOMIC – HANGAR PADEL SEGRATE
+https://anyplans.in/milano/livellamento-playtomic-2026-09-19-2/
 
 Padel a HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, sabato 19 settembre alle 12:30. 20 € (Iscrizione e pagamento su Playtomic).
 
 ## 🎾🎾🚹🚺🍀GIRO  MIX ENTRY MARTEDI DI COACH AURE
 https://anyplans.in/milano/giro-mix-entry-martedi-di-coach-aure/
 
-Padel a Clover Sport Village, Via Comasina 115, 20161 Milano, martedì 15 settembre alle 13:00 (3 date, fino al 29 settembre). 10 € (Iscrizione e pagamento su Playtomic).
+Padel a Clover Sport Village, Via Comasina 115, 20161 Milano, martedì 22 settembre alle 13:00 (2 date, fino al 29 settembre). 10 € (Iscrizione e pagamento su Playtomic).
 
 ## Promo lezioni singole
 https://anyplans.in/milano/promo-lezioni-singole/
 
-Padel a NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo, martedì 15 settembre alle 14:30 (49 date, fino al 16 novembre). 28 € (Iscrizione e pagamento su Playtomic).
+Padel a NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo, martedì 15 settembre alle 15:30 (48 date, fino al 16 novembre). 28 € (Iscrizione e pagamento su Playtomic).
 
 ## Rodeo Gioca con David🇪🇸🎓
 https://anyplans.in/milano/rodeo-gioca-con-david/
@@ -720,42 +869,77 @@ Padel a 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, mar
 ## Every Day Open Day Livello 0-1,5
 https://anyplans.in/milano/every-day-open-day-livello-0-1-5/
 
-Padel a Moving Padel Monza, Via della Birona, 56, 20900 Monza, martedì 15 settembre alle 15:30 (8 date, fino al 24 settembre). Gratis (Iscrizione su Playtomic).
+Padel a Moving Padel Monza, Via della Birona, 56, 20900 Monza, mercoledì 16 settembre alle 15:30 (7 date, fino al 24 settembre). Gratis (Iscrizione su Playtomic).
 
 ## Padel Accademy
 https://anyplans.in/milano/padel-accademy/
 
 Padel a Palapadel Sacarla Por Tres, Via Sondrio 9, 20020 Lainate, martedì 15 settembre alle 15:30 (28 date, fino al 2 ottobre). 35 € (Iscrizione e pagamento su Playtomic).
 
-## Padel: mancano 3 giocatori (amichevole)
+## Padel: mancano 3 giocatori… – PADELLARO CLUBHOUSE
 https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole/
 
 Padel a PADELLARO CLUBHOUSE, VIA VOLONTARI DEL SANGUE 30, 20851 Lissone, martedì 15 settembre alle 15:30. 13,66 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (amichevole)
+## Padel: mancano 3 giocatori… – MUP - Milano Urban Padel
 https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-15/
 
 Padel a MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano, martedì 15 settembre alle 18:30. 25 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (amichevole)
+## Padel: mancano 3 giocatori (amichevole) – Padel 8
+https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-16/
+
+Padel a Padel 8, Via Diomede angolo piazzale Lotto, 20148 Milano, mercoledì 16 settembre alle 22:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Getfit via Pinerolo
+https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-17/
+
+Padel a Getfit via Pinerolo, Via Pinerolo 76, 20151 Milano, giovedì 17 settembre alle 19:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Padel Cesano Maderno
 https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-18/
 
 Padel a Padel Cesano Maderno, Via po' 55, 20811 Cesano Maderno, venerdì 18 settembre alle 13:00. 10 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (amichevole)
-https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-18-2026-09-18/
+## Padel: mancano 3 giocatori… – PADEL ZENTER SEGRATE MILANO
+https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-18-2/
 
 Padel a PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, venerdì 18 settembre alle 14:00. 12 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (amichevole)
-https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-18-2026-09-18-2/
+## Padel: mancano 3 giocatori… – Stan Padel A.S.D - Bar club…
+https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-18-3/
 
 Padel a Stan Padel A.S.D - Bar club house climatizzato, CLIMATIZZATO via Bizet 19 , 20831 Seregno, venerdì 18 settembre alle 22:30. 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (amichevole)
+## Padel: mancano 3 giocatori… – PADEL PALACE - ARIA…
 https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-19/
 
+Padel a PADEL PALACE - ARIA CONDIZIONATA E NIENTE ZANZARE, Via Alfredo Soffredini 16, 20126 Milano, sabato 19 settembre alle 09:00. 17 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Country Sport Village
+https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-19-2/
+
 Padel a Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, sabato 19 settembre alle 14:00. 13,50 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (amichevole) – GOLARSA ACADEMY
+https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-19-3/
+
+Padel a GOLARSA ACADEMY, Via dei Ciclamini 18, 20147 Milano, sabato 19 settembre alle 14:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (amichevole) – NRG Padel Club
+https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-20/
+
+Padel a NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo, domenica 20 settembre alle 10:30. 5 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (amichevole) – ELLE PADEL CLUB
+https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-20-2/
+
+Padel a ELLE PADEL CLUB, Via Monviso 25, 22066 Mariano Comense, domenica 20 settembre alle 18:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Centro Sportivo Tuberose
+https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-21/
+
+Padel a Centro Sportivo Tuberose, Via Giò Ponti 1, 20147 Milano, lunedì 21 settembre alle 19:30. 15 € (Si chiede il posto e si paga su Playtomic).
 
 ## Lezione doppia con Michael Cosenza🎓
 https://anyplans.in/milano/lezione-doppia-con-michael-cosenza/
@@ -776,6 +960,81 @@ Padel a Moving Padel Monza, Via della Birona, 56, 20900 Monza, martedì 15 sette
 https://anyplans.in/milano/every-day-open-day-over-60/
 
 Padel a Moving Padel Monza, Via della Birona, 56, 20900 Monza, martedì 15 settembre alle 16:30 (8 date, fino al 24 settembre). Gratis (Iscrizione su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – Club Ambrosiano
+https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva/
+
+Padel a Club Ambrosiano – Padel, Via Feltre 33, 20134 Milano, martedì 15 settembre alle 17:00. 8,75 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Padel Club Ripamonti…
+https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-15/
+
+Padel a Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, martedì 15 settembre alle 20:30 (5 date, fino al 17 settembre). 16 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Moving Padel Monza
+https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-15-2/
+
+Padel a Moving Padel Monza, Via della Birona, 56, 20900 Monza, martedì 15 settembre alle 21:00. 13 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Mariano Sports Arena
+https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-16/
+
+Padel a Mariano Sports Arena, VIA LAMBRO 15 , 22066 Mariano Comense, mercoledì 16 settembre alle 11:00. 12,50 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Giuriati Sport Center
+https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-2/
+
+Padel a Giuriati Sport Center, via Pascal, 6, 20133 Milano, mercoledì 16 settembre alle 11:30. 7,50 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – Murat4All
+https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-3/
+
+Padel a Murat4All, Via Gioacchino Murat 29, 20159 Milano, mercoledì 16 settembre alle 12:30 (4 date, fino al 19 settembre). 12,50 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – NRG Padel Club
+https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-4/
+
+Padel a NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo, mercoledì 16 settembre alle 17:00. 11,67 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Centro Sportivo De Nicola
+https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-5/
+
+Padel a Centro Sportivo De Nicola, Via Enrico De Nicola, 3, 20142 Milano, mercoledì 16 settembre alle 18:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – M3 PADEL - CORREZZANA
+https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-6/
+
+Padel a M3 PADEL - CORREZZANA, Via Principale 34 , 20856 Correzzana, mercoledì 16 settembre alle 18:30. 13,50 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – BesTennis Academy
+https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-7/
+
+Padel a BesTennis Academy, Via De Amicis 80, 20092 Cinisello Balsamo, mercoledì 16 settembre alle 19:30. 14 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – Enjoy Sport
+https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-8/
+
+Padel a Enjoy Sport, via michelangelo Buonarroti 44a, 20063 Cernusco sul Naviglio, mercoledì 16 settembre alle 20:30. 9 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Country Sport Village
+https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-17/
+
+Padel a Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, giovedì 17 settembre alle 19:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – GOLARSA ACADEMY
+https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-18/
+
+Padel a GOLARSA ACADEMY, Via dei Ciclamini 18, 20147 Milano, venerdì 18 settembre alle 09:00. 13 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – 3
+https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-19/
+
+Padel a 3,90 € Centro Sportivo Burago di Molgora, Largo Saint Symphorien d'Ozon, 20875 Burago di Molgora, sabato 19 settembre alle 10:00 (2 date, fino al 20 settembre). 7,75 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Getfit via Pinerolo
+https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-19-2/
+
+Padel a Getfit via Pinerolo, Via Pinerolo 76, 20151 Milano, sabato 19 settembre alle 11:00. 14 € (Si chiede il posto e si paga su Playtomic).
 
 ## Cena da Tomi sushi: 2 posti liberi
 https://anyplans.in/milano/cena-da-tomi-sushi-2-posti-liberi/
@@ -912,47 +1171,12 @@ https://anyplans.in/milano/da-davidino-a-1-anno-dall-apertura-festeggia-con-open
 
 Cena / aperitivo a Milano, Dateo, martedì 15 settembre alle 20:30. 5 € (Accredito su comehome; il resto si paga in loco). 1 persona ha già detto che ci va.
 
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva/
-
-Padel a Moving Padel Monza, Via della Birona, 56, 20900 Monza, martedì 15 settembre alle 21:00. 13 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-16/
-
-Padel a Murat4All, Via Gioacchino Murat 29, 20159 Milano, mercoledì 16 settembre alle 12:30 (4 date, fino al 19 settembre). 12,50 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-2026-09-16/
-
-Padel a M3 PADEL - CORREZZANA, Via Principale 34 , 20856 Correzzana, mercoledì 16 settembre alle 18:30. 13,50 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-2026-09-16-2/
-
-Padel a BesTennis Academy, Via De Amicis 80, 20092 Cinisello Balsamo, mercoledì 16 settembre alle 19:30. 14 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-2026-09-16-2-2/
-
-Padel a Enjoy Sport, via michelangelo Buonarroti 44a, 20063 Cernusco sul Naviglio, mercoledì 16 settembre alle 20:30. 9 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-17/
-
-Padel a Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, giovedì 17 settembre alle 19:30. 15 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-19/
-
-Padel a 3,90 € Centro Sportivo Burago di Molgora, Burago di Molgora, sabato 19 settembre alle 10:00 (2 date, fino al 20 settembre). 7,75 € (Si chiede il posto e si paga su Playtomic).
-
 ## Lezione individuale
 https://anyplans.in/milano/lezione-individuale/
 
 Padel a Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, mercoledì 16 settembre alle 08:00 (25 date, fino al 18 settembre). 60 € (Iscrizione e pagamento su Playtomic).
 
-## Livellamento
+## Livellamento – Padel Segrate CLIMATIZZATO
 https://anyplans.in/milano/livellamento/
 
 Padel a Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, mercoledì 16 settembre alle 08:00 (25 date, fino al 18 settembre). 25 € (Iscrizione e pagamento su Playtomic).
@@ -962,12 +1186,12 @@ https://anyplans.in/milano/livellamento-2026-09-16/
 
 Padel a 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, mercoledì 16 settembre alle 17:00. 18 € (Iscrizione e pagamento su Playtomic).
 
-## Livellamento
-https://anyplans.in/milano/livellamento-2026-09-16-2026-09-16/
+## Livellamento – Tennis Club Inzago
+https://anyplans.in/milano/livellamento-2026-09-16-2/
 
 Padel a Tennis Club Inzago, Via Orchidee 1, 20065 Villaggio Residenziale, mercoledì 16 settembre alle 18:30. 15 € (Iscrizione e pagamento su Playtomic).
 
-## LIVELLAMENTO
+## LIVELLAMENTO – Padel Farm CLIMATIZZATO
 https://anyplans.in/milano/livellamento-2026-09-17/
 
 Padel a Padel Farm CLIMATIZZATO, Via Giuseppe di Vittorio, 6 , 20090 Assago, giovedì 17 settembre alle 13:00. 30 € (Iscrizione e pagamento su Playtomic).
@@ -1052,12 +1276,12 @@ https://anyplans.in/milano/cena-da-pane-trita-seregno-4-posti-liberi/
 
 Cena / aperitivo a Pane & Trita | Seregno, mercoledì 16 settembre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## OPEN DAY
+## OPEN DAY – Centro Derby Monza
 https://anyplans.in/milano/open-day/
 
 Padel a Centro Derby Monza, Viale Lombardia, 17, Monza MB, 20900 Monza, mercoledì 16 settembre alle 18:00 (2 date, fino al 19 settembre). Gratis (Iscrizione su Playtomic).
 
-## OPEN DAY
+## OPEN DAY – Yousport Padel
 https://anyplans.in/milano/open-day-2026-09-19/
 
 Padel a Yousport Padel, Via Monza 107, 20060 Gessate, sabato 19 settembre alle 14:30 (5 date, fino al 19 settembre). Gratis (Iscrizione su Playtomic).
@@ -1947,6 +2171,11 @@ https://anyplans.in/milano/karmadrome-indie-disco-full-djset-detune/
 
 Spettacoli e teatro a Detune, Milano, venerdì 18 settembre alle 22:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## Escursione al Rifugio Curò
+https://anyplans.in/milano/escursione-al-rifugio-curo/
+
+Escursionismo a Sesto San Giovanni, Escursione al Rifugio Curò, sabato 19 settembre alle 08:15. 3 € (Accredito su comehome; il resto si paga in loco).
+
 ## Esposizione Nazionale Canina di Monza
 https://anyplans.in/milano/esposizione-nazionale-canina-di-monza/
 
@@ -2021,6 +2250,11 @@ Padel a Lainate Padel, Via Circonvallazione Ovest 1, 20043 Lainate, sabato 19 se
 https://anyplans.in/milano/teaology-tea-room/
 
 Incontri culturali a Via Melzo, 34, Milano, sabato 19 settembre alle 10:30. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## The Gentleman - Stile e Gioielli al Maschile
+https://anyplans.in/milano/the-gentleman-stile-e-gioielli-al-maschile/
+
+Incontri culturali a Milano, Zona Montenapoleone, sabato 19 settembre alle 10:30. 5 € (Accredito su comehome; il resto si paga in loco).
 
 ## Sono sempre io. Un laboratorio per piccoli…
 https://anyplans.in/milano/sono-sempre-io-un-laboratorio-per-piccoli-esploratori-di-se/
@@ -2146,6 +2380,11 @@ Cena / aperitivo a Ceriano Laghetto, sabato 19 settembre alle 15:30. 5 € (Acc
 https://anyplans.in/milano/aperitivo-da-sissi-bar-arluno-8-posti-liberi/
 
 Cena / aperitivo a Sissi Bar Arluno, sabato 19 settembre alle 15:55. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## Il Monumentale come non l’avete mai visto
+https://anyplans.in/milano/il-monumentale-come-non-l-avete-mai-visto/
+
+Visite guidate a Milano, sabato 19 settembre alle 16:00 (2 date, fino al 3 ottobre). 15 € (Accredito su comehome; il resto si paga in loco).
 
 ## Vamos Cup Maschile by Adidas
 https://anyplans.in/milano/vamos-cup-maschile-by-adidas/
@@ -2467,6 +2706,11 @@ https://anyplans.in/milano/oxxxa-live-band-show-tavolo-sabrina-da-grace-8-posti-
 
 Cena / aperitivo a GRACE, Lodi Vecchio, sabato 19 settembre alle 20:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## September is coming!! La Taverna reopens..
+https://anyplans.in/milano/september-is-coming-la-taverna-reopens/
+
+Cena / aperitivo a Bollate, Centro, sabato 19 settembre alle 20:30. 35 € (Accredito su comehome; il resto si paga in loco).
+
 ## Endless Summer '90s | Aperitivo in Piscina &…
 https://anyplans.in/milano/endless-summer-90s-aperitivo-in-piscina-welovethe90s/
 
@@ -2592,12 +2836,12 @@ https://anyplans.in/milano/run4rights-corriamo-insieme-per-i-giusti/
 
 Palestra a Via Giovanni Cimabue, 40, Milano, domenica 20 settembre alle 09:30. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## 🎾🏆 ROUND ROBIN TOURNAMENT ENTRY LEVEL 🏆🎾
+## 🎾🏆 ROUND ROBIN TOURNAMENT ENTRY LEVEL… – Padel Concorezzo
 https://anyplans.in/milano/round-robin-tournament-entry-level/
 
 Padel a Padel Concorezzo, Via Libertà, 1, Concorezzo MB, Italia, 20863 Concorezzo, domenica 20 settembre alle 10:00 (2 date, fino al 27 settembre). 20 € (Iscrizione e pagamento su Playtomic).
 
-## 🎾🏆 ROUND ROBIN TOURNAMENT ENTRY LEVEL 🏆🎾
+## 🎾🏆 ROUND ROBIN TOURNAMENT ENTRY… – Padel Cesano Maderno
 https://anyplans.in/milano/round-robin-tournament-entry-level-2026-09-20/
 
 Padel a Padel Cesano Maderno, Via po' 55, 20811 Cesano Maderno, domenica 20 settembre alle 10:00 (2 date, fino al 27 settembre). 20 € (Iscrizione e pagamento su Playtomic).
@@ -2692,17 +2936,17 @@ https://anyplans.in/milano/brunch-in-love-un-brunch-con-nuovi-amici/
 
 Cena / aperitivo a Milano, Porta romana, domenica 20 settembre alle 12:45. 5 € (Accredito su comehome; il resto si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE MASCHILE
+## S-PADEL liv. ENTRY WHITE MASCHILE – Yousport Padel
 https://anyplans.in/milano/s-padel-liv-entry-white-maschile/
 
 Padel a Yousport Padel, Via Monza 107, 20060 Gessate, domenica 20 settembre alle 13:00 (3 date, fino al 18 aprile). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE MASCHILE
+## S-PADEL liv. ENTRY WHITE MASCHILE – PADEL4ALL VILLASANTA
 https://anyplans.in/milano/s-padel-liv-entry-white-maschile-2026-11-14/
 
 Padel a PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, sabato 14 novembre alle 15:00 (2 date, fino al 9 gennaio). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE MASCHILE
+## S-PADEL liv. ENTRY WHITE… – Padel Segrate CLIMATIZZATO
 https://anyplans.in/milano/s-padel-liv-entry-white-maschile-2026-12-05/
 
 Padel a Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, sabato 5 dicembre alle 14:00 (2 date, fino al 7 marzo). 25 € (Iscrizione su Playtomic, si paga in loco).
@@ -2802,17 +3046,17 @@ https://anyplans.in/milano/america-by-adidas/
 
 Padel a Vamos Padel Cimiano, Via Don Giovanni Calabria, 16, 20132 Milano, domenica 20 settembre alle 16:00. 20 € (Iscrizione e pagamento su Playtomic).
 
-## S-PADEL liv. MEDIUM RED MASCHILE
+## S-PADEL liv. MEDIUM RED MASCHILE – Yousport Padel
 https://anyplans.in/milano/s-padel-liv-medium-red-maschile/
 
 Padel a Yousport Padel, Via Monza 107, 20060 Gessate, domenica 20 settembre alle 16:00 (3 date, fino al 18 aprile). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED MASCHILE
+## S-PADEL liv. MEDIUM RED MASCHILE – PADEL4ALL VILLASANTA
 https://anyplans.in/milano/s-padel-liv-medium-red-maschile-2026-11-14/
 
 Padel a PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, sabato 14 novembre alle 15:00 (2 date, fino al 9 gennaio). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED MASCHILE
+## S-PADEL liv. MEDIUM RED… – Padel Segrate CLIMATIZZATO
 https://anyplans.in/milano/s-padel-liv-medium-red-maschile-2026-12-05/
 
 Padel a Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, sabato 5 dicembre alle 17:00 (2 date, fino al 7 marzo). 25 € (Iscrizione su Playtomic, si paga in loco).
@@ -2836,6 +3080,11 @@ Cena / aperitivo a Milano, Parco Forlanini, domenica 20 settembre alle 16:30. 6�
 https://anyplans.in/milano/reading-party-milano-domenica-20-settembre/
 
 Serate e discoteca a CXMilan | Bicocca Campus & Hotel, Milano, domenica 20 settembre alle 17:00. 10 € (Si paga su Luma).
+
+## Inside Investing
+https://anyplans.in/milano/inside-investing/
+
+Incontri culturali a Via Rovello, 2, Milano, domenica 20 settembre alle 17:00. Gratis (Gratis, registrazione su Luma).
 
 ## WHYNOT WUNDERPARTY
 https://anyplans.in/milano/whynot-wunderparty/
@@ -2926,6 +3175,11 @@ Cena / aperitivo a Justme Milano - Restaurant & Club, domenica 20 settembre alle
 https://anyplans.in/milano/italiana-a-6-su-due-livelli-da-2-0-a-4-5-pt/
 
 Padel a Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, domenica 20 settembre alle 18:30. 25 € (Iscrizione e pagamento su Playtomic).
+
+## PILATES IN THE PARK MILAN
+https://anyplans.in/milano/pilates-in-the-park-milan/
+
+Yoga / pilates a Chiosco da Orlando, Milano, domenica 20 settembre alle 18:30. Gratis (Gratis, registrazione su Luma).
 
 ## Settembre nel calice
 https://anyplans.in/milano/settembre-nel-calice-mese-d-uva-e-vino-in-enoteca/
@@ -3047,12 +3301,12 @@ https://anyplans.in/milano/ultimo-torneo-entry-level-con-maestro/
 
 Padel a Mariano Sports Arena, VIA LAMBRO 15 , 22066 Mariano Comense, lunedì 21 settembre alle 12:30 (12 date, fino al 14 dicembre). 15 € (Iscrizione e pagamento su Playtomic).
 
-## Giro a 8
+## Giro a 8 – Mamapadel Melzo
 https://anyplans.in/milano/giro-a-8/
 
 Padel a Mamapadel Melzo, via Martiri della Libertà 46, 20066 Melzo, lunedì 21 settembre alle 12:30 (9 date, fino al 16 novembre). 12 € (Iscrizione e pagamento su Playtomic).
 
-## Giro a 8
+## Giro a 8 – Padel Extreme Tennis
 https://anyplans.in/milano/giro-a-8-2026-09-24/
 
 Padel a Padel Extreme Tennis, Via Como, 15/5, 20825 Barlassina, giovedì 24 settembre alle 10:00. Gratis (Iscrizione su Playtomic).
@@ -3101,6 +3355,11 @@ Serate e discoteca a 21 House of Stories Navigli, Milano, lunedì 21 settembre a
 https://anyplans.in/milano/aperikinky-ayzad-presenta-il-libro-nero-del-bdsm/
 
 Pittura / arte a Stufanka RistoPub karaoke eventi con Giardino, Milano, lunedì 21 settembre alle 19:30. 10 € (Biglietti su AllEvents).
+
+## Milan Startup Basket #39 a Milano, 21 settembre
+https://anyplans.in/milano/milan-startup-basket-39/
+
+Incontri culturali a Milano, lunedì 21 settembre alle 20:00. Gratis (Gratis, registrazione su Luma).
 
 ## Corsi di Ballo Swing 2026/27 • Lezioni di prova…
 https://anyplans.in/milano/corsi-di-ballo-swing-2026-27-lezioni-di-prova-gratuite-boogi/
@@ -3332,12 +3591,12 @@ https://anyplans.in/milano/villainous-scatena-il-tuo-cattivo-preferito-della-dis
 
 Giochi da tavolo a Milano, Zona M4 Bolivar, mercoledì 23 settembre alle 19:35. 5 € (Accredito su comehome; il resto si paga in loco).
 
-## Stand up comedy night
+## Stand up comedy night – Ciclocaffè
 https://anyplans.in/milano/stand-up-comedy-night/
 
 Spettacoli e teatro a Ciclocaffè, Milano, mercoledì 23 settembre alle 20:00. Gratis (Gratis, iscrizione su WeMeet (WeRoad)).
 
-## Stand Up Comedy Night
+## Stand Up Comedy Night – Milano
 https://anyplans.in/milano/stand-up-comedy-night-2026-09-26/
 
 Spettacoli e teatro a Milano, piazza Dateo, sabato 26 settembre alle 20:30. 5 € (Accredito su comehome; il resto si paga in loco).
@@ -3487,12 +3746,12 @@ https://anyplans.in/milano/cena-the-millenium-pub/
 
 Cena / aperitivo a Sesto San Giovanni, Sesto San Giovanni, giovedì 24 settembre alle 20:00. Gratis (Gratis, iscrizione su Meeters (consumazioni a parte)).
 
-## Social Box Jungle Edition - Party a tema con…
+## Social Box Jungle Edition - Party a tema con… – Paullo
 https://anyplans.in/milano/social-box-jungle-edition-party-a-tema-con-buffet-e-drink/
 
 Serate e discoteca a Paullo, giovedì 24 settembre alle 20:00. 5 € (Accredito su comehome; il resto si paga in loco).
 
-## Social Box Jungle Edition - Party a tema con…
+## Social Box Jungle Edition - Party a tema con… – Paullo
 https://anyplans.in/milano/social-box-jungle-edition-party-a-tema-con-buffet-e-drink-2026-10-29/
 
 Serate e discoteca a Paullo, giovedì 29 ottobre alle 20:00. 5 € (Accredito su comehome; il resto si paga in loco).
@@ -3516,6 +3775,11 @@ Cena / aperitivo a Palazzo Bocconi, Milano, giovedì 24 settembre alle 20:30. Gr
 https://anyplans.in/milano/jany-mcpherson/
 
 Concerti e musica dal vivo a Blue Note Milano, Milano, giovedì 24 settembre alle 20:30. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Cena d’inaugurazione nuova spettacolare location
+https://anyplans.in/milano/cena-d-inaugurazione-nuova-spettacolare-location/
+
+Cena / aperitivo a Milano, Sempione, giovedì 24 settembre alle 20:30. 5 € (Accredito su comehome; il resto si paga in loco).
 
 ## Burger e buon rock! Vol.6
 https://anyplans.in/milano/burger-e-buon-rock-vol-6/
@@ -3576,6 +3840,11 @@ Incontri culturali a Via Pastrengo, 14, Milano, venerdì 25 settembre alle 15:00
 https://anyplans.in/milano/milan-celebrity-runway-presentation-showroom-spring-summer-2/
 
 Mostre a Milan, Milano, venerdì 25 settembre alle 16:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## TEACHER'S FRIDAY POLDI PEZZOLI. Prove tecniche…
+https://anyplans.in/milano/teacher-s-friday-poldi-pezzoli-prove-tecniche-di-percorsi-di/
+
+Incontri culturali a Poldi Pezzoli Museum, Milano, venerdì 25 settembre alle 16:00. Gratis (Gratis, registrazione su Luma).
 
 ## Atomic Playground | Milan Fashion Week POP-UP
 https://anyplans.in/milano/atomic-playground-milan-fashion-week-pop-up/
@@ -3677,11 +3946,6 @@ https://anyplans.in/milano/1-irishman-in-milan-a-stand-up-comedy-show-in-english
 
 Spettacoli e teatro a Slow Mill, Milano, venerdì 25 settembre alle 20:30. 14 € (Biglietti su AllEvents).
 
-## PIZZERIA DOLLARO MONZA
-https://anyplans.in/milano/pizzeria-dollaro-monza/
-
-Cena / aperitivo a Via Duca d'Aosta, Monza, venerdì 25 settembre alle 20:30. Gratis (Gratis, iscrizione su Meeters (consumazioni a parte)).
-
 ## Trecentosessantagradi di Musica 2.0
 https://anyplans.in/milano/trecentosessantagradi-di-musica-2-0/
 
@@ -3706,6 +3970,11 @@ Palestra a Bovisio-Masciago, Zona ponte Monza-saronno, venerdì 25 settembre all
 https://anyplans.in/milano/cicchetti-vino/
 
 Cena / aperitivo a Milano, Lodi Tibb MM 🟡, venerdì 25 settembre alle 20:30. 5 € (Accredito su comehome; il resto si paga in loco).
+
+## Laser Party Anni 90!
+https://anyplans.in/milano/laser-party-anni-90/
+
+Serate e discoteca a Milano Ripamonti, venerdì 25 settembre alle 20:30. 5 € (Accredito su comehome; il resto si paga in loco).
 
 ## Laser game battle vol. 10
 https://anyplans.in/milano/laser-game-battle-vol-10/
@@ -4057,6 +4326,11 @@ https://anyplans.in/milano/assaporando-nuove-conoscenze/
 
 Cena / aperitivo a Milano, Vigentino, sabato 26 settembre alle 20:00. 35 € (Accredito su comehome; il resto si paga in loco).
 
+## First Meeting Un brindisi ai nuovi incontri
+https://anyplans.in/milano/first-meeting-un-brindisi-ai-nuovi-incontri/
+
+Cena / aperitivo a Villasanta, Parco di Monza, sabato 26 settembre alle 20:00. 5 € (Accredito su comehome; il resto si paga in loco).
+
 ## Aperitivo Love Generation
 https://anyplans.in/milano/aperitivo-love-generation/
 
@@ -4125,7 +4399,7 @@ Concerti e musica dal vivo a Milano, Parco sempione, sabato 26 settembre alle 22
 ## Karmadrome: Indie-Disco Djset @Mare [Free Entry]
 https://anyplans.in/milano/karmadrome-indie-disco-djset-mare-free-entry/
 
-Spettacoli e teatro a Mare Culturale Urbano, Milano, sabato 26 settembre alle 22:30. Gratis (Ingresso: vedi la pagina AllEvents).
+Serate e discoteca a Mare Culturale Urbano, Milano, sabato 26 settembre alle 22:30. Gratis (Ingresso: vedi la pagina AllEvents).
 
 ## Enygma, Yazmin in Milano
 https://anyplans.in/milano/enygma-yazmin-in-milano/
@@ -4152,6 +4426,11 @@ https://anyplans.in/milano/vignaiolo-per-un-giorno-nel-monferrato-con-pranzo/
 
 Escursionismo a Assago, Tra il Monferrato e Le Langhe - Piemonte, domenica 27 settembre alle 07:30. 10 € (Accredito su comehome; il resto si paga in loco).
 
+## Trekking al Monte Cornizzolo e pranzo al…
+https://anyplans.in/milano/trekking-al-monte-cornizzolo-e-pranzo-al-rifugio-marisa/
+
+Escursionismo a Sesto San Giovanni, Monte Cornizzolo e Rifugio Marisa, domenica 27 settembre alle 08:15. 5 € (Accredito su comehome; il resto si paga in loco).
+
 ## Torneo femminile - biglietti Premier Padel
 https://anyplans.in/milano/torneo-femminile-biglietti-premier-padel/
 
@@ -4167,12 +4446,12 @@ https://anyplans.in/milano/festa-dell-oratorio-e-30-camminata-in-periferia/
 
 Escursionismo a Via Parmenide, Monza, Lombardia, Monza, domenica 27 settembre alle 09:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## TORNEO MISTO
+## TORNEO MISTO – Innova Sport Padel Opera
 https://anyplans.in/milano/torneo-misto/
 
 Padel a Innova Sport Padel Opera, Via Goffredo Mameli 4, 20073 Opera, domenica 27 settembre alle 10:00. 20 € (Iscrizione e pagamento su Playtomic).
 
-## TORNEO MISTO
+## TORNEO MISTO – Gaggiano Padel Academy
 https://anyplans.in/milano/torneo-misto-2026-09-27/
 
 Padel a Gaggiano Padel Academy, Via Alessandro Volta, 45, 20083 Gaggiano, domenica 27 settembre alle 14:00. 25 € (Iscrizione e pagamento su Playtomic).
@@ -4357,6 +4636,11 @@ https://anyplans.in/milano/babolat-x-social-monday-edizione-esclusiva-e-speciale
 
 Padel a ELLE PADEL CLUB, Via Monviso 25, 22066 Mariano Comense, lunedì 28 settembre alle 16:30. 20 € (Iscrizione e pagamento su Playtomic).
 
+## SM GLOBAL Fashion Week Gala - MILAN (28th Sept…
+https://anyplans.in/milano/sm-global-fashion-week-gala-milan-28th-sept-2026/
+
+Spettacoli e teatro a Meliá Milano, Milano, lunedì 28 settembre alle 17:00. 49,16 € (Biglietti su AllEvents).
+
 ## Aperitivi di Corso - Scienze e Tecniche…
 https://anyplans.in/milano/aperitivi-di-corso-scienze-e-tecniche-psicologiche/
 
@@ -4446,6 +4730,11 @@ Incontri culturali a MIND Milano Innovation District, Milano, mercoledì 30 sett
 https://anyplans.in/milano/lab-culturali-arte-cinema-musica-fotografia-performance-teat/
 
 Cinema a Instituto Cervantes, Milano, mercoledì 30 settembre alle 09:30. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Obiettivi Day 2026
+https://anyplans.in/milano/obiettivi-day-2026/
+
+Concerti e musica dal vivo a Starhotels Ritz, Milano, mercoledì 30 settembre alle 10:00. 97,60 € (Biglietti su AllEvents).
 
 ## BABOLAT x GIOCA PER LA CORONA PLUS (2-3,79)…
 https://anyplans.in/milano/babolat-x-gioca-per-la-corona-plus-2-3-79-edizione-esclusiva/
@@ -4787,11 +5076,6 @@ https://anyplans.in/milano/piante-maestre-educazione-vegetale-per-una-rivoluzion
 
 Festa di paese a Libreria Esoterica Milano, sabato 3 ottobre alle 10:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Il Monumentale come non l’avete mai visto
-https://anyplans.in/milano/il-monumentale-come-non-l-avete-mai-visto/
-
-Visite guidate a Milano, sabato 3 ottobre alle 10:00. 15 € (Accredito su comehome; il resto si paga in loco).
-
 ## Beyond the Miles: with Paul Amefiam & Fares…
 https://anyplans.in/milano/beyond-the-miles-with-paul-amefiam-fares-alassi/
 
@@ -4822,12 +5106,12 @@ https://anyplans.in/milano/wine-tasting-10-vini-in-degustazione-banchi-d-assaggi
 
 Cena / aperitivo a Bottega dell'Arte del Vino, Milano, sabato 3 ottobre alle 14:00. 9 € (Biglietti su AllEvents).
 
-## S-PADEL MISTO liv. ENTRY WHITE con media max 2.5
+## S-PADEL MISTO liv. ENTRY… – Padel Segrate CLIMATIZZATO
 https://anyplans.in/milano/s-padel-misto-liv-entry-white-con-media-max-2-5/
 
 Padel a Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, sabato 3 ottobre alle 14:00 (3 date, fino al 3 aprile). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL MISTO liv. ENTRY WHITE con media max 2.5
+## S-PADEL MISTO liv. ENTRY WHITE con… – PADEL4ALL VILLASANTA
 https://anyplans.in/milano/s-padel-misto-liv-entry-white-con-media-max-2-5-2026-10-10/
 
 Padel a PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, sabato 10 ottobre alle 15:00 (3 date, fino al 13 marzo). 25 € (Iscrizione su Playtomic, si paga in loco).
@@ -4847,15 +5131,20 @@ https://anyplans.in/milano/alla-scoperta-di-san-bernardino-alle-ossa-e-del-verzi
 
 Visite guidate a Milano centro città, sabato 3 ottobre alle 16:00. 15 € (Accredito su comehome; il resto si paga in loco).
 
-## S-PADEL MISTO liv. MEDIUM RED con media max 3.5
+## S-PADEL MISTO liv. MEDIUM RED… – Padel Segrate CLIMATIZZATO
 https://anyplans.in/milano/s-padel-misto-liv-medium-red-con-media-max-3-5/
 
 Padel a Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, sabato 3 ottobre alle 16:30 (3 date, fino al 3 aprile). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL MISTO liv. MEDIUM RED con media max 3.5
+## S-PADEL MISTO liv. MEDIUM RED con… – PADEL4ALL VILLASANTA
 https://anyplans.in/milano/s-padel-misto-liv-medium-red-con-media-max-3-5-2026-10-10/
 
 Padel a PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, sabato 10 ottobre alle 15:00 (2 date, fino al 13 marzo). 25 € (Iscrizione su Playtomic, si paga in loco).
+
+## Spa Coreana Vol.3 Men Edit. | 70 minuti per…
+https://anyplans.in/milano/spa-coreana-vol-3-men-edit-70-minuti-per-resettare-tutto/
+
+Yoga / pilates a Milano, sabato 3 ottobre alle 16:45. 5 € (Accredito su comehome; il resto si paga in loco).
 
 ## Chi sarà il re della pista? a Lissone, 3 ottobre
 https://anyplans.in/milano/chi-sara-il-re-della-pista/
@@ -5001,6 +5290,11 @@ Visite guidate a Milano, Brera, domenica 4 ottobre alle 10:30. 5 € (Accredito
 https://anyplans.in/milano/laura-pausini-in-concerto-milano-2026/
 
 Concerti e musica dal vivo a Assago Forum Milano, Milano, domenica 4 ottobre alle 12:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Pranzo della domenica 10 edizione
+https://anyplans.in/milano/pranzo-della-domenica-10-edizione/
+
+Cena / aperitivo a Minervino, Sesto San Giovanni/metro sesto rondo, domenica 4 ottobre alle 12:30. 35 € (Accredito su comehome; il resto si paga in loco).
 
 ## Santo Stinco & Beato Boccale
 https://anyplans.in/milano/santo-stinco-beato-boccale/
@@ -5452,6 +5746,11 @@ https://anyplans.in/milano/mindfall-l-escape-urbano-a-piedi/
 
 Giochi da tavolo a Lainate MI, domenica 11 ottobre alle 17:30. 5 € (Accredito su comehome; il resto si paga in loco).
 
+## Ottobre nel calice. Dai grappoli alla…
+https://anyplans.in/milano/ottobre-nel-calice-dai-grappoli-alla-bottiglia-in-enoteca/
+
+Cena / aperitivo a Milano, Porta genova conca del naviglio, domenica 11 ottobre alle 18:30. 5 € (Accredito su comehome; il resto si paga in loco).
+
 ## Cheers sui Navigli: Drink
 https://anyplans.in/milano/cheers-sui-navigli-drink-buffet-e-buona-compagnia/
 
@@ -5516,6 +5815,11 @@ Cena / aperitivo a Sesto San Giovanni/metro sesto rondo, martedì 13 ottobre all
 https://anyplans.in/milano/serata-in-societa-vol-2/
 
 Giochi da tavolo a Milano, Bolivar, martedì 13 ottobre alle 20:00. 5 € (Accredito su comehome; il resto si paga in loco).
+
+## PIZZERIA DOLLARO MONZA
+https://anyplans.in/milano/pizzeria-dollaro-monza/
+
+Cena / aperitivo a Via Duca d'Aosta, Monza, martedì 13 ottobre alle 20:30. Gratis (Gratis, iscrizione su Meeters (consumazioni a parte)).
 
 ## Business Roundtable - Monza
 https://anyplans.in/milano/business-roundtable-monza/
@@ -5962,17 +6266,17 @@ https://anyplans.in/milano/monza-workshop-macrofotografia-close-up/
 
 Incontri culturali a Monza, Monza, domenica 25 ottobre alle 09:00. 54,56 € (Biglietti su AllEvents).
 
-## S-PADEL liv. ENTRY WHITE FEMMINILE
+## S-PADEL liv. ENTRY WHITE FEMMINILE – Yousport Padel
 https://anyplans.in/milano/s-padel-liv-entry-white-femminile/
 
 Padel a Yousport Padel, Via Monza 107, 20060 Gessate, domenica 25 ottobre alle 13:00 (3 date, fino al 21 marzo). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE FEMMINILE
+## S-PADEL liv. ENTRY WHITE… – Padel Segrate CLIMATIZZATO
 https://anyplans.in/milano/s-padel-liv-entry-white-femminile-2026-11-08/
 
 Padel a Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, domenica 8 novembre alle 14:00 (3 date, fino al 9 maggio). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE FEMMINILE
+## S-PADEL liv. ENTRY WHITE FEMMINILE – PADEL4ALL VILLASANTA
 https://anyplans.in/milano/s-padel-liv-entry-white-femminile-2027-02-13/
 
 Padel a PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, sabato 13 febbraio alle 15:00 (2 date, fino al 10 aprile). 25 € (Iscrizione su Playtomic, si paga in loco).
@@ -5982,17 +6286,17 @@ https://anyplans.in/milano/monza-fotografare-gli-scoiattoli-workshop-fotografia-
 
 Incontri culturali a Monza, Monza, domenica 25 ottobre alle 13:00. 54,56 € (Biglietti su AllEvents).
 
-## S-PADEL liv. MEDIUM RED FEMMINILE
+## S-PADEL liv. MEDIUM RED FEMMINILE – Yousport Padel
 https://anyplans.in/milano/s-padel-liv-medium-red-femminile/
 
 Padel a Yousport Padel, Via Monza 107, 20060 Gessate, domenica 25 ottobre alle 16:00 (3 date, fino al 21 marzo). Gratis (Iscrizione su Playtomic).
 
-## S-PADEL liv. MEDIUM RED FEMMINILE
+## S-PADEL liv. MEDIUM RED… – Padel Segrate CLIMATIZZATO
 https://anyplans.in/milano/s-padel-liv-medium-red-femminile-2026-11-08/
 
 Padel a Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, domenica 8 novembre alle 17:00 (3 date, fino al 9 maggio). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED FEMMINILE
+## S-PADEL liv. MEDIUM RED FEMMINILE – PADEL4ALL VILLASANTA
 https://anyplans.in/milano/s-padel-liv-medium-red-femminile-2027-02-13/
 
 Padel a PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, sabato 13 febbraio alle 15:00 (2 date, fino al 10 aprile). 25 € (Iscrizione su Playtomic, si paga in loco).
@@ -6232,12 +6536,12 @@ https://anyplans.in/milano/trekkinfra-ascesa-al-monte-generoso/
 
 Escursionismo a Milano, Bellavista - Monte Generoso (Canton Ticino - Svizzera), domenica 15 novembre alle 09:30. 9 € (Accredito su comehome; il resto si paga in loco).
 
-## S-PADEL MAJOR BLACK 3000 MISTO liv. max 3° fascia
+## S-PADEL MAJOR BLACK 3000 MISTO liv. max… – Yousport Padel
 https://anyplans.in/milano/s-padel-major-black-3000-misto-liv-max-3-fascia/
 
 Padel a Yousport Padel, Via Monza 107, 20060 Gessate, domenica 15 novembre alle 14:00. 30 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL MAJOR BLACK 3000 MISTO liv. max 3° fascia
+## S-PADEL MAJOR BLACK 3000 MISTO liv.… – PADEL4ALL VILLASANTA
 https://anyplans.in/milano/s-padel-major-black-3000-misto-liv-max-3-fascia-2027-04-25/
 
 Padel a PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, domenica 25 aprile alle 16:00. 30 € (Iscrizione su Playtomic, si paga in loco).
@@ -6322,65 +6626,65 @@ https://anyplans.in/milano/kick-off-men-s-league-championship-singolare-maschile
 
 Tennis a Kick Off San Donato, Via XXV Aprile, 16, 20097 San Donato Milanese MI, 20097 San Donato Milanese, domenica 13 dicembre alle 16:30. 25 € (Iscrizione e pagamento su Playtomic).
 
-## Things to do in Milano: 1190 events
+## Things to do in Milano: 1244 events
 https://anyplans.in/en/milano/
 
 What's on in Milano and its province, today, tonight and this weekend: padel, dinners & aperitivo, talks & culture, concerts & live music, shows & theatre and guided tours. Pick one and go with other people.
 
-## What to do in Milano today: 76 events
+## What to do in Milano today: 58 events
 https://anyplans.in/en/milano/what-to-do-today/
 
-76 events in Milano and its province today, 15 September 2026: Milano, Verano Brianza, Legnano and Pessano Con Bornago and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+58 events in Milano and its province today, 15 September 2026: Milano, Verano Brianza, Legnano and Pessano Con Bornago and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Milano tomorrow: 97 events
+## What to do in Milano tomorrow: 119 events
 https://anyplans.in/en/milano/what-to-do-tomorrow/
 
-97 events in Milano and its province tomorrow, 16 September 2026: Milano, Monza, Porta Romana and Burago di Molgora and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+119 events in Milano and its province tomorrow, 16 September 2026: Milano, Monza, Porta Romana and Grancia and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Milano this weekend: 230 events
+## What to do in Milano this weekend: 248 events
 https://anyplans.in/en/milano/what-to-do-this-weekend/
 
-230 events in Milano and its province this weekend (Saturday 19 September and Sunday 20 September): Milano, Monza, Sesto San Giovanni and Cerro Maggiore and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+248 events in Milano and its province this weekend (Saturday 19 September and Sunday 20 September): Milano, Monza, Sesto San Giovanni and Cerro Maggiore and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## Events in Milano in September 2026: 824
+## Events in Milano in September 2026: 875
 https://anyplans.in/en/milano/events-september-2026/
 
-824 events in Milano and its province in September 2026: padel, guided tours, talks & culture, dinners & aperitivo and exhibitions. Day by day, with times, place and price, in Milano, Monza, Porta Romana and Sesto San Giovanni and other towns. You sign up and go with other people.
+875 events in Milano and its province in September 2026: padel, dinners & aperitivo, guided tours, talks & culture and exhibitions. Day by day, with times, place and price, in Milano, Monza, Porta Romana and Sesto San Giovanni and other towns. You sign up and go with other people.
 
-## Events in Milano in October 2026: 371
+## Events in Milano in October 2026: 375
 https://anyplans.in/en/milano/events-october-2026/
 
-371 events in Milano and its province in October 2026: padel, dinners & aperitivo, talks & culture, concerts & live music and painting & art. Day by day, with times, place and price, in Milano, Monza, Navigli and Porta Romana and other towns. You sign up and go with other people.
+375 events in Milano and its province in October 2026: padel, guided tours, dinners & aperitivo, talks & culture and concerts & live music. Day by day, with times, place and price, in Milano, Monza, Navigli and Porta Romana and other towns. You sign up and go with other people.
 
 ## Events in Milano in November 2026: 68
 https://anyplans.in/en/milano/events-november-2026/
 
 68 events in Milano and its province in November 2026: padel, concerts & live music, guided tours, shows & theatre and talks & culture. Day by day, with times, place and price, in Milano, Monza, Selvanesco and Zona V giornate and other towns. You sign up and go with other people.
 
-## Padel in Milano: 282 events
+## Padel in Milano: 323 events
 https://anyplans.in/en/milano/padel/
 
-In Milano and its province there are 282 padel matches and tournaments in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milano and its province there are 323 padel matches and tournaments in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Dinners & aperitivo in Milano: 251 events
+## Dinners & aperitivo in Milano: 256 events
 https://anyplans.in/en/milano/dinners/
 
-In Milano and its province there are 251 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milano and its province there are 256 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Guided tours in Milano: 41 events
+## Guided tours in Milano: 40 events
 https://anyplans.in/en/milano/guided-tours/
 
-In Milano and its province there are 41 guided tours events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milano and its province there are 40 guided tours events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Painting & art in Milano: 30 events
 https://anyplans.in/en/milano/painting/
 
 In Milano and its province there are 30 painting & art events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Talks & culture in Milano: 185 events
+## Talks & culture in Milano: 187 events
 https://anyplans.in/en/milano/talks-and-culture/
 
-In Milano and its province there are 185 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milano and its province there are 187 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Running in Milano: 8 events
 https://anyplans.in/en/milano/running/
@@ -6407,10 +6711,10 @@ https://anyplans.in/en/milano/cinema/
 
 In Milano and its province there are 14 screenings in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Yoga & pilates in Milano: 23 events
+## Yoga & pilates in Milano: 25 events
 https://anyplans.in/en/milano/yoga/
 
-In Milano and its province there are 23 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milano and its province there are 25 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Board games in Milano: 31 events
 https://anyplans.in/en/milano/board-games/
@@ -6422,25 +6726,25 @@ https://anyplans.in/en/milano/volleyball/
 
 In Milano and its province there are 5 volleyball events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Concerts & live music in Milano: 123 events
+## Concerts & live music in Milano: 124 events
 https://anyplans.in/en/milano/concerts/
 
-In Milano and its province there are 123 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milano and its province there are 124 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Festivals & sagre near Milano: 34 events
 https://anyplans.in/en/milano/festivals/
 
 In Milano and its province there are 34 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Hiking in Milano: 25 events
+## Hiking in Milano: 27 events
 https://anyplans.in/en/milano/hiking/
 
-In Milano and its province there are 25 hiking events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milano and its province there are 27 hiking events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Nights out in Milano: 27 events
+## Nights out in Milano: 29 events
 https://anyplans.in/en/milano/nights-out/
 
-In Milano and its province there are 27 club nights and dj sets in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milano and its province there are 29 club nights and dj sets in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Karaoke in Milano: 7 events
 https://anyplans.in/en/milano/karaoke/
@@ -6482,97 +6786,187 @@ https://anyplans.in/en/milano/the-loft-gourmet-dinner-party/
 
 In The LOFT 🌟 gourmet dinner&party there are 3 events in the coming months. On anyplans you find the festivals and events of The LOFT 🌟 gourmet dinner&party with dates, times and place. You sign up and go with others.
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori… – Padel Cesano Maderno
 https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole/
-
-Padel in Padel+, Via Enrico Toti 67, 20039 Canegrate, Tuesday 15 September at 13:30. €11 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 2 giocatori (amichevole)
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-15/
 
 Padel in Padel Cesano Maderno, Via po' 55, 20811 Cesano Maderno, Tuesday 15 September at 21:30. €13 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori… – Centro Scarioni Milano
 https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-16/
+
+Padel in Centro Scarioni Milano, Via Tucidide 10, 20134 Milano, Wednesday 16 September at 17:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (amichevole) – Grancia Padel Club
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-16-2/
+
+Padel in Grancia Padel Club, Grancia, Wednesday 16 September at 17:30. Free (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Centro Sportivo Tuberose
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-16-3/
+
+Padel in Centro Sportivo Tuberose, Via Giò Ponti 1, 20147 Milano, Wednesday 16 September at 18:00 (2 dates, until 18 September). €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Parco dei Gasometri - Bovisa
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-16-4/
+
+Padel in Parco dei Gasometri - Bovisa, via Giampietrino, 24, 20156 Milano, Wednesday 16 September at 18:30. €12.50 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (amichevole) – ELLE PADEL CLUB
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-16-5/
+
+Padel in ELLE PADEL CLUB, Via Monviso 25, 22066 Mariano Comense, Wednesday 16 September at 20:00 (3 dates, until 21 September). €16 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Mariano Sports Arena
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-16-6/
+
+Padel in Mariano Sports Arena, VIA LAMBRO 15 , 22066 Mariano Comense, Wednesday 16 September at 21:00 (2 dates, until 18 September). €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Clover Sport Village
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-16-7/
 
 Padel in Clover Sport Village, Via Comasina 115, 20161 Milano, Wednesday 16 September at 21:00. €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori… – Country Sport Village
 https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-17/
 
 Padel in Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, Thursday 17 September at 17:30 (2 dates, until 20 September). Free (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-17-2026-09-17/
+## Padel: mancano 2 giocatori… – PADEL ZENTER SEGRATE MILANO
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-17-2/
 
-Padel in PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, Thursday 17 September at 19:30. €20.75 (Si chiede il posto e si paga su Playtomic).
+Padel in PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, Thursday 17 September at 19:30 (2 dates, until 17 September). €20.75 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori… – Centro Sportivo Take Care
 https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-18/
 
 Padel in Centro Sportivo Take Care, Via Papa Giovanni XXXIII n° 23, 20093 Cologno Monzese, Friday 18 September at 17:00. €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-18-2026-09-18/
+## Padel: mancano 2 giocatori… – HANGAR PADEL SEGRATE
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-18-2/
 
 Padel in HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, Friday 18 September at 18:00. €13 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori (amichevole) – PadeLand Milano
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-18-3/
+
+Padel in PadeLand Milano, Via Vincenzo Toffetti, 17, 20139 Milano, Friday 18 September at 18:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (amichevole) – Murat4All
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-18-4/
+
+Padel in Murat4All, Via Gioacchino Murat 29, 20159 Milano, Friday 18 September at 19:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Racquet Club Milano
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-19/
+
+Padel in Racquet Club Milano, Viale Enrico Forlanini Centro Sportivo dell'AERONAUTICA MILITARE, 20090 Novegro-Tregarezzo, Saturday 19 September at 10:00. €12 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (amichevole) – Padel+
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-15/
+
+Padel in Padel+, Via Enrico Toti 67, 20039 Canegrate: it already took place, the last date was Tuesday, 15 September 2026.
+
+## Padel: mancano 2 giocatori (amichevole) – Levante Padel Club
 https://anyplans.in/en/milano/padel-mancano-2-giocatori-amichevole-2026-09-11/
 
 Padel in Levante Padel Club, Vimercate: it already took place, the last date was Friday, 11 September 2026.
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore (amichevole) – Murat4All
 https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole/
 
-Padel in Murat4All, Via Gioacchino Murat 29, 20159 Milano, Tuesday 15 September at 17:30 (3 dates, until 20 September). €15 (Si chiede il posto e si paga su Playtomic).
+Padel in Murat4All, Via Gioacchino Murat 29, 20159 Milano, Tuesday 15 September at 17:30 (2 dates, until 20 September). €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore (amichevole) – ELLE PADEL CLUB
 https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-15/
 
-Padel in PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, Tuesday 15 September at 19:30 (2 dates, until 17 September). €16.25 (Si chiede il posto e si paga su Playtomic).
+Padel in ELLE PADEL CLUB, Via Monviso 25, 22066 Mariano Comense, Tuesday 15 September at 17:30. €16 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
-https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-15-2026-09-15/
+## Padel: manca 1 giocatore… – PADEL ZENTER SEGRATE MILANO
+https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-15-2/
+
+Padel in PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, Tuesday 15 September at 19:30. €16.25 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – SPH - Monza Brugherio
+https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-15-3/
 
 Padel in SPH - Monza Brugherio, Via Ferdinando Magellano, 31, 20861 Brugherio, Tuesday 15 September at 20:30. €16 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
-https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-15-2026-09-15-2/
+## Padel: manca 1 giocatore… – Padel San Siro Gescal Boys
+https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-15-4/
+
+Padel in Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, Tuesday 15 September at 21:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (amichevole) – PADEL4ALL VILLASANTA
+https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-15-5/
 
 Padel in PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, Tuesday 15 September at 21:30 (3 dates, until 19 September). €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore (amichevole) – 3
 https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-16/
 
-Padel in 3,90 € Centro Sportivo Burago di Molgora, Burago di Molgora, Wednesday 16 September at 11:30 (2 dates, until 17 September). €3.90 (Si chiede il posto e si paga su Playtomic).
+Padel in 3,90 € Centro Sportivo Burago di Molgora, Largo Saint Symphorien d'Ozon, 20875 Burago di Molgora, Wednesday 16 September at 11:30 (2 dates, until 17 September). €3.90 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
-https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-16-2026-09-16/
+## Padel: manca 1 giocatore… – Country Sport Village
+https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-16-2/
 
 Padel in Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, Wednesday 16 September at 17:30. €13.50 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
-https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-16-2026-09-16-2/
+## Padel: manca 1 giocatore (amichevole) – Getfit via Pinerolo
+https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-16-3/
+
+Padel in Getfit via Pinerolo, Via Pinerolo 76, 20151 Milano, Wednesday 16 September at 18:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Centro Sportivo Cambini Fossati
+https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-16-4/
 
 Padel in Centro Sportivo Cambini Fossati, via leonardo Cambini, 4, 20131 Milano, Wednesday 16 September at 18:30. €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
-https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-16-2026-09-16-2-2/
+## Padel: manca 1 giocatore (amichevole) – PadeLand Milano
+https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-16-5/
+
+Padel in PadeLand Milano, Via Vincenzo Toffetti, 17, 20139 Milano, Wednesday 16 September at 19:00 (2 dates, until 19 September). €12 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Padel Arena Quintosole
+https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-16-6/
+
+Padel in Padel Arena Quintosole, Via Quintosole, 42/23, 20141 Milano, Wednesday 16 September at 19:30. €13 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Corbetta Padel e Fitness
+https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-16-7/
+
+Padel in Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, Wednesday 16 September at 19:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (amichevole) – Clover Sport Village
+https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-16-8/
 
 Padel in Clover Sport Village, Via Comasina 115, 20161 Milano, Wednesday 16 September at 21:30. €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore (amichevole) – Moving Padel Monza
 https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-17/
 
 Padel in Moving Padel Monza, Via della Birona, 56, 20900 Monza, Thursday 17 September at 14:00. €9.50 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
-https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-15-2026-09-15-2-2/
+## Padel: manca 1 giocatore (amichevole) – GOLARSA ACADEMY
+https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-17-2/
+
+Padel in GOLARSA ACADEMY, Via dei Ciclamini 18, 20147 Milano, Thursday 17 September at 20:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (amichevole) – Padel 8
+https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-19/
+
+Padel in Padel 8, Via Diomede angolo piazzale Lotto, 20148 Milano, Saturday 19 September at 10:00. €12.50 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Centro Sportivo Tuberose
+https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-20/
+
+Padel in Centro Sportivo Tuberose, Via Giò Ponti 1, 20147 Milano, Sunday 20 September at 09:30. €13 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (amichevole) – Mamapadel Melzo
+https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-15-6/
 
 Padel in Mamapadel Melzo, Melzo: it already took place, the last date was Tuesday, 15 September 2026.
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore… – Game Padel Center Villasanta
 https://anyplans.in/en/milano/padel-manca-1-giocatore-amichevole-2026-09-14/
 
 Padel in Game Padel Center Villasanta, Villasanta: it already took place, the last date was Monday, 14 September 2026.
@@ -6640,7 +7034,7 @@ Dinners & aperitivo in Milano navigli: it already took place, the last date was 
 ## LEZIONE
 https://anyplans.in/en/milano/lezione/
 
-Padel in HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, Tuesday 15 September at 11:30 (47 dates, until 16 October). €45 (Iscrizione e pagamento su Playtomic).
+Padel in HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, Wednesday 16 September at 10:30 (46 dates, until 16 October). €45 (Iscrizione e pagamento su Playtomic).
 
 ## Let's Bowling!
 https://anyplans.in/en/milano/let-s-bowling/
@@ -6655,7 +7049,7 @@ Padel in Gioia Padel, via risorgimento 14, 20016 Pero, Monday 14 September at 23
 ## Verona e Lago di Garda: Gita in giornata da…
 https://anyplans.in/en/milano/verona-e-lago-di-garda-gita-in-giornata-da-milano/
 
-Guided tours in Milan Visitor Center, Largo Cairoli 18, Milano, 20121, Milan, IT, Milano, Tuesday 15 September at 07:00. Free (Ingresso: vedi la pagina AllEvents).
+Guided tours in Milan Visitor Center, Largo Cairoli 18, Milano, 20121, Milan, IT, Milano: it already took place, the last date was Tuesday, 15 September 2026.
 
 ## Colazione da Bar Cloe': 5 posti liberi
 https://anyplans.in/en/milano/colazione-da-bar-cloe-5-posti-liberi/
@@ -6667,77 +7061,112 @@ https://anyplans.in/en/milano/domina-il-campo/
 
 Padel in MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano: it already took place, the last date was Tuesday, 15 September 2026.
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori… – PADEL ZENTER SEGRATE MILANO
 https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva/
 
-Padel in Murat4All, Via Gioacchino Murat 29, 20159 Milano, Tuesday 15 September at 11:30 (2 dates, until 16 September). €11.66 (Si chiede il posto e si paga su Playtomic).
+Padel in PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, Tuesday 15 September at 15:00 (2 dates, until 16 September). €12 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori… – Padel Club Ripamonti…
 https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-15/
 
-Padel in PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, Tuesday 15 September at 15:00. €12 (Si chiede il posto e si paga su Playtomic).
+Padel in Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, Tuesday 15 September at 17:00 (4 dates, until 20 September). €13.66 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-2026-09-15/
+## Padel: mancano 2 giocatori… – Centro Sportivo Take Care
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-2/
 
 Padel in Centro Sportivo Take Care, Via Papa Giovanni XXXIII n° 23, 20093 Cologno Monzese, Tuesday 15 September at 18:30. €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-2026-09-15-2/
+## Padel: mancano 2 giocatori (competitiva) – Padel Concorezzo
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-3/
 
 Padel in Padel Concorezzo, Via Libertà, 1, Concorezzo MB, Italia, 20863 Concorezzo, Tuesday 15 September at 19:00. €13 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-2026-09-15-2-2/
+## Padel: mancano 2 giocatori… – Padel Extreme Tennis
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-4/
 
 Padel in Padel Extreme Tennis, Via Como, 15/5, 20825 Barlassina, Tuesday 15 September at 20:00. €13 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-2026-09-15-2-2-2/
+## Padel: mancano 2 giocatori (competitiva) – Quanta Club
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-15-5/
 
 Padel in Quanta Club, Via Assietta 19, 20161 Milano, Tuesday 15 September at 20:30. €13.50 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori (competitiva) – Murat4All
 https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-16/
 
-Padel in Game Padel Center Villasanta, Via San Fiorano 54/B, 20852 Villasanta, Wednesday 16 September at 15:00. €5 (Si chiede il posto e si paga su Playtomic).
+Padel in Murat4All, Via Gioacchino Murat 29, 20159 Milano, Wednesday 16 September at 09:00. €10 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-16-2026-09-16/
+## Padel: mancano 2 giocatori (competitiva) – 3
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-16-2/
 
-Padel in ELLE PADEL CLUB, Via Monviso 25, 22066 Mariano Comense, Wednesday 16 September at 17:30. €16 (Si chiede il posto e si paga su Playtomic).
+Padel in 3,90 € Centro Sportivo Burago di Molgora, Largo Saint Symphorien d'Ozon, 20875 Burago di Molgora, Wednesday 16 September at 16:30. €3.90 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori (competitiva) – ELLE PADEL CLUB
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-16-3/
+
+Padel in ELLE PADEL CLUB, Via Monviso 25, 22066 Mariano Comense, Wednesday 16 September at 17:30 (3 dates, until 20 September). €16 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (competitiva) – PADEL FeSt
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-16-4/
+
+Padel in PADEL FeSt, Via Enzo Ferrari 24, 20010 Arluno, Wednesday 16 September at 22:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Mariano Sports Arena
 https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-17/
+
+Padel in Mariano Sports Arena, VIA LAMBRO 15 , 22066 Mariano Comense, Thursday 17 September at 17:30. €14 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Moving Padel Monza
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-17-2/
 
 Padel in Moving Padel Monza, Via della Birona, 56, 20900 Monza, Thursday 17 September at 18:00. €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-17-2026-09-17/
+## Padel: mancano 2 giocatori (competitiva) – Milago Padel
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-17-3/
+
+Padel in Milago Padel, Via Indipendenza, 3, 20090 Buccinasco MI, Italia, 20090 Buccinasco, Thursday 17 September at 19:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – HANGAR PADEL SEGRATE
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-17-4/
 
 Padel in HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, Thursday 17 September at 19:30. €13 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-17-2026-09-17-2/
+## Padel: mancano 2 giocatori… – Centro Sportivo Bonacossa
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-17-5/
+
+Padel in Centro Sportivo Bonacossa, Via Mecenate 74 , 20138 Milano, Thursday 17 September at 20:00. €12.50 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Centro Sportivo Falcone E…
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-17-6/
 
 Padel in Centro Sportivo Falcone E Borsellino - Cormano, Via Europa 7, 20032 Cormano, Thursday 17 September at 20:30. €14.50 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori… – PADEL4ALL VILLASANTA
 https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-18/
 
 Padel in PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, Friday 18 September at 15:30. €5 (Si chiede il posto e si paga su Playtomic).
 
-## Partita guidata
+## Padel: mancano 2 giocatori (competitiva) – Padel Lorenteggio
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-21/
+
+Padel in Padel Lorenteggio, Via Francesco Gonin 16 -  Tel. 02.48300873 - Mob. 345 4689789, 20147 Milano, Monday 21 September at 19:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Centro Sportivo Palauno
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-21-2/
+
+Padel in Centro Sportivo Palauno, Largo Antonio Balestra, 5, 20146 Milano, Monday 21 September at 20:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Partita guidata – Palapadel Sacarla Por Tres
 https://anyplans.in/en/milano/partita-guidata/
 
 Padel in Palapadel Sacarla Por Tres, Via Sondrio 9, 20020 Lainate, Wednesday 16 September at 17:30. €23 (Iscrizione e pagamento su Playtomic).
 
-## PARTITA GUIDATA
+## PARTITA GUIDATA – MENEGHINO - LOCATE TRIULZI
 https://anyplans.in/en/milano/partita-guidata-2026-09-16/
 
 Padel in MENEGHINO - LOCATE TRIULZI, via carso 4, 20085 Locate di Triulzi, Wednesday 16 September at 20:00. €25 (Iscrizione e pagamento su Playtomic).
 
-## Partita Guidata
+## Partita Guidata – Moving Padel Monza
 https://anyplans.in/en/milano/partita-guidata-2026-09-22/
 
 Padel in Moving Padel Monza, Via della Birona, 56, 20900 Monza, Tuesday 22 September at 09:30. €22 (Iscrizione e pagamento su Playtomic).
@@ -6750,12 +7179,12 @@ Padel in Area Padel Club, via della Resistenza 31/1, 20068 Peschiera Borromeo, W
 ## Lezione Individuale con Michael Cosenza🎓
 https://anyplans.in/en/milano/lezione-individuale-con-michael-cosenza/
 
-Padel in 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, Tuesday 15 September at 12:00 (8 dates, until 19 September). €32 (Iscrizione e pagamento su Playtomic).
+Padel in 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, Thursday 17 September at 10:00 (7 dates, until 19 September). €32 (Iscrizione e pagamento su Playtomic).
 
 ## 🔥🦁 BEST CORBETTA MORNING LEAGUE 🦁🔥
 https://anyplans.in/en/milano/best-corbetta-morning-league/
 
-Padel in Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, Tuesday 15 September at 10:00 (6 dates, until 1 October). €15 (Iscrizione e pagamento su Playtomic).
+Padel in Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, Thursday 17 September at 10:00 (5 dates, until 1 October). €15 (Iscrizione e pagamento su Playtomic).
 
 ## Lezione doppia con David 🇪🇸
 https://anyplans.in/en/milano/lezione-doppia-con-david/
@@ -6765,119 +7194,154 @@ Padel in 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, We
 ## Golden Match 🎾
 https://anyplans.in/en/milano/golden-match/
 
-Padel in Gesiolo - Alma Padel Milago Tennis, Via Casatico angolo Via dell'Oratorio, 27010 Siziano, Tuesday 15 September at 10:30 (2 dates, until 22 September). €16 (Iscrizione e pagamento su Playtomic).
+Padel in Gesiolo - Alma Padel Milago Tennis, Via Casatico angolo Via dell'Oratorio, 27010 Siziano, Tuesday 22 September at 10:30. €16 (Iscrizione e pagamento su Playtomic).
 
 ## ALLENAMENTO STRONG
 https://anyplans.in/en/milano/allenamento-strong/
 
-Padel in MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano, Tuesday 15 September at 11:00. €30 (Iscrizione e pagamento su Playtomic).
+Padel in MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano: it already took place, the last date was Tuesday, 15 September 2026.
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore (competitiva) – 3
 https://anyplans.in/en/milano/padel-manca-1-giocatore-competitiva/
-
-Padel in Game Padel Center Villasanta, Via San Fiorano 54/B, 20852 Villasanta, Tuesday 15 September at 11:00. €5 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: manca 1 giocatore (competitiva)
-https://anyplans.in/en/milano/padel-manca-1-giocatore-competitiva-2026-09-15/
-
-Padel in Padel Cesano Maderno, Via po' 55, 20811 Cesano Maderno, Tuesday 15 September at 12:30. €10 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: manca 1 giocatore (competitiva)
-https://anyplans.in/en/milano/padel-manca-1-giocatore-competitiva-2026-09-15-2026-09-15/
 
 Padel in 3,90 € Centro Sportivo Burago di Molgora, Largo Saint Symphorien d'Ozon, 20875 Burago di Molgora, Tuesday 15 September at 15:00. €3.90 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (competitiva)
-https://anyplans.in/en/milano/padel-manca-1-giocatore-competitiva-2026-09-15-2026-09-15-2/
+## Padel: manca 1 giocatore… – PADEL ZENTER SEGRATE MILANO
+https://anyplans.in/en/milano/padel-manca-1-giocatore-competitiva-2026-09-15/
 
 Padel in PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, Tuesday 15 September at 18:30. €19.50 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore (competitiva) – IL LOPE PADEL
+https://anyplans.in/en/milano/padel-manca-1-giocatore-competitiva-2026-09-15-2/
+
+Padel in IL LOPE PADEL, Lope de Vega 35, 20143 Milano, Tuesday 15 September at 20:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Game Padel Center Villasanta
 https://anyplans.in/en/milano/padel-manca-1-giocatore-competitiva-2026-09-16/
 
+Padel in Game Padel Center Villasanta, Via San Fiorano 54/B, 20852 Villasanta, Wednesday 16 September at 15:00. €5 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Centro Sportivo Palauno
+https://anyplans.in/en/milano/padel-manca-1-giocatore-competitiva-2026-09-16-2/
+
+Padel in Centro Sportivo Palauno, Largo Antonio Balestra, 5, 20146 Milano, Wednesday 16 September at 18:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – SH PADEL GRAF
+https://anyplans.in/en/milano/padel-manca-1-giocatore-competitiva-2026-09-16-3/
+
+Padel in SH PADEL GRAF, Via Arturo Graf, 4, 20157 Milano, Wednesday 16 September at 18:30. €10 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Centro Scarioni Milano
+https://anyplans.in/en/milano/padel-manca-1-giocatore-competitiva-2026-09-16-4/
+
+Padel in Centro Scarioni Milano, Via Tucidide 10, 20134 Milano, Wednesday 16 September at 19:00 (2 dates, until 18 September). €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – Centro Derby Monza
+https://anyplans.in/en/milano/padel-manca-1-giocatore-competitiva-2026-09-16-5/
+
 Padel in Centro Derby Monza, Viale Lombardia, 17, Monza MB, 20900 Monza, Wednesday 16 September at 19:00. €13.50 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – Padel Lorenteggio
+https://anyplans.in/en/milano/padel-manca-1-giocatore-competitiva-2026-09-17/
+
+Padel in Padel Lorenteggio, Via Francesco Gonin 16 -  Tel. 02.48300873 - Mob. 345 4689789, 20147 Milano, Thursday 17 September at 19:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – SPORTITALIA VILLAGE
+https://anyplans.in/en/milano/padel-manca-1-giocatore-competitiva-2026-09-17-2/
+
+Padel in SPORTITALIA VILLAGE, Via Dante Alighieri, 18, Verano Brianza, MB, Italia, 20843 Verano Brianza, Thursday 17 September at 20:00. €14.50 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Padel Club Ripamonti…
+https://anyplans.in/en/milano/padel-manca-1-giocatore-competitiva-2026-09-19/
+
+Padel in Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, Saturday 19 September at 15:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Padel Cesano Maderno
+https://anyplans.in/en/milano/padel-manca-1-giocatore-competitiva-2026-09-15-3/
+
+Padel in Padel Cesano Maderno, Via po' 55, 20811 Cesano Maderno: it already took place, the last date was Tuesday, 15 September 2026.
 
 ## Lezione Individuale Con David 🇪🇸
 https://anyplans.in/en/milano/lezione-individuale-con-david/
 
-Padel in 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, Tuesday 15 September at 11:30 (9 dates, until 17 September). €32 (Iscrizione e pagamento su Playtomic).
+Padel in 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, Wednesday 16 September at 10:30 (6 dates, until 17 September). €32 (Iscrizione e pagamento su Playtomic).
 
 ## *Partita Guidata MBPOWER con M.BARNABA*
 https://anyplans.in/en/milano/partita-guidata-mbpower-con-m-barnaba/
 
-Padel in Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, Tuesday 15 September at 12:00 (10 dates, until 28 September). €30 (Iscrizione e pagamento su Playtomic).
+Padel in Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, Thursday 17 September at 18:00 (9 dates, until 28 September). €40 (Iscrizione e pagamento su Playtomic).
 
 ## The secrets of pasta and tiramisu in my family…
 https://anyplans.in/en/milano/the-secrets-of-pasta-and-tiramisu-in-my-family-house/
 
-Talks & culture in V. Giuseppe Dezza, 47, Milano, Tuesday 15 September at 12:00. €75 (Biglietti su AllEvents).
+Talks & culture in V. Giuseppe Dezza, 47, Milano: it already took place, the last date was Tuesday, 15 September 2026.
 
 ## AGONISTICA MARTEDI
 https://anyplans.in/en/milano/agonistica-martedi/
 
-Padel in Easy Village, Via per Caronno, 6, 21040 Origgio VA, Italia, 21040 Origgio, Tuesday 15 September at 12:30. €25 (Iscrizione e pagamento su Playtomic).
+Padel in Easy Village, Via per Caronno, 6, 21040 Origgio VA, Italia, 21040 Origgio: it already took place, the last date was Tuesday, 15 September 2026.
 
 ## 🥇TORNEO MEDIUM LEVEL🥇
 https://anyplans.in/en/milano/torneo-medium-level/
 
-Padel in Mariano Sports Arena, VIA LAMBRO 15 , 22066 Mariano Comense, Tuesday 15 September at 12:30 (3 dates, until 29 September). €15 (Iscrizione e pagamento su Playtomic).
+Padel in Mariano Sports Arena, VIA LAMBRO 15 , 22066 Mariano Comense, Tuesday 22 September at 12:30 (2 dates, until 29 September). €15 (Iscrizione e pagamento su Playtomic).
 
 ## Silvia in Blues (acoustic duo)
 https://anyplans.in/en/milano/silvia-in-blues-acoustic-duo/
 
-Talks & culture in Hard Rock Cafe Milan, Milano, Tuesday 15 September at 12:30. Free (Ingresso: vedi la pagina AllEvents).
+Talks & culture in Hard Rock Cafe Milan, Milano: it already took place, the last date was Tuesday, 15 September 2026.
 
 ## NRG Rodeo Lunch
 https://anyplans.in/en/milano/nrg-rodeo-lunch/
 
-Padel in NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo, Tuesday 15 September at 12:30. €15 (Iscrizione e pagamento su Playtomic).
+Padel in NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo: it already took place, the last date was Tuesday, 15 September 2026.
 
 ## Lezione singola con coach SR
 https://anyplans.in/en/milano/lezione-singola-con-coach-sr/
 
-Padel in Sport Promotion Comasina - Padel & Beach, Via Salemi 19, 20161 Milano, Tuesday 15 September at 13:00 (13 dates, until 16 October). Free (Iscrizione su Playtomic).
-
-## Lezione singola
-https://anyplans.in/en/milano/lezione-singola/
-
-Padel in Milago Padel, Via Indipendenza, 3, 20090 Buccinasco MI, Italia, 20090 Buccinasco, Tuesday 15 September at 13:00. €50 (Iscrizione e pagamento su Playtomic).
+Padel in Sport Promotion Comasina - Padel & Beach, Via Salemi 19, 20161 Milano, Thursday 17 September at 13:00 (12 dates, until 16 October). Free (Iscrizione su Playtomic).
 
 ## 🔥LEZIONE SINGOLA🎾
-https://anyplans.in/en/milano/lezione-singola-2026-09-16/
+https://anyplans.in/en/milano/lezione-singola/
 
 Padel in M3 PADEL - CORREZZANA, Via Principale 34 , 20856 Correzzana, Wednesday 16 September at 11:00 (49 dates, until 2 October). €40 (Iscrizione e pagamento su Playtomic).
+
+## Lezione singola
+https://anyplans.in/en/milano/lezione-singola-2026-09-15/
+
+Padel in Milago Padel, Via Indipendenza, 3, 20090 Buccinasco MI, Italia, 20090 Buccinasco: it already took place, the last date was Tuesday, 15 September 2026.
 
 ## *Lezione con M.BARNABA*
 https://anyplans.in/en/milano/lezione-con-m-barnaba/
 
-Padel in Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, Tuesday 15 September at 13:00 (22 dates, until 28 September). €35 (Iscrizione e pagamento su Playtomic).
+Padel in Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, Wednesday 16 September at 16:00 (21 dates, until 28 September). €35 (Iscrizione e pagamento su Playtomic).
 
 ## Lezione con Claudio R.
 https://anyplans.in/en/milano/lezione-con-claudio-r/
 
-Padel in Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, Tuesday 15 September at 13:00 (50 dates, until 24 September). €50 (Iscrizione e pagamento su Playtomic).
+Padel in Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, Tuesday 15 September at 16:00 (47 dates, until 24 September). €50 (Iscrizione e pagamento su Playtomic).
 
 ## 🔥🎾 MOVING SMASH & LUNCH 🎾🔥
 https://anyplans.in/en/milano/moving-smash-lunch/
 
-Padel in Moving Padel Monza, Via della Birona, 56, 20900 Monza, Tuesday 15 September at 13:00 (3 dates, until 29 September). €15 (Iscrizione e pagamento su Playtomic).
+Padel in Moving Padel Monza, Via della Birona, 56, 20900 Monza, Tuesday 22 September at 13:00 (2 dates, until 29 September). €15 (Iscrizione e pagamento su Playtomic).
 
-## LIVELLAMENTO PLAYTOMIC
+## Livellamento playtomic – Vamos Padel Cimiano
 https://anyplans.in/en/milano/livellamento-playtomic/
-
-Padel in Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, Tuesday 15 September at 13:00 (2 dates, until 17 September). €18 (Iscrizione e pagamento su Playtomic).
-
-## Livellamento playtomic
-https://anyplans.in/en/milano/livellamento-playtomic-2026-09-16/
 
 Padel in Vamos Padel Cimiano, Via Don Giovanni Calabria, 16, 20132 Milano, Wednesday 16 September at 16:30. €25 (Iscrizione e pagamento su Playtomic).
 
-## Livellamento Playtomic
+## Livellamento Playtomic – Centro Scarioni Milano
 https://anyplans.in/en/milano/livellamento-playtomic-2026-09-17/
 
 Padel in Centro Scarioni Milano, Via Tucidide 10, 20134 Milano, Thursday 17 September at 10:00 (7 dates, until 29 October). €25 (Iscrizione e pagamento su Playtomic).
 
-## LIVELLAMENTO PLAYTOMIC
+## LIVELLAMENTO PLAYTOMIC – Country Sport Village
+https://anyplans.in/en/milano/livellamento-playtomic-2026-09-17-2/
+
+Padel in Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, Thursday 17 September at 13:00. €18 (Iscrizione e pagamento su Playtomic).
+
+## LIVELLAMENTO PLAYTOMIC – LIONS PADEL
 https://anyplans.in/en/milano/livellamento-playtomic-2026-09-18/
 
 Padel in LIONS PADEL, via marconi 33, 20048 Pantigliate, Friday 18 September at 17:30. €20 (Iscrizione e pagamento su Playtomic).
@@ -6887,20 +7351,20 @@ https://anyplans.in/en/milano/livellamento-playtomic-2026-09-19/
 
 Padel in Padel Extreme Tennis, Via Como, 15/5, 20825 Barlassina, Saturday 19 September at 11:00. €25 (Iscrizione e pagamento su Playtomic).
 
-## LIVELLAMENTO PLAYTOMIC
-https://anyplans.in/en/milano/livellamento-playtomic-2026-09-19-2026-09-19/
+## LIVELLAMENTO PLAYTOMIC – HANGAR PADEL SEGRATE
+https://anyplans.in/en/milano/livellamento-playtomic-2026-09-19-2/
 
 Padel in HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, Saturday 19 September at 12:30. €20 (Iscrizione e pagamento su Playtomic).
 
 ## 🎾🎾🚹🚺🍀GIRO  MIX ENTRY MARTEDI DI COACH AURE
 https://anyplans.in/en/milano/giro-mix-entry-martedi-di-coach-aure/
 
-Padel in Clover Sport Village, Via Comasina 115, 20161 Milano, Tuesday 15 September at 13:00 (3 dates, until 29 September). €10 (Iscrizione e pagamento su Playtomic).
+Padel in Clover Sport Village, Via Comasina 115, 20161 Milano, Tuesday 22 September at 13:00 (2 dates, until 29 September). €10 (Iscrizione e pagamento su Playtomic).
 
 ## Promo lezioni singole
 https://anyplans.in/en/milano/promo-lezioni-singole/
 
-Padel in NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo, Tuesday 15 September at 14:30 (49 dates, until 16 November). €28 (Iscrizione e pagamento su Playtomic).
+Padel in NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo, Tuesday 15 September at 15:30 (48 dates, until 16 November). €28 (Iscrizione e pagamento su Playtomic).
 
 ## Rodeo Gioca con David🇪🇸🎓
 https://anyplans.in/en/milano/rodeo-gioca-con-david/
@@ -6910,42 +7374,77 @@ Padel in 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, Tu
 ## Every Day Open Day Livello 0-1,5
 https://anyplans.in/en/milano/every-day-open-day-livello-0-1-5/
 
-Padel in Moving Padel Monza, Via della Birona, 56, 20900 Monza, Tuesday 15 September at 15:30 (8 dates, until 24 September). Free (Iscrizione su Playtomic).
+Padel in Moving Padel Monza, Via della Birona, 56, 20900 Monza, Wednesday 16 September at 15:30 (7 dates, until 24 September). Free (Iscrizione su Playtomic).
 
 ## Padel Accademy
 https://anyplans.in/en/milano/padel-accademy/
 
 Padel in Palapadel Sacarla Por Tres, Via Sondrio 9, 20020 Lainate, Tuesday 15 September at 15:30 (28 dates, until 2 October). €35 (Iscrizione e pagamento su Playtomic).
 
-## Padel: mancano 3 giocatori (amichevole)
+## Padel: mancano 3 giocatori… – PADELLARO CLUBHOUSE
 https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole/
 
 Padel in PADELLARO CLUBHOUSE, VIA VOLONTARI DEL SANGUE 30, 20851 Lissone, Tuesday 15 September at 15:30. €13.66 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (amichevole)
+## Padel: mancano 3 giocatori… – MUP - Milano Urban Padel
 https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole-2026-09-15/
 
 Padel in MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano, Tuesday 15 September at 18:30. €25 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (amichevole)
+## Padel: mancano 3 giocatori (amichevole) – Padel 8
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole-2026-09-16/
+
+Padel in Padel 8, Via Diomede angolo piazzale Lotto, 20148 Milano, Wednesday 16 September at 22:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Getfit via Pinerolo
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole-2026-09-17/
+
+Padel in Getfit via Pinerolo, Via Pinerolo 76, 20151 Milano, Thursday 17 September at 19:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Padel Cesano Maderno
 https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole-2026-09-18/
 
 Padel in Padel Cesano Maderno, Via po' 55, 20811 Cesano Maderno, Friday 18 September at 13:00. €10 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (amichevole)
-https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole-2026-09-18-2026-09-18/
+## Padel: mancano 3 giocatori… – PADEL ZENTER SEGRATE MILANO
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole-2026-09-18-2/
 
 Padel in PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, Friday 18 September at 14:00. €12 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (amichevole)
-https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole-2026-09-18-2026-09-18-2/
+## Padel: mancano 3 giocatori… – Stan Padel A.S.D - Bar club…
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole-2026-09-18-3/
 
 Padel in Stan Padel A.S.D - Bar club house climatizzato, CLIMATIZZATO via Bizet 19 , 20831 Seregno, Friday 18 September at 22:30. €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (amichevole)
+## Padel: mancano 3 giocatori… – PADEL PALACE - ARIA…
 https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole-2026-09-19/
 
+Padel in PADEL PALACE - ARIA CONDIZIONATA E NIENTE ZANZARE, Via Alfredo Soffredini 16, 20126 Milano, Saturday 19 September at 09:00. €17 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Country Sport Village
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole-2026-09-19-2/
+
 Padel in Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, Saturday 19 September at 14:00. €13.50 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (amichevole) – GOLARSA ACADEMY
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole-2026-09-19-3/
+
+Padel in GOLARSA ACADEMY, Via dei Ciclamini 18, 20147 Milano, Saturday 19 September at 14:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (amichevole) – NRG Padel Club
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole-2026-09-20/
+
+Padel in NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo, Sunday 20 September at 10:30. €5 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (amichevole) – ELLE PADEL CLUB
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole-2026-09-20-2/
+
+Padel in ELLE PADEL CLUB, Via Monviso 25, 22066 Mariano Comense, Sunday 20 September at 18:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Centro Sportivo Tuberose
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole-2026-09-21/
+
+Padel in Centro Sportivo Tuberose, Via Giò Ponti 1, 20147 Milano, Monday 21 September at 19:30. €15 (Si chiede il posto e si paga su Playtomic).
 
 ## Lezione doppia con Michael Cosenza🎓
 https://anyplans.in/en/milano/lezione-doppia-con-michael-cosenza/
@@ -6966,6 +7465,81 @@ Padel in Moving Padel Monza, Via della Birona, 56, 20900 Monza, Tuesday 15 Septe
 https://anyplans.in/en/milano/every-day-open-day-over-60/
 
 Padel in Moving Padel Monza, Via della Birona, 56, 20900 Monza, Tuesday 15 September at 16:30 (8 dates, until 24 September). Free (Iscrizione su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – Club Ambrosiano
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva/
+
+Padel in Club Ambrosiano – Padel, Via Feltre 33, 20134 Milano, Tuesday 15 September at 17:00. €8.75 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Padel Club Ripamonti…
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-15/
+
+Padel in Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, Tuesday 15 September at 20:30 (5 dates, until 17 September). €16 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Moving Padel Monza
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-15-2/
+
+Padel in Moving Padel Monza, Via della Birona, 56, 20900 Monza, Tuesday 15 September at 21:00. €13 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Mariano Sports Arena
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-16/
+
+Padel in Mariano Sports Arena, VIA LAMBRO 15 , 22066 Mariano Comense, Wednesday 16 September at 11:00. €12.50 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Giuriati Sport Center
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-2/
+
+Padel in Giuriati Sport Center, via Pascal, 6, 20133 Milano, Wednesday 16 September at 11:30. €7.50 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – Murat4All
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-3/
+
+Padel in Murat4All, Via Gioacchino Murat 29, 20159 Milano, Wednesday 16 September at 12:30 (4 dates, until 19 September). €12.50 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – NRG Padel Club
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-4/
+
+Padel in NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo, Wednesday 16 September at 17:00. €11.67 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Centro Sportivo De Nicola
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-5/
+
+Padel in Centro Sportivo De Nicola, Via Enrico De Nicola, 3, 20142 Milano, Wednesday 16 September at 18:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – M3 PADEL - CORREZZANA
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-6/
+
+Padel in M3 PADEL - CORREZZANA, Via Principale 34 , 20856 Correzzana, Wednesday 16 September at 18:30. €13.50 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – BesTennis Academy
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-7/
+
+Padel in BesTennis Academy, Via De Amicis 80, 20092 Cinisello Balsamo, Wednesday 16 September at 19:30. €14 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – Enjoy Sport
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-8/
+
+Padel in Enjoy Sport, via michelangelo Buonarroti 44a, 20063 Cernusco sul Naviglio, Wednesday 16 September at 20:30. €9 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Country Sport Village
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-17/
+
+Padel in Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, Thursday 17 September at 19:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – GOLARSA ACADEMY
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-18/
+
+Padel in GOLARSA ACADEMY, Via dei Ciclamini 18, 20147 Milano, Friday 18 September at 09:00. €13 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – 3
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-19/
+
+Padel in 3,90 € Centro Sportivo Burago di Molgora, Largo Saint Symphorien d'Ozon, 20875 Burago di Molgora, Saturday 19 September at 10:00 (2 dates, until 20 September). €7.75 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Getfit via Pinerolo
+https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-19-2/
+
+Padel in Getfit via Pinerolo, Via Pinerolo 76, 20151 Milano, Saturday 19 September at 11:00. €14 (Si chiede il posto e si paga su Playtomic).
 
 ## Cena da Tomi sushi: 2 posti liberi
 https://anyplans.in/en/milano/cena-da-tomi-sushi-2-posti-liberi/
@@ -7102,47 +7676,12 @@ https://anyplans.in/en/milano/da-davidino-a-1-anno-dall-apertura-festeggia-con-o
 
 Dinners & aperitivo in Milano, Dateo, Tuesday 15 September at 20:30. €5 (Accredito su comehome; il resto si paga in loco). 1 person has already said they're going.
 
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva/
-
-Padel in Moving Padel Monza, Via della Birona, 56, 20900 Monza, Tuesday 15 September at 21:00. €13 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-16/
-
-Padel in Murat4All, Via Gioacchino Murat 29, 20159 Milano, Wednesday 16 September at 12:30 (4 dates, until 19 September). €12.50 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-2026-09-16/
-
-Padel in M3 PADEL - CORREZZANA, Via Principale 34 , 20856 Correzzana, Wednesday 16 September at 18:30. €13.50 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-2026-09-16-2/
-
-Padel in BesTennis Academy, Via De Amicis 80, 20092 Cinisello Balsamo, Wednesday 16 September at 19:30. €14 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-16-2026-09-16-2-2/
-
-Padel in Enjoy Sport, via michelangelo Buonarroti 44a, 20063 Cernusco sul Naviglio, Wednesday 16 September at 20:30. €9 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-17/
-
-Padel in Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, Thursday 17 September at 19:30. €15 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/en/milano/padel-mancano-3-giocatori-competitiva-2026-09-19/
-
-Padel in 3,90 € Centro Sportivo Burago di Molgora, Burago di Molgora, Saturday 19 September at 10:00 (2 dates, until 20 September). €7.75 (Si chiede il posto e si paga su Playtomic).
-
 ## Lezione individuale
 https://anyplans.in/en/milano/lezione-individuale/
 
 Padel in Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, Wednesday 16 September at 08:00 (25 dates, until 18 September). €60 (Iscrizione e pagamento su Playtomic).
 
-## Livellamento
+## Livellamento – Padel Segrate CLIMATIZZATO
 https://anyplans.in/en/milano/livellamento/
 
 Padel in Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, Wednesday 16 September at 08:00 (25 dates, until 18 September). €25 (Iscrizione e pagamento su Playtomic).
@@ -7152,12 +7691,12 @@ https://anyplans.in/en/milano/livellamento-2026-09-16/
 
 Padel in 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, Wednesday 16 September at 17:00. €18 (Iscrizione e pagamento su Playtomic).
 
-## Livellamento
-https://anyplans.in/en/milano/livellamento-2026-09-16-2026-09-16/
+## Livellamento – Tennis Club Inzago
+https://anyplans.in/en/milano/livellamento-2026-09-16-2/
 
 Padel in Tennis Club Inzago, Via Orchidee 1, 20065 Villaggio Residenziale, Wednesday 16 September at 18:30. €15 (Iscrizione e pagamento su Playtomic).
 
-## LIVELLAMENTO
+## LIVELLAMENTO – Padel Farm CLIMATIZZATO
 https://anyplans.in/en/milano/livellamento-2026-09-17/
 
 Padel in Padel Farm CLIMATIZZATO, Via Giuseppe di Vittorio, 6 , 20090 Assago, Thursday 17 September at 13:00. €30 (Iscrizione e pagamento su Playtomic).
@@ -7242,12 +7781,12 @@ https://anyplans.in/en/milano/cena-da-pane-trita-seregno-4-posti-liberi/
 
 Dinners & aperitivo in Pane & Trita | Seregno, Wednesday 16 September at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## OPEN DAY
+## OPEN DAY – Centro Derby Monza
 https://anyplans.in/en/milano/open-day/
 
 Padel in Centro Derby Monza, Viale Lombardia, 17, Monza MB, 20900 Monza, Wednesday 16 September at 18:00 (2 dates, until 19 September). Free (Iscrizione su Playtomic).
 
-## OPEN DAY
+## OPEN DAY – Yousport Padel
 https://anyplans.in/en/milano/open-day-2026-09-19/
 
 Padel in Yousport Padel, Via Monza 107, 20060 Gessate, Saturday 19 September at 14:30 (5 dates, until 19 September). Free (Iscrizione su Playtomic).
@@ -8137,6 +8676,11 @@ https://anyplans.in/en/milano/karmadrome-indie-disco-full-djset-detune/
 
 Shows & theatre in Detune, Milano, Friday 18 September at 22:00. Free (Ingresso: vedi la pagina AllEvents).
 
+## Escursione al Rifugio Curò
+https://anyplans.in/en/milano/escursione-al-rifugio-curo/
+
+Hiking in Sesto San Giovanni, Escursione al Rifugio Curò, Saturday 19 September at 08:15. €3 (Accredito su comehome; il resto si paga in loco).
+
 ## Esposizione Nazionale Canina di Monza
 https://anyplans.in/en/milano/esposizione-nazionale-canina-di-monza/
 
@@ -8211,6 +8755,11 @@ Padel in Lainate Padel, Via Circonvallazione Ovest 1, 20043 Lainate, Saturday 19
 https://anyplans.in/en/milano/teaology-tea-room/
 
 Talks & culture in Via Melzo, 34, Milano, Saturday 19 September at 10:30. Free (Ingresso: vedi la pagina AllEvents).
+
+## The Gentleman - Stile e Gioielli al Maschile
+https://anyplans.in/en/milano/the-gentleman-stile-e-gioielli-al-maschile/
+
+Talks & culture in Milano, Zona Montenapoleone, Saturday 19 September at 10:30. €5 (Accredito su comehome; il resto si paga in loco).
 
 ## Sono sempre io. Un laboratorio per piccoli…
 https://anyplans.in/en/milano/sono-sempre-io-un-laboratorio-per-piccoli-esploratori-di-se/
@@ -8336,6 +8885,11 @@ Dinners & aperitivo in Ceriano Laghetto, Saturday 19 September at 15:30. €5 (A
 https://anyplans.in/en/milano/aperitivo-da-sissi-bar-arluno-8-posti-liberi/
 
 Dinners & aperitivo in Sissi Bar Arluno, Saturday 19 September at 15:55. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## Il Monumentale come non l’avete mai visto
+https://anyplans.in/en/milano/il-monumentale-come-non-l-avete-mai-visto/
+
+Guided tours in Milano, Saturday 19 September at 16:00 (2 dates, until 3 October). €15 (Accredito su comehome; il resto si paga in loco).
 
 ## Vamos Cup Maschile by Adidas
 https://anyplans.in/en/milano/vamos-cup-maschile-by-adidas/
@@ -8657,6 +9211,11 @@ https://anyplans.in/en/milano/oxxxa-live-band-show-tavolo-sabrina-da-grace-8-pos
 
 Dinners & aperitivo in GRACE, Lodi Vecchio, Saturday 19 September at 20:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## September is coming!! La Taverna reopens..
+https://anyplans.in/en/milano/september-is-coming-la-taverna-reopens/
+
+Dinners & aperitivo in Bollate, Centro, Saturday 19 September at 20:30. €35 (Accredito su comehome; il resto si paga in loco).
+
 ## Endless Summer '90s | Aperitivo in Piscina &…
 https://anyplans.in/en/milano/endless-summer-90s-aperitivo-in-piscina-welovethe90s/
 
@@ -8782,12 +9341,12 @@ https://anyplans.in/en/milano/run4rights-corriamo-insieme-per-i-giusti/
 
 Gym in Via Giovanni Cimabue, 40, Milano, Sunday 20 September at 09:30. Free (Ingresso: vedi la pagina AllEvents).
 
-## 🎾🏆 ROUND ROBIN TOURNAMENT ENTRY LEVEL 🏆🎾
+## 🎾🏆 ROUND ROBIN TOURNAMENT ENTRY LEVEL… – Padel Concorezzo
 https://anyplans.in/en/milano/round-robin-tournament-entry-level/
 
 Padel in Padel Concorezzo, Via Libertà, 1, Concorezzo MB, Italia, 20863 Concorezzo, Sunday 20 September at 10:00 (2 dates, until 27 September). €20 (Iscrizione e pagamento su Playtomic).
 
-## 🎾🏆 ROUND ROBIN TOURNAMENT ENTRY LEVEL 🏆🎾
+## 🎾🏆 ROUND ROBIN TOURNAMENT ENTRY… – Padel Cesano Maderno
 https://anyplans.in/en/milano/round-robin-tournament-entry-level-2026-09-20/
 
 Padel in Padel Cesano Maderno, Via po' 55, 20811 Cesano Maderno, Sunday 20 September at 10:00 (2 dates, until 27 September). €20 (Iscrizione e pagamento su Playtomic).
@@ -8882,17 +9441,17 @@ https://anyplans.in/en/milano/brunch-in-love-un-brunch-con-nuovi-amici/
 
 Dinners & aperitivo in Milano, Porta romana, Sunday 20 September at 12:45. €5 (Accredito su comehome; il resto si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE MASCHILE
+## S-PADEL liv. ENTRY WHITE MASCHILE – Yousport Padel
 https://anyplans.in/en/milano/s-padel-liv-entry-white-maschile/
 
 Padel in Yousport Padel, Via Monza 107, 20060 Gessate, Sunday 20 September at 13:00 (3 dates, until 18 April). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE MASCHILE
+## S-PADEL liv. ENTRY WHITE MASCHILE – PADEL4ALL VILLASANTA
 https://anyplans.in/en/milano/s-padel-liv-entry-white-maschile-2026-11-14/
 
 Padel in PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, Saturday 14 November at 15:00 (2 dates, until 9 January). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE MASCHILE
+## S-PADEL liv. ENTRY WHITE… – Padel Segrate CLIMATIZZATO
 https://anyplans.in/en/milano/s-padel-liv-entry-white-maschile-2026-12-05/
 
 Padel in Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, Saturday 5 December at 14:00 (2 dates, until 7 March). €25 (Iscrizione su Playtomic, si paga in loco).
@@ -8992,17 +9551,17 @@ https://anyplans.in/en/milano/america-by-adidas/
 
 Padel in Vamos Padel Cimiano, Via Don Giovanni Calabria, 16, 20132 Milano, Sunday 20 September at 16:00. €20 (Iscrizione e pagamento su Playtomic).
 
-## S-PADEL liv. MEDIUM RED MASCHILE
+## S-PADEL liv. MEDIUM RED MASCHILE – Yousport Padel
 https://anyplans.in/en/milano/s-padel-liv-medium-red-maschile/
 
 Padel in Yousport Padel, Via Monza 107, 20060 Gessate, Sunday 20 September at 16:00 (3 dates, until 18 April). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED MASCHILE
+## S-PADEL liv. MEDIUM RED MASCHILE – PADEL4ALL VILLASANTA
 https://anyplans.in/en/milano/s-padel-liv-medium-red-maschile-2026-11-14/
 
 Padel in PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, Saturday 14 November at 15:00 (2 dates, until 9 January). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED MASCHILE
+## S-PADEL liv. MEDIUM RED… – Padel Segrate CLIMATIZZATO
 https://anyplans.in/en/milano/s-padel-liv-medium-red-maschile-2026-12-05/
 
 Padel in Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, Saturday 5 December at 17:00 (2 dates, until 7 March). €25 (Iscrizione su Playtomic, si paga in loco).
@@ -9026,6 +9585,11 @@ Dinners & aperitivo in Milano, Parco Forlanini, Sunday 20 September at 16:30. �
 https://anyplans.in/en/milano/reading-party-milano-domenica-20-settembre/
 
 Nights out in CXMilan | Bicocca Campus & Hotel, Milano, Sunday 20 September at 17:00. €10 (Si paga su Luma).
+
+## Inside Investing
+https://anyplans.in/en/milano/inside-investing/
+
+Talks & culture in Via Rovello, 2, Milano, Sunday 20 September at 17:00. Free (Gratis, registrazione su Luma).
 
 ## WHYNOT WUNDERPARTY
 https://anyplans.in/en/milano/whynot-wunderparty/
@@ -9116,6 +9680,11 @@ Dinners & aperitivo in Justme Milano - Restaurant & Club, Sunday 20 September at
 https://anyplans.in/en/milano/italiana-a-6-su-due-livelli-da-2-0-a-4-5-pt/
 
 Padel in Country Sport Village, via Guglielmo Pepe 68, 20037 Paderno Dugnano, Sunday 20 September at 18:30. €25 (Iscrizione e pagamento su Playtomic).
+
+## PILATES IN THE PARK MILAN
+https://anyplans.in/en/milano/pilates-in-the-park-milan/
+
+Yoga & pilates in Chiosco da Orlando, Milano, Sunday 20 September at 18:30. Free (Gratis, registrazione su Luma).
 
 ## Settembre nel calice
 https://anyplans.in/en/milano/settembre-nel-calice-mese-d-uva-e-vino-in-enoteca/
@@ -9237,12 +9806,12 @@ https://anyplans.in/en/milano/ultimo-torneo-entry-level-con-maestro/
 
 Padel in Mariano Sports Arena, VIA LAMBRO 15 , 22066 Mariano Comense, Monday 21 September at 12:30 (12 dates, until 14 December). €15 (Iscrizione e pagamento su Playtomic).
 
-## Giro a 8
+## Giro a 8 – Mamapadel Melzo
 https://anyplans.in/en/milano/giro-a-8/
 
 Padel in Mamapadel Melzo, via Martiri della Libertà 46, 20066 Melzo, Monday 21 September at 12:30 (9 dates, until 16 November). €12 (Iscrizione e pagamento su Playtomic).
 
-## Giro a 8
+## Giro a 8 – Padel Extreme Tennis
 https://anyplans.in/en/milano/giro-a-8-2026-09-24/
 
 Padel in Padel Extreme Tennis, Via Como, 15/5, 20825 Barlassina, Thursday 24 September at 10:00. Free (Iscrizione su Playtomic).
@@ -9291,6 +9860,11 @@ Nights out in 21 House of Stories Navigli, Milano, Monday 21 September at 19:30.
 https://anyplans.in/en/milano/aperikinky-ayzad-presenta-il-libro-nero-del-bdsm/
 
 Painting & art in Stufanka RistoPub karaoke eventi con Giardino, Milano, Monday 21 September at 19:30. €10 (Biglietti su AllEvents).
+
+## Milan Startup Basket #39 in Milano, 21 September
+https://anyplans.in/en/milano/milan-startup-basket-39/
+
+Talks & culture in Milano, Monday 21 September at 20:00. Free (Gratis, registrazione su Luma).
 
 ## Corsi di Ballo Swing 2026/27 • Lezioni di prova…
 https://anyplans.in/en/milano/corsi-di-ballo-swing-2026-27-lezioni-di-prova-gratuite-boogi/
@@ -9522,12 +10096,12 @@ https://anyplans.in/en/milano/villainous-scatena-il-tuo-cattivo-preferito-della-
 
 Board games in Milano, Zona M4 Bolivar, Wednesday 23 September at 19:35. €5 (Accredito su comehome; il resto si paga in loco).
 
-## Stand up comedy night
+## Stand up comedy night – Ciclocaffè
 https://anyplans.in/en/milano/stand-up-comedy-night/
 
 Shows & theatre in Ciclocaffè, Milano, Wednesday 23 September at 20:00. Free (Gratis, iscrizione su WeMeet (WeRoad)).
 
-## Stand Up Comedy Night
+## Stand Up Comedy Night – Milano
 https://anyplans.in/en/milano/stand-up-comedy-night-2026-09-26/
 
 Shows & theatre in Milano, piazza Dateo, Saturday 26 September at 20:30. €5 (Accredito su comehome; il resto si paga in loco).
@@ -9677,12 +10251,12 @@ https://anyplans.in/en/milano/cena-the-millenium-pub/
 
 Dinners & aperitivo in Sesto San Giovanni, Sesto San Giovanni, Thursday 24 September at 20:00. Free (Gratis, iscrizione su Meeters (consumazioni a parte)).
 
-## Social Box Jungle Edition - Party a tema con…
+## Social Box Jungle Edition - Party a tema con… – Paullo
 https://anyplans.in/en/milano/social-box-jungle-edition-party-a-tema-con-buffet-e-drink/
 
 Nights out in Paullo, Thursday 24 September at 20:00. €5 (Accredito su comehome; il resto si paga in loco).
 
-## Social Box Jungle Edition - Party a tema con…
+## Social Box Jungle Edition - Party a tema con… – Paullo
 https://anyplans.in/en/milano/social-box-jungle-edition-party-a-tema-con-buffet-e-drink-2026-10-29/
 
 Nights out in Paullo, Thursday 29 October at 20:00. €5 (Accredito su comehome; il resto si paga in loco).
@@ -9706,6 +10280,11 @@ Dinners & aperitivo in Palazzo Bocconi, Milano, Thursday 24 September at 20:30. 
 https://anyplans.in/en/milano/jany-mcpherson/
 
 Concerts & live music in Blue Note Milano, Milano, Thursday 24 September at 20:30. Free (Ingresso: vedi la pagina AllEvents).
+
+## Cena d’inaugurazione nuova spettacolare location
+https://anyplans.in/en/milano/cena-d-inaugurazione-nuova-spettacolare-location/
+
+Dinners & aperitivo in Milano, Sempione, Thursday 24 September at 20:30. €5 (Accredito su comehome; il resto si paga in loco).
 
 ## Burger e buon rock! Vol.6
 https://anyplans.in/en/milano/burger-e-buon-rock-vol-6/
@@ -9766,6 +10345,11 @@ Talks & culture in Via Pastrengo, 14, Milano, Friday 25 September at 15:00. Free
 https://anyplans.in/en/milano/milan-celebrity-runway-presentation-showroom-spring-summer-2/
 
 Exhibitions in Milan, Milano, Friday 25 September at 16:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## TEACHER'S FRIDAY POLDI PEZZOLI. Prove tecniche…
+https://anyplans.in/en/milano/teacher-s-friday-poldi-pezzoli-prove-tecniche-di-percorsi-di/
+
+Talks & culture in Poldi Pezzoli Museum, Milano, Friday 25 September at 16:00. Free (Gratis, registrazione su Luma).
 
 ## Atomic Playground | Milan Fashion Week POP-UP
 https://anyplans.in/en/milano/atomic-playground-milan-fashion-week-pop-up/
@@ -9867,11 +10451,6 @@ https://anyplans.in/en/milano/1-irishman-in-milan-a-stand-up-comedy-show-in-engl
 
 Shows & theatre in Slow Mill, Milano, Friday 25 September at 20:30. €14 (Biglietti su AllEvents).
 
-## PIZZERIA DOLLARO MONZA
-https://anyplans.in/en/milano/pizzeria-dollaro-monza/
-
-Dinners & aperitivo in Via Duca d'Aosta, Monza, Friday 25 September at 20:30. Free (Gratis, iscrizione su Meeters (consumazioni a parte)).
-
 ## Trecentosessantagradi di Musica 2.0
 https://anyplans.in/en/milano/trecentosessantagradi-di-musica-2-0/
 
@@ -9896,6 +10475,11 @@ Gym in Bovisio-Masciago, Zona ponte Monza-saronno, Friday 25 September at 20:30.
 https://anyplans.in/en/milano/cicchetti-vino/
 
 Dinners & aperitivo in Milano, Lodi Tibb MM 🟡, Friday 25 September at 20:30. €5 (Accredito su comehome; il resto si paga in loco).
+
+## Laser Party Anni 90!
+https://anyplans.in/en/milano/laser-party-anni-90/
+
+Nights out in Milano Ripamonti, Friday 25 September at 20:30. €5 (Accredito su comehome; il resto si paga in loco).
 
 ## Laser game battle vol. 10
 https://anyplans.in/en/milano/laser-game-battle-vol-10/
@@ -10247,6 +10831,11 @@ https://anyplans.in/en/milano/assaporando-nuove-conoscenze/
 
 Dinners & aperitivo in Milano, Vigentino, Saturday 26 September at 20:00. €35 (Accredito su comehome; il resto si paga in loco).
 
+## First Meeting Un brindisi ai nuovi incontri
+https://anyplans.in/en/milano/first-meeting-un-brindisi-ai-nuovi-incontri/
+
+Dinners & aperitivo in Villasanta, Parco di Monza, Saturday 26 September at 20:00. €5 (Accredito su comehome; il resto si paga in loco).
+
 ## Aperitivo Love Generation
 https://anyplans.in/en/milano/aperitivo-love-generation/
 
@@ -10315,7 +10904,7 @@ Concerts & live music in Milano, Parco sempione, Saturday 26 September at 22:30.
 ## Karmadrome: Indie-Disco Djset @Mare [Free Entry]
 https://anyplans.in/en/milano/karmadrome-indie-disco-djset-mare-free-entry/
 
-Shows & theatre in Mare Culturale Urbano, Milano, Saturday 26 September at 22:30. Free (Ingresso: vedi la pagina AllEvents).
+Nights out in Mare Culturale Urbano, Milano, Saturday 26 September at 22:30. Free (Ingresso: vedi la pagina AllEvents).
 
 ## Enygma, Yazmin in Milano
 https://anyplans.in/en/milano/enygma-yazmin-in-milano/
@@ -10342,6 +10931,11 @@ https://anyplans.in/en/milano/vignaiolo-per-un-giorno-nel-monferrato-con-pranzo/
 
 Hiking in Assago, Tra il Monferrato e Le Langhe - Piemonte, Sunday 27 September at 07:30. €10 (Accredito su comehome; il resto si paga in loco).
 
+## Trekking al Monte Cornizzolo e pranzo al…
+https://anyplans.in/en/milano/trekking-al-monte-cornizzolo-e-pranzo-al-rifugio-marisa/
+
+Hiking in Sesto San Giovanni, Monte Cornizzolo e Rifugio Marisa, Sunday 27 September at 08:15. €5 (Accredito su comehome; il resto si paga in loco).
+
 ## Torneo femminile - biglietti Premier Padel
 https://anyplans.in/en/milano/torneo-femminile-biglietti-premier-padel/
 
@@ -10357,12 +10951,12 @@ https://anyplans.in/en/milano/festa-dell-oratorio-e-30-camminata-in-periferia/
 
 Hiking in Via Parmenide, Monza, Lombardia, Monza, Sunday 27 September at 09:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## TORNEO MISTO
+## TORNEO MISTO – Innova Sport Padel Opera
 https://anyplans.in/en/milano/torneo-misto/
 
 Padel in Innova Sport Padel Opera, Via Goffredo Mameli 4, 20073 Opera, Sunday 27 September at 10:00. €20 (Iscrizione e pagamento su Playtomic).
 
-## TORNEO MISTO
+## TORNEO MISTO – Gaggiano Padel Academy
 https://anyplans.in/en/milano/torneo-misto-2026-09-27/
 
 Padel in Gaggiano Padel Academy, Via Alessandro Volta, 45, 20083 Gaggiano, Sunday 27 September at 14:00. €25 (Iscrizione e pagamento su Playtomic).
@@ -10547,6 +11141,11 @@ https://anyplans.in/en/milano/babolat-x-social-monday-edizione-esclusiva-e-speci
 
 Padel in ELLE PADEL CLUB, Via Monviso 25, 22066 Mariano Comense, Monday 28 September at 16:30. €20 (Iscrizione e pagamento su Playtomic).
 
+## SM GLOBAL Fashion Week Gala - MILAN (28th Sept…
+https://anyplans.in/en/milano/sm-global-fashion-week-gala-milan-28th-sept-2026/
+
+Shows & theatre in Meliá Milano, Milano, Monday 28 September at 17:00. €49.16 (Biglietti su AllEvents).
+
 ## Aperitivi di Corso - Scienze e Tecniche…
 https://anyplans.in/en/milano/aperitivi-di-corso-scienze-e-tecniche-psicologiche/
 
@@ -10636,6 +11235,11 @@ Talks & culture in MIND Milano Innovation District, Milano, Wednesday 30 Septemb
 https://anyplans.in/en/milano/lab-culturali-arte-cinema-musica-fotografia-performance-teat/
 
 Cinema in Instituto Cervantes, Milano, Wednesday 30 September at 09:30. Free (Ingresso: vedi la pagina AllEvents).
+
+## Obiettivi Day 2026
+https://anyplans.in/en/milano/obiettivi-day-2026/
+
+Concerts & live music in Starhotels Ritz, Milano, Wednesday 30 September at 10:00. €97.60 (Biglietti su AllEvents).
 
 ## BABOLAT x GIOCA PER LA CORONA PLUS (2-3,79)…
 https://anyplans.in/en/milano/babolat-x-gioca-per-la-corona-plus-2-3-79-edizione-esclusiva/
@@ -10977,11 +11581,6 @@ https://anyplans.in/en/milano/piante-maestre-educazione-vegetale-per-una-rivoluz
 
 Town festival in Libreria Esoterica Milano, Saturday 3 October at 10:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## Il Monumentale come non l’avete mai visto
-https://anyplans.in/en/milano/il-monumentale-come-non-l-avete-mai-visto/
-
-Guided tours in Milano, Saturday 3 October at 10:00. €15 (Accredito su comehome; il resto si paga in loco).
-
 ## Beyond the Miles: with Paul Amefiam & Fares…
 https://anyplans.in/en/milano/beyond-the-miles-with-paul-amefiam-fares-alassi/
 
@@ -11012,12 +11611,12 @@ https://anyplans.in/en/milano/wine-tasting-10-vini-in-degustazione-banchi-d-assa
 
 Dinners & aperitivo in Bottega dell'Arte del Vino, Milano, Saturday 3 October at 14:00. €9 (Biglietti su AllEvents).
 
-## S-PADEL MISTO liv. ENTRY WHITE con media max 2.5
+## S-PADEL MISTO liv. ENTRY… – Padel Segrate CLIMATIZZATO
 https://anyplans.in/en/milano/s-padel-misto-liv-entry-white-con-media-max-2-5/
 
 Padel in Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, Saturday 3 October at 14:00 (3 dates, until 3 April). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL MISTO liv. ENTRY WHITE con media max 2.5
+## S-PADEL MISTO liv. ENTRY WHITE con… – PADEL4ALL VILLASANTA
 https://anyplans.in/en/milano/s-padel-misto-liv-entry-white-con-media-max-2-5-2026-10-10/
 
 Padel in PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, Saturday 10 October at 15:00 (3 dates, until 13 March). €25 (Iscrizione su Playtomic, si paga in loco).
@@ -11037,15 +11636,20 @@ https://anyplans.in/en/milano/alla-scoperta-di-san-bernardino-alle-ossa-e-del-ve
 
 Guided tours in Milano centro città, Saturday 3 October at 16:00. €15 (Accredito su comehome; il resto si paga in loco).
 
-## S-PADEL MISTO liv. MEDIUM RED con media max 3.5
+## S-PADEL MISTO liv. MEDIUM RED… – Padel Segrate CLIMATIZZATO
 https://anyplans.in/en/milano/s-padel-misto-liv-medium-red-con-media-max-3-5/
 
 Padel in Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, Saturday 3 October at 16:30 (3 dates, until 3 April). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL MISTO liv. MEDIUM RED con media max 3.5
+## S-PADEL MISTO liv. MEDIUM RED con… – PADEL4ALL VILLASANTA
 https://anyplans.in/en/milano/s-padel-misto-liv-medium-red-con-media-max-3-5-2026-10-10/
 
 Padel in PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, Saturday 10 October at 15:00 (2 dates, until 13 March). €25 (Iscrizione su Playtomic, si paga in loco).
+
+## Spa Coreana Vol.3 Men Edit. | 70 minuti per…
+https://anyplans.in/en/milano/spa-coreana-vol-3-men-edit-70-minuti-per-resettare-tutto/
+
+Yoga & pilates in Milano, Saturday 3 October at 16:45. €5 (Accredito su comehome; il resto si paga in loco).
 
 ## Chi sarà il re della pista? in Lissone, 3 October
 https://anyplans.in/en/milano/chi-sara-il-re-della-pista/
@@ -11191,6 +11795,11 @@ Guided tours in Milano, Brera, Sunday 4 October at 10:30. €5 (Accredito su com
 https://anyplans.in/en/milano/laura-pausini-in-concerto-milano-2026/
 
 Concerts & live music in Assago Forum Milano, Milano, Sunday 4 October at 12:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## Pranzo della domenica 10 edizione
+https://anyplans.in/en/milano/pranzo-della-domenica-10-edizione/
+
+Dinners & aperitivo in Minervino, Sesto San Giovanni/metro sesto rondo, Sunday 4 October at 12:30. €35 (Accredito su comehome; il resto si paga in loco).
 
 ## Santo Stinco & Beato Boccale
 https://anyplans.in/en/milano/santo-stinco-beato-boccale/
@@ -11642,6 +12251,11 @@ https://anyplans.in/en/milano/mindfall-l-escape-urbano-a-piedi/
 
 Board games in Lainate MI, Sunday 11 October at 17:30. €5 (Accredito su comehome; il resto si paga in loco).
 
+## Ottobre nel calice. Dai grappoli alla…
+https://anyplans.in/en/milano/ottobre-nel-calice-dai-grappoli-alla-bottiglia-in-enoteca/
+
+Dinners & aperitivo in Milano, Porta genova conca del naviglio, Sunday 11 October at 18:30. €5 (Accredito su comehome; il resto si paga in loco).
+
 ## Cheers sui Navigli: Drink
 https://anyplans.in/en/milano/cheers-sui-navigli-drink-buffet-e-buona-compagnia/
 
@@ -11706,6 +12320,11 @@ Dinners & aperitivo in Sesto San Giovanni/metro sesto rondo, Tuesday 13 October 
 https://anyplans.in/en/milano/serata-in-societa-vol-2/
 
 Board games in Milano, Bolivar, Tuesday 13 October at 20:00. €5 (Accredito su comehome; il resto si paga in loco).
+
+## PIZZERIA DOLLARO MONZA
+https://anyplans.in/en/milano/pizzeria-dollaro-monza/
+
+Dinners & aperitivo in Via Duca d'Aosta, Monza, Tuesday 13 October at 20:30. Free (Gratis, iscrizione su Meeters (consumazioni a parte)).
 
 ## Business Roundtable - Monza
 https://anyplans.in/en/milano/business-roundtable-monza/
@@ -12152,17 +12771,17 @@ https://anyplans.in/en/milano/monza-workshop-macrofotografia-close-up/
 
 Talks & culture in Monza, Monza, Sunday 25 October at 09:00. €54.56 (Biglietti su AllEvents).
 
-## S-PADEL liv. ENTRY WHITE FEMMINILE
+## S-PADEL liv. ENTRY WHITE FEMMINILE – Yousport Padel
 https://anyplans.in/en/milano/s-padel-liv-entry-white-femminile/
 
 Padel in Yousport Padel, Via Monza 107, 20060 Gessate, Sunday 25 October at 13:00 (3 dates, until 21 March). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE FEMMINILE
+## S-PADEL liv. ENTRY WHITE… – Padel Segrate CLIMATIZZATO
 https://anyplans.in/en/milano/s-padel-liv-entry-white-femminile-2026-11-08/
 
 Padel in Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, Sunday 8 November at 14:00 (3 dates, until 9 May). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE FEMMINILE
+## S-PADEL liv. ENTRY WHITE FEMMINILE – PADEL4ALL VILLASANTA
 https://anyplans.in/en/milano/s-padel-liv-entry-white-femminile-2027-02-13/
 
 Padel in PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, Saturday 13 February at 15:00 (2 dates, until 10 April). €25 (Iscrizione su Playtomic, si paga in loco).
@@ -12172,17 +12791,17 @@ https://anyplans.in/en/milano/monza-fotografare-gli-scoiattoli-workshop-fotograf
 
 Talks & culture in Monza, Monza, Sunday 25 October at 13:00. €54.56 (Biglietti su AllEvents).
 
-## S-PADEL liv. MEDIUM RED FEMMINILE
+## S-PADEL liv. MEDIUM RED FEMMINILE – Yousport Padel
 https://anyplans.in/en/milano/s-padel-liv-medium-red-femminile/
 
 Padel in Yousport Padel, Via Monza 107, 20060 Gessate, Sunday 25 October at 16:00 (3 dates, until 21 March). Free (Iscrizione su Playtomic).
 
-## S-PADEL liv. MEDIUM RED FEMMINILE
+## S-PADEL liv. MEDIUM RED… – Padel Segrate CLIMATIZZATO
 https://anyplans.in/en/milano/s-padel-liv-medium-red-femminile-2026-11-08/
 
 Padel in Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, Sunday 8 November at 17:00 (3 dates, until 9 May). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED FEMMINILE
+## S-PADEL liv. MEDIUM RED FEMMINILE – PADEL4ALL VILLASANTA
 https://anyplans.in/en/milano/s-padel-liv-medium-red-femminile-2027-02-13/
 
 Padel in PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, Saturday 13 February at 15:00 (2 dates, until 10 April). €25 (Iscrizione su Playtomic, si paga in loco).
@@ -12422,12 +13041,12 @@ https://anyplans.in/en/milano/trekkinfra-ascesa-al-monte-generoso/
 
 Hiking in Milano, Bellavista - Monte Generoso (Canton Ticino - Svizzera), Sunday 15 November at 09:30. €9 (Accredito su comehome; il resto si paga in loco).
 
-## S-PADEL MAJOR BLACK 3000 MISTO liv. max 3° fascia
+## S-PADEL MAJOR BLACK 3000 MISTO liv. max… – Yousport Padel
 https://anyplans.in/en/milano/s-padel-major-black-3000-misto-liv-max-3-fascia/
 
 Padel in Yousport Padel, Via Monza 107, 20060 Gessate, Sunday 15 November at 14:00. €30 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL MAJOR BLACK 3000 MISTO liv. max 3° fascia
+## S-PADEL MAJOR BLACK 3000 MISTO liv.… – PADEL4ALL VILLASANTA
 https://anyplans.in/en/milano/s-padel-major-black-3000-misto-liv-max-3-fascia-2027-04-25/
 
 Padel in PADEL4ALL VILLASANTA, Via Mameli 45, 20852 Villasanta, Sunday 25 April at 16:00. €30 (Iscrizione su Playtomic, si paga in loco).

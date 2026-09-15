@@ -1,14 +1,13 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Brescia e provincia: feste di paese e sagre, corsi di cucina e di ceramica, volontariato, uscite sportive, running club. Raccoglie gli eventi già esistenti dai siti dei comuni e delle associazioni e quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Per ora solo Brescia; Milano e Brescia in arrivo.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Brescia e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Brescia: il sito copre 29 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-15. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Brescia](https://anyplans.in/brescia/cosa-fare/): tutti gli eventi in programma (227), per tipo e per paese; risponde a "cosa fare a Brescia oggi / questo weekend"
-- [Running club a Brescia](https://anyplans.in/brescia/running-club/): 0 run club per giorno della settimana, con ritrovo, orario e domande frequenti
-- [Gruppi a Brescia](https://anyplans.in/brescia/gruppi/): 0 associazioni, club e comunità che pubblicano eventi
+- [Cosa fare a Brescia](https://anyplans.in/brescia/): tutti gli eventi in programma (227), per tipo e per paese; risponde a "cosa fare a Brescia oggi / questo weekend"
+- [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
 - [Condizioni d'uso](https://anyplans.in/terms-it.html)
@@ -32,18 +31,8 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Feste ed eventi a Lonato del Garda](https://anyplans.in/brescia/lonato-del-garda/): 3 in programma
 - [Feste ed eventi a Leno](https://anyplans.in/brescia/leno/): 3 in programma
 
-## Running club per giorno
-
-
-
-## Gruppi
-
-
-
 ## Prossimi eventi
 
-- [Mercato di Torre Pallavicina](https://anyplans.in/brescia/mercato-di-torre-pallavicina/): Dal 15 settembre al 29 settembre, 3 date, Via Turchette, Torre Pallavicina, Gratis
-- [Mercato di Tavernola Bergamasca](https://anyplans.in/brescia/mercato-di-tavernola-bergamasca/): Dal 15 settembre al 29 settembre, 3 date, Via Roma, Tavernola Bergamasca, Gratis
 - [Lezione introduttiva | corsi di Cucina 🧑‍🍳🥄](https://anyplans.in/brescia/lezione-introduttiva-corsi-di-cucina/): Martedì 15 settembre alle 18:00, Via Cremona, 99, Brescia, Gratis
 - [Lezione introduttiva | corsi di Pasticceria 🥐🧁](https://anyplans.in/brescia/lezione-introduttiva-corsi-di-pasticceria/): Martedì 15 settembre alle 18:00, Via Cremona, 99, Brescia, Gratis
 - [Lezione introduttiva | Kintsugi: la bellezza delle imperfezioni ✨](https://anyplans.in/brescia/lezione-introduttiva-kintsugi-la-bellezza-delle-imperfezioni/): Martedì 15 settembre alle 18:00, Via Cremona, 99, Brescia, Gratis
@@ -82,6 +71,8 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Lezione introduttiva | Rilassamento e sviluppo del pensiero positivo ✨](https://anyplans.in/brescia/lezione-introduttiva-rilassamento-e-sviluppo-del-pensiero-po/): Giovedì 17 settembre alle 18:00, Via Cremona, 99, Brescia, Gratis
 - [Lezione introduttiva | Acquarello 🖼️](https://anyplans.in/brescia/lezione-introduttiva-acquarello/): Giovedì 17 settembre alle 18:00, Via Cremona, 99, Brescia, Gratis
 - [Cena da Pizzium - Brescia: 4 posti liberi](https://anyplans.in/brescia/cena-da-pizzium-brescia-4-posti-liberi/): Giovedì 17 settembre alle 18:00, Pizzium - Brescia, Gratis
+- [Lezione introduttiva | Le basi del cucito a mano e a macchina 🧵](https://anyplans.in/brescia/lezione-introduttiva-le-basi-del-cucito-a-mano-e-a-macchina/): Giovedì 17 settembre alle 18:00, Via Cremona, 99, Brescia, Gratis
+- [Lezione introduttiva | GAG: gambe, addominali, glutei 💪🏻](https://anyplans.in/brescia/lezione-introduttiva-gag-gambe-addominali-glutei/): Giovedì 17 settembre alle 18:30, Via Cremona, 99, Brescia, Gratis
 
 ## Optional
 
@@ -91,9 +82,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## English pages (same content, for visitors)
 
-- [Things to do in Brescia](https://anyplans.in/en/brescia/things-to-do/): all upcoming events, by kind and by town; answers "what to do in Bergamo today / this weekend"
-- [Running clubs in Brescia](https://anyplans.in/en/brescia/running-clubs/): 0 run clubs by weekday, open to visitors too
-- [Groups in Brescia](https://anyplans.in/en/brescia/groups/)
+- [Things to do in Brescia](https://anyplans.in/en/brescia/): all upcoming events, by kind and by town; answers "what to do in Brescia today / this weekend"
 - [Town festivals & fairs in Brescia](https://anyplans.in/en/brescia/festivals/)
 - [Talks & culture in Brescia](https://anyplans.in/en/brescia/talks-and-culture/)
 - [Dinners & aperitivo in Brescia](https://anyplans.in/en/brescia/dinners/)
@@ -117,10 +106,10 @@ https://anyplans.in/brescia/
 
 Incontri culturali, feste, sagre ed eventi di paese, cena / aperitivo, concerti e musica dal vivo e spettacoli e teatro: quello che succede a Brescia e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
 
-## Cosa fare a Brescia oggi: 20 eventi
+## Cosa fare a Brescia oggi: 18 eventi
 https://anyplans.in/brescia/cosa-fare-oggi/
 
-20 eventi a Brescia e provincia oggi, 15 settembre 2026: Brescia, Torre Pallavicina, Tavernola Bergamasca e Castiglione delle Stiviere e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+18 eventi a Brescia e provincia oggi, 15 settembre 2026: Brescia, Castiglione delle Stiviere e Botticino e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
 ## Cosa fare a Brescia domani: 16 eventi
 https://anyplans.in/brescia/cosa-fare-domani/
@@ -135,7 +124,7 @@ https://anyplans.in/brescia/cosa-fare-nel-weekend/
 ## Eventi a Brescia a settembre 2026: 173
 https://anyplans.in/brescia/eventi-settembre-2026/
 
-173 eventi a Brescia e provincia a settembre 2026: mercatini, cucina, incontri culturali, cena / aperitivo e yoga / pilates. Giorno per giorno, con orari, luogo e prezzo, a Brescia, Desenzano del Garda, Lonato del Garda e Ome e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+173 eventi a Brescia e provincia a settembre 2026: cucina, incontri culturali, cena / aperitivo, yoga / pilates e feste, sagre ed eventi di paese. Giorno per giorno, con orari, luogo e prezzo, a Brescia, Desenzano del Garda, Lonato del Garda e Ome e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 ## Eventi a Brescia a ottobre 2026: 35
 https://anyplans.in/brescia/eventi-ottobre-2026/
@@ -315,12 +304,12 @@ Festa di paese a Vobarno: si è già svolto, l'ultima data è stata lunedì 14 s
 ## Mercato di Torre Pallavicina
 https://anyplans.in/brescia/mercato-di-torre-pallavicina/
 
-Mercatini a Via Turchette, Torre Pallavicina, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via Turchette, Torre Pallavicina, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Tavernola Bergamasca
 https://anyplans.in/brescia/mercato-di-tavernola-bergamasca/
 
-Mercatini a Via Roma, Tavernola Bergamasca, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via Roma, Tavernola Bergamasca, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Lezione introduttiva | corsi di Cucina 🧑‍🍳🥄
 https://anyplans.in/brescia/lezione-introduttiva-corsi-di-cucina/
@@ -1447,10 +1436,10 @@ https://anyplans.in/en/brescia/
 
 What's on in Brescia and its province, today, tonight and this weekend: talks & culture, town festivals & fairs, dinners & aperitivo, concerts & live music, shows & theatre and yoga & pilates. Pick one and go with other people.
 
-## What to do in Brescia today: 20 events
+## What to do in Brescia today: 18 events
 https://anyplans.in/en/brescia/what-to-do-today/
 
-20 events in Brescia and its province today, 15 September 2026: Brescia, Torre Pallavicina, Tavernola Bergamasca and Castiglione delle Stiviere and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+18 events in Brescia and its province today, 15 September 2026: Brescia, Castiglione delle Stiviere and Botticino and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
 ## What to do in Brescia tomorrow: 16 events
 https://anyplans.in/en/brescia/what-to-do-tomorrow/
@@ -1465,7 +1454,7 @@ https://anyplans.in/en/brescia/what-to-do-this-weekend/
 ## Events in Brescia in September 2026: 173
 https://anyplans.in/en/brescia/events-september-2026/
 
-173 events in Brescia and its province in September 2026: markets, cooking classes, talks & culture, dinners & aperitivo and yoga & pilates. Day by day, with times, place and price, in Brescia, Desenzano del Garda, Lonato del Garda and Ome and other towns. You sign up and go with other people.
+173 events in Brescia and its province in September 2026: cooking classes, talks & culture, dinners & aperitivo, yoga & pilates and town festivals & fairs. Day by day, with times, place and price, in Brescia, Desenzano del Garda, Lonato del Garda and Ome and other towns. You sign up and go with other people.
 
 ## Events in Brescia in October 2026: 35
 https://anyplans.in/en/brescia/events-october-2026/
@@ -1645,12 +1634,12 @@ Town festival in Vobarno: it already took place, the last date was Monday, 14 Se
 ## Mercato di Torre Pallavicina
 https://anyplans.in/en/brescia/mercato-di-torre-pallavicina/
 
-Markets in Via Turchette, Torre Pallavicina, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via Turchette, Torre Pallavicina, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Tavernola Bergamasca
 https://anyplans.in/en/brescia/mercato-di-tavernola-bergamasca/
 
-Markets in Via Roma, Tavernola Bergamasca, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via Roma, Tavernola Bergamasca, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Lezione introduttiva | corsi di Cucina 🧑‍🍳🥄
 https://anyplans.in/en/brescia/lezione-introduttiva-corsi-di-cucina/

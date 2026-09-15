@@ -1,14 +1,13 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Napoli e provincia: feste di paese e sagre, corsi di cucina e di ceramica, volontariato, uscite sportive, running club. Raccoglie gli eventi già esistenti dai siti dei comuni e delle associazioni e quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Per ora solo Napoli; Milano e Brescia in arrivo.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Napoli e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Napoli: il sito copre 29 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-15. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Napoli](https://anyplans.in/napoli/cosa-fare/): tutti gli eventi in programma (281), per tipo e per paese; risponde a "cosa fare a Napoli oggi / questo weekend"
-- [Running club a Napoli](https://anyplans.in/napoli/running-club/): 0 run club per giorno della settimana, con ritrovo, orario e domande frequenti
-- [Gruppi a Napoli](https://anyplans.in/napoli/gruppi/): 0 associazioni, club e comunità che pubblicano eventi
+- [Cosa fare a Napoli](https://anyplans.in/napoli/): tutti gli eventi in programma (281), per tipo e per paese; risponde a "cosa fare a Napoli oggi / questo weekend"
+- [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
 - [Condizioni d'uso](https://anyplans.in/terms-it.html)
@@ -26,15 +25,6 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Ballo e danza a Napoli](https://anyplans.in/napoli/ballo/): 11 in programma
 - [Feste, sagre ed eventi di paese a Napoli](https://anyplans.in/napoli/feste/): 9 in programma
 - [Serate e discoteca a Napoli](https://anyplans.in/napoli/serate/): 4 in programma
-
-
-## Running club per giorno
-
-
-
-## Gruppi
-
-
 
 ## Prossimi eventi
 
@@ -87,9 +77,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## English pages (same content, for visitors)
 
-- [Things to do in Napoli](https://anyplans.in/en/napoli/things-to-do/): all upcoming events, by kind and by town; answers "what to do in Bergamo today / this weekend"
-- [Running clubs in Napoli](https://anyplans.in/en/napoli/running-clubs/): 0 run clubs by weekday, open to visitors too
-- [Groups in Napoli](https://anyplans.in/en/napoli/groups/)
+- [Things to do in Napoli](https://anyplans.in/en/napoli/): all upcoming events, by kind and by town; answers "what to do in Napoli today / this weekend"
 - [Dinners & aperitivo in Napoli](https://anyplans.in/en/napoli/dinners/)
 - [Guided tours in Napoli](https://anyplans.in/en/napoli/guided-tours/)
 - [Talks & culture in Napoli](https://anyplans.in/en/napoli/talks-and-culture/)
@@ -1186,7 +1174,7 @@ https://anyplans.in/napoli/candlelight-tributo-a-cremonini/
 
 Concerti e musica dal vivo a Chiesa Anglicana, Via San Pasquale a Chiaia, 15B, Via S. Pasquale, 15, Napoli, 80121, Naples, IT, Napoli, sabato 17 ottobre alle 21:30. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Benji &amp; Fede in Napoli
+## Benji & Fede in Napoli
 https://anyplans.in/napoli/benji-amp-fede-in-napoli/
 
 Concerti e musica dal vivo a Teatro Augusteo, Napoli, lunedì 19 ottobre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
@@ -2711,7 +2699,7 @@ https://anyplans.in/en/napoli/candlelight-tributo-a-cremonini/
 
 Concerts & live music in Chiesa Anglicana, Via San Pasquale a Chiaia, 15B, Via S. Pasquale, 15, Napoli, 80121, Naples, IT, Napoli, Saturday 17 October at 21:30. Free (Ingresso: vedi la pagina AllEvents).
 
-## Benji &amp; Fede in Napoli
+## Benji & Fede in Napoli
 https://anyplans.in/en/napoli/benji-amp-fede-in-napoli/
 
 Concerts & live music in Teatro Augusteo, Napoli, Monday 19 October at 21:00. Free (Ingresso: vedi la pagina AllEvents).

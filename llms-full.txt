@@ -1,14 +1,15 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Bergamo e provincia: feste di paese e sagre, corsi di cucina e di ceramica, volontariato, uscite sportive, running club. Raccoglie gli eventi già esistenti dai siti dei comuni e delle associazioni e quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Per ora solo Bergamo; Milano e Brescia in arrivo.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Bergamo e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Bergamo: il sito copre 29 città italiane (Milano, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-15. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Bergamo](https://anyplans.in/bergamo/cosa-fare/): tutti gli eventi in programma (696), per tipo e per paese; risponde a "cosa fare a Bergamo oggi / questo weekend"
+- [Cosa fare a Bergamo](https://anyplans.in/bergamo/cosa-fare/): tutti gli eventi in programma (705), per tipo e per paese; risponde a "cosa fare a Bergamo oggi / questo weekend"
 - [Running club a Bergamo](https://anyplans.in/bergamo/running-club/): 25 run club per giorno della settimana, con ritrovo, orario e domande frequenti
 - [Gruppi a Bergamo](https://anyplans.in/bergamo/gruppi/): 37 associazioni, club e comunità che pubblicano eventi
+- [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
 - [Condizioni d'uso](https://anyplans.in/terms-it.html)
@@ -19,15 +20,15 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Corsa a Bergamo](https://anyplans.in/bergamo/corsa/): 28 in programma
 - [Estivo a Bergamo](https://anyplans.in/bergamo/estivi/): 11 in programma
 - [Cena / aperitivo a Bergamo](https://anyplans.in/bergamo/cene-e-aperitivi/): 29 in programma
-- [Padel a Bergamo](https://anyplans.in/bergamo/padel/): 114 in programma
+- [Padel a Bergamo](https://anyplans.in/bergamo/padel/): 125 in programma
 - [Concerti e musica dal vivo a Bergamo](https://anyplans.in/bergamo/concerti/): 91 in programma
 - [Mercatini a Bergamo](https://anyplans.in/bergamo/mercatini/): 189 in programma
-- [Incontri culturali a Bergamo](https://anyplans.in/bergamo/incontri-culturali/): 52 in programma
+- [Incontri culturali a Bergamo](https://anyplans.in/bergamo/incontri-culturali/): 51 in programma
 - [Palestra a Bergamo](https://anyplans.in/bergamo/palestra/): 3 in programma
 - [Karaoke a Bergamo](https://anyplans.in/bergamo/karaoke/): 29 in programma
 - [Visite guidate a Bergamo](https://anyplans.in/bergamo/visite-guidate/): 17 in programma
 - [Spettacoli e teatro a Bergamo](https://anyplans.in/bergamo/spettacoli/): 53 in programma
-- [Escursionismo a Bergamo](https://anyplans.in/bergamo/escursioni/): 5 in programma
+- [Escursionismo a Bergamo](https://anyplans.in/bergamo/escursioni/): 4 in programma
 - [Pittura / arte a Bergamo](https://anyplans.in/bergamo/pittura/): 5 in programma
 - [Ballo e danza a Bergamo](https://anyplans.in/bergamo/ballo/): 6 in programma
 - [Fiere a Bergamo](https://anyplans.in/bergamo/fiere/): 8 in programma
@@ -90,46 +91,46 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## Prossimi eventi
 
-- [Mercato di Santa Brigida](https://anyplans.in/bergamo/mercato-di-santa-brigida/): Dal 15 settembre al 29 settembre, 3 date, Via Colla c/o Piazza Comune, Santa Brigida, Gratis
-- [Mercato di Almenno San Bartolomeo](https://anyplans.in/bergamo/mercato-di-almenno-san-bartolomeo/): Dal 15 settembre al 29 settembre, 3 date, Piazza Italia Località Cerita, Almenno San Bartolomeo, Gratis
-- [Mercato di Misano di Gera d'Adda](https://anyplans.in/bergamo/mercato-di-misano-di-gera-d-adda/): Dal 15 settembre al 29 settembre, 3 date, Via S. Stefano, Misano di Gera d'Adda, Gratis
-- [Mercato di Fornovo San Giovanni](https://anyplans.in/bergamo/mercato-di-fornovo-san-giovanni/): Dal 15 settembre al 29 settembre, 3 date, Piazza San Giovanni, Fornovo San Giovanni, Gratis
-- [Mercato di Foresto Sparso](https://anyplans.in/bergamo/mercato-di-foresto-sparso/): Dal 15 settembre al 29 settembre, 3 date, Via Roma, Foresto Sparso, Gratis
-- [Mercato di Dalmine](https://anyplans.in/bergamo/mercato-di-dalmine/): Dal 15 settembre al 3 ottobre, 12 date, Via Don Sturzo, Dalmine, Gratis
-- [Mercato di Colere](https://anyplans.in/bergamo/mercato-di-colere/): Dal 15 settembre al 29 settembre, 3 date, Via Tortola, Colere, Gratis
-- [Mercato di Solto Collina](https://anyplans.in/bergamo/mercato-di-solto-collina/): Dal 15 settembre al 29 settembre, 3 date, Piazzale Kennedy, Solto Collina, Gratis
-- [Mercato di Villa d'Almè](https://anyplans.in/bergamo/mercato-di-villa-d-alme/): Dal 15 settembre al 29 settembre, 3 date, Via Ventolosa, Via Gaggio, Piazza dell’Artigliere, Villa d'Almè, Gratis
-- [Mercato di Martinengo](https://anyplans.in/bergamo/mercato-di-martinengo/): Dal 15 settembre al 3 ottobre, 6 date, Centro Storico, Martinengo, Gratis
-- [Mercato di Pagazzano](https://anyplans.in/bergamo/mercato-di-pagazzano/): Dal 15 settembre al 29 settembre, 3 date, Via Roma, Pagazzano, Gratis
-- [Mercato di Bergamo](https://anyplans.in/bergamo/mercato-di-bergamo/): Dal 15 settembre al 5 ottobre, 24 date, Via Gemelli Località Redona, Bergamo, Gratis
-- [Mercato di Brusaporto](https://anyplans.in/bergamo/mercato-di-brusaporto/): Dal 15 settembre al 29 settembre, 3 date, Via Cattanea, Brusaporto, Gratis
-- [Mercato di Gorle](https://anyplans.in/bergamo/mercato-di-gorle/): Dal 15 settembre al 29 settembre, 3 date, Via Turati, Gorle, Gratis
-- [Mercato di Costa di Mezzate](https://anyplans.in/bergamo/mercato-di-costa-di-mezzate/): Dal 15 settembre al 29 settembre, 3 date, Via Roma, Costa di Mezzate, Gratis
-- [Mercato di Valbondione](https://anyplans.in/bergamo/mercato-di-valbondione/): Dal 15 settembre al 29 settembre, 3 date, Via Torre Capoluogo di Bondione, Valbondione, Gratis
-- [Mercato di Sorisole](https://anyplans.in/bergamo/mercato-di-sorisole/): Dal 15 settembre al 2 ottobre, 9 date, Via Fonte, Sorisole, Gratis
-- [Mercato di Spirano](https://anyplans.in/bergamo/mercato-di-spirano/): Dal 15 settembre al 29 settembre, 3 date, Via S. Antonio, Spirano, Gratis
-- [Mercato di Ponte Nossa](https://anyplans.in/bergamo/mercato-di-ponte-nossa/): Dal 15 settembre al 29 settembre, 6 date, Via G. Frua, Ponte Nossa, Gratis
-- [Mercato di Filago](https://anyplans.in/bergamo/mercato-di-filago/): Dal 15 settembre al 29 settembre, 3 date, Via A. Locatelli, Filago, Gratis
-- [Mercato di Vedeseta](https://anyplans.in/bergamo/mercato-di-vedeseta/): Dal 15 settembre al 5 ottobre, 15 date, Via Centro, Vedeseta, Gratis
-- [Mercato di Azzano San Paolo](https://anyplans.in/bergamo/mercato-di-azzano-san-paolo/): Dal 15 settembre al 29 settembre, 3 date, Piazzale Brigata Alpina Orobica, Azzano San Paolo, Gratis
-- [Mercato di Cerete Cerete Basso](https://anyplans.in/bergamo/mercato-di-cerete-cerete-basso/): Dal 15 settembre al 29 settembre, 3 date, Via Sorgente Moia, Cerete Cerete Basso, Gratis
-- [Mercato di Castelli Calepio](https://anyplans.in/bergamo/mercato-di-castelli-calepio/): Dal 15 settembre al 5 ottobre, 6 date, Via Bertoli, Ang. Via Locatelli, Castelli Calepio, Gratis
-- [Mercato di Strozza](https://anyplans.in/bergamo/mercato-di-strozza/): Dal 15 settembre al 29 settembre, 3 date, Via Vittorio Emanuele, Strozza, Gratis
-- [Mercato di Carvico](https://anyplans.in/bergamo/mercato-di-carvico/): Dal 15 settembre al 30 settembre, 6 date, Via S. Martino, Carvico, Gratis
-- [Mercato di Osio Sotto](https://anyplans.in/bergamo/mercato-di-osio-sotto/): Dal 15 settembre al 29 settembre, 3 date, Via Machiavelli, Osio Sotto, Gratis
-- [Mercato di Bonate Sopra](https://anyplans.in/bergamo/mercato-di-bonate-sopra/): Dal 15 settembre al 29 settembre, 3 date, Via Garibaldi, Bonate Sopra, Gratis
-- [Mercato di Pognano](https://anyplans.in/bergamo/mercato-di-pognano/): Dal 15 settembre al 29 settembre, 3 date, Piazza Palestra, Pognano, Gratis
-- [Mercato di Pontirolo Nuovo](https://anyplans.in/bergamo/mercato-di-pontirolo-nuovo/): Dal 15 settembre al 29 settembre, 3 date, Piazza del Mercato, Pontirolo Nuovo, Gratis
-- [Mercato di Ponte San Pietro](https://anyplans.in/bergamo/mercato-di-ponte-san-pietro/): Dal 15 settembre al 2 ottobre, 6 date, Via Foiadelli, Ponte San Pietro, Gratis
-- [Mercato di Sovere](https://anyplans.in/bergamo/mercato-di-sovere/): Dal 15 settembre al 30 settembre, 6 date, Piazza Aldo Moro, Sovere, Gratis
-- [Mercato di Sotto il Monte Giovanni XXIII](https://anyplans.in/bergamo/mercato-di-sotto-il-monte-giovanni-xxiii/): Dal 15 settembre al 29 settembre, 3 date, Via IV Novembre, Sotto il Monte Giovanni XXIII, Gratis
-- [Mercato di Torre de' Roveri](https://anyplans.in/bergamo/mercato-di-torre-de-roveri/): Dal 15 settembre al 29 settembre, 3 date, Via Don S. Mangili, Torre de' Roveri, Gratis
-- [Mercato di Castel Rozzone](https://anyplans.in/bergamo/mercato-di-castel-rozzone/): Dal 15 settembre al 29 settembre, 3 date, Piazza Volontari del sangue, Castel Rozzone, Gratis
-- [Mercato di Trescore Balneario](https://anyplans.in/bergamo/mercato-di-trescore-balneario/): Dal 15 settembre al 29 settembre, 3 date, Piazzale Pertini, Trescore Balneario, Gratis
-- [🟦🟨TORNEO GIALLO del Mattino🟨🟦](https://anyplans.in/bergamo/torneo-giallo-del-mattino/): Dal 15 settembre al 29 settembre, 3 date, PadelUs Lodi, Via del Commercio 2, 26817 San Martino in Strada, 10 €
 - [Spritz & Burger](https://anyplans.in/bergamo/spritz-burger/): Dal 15 settembre al 30 settembre, 16 date, Spritz & Burger, parco del Castello, Clusone, Gratis
-- [PRANZO Business Networking Imprenditori e Manager BERGAMO. Promo FLEXX CLUB](https://anyplans.in/bergamo/pranzo-business-networking-imprenditori-e-manager-bergamo-pr/): Martedì 15 settembre alle 12:30, Farina&Co. Bergamo, Bergamo, 10 €
+- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/bergamo/padel-mancano-2-giocatori-competitiva/): Dal 15 settembre al 18 settembre, 3 date, MERATE A 4,50 EURO!!!!, Via Giacomo Matteotti, 2, 23807 Merate, 14 €
+- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/bergamo/padel-mancano-3-giocatori-amichevole/): Dal 15 settembre al 19 settembre, 3 date, Oxygen Sports Club Italy, Via Giuseppe Verdi, 9, 23871 Lomagna, 3,33 €
 - [PTRUNBG](https://anyplans.in/bergamo/ptrunbg/): Dal 15 settembre al 6 ottobre, 16 date, Pista di atletica, centro sportivo di Stezzano, via Isonzo 1, Gratis
+- [Circolino Astino](https://anyplans.in/bergamo/circolino-astino/): Dal 15 settembre al 30 settembre, 14 date, Circolino Astino, via Astino, Bergamo, Gratis
+- [Open Day Adulti](https://anyplans.in/bergamo/open-day-adulti/): Dal 15 settembre al 23 settembre, 4 date, Kira Padel Bergamo, Via Vaccarezza 7, 24040 Osio Sopra, Gratis
+- [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/bergamo/padel-mancano-2-giocatori-amichevole/): Martedì 15 settembre alle 18:30, Kira Padel Bergamo, Osio Sopra, 15 €
+- [Safe Woman riparte: il corso di autodifesa gratuito per le donne arriva da GNAM!](https://anyplans.in/bergamo/safe-woman-riparte-il-corso-di-autodifesa-gratuito-per-le-do/): Martedì 15 settembre alle 18:30, GNAM, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, Gratis
+- [Fabric Cascina Carlinga](https://anyplans.in/bergamo/fabric-cascina-carlinga/): Dal 15 settembre al 20 settembre, 6 date, Fabric, Cascina Carlinga, via Carlinga 19, Curno, Gratis
+- [Le Scalette del Martedì](https://anyplans.in/bergamo/le-scalette-del-martedi/): Dal 15 settembre al 6 ottobre, 4 date, Parcheggio del Baretto, via dei Celestini 10F, Bergamo, Gratis
+- [🟧PARTITA GUIDATA VALERIO🟨](https://anyplans.in/bergamo/partita-guidata-valerio/): Martedì 15 settembre alle 19:30, PadelUs Lodi, Via del Commercio 2, 26817 San Martino in Strada, 22 €
+- [Karaoke con Angy, Le Pupe Bistró – Ambivere](https://anyplans.in/bergamo/karaoke-con-angy-le-pupe-bistro-ambivere/): Dal 15 settembre al 19 settembre, 2 date, Via Guglielmo Marconi, Ambivere, Gratis
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/bergamo/padel-mancano-3-giocatori-competitiva/): Martedì 15 settembre alle 21:30, SPORT CITY LOMAGNA -IN GIORNATA  ANCHE A 5 EURO!, Lomagna, 12,50 €
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-15/): Martedì 15 settembre alle 21:30, Leo Mora Treviolo, VIA PIAVE 19/B, 24048 Treviolo, 12,50 €
+- [Mercato di Vedeseta](https://anyplans.in/bergamo/mercato-di-vedeseta/): Dal 16 settembre al 5 ottobre, 14 date, Via Centro, Vedeseta, Gratis
+- [Mercato di Carvico](https://anyplans.in/bergamo/mercato-di-carvico/): Dal 16 settembre al 30 settembre, 5 date, Piazzale Chiesa, Carvico, Gratis
+- [Mercato di Sovere](https://anyplans.in/bergamo/mercato-di-sovere/): Dal 16 settembre al 30 settembre, 5 date, Via Provinciale Frazione Sellere, Sovere, Gratis
+- [Mercato di Arcene](https://anyplans.in/bergamo/mercato-di-arcene/): Dal 16 settembre al 30 settembre, 3 date, Via S. G. Bosco, Arcene, Gratis
+- [Mercato di Albino](https://anyplans.in/bergamo/mercato-di-albino/): Dal 16 settembre al 30 settembre, 3 date, Piazza Pio La Torre, Albino, Gratis
+- [Mercato di Osio Sopra](https://anyplans.in/bergamo/mercato-di-osio-sopra/): Dal 16 settembre al 30 settembre, 3 date, Via Montessori, Osio Sopra, Gratis
+- [Mercato di Brignano Gera d'Adda](https://anyplans.in/bergamo/mercato-di-brignano-gera-d-adda/): Dal 16 settembre al 30 settembre, 3 date, Via Olimpia, Brignano Gera d'Adda, Gratis
+- [Mercato di Cologno al Serio](https://anyplans.in/bergamo/mercato-di-cologno-al-serio/): Dal 16 settembre al 30 settembre, 3 date, Piazza Caduti sul lavoro, Cologno al Serio, Gratis
+- [Mercato di Torre Boldone](https://anyplans.in/bergamo/mercato-di-torre-boldone/): Dal 16 settembre al 30 settembre, 3 date, Piazza del Bersagliere, Torre Boldone, Gratis
+- [Mercato di Rovetta](https://anyplans.in/bergamo/mercato-di-rovetta/): Dal 16 settembre al 3 ottobre, 9 date, Via Montale Località San Lorenzo, Rovetta, Gratis
+- [Mercato di Berbenno](https://anyplans.in/bergamo/mercato-di-berbenno/): Dal 16 settembre al 30 settembre, 3 date, Piazza Roma, Berbenno, Gratis
+- [Mercato di Costa Volpino](https://anyplans.in/bergamo/mercato-di-costa-volpino/): Dal 16 settembre al 30 settembre, 3 date, Piazzale degli Alpini, Costa Volpino, Gratis
+- [Mercato di Brembate](https://anyplans.in/bergamo/mercato-di-brembate/): Dal 16 settembre al 30 settembre, 3 date, Via T. Vecellio, Brembate, Gratis
+- [Mercato di Treviglio](https://anyplans.in/bergamo/mercato-di-treviglio/): Dal 16 settembre al 3 ottobre, 6 date, Via Bignamini, Treviglio, Gratis
+- [Mercato di Villa d'Adda](https://anyplans.in/bergamo/mercato-di-villa-d-adda/): Dal 16 settembre al 30 settembre, 3 date, Piazzale Donatori, Villa d'Adda, Gratis
+- [Mercato di Bottanuco](https://anyplans.in/bergamo/mercato-di-bottanuco/): Dal 16 settembre al 30 settembre, 3 date, Piazza Mercato, Bottanuco, Gratis
+- [Mercato di Paladina](https://anyplans.in/bergamo/mercato-di-paladina/): Dal 16 settembre al 30 settembre, 3 date, Via Ossanesga, Paladina, Gratis
+- [Mercato di Calcio](https://anyplans.in/bergamo/mercato-di-calcio/): Dal 16 settembre al 30 settembre, 3 date, Viale A. Moro, Calcio, Gratis
+- [Mercato di Ciserano](https://anyplans.in/bergamo/mercato-di-ciserano/): Dal 16 settembre al 30 settembre, 3 date, Piazza Papa Giovanni, Ciserano, Gratis
+- [Mercato di Songavazzo](https://anyplans.in/bergamo/mercato-di-songavazzo/): Dal 16 settembre al 30 settembre, 3 date, Via Vittorio Veneto, Songavazzo, Gratis
+- [Mercato di Covo](https://anyplans.in/bergamo/mercato-di-covo/): Dal 16 settembre al 30 settembre, 3 date, Via Trieste, Covo, Gratis
+- [Mercato di Arzago d'Adda](https://anyplans.in/bergamo/mercato-di-arzago-d-adda/): Dal 16 settembre al 30 settembre, 3 date, Via Capitani d'Arzago, Arzago d'Adda, Gratis
+- [Mercato di Almè](https://anyplans.in/bergamo/mercato-di-alme/): Dal 16 settembre al 30 settembre, 3 date, Via L. da Vinci, Almè, Gratis
+- [Mercato di Castro](https://anyplans.in/bergamo/mercato-di-castro/): Dal 16 settembre al 30 settembre, 3 date, Piazza Salvatore Allende, Castro, Gratis
+- [Mercato di Pedrengo](https://anyplans.in/bergamo/mercato-di-pedrengo/): Dal 16 settembre al 30 settembre, 3 date, Piazza Europa Unita, Pedrengo, Gratis
+- [Mercato di Bonate Sotto](https://anyplans.in/bergamo/mercato-di-bonate-sotto/): Dal 16 settembre al 30 settembre, 3 date, Via Trieste, Bonate Sotto, Gratis
 
 ## Optional
 
@@ -165,35 +166,35 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 # Tutte le pagine di anyplans a Bergamo (italiano, poi inglese)
 
-## Cosa fare a Bergamo e provincia: 696 eventi
+## Cosa fare a Bergamo e provincia: 705 eventi
 https://anyplans.in/bergamo/cosa-fare/
 
 Feste di paese, uscite sportive, corsi e gruppi: tutto quello che succede vicino a te, in un posto solo. Scegli un evento e vai insieme ad altri.
 
-## Cosa fare a Bergamo oggi: 49 eventi
+## Cosa fare a Bergamo oggi: 14 eventi
 https://anyplans.in/bergamo/cosa-fare-oggi/
 
-49 eventi a Bergamo e provincia oggi, 15 settembre 2026: Bergamo, Santa Brigida, Almenno San Bartolomeo e Misano di Gera d'Adda e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+14 eventi a Bergamo e provincia oggi, 15 settembre 2026: Bergamo, Clusone, Osio Sopra e Curno e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Bergamo domani: 61 eventi
+## Cosa fare a Bergamo domani: 65 eventi
 https://anyplans.in/bergamo/cosa-fare-domani/
 
-61 eventi a Bergamo e provincia domani, 16 settembre 2026: Bergamo, Curno, Osio Sopra e Treviglio e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+65 eventi a Bergamo e provincia domani, 16 settembre 2026: Bergamo, Curno, Treviglio e Clusone e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Bergamo nel weekend: 127 eventi
+## Cosa fare a Bergamo nel weekend: 128 eventi
 https://anyplans.in/bergamo/cosa-fare-nel-weekend/
 
-127 eventi a Bergamo e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Bergamo, Zogno, Treviglio e Casnigo e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+128 eventi a Bergamo e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Bergamo, Zogno, Casnigo e Clusone e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Eventi a Bergamo a settembre 2026: 474
+## Eventi a Bergamo a settembre 2026: 484
 https://anyplans.in/bergamo/eventi-settembre-2026/
 
-474 eventi a Bergamo e provincia a settembre 2026: mercatini, padel, estivo, incontri culturali e corsa. Giorno per giorno, con orari, luogo e prezzo, a Bergamo, Torre Boldone, Seriate e Osio Sopra e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+484 eventi a Bergamo e provincia a settembre 2026: estivo, padel, corsa, palestra e karaoke. Giorno per giorno, con orari, luogo e prezzo, a Bergamo, Torre Boldone, Lurano e Seriate e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Bergamo a ottobre 2026: 252
+## Eventi a Bergamo a ottobre 2026: 251
 https://anyplans.in/bergamo/eventi-ottobre-2026/
 
-252 eventi a Bergamo e provincia a ottobre 2026: mercatini, corsa, padel, karaoke e ceramica. Giorno per giorno, con orari, luogo e prezzo, a Bergamo, Sorisole, Treviglio e Onore e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+251 eventi a Bergamo e provincia a ottobre 2026: corsa, mercatini, padel, karaoke e ceramica. Giorno per giorno, con orari, luogo e prezzo, a Bergamo, Treviglio, Sorisole e Onore e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 ## Eventi a Bergamo a novembre 2026: 61
 https://anyplans.in/bergamo/eventi-novembre-2026/
@@ -220,10 +221,10 @@ https://anyplans.in/bergamo/cene-e-aperitivi/
 
 A Bergamo e provincia ci sono 29 cene e aperitivi nei prossimi mesi. Cene e aperitivi di gruppo in città: un tavolo prenotato, posti liberi, nessuno che conosce già tutti.
 
-## Padel a Bergamo: 114 eventi
+## Padel a Bergamo: 125 eventi
 https://anyplans.in/bergamo/padel/
 
-A Bergamo e provincia ci sono 114 partite di padel nei prossimi mesi. Partite di padel in provincia: serve sempre un quarto.
+A Bergamo e provincia ci sono 125 partite di padel nei prossimi mesi. Partite di padel in provincia: serve sempre un quarto.
 
 ## Concerti e musica dal vivo a Bergamo: 91 eventi
 https://anyplans.in/bergamo/concerti/
@@ -235,10 +236,10 @@ https://anyplans.in/bergamo/mercatini/
 
 A Bergamo e provincia ci sono 189 mercatini nei prossimi mesi. I mercatini di Bergamo e provincia: antiquariato, hobbisti, artigianato, vintage e seconda mano, weekend per weekend.
 
-## Incontri culturali a Bergamo: 52 eventi
+## Incontri culturali a Bergamo: 51 eventi
 https://anyplans.in/bergamo/incontri-culturali/
 
-A Bergamo e provincia ci sono 52 incontri nei prossimi mesi. Presentazioni di libri, conferenze e mostre a Bergamo e in provincia: ci si va, si ascolta, si parla dopo.
+A Bergamo e provincia ci sono 51 incontri nei prossimi mesi. Presentazioni di libri, conferenze e mostre a Bergamo e in provincia: ci si va, si ascolta, si parla dopo.
 
 ## Palestra a Bergamo: 3 eventi
 https://anyplans.in/bergamo/palestra/
@@ -260,10 +261,10 @@ https://anyplans.in/bergamo/spettacoli/
 
 A Bergamo e provincia ci sono 53 spettacoli nei prossimi mesi. Teatro, commedie dialettali, cabaret e musical a Bergamo e in provincia, con le date di ogni replica.
 
-## Escursionismo a Bergamo: 5 eventi
+## Escursionismo a Bergamo: 4 eventi
 https://anyplans.in/bergamo/escursioni/
 
-A Bergamo e provincia ci sono 5 escursioni nei prossimi mesi. Escursioni e trekking sulle Orobie e sui sentieri della provincia, con un host che conosce la strada.
+A Bergamo e provincia ci sono 4 escursioni nei prossimi mesi. Escursioni e trekking sulle Orobie e sui sentieri della provincia, con un host che conosce la strada.
 
 ## Pittura / arte a Bergamo: 5 eventi
 https://anyplans.in/bergamo/pittura/
@@ -560,7 +561,7 @@ https://anyplans.in/bergamo/festa-dell-oratorio/
 
 Festa di paese a Dalmine: si è già svolto, l'ultima data è stata sabato 12 settembre 2026.
 
-## FESTA DELL'ORATORIO
+## FESTA DELL'ORATORIO – Fornovo San Giovanni
 https://anyplans.in/bergamo/festa-dell-oratorio-2026-09-06/
 
 Festa di paese a Fornovo San Giovanni: si è già svolto, l'ultima data è stata domenica 6 settembre 2026.
@@ -890,42 +891,57 @@ https://anyplans.in/bergamo/napoli-arsenal-al-maxischermo-della-bombonera/
 
 Cena / aperitivo a Bombonera Social Pub, via Tommaso Grossi 40, Bergamo: si è già svolto, l'ultima data è stata mercoledì 9 settembre 2026. Lo organizza Bombonera Social Pub.
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore (competitiva) – Palapadel Seriate
 https://anyplans.in/bergamo/padel-manca-1-giocatore-competitiva/
 
-Padel a Palapadel Seriate, Seriate, mercoledì 16 settembre alle 15:00 (2 date, fino al 18 settembre). 12,50 € (Si chiede il posto e si paga su Playtomic).
+Padel a Palapadel Seriate, Via Grinetta 1F, 24068 Seriate, mercoledì 16 settembre alle 15:00 (2 date, fino al 18 settembre). 12,50 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore… – YEP Albano Sant' Alessandro
 https://anyplans.in/bergamo/padel-manca-1-giocatore-competitiva-2026-09-16/
 
-Padel a CENTRO VIVERE INSIEME 2 - MARIGOLD CURNO, Curno, mercoledì 16 settembre alle 20:00. 15 € (Si chiede il posto e si paga su Playtomic).
+Padel a YEP Albano Sant' Alessandro, Via Tonale 3/C, 24061 Albano Sant'Alessandro, mercoledì 16 settembre alle 17:30. 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore… – CENTRO VIVERE INSIEME 2 -…
+https://anyplans.in/bergamo/padel-manca-1-giocatore-competitiva-2026-09-16-2/
+
+Padel a CENTRO VIVERE INSIEME 2 - MARIGOLD CURNO, Via Abruzzi 9, Curno, 24035 Curno, mercoledì 16 settembre alle 20:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – MERATE A 4
+https://anyplans.in/bergamo/padel-manca-1-giocatore-competitiva-2026-09-16-3/
+
+Padel a MERATE A 4,50 EURO!!!!, Via Giacomo Matteotti, 2, 23807 Merate, mercoledì 16 settembre alle 21:30. 14 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – 27 Padel
 https://anyplans.in/bergamo/padel-manca-1-giocatore-competitiva-2026-09-17/
 
 Padel a 27 Padel, Bergamo, giovedì 17 settembre alle 15:30. 13,50 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (competitiva)
-https://anyplans.in/bergamo/padel-manca-1-giocatore-competitiva-2026-09-17-2026-09-17/
+## Padel: manca 1 giocatore… – Padel Academy Manenti &…
+https://anyplans.in/bergamo/padel-manca-1-giocatore-competitiva-2026-09-17-2/
 
-Padel a Padel Academy Manenti & Malgaroli, Brusaporto, giovedì 17 settembre alle 20:00. 15 € (Si chiede il posto e si paga su Playtomic).
+Padel a Padel Academy Manenti & Malgaroli, Via Belvedere 1 , 24060 Brusaporto, giovedì 17 settembre alle 20:00. 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore… – Crazy Padel Treviolo
 https://anyplans.in/bergamo/padel-manca-1-giocatore-competitiva-2026-09-18/
 
 Padel a Crazy Padel Treviolo, Treviolo, venerdì 18 settembre alle 17:30. 10 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore (competitiva) – Padel Star Veduggio
+https://anyplans.in/bergamo/padel-manca-1-giocatore-competitiva-2026-09-18-2/
+
+Padel a Padel Star Veduggio, via dell'Atleta 12, 20837 Veduggio Con Colzano, venerdì 18 settembre alle 20:00. Gratis (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – O2 Padel Bergamo
 https://anyplans.in/bergamo/padel-manca-1-giocatore-competitiva-2026-09-14/
 
 Padel a O2 Padel Bergamo, Via Tinaglia 12, 24030 Brembate di Sopra: si è già svolto, l'ultima data è stata lunedì 14 settembre 2026.
 
-## Padel: manca 1 giocatore (competitiva)
-https://anyplans.in/bergamo/padel-manca-1-giocatore-competitiva-2026-09-14-2026-09-14/
+## Padel: manca 1 giocatore… – PADEL TIME TREVIGLIO
+https://anyplans.in/bergamo/padel-manca-1-giocatore-competitiva-2026-09-14-2/
 
 Padel a PADEL TIME TREVIGLIO, Via Roggia Vailata snc, 24047 Treviglio: si è già svolto, l'ultima data è stata lunedì 14 settembre 2026.
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore… – APC Active Padel Club -…
 https://anyplans.in/bergamo/padel-manca-1-giocatore-competitiva-2026-09-10/
 
 Padel a APC Active Padel Club - Brignano Gera d'Adda BG, Via Treviglio 38, 24053 Brignano Gera d'Adda: si è già svolto, l'ultima data è stata giovedì 10 settembre 2026.
@@ -985,37 +1001,42 @@ https://anyplans.in/bergamo/festa-dell-uva-area-feste-foresto-sparso/
 
 Festa di paese a Foresto Sparso, giovedì 17 settembre alle 19:30 (4 date, fino al 20 settembre). Gratis.
 
-## Padel: mancano 3 giocatori (competitiva)
+## Padel: mancano 3 giocatori… – SPORT CITY LOMAGNA -IN…
 https://anyplans.in/bergamo/padel-mancano-3-giocatori-competitiva/
 
 Padel a SPORT CITY LOMAGNA -IN GIORNATA  ANCHE A 5 EURO!, Lomagna, martedì 15 settembre alle 21:30. 12,50 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (competitiva)
+## Padel: mancano 3 giocatori (competitiva) – Leo Mora Treviolo
+https://anyplans.in/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-15/
+
+Padel a Leo Mora Treviolo, VIA PIAVE 19/B, 24048 Treviolo, martedì 15 settembre alle 21:30. 12,50 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Oxygen Sports Club Italy
 https://anyplans.in/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-16/
 
-Padel a 27 Padel, Bergamo, mercoledì 16 settembre alle 11:30 (2 date, fino al 17 settembre). 13,50 € (Si chiede il posto e si paga su Playtomic).
+Padel a Oxygen Sports Club Italy, Via Giuseppe Verdi, 9, 23871 Lomagna, mercoledì 16 settembre alle 09:00 (2 date, fino al 16 settembre). 5 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-16-2026-09-16/
+## Padel: mancano 3 giocatori… – Kira Padel Bergamo
+https://anyplans.in/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-16-2/
 
-Padel a Oxygen Sports Club Italy, Lomagna, mercoledì 16 settembre alle 16:00. 5 € (Si chiede il posto e si paga su Playtomic).
+Padel a Kira Padel Bergamo, Via Vaccarezza 7, 24040 Osio Sopra, mercoledì 16 settembre alle 20:30 (2 date, fino al 17 settembre). 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-16-2026-09-16-2/
-
-Padel a Kira Padel Bergamo, Osio Sopra, mercoledì 16 settembre alle 20:30. 15 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
+## Padel: mancano 3 giocatori (competitiva) – 27 Padel
 https://anyplans.in/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-17/
+
+Padel a 27 Padel, Via Boccaleone 9, 24125 Bergamo, giovedì 17 settembre alle 12:30. 13,50 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Brembate & Grignano - Unica…
+https://anyplans.in/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-17-2/
 
 Padel a Brembate & Grignano - Unica Sport by HServizi, Brembate, giovedì 17 settembre alle 18:00. 8,75 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (competitiva)
+## Padel: mancano 3 giocatori (competitiva) – Palapadel Seriate
 https://anyplans.in/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-14/
 
 Padel a Palapadel Seriate, Via Grinetta 1F, 24068 Seriate: si è già svolto, l'ultima data è stata lunedì 14 settembre 2026.
 
-## Padel: mancano 3 giocatori (competitiva)
+## Padel: mancano 3 giocatori… – PADEL TIME TREVIGLIO
 https://anyplans.in/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-10/
 
 Padel a PADEL TIME TREVIGLIO, Via Roggia Vailata snc, 24047 Treviglio: si è già svolto, l'ultima data è stata giovedì 10 settembre 2026.
@@ -1040,37 +1061,62 @@ https://anyplans.in/bergamo/torneo-dei-mattinieri/
 
 Padel a YEP Albano Sant' Alessandro, Via Tonale 3/C, 24061 Albano Sant'Alessandro, venerdì 18 settembre alle 06:30 (15 date, fino al 25 dicembre). 12,50 € (Iscrizione e pagamento su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori (competitiva) – MERATE A 4
 https://anyplans.in/bergamo/padel-mancano-2-giocatori-competitiva/
 
-Padel a Kira Padel Bergamo, Osio Sopra, mercoledì 16 settembre alle 17:30. 15 € (Si chiede il posto e si paga su Playtomic).
+Padel a MERATE A 4,50 EURO!!!!, Via Giacomo Matteotti, 2, 23807 Merate, martedì 15 settembre alle 17:00 (3 date, fino al 18 settembre). 14 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori (competitiva) – 27 Padel
 https://anyplans.in/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-16/
 
-Padel a MERATE A 4,50 EURO!!!!, Merate, mercoledì 16 settembre alle 18:00 (2 date, fino al 18 settembre). Gratis (Si chiede il posto e si paga su Playtomic).
+Padel a 27 Padel, Via Boccaleone 9, 24125 Bergamo, mercoledì 16 settembre alle 11:30 (3 date, fino al 19 settembre). 13,50 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-16-2026-09-16/
+## Padel: mancano 2 giocatori… – Kira Padel Bergamo
+https://anyplans.in/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-16-2/
 
-Padel a Pratogrande - Frontelago, Garlate, mercoledì 16 settembre alle 19:00. 13,50 € (Si chiede il posto e si paga su Playtomic).
+Padel a Kira Padel Bergamo, Via Vaccarezza 7, 24040 Osio Sopra, mercoledì 16 settembre alle 17:30. 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-16-2026-09-16-2/
+## Padel: mancano 2 giocatori… – Padel Prime Osio Sotto
+https://anyplans.in/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-16-3/
 
-Padel a 27 Padel, Bergamo, mercoledì 16 settembre alle 21:00 (2 date, fino al 19 settembre). 16 € (Si chiede il posto e si paga su Playtomic).
+Padel a Padel Prime Osio Sotto, Via Petrocchi 1, 24046 Osio Sotto, mercoledì 16 settembre alle 19:00. 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori… – Pratogrande - Frontelago
+https://anyplans.in/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-16-4/
+
+Padel a Pratogrande - Frontelago, Via Statale 1100, 23852 Garlate, mercoledì 16 settembre alle 19:00. 13,50 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – CENTRO VIVERE INSIEME 2 -…
+https://anyplans.in/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-16-5/
+
+Padel a CENTRO VIVERE INSIEME 2 - MARIGOLD CURNO, Via Abruzzi 9, Curno, 24035 Curno, mercoledì 16 settembre alle 21:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (competitiva) – SNEF Lambrone
+https://anyplans.in/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-17/
+
+Padel a SNEF Lambrone, Via Della Libertà, 15, Erba CO, Italy, 22036 Erba, giovedì 17 settembre alle 20:00. 13 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Tennis Club 88 Valmadrera
+https://anyplans.in/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-17-2/
+
+Padel a Tennis Club 88 Valmadrera, Via Rio Torto, 29, 23868 Valmadrera, giovedì 17 settembre alle 21:00. 12 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – PADEL TIME TREVIGLIO
 https://anyplans.in/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-19/
 
-Padel a PADEL TIME TREVIGLIO, Treviglio, sabato 19 settembre alle 10:00. 15 € (Si chiede il posto e si paga su Playtomic).
+Padel a PADEL TIME TREVIGLIO, Via Roggia Vailata snc, 24047 Treviglio, sabato 19 settembre alle 10:00. 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori (competitiva) – O2 Padel Bergamo
+https://anyplans.in/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-19-2/
+
+Padel a O2 Padel Bergamo, Via Tinaglia 12, 24030 Brembate di Sopra, sabato 19 settembre alle 18:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Oxygen Sports Club Italy
 https://anyplans.in/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-13/
 
 Padel a Oxygen Sports Club Italy, Via Giuseppe Verdi, 9, 23871 Lomagna: si è già svolto, l'ultima data è stata domenica 13 settembre 2026.
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori… – SPORT CITY LOMAGNA -IN…
 https://anyplans.in/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-12/
 
 Padel a SPORT CITY LOMAGNA -IN GIORNATA  ANCHE A 5 EURO!, Via Carducci 5/15, 23871 Lomagna: si è già svolto, l'ultima data è stata sabato 12 settembre 2026.
@@ -1080,17 +1126,17 @@ https://anyplans.in/bergamo/adunata-degli-alpini-inaugurazione-sul-sentierone-e-
 
 Festa di paese a Bergamo Città: si è già svolto, l'ultima data è stata venerdì 11 settembre 2026.
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore (amichevole) – Palapadel Seriate
 https://anyplans.in/bergamo/padel-manca-1-giocatore-amichevole/
 
 Padel a Palapadel Seriate, Seriate, mercoledì 16 settembre alle 18:30. 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore… – Oxygen Sports Club Italy
 https://anyplans.in/bergamo/padel-manca-1-giocatore-amichevole-2026-09-18/
 
-Padel a Oxygen Sports Club Italy, Lomagna, venerdì 18 settembre alle 14:00. 5 € (Si chiede il posto e si paga su Playtomic).
+Padel a Oxygen Sports Club Italy, Via Giuseppe Verdi, 9, 23871 Lomagna, venerdì 18 settembre alle 14:00. 5 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore (amichevole) – O2 Padel Bergamo
 https://anyplans.in/bergamo/padel-manca-1-giocatore-amichevole-2026-09-12/
 
 Padel a O2 Padel Bergamo, Via Tinaglia 12, 24030 Brembate di Sopra: si è già svolto, l'ultima data è stata sabato 12 settembre 2026.
@@ -1445,42 +1491,52 @@ https://anyplans.in/bergamo/everest-13-09/
 
 Padel a 27 Padel, Via Boccaleone 9, 24125 Bergamo: si è già svolto, l'ultima data è stata domenica 13 settembre 2026.
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori (amichevole) – Kira Padel Bergamo
 https://anyplans.in/bergamo/padel-mancano-2-giocatori-amichevole/
 
 Padel a Kira Padel Bergamo, Osio Sopra, martedì 15 settembre alle 18:30. 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori (amichevole) – KZ Padel
+https://anyplans.in/bergamo/padel-mancano-2-giocatori-amichevole-2026-09-17/
+
+Padel a KZ Padel, Via Riolo 1, 24030 Mozzo, giovedì 17 settembre alle 18:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (amichevole) – 27 Padel
 https://anyplans.in/bergamo/padel-mancano-2-giocatori-amichevole-2026-09-18/
 
 Padel a 27 Padel, Bergamo, venerdì 18 settembre alle 12:00. 13,50 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori… – Cittadella dello Sport
 https://anyplans.in/bergamo/padel-mancano-2-giocatori-amichevole-2026-09-20/
 
-Padel a Cittadella dello Sport, Bergamo, domenica 20 settembre alle 10:30. 10 € (Si chiede il posto e si paga su Playtomic).
+Padel a Cittadella dello Sport, Via Monte Gleno 2L, 24125 Bergamo, domenica 20 settembre alle 10:30. 10 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori (amichevole) – O2 Padel Bergamo
+https://anyplans.in/bergamo/padel-mancano-2-giocatori-amichevole-2026-09-21/
+
+Padel a O2 Padel Bergamo, Via Tinaglia 12, 24030 Brembate di Sopra, lunedì 21 settembre alle 20:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (amichevole) – Sangio Padel
 https://anyplans.in/bergamo/padel-mancano-2-giocatori-amichevole-2026-09-13/
 
 Padel a Sangio Padel, San Giovanni Bianco: si è già svolto, l'ultima data è stata domenica 13 settembre 2026.
 
-## S-PADEL liv. MEDIUM RED MASCHILE
+## S-PADEL liv. MEDIUM RED… – APC Active Padel Club -…
 https://anyplans.in/bergamo/s-padel-liv-medium-red-maschile/
 
 Padel a APC Active Padel Club - Brignano Gera d'Adda BG, Via Treviglio 38, 24053 Brignano Gera d'Adda, domenica 27 settembre alle 14:00 (4 date, fino al 27 marzo). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED MASCHILE
+## S-PADEL liv. MEDIUM RED MASCHILE – MERATE A 4
 https://anyplans.in/bergamo/s-padel-liv-medium-red-maschile-2026-10-24/
 
 Padel a MERATE A 4,50 EURO!!!!, Via Giacomo Matteotti, 2, 23807 Merate, sabato 24 ottobre alle 17:00 (3 date, fino al 20 marzo). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED MASCHILE
+## S-PADEL liv. MEDIUM RED MASCHILE – Padel Prime Osio Sotto
 https://anyplans.in/bergamo/s-padel-liv-medium-red-maschile-2026-11-07/
 
 Padel a Padel Prime Osio Sotto, Via Petrocchi 1, 24046 Osio Sotto, sabato 7 novembre alle 17:00 (3 date, fino al 1 maggio). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED MASCHILE
+## S-PADEL liv. MEDIUM RED MASCHILE – Crazy Padel Treviolo
 https://anyplans.in/bergamo/s-padel-liv-medium-red-maschile-2027-02-07/
 
 Padel a Crazy Padel Treviolo, Via Nelson Mandela, 24048 Treviolo, domenica 7 febbraio alle 17:00 (2 date, fino al 11 aprile). 25 € (Iscrizione su Playtomic, si paga in loco).
@@ -1500,12 +1556,12 @@ https://anyplans.in/bergamo/liscio-con-orchestra-trilogy-oratorio-in-festa-verde
 
 Festa di paese a Verdello: si è già svolto, l'ultima data è stata domenica 13 settembre 2026.
 
-## Padel: mancano 3 giocatori (amichevole)
+## Padel: mancano 3 giocatori… – Oxygen Sports Club Italy
 https://anyplans.in/bergamo/padel-mancano-3-giocatori-amichevole/
 
-Padel a Oxygen Sports Club Italy, Lomagna, sabato 19 settembre alle 18:00. 8 € (Si chiede il posto e si paga su Playtomic).
+Padel a Oxygen Sports Club Italy, Via Giuseppe Verdi, 9, 23871 Lomagna, martedì 15 settembre alle 17:00 (3 date, fino al 19 settembre). 3,33 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (amichevole)
+## Padel: mancano 3 giocatori… – Crazy Padel Treviolo
 https://anyplans.in/bergamo/padel-mancano-3-giocatori-amichevole-2026-09-14/
 
 Padel a Crazy Padel Treviolo, Via Nelson Mandela, 24048 Treviolo: si è già svolto, l'ultima data è stata lunedì 14 settembre 2026.
@@ -1558,187 +1614,187 @@ Padel a Berga Padel, via provinciale 116/a, 24021 Albino, giovedì 17 settembre 
 ## Mercato di Santa Brigida
 https://anyplans.in/bergamo/mercato-di-santa-brigida/
 
-Mercatini a Via Colla c/o Piazza Comune, Santa Brigida, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via Colla c/o Piazza Comune, Santa Brigida, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Almenno San Bartolomeo
 https://anyplans.in/bergamo/mercato-di-almenno-san-bartolomeo/
 
-Mercatini a Piazza Italia Località Cerita, Almenno San Bartolomeo, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Piazza Italia Località Cerita, Almenno San Bartolomeo, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Misano di Gera d'Adda
 https://anyplans.in/bergamo/mercato-di-misano-di-gera-d-adda/
 
-Mercatini a Via S. Stefano, Misano di Gera d'Adda, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via S. Stefano, Misano di Gera d'Adda, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Fornovo San Giovanni
 https://anyplans.in/bergamo/mercato-di-fornovo-san-giovanni/
 
-Mercatini a Piazza San Giovanni, Fornovo San Giovanni, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Piazza San Giovanni, Fornovo San Giovanni, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Foresto Sparso
 https://anyplans.in/bergamo/mercato-di-foresto-sparso/
 
-Mercatini a Via Roma, Foresto Sparso, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via Roma, Foresto Sparso, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Dalmine
 https://anyplans.in/bergamo/mercato-di-dalmine/
 
-Mercatini a Via Don Sturzo, Dalmine, martedì 15 settembre alle 08:00 (12 date, fino al 3 ottobre). Gratis.
+Mercatini a Via Kennedy, Dalmine, giovedì 17 settembre alle 08:00 (11 date, fino al 3 ottobre). Gratis.
 
 ## Mercato di Colere
 https://anyplans.in/bergamo/mercato-di-colere/
 
-Mercatini a Via Tortola, Colere, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via Tortola, Colere, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Solto Collina
 https://anyplans.in/bergamo/mercato-di-solto-collina/
 
-Mercatini a Piazzale Kennedy, Solto Collina, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Piazzale Kennedy, Solto Collina, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Villa d'Almè
 https://anyplans.in/bergamo/mercato-di-villa-d-alme/
 
-Mercatini a Via Ventolosa, Via Gaggio, Piazza dell’Artigliere, Villa d'Almè, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via Ventolosa, Via Gaggio, Piazza dell’Artigliere, Villa d'Almè, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Martinengo
 https://anyplans.in/bergamo/mercato-di-martinengo/
 
-Mercatini a Centro Storico, Martinengo, martedì 15 settembre alle 08:00 (6 date, fino al 3 ottobre). Gratis.
+Mercatini a Centro Storico, Martinengo, sabato 19 settembre alle 08:00 (5 date, fino al 3 ottobre). Gratis.
 
 ## Mercato di Pagazzano
 https://anyplans.in/bergamo/mercato-di-pagazzano/
 
-Mercatini a Via Roma, Pagazzano, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via Roma, Pagazzano, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Bergamo
 https://anyplans.in/bergamo/mercato-di-bergamo/
 
-Mercatini a Via Gemelli Località Redona, Bergamo, martedì 15 settembre alle 08:00 (24 date, fino al 5 ottobre). Gratis.
+Mercatini a Via Promessi Sposi, Bergamo, giovedì 17 settembre alle 08:00 (23 date, fino al 5 ottobre). Gratis.
 
 ## Mercato di Brusaporto
 https://anyplans.in/bergamo/mercato-di-brusaporto/
 
-Mercatini a Via Cattanea, Brusaporto, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via Cattanea, Brusaporto, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Gorle
 https://anyplans.in/bergamo/mercato-di-gorle/
 
-Mercatini a Via Turati, Gorle, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via Turati, Gorle, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Costa di Mezzate
 https://anyplans.in/bergamo/mercato-di-costa-di-mezzate/
 
-Mercatini a Via Roma, Costa di Mezzate, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via Roma, Costa di Mezzate, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Valbondione
 https://anyplans.in/bergamo/mercato-di-valbondione/
 
-Mercatini a Via Torre Capoluogo di Bondione, Valbondione, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via Torre Capoluogo di Bondione, Valbondione, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Sorisole
 https://anyplans.in/bergamo/mercato-di-sorisole/
 
-Mercatini a Via Fonte, Sorisole, martedì 15 settembre alle 08:00 (9 date, fino al 2 ottobre). Gratis.
+Mercatini a Piazza Donatore del sangue, Sorisole, giovedì 17 settembre alle 08:00 (8 date, fino al 2 ottobre). Gratis.
 
 ## Mercato di Spirano
 https://anyplans.in/bergamo/mercato-di-spirano/
 
-Mercatini a Via S. Antonio, Spirano, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via S. Antonio, Spirano, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Ponte Nossa
 https://anyplans.in/bergamo/mercato-di-ponte-nossa/
 
-Mercatini a Via G. Frua, Ponte Nossa, martedì 15 settembre alle 08:00 (6 date, fino al 29 settembre). Gratis.
+Mercatini a Via G. Frua, Ponte Nossa, martedì 22 settembre alle 08:00 (4 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Filago
 https://anyplans.in/bergamo/mercato-di-filago/
 
-Mercatini a Via A. Locatelli, Filago, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via A. Locatelli, Filago, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Vedeseta
 https://anyplans.in/bergamo/mercato-di-vedeseta/
 
-Mercatini a Via Centro, Vedeseta, martedì 15 settembre alle 08:00 (15 date, fino al 5 ottobre). Gratis.
+Mercatini a Via Centro, Vedeseta, mercoledì 16 settembre alle 08:00 (14 date, fino al 5 ottobre). Gratis.
 
 ## Mercato di Azzano San Paolo
 https://anyplans.in/bergamo/mercato-di-azzano-san-paolo/
 
-Mercatini a Piazzale Brigata Alpina Orobica, Azzano San Paolo, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Piazzale Brigata Alpina Orobica, Azzano San Paolo, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Cerete Cerete Basso
 https://anyplans.in/bergamo/mercato-di-cerete-cerete-basso/
 
-Mercatini a Via Sorgente Moia, Cerete Cerete Basso, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via Sorgente Moia, Cerete Cerete Basso, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Castelli Calepio
 https://anyplans.in/bergamo/mercato-di-castelli-calepio/
 
-Mercatini a Via Bertoli, Ang. Via Locatelli, Castelli Calepio, martedì 15 settembre alle 08:00 (6 date, fino al 5 ottobre). Gratis.
+Mercatini a Via Ferrucci Ang. Via Repubblica, Castelli Calepio, lunedì 21 settembre alle 08:00 (5 date, fino al 5 ottobre). Gratis.
 
 ## Mercato di Strozza
 https://anyplans.in/bergamo/mercato-di-strozza/
 
-Mercatini a Via Vittorio Emanuele, Strozza, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via Vittorio Emanuele, Strozza, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Carvico
 https://anyplans.in/bergamo/mercato-di-carvico/
 
-Mercatini a Via S. Martino, Carvico, martedì 15 settembre alle 08:00 (6 date, fino al 30 settembre). Gratis.
+Mercatini a Piazzale Chiesa, Carvico, mercoledì 16 settembre alle 08:00 (5 date, fino al 30 settembre). Gratis.
 
 ## Mercato di Osio Sotto
 https://anyplans.in/bergamo/mercato-di-osio-sotto/
 
-Mercatini a Via Machiavelli, Osio Sotto, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via Machiavelli, Osio Sotto, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Bonate Sopra
 https://anyplans.in/bergamo/mercato-di-bonate-sopra/
 
-Mercatini a Via Garibaldi, Bonate Sopra, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via Garibaldi, Bonate Sopra, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Pognano
 https://anyplans.in/bergamo/mercato-di-pognano/
 
-Mercatini a Piazza Palestra, Pognano, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Piazza Palestra, Pognano, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Pontirolo Nuovo
 https://anyplans.in/bergamo/mercato-di-pontirolo-nuovo/
 
-Mercatini a Piazza del Mercato, Pontirolo Nuovo, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Piazza del Mercato, Pontirolo Nuovo, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Ponte San Pietro
 https://anyplans.in/bergamo/mercato-di-ponte-san-pietro/
 
-Mercatini a Via Foiadelli, Ponte San Pietro, martedì 15 settembre alle 08:00 (6 date, fino al 2 ottobre). Gratis.
+Mercatini a Piazza della Liberta, Ponte San Pietro, venerdì 18 settembre alle 08:00 (5 date, fino al 2 ottobre). Gratis.
 
 ## Mercato di Sovere
 https://anyplans.in/bergamo/mercato-di-sovere/
 
-Mercatini a Piazza Aldo Moro, Sovere, martedì 15 settembre alle 08:00 (6 date, fino al 30 settembre). Gratis.
+Mercatini a Via Provinciale Frazione Sellere, Sovere, mercoledì 16 settembre alle 08:00 (5 date, fino al 30 settembre). Gratis.
 
 ## Mercato di Sotto il Monte Giovanni XXIII
 https://anyplans.in/bergamo/mercato-di-sotto-il-monte-giovanni-xxiii/
 
-Mercatini a Via IV Novembre, Sotto il Monte Giovanni XXIII, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via IV Novembre, Sotto il Monte Giovanni XXIII, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Torre de' Roveri
 https://anyplans.in/bergamo/mercato-di-torre-de-roveri/
 
-Mercatini a Via Don S. Mangili, Torre de' Roveri, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Via Don S. Mangili, Torre de' Roveri, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Castel Rozzone
 https://anyplans.in/bergamo/mercato-di-castel-rozzone/
 
-Mercatini a Piazza Volontari del sangue, Castel Rozzone, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Piazza Volontari del sangue, Castel Rozzone, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## Mercato di Trescore Balneario
 https://anyplans.in/bergamo/mercato-di-trescore-balneario/
 
-Mercatini a Piazzale Pertini, Trescore Balneario, martedì 15 settembre alle 08:00 (3 date, fino al 29 settembre). Gratis.
+Mercatini a Piazzale Pertini, Trescore Balneario, martedì 22 settembre alle 08:00 (2 date, fino al 29 settembre). Gratis.
 
 ## 🟦🟨TORNEO GIALLO del Mattino🟨🟦
 https://anyplans.in/bergamo/torneo-giallo-del-mattino/
 
-Padel a PadelUs Lodi, Via del Commercio 2, 26817 San Martino in Strada, martedì 15 settembre alle 09:30 (3 date, fino al 29 settembre). 10 € (Iscrizione e pagamento su Playtomic).
+Padel a PadelUs Lodi, Via del Commercio 2, 26817 San Martino in Strada, martedì 22 settembre alle 09:30 (2 date, fino al 29 settembre). 10 € (Iscrizione e pagamento su Playtomic).
 
 ## SWITCH & SMASH
 https://anyplans.in/bergamo/switch-smash/
@@ -1748,7 +1804,7 @@ Padel a YEP Albano Sant' Alessandro, Via Tonale 3/C, 24061 Albano Sant'Alessandr
 ## PRANZO Business Networking Imprenditori e…
 https://anyplans.in/bergamo/pranzo-business-networking-imprenditori-e-manager-bergamo-pr/
 
-Incontri culturali a Farina&Co. Bergamo, Bergamo, martedì 15 settembre alle 12:30. 10 € (Biglietti su AllEvents).
+Incontri culturali a Farina&Co. Bergamo, Bergamo: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
 ## Safe Woman riparte: il corso di autodifesa…
 https://anyplans.in/bergamo/safe-woman-riparte-il-corso-di-autodifesa-gratuito-per-le-do/
@@ -3210,7 +3266,7 @@ https://anyplans.in/bergamo/oktoberfest/
 
 Festa di paese a Bagnatica, venerdì 25 settembre alle 19:00 (3 date, fino al 27 settembre). Gratis.
 
-## Oktoberfest
+## Oktoberfest – Sotto Il Monte Giovanni XXIII
 https://anyplans.in/bergamo/oktoberfest-2026-10-01/
 
 Festa di paese a Sotto Il Monte Giovanni XXIII, giovedì 1 ottobre alle 19:00 (4 date, fino al 4 ottobre). Gratis.
@@ -3545,42 +3601,42 @@ https://anyplans.in/bergamo/dal-lago-alla-forma-il-latte-di-rogeno-tra-filatura-
 
 Incontri culturali a Circolino Città Alta, Bergamo, domenica 27 settembre alle 13:00. 21 € (Biglietti su AllEvents).
 
-## S-PADEL liv. ENTRY WHITE FEMMINILE
+## S-PADEL liv. ENTRY WHITE… – APC Active Padel Club -…
 https://anyplans.in/bergamo/s-padel-liv-entry-white-femminile/
 
 Padel a APC Active Padel Club - Brignano Gera d'Adda BG, Via Treviglio 38, 24053 Brignano Gera d'Adda, domenica 27 settembre alle 14:00 (4 date, fino al 27 marzo). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE FEMMINILE
+## S-PADEL liv. ENTRY WHITE FEMMINILE – Padel Prime Osio Sotto
 https://anyplans.in/bergamo/s-padel-liv-entry-white-femminile-2026-10-04/
 
 Padel a Padel Prime Osio Sotto, Via Petrocchi 1, 24046 Osio Sotto, domenica 4 ottobre alle 14:00 (3 date, fino al 4 aprile). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE FEMMINILE
+## S-PADEL liv. ENTRY WHITE FEMMINILE – Crazy Padel Treviolo
 https://anyplans.in/bergamo/s-padel-liv-entry-white-femminile-2026-10-11/
 
 Padel a Crazy Padel Treviolo, Via Nelson Mandela, 24048 Treviolo, domenica 11 ottobre alle 14:00 (3 date, fino al 14 marzo). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE FEMMINILE
+## S-PADEL liv. ENTRY WHITE FEMMINILE – MERATE A 4
 https://anyplans.in/bergamo/s-padel-liv-entry-white-femminile-2026-11-21/
 
 Padel a MERATE A 4,50 EURO!!!!, Via Giacomo Matteotti, 2, 23807 Merate, sabato 21 novembre alle 14:00 (3 date, fino al 2 maggio). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED FEMMINILE
+## S-PADEL liv. MEDIUM RED… – APC Active Padel Club -…
 https://anyplans.in/bergamo/s-padel-liv-medium-red-femminile/
 
 Padel a APC Active Padel Club - Brignano Gera d'Adda BG, Via Treviglio 38, 24053 Brignano Gera d'Adda, domenica 27 settembre alle 14:00 (4 date, fino al 27 marzo). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED FEMMINILE
+## S-PADEL liv. MEDIUM RED FEMMINILE – Padel Prime Osio Sotto
 https://anyplans.in/bergamo/s-padel-liv-medium-red-femminile-2026-10-04/
 
 Padel a Padel Prime Osio Sotto, Via Petrocchi 1, 24046 Osio Sotto, domenica 4 ottobre alle 17:00 (3 date, fino al 4 aprile). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED FEMMINILE
+## S-PADEL liv. MEDIUM RED FEMMINILE – Crazy Padel Treviolo
 https://anyplans.in/bergamo/s-padel-liv-medium-red-femminile-2026-10-11/
 
 Padel a Crazy Padel Treviolo, Via Nelson Mandela, 24048 Treviolo, domenica 11 ottobre alle 17:00 (3 date, fino al 14 marzo). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED FEMMINILE
+## S-PADEL liv. MEDIUM RED FEMMINILE – MERATE A 4
 https://anyplans.in/bergamo/s-padel-liv-medium-red-femminile-2026-11-21/
 
 Padel a MERATE A 4,50 EURO!!!!, Via Giacomo Matteotti, 2, 23807 Merate, sabato 21 novembre alle 17:00 (3 date, fino al 2 maggio). Gratis (Iscrizione su Playtomic).
@@ -3590,22 +3646,22 @@ https://anyplans.in/bergamo/la-gemma-di-parma/
 
 Yoga / pilates a Circolino Città Alta, Bergamo, domenica 27 settembre alle 14:00. 21 € (Biglietti su AllEvents).
 
-## S-PADEL liv. ENTRY WHITE MASCHILE
+## S-PADEL liv. ENTRY WHITE… – APC Active Padel Club -…
 https://anyplans.in/bergamo/s-padel-liv-entry-white-maschile/
 
 Padel a APC Active Padel Club - Brignano Gera d'Adda BG, Via Treviglio 38, 24053 Brignano Gera d'Adda, domenica 27 settembre alle 14:00 (4 date, fino al 27 marzo). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE MASCHILE
+## S-PADEL liv. ENTRY WHITE MASCHILE – MERATE A 4
 https://anyplans.in/bergamo/s-padel-liv-entry-white-maschile-2026-10-24/
 
 Padel a MERATE A 4,50 EURO!!!!, Via Giacomo Matteotti, 2, 23807 Merate, sabato 24 ottobre alle 14:00 (3 date, fino al 20 marzo). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE MASCHILE
+## S-PADEL liv. ENTRY WHITE MASCHILE – Padel Prime Osio Sotto
 https://anyplans.in/bergamo/s-padel-liv-entry-white-maschile-2026-11-07/
 
 Padel a Padel Prime Osio Sotto, Via Petrocchi 1, 24046 Osio Sotto, sabato 7 novembre alle 14:00 (3 date, fino al 1 maggio). 25 € (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE MASCHILE
+## S-PADEL liv. ENTRY WHITE MASCHILE – Crazy Padel Treviolo
 https://anyplans.in/bergamo/s-padel-liv-entry-white-maschile-2027-02-07/
 
 Padel a Crazy Padel Treviolo, Via Nelson Mandela, 24048 Treviolo, domenica 7 febbraio alle 14:00 (2 date, fino al 11 aprile). 25 € (Iscrizione su Playtomic, si paga in loco).
@@ -4174,11 +4230,6 @@ Partite da vedere a New Balance Arena, Bergamo, sabato 24 ottobre alle 23:59. Gr
 https://anyplans.in/bergamo/teremotata-ultra-maratona-dell-isola-48-edizione/
 
 Corsa a Municipio, Via Casolini 7, Terno d'Isola, domenica 25 ottobre alle 07:30. Gratis.
-
-## Porta delle Cornacchie
-https://anyplans.in/bergamo/porta-delle-cornacchie/
-
-Escursionismo a Roncobello, loc. Baresi (BG), domenica 25 ottobre alle 10:00. 9 € (Accredito su comehome; il resto si paga in loco).
 
 ## Pablo Trincia Spettacolo
 https://anyplans.in/bergamo/pablo-trincia-spettacolo-choruslife-bergamo-citta/
@@ -4785,35 +4836,35 @@ https://anyplans.in/bergamo/claudio-baglioni-in-concerto-arena-fiera-bergamo-cit
 
 Concerti e musica dal vivo a Parcheggio Fiera, Via Roggia Vignola 9, Bergamo Città, lunedì 12 luglio alle 22:00. Gratis.
 
-## Things to do in Bergamo: 696 events
+## Things to do in Bergamo: 705 events
 https://anyplans.in/en/bergamo/things-to-do/
 
 What's on in Bergamo and its province, today, tonight and this weekend: markets, padel, town festivals & fairs, concerts & live music, summer venues and shows & theatre. Pick one and go with other people.
 
-## What to do in Bergamo today: 49 events
+## What to do in Bergamo today: 14 events
 https://anyplans.in/en/bergamo/what-to-do-today/
 
-49 events in Bergamo and its province today, 15 September 2026: Bergamo, Santa Brigida, Almenno San Bartolomeo and Misano di Gera d'Adda and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+14 events in Bergamo and its province today, 15 September 2026: Bergamo, Clusone, Osio Sopra and Curno and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Bergamo tomorrow: 61 events
+## What to do in Bergamo tomorrow: 65 events
 https://anyplans.in/en/bergamo/what-to-do-tomorrow/
 
-61 events in Bergamo and its province tomorrow, 16 September 2026: Bergamo, Curno, Osio Sopra and Treviglio and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+65 events in Bergamo and its province tomorrow, 16 September 2026: Bergamo, Curno, Treviglio and Clusone and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Bergamo this weekend: 127 events
+## What to do in Bergamo this weekend: 128 events
 https://anyplans.in/en/bergamo/what-to-do-this-weekend/
 
-127 events in Bergamo and its province this weekend (Saturday 19 September and Sunday 20 September): Bergamo, Zogno, Treviglio and Casnigo and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+128 events in Bergamo and its province this weekend (Saturday 19 September and Sunday 20 September): Bergamo, Zogno, Casnigo and Clusone and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## Events in Bergamo in September 2026: 474
+## Events in Bergamo in September 2026: 484
 https://anyplans.in/en/bergamo/events-september-2026/
 
-474 events in Bergamo and its province in September 2026: markets, padel, summer venues, talks & culture and running. Day by day, with times, place and price, in Bergamo, Torre Boldone, Seriate and Osio Sopra and other towns. You sign up and go with other people.
+484 events in Bergamo and its province in September 2026: summer venues, padel, running, gym and karaoke. Day by day, with times, place and price, in Bergamo, Torre Boldone, Lurano and Seriate and other towns. You sign up and go with other people.
 
-## Events in Bergamo in October 2026: 252
+## Events in Bergamo in October 2026: 251
 https://anyplans.in/en/bergamo/events-october-2026/
 
-252 events in Bergamo and its province in October 2026: markets, running, padel, karaoke and pottery. Day by day, with times, place and price, in Bergamo, Sorisole, Treviglio and Onore and other towns. You sign up and go with other people.
+251 events in Bergamo and its province in October 2026: running, markets, padel, karaoke and pottery. Day by day, with times, place and price, in Bergamo, Treviglio, Sorisole and Onore and other towns. You sign up and go with other people.
 
 ## Events in Bergamo in November 2026: 61
 https://anyplans.in/en/bergamo/events-november-2026/
@@ -4840,10 +4891,10 @@ https://anyplans.in/en/bergamo/dinners/
 
 In Bergamo and its province there are 29 dinners and aperitivo in the coming months. Dinners and aperitivo with people you don't know yet.
 
-## Padel in Bergamo: 114 events
+## Padel in Bergamo: 125 events
 https://anyplans.in/en/bergamo/padel/
 
-In Bergamo and its province there are 114 padel matches and tournaments in the coming months. Open padel matches, tournaments and lessons in the clubs around Bergamo.
+In Bergamo and its province there are 125 padel matches and tournaments in the coming months. Open padel matches, tournaments and lessons in the clubs around Bergamo.
 
 ## Concerts & live music in Bergamo: 91 events
 https://anyplans.in/en/bergamo/concerts/
@@ -4855,10 +4906,10 @@ https://anyplans.in/en/bergamo/markets/
 
 In Bergamo and its province there are 189 markets events in the coming months. The markets of Bergamo and the province: antiques, crafts, vintage and second-hand, weekend by weekend.
 
-## Talks & culture in Bergamo: 52 events
+## Talks & culture in Bergamo: 51 events
 https://anyplans.in/en/bergamo/talks-and-culture/
 
-In Bergamo and its province there are 52 talks & culture events in the coming months. Book presentations, talks and exhibitions in Bergamo and the province.
+In Bergamo and its province there are 51 talks & culture events in the coming months. Book presentations, talks and exhibitions in Bergamo and the province.
 
 ## Gym in Bergamo: 3 events
 https://anyplans.in/en/bergamo/gym/
@@ -4880,10 +4931,10 @@ https://anyplans.in/en/bergamo/shows/
 
 In Bergamo and its province there are 53 shows & theatre events in the coming months. Theatre, dialect comedies, cabaret and musicals in Bergamo and the province, with the dates of every performance.
 
-## Hiking in Bergamo: 5 events
+## Hiking in Bergamo: 4 events
 https://anyplans.in/en/bergamo/hiking/
 
-In Bergamo and its province there are 5 hiking events in the coming months. Hikes in the Orobie Alps and on the hills, in group.
+In Bergamo and its province there are 4 hiking events in the coming months. Hikes in the Orobie Alps and on the hills, in group.
 
 ## Painting & art in Bergamo: 5 events
 https://anyplans.in/en/bergamo/painting/
@@ -5180,7 +5231,7 @@ https://anyplans.in/en/bergamo/festa-dell-oratorio/
 
 Town festival in Dalmine: it already took place, the last date was Saturday, 12 September 2026.
 
-## FESTA DELL'ORATORIO
+## FESTA DELL'ORATORIO – Fornovo San Giovanni
 https://anyplans.in/en/bergamo/festa-dell-oratorio-2026-09-06/
 
 Town festival in Fornovo San Giovanni: it already took place, the last date was Sunday, 6 September 2026.
@@ -5510,42 +5561,57 @@ https://anyplans.in/en/bergamo/napoli-arsenal-al-maxischermo-della-bombonera/
 
 Dinners & aperitivo in Bombonera Social Pub, via Tommaso Grossi 40, Bergamo: it already took place, the last date was Wednesday, 9 September 2026. Organised by Bombonera Social Pub.
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore (competitiva) – Palapadel Seriate
 https://anyplans.in/en/bergamo/padel-manca-1-giocatore-competitiva/
 
-Padel in Palapadel Seriate, Seriate, Wednesday 16 September at 15:00 (2 dates, until 18 September). €12.50 (Si chiede il posto e si paga su Playtomic).
+Padel in Palapadel Seriate, Via Grinetta 1F, 24068 Seriate, Wednesday 16 September at 15:00 (2 dates, until 18 September). €12.50 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore… – YEP Albano Sant' Alessandro
 https://anyplans.in/en/bergamo/padel-manca-1-giocatore-competitiva-2026-09-16/
 
-Padel in CENTRO VIVERE INSIEME 2 - MARIGOLD CURNO, Curno, Wednesday 16 September at 20:00. €15 (Si chiede il posto e si paga su Playtomic).
+Padel in YEP Albano Sant' Alessandro, Via Tonale 3/C, 24061 Albano Sant'Alessandro, Wednesday 16 September at 17:30. €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore… – CENTRO VIVERE INSIEME 2 -…
+https://anyplans.in/en/bergamo/padel-manca-1-giocatore-competitiva-2026-09-16-2/
+
+Padel in CENTRO VIVERE INSIEME 2 - MARIGOLD CURNO, Via Abruzzi 9, Curno, 24035 Curno, Wednesday 16 September at 20:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – MERATE A 4
+https://anyplans.in/en/bergamo/padel-manca-1-giocatore-competitiva-2026-09-16-3/
+
+Padel in MERATE A 4,50 EURO!!!!, Via Giacomo Matteotti, 2, 23807 Merate, Wednesday 16 September at 21:30. €14 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – 27 Padel
 https://anyplans.in/en/bergamo/padel-manca-1-giocatore-competitiva-2026-09-17/
 
 Padel in 27 Padel, Bergamo, Thursday 17 September at 15:30. €13.50 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (competitiva)
-https://anyplans.in/en/bergamo/padel-manca-1-giocatore-competitiva-2026-09-17-2026-09-17/
+## Padel: manca 1 giocatore… – Padel Academy Manenti &…
+https://anyplans.in/en/bergamo/padel-manca-1-giocatore-competitiva-2026-09-17-2/
 
-Padel in Padel Academy Manenti & Malgaroli, Brusaporto, Thursday 17 September at 20:00. €15 (Si chiede il posto e si paga su Playtomic).
+Padel in Padel Academy Manenti & Malgaroli, Via Belvedere 1 , 24060 Brusaporto, Thursday 17 September at 20:00. €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore… – Crazy Padel Treviolo
 https://anyplans.in/en/bergamo/padel-manca-1-giocatore-competitiva-2026-09-18/
 
 Padel in Crazy Padel Treviolo, Treviolo, Friday 18 September at 17:30. €10 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore (competitiva) – Padel Star Veduggio
+https://anyplans.in/en/bergamo/padel-manca-1-giocatore-competitiva-2026-09-18-2/
+
+Padel in Padel Star Veduggio, via dell'Atleta 12, 20837 Veduggio Con Colzano, Friday 18 September at 20:00. Free (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – O2 Padel Bergamo
 https://anyplans.in/en/bergamo/padel-manca-1-giocatore-competitiva-2026-09-14/
 
 Padel in O2 Padel Bergamo, Via Tinaglia 12, 24030 Brembate di Sopra: it already took place, the last date was Monday, 14 September 2026.
 
-## Padel: manca 1 giocatore (competitiva)
-https://anyplans.in/en/bergamo/padel-manca-1-giocatore-competitiva-2026-09-14-2026-09-14/
+## Padel: manca 1 giocatore… – PADEL TIME TREVIGLIO
+https://anyplans.in/en/bergamo/padel-manca-1-giocatore-competitiva-2026-09-14-2/
 
 Padel in PADEL TIME TREVIGLIO, Via Roggia Vailata snc, 24047 Treviglio: it already took place, the last date was Monday, 14 September 2026.
 
-## Padel: manca 1 giocatore (competitiva)
+## Padel: manca 1 giocatore… – APC Active Padel Club -…
 https://anyplans.in/en/bergamo/padel-manca-1-giocatore-competitiva-2026-09-10/
 
 Padel in APC Active Padel Club - Brignano Gera d'Adda BG, Via Treviglio 38, 24053 Brignano Gera d'Adda: it already took place, the last date was Thursday, 10 September 2026.
@@ -5605,37 +5671,42 @@ https://anyplans.in/en/bergamo/festa-dell-uva-area-feste-foresto-sparso/
 
 Town festival in Foresto Sparso, Thursday 17 September at 19:30 (4 dates, until 20 September). Free.
 
-## Padel: mancano 3 giocatori (competitiva)
+## Padel: mancano 3 giocatori… – SPORT CITY LOMAGNA -IN…
 https://anyplans.in/en/bergamo/padel-mancano-3-giocatori-competitiva/
 
 Padel in SPORT CITY LOMAGNA -IN GIORNATA  ANCHE A 5 EURO!, Lomagna, Tuesday 15 September at 21:30. €12.50 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (competitiva)
+## Padel: mancano 3 giocatori (competitiva) – Leo Mora Treviolo
+https://anyplans.in/en/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-15/
+
+Padel in Leo Mora Treviolo, VIA PIAVE 19/B, 24048 Treviolo, Tuesday 15 September at 21:30. €12.50 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Oxygen Sports Club Italy
 https://anyplans.in/en/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-16/
 
-Padel in 27 Padel, Bergamo, Wednesday 16 September at 11:30 (2 dates, until 17 September). €13.50 (Si chiede il posto e si paga su Playtomic).
+Padel in Oxygen Sports Club Italy, Via Giuseppe Verdi, 9, 23871 Lomagna, Wednesday 16 September at 09:00 (2 dates, until 16 September). €5 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/en/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-16-2026-09-16/
+## Padel: mancano 3 giocatori… – Kira Padel Bergamo
+https://anyplans.in/en/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-16-2/
 
-Padel in Oxygen Sports Club Italy, Lomagna, Wednesday 16 September at 16:00. €5 (Si chiede il posto e si paga su Playtomic).
+Padel in Kira Padel Bergamo, Via Vaccarezza 7, 24040 Osio Sopra, Wednesday 16 September at 20:30 (2 dates, until 17 September). €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (competitiva)
-https://anyplans.in/en/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-16-2026-09-16-2/
-
-Padel in Kira Padel Bergamo, Osio Sopra, Wednesday 16 September at 20:30. €15 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva)
+## Padel: mancano 3 giocatori (competitiva) – 27 Padel
 https://anyplans.in/en/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-17/
+
+Padel in 27 Padel, Via Boccaleone 9, 24125 Bergamo, Thursday 17 September at 12:30. €13.50 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Brembate & Grignano - Unica…
+https://anyplans.in/en/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-17-2/
 
 Padel in Brembate & Grignano - Unica Sport by HServizi, Brembate, Thursday 17 September at 18:00. €8.75 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (competitiva)
+## Padel: mancano 3 giocatori (competitiva) – Palapadel Seriate
 https://anyplans.in/en/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-14/
 
 Padel in Palapadel Seriate, Via Grinetta 1F, 24068 Seriate: it already took place, the last date was Monday, 14 September 2026.
 
-## Padel: mancano 3 giocatori (competitiva)
+## Padel: mancano 3 giocatori… – PADEL TIME TREVIGLIO
 https://anyplans.in/en/bergamo/padel-mancano-3-giocatori-competitiva-2026-09-10/
 
 Padel in PADEL TIME TREVIGLIO, Via Roggia Vailata snc, 24047 Treviglio: it already took place, the last date was Thursday, 10 September 2026.
@@ -5660,37 +5731,62 @@ https://anyplans.in/en/bergamo/torneo-dei-mattinieri/
 
 Padel in YEP Albano Sant' Alessandro, Via Tonale 3/C, 24061 Albano Sant'Alessandro, Friday 18 September at 06:30 (15 dates, until 25 December). €12.50 (Iscrizione e pagamento su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori (competitiva) – MERATE A 4
 https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-competitiva/
 
-Padel in Kira Padel Bergamo, Osio Sopra, Wednesday 16 September at 17:30. €15 (Si chiede il posto e si paga su Playtomic).
+Padel in MERATE A 4,50 EURO!!!!, Via Giacomo Matteotti, 2, 23807 Merate, Tuesday 15 September at 17:00 (3 dates, until 18 September). €14 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori (competitiva) – 27 Padel
 https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-16/
 
-Padel in MERATE A 4,50 EURO!!!!, Merate, Wednesday 16 September at 18:00 (2 dates, until 18 September). Free (Si chiede il posto e si paga su Playtomic).
+Padel in 27 Padel, Via Boccaleone 9, 24125 Bergamo, Wednesday 16 September at 11:30 (3 dates, until 19 September). €13.50 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-16-2026-09-16/
+## Padel: mancano 2 giocatori… – Kira Padel Bergamo
+https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-16-2/
 
-Padel in Pratogrande - Frontelago, Garlate, Wednesday 16 September at 19:00. €13.50 (Si chiede il posto e si paga su Playtomic).
+Padel in Kira Padel Bergamo, Via Vaccarezza 7, 24040 Osio Sopra, Wednesday 16 September at 17:30. €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
-https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-16-2026-09-16-2/
+## Padel: mancano 2 giocatori… – Padel Prime Osio Sotto
+https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-16-3/
 
-Padel in 27 Padel, Bergamo, Wednesday 16 September at 21:00 (2 dates, until 19 September). €16 (Si chiede il posto e si paga su Playtomic).
+Padel in Padel Prime Osio Sotto, Via Petrocchi 1, 24046 Osio Sotto, Wednesday 16 September at 19:00. €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori… – Pratogrande - Frontelago
+https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-16-4/
+
+Padel in Pratogrande - Frontelago, Via Statale 1100, 23852 Garlate, Wednesday 16 September at 19:00. €13.50 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – CENTRO VIVERE INSIEME 2 -…
+https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-16-5/
+
+Padel in CENTRO VIVERE INSIEME 2 - MARIGOLD CURNO, Via Abruzzi 9, Curno, 24035 Curno, Wednesday 16 September at 21:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (competitiva) – SNEF Lambrone
+https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-17/
+
+Padel in SNEF Lambrone, Via Della Libertà, 15, Erba CO, Italy, 22036 Erba, Thursday 17 September at 20:00. €13 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Tennis Club 88 Valmadrera
+https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-17-2/
+
+Padel in Tennis Club 88 Valmadrera, Via Rio Torto, 29, 23868 Valmadrera, Thursday 17 September at 21:00. €12 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – PADEL TIME TREVIGLIO
 https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-19/
 
-Padel in PADEL TIME TREVIGLIO, Treviglio, Saturday 19 September at 10:00. €15 (Si chiede il posto e si paga su Playtomic).
+Padel in PADEL TIME TREVIGLIO, Via Roggia Vailata snc, 24047 Treviglio, Saturday 19 September at 10:00. €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori (competitiva) – O2 Padel Bergamo
+https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-19-2/
+
+Padel in O2 Padel Bergamo, Via Tinaglia 12, 24030 Brembate di Sopra, Saturday 19 September at 18:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Oxygen Sports Club Italy
 https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-13/
 
 Padel in Oxygen Sports Club Italy, Via Giuseppe Verdi, 9, 23871 Lomagna: it already took place, the last date was Sunday, 13 September 2026.
 
-## Padel: mancano 2 giocatori (competitiva)
+## Padel: mancano 2 giocatori… – SPORT CITY LOMAGNA -IN…
 https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-competitiva-2026-09-12/
 
 Padel in SPORT CITY LOMAGNA -IN GIORNATA  ANCHE A 5 EURO!, Via Carducci 5/15, 23871 Lomagna: it already took place, the last date was Saturday, 12 September 2026.
@@ -5700,17 +5796,17 @@ https://anyplans.in/en/bergamo/adunata-degli-alpini-inaugurazione-sul-sentierone
 
 Town festival in Bergamo Città: it already took place, the last date was Friday, 11 September 2026.
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore (amichevole) – Palapadel Seriate
 https://anyplans.in/en/bergamo/padel-manca-1-giocatore-amichevole/
 
 Padel in Palapadel Seriate, Seriate, Wednesday 16 September at 18:30. €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore… – Oxygen Sports Club Italy
 https://anyplans.in/en/bergamo/padel-manca-1-giocatore-amichevole-2026-09-18/
 
-Padel in Oxygen Sports Club Italy, Lomagna, Friday 18 September at 14:00. €5 (Si chiede il posto e si paga su Playtomic).
+Padel in Oxygen Sports Club Italy, Via Giuseppe Verdi, 9, 23871 Lomagna, Friday 18 September at 14:00. €5 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore (amichevole)
+## Padel: manca 1 giocatore (amichevole) – O2 Padel Bergamo
 https://anyplans.in/en/bergamo/padel-manca-1-giocatore-amichevole-2026-09-12/
 
 Padel in O2 Padel Bergamo, Via Tinaglia 12, 24030 Brembate di Sopra: it already took place, the last date was Saturday, 12 September 2026.
@@ -6065,42 +6161,52 @@ https://anyplans.in/en/bergamo/everest-13-09/
 
 Padel in 27 Padel, Via Boccaleone 9, 24125 Bergamo: it already took place, the last date was Sunday, 13 September 2026.
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori (amichevole) – Kira Padel Bergamo
 https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-amichevole/
 
 Padel in Kira Padel Bergamo, Osio Sopra, Tuesday 15 September at 18:30. €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori (amichevole) – KZ Padel
+https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-amichevole-2026-09-17/
+
+Padel in KZ Padel, Via Riolo 1, 24030 Mozzo, Thursday 17 September at 18:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (amichevole) – 27 Padel
 https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-amichevole-2026-09-18/
 
 Padel in 27 Padel, Bergamo, Friday 18 September at 12:00. €13.50 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori… – Cittadella dello Sport
 https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-amichevole-2026-09-20/
 
-Padel in Cittadella dello Sport, Bergamo, Sunday 20 September at 10:30. €10 (Si chiede il posto e si paga su Playtomic).
+Padel in Cittadella dello Sport, Via Monte Gleno 2L, 24125 Bergamo, Sunday 20 September at 10:30. €10 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2 giocatori (amichevole)
+## Padel: mancano 2 giocatori (amichevole) – O2 Padel Bergamo
+https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-amichevole-2026-09-21/
+
+Padel in O2 Padel Bergamo, Via Tinaglia 12, 24030 Brembate di Sopra, Monday 21 September at 20:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (amichevole) – Sangio Padel
 https://anyplans.in/en/bergamo/padel-mancano-2-giocatori-amichevole-2026-09-13/
 
 Padel in Sangio Padel, San Giovanni Bianco: it already took place, the last date was Sunday, 13 September 2026.
 
-## S-PADEL liv. MEDIUM RED MASCHILE
+## S-PADEL liv. MEDIUM RED… – APC Active Padel Club -…
 https://anyplans.in/en/bergamo/s-padel-liv-medium-red-maschile/
 
 Padel in APC Active Padel Club - Brignano Gera d'Adda BG, Via Treviglio 38, 24053 Brignano Gera d'Adda, Sunday 27 September at 14:00 (4 dates, until 27 March). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED MASCHILE
+## S-PADEL liv. MEDIUM RED MASCHILE – MERATE A 4
 https://anyplans.in/en/bergamo/s-padel-liv-medium-red-maschile-2026-10-24/
 
 Padel in MERATE A 4,50 EURO!!!!, Via Giacomo Matteotti, 2, 23807 Merate, Saturday 24 October at 17:00 (3 dates, until 20 March). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED MASCHILE
+## S-PADEL liv. MEDIUM RED MASCHILE – Padel Prime Osio Sotto
 https://anyplans.in/en/bergamo/s-padel-liv-medium-red-maschile-2026-11-07/
 
 Padel in Padel Prime Osio Sotto, Via Petrocchi 1, 24046 Osio Sotto, Saturday 7 November at 17:00 (3 dates, until 1 May). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED MASCHILE
+## S-PADEL liv. MEDIUM RED MASCHILE – Crazy Padel Treviolo
 https://anyplans.in/en/bergamo/s-padel-liv-medium-red-maschile-2027-02-07/
 
 Padel in Crazy Padel Treviolo, Via Nelson Mandela, 24048 Treviolo, Sunday 7 February at 17:00 (2 dates, until 11 April). €25 (Iscrizione su Playtomic, si paga in loco).
@@ -6120,12 +6226,12 @@ https://anyplans.in/en/bergamo/liscio-con-orchestra-trilogy-oratorio-in-festa-ve
 
 Town festival in Verdello: it already took place, the last date was Sunday, 13 September 2026.
 
-## Padel: mancano 3 giocatori (amichevole)
+## Padel: mancano 3 giocatori… – Oxygen Sports Club Italy
 https://anyplans.in/en/bergamo/padel-mancano-3-giocatori-amichevole/
 
-Padel in Oxygen Sports Club Italy, Lomagna, Saturday 19 September at 18:00. €8 (Si chiede il posto e si paga su Playtomic).
+Padel in Oxygen Sports Club Italy, Via Giuseppe Verdi, 9, 23871 Lomagna, Tuesday 15 September at 17:00 (3 dates, until 19 September). €3.33 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (amichevole)
+## Padel: mancano 3 giocatori… – Crazy Padel Treviolo
 https://anyplans.in/en/bergamo/padel-mancano-3-giocatori-amichevole-2026-09-14/
 
 Padel in Crazy Padel Treviolo, Via Nelson Mandela, 24048 Treviolo: it already took place, the last date was Monday, 14 September 2026.
@@ -6178,187 +6284,187 @@ Padel in Berga Padel, via provinciale 116/a, 24021 Albino, Thursday 17 September
 ## Mercato di Santa Brigida
 https://anyplans.in/en/bergamo/mercato-di-santa-brigida/
 
-Markets in Via Colla c/o Piazza Comune, Santa Brigida, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via Colla c/o Piazza Comune, Santa Brigida, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Almenno San Bartolomeo
 https://anyplans.in/en/bergamo/mercato-di-almenno-san-bartolomeo/
 
-Markets in Piazza Italia Località Cerita, Almenno San Bartolomeo, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Piazza Italia Località Cerita, Almenno San Bartolomeo, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Misano di Gera d'Adda
 https://anyplans.in/en/bergamo/mercato-di-misano-di-gera-d-adda/
 
-Markets in Via S. Stefano, Misano di Gera d'Adda, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via S. Stefano, Misano di Gera d'Adda, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Fornovo San Giovanni
 https://anyplans.in/en/bergamo/mercato-di-fornovo-san-giovanni/
 
-Markets in Piazza San Giovanni, Fornovo San Giovanni, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Piazza San Giovanni, Fornovo San Giovanni, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Foresto Sparso
 https://anyplans.in/en/bergamo/mercato-di-foresto-sparso/
 
-Markets in Via Roma, Foresto Sparso, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via Roma, Foresto Sparso, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Dalmine
 https://anyplans.in/en/bergamo/mercato-di-dalmine/
 
-Markets in Via Don Sturzo, Dalmine, Tuesday 15 September at 08:00 (12 dates, until 3 October). Free.
+Markets in Via Kennedy, Dalmine, Thursday 17 September at 08:00 (11 dates, until 3 October). Free.
 
 ## Mercato di Colere
 https://anyplans.in/en/bergamo/mercato-di-colere/
 
-Markets in Via Tortola, Colere, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via Tortola, Colere, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Solto Collina
 https://anyplans.in/en/bergamo/mercato-di-solto-collina/
 
-Markets in Piazzale Kennedy, Solto Collina, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Piazzale Kennedy, Solto Collina, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Villa d'Almè
 https://anyplans.in/en/bergamo/mercato-di-villa-d-alme/
 
-Markets in Via Ventolosa, Via Gaggio, Piazza dell’Artigliere, Villa d'Almè, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via Ventolosa, Via Gaggio, Piazza dell’Artigliere, Villa d'Almè, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Martinengo
 https://anyplans.in/en/bergamo/mercato-di-martinengo/
 
-Markets in Centro Storico, Martinengo, Tuesday 15 September at 08:00 (6 dates, until 3 October). Free.
+Markets in Centro Storico, Martinengo, Saturday 19 September at 08:00 (5 dates, until 3 October). Free.
 
 ## Mercato di Pagazzano
 https://anyplans.in/en/bergamo/mercato-di-pagazzano/
 
-Markets in Via Roma, Pagazzano, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via Roma, Pagazzano, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Bergamo
 https://anyplans.in/en/bergamo/mercato-di-bergamo/
 
-Markets in Via Gemelli Località Redona, Bergamo, Tuesday 15 September at 08:00 (24 dates, until 5 October). Free.
+Markets in Via Promessi Sposi, Bergamo, Thursday 17 September at 08:00 (23 dates, until 5 October). Free.
 
 ## Mercato di Brusaporto
 https://anyplans.in/en/bergamo/mercato-di-brusaporto/
 
-Markets in Via Cattanea, Brusaporto, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via Cattanea, Brusaporto, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Gorle
 https://anyplans.in/en/bergamo/mercato-di-gorle/
 
-Markets in Via Turati, Gorle, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via Turati, Gorle, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Costa di Mezzate
 https://anyplans.in/en/bergamo/mercato-di-costa-di-mezzate/
 
-Markets in Via Roma, Costa di Mezzate, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via Roma, Costa di Mezzate, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Valbondione
 https://anyplans.in/en/bergamo/mercato-di-valbondione/
 
-Markets in Via Torre Capoluogo di Bondione, Valbondione, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via Torre Capoluogo di Bondione, Valbondione, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Sorisole
 https://anyplans.in/en/bergamo/mercato-di-sorisole/
 
-Markets in Via Fonte, Sorisole, Tuesday 15 September at 08:00 (9 dates, until 2 October). Free.
+Markets in Piazza Donatore del sangue, Sorisole, Thursday 17 September at 08:00 (8 dates, until 2 October). Free.
 
 ## Mercato di Spirano
 https://anyplans.in/en/bergamo/mercato-di-spirano/
 
-Markets in Via S. Antonio, Spirano, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via S. Antonio, Spirano, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Ponte Nossa
 https://anyplans.in/en/bergamo/mercato-di-ponte-nossa/
 
-Markets in Via G. Frua, Ponte Nossa, Tuesday 15 September at 08:00 (6 dates, until 29 September). Free.
+Markets in Via G. Frua, Ponte Nossa, Tuesday 22 September at 08:00 (4 dates, until 29 September). Free.
 
 ## Mercato di Filago
 https://anyplans.in/en/bergamo/mercato-di-filago/
 
-Markets in Via A. Locatelli, Filago, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via A. Locatelli, Filago, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Vedeseta
 https://anyplans.in/en/bergamo/mercato-di-vedeseta/
 
-Markets in Via Centro, Vedeseta, Tuesday 15 September at 08:00 (15 dates, until 5 October). Free.
+Markets in Via Centro, Vedeseta, Wednesday 16 September at 08:00 (14 dates, until 5 October). Free.
 
 ## Mercato di Azzano San Paolo
 https://anyplans.in/en/bergamo/mercato-di-azzano-san-paolo/
 
-Markets in Piazzale Brigata Alpina Orobica, Azzano San Paolo, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Piazzale Brigata Alpina Orobica, Azzano San Paolo, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Cerete Cerete Basso
 https://anyplans.in/en/bergamo/mercato-di-cerete-cerete-basso/
 
-Markets in Via Sorgente Moia, Cerete Cerete Basso, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via Sorgente Moia, Cerete Cerete Basso, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Castelli Calepio
 https://anyplans.in/en/bergamo/mercato-di-castelli-calepio/
 
-Markets in Via Bertoli, Ang. Via Locatelli, Castelli Calepio, Tuesday 15 September at 08:00 (6 dates, until 5 October). Free.
+Markets in Via Ferrucci Ang. Via Repubblica, Castelli Calepio, Monday 21 September at 08:00 (5 dates, until 5 October). Free.
 
 ## Mercato di Strozza
 https://anyplans.in/en/bergamo/mercato-di-strozza/
 
-Markets in Via Vittorio Emanuele, Strozza, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via Vittorio Emanuele, Strozza, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Carvico
 https://anyplans.in/en/bergamo/mercato-di-carvico/
 
-Markets in Via S. Martino, Carvico, Tuesday 15 September at 08:00 (6 dates, until 30 September). Free.
+Markets in Piazzale Chiesa, Carvico, Wednesday 16 September at 08:00 (5 dates, until 30 September). Free.
 
 ## Mercato di Osio Sotto
 https://anyplans.in/en/bergamo/mercato-di-osio-sotto/
 
-Markets in Via Machiavelli, Osio Sotto, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via Machiavelli, Osio Sotto, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Bonate Sopra
 https://anyplans.in/en/bergamo/mercato-di-bonate-sopra/
 
-Markets in Via Garibaldi, Bonate Sopra, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via Garibaldi, Bonate Sopra, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Pognano
 https://anyplans.in/en/bergamo/mercato-di-pognano/
 
-Markets in Piazza Palestra, Pognano, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Piazza Palestra, Pognano, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Pontirolo Nuovo
 https://anyplans.in/en/bergamo/mercato-di-pontirolo-nuovo/
 
-Markets in Piazza del Mercato, Pontirolo Nuovo, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Piazza del Mercato, Pontirolo Nuovo, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Ponte San Pietro
 https://anyplans.in/en/bergamo/mercato-di-ponte-san-pietro/
 
-Markets in Via Foiadelli, Ponte San Pietro, Tuesday 15 September at 08:00 (6 dates, until 2 October). Free.
+Markets in Piazza della Liberta, Ponte San Pietro, Friday 18 September at 08:00 (5 dates, until 2 October). Free.
 
 ## Mercato di Sovere
 https://anyplans.in/en/bergamo/mercato-di-sovere/
 
-Markets in Piazza Aldo Moro, Sovere, Tuesday 15 September at 08:00 (6 dates, until 30 September). Free.
+Markets in Via Provinciale Frazione Sellere, Sovere, Wednesday 16 September at 08:00 (5 dates, until 30 September). Free.
 
 ## Mercato di Sotto il Monte Giovanni XXIII
 https://anyplans.in/en/bergamo/mercato-di-sotto-il-monte-giovanni-xxiii/
 
-Markets in Via IV Novembre, Sotto il Monte Giovanni XXIII, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via IV Novembre, Sotto il Monte Giovanni XXIII, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Torre de' Roveri
 https://anyplans.in/en/bergamo/mercato-di-torre-de-roveri/
 
-Markets in Via Don S. Mangili, Torre de' Roveri, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Via Don S. Mangili, Torre de' Roveri, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Castel Rozzone
 https://anyplans.in/en/bergamo/mercato-di-castel-rozzone/
 
-Markets in Piazza Volontari del sangue, Castel Rozzone, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Piazza Volontari del sangue, Castel Rozzone, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## Mercato di Trescore Balneario
 https://anyplans.in/en/bergamo/mercato-di-trescore-balneario/
 
-Markets in Piazzale Pertini, Trescore Balneario, Tuesday 15 September at 08:00 (3 dates, until 29 September). Free.
+Markets in Piazzale Pertini, Trescore Balneario, Tuesday 22 September at 08:00 (2 dates, until 29 September). Free.
 
 ## 🟦🟨TORNEO GIALLO del Mattino🟨🟦
 https://anyplans.in/en/bergamo/torneo-giallo-del-mattino/
 
-Padel in PadelUs Lodi, Via del Commercio 2, 26817 San Martino in Strada, Tuesday 15 September at 09:30 (3 dates, until 29 September). €10 (Iscrizione e pagamento su Playtomic).
+Padel in PadelUs Lodi, Via del Commercio 2, 26817 San Martino in Strada, Tuesday 22 September at 09:30 (2 dates, until 29 September). €10 (Iscrizione e pagamento su Playtomic).
 
 ## SWITCH & SMASH
 https://anyplans.in/en/bergamo/switch-smash/
@@ -6368,7 +6474,7 @@ Padel in YEP Albano Sant' Alessandro, Via Tonale 3/C, 24061 Albano Sant'Alessand
 ## PRANZO Business Networking Imprenditori e…
 https://anyplans.in/en/bergamo/pranzo-business-networking-imprenditori-e-manager-bergamo-pr/
 
-Talks & culture in Farina&Co. Bergamo, Bergamo, Tuesday 15 September at 12:30. €10 (Biglietti su AllEvents).
+Talks & culture in Farina&Co. Bergamo, Bergamo: it already took place, the last date was Tuesday, 15 September 2026.
 
 ## Safe Woman riparte: il corso di autodifesa…
 https://anyplans.in/en/bergamo/safe-woman-riparte-il-corso-di-autodifesa-gratuito-per-le-do/
@@ -7830,7 +7936,7 @@ https://anyplans.in/en/bergamo/oktoberfest/
 
 Town festival in Bagnatica, Friday 25 September at 19:00 (3 dates, until 27 September). Free.
 
-## Oktoberfest
+## Oktoberfest – Sotto Il Monte Giovanni XXIII
 https://anyplans.in/en/bergamo/oktoberfest-2026-10-01/
 
 Town festival in Sotto Il Monte Giovanni XXIII, Thursday 1 October at 19:00 (4 dates, until 4 October). Free.
@@ -8165,42 +8271,42 @@ https://anyplans.in/en/bergamo/dal-lago-alla-forma-il-latte-di-rogeno-tra-filatu
 
 Talks & culture in Circolino Città Alta, Bergamo, Sunday 27 September at 13:00. €21 (Biglietti su AllEvents).
 
-## S-PADEL liv. ENTRY WHITE FEMMINILE
+## S-PADEL liv. ENTRY WHITE… – APC Active Padel Club -…
 https://anyplans.in/en/bergamo/s-padel-liv-entry-white-femminile/
 
 Padel in APC Active Padel Club - Brignano Gera d'Adda BG, Via Treviglio 38, 24053 Brignano Gera d'Adda, Sunday 27 September at 14:00 (4 dates, until 27 March). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE FEMMINILE
+## S-PADEL liv. ENTRY WHITE FEMMINILE – Padel Prime Osio Sotto
 https://anyplans.in/en/bergamo/s-padel-liv-entry-white-femminile-2026-10-04/
 
 Padel in Padel Prime Osio Sotto, Via Petrocchi 1, 24046 Osio Sotto, Sunday 4 October at 14:00 (3 dates, until 4 April). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE FEMMINILE
+## S-PADEL liv. ENTRY WHITE FEMMINILE – Crazy Padel Treviolo
 https://anyplans.in/en/bergamo/s-padel-liv-entry-white-femminile-2026-10-11/
 
 Padel in Crazy Padel Treviolo, Via Nelson Mandela, 24048 Treviolo, Sunday 11 October at 14:00 (3 dates, until 14 March). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE FEMMINILE
+## S-PADEL liv. ENTRY WHITE FEMMINILE – MERATE A 4
 https://anyplans.in/en/bergamo/s-padel-liv-entry-white-femminile-2026-11-21/
 
 Padel in MERATE A 4,50 EURO!!!!, Via Giacomo Matteotti, 2, 23807 Merate, Saturday 21 November at 14:00 (3 dates, until 2 May). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED FEMMINILE
+## S-PADEL liv. MEDIUM RED… – APC Active Padel Club -…
 https://anyplans.in/en/bergamo/s-padel-liv-medium-red-femminile/
 
 Padel in APC Active Padel Club - Brignano Gera d'Adda BG, Via Treviglio 38, 24053 Brignano Gera d'Adda, Sunday 27 September at 14:00 (4 dates, until 27 March). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED FEMMINILE
+## S-PADEL liv. MEDIUM RED FEMMINILE – Padel Prime Osio Sotto
 https://anyplans.in/en/bergamo/s-padel-liv-medium-red-femminile-2026-10-04/
 
 Padel in Padel Prime Osio Sotto, Via Petrocchi 1, 24046 Osio Sotto, Sunday 4 October at 17:00 (3 dates, until 4 April). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED FEMMINILE
+## S-PADEL liv. MEDIUM RED FEMMINILE – Crazy Padel Treviolo
 https://anyplans.in/en/bergamo/s-padel-liv-medium-red-femminile-2026-10-11/
 
 Padel in Crazy Padel Treviolo, Via Nelson Mandela, 24048 Treviolo, Sunday 11 October at 17:00 (3 dates, until 14 March). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. MEDIUM RED FEMMINILE
+## S-PADEL liv. MEDIUM RED FEMMINILE – MERATE A 4
 https://anyplans.in/en/bergamo/s-padel-liv-medium-red-femminile-2026-11-21/
 
 Padel in MERATE A 4,50 EURO!!!!, Via Giacomo Matteotti, 2, 23807 Merate, Saturday 21 November at 17:00 (3 dates, until 2 May). Free (Iscrizione su Playtomic).
@@ -8210,22 +8316,22 @@ https://anyplans.in/en/bergamo/la-gemma-di-parma/
 
 Yoga & pilates in Circolino Città Alta, Bergamo, Sunday 27 September at 14:00. €21 (Biglietti su AllEvents).
 
-## S-PADEL liv. ENTRY WHITE MASCHILE
+## S-PADEL liv. ENTRY WHITE… – APC Active Padel Club -…
 https://anyplans.in/en/bergamo/s-padel-liv-entry-white-maschile/
 
 Padel in APC Active Padel Club - Brignano Gera d'Adda BG, Via Treviglio 38, 24053 Brignano Gera d'Adda, Sunday 27 September at 14:00 (4 dates, until 27 March). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE MASCHILE
+## S-PADEL liv. ENTRY WHITE MASCHILE – MERATE A 4
 https://anyplans.in/en/bergamo/s-padel-liv-entry-white-maschile-2026-10-24/
 
 Padel in MERATE A 4,50 EURO!!!!, Via Giacomo Matteotti, 2, 23807 Merate, Saturday 24 October at 14:00 (3 dates, until 20 March). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE MASCHILE
+## S-PADEL liv. ENTRY WHITE MASCHILE – Padel Prime Osio Sotto
 https://anyplans.in/en/bergamo/s-padel-liv-entry-white-maschile-2026-11-07/
 
 Padel in Padel Prime Osio Sotto, Via Petrocchi 1, 24046 Osio Sotto, Saturday 7 November at 14:00 (3 dates, until 1 May). €25 (Iscrizione su Playtomic, si paga in loco).
 
-## S-PADEL liv. ENTRY WHITE MASCHILE
+## S-PADEL liv. ENTRY WHITE MASCHILE – Crazy Padel Treviolo
 https://anyplans.in/en/bergamo/s-padel-liv-entry-white-maschile-2027-02-07/
 
 Padel in Crazy Padel Treviolo, Via Nelson Mandela, 24048 Treviolo, Sunday 7 February at 14:00 (2 dates, until 11 April). €25 (Iscrizione su Playtomic, si paga in loco).
@@ -8794,11 +8900,6 @@ Live sport in New Balance Arena, Bergamo, Saturday 24 October at 23:59. Free (In
 https://anyplans.in/en/bergamo/teremotata-ultra-maratona-dell-isola-48-edizione/
 
 Running in Municipio, Via Casolini 7, Terno d'Isola, Sunday 25 October at 07:30. Free.
-
-## Porta delle Cornacchie
-https://anyplans.in/en/bergamo/porta-delle-cornacchie/
-
-Hiking in Roncobello, loc. Baresi (BG), Sunday 25 October at 10:00. €9 (Accredito su comehome; il resto si paga in loco).
 
 ## Pablo Trincia Spettacolo
 https://anyplans.in/en/bergamo/pablo-trincia-spettacolo-choruslife-bergamo-citta/

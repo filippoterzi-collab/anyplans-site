@@ -1,14 +1,13 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Firenze e provincia: feste di paese e sagre, corsi di cucina e di ceramica, volontariato, uscite sportive, running club. Raccoglie gli eventi già esistenti dai siti dei comuni e delle associazioni e quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Per ora solo Firenze; Milano e Brescia in arrivo.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Firenze e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Firenze: il sito copre 29 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-15. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Firenze](https://anyplans.in/firenze/cosa-fare/): tutti gli eventi in programma (183), per tipo e per paese; risponde a "cosa fare a Firenze oggi / questo weekend"
-- [Running club a Firenze](https://anyplans.in/firenze/running-club/): 0 run club per giorno della settimana, con ritrovo, orario e domande frequenti
-- [Gruppi a Firenze](https://anyplans.in/firenze/gruppi/): 0 associazioni, club e comunità che pubblicano eventi
+- [Cosa fare a Firenze](https://anyplans.in/firenze/): tutti gli eventi in programma (201), per tipo e per paese; risponde a "cosa fare a Firenze oggi / questo weekend"
+- [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
 - [Condizioni d'uso](https://anyplans.in/terms-it.html)
@@ -17,6 +16,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 - [Cena / aperitivo a Firenze](https://anyplans.in/firenze/cene-e-aperitivi/): 46 in programma
 - [Pittura / arte a Firenze](https://anyplans.in/firenze/pittura/): 6 in programma
+- [Padel a Firenze](https://anyplans.in/firenze/padel/): 18 in programma
 - [Concerti e musica dal vivo a Firenze](https://anyplans.in/firenze/concerti/): 35 in programma
 - [Ballo e danza a Firenze](https://anyplans.in/firenze/ballo/): 3 in programma
 - [Incontri culturali a Firenze](https://anyplans.in/firenze/incontri-culturali/): 46 in programma
@@ -26,57 +26,48 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Yoga / pilates a Firenze](https://anyplans.in/firenze/yoga/): 4 in programma
 - [Palestra a Firenze](https://anyplans.in/firenze/palestra/): 3 in programma
 
-
-## Running club per giorno
-
-
-
-## Gruppi
-
-
-
 ## Prossimi eventi
 
 - [Corso di Fotografia per fotografi con Reflex e Smartphone](https://anyplans.in/firenze/corso-di-fotografia-per-fotografi-con-reflex-e-smartphone/): Dal 14 settembre al 14 ottobre, 2 date, Vinci, 25 €
+- [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/firenze/padel-manca-1-giocatore-amichevole/): Dal 15 settembre al 17 settembre, 2 date, PCM PADEL PRATO, Via Bocca di Stella, 3, 59011 Seano, 15 €
+- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole/): Martedì 15 settembre alle 17:30, Oasi Padel Agliana, via ferrucci snc C/O campo sportivo San Michele, 51031 Agliana, 13 €
+- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole-2026-09-15/): Martedì 15 settembre alle 18:00, Padel 31 - Grassina, Via Abebe Bikila, 50012 Grassina, 13 €
 - [Cena da Ristorante Bellosguardo: 1 posto libero](https://anyplans.in/firenze/cena-da-ristorante-bellosguardo-1-posto-libero/): Martedì 15 settembre alle 18:15, Ristorante Bellosguardo, Vinci, Gratis
 - [🌱 TABLOOM-APERICENA-SBOCCIANO CONNESSIONI🌷 da Ristorante Bellosguardo: 9 posti liberi](https://anyplans.in/firenze/tabloom-apericena-sbocciano-connessioni-da-ristorante-bellos/): Martedì 15 settembre alle 18:30, Ristorante Bellosguardo, Vinci, Gratis
 - [Tavolo genitori single da Löwengrube: 3 posti liberi](https://anyplans.in/firenze/tavolo-genitori-single-da-lowengrube-3-posti-liberi/): Martedì 15 settembre alle 18:30, Löwengrube, Limite Sull'Arno, Gratis
 - [Cena da Ristorante Bellosguardo: 4 posti liberi](https://anyplans.in/firenze/cena-da-ristorante-bellosguardo-4-posti-liberi/): Martedì 15 settembre alle 18:30, Ristorante Bellosguardo, Vinci, Gratis
 - [Bellosguardo Vinci da Bellosguardo • Golf Club: 8 posti liberi](https://anyplans.in/firenze/bellosguardo-vinci-da-bellosguardo-golf-club-8-posti-liberi/): Martedì 15 settembre alle 19:30, Bellosguardo • Golf Club, Vinci, Gratis
+- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole-2026-09-15-2/): Dal 15 settembre al 18 settembre, 2 date, Padel Lastra a Signa, Via Leon Battista Alberti 35, 50055 Lastra a Signa, 13 €
 - [Opera in Roma: Three Tenors - Nessun Dorma - Firenze](https://anyplans.in/firenze/opera-in-roma-three-tenors-nessun-dorma-firenze/): Martedì 15 settembre alle 20:30, Cattedrale dell'Immagine, Piazza di Santo Stefano, 5, Firenze, 50122, Florence, IT, Firenze, Gratis
+- [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/firenze/padel-mancano-2-giocatori-amichevole/): Dal 15 settembre al 20 settembre, 2 date, Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze, 15 €
+- [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/firenze/padel-mancano-2-giocatori-amichevole-2026-09-15/): Martedì 15 settembre alle 21:30, Centro Padel Firenze, Via Generale C. A. dalla Chiesa, 11, 50136 Firenze, 17 €
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/firenze/padel-mancano-3-giocatori-competitiva/): Martedì 15 settembre alle 22:00, SPH - Firenze Hidron, Via di Gramignano, 50013 Campi Bisenzio, 15 €
+- [Padel: manca 1 giocatore (competitiva)](https://anyplans.in/firenze/padel-manca-1-giocatore-competitiva/): Mercoledì 16 settembre alle 10:00, Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze, 10 €
+- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole-2026-09-16/): Dal 16 settembre al 19 settembre, 10 date, PCM PADEL PRATO, Via Bocca di Stella, 3, 59011 Seano, 15 €
 - [Cena da Club del Diavolo: 1 posto libero](https://anyplans.in/firenze/cena-da-club-del-diavolo-1-posto-libero/): Mercoledì 16 settembre alle 18:30, Club del Diavolo, Quarrata, Gratis
 - [Cena da The Lodge Club: 7 posti liberi](https://anyplans.in/firenze/cena-da-the-lodge-club-7-posti-liberi/): Mercoledì 16 settembre alle 18:30, The Lodge Club, Firenze, Gratis
 - [Cena da Club del Diavolo: 8 posti liberi](https://anyplans.in/firenze/cena-da-club-del-diavolo-8-posti-liberi/): Mercoledì 16 settembre alle 18:30, Club del Diavolo, Quarrata, Gratis
 - [Cena da Club del Diavolo: 7 posti liberi](https://anyplans.in/firenze/cena-da-club-del-diavolo-7-posti-liberi/): Mercoledì 16 settembre alle 19:00, Club del Diavolo, Quarrata, Gratis
 - [Cena da Hop'N Drop: 6 posti liberi](https://anyplans.in/firenze/cena-da-hop-n-drop-6-posti-liberi/): Mercoledì 16 settembre alle 19:00, Hop'N Drop, Prato, Gratis
 - [Cena da Gelateria Zucchero: 5 posti liberi](https://anyplans.in/firenze/cena-da-gelateria-zucchero-5-posti-liberi/): Mercoledì 16 settembre alle 19:30, Gelateria Zucchero, Prato, Gratis
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/firenze/padel-mancano-3-giocatori-competitiva-2026-09-16/): Mercoledì 16 settembre alle 20:00, Agliana Padel Club, Via Giovannella 6 B, 51031 Agliana, 19 €
 - [Tango Argentino Firenze - Carina Calderon - Open Day Lezione gratuita](https://anyplans.in/firenze/tango-argentino-firenze-carina-calderon-open-day-lezione-gra/): Mercoledì 16 settembre alle 20:00, Circolo Andreoni, Firenze, Gratis
 - [Cena da Club del Diavolo: 5 posti liberi](https://anyplans.in/firenze/cena-da-club-del-diavolo-5-posti-liberi/): Mercoledì 16 settembre alle 20:40, Club del Diavolo, Quarrata, Gratis
+- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole-2026-09-16-2/): Mercoledì 16 settembre alle 21:00, Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze, 15 €
 - [Concerto SOGLIA](https://anyplans.in/firenze/concerto-soglia/): Mercoledì 16 settembre alle 21:00, Certosa di Firenze, Firenze, Gratis
+- [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/firenze/padel-manca-1-giocatore-amichevole-2026-09-17/): Giovedì 17 settembre alle 16:30, REAL PADEL Lastra a Signa, viale dello stadio 2, 50055 Lastra a Signa, 15 €
 - [Pappagallo Night: Schiacciata & Spritz No Stop da Bar Pappagallo: 3 posti liberi](https://anyplans.in/firenze/pappagallo-night-schiacciata-spritz-no-stop-da-bar-pappagall/): Giovedì 17 settembre alle 16:50, Bar Pappagallo, Firenze, Gratis
 - [Nuovi amici e buon Cibo da Ciccia e Briciole - Burger Corner: 8 posti liberi](https://anyplans.in/firenze/nuovi-amici-e-buon-cibo-da-ciccia-e-briciole-burger-corner-8/): Giovedì 17 settembre alle 18:30, Ciccia e Briciole - Burger Corner, Firenze, Gratis
 - [Cena da Snodo Birreria Urbana: 7 posti liberi](https://anyplans.in/firenze/cena-da-snodo-birreria-urbana-7-posti-liberi/): Giovedì 17 settembre alle 19:00, Snodo Birreria Urbana, Prato, Gratis
+- [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/firenze/padel-manca-1-giocatore-amichevole-2026-09-17-2/): Giovedì 17 settembre alle 20:00, Padel Lastra a Signa, Via Leon Battista Alberti 35, 50055 Lastra a Signa, 12 €
+- [Padel: manca 1 giocatore (competitiva)](https://anyplans.in/firenze/padel-manca-1-giocatore-competitiva-2026-09-17/): Giovedì 17 settembre alle 20:00, Padel "Le mura" Brozzi,  Via de' Cattani 49, 50145 Firenze, 12 €
+- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/firenze/padel-mancano-2-giocatori-competitiva/): Giovedì 17 settembre alle 21:30, La Fiorita Padel Club, Via Alfiero Gemmi 2 - Badia a Settimo, 50018 Scandicci, 14 €
 - [Tavolo per chi è nuovo in città da VaLù Bakery & Cakes: 4 posti liberi](https://anyplans.in/firenze/tavolo-per-chi-e-nuovo-in-citta-da-valu-bakery-cakes-4-posti/): Venerdì 18 settembre alle 08:00, VaLù Bakery & Cakes, Firenze, Gratis
 - [Cena da Binomio Firenze: 6 posti liberi](https://anyplans.in/firenze/cena-da-binomio-firenze-6-posti-liberi/): Venerdì 18 settembre alle 17:00, Binomio Firenze, Gratis
 - [Cena da Murá Prato | Spirits & Kitchen: 5 posti liberi](https://anyplans.in/firenze/cena-da-mura-prato-spirits-kitchen-5-posti-liberi/): Venerdì 18 settembre alle 17:00, Murá Prato | Spirits & Kitchen, Gratis
 - [Cena da Löwengrube: 3 posti liberi](https://anyplans.in/firenze/cena-da-lowengrube-3-posti-liberi/): Venerdì 18 settembre alle 18:00, Löwengrube, Limite Sull'Arno, Gratis
 - [Thailandese 100% 🇹🇭 da Thai Ristorante: 1 posto libero](https://anyplans.in/firenze/thailandese-100-da-thai-ristorante-1-posto-libero/): Venerdì 18 settembre alle 18:30, Thai Ristorante, Firenze, Gratis
 - [Cena da Alchimia Vegetale: 1 posto libero](https://anyplans.in/firenze/cena-da-alchimia-vegetale-1-posto-libero/): Venerdì 18 settembre alle 18:30, Alchimia Vegetale, Firenze, Gratis
-- [Cena musica Chiacchiere e Bischerate da OverFit Firenze | Cocktails • Events • Food: 11 posti liberi](https://anyplans.in/firenze/cena-musica-chiacchiere-e-bischerate-da-overfit-firenze-cock/): Venerdì 18 settembre alle 18:45, OverFit Firenze | Cocktails • Events • Food, Gratis
-- [Concerts by Candlelight - Firenze](https://anyplans.in/firenze/concerts-by-candlelight-firenze/): Venerdì 18 settembre alle 19:00, Piazza del Carmine, 14, 50124 Firenze FI, Italia, Firenze, Gratis
-- [ASSEDIO ALLA VILLA 🍷🍷FESTA DEL VINO🍷 da Il Falcone: 10 posti liberi](https://anyplans.in/firenze/assedio-alla-villa-festa-del-vino-da-il-falcone-10-posti-lib/): Venerdì 18 settembre alle 19:00, Il Falcone, Poggio a Caiano, Gratis
-- [L’ESTATE STA FINENDO… MA NON ANCORA ☀️](https://anyplans.in/firenze/l-estate-sta-finendo-ma-non-ancora/): Venerdì 18 settembre alle 19:00, Hotel Indigo Florence by IHG, Firenze, 18 €
-- [ORKTOBERFEST - Quarta Festa della Birra alla Taverna dell'Orco](https://anyplans.in/firenze/orktoberfest-quarta-festa-della-birra-alla-taverna-dell-orco/): Venerdì 18 settembre alle 20:00, La Taverna dell’Orco, Prato, Gratis
-- [Il tempo della Liguria con Fausto de Andreis](https://anyplans.in/firenze/il-tempo-della-liguria-con-fausto-de-andreis/): Venerdì 18 settembre alle 20:30, Via Pistoiese, 154 (6r), 50145 Florence, Italy, Firenze, Gratis
-- [Spettacolo MADRE](https://anyplans.in/firenze/spettacolo-madre/): Venerdì 18 settembre alle 21:00, Certosa di Firenze, Firenze, Gratis
-- [Cena da Villa Vittoria Discoteca Firenze: 5 posti liberi](https://anyplans.in/firenze/cena-da-villa-vittoria-discoteca-firenze-5-posti-liberi/): Venerdì 18 settembre alle 21:00, Villa Vittoria Discoteca Firenze, Gratis
-- [GIGACON Tuscany da Friends Bar & Lounge: 13 posti liberi](https://anyplans.in/firenze/gigacon-tuscany-da-friends-bar-lounge-13-posti-liberi/): Sabato 19 settembre alle 09:30, Friends Bar & Lounge, Scandicci, Gratis
-- [Il giro delle sette chiese](https://anyplans.in/firenze/il-giro-delle-sette-chiese/): Sabato 19 settembre alle 10:00, Piazza di Santa Felicita, 50125 Firenze FI, Italia, Firenze, Gratis
-- [GIGACON](https://anyplans.in/firenze/gigacon/): Sabato 19 settembre alle 10:00, Piazzale della Resistenza, Scandicci ( FIRENZE ), Scandicci, Gratis
-- [Primo tavolo da Rifrullo Firenze: 1 posto libero](https://anyplans.in/firenze/primo-tavolo-da-rifrullo-firenze-1-posto-libero/): Sabato 19 settembre alle 17:00, Rifrullo Firenze, Gratis
-- [Aperitivo da Trattoria Pizzeria Schioccapalle: 11 posti liberi](https://anyplans.in/firenze/aperitivo-da-trattoria-pizzeria-schioccapalle-11-posti-liber/): Sabato 19 settembre alle 18:00, Trattoria Pizzeria Schioccapalle, Sambuca, Gratis
-- [Cena da KOKKOMI sushi Restaurant: 5 posti liberi](https://anyplans.in/firenze/cena-da-kokkomi-sushi-restaurant-5-posti-liberi/): Sabato 19 settembre alle 18:30, KOKKOMI sushi Restaurant, Firenze, Gratis
-- [Candlelight: Coldplay & Imagine Dragons | Florence](https://anyplans.in/firenze/candlelight-coldplay-imagine-dragons-florence/): Sabato 19 settembre alle 19:30, Teatro Niccolini, Via Ricasoli, 3, Firenze, Firenze, Gratis
 
 ## Optional
 
@@ -86,11 +77,10 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## English pages (same content, for visitors)
 
-- [Things to do in Firenze](https://anyplans.in/en/firenze/things-to-do/): all upcoming events, by kind and by town; answers "what to do in Bergamo today / this weekend"
-- [Running clubs in Firenze](https://anyplans.in/en/firenze/running-clubs/): 0 run clubs by weekday, open to visitors too
-- [Groups in Firenze](https://anyplans.in/en/firenze/groups/)
+- [Things to do in Firenze](https://anyplans.in/en/firenze/): all upcoming events, by kind and by town; answers "what to do in Firenze today / this weekend"
 - [Dinners & aperitivo in Firenze](https://anyplans.in/en/firenze/dinners/)
 - [Painting & art in Firenze](https://anyplans.in/en/firenze/painting/)
+- [Padel in Firenze](https://anyplans.in/en/firenze/padel/)
 - [Concerts & live music in Firenze](https://anyplans.in/en/firenze/concerts/)
 - [Dancing in Firenze](https://anyplans.in/en/firenze/dancing/)
 - [Talks & culture in Firenze](https://anyplans.in/en/firenze/talks-and-culture/)
@@ -104,30 +94,30 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 # Tutte le pagine di anyplans a Firenze (italiano, poi inglese)
 
-## Cosa fare a Firenze e provincia: 183 eventi
+## Cosa fare a Firenze e provincia: 201 eventi
 https://anyplans.in/firenze/
 
-Cena / aperitivo, incontri culturali, concerti e musica dal vivo, spettacoli e teatro e visite guidate: quello che succede a Firenze e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
+Cena / aperitivo, incontri culturali, concerti e musica dal vivo, padel e spettacoli e teatro: quello che succede a Firenze e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
 
-## Cosa fare a Firenze oggi: 6 eventi
+## Cosa fare a Firenze oggi: 13 eventi
 https://anyplans.in/firenze/cosa-fare-oggi/
 
-6 eventi a Firenze e provincia oggi, 15 settembre 2026: Vinci, Limite Sull'Arno e Firenze e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+13 eventi a Firenze e provincia oggi, 15 settembre 2026: Firenze, Vinci e Limite Sull'Arno e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Firenze domani: 9 eventi
+## Cosa fare a Firenze domani: 13 eventi
 https://anyplans.in/firenze/cosa-fare-domani/
 
-9 eventi a Firenze e provincia domani, 16 settembre 2026: Quarrata, Firenze e Prato e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+13 eventi a Firenze e provincia domani, 16 settembre 2026: Firenze, Quarrata e Prato e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Firenze nel weekend: 13 eventi
+## Cosa fare a Firenze nel weekend: 17 eventi
 https://anyplans.in/firenze/cosa-fare-nel-weekend/
 
-13 eventi a Firenze e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Firenze, Scandicci, Sambuca e Prato e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+17 eventi a Firenze e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Firenze, Scandicci, Sambuca e Prato e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Eventi a Firenze a settembre 2026: 85
+## Eventi a Firenze a settembre 2026: 103
 https://anyplans.in/firenze/eventi-settembre-2026/
 
-85 eventi a Firenze e provincia a settembre 2026: pittura / arte, cena / aperitivo, concerti e musica dal vivo, ballo e danza e incontri culturali. Giorno per giorno, con orari, luogo e prezzo, a Firenze, Prato, Vinci e Quarrata e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+103 eventi a Firenze e provincia a settembre 2026: pittura / arte, padel, cena / aperitivo, concerti e musica dal vivo e ballo e danza. Giorno per giorno, con orari, luogo e prezzo, a Firenze, Prato, Vinci e Quarrata e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 ## Eventi a Firenze a ottobre 2026: 52
 https://anyplans.in/firenze/eventi-ottobre-2026/
@@ -148,6 +138,11 @@ A Firenze e provincia ci sono 46 cene e aperitivi nei prossimi mesi. In ogni pag
 https://anyplans.in/firenze/pittura/
 
 A Firenze e provincia ci sono 6 laboratori nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+
+## Padel a Firenze: 18 eventi
+https://anyplans.in/firenze/padel/
+
+A Firenze e provincia ci sono 18 partite di padel nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Concerti e musica dal vivo a Firenze: 35 eventi
 https://anyplans.in/firenze/concerti/
@@ -204,6 +199,51 @@ https://anyplans.in/firenze/uffizi-tour-guidato-semi-privato/
 
 Pittura / arte a Galleria degli Uffizi, Piazzale degli Uffizi, 6, Firenze, 50122, Florence, IT, Firenze: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
+## Padel: manca 1 giocatore (amichevole) – PCM PADEL PRATO
+https://anyplans.in/firenze/padel-manca-1-giocatore-amichevole/
+
+Padel a PCM PADEL PRATO, Via Bocca di Stella, 3, 59011 Seano, martedì 15 settembre alle 17:00 (2 date, fino al 17 settembre). 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – REAL PADEL Lastra a Signa
+https://anyplans.in/firenze/padel-manca-1-giocatore-amichevole-2026-09-17/
+
+Padel a REAL PADEL Lastra a Signa, viale dello stadio 2, 50055 Lastra a Signa, giovedì 17 settembre alle 16:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (amichevole) – Padel Lastra a Signa
+https://anyplans.in/firenze/padel-manca-1-giocatore-amichevole-2026-09-17-2/
+
+Padel a Padel Lastra a Signa, Via Leon Battista Alberti 35, 50055 Lastra a Signa, giovedì 17 settembre alle 20:00. 12 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Rondinella Padel Club
+https://anyplans.in/firenze/padel-manca-1-giocatore-amichevole-2026-09-18/
+
+Padel a Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze, venerdì 18 settembre alle 21:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (amichevole) – Oasi Padel Agliana
+https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole/
+
+Padel a Oasi Padel Agliana, via ferrucci snc C/O campo sportivo San Michele, 51031 Agliana, martedì 15 settembre alle 17:30. 13 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Padel 31 - Grassina
+https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole-2026-09-15/
+
+Padel a Padel 31 - Grassina, Via Abebe Bikila, 50012 Grassina, martedì 15 settembre alle 18:00. 13 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Padel Lastra a Signa
+https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole-2026-09-15-2/
+
+Padel a Padel Lastra a Signa, Via Leon Battista Alberti 35, 50055 Lastra a Signa, martedì 15 settembre alle 20:30 (2 date, fino al 18 settembre). 13 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (amichevole) – PCM PADEL PRATO
+https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole-2026-09-16/
+
+Padel a PCM PADEL PRATO, Via Bocca di Stella, 3, 59011 Seano, mercoledì 16 settembre alle 10:30 (10 date, fino al 19 settembre). 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Rondinella Padel Club
+https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole-2026-09-16-2/
+
+Padel a Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze, mercoledì 16 settembre alle 21:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
 ## Cena da Ristorante Bellosguardo: 1 posto libero
 https://anyplans.in/firenze/cena-da-ristorante-bellosguardo-1-posto-libero/
 
@@ -233,6 +273,41 @@ Cena / aperitivo a Bellosguardo • Golf Club, Vinci, martedì 15 settembre alle
 https://anyplans.in/firenze/opera-in-roma-three-tenors-nessun-dorma-firenze/
 
 Concerti e musica dal vivo a Cattedrale dell'Immagine, Piazza di Santo Stefano, 5, Firenze, 50122, Florence, IT, Firenze, martedì 15 settembre alle 20:30. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Padel: mancano 2 giocatori… – Rondinella Padel Club
+https://anyplans.in/firenze/padel-mancano-2-giocatori-amichevole/
+
+Padel a Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze, martedì 15 settembre alle 21:00 (2 date, fino al 20 settembre). 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Centro Padel Firenze
+https://anyplans.in/firenze/padel-mancano-2-giocatori-amichevole-2026-09-15/
+
+Padel a Centro Padel Firenze, Via Generale C. A. dalla Chiesa, 11, 50136 Firenze, martedì 15 settembre alle 21:30. 17 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – SPH - Firenze Hidron
+https://anyplans.in/firenze/padel-mancano-3-giocatori-competitiva/
+
+Padel a SPH - Firenze Hidron, Via di Gramignano, 50013 Campi Bisenzio, martedì 15 settembre alle 22:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Agliana Padel Club
+https://anyplans.in/firenze/padel-mancano-3-giocatori-competitiva-2026-09-16/
+
+Padel a Agliana Padel Club, Via Giovannella 6 B, 51031 Agliana, mercoledì 16 settembre alle 20:00. 19 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – NWG Arena
+https://anyplans.in/firenze/padel-mancano-3-giocatori-competitiva-2026-09-19/
+
+Padel a NWG Arena, Via dell'Organo, 16, Prato , 59100 Prato, sabato 19 settembre alle 09:00. Gratis (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Rondinella Padel Club
+https://anyplans.in/firenze/padel-manca-1-giocatore-competitiva/
+
+Padel a Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze, mercoledì 16 settembre alle 10:00. 10 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Padel "Le mura" Brozzi
+https://anyplans.in/firenze/padel-manca-1-giocatore-competitiva-2026-09-17/
+
+Padel a Padel "Le mura" Brozzi,  Via de' Cattani 49, 50145 Firenze, giovedì 17 settembre alle 20:00. 12 € (Si chiede il posto e si paga su Playtomic).
 
 ## Cena da Club del Diavolo: 1 posto libero
 https://anyplans.in/firenze/cena-da-club-del-diavolo-1-posto-libero/
@@ -293,6 +368,16 @@ Cena / aperitivo a Ciccia e Briciole - Burger Corner, Firenze, giovedì 17 sette
 https://anyplans.in/firenze/cena-da-snodo-birreria-urbana-7-posti-liberi/
 
 Cena / aperitivo a Snodo Birreria Urbana, Prato, giovedì 17 settembre alle 19:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## Padel: mancano 2 giocatori… – La Fiorita Padel Club
+https://anyplans.in/firenze/padel-mancano-2-giocatori-competitiva/
+
+Padel a La Fiorita Padel Club, Via Alfiero Gemmi 2 - Badia a Settimo, 50018 Scandicci, giovedì 17 settembre alle 21:30. 14 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – SPH - Firenze Hidron
+https://anyplans.in/firenze/padel-mancano-2-giocatori-competitiva-2026-09-19/
+
+Padel a SPH - Firenze Hidron, Via di Gramignano, 50013 Campi Bisenzio, sabato 19 settembre alle 08:00. 15 € (Si chiede il posto e si paga su Playtomic).
 
 ## Tavolo per chi è nuovo in città da VaLù Bakery…
 https://anyplans.in/firenze/tavolo-per-chi-e-nuovo-in-citta-da-valu-bakery-cakes-4-posti/
@@ -404,12 +489,12 @@ https://anyplans.in/firenze/swing-in-prato/
 
 Concerti e musica dal vivo a Piazza Delle Carceri, Prato, sabato 19 settembre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Candlelight: Ennio Morricone e altre colonne…
+## Candlelight: Ennio Morricone e altre… – Teatro Niccolini
 https://anyplans.in/firenze/candlelight-ennio-morricone-e-altre-colonne-sonore/
 
 Concerti e musica dal vivo a Teatro Niccolini, Via Ricasoli, 3, Firenze, 50122, Florence, IT, Firenze, sabato 19 settembre alle 21:30. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Candlelight: Ennio Morricone e altre colonne…
+## Candlelight: Ennio Morricone e altre… – Il Garibaldi
 https://anyplans.in/firenze/candlelight-ennio-morricone-e-altre-colonne-sonore-2026-12-10/
 
 Concerti e musica dal vivo a Il Garibaldi, Prato, giovedì 10 dicembre alle 19:00. 23,50 € (Biglietti su AllEvents).
@@ -772,7 +857,7 @@ Concerti e musica dal vivo a Mandela Forum, Firenze, giovedì 15 ottobre alle 21
 ## Candlelight: Tributo a Michael Jackson
 https://anyplans.in/firenze/candlelight-tributo-a-michael-jackson/
 
-Concerti e musica dal vivo a Teatro Niccolini, Via Ricasoli, 3, Firenze, 50122, Florence, IT, Firenze, venerdì 16 ottobre alle 19:30. Gratis (Ingresso: vedi la pagina AllEvents).
+Concerti e musica dal vivo a Sala Vanni, Piazza del Carmine, 14, Firenze, 50124, Florence, IT, Firenze, venerdì 16 ottobre alle 19:30 (2 date, fino al 16 ottobre). Gratis (Ingresso: vedi la pagina AllEvents).
 
 ## Corso LOGICA POSTURALE 1° Liv.
 https://anyplans.in/firenze/corso-logica-posturale-1-liv-prato-17-18-ottobre-2026/
@@ -1114,30 +1199,30 @@ https://anyplans.in/firenze/swing-in-spring-festival/
 
 Festa di paese a Swing in Spring Festival, venerdì 12 marzo alle 20:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Things to do in Firenze: 183 events
+## Things to do in Firenze: 201 events
 https://anyplans.in/en/firenze/
 
-What's on in Firenze and its province, today, tonight and this weekend: dinners & aperitivo, talks & culture, concerts & live music, shows & theatre, guided tours and painting & art. Pick one and go with other people.
+What's on in Firenze and its province, today, tonight and this weekend: dinners & aperitivo, talks & culture, concerts & live music, padel, shows & theatre and guided tours. Pick one and go with other people.
 
-## What to do in Firenze today: 6 events
+## What to do in Firenze today: 13 events
 https://anyplans.in/en/firenze/what-to-do-today/
 
-6 events in Firenze and its province today, 15 September 2026: Vinci, Limite Sull'Arno and Firenze and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+13 events in Firenze and its province today, 15 September 2026: Firenze, Vinci and Limite Sull'Arno and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Firenze tomorrow: 9 events
+## What to do in Firenze tomorrow: 13 events
 https://anyplans.in/en/firenze/what-to-do-tomorrow/
 
-9 events in Firenze and its province tomorrow, 16 September 2026: Quarrata, Firenze and Prato and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+13 events in Firenze and its province tomorrow, 16 September 2026: Firenze, Quarrata and Prato and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Firenze this weekend: 13 events
+## What to do in Firenze this weekend: 17 events
 https://anyplans.in/en/firenze/what-to-do-this-weekend/
 
-13 events in Firenze and its province this weekend (Saturday 19 September and Sunday 20 September): Firenze, Scandicci, Sambuca and Prato and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+17 events in Firenze and its province this weekend (Saturday 19 September and Sunday 20 September): Firenze, Scandicci, Sambuca and Prato and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## Events in Firenze in September 2026: 85
+## Events in Firenze in September 2026: 103
 https://anyplans.in/en/firenze/events-september-2026/
 
-85 events in Firenze and its province in September 2026: painting & art, dinners & aperitivo, concerts & live music, dancing and talks & culture. Day by day, with times, place and price, in Firenze, Prato, Vinci and Quarrata and other towns. You sign up and go with other people.
+103 events in Firenze and its province in September 2026: painting & art, padel, dinners & aperitivo, concerts & live music and dancing. Day by day, with times, place and price, in Firenze, Prato, Vinci and Quarrata and other towns. You sign up and go with other people.
 
 ## Events in Firenze in October 2026: 52
 https://anyplans.in/en/firenze/events-october-2026/
@@ -1158,6 +1243,11 @@ In Firenze and its province there are 46 dinners and aperitivo in the coming mon
 https://anyplans.in/en/firenze/painting/
 
 In Firenze and its province there are 6 painting & art events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+
+## Padel in Firenze: 18 events
+https://anyplans.in/en/firenze/padel/
+
+In Firenze and its province there are 18 padel matches and tournaments in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Concerts & live music in Firenze: 35 events
 https://anyplans.in/en/firenze/concerts/
@@ -1214,6 +1304,51 @@ https://anyplans.in/en/firenze/uffizi-tour-guidato-semi-privato/
 
 Painting & art in Galleria degli Uffizi, Piazzale degli Uffizi, 6, Firenze, 50122, Florence, IT, Firenze: it already took place, the last date was Tuesday, 15 September 2026.
 
+## Padel: manca 1 giocatore (amichevole) – PCM PADEL PRATO
+https://anyplans.in/en/firenze/padel-manca-1-giocatore-amichevole/
+
+Padel in PCM PADEL PRATO, Via Bocca di Stella, 3, 59011 Seano, Tuesday 15 September at 17:00 (2 dates, until 17 September). €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – REAL PADEL Lastra a Signa
+https://anyplans.in/en/firenze/padel-manca-1-giocatore-amichevole-2026-09-17/
+
+Padel in REAL PADEL Lastra a Signa, viale dello stadio 2, 50055 Lastra a Signa, Thursday 17 September at 16:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (amichevole) – Padel Lastra a Signa
+https://anyplans.in/en/firenze/padel-manca-1-giocatore-amichevole-2026-09-17-2/
+
+Padel in Padel Lastra a Signa, Via Leon Battista Alberti 35, 50055 Lastra a Signa, Thursday 17 September at 20:00. €12 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Rondinella Padel Club
+https://anyplans.in/en/firenze/padel-manca-1-giocatore-amichevole-2026-09-18/
+
+Padel in Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze, Friday 18 September at 21:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (amichevole) – Oasi Padel Agliana
+https://anyplans.in/en/firenze/padel-mancano-3-giocatori-amichevole/
+
+Padel in Oasi Padel Agliana, via ferrucci snc C/O campo sportivo San Michele, 51031 Agliana, Tuesday 15 September at 17:30. €13 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Padel 31 - Grassina
+https://anyplans.in/en/firenze/padel-mancano-3-giocatori-amichevole-2026-09-15/
+
+Padel in Padel 31 - Grassina, Via Abebe Bikila, 50012 Grassina, Tuesday 15 September at 18:00. €13 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Padel Lastra a Signa
+https://anyplans.in/en/firenze/padel-mancano-3-giocatori-amichevole-2026-09-15-2/
+
+Padel in Padel Lastra a Signa, Via Leon Battista Alberti 35, 50055 Lastra a Signa, Tuesday 15 September at 20:30 (2 dates, until 18 September). €13 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (amichevole) – PCM PADEL PRATO
+https://anyplans.in/en/firenze/padel-mancano-3-giocatori-amichevole-2026-09-16/
+
+Padel in PCM PADEL PRATO, Via Bocca di Stella, 3, 59011 Seano, Wednesday 16 September at 10:30 (10 dates, until 19 September). €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Rondinella Padel Club
+https://anyplans.in/en/firenze/padel-mancano-3-giocatori-amichevole-2026-09-16-2/
+
+Padel in Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze, Wednesday 16 September at 21:00. €15 (Si chiede il posto e si paga su Playtomic).
+
 ## Cena da Ristorante Bellosguardo: 1 posto libero
 https://anyplans.in/en/firenze/cena-da-ristorante-bellosguardo-1-posto-libero/
 
@@ -1243,6 +1378,41 @@ Dinners & aperitivo in Bellosguardo • Golf Club, Vinci, Tuesday 15 September a
 https://anyplans.in/en/firenze/opera-in-roma-three-tenors-nessun-dorma-firenze/
 
 Concerts & live music in Cattedrale dell'Immagine, Piazza di Santo Stefano, 5, Firenze, 50122, Florence, IT, Firenze, Tuesday 15 September at 20:30. Free (Ingresso: vedi la pagina AllEvents).
+
+## Padel: mancano 2 giocatori… – Rondinella Padel Club
+https://anyplans.in/en/firenze/padel-mancano-2-giocatori-amichevole/
+
+Padel in Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze, Tuesday 15 September at 21:00 (2 dates, until 20 September). €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Centro Padel Firenze
+https://anyplans.in/en/firenze/padel-mancano-2-giocatori-amichevole-2026-09-15/
+
+Padel in Centro Padel Firenze, Via Generale C. A. dalla Chiesa, 11, 50136 Firenze, Tuesday 15 September at 21:30. €17 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – SPH - Firenze Hidron
+https://anyplans.in/en/firenze/padel-mancano-3-giocatori-competitiva/
+
+Padel in SPH - Firenze Hidron, Via di Gramignano, 50013 Campi Bisenzio, Tuesday 15 September at 22:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Agliana Padel Club
+https://anyplans.in/en/firenze/padel-mancano-3-giocatori-competitiva-2026-09-16/
+
+Padel in Agliana Padel Club, Via Giovannella 6 B, 51031 Agliana, Wednesday 16 September at 20:00. €19 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – NWG Arena
+https://anyplans.in/en/firenze/padel-mancano-3-giocatori-competitiva-2026-09-19/
+
+Padel in NWG Arena, Via dell'Organo, 16, Prato , 59100 Prato, Saturday 19 September at 09:00. Free (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Rondinella Padel Club
+https://anyplans.in/en/firenze/padel-manca-1-giocatore-competitiva/
+
+Padel in Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze, Wednesday 16 September at 10:00. €10 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore… – Padel "Le mura" Brozzi
+https://anyplans.in/en/firenze/padel-manca-1-giocatore-competitiva-2026-09-17/
+
+Padel in Padel "Le mura" Brozzi,  Via de' Cattani 49, 50145 Firenze, Thursday 17 September at 20:00. €12 (Si chiede il posto e si paga su Playtomic).
 
 ## Cena da Club del Diavolo: 1 posto libero
 https://anyplans.in/en/firenze/cena-da-club-del-diavolo-1-posto-libero/
@@ -1303,6 +1473,16 @@ Dinners & aperitivo in Ciccia e Briciole - Burger Corner, Firenze, Thursday 17 S
 https://anyplans.in/en/firenze/cena-da-snodo-birreria-urbana-7-posti-liberi/
 
 Dinners & aperitivo in Snodo Birreria Urbana, Prato, Thursday 17 September at 19:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## Padel: mancano 2 giocatori… – La Fiorita Padel Club
+https://anyplans.in/en/firenze/padel-mancano-2-giocatori-competitiva/
+
+Padel in La Fiorita Padel Club, Via Alfiero Gemmi 2 - Badia a Settimo, 50018 Scandicci, Thursday 17 September at 21:30. €14 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – SPH - Firenze Hidron
+https://anyplans.in/en/firenze/padel-mancano-2-giocatori-competitiva-2026-09-19/
+
+Padel in SPH - Firenze Hidron, Via di Gramignano, 50013 Campi Bisenzio, Saturday 19 September at 08:00. €15 (Si chiede il posto e si paga su Playtomic).
 
 ## Tavolo per chi è nuovo in città da VaLù Bakery…
 https://anyplans.in/en/firenze/tavolo-per-chi-e-nuovo-in-citta-da-valu-bakery-cakes-4-posti/
@@ -1414,12 +1594,12 @@ https://anyplans.in/en/firenze/swing-in-prato/
 
 Concerts & live music in Piazza Delle Carceri, Prato, Saturday 19 September at 21:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## Candlelight: Ennio Morricone e altre colonne…
+## Candlelight: Ennio Morricone e altre… – Teatro Niccolini
 https://anyplans.in/en/firenze/candlelight-ennio-morricone-e-altre-colonne-sonore/
 
 Concerts & live music in Teatro Niccolini, Via Ricasoli, 3, Firenze, 50122, Florence, IT, Firenze, Saturday 19 September at 21:30. Free (Ingresso: vedi la pagina AllEvents).
 
-## Candlelight: Ennio Morricone e altre colonne…
+## Candlelight: Ennio Morricone e altre… – Il Garibaldi
 https://anyplans.in/en/firenze/candlelight-ennio-morricone-e-altre-colonne-sonore-2026-12-10/
 
 Concerts & live music in Il Garibaldi, Prato, Thursday 10 December at 19:00. €23.50 (Biglietti su AllEvents).
@@ -1782,7 +1962,7 @@ Concerts & live music in Mandela Forum, Firenze, Thursday 15 October at 21:00. F
 ## Candlelight: Tributo a Michael Jackson
 https://anyplans.in/en/firenze/candlelight-tributo-a-michael-jackson/
 
-Concerts & live music in Teatro Niccolini, Via Ricasoli, 3, Firenze, 50122, Florence, IT, Firenze, Friday 16 October at 19:30. Free (Ingresso: vedi la pagina AllEvents).
+Concerts & live music in Sala Vanni, Piazza del Carmine, 14, Firenze, 50124, Florence, IT, Firenze, Friday 16 October at 19:30 (2 dates, until 16 October). Free (Ingresso: vedi la pagina AllEvents).
 
 ## Corso LOGICA POSTURALE 1° Liv.
 https://anyplans.in/en/firenze/corso-logica-posturale-1-liv-prato-17-18-ottobre-2026/

@@ -1,14 +1,13 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Bologna e provincia: feste di paese e sagre, corsi di cucina e di ceramica, volontariato, uscite sportive, running club. Raccoglie gli eventi già esistenti dai siti dei comuni e delle associazioni e quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Per ora solo Bologna; Milano e Brescia in arrivo.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Bologna e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Bologna: il sito copre 29 città italiane (Milano, Bergamo, Torino, Roma, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-15. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Bologna](https://anyplans.in/bologna/cosa-fare/): tutti gli eventi in programma (396), per tipo e per paese; risponde a "cosa fare a Bologna oggi / questo weekend"
-- [Running club a Bologna](https://anyplans.in/bologna/running-club/): 0 run club per giorno della settimana, con ritrovo, orario e domande frequenti
-- [Gruppi a Bologna](https://anyplans.in/bologna/gruppi/): 0 associazioni, club e comunità che pubblicano eventi
+- [Cosa fare a Bologna](https://anyplans.in/bologna/): tutti gli eventi in programma (412), per tipo e per paese; risponde a "cosa fare a Bologna oggi / questo weekend"
+- [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
 - [Condizioni d'uso](https://anyplans.in/terms-it.html)
@@ -16,12 +15,13 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 ## Eventi per tipo e per paese
 
 - [Cena / aperitivo a Bologna](https://anyplans.in/bologna/cene-e-aperitivi/): 44 in programma
+- [Padel a Bologna](https://anyplans.in/bologna/padel/): 13 in programma
 - [Incontri culturali a Bologna](https://anyplans.in/bologna/incontri-culturali/): 95 in programma
-- [Spettacoli e teatro a Bologna](https://anyplans.in/bologna/spettacoli/): 54 in programma
+- [Spettacoli e teatro a Bologna](https://anyplans.in/bologna/spettacoli/): 55 in programma
 - [Visite guidate a Bologna](https://anyplans.in/bologna/visite-guidate/): 23 in programma
 - [Cinema a Bologna](https://anyplans.in/bologna/cinema/): 8 in programma
-- [Concerti e musica dal vivo a Bologna](https://anyplans.in/bologna/concerti/): 91 in programma
-- [Yoga / pilates a Bologna](https://anyplans.in/bologna/yoga/): 7 in programma
+- [Concerti e musica dal vivo a Bologna](https://anyplans.in/bologna/concerti/): 92 in programma
+- [Yoga / pilates a Bologna](https://anyplans.in/bologna/yoga/): 8 in programma
 - [Serate per single a Bologna](https://anyplans.in/bologna/single/): 3 in programma
 - [Feste, sagre ed eventi di paese a Bologna](https://anyplans.in/bologna/feste/): 23 in programma
 - [Escursionismo a Bologna](https://anyplans.in/bologna/escursioni/): 3 in programma
@@ -30,20 +30,15 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Ballo e danza a Bologna](https://anyplans.in/bologna/ballo/): 4 in programma
 - [Feste ed eventi a Freakout Club](https://anyplans.in/bologna/freakout-club/): 6 in programma
 
-## Running club per giorno
-
-
-
-## Gruppi
-
-
-
 ## Prossimi eventi
 
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/bologna/padel-mancano-3-giocatori-competitiva/): Dal 15 settembre al 16 settembre, 2 date, Tennis Park SSD arl, Via Fratelli Canova, 51 , 40068 San Lazzaro di Savena, 15 €
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/bologna/padel-mancano-3-giocatori-competitiva-2026-09-15/): Martedì 15 settembre alle 18:00, BOLOGNA PADEL, Via Lame, 298, 40013 Torre Verde, 16 €
 - [Cena da La Tìz Osteria Sociale di Villa Pini: 11 posti liberi](https://anyplans.in/bologna/cena-da-la-tiz-osteria-sociale-di-villa-pini-11-posti-liberi/): Martedì 15 settembre alle 18:00, La Tìz Osteria Sociale di Villa Pini, Bologna, Gratis
 - [Scacco al re ★ I martedì di bagordi e gioco autogestito](https://anyplans.in/bologna/scacco-al-re-i-martedi-di-bagordi-e-gioco-autogestito/): Martedì 15 settembre alle 18:00, Circolo Hex, Bologna, Gratis
 - [La bella addormentata - Un'Estate...Classica! 2026 - Teatro Duse](https://anyplans.in/bologna/la-bella-addormentata-un-estate-classica-2026-teatro-duse/): Martedì 15 settembre alle 18:00, Teatro Duse Bologna, Bologna, Gratis
 - [Se una notte d’Autunno, un viaggiatore…](https://anyplans.in/bologna/se-una-notte-d-autunno-un-viaggiatore/): Martedì 15 settembre alle 20:15, Cimitero Della Certosa, Bologna, Gratis
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/bologna/padel-mancano-3-giocatori-competitiva-2026-09-15-2/): Martedì 15 settembre alle 20:30, Country Club Racket World, Via Gozzadini 8, 40055 Villanova, 15 €
 - [Social Dinner in Bologna - Recurrent Link - Registration on website](https://anyplans.in/bologna/social-dinner-in-bologna-recurrent-link-registration-on-webs/): Martedì 15 settembre alle 20:30, Bologna, Italy, Bologna, Gratis
 - [International Meeting Over Dinner in Bologna - Recurrent Link - Registration on website](https://anyplans.in/bologna/international-meeting-over-dinner-in-bologna-recurrent-link-/): Martedì 15 settembre alle 20:30, Bologna, Italy, Bologna, Gratis
 - [Good Food, Good Friends in Bologna - Recurrent event - Registration on website](https://anyplans.in/bologna/good-food-good-friends-in-bologna-recurrent-event-registrati/): Martedì 15 settembre alle 20:30, Bologna, Italy, Bologna, Gratis
@@ -52,14 +47,20 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Friends Around the Table in Bologna (Registration is mandatory)](https://anyplans.in/bologna/friends-around-the-table-in-bologna-registration-is-mandator/): Martedì 15 settembre alle 20:30, Bologna, Italy, Bologna, Gratis
 - [Friendly Encounters / Rencontres Amicales - Bologna (Registration is mandatory)](https://anyplans.in/bologna/friendly-encounters-rencontres-amicales-bologna-registration/): Martedì 15 settembre alle 20:30, Bologna, Italy, Bologna, Gratis
 - [ANCIENT UNREALITY TOUR: Atomic Aggressor, Ectovoid | Freakout Club](https://anyplans.in/bologna/ancient-unreality-tour-atomic-aggressor-ectovoid-freakout-cl/): Martedì 15 settembre alle 21:00, Freakout Club, Bologna, Gratis
+- [Padel: manca 1 giocatore (competitiva)](https://anyplans.in/bologna/padel-manca-1-giocatore-competitiva/): Martedì 15 settembre alle 21:30, GREEN PADEL CLUB ASD, Via 2 Giugno, 40011 Anzola dell'Emilia, 16 €
 - [ITS Academy Biomedicale - open day a Bologna](https://anyplans.in/bologna/its-academy-biomedicale-open-day-a-bologna/): Mercoledì 16 settembre alle 14:30, Fondazione Aldini Valeriani, Bologna, Gratis
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/bologna/padel-mancano-3-giocatori-competitiva-2026-09-16/): Mercoledì 16 settembre alle 15:00, Country Club CASTEL MAGGIORE, Via Vancini 5 , 40013 Castel Maggiore, 15 €
+- [Padel: manca 1 giocatore (competitiva)](https://anyplans.in/bologna/padel-manca-1-giocatore-competitiva-2026-09-16/): Mercoledì 16 settembre alle 16:30, Tennis Park SSD arl, Via Fratelli Canova, 51 , 40068 San Lazzaro di Savena, 15 €
 - [LA FORZA DI FERMARSI](https://anyplans.in/bologna/la-forza-di-fermarsi/): Mercoledì 16 settembre alle 18:30, Atelier Tubertini™, Bologna, 156,12 €
 - [Presentazione di Resistenze in Palestina](https://anyplans.in/bologna/presentazione-di-resistenze-in-palestina/): Mercoledì 16 settembre alle 19:00, Circolo Hex, Bologna, Gratis
 - [Cena da Monkey Factory: 5 posti liberi](https://anyplans.in/bologna/cena-da-monkey-factory-5-posti-liberi/): Mercoledì 16 settembre alle 19:00, Monkey Factory, Bologna, Gratis
 - [Notte Bianca Vittorio Veneto](https://anyplans.in/bologna/notte-bianca-vittorio-veneto/): Mercoledì 16 settembre alle 19:00, via Vittorio Veneto, 40131 Bologna, Italy, Bologna, Gratis
+- [Padel: manca 1 giocatore (competitiva)](https://anyplans.in/bologna/padel-manca-1-giocatore-competitiva-2026-09-16-2/): Mercoledì 16 settembre alle 19:30, BOLOGNA PADEL, Via Lame, 298, 40013 Torre Verde, 15 €
 - [Taboo, pizza e birrette.. replichiamo!](https://anyplans.in/bologna/taboo-pizza-e-birrette-replichiamo/): Mercoledì 16 settembre alle 19:40, Bologna, Casa mia, piazza dell’unità, 19 €
 - [Proiezione dei corti finalisti ai David di Donatello 2026 | SEMI. Il Cinema alle Serre con MUBI](https://anyplans.in/bologna/proiezione-dei-corti-finalisti-ai-david-di-donatello-2026-se/): Mercoledì 16 settembre alle 20:00, Via Castiglione, 134, 40136 Bologna, Italy, Bologna, Gratis
 - [Grito Exclamac!ón, Vision Division | Freakout Club](https://anyplans.in/bologna/grito-exclamac-on-vision-division-freakout-club/): Mercoledì 16 settembre alle 21:00, Freakout Club, Bologna, Gratis
+- [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/bologna/padel-manca-1-giocatore-amichevole/): Mercoledì 16 settembre alle 21:00, Country Club Racket World, Via Gozzadini 8, 40055 Villanova, 15 €
+- [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/bologna/padel-mancano-2-giocatori-amichevole/): Giovedì 17 settembre alle 18:00, Country Club CASTEL MAGGIORE, Via Vancini 5 , 40013 Castel Maggiore, 17 €
 - [MPC EXPERIENCE | METODO PER CRESCERE](https://anyplans.in/bologna/mpc-experience-metodo-per-crescere/): Giovedì 17 settembre alle 18:00, Ristorante Pizzeria AL Cavallino Bianco, Rastignano, 35 €
 - [Maria Chiara Mazzi presenta "Antichi Teatri di Bologna"](https://anyplans.in/bologna/maria-chiara-mazzi-presenta-antichi-teatri-di-bologna/): Giovedì 17 settembre alle 18:30, La libreria del viaggiatore lento, Bologna, Gratis
 - [Gruppo di lettura "La confraternita dei lettori": Il dio dei boschi di Liz Moore](https://anyplans.in/bologna/gruppo-di-lettura-la-confraternita-dei-lettori-il-dio-dei-bo/): Giovedì 17 settembre alle 18:30, Via Belmeloro 1/E, 40126 Bologna, Italy, Bologna, Gratis
@@ -71,15 +72,6 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Speed Date Bologna Fascia d’età 25-45](https://anyplans.in/bologna/speed-date-bologna-fascia-d-eta-25-45/): Giovedì 17 settembre alle 20:00, Doppio Malto Bologna Stalingrado, Bologna, 11,54 €
 - [17.09.26 | GUIDO DAMINI @ INSOLVENZFEST 2026 (Cineteca di Bologna - Cinema Lumière)](https://anyplans.in/bologna/17-09-26-guido-damini-insolvenzfest-2026-cineteca-di-bologna/): Giovedì 17 settembre alle 20:00, Cinema Lumière, Bologna, Gratis
 - [Le Feste Antonacci live @Locomotiv Club | Tutto Molto Bello preview](https://anyplans.in/bologna/le-feste-antonacci-live-locomotiv-club-tutto-molto-bello-pre/): Giovedì 17 settembre alle 20:30, LOCOMOTIV CLUB Bologna, Gratis
-- [Cena da Doppio Malto Bologna Malpighi: 2 posti liberi](https://anyplans.in/bologna/cena-da-doppio-malto-bologna-malpighi-2-posti-liberi/): Giovedì 17 settembre alle 21:30, Doppio Malto Bologna Malpighi, Gratis
-- [Pranzo da Toki Sushi-Asian - Bologna: 5 posti liberi](https://anyplans.in/bologna/pranzo-da-toki-sushi-asian-bologna-5-posti-liberi/): Venerdì 18 settembre alle 11:15, Toki Sushi-Asian - Bologna, Gratis
-- [Cena da Fienile Fluò: 5 posti liberi](https://anyplans.in/bologna/cena-da-fienile-fluo-5-posti-liberi/): Venerdì 18 settembre alle 17:00, Fienile Fluò, Bologna, Gratis
-- [Cena da Pizzikotto - Pizzeria & Lifferia - Castelmaggiore: 3 posti liberi](https://anyplans.in/bologna/cena-da-pizzikotto-pizzeria-lifferia-castelmaggiore-3-posti-/): Venerdì 18 settembre alle 17:45, Pizzikotto - Pizzeria & Lifferia - Castelmaggiore, Castel Maggiore, Gratis
-- [⭐️⭐️DRINK SUL ROOFTOP⭐️⭐️ da Roof Garden HOTEL METROPOLITAN: 1 posto libero](https://anyplans.in/bologna/drink-sul-rooftop-da-roof-garden-hotel-metropolitan-1-posto-/): Venerdì 18 settembre alle 18:00, Roof Garden HOTEL METROPOLITAN, Bologna, Gratis
-- [Cena da Urban Pub: 6 posti liberi](https://anyplans.in/bologna/cena-da-urban-pub-6-posti-liberi/): Venerdì 18 settembre alle 18:00, Urban Pub, Bologna, Gratis
-- [Aperitivo Mistico - Tarocchi & Astrologia](https://anyplans.in/bologna/aperitivo-mistico-tarocchi-astrologia/): Venerdì 18 settembre alle 18:00, Bologna, piazza dell’unità, 15 €
-- [Lungomare Bologna - Piazza Lucio Dalla](https://anyplans.in/bologna/lungomare-bologna-piazza-lucio-dalla/): Venerdì 18 settembre alle 18:00, DiMondi - Piazza Lucio Dalla, Gratis
-- [Uscita fuori porta da Trattoria Vecchio Mercato: 2 posti liberi](https://anyplans.in/bologna/uscita-fuori-porta-da-trattoria-vecchio-mercato-2-posti-libe/): Venerdì 18 settembre alle 18:30, Trattoria Vecchio Mercato, Bologna, Gratis
 
 ## Optional
 
@@ -89,10 +81,9 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## English pages (same content, for visitors)
 
-- [Things to do in Bologna](https://anyplans.in/en/bologna/things-to-do/): all upcoming events, by kind and by town; answers "what to do in Bergamo today / this weekend"
-- [Running clubs in Bologna](https://anyplans.in/en/bologna/running-clubs/): 0 run clubs by weekday, open to visitors too
-- [Groups in Bologna](https://anyplans.in/en/bologna/groups/)
+- [Things to do in Bologna](https://anyplans.in/en/bologna/): all upcoming events, by kind and by town; answers "what to do in Bologna today / this weekend"
 - [Dinners & aperitivo in Bologna](https://anyplans.in/en/bologna/dinners/)
+- [Padel in Bologna](https://anyplans.in/en/bologna/padel/)
 - [Talks & culture in Bologna](https://anyplans.in/en/bologna/talks-and-culture/)
 - [Shows & theatre in Bologna](https://anyplans.in/en/bologna/shows/)
 - [Guided tours in Bologna](https://anyplans.in/en/bologna/guided-tours/)
@@ -110,55 +101,60 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 # Tutte le pagine di anyplans a Bologna (italiano, poi inglese)
 
-## Cosa fare a Bologna e provincia: 396 eventi
+## Cosa fare a Bologna e provincia: 412 eventi
 https://anyplans.in/bologna/
 
 Incontri culturali, concerti e musica dal vivo, spettacoli e teatro, cena / aperitivo e visite guidate: quello che succede a Bologna e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
 
-## Cosa fare a Bologna oggi: 12 eventi
+## Cosa fare a Bologna oggi: 16 eventi
 https://anyplans.in/bologna/cosa-fare-oggi/
 
-12 eventi a Bologna e provincia oggi, 15 settembre 2026: Bologna e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+16 eventi a Bologna e provincia oggi, 15 settembre 2026: Bologna e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Bologna domani: 8 eventi
+## Cosa fare a Bologna domani: 13 eventi
 https://anyplans.in/bologna/cosa-fare-domani/
 
-8 eventi a Bologna e provincia domani, 16 settembre 2026: Bologna e piazza dell’unità e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+13 eventi a Bologna e provincia domani, 16 settembre 2026: Bologna e piazza dell’unità e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
 ## Cosa fare a Bologna nel weekend: 37 eventi
 https://anyplans.in/bologna/cosa-fare-nel-weekend/
 
 37 eventi a Bologna e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Bologna, Freakout Club, Calendario Sagre e Bologna City Rockers e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Eventi a Bologna a settembre 2026: 172
+## Eventi a Bologna a settembre 2026: 185
 https://anyplans.in/bologna/eventi-settembre-2026/
 
-172 eventi a Bologna e provincia a settembre 2026: cena / aperitivo, incontri culturali, spettacoli e teatro, visite guidate e giochi da tavolo. Giorno per giorno, con orari, luogo e prezzo, a Bologna, piazza dell’unità, Castel Maggiore e Freakout Club e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+185 eventi a Bologna e provincia a settembre 2026: padel, cena / aperitivo, incontri culturali, spettacoli e teatro e visite guidate. Giorno per giorno, con orari, luogo e prezzo, a Bologna, piazza dell’unità, Castel Maggiore e Freakout Club e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Bologna a ottobre 2026: 106
+## Eventi a Bologna a ottobre 2026: 107
 https://anyplans.in/bologna/eventi-ottobre-2026/
 
-106 eventi a Bologna e provincia a ottobre 2026: incontri culturali, spettacoli e teatro, pittura / arte, cinema e visite guidate. Giorno per giorno, con orari, luogo e prezzo, a Bologna, Castel Maggiore, Freakout Club e Teatro Duse Bologna e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+107 eventi a Bologna e provincia a ottobre 2026: incontri culturali, spettacoli e teatro, pittura / arte, cinema e visite guidate. Giorno per giorno, con orari, luogo e prezzo, a Bologna, Castel Maggiore, Freakout Club e Teatro Duse Bologna e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Bologna a novembre 2026: 67
+## Eventi a Bologna a novembre 2026: 69
 https://anyplans.in/bologna/eventi-novembre-2026/
 
-67 eventi a Bologna e provincia a novembre 2026: spettacoli e teatro, concerti e musica dal vivo, incontri culturali, visite guidate e ballo e danza. Giorno per giorno, con orari, luogo e prezzo, a Bologna, Freakout Club, nEw liFe promo e Barley Arts e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+69 eventi a Bologna e provincia a novembre 2026: spettacoli e teatro, concerti e musica dal vivo, incontri culturali, visite guidate e ballo e danza. Giorno per giorno, con orari, luogo e prezzo, a Bologna, Freakout Club, nEw liFe promo e Barley Arts e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 ## Cena / aperitivo a Bologna: 44 eventi
 https://anyplans.in/bologna/cene-e-aperitivi/
 
 A Bologna e provincia ci sono 44 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
+## Padel a Bologna: 13 eventi
+https://anyplans.in/bologna/padel/
+
+A Bologna e provincia ci sono 13 partite di padel nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+
 ## Incontri culturali a Bologna: 95 eventi
 https://anyplans.in/bologna/incontri-culturali/
 
 A Bologna e provincia ci sono 95 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Spettacoli e teatro a Bologna: 54 eventi
+## Spettacoli e teatro a Bologna: 55 eventi
 https://anyplans.in/bologna/spettacoli/
 
-A Bologna e provincia ci sono 54 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Bologna e provincia ci sono 55 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Visite guidate a Bologna: 23 eventi
 https://anyplans.in/bologna/visite-guidate/
@@ -170,15 +166,15 @@ https://anyplans.in/bologna/cinema/
 
 A Bologna e provincia ci sono 8 proiezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Concerti e musica dal vivo a Bologna: 91 eventi
+## Concerti e musica dal vivo a Bologna: 92 eventi
 https://anyplans.in/bologna/concerti/
 
-A Bologna e provincia ci sono 91 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Bologna e provincia ci sono 92 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Yoga / pilates a Bologna: 7 eventi
+## Yoga / pilates a Bologna: 8 eventi
 https://anyplans.in/bologna/yoga/
 
-A Bologna e provincia ci sono 7 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Bologna e provincia ci sono 8 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Serate per single a Bologna: 3 eventi
 https://anyplans.in/bologna/single/
@@ -229,6 +225,31 @@ Cena / aperitivo a Street Kitchen, Casalecchio di Reno: si è già svolto, l'ult
 https://anyplans.in/bologna/beach-volley-improvvisazione-teatrale/
 
 Volley a Active Beach Arena, Bologna, lunedì 28 settembre alle 19:45. Gratis (Gratis, iscrizione su WeMeet (WeRoad)).
+
+## Padel: mancano 3 giocatori… – Tennis Park SSD arl
+https://anyplans.in/bologna/padel-mancano-3-giocatori-competitiva/
+
+Padel a Tennis Park SSD arl, Via Fratelli Canova, 51 , 40068 San Lazzaro di Savena, martedì 15 settembre alle 17:30 (2 date, fino al 16 settembre). 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – BOLOGNA PADEL
+https://anyplans.in/bologna/padel-mancano-3-giocatori-competitiva-2026-09-15/
+
+Padel a BOLOGNA PADEL, Via Lame, 298, 40013 Torre Verde, martedì 15 settembre alle 18:00. 16 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Country Club Racket World
+https://anyplans.in/bologna/padel-mancano-3-giocatori-competitiva-2026-09-15-2/
+
+Padel a Country Club Racket World, Via Gozzadini 8, 40055 Villanova, martedì 15 settembre alle 20:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Country Club CASTEL MAGGIORE
+https://anyplans.in/bologna/padel-mancano-3-giocatori-competitiva-2026-09-16/
+
+Padel a Country Club CASTEL MAGGIORE, Via Vancini 5 , 40013 Castel Maggiore, mercoledì 16 settembre alle 15:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – City Padel Bologna
+https://anyplans.in/bologna/padel-mancano-3-giocatori-competitiva-2026-09-18/
+
+Padel a City Padel Bologna, Via Alberto Calda 2, 40135 Bologna, venerdì 18 settembre alle 18:00. 15 € (Si chiede il posto e si paga su Playtomic).
 
 ## Cena da La Tìz Osteria Sociale di Villa Pini:…
 https://anyplans.in/bologna/cena-da-la-tiz-osteria-sociale-di-villa-pini-11-posti-liberi/
@@ -290,6 +311,21 @@ https://anyplans.in/bologna/ancient-unreality-tour-atomic-aggressor-ectovoid-fre
 
 Visite guidate a Freakout Club, Bologna, martedì 15 settembre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## Padel: manca 1 giocatore… – GREEN PADEL CLUB ASD
+https://anyplans.in/bologna/padel-manca-1-giocatore-competitiva/
+
+Padel a GREEN PADEL CLUB ASD, Via 2 Giugno, 40011 Anzola dell'Emilia, martedì 15 settembre alle 21:30. 16 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – Tennis Park SSD arl
+https://anyplans.in/bologna/padel-manca-1-giocatore-competitiva-2026-09-16/
+
+Padel a Tennis Park SSD arl, Via Fratelli Canova, 51 , 40068 San Lazzaro di Savena, mercoledì 16 settembre alle 16:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – BOLOGNA PADEL
+https://anyplans.in/bologna/padel-manca-1-giocatore-competitiva-2026-09-16-2/
+
+Padel a BOLOGNA PADEL, Via Lame, 298, 40013 Torre Verde, mercoledì 16 settembre alle 19:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
 ## ITS Academy Biomedicale - open day a Bologna
 https://anyplans.in/bologna/its-academy-biomedicale-open-day-a-bologna/
 
@@ -329,6 +365,16 @@ Cinema a Via Castiglione, 134, 40136 Bologna, Italy, Bologna, mercoledì 16 sett
 https://anyplans.in/bologna/grito-exclamac-on-vision-division-freakout-club/
 
 Concerti e musica dal vivo a Freakout Club, Bologna, mercoledì 16 settembre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Padel: manca 1 giocatore (amichevole)
+https://anyplans.in/bologna/padel-manca-1-giocatore-amichevole/
+
+Padel a Country Club Racket World, Via Gozzadini 8, 40055 Villanova, mercoledì 16 settembre alle 21:00. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (amichevole)
+https://anyplans.in/bologna/padel-mancano-2-giocatori-amichevole/
+
+Padel a Country Club CASTEL MAGGIORE, Via Vancini 5 , 40013 Castel Maggiore, giovedì 17 settembre alle 18:00. 17 € (Si chiede il posto e si paga su Playtomic).
 
 ## MPC EXPERIENCE | METODO PER CRESCERE
 https://anyplans.in/bologna/mpc-experience-metodo-per-crescere/
@@ -395,6 +441,16 @@ https://anyplans.in/bologna/pranzo-da-toki-sushi-asian-bologna-5-posti-liberi/
 
 Cena / aperitivo a Toki Sushi-Asian - Bologna, venerdì 18 settembre alle 11:15. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Padel: mancano 2 giocatori… – Tennis Park SSD arl
+https://anyplans.in/bologna/padel-mancano-2-giocatori-competitiva/
+
+Padel a Tennis Park SSD arl, Via Fratelli Canova, 51 , 40068 San Lazzaro di Savena, venerdì 18 settembre alle 16:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (competitiva) – BOLOGNA PADEL
+https://anyplans.in/bologna/padel-mancano-2-giocatori-competitiva-2026-09-21/
+
+Padel a BOLOGNA PADEL, Via Lame, 298, 40013 Torre Verde, lunedì 21 settembre alle 20:00. 16 € (Si chiede il posto e si paga su Playtomic).
+
 ## Cena da Fienile Fluò: 5 posti liberi
 https://anyplans.in/bologna/cena-da-fienile-fluo-5-posti-liberi/
 
@@ -424,6 +480,11 @@ Yoga / pilates a Bologna, piazza dell’unità, venerdì 18 settembre alle 18:00
 https://anyplans.in/bologna/lungomare-bologna-piazza-lucio-dalla/
 
 Festa di paese a DiMondi - Piazza Lucio Dalla, venerdì 18 settembre alle 18:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Padel: mancano 3 giocatori (amichevole)
+https://anyplans.in/bologna/padel-mancano-3-giocatori-amichevole/
+
+Padel a BOLOGNA PADEL, Via Lame, 298, 40013 Torre Verde, venerdì 18 settembre alle 18:30. 16 € (Si chiede il posto e si paga su Playtomic).
 
 ## Uscita fuori porta da Trattoria Vecchio…
 https://anyplans.in/bologna/uscita-fuori-porta-da-trattoria-vecchio-mercato-2-posti-libe/
@@ -1160,6 +1221,11 @@ https://anyplans.in/bologna/bologna-medievale/
 
 Incontri culturali a Piazza Maggiore, Bologna BO, Italia, Bologna, sabato 3 ottobre alle 15:15. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## DOPPIO SHOW - Alice nel paese delle meraviglie…
+https://anyplans.in/bologna/doppio-show-alice-nel-paese-delle-meraviglie-teatro-celebraz/
+
+Spettacoli e teatro a Teatro Delle Celebrazioni, Bologna, Bologna, sabato 3 ottobre alle 16:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
 ## SPEED STROKE: RELEASE SHOW UFFICIALE DI "DAMAGE…
 https://anyplans.in/bologna/speed-stroke-release-show-ufficiale-di-damage-control-locomo/
 
@@ -1270,7 +1336,7 @@ https://anyplans.in/bologna/robot17-syntax-error/
 
 Festa di paese a roBOt Festival, giovedì 8 ottobre alle 20:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Benji &amp; Fede in Bologna
+## Benji & Fede in Bologna
 https://anyplans.in/bologna/benji-amp-fede-in-bologna/
 
 Spettacoli e teatro a Teatro Duse, Bologna, giovedì 8 ottobre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
@@ -1523,7 +1589,7 @@ Concerti e musica dal vivo a Beltaine Celtic Pub Bologna, Bologna, venerdì 23 o
 ## ONLYLIVE "FIGLI DELLE STELLE"
 https://anyplans.in/bologna/onlylive-figli-delle-stelle/
 
-Concerti e musica dal vivo a Via Mascarella 1, 40126 Bologna, Italy, Bologna, venerdì 23 ottobre alle 22:00. Gratis (Ingresso: vedi la pagina AllEvents).
+Concerti e musica dal vivo a Via Mascarella 1, 40126 Bologna, Italy, Bologna, venerdì 23 ottobre alle 22:00 (2 date, fino al 23 ottobre). Gratis (Ingresso: vedi la pagina AllEvents).
 
 ## The Jazz Room: omaggio a Frank Sinatra & Louis…
 https://anyplans.in/bologna/the-jazz-room-omaggio-a-frank-sinatra-louis-armstrong/
@@ -1729,6 +1795,11 @@ Mostre a BolognaFiere, Bologna, martedì 10 novembre alle 08:00. Gratis (Ingress
 https://anyplans.in/bologna/sports-in-bologna/
 
 Palestra a Covo Club, Bologna, martedì 10 novembre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## SPORTS live at Covo Club
+https://anyplans.in/bologna/sports-live-at-covo-club-bologna/
+
+Concerti e musica dal vivo a Viale Zagabria, 1, 40127 Bologna, Italy, Bologna, martedì 10 novembre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
 ## Joe Jackson in Bologna
 https://anyplans.in/bologna/joe-jackson-in-bologna/
@@ -1939,6 +2010,11 @@ Concerti e musica dal vivo a Oratorio di San Filippo Neri, Via Manzoni, 5, Bolog
 https://anyplans.in/bologna/rotten-flesh-fest-vol-5-freakout-club/
 
 Festa di paese a Rotten Flesh Fest, sabato 28 novembre alle 20:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## The Longevity Lab
+https://anyplans.in/bologna/the-longevity-lab/
+
+Yoga / pilates a THE SYDNEY HOTEL, Bologna, domenica 29 novembre alle 09:00. 39,90 € (Biglietti su AllEvents).
 
 ## Zumba® Masterclass con ZJ Jonathan Benoit
 https://anyplans.in/bologna/zumba-masterclass-con-zj-jonathan-benoit/
@@ -2205,55 +2281,60 @@ https://anyplans.in/bologna/bologna-vs-napoli-at-stadio-renato-dall-ara/
 
 Partite da vedere a Stadio Renato Dall'Ara, Bologna, sabato 13 marzo alle 23:59. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Things to do in Bologna: 396 events
+## Things to do in Bologna: 412 events
 https://anyplans.in/en/bologna/
 
 What's on in Bologna and its province, today, tonight and this weekend: talks & culture, concerts & live music, shows & theatre, dinners & aperitivo, guided tours and town festivals & fairs. Pick one and go with other people.
 
-## What to do in Bologna today: 12 events
+## What to do in Bologna today: 16 events
 https://anyplans.in/en/bologna/what-to-do-today/
 
-12 events in Bologna and its province today, 15 September 2026: Bologna and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+16 events in Bologna and its province today, 15 September 2026: Bologna and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Bologna tomorrow: 8 events
+## What to do in Bologna tomorrow: 13 events
 https://anyplans.in/en/bologna/what-to-do-tomorrow/
 
-8 events in Bologna and its province tomorrow, 16 September 2026: Bologna and piazza dell’unità and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+13 events in Bologna and its province tomorrow, 16 September 2026: Bologna and piazza dell’unità and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
 ## What to do in Bologna this weekend: 37 events
 https://anyplans.in/en/bologna/what-to-do-this-weekend/
 
 37 events in Bologna and its province this weekend (Saturday 19 September and Sunday 20 September): Bologna, Freakout Club, Calendario Sagre and Bologna City Rockers and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## Events in Bologna in September 2026: 172
+## Events in Bologna in September 2026: 185
 https://anyplans.in/en/bologna/events-september-2026/
 
-172 events in Bologna and its province in September 2026: dinners & aperitivo, talks & culture, shows & theatre, guided tours and board games. Day by day, with times, place and price, in Bologna, piazza dell’unità, Castel Maggiore and Freakout Club and other towns. You sign up and go with other people.
+185 events in Bologna and its province in September 2026: padel, dinners & aperitivo, talks & culture, shows & theatre and guided tours. Day by day, with times, place and price, in Bologna, piazza dell’unità, Castel Maggiore and Freakout Club and other towns. You sign up and go with other people.
 
-## Events in Bologna in October 2026: 106
+## Events in Bologna in October 2026: 107
 https://anyplans.in/en/bologna/events-october-2026/
 
-106 events in Bologna and its province in October 2026: talks & culture, shows & theatre, painting & art, cinema and guided tours. Day by day, with times, place and price, in Bologna, Castel Maggiore, Freakout Club and Teatro Duse Bologna and other towns. You sign up and go with other people.
+107 events in Bologna and its province in October 2026: talks & culture, shows & theatre, painting & art, cinema and guided tours. Day by day, with times, place and price, in Bologna, Castel Maggiore, Freakout Club and Teatro Duse Bologna and other towns. You sign up and go with other people.
 
-## Events in Bologna in November 2026: 67
+## Events in Bologna in November 2026: 69
 https://anyplans.in/en/bologna/events-november-2026/
 
-67 events in Bologna and its province in November 2026: shows & theatre, concerts & live music, talks & culture, guided tours and dancing. Day by day, with times, place and price, in Bologna, Freakout Club, nEw liFe promo and Barley Arts and other towns. You sign up and go with other people.
+69 events in Bologna and its province in November 2026: shows & theatre, concerts & live music, talks & culture, guided tours and dancing. Day by day, with times, place and price, in Bologna, Freakout Club, nEw liFe promo and Barley Arts and other towns. You sign up and go with other people.
 
 ## Dinners & aperitivo in Bologna: 44 events
 https://anyplans.in/en/bologna/dinners/
 
 In Bologna and its province there are 44 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
+## Padel in Bologna: 13 events
+https://anyplans.in/en/bologna/padel/
+
+In Bologna and its province there are 13 padel matches and tournaments in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+
 ## Talks & culture in Bologna: 95 events
 https://anyplans.in/en/bologna/talks-and-culture/
 
 In Bologna and its province there are 95 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Shows & theatre in Bologna: 54 events
+## Shows & theatre in Bologna: 55 events
 https://anyplans.in/en/bologna/shows/
 
-In Bologna and its province there are 54 shows & theatre events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Bologna and its province there are 55 shows & theatre events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Guided tours in Bologna: 23 events
 https://anyplans.in/en/bologna/guided-tours/
@@ -2265,15 +2346,15 @@ https://anyplans.in/en/bologna/cinema/
 
 In Bologna and its province there are 8 screenings in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Concerts & live music in Bologna: 91 events
+## Concerts & live music in Bologna: 92 events
 https://anyplans.in/en/bologna/concerts/
 
-In Bologna and its province there are 91 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Bologna and its province there are 92 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Yoga & pilates in Bologna: 7 events
+## Yoga & pilates in Bologna: 8 events
 https://anyplans.in/en/bologna/yoga/
 
-In Bologna and its province there are 7 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Bologna and its province there are 8 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Singles nights in Bologna: 3 events
 https://anyplans.in/en/bologna/singles/
@@ -2324,6 +2405,31 @@ Dinners & aperitivo in Street Kitchen, Casalecchio di Reno: it already took plac
 https://anyplans.in/en/bologna/beach-volley-improvvisazione-teatrale/
 
 Volleyball in Active Beach Arena, Bologna, Monday 28 September at 19:45. Free (Gratis, iscrizione su WeMeet (WeRoad)).
+
+## Padel: mancano 3 giocatori… – Tennis Park SSD arl
+https://anyplans.in/en/bologna/padel-mancano-3-giocatori-competitiva/
+
+Padel in Tennis Park SSD arl, Via Fratelli Canova, 51 , 40068 San Lazzaro di Savena, Tuesday 15 September at 17:30 (2 dates, until 16 September). €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori (competitiva) – BOLOGNA PADEL
+https://anyplans.in/en/bologna/padel-mancano-3-giocatori-competitiva-2026-09-15/
+
+Padel in BOLOGNA PADEL, Via Lame, 298, 40013 Torre Verde, Tuesday 15 September at 18:00. €16 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Country Club Racket World
+https://anyplans.in/en/bologna/padel-mancano-3-giocatori-competitiva-2026-09-15-2/
+
+Padel in Country Club Racket World, Via Gozzadini 8, 40055 Villanova, Tuesday 15 September at 20:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Country Club CASTEL MAGGIORE
+https://anyplans.in/en/bologna/padel-mancano-3-giocatori-competitiva-2026-09-16/
+
+Padel in Country Club CASTEL MAGGIORE, Via Vancini 5 , 40013 Castel Maggiore, Wednesday 16 September at 15:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – City Padel Bologna
+https://anyplans.in/en/bologna/padel-mancano-3-giocatori-competitiva-2026-09-18/
+
+Padel in City Padel Bologna, Via Alberto Calda 2, 40135 Bologna, Friday 18 September at 18:00. €15 (Si chiede il posto e si paga su Playtomic).
 
 ## Cena da La Tìz Osteria Sociale di Villa Pini:…
 https://anyplans.in/en/bologna/cena-da-la-tiz-osteria-sociale-di-villa-pini-11-posti-liberi/
@@ -2385,6 +2491,21 @@ https://anyplans.in/en/bologna/ancient-unreality-tour-atomic-aggressor-ectovoid-
 
 Guided tours in Freakout Club, Bologna, Tuesday 15 September at 21:00. Free (Ingresso: vedi la pagina AllEvents).
 
+## Padel: manca 1 giocatore… – GREEN PADEL CLUB ASD
+https://anyplans.in/en/bologna/padel-manca-1-giocatore-competitiva/
+
+Padel in GREEN PADEL CLUB ASD, Via 2 Giugno, 40011 Anzola dell'Emilia, Tuesday 15 September at 21:30. €16 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – Tennis Park SSD arl
+https://anyplans.in/en/bologna/padel-manca-1-giocatore-competitiva-2026-09-16/
+
+Padel in Tennis Park SSD arl, Via Fratelli Canova, 51 , 40068 San Lazzaro di Savena, Wednesday 16 September at 16:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: manca 1 giocatore (competitiva) – BOLOGNA PADEL
+https://anyplans.in/en/bologna/padel-manca-1-giocatore-competitiva-2026-09-16-2/
+
+Padel in BOLOGNA PADEL, Via Lame, 298, 40013 Torre Verde, Wednesday 16 September at 19:30. €15 (Si chiede il posto e si paga su Playtomic).
+
 ## ITS Academy Biomedicale - open day a Bologna
 https://anyplans.in/en/bologna/its-academy-biomedicale-open-day-a-bologna/
 
@@ -2424,6 +2545,16 @@ Cinema in Via Castiglione, 134, 40136 Bologna, Italy, Bologna, Wednesday 16 Sept
 https://anyplans.in/en/bologna/grito-exclamac-on-vision-division-freakout-club/
 
 Concerts & live music in Freakout Club, Bologna, Wednesday 16 September at 21:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## Padel: manca 1 giocatore (amichevole)
+https://anyplans.in/en/bologna/padel-manca-1-giocatore-amichevole/
+
+Padel in Country Club Racket World, Via Gozzadini 8, 40055 Villanova, Wednesday 16 September at 21:00. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (amichevole)
+https://anyplans.in/en/bologna/padel-mancano-2-giocatori-amichevole/
+
+Padel in Country Club CASTEL MAGGIORE, Via Vancini 5 , 40013 Castel Maggiore, Thursday 17 September at 18:00. €17 (Si chiede il posto e si paga su Playtomic).
 
 ## MPC EXPERIENCE | METODO PER CRESCERE
 https://anyplans.in/en/bologna/mpc-experience-metodo-per-crescere/
@@ -2490,6 +2621,16 @@ https://anyplans.in/en/bologna/pranzo-da-toki-sushi-asian-bologna-5-posti-liberi
 
 Dinners & aperitivo in Toki Sushi-Asian - Bologna, Friday 18 September at 11:15. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Padel: mancano 2 giocatori… – Tennis Park SSD arl
+https://anyplans.in/en/bologna/padel-mancano-2-giocatori-competitiva/
+
+Padel in Tennis Park SSD arl, Via Fratelli Canova, 51 , 40068 San Lazzaro di Savena, Friday 18 September at 16:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori (competitiva) – BOLOGNA PADEL
+https://anyplans.in/en/bologna/padel-mancano-2-giocatori-competitiva-2026-09-21/
+
+Padel in BOLOGNA PADEL, Via Lame, 298, 40013 Torre Verde, Monday 21 September at 20:00. €16 (Si chiede il posto e si paga su Playtomic).
+
 ## Cena da Fienile Fluò: 5 posti liberi
 https://anyplans.in/en/bologna/cena-da-fienile-fluo-5-posti-liberi/
 
@@ -2519,6 +2660,11 @@ Yoga & pilates in Bologna, piazza dell’unità, Friday 18 September at 18:00. �
 https://anyplans.in/en/bologna/lungomare-bologna-piazza-lucio-dalla/
 
 Town festival in DiMondi - Piazza Lucio Dalla, Friday 18 September at 18:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## Padel: mancano 3 giocatori (amichevole)
+https://anyplans.in/en/bologna/padel-mancano-3-giocatori-amichevole/
+
+Padel in BOLOGNA PADEL, Via Lame, 298, 40013 Torre Verde, Friday 18 September at 18:30. €16 (Si chiede il posto e si paga su Playtomic).
 
 ## Uscita fuori porta da Trattoria Vecchio…
 https://anyplans.in/en/bologna/uscita-fuori-porta-da-trattoria-vecchio-mercato-2-posti-libe/
@@ -3255,6 +3401,11 @@ https://anyplans.in/en/bologna/bologna-medievale/
 
 Talks & culture in Piazza Maggiore, Bologna BO, Italia, Bologna, Saturday 3 October at 15:15. Free (Ingresso: vedi la pagina AllEvents).
 
+## DOPPIO SHOW - Alice nel paese delle meraviglie…
+https://anyplans.in/en/bologna/doppio-show-alice-nel-paese-delle-meraviglie-teatro-celebraz/
+
+Shows & theatre in Teatro Delle Celebrazioni, Bologna, Bologna, Saturday 3 October at 16:00. Free (Ingresso: vedi la pagina AllEvents).
+
 ## SPEED STROKE: RELEASE SHOW UFFICIALE DI "DAMAGE…
 https://anyplans.in/en/bologna/speed-stroke-release-show-ufficiale-di-damage-control-locomo/
 
@@ -3365,7 +3516,7 @@ https://anyplans.in/en/bologna/robot17-syntax-error/
 
 Town festival in roBOt Festival, Thursday 8 October at 20:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## Benji &amp; Fede in Bologna
+## Benji & Fede in Bologna
 https://anyplans.in/en/bologna/benji-amp-fede-in-bologna/
 
 Shows & theatre in Teatro Duse, Bologna, Thursday 8 October at 21:00. Free (Ingresso: vedi la pagina AllEvents).
@@ -3618,7 +3769,7 @@ Concerts & live music in Beltaine Celtic Pub Bologna, Bologna, Friday 23 October
 ## ONLYLIVE "FIGLI DELLE STELLE"
 https://anyplans.in/en/bologna/onlylive-figli-delle-stelle/
 
-Concerts & live music in Via Mascarella 1, 40126 Bologna, Italy, Bologna, Friday 23 October at 22:00. Free (Ingresso: vedi la pagina AllEvents).
+Concerts & live music in Via Mascarella 1, 40126 Bologna, Italy, Bologna, Friday 23 October at 22:00 (2 dates, until 23 October). Free (Ingresso: vedi la pagina AllEvents).
 
 ## The Jazz Room: omaggio a Frank Sinatra & Louis…
 https://anyplans.in/en/bologna/the-jazz-room-omaggio-a-frank-sinatra-louis-armstrong/
@@ -3824,6 +3975,11 @@ Exhibitions in BolognaFiere, Bologna, Tuesday 10 November at 08:00. Free (Ingres
 https://anyplans.in/en/bologna/sports-in-bologna/
 
 Gym in Covo Club, Bologna, Tuesday 10 November at 21:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## SPORTS live at Covo Club
+https://anyplans.in/en/bologna/sports-live-at-covo-club-bologna/
+
+Concerts & live music in Viale Zagabria, 1, 40127 Bologna, Italy, Bologna, Tuesday 10 November at 21:00. Free (Ingresso: vedi la pagina AllEvents).
 
 ## Joe Jackson in Bologna
 https://anyplans.in/en/bologna/joe-jackson-in-bologna/
@@ -4034,6 +4190,11 @@ Concerts & live music in Oratorio di San Filippo Neri, Via Manzoni, 5, Bologna, 
 https://anyplans.in/en/bologna/rotten-flesh-fest-vol-5-freakout-club/
 
 Town festival in Rotten Flesh Fest, Saturday 28 November at 20:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## The Longevity Lab
+https://anyplans.in/en/bologna/the-longevity-lab/
+
+Yoga & pilates in THE SYDNEY HOTEL, Bologna, Sunday 29 November at 09:00. €39.90 (Biglietti su AllEvents).
 
 ## Zumba® Masterclass con ZJ Jonathan Benoit
 https://anyplans.in/en/bologna/zumba-masterclass-con-zj-jonathan-benoit/

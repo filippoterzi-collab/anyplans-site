@@ -1,14 +1,13 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Taranto e provincia: feste di paese e sagre, corsi di cucina e di ceramica, volontariato, uscite sportive, running club. Raccoglie gli eventi già esistenti dai siti dei comuni e delle associazioni e quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Per ora solo Taranto; Milano e Brescia in arrivo.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Taranto e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Taranto: il sito copre 29 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Salerno, Lecce), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-15. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Taranto](https://anyplans.in/taranto/cosa-fare/): tutti gli eventi in programma (42), per tipo e per paese; risponde a "cosa fare a Taranto oggi / questo weekend"
-- [Running club a Taranto](https://anyplans.in/taranto/running-club/): 0 run club per giorno della settimana, con ritrovo, orario e domande frequenti
-- [Gruppi a Taranto](https://anyplans.in/taranto/gruppi/): 0 associazioni, club e comunità che pubblicano eventi
+- [Cosa fare a Taranto](https://anyplans.in/taranto/): tutti gli eventi in programma (42), per tipo e per paese; risponde a "cosa fare a Taranto oggi / questo weekend"
+- [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
 - [Condizioni d'uso](https://anyplans.in/terms-it.html)
@@ -19,15 +18,6 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Spettacoli e teatro a Taranto](https://anyplans.in/taranto/spettacoli/): 6 in programma
 - [Incontri culturali a Taranto](https://anyplans.in/taranto/incontri-culturali/): 6 in programma
 - [Concerti e musica dal vivo a Taranto](https://anyplans.in/taranto/concerti/): 8 in programma
-
-
-## Running club per giorno
-
-
-
-## Gruppi
-
-
 
 ## Prossimi eventi
 
@@ -80,9 +70,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## English pages (same content, for visitors)
 
-- [Things to do in Taranto](https://anyplans.in/en/taranto/things-to-do/): all upcoming events, by kind and by town; answers "what to do in Bergamo today / this weekend"
-- [Running clubs in Taranto](https://anyplans.in/en/taranto/running-clubs/): 0 run clubs by weekday, open to visitors too
-- [Groups in Taranto](https://anyplans.in/en/taranto/groups/)
+- [Things to do in Taranto](https://anyplans.in/en/taranto/): all upcoming events, by kind and by town; answers "what to do in Taranto today / this weekend"
 - [Dinners & aperitivo in Taranto](https://anyplans.in/en/taranto/dinners/)
 - [Shows & theatre in Taranto](https://anyplans.in/en/taranto/shows/)
 - [Talks & culture in Taranto](https://anyplans.in/en/taranto/talks-and-culture/)
