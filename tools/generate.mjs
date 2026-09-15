@@ -151,6 +151,36 @@ function inLocale(code, fn) { const prev = L; L = LOCALES[code]; try { return fn
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 const esc = (t) => String(t ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+// Le descrizioni delle fonti aggregate (AllEvents in testa) arrivano dal database con dentro l'HTML del
+// sito di partenza: "<br /><b>About this Event</b>". Passate a esc() diventano tag scritti a lettere sulla
+// pagina, che il lettore legge e Google conta come contenuto copiato male. Qui i tag tornano a essere righe
+// e le entity tornano caratteri, una volta sola: se nel testo c'è una "&" scritta apposta, resta una "&".
+const ENTITIES = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", hellip: "…", mdash: "—", ndash: "–",
+  rsquo: "’", lsquo: "‘", ldquo: "“", rdquo: "”", laquo: "«", raquo: "»", euro: "€", deg: "°", middot: "·", bull: "•" };
+const decodeEntities = (s) => String(s).replace(/&(#x[0-9a-f]+|#\d+|[a-z]+);/gi, (m, e) => {
+  if (e[0] === "#") {
+    const n = e[1] === "x" || e[1] === "X" ? parseInt(e.slice(2), 16) : parseInt(e.slice(1), 10);
+    return Number.isFinite(n) && n > 0 && n <= 0x10ffff ? String.fromCodePoint(n) : m;
+  }
+  const c = ENTITIES[e.toLowerCase()];
+  return c === undefined ? m : c;
+});
+function plainText(s) {
+  let t = String(s ?? "");
+  if (!/[<&]/.test(t)) return t.trim();
+  t = t.replace(/<\s*(script|style)[^>]*>[\s\S]*?<\s*\/\s*\1\s*>/gi, "")
+       .replace(/<\s*li[^>]*>/gi, "\n· ")
+       .replace(/<\s*(br|\/p|\/div|\/li|\/h[1-6]|\/tr|\/table)[^>]*>/gi, "\n")
+       .replace(/<[^>]*>/g, "");
+  // la fonte taglia la descrizione a N caratteri e la coda resta un tag monco: "...booking.</stro"
+  const cutTag = /<[^>]*$/.test(t);
+  t = decodeEntities(t.replace(/<[^>]*$/, ""));
+  t = t.replace(/[ \t ]+/g, " ").replace(/ *\n */g, "\n").replace(/\n{3,}/g, "\n\n").trim();
+  // un testo lungo che finisce senza punteggiatura l'ha tagliato la fonte a tot caratteri ("...si incontrano"):
+  // i puntini dicono a chi legge che il pezzo continua, e il link alla fonte e' gia' in fondo alla pagina
+  const troncato = cutTag || (t.length > 200 && !/[.!?…:;)»"'\]]$/.test(t));
+  return troncato && t && !/[.!?…:;)»"'\]]$/.test(t) ? t + "…" : t;
+}
 // same as slugify() in bergamo/app.js: shared links /bergamo/<slug> must match
 function slugify(t) {
   return String(t ?? "").toLowerCase()
@@ -204,7 +234,8 @@ const INSTAGRAM = "https://instagram.com/anyplans_bergamo";
 // the same Organization node as the home page (branding/legal/index.html): keep the two identical
 const ORG = { "@type": "Organization", "@id": SITE + "/#org", name: "anyplans", url: SITE + "/", email: "hello@anyplans.in",
   logo: { "@type": "ImageObject", url: SITE + "/favicon-192.png", width: 192, height: 192 },
-  description: "La mappa degli eventi veri di Bergamo e provincia: feste di paese, corsi, volontariato, sport e running club. Ne scegli uno e ci vai insieme ad altri. Solo maggiorenni.",
+  // anyplans e' una sola: la sua descrizione e' nazionale e finiva in ogni pagina di ogni citta dicendo "Bergamo"
+  description: `La mappa degli eventi veri d'Italia: feste di paese, concerti, mercati, corsi, volontariato, sport e cene in ${CITTA.length} città. Ne scegli uno e ci vai insieme ad altri. Solo maggiorenni.`,
   foundingLocation: { "@type": "City", name: "Bergamo" }, areaServed: { "@type": "Country", name: "Italia" }, sameAs: [INSTAGRAM],
   founder: { "@type": "Person", name: "Filippo Terzi", image: SITE + "/founder.jpg", jobTitle: "Fondatore" } };
 const fmtDate = (d) => new Intl.DateTimeFormat(L.intl, { timeZone: DEFAULT_TZ, day: "numeric", month: "long", year: "numeric" }).format(d);
@@ -259,7 +290,9 @@ const rows = rawRows.map(r => {
   const isFest = r.sport === "festival";
   const t = tipo(r.sport);
   return {
-    id: r.id, title: String(r.title || "").trim(), description: String(r.description || "").trim(),
+    // il titolo si mostra ripulito, ma lo slug resta quello del titolo grezzo: e' lo stesso slugify(title)
+    // che fa l'app (bergamo/app.js) sui link che la gente ha gia' condiviso, e deve continuare a combaciare
+    id: r.id, title: plainText(r.title), rawTitle: String(r.title || "").trim(), description: plainText(r.description),
     sport: r.sport, emoji: r.emoji || t.e, tipo: t, tz, start, end,
     // an event is "upcoming" until it ends (end, or 3 hours after start)
     future: (end || new Date(start.getTime() + 3 * 3600e3)) >= NOW,
@@ -305,7 +338,7 @@ const groups = (Array.isArray(rawGroups) ? rawGroups : []).filter(g => g.slug &&
 // ── group rows into pages: one page per slug (same title + same club = same event, all dates) ─
 const bySlug = new Map();
 for (const r of rows) {
-  const s = slugify(r.title);
+  const s = slugify(r.rawTitle);
   if (!s) continue; // the app links these with ?id=: no static page
   const key = norm(r.title) + "|" + norm(r.club);
   if (!bySlug.has(s)) bySlug.set(s, new Map());
@@ -365,11 +398,31 @@ for (const code of ["it", "en"]) inLocale(code, () => {
   }
 });
 const taken = new Set([...RESERVED, ...indexSlugs]);
+// la data si attacca una volta sola: chi l'ha gia' presa sopra (stesso titolo, giorni diversi) qui
+// prenderebbe la seconda, e veniva fuori /padel-manca-1-giocatore-2026-09-15-2026-09-15-2/
+const hasDate = (s) => /-\d{4}-\d{2}-\d{2}$/.test(s);
 for (const p of pages) {
-  if (taken.has(p.slug)) p.slug = p.slug + "-" + dateKey(p.anchor, p.tz);
-  while (taken.has(p.slug)) p.slug += "-2";
+  if (taken.has(p.slug) && !hasDate(p.slug)) p.slug += "-" + dateKey(p.anchor, p.tz);
+  if (taken.has(p.slug)) {
+    const stem = p.slug;
+    for (let n = 2; taken.has(p.slug); n++) p.slug = `${stem}-${n}`;
+  }
   taken.add(p.slug);
 }
+// Le partite aperte di Playtomic si chiamano tutte uguale: a Milano ci sono dodici pagine "Padel: mancano
+// 2 giocatori (competitiva)". Sono partite vere e diverse — cambia il circolo — ma con lo stesso titolo si
+// prendono anche lo stesso <title>, e in un risultato di ricerca diventano dodici righe identiche che si
+// fanno concorrenza fra loro. Chi ha un titolo che si ripete si porta il posto nel titolo della pagina.
+const titoliRipetuti = new Set();
+{
+  const visti = new Map();
+  for (const p of pages) {
+    const k = norm(p.title);
+    visti.set(k, (visti.get(k) || 0) + 1);
+    if (visti.get(k) > 1) titoliRipetuti.add(k);
+  }
+}
+
 // every public url depends on the active locale: /bergamo/gruppi/x/ vs /en/bergamo/groups/x/
 const base = () => `${SITE}${L.prefix}/${CITY}`;
 // L'app web (mappa, iscrizioni, login) sta solo sotto /bergamo/: e' una sola app, non una per citta.
@@ -759,7 +812,17 @@ function eventPage(p) {
   const full = `${p.title} ${en() ? "in" : "a"} ${where}, ${fmtShort(first.start, tz)}`;
   // long titles from the sources ("Festa X, Oratorio Y – Paese"): keep the part before the first separator when it stands alone
   const head = p.title.split(/ – |, /)[0];
-  const title = (full.length <= 49 ? full : head.length >= 12 && head.length <= 49 ? head : cut(p.title, 49)) + " | anyplans";
+  // "titolo a Luogo, data" se ci sta; se no il titolo da solo, ma solo quando e' suo: i titoli che si
+  // ripetono (le partite di padel) si tengono il posto, che e' l'unica cosa che le distingue davvero
+  // del ritrovo basta il nome ("Quanta Club"), non l'indirizzo ("Quanta Club, Via Assietta 19, Milano"):
+  // il posto serve a distinguere la riga, non a riempirla. Qui il tetto e' 60 e non 49: un titolo intero
+  // con il circolo dice piu' di uno tagliato a meta' che sta nei 60 caratteri di Google al pixel.
+  const luogoBreve = String(where || "").split(/\s*[,–]\s*/)[0].trim();
+  const conLuogo = luogoBreve && norm(luogoBreve) !== norm(p.title)
+    ? `${cut(p.title, Math.max(28, 57 - luogoBreve.length))} – ${luogoBreve}` : null;
+  const title = (full.length <= 49 ? full
+    : titoliRipetuti.has(norm(p.title)) && conLuogo ? cut(conLuogo, 60)
+    : head.length >= 12 && head.length <= 49 ? head : cut(p.title, 49)) + " | anyplans";
   const descr = en()
     ? (p.isPast
       ? cut(`${tLabel(t)} in ${where}. Last date: ${fmtShort(first.start, tz)}. This event is over: on anyplans you find the next dates and similar events.`, 160)
@@ -1522,56 +1585,50 @@ ${faqHtml(faq)}
 // ── llms.txt: what the site is and where the answers are, for AI crawlers (llmstxt.org) ──
 function llmsTxt() {
   const line = (name, href, note) => `- [${name}](${href})${note ? `: ${note}` : ""}`;
+  // una sezione senza righe non si stampa: "## Gruppi" seguito dal vuoto e' rumore per chi legge il file
+  const section = (title, lines) => lines.filter(Boolean).length ? `\n## ${title}\n\n${lines.filter(Boolean).join("\n")}\n` : "";
+  // gli indirizzi veri delle pagine, non ricostruiti a mano: a Bergamo l'hub e' /bergamo/cosa-fare/ (in
+  // /bergamo/ c'e' l'app), nelle altre citta e' /milano/. Scritti a mano, le 28 citta nuove mandavano
+  // ChatGPT, Claude e Perplexity su tre 404 in cima al file.
+  const itHub = inLocale("it", hubUrl), enHub = inLocale("en", hubUrl);
+  const itRunning = inLocale("it", runningUrl), enRunning = inLocale("en", runningUrl);
+  const itGroups = inLocale("it", groupsUrl), enGroups = inLocale("en", groupsUrl);
   const dayLines = [];
   for (let i = 0; i < 7; i++) {
     const rows = schedules.filter(x => x.weekday === i && runClubs.some(g => g.slug === x.community_slug));
-    if (rows.length) dayLines.push(line(`Run club il ${WEEKDAYS_IT[i].toLowerCase()}`, `${SITE}/${CITY}/running-club/${LOCALES.it.daySlug[i]}/`, rows.map(r => `${r.community_name} alle ${hhmm(r.start_time)}`).join(", ")));
+    if (rows.length) dayLines.push(line(`Run club il ${WEEKDAYS_IT[i].toLowerCase()}`, `${itRunning}${LOCALES.it.daySlug[i]}/`, rows.map(r => `${r.community_name} alle ${hhmm(r.start_time)}`).join(", ")));
   }
+  const altre = CITTA.filter(c => c.slug !== CITY).map(c => c.nome);
   return `# anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di ${CITY_NAME} e provincia: feste di paese e sagre, corsi di cucina e di ceramica, volontariato, uscite sportive, running club. Raccoglie gli eventi già esistenti dai siti dei comuni e delle associazioni e quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Per ora solo ${CITY_NAME}; Milano e Brescia in arrivo.
+> anyplans (anyplans.in) è la mappa degli eventi veri di ${CITY_NAME} e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di ${CITY_NAME}: il sito copre ${CITTA.length} città italiane (${altre.join(", ")}), l'indice è ${SITE}/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: ${NOW.toISOString().slice(0, 10)}. Instagram: ${INSTAGRAM}. Contatto: hello@anyplans.in.
-
-## Pagine principali
-
-${line(`Cosa fare a ${CITY_NAME}`, `${SITE}/${CITY}/cosa-fare/`, `tutti gli eventi in programma (${upcomingPages.length}), per tipo e per paese; risponde a "cosa fare a ${CITY_NAME} oggi / questo weekend"`)}
-${line(`Running club a ${CITY_NAME}`, `${SITE}/${CITY}/running-club/`, `${runClubs.length} run club per giorno della settimana, con ritrovo, orario e domande frequenti`)}
-${line(`Gruppi a ${CITY_NAME}`, `${SITE}/${CITY}/gruppi/`, `${groups.length} associazioni, club e comunità che pubblicano eventi`)}
-${line("Le regole di anyplans", `${SITE}/guidelines.html`)}
-${line("Privacy", `${SITE}/privacy-it.html`)}
-${line("Condizioni d'uso", `${SITE}/terms-it.html`)}
-
-## Eventi per tipo e per paese
-
-${types.map(x => line(`${x.t.label} a ${CITY_NAME}`, `${SITE}/${CITY}/${x.slug}/`, `${x.list.filter(p => !p.isPast).length} in programma`)).join("\n")}
-${towns.map(x => line(`Feste ed eventi a ${x.town}`, `${SITE}/${CITY}/${x.slug}/`, `${x.list.filter(p => !p.isPast).length} in programma`)).join("\n")}
-
-## Running club per giorno
-
-${dayLines.join("\n")}
-
-## Gruppi
-
-${groups.map(g => line(g.name, groupUrl(g), isRunClub(g) ? (g.sport === "walking" ? "gruppo di camminata" : "run club") : (g.upcoming_count > 0 ? `${g.upcoming_count} eventi in programma` : ""))).join("\n")}
-
-## Prossimi eventi
-
-${upcomingPages.slice(0, 40).map(p => line(p.title, eventUrl(p), `${whenLabel(p)}, ${placeShort(p)}, ${fmtPrice(p.price_cents)}`)).join("\n")}
-
-## Optional
-
-${line("Tutte le pagine in un file", `${SITE}/${LLMS_FILE}`, "titolo, riassunto e domande frequenti di ogni pagina")}
-${line("Sitemap", `${SITE}/sitemap.xml`)}
-${line("Versione inglese della home", `${SITE}/en/`)}
-
-## English pages (same content, for visitors)
-
-${line(`Things to do in ${CITY_NAME}`, `${SITE}/en/${CITY}/${LOCALES.en.hub}/`, "all upcoming events, by kind and by town; answers \"what to do in Bergamo today / this weekend\"")}
-${line(`Running clubs in ${CITY_NAME}`, `${SITE}/en/${CITY}/${LOCALES.en.running}/`, `${runClubs.length} run clubs by weekday, open to visitors too`)}
-${line(`Groups in ${CITY_NAME}`, `${SITE}/en/${CITY}/${LOCALES.en.groups}/`)}
-${types.map(x => line(`${EN_TYPES[x.sport]?.[1] || x.t.label} in ${CITY_NAME}`, `${SITE}/en/${CITY}/${EN_TYPES[x.sport]?.[0] || x.slug}/`)).join("\n")}
-`;
+${section("Pagine principali", [
+  line(`Cosa fare a ${CITY_NAME}`, itHub, `tutti gli eventi in programma (${upcomingPages.length}), per tipo e per paese; risponde a "cosa fare a ${CITY_NAME} oggi / questo weekend"`),
+  runClubs.length ? line(`Running club a ${CITY_NAME}`, itRunning, `${runClubs.length} run club per giorno della settimana, con ritrovo, orario e domande frequenti`) : "",
+  groups.length ? line(`Gruppi a ${CITY_NAME}`, itGroups, `${groups.length} associazioni, club e comunità che pubblicano eventi`) : "",
+  line("Tutte le città", `${SITE}/citta/`, "l'elenco delle città con quanti eventi ha ognuna"),
+  line("Le regole di anyplans", `${SITE}/guidelines.html`),
+  line("Privacy", `${SITE}/privacy-it.html`),
+  line("Condizioni d'uso", `${SITE}/terms-it.html`),
+])}${section("Eventi per tipo e per paese", [
+  ...types.map(x => line(`${x.t.label} a ${CITY_NAME}`, `${SITE}/${CITY}/${x.slug}/`, `${x.list.filter(p => !p.isPast).length} in programma`)),
+  ...towns.map(x => line(`Feste ed eventi a ${x.town}`, `${SITE}/${CITY}/${x.slug}/`, `${x.list.filter(p => !p.isPast).length} in programma`)),
+])}${section("Running club per giorno", dayLines)}${section("Gruppi",
+  groups.map(g => line(g.name, groupUrl(g), isRunClub(g) ? (g.sport === "walking" ? "gruppo di camminata" : "run club") : (g.upcoming_count > 0 ? `${g.upcoming_count} eventi in programma` : ""))),
+)}${section("Prossimi eventi",
+  upcomingPages.slice(0, 40).map(p => line(p.title, eventUrl(p), `${whenLabel(p)}, ${placeShort(p)}, ${fmtPrice(p.price_cents)}`)),
+)}${section("Optional", [
+  line("Tutte le pagine in un file", `${SITE}/${LLMS_FILE}`, "titolo, riassunto e domande frequenti di ogni pagina"),
+  line("Sitemap", `${SITE}/sitemap.xml`),
+  line("Versione inglese della home", `${SITE}/en/`),
+])}${section("English pages (same content, for visitors)", [
+  line(`Things to do in ${CITY_NAME}`, enHub, `all upcoming events, by kind and by town; answers "what to do in ${CITY_NAME} today / this weekend"`),
+  runClubs.length ? line(`Running clubs in ${CITY_NAME}`, enRunning, `${runClubs.length} run clubs by weekday, open to visitors too`) : "",
+  groups.length ? line(`Groups in ${CITY_NAME}`, enGroups) : "",
+  ...types.map(x => line(`${EN_TYPES[x.sport]?.[1] || x.t.label} in ${CITY_NAME}`, `${SITE}/en/${CITY}/${EN_TYPES[x.sport]?.[0] || x.slug}/`)),
+])}`;
 }
 
 // ── robots & sitemap ──────────────────────────────────────────────────────────
@@ -1611,6 +1668,45 @@ const addUrl = (loc, lastmod) => sitemapEntries.push({ loc, lastmod: (lastmod ||
 const LLMS_FILE = CITY === HOME_CITY ? "llms-full.txt" : `llms-${CITY}.txt`;
 // una sitemap per citta (sitemap-milano.xml) e un indice che le tiene insieme: Google vuole al massimo
 // 50.000 url per file e, soprattutto, cosi si vede in Search Console quale citta e' indicizzata e quale no
+// ── IndexNow ──────────────────────────────────────────────────────────────────
+// deploy-site.sh avvisa gia' IndexNow, ma solo quando Filippo deploya dal Mac e solo per una manciata di
+// pagine. Le pagine nuove nascono di notte, qui dentro: un ping dice a Bing (e quindi a Copilot e a ChatGPT,
+// che pescano da li) quali sono cambiate, senza aspettare che ripassi da solo. Si manda solo cio' che e'
+// cambiato davvero: il lastmod di un evento e' il suo updated_at, quindi in una notte tranquilla partono
+// gli indici e poco altro.
+// Si accende da solo dentro GitHub Actions (il file del workflow non si puo' toccare da qui: il token del
+// deploy non ha il permesso "workflow") oppure a mano con --indexnow. I giri di prova in locale non avvisano nessuno.
+const INDEXNOW_KEY = "7f26113ec56cadfa6f45d689241489b1";
+// api.indexnow.org e bing.com rispondono 403 a questo sito (la verifica della chiave non passa, non si sa
+// perche': il file c'e' ed e' raggiungibile). yandex.com accetta e per protocollo passa gli url agli altri,
+// Bing compreso: e' lo stesso endpoint che usa gia' deploy-site.sh. Verificato il 15/09/2026.
+const INDEXNOW_ENDPOINT = "https://yandex.com/indexnow";
+const INDEXNOW = args.includes("--indexnow") || process.env.GITHUB_ACTIONS === "true";
+async function indexNow() {
+  if (!INDEXNOW || FIXTURE) return;
+  const today = NOW.toISOString().slice(0, 10);
+  const cambiati = [...new Set((args.includes("--indexnow-tutto") ? sitemapEntries : sitemapEntries.filter(e => e.lastmod === today)).map(e => e.loc))];
+  if (!cambiati.length) return console.log("indexnow: niente di cambiato oggi");
+  // se una fonte ritocca updated_at a ogni passata, "cambiato oggi" diventa tutta la citta e ogni notte
+  // partirebbero tredicimila indirizzi: un elenco cosi non e' piu' una notizia. Si manda il primo migliaio,
+  // e sono gli indici e le pagine "oggi / domani / weekend", che stanno in cima perche' scritti per primi.
+  const TETTO = 1000;
+  const urls = cambiati.slice(0, TETTO);
+  if (cambiati.length > TETTO) console.log(`indexnow: ${cambiati.length} pagine cambiate, ne mando ${TETTO} (le altre le trova dalla sitemap)`);
+  for (let i = 0; i < urls.length; i += 10000) {
+    const chunk = urls.slice(i, i + 10000);
+    try {
+      const res = await fetch(INDEXNOW_ENDPOINT, {
+        method: "POST", headers: { "content-type": "application/json; charset=utf-8" },
+        body: JSON.stringify({ host: "anyplans.in", key: INDEXNOW_KEY, keyLocation: `${SITE}/${INDEXNOW_KEY}.txt`, urlList: chunk }),
+      });
+      console.log(`indexnow: ${chunk.length} url → HTTP ${res.status}`);
+    } catch (e) {
+      console.log(`indexnow: non risponde (${e.message}) — le pagine sono comunque nella sitemap`);
+    }
+  }
+}
+
 function sitemapIndexXml(files) {
   return `<?xml version="1.0" encoding="UTF-8"?>
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -1770,6 +1866,7 @@ for (const code of ["it", "en"]) {
 }
 L = LOCALES.it;
 await writeFile(path.join(OUT, `sitemap-${CITY}.xml`), sitemapXml());
+await indexNow();
 await writeFile(path.join(OUT, LLMS_FILE), llmsTxt() + "\n---\n\n# Tutte le pagine di anyplans a " + CITY_NAME + " (italiano, poi inglese)\n\n" + fullTxt.join("\n"));
 await mkdir(statoDir, { recursive: true });
 await writeFile(path.join(statoDir, CITY + ".json"), JSON.stringify(
