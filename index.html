@@ -487,7 +487,7 @@ body.locked .cats{pointer-events:none}
     <span>anyplans<span class="q">?</span></span>
   </a>
   <div class="navright">
-    <a class="ghost" href="/viaggi-di-gruppo/" data-gate="viaggi" data-soon>Viaggi di gruppo</a>
+    <a class="ghost" href="/viaggi-di-gruppo/" data-gate="viaggi">Viaggi di gruppo</a>
     <a class="btn navbtn" href="/bergamo/crea.html" data-gate="crea">Crea un evento</a>
     <a class="plus" href="/bergamo/crea.html" data-gate="crea" aria-label="Crea un evento">+</a>
     <a class="btn navbtn" id="navreg" href="/bergamo/login.html" hidden>Registrati</a>
@@ -514,7 +514,7 @@ body.locked .cats{pointer-events:none}
   <div class="sbwrap">
     <nav class="kind" aria-label="Cosa cerchi">
       <a href="/" class="on"><span class="i">📍</span>Eventi</a>
-      <a href="/viaggi-di-gruppo/" data-gate="viaggi" data-soon><span class="i">✈️</span>Viaggi di gruppo</a>
+      <a href="/viaggi-di-gruppo/" data-gate="viaggi"><span class="i">✈️</span>Viaggi di gruppo</a>
     </nav>
     <div class="sbrow">
       <div class="sbrel">
@@ -613,15 +613,14 @@ body.locked .cats{pointer-events:none}
   </section>
 
   <section class="trips" id="trips">
-    <div class="head"><h2>Viaggi di gruppo</h2><span class="soon">In arrivo</span></div>
-    <p class="subl">Parti da solo, con un gruppo e un coordinatore: le partenze di WeRoad, SiVola e Zest Family a confronto. Stiamo mettendo insieme le date.</p>
+    <div class="head"><h2>Viaggi di gruppo</h2><a href="/viaggi-di-gruppo/" data-gate="viaggi">Tutti i viaggi →</a></div>
+    <p class="subl">Parti da solo, con un gruppo e un coordinatore: le partenze di WeRoad, SiVola e Zest Family a confronto.</p>
     <div class="row">
-      <article class="tcard"><div class="h"><div class="tile">🇲🇦</div><div class="t">Marocco 360°: Marrakech, Chefchaouen, Fès e il deserto</div></div><span class="op">WeRoad</span><div class="m">9 giorni · da Milano · Volo escluso</div><div class="pr"><b><small>da</small>889 €</b></div></article>
-      <article class="tcard"><div class="h"><div class="tile">🇮🇸</div><div class="t">Islanda: aurora expedition e grotte di ghiaccio</div></div><span class="op">SiVola</span><div class="m">8 giorni · 18–40 · da Milano o Roma · Volo incluso</div><div class="pr"><b><small>da</small>1.890 €</b></div></article>
-      <article class="tcard"><div class="h"><div class="tile">🇯🇵</div><div class="t">Giappone winter: rail adventure</div></div><span class="op">SiVola</span><div class="m">14 giorni · 35–50 · da Milano o Roma · Volo incluso</div><div class="pr"><b><small>da</small>3.190 €</b></div></article>
-      <article class="tcard"><div class="h"><div class="tile">🎆</div><div class="t">Capodanno in viaggio, in gruppo</div></div><span class="op">Tutti gli operatori</span><div class="m">Le partenze tra il 23 e il 31 dicembre</div><div class="pr"><b>Presto</b></div></article>
+      <article class="tcard"><div class="h"><div class="tile">🇲🇦</div><div class="t">Marocco 360°: Marrakech, Chefchaouen, Fès e il deserto</div></div><span class="op">WeRoad</span><div class="m">9 giorni · da Milano · Volo escluso</div><div class="pr"><b><small>da</small>889 €</b></div><a class="btn" href="https://www.weroad.it/viaggi/marocco-marrakech-chefchaouen-fes-deserto" data-gate="viaggio" target="_blank" rel="noopener nofollow">Vedi le date</a></article>
+      <article class="tcard"><div class="h"><div class="tile">🇮🇸</div><div class="t">Islanda: aurora expedition e grotte di ghiaccio</div></div><span class="op">SiVola</span><div class="m">8 giorni · 18–40 · da Milano o Roma · Volo incluso</div><div class="pr"><b><small>da</small>1.890 €</b></div><a class="btn" href="https://www.sivola.it/viaggi/islanda" data-gate="viaggio" target="_blank" rel="noopener nofollow">Vedi le date</a></article>
+      <article class="tcard"><div class="h"><div class="tile">🇯🇵</div><div class="t">Giappone winter: rail adventure</div></div><span class="op">SiVola</span><div class="m">14 giorni · 35–50 · da Milano o Roma · Volo incluso</div><div class="pr"><b><small>da</small>3.190 €</b></div><a class="btn" href="https://www.sivola.it/viaggi/giappone-winter-rail-adventure" data-gate="viaggio" target="_blank" rel="noopener nofollow">Vedi le date</a></article>
+      <article class="tcard"><div class="h"><div class="tile">🎆</div><div class="t">Capodanno in viaggio, in gruppo</div></div><span class="op">Tutti gli operatori</span><div class="m">Le partenze tra il 23 e il 31 dicembre</div><div class="pr"><b>Le date</b></div><a class="btn" href="/viaggi-di-gruppo/" data-gate="viaggio">Vedi le date</a></article>
     </div>
-    <form class="notify" id="tripsform"><input type="email" id="tripsmail" placeholder="tu@email.com" autocomplete="email" required aria-label="La tua email"><button class="btn" type="submit">Avvisami quando ci sono</button><span class="note" id="tripsnote"></span></form>
   </section>
 
   <div class="crea">
@@ -668,7 +667,7 @@ body.locked .cats{pointer-events:none}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789502725"></script>
+<script src="/bergamo/app.js?v=1789503398"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // WALL = false per rimisurare senza muro: tutto visibile, email su "Ci sono" (site_event: home_view, wall_tap, join).
@@ -686,7 +685,6 @@ function toLogin(why){
 document.addEventListener("click", e => {
   const g = e.target.closest("[data-gate]"); if (!g) return;
   if (LOCKED) { e.preventDefault(); e.stopPropagation(); toLogin(g.dataset.gate); return; }
-  if (g.hasAttribute("data-soon")) { e.preventDefault(); e.stopPropagation(); toast("I viaggi di gruppo arrivano: lascia l'email qui sotto e ti avvisiamo."); document.getElementById("tripsmail").focus(); document.getElementById("trips").scrollIntoView({ behavior: "smooth", block: "center" }); }
 }, true);
 document.addEventListener("mousedown", e => { if (LOCKED && e.target.closest("#sort")) { e.preventDefault(); toLogin("ordina"); } }, true);
 document.addEventListener("focusin", e => { if (LOCKED && e.target.closest("#tsearch, #qsearch, #freedate")) { e.target.blur(); toLogin("cerca"); } }, true);
@@ -775,7 +773,7 @@ async function loadEvents(center){
   EV = rows.map(x => { const d = new Date(x.start_at); const rp = romeParts(d); const tw = cleanTown(cityOf(x.meeting_point_text)) || center.nome || ""; return { ...x, d, ymd: rp.ymd, h: rp.h, tw, emoji: x.emoji || EMOJI[x.sport] || "📍" }; })
     .filter(e => isCurrent(e.d, e.end_at)).sort((a, b) => a.d - b.d);
   buildDynamic(); render();
-  if (map) { fitMap(EV); }
+  if (map) { fitMap(mapRows(lastRows)); }
 }
 
 // ---------- filtri ----------
@@ -833,15 +831,17 @@ function render(){
   if (!rows.length) {
     list.innerHTML = `<div class="nores"><div class="tile">🔎</div><h3>Qui non c'è ancora niente<span>${esc(summarize())}</span></h3><p>Prova a togliere un filtro, allarga il raggio, o guarda i giorni vicini. Oppure inizia tu.</p><div class="btns"><button class="btn ghosty" id="undo">Togli l'ultimo filtro</button><button class="btn" id="clear2">Cancella tutto</button><a class="btn ghosty" href="/bergamo/crea.html" data-gate="crea">Crea un evento</a></div></div>`;
     document.getElementById("clear2").onclick = clearAll; document.getElementById("undo").onclick = () => { if (lastToggled) F[lastToggled.f].delete(lastToggled.v); syncChips(); render(); };
-    document.getElementById("showmore").hidden = true; document.getElementById("listlock2").hidden = true; drawPins(rows); return;
+    document.getElementById("showmore").hidden = true; document.getElementById("listlock2").hidden = true; drawPins(mapRows(rows)); return;
   }
   const shown = rows.slice(0, LOCKED ? 6 : visibleN); let h = "", lastDay = null;
   shown.forEach(e => { if (sort === "time" && e.ymd !== lastDay) { lastDay = e.ymd; const lab = e.ymd === TODAY ? "Oggi" : e.ymd === addDays(TODAY, 1) ? "Domani" : fmtDay.format(e.d); const n = rows.filter(x => x.ymd === e.ymd).length; h += `<div class="dayh"><h2>${lab}</h2><span>${e.ymd === TODAY || e.ymd === addDays(TODAY, 1) ? fmtDay.format(e.d) + " · " : ""}${n} event${n === 1 ? "o" : "i"}</span></div>`; } h += card(e); });
   list.innerHTML = h;
   document.getElementById("showmore").hidden = LOCKED || rows.length <= visibleN;
   document.getElementById("listlock2").hidden = !LOCKED; document.getElementById("lockn").textContent = (rows.length >= 1000 ? "più di " : "") + Math.max(0, rows.length - 4);
-  drawPins(rows);
+  drawPins(mapRows(rows));
 }
+// sulla mappa solo gli eventi di oggi (deciso 15/09/2026: "metti solo oggi"); con un giorno scelto, quelli del giorno
+function mapRows(rows){ if (F.day.size || F.date.size) return rows; const today = rows.filter(e => e.ymd === TODAY); return today.length ? today : rows.slice(0, 40); }
 
 // ---------- pannelli, categorie, città ----------
 function buildStatic(){
@@ -988,7 +988,7 @@ function initMap(){
   map.addControl(new maplibregl.NavigationControl({ showCompass: false }));
   map.addControl(new maplibregl.AttributionControl({ compact: true }), "bottom-left");
   // appena la mappa è pronta: i pin di quello che c'è già in lista (il feed può essere arrivato prima o dopo)
-  map.on("load", () => { mapReady = true; map.resize(); drawPins(lastRows); fitMap(lastRows); });
+  map.on("load", () => { mapReady = true; map.resize(); drawPins(mapRows(lastRows)); fitMap(mapRows(lastRows)); });
   map.on("error", () => {});
   if (LOCKED) document.getElementById("maplock").hidden = false;
 }
@@ -1000,7 +1000,7 @@ function fitMap(rows){
 function drawPins(rows){
   if (!map || !mapReady) return;
   markers.forEach(m => m.remove()); markers = [];
-  const groups = {}; rows.forEach(e => { if (e.lat == null) return; const k = e.lat.toFixed(3) + "," + e.lng.toFixed(3); (groups[k] || (groups[k] = [])).push(e); });
+  const dec = rows.length > 150 ? 2 : 3; const groups = {}; rows.forEach(e => { if (e.lat == null) return; const k = e.lat.toFixed(dec) + "," + e.lng.toFixed(dec); (groups[k] || (groups[k] = [])).push(e); });
   Object.values(groups).forEach(g => {
     const e = g[0]; const el = document.createElement("button"); el.className = "pin"; el.innerHTML = e.emoji + (g.length > 1 ? `<span class="n">${g.length}</span>` : ""); el.title = g.length > 1 ? `${g.length} eventi qui` : e.title;
     const pop = new maplibregl.Popup({ offset: 22, closeButton: false, maxWidth: "260px" }).setHTML(g.map(x => `<div class="pop"><div class="t">${x.emoji} ${esc(x.title)}</div><div class="m">${whenTxt(x)}</div><div class="m">${esc(x.tw)}${x.km > 1 ? ` · ${x.km.toFixed(0)} km` : ""} · ${x.price_cents > 0 ? esc(fmtPrice(x.price_cents)) : "gratis"}${x.going_count ? ` · ${x.going_count} ci vanno` : ""}</div>${cta(x)}</div>`).join(""));
@@ -1009,13 +1009,13 @@ function drawPins(rows){
     el.addEventListener("click", () => { const c = document.querySelector(`.ev[data-id="${e.id}"]`); if (c && !document.body.classList.contains("mapmode")) c.scrollIntoView({ behavior: "smooth", block: "center" }); const mini = document.querySelector(`.carousel .mini[data-id="${e.id}"]`); if (mini) { document.querySelectorAll(".carousel .mini").forEach(m => m.classList.toggle("on", m === mini)); mini.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" }); } });
     markers.push(mk);
   });
-  document.getElementById("mapinfo").textContent = `${rows.length >= 1000 ? "Più di 1000" : rows.length} event${rows.length === 1 ? "o" : "i"} sulla mappa`;
+  document.getElementById("mapinfo").textContent = `${rows.length >= 1000 ? "Più di 1000" : rows.length} event${rows.length === 1 ? "o" : "i"}${F.day.size || F.date.size ? "" : " oggi"} sulla mappa`;
   document.getElementById("carousel").innerHTML = rows.slice(0, 40).map(e => `<article class="mini" data-id="${e.id}"><div class="h"><div class="tile">${e.emoji}</div><a class="t" href="${EVURL(e)}" data-gate="evento">${esc(e.title)}</a></div><div class="m">${whenTxt(e)}</div><div class="m">${esc(e.tw)}${e.km > 1 ? ` · ${e.km.toFixed(0)} km` : ""} · ${e.price_cents > 0 ? esc(fmtPrice(e.price_cents)) : "gratis"}</div>${cta(e)}</article>`).join("");
 }
 function hl(id, on){ document.querySelectorAll(`.ev[data-id="${id}"]`).forEach(c => c.classList.toggle("hl", on)); }
 document.getElementById("list").addEventListener("mouseover", e => { const c = e.target.closest(".ev"); if (c) hl(c.dataset.id, true); });
 document.getElementById("list").addEventListener("mouseout", e => { const c = e.target.closest(".ev"); if (c) hl(c.dataset.id, false); });
-function toggleMap(){ const on = document.body.classList.toggle("mapmode"); document.getElementById("mapfab").textContent = on ? "☰ Lista" : "🗺️ Mappa"; document.getElementById("mapbtn").textContent = on ? "✕ Chiudi la mappa" : "⤢ Tutta la mappa"; if (on) window.scrollTo({ top: 0 }); setTimeout(() => { if (map) { map.resize(); fitMap(lastRows); } }, 80); }
+function toggleMap(){ const on = document.body.classList.toggle("mapmode"); document.getElementById("mapfab").textContent = on ? "☰ Lista" : "🗺️ Mappa"; document.getElementById("mapbtn").textContent = on ? "✕ Chiudi la mappa" : "⤢ Tutta la mappa"; if (on) window.scrollTo({ top: 0 }); setTimeout(() => { if (map) { map.resize(); fitMap(mapRows(lastRows)); } }, 80); }
 document.getElementById("mapfab").addEventListener("click", () => { if (!LOCKED) toggleMap(); });
 document.getElementById("mapbtn").addEventListener("click", e => { if (LOCKED) return; e.stopPropagation(); toggleMap(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && document.body.classList.contains("mapmode")) toggleMap(); });
@@ -1028,17 +1028,11 @@ function loadMapLib(){
 (function(){ const names = CITIES.slice(0, 14).map(c => c.nome); let i = 0; const el = document.getElementById("hcity");
   setInterval(() => { if (window.CHOSEN) return; i = (i + 1) % names.length; el.classList.remove("swap"); void el.offsetWidth; el.textContent = names[i]; el.classList.add("swap"); }, 1800); })();
 
-// ---------- viaggi di gruppo: in arrivo, email per l'avviso ----------
-document.getElementById("tripsform").addEventListener("submit", async e => {
-  e.preventDefault(); const email = document.getElementById("tripsmail").value.trim(); const note = document.getElementById("tripsnote"); note.textContent = "…";
-  try { const r = await rpc("join_beta", { p_email: email, p_source: "site-viaggi", p_city: "viaggi" }); if (!r || !r.ok) throw new Error(); note.textContent = "Fatto: ti scriviamo appena ci sono le date."; track("viaggi_email"); }
-  catch (_) { note.textContent = "Controlla l'indirizzo e riprova."; }
-});
 
 // ---------- via ----------
 buildStatic();
 loadEvents(HOME);
-if ("IntersectionObserver" in window) { const io = new IntersectionObserver(es => { if (es.some(x => x.isIntersecting)) { io.disconnect(); loadMapLib(); } }, { rootMargin: "300px" }); io.observe(document.getElementById("mapbox")); } else loadMapLib();
+setTimeout(loadMapLib, 200);   // la mappa è nella prima schermata: si carica subito, senza aspettare lo scroll
 </script>
 </body>
 </html>
