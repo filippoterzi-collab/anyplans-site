@@ -667,7 +667,7 @@ body.locked .cats{pointer-events:none}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789503398"></script>
+<script src="/bergamo/app.js?v=1789503854"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // WALL = false per rimisurare senza muro: tutto visibile, email su "Ci sono" (site_event: home_view, wall_tap, join).
@@ -761,15 +761,16 @@ function card(e){
 }
 
 // ---------- caricamento dal database (stessa RPC della pagina eventi: centro + raggio 50 km) ----------
-let loadSeq = 0;
+let loadSeq = 0, loading = false;
 async function loadEvents(center){
-  const seq = ++loadSeq;
+  const seq = ++loadSeq; loading = true;
   CENTER = center; REF = { lat: center.lat, lng: center.lng };
   document.getElementById("list").innerHTML = '<div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div>';
   const r = await rpc("feed_activities", { lat: center.lat, lng: center.lng, radius_m: 50000 });
   if (seq !== loadSeq) return;
-  if (!r || !r.ok) { document.getElementById("list").innerHTML = '<div class="nores"><div class="tile">😕</div><h3>Non riesco a caricare gli eventi</h3><p>Ricarica la pagina.</p></div>'; return; }
+  if (!r || !r.ok) { loading = false; document.getElementById("list").innerHTML = '<div class="nores"><div class="tile">😕</div><h3>Non riesco a caricare gli eventi</h3><p>Ricarica la pagina.</p></div>'; return; }
   const rows = await r.json().catch(() => []);
+  loading = false;
   EV = rows.map(x => { const d = new Date(x.start_at); const rp = romeParts(d); const tw = cleanTown(cityOf(x.meeting_point_text)) || center.nome || ""; return { ...x, d, ymd: rp.ymd, h: rp.h, tw, emoji: x.emoji || EMOJI[x.sport] || "📍" }; })
     .filter(e => isCurrent(e.d, e.end_at)).sort((a, b) => a.d - b.d);
   buildDynamic(); render();
@@ -819,6 +820,7 @@ function syncBar(n){
 function syncChips(){ document.querySelectorAll(".chip[data-v]").forEach(c => { const f = c.closest("[data-f]").dataset.f; c.setAttribute("aria-pressed", F[f] && F[f].has(c.dataset.v) ? "true" : "false"); }); }
 function clearAll(){ Object.values(F).forEach(s => s.clear()); PLACE = null; QTEXT = ""; document.getElementById("qsearch").value = ""; syncChips(); if (CENTER.slug !== HOME.slug || CENTER.kind) loadEvents(HOME); else render(); }
 function render(){
+  if (loading) return;   // la città nuova sta arrivando: niente lista vecchia sotto i filtri nuovi
   const sort = document.getElementById("sort").value;
   EV.forEach(e => { e.km = distKm(REF, e); });
   let rows = EV.filter(passes);
