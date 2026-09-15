@@ -391,23 +391,26 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1789449432"></script>
+<script src="app.js?v=1789450842"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
     try { saveSession(JSON.parse(decodeURIComponent(location.hash.slice(3)))); history.replaceState(null, "", location.pathname); } catch (_) {}
   }
-  // deciso 04/09: prima ci si registra (basta l'email), poi si vede la mappa
-  requireLogin();
+  // 15/09/2026: la mappa si vede senza account. Il muro del 04/09 ("prima ci si registra,
+  // poi si vede la mappa") fermava il 73% di chi arrivava da Instagram alla prima pagina
+  // (audit campagna, site_event 11-15/09). L'email si chiede al momento di unirsi: askLogin().
   mountNav("eventi");
   const logged = !!(session && session.access_token);
   if (!logged) {
-    document.getElementById("avatar").parentElement.hidden = true;
+    // il menu del profilo e gli avvisi non hanno senso senza account; al loro posto "Registrati"
+    const av = document.getElementById("avatar"); if (av && av.parentElement) av.parentElement.hidden = true;
     const bell = document.getElementById("bell"); if (bell) bell.style.display = "none";
     const reg = document.createElement("a"); reg.href = "login.html"; reg.id = "nav-reg";
     reg.style.cssText = "background:var(--blue); color:#fff; font-weight:700; font-size:13.5px; padding:9px 16px; border-radius:999px; white-space:nowrap";
     reg.textContent = "Registrati"; reg.onclick = () => { try { sessionStorage.setItem("anyplans_next", "eventi.html"); } catch (_) {} };
-    document.querySelector(".nav-right").prepend(reg);
+    const right = document.querySelector(".sn .right");                          // il contenitore lo crea mountNav
+    if (right) right.prepend(reg);
   }
   if (logged) {
     document.getElementById("avatar").textContent = (session.email || "?")[0].toUpperCase();

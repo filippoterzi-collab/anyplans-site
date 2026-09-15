@@ -421,7 +421,31 @@ function track(name, path){
     }).catch(() => {});
   } catch (_) {}
 }
+
+// Prima sorgente di questo browser (utm dell'annuncio, altrimenti il referrer): evento `campaign`
+// loggato UNA volta sola, con le utm in `path`. Il visitor id tiene insieme tutto quello che
+// succede dopo, quindi il funnel per campagna si fa in SQL senza aggiungere campi allo schema.
+// Solo i parametri utm_*: nella query string passano anche il token del biglietto (?t=) e le
+// ricerche scritte dagli utenti (?q=), che non devono finire nell'analytics.
+function firstTouch(){
+  try {
+    if (localStorage.getItem("anyplans_src")) return null;
+    let ref = "";
+    try { ref = document.referrer ? new URL(document.referrer).hostname : ""; } catch (_) {}
+    if (ref === location.hostname) return null;
+    const q = new URLSearchParams(location.search);
+    const utm = ["utm_source", "utm_medium", "utm_campaign", "utm_content"]
+      .map(k => (q.get(k) || "").replace(/[^A-Za-z0-9._-]/g, "").slice(0, 40));
+    const src = utm.some(Boolean) ? utm.join("/") : (ref || "diretto");
+    localStorage.setItem("anyplans_src", src);
+    return src;
+  } catch (_) { return null; }
+}
+
 track("page_view");
+const firstSrc = firstTouch();
+if (firstSrc) track("campaign", firstSrc);
+
 
 
 // menu unico in alto per le pagine da loggato: eventi · i miei eventi · gruppi · crea evento · avvisi · profilo

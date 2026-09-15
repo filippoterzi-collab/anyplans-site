@@ -272,9 +272,9 @@
         <span class="rot" style="animation-delay:10s">nel weekend?</span>
       </span>
     </h1>
-    <p class="sub">Gli eventi della tua città, tutti in un posto solo: la festa di paese, il corso di ceramica, il giro in bici della domenica. Ne vedi uno, ti iscrivi, ci vai insieme ad altri.</p>
+    <p class="sub">A Bergamo, se non conosci nessuno, il sabato sera stai a casa. Qui apri la mappa e vedi cosa c'è davvero: la festa di paese, il corso di ceramica, il giro in bici della domenica. Ne scegli uno e ci vai insieme ad altri.</p>
     <div class="cta">
-      <a class="btn" href="/bergamo/login.html">Registrati per vedere gli eventi della tua città</a>
+      <a class="btn" href="/bergamo/eventi.html">Apri la mappa di Bergamo →</a>
       <a class="btn ghost" href="/bergamo/login.html">Organizzi eventi? Crea il tuo gruppo</a>
     </div>
     <a class="heroscroll" href="#eventi">Che eventi troverai ↓</a>
@@ -285,7 +285,7 @@
 <section class="block band" id="eventi">
   <div class="wrap">
     <h2 id="ev-h2">Che eventi troverai</h2>
-    <p class="lead" id="ev-lead">Esempi di eventi intorno a Bergamo. Quelli veri li vedi sulla mappa: basta la tua email.</p>
+    <p class="lead" id="ev-lead">Esempi di eventi intorno a Bergamo. Quelli veri sono sulla mappa, aperta a tutti.</p>
     <div class="cards" id="cards">
       <div class="card"><div class="em">🏺</div><div><div class="t">Corso di ceramica, anche principianti</div><div class="m">Giovedì, 19:00 · con la maestra</div></div></div>
       <div class="card"><div class="em">🎪</div><div><div class="t">C'è la festa di paese, chi viene?</div><div class="m">Sabato, dalle 18:00 · piazza principale</div></div></div>
@@ -296,7 +296,7 @@
     </div>
     <div class="teaser" id="teaser">
       <div id="teaser-map"></div>
-      <div class="teaser-ov"><a class="btn" id="teaser-cta" href="/bergamo/login.html">Registrati per aprire la mappa →</a></div>
+      <div class="teaser-ov"><a class="btn" id="teaser-cta" href="/bergamo/eventi.html">Apri la mappa →</a></div>
     </div>
   </div>
 </section>
@@ -332,10 +332,10 @@
 <section class="block final" id="registrati">
   <div class="wrap">
     <h2>anyplans <span>nella tua città?</span></h2>
-    <p class="lead">Partiamo da Bergamo. Ti registri con la tua email e prima di andare vedi chi organizza e chi ci va: niente appuntamenti al buio.</p>
+    <p class="lead">Partiamo da Bergamo. Prima di andare vedi chi organizza e chi ci va: niente appuntamenti al buio.</p>
     <div class="cta">
       <!-- TODO: collegare al flusso sign-in (email + codice via supabase) quando pronto -->
-      <a class="btn" href="/bergamo/login.html">Registrati per vedere gli eventi della tua città</a>
+      <a class="btn" href="/bergamo/eventi.html">Apri la mappa di Bergamo →</a>
       <a class="btn ghost" href="/bergamo/login.html">Organizzi eventi? Crea il tuo gruppo</a>
     </div>
   </div>
@@ -412,7 +412,7 @@
   </div>
 </div>
 
-<script src="/bergamo/app.js?v=1789449432"></script>
+<script src="/bergamo/app.js?v=1789450842"></script>
 <script>
   let quizCity = "";
 
@@ -473,8 +473,8 @@
       s = s || session;
       const logged = s && s.access_token;
       const t = document.getElementById("teaser-cta");
-      t.textContent = logged ? "Apri la mappa →" : "Registrati per aprire la mappa →";
-      t.href = logged ? "/bergamo/eventi.html" : "/bergamo/login.html";
+      t.textContent = "Apri la mappa →";
+      t.href = "/bergamo/eventi.html";
       const cta = document.getElementById("nav-cta");
       cta.textContent = logged ? "Vai agli eventi" : "Registrati";
       cta.href = logged ? "/bergamo/eventi.html" : "/bergamo/login.html";
@@ -484,8 +484,8 @@
           a.onclick = logged ? null : () => { try { sessionStorage.setItem("anyplans_next", "/bergamo/crea-community.html"); } catch (_) {} };
           return;
         }
-        a.href = logged ? "/bergamo/eventi.html" : "/bergamo/login.html";
-        a.textContent = logged ? "Vai agli eventi della tua città" : "Registrati per vedere gli eventi della tua città";
+        a.href = "/bergamo/eventi.html";
+        a.textContent = logged ? "Vai agli eventi della tua città" : "Apri la mappa di Bergamo →";
       });
     } catch (_) {}
   }
@@ -505,12 +505,14 @@
     LIVE = rows;
     const week = rows.filter(x => x.when < new Date(Date.now() + 7 * 86400 * 1000)).length;
     if (week >= 1) {
-      document.getElementById("pill-n").textContent = week;
+      // feed_activities si ferma a 1000 righe: se le riempie tutte il numero esatto non lo sappiamo,
+      // e "1000 eventi" tondo tondo sembra gonfiato (UI.md: mai numeri gonfiati)
+      document.getElementById("pill-n").textContent = rows.length >= 1000 ? "più di 1000" : week;
       document.getElementById("pill-w").textContent = week === 1 ? "evento" : "eventi";
       document.getElementById("pill").hidden = false;
     }
     document.getElementById("ev-h2").textContent = "Eventi a Bergamo, adesso";
-    document.getElementById("ev-lead").textContent = "Presi dalla mappa in questo momento. Ti registri con la tua email, scegli, e ci vai insieme ad altri.";
+    document.getElementById("ev-lead").textContent = "Presi dalla mappa in questo momento. Guardali tutti, poi scegli il tuo: l'email serve solo quando ti unisci.";
     document.getElementById("cards").innerHTML = rows.slice(0, 6).map(x =>
       `<a class="card${lockState(x) === "open" ? "" : " lock"}${lockState(x) === "waiting" ? " waiting" : ""}${lockState(x) === "closed" ? " closed" : ""}" href="/bergamo/evento.html?id=${x.id}"><div class="em">${esc(x.emoji || "📍")}</div>` +
       `<div><div class="t">${esc(x.title)}</div><div class="m">${esc(dayLabel(x.when))}, ${timeStr(x.when)} · <b>${esc(relTime(x.when, x.end_at))}</b> · ${lockTxt(x)}${x.price_cents > 0 ? " · " + esc(fmtPrice(x.price_cents)) : ""}</div></div>` +
