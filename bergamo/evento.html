@@ -407,7 +407,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1789481095"></script>
+<script src="app.js?v=1789481528"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -716,7 +716,7 @@
       document.getElementById("hosts").innerHTML = managers.map(p => {
         const r = roleOf(p);
         const act = "";
-        const tag = r === "host" ? '<span class="tag">Organizza</span>' : r === "opened" ? '<span class="tag">Ha aperto l'evento</span>' : '<span class="tag adm">Collaboratore</span>';
+        const tag = r === "host" ? '<span class="tag">Organizza</span>' : r === "opened" ? "<span class=\"tag\">Ha aperto l'evento</span>" : '<span class="tag adm">Collaboratore</span>';
         return `<div class="person">${avatarOf(p.avatar_url, p.display_name)}<span class="n">${esc(p.display_name || "Qualcuno")}</span><span class="r">${tag}${act}</span></div>`;
       }).join("");
       document.getElementById("hosts-head").hidden = !managers.length;
