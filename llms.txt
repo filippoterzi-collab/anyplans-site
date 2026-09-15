@@ -1,166 +1,51 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Bergamo e provincia: feste di paese e sagre, corsi di cucina e di ceramica, volontariato, uscite sportive, running club. Raccoglie gli eventi già esistenti dai siti dei comuni e delle associazioni e quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Per ora solo Bergamo; Milano e Brescia in arrivo.
+> La mappa degli eventi veri d'Italia: 6267 eventi in programma in 29 città. Feste di paese, concerti,
+> mercati, cene con sconosciuti, uscite di corsa, partite di padel aperte. Di ognuno: data, luogo, prezzo,
+> chi organizza e come iscriversi. Si entra con l'email, solo maggiorenni. Aggiornato ogni notte.
 
-Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-15. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
+Le pagine sono statiche e leggibili senza javascript. Ogni città ha il suo file completo con titolo,
+riassunto e domande frequenti di ogni pagina.
 
-## Pagine principali
+## Le città
 
-- [Cosa fare a Bergamo](https://anyplans.in/bergamo/cosa-fare/): tutti gli eventi in programma (1360), per tipo e per paese; risponde a "cosa fare a Bergamo oggi / questo weekend"
-- [Running club a Bergamo](https://anyplans.in/bergamo/running-club/): 25 run club per giorno della settimana, con ritrovo, orario e domande frequenti
-- [Gruppi a Bergamo](https://anyplans.in/bergamo/gruppi/): 37 associazioni, club e comunità che pubblicano eventi
-- [Le regole di anyplans](https://anyplans.in/guidelines.html)
-- [Privacy](https://anyplans.in/privacy-it.html)
-- [Condizioni d'uso](https://anyplans.in/terms-it.html)
+- [Milano](https://anyplans.in/milano/): 1164 eventi in programma, 2418 pagine — testo completo: https://anyplans.in/llms-milano.txt
+- [Roma](https://anyplans.in/roma/): 786 eventi in programma, 1638 pagine — testo completo: https://anyplans.in/llms-roma.txt
+- [Bergamo](https://anyplans.in/bergamo/cosa-fare/): 694 eventi in programma, 1842 pagine — testo completo: https://anyplans.in/llms-full.txt
+- [Torino](https://anyplans.in/torino/): 672 eventi in programma, 1412 pagine — testo completo: https://anyplans.in/llms-torino.txt
+- [Bologna](https://anyplans.in/bologna/): 393 eventi in programma, 830 pagine — testo completo: https://anyplans.in/llms-bologna.txt
+- [Napoli](https://anyplans.in/napoli/): 281 eventi in programma, 608 pagine — testo completo: https://anyplans.in/llms-napoli.txt
+- [Brescia](https://anyplans.in/brescia/): 223 eventi in programma, 520 pagine — testo completo: https://anyplans.in/llms-brescia.txt
+- [Padova](https://anyplans.in/padova/): 219 eventi in programma, 466 pagine — testo completo: https://anyplans.in/llms-padova.txt
+- [Verona](https://anyplans.in/verona/): 199 eventi in programma, 440 pagine — testo completo: https://anyplans.in/llms-verona.txt
+- [Firenze](https://anyplans.in/firenze/): 183 eventi in programma, 404 pagine — testo completo: https://anyplans.in/llms-firenze.txt
+- [Genova](https://anyplans.in/genova/): 159 eventi in programma, 358 pagine — testo completo: https://anyplans.in/llms-genova.txt
+- [Varese](https://anyplans.in/varese/): 143 eventi in programma, 322 pagine — testo completo: https://anyplans.in/llms-varese.txt
+- [Bari](https://anyplans.in/bari/): 133 eventi in programma, 300 pagine — testo completo: https://anyplans.in/llms-bari.txt
+- [Perugia](https://anyplans.in/perugia/): 121 eventi in programma, 270 pagine — testo completo: https://anyplans.in/llms-perugia.txt
+- [Parma](https://anyplans.in/parma/): 102 eventi in programma, 238 pagine — testo completo: https://anyplans.in/llms-parma.txt
+- [Cagliari](https://anyplans.in/cagliari/): 98 eventi in programma, 220 pagine — testo completo: https://anyplans.in/llms-cagliari.txt
+- [Palermo](https://anyplans.in/palermo/): 88 eventi in programma, 208 pagine — testo completo: https://anyplans.in/llms-palermo.txt
+- [Trieste](https://anyplans.in/trieste/): 75 eventi in programma, 178 pagine — testo completo: https://anyplans.in/llms-trieste.txt
+- [Trento](https://anyplans.in/trento/): 61 eventi in programma, 146 pagine — testo completo: https://anyplans.in/llms-trento.txt
+- [Pescara](https://anyplans.in/pescara/): 59 eventi in programma, 140 pagine — testo completo: https://anyplans.in/llms-pescara.txt
+- [Catania](https://anyplans.in/catania/): 57 eventi in programma, 142 pagine — testo completo: https://anyplans.in/llms-catania.txt
+- [Ravenna](https://anyplans.in/ravenna/): 48 eventi in programma, 122 pagine — testo completo: https://anyplans.in/llms-ravenna.txt
+- [Udine](https://anyplans.in/udine/): 48 eventi in programma, 118 pagine — testo completo: https://anyplans.in/llms-udine.txt
+- [Rimini](https://anyplans.in/rimini/): 47 eventi in programma, 116 pagine — testo completo: https://anyplans.in/llms-rimini.txt
+- [Bolzano](https://anyplans.in/bolzano/): 46 eventi in programma, 114 pagine — testo completo: https://anyplans.in/llms-bolzano.txt
+- [Pisa](https://anyplans.in/pisa/): 44 eventi in programma, 108 pagine — testo completo: https://anyplans.in/llms-pisa.txt
+- [Taranto](https://anyplans.in/taranto/): 42 eventi in programma, 102 pagine — testo completo: https://anyplans.in/llms-taranto.txt
+- [Salerno](https://anyplans.in/salerno/): 41 eventi in programma, 100 pagine — testo completo: https://anyplans.in/llms-salerno.txt
+- [Lecce](https://anyplans.in/lecce/): 41 eventi in programma, 106 pagine — testo completo: https://anyplans.in/llms-lecce.txt
 
-## Eventi per tipo e per paese
+## Il sito
 
-- [Yoga / pilates a Bergamo](https://anyplans.in/bergamo/yoga/): 14 in programma
-- [Feste, sagre ed eventi di paese a Bergamo](https://anyplans.in/bergamo/feste/): 114 in programma
-- [Corsa a Bergamo](https://anyplans.in/bergamo/corsa/): 31 in programma
-- [Estivo a Bergamo](https://anyplans.in/bergamo/estivi/): 11 in programma
-- [Cena / aperitivo a Bergamo](https://anyplans.in/bergamo/cene-e-aperitivi/): 45 in programma
-- [Padel a Bergamo](https://anyplans.in/bergamo/padel/): 316 in programma
-- [Concerti e musica dal vivo a Bergamo](https://anyplans.in/bergamo/concerti/): 206 in programma
-- [Visite guidate a Bergamo](https://anyplans.in/bergamo/visite-guidate/): 43 in programma
-- [Mercatini a Bergamo](https://anyplans.in/bergamo/mercatini/): 199 in programma
-- [Incontri culturali a Bergamo](https://anyplans.in/bergamo/incontri-culturali/): 77 in programma
-- [Palestra a Bergamo](https://anyplans.in/bergamo/palestra/): 106 in programma
-- [Karaoke a Bergamo](https://anyplans.in/bergamo/karaoke/): 29 in programma
-- [Spettacoli e teatro a Bergamo](https://anyplans.in/bergamo/spettacoli/): 109 in programma
-- [Pittura / arte a Bergamo](https://anyplans.in/bergamo/pittura/): 30 in programma
-- [Escursionismo a Bergamo](https://anyplans.in/bergamo/escursioni/): 6 in programma
-- [Tennis a Bergamo](https://anyplans.in/bergamo/tennis/): 6 in programma
-- [Fiere a Bergamo](https://anyplans.in/bergamo/fiere/): 9 in programma
-- [Ceramica a Bergamo](https://anyplans.in/bergamo/ceramica/): 4 in programma
-- [Feste ed eventi a Dalmine](https://anyplans.in/bergamo/dalmine/): 0 in programma
-- [Feste ed eventi a Albino](https://anyplans.in/bergamo/albino/): 0 in programma
-- [Feste ed eventi a Bergamo Città](https://anyplans.in/bergamo/bergamo-citta/): 2 in programma
-- [Feste ed eventi a Chiuduno](https://anyplans.in/bergamo/chiuduno/): 1 in programma
-- [Feste ed eventi a Concert Tracker](https://anyplans.in/bergamo/concert-tracker/): 4 in programma
-- [Feste ed eventi a Gattopardo](https://anyplans.in/bergamo/gattopardo/): 3 in programma
-- [Feste ed eventi a Vivid Events](https://anyplans.in/bergamo/vivid-events/): 17 in programma
-- [Feste ed eventi a Arci Bellezza](https://anyplans.in/bergamo/arci-bellezza/): 3 in programma
+- [Tutte le città](https://anyplans.in/citta/): l'elenco con quanti eventi ci sono in ognuna
+- [Sitemap](https://anyplans.in/sitemap.xml): l'indice delle sitemap, una per città
+- [Le regole](https://anyplans.in/guidelines.html) · [Privacy](https://anyplans.in/privacy-it.html) · [Condizioni](https://anyplans.in/terms-it.html)
 
-## Running club per giorno
+## Come citarci
 
-- [Run club il lunedì](https://anyplans.in/bergamo/running-club/lunedi/): PTRUNBG alle 18:15, MRCBG alle 18:45, Fun Run alle 19:30, Seriana Run Club alle 19:30, WeRunBergamo alle 19:30
-- [Run club il martedì](https://anyplans.in/bergamo/running-club/martedi/): Podisti Insonni alle 05:30, PTRUNBG alle 05:45, PTRUNBG alle 18:00, Le Scalette del Martedì alle 19:00, Quelli del Martedì alle 19:00
-- [Run club il mercoledì](https://anyplans.in/bergamo/running-club/mercoledi/): Cor Run alle 18:45, PTRUNBG alle 18:45, InPistaAMozzo alle 19:00, Pazzi del Mercoledì alle 19:30, WeRunBergamo alle 19:30
-- [Run club il giovedì](https://anyplans.in/bergamo/running-club/giovedi/): Podisti Insonni alle 05:30, PTRUNBG alle 18:00, Ninfea Social Club alle 19:00, Quelli del Martedì alle 19:00, GiovedìPista alle 19:30
-- [Run club il venerdì](https://anyplans.in/bergamo/running-club/venerdi/): Podisti Insonni alle 05:30
-- [Run club il sabato](https://anyplans.in/bergamo/running-club/sabato/): Sabato alla Trucca alle 09:30
-- [Run club il domenica](https://anyplans.in/bergamo/running-club/domenica/): Podisti Insonni alle 05:30, Quelli del Martedì alle 09:00
-
-## Gruppi
-
-- [Spritz & Burger](https://anyplans.in/bergamo/gruppi/spritz-and-burger/): 17 eventi in programma
-- [PTRUNBG](https://anyplans.in/bergamo/gruppi/ptrunbg/): run club
-- [Circolino Astino](https://anyplans.in/bergamo/gruppi/circolino-astino/): 14 eventi in programma
-- [WeRunBergamo](https://anyplans.in/bergamo/gruppi/werunbergamo/): run club
-- [Susanna Alberti Studio](https://anyplans.in/bergamo/gruppi/susanna-alberti-studio/): 8 eventi in programma
-- [Fabric Cascina Carlinga](https://anyplans.in/bergamo/gruppi/fabric-cascina-carlinga/): 6 eventi in programma
-- [Le Scalette del Martedì](https://anyplans.in/bergamo/gruppi/le-scalette-del-martedi/): run club
-- [Podisti Insonni](https://anyplans.in/bergamo/gruppi/podisti-insonni/): run club
-- [GiovedìPista](https://anyplans.in/bergamo/gruppi/giovedipista/): run club
-- [Cor Run](https://anyplans.in/bergamo/gruppi/cor-run/): run club
-- [Fun Run](https://anyplans.in/bergamo/gruppi/fun-run/): run club
-- [MRCBG](https://anyplans.in/bergamo/gruppi/mrcbg/): run club
-- [Seriana Run Club](https://anyplans.in/bergamo/gruppi/seriana-run-club/): run club
-- [Ninfea Social Club](https://anyplans.in/bergamo/gruppi/ninfea-social-club/): run club
-- [Sabato alla Trucca](https://anyplans.in/bergamo/gruppi/sabato-alla-trucca/): run club
-- [Social Run](https://anyplans.in/bergamo/gruppi/socialrunbergamo/): run club
-- [Pazzi del Mercoledì](https://anyplans.in/bergamo/gruppi/pazzi-del-mercoledi/): run club
-- [ASD Runners Bergamo](https://anyplans.in/bergamo/gruppi/asd-runners-bergamo/): run club
-- [Bergamo Walking](https://anyplans.in/bergamo/gruppi/bergamo-walking/): gruppo di camminata
-- [Girly Running Club](https://anyplans.in/bergamo/gruppi/girly-running-club/): run club
-- [Estivo Goisis](https://anyplans.in/bergamo/gruppi/estivo-goisis/)
-- [Edonè](https://anyplans.in/bergamo/gruppi/edone/)
-- [NXT Bergamo](https://anyplans.in/bergamo/gruppi/nxt-bergamo/)
-- [Adda Running Club](https://anyplans.in/bergamo/gruppi/adda-running-club/): run club
-- [BGR Bergamo Running](https://anyplans.in/bergamo/gruppi/bgr-bergamo-running/): run club
-- [filippo social club](https://anyplans.in/bergamo/gruppi/filippo-social-club/)
-- [Trust Running Club](https://anyplans.in/bergamo/gruppi/trust-running-club/): run club
-- [Quelli del Martedì](https://anyplans.in/bergamo/gruppi/quelli-del-martedi/): run club
-- [Capanu Culture Club](https://anyplans.in/bergamo/gruppi/capanu-culture-club/): run club
-- [InPistaAMozzo](https://anyplans.in/bergamo/gruppi/inpistaamozzo/): run club
-- [Fast2Gether Run Gang](https://anyplans.in/bergamo/gruppi/fast2gether-run-gang/): run club
-- [CUS Bergamo](https://anyplans.in/bergamo/gruppi/cus-bergamo/): run club
-- [Potarun Club](https://anyplans.in/bergamo/gruppi/potarun-club/): run club
-- [ESN Bergamo](https://anyplans.in/bergamo/gruppi/esn-bergamo/)
-- [Bombonera Social Pub](https://anyplans.in/bergamo/gruppi/bombonera-social-pub/)
-- [Astrid farfan](https://anyplans.in/bergamo/gruppi/astrid-farfan/)
-- [neurostretching](https://anyplans.in/bergamo/gruppi/neurostretching/)
-
-## Prossimi eventi
-
-- [Verona e Lago di Garda: Gita in giornata da Milano](https://anyplans.in/bergamo/verona-e-lago-di-garda-gita-in-giornata-da-milano/): Martedì 15 settembre alle 07:00, Milan Visitor Center, Largo Cairoli 18, Milano, 20121, Milan, IT, Milano, Gratis
-- [Colazione da Bar Cloe': 5 posti liberi](https://anyplans.in/bergamo/colazione-da-bar-cloe-5-posti-liberi/): Martedì 15 settembre alle 07:00, Bar Cloe', Melzo, Gratis
-- [Mercato di Santa Brigida](https://anyplans.in/bergamo/mercato-di-santa-brigida/): Dal 15 settembre al 29 settembre, 3 date, Via Colla c/o Piazza Comune, Santa Brigida, Gratis
-- [Mercato di Almenno San Bartolomeo](https://anyplans.in/bergamo/mercato-di-almenno-san-bartolomeo/): Dal 15 settembre al 29 settembre, 3 date, Piazza Italia Località Cerita, Almenno San Bartolomeo, Gratis
-- [Mercato di Misano di Gera d'Adda](https://anyplans.in/bergamo/mercato-di-misano-di-gera-d-adda/): Dal 15 settembre al 29 settembre, 3 date, Via S. Stefano, Misano di Gera d'Adda, Gratis
-- [Mercato di Fornovo San Giovanni](https://anyplans.in/bergamo/mercato-di-fornovo-san-giovanni/): Dal 15 settembre al 29 settembre, 3 date, Piazza San Giovanni, Fornovo San Giovanni, Gratis
-- [Mercato di Foresto Sparso](https://anyplans.in/bergamo/mercato-di-foresto-sparso/): Dal 15 settembre al 29 settembre, 3 date, Via Roma, Foresto Sparso, Gratis
-- [Mercato di Dalmine](https://anyplans.in/bergamo/mercato-di-dalmine/): Dal 15 settembre al 3 ottobre, 12 date, Via Don Sturzo, Dalmine, Gratis
-- [Mercato di Colere](https://anyplans.in/bergamo/mercato-di-colere/): Dal 15 settembre al 29 settembre, 3 date, Via Tortola, Colere, Gratis
-- [Mercato di Solto Collina](https://anyplans.in/bergamo/mercato-di-solto-collina/): Dal 15 settembre al 29 settembre, 3 date, Piazzale Kennedy, Solto Collina, Gratis
-- [Mercato di Villa d'Almè](https://anyplans.in/bergamo/mercato-di-villa-d-alme/): Dal 15 settembre al 29 settembre, 3 date, Via Ventolosa, Via Gaggio, Piazza dell’Artigliere, Villa d'Almè, Gratis
-- [Mercato di Martinengo](https://anyplans.in/bergamo/mercato-di-martinengo/): Dal 15 settembre al 3 ottobre, 6 date, Centro Storico, Martinengo, Gratis
-- [Mercato di Pagazzano](https://anyplans.in/bergamo/mercato-di-pagazzano/): Dal 15 settembre al 29 settembre, 3 date, Via Roma, Pagazzano, Gratis
-- [Mercato di Bergamo](https://anyplans.in/bergamo/mercato-di-bergamo/): Dal 15 settembre al 5 ottobre, 24 date, Via Gemelli Località Redona, Bergamo, Gratis
-- [Mercato di Brusaporto](https://anyplans.in/bergamo/mercato-di-brusaporto/): Dal 15 settembre al 29 settembre, 3 date, Via Cattanea, Brusaporto, Gratis
-- [Mercato di Gorle](https://anyplans.in/bergamo/mercato-di-gorle/): Dal 15 settembre al 29 settembre, 3 date, Via Turati, Gorle, Gratis
-- [Mercato di Costa di Mezzate](https://anyplans.in/bergamo/mercato-di-costa-di-mezzate/): Dal 15 settembre al 29 settembre, 3 date, Via Roma, Costa di Mezzate, Gratis
-- [Mercato di Valbondione](https://anyplans.in/bergamo/mercato-di-valbondione/): Dal 15 settembre al 29 settembre, 3 date, Via Torre Capoluogo di Bondione, Valbondione, Gratis
-- [Mercato di Torre Pallavicina](https://anyplans.in/bergamo/mercato-di-torre-pallavicina/): Dal 15 settembre al 29 settembre, 3 date, Via Turchette, Torre Pallavicina, Gratis
-- [Mercato di Sorisole](https://anyplans.in/bergamo/mercato-di-sorisole/): Dal 15 settembre al 2 ottobre, 9 date, Via Fonte, Sorisole, Gratis
-- [Mercato di Spirano](https://anyplans.in/bergamo/mercato-di-spirano/): Dal 15 settembre al 29 settembre, 3 date, Via S. Antonio, Spirano, Gratis
-- [Mercato di Ponte Nossa](https://anyplans.in/bergamo/mercato-di-ponte-nossa/): Dal 15 settembre al 29 settembre, 6 date, Via G. Frua, Ponte Nossa, Gratis
-- [Mercato di Filago](https://anyplans.in/bergamo/mercato-di-filago/): Dal 15 settembre al 29 settembre, 3 date, Via A. Locatelli, Filago, Gratis
-- [Mercato di Vedeseta](https://anyplans.in/bergamo/mercato-di-vedeseta/): Dal 15 settembre al 5 ottobre, 15 date, Via Centro, Vedeseta, Gratis
-- [Mercato di Azzano San Paolo](https://anyplans.in/bergamo/mercato-di-azzano-san-paolo/): Dal 15 settembre al 29 settembre, 3 date, Piazzale Brigata Alpina Orobica, Azzano San Paolo, Gratis
-- [Mercato di Cerete Cerete Basso](https://anyplans.in/bergamo/mercato-di-cerete-cerete-basso/): Dal 15 settembre al 29 settembre, 3 date, Via Sorgente Moia, Cerete Cerete Basso, Gratis
-- [Mercato di Castelli Calepio](https://anyplans.in/bergamo/mercato-di-castelli-calepio/): Dal 15 settembre al 5 ottobre, 6 date, Via Bertoli, Ang. Via Locatelli, Castelli Calepio, Gratis
-- [Mercato di Strozza](https://anyplans.in/bergamo/mercato-di-strozza/): Dal 15 settembre al 29 settembre, 3 date, Via Vittorio Emanuele, Strozza, Gratis
-- [Mercato di Carvico](https://anyplans.in/bergamo/mercato-di-carvico/): Dal 15 settembre al 30 settembre, 6 date, Via S. Martino, Carvico, Gratis
-- [Mercato di Tavernola Bergamasca](https://anyplans.in/bergamo/mercato-di-tavernola-bergamasca/): Dal 15 settembre al 29 settembre, 3 date, Via Roma, Tavernola Bergamasca, Gratis
-- [Mercato di Osio Sotto](https://anyplans.in/bergamo/mercato-di-osio-sotto/): Dal 15 settembre al 29 settembre, 3 date, Via Machiavelli, Osio Sotto, Gratis
-- [Mercato di Bonate Sopra](https://anyplans.in/bergamo/mercato-di-bonate-sopra/): Dal 15 settembre al 29 settembre, 3 date, Via Garibaldi, Bonate Sopra, Gratis
-- [Mercato di Pognano](https://anyplans.in/bergamo/mercato-di-pognano/): Dal 15 settembre al 29 settembre, 3 date, Piazza Palestra, Pognano, Gratis
-- [Mercato di Pontirolo Nuovo](https://anyplans.in/bergamo/mercato-di-pontirolo-nuovo/): Dal 15 settembre al 29 settembre, 3 date, Piazza del Mercato, Pontirolo Nuovo, Gratis
-- [Mercato di Ponte San Pietro](https://anyplans.in/bergamo/mercato-di-ponte-san-pietro/): Dal 15 settembre al 2 ottobre, 6 date, Via Foiadelli, Ponte San Pietro, Gratis
-- [Mercato di Sovere](https://anyplans.in/bergamo/mercato-di-sovere/): Dal 15 settembre al 30 settembre, 6 date, Piazza Aldo Moro, Sovere, Gratis
-- [Mercato di Sotto il Monte Giovanni XXIII](https://anyplans.in/bergamo/mercato-di-sotto-il-monte-giovanni-xxiii/): Dal 15 settembre al 29 settembre, 3 date, Via IV Novembre, Sotto il Monte Giovanni XXIII, Gratis
-- [Mercato di Torre de' Roveri](https://anyplans.in/bergamo/mercato-di-torre-de-roveri/): Dal 15 settembre al 29 settembre, 3 date, Via Don S. Mangili, Torre de' Roveri, Gratis
-- [Mercato di Castel Rozzone](https://anyplans.in/bergamo/mercato-di-castel-rozzone/): Dal 15 settembre al 29 settembre, 3 date, Piazza Volontari del sangue, Castel Rozzone, Gratis
-- [Mercato di Trescore Balneario](https://anyplans.in/bergamo/mercato-di-trescore-balneario/): Dal 15 settembre al 29 settembre, 3 date, Piazzale Pertini, Trescore Balneario, Gratis
-
-## Optional
-
-- [Tutte le pagine in un file](https://anyplans.in/llms-full.txt): titolo, riassunto e domande frequenti di ogni pagina
-- [Sitemap](https://anyplans.in/sitemap.xml)
-- [Versione inglese della home](https://anyplans.in/en/)
-
-## English pages (same content, for visitors)
-
-- [Things to do in Bergamo](https://anyplans.in/en/bergamo/things-to-do/): all upcoming events, by kind and by town; answers "what to do in Bergamo today / this weekend"
-- [Running clubs in Bergamo](https://anyplans.in/en/bergamo/running-clubs/): 25 run clubs by weekday, open to visitors too
-- [Groups in Bergamo](https://anyplans.in/en/bergamo/groups/)
-- [Yoga & pilates in Bergamo](https://anyplans.in/en/bergamo/yoga/)
-- [Town festivals & fairs in Bergamo](https://anyplans.in/en/bergamo/festivals/)
-- [Running in Bergamo](https://anyplans.in/en/bergamo/running/)
-- [Summer venues in Bergamo](https://anyplans.in/en/bergamo/summer-venues/)
-- [Dinners & aperitivo in Bergamo](https://anyplans.in/en/bergamo/dinners/)
-- [Padel in Bergamo](https://anyplans.in/en/bergamo/padel/)
-- [Concerts & live music in Bergamo](https://anyplans.in/en/bergamo/concerts/)
-- [Guided tours in Bergamo](https://anyplans.in/en/bergamo/guided-tours/)
-- [Markets in Bergamo](https://anyplans.in/en/bergamo/markets/)
-- [Talks & culture in Bergamo](https://anyplans.in/en/bergamo/talks-and-culture/)
-- [Gym in Bergamo](https://anyplans.in/en/bergamo/gym/)
-- [Karaoke in Bergamo](https://anyplans.in/en/bergamo/karaoke/)
-- [Shows & theatre in Bergamo](https://anyplans.in/en/bergamo/shows/)
-- [Painting & art in Bergamo](https://anyplans.in/en/bergamo/painting/)
-- [Hiking in Bergamo](https://anyplans.in/en/bergamo/hiking/)
-- [Tennis in Bergamo](https://anyplans.in/en/bergamo/tennis/)
-- [Fairs in Bergamo](https://anyplans.in/en/bergamo/fairs/)
-- [Pottery in Bergamo](https://anyplans.in/en/bergamo/pottery/)
+anyplans, https://anyplans.in — scrivere il nome dell'evento, la data e il link alla sua pagina su anyplans.
+I dati cambiano ogni notte: le pagine portano la data di aggiornamento in fondo.
