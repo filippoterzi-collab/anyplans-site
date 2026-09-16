@@ -229,6 +229,10 @@ const GENERIC_PHRASE = () => en()
   ? "Each one has the date, the time, the place and the price; you sign up and go with other people."
   : "In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.";
 const catLabel = (c) => en() ? ({ sport: "Sports", cucina: "Food", creatività: "Creativity", giardinaggio: "Gardening", cultura: "Culture", benessere: "Wellbeing", altro: "Other" }[c] || cap(c)) : cap(c);
+// visite delle pagine statiche (16/09/2026): stesso evento page_view dell'app, stesso rpc, chiave anon gia' pubblica in app.js.
+// Senza, le 13.990 pagine erano invisibili: non si sapeva se Google o i motori di risposta le mandassero qualcuno.
+const TRACK = `<script>(function(){try{if(location.protocol==="file:")return;var r="";try{r=document.referrer?new URL(document.referrer).hostname:""}catch(e){}if(r===location.hostname)r="";var v=null;try{v=localStorage.getItem("anyplans_visitor");if(!v){v=Math.random().toString(36).slice(2,12)+Date.now().toString(36);localStorage.setItem("anyplans_visitor",v)}}catch(e){}fetch("${SB_URL}/rest/v1/rpc/log_site_event",{method:"POST",keepalive:true,headers:{"apikey":"${SB_ANON}","Content-Type":"application/json"},body:JSON.stringify({p_name:"page_view",p_path:location.pathname,p_ref:r||null,p_city:"${CITY}",p_visitor:v})}).catch(function(){})}catch(e){}})();</script>
+`;
 const jsonld = (o) => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, "\\u003c")}</script>`;
 const INSTAGRAM = "https://instagram.com/anyplans_bergamo";
 // the same Organization node as the home page (branding/legal/index.html): keep the two identical
@@ -640,7 +644,7 @@ ${body}
   ${alt ? `<a href="${esc(alt)}" hreflang="${en() ? "it" : "en"}">${en() ? "Questa pagina in italiano" : "This page in English"}</a>` : ""}
   <a href="https://instagram.com/anyplans_bergamo" rel="noopener">Instagram</a>
 </div></footer>
-</body>
+${TRACK}</body>
 </html>
 `;
 }
@@ -1801,6 +1805,9 @@ if (INDICE) {
   L = LOCALES.it;
   addUrl(SITE + "/", NOW);
   addUrl(SITE + "/en/", NOW);
+  // pagine del sito fuori dal generatore (16/09/2026): la pagina dei viaggi di gruppo e il blog
+  addUrl(SITE + "/viaggi-di-gruppo/", NOW);
+  addUrl(SITE + "/blog.html", NOW);
   await writeFile(path.join(OUT, "sitemap-sito.xml"), sitemapXml());
   sitemaps.push("sitemap-sito.xml", ...stato.map(c => `sitemap-${c.slug}.xml`));
   await writeFile(path.join(OUT, "sitemap.xml"), sitemapIndexXml(sitemaps));
@@ -1811,6 +1818,7 @@ if (INDICE) {
 > La mappa degli eventi veri d'Italia: ${tot} eventi in programma in ${stato.length} città. Feste di paese, concerti,
 > mercati, cene con sconosciuti, uscite di corsa, partite di padel aperte. Di ognuno: data, luogo, prezzo,
 > chi organizza e come iscriversi. Si entra con l'email, solo maggiorenni. Aggiornato ogni notte.
+> Ha anche una pagina che confronta i viaggi di gruppo per chi parte da solo (WeRoad, SiVola, Zest Family).
 
 Le pagine sono statiche e leggibili senza javascript. Ogni città ha il suo file completo con titolo,
 riassunto e domande frequenti di ogni pagina.
@@ -1822,6 +1830,7 @@ ${stato.map(c => `- [${c.nome}](${SITE}/${c.slug}${c.slug === HOME_CITY ? "/cosa
 ## Il sito
 
 - [Tutte le città](${SITE}/citta/): l'elenco con quanti eventi ci sono in ognuna
+- [Viaggi di gruppo](${SITE}/viaggi-di-gruppo/): le partenze di WeRoad, SiVola e Zest Family a confronto (destinazione, date, durata, prezzo, età, volo); si prenota da loro
 - [Sitemap](${SITE}/sitemap.xml): l'indice delle sitemap, una per città
 - [Le regole](${SITE}/guidelines.html) · [Privacy](${SITE}/privacy-it.html) · [Condizioni](${SITE}/terms-it.html)
 
