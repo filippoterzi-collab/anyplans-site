@@ -870,13 +870,20 @@ function eventPage(p) {
   // un titolo solo, costruito in titoloEvento; se un'altra pagina finirebbe uguale si aggiunge la data
   const t0 = titoloEvento(p, false);
   const title = (titoloRipetuto(t0) ? titoloEvento(p, true) : t0) + " | anyplans";
+  // nella descrizione il ritrovo va col nome corto ("Bridge Brew Bar", non "Bridge Brew Bar -
+  // Birreria, Cocktails & Sport Bar, Napoli"): l'indirizzo intero si mangiava i 160 caratteri e
+  // quello che distingue l'evento non ci entrava più.
+  const dove = String(where || "").split(/\s*[,–]\s*/)[0].trim() || where;
+  // la descrizione comincia dal nome dell'evento: prima non c'era, e sedici eventi diversi dello stesso
+  // organizzatore nello stesso bar (i networking di Eventbrite, che dalla fonte arrivano tutti con la
+  // stessa frase) finivano con la stessa identica descrizione. Sul sito erano 249 pagine (16/09/2026).
   const descr = en()
     ? (p.isPast
-      ? cut(`${tLabel(t)} in ${where}. Last date: ${fmtShort(first.start, tz)}. This event is over: on anyplans you find the next dates and similar events.`, 160)
-      : cut(`${tLabel(t)} in ${where}, ${fmtDay(first.start, tz)} at ${fmtTime(first.start, tz)}. ${cut(p.description, 100) || ""} ${fmtPrice(p.price_cents)}. Go with others.`.replace(/\s+/g, " ").replace(/\.\s*\./g, "."), 160))
+      ? cut(`${cut(p.title, 60)}: ${tLabel(t).toLowerCase()} in ${dove}. Last date: ${fmtShort(first.start, tz)}. This event is over: on anyplans you find the next dates and similar events.`, 160)
+      : cut(`${cut(p.title, 60)}: ${tLabel(t).toLowerCase()} in ${dove}, ${fmtDay(first.start, tz)} at ${fmtTime(first.start, tz)}. ${cut(p.description, 70)} ${fmtPrice(p.price_cents)}. Go with others.`.replace(/\s+/g, " ").replace(/\.\s*\./g, "."), 160))
     : p.isPast
-    ? cut(`${t.label} a ${where}. Ultima data: ${fmtShort(first.start, tz)}. Questo evento è passato: su anyplans trovi le prossime date e gli eventi simili.`, 160)
-    : cut(`${t.label} a ${where} ${fmtDay(first.start, tz).toLowerCase()} alle ${fmtTime(first.start, tz)}. ${cut(p.description, 100) || ""} ${fmtPrice(p.price_cents)}. Ci vai insieme ad altri.`.replace(/\s+/g, " ").replace(/\.\s*\./g, "."), 160);
+    ? cut(`${cut(p.title, 60)}: ${t.label.toLowerCase()} a ${dove}. Ultima data: ${fmtShort(first.start, tz)}. Questo evento è passato: su anyplans trovi le prossime date e gli eventi simili.`, 160)
+    : cut(`${cut(p.title, 60)}: ${t.label.toLowerCase()} a ${dove} ${fmtDay(first.start, tz).toLowerCase()} alle ${fmtTime(first.start, tz)}. ${cut(p.description, 70)} ${fmtPrice(p.price_cents)}. Ci vai insieme ad altri.`.replace(/\s+/g, " ").replace(/\.\s*\./g, "."), 160);
   const image = p.photo ? photoSrc(p.photo) : OG_DEFAULT;
   const sim = similar(p);
   const typeIndex = types.find(x => x.sport === p.sport);
