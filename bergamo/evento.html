@@ -407,7 +407,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1789601222"></script>
+<script src="app.js?v=1789601899"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -826,6 +826,7 @@
   let _me = null;
   async function myName(){
     if (_me) return _me;
+    if (!(session && session.access_token)) return null;   // da sloggati la RPC rispondeva 401 (audit 17/09/2026, #10)
     const r = await rpc("my_profile");
     const row = r && r.ok ? (await r.json().catch(() => []))[0] : null;
     _me = row && row.display_name; return _me;
@@ -918,7 +919,7 @@
 
   // calendario: .ics per apple/outlook, link per google
   function buildCalendar(){
-    const start = new Date(ev.start_at), end = new Date(start.getTime() + 2 * 3600 * 1000);
+    const start = new Date(ev.start_at), end = ev.end_at ? new Date(ev.end_at) : new Date(start.getTime() + 2 * 3600 * 1000);
     const fmt = d => d.toISOString().replace(/[-:]/g, "").replace(/\.\d{3}/, "");
     const url = eventUrl(ev);
     const where = ev.meeting_point_text || "Bergamo";
@@ -929,8 +930,12 @@
       "DESCRIPTION:" + desc.replace(/\n/g, "\\n").replace(/([,;])/g, "\\$1"), "URL:" + url,
       "END:VEVENT","END:VCALENDAR"].join("\r\n");
     const a = document.getElementById("cal-ics");
-    a.href = "data:text/calendar;charset=utf-8," + encodeURIComponent(ics);
-    a.onclick = () => track("calendar");
+    // file .ics vero via Blob: il link data: su iPhone Safari a volte non apriva il calendario (audit 17/09/2026, #13)
+    a.href = "#";
+    a.onclick = e => { e.preventDefault(); track("calendar");
+      const u = URL.createObjectURL(new Blob([ics], { type: "text/calendar;charset=utf-8" }));
+      const t = document.createElement("a"); t.href = u; t.download = "evento.ics"; document.body.appendChild(t); t.click(); t.remove();
+      setTimeout(() => URL.revokeObjectURL(u), 4000); };
     const g = document.getElementById("cal-google");
     g.href = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=" + encodeURIComponent(ev.title) +
       "&dates=" + fmt(start) + "/" + fmt(end) + "&location=" + encodeURIComponent(where) + "&details=" + encodeURIComponent(desc);

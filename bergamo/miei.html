@@ -93,7 +93,7 @@
   <div id="list"><p style="color:var(--grey)">Carico…</p></div>
 </main>
 
-<script src="app.js?v=1789601222"></script>
+<script src="app.js?v=1789601899"></script>
 <script>
   requireLogin();
   mountNav("i miei eventi", { col: 860 });
@@ -171,7 +171,7 @@
     const el = document.getElementById("rp-" + id); if (el) el.remove();
   }
   async function suggest(){
-    const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 30000 });   // 30 km: a 50 arrivavano suggerimenti a Milano (audit 17/09/2026, #5)
+    const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 25000 });   // 25 km: a 50 arrivavano suggerimenti a Milano (audit 17/09/2026, #5)
     if (!r || !r.ok) return;
     const evs = (await r.json().catch(() => []))
       .filter(x => new Date(x.start_at) > new Date() && x.my_status !== "going")

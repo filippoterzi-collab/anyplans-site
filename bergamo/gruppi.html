@@ -60,6 +60,7 @@
   .g{display:grid; grid-template-columns:56px 1fr auto; gap:6px 14px; align-items:center;
      background:#fff; border:1.5px solid rgba(25,25,25,.10); border-radius:16px; padding:14px 16px;
      cursor:pointer; min-width:0;}
+  a.g{text-decoration:none;color:inherit}
   .g:hover{border-color:var(--blue);}
   .g .logo{width:56px; height:56px; border-radius:14px; background:var(--tint) center/cover no-repeat;
            display:flex; align-items:center; justify-content:center; font-size:28px; flex-shrink:0; overflow:hidden;}
@@ -147,7 +148,7 @@
   <a class="invite" id="invite" href="crea-community.html" hidden>Organizzi eventi? Crea il tuo gruppo →</a>
 </main>
 
-<script src="app.js?v=1789601222"></script>
+<script src="app.js?v=1789601899"></script>
 <script>
   requireLogin();
   mountNav("gruppi", { col: 860 });
@@ -165,7 +166,7 @@
   const emojiOf = g => g.emoji || CAT_EMOJI[g.category] || (CATALOG[g.category] || {}).e || "📍";
   const catLabel = g => (CATALOG[g.category] || {}).l || g.category || "";
   const catFamily = g => (CATALOG[g.category] || {}).c || g.category;
-  const followersTxt = n => { n = Number(n) || 0; return n === 0 ? "Nessuno ancora" : n === 1 ? "1 persona lo segue" : n + " persone lo seguono"; };
+  const followersTxt = n => { n = Number(n) || 0; return n < 5 ? "" : n + " persone lo seguono"; };   // sotto i 5 niente numero (audit 17/09/2026, #14)
   const upcomingTxt = n => { n = Number(n) || 0; return n === 0 ? "Nessun evento in programma" : n === 1 ? "1 evento in programma" : n + " eventi in programma"; };
 
   async function load(){
@@ -234,21 +235,20 @@
     const action = manage
       ? '<span class="manage">Gestisci →</span>'
       : `<button class="follow${on ? " ghost" : ""}" aria-pressed="${on}" aria-label="${on ? "Non seguire più" : "Segui"} ${esc(g.name)}"
-           ${pending.has(g.id) ? "disabled" : ""} onclick="event.stopPropagation(); toggleFollow('${esc(g.id)}')">${on ? "Lo segui ✓" : "Segui"}</button>`;
-    return `<div class="g" role="link" tabindex="0" data-href="${esc(href)}" onclick="go(this)" onkeydown="if(event.key==='Enter') go(this)">
+           ${pending.has(g.id) ? "disabled" : ""} onclick="event.preventDefault(); event.stopPropagation(); toggleFollow('${esc(g.id)}')">${on ? "Lo segui ✓" : "Segui"}</button>`;
+    return `<a class="g" href="${esc(href)}">
       ${logo}
       <div class="body">
         <div class="name"><span>${esc(g.name)}</span>${vb}</div>
         ${g.is_verified ? '<div class="v">Verificato da anyplans</div>' : ""}
         <div class="m">${esc(emojiOf(g))} ${esc(catLabel(g))}${g.city ? " · " + esc(cityCase(g.city)) : ""}</div>
-        <div class="m">${followersTxt(g.follower_count)} · ${upcomingTxt(g.upcoming_count)}</div>
+        <div class="m">${[followersTxt(g.follower_count), upcomingTxt(g.upcoming_count)].filter(Boolean).join(" · ")}</div>
         ${rating}${band}
         ${next}
       </div>
       ${action}
-    </div>`;
+    </a>`;
   }
-  function go(el){ location.href = el.dataset.href; }
 
   function section(title, list){
     if (!list.length) return "";

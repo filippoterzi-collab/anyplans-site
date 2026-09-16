@@ -391,7 +391,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1789601222"></script>
+<script src="app.js?v=1789601899"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -423,7 +423,7 @@
   if (!logged) document.querySelectorAll("#tabbar a").forEach(a => { if (!a.getAttribute("href").includes("eventi.html")) a.onclick = () => { try { sessionStorage.setItem("anyplans_next", a.getAttribute("href")); } catch (_) {} }; });
 
   let EVENTS = [];
-  const BG = { lat: 45.698, lng: 9.670 };                                        // centro del feed (30 km)
+  const BG = { lat: 45.698, lng: 9.670 };                                        // centro del feed (25 km)
   const BG_CITY = { kind: "bg", name: "Bergamo città", lat: 45.6983, lng: 9.6773, km: 6 };
   let feedCenter = BG;
 
@@ -440,11 +440,11 @@
     }
   }
 
-  // 30 km attorno a Bergamo: a 50 km entravano le partite di padel di Milano sotto "Eventi a Bergamo" (audit 17/09/2026, #5)
-  let loadSeq = 0, feedRadius = 30000;
+  // 25 km attorno a Bergamo: a 50 km entravano le partite di padel di Milano sotto "Eventi a Bergamo" (audit 17/09/2026, #5)
+  let loadSeq = 0, feedRadius = 25000;
   async function loadEvents(center, keepView, radiusM){
     center = center || BG;
-    radiusM = radiusM || 30000;
+    radiusM = radiusM || 25000;
     const seq = ++loadSeq;
     const list = document.getElementById("list");
     list.innerHTML = '<div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div>';

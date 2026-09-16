@@ -77,8 +77,8 @@ header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid 
   .navright .btn,.navright .ghost{display:none}
   .plus{display:flex;width:40px;height:40px;border-radius:999px;background:var(--blue);color:#fff;align-items:center;justify-content:center;font-size:26px;line-height:1;font-weight:700}
   .avatar{display:none}
-  .tabbar{display:grid;grid-template-columns:repeat(4,1fr);position:fixed;left:0;right:0;bottom:0;height:66px;background:#fff;border-top:1px solid var(--hair);z-index:46;padding-bottom:env(safe-area-inset-bottom)}
-  .tabbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:11px;font-weight:700;color:var(--grey);position:relative}
+  .tabbar{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;height:66px;background:#fff;border-top:1px solid var(--hair);z-index:46;padding-bottom:env(safe-area-inset-bottom)}
+  .tabbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:10.5px;font-weight:700;color:var(--grey);position:relative;text-align:center;line-height:1.1;padding:0 2px}
   .tabbar a svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
   .tabbar a.on{color:var(--blue)}
   .tabbar .b{position:absolute;top:8px;left:calc(50% + 6px);min-width:16px;height:16px;border-radius:999px;background:var(--blue);color:#fff;font-size:10px;font-weight:800;display:flex;align-items:center;justify-content:center;padding:0 4px}
@@ -479,6 +479,8 @@ footer li a.now{color:var(--blue);font-weight:700}
 .brand .q{font-size:.92em}
 .navbtn{height:40px;width:auto}
 #map{position:absolute;inset:0}
+.mapload{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:14px;color:#6e6e73;background:linear-gradient(110deg,#eef1f5 30%,#f6f7f9 50%,#eef1f5 70%);background-size:200% 100%;animation:mapload 1.4s linear infinite;pointer-events:none}
+@keyframes mapload{from{background-position:200% 0}to{background-position:-200% 0}}
 .map .maplibregl-popup-content{padding:0;border-radius:14px;box-shadow:0 10px 30px rgba(25,25,25,.22);overflow:hidden}
 .map .maplibregl-popup .pop{position:static;transform:none;width:250px;box-shadow:none;border-radius:0}
 .map .maplibregl-popup .pop+.pop{border-top:1px solid var(--hair)}
@@ -535,6 +537,8 @@ body.locked .mk{display:block}
   .split{display:flex;flex-direction:column;align-items:stretch;gap:0}
   .mapcol{order:-1;position:sticky;top:8px;z-index:5;margin:0 0 12px}
   .map{height:168px;min-height:0;border-radius:16px}
+  /* da sloggati la mappa ospita il riquadro "Registrati": a 168px il bottone si taglia */
+  body.locked .map{height:230px}
   .listcol{order:1;position:relative}
 
   /* conteggio compatto, al posto della riga con il menu Ordina */
@@ -718,6 +722,7 @@ body.locked .mk{display:block}
     <aside class="mapcol" aria-label="Mappa degli eventi">
       <div class="map" id="mapbox">
         <div id="map"></div>
+        <div class="mapload" id="mapload" aria-hidden="true">Carico la mappa…</div>
         <div class="lock" id="maplock" hidden><div>🔒<b>Registrati per vedere la mappa</b><p>Gli eventi vicino a te, con chi ci va. Trenta secondi, gratis.</p><a class="btn" href="/bergamo/login.html" data-gate="mappa">Registrati</a></div></div>
         <button class="mapbtn" id="mapbtn" data-gate="mappa">⤢ Tutta la mappa</button>
         <div class="mapinfo" id="mapinfo"></div>
@@ -783,6 +788,7 @@ body.locked .mk{display:block}
 
 <nav class="tabbar" aria-label="Sezioni">
   <a href="/" class="on"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg>Esplora</a>
+  <a href="/viaggi-di-gruppo/" data-gate="viaggi"><svg viewBox="0 0 24 24"><path d="M2.5 13.5l19-6.5-3 9-5.5-1.5-3.5 4-1-4.5z"/></svg>Viaggi</a>
   <a href="/bergamo/miei.html" data-gate="miei"><svg viewBox="0 0 24 24"><path d="M5 5.5h14v15l-7-4-7 4z"/></svg>I miei eventi</a>
   <a href="/bergamo/gruppi.html" data-gate="gruppi"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Gruppi</a>
   <a href="/bergamo/profilo.html" data-gate="profilo"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Profilo</a>
@@ -797,7 +803,7 @@ body.locked .mk{display:block}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789601222"></script>
+<script src="/bergamo/app.js?v=1789601899"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -926,6 +932,8 @@ async function loadEvents(center){
   const EOD = new Date(NOW); EOD.setHours(23, 59, 0, 0);
   EV = rows.map(x => { const d = new Date(x.start_at); const rp = romeParts(d); const tw = cleanTown(cityOf(x.meeting_point_text)) || center.nome || ""; const multi = rp.ymd < TODAY; return { ...x, d, s: multi ? EOD : d, multi, ymd: multi ? TODAY : rp.ymd, h: rp.h, tw, emoji: x.emoji || EMOJI[x.sport] || "📍" }; })
     .filter(e => isCurrent(e.d, e.end_at)).sort((a, b) => a.s - b.s);
+  // il feed e' arrivato: il titolo smette di ruotare e dice la citta' della lista (audit 17/09/2026, #11)
+  window.FEEDLOADED = true; if (!window.CHOSEN) { const hc = document.getElementById("hcity"); hc.textContent = center.nome; hc.classList.add("swap"); }
   buildDynamic(); render();
   if (map && mapReady) { if (lastRows.length) fitMap(mapRows(lastRows)); else map.jumpTo({ center: [center.lng, center.lat], zoom: 11.5 }); }
 }
@@ -1106,7 +1114,12 @@ function bindAll(){
   }
   ts.addEventListener("input", filterPlaces);
   ts.addEventListener("click", e => e.stopPropagation());
-  ts.addEventListener("keydown", e => { if (e.key !== "Enter") return; e.preventDefault(); const first = document.querySelector("#freecity .chip"); if (first) { first.click(); applyPlace(); closePanels(); } });
+  // Invio = primo suggerimento + Avanti. Se l'elenco non e' ancora comparso (Invio subito dopo l'ultima lettera)
+  // si rifa' la ricerca al volo; il timer dell'auto-applica viene fermato per non riaprire la scelta (audit 17/09/2026, #6).
+  ts.addEventListener("keydown", e => { if (e.key !== "Enter") return; e.preventDefault(); clearTimeout(tt);
+    if (!document.querySelector("#freecity .chip")) filterPlaces();
+    clearTimeout(tt); if (!(window.SUGG || []).length) return;
+    pickPlace(0); applyPlace(); closePanels(); });
   // modale filtri
   const modal = document.getElementById("modal");
   // S1 (17/09/2026, spec §6.1): su mobile il foglio è a schermo intero, quindi servono tre uscite
@@ -1267,7 +1280,7 @@ function initMap(){
   map.addControl(new maplibregl.NavigationControl({ showCompass: false }));
   map.addControl(new maplibregl.AttributionControl({ compact: true }), "bottom-left");
   // appena la mappa è pronta: i pin di quello che c'è già in lista (il feed può essere arrivato prima o dopo)
-  map.on("load", () => { mapReady = true; map.resize(); drawPins(mapRows(lastRows)); fitMap(mapRows(lastRows)); });
+  map.on("load", () => { mapReady = true; const ml = document.getElementById("mapload"); if (ml) ml.remove(); map.resize(); drawPins(mapRows(lastRows)); fitMap(mapRows(lastRows)); });
   // S5 (17/09/2026): su mobile il riquadro della mappa cambia misura quando cambia il layout
   // (e alla rotazione del telefono). Senza resize resta un rettangolo grigio.
   if (window.ResizeObserver) {
@@ -1313,7 +1326,7 @@ function loadMapLib(){
 
 // ---------- la città nel titolo gira finché non ne scegli una ----------
 (function(){ const names = CITIES.slice(0, 14).map(c => c.nome); let i = 0; const el = document.getElementById("hcity");
-  setInterval(() => { if (window.CHOSEN) return; i = (i + 1) % names.length; el.classList.remove("swap"); void el.offsetWidth; el.textContent = names[i]; el.classList.add("swap"); }, 1800); })();
+  setInterval(() => { if (window.CHOSEN || window.FEEDLOADED) return; i = (i + 1) % names.length; el.classList.remove("swap"); void el.offsetWidth; el.textContent = names[i]; el.classList.add("swap"); }, 1800); })();
 
 
 // ---------- categorie sul computer: frecce e trascinamento col mouse (16/09/2026) ----------
