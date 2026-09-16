@@ -6,7 +6,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## Pagine principali
 
-- [Cosa fare a Bergamo](https://anyplans.in/bergamo/cosa-fare/): tutti gli eventi in programma (729), per tipo e per paese; risponde a "cosa fare a Bergamo oggi / questo weekend"
+- [Cosa fare a Bergamo](https://anyplans.in/bergamo/cosa-fare/): tutti gli eventi in programma (886), per tipo e per paese; risponde a "cosa fare a Bergamo oggi / questo weekend"
 - [Running club a Bergamo](https://anyplans.in/bergamo/running-club/): 25 run club per giorno della settimana, con ritrovo, orario e domande frequenti
 - [Gruppi a Bergamo](https://anyplans.in/bergamo/gruppi/): 37 associazioni, club e comunità che pubblicano eventi
 - [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
@@ -16,23 +16,27 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## Eventi per tipo e per paese
 
-- [Feste, sagre ed eventi di paese a Bergamo](https://anyplans.in/bergamo/feste/): 37 in programma
-- [Corsa a Bergamo](https://anyplans.in/bergamo/corsa/): 28 in programma
+- [Yoga / pilates a Bergamo](https://anyplans.in/bergamo/yoga/): 10 in programma
+- [Feste, sagre ed eventi di paese a Bergamo](https://anyplans.in/bergamo/feste/): 66 in programma
+- [Corsa a Bergamo](https://anyplans.in/bergamo/corsa/): 34 in programma
+- [Camminata a Bergamo](https://anyplans.in/bergamo/camminata/): 2 in programma
 - [Estivo a Bergamo](https://anyplans.in/bergamo/estivi/): 11 in programma
-- [Cena / aperitivo a Bergamo](https://anyplans.in/bergamo/cene-e-aperitivi/): 39 in programma
+- [Cena / aperitivo a Bergamo](https://anyplans.in/bergamo/cene-e-aperitivi/): 55 in programma
 - [Padel a Bergamo](https://anyplans.in/bergamo/padel/): 129 in programma
-- [Concerti e musica dal vivo a Bergamo](https://anyplans.in/bergamo/concerti/): 91 in programma
+- [Concerti e musica dal vivo a Bergamo](https://anyplans.in/bergamo/concerti/): 103 in programma
 - [Mercatini a Bergamo](https://anyplans.in/bergamo/mercatini/): 190 in programma
-- [Incontri culturali a Bergamo](https://anyplans.in/bergamo/incontri-culturali/): 52 in programma
+- [Incontri culturali a Bergamo](https://anyplans.in/bergamo/incontri-culturali/): 95 in programma
 - [Palestra a Bergamo](https://anyplans.in/bergamo/palestra/): 2 in programma
-- [Giochi da tavolo a Bergamo](https://anyplans.in/bergamo/giochi/): 2 in programma
+- [Giochi da tavolo a Bergamo](https://anyplans.in/bergamo/giochi/): 4 in programma
 - [Serate e discoteca a Bergamo](https://anyplans.in/bergamo/serate/): 3 in programma
 - [Karaoke a Bergamo](https://anyplans.in/bergamo/karaoke/): 30 in programma
-- [Ballo e danza a Bergamo](https://anyplans.in/bergamo/ballo/): 7 in programma
-- [Visite guidate a Bergamo](https://anyplans.in/bergamo/visite-guidate/): 18 in programma
-- [Spettacoli e teatro a Bergamo](https://anyplans.in/bergamo/spettacoli/): 53 in programma
-- [Escursionismo a Bergamo](https://anyplans.in/bergamo/escursioni/): 5 in programma
-- [Pittura / arte a Bergamo](https://anyplans.in/bergamo/pittura/): 5 in programma
+- [Ballo e danza a Bergamo](https://anyplans.in/bergamo/ballo/): 9 in programma
+- [Visite guidate a Bergamo](https://anyplans.in/bergamo/visite-guidate/): 22 in programma
+- [Mostre a Bergamo](https://anyplans.in/bergamo/mostre/): 4 in programma
+- [Spettacoli e teatro a Bergamo](https://anyplans.in/bergamo/spettacoli/): 62 in programma
+- [Escursionismo a Bergamo](https://anyplans.in/bergamo/escursioni/): 9 in programma
+- [Pittura / arte a Bergamo](https://anyplans.in/bergamo/pittura/): 8 in programma
+- [Cinema a Bergamo](https://anyplans.in/bergamo/cinema/): 8 in programma
 - [Fiere a Bergamo](https://anyplans.in/bergamo/fiere/): 8 in programma
 - [Ceramica a Bergamo](https://anyplans.in/bergamo/ceramica/): 4 in programma
 - [Partite da vedere a Bergamo](https://anyplans.in/bergamo/partite/): 11 in programma
@@ -145,8 +149,10 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Things to do in Bergamo](https://anyplans.in/en/bergamo/things-to-do/): all upcoming events, by kind and by town; answers "what to do in Bergamo today / this weekend"
 - [Running clubs in Bergamo](https://anyplans.in/en/bergamo/running-clubs/): 25 run clubs by weekday, open to visitors too
 - [Groups in Bergamo](https://anyplans.in/en/bergamo/groups/)
+- [Yoga & pilates in Bergamo](https://anyplans.in/en/bergamo/yoga/)
 - [Town festivals & fairs in Bergamo](https://anyplans.in/en/bergamo/festivals/)
 - [Running in Bergamo](https://anyplans.in/en/bergamo/running/)
+- [Walking in Bergamo](https://anyplans.in/en/bergamo/walking/)
 - [Summer venues in Bergamo](https://anyplans.in/en/bergamo/summer-venues/)
 - [Dinners & aperitivo in Bergamo](https://anyplans.in/en/bergamo/dinners/)
 - [Padel in Bergamo](https://anyplans.in/en/bergamo/padel/)
@@ -159,9 +165,11 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Karaoke in Bergamo](https://anyplans.in/en/bergamo/karaoke/)
 - [Dancing in Bergamo](https://anyplans.in/en/bergamo/dancing/)
 - [Guided tours in Bergamo](https://anyplans.in/en/bergamo/guided-tours/)
+- [Exhibitions in Bergamo](https://anyplans.in/en/bergamo/exhibitions/)
 - [Shows & theatre in Bergamo](https://anyplans.in/en/bergamo/shows/)
 - [Hiking in Bergamo](https://anyplans.in/en/bergamo/hiking/)
 - [Painting & art in Bergamo](https://anyplans.in/en/bergamo/painting/)
+- [Cinema in Bergamo](https://anyplans.in/en/bergamo/cinema/)
 - [Fairs in Bergamo](https://anyplans.in/en/bergamo/fairs/)
 - [Pottery in Bergamo](https://anyplans.in/en/bergamo/pottery/)
 - [Live sport in Bergamo](https://anyplans.in/en/bergamo/live-sport/)
@@ -170,90 +178,100 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 # Tutte le pagine di anyplans a Bergamo (italiano, poi inglese)
 
-## Cosa fare a Bergamo e provincia: 729 eventi
+## Cosa fare a Bergamo e provincia: 886 eventi
 https://anyplans.in/bergamo/cosa-fare/
 
 Feste di paese, uscite sportive, corsi e gruppi: tutto quello che succede vicino a te, in un posto solo. Scegli un evento e vai insieme ad altri.
 
-## Cosa fare a Bergamo oggi: 78 eventi
+## Cosa fare a Bergamo oggi: 81 eventi
 https://anyplans.in/bergamo/cosa-fare-oggi/
 
-78 eventi a Bergamo e provincia oggi, 16 settembre 2026: Bergamo, Curno, Treviglio e Vedeseta e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+81 eventi a Bergamo e provincia oggi, 16 settembre 2026: Bergamo, Treviglio, Curno e Vedeseta e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Bergamo domani: 73 eventi
+## Cosa fare a Bergamo domani: 76 eventi
 https://anyplans.in/bergamo/cosa-fare-domani/
 
-73 eventi a Bergamo e provincia domani, 17 settembre 2026: Bergamo, Clusone, Sorisole e Casnigo e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+76 eventi a Bergamo e provincia domani, 17 settembre 2026: Bergamo, Clusone, Sorisole e Casnigo e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Bergamo nel weekend: 132 eventi
+## Cosa fare a Bergamo nel weekend: 168 eventi
 https://anyplans.in/bergamo/cosa-fare-nel-weekend/
 
-132 eventi a Bergamo e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Bergamo, Zogno, Casnigo e Treviglio e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+168 eventi a Bergamo e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Bergamo, Zogno, Treviglio e Casnigo e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Eventi a Bergamo a settembre 2026: 506
+## Eventi a Bergamo a settembre 2026: 594
 https://anyplans.in/bergamo/eventi-settembre-2026/
 
-506 eventi a Bergamo e provincia a settembre 2026: mercatini, estivo, padel, cena / aperitivo e corsa. Giorno per giorno, con orari, luogo e prezzo, a Bergamo, Torre Boldone, Lurano e Curno e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+594 eventi a Bergamo e provincia a settembre 2026: mercatini, estivo, padel, cena / aperitivo e incontri culturali. Giorno per giorno, con orari, luogo e prezzo, a Bergamo, Torre Boldone, Treviglio e Lurano e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Bergamo a ottobre 2026: 254
+## Eventi a Bergamo a ottobre 2026: 299
 https://anyplans.in/bergamo/eventi-ottobre-2026/
 
-254 eventi a Bergamo e provincia a ottobre 2026: mercatini, corsa, padel, karaoke e ceramica. Giorno per giorno, con orari, luogo e prezzo, a Bergamo, Treviglio, Sorisole e Onore e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+299 eventi a Bergamo e provincia a ottobre 2026: mercatini, corsa, padel, karaoke e ceramica. Giorno per giorno, con orari, luogo e prezzo, a Bergamo, Treviglio, Lecco e Sorisole e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Bergamo a novembre 2026: 61
+## Eventi a Bergamo a novembre 2026: 75
 https://anyplans.in/bergamo/eventi-novembre-2026/
 
-61 eventi a Bergamo e provincia a novembre 2026: padel, karaoke, visite guidate, mercatini e ceramica. Giorno per giorno, con orari, luogo e prezzo, a Bergamo, Zogno, Treviglio e San Pellegrino Terme e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+75 eventi a Bergamo e provincia a novembre 2026: padel, karaoke, visite guidate, mercatini e ceramica. Giorno per giorno, con orari, luogo e prezzo, a Bergamo, Treviglio, Erba e Malpaga e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Feste e sagre a Bergamo: 37 eventi
+## Yoga / pilates a Bergamo: 10 eventi
+https://anyplans.in/bergamo/yoga/
+
+A Bergamo e provincia ci sono 10 lezioni nei prossimi mesi. Lezioni di yoga e pilates, al chiuso e all'aperto, per chi vuole rallentare.
+
+## Feste e sagre a Bergamo: 66 eventi
 https://anyplans.in/bergamo/feste/
 
-A Bergamo e provincia ci sono 37 feste nei prossimi mesi. Le feste dell'oratorio, le sagre e gli eventi di paese della bergamasca, con le date di ogni sera.
+A Bergamo e provincia ci sono 66 feste nei prossimi mesi. Le feste dell'oratorio, le sagre e gli eventi di paese della bergamasca, con le date di ogni sera.
 
-## Corsa a Bergamo: 28 eventi
+## Corsa a Bergamo: 34 eventi
 https://anyplans.in/bergamo/corsa/
 
-A Bergamo e provincia ci sono 28 uscite di corsa nei prossimi mesi. Uscite di corsa e gare podistiche in città e in provincia: ti iscrivi e corri insieme ad altri, al tuo passo.
+A Bergamo e provincia ci sono 34 uscite di corsa nei prossimi mesi. Uscite di corsa e gare podistiche in città e in provincia: ti iscrivi e corri insieme ad altri, al tuo passo.
+
+## Camminata a Bergamo: 2 eventi
+https://anyplans.in/bergamo/camminata/
+
+A Bergamo e provincia ci sono 2 camminate nei prossimi mesi. Camminate in compagnia, in città e sui colli: il modo più semplice per uscire di casa.
 
 ## Estivo a Bergamo: 11 eventi
 https://anyplans.in/bergamo/estivi/
 
 A Bergamo e provincia ci sono 11 serate all'aperto nei prossimi mesi. Gli estivi di Bergamo e provincia, sera per sera fino alla chiusura: bar all'aperto nei parchi, cucina, dj set e serate.
 
-## Cena / aperitivo a Bergamo: 39 eventi
+## Cena / aperitivo a Bergamo: 55 eventi
 https://anyplans.in/bergamo/cene-e-aperitivi/
 
-A Bergamo e provincia ci sono 39 cene e aperitivi nei prossimi mesi. Cene e aperitivi di gruppo in città: un tavolo prenotato, posti liberi, nessuno che conosce già tutti.
+A Bergamo e provincia ci sono 55 cene e aperitivi nei prossimi mesi. Cene e aperitivi di gruppo in città: un tavolo prenotato, posti liberi, nessuno che conosce già tutti.
 
 ## Padel a Bergamo: 129 eventi
 https://anyplans.in/bergamo/padel/
 
 A Bergamo e provincia ci sono 129 partite di padel nei prossimi mesi. Partite di padel in provincia: serve sempre un quarto.
 
-## Concerti e musica dal vivo a Bergamo: 91 eventi
+## Concerti e musica dal vivo a Bergamo: 103 eventi
 https://anyplans.in/bergamo/concerti/
 
-A Bergamo e provincia ci sono 91 concerti nei prossimi mesi. I concerti e le serate di musica dal vivo a Bergamo e in provincia: band, tribute, cantautori, dalle feste di paese ai teatri.
+A Bergamo e provincia ci sono 103 concerti nei prossimi mesi. I concerti e le serate di musica dal vivo a Bergamo e in provincia: band, tribute, cantautori, dalle feste di paese ai teatri.
 
 ## Mercatini a Bergamo: 190 eventi
 https://anyplans.in/bergamo/mercatini/
 
 A Bergamo e provincia ci sono 190 mercatini nei prossimi mesi. I mercatini di Bergamo e provincia: antiquariato, hobbisti, artigianato, vintage e seconda mano, weekend per weekend.
 
-## Incontri culturali a Bergamo: 52 eventi
+## Incontri culturali a Bergamo: 95 eventi
 https://anyplans.in/bergamo/incontri-culturali/
 
-A Bergamo e provincia ci sono 52 incontri nei prossimi mesi. Presentazioni di libri, conferenze e mostre a Bergamo e in provincia: ci si va, si ascolta, si parla dopo.
+A Bergamo e provincia ci sono 95 incontri nei prossimi mesi. Presentazioni di libri, conferenze e mostre a Bergamo e in provincia: ci si va, si ascolta, si parla dopo.
 
 ## Palestra a Bergamo: 2 eventi
 https://anyplans.in/bergamo/palestra/
 
 A Bergamo e provincia ci sono 2 eventi di palestra nei prossimi mesi. Allenamenti in palestra e a corpo libero, in gruppo, per tutti i livelli.
 
-## Giochi da tavolo a Bergamo: 2 eventi
+## Giochi da tavolo a Bergamo: 4 eventi
 https://anyplans.in/bergamo/giochi/
 
-A Bergamo e provincia ci sono 2 serate di giochi nei prossimi mesi. Serate di giochi da tavolo, quiz, burraco e scacchi a Bergamo e provincia: ci si siede a un tavolo con chi c'è.
+A Bergamo e provincia ci sono 4 serate di giochi nei prossimi mesi. Serate di giochi da tavolo, quiz, burraco e scacchi a Bergamo e provincia: ci si siede a un tavolo con chi c'è.
 
 ## Serate e discoteca a Bergamo: 3 eventi
 https://anyplans.in/bergamo/serate/
@@ -265,30 +283,40 @@ https://anyplans.in/bergamo/karaoke/
 
 A Bergamo e provincia ci sono 30 serate karaoke nei prossimi mesi. Le serate karaoke nei locali di Bergamo e provincia: microfono aperto, si canta con chi c'è.
 
-## Ballo e danza a Bergamo: 7 eventi
+## Ballo e danza a Bergamo: 9 eventi
 https://anyplans.in/bergamo/ballo/
 
-A Bergamo e provincia ci sono 7 serate di ballo nei prossimi mesi. Milonghe, serate di salsa e bachata, lezioni di prova e corsi di ballo a Bergamo e provincia: si va anche da soli, si balla con chi c'è.
+A Bergamo e provincia ci sono 9 serate di ballo nei prossimi mesi. Milonghe, serate di salsa e bachata, lezioni di prova e corsi di ballo a Bergamo e provincia: si va anche da soli, si balla con chi c'è.
 
-## Visite guidate a Bergamo: 18 eventi
+## Visite guidate a Bergamo: 22 eventi
 https://anyplans.in/bergamo/visite-guidate/
 
-A Bergamo e provincia ci sono 18 visite guidate nei prossimi mesi. Visite guidate a chiese, torri, musei e parchi della bergamasca: si va con una guida e con altri, senza prenotare da soli.
+A Bergamo e provincia ci sono 22 visite guidate nei prossimi mesi. Visite guidate a chiese, torri, musei e parchi della bergamasca: si va con una guida e con altri, senza prenotare da soli.
 
-## Spettacoli e teatro a Bergamo: 53 eventi
+## Mostre a Bergamo: 4 eventi
+https://anyplans.in/bergamo/mostre/
+
+A Bergamo e provincia ci sono 4 mostre nei prossimi mesi. Le mostre aperte a Bergamo e in provincia: quadri, fotografia, archeologia e installazioni, con i giorni di apertura.
+
+## Spettacoli e teatro a Bergamo: 62 eventi
 https://anyplans.in/bergamo/spettacoli/
 
-A Bergamo e provincia ci sono 53 spettacoli nei prossimi mesi. Teatro, commedie dialettali, cabaret e musical a Bergamo e in provincia, con le date di ogni replica.
+A Bergamo e provincia ci sono 62 spettacoli nei prossimi mesi. Teatro, commedie dialettali, cabaret e musical a Bergamo e in provincia, con le date di ogni replica.
 
-## Escursionismo a Bergamo: 5 eventi
+## Escursionismo a Bergamo: 9 eventi
 https://anyplans.in/bergamo/escursioni/
 
-A Bergamo e provincia ci sono 5 escursioni nei prossimi mesi. Escursioni e trekking sulle Orobie e sui sentieri della provincia, con un host che conosce la strada.
+A Bergamo e provincia ci sono 9 escursioni nei prossimi mesi. Escursioni e trekking sulle Orobie e sui sentieri della provincia, con un host che conosce la strada.
 
-## Pittura / arte a Bergamo: 5 eventi
+## Pittura / arte a Bergamo: 8 eventi
 https://anyplans.in/bergamo/pittura/
 
-A Bergamo e provincia ci sono 5 laboratori nei prossimi mesi. Laboratori di pittura e disegno, per chi vuole provare o riprendere in mano i pennelli.
+A Bergamo e provincia ci sono 8 laboratori nei prossimi mesi. Laboratori di pittura e disegno, per chi vuole provare o riprendere in mano i pennelli.
+
+## Cinema a Bergamo: 8 eventi
+https://anyplans.in/bergamo/cinema/
+
+A Bergamo e provincia ci sono 8 proiezioni nei prossimi mesi. Proiezioni, rassegne e cinema all'aperto a Bergamo e in provincia, con le date di ogni replica.
 
 ## Fiere a Bergamo: 8 eventi
 https://anyplans.in/bergamo/fiere/
@@ -1845,8 +1873,13 @@ https://anyplans.in/bergamo/switch-smash/
 
 Padel a YEP Albano Sant' Alessandro, Via Tonale 3/C, 24061 Albano Sant'Alessandro, martedì 22 settembre alle 09:30 (2 date, fino al 29 settembre). 12 € (Iscrizione e pagamento su Playtomic).
 
-## PRANZO Business Networking Imprenditori e…
+## PRANZO Business Networking… – Farina&Co. Bergamo
 https://anyplans.in/bergamo/pranzo-business-networking-imprenditori-e-manager-bergamo-pr/
+
+Incontri culturali a Farina&Co. Bergamo, Bergamo, martedì 6 ottobre alle 12:30. Gratis (Biglietti su Eventbrite).
+
+## PRANZO Business Networking… – Farina&Co. Bergamo
+https://anyplans.in/bergamo/pranzo-business-networking-imprenditori-e-manager-bergamo-pr-2026-09-15/
 
 Incontri culturali a Farina&Co. Bergamo, Bergamo: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
@@ -2105,6 +2138,16 @@ https://anyplans.in/bergamo/birra-dopo-il-lavoro-da-nama-brewing-7-posti-liberi/
 
 Cena / aperitivo a Nama Brewing, Treviglio, mercoledì 16 settembre alle 16:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Baby Bookclub: il gruppo di lettura per…
+https://anyplans.in/bergamo/baby-bookclub-il-gruppo-di-lettura-per-l-infanzia/
+
+Incontri culturali a Via Antonio Locatelli, 15, Treviglio, mercoledì 16 settembre alle 17:00. Gratis (Biglietti su Eventbrite).
+
+## Prova GIOCOMUSICA 4-8 anni
+https://anyplans.in/bergamo/prova-giocomusica-4-8-anni/
+
+Concerti e musica dal vivo a Piazza Giovanni Paolo II, 121, Brembate di Sopra, mercoledì 16 settembre alle 17:00. Gratis (Biglietti su Eventbrite).
+
 ## Cena da PizzaClub No Limits - Capriate: 1 posto…
 https://anyplans.in/bergamo/cena-da-pizzaclub-no-limits-capriate-1-posto-libero/
 
@@ -2134,6 +2177,11 @@ Ballo e danza a NXT Bergamo, Piazzale degli Alpini, Bergamo, mercoledì 16 sette
 https://anyplans.in/bergamo/gala/
 
 Cena / aperitivo a Agriturismo Sadira, Via alle Cascine 525, Calusco d'Adda, mercoledì 16 settembre alle 20:00. Gratis (Ingresso gratuito, prenotazione consigliata).
+
+## Di chi sono i nostri figli?
+https://anyplans.in/bergamo/di-chi-sono-i-nostri-figli/
+
+Incontri culturali a Sala Cine-Teatro Don G. Sironi, Osnago, mercoledì 16 settembre alle 20:45. Gratis (Biglietti su Eventbrite).
 
 ## Karma Night
 https://anyplans.in/bergamo/karma-night/
@@ -2305,6 +2353,11 @@ https://anyplans.in/bergamo/duello-a-mezzogiorno-torneo-pausa-pranzo/
 
 Padel a O2 Padel Bergamo, Via Tinaglia 12, 24030 Brembate di Sopra, giovedì 17 settembre alle 12:30 (3 date, fino al 1 ottobre). 12 € (Iscrizione e pagamento su Playtomic).
 
+## Campane Tibetane al Parco della Trucca -…
+https://anyplans.in/bergamo/campane-tibetane-al-parco-della-trucca-bergamo-evento-gratui/
+
+Yoga / pilates a Parco della Trucca, Bergamo, giovedì 17 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
+
 ## Cinema con cena da Le Cucine di Curno: 7 posti…
 https://anyplans.in/bergamo/cinema-con-cena-da-le-cucine-di-curno-7-posti-liberi/
 
@@ -2370,6 +2423,11 @@ https://anyplans.in/bergamo/karaoke-con-gianfranco-kraken-factory-alzano-lombard
 
 Karaoke a Kraken Factory, Viale Piave 58, Alzano Lombardo, giovedì 17 settembre alle 21:00. Gratis.
 
+## Partita a Uno al bar
+https://anyplans.in/bergamo/partita-a-uno-al-bar/
+
+Giochi da tavolo a Piazza Pontida, Bergamo, giovedì 17 settembre alle 21:00. Gratis.
+
 ## 🌜17.09 LA NOCHE DE PADEL🌛
 https://anyplans.in/bergamo/17-09-la-noche-de-padel/
 
@@ -2384,6 +2442,11 @@ Karaoke a La Rosa blu, Via Guglielmo Marconi 25, Seriate, giovedì 17 settembre 
 https://anyplans.in/bergamo/la-fisarmonica-di-marcello-marangon-in-concerto-alpini-borgo/
 
 Concerti e musica dal vivo a Parco Rosselli, Viale Giulio Cesare, Bergamo Città, giovedì 17 settembre alle 21:30. Gratis.
+
+## UNA NUOVA LUCE serata d'anteprima dei restauri…
+https://anyplans.in/bergamo/una-nuova-luce-serata-d-anteprima-dei-restauri-dell-aula-pic/
+
+Visite guidate a Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, giovedì 17 settembre alle 21:30. Gratis (Biglietti su Eventbrite).
 
 ## TABATA DEL GIOVEDI'
 https://anyplans.in/bergamo/tabata-del-giovedi/
@@ -2555,6 +2618,11 @@ https://anyplans.in/bergamo/i-museo-civici-incontrano-la-scuola/
 
 Visite guidate a Museo Civico di Scienze Naturali Enrico Caffi di Bergamo, Bergamo, venerdì 18 settembre alle 15:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## Gruppo di lettura del venerdì - Le infinite…
+https://anyplans.in/bergamo/gruppo-di-lettura-del-venerdi-le-infinite-notti-di-samantha-/
+
+Incontri culturali a Piazza Garibaldi, Treviglio, venerdì 18 settembre alle 16:00. Gratis (Biglietti su Eventbrite).
+
 ## Streeat Food Truck Festival
 https://anyplans.in/bergamo/streeat-food-truck-festival/
 
@@ -2564,6 +2632,11 @@ Cena / aperitivo a Piazze, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, vene
 https://anyplans.in/bergamo/karaoke-da-p-stop-8-posti-liberi/
 
 Karaoke a P.STOP, Cernusco Lombardone, venerdì 18 settembre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## STP Bergamo Workshop
+https://anyplans.in/bergamo/stp-bergamo-workshop/
+
+Incontri culturali a Hortus Bergamo, Bergamo, venerdì 18 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
 
 ## Il Tavolo Perfetto da Retrobottega Curno: 3…
 https://anyplans.in/bergamo/il-tavolo-perfetto-da-retrobottega-curno-3-posti-liberi/
@@ -2579,6 +2652,11 @@ Cena / aperitivo a Officina Dei Sapori - Curno, venerdì 18 settembre alle 18:15
 https://anyplans.in/bergamo/cena-da-l-anonimo-3-posti-liberi/
 
 Cena / aperitivo a L'Anonimo, Dalmine, venerdì 18 settembre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## Due Secoli di Luce: Mostra Fotografica e…
+https://anyplans.in/bergamo/due-secoli-di-luce-mostra-fotografica-e-fotocamere-d-epoca-a/
+
+Mostre a EX CHIESA SANTO SPIRITO, Casnigo, venerdì 18 settembre alle 19:00. Gratis (Biglietti su Eventbrite).
 
 ## Festa di Mvra
 https://anyplans.in/bergamo/festa-di-mvra/
@@ -2615,6 +2693,11 @@ https://anyplans.in/bergamo/festa-dei-volontari-oratorio-credaro/
 
 Festa di paese a Credaro, venerdì 18 settembre alle 19:30 (3 date, fino al 20 settembre). Gratis.
 
+## SULLE TRACCE DI LORENZO LOTTO visita serale…
+https://anyplans.in/bergamo/sulle-tracce-di-lorenzo-lotto-visita-serale-all-oratorio-sua/
+
+Incontri culturali a Pro Loco Trescore Balneario APS - Oratorio Suardi, Trescore Balneario, venerdì 18 settembre alle 20:00. Gratis (Biglietti su Eventbrite).
+
 ## Cena da Wiener Haus: 2 posti liberi
 https://anyplans.in/bergamo/cena-da-wiener-haus-2-posti-liberi/
 
@@ -2635,6 +2718,11 @@ https://anyplans.in/bergamo/mostra-fotografica-someanza-ex-chiesa-santo-spirito-
 
 Incontri culturali a Via Santo Spirito 11, Casnigo, venerdì 18 settembre alle 20:30 (12 date, fino al 27 settembre). Gratis.
 
+## La Rocca sotto le stelle
+https://anyplans.in/bergamo/la-rocca-sotto-le-stelle/
+
+Festa di paese a Rocca, Romano di Lombardia, venerdì 18 settembre alle 20:30. Gratis (Biglietti su Eventbrite).
+
 ## Karaoke con Dj Gigi Vaghi
 https://anyplans.in/bergamo/karaoke-con-dj-gigi-vaghi-da-nisio-torre-de-roveri/
 
@@ -2644,6 +2732,11 @@ Karaoke a Ristorante Trattoria Da Nisio – Torre de Roveri (Bergamo), Via G. B.
 https://anyplans.in/bergamo/tributo-pooh-goodbye-quei-bravi-ragazzi-brembate/
 
 Concerti e musica dal vivo a Quei Bravi Ragazzi, Via Resistenza 4, Brembate, venerdì 18 settembre alle 21:00. Gratis.
+
+## GDR&BEER 2.6 a NemBeer Pub, Nembro, 18 settembre
+https://anyplans.in/bergamo/gdr-beer-2-6/
+
+Cena / aperitivo a NemBeer Pub, Nembro, venerdì 18 settembre alle 21:00. Gratis (Biglietti su Eventbrite).
 
 ## Karaoke con Francy
 https://anyplans.in/bergamo/karaoke-con-francy-il-pirata-lurano/
@@ -2815,6 +2908,11 @@ https://anyplans.in/bergamo/mercato-di-urgnano-frazione-basella/
 
 Mercatini a Urgnano Frazione Basella, sabato 19 settembre alle 08:00 (3 date, fino al 3 ottobre). Gratis.
 
+## RUN EXPO 2026: il primo test village dedicato…
+https://anyplans.in/bergamo/run-expo-2026-il-primo-test-village-dedicato-al-mondo-del-ru/
+
+Corsa a Centro Sportivo Comunale, Cernusco Lombardone, sabato 19 settembre alle 08:30. Gratis (Biglietti su Eventbrite).
+
 ## RODEO LADIES FLASH
 https://anyplans.in/bergamo/rodeo-ladies-flash/
 
@@ -2840,10 +2938,25 @@ https://anyplans.in/bergamo/padel-strong-tournament/
 
 Padel a PADEL007, Via delle Grigne 10, 22036 Erba, sabato 19 settembre alle 10:00. Gratis (Iscrizione su Playtomic).
 
+## RUN LAB – Obiettivo 10K/21K
+https://anyplans.in/bergamo/run-lab-obiettivo-10k-21k/
+
+Corsa a Santini Store, Bergamo, sabato 19 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
+
 ## AMERICANA MASCHILE EDIL RIVA
 https://anyplans.in/bergamo/americana-maschile-edil-riva/
 
 Padel a Padel Star Veduggio, via dell'Atleta 12, 20837 Veduggio Con Colzano, sabato 19 settembre alle 10:00. 18 € (Iscrizione e pagamento su Playtomic).
+
+## Ville aperte autunno 2026: STORIE CHE RESTANO
+https://anyplans.in/bergamo/ville-aperte-autunno-2026-storie-che-restano/
+
+Visite guidate a Giardini storici di Villa Bertarelli, Galbiate, sabato 19 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
+
+## Open Day TEB a Via Tezze, Ranica, 19 settembre
+https://anyplans.in/bergamo/open-day-teb/
+
+Incontri culturali a Via Tezze, Ranica, sabato 19 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## CORSO DI ASTROLOGIA - Paolo Franceschetti
 https://anyplans.in/bergamo/corso-di-astrologia-paolo-franceschetti/
@@ -2860,6 +2973,16 @@ https://anyplans.in/bergamo/arte-per-educare-la-fede-al-bernareggi/
 
 Pittura / arte a Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, sabato 19 settembre alle 11:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## DONE! at Factory Market
+https://anyplans.in/bergamo/done-at-factory-market/
+
+Incontri culturali a Spazio Fase, Alzano Lombardo, sabato 19 settembre alle 11:00. Gratis (Biglietti su Eventbrite).
+
+## Picnic & Painting in Lake Como
+https://anyplans.in/bergamo/picnic-painting-in-lake-como/
+
+Festa di paese a Spiaggia di Abbadia Lariana, Abbadia Lariana, sabato 19 settembre alle 11:30. Gratis (Biglietti su Eventbrite).
+
 ## RODEO MIX SWITCH
 https://anyplans.in/bergamo/rodeo-mix-switch/
 
@@ -2870,10 +2993,20 @@ https://anyplans.in/bergamo/sessione-di-livellamento-playtomic/
 
 Padel a O2 Padel Bergamo, Via Tinaglia 12, 24030 Brembate di Sopra, sabato 19 settembre alle 13:00. 20 € (Iscrizione e pagamento su Playtomic).
 
+## Light lunch navigando tra storia e natura
+https://anyplans.in/bergamo/light-lunch-navigando-tra-storia-e-natura/
+
+Cena / aperitivo a Via Alzaia, 13, Trezzo sull'Adda, sabato 19 settembre alle 13:00. Gratis (Biglietti su Eventbrite).
+
 ## IL MONASTERO CLAUSTRALE DI SANTA GRATA
 https://anyplans.in/bergamo/il-monastero-claustrale-di-santa-grata/
 
 Incontri culturali a via arena 2 bergamo, Bergamo, sabato 19 settembre alle 14:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Nautilus 2026
+https://anyplans.in/bergamo/nautilus-2026/
+
+Incontri culturali a Hotel Motel Nautilus, Moregge, sabato 19 settembre alle 14:00. Gratis (Biglietti su Eventbrite).
 
 ## Orienteering : avventura in città vol. 5
 https://anyplans.in/bergamo/orienteering-avventura-in-citta-vol-5/
@@ -2884,6 +3017,11 @@ Incontri culturali a Merate (LC), sabato 19 settembre alle 14:30. 5 € (Accred
 https://anyplans.in/bergamo/visita-guidata-chiesa-parrocchiale-zogno/
 
 Visite guidate a Museo della Valle, Via Mazzini 3, Zogno, sabato 19 settembre alle 14:45 (2 date, fino al 21 novembre). Gratis.
+
+## Festa Al Casello San Marco di Bagnatica
+https://anyplans.in/bergamo/festa-al-casello-san-marco-di-bagnatica/
+
+Festa di paese a Casello San Marco, sabato 19 settembre alle 15:00. Gratis. 1 persona ha già detto che ci va.
 
 ## EL POZO MASCHILE 19.09.26  PADEL TIME TREVIGLIO
 https://anyplans.in/bergamo/el-pozo-maschile-19-09-26-padel-time-treviglio/
@@ -2920,10 +3058,20 @@ https://anyplans.in/bergamo/medfest-2026-benedictus-maledictus-bergamo-aula-pict
 
 Concerti e musica dal vivo a AULA DELLA CURIA VESCOVILE, Bergamo, sabato 19 settembre alle 16:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## Degustazione Rossi Alto Adige Cantina Ritterhof
+https://anyplans.in/bergamo/degustazione-rossi-alto-adige-cantina-ritterhof/
+
+Cena / aperitivo a ENOTECA GAUDES, Torre De' Roveri, sabato 19 settembre alle 16:30. Gratis (Biglietti su Eventbrite).
+
 ## S-PADEL MAJOR BLACK 3000 MASCHILE
 https://anyplans.in/bergamo/s-padel-major-black-3000-maschile/
 
 Padel a MERATE A 4,50 EURO!!!!, Via Giacomo Matteotti, 2, 23807 Merate, sabato 19 settembre alle 17:00. 30 € (Iscrizione su Playtomic, si paga in loco).
+
+## VAGABONDI DELLA NOTTE. MISTICI E CERCATORI DI…
+https://anyplans.in/bergamo/vagabondi-della-notte-mistici-e-cercatori-di-verita-dedicato/
+
+Spettacoli e teatro a Rocca Albani - Castello di Urgnano, Urgnano, sabato 19 settembre alle 17:00. Gratis (Biglietti su Eventbrite).
 
 ## Scotch - Un gioco
 https://anyplans.in/bergamo/scotch-un-gioco/
@@ -2934,6 +3082,11 @@ Visite guidate a Ex Ateneo di Scienze Lettere Arti ,sede storica, Bergamo, sabat
 https://anyplans.in/bergamo/aperitivo-nella-storia-castello-navigazione-e-aperitivo/
 
 Visite guidate a Trezzo sull'Adda, sabato 19 settembre alle 17:00. 32 € (Accredito su comehome; il resto si paga in loco).
+
+## New Adult bookclub: il gruppo di lettura per i…
+https://anyplans.in/bergamo/new-adult-bookclub-il-gruppo-di-lettura-per-i-giovani-adulti/
+
+Incontri culturali a Via Camillo Cavour, 4, Treviglio, sabato 19 settembre alle 17:30. Gratis (Biglietti su Eventbrite).
 
 ## Karaoke da Lab Di Revolution: 11 posti liberi
 https://anyplans.in/bergamo/karaoke-da-lab-di-revolution-11-posti-liberi/
@@ -2950,6 +3103,16 @@ https://anyplans.in/bergamo/cena-in-osteria-serata-latina-da-gaina-osteria-6-pos
 
 Cena / aperitivo a Gaina Osteria, Ornago, sabato 19 settembre alle 17:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## "IL SALE DEL PANE ALTRUI" Nenè Ribeiro - Un…
+https://anyplans.in/bergamo/il-sale-del-pane-altrui-nene-ribeiro-un-viaggio-musicale-e-p/
+
+Concerti e musica dal vivo a Bacillo, Lodi, sabato 19 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
+
+## GHISALBA (Bg): BAGNO DI GONG all'APERTO -> 10…
+https://anyplans.in/bergamo/ghisalba-bg-bagno-di-gong-all-aperto-10-gong-planetari-paist/
+
+Yoga / pilates a Parco Privato in Villa, Ghisalba, sabato 19 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
+
 ## Cena da Ristorante Rossera: 9 posti liberi
 https://anyplans.in/bergamo/cena-da-ristorante-rossera-9-posti-liberi/
 
@@ -2960,10 +3123,25 @@ https://anyplans.in/bergamo/cena-da-agriturismo-la-cascina-2-posti-liberi/
 
 Cena / aperitivo a Agriturismo La Cascina, Brembate di Sopra, sabato 19 settembre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Leonardo e l'Aperitivo del Custode: arte
+https://anyplans.in/bergamo/leonardo-e-l-aperitivo-del-custode-arte-storia-e-convivialit/
+
+Cena / aperitivo a Via Alzaia Sud, 3, Vaprio d'Adda, sabato 19 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
+
 ## TORNEO MIX FLASH FINAL
 https://anyplans.in/bergamo/torneo-mix-flash-final/
 
 Padel a KZ Padel, Via Riolo 1, 24030 Mozzo, sabato 19 settembre alle 18:00. 15 € (Iscrizione e pagamento su Playtomic).
+
+## FRONTEMURA CANTINA APERTA
+https://anyplans.in/bergamo/frontemura-cantina-aperta/
+
+Cena / aperitivo a Frontemura, Bergamo, sabato 19 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
+
+## INTRIGO: Le origini del Condottiero
+https://anyplans.in/bergamo/intrigo-le-origini-del-condottiero/
+
+Festa di paese a Rocca, Romano di Lombardia, sabato 19 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
 
 ## Strings in Conversation
 https://anyplans.in/bergamo/strings-in-conversation/
@@ -2974,6 +3152,11 @@ Concerti e musica dal vivo a Palazzo Terzi Bergamo, Bergamo, sabato 19 settembre
 https://anyplans.in/bergamo/cena-da-wiener-haus-7-posti-liberi/
 
 Cena / aperitivo a Wiener Haus, Curno, sabato 19 settembre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## "Il gatto del giardiniere" con Thomas Schlesser
+https://anyplans.in/bergamo/il-gatto-del-giardiniere-con-thomas-schlesser/
+
+Incontri culturali a Ex Chiesetta di Nigrignano, Sarnico, sabato 19 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
 
 ## Corrida di San Gerolamo a Torre de' Roveri
 https://anyplans.in/bergamo/corrida-di-san-gerolamo-a-torre-de-roveri/
@@ -3000,6 +3183,16 @@ https://anyplans.in/bergamo/candlelight-il-signore-degli-anelli/
 
 Concerti e musica dal vivo a Centro Congressi Giovanni XXIII, Bergamo, sabato 19 settembre alle 19:30. 23 € (Biglietti su AllEvents).
 
+## Festa degli Alpini
+https://anyplans.in/bergamo/festa-degli-alpini-ci-andiamo-insieme/
+
+Festa di paese a Festa degli Alpini, Borgo Santa Caterina, Bergamo, sabato 19 settembre alle 19:30. Gratis.
+
+## CENA MEDIEVALE d'autunno
+https://anyplans.in/bergamo/cena-medievale-d-autunno/
+
+Cena / aperitivo a CASTELLO DI MALPAGA, CAVERNAGO, sabato 19 settembre alle 20:00. Gratis (Biglietti su Eventbrite).
+
 ## SeptemBeer live: Greta Caserta e Michele…
 https://anyplans.in/bergamo/septembeer-live-greta-caserta-e-michele-gentilini/
 
@@ -3020,6 +3213,11 @@ https://anyplans.in/bergamo/inti-illimani-in-concerto-teatro-serassi-villa-d-alm
 
 Concerti e musica dal vivo a Teatro Serassi, Via Sereno Locatelli Milesi 6, Villa d’Almè, sabato 19 settembre alle 20:45. Gratis.
 
+## COLPA D’ALFREDO | Teatro e comicità
+https://anyplans.in/bergamo/colpa-d-alfredo-teatro-e-comicita/
+
+Spettacoli e teatro a Teatro San Luigi, Inverigo, sabato 19 settembre alle 21:00. Gratis (Biglietti su Eventbrite).
+
 ## Karaoke con Luisa e Mauro
 https://anyplans.in/bergamo/karaoke-con-luisa-e-mauro-lucerosa-zandobbio/
 
@@ -3029,6 +3227,16 @@ Karaoke a Via Giuseppe Verdi 4, Zandobbio, sabato 19 settembre alle 21:00 (3 dat
 https://anyplans.in/bergamo/karaoke-con-seba-bar-mister-p-bergamo-citta/
 
 Karaoke a Via Giovanni Carnovali 90, Bergamo Città, sabato 19 settembre alle 21:00 (4 date, fino al 31 ottobre). Gratis.
+
+## Gelato al Contadino
+https://anyplans.in/bergamo/gelato-al-contadino/
+
+Cena / aperitivo a Gelateria Il Contadino, Bergamo, sabato 19 settembre alle 21:00. Gratis.
+
+## ViolaFuel @ Nuovo Circolo Arci
+https://anyplans.in/bergamo/violafuel-nuovo-circolo-arci-sovere-bg/
+
+Concerti e musica dal vivo a Circolo Arci - Sovere, Sovere, sabato 19 settembre alle 21:00. Gratis (Biglietti su Eventbrite).
 
 ## Karaoke con Silvia
 https://anyplans.in/bergamo/karaoke-con-silvia-il-pirata-lurano/
@@ -3080,6 +3288,11 @@ https://anyplans.in/bergamo/colazione-da-mais-pasticceria-gelateria-caffetteria-
 
 Cena / aperitivo a Maìs - Pasticceria Gelateria Caffetteria, Busnago, domenica 20 settembre alle 08:20. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Yoga al parco
+https://anyplans.in/bergamo/yoga-al-parco/
+
+Yoga / pilates a Parco della Trucca, Bergamo, domenica 20 settembre alle 08:30. Gratis.
+
 ## Mercatino Antico in Via
 https://anyplans.in/bergamo/mercatino-antico-in-via-centro-storico-treviglio/
 
@@ -3125,6 +3338,16 @@ https://anyplans.in/bergamo/visita-guidata-parco-dei-laghi-fossili-sovere/
 
 Visite guidate a Sellere – Pianico in Val Borlezza Sovere Bergamo, Sovere, domenica 20 settembre alle 10:00. Gratis.
 
+## Visita al Castello di Malpaga
+https://anyplans.in/bergamo/visita-al-castello-di-malpaga/
+
+Festa di paese a Via Marconi, 20, Malpaga, domenica 20 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
+
+## RESIDENTI CAVERNAGO
+https://anyplans.in/bergamo/residenti-cavernago/
+
+Festa di paese a CASTELLO DI MALPAGA, CAVERNAGO, domenica 20 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
+
 ## Trekking vista lago: da Vercurago a Lecco_4a…
 https://anyplans.in/bergamo/trekking-vista-lago-da-vercurago-a-lecco-4a-edizione/
 
@@ -3140,25 +3363,75 @@ https://anyplans.in/bergamo/joel-rogriguez-coach-premier-padel/
 
 Padel a Padel Arena Bg, Via Milano 9, 24040 Calvenzano, domenica 20 settembre alle 10:30. 25 € (Iscrizione e pagamento su Playtomic).
 
+## Pasta fresca a casa mia
+https://anyplans.in/bergamo/pasta-fresca-a-casa-mia/
+
+Cucina a Borgo Santa Caterina, Bergamo, domenica 20 settembre alle 10:30. Gratis.
+
 ## Ròba scambiada
 https://anyplans.in/bergamo/roba-scambiada-longa-durada-swap-party-all-immacolata/
 
 Festa di paese a Oratorio dell'Immacolata, via Greppi 6, Bergamo, domenica 20 settembre alle 10:30. Gratis.
+
+## Paw Patrol. Missione Dinosauri - Oriocenter c/o…
+https://anyplans.in/bergamo/paw-patrol-missione-dinosauri-oriocenter-c-o-uci-cinemas/
+
+Cinema a Oriocenter, Orio al Serio, domenica 20 settembre alle 11:00. Gratis (Biglietti su Eventbrite).
+
+## HEIDI - Oriocenter c/o Uci Cinemas
+https://anyplans.in/bergamo/heidi-oriocenter-c-o-uci-cinemas/
+
+Cinema a Oriocenter, Orio al Serio, domenica 20 settembre alle 11:00. Gratis (Biglietti su Eventbrite).
 
 ## Visita guidata
 https://anyplans.in/bergamo/visita-guidata-grotte-delle-meraviglie-zogno/
 
 Visite guidate a Grotte delle Meraviglie, Via Grotte delle Meraviglie, Zogno, domenica 20 settembre alle 14:30. Gratis.
 
-## CINEDOPERA - "Lucie de Lammermoor"
+## CINEDOPERA - "Lucie de… – Teatro Gaetano Donizetti- Bergamo
 https://anyplans.in/bergamo/cinedopera-lucie-de-lammermoor/
 
 Incontri culturali a Teatro Gaetano Donizetti- Bergamo, Bergamo, domenica 20 settembre alle 15:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## CINEDOPERA - "Lucie de… – Teatro Gaetano Donizetti- Bergamo
+https://anyplans.in/bergamo/cinedopera-lucie-de-lammermoor-2026-10-11/
+
+Concerti e musica dal vivo a Teatro Gaetano Donizetti- Bergamo, Bergamo, domenica 11 ottobre alle 15:00. Gratis (Biglietti su Eventbrite).
+
+## LABORATORIO BAMBINI: Piccoli Orefici
+https://anyplans.in/bergamo/laboratorio-bambini-piccoli-orefici/
+
+Festa di paese a Via Marconi, 20, Malpaga, domenica 20 settembre alle 16:00. Gratis (Biglietti su Eventbrite).
+
+## Visita alla Casa del Custode delle Acque e…
+https://anyplans.in/bergamo/visita-alla-casa-del-custode-delle-acque-e-galleria-interatt/
+
+Mostre a Via Alzaia Sud, 3, Vaprio d'Adda, domenica 20 settembre alle 16:00. Gratis (Biglietti su Eventbrite).
+
+## MedFest 2026 - VESPRI DELL’ADDOLORATA in canto…
+https://anyplans.in/bergamo/medfest-2026-vespri-dell-addolorata-in-canto-gregoriano-civa/
+
+Incontri culturali a Chiesa dei Santi Vito e Modesto, Civate, domenica 20 settembre alle 16:30. Gratis (Biglietti su Eventbrite).
+
+## VISIONPROJECT W/ RESPONSE DAYTIME SESSION -…
+https://anyplans.in/bergamo/visionproject-w-response-daytime-session-closing/
+
+Concerti e musica dal vivo a Genesi, Alzate Brianza, domenica 20 settembre alle 17:00. Gratis (Biglietti su Eventbrite).
+
+## Mundo Castel a Pagazzano, Pagazzano, 20 settembre
+https://anyplans.in/bergamo/mundo-castel/
+
+Festa di paese a Pagazzano, Pagazzano, domenica 20 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
 
 ## Cena da Ristorante Pizzeria Chef Vincenzio: 2…
 https://anyplans.in/bergamo/cena-da-ristorante-pizzeria-chef-vincenzio-2-posti-liberi/
 
 Cena / aperitivo a Ristorante Pizzeria Chef Vincenzio, Grassobbio, domenica 20 settembre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## AperiBook "Il mestiere del buio" con Paolo…
+https://anyplans.in/bergamo/aperibook-il-mestiere-del-buio-con-paolo-roversi/
+
+Incontri culturali a la cà rossa, grumello del monte, domenica 20 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
 
 ## Festa di Fine Estate
 https://anyplans.in/bergamo/festa-di-fine-estate-oratorio-costa-di-mezzate/
@@ -3169,6 +3442,11 @@ Festa di paese a Costa di Mezzate, domenica 20 settembre alle 19:30. Gratis.
 https://anyplans.in/bergamo/septembeer-live-soul-strings/
 
 Estivo a Into The Woods, Torre Boldone, domenica 20 settembre alle 20:00. Gratis.
+
+## Atalanta al bar
+https://anyplans.in/bergamo/atalanta-al-bar-la-vediamo-insieme/
+
+Calcio a Piazza Pontida, Bergamo, domenica 20 settembre alle 20:45. Gratis.
 
 ## Karaoke con Steven Music Show
 https://anyplans.in/bergamo/karaoke-con-steven-music-show-il-pirata-lurano/
@@ -3300,10 +3578,25 @@ https://anyplans.in/bergamo/mercato-di-dossena/
 
 Mercatini a Via Don Pietro Rigoli, Dossena, lunedì 21 settembre alle 08:00 (3 date, fino al 5 ottobre). Gratis.
 
+## Camminata in Città Alta
+https://anyplans.in/bergamo/camminata-in-citta-alta/
+
+Camminata a Porta San Giacomo, Bergamo, lunedì 21 settembre alle 09:30. Gratis.
+
 ## partita guidata con ale santilli
 https://anyplans.in/bergamo/partita-guidata-con-ale-santilli/
 
 Padel a SPH - Lodi La Pergola, Via per Ca' de' Bolli 11, 26817 San Martino in Strada, lunedì 21 settembre alle 12:30 (2 date, fino al 28 settembre). 20 € (Iscrizione e pagamento su Playtomic).
+
+## Polenta insieme in Città Alta
+https://anyplans.in/bergamo/polenta-insieme-in-citta-alta/
+
+Cena / aperitivo a Piazza Mercato delle Scarpe, Bergamo, lunedì 21 settembre alle 12:30. Gratis.
+
+## IL BERNAREGGI PER LA SCUOLA
+https://anyplans.in/bergamo/il-bernareggi-per-la-scuola/
+
+Incontri culturali a Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, lunedì 21 settembre alle 17:00. Gratis (Biglietti su Eventbrite).
 
 ## Appunti in movimento
 https://anyplans.in/bergamo/appunti-in-movimento/
@@ -3320,10 +3613,35 @@ https://anyplans.in/bergamo/choruslife-volley-bergamo-su-il-sipario/
 
 Volley a Piazze, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, martedì 22 settembre alle 16:00. Gratis.
 
+## PROVA GIOCOMUSICA 0-3 anni + persona adulta
+https://anyplans.in/bergamo/prova-giocomusica-0-3-anni-persona-adulta/
+
+Concerti e musica dal vivo a Piazza Giovanni Paolo II, 121, Brembate di Sopra, martedì 22 settembre alle 16:00. Gratis (Biglietti su Eventbrite).
+
 ## Fiera Zootecnica Bovina
 https://anyplans.in/bergamo/fiera-zootecnica-bovina-palazzetto-sport-serina/
 
 Fiere a Palazzetto dello sport – Serina, Serina, mercoledì 23 settembre alle 08:00. Gratis.
+
+## FIMAA CREMONA - La responsabilità civile e…
+https://anyplans.in/bergamo/fimaa-cremona-la-responsabilita-civile-e-penale-dell-agente-/
+
+Incontri culturali a Hotel Il Ponte di Rialto, Crema, mercoledì 23 settembre alle 09:00. Gratis (Biglietti su Eventbrite).
+
+## SOS coliche e massaggio neonatale - Chicco Baby…
+https://anyplans.in/bergamo/sos-coliche-e-massaggio-neonatale-chicco-baby-academy/
+
+Cinema a Oriocenter, Orio al Serio, mercoledì 23 settembre alle 14:00. Gratis (Biglietti su Eventbrite).
+
+## DF x Topo Athletic - Test Trail Running
+https://anyplans.in/bergamo/df-x-topo-athletic-test-trail-running/
+
+Corsa a DF Sport Specialist, Industrie, mercoledì 23 settembre alle 17:30. Gratis (Biglietti su Eventbrite).
+
+## L'ORFEO II, IL CANTO DEL BRONZO
+https://anyplans.in/bergamo/l-orfeo-ii-il-canto-del-bronzo/
+
+Mostre a Museo Diocesano Adriano Bernareggi, Bergamo, mercoledì 23 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
 
 ## All You Can Meet…
 https://anyplans.in/bergamo/all-you-can-meet-leggi-bene-da-momoko-7-posti-liberi/
@@ -3350,6 +3668,11 @@ https://anyplans.in/bergamo/botanica-queer-tour/
 
 Visite guidate a Valle della Biodiversità - Sez. di Astino dell'Orto Botanico di Bergamo, Bergamo, giovedì 24 settembre alle 17:30. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## DF x Joma - Test Trail Running
+https://anyplans.in/bergamo/df-x-joma-test-trail-running/
+
+Corsa a DF Sport Specialist, Industrie, giovedì 24 settembre alle 17:30. Gratis (Biglietti su Eventbrite).
+
 ## Passione educativa
 https://anyplans.in/bergamo/passione-educativa-passione-per-la-comunita/
 
@@ -3375,10 +3698,20 @@ https://anyplans.in/bergamo/weroad-afterwork-back-to-the-city-edition/
 
 Cena / aperitivo a Cosmo Food Club, Bergamo, giovedì 24 settembre alle 20:00. 2 € (Si paga su WeMeet (WeRoad)).
 
+## LOTTO BY NIGHT tour serale tra le opere di…
+https://anyplans.in/bergamo/lotto-by-night-tour-serale-tra-le-opere-di-lorenzo-lotto-in-/
+
+Pittura / arte a Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, giovedì 24 settembre alle 20:00. Gratis (Biglietti su Eventbrite).
+
 ## SeptemBeer live: Manuela Ferro e Giambattista…
 https://anyplans.in/bergamo/septembeer-live-manuela-ferro-e-giambattista-girelli/
 
 Estivo a Into The Woods, Torre Boldone, giovedì 24 settembre alle 20:00. Gratis.
+
+## VOLONTARI A TUTTO VOLUME
+https://anyplans.in/bergamo/volontari-a-tutto-volume/
+
+Incontri culturali a Dancing Lavello, Calolziocorte, giovedì 24 settembre alle 21:00. Gratis (Biglietti su Eventbrite).
 
 ## 🌜24.09 LA NOCHE DE PADEL🌛
 https://anyplans.in/bergamo/24-09-la-noche-de-padel/
@@ -3390,10 +3723,20 @@ https://anyplans.in/bergamo/bergamo-incontra-2026/
 
 Incontri culturali a Piazze, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, venerdì 25 settembre alle 07:00 (3 date, fino al 27 settembre). Gratis.
 
+## SALMEGGIA IN&OUT
+https://anyplans.in/bergamo/salmeggia-in-out/
+
+Pittura / arte a Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, venerdì 25 settembre alle 10:30. Gratis (Biglietti su Eventbrite).
+
 ## 50 anni di eccellenza: il gusto autentico della…
 https://anyplans.in/bergamo/50-anni-di-eccellenza-il-gusto-autentico-della-valle-taleggi/
 
 Incontri culturali a Circolino Città Alta, Bergamo, venerdì 25 settembre alle 17:00. 21 € (Biglietti su AllEvents).
+
+## SENTER DI CASTRU. Pastori orobici nei Grigioni…
+https://anyplans.in/bergamo/senter-di-castru-pastori-orobici-nei-grigioni-tra-seicento-e/
+
+Visite guidate a Sala Curò, Bergamo, venerdì 25 settembre alle 17:30. Gratis (Biglietti su Eventbrite).
 
 ## Il formaggio di Leonardo
 https://anyplans.in/bergamo/il-formaggio-di-leonardo-viaggio-nelle-terre-del-giarolo/
@@ -3404,6 +3747,11 @@ Incontri culturali a Circolino Città Alta, Bergamo, venerdì 25 settembre alle 
 https://anyplans.in/bergamo/bergamoincontra-2026/
 
 Festa di paese a BergamoIncontra, venerdì 25 settembre alle 18:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Danze al tramonto - Dances at sunset
+https://anyplans.in/bergamo/danze-al-tramonto-dances-at-sunset/
+
+Spettacoli e teatro a Villa Carlotta, Tremezzina, venerdì 25 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
 
 ## Aperi-ceramico: dipingi la tua ceramica con…
 https://anyplans.in/bergamo/aperi-ceramico-dipingi-la-tua-ceramica-con-aperitivo/
@@ -3435,6 +3783,11 @@ https://anyplans.in/bergamo/quattro-portoni-un-nuovo-capitolo-il-latte-di-bufala
 
 Incontri culturali a Circolino Città Alta, Bergamo, venerdì 25 settembre alle 19:00. 21 € (Biglietti su AllEvents).
 
+## Sogno di una Notte di fine Estate
+https://anyplans.in/bergamo/sogno-di-una-notte-di-fine-estate/
+
+Ballo e danza a Latterraggio, Caprino Bergamasco, venerdì 25 settembre alle 19:00. Gratis (Biglietti su Eventbrite).
+
 ## Ragnarök Viking Fest
 https://anyplans.in/bergamo/ragnarok-viking-fest-cascina-bosco-grosso-casirate-d-adda/
 
@@ -3454,6 +3807,16 @@ Estivo a Into The Woods, Torre Boldone, venerdì 25 settembre alle 20:00. Gratis
 https://anyplans.in/bergamo/il-formaggio-che-si-ribella-al-tempo-annate-dello-storico-ri/
 
 Incontri culturali a Circolino Città Alta, Bergamo, venerdì 25 settembre alle 20:00. 21 € (Biglietti su AllEvents).
+
+## LEGAMI: Relazioni
+https://anyplans.in/bergamo/legami-relazioni-famiglia-e-comunita-presentazione-ciclo-inc/
+
+Festa di paese a Via S. Giovanni, 1H, Bergamo, venerdì 25 settembre alle 20:30. Gratis (Biglietti su Eventbrite).
+
+## Lu Santo Jullàre Françesco
+https://anyplans.in/bergamo/lu-santo-jullare-fran-esco/
+
+Spettacoli e teatro a Teatro San Filippo Neri, Darfo Boario Terme, venerdì 25 settembre alle 20:30. Gratis (Biglietti su Eventbrite).
 
 ## 💫25.09 LA NOCHE DE PADEL - FRIDAY EDITION 💫
 https://anyplans.in/bergamo/25-09-la-noche-de-padel-friday-edition/
@@ -3530,10 +3893,25 @@ https://anyplans.in/bergamo/salmeggia-a-milano/
 
 Visite guidate a Parcheggio di via Spino, Bergamo, sabato 26 settembre alle 09:00. 18 € (Biglietti su AllEvents).
 
+## MIZUNO Running Day
+https://anyplans.in/bergamo/mizuno-running-day-merate-sabato-26-settembre-2026/
+
+Corsa a Maxi Sport Merate, Cernusco Lombardone, sabato 26 settembre alle 09:30. Gratis (Biglietti su Eventbrite).
+
+## Simposio "Il turismo fra opportunità e rischio"
+https://anyplans.in/bergamo/simposio-il-turismo-fra-opportunita-e-rischio/
+
+Escursionismo a Crespi D'adda, Capriate San Gervasio (BG), sabato 26 settembre alle 09:30. Gratis (Biglietti su Eventbrite).
+
 ## Sabato alla Trucca
 https://anyplans.in/bergamo/sabato-alla-trucca/
 
 Corsa a Parco della Trucca, Bergamo, sabato 26 settembre alle 09:30 (2 date, fino al 3 ottobre). 25 € (25 € una volta sola per tutta la stagione. Chi non è tesserato aggiunge la tessera CSI: 15 € in tutto.). Lo organizza Sabato alla Trucca.
+
+## Settima Arte Final Selection - Oriocenter c/o…
+https://anyplans.in/bergamo/settima-arte-final-selection-oriocenter-c-o-uci-cinema/
+
+Cinema a Oriocenter, Orio al Serio, sabato 26 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## Mercatino dell'usato di Colognola
 https://anyplans.in/bergamo/mercatino-dell-usato-di-colognola/
@@ -3570,6 +3948,11 @@ https://anyplans.in/bergamo/memorial-eugenio-mercorio-a-foppolo-15-edizione/
 
 Corsa a Piazzale Ristorante K, Via Moia 24, Foppolo, sabato 26 settembre alle 14:00. Gratis.
 
+## VIVI LA CORTE! Visita in abiti d'epoca
+https://anyplans.in/bergamo/vivi-la-corte-visita-in-abiti-d-epoca/
+
+Incontri culturali a Via Marconi, 20, Malpaga, sabato 26 settembre alle 14:00. Gratis (Biglietti su Eventbrite).
+
 ## 62° TORNEO e 11° ENTRY LEVEL
 https://anyplans.in/bergamo/62-torneo-e-11-entry-level/
 
@@ -3590,6 +3973,11 @@ https://anyplans.in/bergamo/torneo-kira-black-white-classic/
 
 Padel a Kira Padel Bergamo, Via Vaccarezza 7, 24040 Osio Sopra, sabato 26 settembre alle 14:00. 25 € (Iscrizione e pagamento su Playtomic).
 
+## Nembonauti - Stagione 3 - Sessione 01
+https://anyplans.in/bergamo/nembonauti-stagione-3-sessione-01/
+
+Giochi da tavolo a Via Vittorio Veneto, 42, Brembate, sabato 26 settembre alle 14:30. Gratis (Biglietti su Eventbrite).
+
 ## MUSEO DEL BURATTINO+APERITIVO da Ristorante…
 https://anyplans.in/bergamo/museo-del-burattino-aperitivo-da-ristorante-mura-13-posti-li/
 
@@ -3609,6 +3997,11 @@ Padel a PadelUs Lodi, Via del Commercio 2, 26817 San Martino in Strada, sabato 2
 https://anyplans.in/bergamo/allevatori-di-formaggi-quattro-montagne-una-cantina-dal-1876/
 
 Incontri culturali a Circolino Città Alta, Bergamo, sabato 26 settembre alle 15:00. 21 € (Biglietti su AllEvents).
+
+## LA MAGIA DEL COMPOST: COME CREARE FERTILITA'…
+https://anyplans.in/bergamo/la-magia-del-compost-come-creare-fertilita-dai-tuoi-scarti/
+
+Incontri culturali a Cascina Mulino, Bergamo, sabato 26 settembre alle 15:00. Gratis (Biglietti su Eventbrite).
 
 ## Ol Gir di Pucc a San Giovanni Bianco (33ª…
 https://anyplans.in/bergamo/ol-gir-di-pucc-a-san-giovanni-bianco-33-edizione/
@@ -3660,6 +4053,11 @@ https://anyplans.in/bergamo/giro-a-8-medium-level/
 
 Padel a PadelUs Lodi, Via del Commercio 2, 26817 San Martino in Strada, sabato 26 settembre alle 17:30. Gratis (Iscrizione su Playtomic).
 
+## Tramonto in rosa nel Chiostro
+https://anyplans.in/bergamo/tramonto-in-rosa-nel-chiostro/
+
+Cena / aperitivo a Via Roma, 12, La Valletta Brianza, sabato 26 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
+
 ## Cena da Bar On Off: 4 posti liberi
 https://anyplans.in/bergamo/cena-da-bar-on-off-4-posti-liberi/
 
@@ -3675,10 +4073,30 @@ https://anyplans.in/bergamo/sushi-zero-afterparty-da-sushi-zero-10-posti-liberi/
 
 Cena / aperitivo a Sushi Zero, Seriate, sabato 26 settembre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Bergamo Noir: un tour nella cronaca nera del…
+https://anyplans.in/bergamo/bergamo-noir-un-tour-nella-cronaca-nera-del-passato-tra-tort/
+
+Festa di paese a Presso la Fontana Contarini, Bergamo, sabato 26 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
+
+## Dance across Time - Art2night
+https://anyplans.in/bergamo/dance-across-time-art2night/
+
+Concerti e musica dal vivo a Palazzo Terzi Bergamo, Bergamo, sabato 26 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
+
 ## Dance across Time
 https://anyplans.in/bergamo/dance-across-time/
 
 Concerti e musica dal vivo a Palazzo Terzi Bergamo, Bergamo, sabato 26 settembre alle 18:30. 10 € (Biglietti su AllEvents).
+
+## SOUNDS&SHAPES FORME D'ARTE SI INCONTRANO
+https://anyplans.in/bergamo/sounds-shapes-forme-d-arte-si-incontrano/
+
+Concerti e musica dal vivo a Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, sabato 26 settembre alle 19:00. Gratis (Biglietti su Eventbrite).
+
+## ART2NIGHT 26/09/26 - Tour guidato nel Bunker di…
+https://anyplans.in/bergamo/art2night-26-09-26-tour-guidato-nel-bunker-di-ponte-san-piet/
+
+Visite guidate a Bunker Ponte San Pietro, Ponte San Pietro, sabato 26 settembre alle 19:00. Gratis (Biglietti su Eventbrite).
 
 ## SeptemBeer live: MDL Duo
 https://anyplans.in/bergamo/septembeer-live-mdl-duo/
@@ -3690,10 +4108,20 @@ https://anyplans.in/bergamo/cena-cantata-con-manu-like-it-cenate-sotto/
 
 Karaoke a Via Don Luigi Sturzo 18, Cenate Sotto, sabato 26 settembre alle 20:30. Gratis.
 
+## Trescore B. (BG): BAGNO SONORO CON CAMPANE…
+https://anyplans.in/bergamo/trescore-b-bg-bagno-sonoro-con-campane-tibetane-e-strumenti-/
+
+Yoga / pilates a Centro Kamati Trescore, Trescore Balneario, sabato 26 settembre alle 20:30. Gratis (Biglietti su Eventbrite).
+
 ## Karaoke con Roby e Dan
 https://anyplans.in/bergamo/karaoke-con-roby-e-dan-tyme-cafe-casirate-d-adda/
 
 Karaoke a Tyme Cafè di Villa Giulia, Piazza Papa Giovanni XXIII, Casirate D’Adda, sabato 26 settembre alle 21:00. Gratis.
+
+## NOTTURNA ADULTI: Malpaga Oscura
+https://anyplans.in/bergamo/notturna-adulti-malpaga-oscura/
+
+Festa di paese a Via Marconi, 20, Malpaga, sabato 26 settembre alle 21:00. Gratis (Biglietti su Eventbrite).
 
 ## Karaoke con Luisa e Mauro
 https://anyplans.in/bergamo/karaoke-con-luisa-e-mauro-il-pirata-lurano/
@@ -3734,6 +4162,21 @@ Mercatini a Parco Ermanno Olmi, domenica 27 settembre alle 08:00. Gratis. 1 pers
 https://anyplans.in/bergamo/mercatino-antiquariato-viale-papa-giovanni-san-pellegrino-te/
 
 Mercatini a Comune di San Pellegrino Terme, Viale Papa Giovanni XXIII 20, San Pellegrino Terme, domenica 27 settembre alle 09:00 (4 date, fino al 27 dicembre). Gratis.
+
+## Luna piena durante la Festa di Metà…
+https://anyplans.in/bergamo/luna-piena-durante-la-festa-di-meta-autunno-lode-alla-cina/
+
+Incontri culturali a Yong En Stadium, Bergamo, domenica 27 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
+
+## PER BACCO!
+https://anyplans.in/bergamo/per-bacco/
+
+Incontri culturali a Valle della Biodiversità - Sez. di Astino dell'Orto Botanico di Bergamo, Bergamo, domenica 27 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
+
+## Gesto, segno, danza: un intreccio accessibile
+https://anyplans.in/bergamo/gesto-segno-danza-un-intreccio-accessibile/
+
+Ballo e danza a Biblioteca Civica Angelo Mai, Bergamo, domenica 27 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## No Planet B Day a Bottanuco (orario da definire)
 https://anyplans.in/bergamo/no-planet-b-day-a-bottanuco-orario-da-definire/
@@ -3840,10 +4283,25 @@ https://anyplans.in/bergamo/cuore-e-mente-a-rezzo-l-agrifermenteria-delle-alpi-l
 
 Incontri culturali a Circolino Città Alta, Bergamo, domenica 27 settembre alle 15:00. 21 € (Biglietti su AllEvents).
 
+## COLORI IN MOVIMENTO
+https://anyplans.in/bergamo/colori-in-movimento/
+
+Incontri culturali a Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, domenica 27 settembre alle 15:30. Gratis (Biglietti su Eventbrite).
+
 ## Centoventi giorni di malga
 https://anyplans.in/bergamo/centoventi-giorni-di-malga-l-estate-di-ardiva-sul-monte-corn/
 
 Incontri culturali a Circolino Città Alta, Bergamo, domenica 27 settembre alle 16:00. 21 € (Biglietti su AllEvents).
+
+## LABORATORIO BAMBINI: L'arte del Terrario
+https://anyplans.in/bergamo/laboratorio-bambini-l-arte-del-terrario/
+
+Festa di paese a Via Marconi, 20, Malpaga, domenica 27 settembre alle 16:00. Gratis (Biglietti su Eventbrite).
+
+## Inside the brewery - Totem Brewing Co.
+https://anyplans.in/bergamo/inside-the-brewery-totem-brewing-co/
+
+Cena / aperitivo a Totem Brewing Co. Birreria con cucina pub, Scanzorosciate, domenica 27 settembre alle 16:00. Gratis (Biglietti su Eventbrite).
 
 ## Custodi della Cabannina
 https://anyplans.in/bergamo/custodi-della-cabannina-formaggi-di-pascolo-nell-appennino-p/
@@ -3869,6 +4327,11 @@ Concerti e musica dal vivo a Palazzo Terzi Bergamo, Bergamo, domenica 27 settemb
 https://anyplans.in/bergamo/concerto-con-aperitivo-in-dimora-storica/
 
 Visite guidate a Palazzo Terzi, Bergamo, domenica 27 settembre alle 18:00. Gratis (Gratis, iscrizione su WeMeet (WeRoad)).
+
+## TOOLS - Francesco Cancellato
+https://anyplans.in/bergamo/tools-francesco-cancellato/
+
+Festa di paese a Museo Civico d'Arte e del Territorio "Gianni Bellini", Sarnico, domenica 27 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
 
 ## Candlelight: Ennio Morricone e altre colonne…
 https://anyplans.in/bergamo/candlelight-ennio-morricone-e-altre-colonne-sonore/
@@ -3904,6 +4367,16 @@ Spettacoli e teatro a Sala Della Comunità, Via Don P. Rizzi 46, Val Brembilla, 
 https://anyplans.in/bergamo/candlelight-coldplay-imagine-dragons/
 
 Concerti e musica dal vivo a Centro Congressi Giovanni XXIII, Bergamo, domenica 27 settembre alle 21:30. 18,40 € (Biglietti su AllEvents).
+
+## Privacy Week 2026
+https://anyplans.in/bergamo/privacy-week-2026/
+
+Incontri culturali a Aruba Spa - Global Cloud Data Center IT3, Ponte San Pietro, lunedì 28 settembre alle 09:30. Gratis (Biglietti su Eventbrite).
+
+## MORONI IN&OUT
+https://anyplans.in/bergamo/moroni-in-out/
+
+Pittura / arte a Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, lunedì 28 settembre alle 16:00. Gratis (Biglietti su Eventbrite).
 
 ## Il corpo sensibile
 https://anyplans.in/bergamo/il-corpo-sensibile/
@@ -3949,6 +4422,11 @@ Festa di paese a ABC - Allegra Brigata Cinematica, martedì 29 settembre alle 17
 https://anyplans.in/bergamo/laboratorio-di-ceramica-per-adulti-10-lezioni-dal-29-settemb/
 
 Ceramica a Susanna Alberti Studio, via Longo 11, Bergamo, martedì 29 settembre alle 18:00. 300 € (10 lezioni, materiali e cotture inclusi; classe a scelta: martedì o giovedì, 18-20 o 20:30-22:30). Lo organizza Susanna Alberti Studio.
+
+## GIANNI GRIMALDI
+https://anyplans.in/bergamo/gianni-grimaldi/
+
+Mostre a Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, martedì 29 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
 
 ## Sottopelle
 https://anyplans.in/bergamo/sottopelle/
@@ -4005,6 +4483,11 @@ https://anyplans.in/bergamo/02-10-la-noche-de-padel-friday-edition/
 
 Padel a 27 Padel, Via Boccaleone 9, 24125 Bergamo, venerdì 2 ottobre alle 20:30. 25 € (Iscrizione e pagamento su Playtomic).
 
+## “Più eterno del bronzo. Educazione alla cultura…
+https://anyplans.in/bergamo/piu-eterno-del-bronzo-educazione-alla-cultura-e-semantica-de/
+
+Incontri culturali a Museo Civico d'Arte e del Territorio "Gianni Bellini", Sarnico, venerdì 2 ottobre alle 20:45. Gratis (Biglietti su Eventbrite).
+
 ## Tributo Lucio Battisti Due Mondi
 https://anyplans.in/bergamo/tributo-lucio-battisti-due-mondi-keller-factory-curno/
 
@@ -4025,6 +4508,16 @@ https://anyplans.in/bergamo/fiera-zootecnica-bovina-campo-sportivo-dossena/
 
 Fiere a Dossena, Dossena, sabato 3 ottobre alle 09:00. Gratis.
 
+## MHC It Starts Outside Day: Piramidi di…
+https://anyplans.in/bergamo/mhc-it-starts-outside-day-piramidi-di-montevecchia/
+
+Escursionismo a Piazza Giuseppe Mazzini, 2, Cernusco Lombardone, sabato 3 ottobre alle 09:30. Gratis (Biglietti su Eventbrite).
+
+## Piccino Picciò d'estate 2026 | LA BOTTEGA…
+https://anyplans.in/bergamo/piccino-piccio-d-estate-2026-la-bottega-dell-aria/
+
+Incontri culturali a Auditorium Europa, Bernareggio, sabato 3 ottobre alle 11:00. Gratis (Biglietti su Eventbrite).
+
 ## 🏆 TORNEO PADEL 007
 https://anyplans.in/bergamo/torneo-padel-007-missione-im-possibile/
 
@@ -4034,6 +4527,11 @@ Padel a PADEL007, Via delle Grigne 10, 22036 Erba, sabato 3 ottobre alle 14:00. 
 https://anyplans.in/bergamo/corso-base-intensivo-di-ceramica-2-sabati/
 
 Ceramica a Susanna Alberti Studio, via Longo 11, Bergamo, sabato 3 ottobre alle 14:00. 175 € (materiali e cotture, 2 lezioni da 4 ore (sabato 3 e sabato 10 ottobre), merenda offerta). Lo organizza Susanna Alberti Studio.
+
+## Il sapore del colore
+https://anyplans.in/bergamo/il-sapore-del-colore/
+
+Festa di paese a Museo d'Arte Sacra San Martino, Alzano Lombardo, sabato 3 ottobre alle 14:30. Gratis (Biglietti su Eventbrite).
 
 ## Viva i Malfatti!
 https://anyplans.in/bergamo/viva-i-malfatti/
@@ -4055,6 +4553,11 @@ https://anyplans.in/bergamo/torneo-entry-level-pozo/
 
 Padel a O2 Padel Bergamo, Via Tinaglia 12, 24030 Brembate di Sopra, sabato 3 ottobre alle 16:00. 20 € (Iscrizione e pagamento su Playtomic).
 
+## Trescore Balneario: BAGNO DI GONG con 10 Gong…
+https://anyplans.in/bergamo/trescore-balneario-bagno-di-gong-con-10-gong-planetari-e-cam/
+
+Yoga / pilates a Centro Kamati Trescore, Trescore Balneario, sabato 3 ottobre alle 18:00. Gratis (Biglietti su Eventbrite).
+
 ## ❤️‍🔥🍹 APERISINGLE! 🎶🕺🏻 da Queen Club: 9…
 https://anyplans.in/bergamo/aperisingle-da-queen-club-9-posti-liberi/
 
@@ -4074,6 +4577,11 @@ Cena / aperitivo a MITO SUSHI RESTAURANT, Curno, sabato 3 ottobre alle 18:30. Gr
 https://anyplans.in/bergamo/escap-piamo-da-quella-stanza-buzz-quiz-room/
 
 Giochi da tavolo a Calusco d'Adda (BG), sabato 3 ottobre alle 18:30. 5 € (Accredito su comehome; il resto si paga in loco).
+
+## CENA DELLE STREGHE di Samhain
+https://anyplans.in/bergamo/cena-delle-streghe-di-samhain/
+
+Cena / aperitivo a CASTELLO DI MALPAGA, CAVERNAGO, sabato 3 ottobre alle 20:00. Gratis (Biglietti su Eventbrite).
 
 ## La festa di cittadiDanza
 https://anyplans.in/bergamo/la-festa-di-cittadidanza/
@@ -4145,6 +4653,21 @@ https://anyplans.in/bergamo/no-planet-b-day-a-osio-sotto-orario-da-definire/
 
 Festa di paese a Osio Sotto (posto e orario da definire), domenica 4 ottobre alle 10:00. Gratis.
 
+## Visita alla Rocca Viscontea
+https://anyplans.in/bergamo/visita-alla-rocca-viscontea/
+
+Festa di paese a Rocca, Romano di Lombardia, domenica 4 ottobre alle 10:30. Gratis (Biglietti su Eventbrite).
+
+## Il Pic-Nic di cittadiDanza
+https://anyplans.in/bergamo/il-pic-nic-di-cittadidanza/
+
+Festa di paese a Mura Veneziane, Bergamo, domenica 4 ottobre alle 12:30. Gratis (Biglietti su Eventbrite).
+
+## GHISLANZONI RITROVATO
+https://anyplans.in/bergamo/ghislanzoni-ritrovato/
+
+Incontri culturali a Comune di Caprino Bergamasco, Caprino Bergamasco, domenica 4 ottobre alle 15:30. Gratis (Biglietti su Eventbrite).
+
 ## 🤩 APERITIVO BOBADILLA! 🕺🏻 da Bobadilla…
 https://anyplans.in/bergamo/aperitivo-bobadilla-da-bobadilla-feeling-club-dalmine-10-pos/
 
@@ -4160,10 +4683,35 @@ https://anyplans.in/bergamo/sebino-express-a-paratico/
 
 Festa di paese a Paratico, domenica 4 ottobre alle 19:00 (3 date, fino al 25 ottobre). Gratis.
 
+## Gruppo di lettura del lunedì - Lacci di…
+https://anyplans.in/bergamo/gruppo-di-lettura-del-lunedi-lacci-di-domenico-starnone/
+
+Incontri culturali a Piazza Garibaldi, Treviglio, lunedì 5 ottobre alle 17:30. Gratis (Biglietti su Eventbrite).
+
+## MedFest 2026 - LA PESTE - Spettacolo per le…
+https://anyplans.in/bergamo/medfest-2026-la-peste-spettacolo-per-le-scuole-e-non/
+
+Spettacoli e teatro a Auditorium Casa dell’Economia, Lecco, mercoledì 7 ottobre alle 10:30. Gratis (Biglietti su Eventbrite).
+
+## Cultura che cura. Quando la cultura genera…
+https://anyplans.in/bergamo/cultura-che-cura-quando-la-cultura-genera-benessere/
+
+Festa di paese a Daste Bergamo, Bergamo, mercoledì 7 ottobre alle 18:00. Gratis (Biglietti su Eventbrite).
+
 ## Fai pace con i tuoi soldi
 https://anyplans.in/bergamo/fai-pace-con-i-tuoi-soldi/
 
 Incontri culturali a Fondazione Serughetti La Porta, Bergamo, mercoledì 7 ottobre alle 18:30. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## MedFest 2026 - IL NOME DELLA ROSA - Opera in film
+https://anyplans.in/bergamo/medfest-2026-il-nome-della-rosa-opera-in-film/
+
+Cinema a Nuovo Aquilone Cinema Teatro, Lecco, mercoledì 7 ottobre alle 20:00. Gratis (Biglietti su Eventbrite).
+
+## SALMEGGIA A VILLA DI SERIO
+https://anyplans.in/bergamo/salmeggia-a-villa-di-serio/
+
+Incontri culturali a Via Antonio Locatelli, 2, Villa di Serio, giovedì 8 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
 
 ## 🌜08.10 LA NOCHE DE PADEL🌛
 https://anyplans.in/bergamo/08-10-la-noche-de-padel/
@@ -4180,15 +4728,30 @@ https://anyplans.in/bergamo/gnam-gnam-una-pizza-in-compagnia-da-ristorante-mura-
 
 Cena / aperitivo a Ristorante Mura, Bergamo, venerdì 9 ottobre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Bagno di Gong a Bergamo 
+https://anyplans.in/bergamo/bagno-di-gong-a-bergamo-12-gong-planetari-paiste-experience/
+
+Yoga / pilates a Gong Life, Gorle, venerdì 9 ottobre alle 18:30. Gratis (Biglietti su Eventbrite).
+
 ## 💫09/10 LA NOCHE DE PADEL - FRIDAY EDITION 💫
 https://anyplans.in/bergamo/09-10-la-noche-de-padel-friday-edition/
 
 Padel a 27 Padel, Via Boccaleone 9, 24125 Bergamo, venerdì 9 ottobre alle 20:30. 25 € (Iscrizione e pagamento su Playtomic).
 
+## Valentina Mastroianni in dialogo con Stefano…
+https://anyplans.in/bergamo/valentina-mastroianni-in-dialogo-con-stefano-malosso/
+
+Incontri culturali a Oratorio e teatro "Giuseppe Tovini", Angolo Terme, venerdì 9 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
+
 ## Musical Notre Dame de Paris Riccardo Cocciante
 https://anyplans.in/bergamo/musical-notre-dame-de-paris-riccardo-cocciante-choruslife-be/
 
 Spettacoli e teatro a ChorusLife Bergamo, Via Carlo Serassi 26, Bergamo Città, venerdì 9 ottobre alle 21:00 (4 date, fino al 11 ottobre). Gratis.
+
+## OLTRE LO SGUARDO Dado Moroni + Nicola Villa e…
+https://anyplans.in/bergamo/oltre-lo-sguardo-dado-moroni-nicola-villa-e-mauro-spagnoli-p/
+
+Concerti e musica dal vivo a Camera di Commercio Industria Artigianato e Agricoltura - Lecco, Lecco, venerdì 9 ottobre alle 21:00. Gratis (Biglietti su Eventbrite).
 
 ## Notre Dame de Paris
 https://anyplans.in/bergamo/notre-dame-de-paris/
@@ -4240,6 +4803,11 @@ https://anyplans.in/bergamo/giuseppe-giacobazzi-spettacolo-palafacchetti-trevigl
 
 Concerti e musica dal vivo a PalaFacchetti, Via del Bosco 27, Treviglio, sabato 10 ottobre alle 20:30. Gratis.
 
+## Bergamo Proibita: alla scoperta della storia…
+https://anyplans.in/bergamo/bergamo-proibita-alla-scoperta-della-storia-ose-della-citta/
+
+Festa di paese a Davanti fontana Contarini, Bergamo, sabato 10 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
+
 ## Karaoke con Francesco Marinosci
 https://anyplans.in/bergamo/karaoke-con-francesco-marinosci-bar-mister-p-bergamo-citta/
 
@@ -4260,10 +4828,25 @@ https://anyplans.in/bergamo/mercatino-hobbisti-e-riciclo-piazzale-mercato-gazzan
 
 Mercatini a Mercato Gazzaniga, Via Terruzzi, Gazzaniga, domenica 11 ottobre alle 08:00 (3 date, fino al 13 dicembre). Gratis.
 
+## Bergamo Gravel 2026
+https://anyplans.in/bergamo/bergamo-gravel-2026/
+
+Bici da strada a Rudùn (la grande Ruota), Cassano d'Adda, domenica 11 ottobre alle 08:30. Gratis (Biglietti su Eventbrite).
+
+## Camminata Manzoniana 2026 - 53° edizione
+https://anyplans.in/bergamo/camminata-manzoniana-2026-53-edizione/
+
+Escursionismo a Centro Commerciale Meridiana, Lecco, domenica 11 ottobre alle 08:30. Gratis (Biglietti su Eventbrite).
+
 ## Mercatino Agricolo Km0
 https://anyplans.in/bergamo/mercatino-agricolo-km0-piazzale-scuole-rota-d-imagna/
 
 Mercatini a Comune di Rota d’Imagna, Via V. Emanuele 3, Rota d’Imagna, domenica 11 ottobre alle 08:30 (7 date, fino al 20 dicembre). Gratis.
+
+## Camminata in Valpontida. Settima Edizione
+https://anyplans.in/bergamo/camminata-in-valpontida-settima-edizione/
+
+Escursionismo a Infopoint al parcheggio di fronte al Bar Nano (Pontida), Pontida, domenica 11 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## No Planet B Day a Stezzano (orario da definire)
 https://anyplans.in/bergamo/no-planet-b-day-a-stezzano-orario-da-definire/
@@ -4300,10 +4883,60 @@ https://anyplans.in/bergamo/cinedopera-roberto-devereux/
 
 Incontri culturali a Teatro Gaetano Donizetti- Bergamo, Bergamo, domenica 11 ottobre alle 15:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## "La Canzone Eterna"
+https://anyplans.in/bergamo/la-canzone-eterna-giulia-bolcato-soprano-e-gianluca-geremia-/
+
+Concerti e musica dal vivo a Palazzo Terzi Bergamo, Bergamo, domenica 11 ottobre alle 18:00. Gratis (Biglietti su Eventbrite).
+
 ## "La canzone"
 https://anyplans.in/bergamo/la-canzone-giulia-bolcato-soprano-e-gianluca-geremia-liuto-e/
 
 Concerti e musica dal vivo a Palazzo Terzi Bergamo, Bergamo, domenica 11 ottobre alle 18:00. 20 € (Biglietti su AllEvents).
+
+## Sicurezza in auto e pillole di disostruzione -…
+https://anyplans.in/bergamo/sicurezza-in-auto-e-pillole-di-disostruzione-chicco-baby-aca/
+
+Cinema a Oriocenter, Orio al Serio, lunedì 12 ottobre alle 14:00. Gratis (Biglietti su Eventbrite).
+
+## Gruppo di lettura di filosofia - Linguaggio e…
+https://anyplans.in/bergamo/gruppo-di-lettura-di-filosofia-linguaggio-e-mito-di-e-cassir/
+
+Incontri culturali a Via Camillo Cavour, 4, Treviglio, martedì 13 ottobre alle 20:45. Gratis (Biglietti su Eventbrite).
+
+## Allineamento e Guarigione Spirituale - BERGAMO
+https://anyplans.in/bergamo/allineamento-e-guarigione-spirituale-bergamo/
+
+Yoga / pilates a L'angolo delle stelle - Centro Olistico, Treviolo, mercoledì 14 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
+
+## "Otto ragazze" con Aurora Tamigio
+https://anyplans.in/bergamo/otto-ragazze-con-aurora-tamigio/
+
+Incontri culturali a Sala "De Lisi", Pisogne, mercoledì 14 ottobre alle 20:45. Gratis (Biglietti su Eventbrite).
+
+## Scopri l'anno all'estero
+https://anyplans.in/bergamo/scopri-l-anno-all-estero-quello-vero/
+
+Incontri culturali a Convitto Nazionale C. Battisti, Lovere, giovedì 15 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
+
+## La Fabbrica Digitale
+https://anyplans.in/bergamo/la-fabbrica-digitale-fatta-bene/
+
+Incontri culturali a SHS Italia S.R.L, Capriolo, venerdì 16 ottobre alle 09:00. Gratis (Biglietti su Eventbrite).
+
+## La Giornata del Credito a Crema
+https://anyplans.in/bergamo/la-giornata-del-credito-a-crema/
+
+Incontri culturali a Ristorante Enoteca Fuoriporta, Crema, venerdì 16 ottobre alle 10:30. Gratis (Biglietti su Eventbrite).
+
+## Gruppo di lettura del venerdì - Le ottanta…
+https://anyplans.in/bergamo/gruppo-di-lettura-del-venerdi-le-ottanta-domande-di-atena-fe/
+
+Incontri culturali a Piazza Garibaldi, Treviglio, venerdì 16 ottobre alle 16:00. Gratis (Biglietti su Eventbrite).
+
+## E tu di cosa hai paura?
+https://anyplans.in/bergamo/e-tu-di-cosa-hai-paura/
+
+Concerti e musica dal vivo a Via Casale, 25, Torre De' Roveri, venerdì 16 ottobre alle 16:00. Gratis (Biglietti su Eventbrite).
 
 ## Fiera Zootecnica Bovina Regina e Reginetta…
 https://anyplans.in/bergamo/fiera-zootecnica-bovina-regina-e-reginetta-delle-valli-palaz/
@@ -4319,6 +4952,11 @@ Incontri culturali a Largo Colle Aperto, Bergamo, sabato 17 ottobre alle 17:00. 
 https://anyplans.in/bergamo/tra-il-romanico-e-il-brembo-a-bonate-sotto-7-edizione/
 
 Corsa a Via Giuseppe Garibaldi 15, Bonate Sotto, domenica 18 ottobre alle 07:30. Gratis.
+
+## LECCO Corso  Aromatouch Technique
+https://anyplans.in/bergamo/lecco-corso-aromatouch-technique/
+
+Yoga / pilates a CRAMS di Lecco, Lecco, domenica 18 ottobre alle 09:30. Gratis (Biglietti su Eventbrite).
 
 ## No Planet B Day a Scanzorosciate (orario da…
 https://anyplans.in/bergamo/no-planet-b-day-a-scanzorosciate-orario-da-definire/
@@ -4340,6 +4978,11 @@ https://anyplans.in/bergamo/la-sostenibile-leggerezza-dell-essere/
 
 Incontri culturali a BOPO, Ponteranica, martedì 20 ottobre alle 18:00. Gratis (Gratis, registrazione su Luma).
 
+## Gruppo di lettura del martedì - Il nostro…
+https://anyplans.in/bergamo/gruppo-di-lettura-del-martedi-il-nostro-bisogno-di-consolazi/
+
+Incontri culturali a Via Camillo Cavour, 4, Treviglio, martedì 20 ottobre alle 20:45. Gratis (Biglietti su Eventbrite).
+
 ## La filantropia che fa crescere la comunità
 https://anyplans.in/bergamo/la-filantropia-che-fa-crescere-la-comunita/
 
@@ -4360,6 +5003,11 @@ https://anyplans.in/bergamo/incantesimi-fra-le-mura/
 
 Festa di paese a Ana Mary Varens Garcia, sabato 24 ottobre alle 10:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## Bergamo Sposi | Edizione Autunnale 2026
+https://anyplans.in/bergamo/bergamo-sposi-edizione-autunnale-2026/
+
+Spettacoli e teatro a Aruba Auditorium, Ponte San Pietro, sabato 24 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
+
 ## 64° TORNEO e 10° DOPPIO MISTO
 https://anyplans.in/bergamo/64-torneo-e-10-doppio-misto/
 
@@ -4374,6 +5022,11 @@ Visite guidate a Via Borgo Palazzo, 100, Bergamo, sabato 24 ottobre alle 16:30. 
 https://anyplans.in/bergamo/candlelight-tributo-ai-queen/
 
 Concerti e musica dal vivo a Centro Congressi Giovanni XXIII, Bergamo, sabato 24 ottobre alle 19:30. 18,40 € (Biglietti su AllEvents).
+
+## CENA MEDIEVALE di Halloween
+https://anyplans.in/bergamo/cena-medievale-di-halloween/
+
+Cena / aperitivo a CASTELLO DI MALPAGA, CAVERNAGO, sabato 24 ottobre alle 20:00. Gratis (Biglietti su Eventbrite).
 
 ## Karaoke con Alfonso
 https://anyplans.in/bergamo/karaoke-con-alfonso-bar-mister-p-bergamo-citta/
@@ -4415,6 +5068,21 @@ https://anyplans.in/bergamo/porta-delle-cornacchie/
 
 Escursionismo a Roncobello, loc. Baresi (BG), domenica 25 ottobre alle 10:00. 9 € (Accredito su comehome; il resto si paga in loco).
 
+## FAMIGLIE: Un Castello da Brividi (Halloween)
+https://anyplans.in/bergamo/famiglie-un-castello-da-brividi-halloween/
+
+Festa di paese a Via Marconi, 20, Malpaga, domenica 25 ottobre alle 14:00. Gratis (Biglietti su Eventbrite).
+
+## Perdona e lascia andare | Daniel Lumera
+https://anyplans.in/bergamo/perdona-e-lascia-andare-daniel-lumera/
+
+Yoga / pilates a Via Roma, 3, Missaglia, domenica 25 ottobre alle 14:00. Gratis (Biglietti su Eventbrite).
+
+## VOLA IN MONGOLFIERA al CASTELLO
+https://anyplans.in/bergamo/vola-in-mongolfiera-al-castello/
+
+Incontri culturali a Castello di Cernusco Lombardone, Cernusco Lombardone, domenica 25 ottobre alle 16:00. Gratis (Biglietti su Eventbrite).
+
 ## Pablo Trincia Spettacolo
 https://anyplans.in/bergamo/pablo-trincia-spettacolo-choruslife-bergamo-citta/
 
@@ -4424,6 +5092,11 @@ Spettacoli e teatro a ChorusLife Bergamo, Via Carlo Serassi 26, Bergamo Città, 
 https://anyplans.in/bergamo/pablo-trincia/
 
 Spettacoli e teatro a ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, domenica 25 ottobre alle 17:00. 32 € (Biglietti sul sito di ChorusLife).
+
+## Le povertà che cambiano. Le comunità che…
+https://anyplans.in/bergamo/le-poverta-che-cambiano-le-comunita-che-rispondono/
+
+Giardinaggio / volontariato a Daste Bergamo, Bergamo, mercoledì 28 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## La stampa 3D per rivoluzionare il settore…
 https://anyplans.in/bergamo/la-stampa-3d-per-rivoluzionare-il-settore-industriale-bcn3d-/
@@ -4455,6 +5128,16 @@ https://anyplans.in/bergamo/giro-a-8-misto/
 
 Padel a PADEL007, Via delle Grigne 10, 22036 Erba, venerdì 30 ottobre alle 19:00. Gratis (Iscrizione su Playtomic).
 
+## UNA NOTTE UN MUSEO | Museo Franca Ghitti di…
+https://anyplans.in/bergamo/una-notte-un-museo-museo-franca-ghitti-di-darfo-boario-terme/
+
+Festa di paese a Museo Franca Ghitti, Darfo Boario Terme, venerdì 30 ottobre alle 19:30. Gratis (Biglietti su Eventbrite).
+
+## NOTTURNA FAMIGLIE: Notte Stregata (Halloween)
+https://anyplans.in/bergamo/notturna-famiglie-notte-stregata-halloween/
+
+Incontri culturali a CASTELLO DI MALPAGA, CAVERNAGO, venerdì 30 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
+
 ## Pink Floyd Immersion in concerto
 https://anyplans.in/bergamo/pink-floyd-immersion-in-concerto-teatro-colognola-bergamo-ci/
 
@@ -4465,6 +5148,11 @@ https://anyplans.in/bergamo/bepi-the-prismas-in-concerto-daste-bergamo-citta/
 
 Concerti e musica dal vivo a Via Daste e Spalenga 13, Bergamo Città, venerdì 30 ottobre alle 22:30. Gratis.
 
+## THE TRAIL WITCH PROJECT 2026
+https://anyplans.in/bergamo/the-trail-witch-project-2026/
+
+Corsa a DF Sport Specialist, Industrie, sabato 31 ottobre alle 15:00. Gratis (Biglietti su Eventbrite).
+
 ## The Jury Experience: Il Furto da 20 Milioni di…
 https://anyplans.in/bergamo/the-jury-experience-il-furto-da-20-milioni-di-dollari/
 
@@ -4474,6 +5162,11 @@ Spettacoli e teatro a Centro Congressi Giovanni XXIII, Bergamo, sabato 31 ottobr
 https://anyplans.in/bergamo/halloween-s-padel-con-delitto-2-ed/
 
 Padel a APC Active Padel Club - Brignano Gera d'Adda BG, Via Treviglio 38, 24053 Brignano Gera d'Adda, sabato 31 ottobre alle 17:00. 30 € (Iscrizione su Playtomic, si paga in loco).
+
+## NOTTURNA ADULTI: I misteri di Halloween
+https://anyplans.in/bergamo/notturna-adulti-i-misteri-di-halloween/
+
+Festa di paese a Via Marconi, 20, Malpaga, sabato 31 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
 
 ## PIT in "Lo spettacolo maledetto"
 https://anyplans.in/bergamo/pit-in-lo-spettacolo-maledetto/
@@ -4499,6 +5192,11 @@ Corsa a Piazza Cameroni, Piazza Cameroni 1, Treviglio, domenica 1 novembre alle 
 https://anyplans.in/bergamo/super-aperipadel/
 
 Padel a Padel Arena Bg, Via Milano 9, 24040 Calvenzano, domenica 1 novembre alle 17:00. 25 € (Iscrizione e pagamento su Playtomic).
+
+## Gruppo di lettura del lunedì - Il fuoco che ti…
+https://anyplans.in/bergamo/gruppo-di-lettura-del-lunedi-il-fuoco-che-ti-porti-dentro-di/
+
+Incontri culturali a Piazza Garibaldi, Treviglio, lunedì 2 novembre alle 17:30. Gratis (Biglietti su Eventbrite).
 
 ## Jack Nobile Spettacolo
 https://anyplans.in/bergamo/jack-nobile-spettacolo-teatro-colognola-bergamo-citta/
@@ -4530,15 +5228,35 @@ https://anyplans.in/bergamo/belle-e-la-bestia-musical-choruslife-bergamo-citta/
 
 Spettacoli e teatro a ChorusLife Bergamo, Via Carlo Serassi 26, Bergamo Città, sabato 7 novembre alle 17:00. Gratis.
 
+## CENA DELLE STREGHE di Luna nera
+https://anyplans.in/bergamo/cena-delle-streghe-di-luna-nera/
+
+Cena / aperitivo a CASTELLO DI MALPAGA, CAVERNAGO, sabato 7 novembre alle 20:00. Gratis (Biglietti su Eventbrite).
+
 ## Le Quattro Stagioni a Bergamo - The Four…
 https://anyplans.in/bergamo/le-quattro-stagioni-a-bergamo-the-four-seasons-in-bergamo/
 
 Concerti e musica dal vivo a Sala Piatti, Bergamo, sabato 7 novembre alle 20:30. 49,23 € (Biglietti su AllEvents).
 
+## POP INTERNAZIONALE ANNI ' 80
+https://anyplans.in/bergamo/pop-internazionale-anni-80/
+
+Concerti e musica dal vivo a Sala Polivalente, Centro Polifunzionale San Maurizio, Erba, sabato 7 novembre alle 21:00. Gratis (Biglietti su Eventbrite).
+
 ## TREK EXPERIENCE FALCONIERE PER UN GIORNO
 https://anyplans.in/bergamo/trek-experience-falconiere-per-un-giorno/
 
 Visite guidate a Lombardia, Italia, Bergamo, domenica 8 novembre alle 10:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Fiera sposi Nozze d'Autore a Villa Borromeo…
+https://anyplans.in/bergamo/fiera-sposi-nozze-d-autore-a-villa-borromeo-2026-14esima-edi/
+
+Spettacoli e teatro a Villa Borromeo Srl, Cassano d'Adda, domenica 8 novembre alle 10:30. Gratis (Biglietti su Eventbrite).
+
+## LABORATORIO BAMBINI: Bestiari e Fantasia
+https://anyplans.in/bergamo/laboratorio-bambini-bestiari-e-fantasia/
+
+Festa di paese a Via Marconi, 20, Malpaga, domenica 8 novembre alle 16:00. Gratis (Biglietti su Eventbrite).
 
 ## Costruire la pace
 https://anyplans.in/bergamo/costruire-la-pace/
@@ -4575,10 +5293,20 @@ https://anyplans.in/bergamo/alahor-in-granata-opera-teatro-sociale-bergamo-citta
 
 Spettacoli e teatro a Teatro Sociale, Via Bartolomeo Colleoni 4, Bergamo Città, sabato 14 novembre alle 21:00 (3 date, fino al 27 novembre). Gratis.
 
+## DIALOGHI MUSICALI TRA VIOLONCELLO E PIANOFORTE
+https://anyplans.in/bergamo/dialoghi-musicali-tra-violoncello-e-pianoforte/
+
+Spettacoli e teatro a Sala Polivalente, Centro Polifunzionale San Maurizio, Erba, sabato 14 novembre alle 21:00. Gratis (Biglietti su Eventbrite).
+
 ## Papa Roach in concerto
 https://anyplans.in/bergamo/papa-roach-in-concerto-choruslife-bergamo-citta/
 
 Concerti e musica dal vivo a ChorusLife Bergamo, Via Carlo Serassi 26, Bergamo Città, sabato 14 novembre alle 21:00. Gratis.
+
+## LABORATORIO BAMBINI: Miniatori al Castello
+https://anyplans.in/bergamo/laboratorio-bambini-miniatori-al-castello/
+
+Festa di paese a Via Marconi, 20, Malpaga, domenica 15 novembre alle 16:00. Gratis (Biglietti su Eventbrite).
 
 ## Federico Buffa Spettacolo
 https://anyplans.in/bergamo/federico-buffa-spettacolo-choruslife-bergamo-citta/
@@ -4590,10 +5318,30 @@ https://anyplans.in/bergamo/federico-buffa-number-23-vita-e-splendori-di-micheal
 
 Spettacoli e teatro a ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, giovedì 19 novembre alle 21:00. 28 € (Biglietti sul sito di ChorusLife).
 
+## Gruppo di lettura del venerdì - Atto di…
+https://anyplans.in/bergamo/gruppo-di-lettura-del-venerdi-atto-di-famiglia-di-alessandra/
+
+Incontri culturali a Piazza Garibaldi, Treviglio, venerdì 20 novembre alle 16:00. Gratis (Biglietti su Eventbrite).
+
+## Legione
+https://anyplans.in/bergamo/legione/
+
+Festa di paese a Treviglio Anteo spazioCinema, Treviglio, venerdì 20 novembre alle 20:00. Gratis (Biglietti su Eventbrite).
+
 ## Fratello Sole
 https://anyplans.in/bergamo/fratello-sole-sorella-luna/
 
 Spettacoli e teatro a ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, venerdì 20 novembre alle 21:00. Gratis (Biglietti sul sito di ChorusLife).
+
+## CENA DELLE STREGHE di Luna piena
+https://anyplans.in/bergamo/cena-delle-streghe-di-luna-piena/
+
+Cena / aperitivo a CASTELLO DI MALPAGA, CAVERNAGO, sabato 21 novembre alle 20:00. Gratis (Biglietti su Eventbrite).
+
+## L'INFINITO PIU' O MENO
+https://anyplans.in/bergamo/l-infinito-piu-o-meno/
+
+Incontri culturali a Sala Polivalente, Centro Polifunzionale San Maurizio, Erba, sabato 21 novembre alle 21:00. Gratis (Biglietti su Eventbrite).
 
 ## Fiorella Mannoia in concerto
 https://anyplans.in/bergamo/fiorella-mannoia-in-concerto-choruslife-bergamo-citta/
@@ -4615,6 +5363,11 @@ https://anyplans.in/bergamo/atalanta-vs-inter-at-new-balance-arena/
 
 Partite da vedere a New Balance Arena, Bergamo, sabato 21 novembre alle 23:59. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## LABORATORIO BAMBINI: Ceramisti al Castello
+https://anyplans.in/bergamo/laboratorio-bambini-ceramisti-al-castello/
+
+Festa di paese a Via Marconi, 20, Malpaga, domenica 22 novembre alle 16:00. Gratis (Biglietti su Eventbrite).
+
 ## Osvaldo Poli Spettacolo
 https://anyplans.in/bergamo/osvaldo-poli-spettacolo-choruslife-bergamo-citta/
 
@@ -4624,6 +5377,11 @@ Spettacoli e teatro a ChorusLife Bergamo, Via Carlo Serassi 26, Bergamo Città, 
 https://anyplans.in/bergamo/osvaldo-poli-l-adolescenza-non-e-una-malattia/
 
 Spettacoli e teatro a ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, domenica 22 novembre alle 17:00. 36 € (Biglietti sul sito di ChorusLife).
+
+## "Morte in tre tempi" di Paola Barbato
+https://anyplans.in/bergamo/morte-in-tre-tempi-di-paola-barbato/
+
+Cinema a Oratorio San Giovanni Bosco, Pontoglio, mercoledì 25 novembre alle 20:45. Gratis (Biglietti su Eventbrite).
 
 ## Gigi D’Alessio
 https://anyplans.in/bergamo/gigi-d-alessio/
@@ -4655,6 +5413,11 @@ https://anyplans.in/bergamo/karaoke-con-massimo-aletti-bar-mister-p-bergamo-citt
 
 Karaoke a Via Giovanni Carnovali 90, Bergamo Città, sabato 28 novembre alle 21:00 (2 date, fino al 19 dicembre). Gratis.
 
+## SABATO ITALIANO
+https://anyplans.in/bergamo/sabato-italiano/
+
+Cena / aperitivo a Sala Polivalente, Centro Polifunzionale San Maurizio, Erba, sabato 28 novembre alle 21:00. Gratis (Biglietti su Eventbrite).
+
 ## Benvenuto nell’AI! di Alessandro Cattelan
 https://anyplans.in/bergamo/benvenuto-nell-ai-di-alessandro-cattelan/
 
@@ -4664,6 +5427,26 @@ Spettacoli e teatro a ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 24124 
 https://anyplans.in/bergamo/alessandro-cattelan-spettacolo-choruslife-bergamo-citta/
 
 Spettacoli e teatro a ChorusLife Bergamo, Via Carlo Serassi 26, Bergamo Città, martedì 1 dicembre alle 21:00. Gratis.
+
+## MAHLE Smart Training | Diventa Certified PRO…
+https://anyplans.in/bergamo/mahle-smart-training-diventa-certified-pro-dealer-bergamo/
+
+Bici da strada a Vittoria Park, Brembate, mercoledì 2 dicembre alle 10:00. Gratis (Biglietti su Eventbrite).
+
+## OPEN SATUR-DAY 2026
+https://anyplans.in/bergamo/open-satur-day-2026/
+
+Incontri culturali a SCUOLA DELL'INFANZIA "GIOVANNI XXIII", Rogno, sabato 5 dicembre alle 10:00. Gratis (Biglietti su Eventbrite).
+
+## FAMIGLIE: Racconti di Natale al Castello
+https://anyplans.in/bergamo/famiglie-racconti-di-natale-al-castello/
+
+Festa di paese a CASTELLO DI MALPAGA, CAVERNAGO, sabato 5 dicembre alle 16:30. Gratis (Biglietti su Eventbrite).
+
+## IN ATTESA
+https://anyplans.in/bergamo/in-attesa/
+
+Incontri culturali a Sala Polivalente, Centro Polifunzionale San Maurizio, Erba, sabato 5 dicembre alle 21:00. Gratis (Biglietti su Eventbrite).
 
 ## Marco Goldin Spettacolo
 https://anyplans.in/bergamo/marco-goldin-spettacolo-choruslife-bergamo-citta/
@@ -4695,6 +5478,11 @@ https://anyplans.in/bergamo/masters-of-magic/
 
 Spettacoli e teatro a ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, venerdì 11 dicembre alle 21:00 (3 date, fino al 13 dicembre). 40 € (Biglietti sul sito di ChorusLife).
 
+## NOTTURNA ADULTI: Il lato oscuro di SANTA LUCIA
+https://anyplans.in/bergamo/notturna-adulti-il-lato-oscuro-di-santa-lucia/
+
+Festa di paese a Via Marconi, 20, Malpaga, sabato 12 dicembre alle 18:30. Gratis (Biglietti su Eventbrite).
+
 ## Gospel Time Choir in concerto
 https://anyplans.in/bergamo/gospel-time-choir-in-concerto-cinema-teatro-nuovo-trescore-b/
 
@@ -4705,6 +5493,11 @@ https://anyplans.in/bergamo/atalanta-vs-genoa-at-new-balance-arena/
 
 Partite da vedere a New Balance Arena, Bergamo, sabato 12 dicembre alle 23:59. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## Il cineclub in biblioteca - Crossing Instanbul
+https://anyplans.in/bergamo/il-cineclub-in-biblioteca-crossing-instanbul/
+
+Cinema a Via Camillo Cavour, 4, Treviglio, mercoledì 16 dicembre alle 20:45. Gratis (Biglietti su Eventbrite).
+
 ## Harlem Gospel Choir
 https://anyplans.in/bergamo/harlem-gospel-choir/
 
@@ -4714,6 +5507,11 @@ Concerti e musica dal vivo a ChorusLife Arena, ChorusLife, via Carlo Serassi 26,
 https://anyplans.in/bergamo/busker-artisti-di-strada-festa-borgo-palazzo-bergamo-citta/
 
 Festa di paese a Bergamo Città, venerdì 18 dicembre alle 10:00 (3 date, fino al 20 dicembre). Gratis.
+
+## CENA MEDIEVALE di Natale
+https://anyplans.in/bergamo/cena-medievale-di-natale/
+
+Cena / aperitivo a CASTELLO DI MALPAGA, CAVERNAGO, venerdì 18 dicembre alle 20:00. Gratis (Biglietti su Eventbrite).
 
 ## CHRISTMAS PADEL PARTY "GRINCH IS BACK)
 https://anyplans.in/bergamo/christmas-padel-party-grinch-is-back/
@@ -4730,10 +5528,20 @@ https://anyplans.in/bergamo/attack-on-titan-concert/
 
 Concerti e musica dal vivo a ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, sabato 19 dicembre alle 20:00. 49 € (Biglietti sul sito di ChorusLife).
 
+## Trì neùcc in vacansa - Compagnia “Il Sottoscala…
+https://anyplans.in/bergamo/tri-neucc-in-vacansa-compagnia-il-sottoscala-luigi-colombo-d/
+
+Spettacoli e teatro a Gherim Societa' Cooperativa Sociale, Nembro, sabato 19 dicembre alle 20:45. Gratis (Biglietti su Eventbrite).
+
 ## Atalanta vs Napoli at New Balance Arena
 https://anyplans.in/bergamo/atalanta-vs-napoli-at-new-balance-arena/
 
 Partite da vedere a New Balance Arena, Bergamo, sabato 19 dicembre alle 23:59. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Gruppo di lettura del lunedì mattina
+https://anyplans.in/bergamo/gruppo-di-lettura-del-lunedi-mattina/
+
+Incontri culturali a Via Camillo Cavour, 4, Treviglio, lunedì 28 dicembre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## A Christmas Carol
 https://anyplans.in/bergamo/a-christmas-carol/
@@ -4769,6 +5577,11 @@ Concerti e musica dal vivo a Druso, Via Antonio Locatelli 17, Ranica, sabato 9 g
 https://anyplans.in/bergamo/winx-club-the-magic-is-back-il-musical/
 
 Spettacoli e teatro a ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, domenica 10 gennaio alle 15:30. 32,20 € (Biglietti sul sito di ChorusLife).
+
+## Noi. La comunità al plurale.
+https://anyplans.in/bergamo/noi-la-comunita-al-plurale/
+
+Festa di paese a Daste Bergamo, Bergamo, venerdì 15 gennaio alle 10:30. Gratis (Biglietti su Eventbrite).
 
 ## Atalanta vs Roma at New Balance Arena
 https://anyplans.in/bergamo/atalanta-vs-roma-at-new-balance-arena/
@@ -5020,90 +5833,100 @@ https://anyplans.in/bergamo/claudio-baglioni-in-concerto-arena-fiera-bergamo-cit
 
 Concerti e musica dal vivo a Parcheggio Fiera, Via Roggia Vignola 9, Bergamo Città, lunedì 12 luglio alle 22:00. Gratis.
 
-## Things to do in Bergamo: 729 events
+## Things to do in Bergamo: 886 events
 https://anyplans.in/en/bergamo/things-to-do/
 
-What's on in Bergamo and its province, today, tonight and this weekend: markets, padel, town festivals & fairs, concerts & live music, summer venues and talks & culture. Pick one and go with other people.
+What's on in Bergamo and its province, today, tonight and this weekend: markets, padel, town festivals & fairs, concerts & live music, talks & culture and dinners & aperitivo. Pick one and go with other people.
 
-## What to do in Bergamo today: 78 events
+## What to do in Bergamo today: 81 events
 https://anyplans.in/en/bergamo/what-to-do-today/
 
-78 events in Bergamo and its province today, 16 September 2026: Bergamo, Curno, Treviglio and Vedeseta and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+81 events in Bergamo and its province today, 16 September 2026: Bergamo, Treviglio, Curno and Vedeseta and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Bergamo tomorrow: 73 events
+## What to do in Bergamo tomorrow: 76 events
 https://anyplans.in/en/bergamo/what-to-do-tomorrow/
 
-73 events in Bergamo and its province tomorrow, 17 September 2026: Bergamo, Clusone, Sorisole and Casnigo and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+76 events in Bergamo and its province tomorrow, 17 September 2026: Bergamo, Clusone, Sorisole and Casnigo and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Bergamo this weekend: 132 events
+## What to do in Bergamo this weekend: 168 events
 https://anyplans.in/en/bergamo/what-to-do-this-weekend/
 
-132 events in Bergamo and its province this weekend (Saturday 19 September and Sunday 20 September): Bergamo, Zogno, Casnigo and Treviglio and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+168 events in Bergamo and its province this weekend (Saturday 19 September and Sunday 20 September): Bergamo, Zogno, Treviglio and Casnigo and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## Events in Bergamo in September 2026: 506
+## Events in Bergamo in September 2026: 594
 https://anyplans.in/en/bergamo/events-september-2026/
 
-506 events in Bergamo and its province in September 2026: markets, summer venues, padel, dinners & aperitivo and running. Day by day, with times, place and price, in Bergamo, Torre Boldone, Lurano and Curno and other towns. You sign up and go with other people.
+594 events in Bergamo and its province in September 2026: markets, summer venues, padel, dinners & aperitivo and talks & culture. Day by day, with times, place and price, in Bergamo, Torre Boldone, Treviglio and Lurano and other towns. You sign up and go with other people.
 
-## Events in Bergamo in October 2026: 254
+## Events in Bergamo in October 2026: 299
 https://anyplans.in/en/bergamo/events-october-2026/
 
-254 events in Bergamo and its province in October 2026: markets, running, padel, karaoke and pottery. Day by day, with times, place and price, in Bergamo, Treviglio, Sorisole and Onore and other towns. You sign up and go with other people.
+299 events in Bergamo and its province in October 2026: markets, running, padel, karaoke and pottery. Day by day, with times, place and price, in Bergamo, Treviglio, Lecco and Sorisole and other towns. You sign up and go with other people.
 
-## Events in Bergamo in November 2026: 61
+## Events in Bergamo in November 2026: 75
 https://anyplans.in/en/bergamo/events-november-2026/
 
-61 events in Bergamo and its province in November 2026: padel, karaoke, guided tours, markets and pottery. Day by day, with times, place and price, in Bergamo, Zogno, Treviglio and San Pellegrino Terme and other towns. You sign up and go with other people.
+75 events in Bergamo and its province in November 2026: padel, karaoke, guided tours, markets and pottery. Day by day, with times, place and price, in Bergamo, Treviglio, Erba and Malpaga and other towns. You sign up and go with other people.
 
-## Festivals & sagre near Bergamo: 37 events
+## Yoga & pilates in Bergamo: 10 events
+https://anyplans.in/en/bergamo/yoga/
+
+In Bergamo and its province there are 10 yoga & pilates events in the coming months. Yoga and pilates classes and sessions in the park.
+
+## Festivals & sagre near Bergamo: 66 events
 https://anyplans.in/en/bergamo/festivals/
 
-In Bergamo and its province there are 37 town festivals and sagre in the coming months. The parish festivals (feste dell'oratorio), food fairs (sagre) and village events of the Bergamo area, with the dates of every evening.
+In Bergamo and its province there are 66 town festivals and sagre in the coming months. The parish festivals (feste dell'oratorio), food fairs (sagre) and village events of the Bergamo area, with the dates of every evening.
 
-## Running in Bergamo: 28 events
+## Running in Bergamo: 34 events
 https://anyplans.in/en/bergamo/running/
 
-In Bergamo and its province there are 28 group runs and races in the coming months. Group runs and road races in the city and the province: you sign up and run with others, at your own pace.
+In Bergamo and its province there are 34 group runs and races in the coming months. Group runs and road races in the city and the province: you sign up and run with others, at your own pace.
+
+## Walking in Bergamo: 2 events
+https://anyplans.in/en/bergamo/walking/
+
+In Bergamo and its province there are 2 group walks in the coming months. Group walks in the city and on the hills: the easiest way to get out of the house.
 
 ## Summer venues in Bergamo: 11 events
 https://anyplans.in/en/bergamo/summer-venues/
 
 In Bergamo and its province there are 11 summer venue evenings in the coming months. The open-air summer venues (estivi) of Bergamo and the province, evening by evening until they close: bars in the parks, food, DJ sets and parties.
 
-## Dinners & aperitivo in Bergamo: 39 events
+## Dinners & aperitivo in Bergamo: 55 events
 https://anyplans.in/en/bergamo/dinners/
 
-In Bergamo and its province there are 39 dinners and aperitivo in the coming months. Dinners and aperitivo with people you don't know yet.
+In Bergamo and its province there are 55 dinners and aperitivo in the coming months. Dinners and aperitivo with people you don't know yet.
 
 ## Padel in Bergamo: 129 events
 https://anyplans.in/en/bergamo/padel/
 
 In Bergamo and its province there are 129 padel matches and tournaments in the coming months. Open padel matches, tournaments and lessons in the clubs around Bergamo.
 
-## Concerts & live music in Bergamo: 91 events
+## Concerts & live music in Bergamo: 103 events
 https://anyplans.in/en/bergamo/concerts/
 
-In Bergamo and its province there are 91 concerts & live music events in the coming months. Concerts and live music nights in Bergamo and the province: bands, tribute acts and singer-songwriters, from village festivals to theatres.
+In Bergamo and its province there are 103 concerts & live music events in the coming months. Concerts and live music nights in Bergamo and the province: bands, tribute acts and singer-songwriters, from village festivals to theatres.
 
 ## Markets in Bergamo: 190 events
 https://anyplans.in/en/bergamo/markets/
 
 In Bergamo and its province there are 190 markets events in the coming months. The markets of Bergamo and the province: antiques, crafts, vintage and second-hand, weekend by weekend.
 
-## Talks & culture in Bergamo: 52 events
+## Talks & culture in Bergamo: 95 events
 https://anyplans.in/en/bergamo/talks-and-culture/
 
-In Bergamo and its province there are 52 talks & culture events in the coming months. Book presentations, talks and exhibitions in Bergamo and the province.
+In Bergamo and its province there are 95 talks & culture events in the coming months. Book presentations, talks and exhibitions in Bergamo and the province.
 
 ## Gym in Bergamo: 2 events
 https://anyplans.in/en/bergamo/gym/
 
 In Bergamo and its province there are 2 gym events in the coming months. Training sessions in the gym, in group.
 
-## Board games in Bergamo: 2 events
+## Board games in Bergamo: 4 events
 https://anyplans.in/en/bergamo/board-games/
 
-In Bergamo and its province there are 2 board game nights in the coming months. Board game nights, quizzes and chess: you sit at a table with whoever is there.
+In Bergamo and its province there are 4 board game nights in the coming months. Board game nights, quizzes and chess: you sit at a table with whoever is there.
 
 ## Nights out in Bergamo: 3 events
 https://anyplans.in/en/bergamo/nights-out/
@@ -5115,30 +5938,40 @@ https://anyplans.in/en/bergamo/karaoke/
 
 In Bergamo and its province there are 30 karaoke events in the coming months. Karaoke nights in the bars of Bergamo and the province: open mic, you sing with whoever is there.
 
-## Dancing in Bergamo: 7 events
+## Dancing in Bergamo: 9 events
 https://anyplans.in/en/bergamo/dancing/
 
-In Bergamo and its province there are 7 dance nights and classes in the coming months. Tango, salsa and swing nights, plus dance classes you can try out on your own.
+In Bergamo and its province there are 9 dance nights and classes in the coming months. Tango, salsa and swing nights, plus dance classes you can try out on your own.
 
-## Guided tours in Bergamo: 18 events
+## Guided tours in Bergamo: 22 events
 https://anyplans.in/en/bergamo/guided-tours/
 
-In Bergamo and its province there are 18 guided tours events in the coming months. Guided tours of churches, towers, museums and parks around Bergamo: you go with a guide and with others.
+In Bergamo and its province there are 22 guided tours events in the coming months. Guided tours of churches, towers, museums and parks around Bergamo: you go with a guide and with others.
 
-## Shows & theatre in Bergamo: 53 events
+## Exhibitions in Bergamo: 4 events
+https://anyplans.in/en/bergamo/exhibitions/
+
+In Bergamo and its province there are 4 exhibitions in the coming months. The exhibitions open right now: paintings, photography, archaeology and installations, with opening days.
+
+## Shows & theatre in Bergamo: 62 events
 https://anyplans.in/en/bergamo/shows/
 
-In Bergamo and its province there are 53 shows & theatre events in the coming months. Theatre, dialect comedies, cabaret and musicals in Bergamo and the province, with the dates of every performance.
+In Bergamo and its province there are 62 shows & theatre events in the coming months. Theatre, dialect comedies, cabaret and musicals in Bergamo and the province, with the dates of every performance.
 
-## Hiking in Bergamo: 5 events
+## Hiking in Bergamo: 9 events
 https://anyplans.in/en/bergamo/hiking/
 
-In Bergamo and its province there are 5 hiking events in the coming months. Hikes in the Orobie Alps and on the hills, in group.
+In Bergamo and its province there are 9 hiking events in the coming months. Hikes in the Orobie Alps and on the hills, in group.
 
-## Painting & art in Bergamo: 5 events
+## Painting & art in Bergamo: 8 events
 https://anyplans.in/en/bergamo/painting/
 
-In Bergamo and its province there are 5 painting & art events in the coming months. Painting and art workshops.
+In Bergamo and its province there are 8 painting & art events in the coming months. Painting and art workshops.
+
+## Cinema in Bergamo: 8 events
+https://anyplans.in/en/bergamo/cinema/
+
+In Bergamo and its province there are 8 screenings in the coming months. Screenings, festivals and open-air cinema, with every date.
 
 ## Fairs in Bergamo: 8 events
 https://anyplans.in/en/bergamo/fairs/
@@ -6695,8 +7528,13 @@ https://anyplans.in/en/bergamo/switch-smash/
 
 Padel in YEP Albano Sant' Alessandro, Via Tonale 3/C, 24061 Albano Sant'Alessandro, Tuesday 22 September at 09:30 (2 dates, until 29 September). €12 (Iscrizione e pagamento su Playtomic).
 
-## PRANZO Business Networking Imprenditori e…
+## PRANZO Business Networking… – Farina&Co. Bergamo
 https://anyplans.in/en/bergamo/pranzo-business-networking-imprenditori-e-manager-bergamo-pr/
+
+Talks & culture in Farina&Co. Bergamo, Bergamo, Tuesday 6 October at 12:30. Free (Biglietti su Eventbrite).
+
+## PRANZO Business Networking… – Farina&Co. Bergamo
+https://anyplans.in/en/bergamo/pranzo-business-networking-imprenditori-e-manager-bergamo-pr-2026-09-15/
 
 Talks & culture in Farina&Co. Bergamo, Bergamo: it already took place, the last date was Tuesday, 15 September 2026.
 
@@ -6955,6 +7793,16 @@ https://anyplans.in/en/bergamo/birra-dopo-il-lavoro-da-nama-brewing-7-posti-libe
 
 Dinners & aperitivo in Nama Brewing, Treviglio, Wednesday 16 September at 16:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Baby Bookclub: il gruppo di lettura per…
+https://anyplans.in/en/bergamo/baby-bookclub-il-gruppo-di-lettura-per-l-infanzia/
+
+Talks & culture in Via Antonio Locatelli, 15, Treviglio, Wednesday 16 September at 17:00. Free (Biglietti su Eventbrite).
+
+## Prova GIOCOMUSICA 4-8 anni
+https://anyplans.in/en/bergamo/prova-giocomusica-4-8-anni/
+
+Concerts & live music in Piazza Giovanni Paolo II, 121, Brembate di Sopra, Wednesday 16 September at 17:00. Free (Biglietti su Eventbrite).
+
 ## Cena da PizzaClub No Limits - Capriate: 1 posto…
 https://anyplans.in/en/bergamo/cena-da-pizzaclub-no-limits-capriate-1-posto-libero/
 
@@ -6984,6 +7832,11 @@ Dancing in NXT Bergamo, Piazzale degli Alpini, Bergamo, Wednesday 16 September a
 https://anyplans.in/en/bergamo/gala/
 
 Dinners & aperitivo in Agriturismo Sadira, Via alle Cascine 525, Calusco d'Adda, Wednesday 16 September at 20:00. Free (Ingresso gratuito, prenotazione consigliata).
+
+## Di chi sono i nostri figli?
+https://anyplans.in/en/bergamo/di-chi-sono-i-nostri-figli/
+
+Talks & culture in Sala Cine-Teatro Don G. Sironi, Osnago, Wednesday 16 September at 20:45. Free (Biglietti su Eventbrite).
 
 ## Karma Night
 https://anyplans.in/en/bergamo/karma-night/
@@ -7155,6 +8008,11 @@ https://anyplans.in/en/bergamo/duello-a-mezzogiorno-torneo-pausa-pranzo/
 
 Padel in O2 Padel Bergamo, Via Tinaglia 12, 24030 Brembate di Sopra, Thursday 17 September at 12:30 (3 dates, until 1 October). €12 (Iscrizione e pagamento su Playtomic).
 
+## Campane Tibetane al Parco della Trucca -…
+https://anyplans.in/en/bergamo/campane-tibetane-al-parco-della-trucca-bergamo-evento-gratui/
+
+Yoga & pilates in Parco della Trucca, Bergamo, Thursday 17 September at 18:00. Free (Biglietti su Eventbrite).
+
 ## Cinema con cena da Le Cucine di Curno: 7 posti…
 https://anyplans.in/en/bergamo/cinema-con-cena-da-le-cucine-di-curno-7-posti-liberi/
 
@@ -7220,6 +8078,11 @@ https://anyplans.in/en/bergamo/karaoke-con-gianfranco-kraken-factory-alzano-lomb
 
 Karaoke in Kraken Factory, Viale Piave 58, Alzano Lombardo, Thursday 17 September at 21:00. Free.
 
+## Partita a Uno al bar
+https://anyplans.in/en/bergamo/partita-a-uno-al-bar/
+
+Board games in Piazza Pontida, Bergamo, Thursday 17 September at 21:00. Free.
+
 ## 🌜17.09 LA NOCHE DE PADEL🌛
 https://anyplans.in/en/bergamo/17-09-la-noche-de-padel/
 
@@ -7234,6 +8097,11 @@ Karaoke in La Rosa blu, Via Guglielmo Marconi 25, Seriate, Thursday 17 September
 https://anyplans.in/en/bergamo/la-fisarmonica-di-marcello-marangon-in-concerto-alpini-borgo/
 
 Concerts & live music in Parco Rosselli, Viale Giulio Cesare, Bergamo Città, Thursday 17 September at 21:30. Free.
+
+## UNA NUOVA LUCE serata d'anteprima dei restauri…
+https://anyplans.in/en/bergamo/una-nuova-luce-serata-d-anteprima-dei-restauri-dell-aula-pic/
+
+Guided tours in Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, Thursday 17 September at 21:30. Free (Biglietti su Eventbrite).
 
 ## TABATA DEL GIOVEDI'
 https://anyplans.in/en/bergamo/tabata-del-giovedi/
@@ -7405,6 +8273,11 @@ https://anyplans.in/en/bergamo/i-museo-civici-incontrano-la-scuola/
 
 Guided tours in Museo Civico di Scienze Naturali Enrico Caffi di Bergamo, Bergamo, Friday 18 September at 15:00. Free (Ingresso: vedi la pagina AllEvents).
 
+## Gruppo di lettura del venerdì - Le infinite…
+https://anyplans.in/en/bergamo/gruppo-di-lettura-del-venerdi-le-infinite-notti-di-samantha-/
+
+Talks & culture in Piazza Garibaldi, Treviglio, Friday 18 September at 16:00. Free (Biglietti su Eventbrite).
+
 ## Streeat Food Truck Festival
 https://anyplans.in/en/bergamo/streeat-food-truck-festival/
 
@@ -7414,6 +8287,11 @@ Dinners & aperitivo in Piazze, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, 
 https://anyplans.in/en/bergamo/karaoke-da-p-stop-8-posti-liberi/
 
 Karaoke in P.STOP, Cernusco Lombardone, Friday 18 September at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## STP Bergamo Workshop
+https://anyplans.in/en/bergamo/stp-bergamo-workshop/
+
+Talks & culture in Hortus Bergamo, Bergamo, Friday 18 September at 18:00. Free (Biglietti su Eventbrite).
 
 ## Il Tavolo Perfetto da Retrobottega Curno: 3…
 https://anyplans.in/en/bergamo/il-tavolo-perfetto-da-retrobottega-curno-3-posti-liberi/
@@ -7429,6 +8307,11 @@ Dinners & aperitivo in Officina Dei Sapori - Curno, Friday 18 September at 18:15
 https://anyplans.in/en/bergamo/cena-da-l-anonimo-3-posti-liberi/
 
 Dinners & aperitivo in L'Anonimo, Dalmine, Friday 18 September at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## Due Secoli di Luce: Mostra Fotografica e…
+https://anyplans.in/en/bergamo/due-secoli-di-luce-mostra-fotografica-e-fotocamere-d-epoca-a/
+
+Exhibitions in EX CHIESA SANTO SPIRITO, Casnigo, Friday 18 September at 19:00. Free (Biglietti su Eventbrite).
 
 ## Festa di Mvra
 https://anyplans.in/en/bergamo/festa-di-mvra/
@@ -7465,6 +8348,11 @@ https://anyplans.in/en/bergamo/festa-dei-volontari-oratorio-credaro/
 
 Town festival in Credaro, Friday 18 September at 19:30 (3 dates, until 20 September). Free.
 
+## SULLE TRACCE DI LORENZO LOTTO visita serale…
+https://anyplans.in/en/bergamo/sulle-tracce-di-lorenzo-lotto-visita-serale-all-oratorio-sua/
+
+Talks & culture in Pro Loco Trescore Balneario APS - Oratorio Suardi, Trescore Balneario, Friday 18 September at 20:00. Free (Biglietti su Eventbrite).
+
 ## Cena da Wiener Haus: 2 posti liberi
 https://anyplans.in/en/bergamo/cena-da-wiener-haus-2-posti-liberi/
 
@@ -7485,6 +8373,11 @@ https://anyplans.in/en/bergamo/mostra-fotografica-someanza-ex-chiesa-santo-spiri
 
 Talks & culture in Via Santo Spirito 11, Casnigo, Friday 18 September at 20:30 (12 dates, until 27 September). Free.
 
+## La Rocca sotto le stelle
+https://anyplans.in/en/bergamo/la-rocca-sotto-le-stelle/
+
+Town festival in Rocca, Romano di Lombardia, Friday 18 September at 20:30. Free (Biglietti su Eventbrite).
+
 ## Karaoke con Dj Gigi Vaghi
 https://anyplans.in/en/bergamo/karaoke-con-dj-gigi-vaghi-da-nisio-torre-de-roveri/
 
@@ -7494,6 +8387,11 @@ Karaoke in Ristorante Trattoria Da Nisio – Torre de Roveri (Bergamo), Via G. B
 https://anyplans.in/en/bergamo/tributo-pooh-goodbye-quei-bravi-ragazzi-brembate/
 
 Concerts & live music in Quei Bravi Ragazzi, Via Resistenza 4, Brembate, Friday 18 September at 21:00. Free.
+
+## GDR&BEER 2.6 in NemBeer Pub, Nembro, 18 September
+https://anyplans.in/en/bergamo/gdr-beer-2-6/
+
+Dinners & aperitivo in NemBeer Pub, Nembro, Friday 18 September at 21:00. Free (Biglietti su Eventbrite).
 
 ## Karaoke con Francy
 https://anyplans.in/en/bergamo/karaoke-con-francy-il-pirata-lurano/
@@ -7665,6 +8563,11 @@ https://anyplans.in/en/bergamo/mercato-di-urgnano-frazione-basella/
 
 Markets in Urgnano Frazione Basella, Saturday 19 September at 08:00 (3 dates, until 3 October). Free.
 
+## RUN EXPO 2026: il primo test village dedicato…
+https://anyplans.in/en/bergamo/run-expo-2026-il-primo-test-village-dedicato-al-mondo-del-ru/
+
+Running in Centro Sportivo Comunale, Cernusco Lombardone, Saturday 19 September at 08:30. Free (Biglietti su Eventbrite).
+
 ## RODEO LADIES FLASH
 https://anyplans.in/en/bergamo/rodeo-ladies-flash/
 
@@ -7690,10 +8593,25 @@ https://anyplans.in/en/bergamo/padel-strong-tournament/
 
 Padel in PADEL007, Via delle Grigne 10, 22036 Erba, Saturday 19 September at 10:00. Free (Iscrizione su Playtomic).
 
+## RUN LAB – Obiettivo 10K/21K
+https://anyplans.in/en/bergamo/run-lab-obiettivo-10k-21k/
+
+Running in Santini Store, Bergamo, Saturday 19 September at 10:00. Free (Biglietti su Eventbrite).
+
 ## AMERICANA MASCHILE EDIL RIVA
 https://anyplans.in/en/bergamo/americana-maschile-edil-riva/
 
 Padel in Padel Star Veduggio, via dell'Atleta 12, 20837 Veduggio Con Colzano, Saturday 19 September at 10:00. €18 (Iscrizione e pagamento su Playtomic).
+
+## Ville aperte autunno 2026: STORIE CHE RESTANO
+https://anyplans.in/en/bergamo/ville-aperte-autunno-2026-storie-che-restano/
+
+Guided tours in Giardini storici di Villa Bertarelli, Galbiate, Saturday 19 September at 10:00. Free (Biglietti su Eventbrite).
+
+## Open Day TEB in Via Tezze, Ranica, 19 September
+https://anyplans.in/en/bergamo/open-day-teb/
+
+Talks & culture in Via Tezze, Ranica, Saturday 19 September at 10:00. Free (Biglietti su Eventbrite).
 
 ## CORSO DI ASTROLOGIA - Paolo Franceschetti
 https://anyplans.in/en/bergamo/corso-di-astrologia-paolo-franceschetti/
@@ -7710,6 +8628,16 @@ https://anyplans.in/en/bergamo/arte-per-educare-la-fede-al-bernareggi/
 
 Painting & art in Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, Saturday 19 September at 11:00. Free (Ingresso: vedi la pagina AllEvents).
 
+## DONE! at Factory Market
+https://anyplans.in/en/bergamo/done-at-factory-market/
+
+Talks & culture in Spazio Fase, Alzano Lombardo, Saturday 19 September at 11:00. Free (Biglietti su Eventbrite).
+
+## Picnic & Painting in Lake Como
+https://anyplans.in/en/bergamo/picnic-painting-in-lake-como/
+
+Town festival in Spiaggia di Abbadia Lariana, Abbadia Lariana, Saturday 19 September at 11:30. Free (Biglietti su Eventbrite).
+
 ## RODEO MIX SWITCH
 https://anyplans.in/en/bergamo/rodeo-mix-switch/
 
@@ -7720,10 +8648,20 @@ https://anyplans.in/en/bergamo/sessione-di-livellamento-playtomic/
 
 Padel in O2 Padel Bergamo, Via Tinaglia 12, 24030 Brembate di Sopra, Saturday 19 September at 13:00. €20 (Iscrizione e pagamento su Playtomic).
 
+## Light lunch navigando tra storia e natura
+https://anyplans.in/en/bergamo/light-lunch-navigando-tra-storia-e-natura/
+
+Dinners & aperitivo in Via Alzaia, 13, Trezzo sull'Adda, Saturday 19 September at 13:00. Free (Biglietti su Eventbrite).
+
 ## IL MONASTERO CLAUSTRALE DI SANTA GRATA
 https://anyplans.in/en/bergamo/il-monastero-claustrale-di-santa-grata/
 
 Talks & culture in via arena 2 bergamo, Bergamo, Saturday 19 September at 14:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## Nautilus 2026
+https://anyplans.in/en/bergamo/nautilus-2026/
+
+Talks & culture in Hotel Motel Nautilus, Moregge, Saturday 19 September at 14:00. Free (Biglietti su Eventbrite).
 
 ## Orienteering : avventura in città vol. 5
 https://anyplans.in/en/bergamo/orienteering-avventura-in-citta-vol-5/
@@ -7734,6 +8672,11 @@ Talks & culture in Merate (LC), Saturday 19 September at 14:30. €5 (Accredito 
 https://anyplans.in/en/bergamo/visita-guidata-chiesa-parrocchiale-zogno/
 
 Guided tours in Museo della Valle, Via Mazzini 3, Zogno, Saturday 19 September at 14:45 (2 dates, until 21 November). Free.
+
+## Festa Al Casello San Marco di Bagnatica
+https://anyplans.in/en/bergamo/festa-al-casello-san-marco-di-bagnatica/
+
+Town festival in Casello San Marco, Saturday 19 September at 15:00. Free. 1 person has already said they're going.
 
 ## EL POZO MASCHILE 19.09.26  PADEL TIME TREVIGLIO
 https://anyplans.in/en/bergamo/el-pozo-maschile-19-09-26-padel-time-treviglio/
@@ -7770,10 +8713,20 @@ https://anyplans.in/en/bergamo/medfest-2026-benedictus-maledictus-bergamo-aula-p
 
 Concerts & live music in AULA DELLA CURIA VESCOVILE, Bergamo, Saturday 19 September at 16:00. Free (Ingresso: vedi la pagina AllEvents).
 
+## Degustazione Rossi Alto Adige Cantina Ritterhof
+https://anyplans.in/en/bergamo/degustazione-rossi-alto-adige-cantina-ritterhof/
+
+Dinners & aperitivo in ENOTECA GAUDES, Torre De' Roveri, Saturday 19 September at 16:30. Free (Biglietti su Eventbrite).
+
 ## S-PADEL MAJOR BLACK 3000 MASCHILE
 https://anyplans.in/en/bergamo/s-padel-major-black-3000-maschile/
 
 Padel in MERATE A 4,50 EURO!!!!, Via Giacomo Matteotti, 2, 23807 Merate, Saturday 19 September at 17:00. €30 (Iscrizione su Playtomic, si paga in loco).
+
+## VAGABONDI DELLA NOTTE. MISTICI E CERCATORI DI…
+https://anyplans.in/en/bergamo/vagabondi-della-notte-mistici-e-cercatori-di-verita-dedicato/
+
+Shows & theatre in Rocca Albani - Castello di Urgnano, Urgnano, Saturday 19 September at 17:00. Free (Biglietti su Eventbrite).
 
 ## Scotch - Un gioco
 https://anyplans.in/en/bergamo/scotch-un-gioco/
@@ -7784,6 +8737,11 @@ Guided tours in Ex Ateneo di Scienze Lettere Arti ,sede storica, Bergamo, Saturd
 https://anyplans.in/en/bergamo/aperitivo-nella-storia-castello-navigazione-e-aperitivo/
 
 Guided tours in Trezzo sull'Adda, Saturday 19 September at 17:00. €32 (Accredito su comehome; il resto si paga in loco).
+
+## New Adult bookclub: il gruppo di lettura per i…
+https://anyplans.in/en/bergamo/new-adult-bookclub-il-gruppo-di-lettura-per-i-giovani-adulti/
+
+Talks & culture in Via Camillo Cavour, 4, Treviglio, Saturday 19 September at 17:30. Free (Biglietti su Eventbrite).
 
 ## Karaoke da Lab Di Revolution: 11 posti liberi
 https://anyplans.in/en/bergamo/karaoke-da-lab-di-revolution-11-posti-liberi/
@@ -7800,6 +8758,16 @@ https://anyplans.in/en/bergamo/cena-in-osteria-serata-latina-da-gaina-osteria-6-
 
 Dinners & aperitivo in Gaina Osteria, Ornago, Saturday 19 September at 17:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## "IL SALE DEL PANE ALTRUI" Nenè Ribeiro - Un…
+https://anyplans.in/en/bergamo/il-sale-del-pane-altrui-nene-ribeiro-un-viaggio-musicale-e-p/
+
+Concerts & live music in Bacillo, Lodi, Saturday 19 September at 18:00. Free (Biglietti su Eventbrite).
+
+## GHISALBA (Bg): BAGNO DI GONG all'APERTO -> 10…
+https://anyplans.in/en/bergamo/ghisalba-bg-bagno-di-gong-all-aperto-10-gong-planetari-paist/
+
+Yoga & pilates in Parco Privato in Villa, Ghisalba, Saturday 19 September at 18:00. Free (Biglietti su Eventbrite).
+
 ## Cena da Ristorante Rossera: 9 posti liberi
 https://anyplans.in/en/bergamo/cena-da-ristorante-rossera-9-posti-liberi/
 
@@ -7810,10 +8778,25 @@ https://anyplans.in/en/bergamo/cena-da-agriturismo-la-cascina-2-posti-liberi/
 
 Dinners & aperitivo in Agriturismo La Cascina, Brembate di Sopra, Saturday 19 September at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Leonardo e l'Aperitivo del Custode: arte
+https://anyplans.in/en/bergamo/leonardo-e-l-aperitivo-del-custode-arte-storia-e-convivialit/
+
+Dinners & aperitivo in Via Alzaia Sud, 3, Vaprio d'Adda, Saturday 19 September at 18:00. Free (Biglietti su Eventbrite).
+
 ## TORNEO MIX FLASH FINAL
 https://anyplans.in/en/bergamo/torneo-mix-flash-final/
 
 Padel in KZ Padel, Via Riolo 1, 24030 Mozzo, Saturday 19 September at 18:00. €15 (Iscrizione e pagamento su Playtomic).
+
+## FRONTEMURA CANTINA APERTA
+https://anyplans.in/en/bergamo/frontemura-cantina-aperta/
+
+Dinners & aperitivo in Frontemura, Bergamo, Saturday 19 September at 18:30. Free (Biglietti su Eventbrite).
+
+## INTRIGO: Le origini del Condottiero
+https://anyplans.in/en/bergamo/intrigo-le-origini-del-condottiero/
+
+Town festival in Rocca, Romano di Lombardia, Saturday 19 September at 18:30. Free (Biglietti su Eventbrite).
 
 ## Strings in Conversation
 https://anyplans.in/en/bergamo/strings-in-conversation/
@@ -7824,6 +8807,11 @@ Concerts & live music in Palazzo Terzi Bergamo, Bergamo, Saturday 19 September a
 https://anyplans.in/en/bergamo/cena-da-wiener-haus-7-posti-liberi/
 
 Dinners & aperitivo in Wiener Haus, Curno, Saturday 19 September at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## "Il gatto del giardiniere" con Thomas Schlesser
+https://anyplans.in/en/bergamo/il-gatto-del-giardiniere-con-thomas-schlesser/
+
+Talks & culture in Ex Chiesetta di Nigrignano, Sarnico, Saturday 19 September at 18:30. Free (Biglietti su Eventbrite).
 
 ## Corrida di San Gerolamo a Torre de' Roveri
 https://anyplans.in/en/bergamo/corrida-di-san-gerolamo-a-torre-de-roveri/
@@ -7850,6 +8838,16 @@ https://anyplans.in/en/bergamo/candlelight-il-signore-degli-anelli/
 
 Concerts & live music in Centro Congressi Giovanni XXIII, Bergamo, Saturday 19 September at 19:30. €23 (Biglietti su AllEvents).
 
+## Festa degli Alpini
+https://anyplans.in/en/bergamo/festa-degli-alpini-ci-andiamo-insieme/
+
+Town festival in Festa degli Alpini, Borgo Santa Caterina, Bergamo, Saturday 19 September at 19:30. Free.
+
+## CENA MEDIEVALE d'autunno
+https://anyplans.in/en/bergamo/cena-medievale-d-autunno/
+
+Dinners & aperitivo in CASTELLO DI MALPAGA, CAVERNAGO, Saturday 19 September at 20:00. Free (Biglietti su Eventbrite).
+
 ## SeptemBeer live: Greta Caserta e Michele…
 https://anyplans.in/en/bergamo/septembeer-live-greta-caserta-e-michele-gentilini/
 
@@ -7870,6 +8868,11 @@ https://anyplans.in/en/bergamo/inti-illimani-in-concerto-teatro-serassi-villa-d-
 
 Concerts & live music in Teatro Serassi, Via Sereno Locatelli Milesi 6, Villa d’Almè, Saturday 19 September at 20:45. Free.
 
+## COLPA D’ALFREDO | Teatro e comicità
+https://anyplans.in/en/bergamo/colpa-d-alfredo-teatro-e-comicita/
+
+Shows & theatre in Teatro San Luigi, Inverigo, Saturday 19 September at 21:00. Free (Biglietti su Eventbrite).
+
 ## Karaoke con Luisa e Mauro
 https://anyplans.in/en/bergamo/karaoke-con-luisa-e-mauro-lucerosa-zandobbio/
 
@@ -7879,6 +8882,16 @@ Karaoke in Via Giuseppe Verdi 4, Zandobbio, Saturday 19 September at 21:00 (3 da
 https://anyplans.in/en/bergamo/karaoke-con-seba-bar-mister-p-bergamo-citta/
 
 Karaoke in Via Giovanni Carnovali 90, Bergamo Città, Saturday 19 September at 21:00 (4 dates, until 31 October). Free.
+
+## Gelato al Contadino
+https://anyplans.in/en/bergamo/gelato-al-contadino/
+
+Dinners & aperitivo in Gelateria Il Contadino, Bergamo, Saturday 19 September at 21:00. Free.
+
+## ViolaFuel @ Nuovo Circolo Arci
+https://anyplans.in/en/bergamo/violafuel-nuovo-circolo-arci-sovere-bg/
+
+Concerts & live music in Circolo Arci - Sovere, Sovere, Saturday 19 September at 21:00. Free (Biglietti su Eventbrite).
 
 ## Karaoke con Silvia
 https://anyplans.in/en/bergamo/karaoke-con-silvia-il-pirata-lurano/
@@ -7930,6 +8943,11 @@ https://anyplans.in/en/bergamo/colazione-da-mais-pasticceria-gelateria-caffetter
 
 Dinners & aperitivo in Maìs - Pasticceria Gelateria Caffetteria, Busnago, Sunday 20 September at 08:20. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Yoga al parco
+https://anyplans.in/en/bergamo/yoga-al-parco/
+
+Yoga & pilates in Parco della Trucca, Bergamo, Sunday 20 September at 08:30. Free.
+
 ## Mercatino Antico in Via
 https://anyplans.in/en/bergamo/mercatino-antico-in-via-centro-storico-treviglio/
 
@@ -7975,6 +8993,16 @@ https://anyplans.in/en/bergamo/visita-guidata-parco-dei-laghi-fossili-sovere/
 
 Guided tours in Sellere – Pianico in Val Borlezza Sovere Bergamo, Sovere, Sunday 20 September at 10:00. Free.
 
+## Visita al Castello di Malpaga
+https://anyplans.in/en/bergamo/visita-al-castello-di-malpaga/
+
+Town festival in Via Marconi, 20, Malpaga, Sunday 20 September at 10:00. Free (Biglietti su Eventbrite).
+
+## RESIDENTI CAVERNAGO
+https://anyplans.in/en/bergamo/residenti-cavernago/
+
+Town festival in CASTELLO DI MALPAGA, CAVERNAGO, Sunday 20 September at 10:00. Free (Biglietti su Eventbrite).
+
 ## Trekking vista lago: da Vercurago a Lecco_4a…
 https://anyplans.in/en/bergamo/trekking-vista-lago-da-vercurago-a-lecco-4a-edizione/
 
@@ -7990,25 +9018,75 @@ https://anyplans.in/en/bergamo/joel-rogriguez-coach-premier-padel/
 
 Padel in Padel Arena Bg, Via Milano 9, 24040 Calvenzano, Sunday 20 September at 10:30. €25 (Iscrizione e pagamento su Playtomic).
 
+## Pasta fresca a casa mia
+https://anyplans.in/en/bergamo/pasta-fresca-a-casa-mia/
+
+Cooking classes in Borgo Santa Caterina, Bergamo, Sunday 20 September at 10:30. Free.
+
 ## Ròba scambiada
 https://anyplans.in/en/bergamo/roba-scambiada-longa-durada-swap-party-all-immacolata/
 
 Town festival in Oratorio dell'Immacolata, via Greppi 6, Bergamo, Sunday 20 September at 10:30. Free.
+
+## Paw Patrol. Missione Dinosauri - Oriocenter c/o…
+https://anyplans.in/en/bergamo/paw-patrol-missione-dinosauri-oriocenter-c-o-uci-cinemas/
+
+Cinema in Oriocenter, Orio al Serio, Sunday 20 September at 11:00. Free (Biglietti su Eventbrite).
+
+## HEIDI - Oriocenter c/o Uci Cinemas
+https://anyplans.in/en/bergamo/heidi-oriocenter-c-o-uci-cinemas/
+
+Cinema in Oriocenter, Orio al Serio, Sunday 20 September at 11:00. Free (Biglietti su Eventbrite).
 
 ## Visita guidata
 https://anyplans.in/en/bergamo/visita-guidata-grotte-delle-meraviglie-zogno/
 
 Guided tours in Grotte delle Meraviglie, Via Grotte delle Meraviglie, Zogno, Sunday 20 September at 14:30. Free.
 
-## CINEDOPERA - "Lucie de Lammermoor"
+## CINEDOPERA - "Lucie de… – Teatro Gaetano Donizetti- Bergamo
 https://anyplans.in/en/bergamo/cinedopera-lucie-de-lammermoor/
 
 Talks & culture in Teatro Gaetano Donizetti- Bergamo, Bergamo, Sunday 20 September at 15:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## CINEDOPERA - "Lucie de… – Teatro Gaetano Donizetti- Bergamo
+https://anyplans.in/en/bergamo/cinedopera-lucie-de-lammermoor-2026-10-11/
+
+Concerts & live music in Teatro Gaetano Donizetti- Bergamo, Bergamo, Sunday 11 October at 15:00. Free (Biglietti su Eventbrite).
+
+## LABORATORIO BAMBINI: Piccoli Orefici
+https://anyplans.in/en/bergamo/laboratorio-bambini-piccoli-orefici/
+
+Town festival in Via Marconi, 20, Malpaga, Sunday 20 September at 16:00. Free (Biglietti su Eventbrite).
+
+## Visita alla Casa del Custode delle Acque e…
+https://anyplans.in/en/bergamo/visita-alla-casa-del-custode-delle-acque-e-galleria-interatt/
+
+Exhibitions in Via Alzaia Sud, 3, Vaprio d'Adda, Sunday 20 September at 16:00. Free (Biglietti su Eventbrite).
+
+## MedFest 2026 - VESPRI DELL’ADDOLORATA in canto…
+https://anyplans.in/en/bergamo/medfest-2026-vespri-dell-addolorata-in-canto-gregoriano-civa/
+
+Talks & culture in Chiesa dei Santi Vito e Modesto, Civate, Sunday 20 September at 16:30. Free (Biglietti su Eventbrite).
+
+## VISIONPROJECT W/ RESPONSE DAYTIME SESSION -…
+https://anyplans.in/en/bergamo/visionproject-w-response-daytime-session-closing/
+
+Concerts & live music in Genesi, Alzate Brianza, Sunday 20 September at 17:00. Free (Biglietti su Eventbrite).
+
+## Mundo Castel
+https://anyplans.in/en/bergamo/mundo-castel/
+
+Town festival in Pagazzano, Pagazzano, Sunday 20 September at 18:00. Free (Biglietti su Eventbrite).
 
 ## Cena da Ristorante Pizzeria Chef Vincenzio: 2…
 https://anyplans.in/en/bergamo/cena-da-ristorante-pizzeria-chef-vincenzio-2-posti-liberi/
 
 Dinners & aperitivo in Ristorante Pizzeria Chef Vincenzio, Grassobbio, Sunday 20 September at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## AperiBook "Il mestiere del buio" con Paolo…
+https://anyplans.in/en/bergamo/aperibook-il-mestiere-del-buio-con-paolo-roversi/
+
+Talks & culture in la cà rossa, grumello del monte, Sunday 20 September at 18:30. Free (Biglietti su Eventbrite).
 
 ## Festa di Fine Estate
 https://anyplans.in/en/bergamo/festa-di-fine-estate-oratorio-costa-di-mezzate/
@@ -8019,6 +9097,11 @@ Town festival in Costa di Mezzate, Sunday 20 September at 19:30. Free.
 https://anyplans.in/en/bergamo/septembeer-live-soul-strings/
 
 Summer venues in Into The Woods, Torre Boldone, Sunday 20 September at 20:00. Free.
+
+## Atalanta al bar
+https://anyplans.in/en/bergamo/atalanta-al-bar-la-vediamo-insieme/
+
+Football in Piazza Pontida, Bergamo, Sunday 20 September at 20:45. Free.
 
 ## Karaoke con Steven Music Show
 https://anyplans.in/en/bergamo/karaoke-con-steven-music-show-il-pirata-lurano/
@@ -8150,10 +9233,25 @@ https://anyplans.in/en/bergamo/mercato-di-dossena/
 
 Markets in Via Don Pietro Rigoli, Dossena, Monday 21 September at 08:00 (3 dates, until 5 October). Free.
 
+## Camminata in Città Alta
+https://anyplans.in/en/bergamo/camminata-in-citta-alta/
+
+Walking in Porta San Giacomo, Bergamo, Monday 21 September at 09:30. Free.
+
 ## partita guidata con ale santilli
 https://anyplans.in/en/bergamo/partita-guidata-con-ale-santilli/
 
 Padel in SPH - Lodi La Pergola, Via per Ca' de' Bolli 11, 26817 San Martino in Strada, Monday 21 September at 12:30 (2 dates, until 28 September). €20 (Iscrizione e pagamento su Playtomic).
+
+## Polenta insieme in Città Alta
+https://anyplans.in/en/bergamo/polenta-insieme-in-citta-alta/
+
+Dinners & aperitivo in Piazza Mercato delle Scarpe, Bergamo, Monday 21 September at 12:30. Free.
+
+## IL BERNAREGGI PER LA SCUOLA
+https://anyplans.in/en/bergamo/il-bernareggi-per-la-scuola/
+
+Talks & culture in Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, Monday 21 September at 17:00. Free (Biglietti su Eventbrite).
 
 ## Appunti in movimento
 https://anyplans.in/en/bergamo/appunti-in-movimento/
@@ -8170,10 +9268,35 @@ https://anyplans.in/en/bergamo/choruslife-volley-bergamo-su-il-sipario/
 
 Volleyball in Piazze, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, Tuesday 22 September at 16:00. Free.
 
+## PROVA GIOCOMUSICA 0-3 anni + persona adulta
+https://anyplans.in/en/bergamo/prova-giocomusica-0-3-anni-persona-adulta/
+
+Concerts & live music in Piazza Giovanni Paolo II, 121, Brembate di Sopra, Tuesday 22 September at 16:00. Free (Biglietti su Eventbrite).
+
 ## Fiera Zootecnica Bovina
 https://anyplans.in/en/bergamo/fiera-zootecnica-bovina-palazzetto-sport-serina/
 
 Fairs in Palazzetto dello sport – Serina, Serina, Wednesday 23 September at 08:00. Free.
+
+## FIMAA CREMONA - La responsabilità civile e…
+https://anyplans.in/en/bergamo/fimaa-cremona-la-responsabilita-civile-e-penale-dell-agente-/
+
+Talks & culture in Hotel Il Ponte di Rialto, Crema, Wednesday 23 September at 09:00. Free (Biglietti su Eventbrite).
+
+## SOS coliche e massaggio neonatale - Chicco Baby…
+https://anyplans.in/en/bergamo/sos-coliche-e-massaggio-neonatale-chicco-baby-academy/
+
+Cinema in Oriocenter, Orio al Serio, Wednesday 23 September at 14:00. Free (Biglietti su Eventbrite).
+
+## DF x Topo Athletic - Test Trail Running
+https://anyplans.in/en/bergamo/df-x-topo-athletic-test-trail-running/
+
+Running in DF Sport Specialist, Industrie, Wednesday 23 September at 17:30. Free (Biglietti su Eventbrite).
+
+## L'ORFEO II, IL CANTO DEL BRONZO
+https://anyplans.in/en/bergamo/l-orfeo-ii-il-canto-del-bronzo/
+
+Exhibitions in Museo Diocesano Adriano Bernareggi, Bergamo, Wednesday 23 September at 18:30. Free (Biglietti su Eventbrite).
 
 ## All You Can Meet…
 https://anyplans.in/en/bergamo/all-you-can-meet-leggi-bene-da-momoko-7-posti-liberi/
@@ -8200,6 +9323,11 @@ https://anyplans.in/en/bergamo/botanica-queer-tour/
 
 Guided tours in Valle della Biodiversità - Sez. di Astino dell'Orto Botanico di Bergamo, Bergamo, Thursday 24 September at 17:30. Free (Ingresso: vedi la pagina AllEvents).
 
+## DF x Joma - Test Trail Running
+https://anyplans.in/en/bergamo/df-x-joma-test-trail-running/
+
+Running in DF Sport Specialist, Industrie, Thursday 24 September at 17:30. Free (Biglietti su Eventbrite).
+
 ## Passione educativa
 https://anyplans.in/en/bergamo/passione-educativa-passione-per-la-comunita/
 
@@ -8225,10 +9353,20 @@ https://anyplans.in/en/bergamo/weroad-afterwork-back-to-the-city-edition/
 
 Dinners & aperitivo in Cosmo Food Club, Bergamo, Thursday 24 September at 20:00. €2 (Si paga su WeMeet (WeRoad)).
 
+## LOTTO BY NIGHT tour serale tra le opere di…
+https://anyplans.in/en/bergamo/lotto-by-night-tour-serale-tra-le-opere-di-lorenzo-lotto-in-/
+
+Painting & art in Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, Thursday 24 September at 20:00. Free (Biglietti su Eventbrite).
+
 ## SeptemBeer live: Manuela Ferro e Giambattista…
 https://anyplans.in/en/bergamo/septembeer-live-manuela-ferro-e-giambattista-girelli/
 
 Summer venues in Into The Woods, Torre Boldone, Thursday 24 September at 20:00. Free.
+
+## VOLONTARI A TUTTO VOLUME
+https://anyplans.in/en/bergamo/volontari-a-tutto-volume/
+
+Talks & culture in Dancing Lavello, Calolziocorte, Thursday 24 September at 21:00. Free (Biglietti su Eventbrite).
 
 ## 🌜24.09 LA NOCHE DE PADEL🌛
 https://anyplans.in/en/bergamo/24-09-la-noche-de-padel/
@@ -8240,10 +9378,20 @@ https://anyplans.in/en/bergamo/bergamo-incontra-2026/
 
 Talks & culture in Piazze, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, Friday 25 September at 07:00 (3 dates, until 27 September). Free.
 
+## SALMEGGIA IN&OUT
+https://anyplans.in/en/bergamo/salmeggia-in-out/
+
+Painting & art in Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, Friday 25 September at 10:30. Free (Biglietti su Eventbrite).
+
 ## 50 anni di eccellenza: il gusto autentico della…
 https://anyplans.in/en/bergamo/50-anni-di-eccellenza-il-gusto-autentico-della-valle-taleggi/
 
 Talks & culture in Circolino Città Alta, Bergamo, Friday 25 September at 17:00. €21 (Biglietti su AllEvents).
+
+## SENTER DI CASTRU. Pastori orobici nei Grigioni…
+https://anyplans.in/en/bergamo/senter-di-castru-pastori-orobici-nei-grigioni-tra-seicento-e/
+
+Guided tours in Sala Curò, Bergamo, Friday 25 September at 17:30. Free (Biglietti su Eventbrite).
 
 ## Il formaggio di Leonardo
 https://anyplans.in/en/bergamo/il-formaggio-di-leonardo-viaggio-nelle-terre-del-giarolo/
@@ -8254,6 +9402,11 @@ Talks & culture in Circolino Città Alta, Bergamo, Friday 25 September at 18:00.
 https://anyplans.in/en/bergamo/bergamoincontra-2026/
 
 Town festival in BergamoIncontra, Friday 25 September at 18:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## Danze al tramonto - Dances at sunset
+https://anyplans.in/en/bergamo/danze-al-tramonto-dances-at-sunset/
+
+Shows & theatre in Villa Carlotta, Tremezzina, Friday 25 September at 18:30. Free (Biglietti su Eventbrite).
 
 ## Aperi-ceramico: dipingi la tua ceramica con…
 https://anyplans.in/en/bergamo/aperi-ceramico-dipingi-la-tua-ceramica-con-aperitivo/
@@ -8285,6 +9438,11 @@ https://anyplans.in/en/bergamo/quattro-portoni-un-nuovo-capitolo-il-latte-di-buf
 
 Talks & culture in Circolino Città Alta, Bergamo, Friday 25 September at 19:00. €21 (Biglietti su AllEvents).
 
+## Sogno di una Notte di fine Estate
+https://anyplans.in/en/bergamo/sogno-di-una-notte-di-fine-estate/
+
+Dancing in Latterraggio, Caprino Bergamasco, Friday 25 September at 19:00. Free (Biglietti su Eventbrite).
+
 ## Ragnarök Viking Fest
 https://anyplans.in/en/bergamo/ragnarok-viking-fest-cascina-bosco-grosso-casirate-d-adda/
 
@@ -8304,6 +9462,16 @@ Summer venues in Into The Woods, Torre Boldone, Friday 25 September at 20:00. Fr
 https://anyplans.in/en/bergamo/il-formaggio-che-si-ribella-al-tempo-annate-dello-storico-ri/
 
 Talks & culture in Circolino Città Alta, Bergamo, Friday 25 September at 20:00. €21 (Biglietti su AllEvents).
+
+## LEGAMI: Relazioni
+https://anyplans.in/en/bergamo/legami-relazioni-famiglia-e-comunita-presentazione-ciclo-inc/
+
+Town festival in Via S. Giovanni, 1H, Bergamo, Friday 25 September at 20:30. Free (Biglietti su Eventbrite).
+
+## Lu Santo Jullàre Françesco
+https://anyplans.in/en/bergamo/lu-santo-jullare-fran-esco/
+
+Shows & theatre in Teatro San Filippo Neri, Darfo Boario Terme, Friday 25 September at 20:30. Free (Biglietti su Eventbrite).
 
 ## 💫25.09 LA NOCHE DE PADEL - FRIDAY EDITION 💫
 https://anyplans.in/en/bergamo/25-09-la-noche-de-padel-friday-edition/
@@ -8380,10 +9548,25 @@ https://anyplans.in/en/bergamo/salmeggia-a-milano/
 
 Guided tours in Parcheggio di via Spino, Bergamo, Saturday 26 September at 09:00. €18 (Biglietti su AllEvents).
 
+## MIZUNO Running Day
+https://anyplans.in/en/bergamo/mizuno-running-day-merate-sabato-26-settembre-2026/
+
+Running in Maxi Sport Merate, Cernusco Lombardone, Saturday 26 September at 09:30. Free (Biglietti su Eventbrite).
+
+## Simposio "Il turismo fra opportunità e rischio"
+https://anyplans.in/en/bergamo/simposio-il-turismo-fra-opportunita-e-rischio/
+
+Hiking in Crespi D'adda, Capriate San Gervasio (BG), Saturday 26 September at 09:30. Free (Biglietti su Eventbrite).
+
 ## Sabato alla Trucca
 https://anyplans.in/en/bergamo/sabato-alla-trucca/
 
 Running in Parco della Trucca, Bergamo, Saturday 26 September at 09:30 (2 dates, until 3 October). €25 (25 € una volta sola per tutta la stagione. Chi non è tesserato aggiunge la tessera CSI: 15 € in tutto.). Organised by Sabato alla Trucca.
+
+## Settima Arte Final Selection - Oriocenter c/o…
+https://anyplans.in/en/bergamo/settima-arte-final-selection-oriocenter-c-o-uci-cinema/
+
+Cinema in Oriocenter, Orio al Serio, Saturday 26 September at 10:00. Free (Biglietti su Eventbrite).
 
 ## Mercatino dell'usato di Colognola
 https://anyplans.in/en/bergamo/mercatino-dell-usato-di-colognola/
@@ -8420,6 +9603,11 @@ https://anyplans.in/en/bergamo/memorial-eugenio-mercorio-a-foppolo-15-edizione/
 
 Running in Piazzale Ristorante K, Via Moia 24, Foppolo, Saturday 26 September at 14:00. Free.
 
+## VIVI LA CORTE! Visita in abiti d'epoca
+https://anyplans.in/en/bergamo/vivi-la-corte-visita-in-abiti-d-epoca/
+
+Talks & culture in Via Marconi, 20, Malpaga, Saturday 26 September at 14:00. Free (Biglietti su Eventbrite).
+
 ## 62° TORNEO e 11° ENTRY LEVEL
 https://anyplans.in/en/bergamo/62-torneo-e-11-entry-level/
 
@@ -8440,6 +9628,11 @@ https://anyplans.in/en/bergamo/torneo-kira-black-white-classic/
 
 Padel in Kira Padel Bergamo, Via Vaccarezza 7, 24040 Osio Sopra, Saturday 26 September at 14:00. €25 (Iscrizione e pagamento su Playtomic).
 
+## Nembonauti - Stagione 3 - Sessione 01
+https://anyplans.in/en/bergamo/nembonauti-stagione-3-sessione-01/
+
+Board games in Via Vittorio Veneto, 42, Brembate, Saturday 26 September at 14:30. Free (Biglietti su Eventbrite).
+
 ## MUSEO DEL BURATTINO+APERITIVO da Ristorante…
 https://anyplans.in/en/bergamo/museo-del-burattino-aperitivo-da-ristorante-mura-13-posti-li/
 
@@ -8459,6 +9652,11 @@ Padel in PadelUs Lodi, Via del Commercio 2, 26817 San Martino in Strada, Saturda
 https://anyplans.in/en/bergamo/allevatori-di-formaggi-quattro-montagne-una-cantina-dal-1876/
 
 Talks & culture in Circolino Città Alta, Bergamo, Saturday 26 September at 15:00. €21 (Biglietti su AllEvents).
+
+## LA MAGIA DEL COMPOST: COME CREARE FERTILITA'…
+https://anyplans.in/en/bergamo/la-magia-del-compost-come-creare-fertilita-dai-tuoi-scarti/
+
+Talks & culture in Cascina Mulino, Bergamo, Saturday 26 September at 15:00. Free (Biglietti su Eventbrite).
 
 ## Ol Gir di Pucc a San Giovanni Bianco (33ª…
 https://anyplans.in/en/bergamo/ol-gir-di-pucc-a-san-giovanni-bianco-33-edizione/
@@ -8510,6 +9708,11 @@ https://anyplans.in/en/bergamo/giro-a-8-medium-level/
 
 Padel in PadelUs Lodi, Via del Commercio 2, 26817 San Martino in Strada, Saturday 26 September at 17:30. Free (Iscrizione su Playtomic).
 
+## Tramonto in rosa nel Chiostro
+https://anyplans.in/en/bergamo/tramonto-in-rosa-nel-chiostro/
+
+Dinners & aperitivo in Via Roma, 12, La Valletta Brianza, Saturday 26 September at 18:00. Free (Biglietti su Eventbrite).
+
 ## Cena da Bar On Off: 4 posti liberi
 https://anyplans.in/en/bergamo/cena-da-bar-on-off-4-posti-liberi/
 
@@ -8525,10 +9728,30 @@ https://anyplans.in/en/bergamo/sushi-zero-afterparty-da-sushi-zero-10-posti-libe
 
 Dinners & aperitivo in Sushi Zero, Seriate, Saturday 26 September at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Bergamo Noir: un tour nella cronaca nera del…
+https://anyplans.in/en/bergamo/bergamo-noir-un-tour-nella-cronaca-nera-del-passato-tra-tort/
+
+Town festival in Presso la Fontana Contarini, Bergamo, Saturday 26 September at 18:30. Free (Biglietti su Eventbrite).
+
+## Dance across Time - Art2night
+https://anyplans.in/en/bergamo/dance-across-time-art2night/
+
+Concerts & live music in Palazzo Terzi Bergamo, Bergamo, Saturday 26 September at 18:30. Free (Biglietti su Eventbrite).
+
 ## Dance across Time
 https://anyplans.in/en/bergamo/dance-across-time/
 
 Concerts & live music in Palazzo Terzi Bergamo, Bergamo, Saturday 26 September at 18:30. €10 (Biglietti su AllEvents).
+
+## SOUNDS&SHAPES FORME D'ARTE SI INCONTRANO
+https://anyplans.in/en/bergamo/sounds-shapes-forme-d-arte-si-incontrano/
+
+Concerts & live music in Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, Saturday 26 September at 19:00. Free (Biglietti su Eventbrite).
+
+## ART2NIGHT 26/09/26 - Tour guidato nel Bunker di…
+https://anyplans.in/en/bergamo/art2night-26-09-26-tour-guidato-nel-bunker-di-ponte-san-piet/
+
+Guided tours in Bunker Ponte San Pietro, Ponte San Pietro, Saturday 26 September at 19:00. Free (Biglietti su Eventbrite).
 
 ## SeptemBeer live: MDL Duo
 https://anyplans.in/en/bergamo/septembeer-live-mdl-duo/
@@ -8540,10 +9763,20 @@ https://anyplans.in/en/bergamo/cena-cantata-con-manu-like-it-cenate-sotto/
 
 Karaoke in Via Don Luigi Sturzo 18, Cenate Sotto, Saturday 26 September at 20:30. Free.
 
+## Trescore B. (BG): BAGNO SONORO CON CAMPANE…
+https://anyplans.in/en/bergamo/trescore-b-bg-bagno-sonoro-con-campane-tibetane-e-strumenti-/
+
+Yoga & pilates in Centro Kamati Trescore, Trescore Balneario, Saturday 26 September at 20:30. Free (Biglietti su Eventbrite).
+
 ## Karaoke con Roby e Dan
 https://anyplans.in/en/bergamo/karaoke-con-roby-e-dan-tyme-cafe-casirate-d-adda/
 
 Karaoke in Tyme Cafè di Villa Giulia, Piazza Papa Giovanni XXIII, Casirate D’Adda, Saturday 26 September at 21:00. Free.
+
+## NOTTURNA ADULTI: Malpaga Oscura
+https://anyplans.in/en/bergamo/notturna-adulti-malpaga-oscura/
+
+Town festival in Via Marconi, 20, Malpaga, Saturday 26 September at 21:00. Free (Biglietti su Eventbrite).
 
 ## Karaoke con Luisa e Mauro
 https://anyplans.in/en/bergamo/karaoke-con-luisa-e-mauro-il-pirata-lurano/
@@ -8584,6 +9817,21 @@ Markets in Parco Ermanno Olmi, Sunday 27 September at 08:00. Free. 1 person has 
 https://anyplans.in/en/bergamo/mercatino-antiquariato-viale-papa-giovanni-san-pellegrino-te/
 
 Markets in Comune di San Pellegrino Terme, Viale Papa Giovanni XXIII 20, San Pellegrino Terme, Sunday 27 September at 09:00 (4 dates, until 27 December). Free.
+
+## Luna piena durante la Festa di Metà…
+https://anyplans.in/en/bergamo/luna-piena-durante-la-festa-di-meta-autunno-lode-alla-cina/
+
+Talks & culture in Yong En Stadium, Bergamo, Sunday 27 September at 10:00. Free (Biglietti su Eventbrite).
+
+## PER BACCO!
+https://anyplans.in/en/bergamo/per-bacco/
+
+Talks & culture in Valle della Biodiversità - Sez. di Astino dell'Orto Botanico di Bergamo, Bergamo, Sunday 27 September at 10:00. Free (Biglietti su Eventbrite).
+
+## Gesto, segno, danza: un intreccio accessibile
+https://anyplans.in/en/bergamo/gesto-segno-danza-un-intreccio-accessibile/
+
+Dancing in Biblioteca Civica Angelo Mai, Bergamo, Sunday 27 September at 10:00. Free (Biglietti su Eventbrite).
 
 ## No Planet B Day a Bottanuco (orario da definire)
 https://anyplans.in/en/bergamo/no-planet-b-day-a-bottanuco-orario-da-definire/
@@ -8690,10 +9938,25 @@ https://anyplans.in/en/bergamo/cuore-e-mente-a-rezzo-l-agrifermenteria-delle-alp
 
 Talks & culture in Circolino Città Alta, Bergamo, Sunday 27 September at 15:00. €21 (Biglietti su AllEvents).
 
+## COLORI IN MOVIMENTO
+https://anyplans.in/en/bergamo/colori-in-movimento/
+
+Talks & culture in Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, Sunday 27 September at 15:30. Free (Biglietti su Eventbrite).
+
 ## Centoventi giorni di malga
 https://anyplans.in/en/bergamo/centoventi-giorni-di-malga-l-estate-di-ardiva-sul-monte-corn/
 
 Talks & culture in Circolino Città Alta, Bergamo, Sunday 27 September at 16:00. €21 (Biglietti su AllEvents).
+
+## LABORATORIO BAMBINI: L'arte del Terrario
+https://anyplans.in/en/bergamo/laboratorio-bambini-l-arte-del-terrario/
+
+Town festival in Via Marconi, 20, Malpaga, Sunday 27 September at 16:00. Free (Biglietti su Eventbrite).
+
+## Inside the brewery - Totem Brewing Co.
+https://anyplans.in/en/bergamo/inside-the-brewery-totem-brewing-co/
+
+Dinners & aperitivo in Totem Brewing Co. Birreria con cucina pub, Scanzorosciate, Sunday 27 September at 16:00. Free (Biglietti su Eventbrite).
 
 ## Custodi della Cabannina
 https://anyplans.in/en/bergamo/custodi-della-cabannina-formaggi-di-pascolo-nell-appennino-p/
@@ -8719,6 +9982,11 @@ Concerts & live music in Palazzo Terzi Bergamo, Bergamo, Sunday 27 September at 
 https://anyplans.in/en/bergamo/concerto-con-aperitivo-in-dimora-storica/
 
 Guided tours in Palazzo Terzi, Bergamo, Sunday 27 September at 18:00. Free (Gratis, iscrizione su WeMeet (WeRoad)).
+
+## TOOLS - Francesco Cancellato
+https://anyplans.in/en/bergamo/tools-francesco-cancellato/
+
+Town festival in Museo Civico d'Arte e del Territorio "Gianni Bellini", Sarnico, Sunday 27 September at 18:00. Free (Biglietti su Eventbrite).
 
 ## Candlelight: Ennio Morricone e altre colonne…
 https://anyplans.in/en/bergamo/candlelight-ennio-morricone-e-altre-colonne-sonore/
@@ -8754,6 +10022,16 @@ Shows & theatre in Sala Della Comunità, Via Don P. Rizzi 46, Val Brembilla, Sun
 https://anyplans.in/en/bergamo/candlelight-coldplay-imagine-dragons/
 
 Concerts & live music in Centro Congressi Giovanni XXIII, Bergamo, Sunday 27 September at 21:30. €18.40 (Biglietti su AllEvents).
+
+## Privacy Week 2026
+https://anyplans.in/en/bergamo/privacy-week-2026/
+
+Talks & culture in Aruba Spa - Global Cloud Data Center IT3, Ponte San Pietro, Monday 28 September at 09:30. Free (Biglietti su Eventbrite).
+
+## MORONI IN&OUT
+https://anyplans.in/en/bergamo/moroni-in-out/
+
+Painting & art in Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, Monday 28 September at 16:00. Free (Biglietti su Eventbrite).
 
 ## Il corpo sensibile
 https://anyplans.in/en/bergamo/il-corpo-sensibile/
@@ -8799,6 +10077,11 @@ Town festival in ABC - Allegra Brigata Cinematica, Tuesday 29 September at 17:30
 https://anyplans.in/en/bergamo/laboratorio-di-ceramica-per-adulti-10-lezioni-dal-29-settemb/
 
 Pottery in Susanna Alberti Studio, via Longo 11, Bergamo, Tuesday 29 September at 18:00. €300 (10 lezioni, materiali e cotture inclusi; classe a scelta: martedì o giovedì, 18-20 o 20:30-22:30). Organised by Susanna Alberti Studio.
+
+## GIANNI GRIMALDI
+https://anyplans.in/en/bergamo/gianni-grimaldi/
+
+Exhibitions in Museo Diocesano Adriano Bernareggi - Il Bernareggi, Bergamo, Tuesday 29 September at 18:30. Free (Biglietti su Eventbrite).
 
 ## Sottopelle
 https://anyplans.in/en/bergamo/sottopelle/
@@ -8855,6 +10138,11 @@ https://anyplans.in/en/bergamo/02-10-la-noche-de-padel-friday-edition/
 
 Padel in 27 Padel, Via Boccaleone 9, 24125 Bergamo, Friday 2 October at 20:30. €25 (Iscrizione e pagamento su Playtomic).
 
+## “Più eterno del bronzo. Educazione alla cultura…
+https://anyplans.in/en/bergamo/piu-eterno-del-bronzo-educazione-alla-cultura-e-semantica-de/
+
+Talks & culture in Museo Civico d'Arte e del Territorio "Gianni Bellini", Sarnico, Friday 2 October at 20:45. Free (Biglietti su Eventbrite).
+
 ## Tributo Lucio Battisti Due Mondi
 https://anyplans.in/en/bergamo/tributo-lucio-battisti-due-mondi-keller-factory-curno/
 
@@ -8875,6 +10163,16 @@ https://anyplans.in/en/bergamo/fiera-zootecnica-bovina-campo-sportivo-dossena/
 
 Fairs in Dossena, Dossena, Saturday 3 October at 09:00. Free.
 
+## MHC It Starts Outside Day: Piramidi di…
+https://anyplans.in/en/bergamo/mhc-it-starts-outside-day-piramidi-di-montevecchia/
+
+Hiking in Piazza Giuseppe Mazzini, 2, Cernusco Lombardone, Saturday 3 October at 09:30. Free (Biglietti su Eventbrite).
+
+## Piccino Picciò d'estate 2026 | LA BOTTEGA…
+https://anyplans.in/en/bergamo/piccino-piccio-d-estate-2026-la-bottega-dell-aria/
+
+Talks & culture in Auditorium Europa, Bernareggio, Saturday 3 October at 11:00. Free (Biglietti su Eventbrite).
+
 ## 🏆 TORNEO PADEL 007
 https://anyplans.in/en/bergamo/torneo-padel-007-missione-im-possibile/
 
@@ -8884,6 +10182,11 @@ Padel in PADEL007, Via delle Grigne 10, 22036 Erba, Saturday 3 October at 14:00.
 https://anyplans.in/en/bergamo/corso-base-intensivo-di-ceramica-2-sabati/
 
 Pottery in Susanna Alberti Studio, via Longo 11, Bergamo, Saturday 3 October at 14:00. €175 (materiali e cotture, 2 lezioni da 4 ore (sabato 3 e sabato 10 ottobre), merenda offerta). Organised by Susanna Alberti Studio.
+
+## Il sapore del colore
+https://anyplans.in/en/bergamo/il-sapore-del-colore/
+
+Town festival in Museo d'Arte Sacra San Martino, Alzano Lombardo, Saturday 3 October at 14:30. Free (Biglietti su Eventbrite).
 
 ## Viva i Malfatti!
 https://anyplans.in/en/bergamo/viva-i-malfatti/
@@ -8905,6 +10208,11 @@ https://anyplans.in/en/bergamo/torneo-entry-level-pozo/
 
 Padel in O2 Padel Bergamo, Via Tinaglia 12, 24030 Brembate di Sopra, Saturday 3 October at 16:00. €20 (Iscrizione e pagamento su Playtomic).
 
+## Trescore Balneario: BAGNO DI GONG con 10 Gong…
+https://anyplans.in/en/bergamo/trescore-balneario-bagno-di-gong-con-10-gong-planetari-e-cam/
+
+Yoga & pilates in Centro Kamati Trescore, Trescore Balneario, Saturday 3 October at 18:00. Free (Biglietti su Eventbrite).
+
 ## ❤️‍🔥🍹 APERISINGLE! 🎶🕺🏻 da Queen Club: 9…
 https://anyplans.in/en/bergamo/aperisingle-da-queen-club-9-posti-liberi/
 
@@ -8924,6 +10232,11 @@ Dinners & aperitivo in MITO SUSHI RESTAURANT, Curno, Saturday 3 October at 18:30
 https://anyplans.in/en/bergamo/escap-piamo-da-quella-stanza-buzz-quiz-room/
 
 Board games in Calusco d'Adda (BG), Saturday 3 October at 18:30. €5 (Accredito su comehome; il resto si paga in loco).
+
+## CENA DELLE STREGHE di Samhain
+https://anyplans.in/en/bergamo/cena-delle-streghe-di-samhain/
+
+Dinners & aperitivo in CASTELLO DI MALPAGA, CAVERNAGO, Saturday 3 October at 20:00. Free (Biglietti su Eventbrite).
 
 ## La festa di cittadiDanza
 https://anyplans.in/en/bergamo/la-festa-di-cittadidanza/
@@ -8995,6 +10308,21 @@ https://anyplans.in/en/bergamo/no-planet-b-day-a-osio-sotto-orario-da-definire/
 
 Town festival in Osio Sotto (posto e orario da definire), Sunday 4 October at 10:00. Free.
 
+## Visita alla Rocca Viscontea
+https://anyplans.in/en/bergamo/visita-alla-rocca-viscontea/
+
+Town festival in Rocca, Romano di Lombardia, Sunday 4 October at 10:30. Free (Biglietti su Eventbrite).
+
+## Il Pic-Nic di cittadiDanza
+https://anyplans.in/en/bergamo/il-pic-nic-di-cittadidanza/
+
+Town festival in Mura Veneziane, Bergamo, Sunday 4 October at 12:30. Free (Biglietti su Eventbrite).
+
+## GHISLANZONI RITROVATO
+https://anyplans.in/en/bergamo/ghislanzoni-ritrovato/
+
+Talks & culture in Comune di Caprino Bergamasco, Caprino Bergamasco, Sunday 4 October at 15:30. Free (Biglietti su Eventbrite).
+
 ## 🤩 APERITIVO BOBADILLA! 🕺🏻 da Bobadilla…
 https://anyplans.in/en/bergamo/aperitivo-bobadilla-da-bobadilla-feeling-club-dalmine-10-pos/
 
@@ -9010,10 +10338,35 @@ https://anyplans.in/en/bergamo/sebino-express-a-paratico/
 
 Town festival in Paratico, Sunday 4 October at 19:00 (3 dates, until 25 October). Free.
 
+## Gruppo di lettura del lunedì - Lacci di…
+https://anyplans.in/en/bergamo/gruppo-di-lettura-del-lunedi-lacci-di-domenico-starnone/
+
+Talks & culture in Piazza Garibaldi, Treviglio, Monday 5 October at 17:30. Free (Biglietti su Eventbrite).
+
+## MedFest 2026 - LA PESTE - Spettacolo per le…
+https://anyplans.in/en/bergamo/medfest-2026-la-peste-spettacolo-per-le-scuole-e-non/
+
+Shows & theatre in Auditorium Casa dell’Economia, Lecco, Wednesday 7 October at 10:30. Free (Biglietti su Eventbrite).
+
+## Cultura che cura. Quando la cultura genera…
+https://anyplans.in/en/bergamo/cultura-che-cura-quando-la-cultura-genera-benessere/
+
+Town festival in Daste Bergamo, Bergamo, Wednesday 7 October at 18:00. Free (Biglietti su Eventbrite).
+
 ## Fai pace con i tuoi soldi
 https://anyplans.in/en/bergamo/fai-pace-con-i-tuoi-soldi/
 
 Talks & culture in Fondazione Serughetti La Porta, Bergamo, Wednesday 7 October at 18:30. Free (Ingresso: vedi la pagina AllEvents).
+
+## MedFest 2026 - IL NOME DELLA ROSA - Opera in film
+https://anyplans.in/en/bergamo/medfest-2026-il-nome-della-rosa-opera-in-film/
+
+Cinema in Nuovo Aquilone Cinema Teatro, Lecco, Wednesday 7 October at 20:00. Free (Biglietti su Eventbrite).
+
+## SALMEGGIA A VILLA DI SERIO
+https://anyplans.in/en/bergamo/salmeggia-a-villa-di-serio/
+
+Talks & culture in Via Antonio Locatelli, 2, Villa di Serio, Thursday 8 October at 20:30. Free (Biglietti su Eventbrite).
 
 ## 🌜08.10 LA NOCHE DE PADEL🌛
 https://anyplans.in/en/bergamo/08-10-la-noche-de-padel/
@@ -9030,15 +10383,30 @@ https://anyplans.in/en/bergamo/gnam-gnam-una-pizza-in-compagnia-da-ristorante-mu
 
 Dinners & aperitivo in Ristorante Mura, Bergamo, Friday 9 October at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Bagno di Gong a Bergamo 
+https://anyplans.in/en/bergamo/bagno-di-gong-a-bergamo-12-gong-planetari-paiste-experience/
+
+Yoga & pilates in Gong Life, Gorle, Friday 9 October at 18:30. Free (Biglietti su Eventbrite).
+
 ## 💫09/10 LA NOCHE DE PADEL - FRIDAY EDITION 💫
 https://anyplans.in/en/bergamo/09-10-la-noche-de-padel-friday-edition/
 
 Padel in 27 Padel, Via Boccaleone 9, 24125 Bergamo, Friday 9 October at 20:30. €25 (Iscrizione e pagamento su Playtomic).
 
+## Valentina Mastroianni in dialogo con Stefano…
+https://anyplans.in/en/bergamo/valentina-mastroianni-in-dialogo-con-stefano-malosso/
+
+Talks & culture in Oratorio e teatro "Giuseppe Tovini", Angolo Terme, Friday 9 October at 20:30. Free (Biglietti su Eventbrite).
+
 ## Musical Notre Dame de Paris Riccardo Cocciante
 https://anyplans.in/en/bergamo/musical-notre-dame-de-paris-riccardo-cocciante-choruslife-be/
 
 Shows & theatre in ChorusLife Bergamo, Via Carlo Serassi 26, Bergamo Città, Friday 9 October at 21:00 (4 dates, until 11 October). Free.
+
+## OLTRE LO SGUARDO Dado Moroni + Nicola Villa e…
+https://anyplans.in/en/bergamo/oltre-lo-sguardo-dado-moroni-nicola-villa-e-mauro-spagnoli-p/
+
+Concerts & live music in Camera di Commercio Industria Artigianato e Agricoltura - Lecco, Lecco, Friday 9 October at 21:00. Free (Biglietti su Eventbrite).
 
 ## Notre Dame de Paris
 https://anyplans.in/en/bergamo/notre-dame-de-paris/
@@ -9090,6 +10458,11 @@ https://anyplans.in/en/bergamo/giuseppe-giacobazzi-spettacolo-palafacchetti-trev
 
 Concerts & live music in PalaFacchetti, Via del Bosco 27, Treviglio, Saturday 10 October at 20:30. Free.
 
+## Bergamo Proibita: alla scoperta della storia…
+https://anyplans.in/en/bergamo/bergamo-proibita-alla-scoperta-della-storia-ose-della-citta/
+
+Town festival in Davanti fontana Contarini, Bergamo, Saturday 10 October at 20:30. Free (Biglietti su Eventbrite).
+
 ## Karaoke con Francesco Marinosci
 https://anyplans.in/en/bergamo/karaoke-con-francesco-marinosci-bar-mister-p-bergamo-citta/
 
@@ -9110,10 +10483,25 @@ https://anyplans.in/en/bergamo/mercatino-hobbisti-e-riciclo-piazzale-mercato-gaz
 
 Markets in Mercato Gazzaniga, Via Terruzzi, Gazzaniga, Sunday 11 October at 08:00 (3 dates, until 13 December). Free.
 
+## Bergamo Gravel 2026
+https://anyplans.in/en/bergamo/bergamo-gravel-2026/
+
+Road cycling in Rudùn (la grande Ruota), Cassano d'Adda, Sunday 11 October at 08:30. Free (Biglietti su Eventbrite).
+
+## Camminata Manzoniana 2026 - 53° edizione
+https://anyplans.in/en/bergamo/camminata-manzoniana-2026-53-edizione/
+
+Hiking in Centro Commerciale Meridiana, Lecco, Sunday 11 October at 08:30. Free (Biglietti su Eventbrite).
+
 ## Mercatino Agricolo Km0
 https://anyplans.in/en/bergamo/mercatino-agricolo-km0-piazzale-scuole-rota-d-imagna/
 
 Markets in Comune di Rota d’Imagna, Via V. Emanuele 3, Rota d’Imagna, Sunday 11 October at 08:30 (7 dates, until 20 December). Free.
+
+## Camminata in Valpontida. Settima Edizione
+https://anyplans.in/en/bergamo/camminata-in-valpontida-settima-edizione/
+
+Hiking in Infopoint al parcheggio di fronte al Bar Nano (Pontida), Pontida, Sunday 11 October at 10:00. Free (Biglietti su Eventbrite).
 
 ## No Planet B Day a Stezzano (orario da definire)
 https://anyplans.in/en/bergamo/no-planet-b-day-a-stezzano-orario-da-definire/
@@ -9150,10 +10538,60 @@ https://anyplans.in/en/bergamo/cinedopera-roberto-devereux/
 
 Talks & culture in Teatro Gaetano Donizetti- Bergamo, Bergamo, Sunday 11 October at 15:00. Free (Ingresso: vedi la pagina AllEvents).
 
+## "La Canzone Eterna"
+https://anyplans.in/en/bergamo/la-canzone-eterna-giulia-bolcato-soprano-e-gianluca-geremia-/
+
+Concerts & live music in Palazzo Terzi Bergamo, Bergamo, Sunday 11 October at 18:00. Free (Biglietti su Eventbrite).
+
 ## "La canzone"
 https://anyplans.in/en/bergamo/la-canzone-giulia-bolcato-soprano-e-gianluca-geremia-liuto-e/
 
 Concerts & live music in Palazzo Terzi Bergamo, Bergamo, Sunday 11 October at 18:00. €20 (Biglietti su AllEvents).
+
+## Sicurezza in auto e pillole di disostruzione -…
+https://anyplans.in/en/bergamo/sicurezza-in-auto-e-pillole-di-disostruzione-chicco-baby-aca/
+
+Cinema in Oriocenter, Orio al Serio, Monday 12 October at 14:00. Free (Biglietti su Eventbrite).
+
+## Gruppo di lettura di filosofia - Linguaggio e…
+https://anyplans.in/en/bergamo/gruppo-di-lettura-di-filosofia-linguaggio-e-mito-di-e-cassir/
+
+Talks & culture in Via Camillo Cavour, 4, Treviglio, Tuesday 13 October at 20:45. Free (Biglietti su Eventbrite).
+
+## Allineamento e Guarigione Spirituale - BERGAMO
+https://anyplans.in/en/bergamo/allineamento-e-guarigione-spirituale-bergamo/
+
+Yoga & pilates in L'angolo delle stelle - Centro Olistico, Treviolo, Wednesday 14 October at 20:30. Free (Biglietti su Eventbrite).
+
+## "Otto ragazze" con Aurora Tamigio
+https://anyplans.in/en/bergamo/otto-ragazze-con-aurora-tamigio/
+
+Talks & culture in Sala "De Lisi", Pisogne, Wednesday 14 October at 20:45. Free (Biglietti su Eventbrite).
+
+## Scopri l'anno all'estero
+https://anyplans.in/en/bergamo/scopri-l-anno-all-estero-quello-vero/
+
+Talks & culture in Convitto Nazionale C. Battisti, Lovere, Thursday 15 October at 20:30. Free (Biglietti su Eventbrite).
+
+## La Fabbrica Digitale
+https://anyplans.in/en/bergamo/la-fabbrica-digitale-fatta-bene/
+
+Talks & culture in SHS Italia S.R.L, Capriolo, Friday 16 October at 09:00. Free (Biglietti su Eventbrite).
+
+## La Giornata del Credito a Crema
+https://anyplans.in/en/bergamo/la-giornata-del-credito-a-crema/
+
+Talks & culture in Ristorante Enoteca Fuoriporta, Crema, Friday 16 October at 10:30. Free (Biglietti su Eventbrite).
+
+## Gruppo di lettura del venerdì - Le ottanta…
+https://anyplans.in/en/bergamo/gruppo-di-lettura-del-venerdi-le-ottanta-domande-di-atena-fe/
+
+Talks & culture in Piazza Garibaldi, Treviglio, Friday 16 October at 16:00. Free (Biglietti su Eventbrite).
+
+## E tu di cosa hai paura?
+https://anyplans.in/en/bergamo/e-tu-di-cosa-hai-paura/
+
+Concerts & live music in Via Casale, 25, Torre De' Roveri, Friday 16 October at 16:00. Free (Biglietti su Eventbrite).
 
 ## Fiera Zootecnica Bovina Regina e Reginetta…
 https://anyplans.in/en/bergamo/fiera-zootecnica-bovina-regina-e-reginetta-delle-valli-palaz/
@@ -9169,6 +10607,11 @@ Talks & culture in Largo Colle Aperto, Bergamo, Saturday 17 October at 17:00. �
 https://anyplans.in/en/bergamo/tra-il-romanico-e-il-brembo-a-bonate-sotto-7-edizione/
 
 Running in Via Giuseppe Garibaldi 15, Bonate Sotto, Sunday 18 October at 07:30. Free.
+
+## LECCO Corso  Aromatouch Technique
+https://anyplans.in/en/bergamo/lecco-corso-aromatouch-technique/
+
+Yoga & pilates in CRAMS di Lecco, Lecco, Sunday 18 October at 09:30. Free (Biglietti su Eventbrite).
 
 ## No Planet B Day a Scanzorosciate (orario da…
 https://anyplans.in/en/bergamo/no-planet-b-day-a-scanzorosciate-orario-da-definire/
@@ -9190,6 +10633,11 @@ https://anyplans.in/en/bergamo/la-sostenibile-leggerezza-dell-essere/
 
 Talks & culture in BOPO, Ponteranica, Tuesday 20 October at 18:00. Free (Gratis, registrazione su Luma).
 
+## Gruppo di lettura del martedì - Il nostro…
+https://anyplans.in/en/bergamo/gruppo-di-lettura-del-martedi-il-nostro-bisogno-di-consolazi/
+
+Talks & culture in Via Camillo Cavour, 4, Treviglio, Tuesday 20 October at 20:45. Free (Biglietti su Eventbrite).
+
 ## La filantropia che fa crescere la comunità
 https://anyplans.in/en/bergamo/la-filantropia-che-fa-crescere-la-comunita/
 
@@ -9210,6 +10658,11 @@ https://anyplans.in/en/bergamo/incantesimi-fra-le-mura/
 
 Town festival in Ana Mary Varens Garcia, Saturday 24 October at 10:00. Free (Ingresso: vedi la pagina AllEvents).
 
+## Bergamo Sposi | Edizione Autunnale 2026
+https://anyplans.in/en/bergamo/bergamo-sposi-edizione-autunnale-2026/
+
+Shows & theatre in Aruba Auditorium, Ponte San Pietro, Saturday 24 October at 10:00. Free (Biglietti su Eventbrite).
+
 ## 64° TORNEO e 10° DOPPIO MISTO
 https://anyplans.in/en/bergamo/64-torneo-e-10-doppio-misto/
 
@@ -9224,6 +10677,11 @@ Guided tours in Via Borgo Palazzo, 100, Bergamo, Saturday 24 October at 16:30. �
 https://anyplans.in/en/bergamo/candlelight-tributo-ai-queen/
 
 Concerts & live music in Centro Congressi Giovanni XXIII, Bergamo, Saturday 24 October at 19:30. €18.40 (Biglietti su AllEvents).
+
+## CENA MEDIEVALE di Halloween
+https://anyplans.in/en/bergamo/cena-medievale-di-halloween/
+
+Dinners & aperitivo in CASTELLO DI MALPAGA, CAVERNAGO, Saturday 24 October at 20:00. Free (Biglietti su Eventbrite).
 
 ## Karaoke con Alfonso
 https://anyplans.in/en/bergamo/karaoke-con-alfonso-bar-mister-p-bergamo-citta/
@@ -9265,6 +10723,21 @@ https://anyplans.in/en/bergamo/porta-delle-cornacchie/
 
 Hiking in Roncobello, loc. Baresi (BG), Sunday 25 October at 10:00. €9 (Accredito su comehome; il resto si paga in loco).
 
+## FAMIGLIE: Un Castello da Brividi (Halloween)
+https://anyplans.in/en/bergamo/famiglie-un-castello-da-brividi-halloween/
+
+Town festival in Via Marconi, 20, Malpaga, Sunday 25 October at 14:00. Free (Biglietti su Eventbrite).
+
+## Perdona e lascia andare | Daniel Lumera
+https://anyplans.in/en/bergamo/perdona-e-lascia-andare-daniel-lumera/
+
+Yoga & pilates in Via Roma, 3, Missaglia, Sunday 25 October at 14:00. Free (Biglietti su Eventbrite).
+
+## VOLA IN MONGOLFIERA al CASTELLO
+https://anyplans.in/en/bergamo/vola-in-mongolfiera-al-castello/
+
+Talks & culture in Castello di Cernusco Lombardone, Cernusco Lombardone, Sunday 25 October at 16:00. Free (Biglietti su Eventbrite).
+
 ## Pablo Trincia Spettacolo
 https://anyplans.in/en/bergamo/pablo-trincia-spettacolo-choruslife-bergamo-citta/
 
@@ -9274,6 +10747,11 @@ Shows & theatre in ChorusLife Bergamo, Via Carlo Serassi 26, Bergamo Città, Sun
 https://anyplans.in/en/bergamo/pablo-trincia/
 
 Shows & theatre in ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, Sunday 25 October at 17:00. €32 (Biglietti sul sito di ChorusLife).
+
+## Le povertà che cambiano. Le comunità che…
+https://anyplans.in/en/bergamo/le-poverta-che-cambiano-le-comunita-che-rispondono/
+
+Gardening & volunteering in Daste Bergamo, Bergamo, Wednesday 28 October at 10:00. Free (Biglietti su Eventbrite).
 
 ## La stampa 3D per rivoluzionare il settore…
 https://anyplans.in/en/bergamo/la-stampa-3d-per-rivoluzionare-il-settore-industriale-bcn3d-/
@@ -9305,6 +10783,16 @@ https://anyplans.in/en/bergamo/giro-a-8-misto/
 
 Padel in PADEL007, Via delle Grigne 10, 22036 Erba, Friday 30 October at 19:00. Free (Iscrizione su Playtomic).
 
+## UNA NOTTE UN MUSEO | Museo Franca Ghitti di…
+https://anyplans.in/en/bergamo/una-notte-un-museo-museo-franca-ghitti-di-darfo-boario-terme/
+
+Town festival in Museo Franca Ghitti, Darfo Boario Terme, Friday 30 October at 19:30. Free (Biglietti su Eventbrite).
+
+## NOTTURNA FAMIGLIE: Notte Stregata (Halloween)
+https://anyplans.in/en/bergamo/notturna-famiglie-notte-stregata-halloween/
+
+Talks & culture in CASTELLO DI MALPAGA, CAVERNAGO, Friday 30 October at 20:30. Free (Biglietti su Eventbrite).
+
 ## Pink Floyd Immersion in concerto
 https://anyplans.in/en/bergamo/pink-floyd-immersion-in-concerto-teatro-colognola-bergamo-ci/
 
@@ -9315,6 +10803,11 @@ https://anyplans.in/en/bergamo/bepi-the-prismas-in-concerto-daste-bergamo-citta/
 
 Concerts & live music in Via Daste e Spalenga 13, Bergamo Città, Friday 30 October at 22:30. Free.
 
+## THE TRAIL WITCH PROJECT 2026
+https://anyplans.in/en/bergamo/the-trail-witch-project-2026/
+
+Running in DF Sport Specialist, Industrie, Saturday 31 October at 15:00. Free (Biglietti su Eventbrite).
+
 ## The Jury Experience: Il Furto da 20 Milioni di…
 https://anyplans.in/en/bergamo/the-jury-experience-il-furto-da-20-milioni-di-dollari/
 
@@ -9324,6 +10817,11 @@ Shows & theatre in Centro Congressi Giovanni XXIII, Bergamo, Saturday 31 October
 https://anyplans.in/en/bergamo/halloween-s-padel-con-delitto-2-ed/
 
 Padel in APC Active Padel Club - Brignano Gera d'Adda BG, Via Treviglio 38, 24053 Brignano Gera d'Adda, Saturday 31 October at 17:00. €30 (Iscrizione su Playtomic, si paga in loco).
+
+## NOTTURNA ADULTI: I misteri di Halloween
+https://anyplans.in/en/bergamo/notturna-adulti-i-misteri-di-halloween/
+
+Town festival in Via Marconi, 20, Malpaga, Saturday 31 October at 20:30. Free (Biglietti su Eventbrite).
 
 ## PIT in "Lo spettacolo maledetto"
 https://anyplans.in/en/bergamo/pit-in-lo-spettacolo-maledetto/
@@ -9349,6 +10847,11 @@ Running in Piazza Cameroni, Piazza Cameroni 1, Treviglio, Sunday 1 November at 0
 https://anyplans.in/en/bergamo/super-aperipadel/
 
 Padel in Padel Arena Bg, Via Milano 9, 24040 Calvenzano, Sunday 1 November at 17:00. €25 (Iscrizione e pagamento su Playtomic).
+
+## Gruppo di lettura del lunedì - Il fuoco che ti…
+https://anyplans.in/en/bergamo/gruppo-di-lettura-del-lunedi-il-fuoco-che-ti-porti-dentro-di/
+
+Talks & culture in Piazza Garibaldi, Treviglio, Monday 2 November at 17:30. Free (Biglietti su Eventbrite).
 
 ## Jack Nobile Spettacolo
 https://anyplans.in/en/bergamo/jack-nobile-spettacolo-teatro-colognola-bergamo-citta/
@@ -9380,15 +10883,35 @@ https://anyplans.in/en/bergamo/belle-e-la-bestia-musical-choruslife-bergamo-citt
 
 Shows & theatre in ChorusLife Bergamo, Via Carlo Serassi 26, Bergamo Città, Saturday 7 November at 17:00. Free.
 
+## CENA DELLE STREGHE di Luna nera
+https://anyplans.in/en/bergamo/cena-delle-streghe-di-luna-nera/
+
+Dinners & aperitivo in CASTELLO DI MALPAGA, CAVERNAGO, Saturday 7 November at 20:00. Free (Biglietti su Eventbrite).
+
 ## Le Quattro Stagioni a Bergamo - The Four…
 https://anyplans.in/en/bergamo/le-quattro-stagioni-a-bergamo-the-four-seasons-in-bergamo/
 
 Concerts & live music in Sala Piatti, Bergamo, Saturday 7 November at 20:30. €49.23 (Biglietti su AllEvents).
 
+## POP INTERNAZIONALE ANNI ' 80
+https://anyplans.in/en/bergamo/pop-internazionale-anni-80/
+
+Concerts & live music in Sala Polivalente, Centro Polifunzionale San Maurizio, Erba, Saturday 7 November at 21:00. Free (Biglietti su Eventbrite).
+
 ## TREK EXPERIENCE FALCONIERE PER UN GIORNO
 https://anyplans.in/en/bergamo/trek-experience-falconiere-per-un-giorno/
 
 Guided tours in Lombardia, Italia, Bergamo, Sunday 8 November at 10:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## Fiera sposi Nozze d'Autore a Villa Borromeo…
+https://anyplans.in/en/bergamo/fiera-sposi-nozze-d-autore-a-villa-borromeo-2026-14esima-edi/
+
+Shows & theatre in Villa Borromeo Srl, Cassano d'Adda, Sunday 8 November at 10:30. Free (Biglietti su Eventbrite).
+
+## LABORATORIO BAMBINI: Bestiari e Fantasia
+https://anyplans.in/en/bergamo/laboratorio-bambini-bestiari-e-fantasia/
+
+Town festival in Via Marconi, 20, Malpaga, Sunday 8 November at 16:00. Free (Biglietti su Eventbrite).
 
 ## Costruire la pace
 https://anyplans.in/en/bergamo/costruire-la-pace/
@@ -9425,10 +10948,20 @@ https://anyplans.in/en/bergamo/alahor-in-granata-opera-teatro-sociale-bergamo-ci
 
 Shows & theatre in Teatro Sociale, Via Bartolomeo Colleoni 4, Bergamo Città, Saturday 14 November at 21:00 (3 dates, until 27 November). Free.
 
+## DIALOGHI MUSICALI TRA VIOLONCELLO E PIANOFORTE
+https://anyplans.in/en/bergamo/dialoghi-musicali-tra-violoncello-e-pianoforte/
+
+Shows & theatre in Sala Polivalente, Centro Polifunzionale San Maurizio, Erba, Saturday 14 November at 21:00. Free (Biglietti su Eventbrite).
+
 ## Papa Roach in concerto
 https://anyplans.in/en/bergamo/papa-roach-in-concerto-choruslife-bergamo-citta/
 
 Concerts & live music in ChorusLife Bergamo, Via Carlo Serassi 26, Bergamo Città, Saturday 14 November at 21:00. Free.
+
+## LABORATORIO BAMBINI: Miniatori al Castello
+https://anyplans.in/en/bergamo/laboratorio-bambini-miniatori-al-castello/
+
+Town festival in Via Marconi, 20, Malpaga, Sunday 15 November at 16:00. Free (Biglietti su Eventbrite).
 
 ## Federico Buffa Spettacolo
 https://anyplans.in/en/bergamo/federico-buffa-spettacolo-choruslife-bergamo-citta/
@@ -9440,10 +10973,30 @@ https://anyplans.in/en/bergamo/federico-buffa-number-23-vita-e-splendori-di-mich
 
 Shows & theatre in ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, Thursday 19 November at 21:00. €28 (Biglietti sul sito di ChorusLife).
 
+## Gruppo di lettura del venerdì - Atto di…
+https://anyplans.in/en/bergamo/gruppo-di-lettura-del-venerdi-atto-di-famiglia-di-alessandra/
+
+Talks & culture in Piazza Garibaldi, Treviglio, Friday 20 November at 16:00. Free (Biglietti su Eventbrite).
+
+## Legione
+https://anyplans.in/en/bergamo/legione/
+
+Town festival in Treviglio Anteo spazioCinema, Treviglio, Friday 20 November at 20:00. Free (Biglietti su Eventbrite).
+
 ## Fratello Sole
 https://anyplans.in/en/bergamo/fratello-sole-sorella-luna/
 
 Shows & theatre in ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, Friday 20 November at 21:00. Free (Biglietti sul sito di ChorusLife).
+
+## CENA DELLE STREGHE di Luna piena
+https://anyplans.in/en/bergamo/cena-delle-streghe-di-luna-piena/
+
+Dinners & aperitivo in CASTELLO DI MALPAGA, CAVERNAGO, Saturday 21 November at 20:00. Free (Biglietti su Eventbrite).
+
+## L'INFINITO PIU' O MENO
+https://anyplans.in/en/bergamo/l-infinito-piu-o-meno/
+
+Talks & culture in Sala Polivalente, Centro Polifunzionale San Maurizio, Erba, Saturday 21 November at 21:00. Free (Biglietti su Eventbrite).
 
 ## Fiorella Mannoia in concerto
 https://anyplans.in/en/bergamo/fiorella-mannoia-in-concerto-choruslife-bergamo-citta/
@@ -9465,6 +11018,11 @@ https://anyplans.in/en/bergamo/atalanta-vs-inter-at-new-balance-arena/
 
 Live sport in New Balance Arena, Bergamo, Saturday 21 November at 23:59. Free (Ingresso: vedi la pagina AllEvents).
 
+## LABORATORIO BAMBINI: Ceramisti al Castello
+https://anyplans.in/en/bergamo/laboratorio-bambini-ceramisti-al-castello/
+
+Town festival in Via Marconi, 20, Malpaga, Sunday 22 November at 16:00. Free (Biglietti su Eventbrite).
+
 ## Osvaldo Poli Spettacolo
 https://anyplans.in/en/bergamo/osvaldo-poli-spettacolo-choruslife-bergamo-citta/
 
@@ -9474,6 +11032,11 @@ Shows & theatre in ChorusLife Bergamo, Via Carlo Serassi 26, Bergamo Città, Sun
 https://anyplans.in/en/bergamo/osvaldo-poli-l-adolescenza-non-e-una-malattia/
 
 Shows & theatre in ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, Sunday 22 November at 17:00. €36 (Biglietti sul sito di ChorusLife).
+
+## "Morte in tre tempi" di Paola Barbato
+https://anyplans.in/en/bergamo/morte-in-tre-tempi-di-paola-barbato/
+
+Cinema in Oratorio San Giovanni Bosco, Pontoglio, Wednesday 25 November at 20:45. Free (Biglietti su Eventbrite).
 
 ## Gigi D’Alessio
 https://anyplans.in/en/bergamo/gigi-d-alessio/
@@ -9505,6 +11068,11 @@ https://anyplans.in/en/bergamo/karaoke-con-massimo-aletti-bar-mister-p-bergamo-c
 
 Karaoke in Via Giovanni Carnovali 90, Bergamo Città, Saturday 28 November at 21:00 (2 dates, until 19 December). Free.
 
+## SABATO ITALIANO
+https://anyplans.in/en/bergamo/sabato-italiano/
+
+Dinners & aperitivo in Sala Polivalente, Centro Polifunzionale San Maurizio, Erba, Saturday 28 November at 21:00. Free (Biglietti su Eventbrite).
+
 ## Benvenuto nell’AI! di Alessandro Cattelan
 https://anyplans.in/en/bergamo/benvenuto-nell-ai-di-alessandro-cattelan/
 
@@ -9514,6 +11082,26 @@ Shows & theatre in ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 24124 Ber
 https://anyplans.in/en/bergamo/alessandro-cattelan-spettacolo-choruslife-bergamo-citta/
 
 Shows & theatre in ChorusLife Bergamo, Via Carlo Serassi 26, Bergamo Città, Tuesday 1 December at 21:00. Free.
+
+## MAHLE Smart Training | Diventa Certified PRO…
+https://anyplans.in/en/bergamo/mahle-smart-training-diventa-certified-pro-dealer-bergamo/
+
+Road cycling in Vittoria Park, Brembate, Wednesday 2 December at 10:00. Free (Biglietti su Eventbrite).
+
+## OPEN SATUR-DAY 2026
+https://anyplans.in/en/bergamo/open-satur-day-2026/
+
+Talks & culture in SCUOLA DELL'INFANZIA "GIOVANNI XXIII", Rogno, Saturday 5 December at 10:00. Free (Biglietti su Eventbrite).
+
+## FAMIGLIE: Racconti di Natale al Castello
+https://anyplans.in/en/bergamo/famiglie-racconti-di-natale-al-castello/
+
+Town festival in CASTELLO DI MALPAGA, CAVERNAGO, Saturday 5 December at 16:30. Free (Biglietti su Eventbrite).
+
+## IN ATTESA
+https://anyplans.in/en/bergamo/in-attesa/
+
+Talks & culture in Sala Polivalente, Centro Polifunzionale San Maurizio, Erba, Saturday 5 December at 21:00. Free (Biglietti su Eventbrite).
 
 ## Marco Goldin Spettacolo
 https://anyplans.in/en/bergamo/marco-goldin-spettacolo-choruslife-bergamo-citta/
@@ -9545,6 +11133,11 @@ https://anyplans.in/en/bergamo/masters-of-magic/
 
 Shows & theatre in ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, Friday 11 December at 21:00 (3 dates, until 13 December). €40 (Biglietti sul sito di ChorusLife).
 
+## NOTTURNA ADULTI: Il lato oscuro di SANTA LUCIA
+https://anyplans.in/en/bergamo/notturna-adulti-il-lato-oscuro-di-santa-lucia/
+
+Town festival in Via Marconi, 20, Malpaga, Saturday 12 December at 18:30. Free (Biglietti su Eventbrite).
+
 ## Gospel Time Choir in concerto
 https://anyplans.in/en/bergamo/gospel-time-choir-in-concerto-cinema-teatro-nuovo-trescore-b/
 
@@ -9555,6 +11148,11 @@ https://anyplans.in/en/bergamo/atalanta-vs-genoa-at-new-balance-arena/
 
 Live sport in New Balance Arena, Bergamo, Saturday 12 December at 23:59. Free (Ingresso: vedi la pagina AllEvents).
 
+## Il cineclub in biblioteca - Crossing Instanbul
+https://anyplans.in/en/bergamo/il-cineclub-in-biblioteca-crossing-instanbul/
+
+Cinema in Via Camillo Cavour, 4, Treviglio, Wednesday 16 December at 20:45. Free (Biglietti su Eventbrite).
+
 ## Harlem Gospel Choir
 https://anyplans.in/en/bergamo/harlem-gospel-choir/
 
@@ -9564,6 +11162,11 @@ Concerts & live music in ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 241
 https://anyplans.in/en/bergamo/busker-artisti-di-strada-festa-borgo-palazzo-bergamo-citta/
 
 Town festival in Bergamo Città, Friday 18 December at 10:00 (3 dates, until 20 December). Free.
+
+## CENA MEDIEVALE di Natale
+https://anyplans.in/en/bergamo/cena-medievale-di-natale/
+
+Dinners & aperitivo in CASTELLO DI MALPAGA, CAVERNAGO, Friday 18 December at 20:00. Free (Biglietti su Eventbrite).
 
 ## CHRISTMAS PADEL PARTY "GRINCH IS BACK)
 https://anyplans.in/en/bergamo/christmas-padel-party-grinch-is-back/
@@ -9580,10 +11183,20 @@ https://anyplans.in/en/bergamo/attack-on-titan-concert/
 
 Concerts & live music in ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, Saturday 19 December at 20:00. €49 (Biglietti sul sito di ChorusLife).
 
+## Trì neùcc in vacansa - Compagnia “Il Sottoscala…
+https://anyplans.in/en/bergamo/tri-neucc-in-vacansa-compagnia-il-sottoscala-luigi-colombo-d/
+
+Shows & theatre in Gherim Societa' Cooperativa Sociale, Nembro, Saturday 19 December at 20:45. Free (Biglietti su Eventbrite).
+
 ## Atalanta vs Napoli at New Balance Arena
 https://anyplans.in/en/bergamo/atalanta-vs-napoli-at-new-balance-arena/
 
 Live sport in New Balance Arena, Bergamo, Saturday 19 December at 23:59. Free (Ingresso: vedi la pagina AllEvents).
+
+## Gruppo di lettura del lunedì mattina
+https://anyplans.in/en/bergamo/gruppo-di-lettura-del-lunedi-mattina/
+
+Talks & culture in Via Camillo Cavour, 4, Treviglio, Monday 28 December at 10:00. Free (Biglietti su Eventbrite).
 
 ## A Christmas Carol
 https://anyplans.in/en/bergamo/a-christmas-carol/
@@ -9619,6 +11232,11 @@ Concerts & live music in Druso, Via Antonio Locatelli 17, Ranica, Saturday 9 Jan
 https://anyplans.in/en/bergamo/winx-club-the-magic-is-back-il-musical/
 
 Shows & theatre in ChorusLife Arena, ChorusLife, via Carlo Serassi 26, 24124 Bergamo, Sunday 10 January at 15:30. €32.20 (Biglietti sul sito di ChorusLife).
+
+## Noi. La comunità al plurale.
+https://anyplans.in/en/bergamo/noi-la-comunita-al-plurale/
+
+Town festival in Daste Bergamo, Bergamo, Friday 15 January at 10:30. Free (Biglietti su Eventbrite).
 
 ## Atalanta vs Roma at New Balance Arena
 https://anyplans.in/en/bergamo/atalanta-vs-roma-at-new-balance-arena/
