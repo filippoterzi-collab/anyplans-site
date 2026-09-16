@@ -2,7 +2,7 @@
 <html lang="it">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content">
 <meta property="og:title" content="anyplans? C'è qualche piano?">
 <meta property="og:description" content="Gli eventi della tua città, tutti in un posto solo. Ne vedi uno, ti iscrivi, ci vai insieme ad altri.">
 <meta property="og:image" content="https://anyplans.in/og.png">
@@ -502,6 +502,82 @@ body.locked .maplibregl-ctrl{display:none}
 footer .copy{margin-top:28px;font-size:13px}
 body.locked .mk{display:block}
 /* la barra resta cliccabile da sloggati: il tap sulle categorie porta alla registrazione (data-gate) */
+
+
+/* ---- S2 + S5 (17/09/2026, spec §5 e §7): la prima schermata mobile.
+   Prima: 7 gruppi di controlli e la prima scheda sotto la piega. Ora: un campo, una mappa, una lista.
+   La mappa resta sempre visibile perché è appiccicata sotto la ricerca mentre la lista scorre. */
+.msearch{display:none}
+.msonly{display:none}
+@media (max-width:743px){
+  /* via tutto quello che duplica la ricerca o costa altezza senza dare eventi */
+  .hero,.kind,.sbrow,.dates,.catwrap,.countrow,.mapfab{display:none!important}
+  .sbwrap{margin:0}
+  .wrap{padding-inline:16px}
+
+  .msearch{display:block;padding:14px 0 10px}
+  .mslabel{font-family:var(--round);font-weight:800;letter-spacing:0;font-size:19px;line-height:1.25;
+           margin:0 0 10px}
+  .msfield{display:flex;align-items:center;gap:10px;width:100%;height:56px;padding:0 16px;
+           background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:999px;
+           box-shadow:0 3px 14px rgba(25,25,25,.08);font:inherit;font-size:15.5px;font-weight:600;
+           color:var(--grey);text-align:left}
+  .msfield svg{width:20px;height:20px;flex:none;color:var(--ink)}
+  .msfield.on{color:var(--ink)}
+  .msquick{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin-top:10px;
+           padding-bottom:2px;-webkit-overflow-scrolling:touch}
+  .msquick::-webkit-scrollbar{display:none}
+  .msquick .chip{flex:none;height:38px;font-size:13.5px}
+
+  /* mappa: fascia compatta e appiccicata, così resta in vista mentre si scorre la lista */
+  .wide{padding-inline:16px}
+  /* colonna sola: la mappa va sopra la lista (nel markup viene dopo, quindi serve l'ordine) */
+  .split{display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .mapcol{order:-1;position:sticky;top:8px;z-index:5;margin:0 0 12px}
+  .map{height:168px;min-height:0;border-radius:16px}
+  .listcol{order:1;position:relative}
+
+  /* conteggio compatto, al posto della riga con il menu Ordina */
+  .mcount{display:block;font-size:13px;font-weight:700;color:var(--grey);margin:0 0 8px}
+
+  /* il foglio: ricerca e categorie in cima, i filtri sotto */
+  .msonly{display:block}
+  .mscats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:12px}
+  .mscats button{display:flex;flex-direction:column;align-items:center;gap:5px;padding:10px 4px;
+                 border:1.5px solid rgba(25,25,25,.12);border-radius:14px;background:#fff;
+                 font:inherit;font-size:11.5px;font-weight:700;color:var(--ink);line-height:1.1;
+                 text-align:center}
+  .mscats button .i{font-size:20px;line-height:1}
+  .mscats button.on{border-color:var(--blue);background:var(--tint);color:var(--blue)}
+  /* il pannello "Dove" spostato dentro il foglio: da tendina a gruppo normale */
+  .mbody .panel{position:static;display:block;box-shadow:none;border:0;padding:0;width:auto;
+                border-radius:0;background:transparent}
+  .mbody .panel[hidden]{display:block}
+  #mg-dove .srch{margin-top:10px}
+}
+@media (min-width:744px){ .mcount{display:none} }
+
+/* ---- S1 (17/09/2026, design/landing-mobile-spec.md §6.1): foglio filtri a schermo intero su mobile.
+   Il vecchio `max-height:88vh` ancorato in basso lasciava il piede col bottone fuori dallo schermo
+   su iOS, perché 100vh conta anche la parte coperta dalle barre di Safari: da qui la sensazione
+   di "non riesco a uscire". Qui: dvh, testata ferma con la ✕, corpo unico scroller, piede ancorato. */
+@media (max-width:743px){
+  .modal{align-items:stretch;justify-content:stretch;padding:0;background:#fff}
+  .mbox{width:100%;max-width:none;border-radius:0;height:100vh;height:100dvh;max-height:none;
+        display:flex;flex-direction:column;overflow:hidden}
+  .mhead{flex:none;padding:16px;min-height:56px;box-sizing:border-box;
+         padding-top:calc(16px + env(safe-area-inset-top))}
+  .mhead .x{left:10px;width:44px;height:44px}
+  .mbody{flex:1 1 auto;min-height:0;overflow-y:auto;-webkit-overflow-scrolling:touch;
+         overscroll-behavior:contain;padding:4px 18px}
+  .mfoot{flex:none;padding:12px 18px;padding-bottom:calc(12px + env(safe-area-inset-bottom));
+         gap:12px}
+  .mfoot .btn{height:48px;flex:1 1 auto;justify-content:center}
+  .mfoot .lnk{flex:none}
+  /* maniglia per lo swipe verso il basso */
+  .mhead::before{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%);
+                 width:40px;height:4px;border-radius:2px;background:rgba(25,25,25,.18)}
+}
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://anyplans.in/#website", "name": "anyplans", "alternateName": "anyplans?", "url": "https://anyplans.in/", "description": "Gli eventi della tua città in una mappa: feste di paese, concerti, mercati, corsi, sport e cene, in 29 città italiane. Ti iscrivi e ci vai insieme ad altri.", "inLanguage": "it-IT", "publisher": {"@id": "https://anyplans.in/#org"}}, {"@type": "Organization", "@id": "https://anyplans.in/#org", "name": "anyplans", "url": "https://anyplans.in/", "logo": {"@type": "ImageObject", "url": "https://anyplans.in/favicon-192.png", "width": 192, "height": 192}, "email": "hello@anyplans.in", "description": "La mappa degli eventi veri d'Italia: feste di paese, concerti, mercati, corsi, volontariato, sport e cene in 29 città. Ne scegli uno e ci vai insieme ad altri. Solo maggiorenni.", "foundingLocation": {"@type": "City", "name": "Bergamo"}, "areaServed": {"@type": "Country", "name": "Italia"}, "sameAs": ["https://instagram.com/anyplans_bergamo"], "founder": {"@type": "Person", "name": "Filippo Terzi", "image": "https://anyplans.in/founder.jpg", "jobTitle": "Fondatore"}}, {"@type": "FAQPage", "@id": "https://anyplans.in/#faq", "mainEntity": [{"@type": "Question", "name": "Cos'è anyplans?", "acceptedAnswer": {"@type": "Answer", "text": "La mappa degli eventi veri della tua città a cui puoi unirti insieme ad altri: chi organizza c'è già, tu scegli e ci vai."}}, {"@type": "Question", "name": "anyplans è gratis?", "acceptedAnswer": {"@type": "Answer", "text": "Sì. Ti registri con la tua email e vedi tutti gli eventi. Se un evento ha un biglietto, lo compri da chi lo organizza."}}, {"@type": "Question", "name": "In quali città c'è anyplans?", "acceptedAnswer": {"@type": "Answer", "text": "Gli eventi ci sono in tutta Italia. Scrivi la tua città nella barra: se non c'è ancora niente, lo diciamo."}}, {"@type": "Question", "name": "Chi può usare anyplans?", "acceptedAnswer": {"@type": "Answer", "text": "Chi ha almeno 18 anni. Gli eventi hanno un organizzatore reale: non è un'app per incontrare sconosciuti uno a uno."}}, {"@type": "Question", "name": "Come funziona \"Ci sono\"?", "acceptedAnswer": {"@type": "Answer", "text": "Apri un evento e tocchi \"Ci sono\": da quel momento vedi chi organizza e chi altro viene, e loro vedono te."}}, {"@type": "Question", "name": "Cosa sono i viaggi di gruppo su anyplans?", "acceptedAnswer": {"@type": "Answer", "text": "Le partenze di WeRoad, SiVola e Zest Family messe a confronto: destinazione, date, durata, prezzo, fascia d'età e volo incluso o no. Da noi confronti, da loro prenoti: tutti i viaggi di gruppo."}}, {"@type": "Question", "name": "Organizzo eventi: come li pubblico?", "acceptedAnswer": {"@type": "Answer", "text": "Ti registri, crei il tuo gruppo (associazione, club, run club, pro loco) e pubblichi le date. Chi ti segue le vede sulla mappa."}}]}]}</script>
 </head>
@@ -532,6 +608,21 @@ body.locked .mk{display:block}
 
 <div class="home">
 <div class="wrap">
+  <!-- S2 (17/09/2026, spec §5): su mobile la ricerca è il protagonista. Una card sola, un campo,
+       quattro scorciatoie per chi arriva da Instagram e non sa cosa scrivere. Nascosta da 744px in su. -->
+  <section class="msearch" aria-label="Cerca eventi">
+    <h1 class="mslabel">Che eventi ci sono a <span class="blue" id="mcity2">Bergamo</span>?</h1>
+    <button class="msfield" id="msfield" data-gate="cerca">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg>
+      <span id="msfieldtxt">Cerca: padel, sagra, stasera…</span>
+    </button>
+    <div class="msquick">
+      <button class="chip" data-quick="sera">Stasera</button>
+      <button class="chip" data-quick="weekend">Weekend</button>
+      <button class="chip" data-quick="me">Vicino a me</button>
+      <button class="chip" data-quick="free">Gratis</button>
+    </div>
+  </section>
   <section class="hero">
     <h1 class="hi">Che eventi ci sono a <span class="blue" id="hcity">Bergamo</span>?</h1>
     <p class="sub">Sagre, corse, partite, cene, concerti, corsi: tutto quello a cui puoi unirti oggi e nei prossimi giorni, in tutta Italia, con chi lo organizza. Scegli, e ci vai insieme ad altri.</p>
@@ -594,6 +685,12 @@ body.locked .mk{display:block}
     <div class="mbox">
       <div class="mhead"><button class="x" id="closefilters" aria-label="Chiudi">✕</button><span id="mtitle">Filtri</span></div>
       <div class="mbody">
+        <div class="mg msonly" id="mg-cerca">
+          <h2>Cosa cerchi</h2>
+          <div class="srch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg><input id="msq" type="search" placeholder="padel, sagra, concerto, stasera…" autocomplete="off" aria-label="Cerca un evento"></div>
+          <div class="mscats" id="mscats" aria-label="Categorie"></div>
+        </div>
+        <div class="mg msonly"><h2>Quando</h2><div class="chips" data-f="day"><button class="chip" data-v="oggi">Oggi</button><button class="chip" data-v="domani">Domani</button><button class="chip" data-v="weekend">Fine settimana</button><button class="chip" data-v="sera">Stasera</button></div></div>
         <div class="mg"><h2>Quanto costa</h2><div class="chips" data-f="price"><button class="chip" data-v="free">Gratis</button><button class="chip" data-v="cheap">Fino a 10 €</button><button class="chip" data-v="paid">A pagamento</button></div></div>
         <div class="mg"><h2>A che ora</h2><div class="chips" data-f="hour"><button class="chip" data-v="am">Mattina</button><button class="chip" data-v="pm">Pomeriggio</button><button class="chip" data-v="eve">Sera</button></div></div>
         <div class="mg"><h2>Chi lo organizza</h2><p class="hint">Gente come te, oppure un club, un locale, un'associazione.</p><div class="chips" data-f="who"><button class="chip" data-v="ugc">Qualcuno di anyplans</button><button class="chip" data-v="org">Un club o un locale</button></div></div>
@@ -611,6 +708,7 @@ body.locked .mk{display:block}
         <span id="count" aria-live="polite">Carico gli eventi…</span>
         <label>Ordina&nbsp;<select id="sort" data-gate="ordina"><option value="time">Prima i più vicini nel tempo</option><option value="dist">Prima i più vicini a me</option><option value="going">Prima quelli con più gente</option></select></label>
       </div>
+      <p class="mcount" id="mcount" aria-hidden="true"></p>
       <div class="listlock" id="listlock">
         <div class="list" id="list"><div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div></div>
         <div class="lock2" id="listlock2" hidden><div><b>Registrati per vedere tutti gli eventi</b><p>Questi sono i primi 4. Ce ne sono altri <span id="lockn">…</span> vicino a te. Trenta secondi, gratis.</p><a class="btn" href="/bergamo/login.html" data-gate="lista">Registrati</a></div></div>
@@ -699,26 +797,39 @@ body.locked .mk{display:block}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789592828"></script>
+<script src="/bergamo/app.js?v=1789601173"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
-// WALL = false per rimisurare senza muro: tutto visibile, email su "Ci sono" (site_event: home_view, wall_tap, join).
-// 16/09/2026: spento. Da non registrati la home mostrava 4 eventi e un invito: i motori di risposta (e chi arriva
-// da Instagram) vedevano quello. Ora si vede tutto e l'email si chiede su "Ci sono", nella pagina dell'evento.
-const WALL = false;
+// Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
+// leggere dai motori di risposta (1 su 180). Deciso il 17/09/2026: il muro resta solo per chi arriva da Instagram e
+// Facebook, annunci compresi (quel traffico con il muro faceva 1 su 6 il 13/09); chi arriva da Google o diretto vede
+// tutto, ma al primo tocco su un evento o su "Ci sono" va a registrarsi. I link condivisi e le pagine statiche degli
+// eventi restano aperti: il blocco è sul tocco in home, non sulla pagina dell'evento.
+function fromSocial(){
+  try {
+    const src = (localStorage.getItem("anyplans_src") || "").toLowerCase();
+    let ref = ""; try { ref = document.referrer ? new URL(document.referrer).hostname.toLowerCase() : ""; } catch (_) {}
+    const utm = (new URLSearchParams(location.search).get("utm_source") || "").toLowerCase();
+    return /instagram|facebook|^ig\b|^ig\/|^fb\b|^fb\/|^meta\b/.test(src) || /instagram|facebook/.test(ref) || /^(ig|fb|instagram|facebook|meta)$/.test(utm);
+  } catch (_) { return false; }
+}
+const WALL = fromSocial();
 const logged = !!(session && session.access_token);
 const LOCKED = WALL && !logged;
+const GATE_EVENTS = !logged;   // da non registrati, di qualsiasi provenienza: il primo evento aperto chiede l'account
 if (LOCKED) document.body.classList.add("locked");
 track("home_view");
-function toLogin(why){
-  try { sessionStorage.setItem("anyplans_next", "/"); } catch (_) {}
-  track("wall_tap", "/?" + (why || "tap"));
+function toLogin(why, next){
+  try { sessionStorage.setItem("anyplans_next", next || "/"); } catch (_) {}
+  track("wall_tap", "/?" + (why || "tap") + (WALL ? "" : "&open"));   // "&open" = home aperta (Google/diretto), per confrontare i due muri
   location.href = "/bergamo/login.html";
 }
 // ogni elemento con data-gate: da non registrati porta alla registrazione (cattura in fase di capture: prima di tutto il resto)
 document.addEventListener("click", e => {
   const g = e.target.closest("[data-gate]"); if (!g) return;
   if (LOCKED) { e.preventDefault(); e.stopPropagation(); toLogin(g.dataset.gate); return; }
+  // home aperta: il tocco su un evento (o su "Ci sono") porta a registrarsi e, dopo, dritti a quell'evento
+  if (GATE_EVENTS && (g.dataset.gate === "evento" || g.dataset.gate === "ci-sono")) { e.preventDefault(); e.stopPropagation(); toLogin(g.dataset.gate, g.getAttribute("href") || "/"); }
 }, true);
 document.addEventListener("mousedown", e => { if (LOCKED && e.target.closest("#sort")) { e.preventDefault(); toLogin("ordina"); } }, true);
 document.addEventListener("focusin", e => { if (LOCKED && e.target.closest("#tsearch, #qsearch, #freedate")) { e.target.blur(); toLogin("cerca"); } }, true);
@@ -776,6 +887,7 @@ function cleanTown(t){ t = String(t || "").replace(/^\d{5}\s*/, "").trim(); if (
 const EVURL = e => "/bergamo/evento.html?id=" + e.id;
 
 function whenTxt(e){
+  if (e.multi) return `<span class="now">in corso</span>${e.end_at ? " · fino a " + fmtDay.format(new Date(e.end_at)) : ""}`;
   if (e.ymd === TODAY) { const min = Math.round((e.d - NOW) / 60000); if (min < 0 && isCurrent(e.d, e.end_at)) return `<span class="now">in corso</span>`; if (min >= 0 && min <= 90) return `<span class="soon">tra ${min} min</span>`; return `<b>oggi</b> alle ${fmtHM.format(e.d)}`; }
   if (e.ymd === addDays(TODAY, 1)) return `<b>domani</b> alle ${fmtHM.format(e.d)}`;
   return `<b>${fmtDay.format(e.d)}</b> alle ${fmtHM.format(e.d)}`;
@@ -808,8 +920,12 @@ async function loadEvents(center){
   if (!r || !r.ok) { loading = false; document.getElementById("list").innerHTML = '<div class="nores"><div class="tile">😕</div><h3>Non riesco a caricare gli eventi</h3><p>Ricarica la pagina.</p></div>'; return; }
   const rows = await r.json().catch(() => []);
   loading = false;
-  EV = rows.map(x => { const d = new Date(x.start_at); const rp = romeParts(d); const tw = cleanTown(cityOf(x.meeting_point_text)) || center.nome || ""; return { ...x, d, ymd: rp.ymd, h: rp.h, tw, emoji: x.emoji || EMOJI[x.sport] || "📍" }; })
-    .filter(e => isCurrent(e.d, e.end_at)).sort((a, b) => a.d - b.d);
+  // Un evento iniziato prima di oggi e ancora in corso (un torneo di due settimane, una mostra) non deve
+  // stare in testa alla lista con la data di ieri: va sotto "Oggi", in coda agli eventi che iniziano oggi,
+  // con "in corso · fino a ...". `s` e' la data usata per ordinare, `d` resta l'inizio vero (audit 17/09/2026, #4).
+  const EOD = new Date(NOW); EOD.setHours(23, 59, 0, 0);
+  EV = rows.map(x => { const d = new Date(x.start_at); const rp = romeParts(d); const tw = cleanTown(cityOf(x.meeting_point_text)) || center.nome || ""; const multi = rp.ymd < TODAY; return { ...x, d, s: multi ? EOD : d, multi, ymd: multi ? TODAY : rp.ymd, h: rp.h, tw, emoji: x.emoji || EMOJI[x.sport] || "📍" }; })
+    .filter(e => isCurrent(e.d, e.end_at)).sort((a, b) => a.s - b.s);
   buildDynamic(); render();
   if (map && mapReady) { if (lastRows.length) fitMap(mapRows(lastRows)); else map.jumpTo({ center: [center.lng, center.lat], zoom: 11.5 }); }
 }
@@ -862,15 +978,17 @@ function render(){
   const sort = document.getElementById("sort").value;
   EV.forEach(e => { e.km = distKm(REF, e); });
   let rows = EV.filter(e => passes(e));
-  if (sort === "dist") rows.sort((a, b) => a.km - b.km || a.d - b.d); else if (sort === "going") rows.sort((a, b) => (b.going_count || 0) - (a.going_count || 0) || a.d - b.d); else rows.sort((a, b) => a.d - b.d);
+  if (sort === "dist") rows.sort((a, b) => a.km - b.km || a.s - b.s); else if (sort === "going") rows.sort((a, b) => (b.going_count || 0) - (a.going_count || 0) || a.s - b.s); else rows.sort((a, b) => a.s - b.s);
   lastRows = rows;
   // il feed arriva al massimo a 1000 righe: sopra non si scrive un numero finto
   document.getElementById("count").textContent = `${EV.length >= 1000 && rows.length >= 1000 ? "Più di 1000 eventi" : rows.length + " event" + (rows.length === 1 ? "o" : "i")}${summarize() ? " · " + summarize() : ""}`;
+  { const mc = document.getElementById("mcount"); if (mc) mc.textContent = document.getElementById("count").textContent; }
+  if (window.syncMsField) window.syncMsField();
   syncBar(rows.length);
   const list = document.getElementById("list");
   if (!rows.length && (F.day.size || F.date.size)) {
     // "Oggi niente serate. Il prossimo: …" (16/09/2026): stessi filtri senza il giorno, il primo in ordine di tempo
-    const next = EV.filter(e => passes(e, true)).sort((a, b) => a.d - b.d)[0];
+    const next = EV.filter(e => passes(e, true)).sort((a, b) => a.s - b.s)[0];
     const when = F.date.size ? "Il " + fmtDay.format(new Date([...F.date][0] + "T12:00:00Z")) : { oggi: "Oggi", domani: "Domani", weekend: "Nel fine settimana", sera: "Stasera" }[[...F.day][0]];
     const cat = F.cat.size ? CATBY[[...F.cat][0]] : null;
     const what = cat ? (cat.n || "eventi").toLowerCase() : F.price.size ? "eventi gratis" : F.going.size ? "eventi con qualcuno che ci va" : QTEXT ? `eventi per '${esc(QTEXT)}'` : "eventi";
@@ -901,6 +1019,9 @@ function buildStatic(){
   document.getElementById("dgrid").innerHTML = h;
   document.getElementById("catchips").innerHTML = CATS.filter(c => c.k).map(c => `<button class="chip" data-v="${c.k}">${c.i} ${c.n}<small>0</small></button>`).join("");
   document.getElementById("cats").innerHTML = CATS.map(c => `<a href="#" class="cat ${c.k ? "" : "on"}" data-cat="${c.k}" data-gate="categoria"><span class="i">${c.i}</span>${c.n}</a>`).join("") + `<a href="#" class="cat" data-cat="__sera" data-gate="categoria"><span class="i">🌙</span>Stasera</a><a href="#" class="cat" data-cat="__free" data-gate="categoria"><span class="i">🆓</span>Gratis</a><a href="#" class="cat" data-cat="__going" data-gate="categoria"><span class="i">👋</span>Qualcuno ci va</a>`;
+  // S2: le stesse categorie, in griglia, dentro il foglio di ricerca su mobile
+  const ms = document.getElementById("mscats");
+  if (ms) ms.innerHTML = CATS.map(c => `<button type="button" class="${c.k ? "" : "on"}" data-cat="${c.k}"><span class="i">${c.i}</span>${c.n}</button>`).join("");
   bindAll();
 }
 function buildDynamic(){
@@ -988,9 +1109,107 @@ function bindAll(){
   ts.addEventListener("keydown", e => { if (e.key !== "Enter") return; e.preventDefault(); const first = document.querySelector("#freecity .chip"); if (first) { first.click(); applyPlace(); closePanels(); } });
   // modale filtri
   const modal = document.getElementById("modal");
-  function openModal(){ closePanels(); modal.hidden = false; document.body.style.overflow = "hidden"; }
-  window.closeModal = function(){ modal.hidden = true; document.body.style.overflow = ""; };
+  // S1 (17/09/2026, spec §6.1): su mobile il foglio è a schermo intero, quindi servono tre uscite
+  // — la ✕, lo swipe verso il basso e il tasto indietro del telefono — altrimenti ci si sente in trappola.
+  let modalHist = false;
+  function openModal(){
+    closePanels(); modal.hidden = false; document.body.style.overflow = "hidden";
+    if (!modalHist) { try { history.pushState({ apModal: 1 }, ""); modalHist = true; } catch (e) {} }
+    const x = document.getElementById("closefilters"); if (x) x.focus({ preventScroll: true });
+  }
+  window.closeModal = function(fromPop){
+    modal.hidden = true; document.body.style.overflow = "";
+    if (modalHist && !fromPop) { modalHist = false; try { history.back(); } catch (e) {} }
+    if (fromPop) modalHist = false;
+  };
+  window.addEventListener("popstate", () => { if (!modal.hidden) window.closeModal(true); });
+  // swipe giù sulla testata per chiudere (solo dove il foglio è a schermo intero)
+  (function(){
+    const head = modal.querySelector(".mhead"); if (!head) return;
+    let y0 = null;
+    head.addEventListener("touchstart", e => { y0 = e.touches[0].clientY; }, { passive: true });
+    head.addEventListener("touchmove", e => {
+      if (y0 === null) return;
+      if (e.touches[0].clientY - y0 > 70) { y0 = null; window.closeModal(); }
+    }, { passive: true });
+    head.addEventListener("touchend", () => { y0 = null; }, { passive: true });
+  })();
   document.getElementById("openfilters").addEventListener("click", e => { if (LOCKED) return; e.stopPropagation(); openModal(); });
+
+  // ---- S2 (17/09/2026, spec §5-§6): la ricerca mobile ----
+  // Il campo in pagina non cerca da sé: apre il foglio a schermo intero, dove stanno
+  // dove, cosa, quando e i filtri, con "Mostra N eventi" ancorato in fondo.
+  const MOB = () => matchMedia("(max-width:743px)").matches;
+  const msf = document.getElementById("msfield");
+  const msq = document.getElementById("msq");
+  const mgc = document.getElementById("mg-cerca");
+
+  // "Dove" non aveva più casa su mobile: ci porto dentro il pannello che già funziona,
+  // spostando il nodo vero (così id, suggerimenti e "Vicino a me" restano quelli).
+  (function moveDove(){
+    const pd = document.getElementById("p-dove"); if (!pd || !mgc) return;
+    const g = document.createElement("div"); g.className = "mg msonly"; g.id = "mg-dove";
+    g.innerHTML = "<h2>Dove</h2>";
+    while (pd.firstChild) {
+      const n = pd.firstChild;
+      if (n.nodeType === 1 && (n.tagName === "H2" || n.classList.contains("pfoot"))) { pd.removeChild(n); continue; }
+      g.appendChild(n);
+    }
+    mgc.parentNode.insertBefore(g, mgc);
+  })();
+
+  function openSearch(){
+    if (LOCKED) { const g = document.querySelector("[data-gate]"); if (g) { location.href = "/bergamo/login.html"; return; } }
+    openModal();
+    setTimeout(() => { if (msq) msq.focus({ preventScroll: true }); }, 120);
+  }
+  if (msf) msf.addEventListener("click", e => { e.stopPropagation(); openSearch(); });
+
+  // il campo dentro il foglio fa la stessa cosa della ricerca libera che c'era già
+  if (msq) {
+    let mt = null;
+    const run = () => { QTEXT = msq.value.trim(); F.cat.clear(); syncChips(); render(); syncMsField(); };
+    msq.addEventListener("input", () => { clearTimeout(mt); mt = setTimeout(run, 250); });
+    msq.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); run(); track("cerca_testo"); } });
+  }
+
+  // categorie nel foglio
+  document.addEventListener("click", e => {
+    const b = e.target.closest("#mscats button"); if (!b) return;
+    e.preventDefault();
+    const k = b.dataset.cat || "";
+    F.cat.clear(); if (k) F.cat.add(k);
+    QTEXT = ""; if (msq) msq.value = "";
+    document.querySelectorAll("#mscats button").forEach(x => x.classList.toggle("on", (x.dataset.cat || "") === k));
+    syncChips(); render(); syncMsField();
+  });
+
+  // le quattro scorciatoie in pagina: un tocco solo, niente foglio
+  document.querySelectorAll(".msquick .chip").forEach(c => c.addEventListener("click", e => {
+    e.preventDefault(); if (LOCKED) { location.href = "/bergamo/login.html"; return; }
+    const q = c.dataset.quick; const was = c.classList.contains("on");
+    document.querySelectorAll(".msquick .chip").forEach(x => x.classList.remove("on"));
+    if (!was) c.classList.add("on");
+    if (q === "sera" || q === "weekend") { F.day.clear(); F.date.clear(); if (!was) F.day.add(q); }
+    else if (q === "free") { F.price.clear(); if (!was) F.price.add("free"); }
+    else if (q === "me") { const me = document.querySelector('.chips[data-f="where"] .chip[data-v="me"]'); if (me) { me.click(); return; } }
+    syncChips(); render(); syncMsField(); track("scorciatoia_" + q);
+  }));
+
+  // il campo racconta sempre cosa è attivo, così si capisce a colpo d'occhio
+  window.syncMsField = function(){
+    const t = document.getElementById("msfieldtxt"); if (!t) return;
+    const parts = [];
+    if (QTEXT) parts.push(QTEXT);
+    else if (F.cat.size) { const k = [...F.cat][0]; const c = CATS.find(x => x.k === k); if (c) parts.push(c.n.toLowerCase()); }
+    if (F.day.size) { const d = [...F.day][0]; parts.push({ oggi: "oggi", domani: "domani", weekend: "nel weekend", sera: "stasera" }[d] || d); }
+    else if (F.date.size) parts.push("in una data scelta");
+    if (F.price.has("free")) parts.push("gratis");
+    if (F.where.size) parts.push("vicino a me");
+    const on = parts.length > 0;
+    t.textContent = on ? parts.join(" · ") : "Cerca: padel, sagra, stasera…";
+    msf.classList.toggle("on", on);
+  };
   document.getElementById("closefilters").addEventListener("click", closeModal);
   document.getElementById("showbtn").addEventListener("click", closeModal);
   modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
@@ -1049,6 +1268,13 @@ function initMap(){
   map.addControl(new maplibregl.AttributionControl({ compact: true }), "bottom-left");
   // appena la mappa è pronta: i pin di quello che c'è già in lista (il feed può essere arrivato prima o dopo)
   map.on("load", () => { mapReady = true; map.resize(); drawPins(mapRows(lastRows)); fitMap(mapRows(lastRows)); });
+  // S5 (17/09/2026): su mobile il riquadro della mappa cambia misura quando cambia il layout
+  // (e alla rotazione del telefono). Senza resize resta un rettangolo grigio.
+  if (window.ResizeObserver) {
+    const box = document.getElementById("mapbox");
+    let rt = null;
+    new ResizeObserver(() => { clearTimeout(rt); rt = setTimeout(() => { if (map) { map.resize(); fitMap(mapRows(lastRows)); } }, 60); }).observe(box);
+  }
   map.on("error", () => {});
   if (LOCKED) document.getElementById("maplock").hidden = false;
 }
