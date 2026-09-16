@@ -220,7 +220,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1789601899"></script>
+<script src="app.js?v=1789603176"></script>
 <script>
   requireLogin();
   mountTabbar("profilo");
@@ -447,9 +447,11 @@
     const extra = { p_base_city: city || null, p_gender: genderChoice };
     if (avatarUrl) extra.p_avatar_url = avatarUrl;
     if (editMode) {
-      extra.p_bio = document.getElementById("bio").value.trim() || null;
+      // vuoto = cancella. Con null la RPC (coalesce) lascia il valore di prima e bio e Instagram non si potevano
+      // più togliere una volta scritti (audit 17/09/2026).
+      extra.p_bio = document.getElementById("bio").value.trim();
       const ig = document.getElementById("ig").value.trim().replace(/^@/, "").replace(/^.*instagram\.com\//, "").replace(/\/.*$/, "");
-      extra.p_instagram_handle = ig || null;
+      extra.p_instagram_handle = ig;
     }
     await rpc("update_profile", extra);
     track(editMode ? "profile_edit" : "profile_done");

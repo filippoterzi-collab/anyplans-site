@@ -378,7 +378,7 @@ body.locked .mk,body.locked .strip{display:none}
   body.mapmode{overflow:hidden}
   body.mapmode .mock{display:none}
 body.mapmode .mapbtn{background:var(--ink);color:#fff}
-.mapbtn{position:absolute;left:12px;top:12px;z-index:5;display:inline-flex;align-items:center;gap:6px;height:36px;padding:0 12px;border-radius:999px;background:#fff;font-size:12.5px;font-weight:700;box-shadow:0 2px 8px rgba(25,25,25,.15)}
+.mapbtn{position:absolute;left:12px;top:12px;z-index:5;display:inline-flex;align-items:center;gap:7px;height:42px;padding:0 18px;border-radius:999px;background:#fff;font-size:14px;font-weight:800;box-shadow:0 3px 12px rgba(25,25,25,.2)}
 .mapinfo{left:auto;right:64px}
 @media(max-width:900px){.mapinfo{display:none}}
 /* giorni */
@@ -539,6 +539,16 @@ body.locked .mk{display:block}
   .map{height:168px;min-height:0;border-radius:16px}
   /* da sloggati la mappa ospita il riquadro "Registrati": a 168px il bottone si taglia */
   body.locked .map{height:230px}
+  /* il bottone che apre la mappa a schermo intero: richiesto dal committente il 17/09/2026,
+     su mobile e su desktop. La fascia resta visibile, il bottone la espande. */
+  .mapbtn{display:inline-flex;left:50%;right:auto;top:auto;bottom:auto;top:50%;
+          transform:translate(-50%,-50%);height:44px;padding:0 20px;font-size:14.5px;white-space:nowrap}
+  body.locked .mapbtn{display:none}
+  /* nel foglio restano solo Dove, Cosa cerchi e Quando (scelta del committente, 17/09/2026):
+     prezzo, ora, organizzatore e "con altri" restano su desktop */
+  .mbody .mg.deskonly{display:none}
+  body.mapmode .mapbtn{left:12px;right:auto;top:12px;bottom:auto;transform:none}
+  body.mapmode .msearch,body.mapmode .listcol,body.mapmode .tabbar{display:none}
   .listcol{order:1;position:relative}
 
   /* conteggio compatto, al posto della riga con il menu Ordina */
@@ -694,11 +704,10 @@ body.locked .mk{display:block}
           <div class="srch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg><input id="msq" type="search" placeholder="padel, sagra, concerto, stasera…" autocomplete="off" aria-label="Cerca un evento"></div>
           <div class="mscats" id="mscats" aria-label="Categorie"></div>
         </div>
-        <div class="mg msonly"><h2>Quando</h2><div class="chips" data-f="day"><button class="chip" data-v="oggi">Oggi</button><button class="chip" data-v="domani">Domani</button><button class="chip" data-v="weekend">Fine settimana</button><button class="chip" data-v="sera">Stasera</button></div></div>
-        <div class="mg"><h2>Quanto costa</h2><div class="chips" data-f="price"><button class="chip" data-v="free">Gratis</button><button class="chip" data-v="cheap">Fino a 10 €</button><button class="chip" data-v="paid">A pagamento</button></div></div>
-        <div class="mg"><h2>A che ora</h2><div class="chips" data-f="hour"><button class="chip" data-v="am">Mattina</button><button class="chip" data-v="pm">Pomeriggio</button><button class="chip" data-v="eve">Sera</button></div></div>
-        <div class="mg"><h2>Chi lo organizza</h2><p class="hint">Gente come te, oppure un club, un locale, un'associazione.</p><div class="chips" data-f="who"><button class="chip" data-v="ugc">Qualcuno di anyplans</button><button class="chip" data-v="org">Un club o un locale</button></div></div>
-        <div class="mg"><h2>Con altri</h2><div class="chips" data-f="going"><button class="chip" data-v="1">Qualcuno ci va già</button></div></div>
+        <div class="mg deskonly"><h2>Quanto costa</h2><div class="chips" data-f="price"><button class="chip" data-v="free">Gratis</button><button class="chip" data-v="cheap">Fino a 10 €</button><button class="chip" data-v="paid">A pagamento</button></div></div>
+        <div class="mg deskonly"><h2>A che ora</h2><div class="chips" data-f="hour"><button class="chip" data-v="am">Mattina</button><button class="chip" data-v="pm">Pomeriggio</button><button class="chip" data-v="eve">Sera</button></div></div>
+        <div class="mg deskonly"><h2>Chi lo organizza</h2><p class="hint">Gente come te, oppure un club, un locale, un'associazione.</p><div class="chips" data-f="who"><button class="chip" data-v="ugc">Qualcuno di anyplans</button><button class="chip" data-v="org">Un club o un locale</button></div></div>
+        <div class="mg deskonly"><h2>Con altri</h2><div class="chips" data-f="going"><button class="chip" data-v="1">Qualcuno ci va già</button></div></div>
       </div>
       <div class="mfoot"><button class="lnk" id="clearall">Cancella tutto</button><button class="btn" id="showbtn">Mostra eventi</button></div>
     </div>
@@ -724,7 +733,7 @@ body.locked .mk{display:block}
         <div id="map"></div>
         <div class="mapload" id="mapload" aria-hidden="true">Carico la mappa…</div>
         <div class="lock" id="maplock" hidden><div>🔒<b>Registrati per vedere la mappa</b><p>Gli eventi vicino a te, con chi ci va. Trenta secondi, gratis.</p><a class="btn" href="/bergamo/login.html" data-gate="mappa">Registrati</a></div></div>
-        <button class="mapbtn" id="mapbtn" data-gate="mappa">⤢ Tutta la mappa</button>
+        <button class="mapbtn" id="mapbtn" data-gate="mappa">🗺️ Apri la mappa</button>
         <div class="mapinfo" id="mapinfo"></div>
       </div>
     </aside>
@@ -803,7 +812,7 @@ body.locked .mk{display:block}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789601899"></script>
+<script src="/bergamo/app.js?v=1789603176"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1128,6 +1137,7 @@ function bindAll(){
   function openModal(){
     closePanels(); modal.hidden = false; document.body.style.overflow = "hidden";
     if (!modalHist) { try { history.pushState({ apModal: 1 }, ""); modalHist = true; } catch (e) {} }
+    { const t = document.getElementById("mtitle"); if (t) t.textContent = matchMedia("(max-width:743px)").matches ? "Cerca" : "Filtri"; }
     const x = document.getElementById("closefilters"); if (x) x.focus({ preventScroll: true });
   }
   window.closeModal = function(fromPop){
@@ -1159,17 +1169,23 @@ function bindAll(){
 
   // "Dove" non aveva più casa su mobile: ci porto dentro il pannello che già funziona,
   // spostando il nodo vero (così id, suggerimenti e "Vicino a me" restano quelli).
-  (function moveDove(){
-    const pd = document.getElementById("p-dove"); if (!pd || !mgc) return;
-    const g = document.createElement("div"); g.className = "mg msonly"; g.id = "mg-dove";
-    g.innerHTML = "<h2>Dove</h2>";
-    while (pd.firstChild) {
-      const n = pd.firstChild;
-      if (n.nodeType === 1 && (n.tagName === "H2" || n.classList.contains("pfoot"))) { pd.removeChild(n); continue; }
+  // "Dove" e "Quando" non avevano più casa su mobile: porto dentro al foglio i pannelli che già
+  // funzionano, spostando i nodi veri — così restano gli id, i suggerimenti città, la griglia dei
+  // 14 giorni e il calendario per scegliere un giorno preciso.
+  function movePanel(id, titolo, gid, prima){
+    const src = document.getElementById(id); if (!src) return null;
+    const g = document.createElement("div"); g.className = "mg msonly"; g.id = gid;
+    g.innerHTML = "<h2>" + titolo + "</h2>";
+    while (src.firstChild) {
+      const n = src.firstChild;
+      if (n.nodeType === 1 && (n.tagName === "H2" || n.classList.contains("pfoot"))) { src.removeChild(n); continue; }
       g.appendChild(n);
     }
-    mgc.parentNode.insertBefore(g, mgc);
-  })();
+    prima.parentNode.insertBefore(g, prima);
+    return g;
+  }
+  movePanel("p-dove", "Dove", "mg-dove", mgc);
+  movePanel("p-quando", "Quando", "mg-quando", mgc.nextSibling || mgc);
 
   function openSearch(){
     if (LOCKED) { const g = document.querySelector("[data-gate]"); if (g) { location.href = "/bergamo/login.html"; return; } }
@@ -1186,16 +1202,17 @@ function bindAll(){
     msq.addEventListener("keydown", e => { if (e.key === "Enter") { e.preventDefault(); run(); track("cerca_testo"); } });
   }
 
-  // categorie nel foglio
-  document.addEventListener("click", e => {
-    const b = e.target.closest("#mscats button"); if (!b) return;
-    e.preventDefault();
+  // categorie nel foglio — in cattura e sul contenitore, perché sul document il click non arrivava
+  const mscatsBox = document.getElementById("mscats");
+  if (mscatsBox) mscatsBox.addEventListener("click", e => {
+    const b = e.target.closest("button"); if (!b) return;
+    e.preventDefault(); e.stopPropagation();
     const k = b.dataset.cat || "";
     F.cat.clear(); if (k) F.cat.add(k);
     QTEXT = ""; if (msq) msq.value = "";
     document.querySelectorAll("#mscats button").forEach(x => x.classList.toggle("on", (x.dataset.cat || "") === k));
     syncChips(); render(); syncMsField();
-  });
+  }, true);
 
   // le quattro scorciatoie in pagina: un tocco solo, niente foglio
   document.querySelectorAll(".msquick .chip").forEach(c => c.addEventListener("click", e => {
@@ -1233,6 +1250,15 @@ let PENDING = null;
 function pickPlace(i){ const s = (window.SUGG || [])[i]; if (!s) return; PENDING = s;
   document.querySelectorAll("#freecity .chip").forEach((c, j) => c.setAttribute("aria-pressed", j === i ? "true" : "false"));
   document.getElementById("v-dove").textContent = s.name; document.getElementById("v-dove").classList.add("set");
+  // 17/09/2026: scegliendo un suggerimento il campo si completa col nome intero (scrivi "Ber", tocchi
+  // "Bergamo", il campo dice Bergamo). Su mobile si applica subito, perché nel foglio non c'è "Avanti".
+  const ts = document.getElementById("tsearch");
+  if (ts) ts.value = s.name;
+  if (matchMedia("(max-width:743px)").matches) {
+    const free = document.getElementById("g-free"); if (free) free.hidden = true;
+    applyPlace();
+    if (window.syncMsField) window.syncMsField();
+  }
 }
 // si applica con "Avanti" (15/09/2026: "seleziono Milano, Avanti, poi si apre su Milano")
 function applyPlace(){ const s = PENDING; if (!s) return; PENDING = null; F.city.clear(); F.town.clear(); F.where.clear(); track("cerca_posto", s.name);
@@ -1315,7 +1341,7 @@ function drawPins(rows){
 function hl(id, on){ document.querySelectorAll(`.ev[data-id="${id}"]`).forEach(c => c.classList.toggle("hl", on)); }
 document.getElementById("list").addEventListener("mouseover", e => { const c = e.target.closest(".ev"); if (c) hl(c.dataset.id, true); });
 document.getElementById("list").addEventListener("mouseout", e => { const c = e.target.closest(".ev"); if (c) hl(c.dataset.id, false); });
-function toggleMap(){ const on = document.body.classList.toggle("mapmode"); document.getElementById("mapfab").textContent = on ? "☰ Lista" : "🗺️ Mappa"; document.getElementById("mapbtn").textContent = on ? "✕ Chiudi la mappa" : "⤢ Tutta la mappa"; if (on) window.scrollTo({ top: 0 }); setTimeout(() => { if (map) { map.resize(); fitMap(mapRows(lastRows)); } }, 80); }
+function toggleMap(){ const on = document.body.classList.toggle("mapmode"); document.getElementById("mapfab").textContent = on ? "☰ Lista" : "🗺️ Mappa"; document.getElementById("mapbtn").textContent = on ? "✕ Chiudi la mappa" : "🗺️ Apri la mappa"; if (on) window.scrollTo({ top: 0 }); setTimeout(() => { if (map) { map.resize(); fitMap(mapRows(lastRows)); } }, 80); }
 document.getElementById("mapfab").addEventListener("click", () => { if (!LOCKED) toggleMap(); });
 document.getElementById("mapbtn").addEventListener("click", e => { if (LOCKED) return; e.stopPropagation(); toggleMap(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && document.body.classList.contains("mapmode")) toggleMap(); });
@@ -1326,6 +1352,9 @@ function loadMapLib(){
 
 // ---------- la città nel titolo gira finché non ne scegli una ----------
 (function(){ const names = CITIES.slice(0, 14).map(c => c.nome); let i = 0; const el = document.getElementById("hcity");
+  // 17/09/2026: la stessa rotazione anche nel titolo della versione mobile
+  const el2 = document.getElementById("mcity2");
+  if (el2 && el) { new MutationObserver(() => { el2.textContent = el.textContent; }).observe(el, { childList: true, characterData: true, subtree: true }); }
   setInterval(() => { if (window.CHOSEN || window.FEEDLOADED) return; i = (i + 1) % names.length; el.classList.remove("swap"); void el.offsetWidth; el.textContent = names[i]; el.classList.add("swap"); }, 1800); })();
 
 
