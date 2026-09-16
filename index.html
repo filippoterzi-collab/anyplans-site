@@ -443,6 +443,9 @@ footer li a.now{color:var(--blue);font-weight:700}
 
 /* righe che scorrono col dito: solo a destra e sinistra, mai su e giù */
 .cats,.strip .row,.tr-months,.ny .row,.shortcuts,.carousel{touch-action:pan-x pan-y;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+/* overflow-x:auto porta con sé overflow-y:auto: la riga delle categorie sfora di 1 px e su iPhone quel pixel diventava uno
+   scorrimento verticale interno che si mangiava il gesto (16/09/2026: "la barra sale e scende, il sito resta fermo") */
+.cats,.dates .chips,.strip .row,.trips .row,.tr-months,.ny .row,.shortcuts,.carousel{overflow-y:hidden}
 .sbwrap{transform:translateZ(0)}
 
 /* telefono: la mappa si vede subito, come anteprima sopra la lista; la pillola la apre a tutto schermo */
@@ -678,7 +681,7 @@ body.locked .cats{pointer-events:none}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789534764"></script>
+<script src="/bergamo/app.js?v=1789535092"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // WALL = false per rimisurare senza muro: tutto visibile, email su "Ci sono" (site_event: home_view, wall_tap, join).
