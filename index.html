@@ -216,7 +216,7 @@ body.locked .mk,body.locked .strip{display:none}
 .trips h2{font-size:22px}
 .trips .head a{font-size:13.5px;font-weight:700;color:var(--blue);white-space:nowrap}
 .trips .subl{color:var(--grey);font-size:14px;margin-top:6px}
-.trips .row{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;margin-top:14px;padding-bottom:4px;touch-action:pan-x;overscroll-behavior-x:contain}
+.trips .row{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;margin-top:14px;padding-bottom:4px;touch-action:pan-x pan-y;overscroll-behavior-x:contain}
 .trips .row::-webkit-scrollbar{display:none}
 .tcard{flex:none;width:230px;background:var(--card);border:1.5px solid var(--hair);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:6px}
 .tcard .h{display:flex;gap:10px;align-items:center}
@@ -231,7 +231,7 @@ body.locked .mk,body.locked .strip{display:none}
 .op{display:inline-flex;align-items:center;height:24px;padding:0 9px;border-radius:999px;background:var(--tint);color:var(--blue);font-weight:700;font-size:12px}
 /* riga della data, sempre in vista (15/09/2026: la gente non apriva il pannello) */
 .dates{display:flex;justify-content:center;margin:10px 0 2px}
-.dates .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;touch-action:pan-x}
+.dates .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;touch-action:pan-x pan-y}
 .dates .chips::-webkit-scrollbar{display:none}
 .dates .chip{flex:none;height:36px;font-size:13.5px}
 .dates .chip svg{width:16px;height:16px}
@@ -332,6 +332,8 @@ body.locked .mk,body.locked .strip{display:none}
 .pop{position:absolute;z-index:6;width:250px;background:#fff;border-radius:14px;box-shadow:0 10px 30px rgba(25,25,25,.22);padding:12px 12px 12px;transform:translate(-50%,calc(-100% - 24px));display:flex;flex-direction:column;gap:5px}
 .pop[hidden]{display:none}
 .pop::after{content:"";position:absolute;left:50%;bottom:-7px;width:14px;height:14px;background:#fff;transform:translateX(-50%) rotate(45deg)}
+.pop .body{display:flex;flex-direction:column;gap:5px;color:inherit;text-decoration:none;margin:-12px -12px 0;padding:12px 12px 0;border-radius:14px 14px 0 0}
+.pop .body:hover{background:var(--tint)}
 .pop .t{font-weight:700;font-size:14px;line-height:1.25}
 .pop .m{font-size:12.5px;color:var(--grey)}
 .pop .btn{height:36px;font-size:13px;margin-top:4px}
@@ -440,7 +442,7 @@ footer li{list-style:none;margin-bottom:6px}
 footer li a.now{color:var(--blue);font-weight:700}
 
 /* righe che scorrono col dito: solo a destra e sinistra, mai su e giù */
-.cats,.strip .row,.tr-months,.ny .row,.shortcuts,.carousel{touch-action:pan-x;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.cats,.strip .row,.tr-months,.ny .row,.shortcuts,.carousel{touch-action:pan-x pan-y;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
 .sbwrap{transform:translateZ(0)}
 
 /* telefono: la mappa si vede subito, come anteprima sopra la lista; la pillola la apre a tutto schermo */
@@ -676,7 +678,7 @@ body.locked .cats{pointer-events:none}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789509403"></script>
+<script src="/bergamo/app.js?v=1789534764"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // WALL = false per rimisurare senza muro: tutto visibile, email su "Ci sono" (site_event: home_view, wall_tap, join).
@@ -1027,7 +1029,7 @@ function drawPins(rows){
   const dec = rows.length > 150 ? 2 : 3; const groups = {}; rows.forEach(e => { if (e.lat == null) return; const k = e.lat.toFixed(dec) + "," + e.lng.toFixed(dec); (groups[k] || (groups[k] = [])).push(e); });
   Object.values(groups).forEach(g => {
     const e = g[0]; const el = document.createElement("button"); el.className = "pin"; el.innerHTML = e.emoji + (g.length > 1 ? `<span class="n">${g.length}</span>` : ""); el.title = g.length > 1 ? `${g.length} eventi qui` : e.title;
-    const pop = new maplibregl.Popup({ offset: 22, closeButton: false, maxWidth: "260px" }).setHTML(g.map(x => `<div class="pop"><div class="t">${x.emoji} ${esc(x.title)}</div><div class="m">${whenTxt(x)}</div><div class="m">${esc(x.tw)}${x.km > 1 ? ` · ${x.km.toFixed(0)} km` : ""} · ${x.price_cents > 0 ? esc(fmtPrice(x.price_cents)) : "gratis"}${x.going_count ? ` · ${x.going_count} ci vanno` : ""}</div>${cta(x)}</div>`).join(""));
+    const pop = new maplibregl.Popup({ offset: 22, closeButton: false, maxWidth: "260px" }).setHTML(g.map(x => `<div class="pop"><a class="body" href="${EVURL(x)}" data-gate="evento"><div class="t">${x.emoji} ${esc(x.title)}</div><div class="m">${whenTxt(x)}</div><div class="m">${esc(x.tw)}${x.km > 1 ? ` · ${x.km.toFixed(0)} km` : ""} · ${x.price_cents > 0 ? esc(fmtPrice(x.price_cents)) : "gratis"}${x.going_count ? ` · ${x.going_count} ci vanno` : ""}</div></a>${cta(x)}</div>`).join(""));   // tutto il fumetto apre l'evento, non solo "Ci sono" (16/09/2026)
     const mk = new maplibregl.Marker({ element: el }).setLngLat([e.lng, e.lat]).setPopup(pop).addTo(map);
     el.addEventListener("mouseenter", () => hl(e.id, true)); el.addEventListener("mouseleave", () => hl(e.id, false));
     el.addEventListener("click", () => { const c = document.querySelector(`.ev[data-id="${e.id}"]`); if (c && !document.body.classList.contains("mapmode")) c.scrollIntoView({ behavior: "smooth", block: "center" }); const mini = document.querySelector(`.carousel .mini[data-id="${e.id}"]`); if (mini) { document.querySelectorAll(".carousel .mini").forEach(m => m.classList.toggle("on", m === mini)); mini.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" }); } });
@@ -1053,12 +1055,18 @@ function loadMapLib(){
   setInterval(() => { if (window.CHOSEN) return; i = (i + 1) % names.length; el.classList.remove("swap"); void el.offsetWidth; el.textContent = names[i]; el.classList.add("swap"); }, 1800); })();
 
 
-// ---------- righe che scorrono col dito (categorie, date, file): solo a destra e sinistra, mai la pagina ----------
-// touch-action:pan-x da solo non bastava su iPhone (15/09/2026): il dito sulle icone faceva salire e scendere la pagina.
+// ---------- righe che scorrono col dito (categorie, date, file) ----------
+// La direzione la decide il primo movimento: di lato scorre la riga (e la pagina sta ferma, 15/09/2026: su iPhone
+// touch-action:pan-x da solo non bastava), su e giù scorre la pagina (16/09/2026: prima da queste righe non si poteva).
 document.querySelectorAll(".cats, .dates .chips, .strip .row, .trips .row, .carousel").forEach(row => {
-  let x0 = 0, sl = 0;
-  row.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; sl = row.scrollLeft; }, { passive: true });
-  row.addEventListener("touchmove", e => { row.scrollLeft = sl - (e.touches[0].clientX - x0); e.preventDefault(); }, { passive: false });
+  let x0 = 0, y0 = 0, sl = 0, dir = null;
+  row.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; sl = row.scrollLeft; dir = null; }, { passive: true });
+  row.addEventListener("touchmove", e => {
+    const dx = e.touches[0].clientX - x0, dy = e.touches[0].clientY - y0;
+    if (!dir) { if (Math.abs(dx) < 4 && Math.abs(dy) < 4) return; dir = Math.abs(dx) > Math.abs(dy) ? "x" : "y"; }
+    if (dir !== "x") return;                              // verticale: la pagina scorre da sola
+    row.scrollLeft = sl - dx; e.preventDefault();
+  }, { passive: false });
 });
 // ---------- via ----------
 buildStatic();
