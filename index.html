@@ -698,7 +698,7 @@ body.locked .cats{pointer-events:none}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789548738"></script>
+<script src="/bergamo/app.js?v=1789551679"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // WALL = false per rimisurare senza muro: tutto visibile, email su "Ci sono" (site_event: home_view, wall_tap, join).
@@ -814,10 +814,11 @@ async function loadEvents(center){
 // ---------- filtri ----------
 const F = { where: new Set(), city: new Set(), town: new Set(), place: new Set(), day: new Set(), date: new Set(), cat: new Set(), price: new Set(), hour: new Set(), who: new Set(), going: new Set() };
 let PLACE = null, QTEXT = "";
-function passes(e){
+function passes(e, ignoreDay){
   if (F.where.size && e.km > 15) return false;
   if (e.km > 30) return false;   // il feed copre 50 km: la home mostra la città e i dintorni
-  if (F.date.size) { if (!F.date.has(e.ymd)) return false; }
+  if (ignoreDay) {}
+  else if (F.date.size) { if (!F.date.has(e.ymd)) return false; }
   else if (F.day.size) { const d = [...F.day][0]; if (d === "oggi" && e.ymd !== TODAY) return false; if (d === "domani" && e.ymd !== addDays(TODAY, 1)) return false; if (d === "weekend" && !WEEKEND.includes(e.ymd)) return false; if (d === "sera" && !(e.ymd === TODAY && e.h >= 18)) return false; }
   if (F.cat.size) { const c = CATBY[[...F.cat][0]]; if (c && c.s && !c.s.includes(e.sport)) return false; }
   if (QTEXT) { const q = QTEXT.toLowerCase(); if (!(e.title + " " + (e.meeting_point_text || "") + " " + (e.community_name || e.club_name || e.host_name || "")).toLowerCase().includes(q)) return false; }
@@ -857,13 +858,23 @@ function render(){
   if (loading) return;   // la città nuova sta arrivando: niente lista vecchia sotto i filtri nuovi
   const sort = document.getElementById("sort").value;
   EV.forEach(e => { e.km = distKm(REF, e); });
-  let rows = EV.filter(passes);
+  let rows = EV.filter(e => passes(e));
   if (sort === "dist") rows.sort((a, b) => a.km - b.km || a.d - b.d); else if (sort === "going") rows.sort((a, b) => (b.going_count || 0) - (a.going_count || 0) || a.d - b.d); else rows.sort((a, b) => a.d - b.d);
   lastRows = rows;
   // il feed arriva al massimo a 1000 righe: sopra non si scrive un numero finto
   document.getElementById("count").textContent = `${EV.length >= 1000 && rows.length >= 1000 ? "Più di 1000 eventi" : rows.length + " event" + (rows.length === 1 ? "o" : "i")}${summarize() ? " · " + summarize() : ""}`;
   syncBar(rows.length);
   const list = document.getElementById("list");
+  if (!rows.length && (F.day.size || F.date.size)) {
+    // "Oggi niente serate. Il prossimo: …" (16/09/2026): stessi filtri senza il giorno, il primo in ordine di tempo
+    const next = EV.filter(e => passes(e, true)).sort((a, b) => a.d - b.d)[0];
+    const when = F.date.size ? "Il " + fmtDay.format(new Date([...F.date][0] + "T12:00:00Z")) : { oggi: "Oggi", domani: "Domani", weekend: "Nel fine settimana", sera: "Stasera" }[[...F.day][0]];
+    const cat = F.cat.size ? CATBY[[...F.cat][0]] : null;
+    const what = cat ? (cat.n || "eventi").toLowerCase() : F.price.size ? "eventi gratis" : F.going.size ? "eventi con qualcuno che ci va" : QTEXT ? `eventi per '${esc(QTEXT)}'` : "eventi";
+    list.innerHTML = `<div class="nores"><div class="tile">${cat && cat.i ? cat.i : "🔎"}</div><h3>${when} niente ${what}<span>${esc(summarize())}</span></h3>${next ? `<p>Il prossimo è ${next.ymd === addDays(TODAY, 1) ? "domani" : fmtDay.format(next.d)}:</p>` : `<p>Non ce ne sono nemmeno nei prossimi giorni. Oppure inizia tu.</p>`}<div class="btns"><button class="btn ghosty" id="allday">Vedi tutti i giorni</button>${next ? "" : `<a class="btn" href="/bergamo/crea.html" data-gate="crea">Crea un evento</a>`}</div></div>` + (next ? `<div class="dayh"><h2>${next.ymd === TODAY ? "Oggi" : next.ymd === addDays(TODAY, 1) ? "Domani" : fmtDay.format(next.d)}</h2><span>${fmtDay.format(next.d)}</span></div>` + card(next) : "");
+    document.getElementById("allday").onclick = () => { F.day.clear(); F.date.clear(); syncChips(); render(); };
+    document.getElementById("showmore").hidden = true; document.getElementById("listlock2").hidden = true; drawPins(mapRows(rows)); return;
+  }
   if (!rows.length) {
     list.innerHTML = `<div class="nores"><div class="tile">🔎</div><h3>Qui non c'è ancora niente<span>${esc(summarize())}</span></h3><p>Prova a togliere un filtro, allarga il raggio, o guarda i giorni vicini. Oppure inizia tu.</p><div class="btns"><button class="btn ghosty" id="undo">Togli l'ultimo filtro</button><button class="btn" id="clear2">Cancella tutto</button><a class="btn ghosty" href="/bergamo/crea.html" data-gate="crea">Crea un evento</a></div></div>`;
     document.getElementById("clear2").onclick = clearAll; document.getElementById("undo").onclick = () => { if (lastToggled) F[lastToggled.f].delete(lastToggled.v); syncChips(); render(); };
@@ -927,7 +938,8 @@ function bindChip(c){
 }
 function bindAll(){
   document.querySelectorAll(".chip[data-v]").forEach(bindChip);
-  document.querySelectorAll(".cat").forEach(c => c.addEventListener("click", e => { e.preventDefault(); if (LOCKED) return; Object.values(F).forEach(s => { if (s !== F.city && s !== F.town && s !== F.where) s.clear(); }); QTEXT = ""; const k = c.dataset.cat; if (k === "__sera") F.day.add("sera"); else if (k === "__free") F.price.add("free"); else if (k === "__going") F.going.add("1"); else if (k) F.cat.add(k); visibleN = 30; syncChips(); render(); document.querySelectorAll(".cat").forEach(x => x.classList.toggle("on", x === c)); }));
+  // una categoria cambia solo il "cosa": il giorno scelto resta (16/09/2026: "Oggi" + "Serate" mostrava tutta la settimana)
+  document.querySelectorAll(".cat").forEach(c => c.addEventListener("click", e => { e.preventDefault(); if (LOCKED) return; Object.values(F).forEach(s => { if (s !== F.city && s !== F.town && s !== F.where && s !== F.day && s !== F.date) s.clear(); }); QTEXT = ""; const k = c.dataset.cat; if (k === "__sera") { F.date.clear(); F.day.clear(); F.day.add("sera"); } else if (k === "__free") F.price.add("free"); else if (k === "__going") F.going.add("1"); else if (k) F.cat.add(k); visibleN = 30; syncChips(); render(); document.querySelectorAll(".cat").forEach(x => x.classList.toggle("on", x === c)); }));
   document.addEventListener("click", e => { const a = e.target.closest("[data-sc]"); if (!a || LOCKED) return; e.preventDefault(); const [f, v] = a.dataset.sc.split(":"); F[f].add(v); syncChips(); render(); document.getElementById("list").scrollIntoView({ behavior: "smooth", block: "start" }); });
   document.getElementById("clearall").onclick = clearAll;
   document.getElementById("sort").onchange = render;
