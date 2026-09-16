@@ -427,6 +427,59 @@ const titoliRipetuti = new Set();
     if (visti.get(k) > 1) titoliRipetuti.add(k);
   }
 }
+// 16/09/2026: il conteggio qui sopra guardava il titolo INTERO, ma nel <title> ci finiva la parte
+// prima della virgola ("Visita guidata, Museo della Valle" → "Visita guidata"): titoli diversi
+// collassavano nello stesso e il controllo non scattava mai. Su Bergamo erano 41 pagine con lo
+// stesso <title> di un'altra, e Google ne sceglie una sola. Ora il titolo si costruisce in un
+// posto solo (titoloEvento) e il conteggio si fa su quello che esce davvero, per lingua.
+// Il posto nel titolo serve anche a rispondere alle ricerche che già ci portano gente:
+// "festa oratorio alzano sopra", "festa conca fiorita bergamo" (Search Console, 16/09/2026).
+function titoloEvento(p, conData) {
+  const where = placeShort(p);
+  const tz = p.tz;
+  const first = p.up[0] || p.dates[p.dates.length - 1];
+  const intero = `${p.title} ${en() ? "in" : "a"} ${where}, ${fmtShort(first.start, tz)}`;
+  if (intero.length <= 49 && !conData) return intero;
+  // "Festa X, Oratorio Y – Paese" → "Festa X" quando quella parte sta in piedi da sola
+  const head = p.title.split(/ – |, /)[0];
+  const base = head.length >= 12 && head.length <= 49 ? head : p.title;
+  // il posto da mettere nel titolo è il paese; se manca, il nome del ritrovo — ma non un indirizzo
+  // ("Via G. Frua", "Piazza Dante"): la via non distingue niente e ruba spazio al titolo.
+  // solo chi comincia come una via è un indirizzo: "27 Padel" e "MERATE A 4" sono nomi di circoli.
+  const rit = String(where || "").split(/\s*[,–]\s*/)[0].trim();
+  const indirizzo = /^(via|viale|v\.le|piazza|p\.zza|piazzale|p\.le|corso|c\.so|largo|vicolo|strada|contrada|localit|lungo)\b/i.test(rit);
+  const luogo = p.town || (rit && !indirizzo ? rit : "");
+  const nuovo = (l) => l && !norm(base).includes(norm(l)) && !norm(l).includes(norm(base)) ? l : null;
+  const giaDetto = luogo && !nuovo(luogo);      // "Mercato di Ponte Nossa": il posto è già nel titolo
+  // il ripiego è il comune vero (localityOf lo ricava dall'indirizzo quando il campo manca), non il
+  // capoluogo: un mercato a Rovetta non si intitola "– Bergamo", e se il paese è già nel titolo
+  // ("Mercato di Rovetta") non si aggiunge niente.
+  const v = nuovo(luogo), c = nuovo(localityOf(p));
+  // in ordine: il posto se ci sta senza tagliare, poi la città (è quella che la gente cerca,
+  // "candlelight milano"). Se non ci sta nemmeno quello si lascia il titolo intero: due troncamenti
+  // attaccati ("Trì neùcc in… – Gherim…") sono peggio di un titolo che si ripete. Gli eventi che
+  // girano per l'Italia (Candlelight, WeRoad, le passeggiate fotografiche) avevano lo stesso titolo
+  // in dodici città: senza la città Google ne sceglie una e ignora le altre (16/09/2026).
+  const t = giaDetto ? cut(base, 57)
+    : v && base.length + 3 + v.length <= 60 ? `${base} – ${v}`
+    : c && base.length + 3 + c.length <= 60 ? `${base} – ${c}`
+    : cut(base, 57);
+  if (!conData) return t;
+  // ultima spiaggia per due pagine che finirebbero uguali: il posto anche stretto, poi la data
+  const stretto = v && !t.includes(v) ? `${cut(base, Math.max(24, 57 - v.length))} – ${v}` : t;
+  return `${stretto}, ${fmtShort(first.start, tz)}`;
+}
+// quante pagine finirebbero con lo stesso <title>: si conta per lingua, il titolo cambia ("a" / "in")
+const finaliPerLingua = new Map();
+function titoloRipetuto(t) {
+  let m = finaliPerLingua.get(L.code);
+  if (!m) {
+    m = new Map();
+    for (const q of pages) { const k = norm(titoloEvento(q, false)); m.set(k, (m.get(k) || 0) + 1); }
+    finaliPerLingua.set(L.code, m);
+  }
+  return (m.get(norm(t)) || 0) > 1;
+}
 
 // every public url depends on the active locale: /bergamo/gruppi/x/ vs /en/bergamo/groups/x/
 const base = () => `${SITE}${L.prefix}/${CITY}`;
@@ -814,20 +867,9 @@ function eventPage(p) {
   const where = placeShort(p);
   const faq = eventFaq(p, org);
   const first = p.up[0] || p.dates[p.dates.length - 1];
-  const full = `${p.title} ${en() ? "in" : "a"} ${where}, ${fmtShort(first.start, tz)}`;
-  // long titles from the sources ("Festa X, Oratorio Y – Paese"): keep the part before the first separator when it stands alone
-  const head = p.title.split(/ – |, /)[0];
-  // "titolo a Luogo, data" se ci sta; se no il titolo da solo, ma solo quando e' suo: i titoli che si
-  // ripetono (le partite di padel) si tengono il posto, che e' l'unica cosa che le distingue davvero
-  // del ritrovo basta il nome ("Quanta Club"), non l'indirizzo ("Quanta Club, Via Assietta 19, Milano"):
-  // il posto serve a distinguere la riga, non a riempirla. Qui il tetto e' 60 e non 49: un titolo intero
-  // con il circolo dice piu' di uno tagliato a meta' che sta nei 60 caratteri di Google al pixel.
-  const luogoBreve = String(where || "").split(/\s*[,–]\s*/)[0].trim();
-  const conLuogo = luogoBreve && norm(luogoBreve) !== norm(p.title)
-    ? `${cut(p.title, Math.max(28, 57 - luogoBreve.length))} – ${luogoBreve}` : null;
-  const title = (full.length <= 49 ? full
-    : titoliRipetuti.has(norm(p.title)) && conLuogo ? cut(conLuogo, 60)
-    : head.length >= 12 && head.length <= 49 ? head : cut(p.title, 49)) + " | anyplans";
+  // un titolo solo, costruito in titoloEvento; se un'altra pagina finirebbe uguale si aggiunge la data
+  const t0 = titoloEvento(p, false);
+  const title = (titoloRipetuto(t0) ? titoloEvento(p, true) : t0) + " | anyplans";
   const descr = en()
     ? (p.isPast
       ? cut(`${tLabel(t)} in ${where}. Last date: ${fmtShort(first.start, tz)}. This event is over: on anyplans you find the next dates and similar events.`, 160)
