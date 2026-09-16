@@ -699,11 +699,13 @@ body.locked .cats{pointer-events:none}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789555721"></script>
+<script src="/bergamo/app.js?v=1789556309"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // WALL = false per rimisurare senza muro: tutto visibile, email su "Ci sono" (site_event: home_view, wall_tap, join).
-const WALL = true;
+// 16/09/2026: spento. Da non registrati la home mostrava 4 eventi e un invito: i motori di risposta (e chi arriva
+// da Instagram) vedevano quello. Ora si vede tutto e l'email si chiede su "Ci sono", nella pagina dell'evento.
+const WALL = false;
 const logged = !!(session && session.access_token);
 const LOCKED = WALL && !logged;
 if (LOCKED) document.body.classList.add("locked");
