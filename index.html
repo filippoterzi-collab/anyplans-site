@@ -673,6 +673,9 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
      scheda tagliata di lato e il bottone "Mostra eventi" fuori schermo (17/09/2026) */
   .mbox input,.mbox textarea,.mbox select{font-size:16px}
   .mbox .chip input[type=date]{font-size:16px;width:auto;min-width:122px}
+  /* 17/09/2026: sul telefono la scheda e' solo Dove e Quando, ci sta in una schermata.
+     Il nodo resta nel documento perche' gli altri due gruppi ci si agganciano. */
+  #mg-cerca{display:none}
   /* maniglia per lo swipe verso il basso */
   .mhead::before{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%);
                  width:40px;height:4px;border-radius:2px;background:rgba(25,25,25,.18)}
@@ -907,7 +910,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789624651"></script>
+<script src="/bergamo/app.js?v=1789624724"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
