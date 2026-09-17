@@ -544,6 +544,15 @@ body.locked .mk{display:block}
                        box-shadow:0 8px 24px rgba(27,79,216,.4)}
 }
 
+
+/* 17/09/2026: da non registrati il dito sulla mappa deve poter scorrere la pagina.
+   `touch-action:none` serve a trascinare la mappa, ma qui la mappa non si tocca:
+   l'unica cosa viva è il bottone "Registrati". */
+body.mapgate .map{touch-action:pan-y!important;user-select:auto}
+body.mapgate .map .lock{pointer-events:none;background:rgba(251,249,245,.35)}
+body.mapgate .map .lock > *{pointer-events:none}
+body.mapgate .map .lock .btn{pointer-events:auto}
+
 /* 17/09/2026: chi non è registrato la mappa la vede, ma sfocata e non toccabile, col riquadro
    che chiede l'account. Vedere che c'è qualcosa convince più di un muro cieco. */
 body.mapgate #map{filter:blur(7px) saturate(.85);pointer-events:none}
@@ -876,7 +885,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789605586"></script>
+<script src="/bergamo/app.js?v=1789605829"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
