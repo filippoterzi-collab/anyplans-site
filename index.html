@@ -509,6 +509,21 @@ body.locked .mk{display:block}
 
 
 
+
+/* 17/09/2026: chi arriva non deve trovarsi Bergamo per forza. Se non ha mai scelto una città,
+   prima la chiediamo e solo dopo mostriamo eventi e mappa. La scelta resta ricordata. */
+.citygate{display:none}
+@media (max-width:743px){
+  body.needcity .msquick,body.needcity .mapcol,body.needcity .listcol,body.needcity .mcount{display:none!important}
+  body.needcity #citygate{display:block;margin-top:14px}
+  .cghint{font-size:15px;color:var(--grey);font-weight:600;margin-bottom:12px}
+  .cgcities{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+  .cgcities button{height:48px;border:1.5px solid rgba(25,25,25,.12);border-radius:14px;background:#fff;
+                   font:inherit;font-size:15px;font-weight:700;color:var(--ink)}
+  .cgcities button.me{grid-column:1/-1;border-color:var(--blue);color:var(--blue)}
+  .cgmore{margin-top:12px;font-size:14.5px;font-weight:700;color:var(--blue)}
+}
+
 /* 17/09/2026: chi non è registrato la mappa la vede, ma sfocata e non toccabile, col riquadro
    che chiede l'account. Vedere che c'è qualcosa convince più di un muro cieco. */
 body.mapgate #map{filter:blur(7px) saturate(.85);pointer-events:none}
@@ -652,8 +667,13 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
     <h1 class="mslabel">Che eventi ci sono a <span class="blue" id="mcity2">Bergamo</span>?</h1>
     <button class="msfield" id="msfield" data-gate="cerca">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg>
-      <span id="msfieldtxt">Cerca: padel, sagra, stasera…</span>
+      <span id="msfieldtxt">Inserisci la tua città</span>
     </button>
+    <div class="citygate" id="citygate" hidden>
+      <p class="cghint">Dimmi dove sei e ti mostro gli eventi di oggi.</p>
+      <div class="cgcities" id="cgcities"></div>
+      <button class="cgmore" id="cgmore">Un'altra città →</button>
+    </div>
     <div class="msquick">
       <button class="chip" data-quick="sera">Stasera</button>
       <button class="chip" data-quick="weekend">Weekend</button>
@@ -836,7 +856,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789604055"></script>
+<script src="/bergamo/app.js?v=1789604464"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -891,6 +911,9 @@ if (logged) {
 const CITIES = Object.entries(CITTA_CENTRI).map(([slug, c]) => ({ slug, nome: cityCase(slug), lat: c[0], lng: c[1] }));
 const CITYBY = Object.fromEntries(CITIES.map(c => [c.slug, c.nome]));
 const HOME = { slug: "bergamo", nome: "Bergamo", lat: 45.698, lng: 9.670 };
+// città ricordata dalla volta prima: se non c'è, la home la chiede invece di mostrare Bergamo
+let SAVEDCITY = null; try { SAVEDCITY = JSON.parse(localStorage.getItem("anyplans_city") || "null"); } catch (_) {}
+function saveCity(c){ try { localStorage.setItem("anyplans_city", JSON.stringify({ slug: c.slug, nome: c.nome, lat: c.lat, lng: c.lng })); } catch (_) {} document.body.classList.remove("needcity"); }
 let CENTER = { ...HOME };                 // centro del feed (la città scelta, o "vicino a me")
 let REF = { lat: HOME.lat, lng: HOME.lng }; // punto da cui si misurano i km (paese scelto, o il centro)
 let EV = [];
@@ -1209,6 +1232,41 @@ function bindAll(){
     return g;
   }
   movePanel("p-dove", "Dove", "mg-dove", mgc);
+
+  // la home chiede la città a chi non l'ha mai scelta (17/09/2026): uno di Milano non deve
+  // trovarsi Bergamo. Chi l'ha già scelta entra dritto sui suoi eventi.
+  (function cityGate(){
+    const box = document.getElementById("cgcities"); if (!box) return;
+    if (SAVEDCITY && SAVEDCITY.slug) {
+      window.CHOSEN = true;
+      if (SAVEDCITY.slug !== HOME.slug) { F.city.add(SAVEDCITY.slug); loadEvents({ ...SAVEDCITY }); }
+      const t = document.getElementById("mcity2"); if (t) t.textContent = SAVEDCITY.nome;
+      return;
+    }
+    if (!matchMedia("(max-width:743px)").matches) return;   // il gate è solo su telefono
+    document.body.classList.add("needcity");
+    const top = CITIES.slice(0, 7);
+    box.innerHTML = '<button class="me" data-me="1">📍 Vicino a me</button>' +
+      top.map(c => `<button data-slug="${c.slug}">${esc(c.nome)}</button>`).join("");
+    box.addEventListener("click", e => {
+      const b = e.target.closest("button"); if (!b) return;
+      e.preventDefault(); e.stopPropagation();
+      if (b.dataset.me) {
+        const me = document.querySelector('.chips[data-f="where"] .chip[data-v="me"]');
+        document.body.classList.remove("needcity");
+        try { localStorage.setItem("anyplans_city", JSON.stringify({ slug: "", nome: "Vicino a me" })); } catch (_) {}
+        if (me) me.click();
+        return;
+      }
+      const c = CITIES.find(x => x.slug === b.dataset.slug); if (!c) return;
+      window.CHOSEN = true; F.city.clear(); F.city.add(c.slug); saveCity(c);
+      const t = document.getElementById("mcity2"); if (t) t.textContent = c.nome;
+      syncChips(); loadEvents({ ...c });
+      track("citygate", c.slug);
+    }, true);
+    const more = document.getElementById("cgmore");
+    if (more) more.addEventListener("click", e => { e.preventDefault(); openSearch(); });
+  })();
   movePanel("p-quando", "Quando", "mg-quando", mgc.nextSibling || mgc);
 
   function openSearch(){
@@ -1269,7 +1327,7 @@ function bindAll(){
     if (F.price.has("free")) parts.push("gratis");
     if (F.where.size) parts.push("vicino a me");
     const on = parts.length > 0;
-    t.textContent = on ? parts.join(" · ") : "Cerca: padel, sagra, stasera…";
+    t.textContent = on ? parts.join(" · ") : "Inserisci la tua città";
     msf.classList.toggle("on", on);
   };
   document.getElementById("closefilters").addEventListener("click", closeModal);
@@ -1294,7 +1352,7 @@ function pickPlace(i){ const s = (window.SUGG || [])[i]; if (!s) return; PENDING
 }
 // si applica con "Avanti" (15/09/2026: "seleziono Milano, Avanti, poi si apre su Milano")
 function applyPlace(){ const s = PENDING; if (!s) return; PENDING = null; F.city.clear(); F.town.clear(); F.where.clear(); track("cerca_posto", s.name);
-  if (s.city) { PLACE = null; F.city.add(s.city); syncChips(); loadEvents({ ...CITIES.find(c => c.slug === s.city) }); return; }
+  if (s.city) { PLACE = null; F.city.add(s.city); syncChips(); const cc = CITIES.find(c => c.slug === s.city); saveCity(cc); loadEvents({ ...cc }); return; }
   PLACE = s;
   const nearest = CITIES.map(c => ({ c, km: distKm(c, s) })).sort((a, b) => a.km - b.km)[0];
   if (nearest.km <= 25) { if (CENTER.slug !== nearest.c.slug) loadEvents({ ...nearest.c }).then(() => { REF = { lat: s.lat, lng: s.lng }; render(); if (map) map.flyTo({ center: [s.lng, s.lat], zoom: 12 }); }); else { REF = { lat: s.lat, lng: s.lng }; render(); if (map) map.flyTo({ center: [s.lng, s.lat], zoom: 12 }); } }
@@ -1351,6 +1409,11 @@ function initMap(){
     new ResizeObserver(() => { clearTimeout(rt); rt = setTimeout(() => { if (map) { map.resize(); fitMap(mapRows(lastRows)); } }, 60); }).observe(box);
   }
   map.on("error", () => {});
+  // scheda in secondo piano o colonna fuori schermo: il browser sospende il rendering WebGL e la mappa resta
+  // ferma. Quando la scheda torna visibile, o la colonna entra nello schermo, si ridisegna (audit 17/09/2026, #8).
+  document.addEventListener("visibilitychange", () => { if (!document.hidden && map) { map.resize(); map.triggerRepaint(); } });
+  window.addEventListener("focus", () => { if (map) { map.resize(); map.triggerRepaint(); } });
+  if (window.IntersectionObserver) new IntersectionObserver(es => { if (es.some(e => e.isIntersecting) && map) { map.resize(); map.triggerRepaint(); } }).observe(document.getElementById("mapbox"));
   if (LOCKED) document.getElementById("maplock").hidden = false;
 }
 function fitMap(rows){
