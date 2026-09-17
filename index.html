@@ -579,7 +579,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   .mapcol{order:-1;position:sticky;top:8px;z-index:5;margin:0 0 12px}
   .map{height:168px;min-height:0;border-radius:16px}
   /* da sloggati la mappa ospita il riquadro "Registrati": a 168px il bottone si taglia */
-  body.locked .map{height:230px}
+  body.locked .map,body.mapgate .map{height:230px}
   /* il bottone che apre la mappa a schermo intero: richiesto dal committente il 17/09/2026,
      su mobile e su desktop. La fascia resta visibile, il bottone la espande. */
   .mapbtn{display:inline-flex;left:50%;right:auto;top:auto;bottom:auto;top:50%;
@@ -859,7 +859,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789604777"></script>
+<script src="/bergamo/app.js?v=1789604963"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
