@@ -285,6 +285,8 @@ body.locked .mk,body.locked .strip{display:none}
 .dgrid .chip{height:auto;flex-direction:column;padding:10px 4px;border-radius:14px;gap:1px}
 .dgrid .chip small{font-size:11px}
 @media(max-width:600px){.dgrid{grid-template-columns:repeat(4,1fr)}}
+.chip.datechip{position:relative}
+.chip.datechip input[type=date]{position:absolute;opacity:0;width:0!important;min-width:0!important;height:0;pointer-events:none}
 .cats{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:10px 0 6px;border-bottom:1px solid var(--hair)}
 .cats::-webkit-scrollbar{display:none}
 /* sul computer la riga non ha barra: frecce ai lati quando c'è altro da vedere (16/09/2026) e trascinamento col mouse */
@@ -390,7 +392,9 @@ body.mapmode .mapbtn{background:var(--ink);color:#fff}
 /* card evento (.ev del sito) */
 .list{display:flex;flex-direction:column;gap:10px}
 .ev{background:var(--card);border:1.5px solid var(--hair);border-radius:16px;padding:14px 16px;display:grid;grid-template-columns:52px 1fr auto;gap:4px 14px;align-items:start}
-.ev .tile{width:52px;height:52px;border-radius:13px;background:var(--tint);display:flex;align-items:center;justify-content:center;font-size:26px;grid-row:1/4}
+.ev .lft{grid-row:1/4;display:flex;flex-direction:column;align-items:center;gap:5px}
+.ev .tile{width:52px;height:52px;border-radius:13px;background:var(--tint);display:flex;align-items:center;justify-content:center;font-size:26px}
+.ev .tm{display:none}
 .ev .t{font-weight:700;font-size:15.5px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .ev .t:hover{color:var(--blue)}
 .ev .m{font-size:13px;color:var(--grey)}
@@ -411,7 +415,14 @@ body.mapmode .mapbtn{background:var(--ink);color:#fff}
 .ev .side .extl:hover{color:var(--ink)}
 @media(max-width:600px){
   .ev{grid-template-columns:52px 1fr}
-  .ev .tile{grid-row:1/4}
+  .ev .lft{grid-row:1/4}
+  /* sul telefono l'ora e "tra quanto" stanno sopra l'emoji, e spariscono dalla riga piccola (17/09/2026) */
+  .ev .tm{display:flex;flex-direction:column;align-items:center;text-align:center;line-height:1.15;width:52px}
+  .ev .tm b{font-size:14.5px;font-weight:800;letter-spacing:-.02em}
+  .ev .tm small{font-size:10.5px;font-weight:700;color:var(--grey)}
+  .ev .tm .soon{color:var(--warn)}
+  .ev .tm .now{color:var(--ok)}
+  .ev .m .wt{display:none}
   .ev .m,.ev .t{grid-column:2}
   .ev .side{grid-column:1/-1;grid-row:auto;flex-direction:row;justify-content:space-between;align-items:center;margin-top:8px;padding-top:10px;border-top:1px solid var(--hair)}
 }
@@ -764,11 +775,13 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
         </div>
         <div class="panel" id="p-quando" hidden>
           <h2>Quando vuoi uscire?</h2>
-          <div class="chips" data-f="day" style="margin-bottom:12px">
-            <button class="chip" data-v="oggi">Oggi</button><button class="chip" data-v="domani">Domani</button><button class="chip" data-v="weekend">Nel fine settimana</button><button class="chip" data-v="sera">Stasera</button>
-          </div>
+          <!-- 17/09/2026: i giorni con i numeri stanno in cima (prima erano sotto le scelte rapide e "non si capiva quando
+               e'"); le prime due caselle si chiamano Oggi e Domani, quindi le due scelte rapide omonime non servono piu' -->
           <div class="dgrid" data-f="date" id="dgrid"></div>
-          <div class="chips" style="margin-top:10px"><label class="chip"><input type="date" id="freedate" aria-label="Scegli un giorno"></label></div>
+          <div class="chips" data-f="day" style="margin-top:10px">
+            <button class="chip" data-v="sera">Stasera</button><button class="chip" data-v="weekend">Nel fine settimana</button>
+          </div>
+          <div class="chips" style="margin-top:10px"><label class="chip datechip" id="freedatel">📅 <span id="freedate-txt">Un altro giorno</span><input type="date" id="freedate" aria-label="Scegli un giorno"></label></div>
           <div class="pfoot"><button class="lnk" data-clear="quando">Qualsiasi giorno</button><button class="btn" data-next="cosa">Avanti</button></div>
         </div>
         <div class="panel" id="p-cosa" hidden>
@@ -910,7 +923,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789624943"></script>
+<script src="/bergamo/app.js?v=1789625606"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1004,10 +1017,13 @@ const CATS = [
 const CATBY = Object.fromEntries(CATS.map(c => [c.k, c]));
 const GG = ["dom","lun","mar","mer","gio","ven","sab"], MESI = ["gen","feb","mar","apr","mag","giu","lug","ago","set","ott","nov","dic"];
 const fmtDay = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", weekday: "short", day: "numeric", month: "short" });
+const fmtDayLong = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", weekday: "long", day: "numeric", month: "long" });
 const fmtHM = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit" });
 function romeParts(d){ const p = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(d); const o = {}; p.forEach(x => o[x.type] = x.value); return { ymd: `${o.year}-${o.month}-${o.day}`, h: +o.hour }; }
 const TODAY = romeParts(NOW).ymd;
 const addDays = (ymd, n) => { const d = new Date(ymd + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+const GRID_LAST = addDays(TODAY, 13);   // ultimo giorno della griglia "Quando" (14 caselle)
+const dayLabel = ymd => ymd === TODAY ? "Oggi" : ymd === addDays(TODAY, 1) ? "Domani" : fmtDay.format(new Date(ymd + "T12:00:00Z"));
 function nextWeekend(){ const d = new Date(TODAY + "T12:00:00Z"); const wd = d.getUTCDay(); const toSat = (6 - wd + 7) % 7; const sat = addDays(TODAY, toSat); return [sat, addDays(sat, 1)]; }
 const WEEKEND = nextWeekend();
 function cleanTown(t){ t = String(t || "").replace(/^\d{5}\s*/, "").trim(); if (t.includes(" - ")) t = t.split(" - ").pop().trim(); if (!t || t.length > 28 || /\d/.test(t)) return ""; return t; }
@@ -1019,15 +1035,28 @@ function whenTxt(e){
   if (e.ymd === addDays(TODAY, 1)) return `<b>domani</b> alle ${fmtHM.format(e.d)}`;
   return `<b>${fmtDay.format(e.d)}</b> alle ${fmtHM.format(e.d)}`;
 }
+// sul telefono, sopra l'emoji della card: l'ora e tra quanto inizia (chiesto il 17/09/2026: "l'evento inizia tra, e il tempo")
+function tmTxt(e){
+  if (e.multi) return `<b class="now">in corso</b>${e.end_at ? `<small>fino al ${romeParts(new Date(e.end_at)).ymd.slice(8).replace(/^0/, "")}</small>` : ""}`;
+  const hm = fmtHM.format(e.d), min = Math.round((e.d - NOW) / 60000);
+  let rel, cls = "";
+  if (e.ymd === TODAY) {
+    if (min < 0) { rel = "in corso"; cls = "now"; }
+    else if (min <= 90) { rel = `tra ${min} min`; cls = "soon"; }
+    else { const h = Math.floor(min / 60), m = min % 60; rel = `tra ${h}${m >= 30 ? "½" : ""} h`; }
+  } else if (e.ymd === addDays(TODAY, 1)) rel = "domani";
+  else { const n = Math.round((new Date(e.ymd + "T12:00:00Z") - new Date(TODAY + "T12:00:00Z")) / 864e5); rel = `tra ${n} giorni`; }
+  return `<b>${hm}</b><small class="${cls}">${rel}</small>`;
+}
 const priceTxt = e => e.price_cents > 0 ? `<span class="price">${esc(fmtPrice(e.price_cents))}</span>` : `<span class="price free">Gratis</span>`;
 const cta = e => `<a class="btn" href="${EVURL(e)}" data-gate="ci-sono">Ci sono</a>`;
 function goingTxtH(e){ const n = e.going_count || 0; if (!n) return ""; const dots = Array.from({ length: Math.min(n, 3) }, (_, i) => `<i>${"ABC"[i]}</i>`).join(""); return `<span class="going"><span class="dots">${dots}</span>${n === 1 ? "1 ci va" : n + " ci vanno"}</span>`; }
 function card(e){
   const who = e.community_name || e.club_name || e.host_name || null;
   return `<article class="ev" data-id="${e.id}">
-    <div class="tile" aria-hidden="true">${e.emoji}</div>
+    <div class="lft"><div class="tm">${tmTxt(e)}</div><div class="tile" aria-hidden="true">${e.emoji}</div></div>
     <a class="t" href="${EVURL(e)}" data-gate="evento">${esc(e.title)}</a>
-    <div class="m">${whenTxt(e)} · ${esc((e.meeting_point_text || e.tw).split(",").slice(0, 2).join(",").slice(0, 60))}${e.km > 1 ? ` · ${e.km.toFixed(0)} km` : ""}</div>
+    <div class="m"><span class="wt">${whenTxt(e)} · </span>${esc((e.meeting_point_text || e.tw).split(",").slice(0, 2).join(",").slice(0, 60))}${e.km > 1 ? ` · ${e.km.toFixed(0)} km` : ""}</div>
     <div class="who">${goingTxtH(e)}${who ? `<span>${goingTxtH(e) ? "· " : ""}${e.source === "ugc" ? "proposto da" : "organizza"} <b>${esc(who)}</b></span>` : ""}</div>
     <div class="side">${priceTxt(e)}${cta(e)}</div>
   </article>`;
@@ -1054,12 +1083,26 @@ async function loadEvents(center){
   // stare in testa alla lista con la data di ieri: va sotto "Oggi", in coda agli eventi che iniziano oggi,
   // con "in corso · fino a ...". `s` e' la data usata per ordinare, `d` resta l'inizio vero (audit 17/09/2026, #4).
   const EOD = new Date(NOW); EOD.setHours(23, 59, 0, 0);
-  EV = rows.map(x => { const d = new Date(x.start_at); const rp = romeParts(d); const tw = cleanTown(cityOf(x.meeting_point_text)) || center.nome || ""; const multi = rp.ymd < TODAY; return { ...x, d, s: multi ? EOD : d, multi, ymd: multi ? TODAY : rp.ymd, h: rp.h, tw, emoji: x.emoji || EMOJI[x.sport] || "📍" }; })
-    .filter(e => isCurrent(e.d, e.end_at)).sort((a, b) => a.s - b.s);
+  const toEv = x => { const d = new Date(x.start_at); const rp = romeParts(d); const tw = cleanTown(cityOf(x.meeting_point_text)) || center.nome || ""; const multi = rp.ymd < TODAY; return { ...x, d, s: multi ? EOD : d, multi, ymd: multi ? TODAY : rp.ymd, h: rp.h, tw, emoji: x.emoji || EMOJI[x.sport] || "📍" }; };
+  EV = rows.map(toEv).filter(e => isCurrent(e.d, e.end_at)).sort((a, b) => a.s - b.s);
   // il feed e' arrivato: il titolo smette di ruotare e dice la citta' della lista (audit 17/09/2026, #11)
   window.FEEDLOADED = true; if (!window.CHOSEN) { const hc = document.getElementById("hcity"); hc.textContent = center.nome; hc.classList.add("swap"); }
   buildDynamic(); render();
   if (map && mapReady) { if (lastRows.length) fitMap(mapRows(lastRows)); else map.jumpTo({ center: [center.lng, center.lat], zoom: 11.5 }); }
+  // Da registrati il feed tagliato a 1000 righe non basta: "fammeli vedere tutti, tipo lunedi' 21" (17/09/2026).
+  // La RPC accetta un giorno: chiedo i giorni della griglia dall'ultimo arrivato (che e' incompleto) in poi.
+  if (window.FEEDCAPPED && logged) loadRestDays(center, seq, toEv);
+}
+async function loadRestDays(center, seq, toEv){
+  const from = EV.length ? EV[EV.length - 1].ymd : TODAY;
+  const days = []; for (let i = 0; i < 14; i++) { const y = addDays(TODAY, i); if (y >= from) days.push(y); }
+  const res = await Promise.all(days.map(y => rpc("feed_activities", { lat: center.lat, lng: center.lng, radius_m: 50000, day: y }).then(r => r && r.ok ? r.json() : []).catch(() => [])));
+  if (seq !== loadSeq) return;
+  const seen = new Set(EV.map(e => e.id)), extra = [];
+  res.forEach(rows => (rows || []).forEach(x => { if (!seen.has(x.id)) { seen.add(x.id); extra.push(x); } }));
+  window.FEEDCAPPED = false;
+  if (extra.length) EV = EV.concat(extra.map(toEv).filter(e => isCurrent(e.d, e.end_at))).sort((a, b) => a.s - b.s);
+  buildDynamic(); render();
 }
 
 // ---------- filtri ----------
@@ -1094,7 +1137,7 @@ function summarize(){ const p = [];
 function syncBar(n){
   const set = (id, txt, on) => { const el = document.getElementById(id); el.textContent = txt; el.classList.toggle("set", on); };
   set("v-dove", F.town.size ? `${[...F.town][0]} · ${CENTER.nome}` : PLACE ? PLACE.name : F.city.size ? CITYBY[[...F.city][0]] : F.where.size ? "Vicino a me" : "Cerca destinazioni", !!(F.town.size || PLACE || F.city.size || F.where.size));
-  set("v-quando", F.date.size ? [...F.date].map(d => fmtDay.format(new Date(d + "T12:00:00Z"))).join(", ") : F.day.size ? ({ oggi: "Oggi", domani: "Domani", weekend: "Fine settimana", sera: "Stasera" }[[...F.day][0]]) : "Aggiungi date", !!(F.date.size || F.day.size));
+  set("v-quando", F.date.size ? [...F.date].map(dayLabel).join(", ") : F.day.size ? ({ oggi: "Oggi", domani: "Domani", weekend: "Fine settimana", sera: "Stasera" }[[...F.day][0]]) : "Aggiungi date", !!(F.date.size || F.day.size));
   set("v-cosa", F.cat.size ? CATBY[[...F.cat][0]].n : QTEXT ? `"${QTEXT}"` : "Aggiungi attività", !!(F.cat.size || QTEXT));
   const nAdv = F.price.size + F.hour.size + F.who.size + F.going.size; const bd = document.getElementById("fbadge"); bd.hidden = !nAdv; bd.textContent = nAdv;
   const sb = document.getElementById("showbtn"); sb.textContent = n ? `Mostra ${n} event${n === 1 ? "o" : "i"}` : "Nessun evento"; sb.classList.toggle("zero", !n);
@@ -1104,7 +1147,7 @@ function syncBar(n){
   const active = Object.entries(F).filter(([k, v]) => v.size); const key = active.length === 1 && active[0][0] === "cat" ? [...active[0][1]][0] : active.length ? null : "";
   document.querySelectorAll(".cat").forEach(c => c.classList.toggle("on", c.dataset.cat === key));
 }
-function syncChips(){ document.querySelectorAll(".chip[data-v]").forEach(c => { const f = c.closest("[data-f]").dataset.f; if (f === "place") return; c.setAttribute("aria-pressed", F[f] && F[f].has(c.dataset.v) ? "true" : "false"); }); const fl = document.querySelector("#freedate2") && document.querySelector("#freedate2").closest("label"); if (fl) { fl.setAttribute("aria-pressed", F.date.size ? "true" : "false"); document.getElementById("date-txt").textContent = F.date.size ? fmtDay.format(new Date([...F.date][0] + "T12:00:00Z")) : "Un altro giorno"; } }
+function syncChips(){ document.querySelectorAll(".chip[data-v]").forEach(c => { const f = c.closest("[data-f]").dataset.f; if (f === "place") return; c.setAttribute("aria-pressed", F[f] && F[f].has(c.dataset.v) ? "true" : "false"); }); const fl = document.querySelector("#freedate2") && document.querySelector("#freedate2").closest("label"); if (fl) { fl.setAttribute("aria-pressed", F.date.size ? "true" : "false"); document.getElementById("date-txt").textContent = F.date.size ? fmtDay.format(new Date([...F.date][0] + "T12:00:00Z")) : "Un altro giorno"; } const fdv = [...F.date].find(y => y > GRID_LAST), fl1 = document.getElementById("freedatel"); if (fl1) { fl1.setAttribute("aria-pressed", fdv ? "true" : "false"); document.getElementById("freedate-txt").textContent = fdv ? fmtDay.format(new Date(fdv + "T12:00:00Z")) : "Un altro giorno"; } }
 function clearAll(){ Object.values(F).forEach(s => s.clear()); PLACE = null; QTEXT = ""; document.getElementById("qsearch").value = ""; syncChips(); if (CENTER.slug !== HOME.slug || CENTER.kind) loadEvents(HOME); else render(); }
 function render(){
   if (loading) return;   // la città nuova sta arrivando: niente lista vecchia sotto i filtri nuovi
@@ -1114,7 +1157,7 @@ function render(){
   if (sort === "dist") rows.sort((a, b) => a.km - b.km || a.s - b.s); else if (sort === "going") rows.sort((a, b) => (b.going_count || 0) - (a.going_count || 0) || a.s - b.s); else rows.sort((a, b) => a.s - b.s);
   lastRows = rows;
   // il feed arriva al massimo a 1000 righe: sopra non si scrive un numero finto
-  document.getElementById("count").textContent = `${EV.length >= 1000 && rows.length >= 1000 ? "Più di 1000 eventi" : rows.length + " event" + (rows.length === 1 ? "o" : "i")}${summarize() ? " · " + summarize() : ""}`;
+  document.getElementById("count").textContent = `${window.FEEDCAPPED && rows.length >= 1000 ? "Più di 1000 eventi" : rows.length + " event" + (rows.length === 1 ? "o" : "i")}${summarize() ? " · " + summarize() : ""}`;
   { const mc = document.getElementById("mcount"); if (mc) mc.textContent = document.getElementById("count").textContent; }
   if (window.syncMsField) window.syncMsField();
   syncBar(rows.length);
@@ -1122,7 +1165,7 @@ function render(){
   if (!rows.length && (F.day.size || F.date.size)) {
     // "Oggi niente serate. Il prossimo: …" (16/09/2026): stessi filtri senza il giorno, il primo in ordine di tempo
     const next = EV.filter(e => passes(e, true)).sort((a, b) => a.s - b.s)[0];
-    const when = F.date.size ? "Il " + fmtDay.format(new Date([...F.date][0] + "T12:00:00Z")) : { oggi: "Oggi", domani: "Domani", weekend: "Nel fine settimana", sera: "Stasera" }[[...F.day][0]];
+    const when = F.date.size ? ([...F.date][0] <= addDays(TODAY, 1) ? "" : "Il ") + dayLabel([...F.date][0]) : { oggi: "Oggi", domani: "Domani", weekend: "Nel fine settimana", sera: "Stasera" }[[...F.day][0]];
     const cat = F.cat.size ? CATBY[[...F.cat][0]] : null;
     const what = cat ? (cat.n || "eventi").toLowerCase() : F.price.size ? "eventi gratis" : F.going.size ? "eventi con qualcuno che ci va" : QTEXT ? `eventi per '${esc(QTEXT)}'` : "eventi";
     list.innerHTML = `<div class="nores"><div class="tile">${cat && cat.i ? cat.i : "🔎"}</div><h3>${when} niente ${what}<span>${esc(summarize())}</span></h3>${next ? `<p>Il prossimo è ${next.ymd === addDays(TODAY, 1) ? "domani" : fmtDay.format(next.d)}:</p>` : `<p>Non ce ne sono nemmeno nei prossimi giorni. Oppure inizia tu.</p>`}<div class="btns"><button class="btn ghosty" id="allday">Vedi tutti i giorni</button>${next ? "" : `<a class="btn" href="/bergamo/crea.html" data-gate="crea">Crea un evento</a>`}</div></div>` + (next ? `<div class="dayh"><h2>${next.ymd === TODAY ? "Oggi" : next.ymd === addDays(TODAY, 1) ? "Domani" : fmtDay.format(next.d)}</h2><span>${fmtDay.format(next.d)}</span></div>` + card(next) : "");
@@ -1135,7 +1178,7 @@ function render(){
     document.getElementById("showmore").hidden = true; document.getElementById("listlock2").hidden = true; drawPins(mapRows(rows)); return;
   }
   const shown = rows.slice(0, LOCKED ? 6 : visibleN); let h = "", lastDay = null;
-  shown.forEach(e => { if (sort === "time" && e.ymd !== lastDay) { lastDay = e.ymd; const lab = e.ymd === TODAY ? "Oggi" : e.ymd === addDays(TODAY, 1) ? "Domani" : fmtDay.format(e.d); const n = rows.filter(x => x.ymd === e.ymd).length; h += `<div class="dayh"><h2>${lab}</h2><span>${e.ymd === TODAY || e.ymd === addDays(TODAY, 1) ? fmtDay.format(e.d) + " · " : ""}${n} event${n === 1 ? "o" : "i"}</span></div>`; } h += card(e); });
+  shown.forEach(e => { if (sort === "time" && e.ymd !== lastDay) { lastDay = e.ymd; const lab = e.ymd === TODAY ? "Oggi" : e.ymd === addDays(TODAY, 1) ? "Domani" : fmtDayLong.format(e.d); const n = rows.filter(x => x.ymd === e.ymd).length; h += `<div class="dayh"><h2>${lab}</h2><span>${e.ymd === TODAY || e.ymd === addDays(TODAY, 1) ? fmtDay.format(e.d) + " · " : ""}${n} event${n === 1 ? "o" : "i"}</span></div>`; } h += card(e); });
   list.innerHTML = h;
   document.getElementById("showmore").hidden = LOCKED || rows.length <= visibleN;
   document.getElementById("listlock2").hidden = !LOCKED; document.getElementById("lockn").textContent = (rows.length >= 1000 ? "più di " : "") + Math.max(0, rows.length - 4);
@@ -1148,7 +1191,7 @@ function mapRows(rows){ if (F.day.size || F.date.size) { MAP_TODAY = false; retu
 // ---------- pannelli, categorie, città ----------
 function buildStatic(){
   document.getElementById("citylinks").innerHTML = "Le città con la loro pagina: " + CITIES.map(c => `<a href="/${c.slug}/">${c.nome}</a>`).join(" · ");
-  let h = ""; for (let i = 0; i < 14; i++) { const y = addDays(TODAY, i); const d = new Date(y + "T12:00:00Z"); h += `<button class="chip" data-v="${y}" data-ymd="${y}">${GG[d.getUTCDay()]} ${d.getUTCDate()}<small>0</small></button>`; }
+  let h = ""; for (let i = 0; i < 14; i++) { const y = addDays(TODAY, i); const d = new Date(y + "T12:00:00Z"); h += `<button class="chip" data-v="${y}" data-ymd="${y}" title="${GG[d.getUTCDay()]} ${d.getUTCDate()}">${i === 0 ? "Oggi" : i === 1 ? "Domani" : GG[d.getUTCDay()] + " " + d.getUTCDate()}<small>0</small></button>`; }
   document.getElementById("dgrid").innerHTML = h;
   document.getElementById("catchips").innerHTML = CATS.filter(c => c.k).map(c => `<button class="chip" data-v="${c.k}">${c.i} ${c.n}<small>0</small></button>`).join("");
   document.getElementById("cats").innerHTML = CATS.map(c => `<a href="#" class="cat ${c.k ? "" : "on"}" data-cat="${c.k}" data-gate="categoria"><span class="i">${c.i}</span>${c.n}</a>`).join("") + `<a href="#" class="cat" data-cat="__sera" data-gate="categoria"><span class="i">🌙</span>Stasera</a><a href="#" class="cat" data-cat="__free" data-gate="categoria"><span class="i">🆓</span>Gratis</a><a href="#" class="cat" data-cat="__going" data-gate="categoria"><span class="i">👋</span>Qualcuno ci va</a>`;
@@ -1228,6 +1271,7 @@ function bindAll(){
   document.getElementById("gobtn").addEventListener("click", e => { if (LOCKED) return; e.stopPropagation(); closePanels(); document.getElementById("list").scrollIntoView({ behavior: "smooth", block: "start" }); });
   // data libera
   document.getElementById("freedate").addEventListener("change", e => { const v = e.target.value; if (!v) return; F.day.clear(); F.date.clear(); F.date.add(v); syncChips(); render(); });
+  document.getElementById("freedatel").addEventListener("click", e => { if (LOCKED) return; e.preventDefault(); e.stopPropagation(); const fd = document.getElementById("freedate"); if ([...F.date].some(y => y > GRID_LAST)) { F.date.clear(); syncChips(); render(); return; } try { fd.showPicker(); } catch (_) { fd.click(); } });
   const fd2 = document.getElementById("freedate2"), fdl = fd2.closest("label");
   fdl.addEventListener("click", e => { if (LOCKED) return; e.stopPropagation(); if (F.date.size && e.target !== fd2) { F.date.clear(); syncChips(); render(); return; } try { fd2.showPicker(); } catch (_) { fd2.click(); } });
   fd2.addEventListener("change", e => { const v = e.target.value; if (!v) return; F.day.clear(); F.date.clear(); F.date.add(v); syncChips(); render(); });
