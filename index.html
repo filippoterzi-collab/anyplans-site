@@ -924,7 +924,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789625936"></script>
+<script src="/bergamo/app.js?v=1789626068"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1102,9 +1102,9 @@ async function loadEvents(center){
   window.FEEDLOADED = true; if (!window.CHOSEN) { const hc = document.getElementById("hcity"); hc.textContent = center.nome; hc.classList.add("swap"); }
   buildDynamic(); render();
   if (map && mapReady) { if (lastRows.length) fitMap(mapRows(lastRows)); else map.jumpTo({ center: [center.lng, center.lat], zoom: 11.5 }); }
-  // Da registrati il feed tagliato a 1000 righe non basta: "fammeli vedere tutti, tipo lunedi' 21" (17/09/2026).
+  // Il feed tagliato a 1000 righe non basta: "fammeli vedere tutti, tipo lunedi' 21", registrati e non (17/09/2026).
   // La RPC accetta un giorno: chiedo i giorni della griglia dall'ultimo arrivato (che e' incompleto) in poi.
-  if (window.FEEDCAPPED && logged) loadRestDays(center, seq, toEv);
+  if (window.FEEDCAPPED) loadRestDays(center, seq, toEv);
 }
 async function loadRestDays(center, seq, toEv){
   const from = EV.length ? EV[EV.length - 1].ymd : TODAY;
