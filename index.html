@@ -859,7 +859,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789604728"></script>
+<script src="/bergamo/app.js?v=1789604777"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1252,7 +1252,8 @@ function bindAll(){
       const t = document.getElementById("mcity2"); if (t) t.textContent = SAVEDCITY.nome;
       return;
     }
-    if (!matchMedia("(max-width:743px)").matches) return;   // il gate è solo su telefono
+    return;   // gate spento il 17/09/2026: nascondeva mappa ed eventi, la landing deve mostrarli
+    // eslint-disable-next-line no-unreachable
     document.body.classList.add("needcity"); { const g = document.getElementById("citygate"); if (g) g.hidden = false; }
     const top = CITIES.slice(0, 7);
     box.innerHTML = '<button class="me" data-me="1">📍 Vicino a me</button>' +
