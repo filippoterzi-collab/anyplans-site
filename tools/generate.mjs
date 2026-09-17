@@ -517,8 +517,10 @@ const base = () => `${SITE}${L.prefix}/${CITY}`;
 // L'app web (mappa, iscrizioni, login) sta solo sotto /bergamo/: e' una sola app, non una per citta.
 // Dalle pagine delle altre citta si arriva alla stessa mappa gia centrata li: ?luogo=Milano&lat=&lng=&km=
 const APP = `/${HOME_CITY}`;
-const MAP_URL = `${APP}/eventi.html` + (CITY === HOME_CITY ? ""
-  : `?luogo=${encodeURIComponent(CITY_NAME)}&amp;lat=${C.lat}&amp;lng=${C.lng}&amp;km=${Math.min(C.km, 30)}`);
+// 17/09/2026: da ogni pagina di una citta si entra dalla home, gia' su quella citta: "dove"
+// compilato, mappa e lista li'. Prima si finiva su /bergamo/eventi.html?luogo=..., che e' un'altra
+// pagina e un altro design.
+const MAP_URL = `/?citta=${CITY}`;
 const eventUrl = (p) => `${base()}/${p.slug}/`;
 const groupUrl = (g) => `${base()}/${L.groups}/${g.slug}/`;
 // A Bergamo /bergamo/ e' la home dell'app web, quindi l'hub sta in /bergamo/cosa-fare/; nelle altre

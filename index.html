@@ -383,6 +383,16 @@ body.locked .mk,body.locked .strip{display:none}
 body.mapmode .mapbtn{background:var(--ink);color:#fff}
 .mapbtn{position:absolute;left:12px;top:12px;z-index:5;display:inline-flex;align-items:center;gap:7px;height:42px;padding:0 18px;border-radius:999px;background:#fff;font-size:14px;font-weight:800;box-shadow:0 3px 12px rgba(25,25,25,.2)}
 .mapinfo{left:auto;right:64px}
+/* 17/09/2026: da computer la mappa a tutto schermo aveva la barra di ricerca trasparente sopra le
+   tile (illeggibile), il bottone e lo zoom sotto la barra, e la pillola del contatore allungata per
+   tutta la larghezza (left e right insieme). Qui la barra resta fissa ma opaca, e la mappa parte
+   sotto di lei: --sbh la scrive toggleMap con l'altezza vera della barra. */
+@media(min-width:901px){
+  body.mapmode .sbwrap{background:var(--bg);border-bottom:1px solid var(--hair);padding-inline:0;pointer-events:auto;z-index:30}
+  body.mapmode .mapcol{top:calc(60px + var(--sbh,268px))}
+  body.mapmode .mapinfo{left:auto;right:64px;top:12px;bottom:auto}
+  body.mapmode .map{border-top:1px solid var(--hair)}
+}
 @media(max-width:900px){.mapinfo{display:none}}
 /* giorni */
 .dayh{display:flex;align-items:baseline;gap:10px;margin:22px 0 10px}
@@ -924,7 +934,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789642961"></script>
+<script src="/bergamo/app.js?v=1789659461"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -991,6 +1001,17 @@ const CITYBY = Object.fromEntries(CITIES.map(c => [c.slug, c.nome]));
 const HOME = { slug: "bergamo", nome: "Bergamo", lat: 45.698, lng: 9.670 };
 // città ricordata dalla volta prima: se non c'è, la home la chiede invece di mostrare Bergamo
 let SAVEDCITY = null; try { SAVEDCITY = JSON.parse(localStorage.getItem("anyplans_city") || "null"); } catch (_) {}
+// 17/09/2026: la città può arrivare dall'indirizzo — anyplans.in/?citta=milano, oppure la pagina
+// di una città che dichiara window.ANYPLANS_CITY. In quel caso la home si apre già lì: "dove"
+// compilato, mappa e lista sulla città, senza chiedere niente.
+function cittaDaIndirizzo(){
+  let s = "";
+  try {
+    s = String(window.ANYPLANS_CITY || new URLSearchParams(location.search).get("citta") || "").toLowerCase().trim();
+    if (!s) { const p = location.pathname.split("/").filter(Boolean); if (p.length === 1 && !p[0].includes(".")) s = p[0].toLowerCase(); }
+  } catch (_) {}
+  return s ? (CITIES.find(c => c.slug === s) || null) : null;
+}
 function markCity(){ document.body.classList.add("hascity"); }
 function saveCity(c){ markCity(); try { localStorage.setItem("anyplans_city", JSON.stringify({ slug: c.slug, nome: c.nome, lat: c.lat, lng: c.lng })); } catch (_) {} document.body.classList.remove("needcity"); { const g = document.getElementById("citygate"); if (g) g.hidden = true; } }
 let CENTER = { ...HOME };                 // centro del feed (la città scelta, o "vicino a me")
@@ -1081,7 +1102,7 @@ async function loadEvents(center){
   const seq = ++loadSeq; loading = true;
   CENTER = center; REF = { lat: center.lat, lng: center.lng };
   // la città scelta si vede subito nel titolo e nella barra, senza aspettare il feed
-  window.CHOSEN = !!(center.slug !== HOME.slug || PLACE || F.city.size || F.where.size);
+  window.CHOSEN = !!(center.slug !== HOME.slug || PLACE || F.city.size || F.where.size || window.FORCEDCITY);
   if (window.CHOSEN) { document.getElementById("hcity").textContent = center.nome; document.getElementById("v-dove").textContent = center.nome; document.getElementById("v-dove").classList.add("set"); }
   document.getElementById("list").innerHTML = '<div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div>';
   const r = await rpc("feed_activities", { lat: center.lat, lng: center.lng, radius_m: 50000 });
@@ -1154,7 +1175,7 @@ function syncBar(n){
   set("v-cosa", F.cat.size ? CATBY[[...F.cat][0]].n : QTEXT ? `"${QTEXT}"` : "Aggiungi attività", !!(F.cat.size || QTEXT));
   const nAdv = F.price.size + F.hour.size + F.who.size + F.going.size; const bd = document.getElementById("fbadge"); bd.hidden = !nAdv; bd.textContent = nAdv;
   const sb = document.getElementById("showbtn"); sb.textContent = n ? `Mostra ${n} event${n === 1 ? "o" : "i"}` : "Nessun evento"; sb.classList.toggle("zero", !n);
-  window.CHOSEN = !!(F.city.size || F.town.size || F.where.size || PLACE);
+  window.CHOSEN = !!(F.city.size || F.town.size || F.where.size || PLACE || window.FORCEDCITY);
   if (window.CHOSEN) document.body.classList.add("hascity");
   if (window.CHOSEN) document.getElementById("hcity").textContent = CENTER.slug ? CENTER.nome : (PLACE ? PLACE.name : CENTER.nome);
   const active = Object.entries(F).filter(([k, v]) => v.size); const key = active.length === 1 && active[0][0] === "cat" ? [...active[0][1]][0] : active.length ? null : "";
@@ -1589,7 +1610,9 @@ function drawPins(rows){
 function hl(id, on){ document.querySelectorAll(`.ev[data-id="${id}"]`).forEach(c => c.classList.toggle("hl", on)); }
 document.getElementById("list").addEventListener("mouseover", e => { const c = e.target.closest(".ev"); if (c) hl(c.dataset.id, true); });
 document.getElementById("list").addEventListener("mouseout", e => { const c = e.target.closest(".ev"); if (c) hl(c.dataset.id, false); });
-function toggleMap(){ const on = document.body.classList.toggle("mapmode"); document.body.classList.remove("pinpicked");
+function setSbh(){ const sb = document.querySelector(".sbwrap"); if (sb) document.documentElement.style.setProperty("--sbh", sb.offsetHeight + "px"); }
+window.addEventListener("resize", () => { if (document.body.classList.contains("mapmode")) setSbh(); });
+function toggleMap(){ const on = document.body.classList.toggle("mapmode"); document.body.classList.remove("pinpicked"); if (on) setSbh();
   if (typeof GATE_EVENTS !== "undefined" && GATE_EVENTS && on) track("wall_view", "mappa"); document.getElementById("mapfab").textContent = on ? "☰ Lista" : "🗺️ Mappa"; document.getElementById("mapbtn").textContent = on ? "✕ Chiudi la mappa" : "🗺️ Apri la mappa"; if (on) window.scrollTo({ top: 0 }); setTimeout(() => { if (map) { map.resize(); fitMap(mapRows(lastRows)); } }, 80); }
 document.getElementById("mapfab").addEventListener("click", () => { if (!LOCKED) toggleMap(); });
 document.getElementById("mapbtn").addEventListener("click", e => {
@@ -1655,7 +1678,14 @@ document.querySelectorAll(".cats, .dates .chips, .strip .row, .trips .row, .caro
 });
 // ---------- via ----------
 buildStatic();
-loadEvents(HOME);
+const CITTA_URL = cittaDaIndirizzo();
+if (CITTA_URL) {   // stessa strada di quando la città si sceglie a mano: chip in "dove", mappa e lista lì
+  window.FORCEDCITY = true; window.CHOSEN = true;
+  F.city.clear(); F.city.add(CITTA_URL.slug); saveCity(CITTA_URL);
+  const t = document.getElementById("mcity2"); if (t) t.textContent = CITTA_URL.nome;
+  syncChips();
+}
+loadEvents(CITTA_URL || HOME);
 setTimeout(loadMapLib, 200);   // la mappa è nella prima schermata: si carica subito, senza aspettare lo scroll
 </script>
 </body>
