@@ -514,13 +514,16 @@ body.locked .mk{display:block}
    prima la chiediamo e solo dopo mostriamo eventi e mappa. La scelta resta ricordata. */
 .citygate{display:none}
 @media (max-width:743px){
-  body.needcity .msquick,body.needcity .mapcol,body.needcity .listcol,body.needcity .mcount{display:none!important}
+  body.needcity .msquick,body.needcity .mapcol,body.needcity .listcol,body.needcity .mcount,
+  body.needcity .strip,body.needcity .trips,body.needcity .faq,body.needcity .towns,
+  body.needcity .showmore,body.needcity footer,body.needcity .cities{display:none!important}
   body.needcity #citygate{display:block;margin-top:14px}
   .cghint{font-size:15px;color:var(--grey);font-weight:600;margin-bottom:12px}
   .cgcities{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
   .cgcities button{height:48px;border:1.5px solid rgba(25,25,25,.12);border-radius:14px;background:#fff;
                    font:inherit;font-size:15px;font-weight:700;color:var(--ink)}
-  .cgcities button.me{grid-column:1/-1;border-color:var(--blue);color:var(--blue)}
+  .cgcities button.me{grid-column:1 / -1 !important;border-color:var(--blue);color:var(--blue);
+                      display:flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap}
   .cgmore{margin-top:12px;font-size:14.5px;font-weight:700;color:var(--blue)}
 }
 
@@ -856,7 +859,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789604464"></script>
+<script src="/bergamo/app.js?v=1789604603"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -877,6 +880,12 @@ const logged = !!(session && session.access_token);
 const LOCKED = WALL && !logged;
 const GATE_EVENTS = !logged;   // da non registrati, di qualsiasi provenienza: il primo evento aperto chiede l'account
 if (LOCKED) document.body.classList.add("locked");
+// 17/09/2026: da non registrati la mappa si vede sfocata e non si tocca, ovunque: in Esplora e
+// a schermo intero. Si capisce che c'è qualcosa, e l'unico modo per usarla è registrarsi.
+if (GATE_EVENTS) {
+  document.body.classList.add("mapgate");
+  addEventListener("DOMContentLoaded", () => { const lk = document.getElementById("maplock"); if (lk) lk.hidden = false; });
+}
 track("home_view");
 function toLogin(why, next){
   try { sessionStorage.setItem("anyplans_next", next || "/"); } catch (_) {}
@@ -913,7 +922,7 @@ const CITYBY = Object.fromEntries(CITIES.map(c => [c.slug, c.nome]));
 const HOME = { slug: "bergamo", nome: "Bergamo", lat: 45.698, lng: 9.670 };
 // città ricordata dalla volta prima: se non c'è, la home la chiede invece di mostrare Bergamo
 let SAVEDCITY = null; try { SAVEDCITY = JSON.parse(localStorage.getItem("anyplans_city") || "null"); } catch (_) {}
-function saveCity(c){ try { localStorage.setItem("anyplans_city", JSON.stringify({ slug: c.slug, nome: c.nome, lat: c.lat, lng: c.lng })); } catch (_) {} document.body.classList.remove("needcity"); }
+function saveCity(c){ try { localStorage.setItem("anyplans_city", JSON.stringify({ slug: c.slug, nome: c.nome, lat: c.lat, lng: c.lng })); } catch (_) {} document.body.classList.remove("needcity"); { const g = document.getElementById("citygate"); if (g) g.hidden = true; } }
 let CENTER = { ...HOME };                 // centro del feed (la città scelta, o "vicino a me")
 let REF = { lat: HOME.lat, lng: HOME.lng }; // punto da cui si misurano i km (paese scelto, o il centro)
 let EV = [];
@@ -1244,7 +1253,7 @@ function bindAll(){
       return;
     }
     if (!matchMedia("(max-width:743px)").matches) return;   // il gate è solo su telefono
-    document.body.classList.add("needcity");
+    document.body.classList.add("needcity"); { const g = document.getElementById("citygate"); if (g) g.hidden = false; }
     const top = CITIES.slice(0, 7);
     box.innerHTML = '<button class="me" data-me="1">📍 Vicino a me</button>' +
       top.map(c => `<button data-slug="${c.slug}">${esc(c.nome)}</button>`).join("");
@@ -1253,7 +1262,7 @@ function bindAll(){
       e.preventDefault(); e.stopPropagation();
       if (b.dataset.me) {
         const me = document.querySelector('.chips[data-f="where"] .chip[data-v="me"]');
-        document.body.classList.remove("needcity");
+        document.body.classList.remove("needcity"); { const g = document.getElementById("citygate"); if (g) g.hidden = true; }
         try { localStorage.setItem("anyplans_city", JSON.stringify({ slug: "", nome: "Vicino a me" })); } catch (_) {}
         if (me) me.click();
         return;
@@ -1451,12 +1460,7 @@ function hl(id, on){ document.querySelectorAll(`.ev[data-id="${id}"]`).forEach(c
 document.getElementById("list").addEventListener("mouseover", e => { const c = e.target.closest(".ev"); if (c) hl(c.dataset.id, true); });
 document.getElementById("list").addEventListener("mouseout", e => { const c = e.target.closest(".ev"); if (c) hl(c.dataset.id, false); });
 function toggleMap(){ const on = document.body.classList.toggle("mapmode"); document.body.classList.remove("pinpicked");
-  // da non registrati la mappa si apre sfocata, con l'invito a registrarsi
-  if (typeof GATE_EVENTS !== "undefined" && GATE_EVENTS) {
-    document.body.classList.toggle("mapgate", on);
-    const lk = document.getElementById("maplock"); if (lk) lk.hidden = !on;
-    if (on) track("wall_view", "mappa");
-  } document.getElementById("mapfab").textContent = on ? "☰ Lista" : "🗺️ Mappa"; document.getElementById("mapbtn").textContent = on ? "✕ Chiudi la mappa" : "🗺️ Apri la mappa"; if (on) window.scrollTo({ top: 0 }); setTimeout(() => { if (map) { map.resize(); fitMap(mapRows(lastRows)); } }, 80); }
+  if (typeof GATE_EVENTS !== "undefined" && GATE_EVENTS && on) track("wall_view", "mappa"); document.getElementById("mapfab").textContent = on ? "☰ Lista" : "🗺️ Mappa"; document.getElementById("mapbtn").textContent = on ? "✕ Chiudi la mappa" : "🗺️ Apri la mappa"; if (on) window.scrollTo({ top: 0 }); setTimeout(() => { if (map) { map.resize(); fitMap(mapRows(lastRows)); } }, 80); }
 document.getElementById("mapfab").addEventListener("click", () => { if (!LOCKED) toggleMap(); });
 document.getElementById("mapbtn").addEventListener("click", e => { if (LOCKED) return; e.stopPropagation(); toggleMap(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && document.body.classList.contains("mapmode")) toggleMap(); });
