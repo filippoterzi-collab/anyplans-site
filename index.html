@@ -924,7 +924,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789630638"></script>
+<script src="/bergamo/app.js?v=1789642961"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1358,17 +1358,24 @@ function bindAll(){
   // "Dove" e "Quando" non avevano più casa su mobile: porto dentro al foglio i pannelli che già
   // funzionano, spostando i nodi veri — così restano gli id, i suggerimenti città, la griglia dei
   // 14 giorni e il calendario per scegliere un giorno preciso.
+  // 17/09/2026 (sera): i nodi vanno nel foglio SOLO quando la finestra e' stretta, e tornano nella
+  // tendina quando e' larga. Prima venivano spostati sempre, e su desktop "Dove" e "Quando" si aprivano
+  // vuoti: "cerca destinazione non esce niente" (bug segnalato dal committente).
+  const MOVED = [];
   function movePanel(id, titolo, gid, prima){
     const src = document.getElementById(id); if (!src) return null;
     const g = document.createElement("div"); g.className = "mg msonly"; g.id = gid;
     g.innerHTML = "<h2>" + titolo + "</h2>";
-    while (src.firstChild) {
-      const n = src.firstChild;
-      if (n.nodeType === 1 && (n.tagName === "H2" || n.classList.contains("pfoot"))) { src.removeChild(n); continue; }
-      g.appendChild(n);
-    }
     prima.parentNode.insertBefore(g, prima);
+    MOVED.push({ src, g });
     return g;
+  }
+  function placePanels(){
+    const mob = MOB();
+    MOVED.forEach(({ src, g }) => {
+      if (mob) { [...src.children].forEach(n => { if (n.tagName === "H2" || n.classList.contains("pfoot")) return; g.appendChild(n); }); }
+      else { const foot = src.querySelector(".pfoot"); [...g.children].forEach(n => { if (n.tagName === "H2") return; src.insertBefore(n, foot); }); }
+    });
   }
   movePanel("p-dove", "Dove", "mg-dove", mgc);
 
@@ -1408,6 +1415,8 @@ function bindAll(){
     if (more) more.addEventListener("click", e => { e.preventDefault(); openSearch(); });
   })();
   movePanel("p-quando", "Quando", "mg-quando", mgc.nextSibling || mgc);
+  placePanels();
+  try { matchMedia("(max-width:743px)").addEventListener("change", placePanels); } catch (_) {}
 
   function openSearch(){
     if (LOCKED) { const g = document.querySelector("[data-gate]"); if (g) { location.href = "/bergamo/login.html"; return; } }
