@@ -1,11 +1,11 @@
 {
  "slug": "brescia",
  "nome": "Brescia",
- "eventi": 311,
- "pagine": 768,
+ "eventi": 314,
+ "pagine": 774,
  "tipi": {
   "festival": 78,
-  "culture": 67,
+  "culture": 69,
   "dinner": 47,
   "yoga": 10,
   "market": 7,
@@ -19,7 +19,7 @@
   "tour": 12,
   "painting": 5,
   "hiking": 5,
-  "dancing": 3
+  "dancing": 4
  },
- "aggiornato": "2026-09-17T07:39:39.261Z"
+ "aggiornato": "2026-09-17T11:04:16.013Z"
 }

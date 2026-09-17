@@ -1,10 +1,10 @@
 {
  "slug": "palermo",
  "nome": "Palermo",
- "eventi": 128,
- "pagine": 334,
+ "eventi": 129,
+ "pagine": 336,
  "tipi": {
-  "dinner": 28,
+  "dinner": 29,
   "culture": 17,
   "tour": 13,
   "yoga": 3,
@@ -15,5 +15,5 @@
   "nightlife": 3,
   "painting": 8
  },
- "aggiornato": "2026-09-17T07:40:30.585Z"
+ "aggiornato": "2026-09-17T11:05:03.945Z"
 }

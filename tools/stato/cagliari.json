@@ -1,11 +1,11 @@
 {
  "slug": "cagliari",
  "nome": "Cagliari",
- "eventi": 123,
- "pagine": 290,
+ "eventi": 124,
+ "pagine": 292,
  "tipi": {
-  "culture": 31,
-  "dinner": 26,
+  "culture": 33,
+  "dinner": 25,
   "tour": 8,
   "gym": 3,
   "festival": 7,
@@ -13,5 +13,5 @@
   "concert": 21,
   "show": 17
  },
- "aggiornato": "2026-09-17T07:40:27.835Z"
+ "aggiornato": "2026-09-17T11:04:59.597Z"
 }
