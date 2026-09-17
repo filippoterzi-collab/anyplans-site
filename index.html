@@ -827,7 +827,7 @@ body.locked .mk{display:block}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789603672"></script>
+<script src="/bergamo/app.js?v=1789603791"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1333,6 +1333,8 @@ function initMap(){
   // toccando la mappa fuori da un pin la scheda si richiude
   map.on("click", e => { try { if (!e.originalEvent.target.closest(".pin")) document.body.classList.remove("pinpicked"); } catch (_) {} });
   map.on("load", () => { mapReady = true; const ml = document.getElementById("mapload"); if (ml) ml.remove(); map.resize(); drawPins(mapRows(lastRows)); fitMap(mapRows(lastRows)); });
+  // se dopo 15 secondi la mappa non e' ancora pronta (rete lenta, tile bloccate) la scritta smette di promettere e offre la mappa intera
+  setTimeout(() => { const ml = document.getElementById("mapload"); if (ml && !mapReady) { ml.textContent = "La mappa ci mette un po'. Tocca qui per aprirla a tutto schermo →"; ml.style.pointerEvents = "auto"; ml.style.cursor = "pointer"; ml.onclick = () => { if (!LOCKED) toggleMap(); }; } }, 15000);
   // S5 (17/09/2026): su mobile il riquadro della mappa cambia misura quando cambia il layout
   // (e alla rotazione del telefono). Senza resize resta un rettangolo grigio.
   if (window.ResizeObserver) {
