@@ -506,6 +506,20 @@ body.locked .mk{display:block}
 /* la barra resta cliccabile da sloggati: il tap sulle categorie porta alla registrazione (data-gate) */
 
 
+
+/* 17/09/2026, richiesta del committente: in alto a destra i viaggi (come nella pagina viaggi c'è
+   il rimando agli eventi), e il "+" per creare scende in basso a destra, sopra la barra. */
+.viaggibtn{display:none}
+@media (max-width:743px){
+  .viaggibtn{display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 14px;
+             border-radius:999px;border:1.5px solid var(--blue);color:var(--blue);
+             font-size:13.5px;font-weight:800;white-space:nowrap}
+  .plus{position:fixed;right:16px;bottom:calc(66px + 16px + env(safe-area-inset-bottom));
+        z-index:45;width:56px;height:56px;font-size:32px;
+        box-shadow:0 6px 20px rgba(27,79,216,.38)}
+  body.mapmode .plus,body.locked .plus{display:none}
+}
+
 /* ---- S2 + S5 (17/09/2026, spec §5 e §7): la prima schermata mobile.
    Prima: 7 gruppi di controlli e la prima scheda sotto la piega. Ora: un campo, una mappa, una lista.
    La mappa resta sempre visibile perché è appiccicata sotto la ricerca mentre la lista scorre. */
@@ -606,6 +620,7 @@ body.locked .mk{display:block}
     <a class="ghost" href="/viaggi-di-gruppo/" data-gate="viaggi">Viaggi di gruppo</a>
     <a class="btn navbtn" href="/bergamo/crea.html" data-gate="crea">Crea un evento</a>
     <a class="plus" href="/bergamo/crea.html" data-gate="crea" aria-label="Crea un evento">+</a>
+    <a class="viaggibtn" href="/viaggi-di-gruppo/" data-gate="viaggi">✈️ Cerca i viaggi</a>
     <a class="btn navbtn" id="navreg" href="/bergamo/login.html" hidden>Registrati</a>
     <button class="avatar" id="avatar" aria-haspopup="menu" aria-expanded="false" hidden>?</button>
     <nav class="umenu" id="umenu" hidden role="menu">
@@ -812,7 +827,7 @@ body.locked .mk{display:block}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789603176"></script>
+<script src="/bergamo/app.js?v=1789603306"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
