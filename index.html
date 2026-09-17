@@ -370,7 +370,8 @@ body.locked .mk,body.locked .strip{display:none}
   body.mapmode .mapinfo{top:auto;bottom:150px;left:12px}
   body.mapmode .sbwrap{position:fixed;left:0;right:0;top:60px;padding-inline:18px;background:transparent;pointer-events:none}
   body.mapmode .sbwrap .sbrow,body.mapmode .sbwrap .catwrap,body.mapmode .sbwrap .cats{pointer-events:auto}
-  body.mapmode.pinpicked .carousel{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:12px 18px 80px;scrollbar-width:none;pointer-events:none}
+  body.mapmode .carousel{display:none!important}
+  body.never .carousel{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:40;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:12px 18px 80px;scrollbar-width:none;pointer-events:none}
   body.mapmode.pinpicked .carousel::-webkit-scrollbar{display:none}
   body.mapmode.pinpicked .carousel .mini{scroll-snap-align:center;width:min(300px,80vw);box-shadow:0 8px 24px rgba(25,25,25,.18);pointer-events:auto}
   body.mapmode.pinpicked .carousel .mini.on{outline:2px solid var(--blue)}
@@ -827,7 +828,7 @@ body.locked .mk{display:block}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789603791"></script>
+<script src="/bergamo/app.js?v=1789603933"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1360,7 +1361,17 @@ function drawPins(rows){
     const pop = new maplibregl.Popup({ offset: 22, closeButton: false, maxWidth: "260px" }).setHTML(g.map(x => `<div class="pop"><a class="body" href="${EVURL(x)}" data-gate="evento"><div class="t">${x.emoji} ${esc(x.title)}</div><div class="m">${whenTxt(x)}</div><div class="m">${esc(x.tw)}${x.km > 1 ? ` · ${x.km.toFixed(0)} km` : ""} · ${x.price_cents > 0 ? esc(fmtPrice(x.price_cents)) : "gratis"}${x.going_count ? ` · ${x.going_count} ci vanno` : ""}</div></a>${cta(x)}</div>`).join(""));   // tutto il fumetto apre l'evento, non solo "Ci sono" (16/09/2026)
     const mk = new maplibregl.Marker({ element: el }).setLngLat([e.lng, e.lat]).setPopup(pop).addTo(map);
     el.addEventListener("mouseenter", () => hl(e.id, true)); el.addEventListener("mouseleave", () => hl(e.id, false));
-    el.addEventListener("click", () => { const c = document.querySelector(`.ev[data-id="${e.id}"]`); if (c && !document.body.classList.contains("mapmode")) c.scrollIntoView({ behavior: "smooth", block: "center" }); document.body.classList.add("pinpicked"); const mini = document.querySelector(`.carousel .mini[data-id="${e.id}"]`); if (mini) { document.querySelectorAll(".carousel .mini").forEach(m => m.classList.toggle("on", m === mini)); mini.scrollIntoView({ behavior: "smooth", inline: "center", block: "nearest" }); } });
+    el.addEventListener("click", ev => {
+      const mob = matchMedia("(max-width:743px)").matches;
+      // mappa a schermo intero sul telefono: un pin solo = si apre l'evento e basta
+      if (mob && document.body.classList.contains("mapmode") && g.length === 1) {
+        ev.preventDefault(); ev.stopPropagation();
+        if (typeof GATE_EVENTS !== "undefined" && GATE_EVENTS) { toLogin("evento", EVURL(e)); return; }
+        location.href = EVURL(e); return;
+      }
+      const c = document.querySelector(`.ev[data-id="${e.id}"]`);
+      if (c && !document.body.classList.contains("mapmode")) c.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
     markers.push(mk);
   });
   document.getElementById("mapinfo").textContent = `${rows.length >= 1000 ? "Più di 1000" : rows.length} event${rows.length === 1 ? "o" : "i"}${MAP_TODAY ? " oggi" : " in arrivo"} sulla mappa`;
