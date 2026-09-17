@@ -88,8 +88,8 @@ header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid 
   body.mapmode .tabbar{z-index:46}
 }
 /* la città nel titolo cambia da sola */
-#hcity{display:inline-block;min-width:1ch}
-#hcity.swap{animation:swap .5s ease}
+#hcity,#mcity2{display:inline-block;min-width:1ch}
+#hcity.swap,#mcity2.swap{animation:swap .5s ease}
 @keyframes swap{0%{opacity:0;transform:translateY(.35em)}100%{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){#hcity.swap{animation:none}}
 /* home: "vicino a te" e marketing sotto */
@@ -828,7 +828,7 @@ body.locked .mk{display:block}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789603933"></script>
+<script src="/bergamo/app.js?v=1789603992"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1391,9 +1391,14 @@ function loadMapLib(){
 
 // ---------- la città nel titolo gira finché non ne scegli una ----------
 (function(){ const names = CITIES.slice(0, 14).map(c => c.nome); let i = 0; const el = document.getElementById("hcity");
-  // 17/09/2026: la stessa rotazione anche nel titolo della versione mobile
+  // 17/09/2026: il titolo mobile gira per conto suo, senza dipendere dall'H1 vecchio (che è nascosto
+  // e veniva riscritto al caricamento del feed, restando fermo su Bergamo).
   const el2 = document.getElementById("mcity2");
-  if (el2 && el) { new MutationObserver(() => { el2.textContent = el.textContent; }).observe(el, { childList: true, characterData: true, subtree: true }); }
+  if (el2) { let j = 0; setInterval(() => {
+      if (window.CHOSEN) { el2.textContent = (typeof CENTER !== "undefined" && CENTER.nome) ? CENTER.nome : el2.textContent; return; }
+      j = (j + 1) % names.length; el2.classList.remove("swap"); void el2.offsetWidth;
+      el2.textContent = names[j]; el2.classList.add("swap");
+    }, 1900); }
   setInterval(() => { if (window.CHOSEN) return; i = (i + 1) % names.length; el.classList.remove("swap"); void el.offsetWidth; el.textContent = names[i]; el.classList.add("swap"); }, 1800); })();
 
 
