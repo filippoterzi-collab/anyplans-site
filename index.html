@@ -422,7 +422,8 @@ body.mapmode .mapbtn{background:var(--ink);color:#fff}
   .ev .tm small{font-size:10.5px;font-weight:700;color:var(--grey)}
   .ev .tm .soon{color:var(--warn)}
   .ev .tm .now{color:var(--ok)}
-  .ev .m .wt{display:none}
+  .ev.has-tm .m .wt{display:none}
+  .ev .tm:empty{display:none}
   .ev .m,.ev .t{grid-column:2}
   .ev .side{grid-column:1/-1;grid-row:auto;flex-direction:row;justify-content:space-between;align-items:center;margin-top:8px;padding-top:10px;border-top:1px solid var(--hair)}
 }
@@ -923,7 +924,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789625730"></script>
+<script src="/bergamo/app.js?v=1789625936"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1037,6 +1038,7 @@ function whenTxt(e){
 }
 // sul telefono, sopra l'emoji della card: l'ora e tra quanto inizia (chiesto il 17/09/2026: "l'evento inizia tra, e il tempo")
 function tmTxt(e){
+  if (!e.multi && e.d - NOW > 24 * 3600e3) return "";   // oltre le 24 ore niente colonna: la data resta nella riga piccola
   if (e.multi) return `<b class="now">in corso</b>${e.end_at ? `<small>fino al ${romeParts(new Date(e.end_at)).ymd.slice(8).replace(/^0/, "")}</small>` : ""}`;
   const hm = fmtHM.format(e.d), min = Math.round((e.d - NOW) / 60000);
   let rel, cls = "";
@@ -1048,13 +1050,24 @@ function tmTxt(e){
   else { const n = Math.round((new Date(e.ymd + "T12:00:00Z") - new Date(TODAY + "T12:00:00Z")) / 864e5); rel = `tra ${n} giorni`; }
   return `<b>${hm}</b><small class="${cls}">${rel}</small>`;
 }
+// "tra 2 ore", "tra 3 giorni": quanto manca, con le parole intere, per il quadratino sulla mappa (17/09/2026).
+// Vuoto se e' in corso o sotto i 90 minuti: li' whenTxt dice gia' "in corso" / "tra 40 min".
+function relTxt(e){
+  if (e.multi) return "";
+  const min = Math.round((e.d - NOW) / 60000);
+  if (min <= 90) return "";
+  if (min < 24 * 60) { const h = Math.round(min / 60); return h === 1 ? "tra 1 ora" : `tra ${h} ore`; }
+  const n = Math.round((new Date(e.ymd + "T12:00:00Z") - new Date(TODAY + "T12:00:00Z")) / 864e5);
+  return n === 1 ? "tra 1 giorno" : `tra ${n} giorni`;
+}
 const priceTxt = e => e.price_cents > 0 ? `<span class="price">${esc(fmtPrice(e.price_cents))}</span>` : `<span class="price free">Gratis</span>`;
 const cta = e => `<a class="btn" href="${EVURL(e)}" data-gate="ci-sono">Ci sono</a>`;
 function goingTxtH(e){ const n = e.going_count || 0; if (!n) return ""; const dots = Array.from({ length: Math.min(n, 3) }, (_, i) => `<i>${"ABC"[i]}</i>`).join(""); return `<span class="going"><span class="dots">${dots}</span>${n === 1 ? "1 ci va" : n + " ci vanno"}</span>`; }
 function card(e){
   const who = e.community_name || e.club_name || e.host_name || null;
-  return `<article class="ev" data-id="${e.id}">
-    <div class="lft"><div class="tm">${tmTxt(e)}</div><div class="tile" aria-hidden="true">${e.emoji}</div></div>
+  const tm = tmTxt(e);
+  return `<article class="ev${tm ? " has-tm" : ""}" data-id="${e.id}">
+    <div class="lft"><div class="tm">${tm}</div><div class="tile" aria-hidden="true">${e.emoji}</div></div>
     <a class="t" href="${EVURL(e)}" data-gate="evento">${esc(e.title)}</a>
     <div class="m"><span class="wt">${whenTxt(e)} · </span>${esc((e.meeting_point_text || e.tw).split(",").slice(0, 2).join(",").slice(0, 60))}${e.km > 1 ? ` · ${e.km.toFixed(0)} km` : ""}</div>
     <div class="who">${goingTxtH(e)}${who ? `<span>${goingTxtH(e) ? "· " : ""}${e.source === "ugc" ? "proposto da" : "organizza"} <b>${esc(who)}</b></span>` : ""}</div>
@@ -1550,7 +1563,7 @@ function drawPins(rows){
   const dec = rows.length > 150 ? 2 : 3; const groups = {}; rows.forEach(e => { if (e.lat == null) return; const k = e.lat.toFixed(dec) + "," + e.lng.toFixed(dec); (groups[k] || (groups[k] = [])).push(e); });
   Object.values(groups).forEach(g => {
     const e = g[0]; const el = document.createElement("button"); el.className = "pin"; el.innerHTML = e.emoji + (g.length > 1 ? `<span class="n">${g.length}</span>` : ""); el.title = g.length > 1 ? `${g.length} eventi qui` : e.title;
-    const pop = new maplibregl.Popup({ offset: 22, closeButton: false, maxWidth: "260px" }).setHTML(g.map(x => `<div class="pop"><a class="body" href="${EVURL(x)}" data-gate="evento"><div class="t">${x.emoji} ${esc(x.title)}</div><div class="m">${whenTxt(x)}</div><div class="m">${esc(x.tw)}${x.km > 1 ? ` · ${x.km.toFixed(0)} km` : ""} · ${x.price_cents > 0 ? esc(fmtPrice(x.price_cents)) : "gratis"}${x.going_count ? ` · ${x.going_count} ci vanno` : ""}</div></a>${cta(x)}</div>`).join(""));   // tutto il fumetto apre l'evento, non solo "Ci sono" (16/09/2026)
+    const pop = new maplibregl.Popup({ offset: 22, closeButton: false, maxWidth: "260px" }).setHTML(g.map(x => `<div class="pop"><a class="body" href="${EVURL(x)}" data-gate="evento"><div class="t">${x.emoji} ${esc(x.title)}</div><div class="m">${whenTxt(x)}${relTxt(x) ? " · <b>" + relTxt(x) + "</b>" : ""}</div><div class="m">${esc(x.tw)}${x.km > 1 ? ` · ${x.km.toFixed(0)} km` : ""} · ${x.price_cents > 0 ? esc(fmtPrice(x.price_cents)) : "gratis"}${x.going_count ? ` · ${x.going_count} ci vanno` : ""}</div></a>${cta(x)}</div>`).join(""));   // tutto il fumetto apre l'evento, non solo "Ci sono" (16/09/2026)
     const mk = new maplibregl.Marker({ element: el }).setLngLat([e.lng, e.lat]).setPopup(pop).addTo(map);
     el.addEventListener("mouseenter", () => hl(e.id, true)); el.addEventListener("mouseleave", () => hl(e.id, false));
     el.addEventListener("click", ev => {
