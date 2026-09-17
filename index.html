@@ -508,6 +508,14 @@ body.locked .mk{display:block}
 
 
 
+
+/* 17/09/2026: chi non è registrato la mappa la vede, ma sfocata e non toccabile, col riquadro
+   che chiede l'account. Vedere che c'è qualcosa convince più di un muro cieco. */
+body.mapgate #map{filter:blur(7px) saturate(.85);pointer-events:none}
+body.mapgate .maplibregl-ctrl,body.mapgate .zoom{display:none!important}
+body.mapgate .map .lock{display:flex}
+body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
+
 /* 17/09/2026, richiesta del committente: in alto a destra i viaggi (come nella pagina viaggi c'è
    il rimando agli eventi), e il "+" per creare scende in basso a destra, sopra la barra. */
 .viaggibtn{display:none}
@@ -828,7 +836,7 @@ body.locked .mk{display:block}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789603992"></script>
+<script src="/bergamo/app.js?v=1789604055"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1215,8 +1223,7 @@ function bindAll(){
       const el = document.getElementById(id); if (!el) return;
       el.addEventListener("focus", e => { e.target.blur(); toLogin("cerca"); });
     });
-    const mb = document.getElementById("mapbtn");
-    if (mb) mb.addEventListener("click", e => { e.preventDefault(); e.stopPropagation(); toLogin("mappa"); }, true);
+
   }
 
   // il campo dentro il foglio fa la stessa cosa della ricerca libera che c'era già
@@ -1380,7 +1387,13 @@ function drawPins(rows){
 function hl(id, on){ document.querySelectorAll(`.ev[data-id="${id}"]`).forEach(c => c.classList.toggle("hl", on)); }
 document.getElementById("list").addEventListener("mouseover", e => { const c = e.target.closest(".ev"); if (c) hl(c.dataset.id, true); });
 document.getElementById("list").addEventListener("mouseout", e => { const c = e.target.closest(".ev"); if (c) hl(c.dataset.id, false); });
-function toggleMap(){ const on = document.body.classList.toggle("mapmode"); document.body.classList.remove("pinpicked"); document.getElementById("mapfab").textContent = on ? "☰ Lista" : "🗺️ Mappa"; document.getElementById("mapbtn").textContent = on ? "✕ Chiudi la mappa" : "🗺️ Apri la mappa"; if (on) window.scrollTo({ top: 0 }); setTimeout(() => { if (map) { map.resize(); fitMap(mapRows(lastRows)); } }, 80); }
+function toggleMap(){ const on = document.body.classList.toggle("mapmode"); document.body.classList.remove("pinpicked");
+  // da non registrati la mappa si apre sfocata, con l'invito a registrarsi
+  if (typeof GATE_EVENTS !== "undefined" && GATE_EVENTS) {
+    document.body.classList.toggle("mapgate", on);
+    const lk = document.getElementById("maplock"); if (lk) lk.hidden = !on;
+    if (on) track("wall_view", "mappa");
+  } document.getElementById("mapfab").textContent = on ? "☰ Lista" : "🗺️ Mappa"; document.getElementById("mapbtn").textContent = on ? "✕ Chiudi la mappa" : "🗺️ Apri la mappa"; if (on) window.scrollTo({ top: 0 }); setTimeout(() => { if (map) { map.resize(); fitMap(mapRows(lastRows)); } }, 80); }
 document.getElementById("mapfab").addEventListener("click", () => { if (!LOCKED) toggleMap(); });
 document.getElementById("mapbtn").addEventListener("click", e => { if (LOCKED) return; e.stopPropagation(); toggleMap(); });
 document.addEventListener("keydown", e => { if (e.key === "Escape" && document.body.classList.contains("mapmode")) toggleMap(); });
