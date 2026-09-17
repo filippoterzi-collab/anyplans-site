@@ -19,6 +19,7 @@
 
 import { mkdir, writeFile, readFile, readdir, rm, stat } from "node:fs/promises";
 import path from "node:path";
+import { readFileSync as fsReadSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -456,13 +457,15 @@ function titoloEvento(p, conData) {
   // ("Mercato di Rovetta") non si aggiunge niente.
   const v = nuovo(luogo), c = nuovo(localityOf(p));
   // in ordine: il posto se ci sta senza tagliare, poi la città (è quella che la gente cerca,
-  // "candlelight milano"). Se non ci sta nemmeno quello si lascia il titolo intero: due troncamenti
-  // attaccati ("Trì neùcc in… – Gherim…") sono peggio di un titolo che si ripete. Gli eventi che
+  // "candlelight milano"). Quando non ci sta nei 60 caratteri il comune si aggiunge lo stesso, in coda
+  // a un titolo intero: la coda la taglia Google nel risultato, ma nell'html il titolo resta diverso
+  // da quello delle altre città, ed è quello che conta per non farsi scartare come doppione. Gli eventi che
   // girano per l'Italia (Candlelight, WeRoad, le passeggiate fotografiche) avevano lo stesso titolo
   // in dodici città: senza la città Google ne sceglie una e ignora le altre (16/09/2026).
   const t = giaDetto ? cut(base, 57)
     : v && base.length + 3 + v.length <= 60 ? `${base} – ${v}`
     : c && base.length + 3 + c.length <= 60 ? `${base} – ${c}`
+    : c ? `${cut(base, 75)} – ${c}`
     : cut(base, 57);
   if (!conData) return t;
   // ultima spiaggia per due pagine che finirebbero uguali: il posto anche stretto, poi la data
@@ -1374,6 +1377,7 @@ ${crumbs([["anyplans", L.home], [CITY_NAME, rel(hubUrl())], [ix.kind === "tipo" 
 <div class="cta"><a class="btn" href="${MAP_URL}">See all events</a></div>
 ${up.length ? `<h2>Upcoming</h2>${listHtml(up)}` : ""}
 ${past.length ? `<h2>Past</h2>${listHtml(past)}` : ""}
+${stessoTipoAltrove(ix)}
 ${faqHtml(faq)}
 `;
   const lastmod = new Date(Math.max(...list.map(p => p.updated)));
@@ -1415,6 +1419,7 @@ ${crumbs([["anyplans", "/"], [CITY_NAME, rel(hubUrl())], [ix.kind === "tipo" ? i
 <div class="cta"><a class="btn" href="${MAP_URL}">Vedi tutti gli eventi</a></div>
 ${up.length ? `<h2>Prossimi</h2>${listHtml(up)}` : ""}
 ${past.length ? `<h2>Già passati</h2>${listHtml(past)}` : ""}
+${stessoTipoAltrove(ix)}
 ${faqHtml(faq)}
 `;
   const lastmod = new Date(Math.max(...list.map(p => p.updated)));
@@ -1432,6 +1437,36 @@ const vicine = (n = 5) => CITTA.filter(x => x.slug !== CITY)
   .map(x => ({ ...x, d: distKm({ lat: x.lat, lng: x.lng }, { lat: C.lat, lng: C.lng }) }))
   .sort((a, b) => a.d - b.d).slice(0, n);
 const cityHref = (x) => `/${en() ? "en/" : ""}${x.slug}${x.slug === HOME_CITY ? (en() ? "/things-to-do" : "/cosa-fare") : ""}/`;
+// ── le stesse categorie nelle altre città ────────────────────────────────────
+// "feste a Bergamo" sta in posizione 85 su Google mentre "festa oratorio alzano sopra" sta in 6:
+// le pagine dei nomi precisi reggono, quelle generiche no. L'unica leva che abbiamo in casa sono i
+// link interni: ogni pagina di categoria adesso punta alla stessa categoria nelle città vicine, e
+// le 29 pagine "feste" si tengono su a vicenda invece di stare ognuna per conto suo (17/09/2026).
+// Le categorie delle altre città si leggono da tools/stato/<citta>.json, scritto dalla corsa
+// precedente: si linka solo quello che in quella corsa esisteva davvero, mai un indirizzo inventato.
+let _statoAltre = null;
+function statoAltre() {
+  if (_statoAltre) return _statoAltre;
+  _statoAltre = new Map();
+  for (const c of CITTA) {
+    if (c.slug === CITY) continue;
+    try {
+      const j = JSON.parse(fsReadSync(path.join(OUT, "tools", "stato", c.slug + ".json"), "utf8"));
+      if (j && j.tipi) _statoAltre.set(c.slug, j.tipi);
+    } catch { /* città mai generata, o stato vecchio senza tipi */ }
+  }
+  return _statoAltre;
+}
+const stessoTipoAltrove = (ix) => {
+  if (ix.kind !== "tipo") return "";
+  const st = statoAltre();
+  const righe = vicine(28).filter(x => (st.get(x.slug) || {})[ix.sport] >= MIN_INDEX).slice(0, 8);
+  if (righe.length < 2) return "";
+  const nome = tLabel(ix.t);
+  return `<h2>${esc(nome)} ${en() ? "in other cities" : "nelle altre città"}</h2><div class="tags">${
+    righe.map(x => `<a href="/${en() ? "en/" : ""}${x.slug}/${tSlug(ix.t)}/">${esc(nome)} ${en() ? "in" : "a"} ${esc(x.nome)}</a>`).join("")
+  }<a href="${rel(cittaUrl())}">${en() ? "All the cities" : "Tutte le città"}</a></div>`;
+};
 const vicineHtml = () => `<h2>${en() ? "Nearby cities" : "Qui vicino"}</h2><div class="tags">${
   vicine().map(x => `<a href="${cityHref(x)}">${en() ? "Events in " : "Eventi a "}${esc(x.nome)}</a>`).join("")
 }<a href="${rel(cittaUrl())}">${en() ? "All the cities" : "Tutte le città"}</a></div>`;
@@ -1935,7 +1970,9 @@ await indexNow();
 await writeFile(path.join(OUT, LLMS_FILE), llmsTxt() + "\n---\n\n# Tutte le pagine di anyplans a " + CITY_NAME + " (italiano, poi inglese)\n\n" + fullTxt.join("\n"));
 await mkdir(statoDir, { recursive: true });
 await writeFile(path.join(statoDir, CITY + ".json"), JSON.stringify(
-  { slug: CITY, nome: CITY_NAME, eventi: upcomingPages.length, pagine: sitemapEntries.length, aggiornato: NOW.toISOString() }, null, 1));
+  { slug: CITY, nome: CITY_NAME, eventi: upcomingPages.length, pagine: sitemapEntries.length,
+    tipi: Object.fromEntries(types.map(x => [x.sport, x.list.filter(p => !p.isPast).length])),
+    aggiornato: NOW.toISOString() }, null, 1));
 
 console.log(`${CITY}: ${rows.length} righe, ${pages.length} pagine (${upcomingPages.length} futuri, ${pages.length - upcomingPages.length} passati)`);
 console.log(`indici: ${types.length} tipi (${types.map(x => x.slug).join(", ")}), ${towns.length} paesi`);
