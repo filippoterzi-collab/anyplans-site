@@ -1,31 +1,31 @@
 {
  "slug": "torino",
  "nome": "Torino",
- "eventi": 841,
- "pagine": 1852,
+ "eventi": 851,
+ "pagine": 1864,
  "tipi": {
-  "padel": 48,
+  "padel": 55,
   "dinner": 104,
   "culture": 255,
-  "tour": 69,
+  "tour": 68,
   "painting": 24,
-  "cinema": 15,
+  "cinema": 16,
   "volleyball": 7,
-  "yoga": 22,
-  "concert": 75,
+  "yoga": 24,
+  "concert": 76,
   "exhibition": 7,
   "singles": 7,
-  "show": 37,
+  "show": 35,
   "cycling": 2,
   "hiking": 15,
   "festival": 68,
   "dancing": 7,
   "karaoke": 5,
-  "games": 19,
+  "games": 18,
   "nightlife": 7,
   "gym": 9,
   "match": 24,
-  "running": 9
+  "running": 11
  },
- "aggiornato": "2026-09-17T11:03:46.311Z"
+ "aggiornato": "2026-09-17T15:39:00.868Z"
 }

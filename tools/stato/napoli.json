@@ -1,23 +1,24 @@
 {
  "slug": "napoli",
  "nome": "Napoli",
- "eventi": 437,
- "pagine": 998,
+ "eventi": 442,
+ "pagine": 1014,
  "tipi": {
-  "dinner": 98,
+  "dinner": 99,
   "tour": 29,
-  "culture": 94,
+  "culture": 93,
   "painting": 14,
   "nightlife": 8,
-  "karaoke": 8,
+  "karaoke": 9,
   "concert": 73,
   "dancing": 15,
   "festival": 25,
   "hiking": 7,
   "cinema": 4,
   "show": 39,
+  "padel": 4,
   "yoga": 9,
   "exhibition": 3
  },
- "aggiornato": "2026-09-17T11:04:20.796Z"
+ "aggiornato": "2026-09-17T15:39:49.653Z"
 }
