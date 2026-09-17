@@ -923,7 +923,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789625606"></script>
+<script src="/bergamo/app.js?v=1789625730"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1023,7 +1023,7 @@ function romeParts(d){ const p = new Intl.DateTimeFormat("en-CA", { timeZone: "E
 const TODAY = romeParts(NOW).ymd;
 const addDays = (ymd, n) => { const d = new Date(ymd + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
 const GRID_LAST = addDays(TODAY, 13);   // ultimo giorno della griglia "Quando" (14 caselle)
-const dayLabel = ymd => ymd === TODAY ? "Oggi" : ymd === addDays(TODAY, 1) ? "Domani" : fmtDay.format(new Date(ymd + "T12:00:00Z"));
+const ymdLabel = ymd => ymd === TODAY ? "Oggi" : ymd === addDays(TODAY, 1) ? "Domani" : fmtDay.format(new Date(ymd + "T12:00:00Z"));
 function nextWeekend(){ const d = new Date(TODAY + "T12:00:00Z"); const wd = d.getUTCDay(); const toSat = (6 - wd + 7) % 7; const sat = addDays(TODAY, toSat); return [sat, addDays(sat, 1)]; }
 const WEEKEND = nextWeekend();
 function cleanTown(t){ t = String(t || "").replace(/^\d{5}\s*/, "").trim(); if (t.includes(" - ")) t = t.split(" - ").pop().trim(); if (!t || t.length > 28 || /\d/.test(t)) return ""; return t; }
@@ -1137,7 +1137,7 @@ function summarize(){ const p = [];
 function syncBar(n){
   const set = (id, txt, on) => { const el = document.getElementById(id); el.textContent = txt; el.classList.toggle("set", on); };
   set("v-dove", F.town.size ? `${[...F.town][0]} · ${CENTER.nome}` : PLACE ? PLACE.name : F.city.size ? CITYBY[[...F.city][0]] : F.where.size ? "Vicino a me" : "Cerca destinazioni", !!(F.town.size || PLACE || F.city.size || F.where.size));
-  set("v-quando", F.date.size ? [...F.date].map(dayLabel).join(", ") : F.day.size ? ({ oggi: "Oggi", domani: "Domani", weekend: "Fine settimana", sera: "Stasera" }[[...F.day][0]]) : "Aggiungi date", !!(F.date.size || F.day.size));
+  set("v-quando", F.date.size ? [...F.date].map(ymdLabel).join(", ") : F.day.size ? ({ oggi: "Oggi", domani: "Domani", weekend: "Fine settimana", sera: "Stasera" }[[...F.day][0]]) : "Aggiungi date", !!(F.date.size || F.day.size));
   set("v-cosa", F.cat.size ? CATBY[[...F.cat][0]].n : QTEXT ? `"${QTEXT}"` : "Aggiungi attività", !!(F.cat.size || QTEXT));
   const nAdv = F.price.size + F.hour.size + F.who.size + F.going.size; const bd = document.getElementById("fbadge"); bd.hidden = !nAdv; bd.textContent = nAdv;
   const sb = document.getElementById("showbtn"); sb.textContent = n ? `Mostra ${n} event${n === 1 ? "o" : "i"}` : "Nessun evento"; sb.classList.toggle("zero", !n);
@@ -1165,7 +1165,7 @@ function render(){
   if (!rows.length && (F.day.size || F.date.size)) {
     // "Oggi niente serate. Il prossimo: …" (16/09/2026): stessi filtri senza il giorno, il primo in ordine di tempo
     const next = EV.filter(e => passes(e, true)).sort((a, b) => a.s - b.s)[0];
-    const when = F.date.size ? ([...F.date][0] <= addDays(TODAY, 1) ? "" : "Il ") + dayLabel([...F.date][0]) : { oggi: "Oggi", domani: "Domani", weekend: "Nel fine settimana", sera: "Stasera" }[[...F.day][0]];
+    const when = F.date.size ? ([...F.date][0] <= addDays(TODAY, 1) ? "" : "Il ") + ymdLabel([...F.date][0]) : { oggi: "Oggi", domani: "Domani", weekend: "Nel fine settimana", sera: "Stasera" }[[...F.day][0]];
     const cat = F.cat.size ? CATBY[[...F.cat][0]] : null;
     const what = cat ? (cat.n || "eventi").toLowerCase() : F.price.size ? "eventi gratis" : F.going.size ? "eventi con qualcuno che ci va" : QTEXT ? `eventi per '${esc(QTEXT)}'` : "eventi";
     list.innerHTML = `<div class="nores"><div class="tile">${cat && cat.i ? cat.i : "🔎"}</div><h3>${when} niente ${what}<span>${esc(summarize())}</span></h3>${next ? `<p>Il prossimo è ${next.ymd === addDays(TODAY, 1) ? "domani" : fmtDay.format(next.d)}:</p>` : `<p>Non ce ne sono nemmeno nei prossimi giorni. Oppure inizia tu.</p>`}<div class="btns"><button class="btn ghosty" id="allday">Vedi tutti i giorni</button>${next ? "" : `<a class="btn" href="/bergamo/crea.html" data-gate="crea">Crea un evento</a>`}</div></div>` + (next ? `<div class="dayh"><h2>${next.ymd === TODAY ? "Oggi" : next.ymd === addDays(TODAY, 1) ? "Domani" : fmtDay.format(next.d)}</h2><span>${fmtDay.format(next.d)}</span></div>` + card(next) : "");
