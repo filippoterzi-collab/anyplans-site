@@ -286,6 +286,34 @@ const rawGroups = INDICE ? [] : GROUPS_FIXTURE ? JSON.parse(await readFile(GROUP
 const SCHEDULES_FIXTURE = arg("--schedules");
 const rawSchedules = INDICE ? [] : SCHEDULES_FIXTURE ? JSON.parse(await readFile(SCHEDULES_FIXTURE, "utf8")) : await rpc("list_community_schedules", { p_city: CITY }).catch(() => []);
 const schedules = Array.isArray(rawSchedules) ? rawSchedules : [];
+// i siti dei circoli (migrazione 0088 club_sites): servono al link dell'organizzatore nei dati
+// strutturati — Search Console segnala "Missing field url (in organizer)" su 4 eventi su 5.
+// Difensivo di proposito: se la funzione non c'è ancora sul database, le pagine si generano lo
+// stesso, solo senza quel link. Così il generatore può andare online prima della migrazione.
+const clubSites = await (async () => {
+  if (INDICE) return new Map();
+  let righe = [];
+  try { righe = await rpc("club_sites", {}); } catch { return new Map(); }
+  if (!Array.isArray(righe)) return new Map();
+  // un indirizzo che appartiene a tre circoli diversi non è il sito di nessuno dei tre: è la
+  // piattaforma dove si prenota (playtomic.io). Come url dell'organizzatore sarebbe una bugia.
+  // due circoli diversi non possono avere la stessa identica pagina: quando succede quella pagina non
+  // è di nessuno dei due, è la piattaforma dove si prenota (playtomic.io). Si confronta l'indirizzo
+  // intero, non il dominio: instagram.com/kz_padel è la pagina di quel circolo e va tenuta.
+  const chiave = (u) => { try { const x = new URL(u); return x.hostname.replace(/^www\./, "").toLowerCase() + x.pathname.replace(/\/+$/, "").toLowerCase(); } catch { return ""; } };
+  const quanti = new Map();
+  for (const r of righe) { const k = chiave(r.website_url); if (k) quanti.set(k, (quanti.get(k) || 0) + 1); }
+  const m = new Map();
+  for (const r of righe) {
+    if (!r.name || !r.website_url) continue;
+    const u = String(r.website_url).trim();
+    const k = chiave(u);
+    if (!k || quanti.get(k) >= 2 || !/^https?:\/\//i.test(u)) continue;
+    m.set(norm(r.name), u);
+  }
+  return m;
+})();
+const siteDelClub = (nome) => clubSites.get(norm(nome)) || null;
 if (!INDICE && (!Array.isArray(rawRows) || rawRows.length === 0)) { console.error("nessun evento dalla RPC: non tocco niente"); process.exit(1); }
 
 // normalize rows; only the public columns of the contract are used
@@ -731,7 +759,7 @@ function organizer(p) {
     const g = groupBySlug.get(p.community_slug);
     return { name: p.community_name, url: groupUrl({ slug: p.community_slug }), kind: "gruppo", instagram: g?.instagram_handle ? `https://instagram.com/${String(g.instagram_handle).replace(/^@/, "")}` : null };   // slug del gruppo, non dell'evento
   }
-  if (p.club) return { name: p.club, url: null, kind: "club" };
+  if (p.club) return { name: p.club, url: siteDelClub(p.club), kind: "club" };
   if (p.host_name) return { name: p.host_name, url: null, kind: "utente" };
   return { name: en() ? "An anyplans member" : "Un utente di anyplans", url: null, kind: "utente" };
 }
@@ -755,7 +783,8 @@ function eventJsonLd(p, url) {
   // the town's Comune for the feste it publishes on its own portal (eventi.bergamo.it / app.bergamo.it), never anyplans itself.
   // Events opened by a single user (no group) carry no organizer: the RPC exposes no host name (privacy, SCHEMA §5) and we don't invent one.
   const organizerNode = org.kind === "gruppo" ? { "@type": "Organization", name: org.name, url: org.url, ...(org.instagram ? { sameAs: [org.instagram] } : {}) }
-    : org.kind === "club" ? { "@type": "Organization", name: p.town ? `Comune di ${localityOf(p)}` : org.name } : null; // the Comune keeps its Italian name in both languages
+    : org.kind === "club" ? { "@type": "Organization", name: p.town ? `Comune di ${localityOf(p)}` : org.name,
+        ...(!p.town && org.url ? { url: org.url } : {}) } : null; // the Comune keeps its Italian name in both languages
   if (p.visibility === "open" && p.lat != null && p.lng != null) location.geo = { "@type": "GeoCoordinates", latitude: p.lat, longitude: p.lng };
   // validFrom: since when one can join = when the event was published (updated_at is the closest date the public RPC exposes)
   const validFrom = isoLocal(p.updated instanceof Date && !isNaN(p.updated) ? p.updated : NOW, p.tz || "Europe/Rome");
