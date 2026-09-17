@@ -1,10 +1,10 @@
 {
  "slug": "torino",
  "nome": "Torino",
- "eventi": 851,
- "pagine": 1864,
+ "eventi": 844,
+ "pagine": 1851,
  "tipi": {
-  "padel": 55,
+  "padel": 48,
   "dinner": 104,
   "culture": 255,
   "tour": 68,
@@ -27,5 +27,5 @@
   "match": 24,
   "running": 11
  },
- "aggiornato": "2026-09-17T15:46:01.932Z"
+ "aggiornato": "2026-09-17T15:58:27.450Z"
 }

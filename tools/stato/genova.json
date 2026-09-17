@@ -2,7 +2,7 @@
  "slug": "genova",
  "nome": "Genova",
  "eventi": 256,
- "pagine": 574,
+ "pagine": 575,
  "tipi": {
   "dinner": 25,
   "dancing": 16,
@@ -18,5 +18,5 @@
   "match": 8,
   "cooking": 3
  },
- "aggiornato": "2026-09-17T15:47:09.996Z"
+ "aggiornato": "2026-09-17T15:59:26.762Z"
 }
