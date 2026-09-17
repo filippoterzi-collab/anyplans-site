@@ -527,6 +527,23 @@ body.locked .mk{display:block}
   .cgmore{margin-top:12px;font-size:14.5px;font-weight:700;color:var(--blue)}
 }
 
+
+/* 17/09/2026: la landing mobile è la mappa. Niente lista, niente contatore: sopra la ricerca,
+   sotto la mappa grande. Da non registrati è sfocata e il bottone porta alla registrazione. */
+@media (max-width:743px){
+  /* sotto la mappa si riparte da "Viaggi di gruppo": via solo la lista degli eventi,
+     il contatore, "Nel fine settimana" e "Eventi di gruppo". Il resto resta. */
+  body.maponly .listcol,body.maponly .mcount,body.maponly .showmore,
+  body.maponly .carousel{display:none!important}
+  body.maponly:not(.hascity) #weekend,body.maponly:not(.hascity) #gevents{display:none!important}
+  /* grande ma con un tetto: su schermi alti non deve diventare una pagina intera di mappa */
+  body.maponly .map,body.maponly.mapgate .map{height:min(calc(100dvh - 300px),440px);min-height:300px}
+  body.maponly.mapgate .mapbtn{display:none}   /* da sloggati comanda il banner, non il bottone */
+  body.maponly .mapbtn{display:inline-flex;left:50%;top:50%;transform:translate(-50%,-50%);
+                       height:52px;padding:0 24px;font-size:16px;background:var(--blue);color:#fff;
+                       box-shadow:0 8px 24px rgba(27,79,216,.4)}
+}
+
 /* 17/09/2026: chi non è registrato la mappa la vede, ma sfocata e non toccabile, col riquadro
    che chiede l'account. Vedere che c'è qualcosa convince più di un muro cieco. */
 body.mapgate #map{filter:blur(7px) saturate(.85);pointer-events:none}
@@ -859,7 +876,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789604963"></script>
+<script src="/bergamo/app.js?v=1789605586"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -882,6 +899,7 @@ const GATE_EVENTS = !logged;   // da non registrati, di qualsiasi provenienza: i
 if (LOCKED) document.body.classList.add("locked");
 // 17/09/2026: da non registrati la mappa si vede sfocata e non si tocca, ovunque: in Esplora e
 // a schermo intero. Si capisce che c'è qualcosa, e l'unico modo per usarla è registrarsi.
+document.body.classList.add("maponly");   // la landing mobile è la mappa (17/09/2026)
 if (GATE_EVENTS) {
   document.body.classList.add("mapgate");
   addEventListener("DOMContentLoaded", () => { const lk = document.getElementById("maplock"); if (lk) lk.hidden = false; });
@@ -922,7 +940,8 @@ const CITYBY = Object.fromEntries(CITIES.map(c => [c.slug, c.nome]));
 const HOME = { slug: "bergamo", nome: "Bergamo", lat: 45.698, lng: 9.670 };
 // città ricordata dalla volta prima: se non c'è, la home la chiede invece di mostrare Bergamo
 let SAVEDCITY = null; try { SAVEDCITY = JSON.parse(localStorage.getItem("anyplans_city") || "null"); } catch (_) {}
-function saveCity(c){ try { localStorage.setItem("anyplans_city", JSON.stringify({ slug: c.slug, nome: c.nome, lat: c.lat, lng: c.lng })); } catch (_) {} document.body.classList.remove("needcity"); { const g = document.getElementById("citygate"); if (g) g.hidden = true; } }
+function markCity(){ document.body.classList.add("hascity"); }
+function saveCity(c){ markCity(); try { localStorage.setItem("anyplans_city", JSON.stringify({ slug: c.slug, nome: c.nome, lat: c.lat, lng: c.lng })); } catch (_) {} document.body.classList.remove("needcity"); { const g = document.getElementById("citygate"); if (g) g.hidden = true; } }
 let CENTER = { ...HOME };                 // centro del feed (la città scelta, o "vicino a me")
 let REF = { lat: HOME.lat, lng: HOME.lng }; // punto da cui si misurano i km (paese scelto, o il centro)
 let EV = [];
@@ -1040,6 +1059,7 @@ function syncBar(n){
   const nAdv = F.price.size + F.hour.size + F.who.size + F.going.size; const bd = document.getElementById("fbadge"); bd.hidden = !nAdv; bd.textContent = nAdv;
   const sb = document.getElementById("showbtn"); sb.textContent = n ? `Mostra ${n} event${n === 1 ? "o" : "i"}` : "Nessun evento"; sb.classList.toggle("zero", !n);
   window.CHOSEN = !!(F.city.size || F.town.size || F.where.size || PLACE);
+  if (window.CHOSEN) document.body.classList.add("hascity");
   if (window.CHOSEN) document.getElementById("hcity").textContent = CENTER.slug ? CENTER.nome : (PLACE ? PLACE.name : CENTER.nome);
   const active = Object.entries(F).filter(([k, v]) => v.size); const key = active.length === 1 && active[0][0] === "cat" ? [...active[0][1]][0] : active.length ? null : "";
   document.querySelectorAll(".cat").forEach(c => c.classList.toggle("on", c.dataset.cat === key));
@@ -1463,7 +1483,11 @@ document.getElementById("list").addEventListener("mouseout", e => { const c = e.
 function toggleMap(){ const on = document.body.classList.toggle("mapmode"); document.body.classList.remove("pinpicked");
   if (typeof GATE_EVENTS !== "undefined" && GATE_EVENTS && on) track("wall_view", "mappa"); document.getElementById("mapfab").textContent = on ? "☰ Lista" : "🗺️ Mappa"; document.getElementById("mapbtn").textContent = on ? "✕ Chiudi la mappa" : "🗺️ Apri la mappa"; if (on) window.scrollTo({ top: 0 }); setTimeout(() => { if (map) { map.resize(); fitMap(mapRows(lastRows)); } }, 80); }
 document.getElementById("mapfab").addEventListener("click", () => { if (!LOCKED) toggleMap(); });
-document.getElementById("mapbtn").addEventListener("click", e => { if (LOCKED) return; e.stopPropagation(); toggleMap(); });
+document.getElementById("mapbtn").addEventListener("click", e => {
+  if (LOCKED) return; e.stopPropagation();
+  if (typeof GATE_EVENTS !== "undefined" && GATE_EVENTS) { toLogin("mappa"); return; }
+  toggleMap();
+});
 document.addEventListener("keydown", e => { if (e.key === "Escape" && document.body.classList.contains("mapmode")) toggleMap(); });
 function loadMapLib(){
   const css = document.createElement("link"); css.rel = "stylesheet"; css.href = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css"; document.head.appendChild(css);
