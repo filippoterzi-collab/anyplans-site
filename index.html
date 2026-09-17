@@ -924,7 +924,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789626068"></script>
+<script src="/bergamo/app.js?v=1789626305"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1058,7 +1058,7 @@ function relTxt(e){
   if (min <= 90) return "";
   if (min < 24 * 60) { const h = Math.round(min / 60); return h === 1 ? "tra 1 ora" : `tra ${h} ore`; }
   const n = Math.round((new Date(e.ymd + "T12:00:00Z") - new Date(TODAY + "T12:00:00Z")) / 864e5);
-  return n === 1 ? "tra 1 giorno" : `tra ${n} giorni`;
+  return n === 1 ? "" : `tra ${n} giorni`;   // "domani" lo dice gia' whenTxt
 }
 const priceTxt = e => e.price_cents > 0 ? `<span class="price">${esc(fmtPrice(e.price_cents))}</span>` : `<span class="price free">Gratis</span>`;
 const cta = e => `<a class="btn" href="${EVURL(e)}" data-gate="ci-sono">Ci sono</a>`;
