@@ -910,7 +910,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789624724"></script>
+<script src="/bergamo/app.js?v=1789624943"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1510,13 +1510,8 @@ function drawPins(rows){
     const mk = new maplibregl.Marker({ element: el }).setLngLat([e.lng, e.lat]).setPopup(pop).addTo(map);
     el.addEventListener("mouseenter", () => hl(e.id, true)); el.addEventListener("mouseleave", () => hl(e.id, false));
     el.addEventListener("click", ev => {
-      const mob = matchMedia("(max-width:743px)").matches;
-      // mappa a schermo intero sul telefono: un pin solo = si apre l'evento e basta
-      if (mob && document.body.classList.contains("mapmode") && g.length === 1) {
-        ev.preventDefault(); ev.stopPropagation();
-        if (typeof GATE_EVENTS !== "undefined" && GATE_EVENTS) { toLogin("evento", EVURL(e)); return; }
-        location.href = EVURL(e); return;
-      }
+      // 17/09/2026: il pin apre prima il quadratino con nome, ora e prezzo; l'evento si apre
+      // toccando il quadratino. Prima sul telefono saltava il quadratino e andava dritto.
       const c = document.querySelector(`.ev[data-id="${e.id}"]`);
       if (c && !document.body.classList.contains("mapmode")) c.scrollIntoView({ behavior: "smooth", block: "center" });
     });
