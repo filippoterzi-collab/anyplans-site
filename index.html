@@ -554,6 +554,9 @@ body.locked .mk{display:block}
 /* 17/09/2026: da non registrati il dito sulla mappa deve poter scorrere la pagina.
    `touch-action:none` serve a trascinare la mappa, ma qui la mappa non si tocca:
    l'unica cosa viva è il bottone "Registrati". */
+/* 17/09/2026: da non registrati anche i conti dei giorni sono sfocati, come la mappa. */
+body.mapgate #dgrid .chip small{filter:blur(4px);-webkit-filter:blur(4px)}
+body.mapgate #dgrid .chip.ignoto{opacity:.4}
 body.mapgate .map{touch-action:pan-y!important;user-select:auto}
 body.mapgate .map .lock{pointer-events:none;background:rgba(251,249,245,.35)}
 body.mapgate .map .lock > *{pointer-events:none}
@@ -904,7 +907,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789624144"></script>
+<script src="/bergamo/app.js?v=1789624651"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1041,6 +1044,9 @@ async function loadEvents(center){
   if (!r || !r.ok) { loading = false; document.getElementById("list").innerHTML = '<div class="nores"><div class="tile">😕</div><h3>Non riesco a caricare gli eventi</h3><p>Ricarica la pagina.</p></div>'; return; }
   const rows = await r.json().catch(() => []);
   loading = false;
+  // il database ne manda al massimo 1000 per richiesta: se sono esattamente 1000 il feed e'
+  // tagliato, e dei giorni successivi all'ultimo arrivato non sappiamo niente (17/09/2026)
+  window.FEEDCAPPED = rows.length >= 1000;
   // Un evento iniziato prima di oggi e ancora in corso (un torneo di due settimane, una mostra) non deve
   // stare in testa alla lista con la data di ieri: va sotto "Oggi", in coda agli eventi che iniziano oggi,
   // con "in corso · fino a ...". `s` e' la data usata per ordinare, `d` resta l'inizio vero (audit 17/09/2026, #4).
@@ -1151,7 +1157,18 @@ function buildStatic(){
 function buildDynamic(){
   // conteggi veri per giorno e categoria; paesi del feed
   const dc = {}; EV.forEach(e => { dc[e.ymd] = (dc[e.ymd] || 0) + 1; });
-  document.querySelectorAll("#dgrid .chip").forEach(c => { const n = dc[c.dataset.ymd] || 0; c.querySelector("small").textContent = n; c.disabled = !n; });
+  // Oltre l'ultimo giorno arrivato il conto non lo sappiamo: scrivere "0" e' falso (a Bergamo
+  // il 21 settembre ci sono 98 eventi e la griglia diceva zero). Meglio non scrivere niente.
+  const LASTDAY = EV.length ? EV[EV.length - 1].ymd : null;
+  const OSPITE = (typeof GATE_EVENTS !== "undefined" && GATE_EVENTS);
+  document.querySelectorAll("#dgrid .chip").forEach(c => {
+    const y = c.dataset.ymd, n = dc[y] || 0;
+    const ignoto = !!(window.FEEDCAPPED && LASTDAY && y > LASTDAY);
+    c.querySelector("small").textContent = ignoto ? "·" : n;
+    // da non registrati nessun giorno e' spento: il tocco sul numero sfocato porta alla registrazione
+    c.disabled = OSPITE ? false : (ignoto ? true : !n);
+    c.classList.toggle("ignoto", ignoto);
+  });
   const cc = {}; EV.forEach(e => { CATS.forEach(c => { if (c.s && c.s.includes(e.sport)) cc[c.k] = (cc[c.k] || 0) + 1; }); });
   // tutte le categorie sempre in lista, anche a zero (15/09/2026: "cosa ti va di fare deve esserci tutto")
   document.querySelectorAll("#catchips .chip").forEach(c => { const n = cc[c.dataset.v] || 0; c.querySelector("small").textContent = n; c.disabled = false; });
@@ -1170,6 +1187,8 @@ function bindChip(c){
   if (c.dataset.bound) return; c.dataset.bound = "1"; c.setAttribute("aria-pressed", "false");
   c.addEventListener("click", e => {
     if (c.disabled) return; e.stopPropagation();
+    // 17/09/2026: da non registrati i conti dei giorni sono sfocati e toccarli porta alla registrazione
+    if (typeof GATE_EVENTS !== "undefined" && GATE_EVENTS && c.closest("#dgrid")) { e.preventDefault(); toLogin("data"); return; }
     const f = c.closest("[data-f]").dataset.f, v = c.dataset.v;
     if (f === "place") { pickPlace(+v); return; }
     const single = ["where","city","town","day","cat","price","hour","who","date"].includes(f);
