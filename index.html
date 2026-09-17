@@ -554,8 +554,8 @@ body.locked .mk{display:block}
   body.maponly.mapmode .map,body.maponly.mapmode.mapgate .map{height:100%!important;max-height:none;border-radius:0}
   body.maponly.mapmode .mapcol{position:fixed;left:0;right:0;top:60px;bottom:0;margin:0;z-index:25}
   body.maponly.mapgate .mapbtn{display:none}   /* da sloggati comanda il banner, non il bottone */
-  /* da registrati il bottone sta in basso al centro, non in mezzo alla mappa sopra i pin (17/09/2026) */
-  body.maponly .mapbtn{display:inline-flex;left:50%;right:auto;top:auto;bottom:14px;
+  /* il bottone sta in alto al centro: in basso finiva sotto la barra e non si vedeva aprendo la pagina (17/09/2026) */
+  body.maponly .mapbtn{display:inline-flex;left:50%;right:auto;top:12px;bottom:auto;
                        transform:translateX(-50%);height:48px;padding:0 22px;font-size:15.5px;
                        background:var(--blue);color:#fff;box-shadow:0 8px 24px rgba(27,79,216,.4)}
   body.maponly.mapmode .mapbtn{left:12px;top:12px;bottom:auto;transform:none;
@@ -924,7 +924,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789626305"></script>
+<script src="/bergamo/app.js?v=1789626519"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
