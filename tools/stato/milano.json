@@ -1,7 +1,36 @@
 {
  "slug": "milano",
  "nome": "Milano",
- "eventi": 1705,
+ "eventi": 1704,
  "pagine": 3808,
- "aggiornato": "2026-09-17T06:32:03.200Z"
+ "tipi": {
+  "padel": 372,
+  "dinner": 305,
+  "tour": 51,
+  "painting": 31,
+  "culture": 300,
+  "running": 15,
+  "exhibition": 19,
+  "show": 118,
+  "tennis": 10,
+  "cinema": 17,
+  "yoga": 64,
+  "gardening": 4,
+  "festival": 81,
+  "games": 37,
+  "volleyball": 6,
+  "concert": 150,
+  "gym": 4,
+  "hiking": 31,
+  "match": 6,
+  "nightlife": 36,
+  "cooking": 3,
+  "karaoke": 7,
+  "cycling": 4,
+  "market": 11,
+  "fair": 6,
+  "singles": 3,
+  "dancing": 9
+ },
+ "aggiornato": "2026-09-17T07:30:13.788Z"
 }

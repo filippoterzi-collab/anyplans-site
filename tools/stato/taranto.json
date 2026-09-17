@@ -3,5 +3,13 @@
  "nome": "Taranto",
  "eventi": 58,
  "pagine": 142,
- "aggiornato": "2026-09-17T06:34:15.579Z"
+ "tipi": {
+  "culture": 11,
+  "dinner": 24,
+  "hiking": 3,
+  "show": 6,
+  "concert": 9,
+  "tour": 3
+ },
+ "aggiornato": "2026-09-17T07:32:49.474Z"
 }

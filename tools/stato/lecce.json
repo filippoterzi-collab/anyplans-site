@@ -3,5 +3,13 @@
  "nome": "Lecce",
  "eventi": 61,
  "pagine": 156,
- "aggiornato": "2026-09-17T06:34:19.202Z"
+ "tipi": {
+  "dinner": 21,
+  "festival": 5,
+  "culture": 12,
+  "show": 6,
+  "concert": 8,
+  "yoga": 4
+ },
+ "aggiornato": "2026-09-17T07:32:53.536Z"
 }

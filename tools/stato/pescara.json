@@ -3,5 +3,15 @@
  "nome": "Pescara",
  "eventi": 82,
  "pagine": 196,
- "aggiornato": "2026-09-17T06:34:02.070Z"
+ "tipi": {
+  "dinner": 11,
+  "culture": 14,
+  "festival": 4,
+  "concert": 13,
+  "tour": 4,
+  "show": 19,
+  "exhibition": 5,
+  "yoga": 3
+ },
+ "aggiornato": "2026-09-17T07:32:33.281Z"
 }

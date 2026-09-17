@@ -3,5 +3,15 @@
  "nome": "Cagliari",
  "eventi": 123,
  "pagine": 290,
- "aggiornato": "2026-09-17T06:33:52.426Z"
+ "tipi": {
+  "culture": 31,
+  "dinner": 26,
+  "tour": 8,
+  "gym": 3,
+  "festival": 7,
+  "yoga": 3,
+  "concert": 21,
+  "show": 17
+ },
+ "aggiornato": "2026-09-17T07:32:22.033Z"
 }

@@ -3,5 +3,22 @@
  "nome": "Padova",
  "eventi": 404,
  "pagine": 882,
- "aggiornato": "2026-09-17T06:33:27.726Z"
+ "tipi": {
+  "dancing": 2,
+  "culture": 111,
+  "dinner": 63,
+  "yoga": 16,
+  "karaoke": 3,
+  "hiking": 6,
+  "concert": 63,
+  "show": 45,
+  "festival": 25,
+  "cinema": 9,
+  "games": 8,
+  "gym": 3,
+  "tour": 20,
+  "painting": 15,
+  "exhibition": 5
+ },
+ "aggiornato": "2026-09-17T07:31:51.444Z"
 }

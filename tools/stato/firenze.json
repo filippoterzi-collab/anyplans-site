@@ -3,5 +3,24 @@
  "nome": "Firenze",
  "eventi": 393,
  "pagine": 920,
- "aggiornato": "2026-09-17T06:33:36.519Z"
+ "tipi": {
+  "dinner": 65,
+  "painting": 11,
+  "padel": 16,
+  "concert": 56,
+  "festival": 32,
+  "hiking": 4,
+  "culture": 103,
+  "gym": 4,
+  "show": 30,
+  "dancing": 5,
+  "games": 5,
+  "karaoke": 2,
+  "yoga": 11,
+  "exhibition": 15,
+  "cinema": 5,
+  "nightlife": 3,
+  "tour": 23
+ },
+ "aggiornato": "2026-09-17T07:32:01.810Z"
 }

@@ -3,5 +3,26 @@
  "nome": "Bologna",
  "eventi": 597,
  "pagine": 1306,
- "aggiornato": "2026-09-17T06:33:08.066Z"
+ "tipi": {
+  "dinner": 61,
+  "volleyball": 3,
+  "padel": 13,
+  "culture": 154,
+  "show": 69,
+  "tour": 22,
+  "concert": 109,
+  "yoga": 15,
+  "cinema": 10,
+  "games": 8,
+  "dancing": 12,
+  "gym": 6,
+  "singles": 3,
+  "festival": 59,
+  "painting": 17,
+  "match": 13,
+  "exhibition": 9,
+  "hiking": 3,
+  "nightlife": 3
+ },
+ "aggiornato": "2026-09-17T07:31:26.572Z"
 }

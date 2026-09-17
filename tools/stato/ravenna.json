@@ -3,5 +3,15 @@
  "nome": "Ravenna",
  "eventi": 66,
  "pagine": 176,
- "aggiornato": "2026-09-17T06:34:05.941Z"
+ "tipi": {
+  "culture": 15,
+  "dinner": 12,
+  "show": 3,
+  "festival": 8,
+  "concert": 7,
+  "painting": 3,
+  "tour": 3,
+  "cinema": 3
+ },
+ "aggiornato": "2026-09-17T07:32:38.118Z"
 }

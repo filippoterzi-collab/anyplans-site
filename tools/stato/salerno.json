@@ -3,5 +3,16 @@
  "nome": "Salerno",
  "eventi": 86,
  "pagine": 236,
- "aggiornato": "2026-09-17T06:34:17.264Z"
+ "tipi": {
+  "dinner": 19,
+  "culture": 34,
+  "exhibition": 0,
+  "show": 4,
+  "cinema": 5,
+  "tour": 4,
+  "hiking": 3,
+  "concert": 11,
+  "festival": 4
+ },
+ "aggiornato": "2026-09-17T07:32:51.372Z"
 }

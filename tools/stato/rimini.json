@@ -3,5 +3,13 @@
  "nome": "Rimini",
  "eventi": 72,
  "pagine": 174,
- "aggiornato": "2026-09-17T06:34:09.901Z"
+ "tipi": {
+  "culture": 14,
+  "dinner": 29,
+  "show": 3,
+  "concert": 4,
+  "tour": 5,
+  "festival": 3
+ },
+ "aggiornato": "2026-09-17T07:32:42.579Z"
 }

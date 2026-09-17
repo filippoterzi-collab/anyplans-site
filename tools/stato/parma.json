@@ -3,5 +3,22 @@
  "nome": "Parma",
  "eventi": 193,
  "pagine": 458,
- "aggiornato": "2026-09-17T06:33:49.607Z"
+ "tipi": {
+  "dinner": 27,
+  "culture": 43,
+  "tour": 5,
+  "running": 2,
+  "painting": 5,
+  "games": 15,
+  "gym": 3,
+  "festival": 29,
+  "concert": 19,
+  "dancing": 4,
+  "match": 12,
+  "show": 12,
+  "exhibition": 3,
+  "yoga": 3,
+  "cooking": 5
+ },
+ "aggiornato": "2026-09-17T07:32:18.218Z"
 }

@@ -3,5 +3,31 @@
  "nome": "Bergamo",
  "eventi": 883,
  "pagine": 2294,
- "aggiornato": "2026-09-17T06:32:24.546Z"
+ "tipi": {
+  "yoga": 10,
+  "festival": 66,
+  "running": 33,
+  "walking": 2,
+  "estivo": 11,
+  "dinner": 53,
+  "padel": 131,
+  "concert": 103,
+  "market": 190,
+  "culture": 93,
+  "gym": 2,
+  "games": 4,
+  "nightlife": 0,
+  "karaoke": 31,
+  "dancing": 8,
+  "tour": 22,
+  "exhibition": 4,
+  "show": 64,
+  "hiking": 10,
+  "painting": 8,
+  "cinema": 8,
+  "fair": 8,
+  "ceramics": 4,
+  "match": 11
+ },
+ "aggiornato": "2026-09-17T07:30:41.489Z"
 }

@@ -3,5 +3,15 @@
  "nome": "Perugia",
  "eventi": 136,
  "pagine": 306,
- "aggiornato": "2026-09-17T06:33:47.223Z"
+ "tipi": {
+  "dinner": 4,
+  "tour": 6,
+  "culture": 55,
+  "festival": 33,
+  "yoga": 4,
+  "hiking": 5,
+  "concert": 18,
+  "painting": 3
+ },
+ "aggiornato": "2026-09-17T07:32:15.345Z"
 }

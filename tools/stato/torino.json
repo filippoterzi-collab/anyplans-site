@@ -3,5 +3,29 @@
  "nome": "Torino",
  "eventi": 846,
  "pagine": 1852,
- "aggiornato": "2026-09-17T06:32:45.626Z"
+ "tipi": {
+  "padel": 51,
+  "dinner": 104,
+  "culture": 255,
+  "tour": 69,
+  "painting": 24,
+  "cinema": 15,
+  "volleyball": 7,
+  "yoga": 22,
+  "concert": 75,
+  "exhibition": 7,
+  "singles": 7,
+  "show": 37,
+  "cycling": 3,
+  "hiking": 16,
+  "festival": 68,
+  "dancing": 7,
+  "karaoke": 5,
+  "games": 19,
+  "nightlife": 7,
+  "gym": 9,
+  "match": 24,
+  "running": 9
+ },
+ "aggiornato": "2026-09-17T07:31:00.013Z"
 }

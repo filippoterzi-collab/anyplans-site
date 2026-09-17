@@ -3,5 +3,18 @@
  "nome": "Pisa",
  "eventi": 131,
  "pagine": 310,
- "aggiornato": "2026-09-17T06:34:13.243Z"
+ "tipi": {
+  "dinner": 28,
+  "culture": 45,
+  "games": 4,
+  "hiking": 4,
+  "festival": 9,
+  "painting": 3,
+  "yoga": 3,
+  "show": 10,
+  "tour": 4,
+  "concert": 6,
+  "gardening": 3
+ },
+ "aggiornato": "2026-09-17T07:32:46.623Z"
 }

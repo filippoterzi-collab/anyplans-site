@@ -3,5 +3,21 @@
  "nome": "Verona",
  "eventi": 272,
  "pagine": 610,
- "aggiornato": "2026-09-17T06:33:23.699Z"
+ "tipi": {
+  "festival": 19,
+  "padel": 24,
+  "culture": 79,
+  "yoga": 7,
+  "concert": 30,
+  "dinner": 34,
+  "hiking": 6,
+  "show": 26,
+  "market": 3,
+  "exhibition": 3,
+  "tour": 15,
+  "gym": 3,
+  "painting": 5,
+  "cycling": 3
+ },
+ "aggiornato": "2026-09-17T07:31:46.674Z"
 }

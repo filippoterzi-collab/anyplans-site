@@ -3,5 +3,20 @@
  "nome": "Genova",
  "eventi": 248,
  "pagine": 556,
- "aggiornato": "2026-09-17T06:33:41.104Z"
+ "tipi": {
+  "dinner": 22,
+  "dancing": 16,
+  "culture": 67,
+  "festival": 14,
+  "concert": 33,
+  "tour": 11,
+  "painting": 7,
+  "yoga": 5,
+  "show": 41,
+  "exhibition": 6,
+  "hiking": 5,
+  "match": 8,
+  "cooking": 3
+ },
+ "aggiornato": "2026-09-17T07:32:07.478Z"
 }

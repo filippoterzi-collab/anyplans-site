@@ -3,5 +3,21 @@
  "nome": "Napoli",
  "eventi": 431,
  "pagine": 992,
- "aggiornato": "2026-09-17T06:33:18.625Z"
+ "tipi": {
+  "dinner": 97,
+  "tour": 29,
+  "culture": 92,
+  "painting": 13,
+  "nightlife": 8,
+  "karaoke": 8,
+  "concert": 72,
+  "dancing": 15,
+  "festival": 25,
+  "hiking": 6,
+  "cinema": 4,
+  "show": 39,
+  "yoga": 9,
+  "exhibition": 3
+ },
+ "aggiornato": "2026-09-17T07:31:40.652Z"
 }

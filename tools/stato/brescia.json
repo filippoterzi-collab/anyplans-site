@@ -3,5 +3,23 @@
  "nome": "Brescia",
  "eventi": 311,
  "pagine": 768,
- "aggiornato": "2026-09-17T06:33:14.492Z"
+ "tipi": {
+  "festival": 78,
+  "culture": 67,
+  "dinner": 47,
+  "yoga": 10,
+  "market": 7,
+  "show": 18,
+  "padel": 3,
+  "cinema": 5,
+  "concert": 28,
+  "singles": 5,
+  "exhibition": 4,
+  "gym": 3,
+  "tour": 12,
+  "painting": 5,
+  "hiking": 5,
+  "dancing": 3
+ },
+ "aggiornato": "2026-09-17T07:31:34.889Z"
 }

@@ -3,5 +3,16 @@
  "nome": "Catania",
  "eventi": 86,
  "pagine": 224,
- "aggiornato": "2026-09-17T06:34:03.983Z"
+ "tipi": {
+  "dinner": 13,
+  "culture": 28,
+  "gym": 2,
+  "show": 4,
+  "yoga": 3,
+  "tour": 4,
+  "concert": 12,
+  "festival": 4,
+  "cinema": 3
+ },
+ "aggiornato": "2026-09-17T07:32:35.827Z"
 }
