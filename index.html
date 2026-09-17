@@ -934,7 +934,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789659461"></script>
+<script src="/bergamo/app.js?v=1789659891"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1491,6 +1491,8 @@ function bindAll(){
     else if (F.date.size) parts.push("in una data scelta");
     if (F.price.has("free")) parts.push("gratis");
     if (F.where.size) parts.push("vicino a me");
+    // con la città scelta il campo la deve dire, invece di chiederla ancora (17/09/2026)
+    else if (F.city.size) parts.unshift(CITYBY[[...F.city][0]] || "");
     const on = parts.length > 0;
     t.textContent = on ? parts.join(" · ") : "Inserisci la tua città";
     msf.classList.toggle("on", on);
@@ -1585,7 +1587,9 @@ function fitMap(rows){
   if (!map || !mapReady) return;
   if (!rows.length) { map.jumpTo({ center: [CENTER.lng, CENTER.lat], zoom: 11.5 }); return; }
   const b = new maplibregl.LngLatBounds(); rows.slice(0, 200).forEach(e => b.extend([e.lng, e.lat]));
-  map.fitBounds(b, { padding: 40, maxZoom: 13, duration: 0 });
+  // in alto a sinistra c'è sempre il bottone della mappa (e da computer la pillola del contatore a
+  // destra): con due o tre eventi fitBounds li metteva a 40 px dal bordo, cioè sotto il bottone (17/09/2026)
+  map.fitBounds(b, { padding: { top: 70, bottom: 40, left: 40, right: 40 }, maxZoom: 13, duration: 0 });
 }
 function drawPins(rows){
   if (!map || !mapReady) return;
@@ -1613,7 +1617,8 @@ document.getElementById("list").addEventListener("mouseout", e => { const c = e.
 function setSbh(){ const sb = document.querySelector(".sbwrap"); if (sb) document.documentElement.style.setProperty("--sbh", sb.offsetHeight + "px"); }
 window.addEventListener("resize", () => { if (document.body.classList.contains("mapmode")) setSbh(); });
 function toggleMap(){ const on = document.body.classList.toggle("mapmode"); document.body.classList.remove("pinpicked"); if (on) setSbh();
-  if (typeof GATE_EVENTS !== "undefined" && GATE_EVENTS && on) track("wall_view", "mappa"); document.getElementById("mapfab").textContent = on ? "☰ Lista" : "🗺️ Mappa"; document.getElementById("mapbtn").textContent = on ? "✕ Chiudi la mappa" : "🗺️ Apri la mappa"; if (on) window.scrollTo({ top: 0 }); setTimeout(() => { if (map) { map.resize(); fitMap(mapRows(lastRows)); } }, 80); }
+  if (typeof GATE_EVENTS !== "undefined" && GATE_EVENTS && on) track("wall_view", "mappa"); document.getElementById("mapfab").textContent = on ? "☰ Lista" : "🗺️ Mappa"; document.getElementById("mapbtn").textContent = on ? "✕ Chiudi la mappa" : "🗺️ Apri la mappa"; window.scrollTo({ top: 0 });   // anche alla chiusura: su iPhone la pagina sotto la mappa fissa scorre lo stesso e si riapriva su "Viaggi di gruppo" (17/09/2026)
+  setTimeout(() => { if (map) { map.resize(); fitMap(mapRows(lastRows)); } }, 80); }
 document.getElementById("mapfab").addEventListener("click", () => { if (!LOCKED) toggleMap(); });
 document.getElementById("mapbtn").addEventListener("click", e => {
   if (LOCKED) return; e.stopPropagation();
