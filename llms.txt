@@ -1,6 +1,6 @@
 # anyplans
 
-> La mappa degli eventi veri d'Italia: 9452 eventi in programma in 29 città. Feste di paese, concerti,
+> La mappa degli eventi veri d'Italia: 9450 eventi in programma in 29 città. Feste di paese, concerti,
 > mercati, cene con sconosciuti, uscite di corsa, partite di padel aperte. Di ognuno: data, luogo, prezzo,
 > chi organizza e come iscriversi. Si entra con l'email, solo maggiorenni. Aggiornato ogni notte.
 > Ha anche una pagina che confronta i viaggi di gruppo per chi parte da solo (WeRoad, SiVola, Zest Family).
@@ -14,7 +14,7 @@ riassunto e domande frequenti di ogni pagina.
 - [Roma](https://anyplans.in/roma/): 1295 eventi in programma, 2814 pagine — testo completo: https://anyplans.in/llms-roma.txt
 - [Bergamo](https://anyplans.in/bergamo/cosa-fare/): 883 eventi in programma, 2294 pagine — testo completo: https://anyplans.in/llms-full.txt
 - [Torino](https://anyplans.in/torino/): 846 eventi in programma, 1852 pagine — testo completo: https://anyplans.in/llms-torino.txt
-- [Bologna](https://anyplans.in/bologna/): 596 eventi in programma, 1306 pagine — testo completo: https://anyplans.in/llms-bologna.txt
+- [Bologna](https://anyplans.in/bologna/): 594 eventi in programma, 1302 pagine — testo completo: https://anyplans.in/llms-bologna.txt
 - [Napoli](https://anyplans.in/napoli/): 431 eventi in programma, 992 pagine — testo completo: https://anyplans.in/llms-napoli.txt
 - [Padova](https://anyplans.in/padova/): 404 eventi in programma, 882 pagine — testo completo: https://anyplans.in/llms-padova.txt
 - [Firenze](https://anyplans.in/firenze/): 393 eventi in programma, 920 pagine — testo completo: https://anyplans.in/llms-firenze.txt
