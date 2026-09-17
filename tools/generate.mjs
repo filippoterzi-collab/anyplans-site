@@ -526,7 +526,9 @@ const groupUrl = (g) => `${base()}/${L.groups}/${g.slug}/`;
 // A Bergamo /bergamo/ e' la home dell'app web, quindi l'hub sta in /bergamo/cosa-fare/; nelle altre
 // citta l'indirizzo e' libero e l'hub sta li', che e' anche l'indirizzo che la gente prova a mano.
 const cittaUrl = () => `${SITE}${L.prefix}/${L.citta}/`;   // l'elenco delle città del sito
-const hubUrl = () => CITY === HOME_CITY ? `${base()}/${L.hub}/` : `${base()}/`;
+// 17/09/2026: in italiano /milano/ apre la home (mappa + ricerca, gia' su Milano) come /bergamo/,
+// quindi l'elenco di link vive sotto /milano/cosa-fare/. In inglese resta dov'era.
+const hubUrl = () => (!en() || CITY === HOME_CITY) ? `${base()}/${L.hub}/` : `${base()}/`;
 const groupsUrl = () => `${base()}/${L.groups}/`;
 const runningUrl = () => `${base()}/${L.running}/`;
 const dayUrl = (i) => `${runningUrl()}${L.daySlug[i]}/`;
@@ -1467,7 +1469,7 @@ const evTown = (p) => { const t = localityOf(p); return t && !norm(p.title).incl
 const vicine = (n = 5) => CITTA.filter(x => x.slug !== CITY)
   .map(x => ({ ...x, d: distKm({ lat: x.lat, lng: x.lng }, { lat: C.lat, lng: C.lng }) }))
   .sort((a, b) => a.d - b.d).slice(0, n);
-const cityHref = (x) => `/${en() ? "en/" : ""}${x.slug}${x.slug === HOME_CITY ? (en() ? "/things-to-do" : "/cosa-fare") : ""}/`;
+const cityHref = (x) => `/${en() ? "en/" : ""}${x.slug}${en() ? (x.slug === HOME_CITY ? "/things-to-do" : "") : "/cosa-fare"}/`;
 // ── le stesse categorie nelle altre città ────────────────────────────────────
 // "feste a Bergamo" sta in posizione 85 su Google mentre "festa oratorio alzano sopra" sta in 6:
 // le pagine dei nomi precisi reggono, quelle generiche no. L'unica leva che abbiamo in casa sono i
@@ -1874,7 +1876,7 @@ function cittaPage(stato) {
   const lead = en()
     ? `anyplans has ${nf(tot)} upcoming events in ${stato.length} Italian cities: ${first.join(", ")} and more. Concerts, town festivals, markets, dinners with strangers, group runs and open padel matches, each with date, place, price and how to sign up. Updated every night.`
     : `Su anyplans ci sono ${nf(tot)} eventi in programma in ${stato.length} città italiane: ${first.join(", ")} e altre. Concerti, feste di paese, mercati, cene con sconosciuti, uscite di corsa e partite di padel aperte, ognuno con data, luogo, prezzo e come iscriversi. Aggiornato ogni notte.`;
-  const cards = stato.map(c => `<a href="/${en() ? "en/" : ""}${c.slug}${c.slug === HOME_CITY ? (en() ? "/things-to-do" : "/cosa-fare") : ""}/">${esc(c.nome)}<span class="n">${c.eventi}</span></a>`).join("");
+  const cards = stato.map(c => `<a href="/${en() ? "en/" : ""}${c.slug}${en() ? (c.slug === HOME_CITY ? "/things-to-do" : "") : "/cosa-fare"}/">${esc(c.nome)}<span class="n">${c.eventi}</span></a>`).join("");
   const faq = en() ? [
     { q: "Which cities is anyplans in?", a: `${stato.length} cities: ${joinIt(stato.map(c => `${c.nome} (${c.eventi} events)`))}.` },
     { q: "My city is not here. Why?", a: "Because there are not enough events yet to make a page worth reading. The map covers the whole country: open it and drag it where you live, the events load as you go." },
@@ -1888,7 +1890,7 @@ function cittaPage(stato) {
   ];
   const ld = jsonld({ "@context": "https://schema.org", "@type": "ItemList", name: h1, url, numberOfItems: stato.length,
     itemListElement: stato.map((c, i) => ({ "@type": "ListItem", position: i + 1, name: c.nome,
-      url: `${SITE}${en() ? "/en" : ""}/${c.slug}${c.slug === HOME_CITY ? (en() ? "/things-to-do" : "/cosa-fare") : ""}/` })) });
+      url: `${SITE}${en() ? "/en" : ""}/${c.slug}${en() ? (c.slug === HOME_CITY ? "/things-to-do" : "") : "/cosa-fare"}/` })) });
   const body = `
 ${crumbs([["anyplans", L.home], [en() ? "Cities" : "Città", null]])}
 <h1>${esc(h1)}</h1>
@@ -1942,7 +1944,7 @@ riassunto e domande frequenti di ogni pagina.
 
 ## Le città
 
-${stato.map(c => `- [${c.nome}](${SITE}/${c.slug}${c.slug === HOME_CITY ? "/cosa-fare" : ""}/): ${c.eventi} eventi in programma, ${c.pagine} pagine — testo completo: ${SITE}/${c.slug === HOME_CITY ? "llms-full.txt" : `llms-${c.slug}.txt`}`).join("\n")}
+${stato.map(c => `- [${c.nome}](${SITE}/${c.slug}/cosa-fare/): ${c.eventi} eventi in programma, ${c.pagine} pagine — testo completo: ${SITE}/${c.slug === HOME_CITY ? "llms-full.txt" : `llms-${c.slug}.txt`}`).join("\n")}
 
 ## Il sito
 
@@ -1996,6 +1998,33 @@ for (const code of ["it", "en"]) {
   for (const p of pages) { await writePage(relOf(eventUrl(p)), eventPage(p)); addUrl(eventUrl(p), p.updated); }
 }
 L = LOCALES.it;
+
+// ── /<citta>/ e' la home, gia' su quella citta' ───────────────────────────────
+// 17/09/2026 (Filippo: "voglio che apra questo", indicando anyplans.in). La radice di ogni citta'
+// serve la home del sito con window.ANYPLANS_CITY impostato: dove compilato, mappa e lista li'.
+// Titolo, descrizione e canonical restano quelli della citta', cosi' la pagina resta indicizzabile.
+if (CITY !== HOME_CITY) {
+  try {
+    const home = await readFile(path.join(OUT, "index.html"), "utf8");
+    const url = `${SITE}/${CITY}/`;
+    const tit = `Eventi a ${CITY_NAME}: cosa fare oggi e nei prossimi giorni | anyplans`;
+    const des = `Gli eventi di ${CITY_NAME} su una mappa: feste, concerti, mercati, corsi, sport e cene. `
+              + `Ne scegli uno e ci vai insieme ad altri.`;
+    const conCitta = home
+      .replace(/<title>[\s\S]*?<\/title>/, `<title>${esc(tit)}</title>`)
+      .replace(/<meta name="description" content="[^"]*">/, `<meta name="description" content="${esc(des)}">`)
+      .replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${url}">`)
+      .replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(tit)}">`)
+      .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${url}">`)
+      .replace("</head>", `<script>window.ANYPLANS_CITY=${JSON.stringify(CITY)};</script>\n</head>`);
+    await writeFile(path.join(cityDir, "index.html"), conCitta);
+    addUrl(url, NOW);
+    console.log(`${CITY}: /${CITY}/ e' la home su ${CITY_NAME} (elenco sotto /${CITY}/cosa-fare/)`);
+  } catch (e) {
+    console.log(`${CITY}: home non copiata (${e.message}); /${CITY}/ resta l'elenco`);
+  }
+}
+
 await writeFile(path.join(OUT, `sitemap-${CITY}.xml`), sitemapXml());
 await indexNow();
 await writeFile(path.join(OUT, LLMS_FILE), llmsTxt() + "\n---\n\n# Tutte le pagine di anyplans a " + CITY_NAME + " (italiano, poi inglese)\n\n" + fullTxt.join("\n"));
