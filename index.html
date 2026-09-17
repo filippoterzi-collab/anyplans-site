@@ -827,7 +827,7 @@ body.locked .mk{display:block}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789603451"></script>
+<script src="/bergamo/app.js?v=1789603672"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1208,6 +1208,15 @@ function bindAll(){
     setTimeout(() => { if (msq) msq.focus({ preventScroll: true }); }, 120);
   }
   if (msf) msf.addEventListener("click", e => { e.stopPropagation(); openSearch(); });
+  // chi non è registrato: appena scrive, o appena apre la mappa, gli si chiede l'account
+  if (GATE_EVENTS) {
+    ["msq", "tsearch", "qsearch"].forEach(id => {
+      const el = document.getElementById(id); if (!el) return;
+      el.addEventListener("focus", e => { e.target.blur(); toLogin("cerca"); });
+    });
+    const mb = document.getElementById("mapbtn");
+    if (mb) mb.addEventListener("click", e => { e.preventDefault(); e.stopPropagation(); toLogin("mappa"); }, true);
+  }
 
   // il campo dentro il foglio fa la stessa cosa della ricerca libera che c'era già
   if (msq) {
@@ -1372,7 +1381,7 @@ function loadMapLib(){
   // 17/09/2026: la stessa rotazione anche nel titolo della versione mobile
   const el2 = document.getElementById("mcity2");
   if (el2 && el) { new MutationObserver(() => { el2.textContent = el.textContent; }).observe(el, { childList: true, characterData: true, subtree: true }); }
-  setInterval(() => { if (window.CHOSEN || window.FEEDLOADED) return; i = (i + 1) % names.length; el.classList.remove("swap"); void el.offsetWidth; el.textContent = names[i]; el.classList.add("swap"); }, 1800); })();
+  setInterval(() => { if (window.CHOSEN) return; i = (i + 1) % names.length; el.classList.remove("swap"); void el.offsetWidth; el.textContent = names[i]; el.classList.add("swap"); }, 1800); })();
 
 
 // ---------- categorie sul computer: frecce e trascinamento col mouse (16/09/2026) ----------
