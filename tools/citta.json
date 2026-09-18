@@ -5,7 +5,8 @@
   "lat": 45.4642,
   "lng": 9.19,
   "km": 30,
-  "prov": "MI"
+  "prov": "MI",
+  "nome_en": "Milan"
  },
  {
   "slug": "bergamo",
@@ -21,7 +22,8 @@
   "lat": 45.0703,
   "lng": 7.6869,
   "km": 30,
-  "prov": "TO"
+  "prov": "TO",
+  "nome_en": "Turin"
  },
  {
   "slug": "roma",
@@ -29,7 +31,8 @@
   "lat": 41.9028,
   "lng": 12.4964,
   "km": 30,
-  "prov": "RM"
+  "prov": "RM",
+  "nome_en": "Rome"
  },
  {
   "slug": "bologna",
@@ -53,7 +56,8 @@
   "lat": 40.8518,
   "lng": 14.2681,
   "km": 30,
-  "prov": "NA"
+  "prov": "NA",
+  "nome_en": "Naples"
  },
  {
   "slug": "verona",
@@ -69,7 +73,8 @@
   "lat": 45.4064,
   "lng": 11.8768,
   "km": 30,
-  "prov": "PD"
+  "prov": "PD",
+  "nome_en": "Padua"
  },
  {
   "slug": "varese",
@@ -85,7 +90,8 @@
   "lat": 43.7696,
   "lng": 11.2558,
   "km": 30,
-  "prov": "FI"
+  "prov": "FI",
+  "nome_en": "Florence"
  },
  {
   "slug": "genova",
@@ -93,7 +99,8 @@
   "lat": 44.4056,
   "lng": 8.9463,
   "km": 30,
-  "prov": "GE"
+  "prov": "GE",
+  "nome_en": "Genoa"
  },
  {
   "slug": "bari",
@@ -301,7 +308,8 @@
   "lat": 45.438,
   "lng": 12.327,
   "km": 20,
-  "prov": "VE"
+  "prov": "VE",
+  "nome_en": "Venice"
  },
  {
   "slug": "vicenza",
@@ -333,7 +341,8 @@
   "lat": 45.157,
   "lng": 10.791,
   "km": 25,
-  "prov": "MN"
+  "prov": "MN",
+  "nome_en": "Mantua"
  },
  {
   "slug": "ferrara",

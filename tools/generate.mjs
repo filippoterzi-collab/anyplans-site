@@ -37,7 +37,11 @@ const C = CITTA.find(c => c.slug === argvCity);
 if (!C) { console.error(`città sconosciuta: ${argvCity} (in citta.json: ${CITTA.map(c => c.slug).join(", ")})`); process.exit(2); }
 const INDICE = process.argv.includes("--indice");   // niente pagine: scrive sitemap, robots, llms e /citta/
 const CITY = C.slug;
-const CITY_NAME = C.nome;
+// il nome della città nella lingua della pagina: chi cerca in inglese scrive "things to do in Naples",
+// non "in Napoli" (18/09/2026). L'indirizzo resta quello italiano: /en/napoli/ è già indicizzato.
+const CITY_NAME_IT = C.nome;
+const CITY_NAME_EN = C.nome_en || C.nome;
+let CITY_NAME = CITY_NAME_IT;
 const PROV = C.prov;
 const CITY_CENTER = { lat: C.lat, lng: C.lng };
 const CITY_KM = C.km;
@@ -146,9 +150,10 @@ const LOCALES = {
         and: " and ", free: "Free", privacy: "/privacy.html", terms: "/terms.html", home: "/en/", citta: "cities", locali: "venues" },
 };
 let L = LOCALES.it;           // the locale of the page being built (the write loop at the bottom switches it)
+const setLocale = (code) => { L = LOCALES[code]; CITY_NAME = code === "en" ? CITY_NAME_EN : CITY_NAME_IT; };
 const en = () => L.code === "en";
 // run fn with another locale active (to compute the hreflang alternate of the page being built)
-function inLocale(code, fn) { const prev = L; L = LOCALES[code]; try { return fn(); } finally { L = prev; } }
+function inLocale(code, fn) { const prev = L.code; setLocale(code); try { return fn(); } finally { setLocale(prev); } }
 
 // ── helpers ───────────────────────────────────────────────────────────────────
 const esc = (t) => String(t ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -2117,11 +2122,11 @@ if (INDICE) {
   stato.sort((a, b) => b.eventi - a.eventi);
   const sitemaps = [];
   for (const code of ["it", "en"]) {
-    L = LOCALES[code];
+    setLocale(code);
     await writePage(rel(cittaUrl()).replace(/^\/|\/$/g, ""), cittaPage(stato));
     addUrl(cittaUrl(), NOW);
   }
-  L = LOCALES.it;
+  setLocale('it');
   addUrl(SITE + "/", NOW);
   addUrl(SITE + "/en/", NOW);
   // pagine del sito fuori dal generatore (16/09/2026): la pagina dei viaggi di gruppo e il blog
@@ -2176,7 +2181,7 @@ await rm(path.join(OUT, "en", CITY), { recursive: true, force: true }); // /en/i
 // the same pages in Italian and in English: urls, labels and texts come from the active locale
 const relOf = (u) => rel(u).replace(/^\/|\/$/g, "");
 for (const code of ["it", "en"]) {
-  L = LOCALES[code];
+  setLocale(code);
   const hub = hubPage(); await writePage(relOf(hubUrl()), hub.html); addUrl(hubUrl(), hub.lastmod);
   for (const k of SOLO_HUB ? [] : ["oggi", "domani", "weekend"]) {       // "cosa fare a Bergamo oggi/domani/nel weekend"
     if (WHEN[k].list.length < MIN_WHEN) continue;
@@ -2201,7 +2206,7 @@ for (const code of ["it", "en"]) {
   for (const g of groups) { const r = groupPage(g); await writePage(relOf(groupUrl(g)), r.html); addUrl(groupUrl(g), r.lastmod); }
   for (const p of pages) { await writePage(relOf(eventUrl(p)), eventPage(p)); addUrl(eventUrl(p), p.updated); }
 }
-L = LOCALES.it;
+setLocale('it');
 
 // ── /<citta>/ e' la home, gia' su quella citta' ───────────────────────────────
 // 17/09/2026 (Filippo: "voglio che apra questo", indicando anyplans.in). La radice di ogni citta'
