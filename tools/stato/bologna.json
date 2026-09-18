@@ -1,8 +1,8 @@
 {
  "slug": "bologna",
  "nome": "Bologna",
- "eventi": 602,
- "pagine": 1509,
+ "eventi": 603,
+ "pagine": 1511,
  "tipi": {
   "dinner": 51,
   "padel": 14,
@@ -12,6 +12,7 @@
   "concert": 109,
   "cinema": 15,
   "games": 9,
+  "karaoke": 3,
   "yoga": 14,
   "dancing": 12,
   "gym": 6,
@@ -23,5 +24,5 @@
   "hiking": 5,
   "nightlife": 3
  },
- "aggiornato": "2026-09-18T11:40:11.166Z"
+ "aggiornato": "2026-09-18T13:43:06.428Z"
 }

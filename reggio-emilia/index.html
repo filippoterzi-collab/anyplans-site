@@ -627,6 +627,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   .msearch{display:block;padding:14px 0 10px}
   .mslabel{font-family:var(--round);font-weight:800;letter-spacing:0;font-size:19px;line-height:1.25;
            margin:0 0 8px}
+  .mslabel .dom{color:var(--blue)}
   /* font del marchio: Bricolage 800 con tracking -4,5%, come da brand kit (17/09/2026) */
   .msclaim{font-family:var(--display);font-weight:800;letter-spacing:-.045em;font-size:16px;
            line-height:1.2;margin:0 0 4px;color:var(--ink)}
@@ -747,7 +748,9 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
        quattro scorciatoie per chi arriva da Instagram e non sa cosa scrivere. Nascosta da 744px in su. -->
   <section class="msearch" aria-label="Cerca eventi">
     <div class="pill" data-pill hidden>📍 Oggi in Italia: <b class="pill-n"></b> <span class="pill-w">eventi</span></div>
-    <h1 class="mslabel">Che eventi ci sono a <span class="blue" id="mcity2">Bergamo</span>?</h1>
+    <!-- 18/09/2026: il titolo mobile non dice piu' una citta' (diceva Bergamo anche a chi aveva
+         scelto Milano): dice l'indirizzo del sito dentro la frase, anyplans.in|torno a te. -->
+    <h1 class="mslabel">Cosa succede <span class="dom">anyplans.in</span>torno a te?</h1>
     <!-- 17/09/2026: due righe sole, sopra la mappa. Chi arriva da Instagram deve capire in tre
          secondi cosa trova qui e cosa gli succede se clicca. Il discorso lungo va sotto la mappa. -->
     <p class="msclaim">Le cose che succedono <span class="blue">davvero</span> nella tua città.</p>
@@ -782,7 +785,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
     <div class="sbrow">
       <div class="sbrel">
         <div class="sb" role="search">
-          <button class="seg s1" data-seg="dove" data-gate="dove"><span class="l">Dove</span><span class="v" id="v-dove">Cerca destinazioni</span></button>
+          <button class="seg s1" data-seg="dove" data-gate="dove"><span class="l">Dove</span><span class="v" id="v-dove">Reggio Emilia</span></button>
           <button class="seg s2" data-seg="quando" data-gate="quando"><span class="l">Quando</span><span class="v" id="v-quando">Aggiungi date</span></button>
           <button class="seg s3" data-seg="cosa" data-gate="cosa"><span class="l">Cosa</span><span class="v" id="v-cosa">Aggiungi attività</span></button>
           <button class="go" id="gobtn" data-gate="cerca" aria-label="Cerca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg></button>
@@ -946,7 +949,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789730750"></script>
+<script src="/bergamo/app.js?v=1789738820"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
