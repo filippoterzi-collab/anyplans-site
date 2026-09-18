@@ -1,0 +1,18 @@
+{
+ "slug": "venezia",
+ "nome": "Venezia",
+ "eventi": 144,
+ "pagine": 427,
+ "tipi": {
+  "culture": 39,
+  "dinner": 21,
+  "show": 9,
+  "hiking": 4,
+  "tour": 18,
+  "festival": 20,
+  "concert": 12,
+  "exhibition": 9,
+  "painting": 3
+ },
+ "aggiornato": "2026-09-18T09:47:00.358Z"
+}

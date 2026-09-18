@@ -1,0 +1,18 @@
+{
+ "slug": "ancona",
+ "nome": "Ancona",
+ "eventi": 70,
+ "pagine": 223,
+ "tipi": {
+  "dinner": 16,
+  "gym": 10,
+  "cinema": 2,
+  "yoga": 7,
+  "culture": 14,
+  "concert": 5,
+  "painting": 3,
+  "games": 3,
+  "show": 3
+ },
+ "aggiornato": "2026-09-18T09:47:24.155Z"
+}

@@ -1,12 +1,12 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Parma e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Parma: il sito copre 29 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce), l'indice è https://anyplans.in/llms.txt.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Parma e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Parma: il sito copre 52 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce, Monza, Prato, Como, Lecco, Lodi, Modena, Reggio Emilia, Treviso, Venezia, Vicenza, Novara, Lucca, Mantova, Ferrara, Pistoia, Pavia, Ancona, Pordenone, Cremona, Messina, Reggio Calabria, Alessandria, Latina), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-18. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Parma](https://anyplans.in/parma/cosa-fare/): tutti gli eventi in programma (196), per tipo e per paese; risponde a "cosa fare a Parma oggi / questo weekend"
+- [Cosa fare a Parma](https://anyplans.in/parma/cosa-fare/): tutti gli eventi in programma (130), per tipo e per paese; risponde a "cosa fare a Parma oggi / questo weekend"
 - [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
@@ -14,67 +14,60 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## Eventi per tipo e per paese
 
-- [Cena / aperitivo a Parma](https://anyplans.in/parma/cene-e-aperitivi/): 31 in programma
-- [Incontri culturali a Parma](https://anyplans.in/parma/incontri-culturali/): 44 in programma
-- [Visite guidate a Parma](https://anyplans.in/parma/visite-guidate/): 4 in programma
+- [Cena / aperitivo a Parma](https://anyplans.in/parma/cene-e-aperitivi/): 15 in programma
+- [Incontri culturali a Parma](https://anyplans.in/parma/incontri-culturali/): 30 in programma
 - [Corsa a Parma](https://anyplans.in/parma/corsa/): 2 in programma
 - [Pittura / arte a Parma](https://anyplans.in/parma/pittura/): 4 in programma
-- [Giochi da tavolo a Parma](https://anyplans.in/parma/giochi/): 14 in programma
-- [Palestra a Parma](https://anyplans.in/parma/palestra/): 2 in programma
-- [Feste, sagre ed eventi di paese a Parma](https://anyplans.in/parma/feste/): 29 in programma
-- [Concerti e musica dal vivo a Parma](https://anyplans.in/parma/concerti/): 19 in programma
+- [Feste, sagre ed eventi di paese a Parma](https://anyplans.in/parma/feste/): 21 in programma
+- [Concerti e musica dal vivo a Parma](https://anyplans.in/parma/concerti/): 18 in programma
 - [Ballo e danza a Parma](https://anyplans.in/parma/ballo/): 4 in programma
 - [Partite da vedere a Parma](https://anyplans.in/parma/partite/): 12 in programma
-- [Spettacoli e teatro a Parma](https://anyplans.in/parma/spettacoli/): 12 in programma
-- [Mostre a Parma](https://anyplans.in/parma/mostre/): 3 in programma
-- [Yoga / pilates a Parma](https://anyplans.in/parma/yoga/): 3 in programma
-- [Cucina a Parma](https://anyplans.in/parma/cucina/): 5 in programma
-- [Feste ed eventi a Reggio Emilia](https://anyplans.in/parma/reggio-emilia/): 58 in programma
+- [Spettacoli e teatro a Parma](https://anyplans.in/parma/spettacoli/): 11 in programma
 - [Feste ed eventi a Fidenza](https://anyplans.in/parma/fidenza/): 3 in programma
 - [Feste ed eventi a Il Rumore del Lutto Festival](https://anyplans.in/parma/il-rumore-del-lutto-festival/): 6 in programma
 
 ## Prossimi eventi
 
-- [Coltivare l'amicizia con la materia](https://anyplans.in/parma/coltivare-l-amicizia-con-la-materia/): Venerdì 18 settembre alle 10:00, Remida, il Centro di Riciclaggio Creativo, Reggio Emilia, Gratis
 - [Estate con gli amici del Pò](https://anyplans.in/parma/estate-con-gli-amici-del-po/): Dal 18 settembre al 26 settembre, 2 date, Cremona, Gratis
-- [Cena da Gelateria 90: 4 posti liberi](https://anyplans.in/parma/cena-da-gelateria-90-4-posti-liberi/): Venerdì 18 settembre alle 16:00, Gelateria 90, Reggio Emilia, Gratis
-- [Anteprima del Festiva - Dove sono tutti?](https://anyplans.in/parma/anteprima-del-festiva-dove-sono-tutti/): Venerdì 18 settembre alle 17:30, Smart Hub Coopservice S.p.A., Reggio nell'Emilia, Gratis
 - [COREA: CULTURA E SAPORI](https://anyplans.in/parma/corea-cultura-e-sapori/): Venerdì 18 settembre alle 18:00, Laboratorio Aperto di Parma, Parma, Gratis
 - [Parva mundi](https://anyplans.in/parma/parva-mundi/): Dal 18 settembre al 20 settembre, 3 date, Mantova, Gratis
 - [Cena da Pizzeria Passione E Tradizione: 5 posti liberi](https://anyplans.in/parma/cena-da-pizzeria-passione-e-tradizione-5-posti-liberi/): Venerdì 18 settembre alle 18:30, Pizzeria Passione E Tradizione, Parma, Gratis
-- [Cena da Doppio Malto Reggio Emilia: 5 posti liberi](https://anyplans.in/parma/cena-da-doppio-malto-reggio-emilia-5-posti-liberi/): Venerdì 18 settembre alle 19:00, Doppio Malto Reggio Emilia, Gratis
 - [Cena da Il Baule 1974: 1 posto libero](https://anyplans.in/parma/cena-da-il-baule-1974-1-posto-libero/): Venerdì 18 settembre alle 19:00, Il Baule 1974, Lemignano, Gratis
-- [Tavolo a tema spirituale da XL Pub & More: 8 posti liberi](https://anyplans.in/parma/tavolo-a-tema-spirituale-da-xl-pub-more-8-posti-liberi/): Venerdì 18 settembre alle 19:20, XL Pub & More, Barco, Gratis
-- [Aperitivo da XL Pub & More: 7 posti liberi](https://anyplans.in/parma/aperitivo-da-xl-pub-more-7-posti-liberi/): Venerdì 18 settembre alle 19:30, XL Pub & More, Barco, Gratis
 - [CINQUANT'ANNI DI PASSIONE, IMPEGNO E PERSONE](https://anyplans.in/parma/cinquant-anni-di-passione-impegno-e-persone/): Venerdì 18 settembre alle 19:30, IL PAVARANO, SALA BAGANZA, Gratis
-- [Tablo business da Prestige: 9 posti liberi](https://anyplans.in/parma/tablo-business-da-prestige-9-posti-liberi/): Venerdì 18 settembre alle 19:45, Prestige, Reggio Emilia, Gratis
 - [CHIUSURA: WUNDERFLUX #02 – HST (Human Sound Track)](https://anyplans.in/parma/chiusura-wunderflux-02-hst-human-sound-track/): Venerdì 18 settembre alle 20:00, Laboratorio Aperto di Parma, Parma, Gratis
 - [Cena da Signorvino Parma: 10 posti liberi](https://anyplans.in/parma/cena-da-signorvino-parma-10-posti-liberi/): Venerdì 18 settembre alle 20:00, Signorvino Parma, Gratis
 - [KIZOMBA Principianti - Nuovo Corso asd Cohiba Club Parma](https://anyplans.in/parma/kizomba-principianti-nuovo-corso-asd-cohiba-club-parma/): Venerdì 18 settembre alle 20:30, A.S.D. Cohiba Club Parma, Parma, Gratis
-- [La Piccola Versailles Reggiana: Visita Guidata alla Reggia di Rivalta](https://anyplans.in/parma/la-piccola-versailles-reggiana-visita-guidata-alla-reggia-di/): Venerdì 18 settembre alle 20:30, Davanti facciata Villa, Reggio Emilia, Gratis
-- [Reggio Emilia segreta, curiosa e misteriosa](https://anyplans.in/parma/reggio-emilia-segreta-curiosa-e-misteriosa/): Venerdì 18 settembre alle 20:30, Davanti al Caffè Fontanesi, Reggio Emilia, Gratis
-- [BEYBLADE X - Serata di gioco](https://anyplans.in/parma/beyblade-x-serata-di-gioco/): Venerdì 18 settembre alle 20:30, Funside Reggio Emilia, Reggio Emilia, Gratis
 - [VEXOVOID + NECROCENE +PECE @CDC](https://anyplans.in/parma/vexovoid-necrocene-pece-cdc/): Venerdì 18 settembre alle 21:00, V.le Mentana, 31/A, Parma, Emilia-Romagna, Parma, Gratis
 - [Cena di gala da Campus Industry: 5 posti liberi](https://anyplans.in/parma/cena-di-gala-da-campus-industry-5-posti-liberi/): Venerdì 18 settembre alle 21:50, Campus Industry, Parma, Gratis
 - [Donno Bikes a Parma | Prova le cargo bike al BikeUP Cargo Days](https://anyplans.in/parma/donno-bikes-a-parma-prova-le-cargo-bike-al-bikeup-cargo-days/): Sabato 19 settembre alle 08:30, Parma, Parco Della Cittadella, Parma, Gratis
 - [L'anima Liberty di Parma](https://anyplans.in/parma/l-anima-liberty-di-parma/): Sabato 19 settembre alle 10:00, Parma, Parma, 15 €
 - [AMERICANO MASCHILE INTERMEDIO](https://anyplans.in/parma/americano-maschile-intermedio/): Sabato 19 settembre alle 10:30, PADEL HERO PARMA, STRADA VIAZZA DI MARTORANO SNC, 43123 Parma, 15 €
-- [Dove sono tutti](https://anyplans.in/parma/dove-sono-tutti/): Sabato 19 settembre alle 14:30, Reggiane Parco Innovazione, Reggio Emilia, Gratis
 - [SOCIAL RUN PARMA](https://anyplans.in/parma/social-run-parma/): Sabato 19 settembre alle 14:30, Cittadella, Parma, Gratis
 - [🛡️ 40° PALIO DI PARMA 🏹 e Villaggio Medievale 🗡️👑](https://anyplans.in/parma/40-palio-di-parma-e-villaggio-medievale/): Sabato 19 settembre alle 15:00, Parco Ducale, 43125 Parma PR, Italia, Parma, Gratis
-- [FLESH AND BLOOD - Prerelease di Usurp the Shadow Throne](https://anyplans.in/parma/flesh-and-blood-prerelease-di-usurp-the-shadow-throne/): Sabato 19 settembre alle 15:00, Funside Reggio Emilia, Reggio Emilia, Gratis
-- [YU-Gi-OH! - Gioco libero](https://anyplans.in/parma/yu-gi-oh-gioco-libero/): Sabato 19 settembre alle 15:30, Funside Reggio Emilia, Reggio Emilia, Gratis
 - [ISABELITA OFF Tdj CIPOLLA + BIONDO](https://anyplans.in/parma/isabelita-off-tdj-cipolla-biondo/): Sabato 19 settembre alle 17:00, Circolo Arci Post Parma, Parma, Gratis
 - [Cena da Hostaria delle Terre Verdiane: 5 posti liberi](https://anyplans.in/parma/cena-da-hostaria-delle-terre-verdiane-5-posti-liberi/): Sabato 19 settembre alle 17:00, Hostaria delle Terre Verdiane, Fidenza, Gratis
 - [Fatti e misfatti, intrighi e segreti dei Duchi alla corte dei Farnese](https://anyplans.in/parma/fatti-e-misfatti-intrighi-e-segreti-dei-duchi-alla-corte-dei/): Sabato 19 settembre alle 17:00, Cancello di ingresso al Parco Ducale, Parma, Gratis
 - [Che occhi grandi che hai - "Pensare come una montagna"](https://anyplans.in/parma/che-occhi-grandi-che-hai-pensare-come-una-montagna/): Sabato 19 settembre alle 17:30, Via Giosuè Carducci, 47, Fidenza, Gratis
-- [Percorsi Dimenticati: Il Crostolo e le Storie Nascoste di Reggio](https://anyplans.in/parma/percorsi-dimenticati-il-crostolo-e-le-storie-nascoste-di-reg/): Sabato 19 settembre alle 18:00, Davanti Chiesa del Cristo, Reggio Emilia, Gratis
 - [Alle Foglie Fest vol.6 | SABATO 19 SETTEMBRE 2026](https://anyplans.in/parma/alle-foglie-fest-vol-6-sabato-19-settembre-2026/): Sabato 19 settembre alle 18:00, Alle Foglie Fest, Gratis
-- [Cena da L'Angolo di Napoli: 2 posti liberi](https://anyplans.in/parma/cena-da-l-angolo-di-napoli-2-posti-liberi/): Sabato 19 settembre alle 18:30, L'Angolo di Napoli, Reggio Emilia, Gratis
 - [Concerts by Candlelight - Parma](https://anyplans.in/parma/concerts-by-candlelight-parma/): Sabato 19 settembre alle 19:00, Strada della Repubblica, 57, 43121 Parma PR, Italia, Parma, Gratis
-- [Cena da Destino -Bruschette e Aperitivi-: 4 posti liberi](https://anyplans.in/parma/cena-da-destino-bruschette-e-aperitivi-4-posti-liberi/): Sabato 19 settembre alle 19:00, Destino -Bruschette e Aperitivi-, Reggio Emilia, Gratis
 - [Cena da Sound Cafe': 7 posti liberi](https://anyplans.in/parma/cena-da-sound-cafe-7-posti-liberi/): Sabato 19 settembre alle 19:00, Sound Cafe', Parma, Gratis
 - [Cena da THE ROOF: 7 posti liberi](https://anyplans.in/parma/cena-da-the-roof-7-posti-liberi/): Sabato 19 settembre alle 20:30, THE ROOF, Parma, Gratis
+- [Worship Service](https://anyplans.in/parma/worship-service/): Domenica 20 settembre alle 10:00, Strada Felice Cavallotti 15, Parma, Emilia-Romagna, Italy, Parma, Gratis
+- [Parma vs Genoa at Stadio Ennio Tardini](https://anyplans.in/parma/parma-vs-genoa-at-stadio-ennio-tardini/): Domenica 20 settembre alle 15:00, Stadio Ennio Tardini, Parma, Gratis
+- [AMORE PER IL PADEL](https://anyplans.in/parma/amore-per-il-padel/): Domenica 20 settembre alle 15:30, PADEL HERO PARMA, STRADA VIAZZA DI MARTORANO SNC, 43123 Parma, 20 €
+- [Aperitivo a Perma da Arte & Gusto: 2 posti liberi](https://anyplans.in/parma/aperitivo-a-perma-da-arte-gusto-2-posti-liberi/): Domenica 20 settembre alle 16:00, Arte & Gusto, Parma, Gratis
+- [Cena da Fradiavolo Pizzeria - Parma: 2 posti liberi](https://anyplans.in/parma/cena-da-fradiavolo-pizzeria-parma-2-posti-liberi/): Domenica 20 settembre alle 18:15, Fradiavolo Pizzeria - Parma, Gratis
+- [LAST SUMMER RUN 26041](https://anyplans.in/parma/last-summer-run-26041/): Domenica 20 settembre alle 18:30, La Baia Casalmaggiore, Casalmaggiore, Gratis
+- [Dal quadro al feed](https://anyplans.in/parma/dal-quadro-al-feed/): Lunedì 21 settembre alle 18:30, Laboratorio Aperto di Parma, Parma, Gratis
+- [Locale e certificato](https://anyplans.in/parma/locale-e-certificato/): Martedì 22 settembre alle 15:00, Palazzo Giordani, Parma, Gratis
+- [Parma BlaBla Dinner - Every month - Recurrent event - Registration on website](https://anyplans.in/parma/parma-blabla-dinner-every-month-recurrent-event-registration/): Martedì 22 settembre alle 20:30, Parma, Italy, Parma, Gratis
+- [International Meeting Over Dinner in Parma - Recurrent Link - Registration on website](https://anyplans.in/parma/international-meeting-over-dinner-in-parma-recurrent-link-re/): Martedì 22 settembre alle 20:30, Parma, Italy, Parma, Gratis
+- [Laterlite SpA apre al pubblico: scopri come nasce l'argilla espansa](https://anyplans.in/parma/laterlite-spa-apre-al-pubblico-scopri-come-nasce-l-argilla-e/): Mercoledì 23 settembre alle 09:30, Laterlite S.p.A., Rubbiano, Gratis
+- [Visit Opem - Dietro le quinte del packaging](https://anyplans.in/parma/visit-opem-dietro-le-quinte-del-packaging/): Mercoledì 23 settembre alle 10:00, Opem Spa, Parma, Gratis
+- [Cena da Pub Birreria La Corriera: 8 posti liberi](https://anyplans.in/parma/cena-da-pub-birreria-la-corriera-8-posti-liberi/): Mercoledì 23 settembre alle 17:30, Pub Birreria La Corriera, Parma, Gratis
+- [Sviluppo locale sostenibile: verso il patto aziende e consumatori](https://anyplans.in/parma/sviluppo-locale-sostenibile-verso-il-patto-aziende-e-consuma/): Mercoledì 23 settembre alle 17:30, Via Manzoni, 4, Viadana, Gratis
+- [Altri Spiriti](https://anyplans.in/parma/altri-spiriti/): Mercoledì 23 settembre alle 18:30, Laboratorio Aperto di Parma, Parma, Gratis
+- [Food Tech Talks #3 | Italian Tech Alliance - Maia Ventures - Le Village by CA Parma | Parma](https://anyplans.in/parma/food-tech-talks-3-italian-tech-alliance-maia-ventures-le-vil/): Giovedì 24 settembre alle 17:30, Le Village by CA Parma, Gratis
 
 ## Optional
 
@@ -87,73 +80,62 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Things to do in Parma](https://anyplans.in/en/parma/): all upcoming events, by kind and by town; answers "what to do in Parma today / this weekend"
 - [Dinners & aperitivo in Parma](https://anyplans.in/en/parma/dinners/)
 - [Talks & culture in Parma](https://anyplans.in/en/parma/talks-and-culture/)
-- [Guided tours in Parma](https://anyplans.in/en/parma/guided-tours/)
 - [Running in Parma](https://anyplans.in/en/parma/running/)
 - [Painting & art in Parma](https://anyplans.in/en/parma/painting/)
-- [Board games in Parma](https://anyplans.in/en/parma/board-games/)
-- [Gym in Parma](https://anyplans.in/en/parma/gym/)
 - [Town festivals & fairs in Parma](https://anyplans.in/en/parma/festivals/)
 - [Concerts & live music in Parma](https://anyplans.in/en/parma/concerts/)
 - [Dancing in Parma](https://anyplans.in/en/parma/dancing/)
 - [Live sport in Parma](https://anyplans.in/en/parma/live-sport/)
 - [Shows & theatre in Parma](https://anyplans.in/en/parma/shows/)
-- [Exhibitions in Parma](https://anyplans.in/en/parma/exhibitions/)
-- [Yoga & pilates in Parma](https://anyplans.in/en/parma/yoga/)
-- [Cooking classes in Parma](https://anyplans.in/en/parma/cooking/)
 
 ---
 
 # Tutte le pagine di anyplans a Parma (italiano, poi inglese)
 
-## Cosa fare a Parma e provincia: 196 eventi
+## Cosa fare a Parma e provincia: 130 eventi
 https://anyplans.in/parma/cosa-fare/
 
-Incontri culturali, cena / aperitivo, feste, sagre ed eventi di paese, concerti e musica dal vivo e giochi da tavolo: quello che succede a Parma e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
+Incontri culturali, feste, sagre ed eventi di paese, cena / aperitivo, concerti e musica dal vivo e partite da vedere: quello che succede a Parma e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
 
-## Cosa fare a Parma oggi: 21 eventi
+## Cosa fare a Parma oggi: 11 eventi
 https://anyplans.in/parma/cosa-fare-oggi/
 
-21 eventi a Parma e provincia oggi, 18 settembre 2026: Parma, Reggio Emilia, Barco e Cremona e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+11 eventi a Parma e provincia oggi, 18 settembre 2026: Parma, Cremona, Mantova e Lemignano e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Parma domani: 20 eventi
+## Cosa fare a Parma domani: 14 eventi
 https://anyplans.in/parma/cosa-fare-domani/
 
-20 eventi a Parma e provincia domani, 19 settembre 2026: Parma, Reggio Emilia, Fidenza e Mantova e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+14 eventi a Parma e provincia domani, 19 settembre 2026: Parma, Fidenza, Mantova e Alle Foglie Fest e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Parma nel weekend: 28 eventi
+## Cosa fare a Parma nel weekend: 20 eventi
 https://anyplans.in/parma/cosa-fare-nel-weekend/
 
-28 eventi a Parma e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Parma, Reggio Emilia, Fidenza e Mantova e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+20 eventi a Parma e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Parma, Fidenza, Mantova e Alle Foglie Fest e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Eventi a Parma a settembre 2026: 97
+## Eventi a Parma a settembre 2026: 56
 https://anyplans.in/parma/eventi-settembre-2026/
 
-97 eventi a Parma e provincia a settembre 2026: feste, sagre ed eventi di paese, cena / aperitivo, incontri culturali, concerti e musica dal vivo e ballo e danza. Giorno per giorno, con orari, luogo e prezzo, a Parma, Reggio Emilia, Barco e Fidenza e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+56 eventi a Parma e provincia a settembre 2026: feste, sagre ed eventi di paese, cena / aperitivo, incontri culturali, concerti e musica dal vivo e ballo e danza. Giorno per giorno, con orari, luogo e prezzo, a Parma, Fidenza, Cremona e Mantova e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Parma a ottobre 2026: 69
+## Eventi a Parma a ottobre 2026: 50
 https://anyplans.in/parma/eventi-ottobre-2026/
 
-69 eventi a Parma e provincia a ottobre 2026: cena / aperitivo, feste, sagre ed eventi di paese, incontri culturali, cucina e yoga / pilates. Giorno per giorno, con orari, luogo e prezzo, a Parma, Reggio Emilia, Il Rumore del Lutto Festival e Insolito Festival e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+50 eventi a Parma e provincia a ottobre 2026: feste, sagre ed eventi di paese, cucina, cena / aperitivo, yoga / pilates e ballo e danza. Giorno per giorno, con orari, luogo e prezzo, a Parma, Il Rumore del Lutto Festival, Insolito Festival e Noceto e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Parma a novembre 2026: 16
+## Eventi a Parma a novembre 2026: 12
 https://anyplans.in/parma/eventi-novembre-2026/
 
-16 eventi a Parma e provincia a novembre 2026: feste, sagre ed eventi di paese, partite da vedere, spettacoli e teatro, incontri culturali e concerti e musica dal vivo. Giorno per giorno, con orari, luogo e prezzo, a Parma, Reggio Emilia, Il Rumore del Lutto Festival e Fontanellato e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+12 eventi a Parma e provincia a novembre 2026: feste, sagre ed eventi di paese, partite da vedere, spettacoli e teatro, incontri culturali e concerti e musica dal vivo. Giorno per giorno, con orari, luogo e prezzo, a Parma, Il Rumore del Lutto Festival e Fontanellato e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Cena / aperitivo a Parma: 31 eventi
+## Cena / aperitivo a Parma: 15 eventi
 https://anyplans.in/parma/cene-e-aperitivi/
 
-A Parma e provincia ci sono 31 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Parma e provincia ci sono 15 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Incontri culturali a Parma: 44 eventi
+## Incontri culturali a Parma: 30 eventi
 https://anyplans.in/parma/incontri-culturali/
 
-A Parma e provincia ci sono 44 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
-
-## Visite guidate a Parma: 4 eventi
-https://anyplans.in/parma/visite-guidate/
-
-A Parma e provincia ci sono 4 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Parma e provincia ci sono 30 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Corsa a Parma: 2 eventi
 https://anyplans.in/parma/corsa/
@@ -165,25 +147,15 @@ https://anyplans.in/parma/pittura/
 
 A Parma e provincia ci sono 4 laboratori nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Giochi da tavolo a Parma: 14 eventi
-https://anyplans.in/parma/giochi/
-
-A Parma e provincia ci sono 14 serate di giochi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
-
-## Palestra a Parma: 2 eventi
-https://anyplans.in/parma/palestra/
-
-A Parma e provincia ci sono 2 eventi di palestra nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
-
-## Feste e sagre a Parma: 29 eventi
+## Feste e sagre a Parma: 21 eventi
 https://anyplans.in/parma/feste/
 
-A Parma e provincia ci sono 29 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Parma e provincia ci sono 21 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Concerti e musica dal vivo a Parma: 19 eventi
+## Concerti e musica dal vivo a Parma: 18 eventi
 https://anyplans.in/parma/concerti/
 
-A Parma e provincia ci sono 19 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Parma e provincia ci sono 18 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Ballo e danza a Parma: 4 eventi
 https://anyplans.in/parma/ballo/
@@ -195,30 +167,10 @@ https://anyplans.in/parma/partite/
 
 A Parma e provincia ci sono 12 partite nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Spettacoli e teatro a Parma: 12 eventi
+## Spettacoli e teatro a Parma: 11 eventi
 https://anyplans.in/parma/spettacoli/
 
-A Parma e provincia ci sono 12 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
-
-## Mostre a Parma: 3 eventi
-https://anyplans.in/parma/mostre/
-
-A Parma e provincia ci sono 3 mostre nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
-
-## Yoga / pilates a Parma: 3 eventi
-https://anyplans.in/parma/yoga/
-
-A Parma e provincia ci sono 3 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
-
-## Cucina a Parma: 5 eventi
-https://anyplans.in/parma/cucina/
-
-A Parma e provincia ci sono 5 corsi di cucina nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
-
-## Feste ed eventi a Reggio Emilia: 58 in programma
-https://anyplans.in/parma/reggio-emilia/
-
-A Reggio Emilia ci sono 58 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Reggio Emilia con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Parma e provincia ci sono 11 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Feste ed eventi a Fidenza: 3 in programma
 https://anyplans.in/parma/fidenza/
@@ -230,50 +182,25 @@ https://anyplans.in/parma/il-rumore-del-lutto-festival/
 
 A Il Rumore del Lutto Festival ci sono 6 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Il Rumore del Lutto Festival con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Locali a Parma: 16
+## Locali a Parma: 10
 https://anyplans.in/parma/locali/
 
-16 locali a Parma e provincia dove c'è qualcosa in programma: circoli, bar, centri sportivi, teatri e piazze. Ognuno ha la sua pagina con le prossime date.
+10 locali a Parma e provincia dove c'è qualcosa in programma: circoli, bar, centri sportivi, teatri e piazze. Ognuno ha la sua pagina con le prossime date.
 
 ## Tablo: eventi e serate a Parma
 https://anyplans.in/parma/locali/tablo/
 
-Tablo a Parma: 29 eventi in programma — cena / aperitivo, incontri culturali e karaoke. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## Funside Reggio Emilia: eventi in programma
-https://anyplans.in/parma/locali/funside-reggio-emilia/
-
-Funside Reggio Emilia: 13 eventi in programma — giochi da tavolo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Tablo a Parma: 13 eventi in programma — cena / aperitivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Vivid Events: eventi in programma a Parma
 https://anyplans.in/parma/locali/vivid-events/
 
 Vivid Events a Parma: 12 eventi in programma — partite da vedere. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-## Acrobatica Aerea Reggio Emilia: eventi in programma
-https://anyplans.in/parma/locali/acrobatica-aerea-reggio-emilia/
-
-Acrobatica Aerea Reggio Emilia: 8 eventi in programma — spettacoli e teatro, palestra, incontri culturali e yoga / pilates. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## Smeg Store Reggio Emilia: eventi e serate
-https://anyplans.in/parma/locali/smeg-store-reggio-emilia/
-
-Smeg Store Reggio Emilia: 5 eventi in programma — cena / aperitivo e cucina. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
 ## Laboratorio Aperto di Parma: eventi e serate
 https://anyplans.in/parma/locali/laboratorio-aperto-di-parma/
 
 Laboratorio Aperto di Parma: 4 eventi in programma — feste, sagre ed eventi di paese, concerti e musica dal vivo, pittura / arte e incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## Tecnopolo: eventi in programma a Reggio Emilia
-https://anyplans.in/parma/locali/tecnopolo/
-
-Tecnopolo a Reggio Emilia: 2 eventi in programma — feste, sagre ed eventi di paese e incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## Luma: eventi e serate a Parma
-https://anyplans.in/parma/locali/luma/
-
-Luma a Parma: 3 eventi in programma — incontri culturali e cena / aperitivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Concert Tracker: eventi e serate a Parma
 https://anyplans.in/parma/locali/concert-tracker/
@@ -290,15 +217,10 @@ https://anyplans.in/parma/locali/voglia-di-tango/
 
 Voglia di Tango a Parma: 2 eventi in programma — incontri culturali e ballo e danza. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-## Davanti Chiesa del Cristo: eventi in programma a Reggio…
-https://anyplans.in/parma/locali/davanti-chiesa-del-cristo/
+## Luma: eventi e serate a Parma
+https://anyplans.in/parma/locali/luma/
 
-Davanti Chiesa del Cristo a Reggio Emilia: 2 eventi in programma — feste, sagre ed eventi di paese. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## Chiostri di San Pietro: eventi e serate a Reggio Emilia
-https://anyplans.in/parma/locali/chiostri-di-san-pietro/
-
-Chiostri di San Pietro a Reggio Emilia: 2 eventi in programma — concerti e musica dal vivo e giardinaggio / volontariato. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Luma a Parma: 2 eventi in programma — incontri culturali e cena / aperitivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Smeg Store Guastalla: eventi in programma
 https://anyplans.in/parma/locali/smeg-store-guastalla/
@@ -325,11 +247,6 @@ https://anyplans.in/parma/patente-nautica-corso-vela-motore-12-mg-e-senza-limiti
 
 Incontri culturali a Borgo Venti Marzo 6, Parma, Emilia-Romagna, Parma: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
-## Cena da Birreria Oktoberfest: 1 posto libero
-https://anyplans.in/parma/cena-da-birreria-oktoberfest-1-posto-libero/
-
-Cena / aperitivo a Birreria Oktoberfest, Reggio Emilia: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
-
 ## Cena da Signorvino Parma: 8 posti liberi
 https://anyplans.in/parma/cena-da-signorvino-parma-8-posti-liberi/
 
@@ -339,11 +256,6 @@ Cena / aperitivo a Signorvino Parma: si è già svolto, l'ultima data è stata m
 https://anyplans.in/parma/cena-da-birrificio-gregorio-u-beer-4-posti-liberi/
 
 Cena / aperitivo a Birrificio Gregorio - U.Beer, Parma: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
-
-## Cena da Caffetteria "Le Torri": 5 posti liberi
-https://anyplans.in/parma/cena-da-caffetteria-le-torri-5-posti-liberi/
-
-Cena / aperitivo a Caffetteria "Le Torri", Reggio Emilia: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
 
 ## Amici di amici da Birroteca Puro Malto: 1 posto libero
 https://anyplans.in/parma/amici-di-amici-da-birroteca-puro-malto-1-posto-libero/
@@ -355,50 +267,10 @@ https://anyplans.in/parma/decorare-il-gusto/
 
 Cena / aperitivo a Sala Show-cooking (ex Palazzo della Provincia), Parma: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
 
-## Compagni di viaggio da ALPHA SUSHI Reggio Emilia: 5…
-https://anyplans.in/parma/compagni-di-viaggio-da-alpha-sushi-reggio-emilia-5-posti-lib/
-
-Visite guidate a ALPHA SUSHI Reggio Emilia: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
-
 ## Mizuno X Running Club Parma – Parma Sport
 https://anyplans.in/parma/mizuno-x-running-club-parma/
 
 Corsa a Parma Sport, Parma: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
-
-## Cena da MIC Ramen Reggio Emilia: 3 posti liberi
-https://anyplans.in/parma/cena-da-mic-ramen-reggio-emilia-3-posti-liberi/
-
-Cena / aperitivo a MIC Ramen Reggio Emilia: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
-
-## Cena da Birreria Oktoberfest: 5 posti liberi
-https://anyplans.in/parma/cena-da-birreria-oktoberfest-5-posti-liberi/
-
-Cena / aperitivo a Birreria Oktoberfest, Reggio Emilia: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
-
-## GAMES WORKSHOP - Corso di pittura e modellismo – Reggio Emilia
-https://anyplans.in/parma/games-workshop-corso-di-pittura-e-modellismo/
-
-Pittura / arte a Funside Reggio Emilia, Reggio Emilia: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
-
-## KENTE & FUGU FESTIVAL 2026 – Reggio Emilia
-https://anyplans.in/parma/kente-fugu-festival-2026/
-
-Visite guidate a Via Vasco Agosti, 6, Reggio Emilia: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
-
-## 17 Settembre: Hackathon Future Lab – Tecnopolo
-https://anyplans.in/parma/17-settembre-hackathon-future-lab/
-
-Incontri culturali a Tecnopolo, Piazzale Europa, Reggio Emilia, RE, Italia, Reggio Emilia: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
-
-## POKÉMON - Lega Pokemon – Funside Reggio Emilia
-https://anyplans.in/parma/pokemon-lega-pokemon/
-
-Giochi da tavolo a Funside Reggio Emilia, Reggio Emilia: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
-
-## Cena da Màs Mexico: 7 posti liberi
-https://anyplans.in/parma/cena-da-mas-mexico-7-posti-liberi/
-
-Cena / aperitivo a Màs Mexico, Reggio Emilia: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
 
 ## ZUMBA AL COHIBA CLUB PARMA!
 https://anyplans.in/parma/zumba-al-cohiba-club-parma/
@@ -410,25 +282,10 @@ https://anyplans.in/parma/kamikaze-spero-vada-meglio-dell-ultima-volta/
 
 Pittura / arte a Largo 8 Marzo, 43124 Parma PR, Italia, Parma: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
 
-## Coltivare l'amicizia con la materia – Remida
-https://anyplans.in/parma/coltivare-l-amicizia-con-la-materia/
-
-Festa di paese a Remida, il Centro di Riciclaggio Creativo, Reggio Emilia, venerdì 18 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
-
 ## Estate con gli amici del Pò – Cremona
 https://anyplans.in/parma/estate-con-gli-amici-del-po/
 
 Festa di paese a Cremona, venerdì 18 settembre alle 15:30 (2 date, fino al 26 settembre). Gratis.
-
-## Cena da Gelateria 90: 4 posti liberi
-https://anyplans.in/parma/cena-da-gelateria-90-4-posti-liberi/
-
-Cena / aperitivo a Gelateria 90, Reggio Emilia, venerdì 18 settembre alle 16:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Anteprima del Festiva - Dove sono tutti? – Reggio nell'Emilia
-https://anyplans.in/parma/anteprima-del-festiva-dove-sono-tutti/
-
-Incontri culturali a Smart Hub Coopservice S.p.A., Reggio nell'Emilia, venerdì 18 settembre alle 17:30. Gratis (Biglietti su Eventbrite).
 
 ## COREA: CULTURA E SAPORI – Laboratorio Aperto di Parma
 https://anyplans.in/parma/corea-cultura-e-sapori/
@@ -445,35 +302,15 @@ https://anyplans.in/parma/cena-da-pizzeria-passione-e-tradizione-5-posti-liberi/
 
 Cena / aperitivo a Pizzeria Passione E Tradizione, Parma, venerdì 18 settembre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Cena da Doppio Malto Reggio Emilia: 5 posti liberi
-https://anyplans.in/parma/cena-da-doppio-malto-reggio-emilia-5-posti-liberi/
-
-Cena / aperitivo a Doppio Malto Reggio Emilia, venerdì 18 settembre alle 19:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Cena da Il Baule 1974: 1 posto libero
 https://anyplans.in/parma/cena-da-il-baule-1974-1-posto-libero/
 
 Cena / aperitivo a Il Baule 1974, Lemignano, venerdì 18 settembre alle 19:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Tavolo a tema spirituale da XL Pub & More: 8 posti liberi
-https://anyplans.in/parma/tavolo-a-tema-spirituale-da-xl-pub-more-8-posti-liberi/
-
-Incontri culturali a XL Pub & More, Barco, venerdì 18 settembre alle 19:20. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Aperitivo da XL Pub & More: 7 posti liberi
-https://anyplans.in/parma/aperitivo-da-xl-pub-more-7-posti-liberi/
-
-Cena / aperitivo a XL Pub & More, Barco, venerdì 18 settembre alle 19:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## CINQUANT'ANNI DI PASSIONE – IL PAVARANO
 https://anyplans.in/parma/cinquant-anni-di-passione-impegno-e-persone/
 
 Incontri culturali a IL PAVARANO, SALA BAGANZA, venerdì 18 settembre alle 19:30. Gratis (Biglietti su Eventbrite).
-
-## Tablo business da Prestige: 9 posti liberi
-https://anyplans.in/parma/tablo-business-da-prestige-9-posti-liberi/
-
-Cena / aperitivo a Prestige, Reggio Emilia, venerdì 18 settembre alle 19:45. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## CHIUSURA: WUNDERFLUX #02 – Laboratorio Aperto di Parma
 https://anyplans.in/parma/chiusura-wunderflux-02-hst-human-sound-track/
@@ -489,21 +326,6 @@ Cena / aperitivo a Signorvino Parma, venerdì 18 settembre alle 20:00. Gratis (O
 https://anyplans.in/parma/kizomba-principianti-nuovo-corso-asd-cohiba-club-parma/
 
 Ballo e danza a A.S.D. Cohiba Club Parma, Parma, venerdì 18 settembre alle 20:30. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## La Piccola Versailles Reggiana: Visita Guidata alla Reggia di Rivalta – Reggio Emilia
-https://anyplans.in/parma/la-piccola-versailles-reggiana-visita-guidata-alla-reggia-di/
-
-Visite guidate a Davanti facciata Villa, Reggio Emilia, venerdì 18 settembre alle 20:30. Gratis (Biglietti su Eventbrite).
-
-## Reggio Emilia segreta – Davanti al Caffè Fontanesi
-https://anyplans.in/parma/reggio-emilia-segreta-curiosa-e-misteriosa/
-
-Festa di paese a Davanti al Caffè Fontanesi, Reggio Emilia, venerdì 18 settembre alle 20:30. Gratis (Biglietti su Eventbrite).
-
-## BEYBLADE X - Serata di gioco – Funside Reggio Emilia
-https://anyplans.in/parma/beyblade-x-serata-di-gioco/
-
-Giochi da tavolo a Funside Reggio Emilia, Reggio Emilia, venerdì 18 settembre alle 20:30. Gratis (Biglietti su Eventbrite).
 
 ## VEXOVOID + NECROCENE +PECE @CDC – Parma
 https://anyplans.in/parma/vexovoid-necrocene-pece-cdc/
@@ -530,11 +352,6 @@ https://anyplans.in/parma/americano-maschile-intermedio/
 
 Padel a PADEL HERO PARMA, STRADA VIAZZA DI MARTORANO SNC, 43123 Parma, sabato 19 settembre alle 10:30. 15 € (Iscrizione e pagamento su Playtomic).
 
-## Dove sono tutti – Reggiane Parco Innovazione
-https://anyplans.in/parma/dove-sono-tutti/
-
-Incontri culturali a Reggiane Parco Innovazione, Reggio Emilia, sabato 19 settembre alle 14:30. Gratis (Biglietti su Eventbrite).
-
 ## SOCIAL RUN PARMA – Cittadella
 https://anyplans.in/parma/social-run-parma/
 
@@ -544,16 +361,6 @@ Corsa a Cittadella, Parma, sabato 19 settembre alle 14:30. Gratis (Biglietti su 
 https://anyplans.in/parma/40-palio-di-parma-e-villaggio-medievale/
 
 Incontri culturali a Parco Ducale, 43125 Parma PR, Italia, Parma, sabato 19 settembre alle 15:00. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## FLESH AND BLOOD - Prerelease di Usurp the Shadow Throne – Reggio Emilia
-https://anyplans.in/parma/flesh-and-blood-prerelease-di-usurp-the-shadow-throne/
-
-Giochi da tavolo a Funside Reggio Emilia, Reggio Emilia, sabato 19 settembre alle 15:00. Gratis (Biglietti su Eventbrite).
-
-## YU-Gi-OH! - Gioco libero – Funside Reggio Emilia
-https://anyplans.in/parma/yu-gi-oh-gioco-libero/
-
-Giochi da tavolo a Funside Reggio Emilia, Reggio Emilia, sabato 19 settembre alle 15:30. Gratis (Biglietti su Eventbrite).
 
 ## ISABELITA OFF Tdj CIPOLLA + BIONDO – Circolo Arci Post Parma
 https://anyplans.in/parma/isabelita-off-tdj-cipolla-biondo/
@@ -575,30 +382,15 @@ https://anyplans.in/parma/che-occhi-grandi-che-hai-pensare-come-una-montagna/
 
 Festa di paese a Via Giosuè Carducci, 47, Fidenza, sabato 19 settembre alle 17:30. Gratis (Biglietti su Eventbrite).
 
-## Percorsi Dimenticati: Il Crostolo e le Storie Nascoste di Reggio – Reggio Emilia
-https://anyplans.in/parma/percorsi-dimenticati-il-crostolo-e-le-storie-nascoste-di-reg/
-
-Festa di paese a Davanti Chiesa del Cristo, Reggio Emilia, sabato 19 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
-
 ## Alle Foglie Fest vol.6 | SABATO 19 SETTEMBRE 2026
 https://anyplans.in/parma/alle-foglie-fest-vol-6-sabato-19-settembre-2026/
 
 Festa di paese a Alle Foglie Fest, sabato 19 settembre alle 18:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Cena da L'Angolo di Napoli: 2 posti liberi
-https://anyplans.in/parma/cena-da-l-angolo-di-napoli-2-posti-liberi/
-
-Cena / aperitivo a L'Angolo di Napoli, Reggio Emilia, sabato 19 settembre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Concerts by Candlelight - Parma
 https://anyplans.in/parma/concerts-by-candlelight-parma/
 
 Concerti e musica dal vivo a Strada della Repubblica, 57, 43121 Parma PR, Italia, Parma, sabato 19 settembre alle 19:00. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## Cena da Destino -Bruschette e Aperitivi-: 4 posti liberi
-https://anyplans.in/parma/cena-da-destino-bruschette-e-aperitivi-4-posti-liberi/
-
-Cena / aperitivo a Destino -Bruschette e Aperitivi-, Reggio Emilia, sabato 19 settembre alle 19:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## Cena da Sound Cafe': 7 posti liberi
 https://anyplans.in/parma/cena-da-sound-cafe-7-posti-liberi/
@@ -609,11 +401,6 @@ Cena / aperitivo a Sound Cafe', Parma, sabato 19 settembre alle 19:00. Gratis (O
 https://anyplans.in/parma/cena-da-the-roof-7-posti-liberi/
 
 Cena / aperitivo a THE ROOF, Parma, sabato 19 settembre alle 20:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Visita alla Reggia di Rivalta: palazzo – Reggio Emilia
-https://anyplans.in/parma/visita-alla-reggia-di-rivalta-palazzo-giardino-frutteto-e-gr/
-
-Escursionismo a Palazzo Ducale di Rivalta, Reggio Emilia, domenica 20 settembre alle 09:00. Gratis (Biglietti su Eventbrite).
 
 ## Worship Service – Parma
 https://anyplans.in/parma/worship-service/
@@ -645,55 +432,15 @@ https://anyplans.in/parma/last-summer-run-26041/
 
 Corsa a La Baia Casalmaggiore, Casalmaggiore, domenica 20 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
 
-## Cena da MIC Ramen Reggio Emilia: 1 posto libero
-https://anyplans.in/parma/cena-da-mic-ramen-reggio-emilia-1-posto-libero/
-
-Cena / aperitivo a MIC Ramen Reggio Emilia, domenica 20 settembre alle 19:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Dal quadro al feed – Laboratorio Aperto di Parma
 https://anyplans.in/parma/dal-quadro-al-feed/
 
 Pittura / arte a Laboratorio Aperto di Parma, Parma, lunedì 21 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
 
-## Tessuti Avanzato PROVA GRATUITA – Reggio Emilia
-https://anyplans.in/parma/tessuti-avanzato-prova-gratuita/
-
-Spettacoli e teatro a Acrobatica Aerea Reggio Emilia, Reggio Emilia, lunedì 21 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
-
-## Corda Livello Unico PROVA GRATUITA – Reggio Emilia
-https://anyplans.in/parma/corda-livello-unico-prova-gratuita/
-
-Palestra a Acrobatica Aerea Reggio Emilia, Reggio Emilia, lunedì 21 settembre alle 20:00. Gratis (Biglietti su Eventbrite).
-
 ## Locale e certificato – Palazzo Giordani
 https://anyplans.in/parma/locale-e-certificato/
 
 Incontri culturali a Palazzo Giordani, Parma, martedì 22 settembre alle 15:00. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## Cerchio Junior liv.2 PROVA GRATUITA – Reggio Emilia
-https://anyplans.in/parma/cerchio-junior-liv-2-prova-gratuita/
-
-Incontri culturali a Acrobatica Aerea Reggio Emilia, Reggio Emilia, martedì 22 settembre alle 17:30. Gratis (Biglietti su Eventbrite).
-
-## Cena da DiVino: 7 posti liberi
-https://anyplans.in/parma/cena-da-divino-7-posti-liberi/
-
-Cena / aperitivo a DiVino, Reggio Emilia, martedì 22 settembre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Trapezio Livello Unico PROVA GRATUITA – Reggio Emilia
-https://anyplans.in/parma/trapezio-livello-unico-prova-gratuita/
-
-Palestra a Acrobatica Aerea Reggio Emilia, Reggio Emilia, martedì 22 settembre alle 20:00. Gratis (Biglietti su Eventbrite).
-
-## GAME NIGHT - Serata di Giochi da Tavolo – Reggio Emilia
-https://anyplans.in/parma/game-night-serata-di-giochi-da-tavolo/
-
-Giochi da tavolo a Funside Reggio Emilia, Reggio Emilia, martedì 22 settembre alle 20:30. Gratis (Biglietti su Eventbrite).
-
-## WARHAMMER 40K - Kill Team e Combat Patrol – Reggio Emilia
-https://anyplans.in/parma/warhammer-40k-kill-team-e-combat-patrol/
-
-Giochi da tavolo a Funside Reggio Emilia, Reggio Emilia, martedì 22 settembre alle 20:30. Gratis (Biglietti su Eventbrite).
 
 ## Parma BlaBla Dinner - Every month - Recurrent event -…
 https://anyplans.in/parma/parma-blabla-dinner-every-month-recurrent-event-registration/
@@ -715,11 +462,6 @@ https://anyplans.in/parma/visit-opem-dietro-le-quinte-del-packaging/
 
 Incontri culturali a Opem Spa, Parma, mercoledì 23 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
 
-## Torneo di burraco – Food in Chiostri
-https://anyplans.in/parma/torneo-di-burraco/
-
-Incontri culturali a Food in Chiostri, Reggio Emilia, mercoledì 23 settembre alle 17:00. Gratis (Gratis, registrazione su Luma).
-
 ## Cena da Pub Birreria La Corriera: 8 posti liberi
 https://anyplans.in/parma/cena-da-pub-birreria-la-corriera-8-posti-liberi/
 
@@ -730,45 +472,20 @@ https://anyplans.in/parma/sviluppo-locale-sostenibile-verso-il-patto-aziende-e-c
 
 Incontri culturali a Via Manzoni, 4, Viadana, mercoledì 23 settembre alle 17:30. Gratis (Biglietti su Eventbrite).
 
-## Tessuti Junior liv. 1 PROVA GRATUITA – Reggio Emilia
-https://anyplans.in/parma/tessuti-junior-liv-1-prova-gratuita/
-
-Incontri culturali a Acrobatica Aerea Reggio Emilia, Reggio Emilia, mercoledì 23 settembre alle 17:30. Gratis (Biglietti su Eventbrite).
-
 ## Altri Spiriti – Laboratorio Aperto di Parma
 https://anyplans.in/parma/altri-spiriti/
 
 Incontri culturali a Laboratorio Aperto di Parma, Parma, mercoledì 23 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
-
-## CYBERPUNK - Weekly Serale – Funside Reggio Emilia
-https://anyplans.in/parma/cyberpunk-weekly-serale/
-
-Giochi da tavolo a Funside Reggio Emilia, Reggio Emilia, mercoledì 23 settembre alle 20:30. Gratis (Biglietti su Eventbrite).
 
 ## Food Tech Talks #3 | Italian Tech Alliance - Maia…
 https://anyplans.in/parma/food-tech-talks-3-italian-tech-alliance-maia-ventures-le-vil/
 
 Incontri culturali a Le Village by CA Parma, giovedì 24 settembre alle 17:30. Gratis (Gratis, registrazione su Luma).
 
-## Cena da Roadhouse Reggio Emilia I Petali: 5 posti liberi
-https://anyplans.in/parma/cena-da-roadhouse-reggio-emilia-i-petali-5-posti-liberi/
-
-Cena / aperitivo a Roadhouse Reggio Emilia I Petali, giovedì 24 settembre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Gruppo di Lettura Diari da Leggere con Exòrma – Parma
 https://anyplans.in/parma/gruppo-di-lettura-diari-da-leggere-con-exorma/
 
 Incontri culturali a BORGO SANTA BRIGIDA,  n. 9, Parma, Emilia-Romagna, Parma, giovedì 24 settembre alle 19:00. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## Cerchio liv. 1 PROVE GRATUITE – Reggio Emilia
-https://anyplans.in/parma/cerchio-liv-1-prove-gratuite/
-
-Incontri culturali a Acrobatica Aerea Reggio Emilia, Reggio Emilia, giovedì 24 settembre alle 20:00. Gratis (Biglietti su Eventbrite).
-
-## Articolo 11: «L'Italia ripudia la guerra» con Bersani, Foa e Zuppi – Reggio Emilia
-https://anyplans.in/parma/articolo-11-l-italia-ripudia-la-guerra-con-bersani-foa-e-zup/
-
-Incontri culturali a Teatro Municipale Romolo Valli, Reggio Emilia, venerdì 25 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## Visita MAX STREICHER S.p.A. - EPC Contractor Oil&Gas – Parma
 https://anyplans.in/parma/visita-max-streicher-s-p-a-epc-contractor-oil-gas/
@@ -779,26 +496,6 @@ Incontri culturali a MAX STREICHER SpA, Parma, venerdì 25 settembre alle 10:00.
 https://anyplans.in/parma/calici-nobili/
 
 Incontri culturali a Parma, Parma, venerdì 25 settembre alle 18:00. 86,58 € (Biglietti su AllEvents).
-
-## Karaoke da Ristorante Huiwei 回味源: 11 posti liberi
-https://anyplans.in/parma/karaoke-da-ristorante-huiwei-11-posti-liberi/
-
-Karaoke a Ristorante Huiwei 回味源, Reggio Emilia, venerdì 25 settembre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Cena da La Via Delle Spezie: 8 posti liberi
-https://anyplans.in/parma/cena-da-la-via-delle-spezie-8-posti-liberi/
-
-Cena / aperitivo a La Via Delle Spezie, Reggio Emilia, venerdì 25 settembre alle 19:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## GdR LAB - Giochi di Ruolo in Biblioteca – Quattro Castella
-https://anyplans.in/parma/gdr-lab-giochi-di-ruolo-in-biblioteca/
-
-Giochi da tavolo a Bibilioteca Comunale di Quattro Castella, Piazza Dante, Quattro Castella, Province of Reggio Emilia, Italy, Quattro Castella, venerdì 25 settembre alle 20:30. Gratis (Biglietti su Eventbrite).
-
-## Reggio Emilia Pestiferia: storie di morbi
-https://anyplans.in/parma/reggio-emilia-pestiferia-storie-di-morbi-beccamorti-e-lazzar/
-
-Festa di paese a Davanti al Grattacielo Cafè, Reggio Emilia, venerdì 25 settembre alle 21:00. Gratis (Biglietti su Eventbrite).
 
 ## JAM BACK!!! con Lucio Vallisneri – Parma
 https://anyplans.in/parma/jam-back-con-lucio-vallisneri/
@@ -814,16 +511,6 @@ Mostre a Museo Agorà Orsi Coppini - Museo di Arte Olearia, San Secondo Parmense
 https://anyplans.in/parma/tradurre-la-letteratura-di-viaggio-workshop-gratuito/
 
 Incontri culturali a Officine On/Off, Parma, sabato 26 settembre alle 14:00. 50 € (Biglietti su AllEvents).
-
-## MAGIC - Prerelease di Reality Fracture – Reggio Emilia
-https://anyplans.in/parma/magic-prerelease-di-reality-fracture/
-
-Giochi da tavolo a Funside Reggio Emilia, Reggio Emilia, sabato 26 settembre alle 15:00. Gratis (Biglietti su Eventbrite).
-
-## OFFCLUB - Equinozio D'Autunno - Chiostri di San Pietro
-https://anyplans.in/parma/offclub-equinozio-d-autunno-chiostri-di-san-pietro/
-
-Concerti e musica dal vivo a Chiostri di San Pietro, Reggio Emilia, sabato 26 settembre alle 17:00. Gratis (Biglietti su Eventbrite).
 
 ## Raduno tange night – Tangenziale del ducato 580A
 https://anyplans.in/parma/raduno-tange-night/
@@ -865,16 +552,6 @@ https://anyplans.in/parma/visita-guidata-a-torricella-del-pizzo-passeggiata-nell
 
 Visite guidate a Via Po Morto, 56, Torricella del Pizzo, domenica 27 settembre alle 10:30. Gratis (Biglietti su Eventbrite).
 
-## Tavolo genitori single da Mennui - Cucina Asiatica,…
-https://anyplans.in/parma/tavolo-genitori-single-da-mennui-cucina-asiatica-poke-e-rame/
-
-Cena / aperitivo a Mennui - Cucina Asiatica, Poke e Ramen, Reggio Emilia, domenica 27 settembre alle 10:45. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## aperitivo dei forestieri..😁😁 da Melli Da Gentilia: 8…
-https://anyplans.in/parma/aperitivo-dei-forestieri-da-melli-da-gentilia-8-posti-liberi/
-
-Cena / aperitivo a Melli Da Gentilia, Reggio Emilia, domenica 27 settembre alle 15:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Aperitivo da Arte & Gusto: 1 posto libero
 https://anyplans.in/parma/aperitivo-da-arte-gusto-1-posto-libero/
 
@@ -885,50 +562,15 @@ https://anyplans.in/parma/marc-almond-in-concerto-il-rumore-del-lutto-festival-2
 
 Concerti e musica dal vivo a Paganini Congressi, Parma, domenica 27 settembre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Cerchio liv.1 PROVA GRATUITA – Reggio Emilia
-https://anyplans.in/parma/cerchio-liv-1-prova-gratuita/
-
-Yoga / pilates a Acrobatica Aerea Reggio Emilia, Reggio Emilia, martedì 29 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
-
-## ANTIRICICLAGGIO: INDICAZIONI PRATICHE E OBBLIGHI NELLE AGENZIE IMMOBILIARI – Reggio Emilia
-https://anyplans.in/parma/antiriciclaggio-indicazioni-pratiche-e-obblighi-nelle-agenzi/
-
-Incontri culturali a REMAX OPEN - AGENZIA IMMOBILIARE, Reggio Emilia, mercoledì 30 settembre alle 09:00. Gratis (Biglietti su Eventbrite).
-
-## Cena da Tortuga: 7 posti liberi
-https://anyplans.in/parma/cena-da-tortuga-7-posti-liberi/
-
-Cena / aperitivo a Tortuga, Reggio Emilia, giovedì 1 ottobre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Fracasso a Insolito Festival, 1 ottobre
 https://anyplans.in/parma/fracasso/
 
 Festa di paese a Insolito Festival, giovedì 1 ottobre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## IUNGOforum 2026 | Impronte – Ruote da Sogno
-https://anyplans.in/parma/iungoforum-2026-impronte/
-
-Incontri culturali a Ruote da Sogno, Reggio Emilia, venerdì 2 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
-
-## Cerchio Junior liv. 3 PROVE GRATUITE – Reggio Emilia
-https://anyplans.in/parma/cerchio-junior-liv-3-prove-gratuite/
-
-Incontri culturali a Acrobatica Aerea Reggio Emilia, Reggio Emilia, venerdì 2 ottobre alle 17:30. Gratis (Biglietti su Eventbrite).
-
-## La Reggio Noire: un tour nella cronaca nera del passato by Night – Reggio Emilia
-https://anyplans.in/parma/la-reggio-noire-un-tour-nella-cronaca-nera-del-passato-by-ni/
-
-Festa di paese a Davanti ingresso Cattedrale, Reggio Emilia, venerdì 2 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
-
 ## Keeley Forsyth & Matthew Bourne | Hand to mouth | Il…
 https://anyplans.in/parma/keeley-forsyth-matthew-bourne-hand-to-mouth-il-rumore-del-lu/
 
 Festa di paese a Il Rumore del Lutto Festival, venerdì 2 ottobre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## Nobìlita, il Festival della Cultura del Lavoro – Tecnopolo
-https://anyplans.in/parma/nobilita-il-festival-della-cultura-del-lavoro/
-
-Festa di paese a Tecnopolo, Reggio Emilia, sabato 3 ottobre alle 09:30. Gratis (Biglietti su Eventbrite).
 
 ## Corso di cucina - Polpette per tutti – Smeg Store Guastalla
 https://anyplans.in/parma/corso-di-cucina-polpette-per-tutti/
@@ -954,11 +596,6 @@ Ballo e danza a Palaenza, Parma, sabato 3 ottobre alle 15:00. Gratis (Ingresso: 
 https://anyplans.in/parma/parma-segreta-curiosa-e-misteriosa/
 
 Festa di paese a Davanti ingresso Battistero, Parma, sabato 3 ottobre alle 16:00. Gratis (Biglietti su Eventbrite).
-
-## Visita all'ex-manicomio San Lazzaro: da lebbrosario a complesso manicomiale – Reggio Emilia
-https://anyplans.in/parma/visita-all-ex-manicomio-san-lazzaro-da-lebbrosario-a-comples/
-
-Visite guidate a Davanti Ingresso Padiglione Ziccardi, Reggio Emilia, sabato 3 ottobre alle 16:30. Gratis (Biglietti su Eventbrite).
 
 ## QUARTASA FEST @CDC PARMA – WE WANT PUNK
 https://anyplans.in/parma/quartasa-fest-cdc-parma/
@@ -1000,11 +637,6 @@ https://anyplans.in/parma/sagra-della-lotta-antispecista-parma/
 
 Festa di paese a Via Montanara, Parma, domenica 4 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
 
-## Flesh and Blood - Pro Quest London – Funside Reggio Emilia
-https://anyplans.in/parma/flesh-and-blood-pro-quest-london/
-
-Giochi da tavolo a Funside Reggio Emilia, Reggio Emilia, domenica 4 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
-
 ## Visita Guidata al Complesso Monumentale della Pilotta – Parma
 https://anyplans.in/parma/visita-guidata-al-complesso-monumentale-della-pilotta/
 
@@ -1014,11 +646,6 @@ Visite guidate a Sotto i voltoni, davanti biglietteria, Parma, domenica 4 ottobr
 https://anyplans.in/parma/correggio-e-parmigianino-la-sfida-che-rese-parma-immortale/
 
 Mostre a Davanti Teatro Regio, Parma, domenica 4 ottobre alle 15:00. Gratis (Biglietti su Eventbrite).
-
-## RIFTBOUND - Summoner Skirmish – Funside Reggio Emilia
-https://anyplans.in/parma/riftbound-summoner-skirmish/
-
-Giochi da tavolo a Funside Reggio Emilia, Reggio Emilia, domenica 4 ottobre alle 15:00. Gratis (Biglietti su Eventbrite).
 
 ## URBAN NATURE 2026 - Waggle Dance - Danza Creativa (dai 4 ai 6 anni) – Parma
 https://anyplans.in/parma/urban-nature-2026-waggle-dance-danza-creativa-dai-4-ai-6-ann/
@@ -1030,20 +657,10 @@ https://anyplans.in/parma/sylvaine-fagelle-colonne-28-parma/
 
 Pittura / arte a Borgo Delle Colonne, 28, 43121 Parma PR, Italia, Parma, domenica 4 ottobre alle 18:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Visita d'autunno – Fondazione Luigi Ghirri
-https://anyplans.in/parma/visita-d-autunno/
-
-Mostre a Fondazione Luigi Ghirri, Reggio Emilia, giovedì 8 ottobre alle 09:30. Gratis (Biglietti su Eventbrite).
-
 ## OLTRE LE BARRIERE – Barilla - Sede Centrale
 https://anyplans.in/parma/oltre-le-barriere/
 
 Incontri culturali a Barilla - Sede Centrale, Parma, venerdì 9 ottobre alle 10:00. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## Cena da Tortuga Reggio Emilia: 9 posti liberi
-https://anyplans.in/parma/cena-da-tortuga-reggio-emilia-9-posti-liberi/
-
-Cena / aperitivo a Tortuga Reggio Emilia, Reggio nell'Emilia, venerdì 9 ottobre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## Atti degli apostoli – Insolito Festival
 https://anyplans.in/parma/atti-degli-apostoli/
@@ -1085,16 +702,6 @@ https://anyplans.in/parma/sabato-10-ottobre-hobos-miracle-blades-rudo-arci-cdc-p
 
 Concerti e musica dal vivo a Arci CDC Parma, Parma, sabato 10 ottobre alle 21:30. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## POKEMON - Sfida di Lega - Win a Box – Funside Reggio Emilia
-https://anyplans.in/parma/pokemon-sfida-di-lega-win-a-box/
-
-Giochi da tavolo a Funside Reggio Emilia, Reggio Emilia, domenica 11 ottobre alle 14:30. Gratis (Biglietti su Eventbrite).
-
-## October 2026 #Shifting the Paradigm in Reggio Emilia
-https://anyplans.in/parma/october-2026-shifting-the-paradigm-in-reggio-emilia/
-
-Incontri culturali a Centro Internazionale Loris Malaguzzi, Reggio Emilia, domenica 11 ottobre alle 16:00. Gratis (Biglietti su Eventbrite).
-
 ## Oratorio "Agar e Ismaele" — Alessandro Scarlatti – Parma
 https://anyplans.in/parma/oratorio-agar-e-ismaele-alessandro-scarlatti/
 
@@ -1109,16 +716,6 @@ Incontri culturali a Manzini Off - Wopa, Parma, martedì 13 ottobre alle 21:00. 
 https://anyplans.in/parma/soloindue/
 
 Concerti e musica dal vivo a Oratorio di San Tiburzio, Parma, venerdì 16 ottobre alle 19:30. Gratis (Biglietti su Eventbrite).
-
-## Tradizione e Creatività: la Pizza di Servidio – Reggio Emilia
-https://anyplans.in/parma/tradizione-e-creativita-la-pizza-di-servidio/
-
-Cena / aperitivo a Smeg Store Reggio Emilia, Reggio Emilia, sabato 17 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
-
-## Le Officine Reggiane: una storia di archeologia industriale – Reggio Emilia
-https://anyplans.in/parma/le-officine-reggiane-una-storia-di-archeologia-industriale/
-
-Festa di paese a Officine Meccaniche Reggiane, sotto al carroponte, Reggio Emilia, sabato 17 ottobre alle 10:30. Gratis (Biglietti su Eventbrite).
 
 ## The Jury Experience – Teatro al Parco
 https://anyplans.in/parma/the-jury-experience-il-colpo-da-20-milioni-di-dollari/
@@ -1135,20 +732,10 @@ https://anyplans.in/parma/costellazioni-familiari-sistemiche-l-abbondanza-dalle-
 
 Yoga / pilates a Hotel delle Rose Terme & Wellness Spa, Monticelli Terme, domenica 18 ottobre alle 14:30. Gratis (Biglietti su Eventbrite).
 
-## MAGIC - Echi di Realtà - Evento Draft Prendi 2 – Reggio Emilia
-https://anyplans.in/parma/magic-echi-di-realta-evento-draft-prendi-2/
-
-Giochi da tavolo a Funside Reggio Emilia, Reggio Emilia, domenica 18 ottobre alle 15:30. Gratis (Biglietti su Eventbrite).
-
 ## OLTRE LO SPECCHIO – Europa Teatri
 https://anyplans.in/parma/oltre-lo-specchio-l-amore-come-orizzonte-di-senso/
 
 Pittura / arte a Europa Teatri, Parma, domenica 18 ottobre alle 20:30. 22,55 € (Biglietti su AllEvents).
-
-## Il dramma dell'orientamento – Teatro Ludovico Ariosto
-https://anyplans.in/parma/il-dramma-dell-orientamento/
-
-Incontri culturali a Teatro Ludovico Ariosto, Reggio Emilia, lunedì 19 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
 
 ## Scherzi d'Irrealtà – Casa del Suono
 https://anyplans.in/parma/scherzi-d-irrealta-la-monodia-accompagnata-tra-600-e-900/
@@ -1160,20 +747,10 @@ https://anyplans.in/parma/dad-or-alive/
 
 Concerti e musica dal vivo a Lenz Teatro, Parma, venerdì 23 ottobre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## La cucina vegetale – Smeg Store Reggio Emilia
-https://anyplans.in/parma/la-cucina-vegetale/
-
-Cena / aperitivo a Smeg Store Reggio Emilia, Reggio Emilia, sabato 24 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
-
 ## Misatango con Martin Palmeri – Cattedrale di Parma
 https://anyplans.in/parma/misatango-con-martin-palmeri/
 
 Concerti e musica dal vivo a Cattedrale di Parma, Parma, sabato 24 ottobre alle 14:00. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## Aspettando halloween - corso di cucina per i più piccoli (dai 6 anni) – Reggio Emilia
-https://anyplans.in/parma/aspettando-halloween-corso-di-cucina-per-i-piu-piccoli-dai-6/
-
-Cucina a Smeg Store Reggio Emilia, Reggio Emilia, sabato 24 ottobre alle 16:00. Gratis (Biglietti su Eventbrite).
 
 ## Rendez-vous | Victoria Thierrée-Chaplin – Parma
 https://anyplans.in/parma/rendez-vous-victoria-thierree-chaplin-jean-baptiste-thierree/
@@ -1209,11 +786,6 @@ Concerti e musica dal vivo a Borgo Santa Brigida, 43121 Parma PR, Italia, Parma,
 https://anyplans.in/parma/jonathan-hulten-caronte-colonne-28-parma/
 
 Incontri culturali a Colonne 28, Parma, domenica 25 ottobre alle 18:00. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## LinkedIn Key People – Tecnopolo
-https://anyplans.in/parma/linkedin-key-people/
-
-Incontri culturali a Tecnopolo, Reggio Emilia, lunedì 26 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## CIBUSTEC a Parma Fiera, Parma, 27 ottobre
 https://anyplans.in/parma/cibustec/
@@ -1285,35 +857,15 @@ https://anyplans.in/parma/safety-hub-2026/
 
 Incontri culturali a Labirinto della Masone, Fontanellato, martedì 17 novembre alle 16:00. Gratis (Biglietti su Eventbrite).
 
-## Corso di cucina: Pasta e legumi – Smeg Store Reggio Emilia
-https://anyplans.in/parma/corso-di-cucina-pasta-e-legumi/
-
-Cucina a Smeg Store Reggio Emilia, Reggio Emilia, sabato 21 novembre alle 10:00. Gratis (Biglietti su Eventbrite).
-
 ## Parma vs Roma at Stadio Ennio Tardini
 https://anyplans.in/parma/parma-vs-roma-at-stadio-ennio-tardini/
 
 Partite da vedere a Stadio Ennio Tardini, Parma, sabato 21 novembre alle 18:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## POKEMON - Coppa di Lega - Win a Box – Funside Reggio Emilia
-https://anyplans.in/parma/pokemon-coppa-di-lega-win-a-box/
-
-Giochi da tavolo a Funside Reggio Emilia, Reggio Emilia, domenica 22 novembre alle 09:30. Gratis (Biglietti su Eventbrite).
-
-## POKEMON - Sfida di Lega VGC - Pokemon Champions - Nintendo Switch – Reggio Emilia
-https://anyplans.in/parma/pokemon-sfida-di-lega-vgc-pokemon-champions-nintendo-switch/
-
-Giochi da tavolo a Funside Reggio Emilia, Reggio Emilia, domenica 22 novembre alle 15:30. Gratis (Biglietti su Eventbrite).
-
 ## HANS ZIMMER Tribute by Ensemble Symphony Orchestra – Parma
 https://anyplans.in/parma/hans-zimmer-tribute-by-ensemble-symphony-orchestra/
 
 Concerti e musica dal vivo a Teatro Regio di Parma, Parma, martedì 24 novembre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## Un giorno a Casina Dei Bimbi: volontariato con Studio Dentistico Fornaciari – Reggio Emilia
-https://anyplans.in/parma/un-giorno-a-casina-dei-bimbi-volontariato-con-studio-dentist/
-
-Giardinaggio / volontariato a Chiostri di San Pietro, Reggio Emilia, sabato 28 novembre alle 16:00. Gratis (Biglietti su Eventbrite).
 
 ## Coez in Parma a Teatro Regio, Parma, 28 novembre
 https://anyplans.in/parma/coez-in-parma/
@@ -1335,11 +887,6 @@ https://anyplans.in/parma/corso-di-cucina-a-ciascun-primo-il-suo-pescato/
 
 Cucina a Smeg Store Guastalla, Guastalla, sabato 12 dicembre alle 10:30. Gratis (Biglietti su Eventbrite).
 
-## La Reggio del "Popol Giost" tra Storie e Curiosità – Reggio Emilia
-https://anyplans.in/parma/la-reggio-del-popol-giost-tra-storie-e-curiosita/
-
-Festa di paese a Davanti Chiesa del Cristo, Reggio Emilia, sabato 12 dicembre alle 15:00. Gratis (Biglietti su Eventbrite).
-
 ## Sébastien Tellier in Parma – Teatro Regio
 https://anyplans.in/parma/sebastien-tellier-in-parma/
 
@@ -1349,11 +896,6 @@ Concerti e musica dal vivo a Teatro Regio, Parma, sabato 12 dicembre alle 20:00.
 https://anyplans.in/parma/parma-vs-fiorentina-at-stadio-ennio-tardini/
 
 Partite da vedere a Stadio Ennio Tardini, Parma, sabato 12 dicembre alle 23:59. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## Corso di cucina: Natale è... – Smeg Store Reggio Emilia
-https://anyplans.in/parma/corso-di-cucina-natale-e/
-
-Cucina a Smeg Store Reggio Emilia, Reggio Emilia, sabato 19 dicembre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## 📸 Incontri amichevoli & passeggiata fotografica / Make friends &… – Parma
 https://anyplans.in/parma/incontri-amichevoli-passeggiata-fotografica-make-friends-pho/
@@ -1390,55 +932,50 @@ https://anyplans.in/parma/parma-vs-lecce-at-stadio-ennio-tardini/
 
 Partite da vedere a Stadio Ennio Tardini, Parma, sabato 13 marzo alle 23:59. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Things to do in Parma: 196 events
+## Things to do in Parma: 130 events
 https://anyplans.in/en/parma/
 
-What's on in Parma and its province, today, tonight and this weekend: talks & culture, dinners & aperitivo, town festivals & fairs, concerts & live music, board games and live sport. Pick one and go with other people.
+What's on in Parma and its province, today, tonight and this weekend: talks & culture, town festivals & fairs, dinners & aperitivo, concerts & live music, live sport and shows & theatre. Pick one and go with other people.
 
-## What to do in Parma today: 21 events
+## What to do in Parma today: 11 events
 https://anyplans.in/en/parma/what-to-do-today/
 
-21 events in Parma and its province today, 18 September 2026: Parma, Reggio Emilia, Barco and Cremona and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+11 events in Parma and its province today, 18 September 2026: Parma, Cremona, Mantova and Lemignano and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Parma tomorrow: 20 events
+## What to do in Parma tomorrow: 14 events
 https://anyplans.in/en/parma/what-to-do-tomorrow/
 
-20 events in Parma and its province tomorrow, 19 September 2026: Parma, Reggio Emilia, Fidenza and Mantova and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+14 events in Parma and its province tomorrow, 19 September 2026: Parma, Fidenza, Mantova and Alle Foglie Fest and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Parma this weekend: 28 events
+## What to do in Parma this weekend: 20 events
 https://anyplans.in/en/parma/what-to-do-this-weekend/
 
-28 events in Parma and its province this weekend (Saturday 19 September and Sunday 20 September): Parma, Reggio Emilia, Fidenza and Mantova and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+20 events in Parma and its province this weekend (Saturday 19 September and Sunday 20 September): Parma, Fidenza, Mantova and Alle Foglie Fest and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## Events in Parma in September 2026: 97
+## Events in Parma in September 2026: 56
 https://anyplans.in/en/parma/events-september-2026/
 
-97 events in Parma and its province in September 2026: town festivals & fairs, dinners & aperitivo, talks & culture, concerts & live music and dancing. Day by day, with times, place and price, in Parma, Reggio Emilia, Barco and Fidenza and other towns. You sign up and go with other people.
+56 events in Parma and its province in September 2026: town festivals & fairs, dinners & aperitivo, talks & culture, concerts & live music and dancing. Day by day, with times, place and price, in Parma, Fidenza, Cremona and Mantova and other towns. You sign up and go with other people.
 
-## Events in Parma in October 2026: 69
+## Events in Parma in October 2026: 50
 https://anyplans.in/en/parma/events-october-2026/
 
-69 events in Parma and its province in October 2026: dinners & aperitivo, town festivals & fairs, talks & culture, cooking classes and yoga & pilates. Day by day, with times, place and price, in Parma, Reggio Emilia, Il Rumore del Lutto Festival and Insolito Festival and other towns. You sign up and go with other people.
+50 events in Parma and its province in October 2026: town festivals & fairs, cooking classes, dinners & aperitivo, yoga & pilates and dancing. Day by day, with times, place and price, in Parma, Il Rumore del Lutto Festival, Insolito Festival and Noceto and other towns. You sign up and go with other people.
 
-## Events in Parma in November 2026: 16
+## Events in Parma in November 2026: 12
 https://anyplans.in/en/parma/events-november-2026/
 
-16 events in Parma and its province in November 2026: town festivals & fairs, live sport, shows & theatre, talks & culture and concerts & live music. Day by day, with times, place and price, in Parma, Reggio Emilia, Il Rumore del Lutto Festival and Fontanellato and other towns. You sign up and go with other people.
+12 events in Parma and its province in November 2026: town festivals & fairs, live sport, shows & theatre, talks & culture and concerts & live music. Day by day, with times, place and price, in Parma, Il Rumore del Lutto Festival and Fontanellato and other towns. You sign up and go with other people.
 
-## Dinners & aperitivo in Parma: 31 events
+## Dinners & aperitivo in Parma: 15 events
 https://anyplans.in/en/parma/dinners/
 
-In Parma and its province there are 31 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Parma and its province there are 15 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Talks & culture in Parma: 44 events
+## Talks & culture in Parma: 30 events
 https://anyplans.in/en/parma/talks-and-culture/
 
-In Parma and its province there are 44 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
-
-## Guided tours in Parma: 4 events
-https://anyplans.in/en/parma/guided-tours/
-
-In Parma and its province there are 4 guided tours events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Parma and its province there are 30 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Running in Parma: 2 events
 https://anyplans.in/en/parma/running/
@@ -1450,25 +987,15 @@ https://anyplans.in/en/parma/painting/
 
 In Parma and its province there are 4 painting & art events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Board games in Parma: 14 events
-https://anyplans.in/en/parma/board-games/
-
-In Parma and its province there are 14 board game nights in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
-
-## Gym in Parma: 2 events
-https://anyplans.in/en/parma/gym/
-
-In Parma and its province there are 2 gym events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
-
-## Festivals & sagre near Parma: 29 events
+## Festivals & sagre near Parma: 21 events
 https://anyplans.in/en/parma/festivals/
 
-In Parma and its province there are 29 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Parma and its province there are 21 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Concerts & live music in Parma: 19 events
+## Concerts & live music in Parma: 18 events
 https://anyplans.in/en/parma/concerts/
 
-In Parma and its province there are 19 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Parma and its province there are 18 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Dancing in Parma: 4 events
 https://anyplans.in/en/parma/dancing/
@@ -1480,30 +1007,10 @@ https://anyplans.in/en/parma/live-sport/
 
 In Parma and its province there are 12 matches to watch in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Shows & theatre in Parma: 12 events
+## Shows & theatre in Parma: 11 events
 https://anyplans.in/en/parma/shows/
 
-In Parma and its province there are 12 shows & theatre events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
-
-## Exhibitions in Parma: 3 events
-https://anyplans.in/en/parma/exhibitions/
-
-In Parma and its province there are 3 exhibitions in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
-
-## Yoga & pilates in Parma: 3 events
-https://anyplans.in/en/parma/yoga/
-
-In Parma and its province there are 3 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
-
-## Cooking classes in Parma: 5 events
-https://anyplans.in/en/parma/cooking/
-
-In Parma and its province there are 5 cooking classes events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
-
-## Festivals and events in Reggio Emilia, Bergamo:…
-https://anyplans.in/en/parma/reggio-emilia/
-
-In Reggio Emilia there are 58 events in the coming months. On anyplans you find the festivals and events of Reggio Emilia with dates, times and place. You sign up and go with others.
+In Parma and its province there are 11 shows & theatre events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Festivals and events in Fidenza, Bergamo: 3…
 https://anyplans.in/en/parma/fidenza/
@@ -1515,50 +1022,25 @@ https://anyplans.in/en/parma/il-rumore-del-lutto-festival/
 
 In Il Rumore del Lutto Festival there are 6 events in the coming months. On anyplans you find the festivals and events of Il Rumore del Lutto Festival with dates, times and place. You sign up and go with others.
 
-## Venues in Parma: 16
+## Venues in Parma: 10
 https://anyplans.in/en/parma/venues/
 
-16 venues in Parma and its province with something on: clubs, bars, sports centres, theatres and squares. One page each, with the upcoming dates.
+10 venues in Parma and its province with something on: clubs, bars, sports centres, theatres and squares. One page each, with the upcoming dates.
 
 ## Tablo: events and nights out in Parma
 https://anyplans.in/en/parma/venues/tablo/
 
-Tablo in Parma: 29 upcoming events — dinners & aperitivo, talks & culture and karaoke. Date, time, price and how to join, one page each. You go with other people.
-
-## Funside Reggio Emilia: what's on
-https://anyplans.in/en/parma/venues/funside-reggio-emilia/
-
-Funside Reggio Emilia: 13 upcoming events — board games. Date, time, price and how to join, one page each. You go with other people.
+Tablo in Parma: 13 upcoming events — dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
 
 ## Vivid Events: what's on in Parma
 https://anyplans.in/en/parma/venues/vivid-events/
 
 Vivid Events in Parma: 12 upcoming events — live sport. Date, time, price and how to join, one page each. You go with other people.
 
-## Acrobatica Aerea Reggio Emilia: what's on
-https://anyplans.in/en/parma/venues/acrobatica-aerea-reggio-emilia/
-
-Acrobatica Aerea Reggio Emilia: 8 upcoming events — shows & theatre, gym, talks & culture and yoga & pilates. Date, time, price and how to join, one page each. You go with other people.
-
-## Smeg Store Reggio Emilia: events and nights out
-https://anyplans.in/en/parma/venues/smeg-store-reggio-emilia/
-
-Smeg Store Reggio Emilia: 5 upcoming events — dinners & aperitivo and cooking classes. Date, time, price and how to join, one page each. You go with other people.
-
 ## Laboratorio Aperto di Parma: events and nights out
 https://anyplans.in/en/parma/venues/laboratorio-aperto-di-parma/
 
 Laboratorio Aperto di Parma: 4 upcoming events — town festivals & fairs, concerts & live music, painting & art and talks & culture. Date, time, price and how to join, one page each. You go with other people.
-
-## Tecnopolo: what's on in Reggio Emilia
-https://anyplans.in/en/parma/venues/tecnopolo/
-
-Tecnopolo in Reggio Emilia: 2 upcoming events — town festivals & fairs and talks & culture. Date, time, price and how to join, one page each. You go with other people.
-
-## Luma: events and nights out in Parma
-https://anyplans.in/en/parma/venues/luma/
-
-Luma in Parma: 3 upcoming events — talks & culture and dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
 
 ## Concert Tracker: events and nights out in Parma
 https://anyplans.in/en/parma/venues/concert-tracker/
@@ -1575,15 +1057,10 @@ https://anyplans.in/en/parma/venues/voglia-di-tango/
 
 Voglia di Tango in Parma: 2 upcoming events — talks & culture and dancing. Date, time, price and how to join, one page each. You go with other people.
 
-## Davanti Chiesa del Cristo: what's on in Reggio Emilia
-https://anyplans.in/en/parma/venues/davanti-chiesa-del-cristo/
+## Luma: events and nights out in Parma
+https://anyplans.in/en/parma/venues/luma/
 
-Davanti Chiesa del Cristo in Reggio Emilia: 2 upcoming events — town festivals & fairs. Date, time, price and how to join, one page each. You go with other people.
-
-## Chiostri di San Pietro: events and nights out in Reggio…
-https://anyplans.in/en/parma/venues/chiostri-di-san-pietro/
-
-Chiostri di San Pietro in Reggio Emilia: 2 upcoming events — concerts & live music and gardening & volunteering. Date, time, price and how to join, one page each. You go with other people.
+Luma in Parma: 2 upcoming events — talks & culture and dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
 
 ## Smeg Store Guastalla: what's on
 https://anyplans.in/en/parma/venues/smeg-store-guastalla/
@@ -1610,11 +1087,6 @@ https://anyplans.in/en/parma/patente-nautica-corso-vela-motore-12-mg-e-senza-lim
 
 Talks & culture in Borgo Venti Marzo 6, Parma, Emilia-Romagna, Parma: it already took place, the last date was Tuesday, 15 September 2026.
 
-## Cena da Birreria Oktoberfest: 1 posto libero
-https://anyplans.in/en/parma/cena-da-birreria-oktoberfest-1-posto-libero/
-
-Dinners & aperitivo in Birreria Oktoberfest, Reggio Emilia: it already took place, the last date was Tuesday, 15 September 2026.
-
 ## Cena da Signorvino Parma: 8 posti liberi
 https://anyplans.in/en/parma/cena-da-signorvino-parma-8-posti-liberi/
 
@@ -1624,11 +1096,6 @@ Dinners & aperitivo in Signorvino Parma: it already took place, the last date wa
 https://anyplans.in/en/parma/cena-da-birrificio-gregorio-u-beer-4-posti-liberi/
 
 Dinners & aperitivo in Birrificio Gregorio - U.Beer, Parma: it already took place, the last date was Wednesday, 16 September 2026.
-
-## Cena da Caffetteria "Le Torri": 5 posti liberi
-https://anyplans.in/en/parma/cena-da-caffetteria-le-torri-5-posti-liberi/
-
-Dinners & aperitivo in Caffetteria "Le Torri", Reggio Emilia: it already took place, the last date was Wednesday, 16 September 2026.
 
 ## Amici di amici da Birroteca Puro Malto: 1 posto libero
 https://anyplans.in/en/parma/amici-di-amici-da-birroteca-puro-malto-1-posto-libero/
@@ -1640,50 +1107,10 @@ https://anyplans.in/en/parma/decorare-il-gusto/
 
 Dinners & aperitivo in Sala Show-cooking (ex Palazzo della Provincia), Parma: it already took place, the last date was Wednesday, 16 September 2026.
 
-## Compagni di viaggio da ALPHA SUSHI Reggio Emilia: 5…
-https://anyplans.in/en/parma/compagni-di-viaggio-da-alpha-sushi-reggio-emilia-5-posti-lib/
-
-Guided tours in ALPHA SUSHI Reggio Emilia: it already took place, the last date was Wednesday, 16 September 2026.
-
 ## Mizuno X Running Club Parma – Parma Sport
 https://anyplans.in/en/parma/mizuno-x-running-club-parma/
 
 Running in Parma Sport, Parma: it already took place, the last date was Wednesday, 16 September 2026.
-
-## Cena da MIC Ramen Reggio Emilia: 3 posti liberi
-https://anyplans.in/en/parma/cena-da-mic-ramen-reggio-emilia-3-posti-liberi/
-
-Dinners & aperitivo in MIC Ramen Reggio Emilia: it already took place, the last date was Wednesday, 16 September 2026.
-
-## Cena da Birreria Oktoberfest: 5 posti liberi
-https://anyplans.in/en/parma/cena-da-birreria-oktoberfest-5-posti-liberi/
-
-Dinners & aperitivo in Birreria Oktoberfest, Reggio Emilia: it already took place, the last date was Wednesday, 16 September 2026.
-
-## GAMES WORKSHOP - Corso di pittura e modellismo – Reggio Emilia
-https://anyplans.in/en/parma/games-workshop-corso-di-pittura-e-modellismo/
-
-Painting & art in Funside Reggio Emilia, Reggio Emilia: it already took place, the last date was Wednesday, 16 September 2026.
-
-## KENTE & FUGU FESTIVAL 2026 – Reggio Emilia
-https://anyplans.in/en/parma/kente-fugu-festival-2026/
-
-Guided tours in Via Vasco Agosti, 6, Reggio Emilia: it already took place, the last date was Thursday, 17 September 2026.
-
-## 17 Settembre: Hackathon Future Lab – Tecnopolo
-https://anyplans.in/en/parma/17-settembre-hackathon-future-lab/
-
-Talks & culture in Tecnopolo, Piazzale Europa, Reggio Emilia, RE, Italia, Reggio Emilia: it already took place, the last date was Thursday, 17 September 2026.
-
-## POKÉMON - Lega Pokemon – Funside Reggio Emilia
-https://anyplans.in/en/parma/pokemon-lega-pokemon/
-
-Board games in Funside Reggio Emilia, Reggio Emilia: it already took place, the last date was Thursday, 17 September 2026.
-
-## Cena da Màs Mexico: 7 posti liberi
-https://anyplans.in/en/parma/cena-da-mas-mexico-7-posti-liberi/
-
-Dinners & aperitivo in Màs Mexico, Reggio Emilia: it already took place, the last date was Thursday, 17 September 2026.
 
 ## ZUMBA AL COHIBA CLUB PARMA!
 https://anyplans.in/en/parma/zumba-al-cohiba-club-parma/
@@ -1695,25 +1122,10 @@ https://anyplans.in/en/parma/kamikaze-spero-vada-meglio-dell-ultima-volta/
 
 Painting & art in Largo 8 Marzo, 43124 Parma PR, Italia, Parma: it already took place, the last date was Thursday, 17 September 2026.
 
-## Coltivare l'amicizia con la materia – Remida
-https://anyplans.in/en/parma/coltivare-l-amicizia-con-la-materia/
-
-Town festival in Remida, il Centro di Riciclaggio Creativo, Reggio Emilia, Friday 18 September at 10:00. Free (Biglietti su Eventbrite).
-
 ## Estate con gli amici del Pò – Cremona
 https://anyplans.in/en/parma/estate-con-gli-amici-del-po/
 
 Town festival in Cremona, Friday 18 September at 15:30 (2 dates, until 26 September). Free.
-
-## Cena da Gelateria 90: 4 posti liberi
-https://anyplans.in/en/parma/cena-da-gelateria-90-4-posti-liberi/
-
-Dinners & aperitivo in Gelateria 90, Reggio Emilia, Friday 18 September at 16:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Anteprima del Festiva - Dove sono tutti? – Reggio nell'Emilia
-https://anyplans.in/en/parma/anteprima-del-festiva-dove-sono-tutti/
-
-Talks & culture in Smart Hub Coopservice S.p.A., Reggio nell'Emilia, Friday 18 September at 17:30. Free (Biglietti su Eventbrite).
 
 ## COREA: CULTURA E SAPORI – Laboratorio Aperto di Parma
 https://anyplans.in/en/parma/corea-cultura-e-sapori/
@@ -1730,35 +1142,15 @@ https://anyplans.in/en/parma/cena-da-pizzeria-passione-e-tradizione-5-posti-libe
 
 Dinners & aperitivo in Pizzeria Passione E Tradizione, Parma, Friday 18 September at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Cena da Doppio Malto Reggio Emilia: 5 posti liberi
-https://anyplans.in/en/parma/cena-da-doppio-malto-reggio-emilia-5-posti-liberi/
-
-Dinners & aperitivo in Doppio Malto Reggio Emilia, Friday 18 September at 19:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Cena da Il Baule 1974: 1 posto libero
 https://anyplans.in/en/parma/cena-da-il-baule-1974-1-posto-libero/
 
 Dinners & aperitivo in Il Baule 1974, Lemignano, Friday 18 September at 19:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Tavolo a tema spirituale da XL Pub & More: 8 posti liberi
-https://anyplans.in/en/parma/tavolo-a-tema-spirituale-da-xl-pub-more-8-posti-liberi/
-
-Talks & culture in XL Pub & More, Barco, Friday 18 September at 19:20. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Aperitivo da XL Pub & More: 7 posti liberi
-https://anyplans.in/en/parma/aperitivo-da-xl-pub-more-7-posti-liberi/
-
-Dinners & aperitivo in XL Pub & More, Barco, Friday 18 September at 19:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## CINQUANT'ANNI DI PASSIONE – IL PAVARANO
 https://anyplans.in/en/parma/cinquant-anni-di-passione-impegno-e-persone/
 
 Talks & culture in IL PAVARANO, SALA BAGANZA, Friday 18 September at 19:30. Free (Biglietti su Eventbrite).
-
-## Tablo business da Prestige: 9 posti liberi
-https://anyplans.in/en/parma/tablo-business-da-prestige-9-posti-liberi/
-
-Dinners & aperitivo in Prestige, Reggio Emilia, Friday 18 September at 19:45. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## CHIUSURA: WUNDERFLUX #02 – Laboratorio Aperto di Parma
 https://anyplans.in/en/parma/chiusura-wunderflux-02-hst-human-sound-track/
@@ -1774,21 +1166,6 @@ Dinners & aperitivo in Signorvino Parma, Friday 18 September at 20:00. Free (Ogn
 https://anyplans.in/en/parma/kizomba-principianti-nuovo-corso-asd-cohiba-club-parma/
 
 Dancing in A.S.D. Cohiba Club Parma, Parma, Friday 18 September at 20:30. Free (Ingresso: vedi la pagina AllEvents).
-
-## La Piccola Versailles Reggiana: Visita Guidata alla Reggia di Rivalta – Reggio Emilia
-https://anyplans.in/en/parma/la-piccola-versailles-reggiana-visita-guidata-alla-reggia-di/
-
-Guided tours in Davanti facciata Villa, Reggio Emilia, Friday 18 September at 20:30. Free (Biglietti su Eventbrite).
-
-## Reggio Emilia segreta – Davanti al Caffè Fontanesi
-https://anyplans.in/en/parma/reggio-emilia-segreta-curiosa-e-misteriosa/
-
-Town festival in Davanti al Caffè Fontanesi, Reggio Emilia, Friday 18 September at 20:30. Free (Biglietti su Eventbrite).
-
-## BEYBLADE X - Serata di gioco – Funside Reggio Emilia
-https://anyplans.in/en/parma/beyblade-x-serata-di-gioco/
-
-Board games in Funside Reggio Emilia, Reggio Emilia, Friday 18 September at 20:30. Free (Biglietti su Eventbrite).
 
 ## VEXOVOID + NECROCENE +PECE @CDC – Parma
 https://anyplans.in/en/parma/vexovoid-necrocene-pece-cdc/
@@ -1815,11 +1192,6 @@ https://anyplans.in/en/parma/americano-maschile-intermedio/
 
 Padel in PADEL HERO PARMA, STRADA VIAZZA DI MARTORANO SNC, 43123 Parma, Saturday 19 September at 10:30. €15 (Iscrizione e pagamento su Playtomic).
 
-## Dove sono tutti – Reggiane Parco Innovazione
-https://anyplans.in/en/parma/dove-sono-tutti/
-
-Talks & culture in Reggiane Parco Innovazione, Reggio Emilia, Saturday 19 September at 14:30. Free (Biglietti su Eventbrite).
-
 ## SOCIAL RUN PARMA – Cittadella
 https://anyplans.in/en/parma/social-run-parma/
 
@@ -1829,16 +1201,6 @@ Running in Cittadella, Parma, Saturday 19 September at 14:30. Free (Biglietti su
 https://anyplans.in/en/parma/40-palio-di-parma-e-villaggio-medievale/
 
 Talks & culture in Parco Ducale, 43125 Parma PR, Italia, Parma, Saturday 19 September at 15:00. Free (Ingresso: vedi la pagina AllEvents).
-
-## FLESH AND BLOOD - Prerelease di Usurp the Shadow Throne – Reggio Emilia
-https://anyplans.in/en/parma/flesh-and-blood-prerelease-di-usurp-the-shadow-throne/
-
-Board games in Funside Reggio Emilia, Reggio Emilia, Saturday 19 September at 15:00. Free (Biglietti su Eventbrite).
-
-## YU-Gi-OH! - Gioco libero – Funside Reggio Emilia
-https://anyplans.in/en/parma/yu-gi-oh-gioco-libero/
-
-Board games in Funside Reggio Emilia, Reggio Emilia, Saturday 19 September at 15:30. Free (Biglietti su Eventbrite).
 
 ## ISABELITA OFF Tdj CIPOLLA + BIONDO – Circolo Arci Post Parma
 https://anyplans.in/en/parma/isabelita-off-tdj-cipolla-biondo/
@@ -1860,30 +1222,15 @@ https://anyplans.in/en/parma/che-occhi-grandi-che-hai-pensare-come-una-montagna/
 
 Town festival in Via Giosuè Carducci, 47, Fidenza, Saturday 19 September at 17:30. Free (Biglietti su Eventbrite).
 
-## Percorsi Dimenticati: Il Crostolo e le Storie Nascoste di Reggio – Reggio Emilia
-https://anyplans.in/en/parma/percorsi-dimenticati-il-crostolo-e-le-storie-nascoste-di-reg/
-
-Town festival in Davanti Chiesa del Cristo, Reggio Emilia, Saturday 19 September at 18:00. Free (Biglietti su Eventbrite).
-
 ## Alle Foglie Fest vol.6 | SABATO 19 SETTEMBRE 2026
 https://anyplans.in/en/parma/alle-foglie-fest-vol-6-sabato-19-settembre-2026/
 
 Town festival in Alle Foglie Fest, Saturday 19 September at 18:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## Cena da L'Angolo di Napoli: 2 posti liberi
-https://anyplans.in/en/parma/cena-da-l-angolo-di-napoli-2-posti-liberi/
-
-Dinners & aperitivo in L'Angolo di Napoli, Reggio Emilia, Saturday 19 September at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Concerts by Candlelight - Parma
 https://anyplans.in/en/parma/concerts-by-candlelight-parma/
 
 Concerts & live music in Strada della Repubblica, 57, 43121 Parma PR, Italia, Parma, Saturday 19 September at 19:00. Free (Ingresso: vedi la pagina AllEvents).
-
-## Cena da Destino -Bruschette e Aperitivi-: 4 posti liberi
-https://anyplans.in/en/parma/cena-da-destino-bruschette-e-aperitivi-4-posti-liberi/
-
-Dinners & aperitivo in Destino -Bruschette e Aperitivi-, Reggio Emilia, Saturday 19 September at 19:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## Cena da Sound Cafe': 7 posti liberi
 https://anyplans.in/en/parma/cena-da-sound-cafe-7-posti-liberi/
@@ -1894,11 +1241,6 @@ Dinners & aperitivo in Sound Cafe', Parma, Saturday 19 September at 19:00. Free 
 https://anyplans.in/en/parma/cena-da-the-roof-7-posti-liberi/
 
 Dinners & aperitivo in THE ROOF, Parma, Saturday 19 September at 20:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Visita alla Reggia di Rivalta: palazzo – Reggio Emilia
-https://anyplans.in/en/parma/visita-alla-reggia-di-rivalta-palazzo-giardino-frutteto-e-gr/
-
-Hiking in Palazzo Ducale di Rivalta, Reggio Emilia, Sunday 20 September at 09:00. Free (Biglietti su Eventbrite).
 
 ## Worship Service – Parma
 https://anyplans.in/en/parma/worship-service/
@@ -1930,55 +1272,15 @@ https://anyplans.in/en/parma/last-summer-run-26041/
 
 Running in La Baia Casalmaggiore, Casalmaggiore, Sunday 20 September at 18:30. Free (Biglietti su Eventbrite).
 
-## Cena da MIC Ramen Reggio Emilia: 1 posto libero
-https://anyplans.in/en/parma/cena-da-mic-ramen-reggio-emilia-1-posto-libero/
-
-Dinners & aperitivo in MIC Ramen Reggio Emilia, Sunday 20 September at 19:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Dal quadro al feed – Laboratorio Aperto di Parma
 https://anyplans.in/en/parma/dal-quadro-al-feed/
 
 Painting & art in Laboratorio Aperto di Parma, Parma, Monday 21 September at 18:30. Free (Biglietti su Eventbrite).
 
-## Tessuti Avanzato PROVA GRATUITA – Reggio Emilia
-https://anyplans.in/en/parma/tessuti-avanzato-prova-gratuita/
-
-Shows & theatre in Acrobatica Aerea Reggio Emilia, Reggio Emilia, Monday 21 September at 18:30. Free (Biglietti su Eventbrite).
-
-## Corda Livello Unico PROVA GRATUITA – Reggio Emilia
-https://anyplans.in/en/parma/corda-livello-unico-prova-gratuita/
-
-Gym in Acrobatica Aerea Reggio Emilia, Reggio Emilia, Monday 21 September at 20:00. Free (Biglietti su Eventbrite).
-
 ## Locale e certificato – Palazzo Giordani
 https://anyplans.in/en/parma/locale-e-certificato/
 
 Talks & culture in Palazzo Giordani, Parma, Tuesday 22 September at 15:00. Free (Ingresso: vedi la pagina AllEvents).
-
-## Cerchio Junior liv.2 PROVA GRATUITA – Reggio Emilia
-https://anyplans.in/en/parma/cerchio-junior-liv-2-prova-gratuita/
-
-Talks & culture in Acrobatica Aerea Reggio Emilia, Reggio Emilia, Tuesday 22 September at 17:30. Free (Biglietti su Eventbrite).
-
-## Cena da DiVino: 7 posti liberi
-https://anyplans.in/en/parma/cena-da-divino-7-posti-liberi/
-
-Dinners & aperitivo in DiVino, Reggio Emilia, Tuesday 22 September at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Trapezio Livello Unico PROVA GRATUITA – Reggio Emilia
-https://anyplans.in/en/parma/trapezio-livello-unico-prova-gratuita/
-
-Gym in Acrobatica Aerea Reggio Emilia, Reggio Emilia, Tuesday 22 September at 20:00. Free (Biglietti su Eventbrite).
-
-## GAME NIGHT - Serata di Giochi da Tavolo – Reggio Emilia
-https://anyplans.in/en/parma/game-night-serata-di-giochi-da-tavolo/
-
-Board games in Funside Reggio Emilia, Reggio Emilia, Tuesday 22 September at 20:30. Free (Biglietti su Eventbrite).
-
-## WARHAMMER 40K - Kill Team e Combat Patrol – Reggio Emilia
-https://anyplans.in/en/parma/warhammer-40k-kill-team-e-combat-patrol/
-
-Board games in Funside Reggio Emilia, Reggio Emilia, Tuesday 22 September at 20:30. Free (Biglietti su Eventbrite).
 
 ## Parma BlaBla Dinner - Every month - Recurrent event -…
 https://anyplans.in/en/parma/parma-blabla-dinner-every-month-recurrent-event-registration/
@@ -2000,11 +1302,6 @@ https://anyplans.in/en/parma/visit-opem-dietro-le-quinte-del-packaging/
 
 Talks & culture in Opem Spa, Parma, Wednesday 23 September at 10:00. Free (Biglietti su Eventbrite).
 
-## Torneo di burraco – Food in Chiostri
-https://anyplans.in/en/parma/torneo-di-burraco/
-
-Talks & culture in Food in Chiostri, Reggio Emilia, Wednesday 23 September at 17:00. Free (Gratis, registrazione su Luma).
-
 ## Cena da Pub Birreria La Corriera: 8 posti liberi
 https://anyplans.in/en/parma/cena-da-pub-birreria-la-corriera-8-posti-liberi/
 
@@ -2015,45 +1312,20 @@ https://anyplans.in/en/parma/sviluppo-locale-sostenibile-verso-il-patto-aziende-
 
 Talks & culture in Via Manzoni, 4, Viadana, Wednesday 23 September at 17:30. Free (Biglietti su Eventbrite).
 
-## Tessuti Junior liv. 1 PROVA GRATUITA – Reggio Emilia
-https://anyplans.in/en/parma/tessuti-junior-liv-1-prova-gratuita/
-
-Talks & culture in Acrobatica Aerea Reggio Emilia, Reggio Emilia, Wednesday 23 September at 17:30. Free (Biglietti su Eventbrite).
-
 ## Altri Spiriti – Laboratorio Aperto di Parma
 https://anyplans.in/en/parma/altri-spiriti/
 
 Talks & culture in Laboratorio Aperto di Parma, Parma, Wednesday 23 September at 18:30. Free (Biglietti su Eventbrite).
-
-## CYBERPUNK - Weekly Serale – Funside Reggio Emilia
-https://anyplans.in/en/parma/cyberpunk-weekly-serale/
-
-Board games in Funside Reggio Emilia, Reggio Emilia, Wednesday 23 September at 20:30. Free (Biglietti su Eventbrite).
 
 ## Food Tech Talks #3 | Italian Tech Alliance - Maia…
 https://anyplans.in/en/parma/food-tech-talks-3-italian-tech-alliance-maia-ventures-le-vil/
 
 Talks & culture in Le Village by CA Parma, Thursday 24 September at 17:30. Free (Gratis, registrazione su Luma).
 
-## Cena da Roadhouse Reggio Emilia I Petali: 5 posti liberi
-https://anyplans.in/en/parma/cena-da-roadhouse-reggio-emilia-i-petali-5-posti-liberi/
-
-Dinners & aperitivo in Roadhouse Reggio Emilia I Petali, Thursday 24 September at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Gruppo di Lettura Diari da Leggere con Exòrma – Parma
 https://anyplans.in/en/parma/gruppo-di-lettura-diari-da-leggere-con-exorma/
 
 Talks & culture in BORGO SANTA BRIGIDA,  n. 9, Parma, Emilia-Romagna, Parma, Thursday 24 September at 19:00. Free (Ingresso: vedi la pagina AllEvents).
-
-## Cerchio liv. 1 PROVE GRATUITE – Reggio Emilia
-https://anyplans.in/en/parma/cerchio-liv-1-prove-gratuite/
-
-Talks & culture in Acrobatica Aerea Reggio Emilia, Reggio Emilia, Thursday 24 September at 20:00. Free (Biglietti su Eventbrite).
-
-## Articolo 11: «L'Italia ripudia la guerra» con Bersani, Foa e Zuppi – Reggio Emilia
-https://anyplans.in/en/parma/articolo-11-l-italia-ripudia-la-guerra-con-bersani-foa-e-zup/
-
-Talks & culture in Teatro Municipale Romolo Valli, Reggio Emilia, Friday 25 September at 10:00. Free (Biglietti su Eventbrite).
 
 ## Visita MAX STREICHER S.p.A. - EPC Contractor Oil&Gas – Parma
 https://anyplans.in/en/parma/visita-max-streicher-s-p-a-epc-contractor-oil-gas/
@@ -2064,26 +1336,6 @@ Talks & culture in MAX STREICHER SpA, Parma, Friday 25 September at 10:00. Free 
 https://anyplans.in/en/parma/calici-nobili/
 
 Talks & culture in Parma, Parma, Friday 25 September at 18:00. €86.58 (Biglietti su AllEvents).
-
-## Karaoke da Ristorante Huiwei 回味源: 11 posti liberi
-https://anyplans.in/en/parma/karaoke-da-ristorante-huiwei-11-posti-liberi/
-
-Karaoke in Ristorante Huiwei 回味源, Reggio Emilia, Friday 25 September at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Cena da La Via Delle Spezie: 8 posti liberi
-https://anyplans.in/en/parma/cena-da-la-via-delle-spezie-8-posti-liberi/
-
-Dinners & aperitivo in La Via Delle Spezie, Reggio Emilia, Friday 25 September at 19:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## GdR LAB - Giochi di Ruolo in Biblioteca – Quattro Castella
-https://anyplans.in/en/parma/gdr-lab-giochi-di-ruolo-in-biblioteca/
-
-Board games in Bibilioteca Comunale di Quattro Castella, Piazza Dante, Quattro Castella, Province of Reggio Emilia, Italy, Quattro Castella, Friday 25 September at 20:30. Free (Biglietti su Eventbrite).
-
-## Reggio Emilia Pestiferia: storie di morbi
-https://anyplans.in/en/parma/reggio-emilia-pestiferia-storie-di-morbi-beccamorti-e-lazzar/
-
-Town festival in Davanti al Grattacielo Cafè, Reggio Emilia, Friday 25 September at 21:00. Free (Biglietti su Eventbrite).
 
 ## JAM BACK!!! con Lucio Vallisneri – Parma
 https://anyplans.in/en/parma/jam-back-con-lucio-vallisneri/
@@ -2099,16 +1351,6 @@ Exhibitions in Museo Agorà Orsi Coppini - Museo di Arte Olearia, San Secondo Pa
 https://anyplans.in/en/parma/tradurre-la-letteratura-di-viaggio-workshop-gratuito/
 
 Talks & culture in Officine On/Off, Parma, Saturday 26 September at 14:00. €50 (Biglietti su AllEvents).
-
-## MAGIC - Prerelease di Reality Fracture – Reggio Emilia
-https://anyplans.in/en/parma/magic-prerelease-di-reality-fracture/
-
-Board games in Funside Reggio Emilia, Reggio Emilia, Saturday 26 September at 15:00. Free (Biglietti su Eventbrite).
-
-## OFFCLUB - Equinozio D'Autunno - Chiostri di San Pietro
-https://anyplans.in/en/parma/offclub-equinozio-d-autunno-chiostri-di-san-pietro/
-
-Concerts & live music in Chiostri di San Pietro, Reggio Emilia, Saturday 26 September at 17:00. Free (Biglietti su Eventbrite).
 
 ## Raduno tange night – Tangenziale del ducato 580A
 https://anyplans.in/en/parma/raduno-tange-night/
@@ -2150,16 +1392,6 @@ https://anyplans.in/en/parma/visita-guidata-a-torricella-del-pizzo-passeggiata-n
 
 Guided tours in Via Po Morto, 56, Torricella del Pizzo, Sunday 27 September at 10:30. Free (Biglietti su Eventbrite).
 
-## Tavolo genitori single da Mennui - Cucina Asiatica,…
-https://anyplans.in/en/parma/tavolo-genitori-single-da-mennui-cucina-asiatica-poke-e-rame/
-
-Dinners & aperitivo in Mennui - Cucina Asiatica, Poke e Ramen, Reggio Emilia, Sunday 27 September at 10:45. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## aperitivo dei forestieri..😁😁 da Melli Da Gentilia: 8…
-https://anyplans.in/en/parma/aperitivo-dei-forestieri-da-melli-da-gentilia-8-posti-liberi/
-
-Dinners & aperitivo in Melli Da Gentilia, Reggio Emilia, Sunday 27 September at 15:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Aperitivo da Arte & Gusto: 1 posto libero
 https://anyplans.in/en/parma/aperitivo-da-arte-gusto-1-posto-libero/
 
@@ -2170,50 +1402,15 @@ https://anyplans.in/en/parma/marc-almond-in-concerto-il-rumore-del-lutto-festiva
 
 Concerts & live music in Paganini Congressi, Parma, Sunday 27 September at 21:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## Cerchio liv.1 PROVA GRATUITA – Reggio Emilia
-https://anyplans.in/en/parma/cerchio-liv-1-prova-gratuita/
-
-Yoga & pilates in Acrobatica Aerea Reggio Emilia, Reggio Emilia, Tuesday 29 September at 18:30. Free (Biglietti su Eventbrite).
-
-## ANTIRICICLAGGIO: INDICAZIONI PRATICHE E OBBLIGHI NELLE AGENZIE IMMOBILIARI – Reggio Emilia
-https://anyplans.in/en/parma/antiriciclaggio-indicazioni-pratiche-e-obblighi-nelle-agenzi/
-
-Talks & culture in REMAX OPEN - AGENZIA IMMOBILIARE, Reggio Emilia, Wednesday 30 September at 09:00. Free (Biglietti su Eventbrite).
-
-## Cena da Tortuga: 7 posti liberi
-https://anyplans.in/en/parma/cena-da-tortuga-7-posti-liberi/
-
-Dinners & aperitivo in Tortuga, Reggio Emilia, Thursday 1 October at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Fracasso in Insolito Festival, 1 October
 https://anyplans.in/en/parma/fracasso/
 
 Town festival in Insolito Festival, Thursday 1 October at 21:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## IUNGOforum 2026 | Impronte – Ruote da Sogno
-https://anyplans.in/en/parma/iungoforum-2026-impronte/
-
-Talks & culture in Ruote da Sogno, Reggio Emilia, Friday 2 October at 10:00. Free (Biglietti su Eventbrite).
-
-## Cerchio Junior liv. 3 PROVE GRATUITE – Reggio Emilia
-https://anyplans.in/en/parma/cerchio-junior-liv-3-prove-gratuite/
-
-Talks & culture in Acrobatica Aerea Reggio Emilia, Reggio Emilia, Friday 2 October at 17:30. Free (Biglietti su Eventbrite).
-
-## La Reggio Noire: un tour nella cronaca nera del passato by Night – Reggio Emilia
-https://anyplans.in/en/parma/la-reggio-noire-un-tour-nella-cronaca-nera-del-passato-by-ni/
-
-Town festival in Davanti ingresso Cattedrale, Reggio Emilia, Friday 2 October at 20:30. Free (Biglietti su Eventbrite).
-
 ## Keeley Forsyth & Matthew Bourne | Hand to mouth | Il…
 https://anyplans.in/en/parma/keeley-forsyth-matthew-bourne-hand-to-mouth-il-rumore-del-lu/
 
 Town festival in Il Rumore del Lutto Festival, Friday 2 October at 21:00. Free (Ingresso: vedi la pagina AllEvents).
-
-## Nobìlita, il Festival della Cultura del Lavoro – Tecnopolo
-https://anyplans.in/en/parma/nobilita-il-festival-della-cultura-del-lavoro/
-
-Town festival in Tecnopolo, Reggio Emilia, Saturday 3 October at 09:30. Free (Biglietti su Eventbrite).
 
 ## Corso di cucina - Polpette per tutti – Smeg Store Guastalla
 https://anyplans.in/en/parma/corso-di-cucina-polpette-per-tutti/
@@ -2239,11 +1436,6 @@ Dancing in Palaenza, Parma, Saturday 3 October at 15:00. Free (Ingresso: vedi la
 https://anyplans.in/en/parma/parma-segreta-curiosa-e-misteriosa/
 
 Town festival in Davanti ingresso Battistero, Parma, Saturday 3 October at 16:00. Free (Biglietti su Eventbrite).
-
-## Visita all'ex-manicomio San Lazzaro: da lebbrosario a complesso manicomiale – Reggio Emilia
-https://anyplans.in/en/parma/visita-all-ex-manicomio-san-lazzaro-da-lebbrosario-a-comples/
-
-Guided tours in Davanti Ingresso Padiglione Ziccardi, Reggio Emilia, Saturday 3 October at 16:30. Free (Biglietti su Eventbrite).
 
 ## QUARTASA FEST @CDC PARMA – WE WANT PUNK
 https://anyplans.in/en/parma/quartasa-fest-cdc-parma/
@@ -2285,11 +1477,6 @@ https://anyplans.in/en/parma/sagra-della-lotta-antispecista-parma/
 
 Town festival in Via Montanara, Parma, Sunday 4 October at 10:00. Free (Biglietti su Eventbrite).
 
-## Flesh and Blood - Pro Quest London – Funside Reggio Emilia
-https://anyplans.in/en/parma/flesh-and-blood-pro-quest-london/
-
-Board games in Funside Reggio Emilia, Reggio Emilia, Sunday 4 October at 10:00. Free (Biglietti su Eventbrite).
-
 ## Visita Guidata al Complesso Monumentale della Pilotta – Parma
 https://anyplans.in/en/parma/visita-guidata-al-complesso-monumentale-della-pilotta/
 
@@ -2299,11 +1486,6 @@ Guided tours in Sotto i voltoni, davanti biglietteria, Parma, Sunday 4 October a
 https://anyplans.in/en/parma/correggio-e-parmigianino-la-sfida-che-rese-parma-immortale/
 
 Exhibitions in Davanti Teatro Regio, Parma, Sunday 4 October at 15:00. Free (Biglietti su Eventbrite).
-
-## RIFTBOUND - Summoner Skirmish – Funside Reggio Emilia
-https://anyplans.in/en/parma/riftbound-summoner-skirmish/
-
-Board games in Funside Reggio Emilia, Reggio Emilia, Sunday 4 October at 15:00. Free (Biglietti su Eventbrite).
 
 ## URBAN NATURE 2026 - Waggle Dance - Danza Creativa (dai 4 ai 6 anni) – Parma
 https://anyplans.in/en/parma/urban-nature-2026-waggle-dance-danza-creativa-dai-4-ai-6-ann/
@@ -2315,20 +1497,10 @@ https://anyplans.in/en/parma/sylvaine-fagelle-colonne-28-parma/
 
 Painting & art in Borgo Delle Colonne, 28, 43121 Parma PR, Italia, Parma, Sunday 4 October at 18:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## Visita d'autunno – Fondazione Luigi Ghirri
-https://anyplans.in/en/parma/visita-d-autunno/
-
-Exhibitions in Fondazione Luigi Ghirri, Reggio Emilia, Thursday 8 October at 09:30. Free (Biglietti su Eventbrite).
-
 ## OLTRE LE BARRIERE – Barilla - Sede Centrale
 https://anyplans.in/en/parma/oltre-le-barriere/
 
 Talks & culture in Barilla - Sede Centrale, Parma, Friday 9 October at 10:00. Free (Ingresso: vedi la pagina AllEvents).
-
-## Cena da Tortuga Reggio Emilia: 9 posti liberi
-https://anyplans.in/en/parma/cena-da-tortuga-reggio-emilia-9-posti-liberi/
-
-Dinners & aperitivo in Tortuga Reggio Emilia, Reggio nell'Emilia, Friday 9 October at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## Atti degli apostoli – Insolito Festival
 https://anyplans.in/en/parma/atti-degli-apostoli/
@@ -2370,16 +1542,6 @@ https://anyplans.in/en/parma/sabato-10-ottobre-hobos-miracle-blades-rudo-arci-cd
 
 Concerts & live music in Arci CDC Parma, Parma, Saturday 10 October at 21:30. Free (Ingresso: vedi la pagina AllEvents).
 
-## POKEMON - Sfida di Lega - Win a Box – Funside Reggio Emilia
-https://anyplans.in/en/parma/pokemon-sfida-di-lega-win-a-box/
-
-Board games in Funside Reggio Emilia, Reggio Emilia, Sunday 11 October at 14:30. Free (Biglietti su Eventbrite).
-
-## October 2026 #Shifting the Paradigm in Reggio Emilia
-https://anyplans.in/en/parma/october-2026-shifting-the-paradigm-in-reggio-emilia/
-
-Talks & culture in Centro Internazionale Loris Malaguzzi, Reggio Emilia, Sunday 11 October at 16:00. Free (Biglietti su Eventbrite).
-
 ## Oratorio "Agar e Ismaele" — Alessandro Scarlatti – Parma
 https://anyplans.in/en/parma/oratorio-agar-e-ismaele-alessandro-scarlatti/
 
@@ -2394,16 +1556,6 @@ Talks & culture in Manzini Off - Wopa, Parma, Tuesday 13 October at 21:00. Free 
 https://anyplans.in/en/parma/soloindue/
 
 Concerts & live music in Oratorio di San Tiburzio, Parma, Friday 16 October at 19:30. Free (Biglietti su Eventbrite).
-
-## Tradizione e Creatività: la Pizza di Servidio – Reggio Emilia
-https://anyplans.in/en/parma/tradizione-e-creativita-la-pizza-di-servidio/
-
-Dinners & aperitivo in Smeg Store Reggio Emilia, Reggio Emilia, Saturday 17 October at 10:00. Free (Biglietti su Eventbrite).
-
-## Le Officine Reggiane: una storia di archeologia industriale – Reggio Emilia
-https://anyplans.in/en/parma/le-officine-reggiane-una-storia-di-archeologia-industriale/
-
-Town festival in Officine Meccaniche Reggiane, sotto al carroponte, Reggio Emilia, Saturday 17 October at 10:30. Free (Biglietti su Eventbrite).
 
 ## The Jury Experience – Teatro al Parco
 https://anyplans.in/en/parma/the-jury-experience-il-colpo-da-20-milioni-di-dollari/
@@ -2420,20 +1572,10 @@ https://anyplans.in/en/parma/costellazioni-familiari-sistemiche-l-abbondanza-dal
 
 Yoga & pilates in Hotel delle Rose Terme & Wellness Spa, Monticelli Terme, Sunday 18 October at 14:30. Free (Biglietti su Eventbrite).
 
-## MAGIC - Echi di Realtà - Evento Draft Prendi 2 – Reggio Emilia
-https://anyplans.in/en/parma/magic-echi-di-realta-evento-draft-prendi-2/
-
-Board games in Funside Reggio Emilia, Reggio Emilia, Sunday 18 October at 15:30. Free (Biglietti su Eventbrite).
-
 ## OLTRE LO SPECCHIO – Europa Teatri
 https://anyplans.in/en/parma/oltre-lo-specchio-l-amore-come-orizzonte-di-senso/
 
 Painting & art in Europa Teatri, Parma, Sunday 18 October at 20:30. €22.55 (Biglietti su AllEvents).
-
-## Il dramma dell'orientamento – Teatro Ludovico Ariosto
-https://anyplans.in/en/parma/il-dramma-dell-orientamento/
-
-Talks & culture in Teatro Ludovico Ariosto, Reggio Emilia, Monday 19 October at 20:30. Free (Biglietti su Eventbrite).
 
 ## Scherzi d'Irrealtà – Casa del Suono
 https://anyplans.in/en/parma/scherzi-d-irrealta-la-monodia-accompagnata-tra-600-e-900/
@@ -2445,20 +1587,10 @@ https://anyplans.in/en/parma/dad-or-alive/
 
 Concerts & live music in Lenz Teatro, Parma, Friday 23 October at 21:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## La cucina vegetale – Smeg Store Reggio Emilia
-https://anyplans.in/en/parma/la-cucina-vegetale/
-
-Dinners & aperitivo in Smeg Store Reggio Emilia, Reggio Emilia, Saturday 24 October at 10:00. Free (Biglietti su Eventbrite).
-
 ## Misatango con Martin Palmeri – Cattedrale di Parma
 https://anyplans.in/en/parma/misatango-con-martin-palmeri/
 
 Concerts & live music in Cattedrale di Parma, Parma, Saturday 24 October at 14:00. Free (Ingresso: vedi la pagina AllEvents).
-
-## Aspettando halloween - corso di cucina per i più piccoli (dai 6 anni) – Reggio Emilia
-https://anyplans.in/en/parma/aspettando-halloween-corso-di-cucina-per-i-piu-piccoli-dai-6/
-
-Cooking classes in Smeg Store Reggio Emilia, Reggio Emilia, Saturday 24 October at 16:00. Free (Biglietti su Eventbrite).
 
 ## Rendez-vous | Victoria Thierrée-Chaplin – Parma
 https://anyplans.in/en/parma/rendez-vous-victoria-thierree-chaplin-jean-baptiste-thierree/
@@ -2494,11 +1626,6 @@ Concerts & live music in Borgo Santa Brigida, 43121 Parma PR, Italia, Parma, Sun
 https://anyplans.in/en/parma/jonathan-hulten-caronte-colonne-28-parma/
 
 Talks & culture in Colonne 28, Parma, Sunday 25 October at 18:00. Free (Ingresso: vedi la pagina AllEvents).
-
-## LinkedIn Key People – Tecnopolo
-https://anyplans.in/en/parma/linkedin-key-people/
-
-Talks & culture in Tecnopolo, Reggio Emilia, Monday 26 October at 10:00. Free (Biglietti su Eventbrite).
 
 ## CIBUSTEC in Parma Fiera, Parma, 27 October
 https://anyplans.in/en/parma/cibustec/
@@ -2570,35 +1697,15 @@ https://anyplans.in/en/parma/safety-hub-2026/
 
 Talks & culture in Labirinto della Masone, Fontanellato, Tuesday 17 November at 16:00. Free (Biglietti su Eventbrite).
 
-## Corso di cucina: Pasta e legumi – Smeg Store Reggio Emilia
-https://anyplans.in/en/parma/corso-di-cucina-pasta-e-legumi/
-
-Cooking classes in Smeg Store Reggio Emilia, Reggio Emilia, Saturday 21 November at 10:00. Free (Biglietti su Eventbrite).
-
 ## Parma vs Roma at Stadio Ennio Tardini
 https://anyplans.in/en/parma/parma-vs-roma-at-stadio-ennio-tardini/
 
 Live sport in Stadio Ennio Tardini, Parma, Saturday 21 November at 18:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## POKEMON - Coppa di Lega - Win a Box – Funside Reggio Emilia
-https://anyplans.in/en/parma/pokemon-coppa-di-lega-win-a-box/
-
-Board games in Funside Reggio Emilia, Reggio Emilia, Sunday 22 November at 09:30. Free (Biglietti su Eventbrite).
-
-## POKEMON - Sfida di Lega VGC - Pokemon Champions - Nintendo Switch – Reggio Emilia
-https://anyplans.in/en/parma/pokemon-sfida-di-lega-vgc-pokemon-champions-nintendo-switch/
-
-Board games in Funside Reggio Emilia, Reggio Emilia, Sunday 22 November at 15:30. Free (Biglietti su Eventbrite).
-
 ## HANS ZIMMER Tribute by Ensemble Symphony Orchestra – Parma
 https://anyplans.in/en/parma/hans-zimmer-tribute-by-ensemble-symphony-orchestra/
 
 Concerts & live music in Teatro Regio di Parma, Parma, Tuesday 24 November at 21:00. Free (Ingresso: vedi la pagina AllEvents).
-
-## Un giorno a Casina Dei Bimbi: volontariato con Studio Dentistico Fornaciari – Reggio Emilia
-https://anyplans.in/en/parma/un-giorno-a-casina-dei-bimbi-volontariato-con-studio-dentist/
-
-Gardening & volunteering in Chiostri di San Pietro, Reggio Emilia, Saturday 28 November at 16:00. Free (Biglietti su Eventbrite).
 
 ## Coez in Parma in Teatro Regio, Parma, 28 November
 https://anyplans.in/en/parma/coez-in-parma/
@@ -2620,11 +1727,6 @@ https://anyplans.in/en/parma/corso-di-cucina-a-ciascun-primo-il-suo-pescato/
 
 Cooking classes in Smeg Store Guastalla, Guastalla, Saturday 12 December at 10:30. Free (Biglietti su Eventbrite).
 
-## La Reggio del "Popol Giost" tra Storie e Curiosità – Reggio Emilia
-https://anyplans.in/en/parma/la-reggio-del-popol-giost-tra-storie-e-curiosita/
-
-Town festival in Davanti Chiesa del Cristo, Reggio Emilia, Saturday 12 December at 15:00. Free (Biglietti su Eventbrite).
-
 ## Sébastien Tellier in Parma – Teatro Regio
 https://anyplans.in/en/parma/sebastien-tellier-in-parma/
 
@@ -2634,11 +1736,6 @@ Concerts & live music in Teatro Regio, Parma, Saturday 12 December at 20:00. Fre
 https://anyplans.in/en/parma/parma-vs-fiorentina-at-stadio-ennio-tardini/
 
 Live sport in Stadio Ennio Tardini, Parma, Saturday 12 December at 23:59. Free (Ingresso: vedi la pagina AllEvents).
-
-## Corso di cucina: Natale è... – Smeg Store Reggio Emilia
-https://anyplans.in/en/parma/corso-di-cucina-natale-e/
-
-Cooking classes in Smeg Store Reggio Emilia, Reggio Emilia, Saturday 19 December at 10:00. Free (Biglietti su Eventbrite).
 
 ## 📸 Incontri amichevoli & passeggiata fotografica / Make friends &… – Parma
 https://anyplans.in/en/parma/incontri-amichevoli-passeggiata-fotografica-make-friends-pho/

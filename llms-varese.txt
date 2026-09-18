@@ -1,12 +1,12 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Varese e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Varese: il sito copre 29 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce), l'indice è https://anyplans.in/llms.txt.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Varese e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Varese: il sito copre 52 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce, Monza, Prato, Como, Lecco, Lodi, Modena, Reggio Emilia, Treviso, Venezia, Vicenza, Novara, Lucca, Mantova, Ferrara, Pistoia, Pavia, Ancona, Pordenone, Cremona, Messina, Reggio Calabria, Alessandria, Latina), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-18. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Varese](https://anyplans.in/varese/cosa-fare/): tutti gli eventi in programma (297), per tipo e per paese; risponde a "cosa fare a Varese oggi / questo weekend"
+- [Cosa fare a Varese](https://anyplans.in/varese/cosa-fare/): tutti gli eventi in programma (208), per tipo e per paese; risponde a "cosa fare a Varese oggi / questo weekend"
 - [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
@@ -14,39 +14,30 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## Eventi per tipo e per paese
 
-- [Padel a Varese](https://anyplans.in/varese/padel/): 67 in programma
-- [Cena / aperitivo a Varese](https://anyplans.in/varese/cene-e-aperitivi/): 60 in programma
-- [Yoga / pilates a Varese](https://anyplans.in/varese/yoga/): 13 in programma
-- [Incontri culturali a Varese](https://anyplans.in/varese/incontri-culturali/): 54 in programma
-- [Concerti e musica dal vivo a Varese](https://anyplans.in/varese/concerti/): 26 in programma
-- [Feste, sagre ed eventi di paese a Varese](https://anyplans.in/varese/feste/): 13 in programma
+- [Cena / aperitivo a Varese](https://anyplans.in/varese/cene-e-aperitivi/): 48 in programma
+- [Padel a Varese](https://anyplans.in/varese/padel/): 46 in programma
+- [Yoga / pilates a Varese](https://anyplans.in/varese/yoga/): 8 in programma
+- [Incontri culturali a Varese](https://anyplans.in/varese/incontri-culturali/): 36 in programma
+- [Feste, sagre ed eventi di paese a Varese](https://anyplans.in/varese/feste/): 8 in programma
 - [Serate per single a Varese](https://anyplans.in/varese/single/): 4 in programma
-- [Karaoke a Varese](https://anyplans.in/varese/karaoke/): 4 in programma
-- [Visite guidate a Varese](https://anyplans.in/varese/visite-guidate/): 15 in programma
-- [Spettacoli e teatro a Varese](https://anyplans.in/varese/spettacoli/): 12 in programma
-- [Escursionismo a Varese](https://anyplans.in/varese/escursioni/): 4 in programma
-- [Mostre a Varese](https://anyplans.in/varese/mostre/): 3 in programma
+- [Concerti e musica dal vivo a Varese](https://anyplans.in/varese/concerti/): 18 in programma
+- [Visite guidate a Varese](https://anyplans.in/varese/visite-guidate/): 10 in programma
+- [Escursionismo a Varese](https://anyplans.in/varese/escursioni/): 3 in programma
 - [Palestra a Varese](https://anyplans.in/varese/palestra/): 11 in programma
+- [Spettacoli e teatro a Varese](https://anyplans.in/varese/spettacoli/): 7 in programma
 - [Feste ed eventi a Castronno](https://anyplans.in/varese/castronno/): 17 in programma
 - [Feste ed eventi a Busto Arsizio](https://anyplans.in/varese/busto-arsizio/): 7 in programma
-- [Feste ed eventi a Como](https://anyplans.in/varese/como/): 29 in programma
 - [Feste ed eventi a Castellanza](https://anyplans.in/varese/castellanza/): 5 in programma
 - [Feste ed eventi a Gavirate](https://anyplans.in/varese/gavirate/): 10 in programma
 - [Feste ed eventi a Castelletto sopra Ticino](https://anyplans.in/varese/castelletto-sopra-ticino/): 5 in programma
-- [Feste ed eventi a Cernobbio](https://anyplans.in/varese/cernobbio/): 3 in programma
-- [Feste ed eventi a Cermenate](https://anyplans.in/varese/cermenate/): 3 in programma
 - [Feste ed eventi a Somma Lombardo](https://anyplans.in/varese/somma-lombardo/): 13 in programma
-- [Feste ed eventi a Tornavento](https://anyplans.in/varese/tornavento/): 7 in programma
 - [Feste ed eventi a Gallarate](https://anyplans.in/varese/gallarate/): 4 in programma
 
 ## Prossimi eventi
 
 - [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/varese/padel-mancano-3-giocatori-competitiva/): Venerdì 18 settembre alle 12:00, ARX PADEL, via Curtatone 20, 21013 Gallarate, 10 €
-- [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/varese/padel-mancano-2-giocatori-amichevole/): Venerdì 18 settembre alle 12:00, The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, 12,50 €
 - [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/varese/padel-manca-1-giocatore-amichevole/): Venerdì 18 settembre alle 12:00, STARPADEL Legnano, Via Monte Rosa 1, 20025 Legnano, 10 €
 - [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/varese/padel-mancano-3-giocatori-competitiva-2026-09-18/): Dal 18 settembre al 20 settembre, 7 date, SMASHX3 Bellavista Varese, Località Campagnola, 21045 Gazzada Schianno, 13 €
-- [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/varese/padel-manca-1-giocatore-amichevole-2026-09-18/): Venerdì 18 settembre alle 12:30, The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, 12,50 €
-- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/varese/padel-mancano-3-giocatori-competitiva-2026-09-18-2/): Dal 18 settembre al 18 settembre, 3 date, The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, 12,50 €
 - [Aperilab - il tessile che non ti aspetti](https://anyplans.in/varese/aperilab-il-tessile-che-non-ti-aspetti/): Venerdì 18 settembre alle 15:00, MalpensaFiere | Centro Fiere Congressi ed Eventi, Busto Arsizio, Gratis
 - [Aperitivo da McDonald's: 5 posti liberi](https://anyplans.in/varese/aperitivo-da-mcdonald-s-5-posti-liberi/): Venerdì 18 settembre alle 15:45, McDonald's, Cerro Maggiore, Gratis
 - [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/varese/padel-mancano-3-giocatori-amichevole/): Venerdì 18 settembre alle 16:30, STARPADEL Legnano, Via Monte Rosa 1, 20025 Legnano, 12,66 €
@@ -58,29 +49,32 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [👤1vs1 - TORNEO SINGOLO - montepremi 200€🏆](https://anyplans.in/varese/1vs1-torneo-singolo-montepremi-200/): Venerdì 18 settembre alle 18:00, STARPADEL Legnano, Via Monte Rosa 1, 20025 Legnano, 19 €
 - [🏆 TORNEO AGONISTICA - OPEN DAY 🎾](https://anyplans.in/varese/torneo-agonistica-open-day/): Venerdì 18 settembre alle 18:00, STARPADEL Legnano, Via Monte Rosa 1, 20025 Legnano, Gratis
 - [Cena da Villa Cocca: 8 posti liberi](https://anyplans.in/varese/cena-da-villa-cocca-8-posti-liberi/): Venerdì 18 settembre alle 18:00, Villa Cocca, Gavirate, Gratis
-- [Presentazione con l'autrice Eleonora Sacco + laboratorio e aperitivo](https://anyplans.in/varese/presentazione-con-l-autrice-eleonora-sacco-laboratorio-e-ape/): Venerdì 18 settembre alle 18:00, Campo Terra Viva, Como, Gratis
 - [🥂🥂 APERICENA INSIEME 🥂 da Ritual Club & Lounge: 3 posti liberi](https://anyplans.in/varese/apericena-insieme-da-ritual-club-lounge-3-posti-liberi/): Venerdì 18 settembre alle 18:00, Ritual Club & Lounge, Castellanza, Gratis
-- [Pizza o carne. Dance 80 90 dj PANICO da Lunario Cantù: 6 posti liberi](https://anyplans.in/varese/pizza-o-carne-dance-80-90-dj-panico-da-lunario-cantu-6-posti/): Venerdì 18 settembre alle 18:15, Lunario Cantù, Gratis
-- [Pizza o carne. Dance 80 90 dj PANICO da Lunario Cantù: 11 posti liberi](https://anyplans.in/varese/pizza-o-carne-dance-80-90-dj-panico-da-lunario-cantu-11-post/): Venerdì 18 settembre alle 18:15, Lunario Cantù, Gratis
-- [Dinner +;Ballo in compagnia 🍾😻🎙️ da ROADHOUSE RESTAURANT OLGIATE COMASCO: 4 posti liberi](https://anyplans.in/varese/dinner-ballo-in-compagnia-da-roadhouse-restaurant-olgiate-co/): Venerdì 18 settembre alle 18:15, ROADHOUSE RESTAURANT OLGIATE COMASCO, Gratis
 - [Cena da Villa Cocca: 7 posti liberi](https://anyplans.in/varese/cena-da-villa-cocca-7-posti-liberi/): Venerdì 18 settembre alle 18:20, Villa Cocca, Gavirate, Gratis
-- [Padel: manca 1 giocatore (competitiva)](https://anyplans.in/varese/padel-manca-1-giocatore-competitiva/): Dal 18 settembre al 19 settembre, 2 date, Padel Center Italfunivie, via provinciale 84, 22038 Tavernerio, 14 €
-- [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/varese/padel-mancano-2-giocatori-amichevole-2026-09-18/): Venerdì 18 settembre alle 18:30, Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo, 15 €
 - [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/varese/padel-mancano-2-giocatori-competitiva-2026-09-18/): Venerdì 18 settembre alle 18:30, WePadel Club - Gallarate, Viale Lombardia, 49, Gallarate VA, Italy, 21013 Gallarate, 15 €
+- [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/varese/padel-mancano-2-giocatori-amichevole/): Venerdì 18 settembre alle 18:30, Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo, 15 €
 - [Tommaso Sacchi e il grande viaggio nelle meraviglie d'Italia](https://anyplans.in/varese/tommaso-sacchi-e-il-grande-viaggio-nelle-meraviglie-d-italia/): Venerdì 18 settembre alle 18:30, Materia Spazio Libero, Castronno, Gratis
 - [Tablo anni '60 da Pizza Village: 5 posti liberi](https://anyplans.in/varese/tablo-anni-60-da-pizza-village-5-posti-liberi/): Venerdì 18 settembre alle 18:30, Pizza Village, Castelletto sopra Ticino, Gratis
-- [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/varese/padel-manca-1-giocatore-amichevole-2026-09-18-2/): Venerdì 18 settembre alle 19:00, Centro Padel Lago Maggiore, Via Beati 181, 28053 Castelletto sopra Ticino, 14 €
+- [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/varese/padel-manca-1-giocatore-amichevole-2026-09-18/): Venerdì 18 settembre alle 19:00, Centro Padel Lago Maggiore, Via Beati 181, 28053 Castelletto sopra Ticino, 14 €
 - [Cena da Fermata 24 “Ristorante & Pizzeria”: 14 posti liberi](https://anyplans.in/varese/cena-da-fermata-24-ristorante-pizzeria-14-posti-liberi/): Venerdì 18 settembre alle 19:00, Fermata 24 “Ristorante & Pizzeria”, Castelletto sopra Ticino, Gratis
-- [Cena da il Birrivico: 4 posti liberi](https://anyplans.in/varese/cena-da-il-birrivico-4-posti-liberi/): Venerdì 18 settembre alle 19:00, il Birrivico, Como, Gratis
 - [Festa dell Uva Rescalda 2026](https://anyplans.in/varese/festa-dell-uva-rescalda-2026/): Dal 18 settembre al 19 settembre, 2 date, Rescalda, Gratis
-- [Lions Swing Night](https://anyplans.in/varese/lions-swing-night/): Venerdì 18 settembre alle 19:30, Oratorio di Piazza Santo Stefano, Cernobbio, Gratis
 - [Cena da Johnnie Fox's: 1 posto libero](https://anyplans.in/varese/cena-da-johnnie-fox-s-1-posto-libero/): Venerdì 18 settembre alle 19:30, Johnnie Fox's, Casorate Sempione, Gratis
 - [Cupido colpisce ancora: speed date vol 3](https://anyplans.in/varese/cupido-colpisce-ancora-speed-date-vol-3/): Venerdì 18 settembre alle 19:30, Pub legnano, 5 €
 - [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/varese/padel-mancano-2-giocatori-competitiva-2026-09-18-2/): Dal 18 settembre al 20 settembre, 2 date, Centro Padel Lago Maggiore, Via Beati 181, 28053 Castelletto sopra Ticino, 14 €
 - [JUGGLE SLAM - ENTRY LEVEL](https://anyplans.in/varese/juggle-slam-entry-level/): Dal 18 settembre al 11 dicembre, 7 date, Juggle Padel Malpensa, via del Barchello, 1, 21019 Somma Lombardo, 25 €
-- [Karaoke da Black Horse Pub: 7 posti liberi](https://anyplans.in/varese/karaoke-da-black-horse-pub-7-posti-liberi/): Venerdì 18 settembre alle 20:00, Black Horse Pub, Cermenate, Gratis
 - [💥Contest Mid Level 2.0-3.5💥](https://anyplans.in/varese/contest-mid-level-2-0-3-5/): Venerdì 18 settembre alle 20:00, Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo, 20 €
 - [Vintage night: music band rock internazionale 70/80 e dj set](https://anyplans.in/varese/vintage-night-music-band-rock-internazionale-70-80-e-dj-set/): Venerdì 18 settembre alle 20:00, Castellanza, 5 €
+- [Remen e buoni propositi Vol.3](https://anyplans.in/varese/remen-e-buoni-propositi-vol-3/): Venerdì 18 settembre alle 20:00, Busto Arsizio, Parco Comerio, 5 €
+- [Cecilia Barra & Lost Generation(s) at VCC - show 1](https://anyplans.in/varese/cecilia-barra-lost-generation-s-at-vcc-show-1/): Venerdì 18 settembre alle 20:30, Villa Cambiaghi Club, Varese, Gratis
+- [1° anniversario del D20](https://anyplans.in/varese/1-anniversario-del-d20/): Venerdì 18 settembre alle 20:30, Via Angelo Moratti, 15, Somma Lombardo, Gratis
+- [VILLE IN SCENA - ASPETTANDO BIZET](https://anyplans.in/varese/ville-in-scena-aspettando-bizet/): Venerdì 18 settembre alle 21:00, Villa Tarlarini, Laveno-Mombello, Gratis
+- [10 anni di Circolo Gagarin: storia, impatto e spazi indipendenti](https://anyplans.in/varese/10-anni-di-circolo-gagarin-storia-impatto-e-spazi-indipenden/): Venerdì 18 settembre alle 21:00, Materia Spazio Libero, Castronno, Gratis
+- [Cena da Discoteca Gilda: 3 posti liberi](https://anyplans.in/varese/cena-da-discoteca-gilda-3-posti-liberi/): Venerdì 18 settembre alle 21:30, Discoteca Gilda, Castelletto sopra Ticino, Gratis
+- [Tavolo genitori single da Discoteca Gilda: 10 posti liberi](https://anyplans.in/varese/tavolo-genitori-single-da-discoteca-gilda-10-posti-liberi/): Venerdì 18 settembre alle 22:30, Discoteca Gilda, Castelletto sopra Ticino, Gratis
+- [Visita guidata del centro cittadino in bicibus](https://anyplans.in/varese/visita-guidata-del-centro-cittadino-in-bicibus/): Sabato 19 settembre alle 09:00, Piazza San Giovanni, Busto Arsizio, Gratis
+- [Impianti Aperti -  Teleriscaldamento di Varese](https://anyplans.in/varese/impianti-aperti-teleriscaldamento-di-varese/): Sabato 19 settembre alle 09:00, Via Ottorino Rossi, 19, Varese, Gratis
+- [Torneo Padel SETTEMBRE CUP (Livello PT 0-3)](https://anyplans.in/varese/torneo-padel-settembre-cup-livello-pt-0-3/): Sabato 19 settembre alle 10:00, SMASHX3 Bellavista Varese, Località Campagnola, 21045 Gazzada Schianno, 20 €
+- [GLI SCIENZIATI SOTTO LE LENTI DEL MICROSCOPIO. (AUTO)BIOGRAFIE](https://anyplans.in/varese/gli-scienziati-sotto-le-lenti-del-microscopio-auto-biografie/): Sabato 19 settembre alle 10:30, Sala Morselli / Biblioteca Civica, Varese, Gratis
 
 ## Optional
 
@@ -91,123 +85,111 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 ## English pages (same content, for visitors)
 
 - [Things to do in Varese](https://anyplans.in/en/varese/): all upcoming events, by kind and by town; answers "what to do in Varese today / this weekend"
-- [Padel in Varese](https://anyplans.in/en/varese/padel/)
 - [Dinners & aperitivo in Varese](https://anyplans.in/en/varese/dinners/)
+- [Padel in Varese](https://anyplans.in/en/varese/padel/)
 - [Yoga & pilates in Varese](https://anyplans.in/en/varese/yoga/)
 - [Talks & culture in Varese](https://anyplans.in/en/varese/talks-and-culture/)
-- [Concerts & live music in Varese](https://anyplans.in/en/varese/concerts/)
 - [Town festivals & fairs in Varese](https://anyplans.in/en/varese/festivals/)
 - [Singles nights in Varese](https://anyplans.in/en/varese/singles/)
-- [Karaoke in Varese](https://anyplans.in/en/varese/karaoke/)
+- [Concerts & live music in Varese](https://anyplans.in/en/varese/concerts/)
 - [Guided tours in Varese](https://anyplans.in/en/varese/guided-tours/)
-- [Shows & theatre in Varese](https://anyplans.in/en/varese/shows/)
 - [Hiking in Varese](https://anyplans.in/en/varese/hiking/)
-- [Exhibitions in Varese](https://anyplans.in/en/varese/exhibitions/)
 - [Gym in Varese](https://anyplans.in/en/varese/gym/)
+- [Shows & theatre in Varese](https://anyplans.in/en/varese/shows/)
 
 ---
 
 # Tutte le pagine di anyplans a Varese (italiano, poi inglese)
 
-## Cosa fare a Varese e provincia: 297 eventi
+## Cosa fare a Varese e provincia: 208 eventi
 https://anyplans.in/varese/cosa-fare/
 
-Padel, cena / aperitivo, incontri culturali, concerti e musica dal vivo e visite guidate: quello che succede a Varese e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
+Padel, cena / aperitivo, incontri culturali, concerti e musica dal vivo e palestra: quello che succede a Varese e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
 
-## Cosa fare a Varese oggi: 50 eventi
+## Cosa fare a Varese oggi: 36 eventi
 https://anyplans.in/varese/cosa-fare-oggi/
 
-50 eventi a Varese e provincia oggi, 18 settembre 2026: Varese, Castelletto sopra Ticino, Como e Castellanza e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+36 eventi a Varese e provincia oggi, 18 settembre 2026: Varese, Castelletto sopra Ticino, Castellanza e Gavirate e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Varese domani: 37 eventi
+## Cosa fare a Varese domani: 22 eventi
 https://anyplans.in/varese/cosa-fare-domani/
 
-37 eventi a Varese e provincia domani, 19 settembre 2026: Varese, Tornavento, Como e Gallarate e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+22 eventi a Varese e provincia domani, 19 settembre 2026: Varese, Gallarate, Rescalda e Busto Arsizio e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Varese nel weekend: 58 eventi
+## Cosa fare a Varese nel weekend: 38 eventi
 https://anyplans.in/varese/cosa-fare-nel-weekend/
 
-58 eventi a Varese e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Varese, Tornavento, Como e Gallarate e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+38 eventi a Varese e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Varese, Gallarate, Castellanza e Rescalda e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Eventi a Varese a settembre 2026: 211
+## Eventi a Varese a settembre 2026: 144
 https://anyplans.in/varese/eventi-settembre-2026/
 
-211 eventi a Varese e provincia a settembre 2026: padel, incontri culturali, cena / aperitivo, feste, sagre ed eventi di paese e concerti e musica dal vivo. Giorno per giorno, con orari, luogo e prezzo, a Varese, Como, Somma Lombardo e Castronno e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+144 eventi a Varese e provincia a settembre 2026: padel, incontri culturali, cena / aperitivo, feste, sagre ed eventi di paese e serate per single. Giorno per giorno, con orari, luogo e prezzo, a Varese, Somma Lombardo, Castronno e Castellanza e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Varese a ottobre 2026: 76
+## Eventi a Varese a ottobre 2026: 58
 https://anyplans.in/varese/eventi-ottobre-2026/
 
-76 eventi a Varese e provincia a ottobre 2026: padel, yoga / pilates, incontri culturali, escursionismo e visite guidate. Giorno per giorno, con orari, luogo e prezzo, a Varese, Castronno, Gavirate e Como e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+58 eventi a Varese e provincia a ottobre 2026: padel, yoga / pilates, escursionismo, visite guidate e cena / aperitivo. Giorno per giorno, con orari, luogo e prezzo, a Varese, Castronno, Gavirate e Busto Arsizio e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Varese a novembre 2026: 17
+## Eventi a Varese a novembre 2026: 13
 https://anyplans.in/varese/eventi-novembre-2026/
 
-17 eventi a Varese e provincia a novembre 2026: padel, incontri culturali, concerti e musica dal vivo, feste, sagre ed eventi di paese e cena / aperitivo. Giorno per giorno, con orari, luogo e prezzo, a Varese, Cernobbio, Varano Borghi e Cermenate e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+13 eventi a Varese e provincia a novembre 2026: padel, incontri culturali, concerti e musica dal vivo, cena / aperitivo e visite guidate. Giorno per giorno, con orari, luogo e prezzo, a Varese, Varano Borghi, Busto Arsizio e Ispra e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Padel a Varese: 67 eventi
-https://anyplans.in/varese/padel/
-
-A Varese e provincia ci sono 67 partite di padel nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
-
-## Cena / aperitivo a Varese: 60 eventi
+## Cena / aperitivo a Varese: 48 eventi
 https://anyplans.in/varese/cene-e-aperitivi/
 
-A Varese e provincia ci sono 60 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Varese e provincia ci sono 48 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Yoga / pilates a Varese: 13 eventi
+## Padel a Varese: 46 eventi
+https://anyplans.in/varese/padel/
+
+A Varese e provincia ci sono 46 partite di padel nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+
+## Yoga / pilates a Varese: 8 eventi
 https://anyplans.in/varese/yoga/
 
-A Varese e provincia ci sono 13 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Varese e provincia ci sono 8 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Incontri culturali a Varese: 54 eventi
+## Incontri culturali a Varese: 36 eventi
 https://anyplans.in/varese/incontri-culturali/
 
-A Varese e provincia ci sono 54 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Varese e provincia ci sono 36 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Concerti e musica dal vivo a Varese: 26 eventi
-https://anyplans.in/varese/concerti/
-
-A Varese e provincia ci sono 26 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
-
-## Feste e sagre a Varese: 13 eventi
+## Feste e sagre a Varese: 8 eventi
 https://anyplans.in/varese/feste/
 
-A Varese e provincia ci sono 13 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Varese e provincia ci sono 8 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Serate per single a Varese: 4 eventi
 https://anyplans.in/varese/single/
 
 A Varese e provincia ci sono 4 serate per single nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Karaoke a Varese: 4 eventi
-https://anyplans.in/varese/karaoke/
+## Concerti e musica dal vivo a Varese: 18 eventi
+https://anyplans.in/varese/concerti/
 
-A Varese e provincia ci sono 4 serate karaoke nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Varese e provincia ci sono 18 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Visite guidate a Varese: 15 eventi
+## Visite guidate a Varese: 10 eventi
 https://anyplans.in/varese/visite-guidate/
 
-A Varese e provincia ci sono 15 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Varese e provincia ci sono 10 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Spettacoli e teatro a Varese: 12 eventi
-https://anyplans.in/varese/spettacoli/
-
-A Varese e provincia ci sono 12 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
-
-## Escursionismo a Varese: 4 eventi
+## Escursionismo a Varese: 3 eventi
 https://anyplans.in/varese/escursioni/
 
-A Varese e provincia ci sono 4 escursioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
-
-## Mostre a Varese: 3 eventi
-https://anyplans.in/varese/mostre/
-
-A Varese e provincia ci sono 3 mostre nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Varese e provincia ci sono 3 escursioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Palestra a Varese: 11 eventi
 https://anyplans.in/varese/palestra/
 
 A Varese e provincia ci sono 11 eventi di palestra nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+
+## Spettacoli e teatro a Varese: 7 eventi
+https://anyplans.in/varese/spettacoli/
+
+A Varese e provincia ci sono 7 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Feste ed eventi a Castronno: 17 in programma
 https://anyplans.in/varese/castronno/
@@ -218,11 +200,6 @@ A Castronno ci sono 17 eventi nei prossimi mesi. Su anyplans trovi le feste e gl
 https://anyplans.in/varese/busto-arsizio/
 
 A Busto Arsizio ci sono 7 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Busto Arsizio con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
-
-## Feste ed eventi a Como: 29 in programma
-https://anyplans.in/varese/como/
-
-A Como ci sono 29 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Como con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 ## Feste ed eventi a Castellanza: 5 in programma
 https://anyplans.in/varese/castellanza/
@@ -239,65 +216,45 @@ https://anyplans.in/varese/castelletto-sopra-ticino/
 
 A Castelletto sopra Ticino ci sono 5 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Castelletto sopra Ticino con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Feste ed eventi a Cernobbio: 3 in programma
-https://anyplans.in/varese/cernobbio/
-
-A Cernobbio ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Cernobbio con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
-
-## Feste ed eventi a Cermenate: 3 in programma
-https://anyplans.in/varese/cermenate/
-
-A Cermenate ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Cermenate con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
-
 ## Feste ed eventi a Somma Lombardo: 13 in programma
 https://anyplans.in/varese/somma-lombardo/
 
 A Somma Lombardo ci sono 13 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Somma Lombardo con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
-
-## Feste ed eventi a Tornavento: 7 in programma
-https://anyplans.in/varese/tornavento/
-
-A Tornavento ci sono 7 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Tornavento con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 ## Feste ed eventi a Gallarate: 4 in programma
 https://anyplans.in/varese/gallarate/
 
 A Gallarate ci sono 4 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Gallarate con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Locali a Varese: 34
+## Locali a Varese: 23
 https://anyplans.in/varese/locali/
 
-34 locali a Varese e provincia dove c'è qualcosa in programma: circoli, bar, centri sportivi, teatri e piazze. Ognuno ha la sua pagina con le prossime date.
+23 locali a Varese e provincia dove c'è qualcosa in programma: circoli, bar, centri sportivi, teatri e piazze. Ognuno ha la sua pagina con le prossime date.
 
 ## Tablo: eventi e serate a Varese
 https://anyplans.in/varese/locali/tablo/
 
-Tablo a Varese: 33 eventi in programma — cena / aperitivo, karaoke e incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Tablo a Varese: 25 eventi in programma — cena / aperitivo, incontri culturali e karaoke. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Materia Spazio Libero: eventi e serate a Castronno
 https://anyplans.in/varese/locali/materia-spazio-libero/
 
 Materia Spazio Libero a Castronno: 17 eventi in programma — incontri culturali, visite guidate, concerti e musica dal vivo e yoga / pilates. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-## The Padel Resort Como: eventi in programma a Varese
-https://anyplans.in/varese/locali/the-padel-resort-como/
-
-The Padel Resort Como a Varese: 9 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
 ## WePadel Club - Gallarate: eventi in programma a Varese
 https://anyplans.in/varese/locali/wepadel-club-gallarate/
 
 WePadel Club - Gallarate a Varese: 7 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-## Eventi Fuori Milano: eventi e serate a Varese
-https://anyplans.in/varese/locali/eventi-fuori-milano/
-
-Eventi Fuori Milano a Varese: 10 eventi in programma — cena / aperitivo, concerti e musica dal vivo, karaoke e serate per single. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
 ## Green Padel Malpensa: eventi in programma a Varese
 https://anyplans.in/varese/locali/green-padel-malpensa/
 
 Green Padel Malpensa a Varese: 7 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
+## Eventi Fuori Milano: eventi e serate a Varese
+https://anyplans.in/varese/locali/eventi-fuori-milano/
+
+Eventi Fuori Milano a Varese: 9 eventi in programma — cena / aperitivo, karaoke, serate per single e incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Scuola Primaria G. Rodari: eventi in programma a Somma…
 https://anyplans.in/varese/locali/scuola-primaria-g-rodari/
@@ -314,11 +271,6 @@ https://anyplans.in/varese/locali/chiostro-di-voltorre/
 
 Chiostro di Voltorre a Gavirate: 8 eventi in programma — mostre, spettacoli e teatro, visite guidate e cena / aperitivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-## Yurta - Piazza Giuseppe Verdi: eventi in programma a Como
-https://anyplans.in/varese/locali/yurta-piazza-giuseppe-verdi/
-
-Yurta - Piazza Giuseppe Verdi a Como: 8 eventi in programma — incontri culturali e ballo e danza. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
 ## STARPADEL Legnano: eventi in programma a Varese
 https://anyplans.in/varese/locali/starpadel-legnano/
 
@@ -329,40 +281,20 @@ https://anyplans.in/varese/locali/padelus-rovello/
 
 PadelUs Rovello a Varese: 6 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-## Let’s Padel Centers - Orsenigo: eventi in programma a…
-https://anyplans.in/varese/locali/let-s-padel-centers-orsenigo/
-
-Let’s Padel Centers - Orsenigo a Varese: 4 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
 ## Juggle Padel Malpensa: eventi in programma a Varese
 https://anyplans.in/varese/locali/juggle-padel-malpensa/
 
 Juggle Padel Malpensa a Varese: 5 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## Centro Parco Ex Dogana Austroungarica: eventi in…
-https://anyplans.in/varese/locali/centro-parco-ex-dogana-austroungarica/
-
-Centro Parco Ex Dogana Austroungarica a Tornavento: 6 eventi in programma — incontri culturali, feste, sagre ed eventi di paese, yoga / pilates e escursionismo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## ARX PADEL: eventi in programma a Varese
 https://anyplans.in/varese/locali/arx-padel/
 
 ARX PADEL a Varese: 3 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-## Let's Padel Centers - Anzano del Parco: eventi in…
-https://anyplans.in/varese/locali/let-s-padel-centers-anzano-del-parco/
-
-Let's Padel Centers - Anzano del Parco a Varese: 2 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
 ## SMASHX3 Bellavista Varese: eventi in programma
 https://anyplans.in/varese/locali/smashx3-bellavista-varese/
 
 SMASHX3 Bellavista Varese: 3 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## Padel Center Italfunivie: eventi in programma a Varese
-https://anyplans.in/varese/locali/padel-center-italfunivie/
-
-Padel Center Italfunivie a Varese: 3 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Centro Padel Lago Maggiore: eventi in programma a Varese
 https://anyplans.in/varese/locali/centro-padel-lago-maggiore/
@@ -373,16 +305,6 @@ Centro Padel Lago Maggiore a Varese: 3 eventi in programma — padel. Di ognuno 
 https://anyplans.in/varese/locali/meeters/
 
 Meeters a Busto Arsizio: 4 eventi in programma — visite guidate e cena / aperitivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## WeMeet by WeRoad: eventi in programma a Cadorago
-https://anyplans.in/varese/locali/wemeet-by-weroad/
-
-WeMeet by WeRoad a Cadorago: 4 eventi in programma — volley e visite guidate. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## Libreria la Ciurma: eventi in programma a Como
-https://anyplans.in/varese/locali/libreria-la-ciurma/
-
-Libreria la Ciurma a Como: 2 eventi in programma — feste, sagre ed eventi di paese e incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Parco Valle del Lanza: eventi in programma a Varese
 https://anyplans.in/varese/locali/parco-valle-del-lanza/
@@ -404,30 +326,15 @@ https://anyplans.in/varese/locali/friends-with-no-limits-mi-va/
 
 Friends with no Limits Mi -Va a Varese: 2 eventi in programma — cena / aperitivo e yoga / pilates. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-## Luma: eventi e serate a Provincia di Varese
-https://anyplans.in/varese/locali/luma/
-
-Luma a Provincia di Varese: 2 eventi in programma — concerti e musica dal vivo e incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## Associazione Villa Del Grumello: eventi in programma a…
-https://anyplans.in/varese/locali/associazione-villa-del-grumello/
-
-Associazione Villa Del Grumello a Como: 2 eventi in programma — yoga / pilates e cinema. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## Como centro: eventi e serate a Varese
-https://anyplans.in/varese/locali/como-centro/
-
-Como centro a Varese: 2 eventi in programma — concerti e musica dal vivo e spettacoli e teatro. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## Tempio Voltiano: eventi e serate a Como
-https://anyplans.in/varese/locali/tempio-voltiano/
-
-Tempio Voltiano a Como: 2 eventi in programma — concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
 ## TENNIS PADEL LAGO MAGGIORE SSD ARL: eventi in programma…
 https://anyplans.in/varese/locali/tennis-padel-lago-maggiore-ssd-arl/
 
 TENNIS PADEL LAGO MAGGIORE SSD ARL a Varese: 2 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
+## WeMeet by WeRoad: eventi in programma a Somma Lombardo
+https://anyplans.in/varese/locali/wemeet-by-weroad/
+
+WeMeet by WeRoad a Somma Lombardo: 2 eventi in programma — visite guidate. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Premio Chiara: eventi in programma a Varese
 https://anyplans.in/varese/locali/premio-chiara/
@@ -438,11 +345,6 @@ Premio Chiara a Varese: 2 eventi in programma — incontri culturali e spettacol
 https://anyplans.in/varese/locali/concert-tracker/
 
 Concert Tracker a Varese: 2 eventi in programma — concerti e musica dal vivo e spettacoli e teatro. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## LADIES NIGHT by LongevitySuite – The Padel Resort Como
-https://anyplans.in/varese/ladies-night-by-longevitysuite/
-
-Padel a The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como: si è già svolto, l'ultima data è stata lunedì 14 settembre 2026.
 
 ## Cena da Tappo12 Posteria: 7 posti liberi
 https://anyplans.in/varese/cena-da-tappo12-posteria-7-posti-liberi/
@@ -469,40 +371,15 @@ https://anyplans.in/varese/padel-mancano-3-giocatori-competitiva-2026-09-18/
 
 Padel a SMASHX3 Bellavista Varese, Località Campagnola, 21045 Gazzada Schianno, venerdì 18 settembre alle 12:30 (7 date, fino al 20 settembre). 13 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori… – The Padel Resort Como, 18 settembre
-https://anyplans.in/varese/padel-mancano-3-giocatori-competitiva-2026-09-18-2/
-
-Padel a The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, venerdì 18 settembre alle 14:00 (3 date, fino al 18 settembre). 12,50 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3… – Let’s Padel Centers - Orsenigo, 19 settembre
+## Padel: mancano 3 giocatori… – Green Padel Malpensa, 19 settembre
 https://anyplans.in/varese/padel-mancano-3-giocatori-competitiva-2026-09-19/
 
-Padel a Let’s Padel Centers - Orsenigo, Via Caio Plinio 22, 22030 Orsenigo, sabato 19 settembre alle 08:30. 13 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori… – Green Padel Malpensa, 19 settembre
-https://anyplans.in/varese/padel-mancano-3-giocatori-competitiva-2026-09-19-2/
-
 Padel a Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo, sabato 19 settembre alle 14:00. 15 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3… – Padel - Lomazzo SSD Bassa Comasca, 20 settembre
-https://anyplans.in/varese/padel-mancano-3-giocatori-competitiva-2026-09-20/
-
-Padel a Padel - Lomazzo SSD Bassa Comasca, via del filagno  2 , 22074 Lomazzo, domenica 20 settembre alle 14:30 (2 date, fino al 21 settembre). 9 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva) – Shape Village
-https://anyplans.in/varese/padel-mancano-3-giocatori-competitiva-2026-09-22/
-
-Padel a Shape Village, Via Caio Plinio Secondo, 5, 22070 Appiano Gentile, martedì 22 settembre alle 18:30. Gratis (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: mancano 3 giocatori… – WePadel Club - Gallarate, 16 settembre
 https://anyplans.in/varese/padel-mancano-3-giocatori-competitiva-2026-09-16/
 
 Padel a WePadel Club - Gallarate, Viale Lombardia, 49, Gallarate VA, Italy, 21013 Gallarate: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
-
-## Padel: mancano 3 giocatori… – Padel Center Italfunivie, 16 settembre
-https://anyplans.in/varese/padel-mancano-3-giocatori-competitiva-2026-09-16-2/
-
-Padel a Padel Center Italfunivie, via provinciale 84, 22038 Tavernerio: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
 
 ## Padel: mancano 3 giocatori (competitiva) – PADEL AIR VARESE
 https://anyplans.in/varese/padel-mancano-3-giocatori-competitiva-2026-09-15/
@@ -514,41 +391,6 @@ https://anyplans.in/varese/cena-da-sushi-club-venegono-inferiore-11-posti-liberi
 
 Cena / aperitivo a Sushi Club Venegono Inferiore: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
-## Padel: mancano 3 giocatori (amichevole) – STARPADEL Legnano
-https://anyplans.in/varese/padel-mancano-3-giocatori-amichevole/
-
-Padel a STARPADEL Legnano, Via Monte Rosa 1, 20025 Legnano, venerdì 18 settembre alle 16:30. 12,66 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3… – Let’s Padel Centers - Orsenigo, 18 settembre
-https://anyplans.in/varese/padel-mancano-3-giocatori-amichevole-2026-09-18/
-
-Padel a Let’s Padel Centers - Orsenigo, Via Caio Plinio 22, 22030 Orsenigo, venerdì 18 settembre alle 21:00. 14 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori… – The Padel Resort Como, 19 settembre
-https://anyplans.in/varese/padel-mancano-3-giocatori-amichevole-2026-09-19/
-
-Padel a The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, sabato 19 settembre alle 10:30. 15 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori… – Padel Time Champion, 22 settembre
-https://anyplans.in/varese/padel-mancano-3-giocatori-amichevole-2026-09-22/
-
-Padel a Padel Time Champion, Via Torino 7, 21053 Castellanza, martedì 22 settembre alle 08:00. 13,50 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori… – Green Padel Malpensa, 17 settembre
-https://anyplans.in/varese/padel-mancano-3-giocatori-amichevole-2026-09-17/
-
-Padel a Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
-
-## Padel: mancano 3 giocatori (amichevole) – Arena4 Grandate
-https://anyplans.in/varese/padel-mancano-3-giocatori-amichevole-2026-09-16/
-
-Padel a Arena4 Grandate, Via San Pos 6 Grandate, 22070 Grandate: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
-
-## Cena da Doppio Malto Casnate: 4 posti liberi
-https://anyplans.in/varese/cena-da-doppio-malto-casnate-4-posti-liberi/
-
-Cena / aperitivo a Doppio Malto Casnate, Prato Pagano: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
-
 ## RODEO DEL GALLO 🐔 – ARX PADEL
 https://anyplans.in/varese/rodeo-del-gallo/
 
@@ -559,33 +401,13 @@ https://anyplans.in/varese/perfetti-sconosciuti-da-doppio-malto-legnano-10-posti
 
 Cena / aperitivo a Doppio Malto Legnano: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
-## Padel: manca 1 giocatore… – Padel Center Italfunivie, 18 settembre
-https://anyplans.in/varese/padel-manca-1-giocatore-competitiva/
-
-Padel a Padel Center Italfunivie, via provinciale 84, 22038 Tavernerio, venerdì 18 settembre alle 18:30 (2 date, fino al 19 settembre). 14 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: manca 1 giocatore… – Let’s Padel Centers - Orsenigo, 18 settembre
-https://anyplans.in/varese/padel-manca-1-giocatore-competitiva-2026-09-18/
-
-Padel a Let’s Padel Centers - Orsenigo, Via Caio Plinio 22, 22030 Orsenigo, venerdì 18 settembre alle 21:00. 14 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: manca 1 giocatore… – The Padel Resort Como, 19 settembre
-https://anyplans.in/varese/padel-manca-1-giocatore-competitiva-2026-09-19/
-
-Padel a The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, sabato 19 settembre alle 07:00 (3 date, fino al 24 settembre). 15 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: manca 1… – Let's Padel Centers - Anzano del Parco, 17 settembre
-https://anyplans.in/varese/padel-manca-1-giocatore-competitiva-2026-09-17/
-
-Padel a Let's Padel Centers - Anzano del Parco, Via Valera, 22040 Anzano del Parco: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
-
 ## Padel: manca 1 giocatore… – Green Padel Malpensa, 17 settembre
-https://anyplans.in/varese/padel-manca-1-giocatore-competitiva-2026-09-17-2/
+https://anyplans.in/varese/padel-manca-1-giocatore-competitiva/
 
 Padel a Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
 
 ## Padel: manca 1 giocatore (competitiva) – PADEL AIR VARESE
-https://anyplans.in/varese/padel-manca-1-giocatore-competitiva-2026-09-17-3/
+https://anyplans.in/varese/padel-manca-1-giocatore-competitiva-2026-09-17/
 
 Padel a PADEL AIR VARESE, VIA PERGINE, 21100 Varese: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
 
@@ -593,26 +415,6 @@ Padel a PADEL AIR VARESE, VIA PERGINE, 21100 Varese: si è già svolto, l'ultima
 https://anyplans.in/varese/padel-manca-1-giocatore-competitiva-2026-09-15/
 
 Padel a WePadel Club - Gallarate, Viale Lombardia, 49, Gallarate VA, Italy, 21013 Gallarate: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
-
-## Padel: mancano 2 giocatori… – The Padel Resort Como, 18 settembre
-https://anyplans.in/varese/padel-mancano-2-giocatori-amichevole/
-
-Padel a The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, venerdì 18 settembre alle 12:00. 12,50 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 2 giocatori… – Green Padel Malpensa, 18 settembre
-https://anyplans.in/varese/padel-mancano-2-giocatori-amichevole-2026-09-18/
-
-Padel a Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo, venerdì 18 settembre alle 18:30. 15 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 2… – Let’s Padel Centers - Orsenigo, 17 settembre
-https://anyplans.in/varese/padel-mancano-2-giocatori-amichevole-2026-09-17/
-
-Padel a Let’s Padel Centers - Orsenigo, Via Caio Plinio 22, 22030 Orsenigo: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
-
-## Padel: mancano 2 giocatori… – Centro Padel Lago Maggiore, 17 settembre
-https://anyplans.in/varese/padel-mancano-2-giocatori-amichevole-2026-09-17-2/
-
-Padel a Centro Padel Lago Maggiore, Via Beati 181, 28053 Castelletto sopra Ticino: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
 
 ## Padel: mancano 2 giocatori… – Green Padel Malpensa, 18 settembre
 https://anyplans.in/varese/padel-mancano-2-giocatori-competitiva/
@@ -629,16 +431,6 @@ https://anyplans.in/varese/padel-mancano-2-giocatori-competitiva-2026-09-18-2/
 
 Padel a Centro Padel Lago Maggiore, Via Beati 181, 28053 Castelletto sopra Ticino, venerdì 18 settembre alle 20:00 (2 date, fino al 20 settembre). 14 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2… – Let’s Padel Centers - Orsenigo, 19 settembre
-https://anyplans.in/varese/padel-mancano-2-giocatori-competitiva-2026-09-19/
-
-Padel a Let’s Padel Centers - Orsenigo, Via Caio Plinio 22, 22030 Orsenigo, sabato 19 settembre alle 08:30. 13 € (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 2 giocatori… – The Padel Resort Como, 21 settembre
-https://anyplans.in/varese/padel-mancano-2-giocatori-competitiva-2026-09-21/
-
-Padel a The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, lunedì 21 settembre alle 20:30 (2 date, fino al 22 settembre). 20 € (Si chiede il posto e si paga su Playtomic).
-
 ## Padel: mancano 2 giocatori (competitiva) – EoloSportCity
 https://anyplans.in/varese/padel-mancano-2-giocatori-competitiva-2026-09-23/
 
@@ -649,18 +441,8 @@ https://anyplans.in/varese/padel-mancano-2-giocatori-competitiva-2026-09-17/
 
 Padel a Juggle Padel Malpensa, via del Barchello, 1, 21019 Somma Lombardo: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
 
-## Padel: mancano 2… – Padel - Lomazzo SSD Bassa Comasca, 17 settembre
-https://anyplans.in/varese/padel-mancano-2-giocatori-competitiva-2026-09-17-2/
-
-Padel a Padel - Lomazzo SSD Bassa Comasca, via del filagno  2 , 22074 Lomazzo: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
-
-## Padel: mancano 2… – Let's Padel Centers - Anzano del Parco, 16 settembre
-https://anyplans.in/varese/padel-mancano-2-giocatori-competitiva-2026-09-16/
-
-Padel a Let's Padel Centers - Anzano del Parco, Via Valera, 22040 Anzano del Parco: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
-
 ## Padel: mancano 2 giocatori… – SMASHX3 Bellavista Varese, 16 settembre
-https://anyplans.in/varese/padel-mancano-2-giocatori-competitiva-2026-09-16-2/
+https://anyplans.in/varese/padel-mancano-2-giocatori-competitiva-2026-09-16/
 
 Padel a SMASHX3 Bellavista Varese, Località Campagnola, 21045 Gazzada Schianno: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
 
@@ -669,30 +451,35 @@ https://anyplans.in/varese/costellazioni-familiari-individuali-a-varese-e-provin
 
 Yoga / pilates a Via Castellazzo, 8, Castronno: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
 
-## GirOTTO – LA BOLA
-https://anyplans.in/varese/girotto/
+## Padel: mancano 3 giocatori (amichevole) – STARPADEL Legnano
+https://anyplans.in/varese/padel-mancano-3-giocatori-amichevole/
 
-Padel a LA BOLA, Via Fittavolo, 2,  San Fermo della Battaglia CO, Italia, 22020 San Fermo della Battaglia, mercoledì 23 settembre alle 16:00 (2 date, fino al 30 settembre). 10 € (Iscrizione e pagamento su Playtomic).
+Padel a STARPADEL Legnano, Via Monte Rosa 1, 20025 Legnano, venerdì 18 settembre alle 16:30. 12,66 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Padel Time Champion, 22 settembre
+https://anyplans.in/varese/padel-mancano-3-giocatori-amichevole-2026-09-22/
+
+Padel a Padel Time Champion, Via Torino 7, 21053 Castellanza, martedì 22 settembre alle 08:00. 13,50 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Green Padel Malpensa, 17 settembre
+https://anyplans.in/varese/padel-mancano-3-giocatori-amichevole-2026-09-17/
+
+Padel a Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
+
+## Padel: mancano 2 giocatori… – Green Padel Malpensa, 18 settembre
+https://anyplans.in/varese/padel-mancano-2-giocatori-amichevole/
+
+Padel a Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo, venerdì 18 settembre alle 18:30. 15 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Centro Padel Lago Maggiore, 17 settembre
+https://anyplans.in/varese/padel-mancano-2-giocatori-amichevole-2026-09-17/
+
+Padel a Centro Padel Lago Maggiore, Via Beati 181, 28053 Castelletto sopra Ticino: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
 
 ## Drink e leggerezza🍻🤙🏻🤙🏻🌴 da The Millenium pub -…
 https://anyplans.in/varese/drink-e-leggerezza-da-the-millenium-pub-l-irish-pub-numero-1/
 
 Cena / aperitivo a The Millenium pub - L'Irish Pub numero 1 in Italia, Busto Arsizio: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
-
-## 📶📲LIVELLAMENTO PLAYTOMIC📲📶 – PadelUs Rovello
-https://anyplans.in/varese/livellamento-playtomic/
-
-Padel a PadelUs Rovello, Via Francesco Petrarca, 22070  Rovello Porro, lunedì 21 settembre alle 18:00. 20 € (Iscrizione e pagamento su Playtomic).
-
-## livellamento playtomic – Let’s Padel Centers - Orsenigo
-https://anyplans.in/varese/livellamento-playtomic-2026-09-16/
-
-Padel a Let’s Padel Centers - Orsenigo, Via Caio Plinio 22, 22030 Orsenigo: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
-
-## Cena da PlayUp: 2 posti liberi
-https://anyplans.in/varese/cena-da-playup-2-posti-liberi/
-
-Cena / aperitivo a PlayUp, Villa Guardia: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
 
 ## PARTITA GUIDATA CON TEO – ARX PADEL
 https://anyplans.in/varese/partita-guidata-con-teo/
@@ -704,18 +491,23 @@ https://anyplans.in/varese/morning-padelus/
 
 Padel a PadelUs Rovello, Via Francesco Petrarca, 22070  Rovello Porro, giovedì 24 settembre alle 10:30 (2 date, fino al 1 ottobre). 12 € (Iscrizione e pagamento su Playtomic).
 
+## Latin Summer Vibes del giovedì 🎙️🥂🌺 da Pizzeria Lido…
+https://anyplans.in/varese/latin-summer-vibes-del-giovedi-da-pizzeria-lido-2-0-beach-cl/
+
+Cena / aperitivo a Pizzeria Lido 2.0 Beach Club, Porto Ceresio: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
+
+## Anatomia di uno scrittore – Materia Spazio Libero
+https://anyplans.in/varese/anatomia-di-uno-scrittore/
+
+Incontri culturali a Materia Spazio Libero, Castronno: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
+
 ## Padel: manca 1 giocatore (amichevole) – STARPADEL Legnano
 https://anyplans.in/varese/padel-manca-1-giocatore-amichevole/
 
 Padel a STARPADEL Legnano, Via Monte Rosa 1, 20025 Legnano, venerdì 18 settembre alle 12:00. 10 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore… – The Padel Resort Como, 18 settembre
-https://anyplans.in/varese/padel-manca-1-giocatore-amichevole-2026-09-18/
-
-Padel a The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, venerdì 18 settembre alle 12:30. 12,50 € (Si chiede il posto e si paga su Playtomic).
-
 ## Padel: manca 1 giocatore… – Centro Padel Lago Maggiore, 18 settembre
-https://anyplans.in/varese/padel-manca-1-giocatore-amichevole-2026-09-18-2/
+https://anyplans.in/varese/padel-manca-1-giocatore-amichevole-2026-09-18/
 
 Padel a Centro Padel Lago Maggiore, Via Beati 181, 28053 Castelletto sopra Ticino, venerdì 18 settembre alle 19:00. 14 € (Si chiede il posto e si paga su Playtomic).
 
@@ -723,46 +515,6 @@ Padel a Centro Padel Lago Maggiore, Via Beati 181, 28053 Castelletto sopra Ticin
 https://anyplans.in/varese/padel-manca-1-giocatore-amichevole-2026-09-17/
 
 Padel a WePadel Club - Gallarate, Viale Lombardia, 49, Gallarate VA, Italy, 21013 Gallarate: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
-
-## Padel: manca 1 giocatore (amichevole) – Shape Village
-https://anyplans.in/varese/padel-manca-1-giocatore-amichevole-2026-09-17-2/
-
-Padel a Shape Village, Via Caio Plinio Secondo, 5, 22070 Appiano Gentile: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
-
-## Padel: manca 1 giocatore (amichevole) – Newlariopark
-https://anyplans.in/varese/padel-manca-1-giocatore-amichevole-2026-09-17-3/
-
-Padel a Newlariopark, Via Olimpica, 1, lipomo CO, Italy, 22030 Lipomo: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
-
-## Padel: manca 1… – Let's Padel Centers - Anzano del Parco, 17 settembre
-https://anyplans.in/varese/padel-manca-1-giocatore-amichevole-2026-09-17-4/
-
-Padel a Let's Padel Centers - Anzano del Parco, Via Valera, 22040 Anzano del Parco: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
-
-## Latin Summer Vibes del giovedì 🎙️🥂🌺 da Pizzeria Lido…
-https://anyplans.in/varese/latin-summer-vibes-del-giovedi-da-pizzeria-lido-2-0-beach-cl/
-
-Cena / aperitivo a Pizzeria Lido 2.0 Beach Club, Porto Ceresio: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
-
-## Isola dei classici - Cent'anni di solitudine – Como
-https://anyplans.in/varese/isola-dei-classici-cent-anni-di-solitudine/
-
-Incontri culturali a Libreria la Ciurma, Como: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
-
-## Anatomia di uno scrittore – Materia Spazio Libero
-https://anyplans.in/varese/anatomia-di-uno-scrittore/
-
-Incontri culturali a Materia Spazio Libero, Castronno: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
-
-## The Como Lakers: Una palestra di public speaking
-https://anyplans.in/varese/the-como-lakers-una-palestra-di-public-speaking/
-
-Incontri culturali a The Como Lakers Toastmasters Club, Como: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
-
-## Alessia La Corte presenta "Terra Bruciata" • Ostello…
-https://anyplans.in/varese/alessia-la-corte-presenta-terra-bruciata-ostello-bello-como/
-
-Concerti e musica dal vivo a Ostello Bello Como - Hostel and Bar, Como: si è già svolto, l'ultima data è stata giovedì 17 settembre 2026.
 
 ## Chi emigrava dimenticava il proprio dialetto? – Castronno
 https://anyplans.in/varese/chi-emigrava-dimenticava-il-proprio-dialetto/
@@ -814,30 +566,10 @@ https://anyplans.in/varese/cena-da-villa-cocca-8-posti-liberi/
 
 Cena / aperitivo a Villa Cocca, Gavirate, venerdì 18 settembre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Presentazione con l'autrice Eleonora Sacco + laboratorio e aperitivo – Como
-https://anyplans.in/varese/presentazione-con-l-autrice-eleonora-sacco-laboratorio-e-ape/
-
-Cena / aperitivo a Campo Terra Viva, Como, venerdì 18 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
-
 ## 🥂🥂 APERICENA INSIEME 🥂 da Ritual Club & Lounge: 3…
 https://anyplans.in/varese/apericena-insieme-da-ritual-club-lounge-3-posti-liberi/
 
 Cena / aperitivo a Ritual Club & Lounge, Castellanza, venerdì 18 settembre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Pizza o carne. Dance 80 90 dj PANICO da Lunario Cantù:…, 18 settembre
-https://anyplans.in/varese/pizza-o-carne-dance-80-90-dj-panico-da-lunario-cantu-6-posti/
-
-Cena / aperitivo a Lunario Cantù, venerdì 18 settembre alle 18:15. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Pizza o carne. Dance 80 90 dj PANICO da Lunario Cantù:…, 18 settembre
-https://anyplans.in/varese/pizza-o-carne-dance-80-90-dj-panico-da-lunario-cantu-11-post/
-
-Cena / aperitivo a Lunario Cantù, venerdì 18 settembre alle 18:15. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Dinner +;Ballo in compagnia 🍾😻🎙️ da ROADHOUSE…
-https://anyplans.in/varese/dinner-ballo-in-compagnia-da-roadhouse-restaurant-olgiate-co/
-
-Cena / aperitivo a ROADHOUSE RESTAURANT OLGIATE COMASCO, venerdì 18 settembre alle 18:15. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## Cena da Villa Cocca: 7 posti liberi
 https://anyplans.in/varese/cena-da-villa-cocca-7-posti-liberi/
@@ -859,20 +591,10 @@ https://anyplans.in/varese/cena-da-fermata-24-ristorante-pizzeria-14-posti-liber
 
 Cena / aperitivo a Fermata 24 “Ristorante & Pizzeria”, Castelletto sopra Ticino, venerdì 18 settembre alle 19:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Cena da il Birrivico: 4 posti liberi
-https://anyplans.in/varese/cena-da-il-birrivico-4-posti-liberi/
-
-Cena / aperitivo a il Birrivico, Como, venerdì 18 settembre alle 19:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Festa dell Uva Rescalda 2026
 https://anyplans.in/varese/festa-dell-uva-rescalda-2026/
 
 Festa di paese a Rescalda, venerdì 18 settembre alle 19:00 (2 date, fino al 19 settembre). Gratis.
-
-## Lions Swing Night – Oratorio di Piazza Santo Stefano
-https://anyplans.in/varese/lions-swing-night/
-
-Concerti e musica dal vivo a Oratorio di Piazza Santo Stefano, Cernobbio, venerdì 18 settembre alle 19:30. Gratis (Biglietti su Eventbrite).
 
 ## Cena da Johnnie Fox's: 1 posto libero
 https://anyplans.in/varese/cena-da-johnnie-fox-s-1-posto-libero/
@@ -888,11 +610,6 @@ Serate per single a Pub legnano, venerdì 18 settembre alle 19:30. 5 € (Accre
 https://anyplans.in/varese/juggle-slam-entry-level/
 
 Padel a Juggle Padel Malpensa, via del Barchello, 1, 21019 Somma Lombardo, venerdì 18 settembre alle 20:00 (7 date, fino al 11 dicembre). 25 € (Iscrizione e pagamento su Playtomic).
-
-## Karaoke da Black Horse Pub: 7 posti liberi
-https://anyplans.in/varese/karaoke-da-black-horse-pub-7-posti-liberi/
-
-Karaoke a Black Horse Pub, Cermenate, venerdì 18 settembre alle 20:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## 💥Contest Mid Level 2.0-3.5💥 – Green Padel Malpensa
 https://anyplans.in/varese/contest-mid-level-2-0-3-5/
@@ -929,11 +646,6 @@ https://anyplans.in/varese/10-anni-di-circolo-gagarin-storia-impatto-e-spazi-ind
 
 Visite guidate a Materia Spazio Libero, Castronno, venerdì 18 settembre alle 21:00. Gratis (Biglietti su Eventbrite).
 
-## 18th SEPTEMBER - Lake Como - Free Entry English Standup…
-https://anyplans.in/varese/18th-september-lake-como-free-entry-english-standup-comedy/
-
-Spettacoli e teatro a Ostello Bello Lake Como, Como, venerdì 18 settembre alle 21:00. Gratis (Biglietti su Eventbrite).
-
 ## Cena da Discoteca Gilda: 3 posti liberi
 https://anyplans.in/varese/cena-da-discoteca-gilda-3-posti-liberi/
 
@@ -954,16 +666,6 @@ https://anyplans.in/varese/impianti-aperti-teleriscaldamento-di-varese/
 
 Incontri culturali a Via Ottorino Rossi, 19, Varese, sabato 19 settembre alle 09:00. Gratis (Biglietti su Eventbrite).
 
-## Breath Walking e Musica delle Piante – Lonate Pozzolo
-https://anyplans.in/varese/breath-walking-e-musica-delle-piante/
-
-Concerti e musica dal vivo a Lonate Pozzolo, Tornavento (VA), sabato 19 settembre alle 09:30. 5 € (Accredito su comehome; il resto si paga in loco).
-
-## VOCI E SUONI DELLA NATURA – Tornavento
-https://anyplans.in/varese/voci-e-suoni-della-natura-oltre-lo-sguardo/
-
-Incontri culturali a Centro Parco Ex Dogana Austroungarica, Tornavento, sabato 19 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
-
 ## Torneo Padel SETTEMBRE CUP (Livello PT 0-3) – Varese
 https://anyplans.in/varese/torneo-padel-settembre-cup-livello-pt-0-3/
 
@@ -979,45 +681,15 @@ https://anyplans.in/varese/incontri-d-autore-lampi-di-luce/
 
 Festa di paese a Sala Morselli / Biblioteca Civica, Varese, sabato 19 settembre alle 10:30. Gratis (Biglietti su Eventbrite).
 
-## Lezione partita – The Padel Resort Como
-https://anyplans.in/varese/lezione-partita/
-
-Padel a The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, sabato 19 settembre alle 11:00 (4 date, fino al 24 settembre). 25 € (Iscrizione e pagamento su Playtomic).
-
 ## INCONTRO CON L'AUTORE GIAN ANDREA CERONE – Olgiate Olona
 https://anyplans.in/varese/incontro-con-l-autore-gian-andrea-cerone/
 
 Festa di paese a Via Luigia Greppi, 9, Olgiate Olona, sabato 19 settembre alle 11:00. Gratis (Biglietti su Eventbrite).
 
-## THE PADEL RESORT - TOTAL WHITE EDITION – Varese
-https://anyplans.in/varese/the-padel-resort-total-white-edition/
-
-Padel a The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, sabato 19 settembre alle 14:00. 35 € (Iscrizione e pagamento su Playtomic).
-
-## William Turner a Como - Visita guidata 19/09
-https://anyplans.in/varese/william-turner-a-como-visita-guidata-19-09/
-
-Visite guidate a Piazza Guido Grimoldi, Como, sabato 19 settembre alle 14:00. Gratis (Biglietti su Eventbrite).
-
-## TRACCE E SAPORI IN BRUGHIERA – Tornavento
-https://anyplans.in/varese/tracce-e-sapori-in-brughiera/
-
-Festa di paese a Centro Parco Ex Dogana Austroungarica, Tornavento, sabato 19 settembre alle 14:30. Gratis (Biglietti su Eventbrite).
-
-## SINFONIA VERDE – Centro Parco Ex Dogana Austroungarica
-https://anyplans.in/varese/sinfonia-verde/
-
-Incontri culturali a Centro Parco Ex Dogana Austroungarica, Tornavento, sabato 19 settembre alle 14:30. Gratis (Biglietti su Eventbrite).
-
 ## La Biodiversità del suolo – Varese
 https://anyplans.in/varese/la-biodiversita-del-suolo/
 
 Escursionismo a Via Molino del Trotto, 22070 Solbiate con Cagno CO, Italia, Varese, sabato 19 settembre alle 15:00. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## Visita guidata al Duomo di Como
-https://anyplans.in/varese/visita-guidata-al-duomo-di-como/
-
-Visite guidate a Cattedrale di Santa Maria Assunta / Duomo di Como, Como, sabato 19 settembre alle 15:00. Gratis (Biglietti su Eventbrite).
 
 ## Giochi da tavolo da Fradiavolo Pizzeria - Varese: 5…
 https://anyplans.in/varese/giochi-da-tavolo-da-fradiavolo-pizzeria-varese-5-posti-liber/
@@ -1059,16 +731,6 @@ https://anyplans.in/varese/quando-un-boccone-incontra-il-suo-sorso-divino/
 
 Cena / aperitivo a Somma Lombardo, sabato 19 settembre alle 20:00. 39 € (Accredito su comehome; il resto si paga in loco).
 
-## FESTA DI FINE ESTATE • Ostello Bello Como
-https://anyplans.in/varese/festa-di-fine-estate-ostello-bello-como/
-
-Serate e discoteca a Ostello Bello Como - Hostel and Bar, Como, sabato 19 settembre alle 20:30. Gratis (Biglietti su Eventbrite).
-
-## VERSUS – Teatro Sociale di Como - AsLiCo
-https://anyplans.in/varese/versus/
-
-Spettacoli e teatro a Teatro Sociale di Como - AsLiCo, Como, sabato 19 settembre alle 20:30. Gratis (Biglietti su Eventbrite).
-
 ## Cecilia Barra & Lost Generation(s) at VCC - show 2 – Varese
 https://anyplans.in/varese/cecilia-barra-lost-generation-s-at-vcc-show-2/
 
@@ -1099,20 +761,10 @@ https://anyplans.in/varese/women-s-padel-day/
 
 Padel a #4 Padel, Via Enrico Mattei 212, 21050 Gorla Maggiore, domenica 20 settembre alle 09:00. 25 € (Iscrizione e pagamento su Playtomic).
 
-## PASSI DI SALUTE – Centro Parco Ex Dogana Austroungarica
-https://anyplans.in/varese/passi-di-salute/
-
-Yoga / pilates a Centro Parco Ex Dogana Austroungarica, Tornavento, domenica 20 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
-
 ## Softember. Soft-clubbing – Villa de Angeli Frua
 https://anyplans.in/varese/softember-soft-clubbing-brunch-e-live-music-by-dischi-lacust/
 
 Concerti e musica dal vivo a Villa de Angeli Frua, Provincia di Varese, domenica 20 settembre alle 10:00. Gratis (Gratis, registrazione su Luma).
-
-## NORDIC WALKING - Le Basi della Camminata Nordica – Tornavento
-https://anyplans.in/varese/nordic-walking-le-basi-della-camminata-nordica/
-
-Escursionismo a Centro Parco Ex Dogana Austroungarica, Tornavento, domenica 20 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## Torneo Padel SETTEMBRE CUP (Livello PT 0-1) – Varese
 https://anyplans.in/varese/torneo-padel-settembre-cup-livello-pt-0-1/
@@ -1144,11 +796,6 @@ https://anyplans.in/varese/lega-sunday-arx-master-finale/
 
 Padel a ARX PADEL, via Curtatone 20, 21013 Gallarate, domenica 20 settembre alle 11:00. 25 € (Iscrizione e pagamento su Playtomic).
 
-## BAGNI DI FORESTA E YOGA – Tornavento
-https://anyplans.in/varese/bagni-di-foresta-e-yoga/
-
-Yoga / pilates a Centro Parco Ex Dogana Austroungarica, Tornavento, domenica 20 settembre alle 14:30. Gratis (Biglietti su Eventbrite).
-
 ## Ticino. Il racconto della terra. – Chiostro di Voltorre
 https://anyplans.in/varese/ticino-il-racconto-della-terra/
 
@@ -1164,11 +811,6 @@ https://anyplans.in/varese/aperitivo-a-buffet-cantato-e-ballato-dj-set-da-ritual
 
 Cena / aperitivo a Ritual Club & Lounge, Castellanza, domenica 20 settembre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Cognitive Positioning Systems & Mind Atlas - Polymathic Language Cycles – Milan
-https://anyplans.in/varese/cognitive-positioning-systems-mind-atlas-polymathic-language/
-
-Yoga / pilates a Milan, Milan, domenica 20 settembre alle 19:00. Gratis (Biglietti su Eventbrite).
-
 ## Cena da Mokha - Bar e Ristorante - Varese e provincia:…
 https://anyplans.in/varese/cena-da-mokha-bar-e-ristorante-varese-e-provincia-5-posti-li/
 
@@ -1183,6 +825,11 @@ Ballo e danza a Salone Estense, Varese, domenica 20 settembre alle 20:30. Gratis
 https://anyplans.in/varese/forever-padel/
 
 Padel a STARPADEL Legnano, Via Monte Rosa 1, 20025 Legnano, lunedì 21 settembre alle 10:00. 10 € (Iscrizione e pagamento su Playtomic).
+
+## 📶📲LIVELLAMENTO PLAYTOMIC📲📶 – PadelUs Rovello
+https://anyplans.in/varese/livellamento-playtomic/
+
+Padel a PadelUs Rovello, Via Francesco Petrarca, 22070  Rovello Porro, lunedì 21 settembre alle 18:00. 20 € (Iscrizione e pagamento su Playtomic).
 
 ## corso adulti – Juggle Padel Malpensa
 https://anyplans.in/varese/corso-adulti/
@@ -1254,35 +901,15 @@ https://anyplans.in/varese/videodance-medie-e-superiori/
 
 Palestra a Scuola Primaria G. Rodari, Somma Lombardo, mercoledì 23 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
 
-## Festa Patronale di San Michele Figino Serenza 2026
-https://anyplans.in/varese/festa-patronale-di-san-michele-figino-serenza-2026/
-
-Festa di paese a Figino Serenza, mercoledì 23 settembre alle 19:00 (6 date, fino al 28 settembre). Gratis.
-
 ## Chiacchiere e Biliardino a Legnano, 23 settembre
 https://anyplans.in/varese/chiacchiere-e-biliardino/
 
 Incontri culturali a Legnano, mercoledì 23 settembre alle 20:00. 3 € (Accredito su comehome; il resto si paga in loco).
 
-## Come lucciole - Con Le Sfogliatelle Francesca Valente – Cantù
-https://anyplans.in/varese/come-lucciole-con-le-sfogliatelle-francesca-valente/
-
-Incontri culturali a Basilica di San Vincenzo in Galliano, Cantù, mercoledì 23 settembre alle 21:00. Gratis (Biglietti su Eventbrite).
-
 ## Dalle felpe al generale: come si raccontano Salvini e Vannacci – Castronno
 https://anyplans.in/varese/dalle-felpe-al-generale-come-si-raccontano-salvini-e-vannacc/
 
 Incontri culturali a Materia Spazio Libero, Castronno, mercoledì 23 settembre alle 21:00. Gratis (Biglietti su Eventbrite).
-
-## Tra natura e ambiente: le origini profonde della malattia mentale – Como
-https://anyplans.in/varese/tra-natura-e-ambiente-le-origini-profonde-della-malattia-men/
-
-Yoga / pilates a Associazione Villa Del Grumello, Como, giovedì 24 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
-
-## Luce e tecnologie quantistiche – Como
-https://anyplans.in/varese/luce-e-tecnologie-quantistiche/
-
-Incontri culturali a Yurta - Piazza Giuseppe Verdi, Como, giovedì 24 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
 
 ## Discover IE University & IENYC – Varese TBC
 https://anyplans.in/varese/discover-ie-university-ienyc/
@@ -1293,16 +920,6 @@ Incontri culturali a Varese TBC, Varese, giovedì 24 settembre alle 18:00. Grati
 https://anyplans.in/varese/discover-ie-university-ienyc-bachelor-programs/
 
 Incontri culturali a Varese TBC, Varese, giovedì 24 settembre alle 18:00. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## Karaoke da Shabu Como: 7 posti liberi
-https://anyplans.in/varese/karaoke-da-shabu-como-7-posti-liberi/
-
-Karaoke a Shabu Como, giovedì 24 settembre alle 18:45. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## La seta come piattaforma di luce – Como
-https://anyplans.in/varese/la-seta-come-piattaforma-di-luce/
-
-Incontri culturali a Yurta - Piazza Giuseppe Verdi, Como, giovedì 24 settembre alle 19:00. Gratis (Biglietti su Eventbrite).
 
 ## Due verità e una bugia a Legnano, 24 settembre
 https://anyplans.in/varese/due-verita-e-una-bugia/
@@ -1324,40 +941,15 @@ https://anyplans.in/varese/occhio-al-futuro-prevenire-la-miopia-si-puo/
 
 Incontri culturali a Materia Spazio Libero, Castronno, giovedì 24 settembre alle 21:00. Gratis (Biglietti su Eventbrite).
 
-## Aperitivo con concerto – Como centro
-https://anyplans.in/varese/aperitivo-con-concerto/
-
-Concerti e musica dal vivo a Como centro, venerdì 25 settembre alle 00:00. 14 € (Accredito su comehome; il resto si paga in loco).
-
-## concerto dal vivo – Ferno
-https://anyplans.in/varese/concerto-dal-vivo/
-
-Concerti e musica dal vivo a Via Padre Pedrotti, Ferno, venerdì 25 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
-
 ## KING FRIDAY BY CARDA – WePadel Club - Gallarate
 https://anyplans.in/varese/king-friday-by-carda/
 
 Padel a WePadel Club - Gallarate, Viale Lombardia, 49, Gallarate VA, Italy, 21013 Gallarate, venerdì 25 settembre alle 12:00. 15 € (Iscrizione e pagamento su Playtomic).
 
-## LA VOLTA CELESTE – Tempio Voltiano
-https://anyplans.in/varese/la-volta-celeste/
-
-Concerti e musica dal vivo a Tempio Voltiano, Como, venerdì 25 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
-
-## Cena da Food truck Dal Vezza: 6 posti liberi
-https://anyplans.in/varese/cena-da-food-truck-dal-vezza-6-posti-liberi/
-
-Cena / aperitivo a Food truck Dal Vezza, Veniano, venerdì 25 settembre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Aperitivo a buffet. Cantato e danc – Ritual Club & Lounge
 https://anyplans.in/varese/aperitivo-a-buffet-cantato-e-danc-dj-carelli-da-ritual-club-/
 
 Cena / aperitivo a Ritual Club & Lounge, Castellanza, venerdì 25 settembre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Quando il colore non basta: imaging iperspettrale e opere d'arte – Como
-https://anyplans.in/varese/quando-il-colore-non-basta-imaging-iperspettrale-e-opere-d-a/
-
-Incontri culturali a Yurta - Piazza Giuseppe Verdi, Como, venerdì 25 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
 
 ## MISTO ENTRY LEVEL – WePadel Club - Gallarate
 https://anyplans.in/varese/misto-entry-level/
@@ -1373,11 +965,6 @@ Visite guidate a Peveranza (VA), venerdì 25 settembre alle 19:00 (4 date, fino 
 https://anyplans.in/varese/risveglia-la-tua-energia-kundalini-busto-arsizio/
 
 Yoga / pilates a Via Cesare Correnti, 1, Busto Arsizio, venerdì 25 settembre alle 19:00. Gratis (Biglietti su Eventbrite).
-
-## Beach Volley Time – Arena beach Cadorago
-https://anyplans.in/varese/beach-volley-time/
-
-Volley a Arena beach Cadorago, Cadorago, venerdì 25 settembre alle 19:30. 18 € (Si paga su WeMeet (WeRoad)).
 
 ## Mesci ed Esci @HOME - Connessioni al femminile – Cislago
 https://anyplans.in/varese/mesci-ed-esci-home-connessioni-al-femminile/
@@ -1404,11 +991,6 @@ https://anyplans.in/varese/the-90s-vibes-aperitivo-party/
 
 Serate e discoteca a Castellanza - Legnano, venerdì 25 settembre alle 20:45. 5 € (Accredito su comehome; il resto si paga in loco).
 
-## Violin Show: concerto a lume di candela presso il CORTILE ME – Olgiate Comasco
-https://anyplans.in/varese/violin-show-concerto-a-lume-di-candela-presso-il-cortile-me/
-
-Visite guidate a Olgiate Comasco, Olgiate Comasco, venerdì 25 settembre alle 21:00. 21 € (Si paga su WeMeet (WeRoad)).
-
 ## Incontro con l'autrice Barbara Perna – Olgiate Olona
 https://anyplans.in/varese/incontro-con-l-autrice-barbara-perna/
 
@@ -1428,16 +1010,6 @@ Palestra a 92LabAthletics, Velate, sabato 26 settembre alle 09:30. Gratis (Bigli
 https://anyplans.in/varese/last-summer-mix-al-parco/
 
 Padel a Centro Padel Lago Maggiore, Via Beati 181, 28053 Castelletto sopra Ticino, sabato 26 settembre alle 09:30. 25 € (Iscrizione e pagamento su Playtomic).
-
-## Visita la Chiesa romanica di Sant'Agata a Moltrasio
-https://anyplans.in/varese/visita-la-chiesa-romanica-di-sant-agata-a-moltrasio/
-
-Visite guidate a Chiesa di Sant'Agata, Moltrasio, sabato 26 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
-
-## Alessandro Volta e il teatro – Como
-https://anyplans.in/varese/alessandro-volta-e-il-teatro/
-
-Visite guidate a Sala Bianca del Teatro Sociale, Como, sabato 26 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## Torneo MISTO di fine estate – Varese
 https://anyplans.in/varese/torneo-misto-di-fine-estate/
@@ -1484,45 +1056,15 @@ https://anyplans.in/varese/apertura-straordinaria-visita-guidata-del-castello-vi
 
 Visite guidate a Castello Visconti, Somma Lombardo, sabato 26 settembre alle 15:00. 17 € (Si paga su WeMeet (WeRoad)).
 
-## Coding Lab | Como Grandate – Centro Polifunzionale Grandate
-https://anyplans.in/varese/coding-lab-como-grandate/
-
-Incontri culturali a Centro Polifunzionale Grandate, Grandate, sabato 26 settembre alle 15:00. Gratis (Biglietti su Eventbrite).
-
 ## Workshop Yoga X Core Strength – Varese
 https://anyplans.in/varese/workshop-yoga-x-core-strength/
 
 Incontri culturali a Parco di Villa Torelli Mylius, Varese, sabato 26 settembre alle 16:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Luce per lo studio e la salute del cervello – Como
-https://anyplans.in/varese/luce-per-lo-studio-e-la-salute-del-cervello/
-
-Incontri culturali a Yurta - Piazza Giuseppe Verdi, Como, sabato 26 settembre alle 17:00. Gratis (Biglietti su Eventbrite).
-
-## ORME DI BELLEZZA Spettacolo itinerante nel Villaggio Operaio Somaini – Lomazzo
-https://anyplans.in/varese/orme-di-bellezza-spettacolo-itinerante-nel-villaggio-operaio/
-
-Spettacoli e teatro a Chiesa Parrocchiale di San Siro Vescovo, Lomazzo, sabato 26 settembre alle 17:00. Gratis (Biglietti su Eventbrite).
-
-## Indossa l’Energia: dal Colore all’Essenza _ Vol.4 – Varese
-https://anyplans.in/varese/indossa-l-energia-dal-colore-all-essenza-vol-4/
-
-Yoga / pilates a Casnate con Bernate (CO), sabato 26 settembre alle 17:00. 30 € (Accredito su comehome; il resto si paga in loco).
-
 ## Aperi Mindfulness a Legnano, 26 settembre
 https://anyplans.in/varese/aperi-mindfulness/
 
 Yoga / pilates a Legnano, sabato 26 settembre alle 17:00. 15 € (Accredito su comehome; il resto si paga in loco).
-
-## Incontro con il Premio Nobel per la Fisica Kostya Novoselov – Como
-https://anyplans.in/varese/incontro-con-il-premio-nobel-per-la-fisica-kostya-novoselov/
-
-Incontri culturali a Yurta - Piazza Giuseppe Verdi, Como, sabato 26 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
-
-## Cena col QUIZZONE in una sala riservata da Wiener Haus:…
-https://anyplans.in/varese/cena-col-quizzone-in-una-sala-riservata-da-wiener-haus-7-pos/
-
-Cena / aperitivo a Wiener Haus, Como, sabato 26 settembre alle 18:15. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## E se fosse proprio questa la sera giusta? – Legnano
 https://anyplans.in/varese/e-se-fosse-proprio-questa-la-sera-giusta/
@@ -1554,20 +1096,10 @@ https://anyplans.in/varese/la-torre-romana-del-san-maffeo-e-la-difesa-del-confin
 
 Incontri culturali a Via Peschiera, 22070 Rodero CO, Italia, 22070 Rodero CO, domenica 27 settembre alle 09:00. Gratis (Biglietti su Eventbrite).
 
-## Fall Equinox Ceremony – Carate Urio
-https://anyplans.in/varese/fall-equinox-ceremony/
-
-Incontri culturali a Carate Urio, Carate Urio, domenica 27 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
-
 ## GOLDEN CUP BY ITALPREZIOSI Maschile – Varese
 https://anyplans.in/varese/golden-cup-by-italpreziosi-maschile/
 
 Padel a WePadel Club - Gallarate, Viale Lombardia, 49, Gallarate VA, Italy, 21013 Gallarate, domenica 27 settembre alle 10:00. 30 € (Iscrizione e pagamento su Playtomic).
-
-## L’energia invisibile. Il nucleare e il mondo che abitiamo. – Como
-https://anyplans.in/varese/l-energia-invisibile-il-nucleare-e-il-mondo-che-abitiamo/
-
-Incontri culturali a Yurta - Piazza Giuseppe Verdi, Como, domenica 27 settembre alle 11:30. Gratis (Biglietti su Eventbrite).
 
 ## MINI LEGA - ARX feat GREEN - Entry level – ARX PADEL
 https://anyplans.in/varese/mini-lega-arx-feat-green-entry-level/
@@ -1579,21 +1111,6 @@ https://anyplans.in/varese/pomeriggio-botanico-al-parco-archeologico-di-castelse
 
 Incontri culturali a Via Castelvecchio, 1513, 21050 Castelseprio VA, Italia, 1513, domenica 27 settembre alle 14:30. Gratis (Biglietti su Eventbrite).
 
-## Vedere l'Invisibile attraverso gli occhi del James Webb Space Telescope – Como
-https://anyplans.in/varese/vedere-l-invisibile-attraverso-gli-occhi-del-james-webb-spac/
-
-Incontri culturali a Yurta - Piazza Giuseppe Verdi, Como, domenica 27 settembre alle 17:00. Gratis (Biglietti su Eventbrite).
-
-## Luce instabile: ai confini tra l'ordine e il caos – Como
-https://anyplans.in/varese/luce-instabile-ai-confini-tra-l-ordine-e-il-caos/
-
-Ballo e danza a Yurta - Piazza Giuseppe Verdi, Como, domenica 27 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
-
-## Stand up comedy! a Como centro, 27 settembre
-https://anyplans.in/varese/stand-up-comedy/
-
-Spettacoli e teatro a Como centro, domenica 27 settembre alle 20:00. 14 € (Accredito su comehome; il resto si paga in loco).
-
 ## THE REVEREND PEYTON’S BIG DAMN BAND – Lonate Ceppino
 https://anyplans.in/varese/the-reverend-peyton-s-big-damn-band/
 
@@ -1604,30 +1121,15 @@ https://anyplans.in/varese/international-conference-on-psychology-and-mental-hea
 
 Yoga / pilates a ibis Milano Malpensa Aeroporto, Cardano Al Campo, lunedì 28 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
 
-## Taqquini – Upcycling di carta – Memesi
-https://anyplans.in/varese/taqquini-upcycling-di-carta/
-
-Ceramica a Memesi, Como, lunedì 28 settembre alle 14:00. Gratis (Biglietti su Eventbrite).
-
 ## 🟪PARTITA GUIDATA CON PISO🟪 – PadelUs Rovello
 https://anyplans.in/varese/partita-guidata-con-piso/
 
 Padel a PadelUs Rovello, Via Francesco Petrarca, 22070  Rovello Porro, lunedì 28 settembre alle 17:00. 23 € (Iscrizione e pagamento su Playtomic).
 
-## 8° incontro: Gloria – Libreria la Ciurma
-https://anyplans.in/varese/8-incontro-gloria-noviolet-bulawayo/
-
-Festa di paese a Libreria la Ciurma, Como, lunedì 28 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
-
 ## Acrobatica – Scuola Primaria G. Rodari
 https://anyplans.in/varese/acrobatica/
 
 Palestra a Scuola Primaria G. Rodari, Somma Lombardo, lunedì 28 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
-
-## Cerimonia di premiazione Scritture di Lago 7° edizione – Como
-https://anyplans.in/varese/cerimonia-di-premiazione-scritture-di-lago-7-edizione/
-
-Incontri culturali a Teatro Sociale, Como, lunedì 28 settembre alle 20:00. Gratis (Biglietti su Eventbrite).
 
 ## TONIFICAZIONE – Scuola Primaria G. Rodari
 https://anyplans.in/varese/tonificazione/
@@ -1649,20 +1151,10 @@ https://anyplans.in/varese/non-c-e-storia-streghe-far-west-e-altri-equivoci/
 
 Incontri culturali a Materia Spazio Libero, Castronno, martedì 29 settembre alle 21:00. Gratis (Biglietti su Eventbrite).
 
-## QUEEN OF THE COURT by MarieDanielle – The Padel Resort Como
-https://anyplans.in/varese/queen-of-the-court-by-mariedanielle/
-
-Padel a The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, mercoledì 30 settembre alle 11:00. 20 € (Iscrizione e pagamento su Playtomic).
-
 ## Chi si prende cura di noi? – Materia Spazio Libero
 https://anyplans.in/varese/chi-si-prende-cura-di-noi/
 
 Incontri culturali a Materia Spazio Libero, Castronno, mercoledì 30 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
-
-## Lake Como Future: Far quadrare i conti w/ Andrea Gay – Varese
-https://anyplans.in/varese/lake-como-future-far-quadrare-i-conti-w-andrea-gay/
-
-Incontri culturali a Albese con Cassano, mercoledì 30 settembre alle 18:30. Gratis (Gratis, registrazione su Luma).
 
 ## A Pizza Cu 'a Pummarola – Busto arsizio
 https://anyplans.in/varese/a-pizza-cu-a-pummarola/
@@ -1679,11 +1171,6 @@ https://anyplans.in/varese/ciak-azione-sguardi-sulla-salute-mentale/
 
 Yoga / pilates a Materia Spazio Libero, Castronno, mercoledì 30 settembre alle 21:00. Gratis (Biglietti su Eventbrite).
 
-## Business Roundtable -  Como – HOSTARIA CASCINA LA COSTA
-https://anyplans.in/varese/business-roundtable-como/
-
-Incontri culturali a HOSTARIA CASCINA LA COSTA, Fino Mornasco, giovedì 1 ottobre alle 12:00. Gratis (Biglietti su Eventbrite).
-
 ## Cammini che lasciano il segno – Materia Spazio Libero
 https://anyplans.in/varese/cammini-che-lasciano-il-segno/
 
@@ -1693,11 +1180,6 @@ Escursionismo a Materia Spazio Libero, Castronno, giovedì 1 ottobre alle 21:00.
 https://anyplans.in/varese/ticino-lo-sguardo-dell-arte/
 
 Visite guidate a Chiostro di Voltorre, Gavirate, venerdì 2 ottobre alle 18:00. Gratis (Biglietti su Eventbrite).
-
-## MAGIKA BOOKCLUB - L'ESTATE CHE SCIOLSE OGNI COSA – Como
-https://anyplans.in/varese/magika-bookclub-l-estate-che-sciolse-ogni-cosa/
-
-Incontri culturali a Libreria la Ciurma, Como, venerdì 2 ottobre alle 18:30. Gratis (Biglietti su Eventbrite).
 
 ## ENTRY LEVEL MASCHILE – WePadel Club - Gallarate
 https://anyplans.in/varese/entry-level-maschile/
@@ -1724,11 +1206,6 @@ https://anyplans.in/varese/granfondo-tre-valli-varesine/
 
 Incontri culturali a Via Luigi Sacco, 21100 Varese VA, Italia, Varese, sabato 3 ottobre alle 13:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## SILVIA VISCONTI Showcooking Cucina naturale senza glutine – Como
-https://anyplans.in/varese/silvia-visconti-showcooking-cucina-naturale-senza-glutine/
-
-Cena / aperitivo a NON C'È GRANO COMO, Como, sabato 3 ottobre alle 14:00. Gratis (Biglietti su Eventbrite).
-
 ## 🏆FINECO PADEL CUP 🎾Entry level – STARPADEL Legnano
 https://anyplans.in/varese/fineco-padel-cup-entry-level/
 
@@ -1749,20 +1226,10 @@ https://anyplans.in/varese/chiostro-divino/
 
 Cena / aperitivo a Chiostro di Voltorre, Gavirate, sabato 3 ottobre alle 17:30. Gratis (Biglietti su Eventbrite).
 
-## Opening: Museo d'impresa Gentili Mosconi – Casnate Con Bernate
-https://anyplans.in/varese/opening-museo-d-impresa-gentili-mosconi/
-
-Spettacoli e teatro a Casnate Con Bernate, Casnate Con Bernate, sabato 3 ottobre alle 17:30. Gratis (Biglietti su Eventbrite).
-
 ## Too Good To Go Challenge e biliardino – Sesto Calende
 https://anyplans.in/varese/too-good-to-go-challenge-e-biliardino/
 
 Cena / aperitivo a Sesto Calende, sabato 3 ottobre alle 20:00. 12 € (Accredito su comehome; il resto si paga in loco).
-
-## Ballo in Fa# di fantasy – Centro Congressi Medioevo
-https://anyplans.in/varese/ballo-in-fa-di-fantasy/
-
-Incontri culturali a Centro Congressi Medioevo, Olgiate Comasco, sabato 3 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
 
 ## MEMORIAL Cav. Stefano Guarnieri – Gallarate
 https://anyplans.in/varese/memorial-cav-stefano-guarnieri/
@@ -1799,11 +1266,6 @@ https://anyplans.in/varese/sunsystem-cup-entry-level-3-tappa/
 
 Padel a Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo, domenica 4 ottobre alle 14:00. 25 € (Iscrizione e pagamento su Playtomic).
 
-## Picnic Swap Party! Scambia i tuoi vestiti e libri – Como
-https://anyplans.in/varese/picnic-swap-party-scambia-i-tuoi-vestiti-e-libri/
-
-Cena / aperitivo a Como, Prato/Spiaggetta vicino al Tempio Voltiano, domenica 4 ottobre alle 15:00. 6 € (Accredito su comehome; il resto si paga in loco).
-
 ## Pizza tra amici a Busto Arsizio, 4 ottobre
 https://anyplans.in/varese/pizza-tra-amici/
 
@@ -1828,11 +1290,6 @@ Serate per single a Gallarate, martedì 6 ottobre alle 20:00. 15 € (Accredito
 https://anyplans.in/varese/l-energia-umana/
 
 Incontri culturali a Via G. Borghi, 27 (Ex Whirlpool), Comerio, mercoledì 7 ottobre alle 18:30. Gratis (Biglietti su Eventbrite).
-
-## QUARTETTO GOLDBERG AL TEMPIO VOLTIANO
-https://anyplans.in/varese/quartetto-goldberg-al-tempio-voltiano/
-
-Concerti e musica dal vivo a Tempio Voltiano, Como, mercoledì 7 ottobre alle 19:00. Gratis (Biglietti su Eventbrite).
 
 ## Il Settecento musicale tra cembalo e pianoforte – Ispra
 https://anyplans.in/varese/il-settecento-musicale-tra-cembalo-e-pianoforte/
@@ -1879,11 +1336,6 @@ https://anyplans.in/varese/ticino-lo-sguardo-del-fotografo/
 
 Mostre a Chiostro di Voltorre, Gavirate, sabato 10 ottobre alle 18:00. Gratis (Biglietti su Eventbrite).
 
-## Saturday Night...On the Lake! a Como, 10 ottobre
-https://anyplans.in/varese/saturday-night-on-the-lake/
-
-Cena / aperitivo a Como, sabato 10 ottobre alle 20:30. 5 € (Accredito su comehome; il resto si paga in loco).
-
 ## Festival di Luino – Compagnia delle note
 https://anyplans.in/varese/festival-di-luino/
 
@@ -1893,26 +1345,6 @@ Festa di paese a Compagnia delle note, sabato 10 ottobre alle 21:00. Gratis (Ing
 https://anyplans.in/varese/passeggiata-alle-sorgenti-del-lanza/
 
 Incontri culturali a 6867 Serpiano TI, Svizzera, Svizzera, domenica 11 ottobre alle 09:00. Gratis (Biglietti su Eventbrite).
-
-## S-Padel Challenge - Entry White – Padel Center Italfunivie
-https://anyplans.in/varese/s-padel-challenge-entry-white/
-
-Padel a Padel Center Italfunivie, via provinciale 84, 22038 Tavernerio, domenica 11 ottobre alle 15:00. 25 € (Iscrizione su Playtomic, si paga in loco).
-
-## Il masso del Ronco – Brienno
-https://anyplans.in/varese/il-masso-del-ronco/
-
-Mostre a Via Regina, 60, Brienno, domenica 11 ottobre alle 15:00. Gratis (Biglietti su Eventbrite).
-
-## S-Padel Challenge - Medium Red – Padel Center Italfunivie
-https://anyplans.in/varese/s-padel-challenge-medium-red/
-
-Padel a Padel Center Italfunivie, via provinciale 84, 22038 Tavernerio, domenica 11 ottobre alle 18:00. 25 € (Iscrizione su Playtomic, si paga in loco).
-
-## Cermenate (CO): Magia d'autunno – Enoteca In Vena di Vino
-https://anyplans.in/varese/cermenate-co-magia-d-autunno-un-aperitivo-appennello/
-
-Cena / aperitivo a Enoteca In Vena di Vino, Cermenate, martedì 13 ottobre alle 20:00. Gratis (Biglietti su Eventbrite).
 
 ## La salute nel carrello – Materia Spazio Libero
 https://anyplans.in/varese/la-salute-nel-carrello/
@@ -1949,40 +1381,15 @@ https://anyplans.in/varese/parliamo-di-biodiversita-il-ruolo-dei-plis-nel-sistem
 
 Incontri culturali a 21040 Vedano Olona VA, Italia, Varese, venerdì 16 ottobre alle 20:30. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Scegliere. La responsabilità di diventare – Cernobbio
-https://anyplans.in/varese/scegliere-la-responsabilita-di-diventare/
-
-Festa di paese a Istituto Comprensivo Cernobbio - Scuola Secondaria di Primo Grado, Cernobbio, venerdì 16 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
-
-## Corso di Handpan a Como per principianti in partenza…
-https://anyplans.in/varese/corso-di-handpan-a-como-per-principianti-in-partenza-sabato-/
-
-Concerti e musica dal vivo a Nerolidio Music Factory, Como, sabato 17 ottobre alle 10:30. Gratis (Biglietti su Eventbrite).
-
 ## Brunch autunnale a Busto Arsizio, 18 ottobre
 https://anyplans.in/varese/brunch-autunnale/
 
 Cena / aperitivo a Busto Arsizio, domenica 18 ottobre alle 12:15. 5 € (Accredito su comehome; il resto si paga in loco).
 
-## TORNEO  ENTRY WHITE FEMMINILE – Varese
-https://anyplans.in/varese/torneo-entry-white-femminile/
-
-Padel a Let's Padel Centers - Anzano del Parco, Via Valera, 22040 Anzano del Parco, domenica 18 ottobre alle 15:00. 25 € (Iscrizione su Playtomic, si paga in loco).
-
 ## Finale del Premio Chiara 2026 – Ville Ponti
 https://anyplans.in/varese/finale-del-premio-chiara-2026/
 
 Incontri culturali a Ville Ponti, Varese, domenica 18 ottobre alle 17:00. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## TORNEO MEDIUM RED FEMMINILE – Varese
-https://anyplans.in/varese/torneo-medium-red-femminile/
-
-Padel a Let's Padel Centers - Anzano del Parco, Via Valera, 22040 Anzano del Parco, domenica 18 ottobre alle 18:00. 25 € (Iscrizione su Playtomic, si paga in loco).
-
-## Quartetto per la fine del Tempo – Como
-https://anyplans.in/varese/quartetto-per-la-fine-del-tempo/
-
-Incontri culturali a Conservatorio di Musica Giuseppe Verdi, Como, mercoledì 21 ottobre alle 17:00. Gratis (Biglietti su Eventbrite).
 
 ## MUSIC 4.0 – MalpensaFiere | Centro Fiere Congressi ed Eventi
 https://anyplans.in/varese/music-4-0/
@@ -1993,11 +1400,6 @@ Concerti e musica dal vivo a MalpensaFiere | Centro Fiere Congressi ed Eventi, B
 https://anyplans.in/varese/ticino-lo-sguardo-del-paleontologo/
 
 Incontri culturali a Chiostro di Voltorre, Gavirate, venerdì 23 ottobre alle 18:00. Gratis (Biglietti su Eventbrite).
-
-## MIZUNO Running Day – Maxi Sport Como
-https://anyplans.in/varese/mizuno-running-day-como-sabato-24-ottobre-2026/
-
-Corsa a Maxi Sport Como, Como, sabato 24 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## Il cerchio delle parole – Somma Lombardo
 https://anyplans.in/varese/il-cerchio-delle-parole/
@@ -2039,11 +1441,6 @@ https://anyplans.in/varese/mario-biondi-in-varese/
 
 Concerti e musica dal vivo a Teatro Intred - Varese, Varese, giovedì 5 novembre alle 20:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## TEDxLakeComo 2026: Futuro Anteriore – Cernobbio
-https://anyplans.in/varese/tedxlakecomo-2026-futuro-anteriore/
-
-Festa di paese a Centro Congressi di Villa Erba, Cernobbio, sabato 7 novembre alle 10:30. Gratis (Biglietti su Eventbrite).
-
 ## Orecchiette, panzerotti e primitivo: Puglia I LOVE U – Varese
 https://anyplans.in/varese/orecchiette-panzerotti-e-primitivo-puglia-i-love-u/
 
@@ -2053,11 +1450,6 @@ Cena / aperitivo a Legnano, sabato 7 novembre alle 20:00. 5 € (Accredito su c
 https://anyplans.in/varese/i-salotti-del-tempo-un-the-a-villa-borghi/
 
 Visite guidate a Hotel Villa Borghi, Varano Borghi, domenica 8 novembre alle 15:00. Gratis (Biglietti su Eventbrite).
-
-## Cermenate (CO): A Mici – In Vena di Vino
-https://anyplans.in/varese/cermenate-co-a-mici-un-aperitivo-appennello/
-
-Cena / aperitivo a In Vena di Vino, Cermenate, martedì 10 novembre alle 20:00. Gratis (Biglietti su Eventbrite).
 
 ## Francesco Costa – Cinema Teatro Castellani - Azzate
 https://anyplans.in/varese/francesco-costa-come-se-ne-esce-mondadori/
@@ -2073,16 +1465,6 @@ Cena / aperitivo a Via Montebello 11d, Busto Arsizio, domenica 15 novembre alle 
 https://anyplans.in/varese/parigi-1934-jazz-manouche-night/
 
 Concerti e musica dal vivo a Via Esperia, Ispra, mercoledì 18 novembre alle 21:00. Gratis (Biglietti su Eventbrite).
-
-## LA VILLA DEGLI AUTORI - DAL LIBRO ALLA SCENEGGIATURA – Como
-https://anyplans.in/varese/la-villa-degli-autori-dal-libro-alla-sceneggiatura/
-
-Cinema a Associazione Villa Del Grumello, Como, venerdì 27 novembre alle 14:00. Gratis (Biglietti su Eventbrite).
-
-## Armonie Inclusive - Infinity Sound – Villa Imbonati
-https://anyplans.in/varese/armonie-inclusive-infinity-sound/
-
-Concerti e musica dal vivo a Villa Imbonati, Cavallasca, venerdì 27 novembre alle 20:30. Gratis (Biglietti su Eventbrite).
 
 ## Fusion Night: da Oriente a Occidente – Castellanza
 https://anyplans.in/varese/fusion-night-da-oriente-a-occidente/
@@ -2109,105 +1491,95 @@ https://anyplans.in/varese/quando-manca-la-terra-sotto-i-piedi-trauma-corpo-e-re
 
 Yoga / pilates a Comune di Varese, Varese, mercoledì 3 marzo alle 18:30. Gratis (Biglietti su Eventbrite).
 
-## Things to do in Varese: 297 events
+## Things to do in Varese: 208 events
 https://anyplans.in/en/varese/
 
-What's on in Varese and its province, today, tonight and this weekend: padel, dinners & aperitivo, talks & culture, concerts & live music, guided tours and yoga & pilates. Pick one and go with other people.
+What's on in Varese and its province, today, tonight and this weekend: padel, dinners & aperitivo, talks & culture, concerts & live music, gym and guided tours. Pick one and go with other people.
 
-## What to do in Varese today: 50 events
+## What to do in Varese today: 36 events
 https://anyplans.in/en/varese/what-to-do-today/
 
-50 events in Varese and its province today, 18 September 2026: Varese, Castelletto sopra Ticino, Como and Castellanza and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+36 events in Varese and its province today, 18 September 2026: Varese, Castelletto sopra Ticino, Castellanza and Gavirate and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Varese tomorrow: 37 events
+## What to do in Varese tomorrow: 22 events
 https://anyplans.in/en/varese/what-to-do-tomorrow/
 
-37 events in Varese and its province tomorrow, 19 September 2026: Varese, Tornavento, Como and Gallarate and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+22 events in Varese and its province tomorrow, 19 September 2026: Varese, Gallarate, Rescalda and Busto Arsizio and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Varese this weekend: 58 events
+## What to do in Varese this weekend: 38 events
 https://anyplans.in/en/varese/what-to-do-this-weekend/
 
-58 events in Varese and its province this weekend (Saturday 19 September and Sunday 20 September): Varese, Tornavento, Como and Gallarate and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+38 events in Varese and its province this weekend (Saturday 19 September and Sunday 20 September): Varese, Gallarate, Castellanza and Rescalda and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## Events in Varese in September 2026: 211
+## Events in Varese in September 2026: 144
 https://anyplans.in/en/varese/events-september-2026/
 
-211 events in Varese and its province in September 2026: padel, talks & culture, dinners & aperitivo, town festivals & fairs and concerts & live music. Day by day, with times, place and price, in Varese, Como, Somma Lombardo and Castronno and other towns. You sign up and go with other people.
+144 events in Varese and its province in September 2026: padel, talks & culture, dinners & aperitivo, town festivals & fairs and singles nights. Day by day, with times, place and price, in Varese, Somma Lombardo, Castronno and Castellanza and other towns. You sign up and go with other people.
 
-## Events in Varese in October 2026: 76
+## Events in Varese in October 2026: 58
 https://anyplans.in/en/varese/events-october-2026/
 
-76 events in Varese and its province in October 2026: padel, yoga & pilates, talks & culture, hiking and guided tours. Day by day, with times, place and price, in Varese, Castronno, Gavirate and Como and other towns. You sign up and go with other people.
+58 events in Varese and its province in October 2026: padel, yoga & pilates, hiking, guided tours and dinners & aperitivo. Day by day, with times, place and price, in Varese, Castronno, Gavirate and Busto Arsizio and other towns. You sign up and go with other people.
 
-## Events in Varese in November 2026: 17
+## Events in Varese in November 2026: 13
 https://anyplans.in/en/varese/events-november-2026/
 
-17 events in Varese and its province in November 2026: padel, talks & culture, concerts & live music, town festivals & fairs and dinners & aperitivo. Day by day, with times, place and price, in Varese, Cernobbio, Varano Borghi and Cermenate and other towns. You sign up and go with other people.
+13 events in Varese and its province in November 2026: padel, talks & culture, concerts & live music, dinners & aperitivo and guided tours. Day by day, with times, place and price, in Varese, Varano Borghi, Busto Arsizio and Ispra and other towns. You sign up and go with other people.
 
-## Padel in Varese: 67 events
-https://anyplans.in/en/varese/padel/
-
-In Varese and its province there are 67 padel matches and tournaments in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
-
-## Dinners & aperitivo in Varese: 60 events
+## Dinners & aperitivo in Varese: 48 events
 https://anyplans.in/en/varese/dinners/
 
-In Varese and its province there are 60 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Varese and its province there are 48 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Yoga & pilates in Varese: 13 events
+## Padel in Varese: 46 events
+https://anyplans.in/en/varese/padel/
+
+In Varese and its province there are 46 padel matches and tournaments in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+
+## Yoga & pilates in Varese: 8 events
 https://anyplans.in/en/varese/yoga/
 
-In Varese and its province there are 13 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Varese and its province there are 8 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Talks & culture in Varese: 54 events
+## Talks & culture in Varese: 36 events
 https://anyplans.in/en/varese/talks-and-culture/
 
-In Varese and its province there are 54 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Varese and its province there are 36 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Concerts & live music in Varese: 26 events
-https://anyplans.in/en/varese/concerts/
-
-In Varese and its province there are 26 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
-
-## Festivals & sagre near Varese: 13 events
+## Festivals & sagre near Varese: 8 events
 https://anyplans.in/en/varese/festivals/
 
-In Varese and its province there are 13 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Varese and its province there are 8 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Singles nights in Varese: 4 events
 https://anyplans.in/en/varese/singles/
 
 In Varese and its province there are 4 singles nights in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Karaoke in Varese: 4 events
-https://anyplans.in/en/varese/karaoke/
+## Concerts & live music in Varese: 18 events
+https://anyplans.in/en/varese/concerts/
 
-In Varese and its province there are 4 karaoke events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Varese and its province there are 18 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Guided tours in Varese: 15 events
+## Guided tours in Varese: 10 events
 https://anyplans.in/en/varese/guided-tours/
 
-In Varese and its province there are 15 guided tours events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Varese and its province there are 10 guided tours events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Shows & theatre in Varese: 12 events
-https://anyplans.in/en/varese/shows/
-
-In Varese and its province there are 12 shows & theatre events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
-
-## Hiking in Varese: 4 events
+## Hiking in Varese: 3 events
 https://anyplans.in/en/varese/hiking/
 
-In Varese and its province there are 4 hiking events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
-
-## Exhibitions in Varese: 3 events
-https://anyplans.in/en/varese/exhibitions/
-
-In Varese and its province there are 3 exhibitions in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Varese and its province there are 3 hiking events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Gym in Varese: 11 events
 https://anyplans.in/en/varese/gym/
 
 In Varese and its province there are 11 gym events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+
+## Shows & theatre in Varese: 7 events
+https://anyplans.in/en/varese/shows/
+
+In Varese and its province there are 7 shows & theatre events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Festivals and events in Castronno, Bergamo: 17…
 https://anyplans.in/en/varese/castronno/
@@ -2218,11 +1590,6 @@ In Castronno there are 17 events in the coming months. On anyplans you find the 
 https://anyplans.in/en/varese/busto-arsizio/
 
 In Busto Arsizio there are 7 events in the coming months. On anyplans you find the festivals and events of Busto Arsizio with dates, times and place. You sign up and go with others.
-
-## Festivals and events in Como, Bergamo: 29…
-https://anyplans.in/en/varese/como/
-
-In Como there are 29 events in the coming months. On anyplans you find the festivals and events of Como with dates, times and place. You sign up and go with others.
 
 ## Festivals and events in Castellanza, Bergamo: 5…
 https://anyplans.in/en/varese/castellanza/
@@ -2239,65 +1606,45 @@ https://anyplans.in/en/varese/castelletto-sopra-ticino/
 
 In Castelletto sopra Ticino there are 5 events in the coming months. On anyplans you find the festivals and events of Castelletto sopra Ticino with dates, times and place. You sign up and go with others.
 
-## Festivals and events in Cernobbio, Bergamo: 3…
-https://anyplans.in/en/varese/cernobbio/
-
-In Cernobbio there are 3 events in the coming months. On anyplans you find the festivals and events of Cernobbio with dates, times and place. You sign up and go with others.
-
-## Festivals and events in Cermenate, Bergamo: 3…
-https://anyplans.in/en/varese/cermenate/
-
-In Cermenate there are 3 events in the coming months. On anyplans you find the festivals and events of Cermenate with dates, times and place. You sign up and go with others.
-
 ## Festivals and events in Somma Lombardo,…
 https://anyplans.in/en/varese/somma-lombardo/
 
 In Somma Lombardo there are 13 events in the coming months. On anyplans you find the festivals and events of Somma Lombardo with dates, times and place. You sign up and go with others.
-
-## Festivals and events in Tornavento, Bergamo: 7…
-https://anyplans.in/en/varese/tornavento/
-
-In Tornavento there are 7 events in the coming months. On anyplans you find the festivals and events of Tornavento with dates, times and place. You sign up and go with others.
 
 ## Festivals and events in Gallarate, Bergamo: 4…
 https://anyplans.in/en/varese/gallarate/
 
 In Gallarate there are 4 events in the coming months. On anyplans you find the festivals and events of Gallarate with dates, times and place. You sign up and go with others.
 
-## Venues in Varese: 34
+## Venues in Varese: 23
 https://anyplans.in/en/varese/venues/
 
-34 venues in Varese and its province with something on: clubs, bars, sports centres, theatres and squares. One page each, with the upcoming dates.
+23 venues in Varese and its province with something on: clubs, bars, sports centres, theatres and squares. One page each, with the upcoming dates.
 
 ## Tablo: events and nights out in Varese
 https://anyplans.in/en/varese/venues/tablo/
 
-Tablo in Varese: 33 upcoming events — dinners & aperitivo, karaoke and talks & culture. Date, time, price and how to join, one page each. You go with other people.
+Tablo in Varese: 25 upcoming events — dinners & aperitivo, talks & culture and karaoke. Date, time, price and how to join, one page each. You go with other people.
 
 ## Materia Spazio Libero: events and nights out in Castronno
 https://anyplans.in/en/varese/venues/materia-spazio-libero/
 
 Materia Spazio Libero in Castronno: 17 upcoming events — talks & culture, guided tours, concerts & live music and yoga & pilates. Date, time, price and how to join, one page each. You go with other people.
 
-## The Padel Resort Como: what's on in Varese
-https://anyplans.in/en/varese/venues/the-padel-resort-como/
-
-The Padel Resort Como in Varese: 9 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
-
 ## WePadel Club - Gallarate: what's on in Varese
 https://anyplans.in/en/varese/venues/wepadel-club-gallarate/
 
 WePadel Club - Gallarate in Varese: 7 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
 
-## Eventi Fuori Milano: events and nights out in Varese
-https://anyplans.in/en/varese/venues/eventi-fuori-milano/
-
-Eventi Fuori Milano in Varese: 10 upcoming events — dinners & aperitivo, concerts & live music, karaoke and singles nights. Date, time, price and how to join, one page each. You go with other people.
-
 ## Green Padel Malpensa: what's on in Varese
 https://anyplans.in/en/varese/venues/green-padel-malpensa/
 
 Green Padel Malpensa in Varese: 7 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
+
+## Eventi Fuori Milano: events and nights out in Varese
+https://anyplans.in/en/varese/venues/eventi-fuori-milano/
+
+Eventi Fuori Milano in Varese: 9 upcoming events — dinners & aperitivo, karaoke, singles nights and talks & culture. Date, time, price and how to join, one page each. You go with other people.
 
 ## Scuola Primaria G. Rodari: what's on in Somma Lombardo
 https://anyplans.in/en/varese/venues/scuola-primaria-g-rodari/
@@ -2314,11 +1661,6 @@ https://anyplans.in/en/varese/venues/chiostro-di-voltorre/
 
 Chiostro di Voltorre in Gavirate: 8 upcoming events — exhibitions, shows & theatre, guided tours and dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
 
-## Yurta - Piazza Giuseppe Verdi: what's on in Como
-https://anyplans.in/en/varese/venues/yurta-piazza-giuseppe-verdi/
-
-Yurta - Piazza Giuseppe Verdi in Como: 8 upcoming events — talks & culture and dancing. Date, time, price and how to join, one page each. You go with other people.
-
 ## STARPADEL Legnano: what's on in Varese
 https://anyplans.in/en/varese/venues/starpadel-legnano/
 
@@ -2329,40 +1671,20 @@ https://anyplans.in/en/varese/venues/padelus-rovello/
 
 PadelUs Rovello in Varese: 6 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
 
-## Let’s Padel Centers - Orsenigo: what's on in Varese
-https://anyplans.in/en/varese/venues/let-s-padel-centers-orsenigo/
-
-Let’s Padel Centers - Orsenigo in Varese: 4 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
-
 ## Juggle Padel Malpensa: what's on in Varese
 https://anyplans.in/en/varese/venues/juggle-padel-malpensa/
 
 Juggle Padel Malpensa in Varese: 5 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
-
-## Centro Parco Ex Dogana Austroungarica: what's on in…
-https://anyplans.in/en/varese/venues/centro-parco-ex-dogana-austroungarica/
-
-Centro Parco Ex Dogana Austroungarica in Tornavento: 6 upcoming events — talks & culture, town festivals & fairs, yoga & pilates and hiking. Date, time, price and how to join, one page each. You go with other people.
 
 ## ARX PADEL: what's on in Varese
 https://anyplans.in/en/varese/venues/arx-padel/
 
 ARX PADEL in Varese: 3 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
 
-## Let's Padel Centers - Anzano del Parco: what's on in…
-https://anyplans.in/en/varese/venues/let-s-padel-centers-anzano-del-parco/
-
-Let's Padel Centers - Anzano del Parco in Varese: 2 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
-
 ## SMASHX3 Bellavista Varese: what's on
 https://anyplans.in/en/varese/venues/smashx3-bellavista-varese/
 
 SMASHX3 Bellavista Varese: 3 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
-
-## Padel Center Italfunivie: what's on in Varese
-https://anyplans.in/en/varese/venues/padel-center-italfunivie/
-
-Padel Center Italfunivie in Varese: 3 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
 
 ## Centro Padel Lago Maggiore: what's on in Varese
 https://anyplans.in/en/varese/venues/centro-padel-lago-maggiore/
@@ -2373,16 +1695,6 @@ Centro Padel Lago Maggiore in Varese: 3 upcoming events — padel. Date, time, p
 https://anyplans.in/en/varese/venues/meeters/
 
 Meeters in Busto Arsizio: 4 upcoming events — guided tours and dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
-
-## WeMeet by WeRoad: what's on in Cadorago
-https://anyplans.in/en/varese/venues/wemeet-by-weroad/
-
-WeMeet by WeRoad in Cadorago: 4 upcoming events — volleyball and guided tours. Date, time, price and how to join, one page each. You go with other people.
-
-## Libreria la Ciurma: what's on in Como
-https://anyplans.in/en/varese/venues/libreria-la-ciurma/
-
-Libreria la Ciurma in Como: 2 upcoming events — town festivals & fairs and talks & culture. Date, time, price and how to join, one page each. You go with other people.
 
 ## Parco Valle del Lanza: what's on in Varese
 https://anyplans.in/en/varese/venues/parco-valle-del-lanza/
@@ -2404,30 +1716,15 @@ https://anyplans.in/en/varese/venues/friends-with-no-limits-mi-va/
 
 Friends with no Limits Mi -Va in Varese: 2 upcoming events — dinners & aperitivo and yoga & pilates. Date, time, price and how to join, one page each. You go with other people.
 
-## Luma: events and nights out in Provincia di Varese
-https://anyplans.in/en/varese/venues/luma/
-
-Luma in Provincia di Varese: 2 upcoming events — concerts & live music and talks & culture. Date, time, price and how to join, one page each. You go with other people.
-
-## Associazione Villa Del Grumello: what's on in Como
-https://anyplans.in/en/varese/venues/associazione-villa-del-grumello/
-
-Associazione Villa Del Grumello in Como: 2 upcoming events — yoga & pilates and cinema. Date, time, price and how to join, one page each. You go with other people.
-
-## Como centro: events and nights out in Varese
-https://anyplans.in/en/varese/venues/como-centro/
-
-Como centro in Varese: 2 upcoming events — concerts & live music and shows & theatre. Date, time, price and how to join, one page each. You go with other people.
-
-## Tempio Voltiano: events and nights out in Como
-https://anyplans.in/en/varese/venues/tempio-voltiano/
-
-Tempio Voltiano in Como: 2 upcoming events — concerts & live music. Date, time, price and how to join, one page each. You go with other people.
-
 ## TENNIS PADEL LAGO MAGGIORE SSD ARL: what's on in Varese
 https://anyplans.in/en/varese/venues/tennis-padel-lago-maggiore-ssd-arl/
 
 TENNIS PADEL LAGO MAGGIORE SSD ARL in Varese: 2 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
+
+## WeMeet by WeRoad: what's on in Somma Lombardo
+https://anyplans.in/en/varese/venues/wemeet-by-weroad/
+
+WeMeet by WeRoad in Somma Lombardo: 2 upcoming events — guided tours. Date, time, price and how to join, one page each. You go with other people.
 
 ## Premio Chiara: what's on in Varese
 https://anyplans.in/en/varese/venues/premio-chiara/
@@ -2438,11 +1735,6 @@ Premio Chiara in Varese: 2 upcoming events — talks & culture and shows & theat
 https://anyplans.in/en/varese/venues/concert-tracker/
 
 Concert Tracker in Varese: 2 upcoming events — concerts & live music and shows & theatre. Date, time, price and how to join, one page each. You go with other people.
-
-## LADIES NIGHT by LongevitySuite – The Padel Resort Como
-https://anyplans.in/en/varese/ladies-night-by-longevitysuite/
-
-Padel in The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como: it already took place, the last date was Monday, 14 September 2026.
 
 ## Cena da Tappo12 Posteria: 7 posti liberi
 https://anyplans.in/en/varese/cena-da-tappo12-posteria-7-posti-liberi/
@@ -2469,40 +1761,15 @@ https://anyplans.in/en/varese/padel-mancano-3-giocatori-competitiva-2026-09-18/
 
 Padel in SMASHX3 Bellavista Varese, Località Campagnola, 21045 Gazzada Schianno, Friday 18 September at 12:30 (7 dates, until 20 September). €13 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori… – The Padel Resort Como, 18 September
-https://anyplans.in/en/varese/padel-mancano-3-giocatori-competitiva-2026-09-18-2/
-
-Padel in The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, Friday 18 September at 14:00 (3 dates, until 18 September). €12.50 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3… – Let’s Padel Centers - Orsenigo, 19 September
+## Padel: mancano 3 giocatori… – Green Padel Malpensa, 19 September
 https://anyplans.in/en/varese/padel-mancano-3-giocatori-competitiva-2026-09-19/
 
-Padel in Let’s Padel Centers - Orsenigo, Via Caio Plinio 22, 22030 Orsenigo, Saturday 19 September at 08:30. €13 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori… – Green Padel Malpensa, 19 September
-https://anyplans.in/en/varese/padel-mancano-3-giocatori-competitiva-2026-09-19-2/
-
 Padel in Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo, Saturday 19 September at 14:00. €15 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3… – Padel - Lomazzo SSD Bassa Comasca, 20 September
-https://anyplans.in/en/varese/padel-mancano-3-giocatori-competitiva-2026-09-20/
-
-Padel in Padel - Lomazzo SSD Bassa Comasca, via del filagno  2 , 22074 Lomazzo, Sunday 20 September at 14:30 (2 dates, until 21 September). €9 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori (competitiva) – Shape Village
-https://anyplans.in/en/varese/padel-mancano-3-giocatori-competitiva-2026-09-22/
-
-Padel in Shape Village, Via Caio Plinio Secondo, 5, 22070 Appiano Gentile, Tuesday 22 September at 18:30. Free (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: mancano 3 giocatori… – WePadel Club - Gallarate, 16 September
 https://anyplans.in/en/varese/padel-mancano-3-giocatori-competitiva-2026-09-16/
 
 Padel in WePadel Club - Gallarate, Viale Lombardia, 49, Gallarate VA, Italy, 21013 Gallarate: it already took place, the last date was Wednesday, 16 September 2026.
-
-## Padel: mancano 3 giocatori… – Padel Center Italfunivie, 16 September
-https://anyplans.in/en/varese/padel-mancano-3-giocatori-competitiva-2026-09-16-2/
-
-Padel in Padel Center Italfunivie, via provinciale 84, 22038 Tavernerio: it already took place, the last date was Wednesday, 16 September 2026.
 
 ## Padel: mancano 3 giocatori (competitiva) – PADEL AIR VARESE
 https://anyplans.in/en/varese/padel-mancano-3-giocatori-competitiva-2026-09-15/
@@ -2514,41 +1781,6 @@ https://anyplans.in/en/varese/cena-da-sushi-club-venegono-inferiore-11-posti-lib
 
 Dinners & aperitivo in Sushi Club Venegono Inferiore: it already took place, the last date was Tuesday, 15 September 2026.
 
-## Padel: mancano 3 giocatori (amichevole) – STARPADEL Legnano
-https://anyplans.in/en/varese/padel-mancano-3-giocatori-amichevole/
-
-Padel in STARPADEL Legnano, Via Monte Rosa 1, 20025 Legnano, Friday 18 September at 16:30. €12.66 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3… – Let’s Padel Centers - Orsenigo, 18 September
-https://anyplans.in/en/varese/padel-mancano-3-giocatori-amichevole-2026-09-18/
-
-Padel in Let’s Padel Centers - Orsenigo, Via Caio Plinio 22, 22030 Orsenigo, Friday 18 September at 21:00. €14 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori… – The Padel Resort Como, 19 September
-https://anyplans.in/en/varese/padel-mancano-3-giocatori-amichevole-2026-09-19/
-
-Padel in The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, Saturday 19 September at 10:30. €15 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori… – Padel Time Champion, 22 September
-https://anyplans.in/en/varese/padel-mancano-3-giocatori-amichevole-2026-09-22/
-
-Padel in Padel Time Champion, Via Torino 7, 21053 Castellanza, Tuesday 22 September at 08:00. €13.50 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 3 giocatori… – Green Padel Malpensa, 17 September
-https://anyplans.in/en/varese/padel-mancano-3-giocatori-amichevole-2026-09-17/
-
-Padel in Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo: it already took place, the last date was Thursday, 17 September 2026.
-
-## Padel: mancano 3 giocatori (amichevole) – Arena4 Grandate
-https://anyplans.in/en/varese/padel-mancano-3-giocatori-amichevole-2026-09-16/
-
-Padel in Arena4 Grandate, Via San Pos 6 Grandate, 22070 Grandate: it already took place, the last date was Wednesday, 16 September 2026.
-
-## Cena da Doppio Malto Casnate: 4 posti liberi
-https://anyplans.in/en/varese/cena-da-doppio-malto-casnate-4-posti-liberi/
-
-Dinners & aperitivo in Doppio Malto Casnate, Prato Pagano: it already took place, the last date was Tuesday, 15 September 2026.
-
 ## RODEO DEL GALLO 🐔 – ARX PADEL
 https://anyplans.in/en/varese/rodeo-del-gallo/
 
@@ -2559,33 +1791,13 @@ https://anyplans.in/en/varese/perfetti-sconosciuti-da-doppio-malto-legnano-10-po
 
 Dinners & aperitivo in Doppio Malto Legnano: it already took place, the last date was Tuesday, 15 September 2026.
 
-## Padel: manca 1 giocatore… – Padel Center Italfunivie, 18 September
-https://anyplans.in/en/varese/padel-manca-1-giocatore-competitiva/
-
-Padel in Padel Center Italfunivie, via provinciale 84, 22038 Tavernerio, Friday 18 September at 18:30 (2 dates, until 19 September). €14 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: manca 1 giocatore… – Let’s Padel Centers - Orsenigo, 18 September
-https://anyplans.in/en/varese/padel-manca-1-giocatore-competitiva-2026-09-18/
-
-Padel in Let’s Padel Centers - Orsenigo, Via Caio Plinio 22, 22030 Orsenigo, Friday 18 September at 21:00. €14 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: manca 1 giocatore… – The Padel Resort Como, 19 September
-https://anyplans.in/en/varese/padel-manca-1-giocatore-competitiva-2026-09-19/
-
-Padel in The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, Saturday 19 September at 07:00 (3 dates, until 24 September). €15 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: manca 1… – Let's Padel Centers - Anzano del Parco, 17 September
-https://anyplans.in/en/varese/padel-manca-1-giocatore-competitiva-2026-09-17/
-
-Padel in Let's Padel Centers - Anzano del Parco, Via Valera, 22040 Anzano del Parco: it already took place, the last date was Thursday, 17 September 2026.
-
 ## Padel: manca 1 giocatore… – Green Padel Malpensa, 17 September
-https://anyplans.in/en/varese/padel-manca-1-giocatore-competitiva-2026-09-17-2/
+https://anyplans.in/en/varese/padel-manca-1-giocatore-competitiva/
 
 Padel in Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo: it already took place, the last date was Thursday, 17 September 2026.
 
 ## Padel: manca 1 giocatore (competitiva) – PADEL AIR VARESE
-https://anyplans.in/en/varese/padel-manca-1-giocatore-competitiva-2026-09-17-3/
+https://anyplans.in/en/varese/padel-manca-1-giocatore-competitiva-2026-09-17/
 
 Padel in PADEL AIR VARESE, VIA PERGINE, 21100 Varese: it already took place, the last date was Thursday, 17 September 2026.
 
@@ -2593,26 +1805,6 @@ Padel in PADEL AIR VARESE, VIA PERGINE, 21100 Varese: it already took place, the
 https://anyplans.in/en/varese/padel-manca-1-giocatore-competitiva-2026-09-15/
 
 Padel in WePadel Club - Gallarate, Viale Lombardia, 49, Gallarate VA, Italy, 21013 Gallarate: it already took place, the last date was Tuesday, 15 September 2026.
-
-## Padel: mancano 2 giocatori… – The Padel Resort Como, 18 September
-https://anyplans.in/en/varese/padel-mancano-2-giocatori-amichevole/
-
-Padel in The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, Friday 18 September at 12:00. €12.50 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 2 giocatori… – Green Padel Malpensa, 18 September
-https://anyplans.in/en/varese/padel-mancano-2-giocatori-amichevole-2026-09-18/
-
-Padel in Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo, Friday 18 September at 18:30. €15 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 2… – Let’s Padel Centers - Orsenigo, 17 September
-https://anyplans.in/en/varese/padel-mancano-2-giocatori-amichevole-2026-09-17/
-
-Padel in Let’s Padel Centers - Orsenigo, Via Caio Plinio 22, 22030 Orsenigo: it already took place, the last date was Thursday, 17 September 2026.
-
-## Padel: mancano 2 giocatori… – Centro Padel Lago Maggiore, 17 September
-https://anyplans.in/en/varese/padel-mancano-2-giocatori-amichevole-2026-09-17-2/
-
-Padel in Centro Padel Lago Maggiore, Via Beati 181, 28053 Castelletto sopra Ticino: it already took place, the last date was Thursday, 17 September 2026.
 
 ## Padel: mancano 2 giocatori… – Green Padel Malpensa, 18 September
 https://anyplans.in/en/varese/padel-mancano-2-giocatori-competitiva/
@@ -2629,16 +1821,6 @@ https://anyplans.in/en/varese/padel-mancano-2-giocatori-competitiva-2026-09-18-2
 
 Padel in Centro Padel Lago Maggiore, Via Beati 181, 28053 Castelletto sopra Ticino, Friday 18 September at 20:00 (2 dates, until 20 September). €14 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 2… – Let’s Padel Centers - Orsenigo, 19 September
-https://anyplans.in/en/varese/padel-mancano-2-giocatori-competitiva-2026-09-19/
-
-Padel in Let’s Padel Centers - Orsenigo, Via Caio Plinio 22, 22030 Orsenigo, Saturday 19 September at 08:30. €13 (Si chiede il posto e si paga su Playtomic).
-
-## Padel: mancano 2 giocatori… – The Padel Resort Como, 21 September
-https://anyplans.in/en/varese/padel-mancano-2-giocatori-competitiva-2026-09-21/
-
-Padel in The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, Monday 21 September at 20:30 (2 dates, until 22 September). €20 (Si chiede il posto e si paga su Playtomic).
-
 ## Padel: mancano 2 giocatori (competitiva) – EoloSportCity
 https://anyplans.in/en/varese/padel-mancano-2-giocatori-competitiva-2026-09-23/
 
@@ -2649,18 +1831,8 @@ https://anyplans.in/en/varese/padel-mancano-2-giocatori-competitiva-2026-09-17/
 
 Padel in Juggle Padel Malpensa, via del Barchello, 1, 21019 Somma Lombardo: it already took place, the last date was Thursday, 17 September 2026.
 
-## Padel: mancano 2… – Padel - Lomazzo SSD Bassa Comasca, 17 September
-https://anyplans.in/en/varese/padel-mancano-2-giocatori-competitiva-2026-09-17-2/
-
-Padel in Padel - Lomazzo SSD Bassa Comasca, via del filagno  2 , 22074 Lomazzo: it already took place, the last date was Thursday, 17 September 2026.
-
-## Padel: mancano 2… – Let's Padel Centers - Anzano del Parco, 16 September
-https://anyplans.in/en/varese/padel-mancano-2-giocatori-competitiva-2026-09-16/
-
-Padel in Let's Padel Centers - Anzano del Parco, Via Valera, 22040 Anzano del Parco: it already took place, the last date was Wednesday, 16 September 2026.
-
 ## Padel: mancano 2 giocatori… – SMASHX3 Bellavista Varese, 16 September
-https://anyplans.in/en/varese/padel-mancano-2-giocatori-competitiva-2026-09-16-2/
+https://anyplans.in/en/varese/padel-mancano-2-giocatori-competitiva-2026-09-16/
 
 Padel in SMASHX3 Bellavista Varese, Località Campagnola, 21045 Gazzada Schianno: it already took place, the last date was Wednesday, 16 September 2026.
 
@@ -2669,30 +1841,35 @@ https://anyplans.in/en/varese/costellazioni-familiari-individuali-a-varese-e-pro
 
 Yoga & pilates in Via Castellazzo, 8, Castronno: it already took place, the last date was Wednesday, 16 September 2026.
 
-## GirOTTO – LA BOLA
-https://anyplans.in/en/varese/girotto/
+## Padel: mancano 3 giocatori (amichevole) – STARPADEL Legnano
+https://anyplans.in/en/varese/padel-mancano-3-giocatori-amichevole/
 
-Padel in LA BOLA, Via Fittavolo, 2,  San Fermo della Battaglia CO, Italia, 22020 San Fermo della Battaglia, Wednesday 23 September at 16:00 (2 dates, until 30 September). €10 (Iscrizione e pagamento su Playtomic).
+Padel in STARPADEL Legnano, Via Monte Rosa 1, 20025 Legnano, Friday 18 September at 16:30. €12.66 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Padel Time Champion, 22 September
+https://anyplans.in/en/varese/padel-mancano-3-giocatori-amichevole-2026-09-22/
+
+Padel in Padel Time Champion, Via Torino 7, 21053 Castellanza, Tuesday 22 September at 08:00. €13.50 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 3 giocatori… – Green Padel Malpensa, 17 September
+https://anyplans.in/en/varese/padel-mancano-3-giocatori-amichevole-2026-09-17/
+
+Padel in Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo: it already took place, the last date was Thursday, 17 September 2026.
+
+## Padel: mancano 2 giocatori… – Green Padel Malpensa, 18 September
+https://anyplans.in/en/varese/padel-mancano-2-giocatori-amichevole/
+
+Padel in Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo, Friday 18 September at 18:30. €15 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2 giocatori… – Centro Padel Lago Maggiore, 17 September
+https://anyplans.in/en/varese/padel-mancano-2-giocatori-amichevole-2026-09-17/
+
+Padel in Centro Padel Lago Maggiore, Via Beati 181, 28053 Castelletto sopra Ticino: it already took place, the last date was Thursday, 17 September 2026.
 
 ## Drink e leggerezza🍻🤙🏻🤙🏻🌴 da The Millenium pub -…
 https://anyplans.in/en/varese/drink-e-leggerezza-da-the-millenium-pub-l-irish-pub-numero-1/
 
 Dinners & aperitivo in The Millenium pub - L'Irish Pub numero 1 in Italia, Busto Arsizio: it already took place, the last date was Wednesday, 16 September 2026.
-
-## 📶📲LIVELLAMENTO PLAYTOMIC📲📶 – PadelUs Rovello
-https://anyplans.in/en/varese/livellamento-playtomic/
-
-Padel in PadelUs Rovello, Via Francesco Petrarca, 22070  Rovello Porro, Monday 21 September at 18:00. €20 (Iscrizione e pagamento su Playtomic).
-
-## livellamento playtomic – Let’s Padel Centers - Orsenigo
-https://anyplans.in/en/varese/livellamento-playtomic-2026-09-16/
-
-Padel in Let’s Padel Centers - Orsenigo, Via Caio Plinio 22, 22030 Orsenigo: it already took place, the last date was Wednesday, 16 September 2026.
-
-## Cena da PlayUp: 2 posti liberi
-https://anyplans.in/en/varese/cena-da-playup-2-posti-liberi/
-
-Dinners & aperitivo in PlayUp, Villa Guardia: it already took place, the last date was Wednesday, 16 September 2026.
 
 ## PARTITA GUIDATA CON TEO – ARX PADEL
 https://anyplans.in/en/varese/partita-guidata-con-teo/
@@ -2704,18 +1881,23 @@ https://anyplans.in/en/varese/morning-padelus/
 
 Padel in PadelUs Rovello, Via Francesco Petrarca, 22070  Rovello Porro, Thursday 24 September at 10:30 (2 dates, until 1 October). €12 (Iscrizione e pagamento su Playtomic).
 
+## Latin Summer Vibes del giovedì 🎙️🥂🌺 da Pizzeria Lido…
+https://anyplans.in/en/varese/latin-summer-vibes-del-giovedi-da-pizzeria-lido-2-0-beach-cl/
+
+Dinners & aperitivo in Pizzeria Lido 2.0 Beach Club, Porto Ceresio: it already took place, the last date was Thursday, 17 September 2026.
+
+## Anatomia di uno scrittore – Materia Spazio Libero
+https://anyplans.in/en/varese/anatomia-di-uno-scrittore/
+
+Talks & culture in Materia Spazio Libero, Castronno: it already took place, the last date was Thursday, 17 September 2026.
+
 ## Padel: manca 1 giocatore (amichevole) – STARPADEL Legnano
 https://anyplans.in/en/varese/padel-manca-1-giocatore-amichevole/
 
 Padel in STARPADEL Legnano, Via Monte Rosa 1, 20025 Legnano, Friday 18 September at 12:00. €10 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: manca 1 giocatore… – The Padel Resort Como, 18 September
-https://anyplans.in/en/varese/padel-manca-1-giocatore-amichevole-2026-09-18/
-
-Padel in The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, Friday 18 September at 12:30. €12.50 (Si chiede il posto e si paga su Playtomic).
-
 ## Padel: manca 1 giocatore… – Centro Padel Lago Maggiore, 18 September
-https://anyplans.in/en/varese/padel-manca-1-giocatore-amichevole-2026-09-18-2/
+https://anyplans.in/en/varese/padel-manca-1-giocatore-amichevole-2026-09-18/
 
 Padel in Centro Padel Lago Maggiore, Via Beati 181, 28053 Castelletto sopra Ticino, Friday 18 September at 19:00. €14 (Si chiede il posto e si paga su Playtomic).
 
@@ -2723,46 +1905,6 @@ Padel in Centro Padel Lago Maggiore, Via Beati 181, 28053 Castelletto sopra Tici
 https://anyplans.in/en/varese/padel-manca-1-giocatore-amichevole-2026-09-17/
 
 Padel in WePadel Club - Gallarate, Viale Lombardia, 49, Gallarate VA, Italy, 21013 Gallarate: it already took place, the last date was Thursday, 17 September 2026.
-
-## Padel: manca 1 giocatore (amichevole) – Shape Village
-https://anyplans.in/en/varese/padel-manca-1-giocatore-amichevole-2026-09-17-2/
-
-Padel in Shape Village, Via Caio Plinio Secondo, 5, 22070 Appiano Gentile: it already took place, the last date was Thursday, 17 September 2026.
-
-## Padel: manca 1 giocatore (amichevole) – Newlariopark
-https://anyplans.in/en/varese/padel-manca-1-giocatore-amichevole-2026-09-17-3/
-
-Padel in Newlariopark, Via Olimpica, 1, lipomo CO, Italy, 22030 Lipomo: it already took place, the last date was Thursday, 17 September 2026.
-
-## Padel: manca 1… – Let's Padel Centers - Anzano del Parco, 17 September
-https://anyplans.in/en/varese/padel-manca-1-giocatore-amichevole-2026-09-17-4/
-
-Padel in Let's Padel Centers - Anzano del Parco, Via Valera, 22040 Anzano del Parco: it already took place, the last date was Thursday, 17 September 2026.
-
-## Latin Summer Vibes del giovedì 🎙️🥂🌺 da Pizzeria Lido…
-https://anyplans.in/en/varese/latin-summer-vibes-del-giovedi-da-pizzeria-lido-2-0-beach-cl/
-
-Dinners & aperitivo in Pizzeria Lido 2.0 Beach Club, Porto Ceresio: it already took place, the last date was Thursday, 17 September 2026.
-
-## Isola dei classici - Cent'anni di solitudine – Como
-https://anyplans.in/en/varese/isola-dei-classici-cent-anni-di-solitudine/
-
-Talks & culture in Libreria la Ciurma, Como: it already took place, the last date was Thursday, 17 September 2026.
-
-## Anatomia di uno scrittore – Materia Spazio Libero
-https://anyplans.in/en/varese/anatomia-di-uno-scrittore/
-
-Talks & culture in Materia Spazio Libero, Castronno: it already took place, the last date was Thursday, 17 September 2026.
-
-## The Como Lakers: Una palestra di public speaking
-https://anyplans.in/en/varese/the-como-lakers-una-palestra-di-public-speaking/
-
-Talks & culture in The Como Lakers Toastmasters Club, Como: it already took place, the last date was Thursday, 17 September 2026.
-
-## Alessia La Corte presenta "Terra Bruciata" • Ostello…
-https://anyplans.in/en/varese/alessia-la-corte-presenta-terra-bruciata-ostello-bello-como/
-
-Concerts & live music in Ostello Bello Como - Hostel and Bar, Como: it already took place, the last date was Thursday, 17 September 2026.
 
 ## Chi emigrava dimenticava il proprio dialetto? – Castronno
 https://anyplans.in/en/varese/chi-emigrava-dimenticava-il-proprio-dialetto/
@@ -2814,30 +1956,10 @@ https://anyplans.in/en/varese/cena-da-villa-cocca-8-posti-liberi/
 
 Dinners & aperitivo in Villa Cocca, Gavirate, Friday 18 September at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Presentazione con l'autrice Eleonora Sacco + laboratorio e aperitivo – Como
-https://anyplans.in/en/varese/presentazione-con-l-autrice-eleonora-sacco-laboratorio-e-ape/
-
-Dinners & aperitivo in Campo Terra Viva, Como, Friday 18 September at 18:00. Free (Biglietti su Eventbrite).
-
 ## 🥂🥂 APERICENA INSIEME 🥂 da Ritual Club & Lounge: 3…
 https://anyplans.in/en/varese/apericena-insieme-da-ritual-club-lounge-3-posti-liberi/
 
 Dinners & aperitivo in Ritual Club & Lounge, Castellanza, Friday 18 September at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Pizza o carne. Dance 80 90 dj PANICO da Lunario Cantù:…, 18 September
-https://anyplans.in/en/varese/pizza-o-carne-dance-80-90-dj-panico-da-lunario-cantu-6-posti/
-
-Dinners & aperitivo in Lunario Cantù, Friday 18 September at 18:15. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Pizza o carne. Dance 80 90 dj PANICO da Lunario Cantù:…, 18 September
-https://anyplans.in/en/varese/pizza-o-carne-dance-80-90-dj-panico-da-lunario-cantu-11-post/
-
-Dinners & aperitivo in Lunario Cantù, Friday 18 September at 18:15. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Dinner +;Ballo in compagnia 🍾😻🎙️ da ROADHOUSE…
-https://anyplans.in/en/varese/dinner-ballo-in-compagnia-da-roadhouse-restaurant-olgiate-co/
-
-Dinners & aperitivo in ROADHOUSE RESTAURANT OLGIATE COMASCO, Friday 18 September at 18:15. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## Cena da Villa Cocca: 7 posti liberi
 https://anyplans.in/en/varese/cena-da-villa-cocca-7-posti-liberi/
@@ -2859,20 +1981,10 @@ https://anyplans.in/en/varese/cena-da-fermata-24-ristorante-pizzeria-14-posti-li
 
 Dinners & aperitivo in Fermata 24 “Ristorante & Pizzeria”, Castelletto sopra Ticino, Friday 18 September at 19:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Cena da il Birrivico: 4 posti liberi
-https://anyplans.in/en/varese/cena-da-il-birrivico-4-posti-liberi/
-
-Dinners & aperitivo in il Birrivico, Como, Friday 18 September at 19:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Festa dell Uva Rescalda 2026
 https://anyplans.in/en/varese/festa-dell-uva-rescalda-2026/
 
 Town festival in Rescalda, Friday 18 September at 19:00 (2 dates, until 19 September). Free.
-
-## Lions Swing Night – Oratorio di Piazza Santo Stefano
-https://anyplans.in/en/varese/lions-swing-night/
-
-Concerts & live music in Oratorio di Piazza Santo Stefano, Cernobbio, Friday 18 September at 19:30. Free (Biglietti su Eventbrite).
 
 ## Cena da Johnnie Fox's: 1 posto libero
 https://anyplans.in/en/varese/cena-da-johnnie-fox-s-1-posto-libero/
@@ -2888,11 +2000,6 @@ Singles nights in Pub legnano, Friday 18 September at 19:30. €5 (Accredito su 
 https://anyplans.in/en/varese/juggle-slam-entry-level/
 
 Padel in Juggle Padel Malpensa, via del Barchello, 1, 21019 Somma Lombardo, Friday 18 September at 20:00 (7 dates, until 11 December). €25 (Iscrizione e pagamento su Playtomic).
-
-## Karaoke da Black Horse Pub: 7 posti liberi
-https://anyplans.in/en/varese/karaoke-da-black-horse-pub-7-posti-liberi/
-
-Karaoke in Black Horse Pub, Cermenate, Friday 18 September at 20:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## 💥Contest Mid Level 2.0-3.5💥 – Green Padel Malpensa
 https://anyplans.in/en/varese/contest-mid-level-2-0-3-5/
@@ -2929,11 +2036,6 @@ https://anyplans.in/en/varese/10-anni-di-circolo-gagarin-storia-impatto-e-spazi-
 
 Guided tours in Materia Spazio Libero, Castronno, Friday 18 September at 21:00. Free (Biglietti su Eventbrite).
 
-## 18th SEPTEMBER - Lake Como - Free Entry English Standup…
-https://anyplans.in/en/varese/18th-september-lake-como-free-entry-english-standup-comedy/
-
-Shows & theatre in Ostello Bello Lake Como, Como, Friday 18 September at 21:00. Free (Biglietti su Eventbrite).
-
 ## Cena da Discoteca Gilda: 3 posti liberi
 https://anyplans.in/en/varese/cena-da-discoteca-gilda-3-posti-liberi/
 
@@ -2954,16 +2056,6 @@ https://anyplans.in/en/varese/impianti-aperti-teleriscaldamento-di-varese/
 
 Talks & culture in Via Ottorino Rossi, 19, Varese, Saturday 19 September at 09:00. Free (Biglietti su Eventbrite).
 
-## Breath Walking e Musica delle Piante – Lonate Pozzolo
-https://anyplans.in/en/varese/breath-walking-e-musica-delle-piante/
-
-Concerts & live music in Lonate Pozzolo, Tornavento (VA), Saturday 19 September at 09:30. €5 (Accredito su comehome; il resto si paga in loco).
-
-## VOCI E SUONI DELLA NATURA – Tornavento
-https://anyplans.in/en/varese/voci-e-suoni-della-natura-oltre-lo-sguardo/
-
-Talks & culture in Centro Parco Ex Dogana Austroungarica, Tornavento, Saturday 19 September at 10:00. Free (Biglietti su Eventbrite).
-
 ## Torneo Padel SETTEMBRE CUP (Livello PT 0-3) – Varese
 https://anyplans.in/en/varese/torneo-padel-settembre-cup-livello-pt-0-3/
 
@@ -2979,45 +2071,15 @@ https://anyplans.in/en/varese/incontri-d-autore-lampi-di-luce/
 
 Town festival in Sala Morselli / Biblioteca Civica, Varese, Saturday 19 September at 10:30. Free (Biglietti su Eventbrite).
 
-## Lezione partita – The Padel Resort Como
-https://anyplans.in/en/varese/lezione-partita/
-
-Padel in The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, Saturday 19 September at 11:00 (4 dates, until 24 September). €25 (Iscrizione e pagamento su Playtomic).
-
 ## INCONTRO CON L'AUTORE GIAN ANDREA CERONE – Olgiate Olona
 https://anyplans.in/en/varese/incontro-con-l-autore-gian-andrea-cerone/
 
 Town festival in Via Luigia Greppi, 9, Olgiate Olona, Saturday 19 September at 11:00. Free (Biglietti su Eventbrite).
 
-## THE PADEL RESORT - TOTAL WHITE EDITION – Varese
-https://anyplans.in/en/varese/the-padel-resort-total-white-edition/
-
-Padel in The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, Saturday 19 September at 14:00. €35 (Iscrizione e pagamento su Playtomic).
-
-## William Turner a Como - Visita guidata 19/09
-https://anyplans.in/en/varese/william-turner-a-como-visita-guidata-19-09/
-
-Guided tours in Piazza Guido Grimoldi, Como, Saturday 19 September at 14:00. Free (Biglietti su Eventbrite).
-
-## TRACCE E SAPORI IN BRUGHIERA – Tornavento
-https://anyplans.in/en/varese/tracce-e-sapori-in-brughiera/
-
-Town festival in Centro Parco Ex Dogana Austroungarica, Tornavento, Saturday 19 September at 14:30. Free (Biglietti su Eventbrite).
-
-## SINFONIA VERDE – Centro Parco Ex Dogana Austroungarica
-https://anyplans.in/en/varese/sinfonia-verde/
-
-Talks & culture in Centro Parco Ex Dogana Austroungarica, Tornavento, Saturday 19 September at 14:30. Free (Biglietti su Eventbrite).
-
 ## La Biodiversità del suolo – Varese
 https://anyplans.in/en/varese/la-biodiversita-del-suolo/
 
 Hiking in Via Molino del Trotto, 22070 Solbiate con Cagno CO, Italia, Varese, Saturday 19 September at 15:00. Free (Ingresso: vedi la pagina AllEvents).
-
-## Visita guidata al Duomo di Como
-https://anyplans.in/en/varese/visita-guidata-al-duomo-di-como/
-
-Guided tours in Cattedrale di Santa Maria Assunta / Duomo di Como, Como, Saturday 19 September at 15:00. Free (Biglietti su Eventbrite).
 
 ## Giochi da tavolo da Fradiavolo Pizzeria - Varese: 5…
 https://anyplans.in/en/varese/giochi-da-tavolo-da-fradiavolo-pizzeria-varese-5-posti-liber/
@@ -3059,16 +2121,6 @@ https://anyplans.in/en/varese/quando-un-boccone-incontra-il-suo-sorso-divino/
 
 Dinners & aperitivo in Somma Lombardo, Saturday 19 September at 20:00. €39 (Accredito su comehome; il resto si paga in loco).
 
-## FESTA DI FINE ESTATE • Ostello Bello Como
-https://anyplans.in/en/varese/festa-di-fine-estate-ostello-bello-como/
-
-Nights out in Ostello Bello Como - Hostel and Bar, Como, Saturday 19 September at 20:30. Free (Biglietti su Eventbrite).
-
-## VERSUS – Teatro Sociale di Como - AsLiCo
-https://anyplans.in/en/varese/versus/
-
-Shows & theatre in Teatro Sociale di Como - AsLiCo, Como, Saturday 19 September at 20:30. Free (Biglietti su Eventbrite).
-
 ## Cecilia Barra & Lost Generation(s) at VCC - show 2 – Varese
 https://anyplans.in/en/varese/cecilia-barra-lost-generation-s-at-vcc-show-2/
 
@@ -3099,20 +2151,10 @@ https://anyplans.in/en/varese/women-s-padel-day/
 
 Padel in #4 Padel, Via Enrico Mattei 212, 21050 Gorla Maggiore, Sunday 20 September at 09:00. €25 (Iscrizione e pagamento su Playtomic).
 
-## PASSI DI SALUTE – Centro Parco Ex Dogana Austroungarica
-https://anyplans.in/en/varese/passi-di-salute/
-
-Yoga & pilates in Centro Parco Ex Dogana Austroungarica, Tornavento, Sunday 20 September at 10:00. Free (Biglietti su Eventbrite).
-
 ## Softember. Soft-clubbing – Villa de Angeli Frua
 https://anyplans.in/en/varese/softember-soft-clubbing-brunch-e-live-music-by-dischi-lacust/
 
 Concerts & live music in Villa de Angeli Frua, Provincia di Varese, Sunday 20 September at 10:00. Free (Gratis, registrazione su Luma).
-
-## NORDIC WALKING - Le Basi della Camminata Nordica – Tornavento
-https://anyplans.in/en/varese/nordic-walking-le-basi-della-camminata-nordica/
-
-Hiking in Centro Parco Ex Dogana Austroungarica, Tornavento, Sunday 20 September at 10:00. Free (Biglietti su Eventbrite).
 
 ## Torneo Padel SETTEMBRE CUP (Livello PT 0-1) – Varese
 https://anyplans.in/en/varese/torneo-padel-settembre-cup-livello-pt-0-1/
@@ -3144,11 +2186,6 @@ https://anyplans.in/en/varese/lega-sunday-arx-master-finale/
 
 Padel in ARX PADEL, via Curtatone 20, 21013 Gallarate, Sunday 20 September at 11:00. €25 (Iscrizione e pagamento su Playtomic).
 
-## BAGNI DI FORESTA E YOGA – Tornavento
-https://anyplans.in/en/varese/bagni-di-foresta-e-yoga/
-
-Yoga & pilates in Centro Parco Ex Dogana Austroungarica, Tornavento, Sunday 20 September at 14:30. Free (Biglietti su Eventbrite).
-
 ## Ticino. Il racconto della terra. – Chiostro di Voltorre
 https://anyplans.in/en/varese/ticino-il-racconto-della-terra/
 
@@ -3164,11 +2201,6 @@ https://anyplans.in/en/varese/aperitivo-a-buffet-cantato-e-ballato-dj-set-da-rit
 
 Dinners & aperitivo in Ritual Club & Lounge, Castellanza, Sunday 20 September at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Cognitive Positioning Systems & Mind Atlas - Polymathic Language Cycles – Milan
-https://anyplans.in/en/varese/cognitive-positioning-systems-mind-atlas-polymathic-language/
-
-Yoga & pilates in Milan, Milan, Sunday 20 September at 19:00. Free (Biglietti su Eventbrite).
-
 ## Cena da Mokha - Bar e Ristorante - Varese e provincia:…
 https://anyplans.in/en/varese/cena-da-mokha-bar-e-ristorante-varese-e-provincia-5-posti-li/
 
@@ -3183,6 +2215,11 @@ Dancing in Salone Estense, Varese, Sunday 20 September at 20:30. Free (Ingresso:
 https://anyplans.in/en/varese/forever-padel/
 
 Padel in STARPADEL Legnano, Via Monte Rosa 1, 20025 Legnano, Monday 21 September at 10:00. €10 (Iscrizione e pagamento su Playtomic).
+
+## 📶📲LIVELLAMENTO PLAYTOMIC📲📶 – PadelUs Rovello
+https://anyplans.in/en/varese/livellamento-playtomic/
+
+Padel in PadelUs Rovello, Via Francesco Petrarca, 22070  Rovello Porro, Monday 21 September at 18:00. €20 (Iscrizione e pagamento su Playtomic).
 
 ## corso adulti – Juggle Padel Malpensa
 https://anyplans.in/en/varese/corso-adulti/
@@ -3254,35 +2291,15 @@ https://anyplans.in/en/varese/videodance-medie-e-superiori/
 
 Gym in Scuola Primaria G. Rodari, Somma Lombardo, Wednesday 23 September at 18:30. Free (Biglietti su Eventbrite).
 
-## Festa Patronale di San Michele Figino Serenza 2026
-https://anyplans.in/en/varese/festa-patronale-di-san-michele-figino-serenza-2026/
-
-Town festival in Figino Serenza, Wednesday 23 September at 19:00 (6 dates, until 28 September). Free.
-
 ## Chiacchiere e Biliardino in Legnano, 23 September
 https://anyplans.in/en/varese/chiacchiere-e-biliardino/
 
 Talks & culture in Legnano, Wednesday 23 September at 20:00. €3 (Accredito su comehome; il resto si paga in loco).
 
-## Come lucciole - Con Le Sfogliatelle Francesca Valente – Cantù
-https://anyplans.in/en/varese/come-lucciole-con-le-sfogliatelle-francesca-valente/
-
-Talks & culture in Basilica di San Vincenzo in Galliano, Cantù, Wednesday 23 September at 21:00. Free (Biglietti su Eventbrite).
-
 ## Dalle felpe al generale: come si raccontano Salvini e Vannacci – Castronno
 https://anyplans.in/en/varese/dalle-felpe-al-generale-come-si-raccontano-salvini-e-vannacc/
 
 Talks & culture in Materia Spazio Libero, Castronno, Wednesday 23 September at 21:00. Free (Biglietti su Eventbrite).
-
-## Tra natura e ambiente: le origini profonde della malattia mentale – Como
-https://anyplans.in/en/varese/tra-natura-e-ambiente-le-origini-profonde-della-malattia-men/
-
-Yoga & pilates in Associazione Villa Del Grumello, Como, Thursday 24 September at 18:00. Free (Biglietti su Eventbrite).
-
-## Luce e tecnologie quantistiche – Como
-https://anyplans.in/en/varese/luce-e-tecnologie-quantistiche/
-
-Talks & culture in Yurta - Piazza Giuseppe Verdi, Como, Thursday 24 September at 18:00. Free (Biglietti su Eventbrite).
 
 ## Discover IE University & IENYC – Varese TBC
 https://anyplans.in/en/varese/discover-ie-university-ienyc/
@@ -3293,16 +2310,6 @@ Talks & culture in Varese TBC, Varese, Thursday 24 September at 18:00. Free (Big
 https://anyplans.in/en/varese/discover-ie-university-ienyc-bachelor-programs/
 
 Talks & culture in Varese TBC, Varese, Thursday 24 September at 18:00. Free (Ingresso: vedi la pagina AllEvents).
-
-## Karaoke da Shabu Como: 7 posti liberi
-https://anyplans.in/en/varese/karaoke-da-shabu-como-7-posti-liberi/
-
-Karaoke in Shabu Como, Thursday 24 September at 18:45. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## La seta come piattaforma di luce – Como
-https://anyplans.in/en/varese/la-seta-come-piattaforma-di-luce/
-
-Talks & culture in Yurta - Piazza Giuseppe Verdi, Como, Thursday 24 September at 19:00. Free (Biglietti su Eventbrite).
 
 ## Due verità e una bugia in Legnano, 24 September
 https://anyplans.in/en/varese/due-verita-e-una-bugia/
@@ -3324,40 +2331,15 @@ https://anyplans.in/en/varese/occhio-al-futuro-prevenire-la-miopia-si-puo/
 
 Talks & culture in Materia Spazio Libero, Castronno, Thursday 24 September at 21:00. Free (Biglietti su Eventbrite).
 
-## Aperitivo con concerto – Como centro
-https://anyplans.in/en/varese/aperitivo-con-concerto/
-
-Concerts & live music in Como centro, Friday 25 September at 00:00. €14 (Accredito su comehome; il resto si paga in loco).
-
-## concerto dal vivo – Ferno
-https://anyplans.in/en/varese/concerto-dal-vivo/
-
-Concerts & live music in Via Padre Pedrotti, Ferno, Friday 25 September at 10:00. Free (Biglietti su Eventbrite).
-
 ## KING FRIDAY BY CARDA – WePadel Club - Gallarate
 https://anyplans.in/en/varese/king-friday-by-carda/
 
 Padel in WePadel Club - Gallarate, Viale Lombardia, 49, Gallarate VA, Italy, 21013 Gallarate, Friday 25 September at 12:00. €15 (Iscrizione e pagamento su Playtomic).
 
-## LA VOLTA CELESTE – Tempio Voltiano
-https://anyplans.in/en/varese/la-volta-celeste/
-
-Concerts & live music in Tempio Voltiano, Como, Friday 25 September at 18:00. Free (Biglietti su Eventbrite).
-
-## Cena da Food truck Dal Vezza: 6 posti liberi
-https://anyplans.in/en/varese/cena-da-food-truck-dal-vezza-6-posti-liberi/
-
-Dinners & aperitivo in Food truck Dal Vezza, Veniano, Friday 25 September at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Aperitivo a buffet. Cantato e danc – Ritual Club & Lounge
 https://anyplans.in/en/varese/aperitivo-a-buffet-cantato-e-danc-dj-carelli-da-ritual-club-/
 
 Dinners & aperitivo in Ritual Club & Lounge, Castellanza, Friday 25 September at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Quando il colore non basta: imaging iperspettrale e opere d'arte – Como
-https://anyplans.in/en/varese/quando-il-colore-non-basta-imaging-iperspettrale-e-opere-d-a/
-
-Talks & culture in Yurta - Piazza Giuseppe Verdi, Como, Friday 25 September at 18:00. Free (Biglietti su Eventbrite).
 
 ## MISTO ENTRY LEVEL – WePadel Club - Gallarate
 https://anyplans.in/en/varese/misto-entry-level/
@@ -3373,11 +2355,6 @@ Guided tours in Peveranza (VA), Friday 25 September at 19:00 (4 dates, until 28 
 https://anyplans.in/en/varese/risveglia-la-tua-energia-kundalini-busto-arsizio/
 
 Yoga & pilates in Via Cesare Correnti, 1, Busto Arsizio, Friday 25 September at 19:00. Free (Biglietti su Eventbrite).
-
-## Beach Volley Time – Arena beach Cadorago
-https://anyplans.in/en/varese/beach-volley-time/
-
-Volleyball in Arena beach Cadorago, Cadorago, Friday 25 September at 19:30. €18 (Si paga su WeMeet (WeRoad)).
 
 ## Mesci ed Esci @HOME - Connessioni al femminile – Cislago
 https://anyplans.in/en/varese/mesci-ed-esci-home-connessioni-al-femminile/
@@ -3404,11 +2381,6 @@ https://anyplans.in/en/varese/the-90s-vibes-aperitivo-party/
 
 Nights out in Castellanza - Legnano, Friday 25 September at 20:45. €5 (Accredito su comehome; il resto si paga in loco).
 
-## Violin Show: concerto a lume di candela presso il CORTILE ME – Olgiate Comasco
-https://anyplans.in/en/varese/violin-show-concerto-a-lume-di-candela-presso-il-cortile-me/
-
-Guided tours in Olgiate Comasco, Olgiate Comasco, Friday 25 September at 21:00. €21 (Si paga su WeMeet (WeRoad)).
-
 ## Incontro con l'autrice Barbara Perna – Olgiate Olona
 https://anyplans.in/en/varese/incontro-con-l-autrice-barbara-perna/
 
@@ -3428,16 +2400,6 @@ Gym in 92LabAthletics, Velate, Saturday 26 September at 09:30. Free (Biglietti s
 https://anyplans.in/en/varese/last-summer-mix-al-parco/
 
 Padel in Centro Padel Lago Maggiore, Via Beati 181, 28053 Castelletto sopra Ticino, Saturday 26 September at 09:30. €25 (Iscrizione e pagamento su Playtomic).
-
-## Visita la Chiesa romanica di Sant'Agata a Moltrasio
-https://anyplans.in/en/varese/visita-la-chiesa-romanica-di-sant-agata-a-moltrasio/
-
-Guided tours in Chiesa di Sant'Agata, Moltrasio, Saturday 26 September at 10:00. Free (Biglietti su Eventbrite).
-
-## Alessandro Volta e il teatro – Como
-https://anyplans.in/en/varese/alessandro-volta-e-il-teatro/
-
-Guided tours in Sala Bianca del Teatro Sociale, Como, Saturday 26 September at 10:00. Free (Biglietti su Eventbrite).
 
 ## Torneo MISTO di fine estate – Varese
 https://anyplans.in/en/varese/torneo-misto-di-fine-estate/
@@ -3484,45 +2446,15 @@ https://anyplans.in/en/varese/apertura-straordinaria-visita-guidata-del-castello
 
 Guided tours in Castello Visconti, Somma Lombardo, Saturday 26 September at 15:00. €17 (Si paga su WeMeet (WeRoad)).
 
-## Coding Lab | Como Grandate – Centro Polifunzionale Grandate
-https://anyplans.in/en/varese/coding-lab-como-grandate/
-
-Talks & culture in Centro Polifunzionale Grandate, Grandate, Saturday 26 September at 15:00. Free (Biglietti su Eventbrite).
-
 ## Workshop Yoga X Core Strength – Varese
 https://anyplans.in/en/varese/workshop-yoga-x-core-strength/
 
 Talks & culture in Parco di Villa Torelli Mylius, Varese, Saturday 26 September at 16:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## Luce per lo studio e la salute del cervello – Como
-https://anyplans.in/en/varese/luce-per-lo-studio-e-la-salute-del-cervello/
-
-Talks & culture in Yurta - Piazza Giuseppe Verdi, Como, Saturday 26 September at 17:00. Free (Biglietti su Eventbrite).
-
-## ORME DI BELLEZZA Spettacolo itinerante nel Villaggio Operaio Somaini – Lomazzo
-https://anyplans.in/en/varese/orme-di-bellezza-spettacolo-itinerante-nel-villaggio-operaio/
-
-Shows & theatre in Chiesa Parrocchiale di San Siro Vescovo, Lomazzo, Saturday 26 September at 17:00. Free (Biglietti su Eventbrite).
-
-## Indossa l’Energia: dal Colore all’Essenza _ Vol.4 – Varese
-https://anyplans.in/en/varese/indossa-l-energia-dal-colore-all-essenza-vol-4/
-
-Yoga & pilates in Casnate con Bernate (CO), Saturday 26 September at 17:00. €30 (Accredito su comehome; il resto si paga in loco).
-
 ## Aperi Mindfulness in Legnano, 26 September
 https://anyplans.in/en/varese/aperi-mindfulness/
 
 Yoga & pilates in Legnano, Saturday 26 September at 17:00. €15 (Accredito su comehome; il resto si paga in loco).
-
-## Incontro con il Premio Nobel per la Fisica Kostya Novoselov – Como
-https://anyplans.in/en/varese/incontro-con-il-premio-nobel-per-la-fisica-kostya-novoselov/
-
-Talks & culture in Yurta - Piazza Giuseppe Verdi, Como, Saturday 26 September at 18:00. Free (Biglietti su Eventbrite).
-
-## Cena col QUIZZONE in una sala riservata da Wiener Haus:…
-https://anyplans.in/en/varese/cena-col-quizzone-in-una-sala-riservata-da-wiener-haus-7-pos/
-
-Dinners & aperitivo in Wiener Haus, Como, Saturday 26 September at 18:15. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## E se fosse proprio questa la sera giusta? – Legnano
 https://anyplans.in/en/varese/e-se-fosse-proprio-questa-la-sera-giusta/
@@ -3554,20 +2486,10 @@ https://anyplans.in/en/varese/la-torre-romana-del-san-maffeo-e-la-difesa-del-con
 
 Talks & culture in Via Peschiera, 22070 Rodero CO, Italia, 22070 Rodero CO, Sunday 27 September at 09:00. Free (Biglietti su Eventbrite).
 
-## Fall Equinox Ceremony – Carate Urio
-https://anyplans.in/en/varese/fall-equinox-ceremony/
-
-Talks & culture in Carate Urio, Carate Urio, Sunday 27 September at 10:00. Free (Biglietti su Eventbrite).
-
 ## GOLDEN CUP BY ITALPREZIOSI Maschile – Varese
 https://anyplans.in/en/varese/golden-cup-by-italpreziosi-maschile/
 
 Padel in WePadel Club - Gallarate, Viale Lombardia, 49, Gallarate VA, Italy, 21013 Gallarate, Sunday 27 September at 10:00. €30 (Iscrizione e pagamento su Playtomic).
-
-## L’energia invisibile. Il nucleare e il mondo che abitiamo. – Como
-https://anyplans.in/en/varese/l-energia-invisibile-il-nucleare-e-il-mondo-che-abitiamo/
-
-Talks & culture in Yurta - Piazza Giuseppe Verdi, Como, Sunday 27 September at 11:30. Free (Biglietti su Eventbrite).
 
 ## MINI LEGA - ARX feat GREEN - Entry level – ARX PADEL
 https://anyplans.in/en/varese/mini-lega-arx-feat-green-entry-level/
@@ -3579,21 +2501,6 @@ https://anyplans.in/en/varese/pomeriggio-botanico-al-parco-archeologico-di-caste
 
 Talks & culture in Via Castelvecchio, 1513, 21050 Castelseprio VA, Italia, 1513, Sunday 27 September at 14:30. Free (Biglietti su Eventbrite).
 
-## Vedere l'Invisibile attraverso gli occhi del James Webb Space Telescope – Como
-https://anyplans.in/en/varese/vedere-l-invisibile-attraverso-gli-occhi-del-james-webb-spac/
-
-Talks & culture in Yurta - Piazza Giuseppe Verdi, Como, Sunday 27 September at 17:00. Free (Biglietti su Eventbrite).
-
-## Luce instabile: ai confini tra l'ordine e il caos – Como
-https://anyplans.in/en/varese/luce-instabile-ai-confini-tra-l-ordine-e-il-caos/
-
-Dancing in Yurta - Piazza Giuseppe Verdi, Como, Sunday 27 September at 18:00. Free (Biglietti su Eventbrite).
-
-## Stand up comedy! in Como centro, 27 September
-https://anyplans.in/en/varese/stand-up-comedy/
-
-Shows & theatre in Como centro, Sunday 27 September at 20:00. €14 (Accredito su comehome; il resto si paga in loco).
-
 ## THE REVEREND PEYTON’S BIG DAMN BAND – Lonate Ceppino
 https://anyplans.in/en/varese/the-reverend-peyton-s-big-damn-band/
 
@@ -3604,30 +2511,15 @@ https://anyplans.in/en/varese/international-conference-on-psychology-and-mental-
 
 Yoga & pilates in ibis Milano Malpensa Aeroporto, Cardano Al Campo, Monday 28 September at 10:00. Free (Biglietti su Eventbrite).
 
-## Taqquini – Upcycling di carta – Memesi
-https://anyplans.in/en/varese/taqquini-upcycling-di-carta/
-
-Pottery in Memesi, Como, Monday 28 September at 14:00. Free (Biglietti su Eventbrite).
-
 ## 🟪PARTITA GUIDATA CON PISO🟪 – PadelUs Rovello
 https://anyplans.in/en/varese/partita-guidata-con-piso/
 
 Padel in PadelUs Rovello, Via Francesco Petrarca, 22070  Rovello Porro, Monday 28 September at 17:00. €23 (Iscrizione e pagamento su Playtomic).
 
-## 8° incontro: Gloria – Libreria la Ciurma
-https://anyplans.in/en/varese/8-incontro-gloria-noviolet-bulawayo/
-
-Town festival in Libreria la Ciurma, Como, Monday 28 September at 18:30. Free (Biglietti su Eventbrite).
-
 ## Acrobatica – Scuola Primaria G. Rodari
 https://anyplans.in/en/varese/acrobatica/
 
 Gym in Scuola Primaria G. Rodari, Somma Lombardo, Monday 28 September at 18:30. Free (Biglietti su Eventbrite).
-
-## Cerimonia di premiazione Scritture di Lago 7° edizione – Como
-https://anyplans.in/en/varese/cerimonia-di-premiazione-scritture-di-lago-7-edizione/
-
-Talks & culture in Teatro Sociale, Como, Monday 28 September at 20:00. Free (Biglietti su Eventbrite).
 
 ## TONIFICAZIONE – Scuola Primaria G. Rodari
 https://anyplans.in/en/varese/tonificazione/
@@ -3649,20 +2541,10 @@ https://anyplans.in/en/varese/non-c-e-storia-streghe-far-west-e-altri-equivoci/
 
 Talks & culture in Materia Spazio Libero, Castronno, Tuesday 29 September at 21:00. Free (Biglietti su Eventbrite).
 
-## QUEEN OF THE COURT by MarieDanielle – The Padel Resort Como
-https://anyplans.in/en/varese/queen-of-the-court-by-mariedanielle/
-
-Padel in The Padel Resort Como, Via Pasquale Paoli 55, 22100 Como, Wednesday 30 September at 11:00. €20 (Iscrizione e pagamento su Playtomic).
-
 ## Chi si prende cura di noi? – Materia Spazio Libero
 https://anyplans.in/en/varese/chi-si-prende-cura-di-noi/
 
 Talks & culture in Materia Spazio Libero, Castronno, Wednesday 30 September at 18:00. Free (Biglietti su Eventbrite).
-
-## Lake Como Future: Far quadrare i conti w/ Andrea Gay – Varese
-https://anyplans.in/en/varese/lake-como-future-far-quadrare-i-conti-w-andrea-gay/
-
-Talks & culture in Albese con Cassano, Wednesday 30 September at 18:30. Free (Gratis, registrazione su Luma).
 
 ## A Pizza Cu 'a Pummarola – Busto arsizio
 https://anyplans.in/en/varese/a-pizza-cu-a-pummarola/
@@ -3679,11 +2561,6 @@ https://anyplans.in/en/varese/ciak-azione-sguardi-sulla-salute-mentale/
 
 Yoga & pilates in Materia Spazio Libero, Castronno, Wednesday 30 September at 21:00. Free (Biglietti su Eventbrite).
 
-## Business Roundtable -  Como – HOSTARIA CASCINA LA COSTA
-https://anyplans.in/en/varese/business-roundtable-como/
-
-Talks & culture in HOSTARIA CASCINA LA COSTA, Fino Mornasco, Thursday 1 October at 12:00. Free (Biglietti su Eventbrite).
-
 ## Cammini che lasciano il segno – Materia Spazio Libero
 https://anyplans.in/en/varese/cammini-che-lasciano-il-segno/
 
@@ -3693,11 +2570,6 @@ Hiking in Materia Spazio Libero, Castronno, Thursday 1 October at 21:00. Free (B
 https://anyplans.in/en/varese/ticino-lo-sguardo-dell-arte/
 
 Guided tours in Chiostro di Voltorre, Gavirate, Friday 2 October at 18:00. Free (Biglietti su Eventbrite).
-
-## MAGIKA BOOKCLUB - L'ESTATE CHE SCIOLSE OGNI COSA – Como
-https://anyplans.in/en/varese/magika-bookclub-l-estate-che-sciolse-ogni-cosa/
-
-Talks & culture in Libreria la Ciurma, Como, Friday 2 October at 18:30. Free (Biglietti su Eventbrite).
 
 ## ENTRY LEVEL MASCHILE – WePadel Club - Gallarate
 https://anyplans.in/en/varese/entry-level-maschile/
@@ -3724,11 +2596,6 @@ https://anyplans.in/en/varese/granfondo-tre-valli-varesine/
 
 Talks & culture in Via Luigi Sacco, 21100 Varese VA, Italia, Varese, Saturday 3 October at 13:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## SILVIA VISCONTI Showcooking Cucina naturale senza glutine – Como
-https://anyplans.in/en/varese/silvia-visconti-showcooking-cucina-naturale-senza-glutine/
-
-Dinners & aperitivo in NON C'È GRANO COMO, Como, Saturday 3 October at 14:00. Free (Biglietti su Eventbrite).
-
 ## 🏆FINECO PADEL CUP 🎾Entry level – STARPADEL Legnano
 https://anyplans.in/en/varese/fineco-padel-cup-entry-level/
 
@@ -3749,20 +2616,10 @@ https://anyplans.in/en/varese/chiostro-divino/
 
 Dinners & aperitivo in Chiostro di Voltorre, Gavirate, Saturday 3 October at 17:30. Free (Biglietti su Eventbrite).
 
-## Opening: Museo d'impresa Gentili Mosconi – Casnate Con Bernate
-https://anyplans.in/en/varese/opening-museo-d-impresa-gentili-mosconi/
-
-Shows & theatre in Casnate Con Bernate, Casnate Con Bernate, Saturday 3 October at 17:30. Free (Biglietti su Eventbrite).
-
 ## Too Good To Go Challenge e biliardino – Sesto Calende
 https://anyplans.in/en/varese/too-good-to-go-challenge-e-biliardino/
 
 Dinners & aperitivo in Sesto Calende, Saturday 3 October at 20:00. €12 (Accredito su comehome; il resto si paga in loco).
-
-## Ballo in Fa# di fantasy – Centro Congressi Medioevo
-https://anyplans.in/en/varese/ballo-in-fa-di-fantasy/
-
-Talks & culture in Centro Congressi Medioevo, Olgiate Comasco, Saturday 3 October at 20:30. Free (Biglietti su Eventbrite).
 
 ## MEMORIAL Cav. Stefano Guarnieri – Gallarate
 https://anyplans.in/en/varese/memorial-cav-stefano-guarnieri/
@@ -3799,11 +2656,6 @@ https://anyplans.in/en/varese/sunsystem-cup-entry-level-3-tappa/
 
 Padel in Green Padel Malpensa, Via delle Biolle 78, 21010 Cardano Al Campo, Sunday 4 October at 14:00. €25 (Iscrizione e pagamento su Playtomic).
 
-## Picnic Swap Party! Scambia i tuoi vestiti e libri – Como
-https://anyplans.in/en/varese/picnic-swap-party-scambia-i-tuoi-vestiti-e-libri/
-
-Dinners & aperitivo in Como, Prato/Spiaggetta vicino al Tempio Voltiano, Sunday 4 October at 15:00. €6 (Accredito su comehome; il resto si paga in loco).
-
 ## Pizza tra amici in Busto Arsizio, 4 October
 https://anyplans.in/en/varese/pizza-tra-amici/
 
@@ -3828,11 +2680,6 @@ Singles nights in Gallarate, Tuesday 6 October at 20:00. €15 (Accredito su com
 https://anyplans.in/en/varese/l-energia-umana/
 
 Talks & culture in Via G. Borghi, 27 (Ex Whirlpool), Comerio, Wednesday 7 October at 18:30. Free (Biglietti su Eventbrite).
-
-## QUARTETTO GOLDBERG AL TEMPIO VOLTIANO
-https://anyplans.in/en/varese/quartetto-goldberg-al-tempio-voltiano/
-
-Concerts & live music in Tempio Voltiano, Como, Wednesday 7 October at 19:00. Free (Biglietti su Eventbrite).
 
 ## Il Settecento musicale tra cembalo e pianoforte – Ispra
 https://anyplans.in/en/varese/il-settecento-musicale-tra-cembalo-e-pianoforte/
@@ -3879,11 +2726,6 @@ https://anyplans.in/en/varese/ticino-lo-sguardo-del-fotografo/
 
 Exhibitions in Chiostro di Voltorre, Gavirate, Saturday 10 October at 18:00. Free (Biglietti su Eventbrite).
 
-## Saturday Night...On the Lake! in Como, 10 October
-https://anyplans.in/en/varese/saturday-night-on-the-lake/
-
-Dinners & aperitivo in Como, Saturday 10 October at 20:30. €5 (Accredito su comehome; il resto si paga in loco).
-
 ## Festival di Luino – Compagnia delle note
 https://anyplans.in/en/varese/festival-di-luino/
 
@@ -3893,26 +2735,6 @@ Town festival in Compagnia delle note, Saturday 10 October at 21:00. Free (Ingre
 https://anyplans.in/en/varese/passeggiata-alle-sorgenti-del-lanza/
 
 Talks & culture in 6867 Serpiano TI, Svizzera, Svizzera, Sunday 11 October at 09:00. Free (Biglietti su Eventbrite).
-
-## S-Padel Challenge - Entry White – Padel Center Italfunivie
-https://anyplans.in/en/varese/s-padel-challenge-entry-white/
-
-Padel in Padel Center Italfunivie, via provinciale 84, 22038 Tavernerio, Sunday 11 October at 15:00. €25 (Iscrizione su Playtomic, si paga in loco).
-
-## Il masso del Ronco – Brienno
-https://anyplans.in/en/varese/il-masso-del-ronco/
-
-Exhibitions in Via Regina, 60, Brienno, Sunday 11 October at 15:00. Free (Biglietti su Eventbrite).
-
-## S-Padel Challenge - Medium Red – Padel Center Italfunivie
-https://anyplans.in/en/varese/s-padel-challenge-medium-red/
-
-Padel in Padel Center Italfunivie, via provinciale 84, 22038 Tavernerio, Sunday 11 October at 18:00. €25 (Iscrizione su Playtomic, si paga in loco).
-
-## Cermenate (CO): Magia d'autunno – Enoteca In Vena di Vino
-https://anyplans.in/en/varese/cermenate-co-magia-d-autunno-un-aperitivo-appennello/
-
-Dinners & aperitivo in Enoteca In Vena di Vino, Cermenate, Tuesday 13 October at 20:00. Free (Biglietti su Eventbrite).
 
 ## La salute nel carrello – Materia Spazio Libero
 https://anyplans.in/en/varese/la-salute-nel-carrello/
@@ -3949,40 +2771,15 @@ https://anyplans.in/en/varese/parliamo-di-biodiversita-il-ruolo-dei-plis-nel-sis
 
 Talks & culture in 21040 Vedano Olona VA, Italia, Varese, Friday 16 October at 20:30. Free (Ingresso: vedi la pagina AllEvents).
 
-## Scegliere. La responsabilità di diventare – Cernobbio
-https://anyplans.in/en/varese/scegliere-la-responsabilita-di-diventare/
-
-Town festival in Istituto Comprensivo Cernobbio - Scuola Secondaria di Primo Grado, Cernobbio, Friday 16 October at 20:30. Free (Biglietti su Eventbrite).
-
-## Corso di Handpan a Como per principianti in partenza…
-https://anyplans.in/en/varese/corso-di-handpan-a-como-per-principianti-in-partenza-sabato-/
-
-Concerts & live music in Nerolidio Music Factory, Como, Saturday 17 October at 10:30. Free (Biglietti su Eventbrite).
-
 ## Brunch autunnale in Busto Arsizio, 18 October
 https://anyplans.in/en/varese/brunch-autunnale/
 
 Dinners & aperitivo in Busto Arsizio, Sunday 18 October at 12:15. €5 (Accredito su comehome; il resto si paga in loco).
 
-## TORNEO  ENTRY WHITE FEMMINILE – Varese
-https://anyplans.in/en/varese/torneo-entry-white-femminile/
-
-Padel in Let's Padel Centers - Anzano del Parco, Via Valera, 22040 Anzano del Parco, Sunday 18 October at 15:00. €25 (Iscrizione su Playtomic, si paga in loco).
-
 ## Finale del Premio Chiara 2026 – Ville Ponti
 https://anyplans.in/en/varese/finale-del-premio-chiara-2026/
 
 Talks & culture in Ville Ponti, Varese, Sunday 18 October at 17:00. Free (Ingresso: vedi la pagina AllEvents).
-
-## TORNEO MEDIUM RED FEMMINILE – Varese
-https://anyplans.in/en/varese/torneo-medium-red-femminile/
-
-Padel in Let's Padel Centers - Anzano del Parco, Via Valera, 22040 Anzano del Parco, Sunday 18 October at 18:00. €25 (Iscrizione su Playtomic, si paga in loco).
-
-## Quartetto per la fine del Tempo – Como
-https://anyplans.in/en/varese/quartetto-per-la-fine-del-tempo/
-
-Talks & culture in Conservatorio di Musica Giuseppe Verdi, Como, Wednesday 21 October at 17:00. Free (Biglietti su Eventbrite).
 
 ## MUSIC 4.0 – MalpensaFiere | Centro Fiere Congressi ed Eventi
 https://anyplans.in/en/varese/music-4-0/
@@ -3993,11 +2790,6 @@ Concerts & live music in MalpensaFiere | Centro Fiere Congressi ed Eventi, Busto
 https://anyplans.in/en/varese/ticino-lo-sguardo-del-paleontologo/
 
 Talks & culture in Chiostro di Voltorre, Gavirate, Friday 23 October at 18:00. Free (Biglietti su Eventbrite).
-
-## MIZUNO Running Day – Maxi Sport Como
-https://anyplans.in/en/varese/mizuno-running-day-como-sabato-24-ottobre-2026/
-
-Running in Maxi Sport Como, Como, Saturday 24 October at 10:00. Free (Biglietti su Eventbrite).
 
 ## Il cerchio delle parole – Somma Lombardo
 https://anyplans.in/en/varese/il-cerchio-delle-parole/
@@ -4039,11 +2831,6 @@ https://anyplans.in/en/varese/mario-biondi-in-varese/
 
 Concerts & live music in Teatro Intred - Varese, Varese, Thursday 5 November at 20:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## TEDxLakeComo 2026: Futuro Anteriore – Cernobbio
-https://anyplans.in/en/varese/tedxlakecomo-2026-futuro-anteriore/
-
-Town festival in Centro Congressi di Villa Erba, Cernobbio, Saturday 7 November at 10:30. Free (Biglietti su Eventbrite).
-
 ## Orecchiette, panzerotti e primitivo: Puglia I LOVE U – Varese
 https://anyplans.in/en/varese/orecchiette-panzerotti-e-primitivo-puglia-i-love-u/
 
@@ -4053,11 +2840,6 @@ Dinners & aperitivo in Legnano, Saturday 7 November at 20:00. €5 (Accredito su
 https://anyplans.in/en/varese/i-salotti-del-tempo-un-the-a-villa-borghi/
 
 Guided tours in Hotel Villa Borghi, Varano Borghi, Sunday 8 November at 15:00. Free (Biglietti su Eventbrite).
-
-## Cermenate (CO): A Mici – In Vena di Vino
-https://anyplans.in/en/varese/cermenate-co-a-mici-un-aperitivo-appennello/
-
-Dinners & aperitivo in In Vena di Vino, Cermenate, Tuesday 10 November at 20:00. Free (Biglietti su Eventbrite).
 
 ## Francesco Costa – Cinema Teatro Castellani - Azzate
 https://anyplans.in/en/varese/francesco-costa-come-se-ne-esce-mondadori/
@@ -4073,16 +2855,6 @@ Dinners & aperitivo in Via Montebello 11d, Busto Arsizio, Sunday 15 November at 
 https://anyplans.in/en/varese/parigi-1934-jazz-manouche-night/
 
 Concerts & live music in Via Esperia, Ispra, Wednesday 18 November at 21:00. Free (Biglietti su Eventbrite).
-
-## LA VILLA DEGLI AUTORI - DAL LIBRO ALLA SCENEGGIATURA – Como
-https://anyplans.in/en/varese/la-villa-degli-autori-dal-libro-alla-sceneggiatura/
-
-Cinema in Associazione Villa Del Grumello, Como, Friday 27 November at 14:00. Free (Biglietti su Eventbrite).
-
-## Armonie Inclusive - Infinity Sound – Villa Imbonati
-https://anyplans.in/en/varese/armonie-inclusive-infinity-sound/
-
-Concerts & live music in Villa Imbonati, Cavallasca, Friday 27 November at 20:30. Free (Biglietti su Eventbrite).
 
 ## Fusion Night: da Oriente a Occidente – Castellanza
 https://anyplans.in/en/varese/fusion-night-da-oriente-a-occidente/

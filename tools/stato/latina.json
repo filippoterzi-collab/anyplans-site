@@ -1,0 +1,14 @@
+{
+ "slug": "latina",
+ "nome": "Latina",
+ "eventi": 45,
+ "pagine": 139,
+ "tipi": {
+  "dinner": 8,
+  "show": 6,
+  "gym": 3,
+  "yoga": 3,
+  "culture": 14
+ },
+ "aggiornato": "2026-09-18T09:47:38.069Z"
+}

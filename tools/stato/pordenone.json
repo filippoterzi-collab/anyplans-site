@@ -1,0 +1,17 @@
+{
+ "slug": "pordenone",
+ "nome": "Pordenone",
+ "eventi": 50,
+ "pagine": 151,
+ "tipi": {
+  "festival": 4,
+  "hiking": 3,
+  "dinner": 10,
+  "yoga": 6,
+  "concert": 4,
+  "show": 8,
+  "culture": 10,
+  "exhibition": 3
+ },
+ "aggiornato": "2026-09-18T09:47:26.771Z"
+}

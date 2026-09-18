@@ -1,0 +1,17 @@
+{
+ "slug": "como",
+ "nome": "Como",
+ "eventi": 112,
+ "pagine": 327,
+ "tipi": {
+  "padel": 42,
+  "dinner": 14,
+  "culture": 18,
+  "concert": 8,
+  "show": 7,
+  "tour": 5,
+  "yoga": 3,
+  "festival": 4
+ },
+ "aggiornato": "2026-09-18T09:46:41.012Z"
+}

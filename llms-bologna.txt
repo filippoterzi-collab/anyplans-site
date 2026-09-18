@@ -1,12 +1,12 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Bologna e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Bologna: il sito copre 29 città italiane (Milano, Bergamo, Torino, Roma, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce), l'indice è https://anyplans.in/llms.txt.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Bologna e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Bologna: il sito copre 52 città italiane (Milano, Bergamo, Torino, Roma, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce, Monza, Prato, Como, Lecco, Lodi, Modena, Reggio Emilia, Treviso, Venezia, Vicenza, Novara, Lucca, Mantova, Ferrara, Pistoia, Pavia, Ancona, Pordenone, Cremona, Messina, Reggio Calabria, Alessandria, Latina), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-18. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Bologna](https://anyplans.in/bologna/cosa-fare/): tutti gli eventi in programma (590), per tipo e per paese; risponde a "cosa fare a Bologna oggi / questo weekend"
+- [Cosa fare a Bologna](https://anyplans.in/bologna/cosa-fare/): tutti gli eventi in programma (578), per tipo e per paese; risponde a "cosa fare a Bologna oggi / questo weekend"
 - [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
@@ -14,15 +14,15 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## Eventi per tipo e per paese
 
-- [Cena / aperitivo a Bologna](https://anyplans.in/bologna/cene-e-aperitivi/): 56 in programma
+- [Cena / aperitivo a Bologna](https://anyplans.in/bologna/cene-e-aperitivi/): 50 in programma
 - [Padel a Bologna](https://anyplans.in/bologna/padel/): 14 in programma
-- [Incontri culturali a Bologna](https://anyplans.in/bologna/incontri-culturali/): 154 in programma
+- [Incontri culturali a Bologna](https://anyplans.in/bologna/incontri-culturali/): 150 in programma
 - [Spettacoli e teatro a Bologna](https://anyplans.in/bologna/spettacoli/): 67 in programma
 - [Visite guidate a Bologna](https://anyplans.in/bologna/visite-guidate/): 22 in programma
-- [Concerti e musica dal vivo a Bologna](https://anyplans.in/bologna/concerti/): 110 in programma
-- [Yoga / pilates a Bologna](https://anyplans.in/bologna/yoga/): 13 in programma
+- [Concerti e musica dal vivo a Bologna](https://anyplans.in/bologna/concerti/): 109 in programma
 - [Cinema a Bologna](https://anyplans.in/bologna/cinema/): 14 in programma
 - [Giochi da tavolo a Bologna](https://anyplans.in/bologna/giochi/): 6 in programma
+- [Yoga / pilates a Bologna](https://anyplans.in/bologna/yoga/): 12 in programma
 - [Ballo e danza a Bologna](https://anyplans.in/bologna/ballo/): 11 in programma
 - [Palestra a Bologna](https://anyplans.in/bologna/palestra/): 5 in programma
 - [Serate per single a Bologna](https://anyplans.in/bologna/single/): 2 in programma
@@ -32,13 +32,12 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Mostre a Bologna](https://anyplans.in/bologna/mostre/): 9 in programma
 - [Escursionismo a Bologna](https://anyplans.in/bologna/escursioni/): 4 in programma
 - [Serate e discoteca a Bologna](https://anyplans.in/bologna/serate/): 3 in programma
-- [Feste ed eventi a San Giovanni in Persiceto](https://anyplans.in/bologna/san-giovanni-in-persiceto/): 4 in programma
-- [Feste ed eventi a Vignola](https://anyplans.in/bologna/vignola/): 4 in programma
 - [Feste ed eventi a piazza dell’unità](https://anyplans.in/bologna/piazza-dell-unita/): 4 in programma
 - [Feste ed eventi a Castel Maggiore](https://anyplans.in/bologna/castel-maggiore/): 8 in programma
 - [Feste ed eventi a San Lazzaro di Savena](https://anyplans.in/bologna/san-lazzaro-di-savena/): 11 in programma
-- [Feste ed eventi a Castelfranco Emilia](https://anyplans.in/bologna/castelfranco-emilia/): 3 in programma
 - [Feste ed eventi a Zona Industriale Via del Lavoro](https://anyplans.in/bologna/zona-industriale-via-del-lavoro/): 4 in programma
+- [Feste ed eventi a San Giovanni in Persiceto](https://anyplans.in/bologna/san-giovanni-in-persiceto/): 3 in programma
+- [Feste ed eventi a Vignola](https://anyplans.in/bologna/vignola/): 3 in programma
 - [Feste ed eventi a Progresso](https://anyplans.in/bologna/progresso/): 4 in programma
 
 ## Prossimi eventi
@@ -99,9 +98,9 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Shows & theatre in Bologna](https://anyplans.in/en/bologna/shows/)
 - [Guided tours in Bologna](https://anyplans.in/en/bologna/guided-tours/)
 - [Concerts & live music in Bologna](https://anyplans.in/en/bologna/concerts/)
-- [Yoga & pilates in Bologna](https://anyplans.in/en/bologna/yoga/)
 - [Cinema in Bologna](https://anyplans.in/en/bologna/cinema/)
 - [Board games in Bologna](https://anyplans.in/en/bologna/board-games/)
+- [Yoga & pilates in Bologna](https://anyplans.in/en/bologna/yoga/)
 - [Dancing in Bologna](https://anyplans.in/en/bologna/dancing/)
 - [Gym in Bologna](https://anyplans.in/en/bologna/gym/)
 - [Singles nights in Bologna](https://anyplans.in/en/bologna/singles/)
@@ -116,7 +115,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 # Tutte le pagine di anyplans a Bologna (italiano, poi inglese)
 
-## Cosa fare a Bologna e provincia: 590 eventi
+## Cosa fare a Bologna e provincia: 578 eventi
 https://anyplans.in/bologna/cosa-fare/
 
 Incontri culturali, concerti e musica dal vivo, spettacoli e teatro, cena / aperitivo e feste, sagre ed eventi di paese: quello che succede a Bologna e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
@@ -126,45 +125,45 @@ https://anyplans.in/bologna/cosa-fare-oggi/
 
 29 eventi a Bologna e provincia oggi, 18 settembre 2026: Bologna, Castel Maggiore, San Lazzaro di Savena e Longara e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Bologna domani: 44 eventi
+## Cosa fare a Bologna domani: 40 eventi
 https://anyplans.in/bologna/cosa-fare-domani/
 
-44 eventi a Bologna e provincia domani, 19 settembre 2026: Bologna, Castelfranco Emilia, San Lazzaro di Savena e Calendario Sagre e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+40 eventi a Bologna e provincia domani, 19 settembre 2026: Bologna, San Lazzaro di Savena, Calendario Sagre e DiMondi - Piazza Lucio Dalla e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Bologna nel weekend: 71 eventi
+## Cosa fare a Bologna nel weekend: 67 eventi
 https://anyplans.in/bologna/cosa-fare-nel-weekend/
 
-71 eventi a Bologna e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Bologna, San Lazzaro di Savena, Castelfranco Emilia e Calendario Sagre e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+67 eventi a Bologna e provincia nel weekend (Sabato 19 settembre e Domenica 20 settembre): Bologna, San Lazzaro di Savena, Calendario Sagre e DiMondi - Piazza Lucio Dalla e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Eventi a Bologna a settembre 2026: 266
+## Eventi a Bologna a settembre 2026: 258
 https://anyplans.in/bologna/eventi-settembre-2026/
 
-266 eventi a Bologna e provincia a settembre 2026: cena / aperitivo, padel, spettacoli e teatro, yoga / pilates e feste, sagre ed eventi di paese. Giorno per giorno, con orari, luogo e prezzo, a Bologna, San Lazzaro di Savena, Castel Maggiore e piazza dell’unità e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+258 eventi a Bologna e provincia a settembre 2026: cena / aperitivo, padel, spettacoli e teatro, yoga / pilates e feste, sagre ed eventi di paese. Giorno per giorno, con orari, luogo e prezzo, a Bologna, San Lazzaro di Savena, Castel Maggiore e piazza dell’unità e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Bologna a ottobre 2026: 188
+## Eventi a Bologna a ottobre 2026: 184
 https://anyplans.in/bologna/eventi-ottobre-2026/
 
-188 eventi a Bologna e provincia a ottobre 2026: incontri culturali, mostre, spettacoli e teatro, pittura / arte e cinema. Giorno per giorno, con orari, luogo e prezzo, a Bologna, Castel Maggiore, Progresso e Zona Industriale Via del Lavoro e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+184 eventi a Bologna e provincia a ottobre 2026: incontri culturali, mostre, spettacoli e teatro, pittura / arte e cinema. Giorno per giorno, con orari, luogo e prezzo, a Bologna, Castel Maggiore, Progresso e Zona Industriale Via del Lavoro e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 ## Eventi a Bologna a novembre 2026: 79
 https://anyplans.in/bologna/eventi-novembre-2026/
 
 79 eventi a Bologna e provincia a novembre 2026: spettacoli e teatro, concerti e musica dal vivo, incontri culturali, visite guidate e ballo e danza. Giorno per giorno, con orari, luogo e prezzo, a Bologna, Valsamoggia, nEw liFe promo e Barley Arts e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Cena / aperitivo a Bologna: 56 eventi
+## Cena / aperitivo a Bologna: 50 eventi
 https://anyplans.in/bologna/cene-e-aperitivi/
 
-A Bologna e provincia ci sono 56 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Bologna e provincia ci sono 50 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Padel a Bologna: 14 eventi
 https://anyplans.in/bologna/padel/
 
 A Bologna e provincia ci sono 14 partite di padel nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Incontri culturali a Bologna: 154 eventi
+## Incontri culturali a Bologna: 150 eventi
 https://anyplans.in/bologna/incontri-culturali/
 
-A Bologna e provincia ci sono 154 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Bologna e provincia ci sono 150 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Spettacoli e teatro a Bologna: 67 eventi
 https://anyplans.in/bologna/spettacoli/
@@ -176,15 +175,10 @@ https://anyplans.in/bologna/visite-guidate/
 
 A Bologna e provincia ci sono 22 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Concerti e musica dal vivo a Bologna: 110 eventi
+## Concerti e musica dal vivo a Bologna: 109 eventi
 https://anyplans.in/bologna/concerti/
 
-A Bologna e provincia ci sono 110 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
-
-## Yoga / pilates a Bologna: 13 eventi
-https://anyplans.in/bologna/yoga/
-
-A Bologna e provincia ci sono 13 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Bologna e provincia ci sono 109 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Cinema a Bologna: 14 eventi
 https://anyplans.in/bologna/cinema/
@@ -195,6 +189,11 @@ A Bologna e provincia ci sono 14 proiezioni nei prossimi mesi. In ogni pagina ci
 https://anyplans.in/bologna/giochi/
 
 A Bologna e provincia ci sono 6 serate di giochi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+
+## Yoga / pilates a Bologna: 12 eventi
+https://anyplans.in/bologna/yoga/
+
+A Bologna e provincia ci sono 12 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Ballo e danza a Bologna: 11 eventi
 https://anyplans.in/bologna/ballo/
@@ -241,16 +240,6 @@ https://anyplans.in/bologna/serate/
 
 A Bologna e provincia ci sono 3 serate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Feste ed eventi a San Giovanni in Persiceto: 4…
-https://anyplans.in/bologna/san-giovanni-in-persiceto/
-
-A San Giovanni in Persiceto ci sono 4 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di San Giovanni in Persiceto con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
-
-## Feste ed eventi a Vignola: 4 in programma
-https://anyplans.in/bologna/vignola/
-
-A Vignola ci sono 4 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Vignola con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
-
 ## Feste ed eventi a piazza dell’unità: 4 in…
 https://anyplans.in/bologna/piazza-dell-unita/
 
@@ -266,15 +255,20 @@ https://anyplans.in/bologna/san-lazzaro-di-savena/
 
 A San Lazzaro di Savena ci sono 11 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di San Lazzaro di Savena con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Feste ed eventi a Castelfranco Emilia: 3 in…
-https://anyplans.in/bologna/castelfranco-emilia/
-
-A Castelfranco Emilia ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Castelfranco Emilia con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
-
 ## Feste ed eventi a Zona Industriale Via del…
 https://anyplans.in/bologna/zona-industriale-via-del-lavoro/
 
 A Zona Industriale Via del Lavoro ci sono 4 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Zona Industriale Via del Lavoro con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+
+## Feste ed eventi a San Giovanni in Persiceto: 3…
+https://anyplans.in/bologna/san-giovanni-in-persiceto/
+
+A San Giovanni in Persiceto ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di San Giovanni in Persiceto con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+
+## Feste ed eventi a Vignola: 3 in programma
+https://anyplans.in/bologna/vignola/
+
+A Vignola ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Vignola con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 ## Feste ed eventi a Progresso: 4 in programma
 https://anyplans.in/bologna/progresso/
@@ -289,7 +283,7 @@ https://anyplans.in/bologna/locali/
 ## Tablo: eventi e serate a Bologna
 https://anyplans.in/bologna/locali/tablo/
 
-Tablo a Bologna: 40 eventi in programma — cena / aperitivo, escursionismo e incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Tablo a Bologna: 34 eventi in programma — cena / aperitivo, escursionismo e incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Vivid Events: eventi e serate a Bologna
 https://anyplans.in/bologna/locali/vivid-events/
@@ -396,11 +390,6 @@ https://anyplans.in/bologna/locali/circolo-hex/
 
 Circolo Hex a Bologna: 2 eventi in programma — pittura / arte e incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-## Luma: eventi in programma a Bologna
-https://anyplans.in/bologna/locali/luma/
-
-Luma a Bologna: 3 eventi in programma — incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
 ## Magic Show Bologna: eventi in programma
 https://anyplans.in/bologna/locali/magic-show-bologna/
 
@@ -440,6 +429,11 @@ Centro Universitario Sportivo Record a Bologna: 2 eventi in programma — padel.
 https://anyplans.in/bologna/locali/country-club-castel-maggiore/
 
 Country Club CASTEL MAGGIORE a Bologna: 3 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
+## Luma: eventi in programma a Bologna
+https://anyplans.in/bologna/locali/luma/
+
+Luma a Bologna: 2 eventi in programma — incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## ElleTango: eventi in programma a Bologna
 https://anyplans.in/bologna/locali/elletango/
@@ -756,11 +750,6 @@ https://anyplans.in/bologna/uri-caine-un-visionario-all-incrocio-tra-classica-e-
 
 Concerti e musica dal vivo a Conservatorio di Musica Giovan Battista Martini, Bologna: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
 
-## PRIMO SOCCORSO: TECNICHE DI RIANIMAZIONE E MANOVRA DI DISOSTRUZIONE – San Giovanni in Persiceto
-https://anyplans.in/bologna/primo-soccorso-tecniche-di-rianimazione-e-manovra-di-disostr/
-
-Yoga / pilates a Immobiliare San Pietro, San Giovanni in Persiceto, martedì 13 ottobre alle 18:30 (2 date, fino al 27 ottobre). Gratis (Biglietti su Eventbrite).
-
 ## Link Academy OPEN DAY @Link Bologna 16.10.26
 https://anyplans.in/bologna/link-academy-open-day-link-bologna-16-10-26/
 
@@ -780,11 +769,6 @@ Incontri culturali a Atelier Tubertini™, Bologna: si è già svolto, l'ultima 
 https://anyplans.in/bologna/inside-bhakti/
 
 Incontri culturali a Centro Vaikuntha, Bologna, mercoledì 23 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
-
-## Aperitivo in inglese con madrelingua a Vignola
-https://anyplans.in/bologna/aperitivo-in-inglese-con-madrelingua-a-vignola/
-
-Cena / aperitivo a Corso VI.TA, Vignola: si è già svolto, l'ultima data è stata mercoledì 16 settembre 2026.
 
 ## SEMI film kids | Il cinema dei piccoli – Bologna
 https://anyplans.in/bologna/semi-film-kids-il-cinema-dei-piccoli/
@@ -1171,16 +1155,6 @@ https://anyplans.in/bologna/loomoon-games-prenotazione-games-on-board/
 
 Giochi da tavolo a Via Caselle, 26, San Lazzaro di Savena, sabato 19 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
 
-## SUPER SATURDAY BOLOGNA – Simpli
-https://anyplans.in/bologna/super-saturday-bologna/
-
-Incontri culturali a Simpli, Castelfranco Emilia, sabato 19 settembre alle 14:30. Gratis (Biglietti su Eventbrite).
-
-## Evento Conapi-Mielizia e Granarolo: Pastori di api e allevatori di bovini – Maccaretolo
-https://anyplans.in/bologna/evento-conapi-mielizia-e-granarolo-pastori-di-api-e-allevato/
-
-Incontri culturali a Azienda Agricola Famiglia Montagnini, Maccaretolo, sabato 19 settembre alle 15:00. Gratis (Biglietti su Eventbrite).
-
 ## Bologna vs Torino at Stadio Renato Dall'Ara
 https://anyplans.in/bologna/bologna-vs-torino-at-stadio-renato-dall-ara/
 
@@ -1235,16 +1209,6 @@ Cena / aperitivo a Ristorante Cinese IL CINESINO, Bologna, sabato 19 settembre a
 https://anyplans.in/bologna/festa-della-maglia-e-dell-orgoglio-rossoblu/
 
 Festa di paese a DiMondi - Piazza Lucio Dalla, sabato 19 settembre alle 18:00. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## Cena da Kazuki: 5 posti liberi
-https://anyplans.in/bologna/cena-da-kazuki-5-posti-liberi/
-
-Cena / aperitivo a Kazuki, Castelfranco Emilia, sabato 19 settembre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Cena da Terra Mia: 7 posti liberi
-https://anyplans.in/bologna/cena-da-terra-mia-7-posti-liberi/
-
-Cena / aperitivo a Terra Mia, Castelfranco Emilia, sabato 19 settembre alle 18:15. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## Cena da Ristorante La Scuderia: 1 posto libero
 https://anyplans.in/bologna/cena-da-ristorante-la-scuderia-1-posto-libero/
@@ -1761,11 +1725,6 @@ https://anyplans.in/bologna/passeggiata-dadaista/
 
 Festa di paese a ITC Teatro di San Lazzaro, San Lazzaro di Savena, venerdì 25 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
 
-## Ci fai o ci sei? da Il Filò: 8 posti liberi
-https://anyplans.in/bologna/ci-fai-o-ci-sei-da-il-filo-8-posti-liberi/
-
-Cena / aperitivo a Il Filò, Crevalcore, venerdì 25 settembre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Design per la longevità – Palazzo Isolani
 https://anyplans.in/bologna/design-per-la-longevita/
 
@@ -2031,11 +1990,6 @@ https://anyplans.in/bologna/magia-swing-in-un-locale-storico/
 
 Concerti e musica dal vivo a Bologna centro, sabato 26 settembre alle 21:30. 5 € (Accredito su comehome; il resto si paga in loco).
 
-## DOMVS // Sabato 26 Settembre – Club A Tavola
-https://anyplans.in/bologna/domvs-sabato-26-settembre/
-
-Incontri culturali a Club A Tavola, Chiesolino Cà Rossa, sabato 26 settembre alle 23:00. Gratis (Gratis, registrazione su Luma).
-
 ## Connessioni interculturali: una speranza di pace – Bologna
 https://anyplans.in/bologna/connessioni-interculturali-una-speranza-di-pace-area-kids/
 
@@ -2055,11 +2009,6 @@ Incontri culturali a Chiostro | Arena del Sole, Bologna, domenica 27 settembre a
 https://anyplans.in/bologna/mini-mondi-urbani-alla-scoperta-degli-insetti-bambini-accomp/
 
 Incontri culturali a Sala degli Archi | Arena del Sole, Bologna, domenica 27 settembre alle 10:30. Gratis (Biglietti su Eventbrite).
-
-## Club les Matinèe @ Halto Rooftop – San Giovanni in Persiceto
-https://anyplans.in/bologna/club-les-matinee-halto-rooftop/
-
-Concerti e musica dal vivo a Halto Rooftop Restaurant & Cocktails, San Giovanni in Persiceto, domenica 27 settembre alle 10:30. Gratis (Biglietti su Eventbrite).
 
 ## MINI MONDI URBANI: ALLA SCOPERTA DEGLI INSETTI – Bologna
 https://anyplans.in/bologna/mini-mondi-urbani-alla-scoperta-degli-insetti/
@@ -2090,11 +2039,6 @@ Serate e discoteca a The Social Hub Bologna, domenica 27 settembre alle 17:00. 1
 https://anyplans.in/bologna/candlelight-tributo-a-cremonini/
 
 Concerti e musica dal vivo a Oratorio di San Filippo Neri, Bologna, domenica 27 settembre alle 17:30. 19 € (Biglietti su AllEvents).
-
-## Incontro con l'autore - La Guarigione Visibile (libro) – Molinella
-https://anyplans.in/bologna/incontro-con-l-autore-la-guarigione-visibile-libro/
-
-Yoga / pilates a Studio Olistico Yoga, Molinella, domenica 27 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
 
 ## Cena da Bravo Caffè Bologna: 2 posti liberi
 https://anyplans.in/bologna/cena-da-bravo-caffe-bologna-2-posti-liberi/
@@ -2286,11 +2230,6 @@ https://anyplans.in/bologna/lezione-prova-laboratorio-babele/
 
 Spettacoli e teatro a Teatro Testoni Ragazzi - La Baracca, Bologna, venerdì 2 ottobre alle 17:30. Gratis (Biglietti su Eventbrite).
 
-## 🔥 BAR MANZOLINO ACCENDE I MICROFONI🔥 da Bar…
-https://anyplans.in/bologna/bar-manzolino-accende-i-microfoni-da-bar-manzolino-17-posti-/
-
-Cena / aperitivo a Bar manzolino, venerdì 2 ottobre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## ⭐️ Inaugurazione 707 ⭐️ da 707: 11 posti liberi
 https://anyplans.in/bologna/inaugurazione-707-da-707-11-posti-liberi/
 
@@ -2365,11 +2304,6 @@ Incontri culturali a Mediateca di San Lazzaro, San Lazzaro di Savena, sabato 3 o
 https://anyplans.in/bologna/giornata-nazionale-dei-locali-storici-2026-visita-guidata/
 
 Visite guidate a Grand Hotel Majestic "già Baglioni", Bologna, sabato 3 ottobre alle 11:00. 14,01 € (Biglietti su AllEvents).
-
-## Pelatti Tools Day 2026 – Pelatti | Vignola
-https://anyplans.in/bologna/pelatti-tools-day-2026/
-
-Incontri culturali a Pelatti | Vignola, Vignola, sabato 3 ottobre alle 15:00. Gratis (Biglietti su Eventbrite).
 
 ## Bologna Medievale
 https://anyplans.in/bologna/bologna-medievale/
@@ -2726,11 +2660,6 @@ https://anyplans.in/bologna/la-famiglia-bononcini/
 
 Concerti e musica dal vivo a Museo internazionale e biblioteca della musica, Bologna, sabato 10 ottobre alle 17:30. Gratis (Biglietti su Eventbrite).
 
-## Maschi vs Femmine da Bar manzolino: 14 posti liberi
-https://anyplans.in/bologna/maschi-vs-femmine-da-bar-manzolino-14-posti-liberi/
-
-Cena / aperitivo a Bar manzolino, sabato 10 ottobre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Storie che attraversano i confini. Il cibo – Bologna
 https://anyplans.in/bologna/storie-che-attraversano-i-confini-il-cibo-la-memoria-le-radi/
 
@@ -2845,6 +2774,11 @@ Yoga / pilates a Sala Servizi Alla Persona, Argelato, lunedì 12 ottobre alle 18
 https://anyplans.in/bologna/percorso-di-filosofia-attiva/
 
 Festa di paese a Nuova Acropoli Bologna, Bologna, lunedì 12 ottobre alle 19:00. Gratis (Biglietti su Eventbrite).
+
+## PRIMO SOCCORSO: TECNICHE DI RIANIMAZIONE E MANOVRA DI DISOSTRUZIONE – San Giovanni in Persiceto
+https://anyplans.in/bologna/primo-soccorso-tecniche-di-rianimazione-e-manovra-di-disostr/
+
+Yoga / pilates a Immobiliare San Pietro, San Giovanni in Persiceto, martedì 13 ottobre alle 18:30 (2 date, fino al 27 ottobre). Gratis (Biglietti su Eventbrite).
 
 ## FedEdu 10-26 – Best Western Plus Tower Hotel Bologna
 https://anyplans.in/bologna/fededu-10-26-il-consiglio-del-farmacista-nelle-lesioni-cutan/
@@ -3075,11 +3009,6 @@ Concerti e musica dal vivo a Beltaine Celtic Pub Bologna, Bologna, venerdì 23 o
 https://anyplans.in/bologna/onlylive-figli-delle-stelle/
 
 Concerti e musica dal vivo a Via Mascarella 1, 40126 Bologna, Italy, Bologna, venerdì 23 ottobre alle 22:00 (2 date, fino al 23 ottobre). Gratis (Ingresso: vedi la pagina AllEvents).
-
-## 🎉 Festa 3 Mesi della Community! 🎉 da Bar manzolino:…
-https://anyplans.in/bologna/festa-3-mesi-della-community-da-bar-manzolino-18-posti-liber/
-
-Cena / aperitivo a Bar manzolino, sabato 24 ottobre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## The Jazz Room: omaggio a Frank Sinatra & Louis Armstrong – Bologna
 https://anyplans.in/bologna/the-jazz-room-omaggio-a-frank-sinatra-louis-armstrong/
@@ -3856,7 +3785,7 @@ https://anyplans.in/bologna/robin-hood-teatro-dehon/
 
 Spettacoli e teatro a Teatro Dehon, Bologna, domenica 14 marzo alle 17:30. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Things to do in Bologna: 590 events
+## Things to do in Bologna: 578 events
 https://anyplans.in/en/bologna/
 
 What's on in Bologna and its province, today, tonight and this weekend: talks & culture, concerts & live music, shows & theatre, dinners & aperitivo, town festivals & fairs and guided tours. Pick one and go with other people.
@@ -3866,45 +3795,45 @@ https://anyplans.in/en/bologna/what-to-do-today/
 
 29 events in Bologna and its province today, 18 September 2026: Bologna, Castel Maggiore, San Lazzaro di Savena and Longara and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Bologna tomorrow: 44 events
+## What to do in Bologna tomorrow: 40 events
 https://anyplans.in/en/bologna/what-to-do-tomorrow/
 
-44 events in Bologna and its province tomorrow, 19 September 2026: Bologna, Castelfranco Emilia, San Lazzaro di Savena and Calendario Sagre and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+40 events in Bologna and its province tomorrow, 19 September 2026: Bologna, San Lazzaro di Savena, Calendario Sagre and DiMondi - Piazza Lucio Dalla and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Bologna this weekend: 71 events
+## What to do in Bologna this weekend: 67 events
 https://anyplans.in/en/bologna/what-to-do-this-weekend/
 
-71 events in Bologna and its province this weekend (Saturday 19 September and Sunday 20 September): Bologna, San Lazzaro di Savena, Castelfranco Emilia and Calendario Sagre and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+67 events in Bologna and its province this weekend (Saturday 19 September and Sunday 20 September): Bologna, San Lazzaro di Savena, Calendario Sagre and DiMondi - Piazza Lucio Dalla and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## Events in Bologna in September 2026: 266
+## Events in Bologna in September 2026: 258
 https://anyplans.in/en/bologna/events-september-2026/
 
-266 events in Bologna and its province in September 2026: dinners & aperitivo, padel, shows & theatre, yoga & pilates and town festivals & fairs. Day by day, with times, place and price, in Bologna, San Lazzaro di Savena, Castel Maggiore and piazza dell’unità and other towns. You sign up and go with other people.
+258 events in Bologna and its province in September 2026: dinners & aperitivo, padel, shows & theatre, yoga & pilates and town festivals & fairs. Day by day, with times, place and price, in Bologna, San Lazzaro di Savena, Castel Maggiore and piazza dell’unità and other towns. You sign up and go with other people.
 
-## Events in Bologna in October 2026: 188
+## Events in Bologna in October 2026: 184
 https://anyplans.in/en/bologna/events-october-2026/
 
-188 events in Bologna and its province in October 2026: talks & culture, exhibitions, shows & theatre, painting & art and cinema. Day by day, with times, place and price, in Bologna, Castel Maggiore, Progresso and Zona Industriale Via del Lavoro and other towns. You sign up and go with other people.
+184 events in Bologna and its province in October 2026: talks & culture, exhibitions, shows & theatre, painting & art and cinema. Day by day, with times, place and price, in Bologna, Castel Maggiore, Progresso and Zona Industriale Via del Lavoro and other towns. You sign up and go with other people.
 
 ## Events in Bologna in November 2026: 79
 https://anyplans.in/en/bologna/events-november-2026/
 
 79 events in Bologna and its province in November 2026: shows & theatre, concerts & live music, talks & culture, guided tours and dancing. Day by day, with times, place and price, in Bologna, Valsamoggia, nEw liFe promo and Barley Arts and other towns. You sign up and go with other people.
 
-## Dinners & aperitivo in Bologna: 56 events
+## Dinners & aperitivo in Bologna: 50 events
 https://anyplans.in/en/bologna/dinners/
 
-In Bologna and its province there are 56 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Bologna and its province there are 50 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Padel in Bologna: 14 events
 https://anyplans.in/en/bologna/padel/
 
 In Bologna and its province there are 14 padel matches and tournaments in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Talks & culture in Bologna: 154 events
+## Talks & culture in Bologna: 150 events
 https://anyplans.in/en/bologna/talks-and-culture/
 
-In Bologna and its province there are 154 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Bologna and its province there are 150 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Shows & theatre in Bologna: 67 events
 https://anyplans.in/en/bologna/shows/
@@ -3916,15 +3845,10 @@ https://anyplans.in/en/bologna/guided-tours/
 
 In Bologna and its province there are 22 guided tours events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Concerts & live music in Bologna: 110 events
+## Concerts & live music in Bologna: 109 events
 https://anyplans.in/en/bologna/concerts/
 
-In Bologna and its province there are 110 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
-
-## Yoga & pilates in Bologna: 13 events
-https://anyplans.in/en/bologna/yoga/
-
-In Bologna and its province there are 13 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Bologna and its province there are 109 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Cinema in Bologna: 14 events
 https://anyplans.in/en/bologna/cinema/
@@ -3935,6 +3859,11 @@ In Bologna and its province there are 14 screenings in the coming months. Each o
 https://anyplans.in/en/bologna/board-games/
 
 In Bologna and its province there are 6 board game nights in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+
+## Yoga & pilates in Bologna: 12 events
+https://anyplans.in/en/bologna/yoga/
+
+In Bologna and its province there are 12 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Dancing in Bologna: 11 events
 https://anyplans.in/en/bologna/dancing/
@@ -3981,16 +3910,6 @@ https://anyplans.in/en/bologna/nights-out/
 
 In Bologna and its province there are 3 club nights and dj sets in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Festivals and events in San Giovanni in…
-https://anyplans.in/en/bologna/san-giovanni-in-persiceto/
-
-In San Giovanni in Persiceto there are 4 events in the coming months. On anyplans you find the festivals and events of San Giovanni in Persiceto with dates, times and place. You sign up and go with others.
-
-## Festivals and events in Vignola, Bergamo: 4…
-https://anyplans.in/en/bologna/vignola/
-
-In Vignola there are 4 events in the coming months. On anyplans you find the festivals and events of Vignola with dates, times and place. You sign up and go with others.
-
 ## Festivals and events in piazza dell’unità,…
 https://anyplans.in/en/bologna/piazza-dell-unita/
 
@@ -4006,15 +3925,20 @@ https://anyplans.in/en/bologna/san-lazzaro-di-savena/
 
 In San Lazzaro di Savena there are 11 events in the coming months. On anyplans you find the festivals and events of San Lazzaro di Savena with dates, times and place. You sign up and go with others.
 
-## Festivals and events in Castelfranco Emilia,…
-https://anyplans.in/en/bologna/castelfranco-emilia/
-
-In Castelfranco Emilia there are 3 events in the coming months. On anyplans you find the festivals and events of Castelfranco Emilia with dates, times and place. You sign up and go with others.
-
 ## Festivals and events in Zona Industriale Via…
 https://anyplans.in/en/bologna/zona-industriale-via-del-lavoro/
 
 In Zona Industriale Via del Lavoro there are 4 events in the coming months. On anyplans you find the festivals and events of Zona Industriale Via del Lavoro with dates, times and place. You sign up and go with others.
+
+## Festivals and events in San Giovanni in…
+https://anyplans.in/en/bologna/san-giovanni-in-persiceto/
+
+In San Giovanni in Persiceto there are 3 events in the coming months. On anyplans you find the festivals and events of San Giovanni in Persiceto with dates, times and place. You sign up and go with others.
+
+## Festivals and events in Vignola, Bergamo: 3…
+https://anyplans.in/en/bologna/vignola/
+
+In Vignola there are 3 events in the coming months. On anyplans you find the festivals and events of Vignola with dates, times and place. You sign up and go with others.
 
 ## Festivals and events in Progresso, Bergamo: 4…
 https://anyplans.in/en/bologna/progresso/
@@ -4029,7 +3953,7 @@ https://anyplans.in/en/bologna/venues/
 ## Tablo: events and nights out in Bologna
 https://anyplans.in/en/bologna/venues/tablo/
 
-Tablo in Bologna: 40 upcoming events — dinners & aperitivo, hiking and talks & culture. Date, time, price and how to join, one page each. You go with other people.
+Tablo in Bologna: 34 upcoming events — dinners & aperitivo, hiking and talks & culture. Date, time, price and how to join, one page each. You go with other people.
 
 ## Vivid Events: events and nights out in Bologna
 https://anyplans.in/en/bologna/venues/vivid-events/
@@ -4136,11 +4060,6 @@ https://anyplans.in/en/bologna/venues/circolo-hex/
 
 Circolo Hex in Bologna: 2 upcoming events — painting & art and talks & culture. Date, time, price and how to join, one page each. You go with other people.
 
-## Luma: what's on in Bologna
-https://anyplans.in/en/bologna/venues/luma/
-
-Luma in Bologna: 3 upcoming events — talks & culture. Date, time, price and how to join, one page each. You go with other people.
-
 ## Magic Show Bologna: what's on
 https://anyplans.in/en/bologna/venues/magic-show-bologna/
 
@@ -4180,6 +4099,11 @@ Centro Universitario Sportivo Record in Bologna: 2 upcoming events — padel. Da
 https://anyplans.in/en/bologna/venues/country-club-castel-maggiore/
 
 Country Club CASTEL MAGGIORE in Bologna: 3 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
+
+## Luma: what's on in Bologna
+https://anyplans.in/en/bologna/venues/luma/
+
+Luma in Bologna: 2 upcoming events — talks & culture. Date, time, price and how to join, one page each. You go with other people.
 
 ## ElleTango: what's on in Bologna
 https://anyplans.in/en/bologna/venues/elletango/
@@ -4496,11 +4420,6 @@ https://anyplans.in/en/bologna/uri-caine-un-visionario-all-incrocio-tra-classica
 
 Concerts & live music in Conservatorio di Musica Giovan Battista Martini, Bologna: it already took place, the last date was Wednesday, 16 September 2026.
 
-## PRIMO SOCCORSO: TECNICHE DI RIANIMAZIONE E MANOVRA DI DISOSTRUZIONE – San Giovanni in Persiceto
-https://anyplans.in/en/bologna/primo-soccorso-tecniche-di-rianimazione-e-manovra-di-disostr/
-
-Yoga & pilates in Immobiliare San Pietro, San Giovanni in Persiceto, Tuesday 13 October at 18:30 (2 dates, until 27 October). Free (Biglietti su Eventbrite).
-
 ## Link Academy OPEN DAY @Link Bologna 16.10.26
 https://anyplans.in/en/bologna/link-academy-open-day-link-bologna-16-10-26/
 
@@ -4520,11 +4439,6 @@ Talks & culture in Atelier Tubertini™, Bologna: it already took place, the las
 https://anyplans.in/en/bologna/inside-bhakti/
 
 Talks & culture in Centro Vaikuntha, Bologna, Wednesday 23 September at 18:30. Free (Biglietti su Eventbrite).
-
-## Aperitivo in inglese con madrelingua a Vignola
-https://anyplans.in/en/bologna/aperitivo-in-inglese-con-madrelingua-a-vignola/
-
-Dinners & aperitivo in Corso VI.TA, Vignola: it already took place, the last date was Wednesday, 16 September 2026.
 
 ## SEMI film kids | Il cinema dei piccoli – Bologna
 https://anyplans.in/en/bologna/semi-film-kids-il-cinema-dei-piccoli/
@@ -4911,16 +4825,6 @@ https://anyplans.in/en/bologna/loomoon-games-prenotazione-games-on-board/
 
 Board games in Via Caselle, 26, San Lazzaro di Savena, Saturday 19 September at 10:00. Free (Biglietti su Eventbrite).
 
-## SUPER SATURDAY BOLOGNA – Simpli
-https://anyplans.in/en/bologna/super-saturday-bologna/
-
-Talks & culture in Simpli, Castelfranco Emilia, Saturday 19 September at 14:30. Free (Biglietti su Eventbrite).
-
-## Evento Conapi-Mielizia e Granarolo: Pastori di api e allevatori di bovini – Maccaretolo
-https://anyplans.in/en/bologna/evento-conapi-mielizia-e-granarolo-pastori-di-api-e-allevato/
-
-Talks & culture in Azienda Agricola Famiglia Montagnini, Maccaretolo, Saturday 19 September at 15:00. Free (Biglietti su Eventbrite).
-
 ## Bologna vs Torino at Stadio Renato Dall'Ara
 https://anyplans.in/en/bologna/bologna-vs-torino-at-stadio-renato-dall-ara/
 
@@ -4975,16 +4879,6 @@ Dinners & aperitivo in Ristorante Cinese IL CINESINO, Bologna, Saturday 19 Septe
 https://anyplans.in/en/bologna/festa-della-maglia-e-dell-orgoglio-rossoblu/
 
 Town festival in DiMondi - Piazza Lucio Dalla, Saturday 19 September at 18:00. Free (Ingresso: vedi la pagina AllEvents).
-
-## Cena da Kazuki: 5 posti liberi
-https://anyplans.in/en/bologna/cena-da-kazuki-5-posti-liberi/
-
-Dinners & aperitivo in Kazuki, Castelfranco Emilia, Saturday 19 September at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Cena da Terra Mia: 7 posti liberi
-https://anyplans.in/en/bologna/cena-da-terra-mia-7-posti-liberi/
-
-Dinners & aperitivo in Terra Mia, Castelfranco Emilia, Saturday 19 September at 18:15. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## Cena da Ristorante La Scuderia: 1 posto libero
 https://anyplans.in/en/bologna/cena-da-ristorante-la-scuderia-1-posto-libero/
@@ -5501,11 +5395,6 @@ https://anyplans.in/en/bologna/passeggiata-dadaista/
 
 Town festival in ITC Teatro di San Lazzaro, San Lazzaro di Savena, Friday 25 September at 18:00. Free (Biglietti su Eventbrite).
 
-## Ci fai o ci sei? da Il Filò: 8 posti liberi
-https://anyplans.in/en/bologna/ci-fai-o-ci-sei-da-il-filo-8-posti-liberi/
-
-Dinners & aperitivo in Il Filò, Crevalcore, Friday 25 September at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Design per la longevità – Palazzo Isolani
 https://anyplans.in/en/bologna/design-per-la-longevita/
 
@@ -5771,11 +5660,6 @@ https://anyplans.in/en/bologna/magia-swing-in-un-locale-storico/
 
 Concerts & live music in Bologna centro, Saturday 26 September at 21:30. €5 (Accredito su comehome; il resto si paga in loco).
 
-## DOMVS // Sabato 26 Settembre – Club A Tavola
-https://anyplans.in/en/bologna/domvs-sabato-26-settembre/
-
-Talks & culture in Club A Tavola, Chiesolino Cà Rossa, Saturday 26 September at 23:00. Free (Gratis, registrazione su Luma).
-
 ## Connessioni interculturali: una speranza di pace – Bologna
 https://anyplans.in/en/bologna/connessioni-interculturali-una-speranza-di-pace-area-kids/
 
@@ -5795,11 +5679,6 @@ Talks & culture in Chiostro | Arena del Sole, Bologna, Sunday 27 September at 10
 https://anyplans.in/en/bologna/mini-mondi-urbani-alla-scoperta-degli-insetti-bambini-accomp/
 
 Talks & culture in Sala degli Archi | Arena del Sole, Bologna, Sunday 27 September at 10:30. Free (Biglietti su Eventbrite).
-
-## Club les Matinèe @ Halto Rooftop – San Giovanni in Persiceto
-https://anyplans.in/en/bologna/club-les-matinee-halto-rooftop/
-
-Concerts & live music in Halto Rooftop Restaurant & Cocktails, San Giovanni in Persiceto, Sunday 27 September at 10:30. Free (Biglietti su Eventbrite).
 
 ## MINI MONDI URBANI: ALLA SCOPERTA DEGLI INSETTI – Bologna
 https://anyplans.in/en/bologna/mini-mondi-urbani-alla-scoperta-degli-insetti/
@@ -5830,11 +5709,6 @@ Nights out in The Social Hub Bologna, Sunday 27 September at 17:00. €10 (Si pa
 https://anyplans.in/en/bologna/candlelight-tributo-a-cremonini/
 
 Concerts & live music in Oratorio di San Filippo Neri, Bologna, Sunday 27 September at 17:30. €19 (Biglietti su AllEvents).
-
-## Incontro con l'autore - La Guarigione Visibile (libro) – Molinella
-https://anyplans.in/en/bologna/incontro-con-l-autore-la-guarigione-visibile-libro/
-
-Yoga & pilates in Studio Olistico Yoga, Molinella, Sunday 27 September at 18:00. Free (Biglietti su Eventbrite).
 
 ## Cena da Bravo Caffè Bologna: 2 posti liberi
 https://anyplans.in/en/bologna/cena-da-bravo-caffe-bologna-2-posti-liberi/
@@ -6026,11 +5900,6 @@ https://anyplans.in/en/bologna/lezione-prova-laboratorio-babele/
 
 Shows & theatre in Teatro Testoni Ragazzi - La Baracca, Bologna, Friday 2 October at 17:30. Free (Biglietti su Eventbrite).
 
-## 🔥 BAR MANZOLINO ACCENDE I MICROFONI🔥 da Bar…
-https://anyplans.in/en/bologna/bar-manzolino-accende-i-microfoni-da-bar-manzolino-17-posti-/
-
-Dinners & aperitivo in Bar manzolino, Friday 2 October at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## ⭐️ Inaugurazione 707 ⭐️ da 707: 11 posti liberi
 https://anyplans.in/en/bologna/inaugurazione-707-da-707-11-posti-liberi/
 
@@ -6105,11 +5974,6 @@ Talks & culture in Mediateca di San Lazzaro, San Lazzaro di Savena, Saturday 3 O
 https://anyplans.in/en/bologna/giornata-nazionale-dei-locali-storici-2026-visita-guidata/
 
 Guided tours in Grand Hotel Majestic "già Baglioni", Bologna, Saturday 3 October at 11:00. €14.01 (Biglietti su AllEvents).
-
-## Pelatti Tools Day 2026 – Pelatti | Vignola
-https://anyplans.in/en/bologna/pelatti-tools-day-2026/
-
-Talks & culture in Pelatti | Vignola, Vignola, Saturday 3 October at 15:00. Free (Biglietti su Eventbrite).
 
 ## Bologna Medievale
 https://anyplans.in/en/bologna/bologna-medievale/
@@ -6466,11 +6330,6 @@ https://anyplans.in/en/bologna/la-famiglia-bononcini/
 
 Concerts & live music in Museo internazionale e biblioteca della musica, Bologna, Saturday 10 October at 17:30. Free (Biglietti su Eventbrite).
 
-## Maschi vs Femmine da Bar manzolino: 14 posti liberi
-https://anyplans.in/en/bologna/maschi-vs-femmine-da-bar-manzolino-14-posti-liberi/
-
-Dinners & aperitivo in Bar manzolino, Saturday 10 October at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Storie che attraversano i confini. Il cibo – Bologna
 https://anyplans.in/en/bologna/storie-che-attraversano-i-confini-il-cibo-la-memoria-le-radi/
 
@@ -6585,6 +6444,11 @@ Yoga & pilates in Sala Servizi Alla Persona, Argelato, Monday 12 October at 18:3
 https://anyplans.in/en/bologna/percorso-di-filosofia-attiva/
 
 Town festival in Nuova Acropoli Bologna, Bologna, Monday 12 October at 19:00. Free (Biglietti su Eventbrite).
+
+## PRIMO SOCCORSO: TECNICHE DI RIANIMAZIONE E MANOVRA DI DISOSTRUZIONE – San Giovanni in Persiceto
+https://anyplans.in/en/bologna/primo-soccorso-tecniche-di-rianimazione-e-manovra-di-disostr/
+
+Yoga & pilates in Immobiliare San Pietro, San Giovanni in Persiceto, Tuesday 13 October at 18:30 (2 dates, until 27 October). Free (Biglietti su Eventbrite).
 
 ## FedEdu 10-26 – Best Western Plus Tower Hotel Bologna
 https://anyplans.in/en/bologna/fededu-10-26-il-consiglio-del-farmacista-nelle-lesioni-cutan/
@@ -6815,11 +6679,6 @@ Concerts & live music in Beltaine Celtic Pub Bologna, Bologna, Friday 23 October
 https://anyplans.in/en/bologna/onlylive-figli-delle-stelle/
 
 Concerts & live music in Via Mascarella 1, 40126 Bologna, Italy, Bologna, Friday 23 October at 22:00 (2 dates, until 23 October). Free (Ingresso: vedi la pagina AllEvents).
-
-## 🎉 Festa 3 Mesi della Community! 🎉 da Bar manzolino:…
-https://anyplans.in/en/bologna/festa-3-mesi-della-community-da-bar-manzolino-18-posti-liber/
-
-Dinners & aperitivo in Bar manzolino, Saturday 24 October at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## The Jazz Room: omaggio a Frank Sinatra & Louis Armstrong – Bologna
 https://anyplans.in/en/bologna/the-jazz-room-omaggio-a-frank-sinatra-louis-armstrong/

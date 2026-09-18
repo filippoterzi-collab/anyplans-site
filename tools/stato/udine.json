@@ -1,17 +1,16 @@
 {
  "slug": "udine",
  "nome": "Udine",
- "eventi": 112,
- "pagine": 295,
+ "eventi": 109,
+ "pagine": 285,
  "tipi": {
   "dinner": 43,
   "yoga": 9,
   "festival": 8,
   "match": 12,
-  "games": 3,
   "culture": 10,
-  "show": 7,
+  "show": 6,
   "concert": 11
  },
- "aggiornato": "2026-09-18T09:40:26.319Z"
+ "aggiornato": "2026-09-18T09:46:05.798Z"
 }
