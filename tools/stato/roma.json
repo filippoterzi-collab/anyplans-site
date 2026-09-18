@@ -1,10 +1,10 @@
 {
  "slug": "roma",
  "nome": "Roma",
- "eventi": 1332,
- "pagine": 2999,
+ "eventi": 1331,
+ "pagine": 3247,
  "tipi": {
-  "dinner": 256,
+  "dinner": 255,
   "concert": 123,
   "culture": 273,
   "tour": 124,
@@ -32,5 +32,5 @@
   "cycling": 7,
   "match": 25
  },
- "aggiornato": "2026-09-18T06:17:45.244Z"
+ "aggiornato": "2026-09-18T09:17:27.476Z"
 }

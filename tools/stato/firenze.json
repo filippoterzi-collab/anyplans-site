@@ -1,10 +1,10 @@
 {
  "slug": "firenze",
  "nome": "Firenze",
- "eventi": 398,
- "pagine": 979,
+ "eventi": 397,
+ "pagine": 1089,
  "tipi": {
-  "dinner": 70,
+  "dinner": 69,
   "painting": 11,
   "padel": 27,
   "concert": 58,
@@ -22,5 +22,5 @@
   "cinema": 5,
   "nightlife": 3
  },
- "aggiornato": "2026-09-18T06:18:41.810Z"
+ "aggiornato": "2026-09-18T09:18:30.189Z"
 }

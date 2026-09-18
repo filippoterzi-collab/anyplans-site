@@ -1,12 +1,12 @@
 {
  "slug": "bergamo",
  "nome": "Bergamo",
- "eventi": 966,
- "pagine": 2522,
+ "eventi": 964,
+ "pagine": 2662,
  "tipi": {
   "yoga": 9,
   "festival": 73,
-  "running": 34,
+  "running": 35,
   "walking": 2,
   "estivo": 10,
   "dinner": 50,
@@ -16,7 +16,7 @@
   "culture": 98,
   "gym": 3,
   "games": 2,
-  "nightlife": 48,
+  "nightlife": 45,
   "karaoke": 38,
   "dancing": 8,
   "tour": 28,
@@ -29,5 +29,5 @@
   "ceramics": 4,
   "match": 11
  },
- "aggiornato": "2026-09-18T06:17:13.192Z"
+ "aggiornato": "2026-09-18T09:16:42.946Z"
 }
