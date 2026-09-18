@@ -1,24 +1,24 @@
 {
  "slug": "padova",
  "nome": "Padova",
- "eventi": 423,
- "pagine": 913,
+ "eventi": 407,
+ "pagine": 919,
  "tipi": {
   "dancing": 2,
-  "culture": 118,
-  "dinner": 65,
-  "yoga": 18,
+  "culture": 112,
+  "dinner": 67,
+  "yoga": 13,
   "karaoke": 3,
   "hiking": 6,
   "concert": 64,
   "show": 46,
-  "festival": 26,
-  "cinema": 9,
-  "games": 10,
+  "festival": 25,
+  "cinema": 7,
+  "games": 8,
   "gym": 3,
   "tour": 20,
   "painting": 16,
   "exhibition": 6
  },
- "aggiornato": "2026-09-17T15:59:11.208Z"
+ "aggiornato": "2026-09-18T06:18:29.976Z"
 }

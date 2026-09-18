@@ -1,26 +1,26 @@
 {
  "slug": "firenze",
  "nome": "Firenze",
- "eventi": 421,
- "pagine": 971,
+ "eventi": 398,
+ "pagine": 979,
  "tipi": {
-  "dinner": 76,
+  "dinner": 70,
   "painting": 11,
-  "padel": 28,
-  "concert": 59,
-  "festival": 33,
-  "hiking": 4,
-  "culture": 103,
+  "padel": 27,
+  "concert": 58,
+  "festival": 31,
+  "hiking": 3,
+  "culture": 96,
   "gym": 4,
-  "show": 30,
+  "show": 29,
   "dancing": 5,
   "games": 5,
   "karaoke": 2,
-  "yoga": 11,
-  "exhibition": 15,
+  "yoga": 9,
+  "exhibition": 13,
   "tour": 24,
   "cinema": 5,
   "nightlife": 3
  },
- "aggiornato": "2026-09-17T15:59:21.038Z"
+ "aggiornato": "2026-09-18T06:18:41.810Z"
 }
