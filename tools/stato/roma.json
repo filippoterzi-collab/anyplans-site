@@ -1,15 +1,15 @@
 {
  "slug": "roma",
  "nome": "Roma",
- "eventi": 1521,
- "pagine": 3701,
+ "eventi": 1523,
+ "pagine": 3723,
  "tipi": {
-  "dinner": 272,
+  "dinner": 275,
   "concert": 157,
   "culture": 305,
-  "tour": 131,
-  "padel": 56,
-  "yoga": 46,
+  "tour": 132,
+  "padel": 52,
+  "yoga": 47,
   "painting": 35,
   "festival": 126,
   "show": 120,
@@ -21,7 +21,7 @@
   "cinema": 17,
   "running": 8,
   "bowling": 4,
-  "karaoke": 8,
+  "karaoke": 9,
   "singles": 7,
   "nightlife": 17,
   "exhibition": 26,
@@ -32,5 +32,5 @@
   "cycling": 7,
   "match": 25
  },
- "aggiornato": "2026-09-18T13:42:32.629Z"
+ "aggiornato": "2026-09-18T16:39:15.642Z"
 }

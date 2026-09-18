@@ -1,11 +1,11 @@
 {
  "slug": "monza",
  "nome": "Monza",
- "eventi": 364,
- "pagine": 1023,
+ "eventi": 380,
+ "pagine": 1057,
  "tipi": {
-  "padel": 141,
-  "dinner": 76,
+  "padel": 152,
+  "dinner": 81,
   "running": 2,
   "culture": 48,
   "games": 5,
@@ -21,5 +21,5 @@
   "cycling": 4,
   "nightlife": 3
  },
- "aggiornato": "2026-09-18T13:44:53.441Z"
+ "aggiornato": "2026-09-18T16:41:56.150Z"
 }

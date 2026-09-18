@@ -1,11 +1,11 @@
 {
  "slug": "bari",
  "nome": "Bari",
- "eventi": 322,
- "pagine": 825,
+ "eventi": 330,
+ "pagine": 843,
  "tipi": {
   "padel": 8,
-  "dinner": 62,
+  "dinner": 71,
   "yoga": 2,
   "show": 59,
   "festival": 17,
@@ -17,5 +17,5 @@
   "cinema": 4,
   "dancing": 3
  },
- "aggiornato": "2026-09-18T13:44:01.282Z"
+ "aggiornato": "2026-09-18T16:40:50.784Z"
 }

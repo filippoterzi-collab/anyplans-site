@@ -1,14 +1,14 @@
 {
  "slug": "verona",
  "nome": "Verona",
- "eventi": 346,
- "pagine": 901,
+ "eventi": 349,
+ "pagine": 907,
  "tipi": {
-  "festival": 23,
-  "padel": 23,
+  "festival": 25,
+  "padel": 22,
   "culture": 117,
   "concert": 38,
-  "dinner": 36,
+  "dinner": 38,
   "hiking": 4,
   "show": 37,
   "gym": 4,
@@ -20,5 +20,5 @@
   "painting": 5,
   "cycling": 3
  },
- "aggiornato": "2026-09-18T13:43:32.621Z"
+ "aggiornato": "2026-09-18T16:40:17.121Z"
 }
