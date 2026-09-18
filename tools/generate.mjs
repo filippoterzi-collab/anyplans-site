@@ -460,18 +460,25 @@ const paeseDi = (p) => {
   const nome = dallIndirizzo || paeseDalTitolo(p);
   return nome && paeseValido(nome) ? nome : "";
 };
-const townIdx = new Map();  // town name -> pages
+const townIdx = new Map();  // nome normalizzato -> { nomi, pagine }: "EUR" e "Eur" sono lo stesso paese
+                            // e lo stesso indirizzo, e due indici con lo stesso indirizzo fermavano la corsa
 for (const p of pages) {
   if (!inWindow(p)) continue;
   if (!typeIdx.has(p.sport)) typeIdx.set(p.sport, []);
   typeIdx.get(p.sport).push(p);
   const paese = paeseDi(p);
-  if (paese && norm(paese) !== norm(CITY_NAME)) { if (!townIdx.has(paese)) townIdx.set(paese, []); townIdx.get(paese).push(p); }
+  if (paese && norm(paese) !== norm(CITY_NAME)) {
+    const k = norm(paese);
+    if (!townIdx.has(k)) townIdx.set(k, { nomi: new Map(), list: [] });
+    const t = townIdx.get(k);
+    t.nomi.set(paese, (t.nomi.get(paese) || 0) + 1);
+    t.list.push(p);
+  }
 }
 const types = [...typeIdx].filter(([, l]) => l.length >= MIN_INDEX)
   .map(([sport, list]) => ({ kind: "tipo", sport, t: tipo(sport), slug: tipo(sport).key, list }));
-const towns = [...townIdx].filter(([, l]) => l.length >= MIN_INDEX)
-  .map(([town, list]) => ({ kind: "paese", town, slug: slugify(town), list }));
+let towns = [...townIdx.values()].filter(t => t.list.length >= MIN_INDEX)
+  .map(t => { const town = [...t.nomi.entries()].sort((a, b) => b[1] - a[1])[0][0]; return { kind: "paese", town, slug: slugify(town), list: t.list }; });
 
 // ── i locali ─────────────────────────────────────────────────────────────────
 // La gente cerca il posto per nome: "circolino astino", "vog summer club", "zero club bergamo",
@@ -511,11 +518,20 @@ const venues = [...venueIdx.values()]
   .filter(v => v.list.filter(p => !p.isPast).length >= MIN_LOCALE)
   .sort((a, b) => b.list.length - a.list.length);
 const indexSlugs = new Set();
-for (const ix of [...types, ...towns]) {
+for (const ix of types) {
   if (RESERVED.has(ix.slug)) { console.error(`indice "${ix.slug}" collide con un nome riservato: mi fermo`); process.exit(1); }
-  if (indexSlugs.has(ix.slug)) { console.error(`indice "${ix.slug}" duplicato tra tipo e paese: mi fermo`); process.exit(1); }
+  if (indexSlugs.has(ix.slug)) { console.error(`tipo "${ix.slug}" duplicato: mi fermo`); process.exit(1); }
   indexSlugs.add(ix.slug);
 }
+// un paese che finirebbe sullo stesso indirizzo di un tipo (o di un altro paese) si toglie e basta:
+// i tipi sono gli stessi in tutte le città, i paesi no, e una corsa non deve fermarsi per questo.
+const townsScartati = [];
+towns = towns.filter(ix => {
+  if (RESERVED.has(ix.slug) || indexSlugs.has(ix.slug)) { townsScartati.push(ix.slug); return false; }
+  indexSlugs.add(ix.slug);
+  return true;
+});
+if (townsScartati.length) console.error(`paesi saltati, l'indirizzo era già preso: ${townsScartati.join(", ")}`);
 // events colliding with a reserved name or an index get the date suffix
 // gli slug delle pagine "quando" sono riservati prima che gli eventi scelgano il loro (in entrambe le lingue:
 // lo slug dell'evento è lo stesso per /bergamo/ e /en/bergamo/). I mesi si riservano per un anno avanti.
@@ -906,7 +922,8 @@ function whenRow(d, tz, old) {
 }
 function similar(p, n = 4) {
   const sameType = upcomingPages.filter(x => x.slug !== p.slug && x.sport === p.sport);
-  const sameTown = p.town ? upcomingPages.filter(x => x.slug !== p.slug && x.town === p.town && x.sport !== p.sport) : [];
+  const paeseQui = paeseDi(p);
+  const sameTown = paeseQui ? upcomingPages.filter(x => x.slug !== p.slug && norm(paeseDi(x)) === norm(paeseQui) && x.sport !== p.sport) : [];
   const seen = new Set(); const out = [];
   for (const x of [...sameType, ...sameTown, ...upcomingPages]) { if (x.slug !== p.slug && !seen.has(x.slug)) { seen.add(x.slug); out.push(x); } if (out.length >= n) break; }
   return out;
@@ -1017,7 +1034,7 @@ function eventPage(p) {
   const image = p.photo ? photoSrc(p.photo) : OG_DEFAULT;
   const sim = similar(p);
   const typeIndex = types.find(x => x.sport === p.sport);
-  const townIndex = p.town ? towns.find(x => x.town === p.town) : null;
+  const townIndex = towns.find(x => norm(x.town) === norm(paeseDi(p))) || null;
   const crumbItems = [["anyplans", L.home], [CITY_NAME, rel(hubUrl())]];
   if (typeIndex) crumbItems.push([tLabel(t), rel(indexUrl(typeIndex))]);
   crumbItems.push([p.title, null]);
