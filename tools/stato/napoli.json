@@ -1,10 +1,10 @@
 {
  "slug": "napoli",
  "nome": "Napoli",
- "eventi": 600,
+ "eventi": 599,
  "pagine": 1527,
  "tipi": {
-  "dinner": 115,
+  "dinner": 114,
   "tour": 36,
   "culture": 130,
   "painting": 14,
@@ -21,5 +21,5 @@
   "yoga": 10,
   "exhibition": 3
  },
- "aggiornato": "2026-09-18T11:29:11.718Z"
+ "aggiornato": "2026-09-18T11:40:23.307Z"
 }
