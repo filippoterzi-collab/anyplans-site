@@ -92,6 +92,15 @@ header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid 
 #hcity.swap,#mcity2.swap{animation:swap .5s ease}
 @keyframes swap{0%{opacity:0;transform:translateY(.35em)}100%{opacity:1;transform:none}}
 @media(prefers-reduced-motion:reduce){#hcity.swap{animation:none}}
+/* Pillola del conteggio (tornata il 18/09/2026, era sparita con la home alla Airbnb del 15/09).
+   Dice quanti eventi ci sono oggi in tutta Italia, non solo nella città scelta: è la prova che
+   dentro c'è roba vera, e il numero grande vale più di qualsiasi promessa. Nasce nascosta e si
+   mostra solo col numero vero in mano: se il conteggio non arriva o è zero, non si vede niente. */
+.pill{display:inline-block;white-space:nowrap;background:var(--tint);color:var(--blue);
+      font-weight:700;font-size:14px;padding:8px 16px;border-radius:999px;margin-bottom:14px}
+.pill b{font-weight:800}
+@media (max-width:743px){ .pill{font-size:12.5px;padding:7px 13px;margin-bottom:10px} }
+
 /* home: "vicino a te" e marketing sotto */
 .hero .here{display:inline-flex;align-items:center;gap:8px;margin-top:12px;background:#fff;border:1.5px solid var(--hair);border-radius:999px;padding:7px 14px;font-size:13.5px;font-weight:700}
 .hero .here a{color:var(--blue)}
@@ -737,6 +746,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <!-- S2 (17/09/2026, spec §5): su mobile la ricerca è il protagonista. Una card sola, un campo,
        quattro scorciatoie per chi arriva da Instagram e non sa cosa scrivere. Nascosta da 744px in su. -->
   <section class="msearch" aria-label="Cerca eventi">
+    <div class="pill" data-pill hidden>📍 Oggi in Italia: <b class="pill-n"></b> <span class="pill-w">eventi</span></div>
     <h1 class="mslabel">Che eventi ci sono a <span class="blue" id="mcity2">Bergamo</span>?</h1>
     <!-- 17/09/2026: due righe sole, sopra la mappa. Chi arriva da Instagram deve capire in tre
          secondi cosa trova qui e cosa gli succede se clicca. Il discorso lungo va sotto la mappa. -->
@@ -759,6 +769,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
     </div>
   </section>
   <section class="hero">
+    <div class="pill" data-pill hidden>📍 Oggi in Italia: <b class="pill-n"></b> <span class="pill-w">eventi</span></div>
     <h1 class="hi">Che eventi ci sono a <span class="blue" id="hcity">Bergamo</span>?</h1>
     <p class="sub">Sagre, corse, partite, cene, concerti, corsi: tutto quello a cui puoi unirti oggi e nei prossimi giorni, in tutta Italia, con chi lo organizza. Scegli, e ci vai insieme ad altri.</p>
   </section>
@@ -935,7 +946,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789724521"></script>
+<script src="/bergamo/app.js?v=1789726290"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1682,6 +1693,34 @@ document.querySelectorAll(".cats, .dates .chips, .strip .row, .trips .row, .caro
     row.scrollLeft = sl - dx; e.preventDefault();
   }, { passive: false });
 });
+// ---------- pillola "Oggi in Italia" ----------
+// Il numero è di tutto il paese, non della città scelta: un raggio di 1.200 km dal centro d'Italia
+// prende dalle Alpi a Lampedusa. Oggi sono più di mille eventi, e scaricarli tutti per contarli
+// sarebbe un megabyte buttato: si chiede a PostgREST solo il conteggio (`Prefer: count=exact` con
+// `limit=1`), che torna nell'intestazione Content-Range. Il corpo della risposta è una riga sola.
+async function loadItalyCount(){
+  let n;
+  try {
+    const r = await fetch(SB_URL + "/rest/v1/rpc/feed_activities?select=id&limit=1", {
+      method: "POST",
+      headers: { "apikey": SB_ANON, "Authorization": "Bearer " + SB_ANON,
+                 "Content-Type": "application/json", "Prefer": "count=exact" },
+      body: JSON.stringify({ lat: 42.5, lng: 12.5, radius_m: 1200000, day: TODAY })
+    });
+    if (!r.ok) return;
+    n = parseInt((r.headers.get("content-range") || "").split("/")[1], 10);
+  } catch (_) { return; }
+  if (!n || !isFinite(n)) return;      // zero eventi o conteggio non arrivato: la pillola resta nascosta
+  // punto per le migliaia scritto a mano: toLocaleString("it-IT") non raggruppa su tutti i browser
+  const mille = String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  document.querySelectorAll("[data-pill]").forEach(p => {
+    p.querySelector(".pill-n").textContent = mille;
+    p.querySelector(".pill-w").textContent = n === 1 ? "evento" : "eventi";
+    p.hidden = false;
+  });
+}
+loadItalyCount();
+
 // ---------- via ----------
 buildStatic();
 const CITTA_URL = cittaDaIndirizzo();
