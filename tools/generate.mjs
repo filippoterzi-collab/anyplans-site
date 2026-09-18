@@ -785,7 +785,7 @@ const CITY_LD = { "@type": "City", name: CITY_NAME,
   address: { "@type": "PostalAddress", addressLocality: CITY_NAME, addressRegion: PROV, addressCountry: "IT" },
   geo: { "@type": "GeoCoordinates", latitude: C.lat, longitude: C.lng } };
 const ITALIA = { "@type": "Country", name: "Italia" };
-function layout({ title, description, url, image, jsonLd, body, ogType = "website", modified = NOW, head = "", alt = null, about = CITY_LD }) {
+function layout({ title, description, url, image, jsonLd, body, ogType = "website", modified = NOW, head = "", alt = null, about = CITY_LD, vecchio = false }) {
   // alt: the same page in the other language (hreflang); Italian is the default for everyone else
   const itUrl = en() ? alt : url, enUrl = en() ? url : alt;
   const crumbLd = lastCrumbs ? jsonld({ "@context": "https://schema.org", "@type": "BreadcrumbList", itemListElement: lastCrumbs.map(([l, h], i) =>
@@ -812,7 +812,8 @@ function layout({ title, description, url, image, jsonLd, body, ogType = "websit
 ${itUrl && enUrl ? `<link rel="alternate" hreflang="it" href="${esc(itUrl)}">
 <link rel="alternate" hreflang="en" href="${esc(enUrl)}">
 <link rel="alternate" hreflang="x-default" href="${esc(itUrl)}">` : ""}
-<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+${vecchio ? '<meta name="robots" content="noindex, follow">'
+  : '<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">'}
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
 <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
@@ -1012,6 +1013,18 @@ function eventFaqIt(p, org) {
     { q: `Come faccio a partecipare a ${p.title}?`, a: `Ti registri su anyplans con la tua email, apri l'evento e dici che ci vai: così vedi chi organizza e chi altro viene, e non ci vai da solo. Serve avere almeno 18 anni.` },
   ];
 }
+// Un evento finito da più di 45 giorni non serve a chi cerca: la pagina resta (chi ci arriva da un
+// link vecchio la trova, e i suoi link continuano a valere) ma non si chiede più a Google di
+// indicizzarla, e sparisce dalla sitemap. Search Console il 18/09/2026: 3.394 pagine "scansionate,
+// attualmente non indicizzate" — 1.319 sono eventi già passati, e chiedere l'indicizzazione di roba
+// che non si può più fare consuma la scansione che serve alle altre. I primi 45 giorni restano
+// indicizzabili perché dopo una festa la gente la cerca ancora ("conca fiorita in festa", 12 impressioni).
+const GIORNI_VECCHIO = 45;
+const vecchioDi = (p) => {
+  if (!p.isPast) return false;
+  const ultima = p.dates.length ? p.dates[p.dates.length - 1].start : null;
+  return !!ultima && (NOW - ultima) > GIORNI_VECCHIO * 86400e3;
+};
 function eventPage(p) {
   const url = eventUrl(p);
   const tz = p.tz, t = p.tipo, org = organizer(p);
@@ -1144,7 +1157,7 @@ ${sim.length ? `<h2>${S.similar}</h2>${listHtml(sim)}` : ""}
     el.textContent = txt ? "· " + txt : "";
   })();
 </script>`;
-  return layout({ title, description: descr, url, image, jsonLd: [eventJsonLd(p, url), faqLd(faq)].filter(Boolean).join("\n"), body: body + mapScript + relScript, ogType: "article", modified: p.updated, head: mapHead,
+  return layout({ vecchio: vecchioDi(p), title, description: descr, url, image, jsonLd: [eventJsonLd(p, url), faqLd(faq)].filter(Boolean).join("\n"), body: body + mapScript + relScript, ogType: "article", modified: p.updated, head: mapHead,
     alt: inLocale(E ? "it" : "en", () => eventUrl(p)) });
 }
 
@@ -2204,7 +2217,7 @@ for (const code of ["it", "en"]) {
     }
   }
   for (const g of groups) { const r = groupPage(g); await writePage(relOf(groupUrl(g)), r.html); addUrl(groupUrl(g), r.lastmod); }
-  for (const p of pages) { await writePage(relOf(eventUrl(p)), eventPage(p)); addUrl(eventUrl(p), p.updated); }
+  for (const p of pages) { await writePage(relOf(eventUrl(p)), eventPage(p)); if (!vecchioDi(p)) addUrl(eventUrl(p), p.updated); }
 }
 setLocale('it');
 
@@ -2227,7 +2240,9 @@ if (CITY !== HOME_CITY) {
       .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${url}">`)
       // il titolo dentro la pagina diceva "Che eventi ci sono a Bergamo?" anche su Napoli: il nome lo
       // metteva il javascript, e Google leggeva Bergamo su tutte e 51 le altre città (18/09/2026).
-      .replace(/(<span class="blue" id="hcity">)[^<]*(<\/span>)/, `$1${esc(CITY_NAME)}$2`)
+      .replace(/(<span class="blue" id="(?:hcity|mcity2)">)[^<]*(<\/span>)/g, `$1${esc(CITY_NAME)}$2`)
+      // il segmento "Dove" della barra parte già sulla città, come fa il javascript
+      .replace(/(<span class="v" id="v-dove">)[^<]*(<\/span>)/, `$1${esc(CITY_NAME)}$2`)
       .replace(/(<p class="sub">)([^<]*)/, (_m, tag, txt) =>
         `${tag}${esc(CITY_NAME)} e dintorni: ${txt.charAt(0).toLowerCase()}${txt.slice(1)}`)
       .replace("</head>", `<script>window.ANYPLANS_CITY=${JSON.stringify(CITY)};</script>\n</head>`);
