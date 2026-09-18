@@ -422,12 +422,51 @@ pages = pages.filter(p => !(p.isPast && p.source === "ugc" && !p.photo && p.desc
 const windowStart = new Date(NOW.getTime() - INDEX_WINDOW_DAYS * 86400e3);
 const inWindow = (p) => p.dates.some(d => d.start >= windowStart);
 const typeIdx = new Map();  // sport -> pages
+// i paesi che il database dichiara davvero (p.town): servono a riconoscere il paese anche quando il
+// campo manca. "Mercato di Ponte Nossa" diceva a Google di essere a Bergamo, perché il ritrovo è
+// "Via G. Frua" e da lì non si ricava niente: il paese però sta nel titolo, e Ponte Nossa è un paese
+// che conosciamo da altri eventi. Senza, il mercato non compariva nemmeno nella pagina del suo paese
+// (18/09/2026).
+const PAESI_NOTI = (() => {
+  const m = new Map();
+  for (const p of pages) if (p.town && p.town !== "Bergamo Città") m.set(norm(p.town), p.town);
+  return [...m.entries()].sort((a, b) => b[0].length - a[0].length);   // prima i nomi lunghi: "Bonate Sotto" batte "Bonate"
+})();
+const paeseDalTitolo = (p) => {
+  const t = norm(p.title);
+  for (const [k, nome] of PAESI_NOTI) if (k.length >= 4 && new RegExp(`(^|[^a-z])${k.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}([^a-z]|$)`).test(t)) return nome;
+  return "";
+};
+// un paese non è la città stessa scritta in un altro modo ("Milan" per Milano) e non è un locale
+// ("Artevox Teatro"): quelli hanno la loro pagina sotto /locali/.
+// le piattaforme da cui arrivano gli eventi non sono paesi: capita che finiscano nel campo del club
+const PIATTAFORME = new Set(["nomadtable", "tablo", "luma", "lu.ma", "eventbrite", "allevents", "meeters",
+  "weroad", "wemeet", "playtomic", "comehome", "panesalamina", "sivola", "zest", "feverup", "fever", "play2match", "2d2web"]);
+const paeseValido = (nome) => {
+  const n = norm(nome), c = norm(CITY_NAME);
+  if (n.length < 3 || n === c || c.startsWith(n) || n.startsWith(c)) return false;
+  if (PIATTAFORME.has(n)) return false;
+  return !/\b(teatro|cinema|club|circolo|museo|stadio|arena|auditorium|palazzetto|hotel|ristorante|pizzeria|birreria|discoteca|osteria|taverna)\b/.test(n);
+};
+// il paese dell'evento: quello dichiarato, poi quello dell'indirizzo, poi quello scritto nel titolo
+const paeseDi = (p) => {
+  if (p.town) {
+    const t = p.town === "Bergamo Città" ? CITY_NAME : p.town;
+    return norm(t) === norm(CITY_NAME) || paeseValido(t) ? t : "";
+  }
+  const parts = String(p.meeting || "").split(",").map(x => x.trim()).filter(Boolean);
+  const last = parts.length > 1 ? parts[parts.length - 1] : "";
+  const dallIndirizzo = last && !/\d/.test(last) && last.length <= 40 ? last.replace(/\s*\(.*\)\s*$/, "") : "";
+  const nome = dallIndirizzo || paeseDalTitolo(p);
+  return nome && paeseValido(nome) ? nome : "";
+};
 const townIdx = new Map();  // town name -> pages
 for (const p of pages) {
   if (!inWindow(p)) continue;
   if (!typeIdx.has(p.sport)) typeIdx.set(p.sport, []);
   typeIdx.get(p.sport).push(p);
-  if (p.town) { if (!townIdx.has(p.town)) townIdx.set(p.town, []); townIdx.get(p.town).push(p); }
+  const paese = paeseDi(p);
+  if (paese && norm(paese) !== norm(CITY_NAME)) { if (!townIdx.has(paese)) townIdx.set(paese, []); townIdx.get(paese).push(p); }
 }
 const types = [...typeIdx].filter(([, l]) => l.length >= MIN_INDEX)
   .map(([sport, list]) => ({ kind: "tipo", sport, t: tipo(sport), slug: tipo(sport).key, list }));
@@ -827,12 +866,7 @@ function organizer(p) {
   return { name: en() ? "An anyplans member" : "Un utente di anyplans", url: null, kind: "utente" };
 }
 // "Piazzale della Chiesa, Carvico" -> Carvico; a last segment with digits or the city name itself is not a locality
-function localityOf(p) {
-  if (p.town) return p.town === "Bergamo Città" ? CITY_NAME : p.town; // eventi.bergamo.it says "Bergamo Città" for the city itself
-  const parts = String(p.meeting || "").split(",").map(x => x.trim()).filter(Boolean);
-  const last = parts.length > 1 ? parts[parts.length - 1] : "";
-  return last && !/\d/.test(last) && last.length <= 40 ? last.replace(/\s*\(.*\)\s*$/, "") : CITY_NAME;
-}
+function localityOf(p) { return paeseDi(p) || CITY_NAME; }
 function eventJsonLd(p, url) {
   // Google wants Event markup only for events still to come: past dates get no Event node at all
   const dates = p.dates.filter(d => d.future);
