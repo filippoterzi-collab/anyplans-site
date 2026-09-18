@@ -227,7 +227,8 @@
    "label": "Feste, sagre ed eventi di paese",
    "c": "cultura",
    "frase": "Le feste dell'oratorio, le sagre e gli eventi di paese della bergamasca, con le date di ogni sera.",
-   "conta": "festa|feste"
+   "conta": "festa|feste",
+   "titolo": "Feste e sagre"
   },
   "estivo": {
    "key": "estivi",
@@ -259,7 +260,8 @@
    "label": "Mercatini",
    "c": "cultura",
    "frase": "I mercatini di Bergamo e provincia: antiquariato, hobbisti, artigianato, vintage e seconda mano, weekend per weekend.",
-   "conta": "mercatino|mercatini"
+   "conta": "mercatino|mercatini",
+   "titolo": "Mercati e mercatini"
   },
   "karaoke": {
    "key": "karaoke",

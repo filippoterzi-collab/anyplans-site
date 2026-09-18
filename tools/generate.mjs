@@ -138,12 +138,12 @@ const LOCALES = {
         when: { oggi: "cosa-fare-oggi", domani: "cosa-fare-domani", weekend: "cosa-fare-nel-weekend" },
         monthSlug: (label) => "eventi-" + slugify(label),
         days: ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"], daySlug: ["lunedi", "martedi", "mercoledi", "giovedi", "venerdi", "sabato", "domenica"],
-        and: " e ", free: "Gratis", privacy: "/privacy-it.html", terms: "/terms-it.html", home: "/", citta: "citta" },
+        and: " e ", free: "Gratis", privacy: "/privacy-it.html", terms: "/terms-it.html", home: "/", citta: "citta", locali: "locali" },
   en: { code: "en", tag: "en", og: "en_GB", intl: "en-GB", prefix: "/en", hub: "things-to-do", groups: "groups", running: "running-clubs",
         when: { oggi: "what-to-do-today", domani: "what-to-do-tomorrow", weekend: "what-to-do-this-weekend" },
         monthSlug: (label) => "events-" + slugify(label),
         days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], daySlug: ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"],
-        and: " and ", free: "Free", privacy: "/privacy.html", terms: "/terms.html", home: "/en/", citta: "cities" },
+        and: " and ", free: "Free", privacy: "/privacy.html", terms: "/terms.html", home: "/en/", citta: "cities", locali: "venues" },
 };
 let L = LOCALES.it;           // the locale of the page being built (the write loop at the bottom switches it)
 const en = () => L.code === "en";
@@ -414,6 +414,44 @@ const types = [...typeIdx].filter(([, l]) => l.length >= MIN_INDEX)
   .map(([sport, list]) => ({ kind: "tipo", sport, t: tipo(sport), slug: tipo(sport).key, list }));
 const towns = [...townIdx].filter(([, l]) => l.length >= MIN_INDEX)
   .map(([town, list]) => ({ kind: "paese", town, slug: slugify(town), list }));
+
+// ── i locali ─────────────────────────────────────────────────────────────────
+// La gente cerca il posto per nome: "circolino astino", "vog summer club", "zero club bergamo",
+// "27 bistrot", "bar8 pontida". In Search Console sono oltre cento impressioni al mese solo a
+// Bergamo, tutte intorno alla decima posizione, perché rispondiamo con la pagina di un singolo
+// evento invece che con la pagina del locale. Qui nasce quella pagina (17/09/2026).
+const MIN_LOCALE = 2;             // sotto due eventi in programma la pagina del locale direbbe quello che dice gia la pagina dell'evento
+// i nomi dei paesi visti in questa città: un paese non è un locale ("Dalmine", "Zogno", "Seriate")
+const PAESI = new Set(pages.flatMap(p => [p.town, localityOf(p)]).filter(Boolean).map(norm)
+  .concat(CITTA.map(c => norm(c.nome))));
+// nomi che non identificano un posto: ce n'è uno per paese e tutti si chiamano così
+const GENERICI = new Set(["sala polivalente", "sala civica", "pista di atletica", "rocca", "centro sportivo",
+  "palazzetto dello sport", "area feste", "oratorio", "campo sportivo", "palazzetto", "palestra comunale",
+  "centro anziani", "sala consiliare", "auditorium", "biblioteca comunale", "teatro comunale", "cinema teatro",
+  "piazza del mercato", "centro civico", "casa della comunita", "parco comunale", "campo sportivo comunale"]);
+const nomeLocale = (p) => {
+  const raw = String(p.club || String(p.meeting || "").split(/\s*[,–]\s*/)[0] || "").trim();
+  if (raw.length < 4 || raw.length > 60) return "";
+  // un indirizzo non è un locale, e nemmeno il nome del paese o un nome che hanno tutti i paesi
+  if (/^(via|viale|v\.le|piazza|p\.zza|piazzale|p\.le|corso|c\.so|largo|vicolo|strada|contrada|localit|lungo|parcheggio|oratorio di|centro sportivo di)\b/i.test(raw)) return "";
+  if (PAESI.has(norm(raw)) || GENERICI.has(norm(raw))) return "";
+  return raw;
+};
+const venueIdx = new Map();
+for (const p of pages) {
+  const nome = nomeLocale(p);
+  if (!nome) continue;
+  const k = slugify(nome);
+  if (!k || RESERVED.has(k)) continue;
+  if (!venueIdx.has(k)) venueIdx.set(k, { kind: "locale", slug: k, nomi: new Map(), list: [] });
+  const v = venueIdx.get(k);
+  v.nomi.set(nome, (v.nomi.get(nome) || 0) + 1);
+  v.list.push(p);
+}
+const venues = [...venueIdx.values()]
+  .map(v => ({ ...v, nome: [...v.nomi.entries()].sort((a, b) => b[1] - a[1])[0][0] }))
+  .filter(v => v.list.filter(p => !p.isPast).length >= MIN_LOCALE)
+  .sort((a, b) => b.list.length - a.list.length);
 const indexSlugs = new Set();
 for (const ix of [...types, ...towns]) {
   if (RESERVED.has(ix.slug)) { console.error(`indice "${ix.slug}" collide con un nome riservato: mi fermo`); process.exit(1); }
@@ -530,6 +568,8 @@ const cittaUrl = () => `${SITE}${L.prefix}/${L.citta}/`;   // l'elenco delle cit
 // quindi l'elenco di link vive sotto /milano/cosa-fare/. In inglese resta dov'era.
 const hubUrl = () => (!en() || CITY === HOME_CITY) ? `${base()}/${L.hub}/` : `${base()}/`;
 const groupsUrl = () => `${base()}/${L.groups}/`;
+const venuesUrl = () => `${base()}/${L.locali}/`;
+const venueUrl = (v) => `${base()}/${L.locali}/${v.slug}/`;
 const runningUrl = () => `${base()}/${L.running}/`;
 const dayUrl = (i) => `${runningUrl()}${L.daySlug[i]}/`;
 // "cosa fare a Bergamo oggi / domani / nel weekend" e "eventi a Bergamo a ottobre": le ricerche più frequenti
@@ -1369,6 +1409,92 @@ ${faqHtml(faq)}
   return layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld + "\n" + faqLd(faq), body, alt: inLocale("en", groupsUrl) });
 }
 
+// ── le pagine dei locali ─────────────────────────────────────────────────────
+// Una per locale, più l'elenco. Rispondono alla ricerca fatta col nome del posto ("circolino
+// astino", "vog summer club"), che oggi ci trova solo con la pagina di un evento singolo.
+const indirizzoLocale = (v) => {
+  const p = v.list.find(x => x.meeting) || v.list[0];
+  const m = String(p && p.meeting || "").trim();
+  return m && norm(m) !== norm(v.nome) ? m : "";
+};
+const paeseLocale = (v) => {
+  const c = new Map();
+  for (const p of v.list) { const t = localityOf(p); if (t) c.set(t, (c.get(t) || 0) + 1); }
+  return [...c.entries()].sort((a, b) => b[1] - a[1]).map(x => x[0])[0] || CITY_NAME;
+};
+function venuePage(v) {
+  const url = venueUrl(v);
+  const E = en();
+  const nome = v.nome, paese = paeseLocale(v), indirizzo = indirizzoLocale(v);
+  const list = v.list.slice().sort(byDate);
+  const up = list.filter(p => !p.isPast), past = list.filter(p => p.isPast).reverse().slice(0, 20);
+  const dove = norm(nome).includes(norm(paese)) ? "" : (E ? ` in ${paese}` : ` a ${paese}`);
+  // "eventi e serate" solo dove le serate ci sono davvero: in un museo suonerebbe falso
+  const notturno = up.some(x => ["nightlife", "concert", "karaoke", "dance", "dinner"].includes(x.sport));
+  const h1 = `${nome}: ${E ? (notturno ? "events and nights out" : "what's on") : (notturno ? "eventi e serate" : "eventi in programma")}${dove}`;
+  const title = cut(h1, 57) + " | anyplans";
+  const tipi = [...new Map(up.map(p => [p.sport, p.tipo])).values()].slice(0, 4).map(t => tLabel(t).toLowerCase());
+  const free = up.filter(p => !(p.price_cents > 0)).length;
+  const lead = E
+    ? `${nome}${dove}: ${up.length} upcoming ${up.length === 1 ? "event" : "events"}${tipi.length ? ` — ${joinIt(tipi)}` : ""}. Date, time, price and how to join, one page each. You go with other people.`
+    : `${nome}${dove}: ${up.length} ${up.length === 1 ? "evento in programma" : "eventi in programma"}${tipi.length ? ` — ${joinIt(tipi)}` : ""}. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.`;
+  const descr = cut(lead, 160);
+  const riga = (p) => `${p.title} (${whenLabel(p).toLowerCase()})`;
+  const faq = E ? [
+    { q: `${nome}: what's on?`, a: up.length ? `${up.length} upcoming ${up.length === 1 ? "event" : "events"}: ${joinIt(up.slice(0, 6).map(riga))}${up.length > 6 ? ", and more in the list above" : ""}.` : `Nothing scheduled right now. Past events are listed below, and new dates appear here as soon as they are published.` },
+    { q: `${nome}: where is it?`, a: indirizzo ? `${indirizzo}${norm(indirizzo).includes(norm(paese)) ? "" : ", " + paese}. Every event page has the meeting point and a link to the map.` : `In ${paese}. Every event page has the exact meeting point and a link to the map.` },
+    { q: `${nome}: how much is it?`, a: up.length ? `${free === up.length ? "All the upcoming events are free" : free ? `${free} of the ${up.length} upcoming events are free` : "All the upcoming events have a ticket or a fee"}. The price is on each event page.` : `It depends on the event: the price is on each event page.` },
+    { q: `${nome}: can I go alone?`, a: `Yes. On anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.` },
+  ] : [
+    { q: `${nome}: che eventi ci sono?`, a: up.length ? `${up.length === 1 ? "C'è 1 evento in programma" : `Ci sono ${up.length} eventi in programma`}: ${joinIt(up.slice(0, 6).map(riga))}${up.length > 6 ? ", e altri nella lista qui sopra" : ""}.` : `Al momento non c'è niente in programma. Qui sotto ci sono quelli già passati, e le date nuove compaiono qui appena vengono pubblicate.` },
+    { q: `${nome}: dove si trova?`, a: indirizzo ? `${indirizzo}${norm(indirizzo).includes(norm(paese)) ? "" : ", " + paese}. In ogni pagina dell'evento c'è il punto di ritrovo e il link alla mappa.` : `A ${paese}. In ogni pagina dell'evento c'è il punto di ritrovo esatto e il link alla mappa.` },
+    { q: `${nome}: si paga?`, a: up.length ? `${free === up.length ? "Gli eventi in programma sono tutti gratis" : free ? `${free} eventi su ${up.length} sono gratis` : "Gli eventi in programma hanno tutti un biglietto o una quota"}. Il prezzo è scritto nella pagina di ogni evento.` : `Dipende dall'evento: il prezzo è scritto nella pagina di ognuno.` },
+    { q: `${nome}: ci posso andare da solo?`, a: `Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.` },
+  ];
+  const conGeo = v.list.find(p => p.visibility === "open" && p.lat != null && p.lng != null);
+  const place = { "@type": "Place", "@id": url + "#locale", name: nome,
+    address: { "@type": "PostalAddress", ...(indirizzo ? { streetAddress: indirizzo } : {}), addressLocality: paese, addressRegion: PROV, addressCountry: "IT" },
+    ...(conGeo ? { geo: { "@type": "GeoCoordinates", latitude: conGeo.lat, longitude: conGeo.lng } } : {}) };
+  const ld = jsonld({ "@context": "https://schema.org", "@graph": [place,
+    { "@type": "ItemList", name: h1, url, itemListElement: up.slice(0, 50).map((p, i) => ({ "@type": "ListItem", position: i + 1, url: eventUrl(p), name: p.title })) }] });
+  const body = `
+${crumbs([["anyplans", L.home], [CITY_NAME, rel(hubUrl())], [E ? "Venues" : "Locali", rel(venuesUrl())], [nome, null]])}
+<h1>${esc(h1)}</h1>
+<p class="lead">${esc(lead)}</p>
+${indirizzo ? `<div class="chips"><span class="chip">📍 ${esc(indirizzo)}</span></div>` : ""}
+<div class="cta"><a class="btn" href="${MAP_URL}">${E ? "See it on the map" : "Vedi sulla mappa"}</a><a class="btn ghost" href="${rel(venuesUrl())}">${E ? "All the venues" : "Tutti i locali"}</a></div>
+${up.length ? `<h2>${E ? "Upcoming" : "Prossimi"}</h2>${listHtml(up)}` : ""}
+${past.length ? `<h2>${E ? "Past" : "Già passati"}</h2>${listHtml(past)}` : ""}
+${faqHtml(faq)}
+`;
+  const lastmod = new Date(Math.max(...list.map(p => p.updated)));
+  return { html: layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld + "\n" + faqLd(faq), body, modified: lastmod, alt: inLocale(E ? "it" : "en", () => venueUrl(v)) }), lastmod };
+}
+function venuesIndex() {
+  const url = venuesUrl(), E = en();
+  const title = `${E ? `Venues in ${CITY_NAME}` : `Locali a ${CITY_NAME}`}: ${venues.length} | anyplans`;
+  const descr = cut(E
+    ? `${venues.length} venues in ${CITY_NAME} and its province with something on: clubs, bars, sports centres, theatres and squares. One page each, with the upcoming dates.`
+    : `${venues.length} locali a ${CITY_NAME} e provincia dove c'è qualcosa in programma: circoli, bar, centri sportivi, teatri e piazze. Ognuno ha la sua pagina con le prossime date.`, 160);
+  const ld = jsonld({ "@context": "https://schema.org", "@type": "ItemList", name: title, url,
+    itemListElement: venues.map((v, i) => ({ "@type": "ListItem", position: i + 1, url: venueUrl(v), name: v.nome })) });
+  const faq = E ? [
+    { q: `Which venues are on anyplans in ${CITY_NAME}?`, a: `${venues.length}: ${joinIt(venues.slice(0, 8).map(v => v.nome))}${venues.length > 8 ? " and more" : ""}. Each has its own page with the upcoming dates.` },
+    { q: `I run a venue: how do I get on here?`, a: `Publish your dates on anyplans: sign up, create your group and add the events. The page of your venue builds itself from the dates you publish.` },
+  ] : [
+    { q: `Quali locali ci sono su anyplans a ${CITY_NAME}?`, a: `${venues.length}: ${joinIt(venues.slice(0, 8).map(v => v.nome))}${venues.length > 8 ? " e altri" : ""}. Ognuno ha la sua pagina con le prossime date.` },
+    { q: `Ho un locale: come ci finisco?`, a: `Pubblicando le tue date su anyplans: ti registri, crei il tuo gruppo e inserisci gli eventi. La pagina del locale si costruisce da sola con le date che pubblichi.` },
+  ];
+  const body = `
+${crumbs([["anyplans", L.home], [CITY_NAME, rel(hubUrl())], [E ? "Venues" : "Locali", null]])}
+<h1>${E ? `Venues in ${esc(CITY_NAME)}` : `Locali a ${esc(CITY_NAME)}`}</h1>
+<p class="lead">${esc(descr)}</p>
+<div class="list">${venues.map(v => { const n = v.list.filter(p => !p.isPast).length; return `<a class="card" href="${esc(venueUrl(v))}"><span class="em">📍</span><span><span class="t">${esc(v.nome)}</span><br><span class="m">${esc(paeseLocale(v))} · ${n} ${E ? (n === 1 ? "event" : "events") : (n === 1 ? "evento" : "eventi")}</span></span></a>`; }).join("")}</div>
+${faqHtml(faq)}
+`;
+  return layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld + "\n" + faqLd(faq), body, alt: inLocale(E ? "it" : "en", venuesUrl) });
+}
+
 // ── index pages (type / town) and hub ─────────────────────────────────────────
 function indexPage(ix) { return en() ? indexPageEn(ix) : indexPageIt(ix); }
 function indexPageEn(ix) {
@@ -1422,8 +1548,10 @@ function indexPageIt(ix) {
   const up = list.filter(p => !p.isPast), past = list.filter(p => p.isPast).reverse().slice(0, Math.max(0, Math.min(20, 100 - up.length)));
   let h1, title, intro, emoji;
   if (ix.kind === "tipo") {
-    h1 = `${ix.t.label} a ${CITY_NAME} e provincia`; emoji = ix.t.e;
-    title = cut(`${ix.sport === "festival" ? "Feste e sagre" : ix.t.label} a ${CITY_NAME}`, 36) + (up.length ? `: ${up.length} ${up.length === 1 ? "evento" : "eventi"}` : "") + " | anyplans";
+    // "mercatini" è come lo chiamiamo noi, "mercato di Rovetta" è come lo cerca la gente: il titolo
+    // della categoria porta tutte e due le parole (testi.json "titolo").
+    h1 = `${ix.t.titolo || ix.t.label} a ${CITY_NAME} e provincia`; emoji = ix.t.e;
+    title = cut(`${ix.t.titolo || ix.t.label} a ${CITY_NAME}`, 36) + (up.length ? `: ${up.length} ${up.length === 1 ? "evento" : "eventi"}` : "") + " | anyplans";
     // "8 mostre", non "8 eventi di mostre": ogni tipo dice come si chiama quando lo si conta (testi.json "conta")
     const [sing, plur] = String(ix.t.conta || `evento di ${ix.t.label.toLowerCase()}|eventi di ${ix.t.label.toLowerCase()}`).split("|");
     const quanti = `${up.length} ${up.length === 1 ? sing : plur}`;
@@ -1540,6 +1668,7 @@ ${types.length ? `<h2>By kind</h2><div class="tags">${types.map(x => `<a href="$
 ${towns.length ? `<h2>By town</h2><div class="tags">${towns.slice().sort((a, b) => a.town.localeCompare(b.town, "it")).map(x => `<a href="${rel(indexUrl(x))}">${esc(x.town)}</a>`).join("")}</div>` : ""}
 ${runClubs.length >= 3 ? `<h2>Running with others</h2><div class="tags"><a href="${rel(runningUrl())}">🏃 Running clubs in ${esc(CITY_NAME)}</a></div>` : ""}
 ${groups.length ? `<h2>Groups</h2><div class="tags">${groups.map(g => `<a href="${esc(groupUrl(g))}">${g.emoji || "👥"} ${esc(g.name)}</a>`).join("")}</div>` : ""}
+${venues.length ? `<h2>Venues</h2><p class="subl">The places where things happen: clubs, bars, sports centres, theatres and squares. Each with its own dates.</p><div class="tags">${venues.slice(0, 12).map(v => `<a href="${esc(venueUrl(v))}">📍 ${esc(v.nome)}</a>`).join("")}<a href="${rel(venuesUrl())}">All the venues</a></div>` : ""}
 ${vicineHtml()}
 <h2>Upcoming events</h2>
 ${next.length ? listHtml(next) : `<p class="lead">Nothing scheduled right now.</p>`}
@@ -1579,6 +1708,7 @@ ${types.length ? `<h2>Per tipo</h2><div class="tags">${types.map(x => `<a href="
 ${towns.length ? `<h2>Per paese</h2><div class="tags">${towns.slice().sort((a, b) => a.town.localeCompare(b.town, "it")).map(x => `<a href="${rel(indexUrl(x))}">${esc(x.town)}</a>`).join("")}</div>` : ""}
 ${runClubs.length >= 3 ? `<h2>Correre in compagnia</h2><div class="tags"><a href="${rel(runningUrl())}">🏃 Running club a ${esc(CITY_NAME)}</a></div>` : ""}
 ${groups.length ? `<h2>Gruppi</h2><div class="tags">${groups.map(g => `<a href="${esc(groupUrl(g))}">${g.emoji || "👥"} ${esc(g.name)}</a>`).join("")}</div>` : ""}
+${venues.length ? `<h2>I locali</h2><p class="subl">I posti dove succedono le cose: circoli, bar, centri sportivi, teatri e piazze. Ognuno con le sue prossime date.</p><div class="tags">${venues.slice(0, 12).map(v => `<a href="${esc(venueUrl(v))}">📍 ${esc(v.nome)}</a>`).join("")}<a href="${rel(venuesUrl())}">Tutti i locali</a></div>` : ""}
 ${vicineHtml()}
 <h2>Prossimi eventi</h2>
 ${next.length ? listHtml(next) : `<p class="lead">Niente in programma adesso.</p>`}
@@ -1987,6 +2117,10 @@ for (const code of ["it", "en"]) {
   }
   for (const ix of (SOLO_HUB ? [] : [...types, ...towns])) { const r = indexPage(ix); await writePage(relOf(indexUrl(ix)), r.html); addUrl(indexUrl(ix), r.lastmod); }
   if (groups.length) { await writePage(relOf(groupsUrl()), groupsIndex()); addUrl(groupsUrl(), NOW); }
+  if (!SOLO_HUB && venues.length) {                                       // "circolino astino", "vog summer club": la gente cerca il posto per nome
+    await writePage(relOf(venuesUrl()), venuesIndex()); addUrl(venuesUrl(), NOW);
+    for (const v of venues) { const r = venuePage(v); await writePage(relOf(venueUrl(v)), r.html); addUrl(venueUrl(v), r.lastmod); }
+  }
   if (runClubs.length >= 3) {
     const r = runningHub(); await writePage(relOf(runningUrl()), r.html); addUrl(runningUrl(), r.lastmod);
     for (let i = 0; i < 7; i++) {
