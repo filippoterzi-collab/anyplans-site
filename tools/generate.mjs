@@ -263,13 +263,32 @@ async function rpc(name, body) {
   if (!r.ok) throw new Error(`rpc ${name}: HTTP ${r.status} ${(await r.text()).slice(0, 200)}`);
   return r.json();
 }
+// il 18/09/2026 la corsa notturna è morta su Milano con "canceling statement due to statement
+// timeout": il database ci mette più del limite a rispondere quando la città è grossa e c'è carico.
+// Un errore così non è definitivo, è un momento storto: si riprova. Senza, salta la rigenerazione
+// di tutte e 29 le città e il sito resta fermo al giorno prima.
+async function rpcRetry(name, body, tentativi = 4) {
+  let ultimo;
+  for (let i = 0; i < tentativi; i++) {
+    try { return await rpc(name, body); }
+    catch (e) {
+      ultimo = e;
+      const riprovabile = /HTTP (5\d\d|408|429)|timeout|fetch failed|ECONNRESET|socket/i.test(String(e && e.message));
+      if (!riprovabile || i === tentativi - 1) throw e;
+      const attesa = 2000 * Math.pow(2, i);        // 2s, 4s, 8s
+      console.error(`rpc ${name}: ${String(e.message).slice(0, 90)} — riprovo fra ${attesa / 1000}s`);
+      await new Promise(r => setTimeout(r, attesa));
+    }
+  }
+  throw ultimo;
+}
 // PostgREST restituisce al massimo 1000 righe per chiamata (db-max-rows) e per le FUNZIONI ignora l'header
 // Range: si pagina con il parametro p_offset (migrazione 0086). Senza, il sito vedeva solo le prime 1000
 // righe della finestra — cioè quasi solo passato — e perdeva tutte le date oltre pochi giorni.
-async function rpcPaged(name, body, page = 1000, max = 20000) {
+async function rpcPaged(name, body, page = 500, max = 20000) {
   const out = [];
   for (let off = 0; off < max; off += page) {
-    const rows = await rpc(name, { ...body, p_limit: page, p_offset: off });
+    const rows = await rpcRetry(name, { ...body, p_limit: page, p_offset: off });
     if (!Array.isArray(rows)) throw new Error(`rpc ${name}: risposta inattesa`);
     out.push(...rows);
     if (rows.length < page) break;
@@ -281,10 +300,10 @@ async function rpcPaged(name, body, page = 1000, max = 20000) {
 // filtro il limite di righe verrebbe mangiato dalle fonti nazionali (Tablo, comehome, Playtomic su tutta Italia)
 const rawRows = INDICE ? [] : FIXTURE ? JSON.parse(await readFile(FIXTURE, "utf8"))
   : await rpcPaged("public_activities_for_seo", { p_lat: CITY_CENTER.lat, p_lng: CITY_CENTER.lng, p_radius_km: CITY_KM });
-const rawGroups = INDICE ? [] : GROUPS_FIXTURE ? JSON.parse(await readFile(GROUPS_FIXTURE, "utf8")) : await rpc("list_communities", { p_city: CITY });
+const rawGroups = INDICE ? [] : GROUPS_FIXTURE ? JSON.parse(await readFile(GROUPS_FIXTURE, "utf8")) : await rpcRetry("list_communities", { p_city: CITY });
 // ritrovi fissi dei gruppi (migrazione 0070): "ogni mercoledì alle 18:45 al parco della Trucca"
 const SCHEDULES_FIXTURE = arg("--schedules");
-const rawSchedules = INDICE ? [] : SCHEDULES_FIXTURE ? JSON.parse(await readFile(SCHEDULES_FIXTURE, "utf8")) : await rpc("list_community_schedules", { p_city: CITY }).catch(() => []);
+const rawSchedules = INDICE ? [] : SCHEDULES_FIXTURE ? JSON.parse(await readFile(SCHEDULES_FIXTURE, "utf8")) : await rpcRetry("list_community_schedules", { p_city: CITY }).catch(() => []);
 const schedules = Array.isArray(rawSchedules) ? rawSchedules : [];
 // i siti dei circoli (migrazione 0088 club_sites): servono al link dell'organizzatore nei dati
 // strutturati — Search Console segnala "Missing field url (in organizer)" su 4 eventi su 5.
