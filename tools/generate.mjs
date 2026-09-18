@@ -2225,6 +2225,11 @@ if (CITY !== HOME_CITY) {
       .replace(/<link rel="canonical"[^>]*>/, `<link rel="canonical" href="${url}">`)
       .replace(/<meta property="og:title" content="[^"]*">/, `<meta property="og:title" content="${esc(tit)}">`)
       .replace(/<meta property="og:url" content="[^"]*">/, `<meta property="og:url" content="${url}">`)
+      // il titolo dentro la pagina diceva "Che eventi ci sono a Bergamo?" anche su Napoli: il nome lo
+      // metteva il javascript, e Google leggeva Bergamo su tutte e 51 le altre città (18/09/2026).
+      .replace(/(<span class="blue" id="hcity">)[^<]*(<\/span>)/, `$1${esc(CITY_NAME)}$2`)
+      .replace(/(<p class="sub">)([^<]*)/, (_m, tag, txt) =>
+        `${tag}${esc(CITY_NAME)} e dintorni: ${txt.charAt(0).toLowerCase()}${txt.slice(1)}`)
       .replace("</head>", `<script>window.ANYPLANS_CITY=${JSON.stringify(CITY)};</script>\n</head>`);
     await writeFile(path.join(cityDir, "index.html"), conCitta);
     addUrl(url, NOW);
