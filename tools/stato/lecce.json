@@ -1,16 +1,16 @@
 {
  "slug": "lecce",
  "nome": "Lecce",
- "eventi": 128,
- "pagine": 331,
+ "eventi": 116,
+ "pagine": 329,
  "tipi": {
-  "dinner": 24,
-  "festival": 13,
-  "culture": 30,
-  "show": 19,
+  "dinner": 18,
+  "festival": 12,
+  "culture": 27,
+  "show": 16,
   "concert": 20,
   "tour": 8,
   "yoga": 6
  },
- "aggiornato": "2026-09-18T16:41:52.741Z"
+ "aggiornato": "2026-09-19T06:18:55.644Z"
 }
