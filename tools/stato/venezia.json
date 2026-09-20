@@ -1,19 +1,19 @@
 {
  "slug": "venezia",
  "nome": "Venezia",
- "eventi": 155,
- "pagine": 481,
+ "eventi": 154,
+ "pagine": 491,
  "tipi": {
-  "culture": 39,
-  "dinner": 16,
+  "culture": 41,
+  "dinner": 19,
   "show": 12,
-  "hiking": 4,
-  "tour": 17,
-  "festival": 22,
+  "hiking": 5,
+  "tour": 13,
+  "festival": 21,
   "concert": 20,
-  "padel": 1,
-  "exhibition": 9,
-  "painting": 3
+  "padel": 3,
+  "exhibition": 7,
+  "painting": 2
  },
- "aggiornato": "2026-09-19T06:19:25.305Z"
+ "aggiornato": "2026-09-20T06:43:58.767Z"
 }

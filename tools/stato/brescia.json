@@ -1,25 +1,25 @@
 {
  "slug": "brescia",
  "nome": "Brescia",
- "eventi": 317,
- "pagine": 969,
+ "eventi": 299,
+ "pagine": 1003,
  "tipi": {
-  "festival": 80,
-  "culture": 64,
-  "dinner": 43,
+  "festival": 82,
+  "culture": 65,
+  "dinner": 29,
   "yoga": 8,
   "market": 7,
   "show": 24,
-  "padel": 6,
+  "padel": 3,
   "cinema": 5,
-  "concert": 31,
+  "concert": 30,
   "singles": 3,
-  "exhibition": 3,
+  "exhibition": 2,
   "gym": 2,
-  "tour": 15,
+  "tour": 13,
   "painting": 6,
   "hiking": 5,
   "dancing": 4
  },
- "aggiornato": "2026-09-19T06:17:32.091Z"
+ "aggiornato": "2026-09-20T06:41:29.085Z"
 }

@@ -1,17 +1,17 @@
 {
  "slug": "mantova",
  "nome": "Mantova",
- "eventi": 46,
- "pagine": 141,
+ "eventi": 47,
+ "pagine": 159,
  "tipi": {
-  "dinner": 4,
-  "culture": 7,
-  "festival": 12,
-  "exhibition": 3,
-  "games": 3,
-  "concert": 3,
+  "dinner": 3,
+  "culture": 6,
+  "festival": 13,
+  "exhibition": 2,
+  "games": 2,
+  "concert": 2,
   "tour": 3,
-  "show": 6
+  "show": 9
  },
- "aggiornato": "2026-09-19T06:19:36.634Z"
+ "aggiornato": "2026-09-20T06:44:13.722Z"
 }
