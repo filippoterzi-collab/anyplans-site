@@ -1,12 +1,13 @@
 {
  "slug": "messina",
  "nome": "Messina",
- "eventi": 27,
- "pagine": 79,
+ "eventi": 29,
+ "pagine": 81,
  "tipi": {
-  "culture": 11,
+  "culture": 12,
   "concert": 7,
+  "dinner": 2,
   "festival": 3
  },
- "aggiornato": "2026-09-20T06:44:33.494Z"
+ "aggiornato": "2026-09-21T06:51:09.667Z"
 }

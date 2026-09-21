@@ -1,16 +1,17 @@
 {
  "slug": "cremona",
  "nome": "Cremona",
- "eventi": 69,
- "pagine": 221,
+ "eventi": 65,
+ "pagine": 227,
  "tipi": {
-  "dinner": 9,
-  "festival": 13,
+  "dinner": 8,
+  "festival": 9,
   "culture": 20,
+  "concert": 2,
   "yoga": 3,
   "padel": 3,
   "tour": 6,
   "show": 9
  },
- "aggiornato": "2026-09-20T06:44:30.486Z"
+ "aggiornato": "2026-09-21T06:51:06.926Z"
 }

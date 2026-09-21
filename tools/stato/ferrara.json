@@ -1,19 +1,19 @@
 {
  "slug": "ferrara",
  "nome": "Ferrara",
- "eventi": 122,
- "pagine": 361,
+ "eventi": 117,
+ "pagine": 357,
  "tipi": {
   "yoga": 8,
   "concert": 24,
   "games": 10,
-  "dinner": 11,
-  "culture": 23,
-  "tour": 10,
+  "dinner": 10,
+  "culture": 22,
+  "tour": 8,
   "show": 9,
-  "festival": 14,
+  "festival": 13,
   "hiking": 5,
   "cinema": 3
  },
- "aggiornato": "2026-09-20T06:44:16.417Z"
+ "aggiornato": "2026-09-21T06:50:53.382Z"
 }

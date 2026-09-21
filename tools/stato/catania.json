@@ -1,18 +1,18 @@
 {
  "slug": "catania",
  "nome": "Catania",
- "eventi": 96,
- "pagine": 329,
+ "eventi": 94,
+ "pagine": 333,
  "tipi": {
   "dinner": 15,
-  "culture": 25,
-  "gym": 2,
+  "culture": 23,
+  "gym": 3,
   "show": 11,
   "yoga": 2,
-  "tour": 7,
-  "concert": 12,
+  "tour": 6,
+  "concert": 13,
   "festival": 6,
   "cinema": 3
  },
- "aggiornato": "2026-09-20T06:42:52.206Z"
+ "aggiornato": "2026-09-21T06:49:37.668Z"
 }

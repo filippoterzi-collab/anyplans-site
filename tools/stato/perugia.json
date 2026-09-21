@@ -1,18 +1,18 @@
 {
  "slug": "perugia",
  "nome": "Perugia",
- "eventi": 150,
- "pagine": 381,
+ "eventi": 151,
+ "pagine": 393,
  "tipi": {
-  "dinner": 1,
+  "dinner": 4,
   "tour": 7,
-  "culture": 64,
+  "culture": 63,
   "yoga": 4,
   "festival": 32,
-  "hiking": 5,
+  "hiking": 4,
+  "painting": 4,
   "concert": 21,
-  "show": 8,
-  "painting": 3
+  "show": 8
  },
- "aggiornato": "2026-09-20T06:42:27.320Z"
+ "aggiornato": "2026-09-21T06:49:13.884Z"
 }

@@ -1,15 +1,15 @@
 {
  "slug": "lucca",
  "nome": "Lucca",
- "eventi": 130,
- "pagine": 331,
+ "eventi": 129,
+ "pagine": 329,
  "tipi": {
   "dinner": 7,
   "culture": 30,
   "festival": 5,
-  "show": 7,
-  "concert": 5,
-  "cinema": 69
+  "show": 5,
+  "concert": 6,
+  "cinema": 70
  },
- "aggiornato": "2026-09-20T06:44:10.336Z"
+ "aggiornato": "2026-09-21T06:50:47.895Z"
 }
