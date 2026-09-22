@@ -948,7 +948,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1789739051"></script>
+<script src="/bergamo/app.js?v=1790067054"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1119,7 +1119,7 @@ async function loadEvents(center){
   window.CHOSEN = !!(center.slug !== HOME.slug || PLACE || F.city.size || F.where.size || window.FORCEDCITY);
   if (window.CHOSEN) { document.getElementById("hcity").textContent = center.nome; document.getElementById("v-dove").textContent = center.nome; document.getElementById("v-dove").classList.add("set"); }
   document.getElementById("list").innerHTML = '<div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div>';
-  const r = await rpc("feed_activities", { lat: center.lat, lng: center.lng, radius_m: 50000 });
+  const r = await rpc(FEED_LISTA, { lat: center.lat, lng: center.lng, radius_m: 50000 });
   if (seq !== loadSeq) return;
   if (!r || !r.ok) { loading = false; document.getElementById("list").innerHTML = '<div class="nores"><div class="tile">😕</div><h3>Non riesco a caricare gli eventi</h3><p>Ricarica la pagina.</p></div>'; return; }
   const rows = await r.json().catch(() => []);
@@ -1144,7 +1144,7 @@ async function loadEvents(center){
 async function loadRestDays(center, seq, toEv){
   const from = EV.length ? EV[EV.length - 1].ymd : TODAY;
   const days = []; for (let i = 0; i < 14; i++) { const y = addDays(TODAY, i); if (y >= from) days.push(y); }
-  const res = await Promise.all(days.map(y => rpc("feed_activities", { lat: center.lat, lng: center.lng, radius_m: 50000, day: y }).then(r => r && r.ok ? r.json() : []).catch(() => [])));
+  const res = await Promise.all(days.map(y => rpc(FEED_LISTA, { lat: center.lat, lng: center.lng, radius_m: 50000, day: y }).then(r => r && r.ok ? r.json() : []).catch(() => [])));
   if (seq !== loadSeq) return;
   const seen = new Set(EV.map(e => e.id)), extra = [];
   res.forEach(rows => (rows || []).forEach(x => { if (!seen.has(x.id)) { seen.add(x.id); extra.push(x); } }));

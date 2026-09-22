@@ -140,7 +140,7 @@
   </div>
 </form>
 
-<script src="app.js?v=1789739051"></script>
+<script src="app.js?v=1790067054"></script>
 <script>
   // pagina aperta anche senza account (si può linkare da Instagram): il login arriva quando si apre un evento
   mountNav("chiedi", { col: 640 });
@@ -177,7 +177,7 @@
 
   // ── dati ───────────────────────────────────────────────────────
   async function loadEvents(){
-    const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 25000 });   // 25 km come eventi.html (audit 17/09/2026, #5)
+    const r = await rpc(FEED_LISTA, { lat: 45.698, lng: 9.670, radius_m: 25000 });   // 25 km come eventi.html (audit 17/09/2026, #5)
     if (!r || !r.ok) { clearSkeleton(); say("Non riesco a caricare gli eventi.", [{ l:"Riprova", kind:"retry" }]); return; }
     const rows = await r.json().catch(() => []);
     EVENTS = rows.map(x => ({

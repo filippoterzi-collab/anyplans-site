@@ -92,6 +92,13 @@ function esc(t){
 }
 
 // rpc autenticata se c'è la sessione, altrimenti anonima; null se la rete fallisce
+// I campi del feed che servono alle LISTE (home, mappa, i miei, chiedi). Fuori "description", che è
+// il campo più pesante della risposta e nelle liste non si mostra: la risposta passa da 1,43 MB a
+// 787 KB per mille righe, -45%. Serve perché il 21/09/2026 Supabase ha scritto che il piano Free ha
+// sforato i 5 GB di egress, con periodo di grazia fino al 20/10: 20.611 chiamate a feed_activities
+// in 24 ore, quasi tutte dal sito. La pagina del singolo evento continua a chiedere tutto, lì la
+// descrizione si legge davvero.
+const FEED_LISTA = "feed_activities?select=id,sport,emoji,title,meeting_point_text,lat,lng,start_at,end_at,going_count,max_participants,my_status,is_mine,waitlist_count,claimed_by,gender_allowed,price_cents,photo_url,source,source_url,visibility,host_name,host_avatar,club_name,community_id,community_name";
 async function rpc(name, body, retry = true){
   let r;
   try {

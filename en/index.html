@@ -513,7 +513,7 @@
   // eventi veri: contatore della settimana, prime card, pin sulla mappa teaser
   let LIVE = [];
   async function loadLanding(){
-    const r = await rpc("feed_activities", { lat: 45.698, lng: 9.670, radius_m: 50000 });
+    const r = await rpc(FEED_LISTA, { lat: 45.698, lng: 9.670, radius_m: 50000 });
     if (!r || !r.ok) return;
     const rows = (await r.json().catch(() => []))
       .map(x => ({ ...x, when: new Date(x.start_at) }))
