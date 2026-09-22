@@ -520,7 +520,16 @@ for (const p of pages) {
 }
 const venues = [...venueIdx.values()]
   .map(v => ({ ...v, nome: [...v.nomi.entries()].sort((a, b) => b[1] - a[1])[0][0] }))
-  .filter(v => v.list.filter(p => !p.isPast).length >= MIN_LOCALE)
+  // Un locale merita la pagina se ha qualcosa in programma E una storia: due eventi futuri, oppure
+  // uno solo ma almeno tre in tutto contando i passati. Il Circolino Astino vale 629 impressioni al
+  // mese su Google (Search Console, 22/09/2026) e con la vecchia regola — due futuri — restava senza
+  // pagina, perché d'estate fa una rassegna sola per volta. Senza un evento in programma invece la
+  // pagina non si fa: direbbe solo che non c'è niente.
+  // e i locali fermi ma con una storia vera (cinque eventi passati) la pagina ce l'hanno lo stesso:
+  // il Circolino Astino d'estate fa una rassegna e d'inverno chiude, ma "circolino astino" vale 629
+  // impressioni al mese su Google e chi lo cerca vuole sapere se c'è qualcosa, anche quando non c'è.
+  .filter(v => { const f = v.list.filter(p => !p.isPast).length;
+                 return (f >= 1 && (f >= MIN_LOCALE || v.list.length >= 3)) || (f === 0 && v.list.length >= 5); })
   .sort((a, b) => b.list.length - a.list.length);
 const indexSlugs = new Set();
 for (const ix of types) {
@@ -1519,13 +1528,20 @@ function venuePage(v) {
   const dove = norm(nome).includes(norm(paese)) ? "" : (E ? ` in ${paese}` : ` a ${paese}`);
   // "eventi e serate" solo dove le serate ci sono davvero: in un museo suonerebbe falso
   const notturno = up.some(x => ["nightlife", "concert", "karaoke", "dance", "dinner"].includes(x.sport));
-  const h1 = `${nome}: ${E ? (notturno ? "events and nights out" : "what's on") : (notturno ? "eventi e serate" : "eventi in programma")}${dove}`;
+  const h1 = `${nome}: ${E ? (notturno ? "events and nights out" : "what's on") : (notturno ? "eventi e serate" : (up.length ? "eventi in programma" : "eventi e date"))}${dove}`;
   const title = cut(h1, 57) + " | anyplans";
   const tipi = [...new Map(up.map(p => [p.sport, p.tipo])).values()].slice(0, 4).map(t => tLabel(t).toLowerCase());
   const free = up.filter(p => !(p.price_cents > 0)).length;
-  const lead = E
-    ? `${nome}${dove}: ${up.length} upcoming ${up.length === 1 ? "event" : "events"}${tipi.length ? ` — ${joinIt(tipi)}` : ""}. Date, time, price and how to join, one page each. You go with other people.`
-    : `${nome}${dove}: ${up.length} ${up.length === 1 ? "evento in programma" : "eventi in programma"}${tipi.length ? ` — ${joinIt(tipi)}` : ""}. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.`;
+  // quando non c'è niente in programma la frase di prima diceva "0 eventi in programma. Di ognuno
+  // data, ora e prezzo": una contraddizione. I locali fermi ma con una storia la pagina ce l'hanno
+  // (il Circolino d'inverno chiude e la gente lo cerca lo stesso): la pagina lo dice e mostra
+  // quello che c'è stato.
+  const passati = list.filter(p => p.isPast).length;
+  const lead = up.length
+    ? (E ? `${nome}${dove}: ${up.length} upcoming ${up.length === 1 ? "event" : "events"}${tipi.length ? ` — ${joinIt(tipi)}` : ""}. Date, time, price and how to join, one page each. You go with other people.`
+         : `${nome}${dove}: ${up.length} ${up.length === 1 ? "evento in programma" : "eventi in programma"}${tipi.length ? ` — ${joinIt(tipi)}` : ""}. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.`)
+    : (E ? `${nome}${dove}: nothing on right now. Below are the last ${passati} events held here; new dates show up on this page as soon as they are announced.`
+         : `${nome}${dove}: al momento non c'è niente in programma. Qui sotto gli ultimi ${passati} eventi che ci sono stati; le date nuove compaiono su questa pagina appena le pubblicano.`);
   const descr = cut(lead, 160);
   const riga = (p) => `${p.title} (${whenLabel(p).toLowerCase()})`;
   const faq = E ? [
@@ -2071,7 +2087,9 @@ ${sitemapEntries.map(e => `  <url><loc>${esc(e.loc)}</loc><lastmod>${e.lastmod}<
 // ── write ─────────────────────────────────────────────────────────────────────
 const unesc = (t) => String(t ?? "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'");
 const fullTxt = [];
+const scritte = new Set();          // quello che questa corsa ha scritto: serve alle lapidi
 async function writePage(rel, html) {
+  scritte.add(rel);
   const dir = path.join(OUT, rel);
   await mkdir(dir, { recursive: true });
   await writeFile(path.join(dir, "index.html"), html);
@@ -2187,6 +2205,32 @@ I dati cambiano ogni notte: le pagine portano la data di aggiornamento in fondo.
 const SOLO_HUB = CITY !== HOME_CITY && upcomingPages.length < MIN_CITY;
 if (SOLO_HUB) console.log(`${CITY}: ${upcomingPages.length} eventi futuri, sotto ${MIN_CITY}: solo hub e pagine evento`);
 
+// ── le lapidi ────────────────────────────────────────────────────────────────
+// Un evento sparisce dalla fonte quando si riempie o viene tolto (le cene di Tablo, le partite di
+// padel): la sua pagina spariva e chi ci arrivava da Google trovava un "non trovato". Il 19/09/2026
+// erano 71 pagine, tutte già indicizzate: posti nell'indice guadagnati e buttati via.
+// Adesso la pagina resta e dice che l'evento non c'è più, con i link per trovarne altri. Non si fa
+// indicizzare (noindex) ma i suoi link continuano a valere (follow). Dopo GIORNI_TOMBA giorni sparisce
+// davvero: a quel punto Google l'ha tolta dall'indice e tenerla non serve a nessuno.
+const GIORNI_TOMBA = 60;
+const TOMBA = /<!--tomba:(\d{4}-\d{2}-\d{2})-->/;
+async function cosaCera(dir) {
+  const out = new Map();
+  let voci = [];
+  try { voci = await readdir(dir, { withFileTypes: true }); } catch { return out; }
+  for (const e of voci) {
+    if (!e.isDirectory()) continue;
+    let h = "";
+    try { h = await readFile(path.join(dir, e.name, "index.html"), "utf8"); } catch { continue; }
+    const t = (h.match(/<title>(.*?)<\/title>/s) || [])[1] || "";
+    const tomba = (h.match(TOMBA) || [])[1] || null;
+    out.set(e.name, { titolo: unesc(t).replace(/ \| anyplans$/, "").trim(), tomba });
+  }
+  return out;
+}
+const ceraIt = await cosaCera(cityDir);
+const ceraEn = await cosaCera(path.join(OUT, "en", CITY));
+
 await mkdir(cityDir, { recursive: true });
 for (const e of await readdir(cityDir, { withFileTypes: true })) if (e.isDirectory()) await rm(path.join(cityDir, e.name), { recursive: true, force: true });
 await rm(path.join(OUT, "en", CITY), { recursive: true, force: true }); // /en/index.html (the English home) stays
@@ -2220,6 +2264,48 @@ for (const code of ["it", "en"]) {
   for (const p of pages) { await writePage(relOf(eventUrl(p)), eventPage(p)); if (!vecchioDi(p)) addUrl(eventUrl(p), p.updated); }
 }
 setLocale('it');
+
+// le lapidi: quello che c'era prima e questa corsa non ha riscritto
+async function lapidi(cera, prefisso, code) {
+  setLocale(code);
+  const E = code === "en";
+  const oggi = NOW.toISOString().slice(0, 10);
+  let messe = 0, sepolte = 0;
+  for (const [slug, info] of cera) {
+    if (scritte.has(`${prefisso}/${slug}`)) continue;
+    if (info.tomba && (NOW - new Date(info.tomba)) > GIORNI_TOMBA * 86400e3) { sepolte++; continue; }
+    const nome = info.titolo && !/^anyplans$/i.test(info.titolo) ? info.titolo.split(/ [–|] /)[0].trim() : "";
+    const url = `${SITE}/${prefisso}/${slug}/`;
+    const h1 = nome
+      ? (E ? `${nome}: this event is no longer listed` : `${nome}: questo evento non è più in programma`)
+      : (E ? "This event is no longer listed" : "Questo evento non è più in programma");
+    const descr = E
+      ? `This event is no longer on anyplans: it filled up, or whoever organises it took it down. Here is what is on in ${CITY_NAME} now.`
+      : `Questo evento non è più su anyplans: si è riempito, oppure chi lo organizza l'ha tolto. Qui sotto c'è quello che c'è adesso a ${CITY_NAME}.`;
+    const body = `
+${crumbs([["anyplans", L.home], [CITY_NAME, rel(hubUrl())], [E ? "Not listed" : "Non più in programma", null]])}
+<h1>${esc(h1)}</h1>
+<p class="lead">${esc(descr)}</p>
+<div class="cta"><a class="btn" href="${rel(hubUrl())}">${E ? `What's on in ${esc(CITY_NAME)}` : `Cosa c'è a ${esc(CITY_NAME)}`}</a><a class="btn ghost" href="${MAP_URL}">${E ? "See the map" : "Vedi la mappa"}</a></div>
+${vicineHtml()}
+`;
+    const html = layout({ vecchio: true, title: cut(h1, 57) + " | anyplans", description: cut(descr, 160),
+                          url, image: OG_DEFAULT, jsonLd: "", body, alt: null })
+      .replace("</head>", `<!--tomba:${info.tomba || oggi}-->\n</head>`);
+    const dir = path.join(OUT, prefisso, slug);
+    await mkdir(dir, { recursive: true });
+    await writeFile(path.join(dir, "index.html"), html);
+    messe++;
+  }
+  return { messe, sepolte };
+}
+{
+  const it = await lapidi(ceraIt, CITY, "it");
+  const en = await lapidi(ceraEn, `en/${CITY}`, "en");
+  setLocale('it');
+  if (it.messe + en.messe + it.sepolte + en.sepolte)
+    console.log(`${CITY}: lapidi ${it.messe + en.messe} (eventi spariti dalla fonte), tolte dopo ${GIORNI_TOMBA} giorni: ${it.sepolte + en.sepolte}`);
+}
 
 // ── /<citta>/ e' la home, gia' su quella citta' ───────────────────────────────
 // 17/09/2026 (Filippo: "voglio che apra questo", indicando anyplans.in). La radice di ogni citta'
