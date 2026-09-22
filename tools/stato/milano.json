@@ -1,14 +1,14 @@
 {
  "slug": "milano",
  "nome": "Milano",
- "eventi": 1495,
+ "eventi": 1493,
  "pagine": 4623,
  "tipi": {
   "tour": 60,
   "dinner": 223,
   "painting": 29,
   "culture": 290,
-  "padel": 255,
+  "padel": 253,
   "exhibition": 13,
   "show": 146,
   "tennis": 4,
@@ -31,5 +31,5 @@
   "dancing": 7,
   "cooking": 4
  },
- "aggiornato": "2026-09-22T08:51:23.479Z"
+ "aggiornato": "2026-09-22T09:46:54.446Z"
 }

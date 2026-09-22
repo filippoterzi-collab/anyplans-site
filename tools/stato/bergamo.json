@@ -1,8 +1,8 @@
 {
  "slug": "bergamo",
  "nome": "Bergamo",
- "eventi": 785,
- "pagine": 2784,
+ "eventi": 788,
+ "pagine": 2794,
  "tipi": {
   "yoga": 13,
   "festival": 54,
@@ -22,7 +22,7 @@
   "tour": 22,
   "exhibition": 6,
   "show": 82,
-  "hiking": 5,
+  "hiking": 8,
   "painting": 6,
   "cinema": 6,
   "gardening": 3,
@@ -31,5 +31,5 @@
   "cycling": 4,
   "match": 11
  },
- "aggiornato": "2026-09-22T08:52:05.560Z"
+ "aggiornato": "2026-09-22T09:47:37.664Z"
 }

@@ -949,7 +949,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1790067054"></script>
+<script src="/bergamo/app.js?v=1790070380"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1096,7 +1096,7 @@ function relTxt(e){
   const n = Math.round((new Date(e.ymd + "T12:00:00Z") - new Date(TODAY + "T12:00:00Z")) / 864e5);
   return n === 1 ? "" : `tra ${n} giorni`;   // "domani" lo dice gia' whenTxt
 }
-const priceTxt = e => e.price_cents > 0 ? `<span class="price">${esc(fmtPrice(e.price_cents))}</span>` : `<span class="price free">Gratis</span>`;
+const priceTxt = e => e.price_cents > 0 ? `<span class="price">${esc(fmtPrice(e.price_cents))}</span>` : (isFree(e) ? `<span class="price free">Gratis</span>` : "");
 const cta = e => `<a class="btn" href="${EVURL(e)}" data-gate="ci-sono">Ci sono</a>`;
 function goingTxtH(e){ const n = e.going_count || 0; if (!n) return ""; const dots = Array.from({ length: Math.min(n, 3) }, (_, i) => `<i>${"ABC"[i]}</i>`).join(""); return `<span class="going"><span class="dots">${dots}</span>${n === 1 ? "1 ci va" : n + " ci vanno"}</span>`; }
 function card(e){
@@ -1165,7 +1165,7 @@ function passes(e, ignoreDay){
   else if (F.day.size) { const d = [...F.day][0]; if (d === "oggi" && e.ymd !== TODAY) return false; if (d === "domani" && e.ymd !== addDays(TODAY, 1)) return false; if (d === "weekend" && !WEEKEND.includes(e.ymd)) return false; if (d === "sera" && !(e.ymd === TODAY && e.h >= 18)) return false; }
   if (F.cat.size) { const c = CATBY[[...F.cat][0]]; if (c && c.s && !c.s.includes(e.sport)) return false; }
   if (QTEXT) { const q = QTEXT.toLowerCase(); if (!(e.title + " " + (e.meeting_point_text || "") + " " + (e.community_name || e.club_name || e.host_name || "")).toLowerCase().includes(q)) return false; }
-  if (F.price.size) { const p = [...F.price][0]; const c = e.price_cents || 0; if (p === "free" && c > 0) return false; if (p === "cheap" && c > 1000) return false; if (p === "paid" && !c) return false; }
+  if (F.price.size) { const p = [...F.price][0]; const c = e.price_cents || 0; if (p === "free" && !isFree(e)) return false; if (p === "cheap" && !(isFree(e) || (c > 0 && c <= 1000))) return false; if (p === "paid" && !c) return false; }   // (22/09/2026) "gratis" = gratis davvero, non prezzo ignoto
   if (F.hour.size) { const h = [...F.hour][0]; if (h === "am" && e.h >= 12) return false; if (h === "pm" && (e.h < 12 || e.h >= 18)) return false; if (h === "eve" && e.h < 18) return false; }
   if (F.who.size) { const w = [...F.who][0]; if (w === "ugc" && e.source !== "ugc") return false; if (w === "org" && e.source === "ugc") return false; }
   if (F.going.size && !(e.going_count > 0)) return false;
@@ -1272,11 +1272,11 @@ function buildDynamic(){
   const wk = EV.filter(e => WEEKEND.includes(e.ymd) && e.sport !== "market").slice(0, 12);
   document.getElementById("weekend").hidden = LOCKED || !wk.length;
   document.getElementById("wksub").textContent = `Sabato ${new Date(WEEKEND[0] + "T12:00:00Z").getUTCDate()} e domenica ${new Date(WEEKEND[1] + "T12:00:00Z").getUTCDate()}, in ordine di orario.`;
-  document.getElementById("wkrow").innerHTML = wk.map(e => `<article class="mini"><div class="h"><div class="tile">${e.emoji}</div><a class="t" href="${EVURL(e)}" data-gate="evento">${esc(e.title)}</a></div><div class="m">${whenTxt(e)}</div><div class="m">${esc(e.tw)} · ${e.price_cents > 0 ? esc(fmtPrice(e.price_cents)) : "gratis"}</div>${cta(e)}</article>`).join("");
+  document.getElementById("wkrow").innerHTML = wk.map(e => `<article class="mini"><div class="h"><div class="tile">${e.emoji}</div><a class="t" href="${EVURL(e)}" data-gate="evento">${esc(e.title)}</a></div><div class="m">${whenTxt(e)}</div><div class="m">${esc(e.tw)}${priceLabel(e) ? " · " + esc(priceLabel(e)) : ""}</div>${cta(e)}</article>`).join("");
   const GS = ["dinner","karaoke","games","tour","running","walking","hiking","culture","dancing","volleyball","padel"]; const seen = new Set();
   const ge = EV.filter(e => GS.includes(e.sport) && (e.community_name || e.club_name || e.host_name || e.going_count > 0)).sort((a, b) => (b.going_count || 0) - (a.going_count || 0) || a.d - b.d).filter(e => { const k = e.sport + "|" + (e.club_name || e.community_name || e.host_name || ""); if (seen.has(k)) return false; seen.add(k); return true; }).slice(0, 8);
   document.getElementById("gevents").hidden = !ge.length;
-  document.getElementById("gerow").innerHTML = ge.map(e => { const who = e.community_name || e.club_name || e.host_name; const n = e.going_count || 0; return `<article class="tcard"><div class="h"><div class="tile">${e.emoji}</div><a class="t" href="${EVURL(e)}" data-gate="evento">${esc(e.title)}</a></div>${who ? `<span class="op">${esc(who)}</span>` : ""}<div class="m">${whenTxt(e)} · ${esc(e.tw)}${e.km > 1 ? ` · ${e.km.toFixed(0)} km` : ""}</div><div class="pr"><b>${e.price_cents > 0 ? esc(fmtPrice(e.price_cents)) : "Gratis"}</b><span class="m">${n ? `${n} ci ${n === 1 ? "va" : "vanno"}` : "con un host"}</span></div>${cta(e)}</article>`; }).join("");
+  document.getElementById("gerow").innerHTML = ge.map(e => { const who = e.community_name || e.club_name || e.host_name; const n = e.going_count || 0; return `<article class="tcard"><div class="h"><div class="tile">${e.emoji}</div><a class="t" href="${EVURL(e)}" data-gate="evento">${esc(e.title)}</a></div>${who ? `<span class="op">${esc(who)}</span>` : ""}<div class="m">${whenTxt(e)} · ${esc(e.tw)}${e.km > 1 ? ` · ${e.km.toFixed(0)} km` : ""}</div><div class="pr"><b>${esc(priceLabel(e))}</b><span class="m">${n ? `${n} ci ${n === 1 ? "va" : "vanno"}` : "con un host"}</span></div>${cta(e)}</article>`; }).join("");
 }
 function bindChip(c){
   if (c.dataset.bound) return; c.dataset.bound = "1"; c.setAttribute("aria-pressed", "false");
@@ -1612,7 +1612,7 @@ function drawPins(rows){
   const dec = rows.length > 150 ? 2 : 3; const groups = {}; rows.forEach(e => { if (e.lat == null) return; const k = e.lat.toFixed(dec) + "," + e.lng.toFixed(dec); (groups[k] || (groups[k] = [])).push(e); });
   Object.values(groups).forEach(g => {
     const e = g[0]; const el = document.createElement("button"); el.className = "pin"; el.innerHTML = e.emoji + (g.length > 1 ? `<span class="n">${g.length}</span>` : ""); el.title = g.length > 1 ? `${g.length} eventi qui` : e.title;
-    const pop = new maplibregl.Popup({ offset: 22, closeButton: false, maxWidth: "260px" }).setHTML(g.map(x => `<div class="pop"><a class="body" href="${EVURL(x)}" data-gate="evento"><div class="t">${x.emoji} ${esc(x.title)}</div><div class="m">${whenTxt(x)}${relTxt(x) ? " · <b>" + relTxt(x) + "</b>" : ""}</div><div class="m">${esc(x.tw)}${x.km > 1 ? ` · ${x.km.toFixed(0)} km` : ""} · ${x.price_cents > 0 ? esc(fmtPrice(x.price_cents)) : "gratis"}${x.going_count ? ` · ${x.going_count} ci vanno` : ""}</div></a>${cta(x)}</div>`).join(""));   // tutto il fumetto apre l'evento, non solo "Ci sono" (16/09/2026)
+    const pop = new maplibregl.Popup({ offset: 22, closeButton: false, maxWidth: "260px" }).setHTML(g.map(x => `<div class="pop"><a class="body" href="${EVURL(x)}" data-gate="evento"><div class="t">${x.emoji} ${esc(x.title)}</div><div class="m">${whenTxt(x)}${relTxt(x) ? " · <b>" + relTxt(x) + "</b>" : ""}</div><div class="m">${esc(x.tw)}${x.km > 1 ? ` · ${x.km.toFixed(0)} km` : ""}${priceLabel(x) ? " · " + esc(priceLabel(x)) : ""}${x.going_count ? ` · ${x.going_count} ci vanno` : ""}</div></a>${cta(x)}</div>`).join(""));   // tutto il fumetto apre l'evento, non solo "Ci sono" (16/09/2026)
     const mk = new maplibregl.Marker({ element: el }).setLngLat([e.lng, e.lat]).setPopup(pop).addTo(map);
     el.addEventListener("mouseenter", () => hl(e.id, true)); el.addEventListener("mouseleave", () => hl(e.id, false));
     el.addEventListener("click", ev => {
@@ -1624,7 +1624,7 @@ function drawPins(rows){
     markers.push(mk);
   });
   document.getElementById("mapinfo").textContent = `${rows.length >= 1000 ? "Più di 1000" : rows.length} event${rows.length === 1 ? "o" : "i"}${MAP_TODAY ? " oggi" : " in arrivo"} sulla mappa`;
-  document.getElementById("carousel").innerHTML = rows.slice(0, 40).map(e => `<article class="mini" data-id="${e.id}"><div class="h"><div class="tile">${e.emoji}</div><a class="t" href="${EVURL(e)}" data-gate="evento">${esc(e.title)}</a></div><div class="m">${whenTxt(e)}</div><div class="m">${esc(e.tw)}${e.km > 1 ? ` · ${e.km.toFixed(0)} km` : ""} · ${e.price_cents > 0 ? esc(fmtPrice(e.price_cents)) : "gratis"}</div>${cta(e)}</article>`).join("");
+  document.getElementById("carousel").innerHTML = rows.slice(0, 40).map(e => `<article class="mini" data-id="${e.id}"><div class="h"><div class="tile">${e.emoji}</div><a class="t" href="${EVURL(e)}" data-gate="evento">${esc(e.title)}</a></div><div class="m">${whenTxt(e)}</div><div class="m">${esc(e.tw)}${e.km > 1 ? ` · ${e.km.toFixed(0)} km` : ""}${priceLabel(e) ? " · " + esc(priceLabel(e)) : ""}</div>${cta(e)}</article>`).join("");
 }
 function hl(id, on){ document.querySelectorAll(`.ev[data-id="${id}"]`).forEach(c => c.classList.toggle("hl", on)); }
 document.getElementById("list").addEventListener("mouseover", e => { const c = e.target.closest(".ev"); if (c) hl(c.dataset.id, true); });
