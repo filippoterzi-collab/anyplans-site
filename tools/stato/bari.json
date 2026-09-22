@@ -1,22 +1,22 @@
 {
  "slug": "bari",
  "nome": "Bari",
- "eventi": 258,
- "pagine": 895,
+ "eventi": 323,
+ "pagine": 1053,
  "tipi": {
   "padel": 5,
   "dinner": 47,
   "yoga": 3,
   "karaoke": 1,
-  "show": 52,
-  "festival": 11,
-  "culture": 65,
-  "tour": 16,
-  "hiking": 4,
-  "concert": 39,
+  "show": 65,
+  "festival": 16,
+  "culture": 79,
+  "tour": 18,
+  "hiking": 5,
+  "concert": 62,
   "painting": 3,
-  "cinema": 4,
-  "dancing": 3
+  "cinema": 10,
+  "dancing": 4
  },
- "aggiornato": "2026-09-22T09:50:24.975Z"
+ "aggiornato": "2026-09-22T11:03:02.010Z"
 }
