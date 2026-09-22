@@ -408,6 +408,19 @@ function fmtPrice(c){ if (c == null || c <= 0) return "Gratis";
   const e = Math.floor(c / 100), r = c % 100;
   return (r ? e + "," + String(r).padStart(2, "0") : e) + "\u00a0€"; }
 function fmtAmount(c){ return fmtPrice(c).replace("\u00a0€", ""); }
+// "Gratis" solo quando lo sappiamo davvero (22/09/2026). Su un evento UGC il prezzo nullo e' l'host che
+// dichiara gratis; su uno preso da un altro sito vuol dire soltanto che il prezzo non l'abbiamo letto.
+// Prima 11.418 aggregate su 11.569 si presentavano come gratis, comprese quelle con nota "Biglietti su
+// Eventbrite" o "si paga su Playtomic". Senza prova non si scrive niente: il prezzo sta sul sito di chi organizza.
+function isFree(e){ if (!e || e.price_cents > 0) return false;
+  if (e.source && e.source !== "ugc") return /gratis|gratuit|libero|free/i.test(e.price_note || "");
+  return true; }
+function priceLabel(e){ if (!e) return "";
+  if (e.price_cents > 0) return fmtPrice(e.price_cents);
+  if (isFree(e)) return "Gratis";
+  const n = (e.price_note || "").trim();   // prezzo ignoto: la nota breve ("Info in DM", "Biglietti su
+  return n && n.length <= 30 ? n : "";     // Eventbrite"); se e' lunga non si scrive niente
+}
 function parsePrice(s){ const t = String(s).trim().replace(/[\s€]/g, "").replace(",", ".");
   if (!/^\d{1,4}(\.\d{1,2})?$/.test(t)) return NaN; return Math.round(parseFloat(t) * 100); }
 // "oggi" | "domani" | "" (valore tecnico per i confronti; il testo visibile è dayLabel)

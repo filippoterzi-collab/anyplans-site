@@ -391,7 +391,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1790067054"></script>
+<script src="app.js?v=1790070380"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -474,6 +474,7 @@
       mine: x.is_mine,
       request: x.visibility === "request",
       price: x.price_cents ?? null,
+      free: isFree(x),   // (22/09/2026) prezzo nullo su un'aggregata = non letto, non gratis (app.js)
       photo: x.photo_url || null,
       community: x.community_id || null,
       claimed: x.claimed_by || null,
@@ -848,7 +849,7 @@
   function byText(list, p){
     return list.filter(e => {
       if (p.sports.length && !p.sports.includes(e.slug)) return false;
-      if (p.free && e.price > 0) return false;
+      if (p.free && !e.free) return false;
       if (p.rest.length) {
         const words = norm([e.title, e.host, e.place].join(" ")).split(/[^a-z0-9]+/);
         if (!p.rest.every(w => words.some(h => h === w || (w.length >= 4 && h.startsWith(w))))) return false;
