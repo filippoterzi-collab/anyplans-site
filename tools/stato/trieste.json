@@ -1,17 +1,17 @@
 {
  "slug": "trieste",
  "nome": "Trieste",
- "eventi": 79,
- "pagine": 255,
+ "eventi": 78,
+ "pagine": 259,
  "tipi": {
-  "culture": 29,
-  "dancing": 3,
+  "culture": 28,
+  "dancing": 2,
   "show": 10,
   "dinner": 4,
-  "tour": 3,
+  "tour": 4,
   "festival": 3,
-  "yoga": 5,
-  "concert": 15
+  "yoga": 4,
+  "concert": 16
  },
- "aggiornato": "2026-09-21T06:49:28.536Z"
+ "aggiornato": "2026-09-22T06:36:22.860Z"
 }

@@ -1,16 +1,17 @@
 {
  "slug": "rimini",
  "nome": "Rimini",
- "eventi": 50,
- "pagine": 217,
+ "eventi": 56,
+ "pagine": 241,
  "tipi": {
-  "culture": 17,
-  "dinner": 11,
+  "culture": 16,
+  "dinner": 15,
   "show": 4,
+  "padel": 3,
   "concert": 2,
-  "tour": 2,
+  "tour": 1,
   "festival": 3,
   "dancing": 3
  },
- "aggiornato": "2026-09-21T06:49:46.015Z"
+ "aggiornato": "2026-09-22T06:36:42.947Z"
 }

@@ -1,18 +1,17 @@
 {
  "slug": "ravenna",
  "nome": "Ravenna",
- "eventi": 67,
- "pagine": 241,
+ "eventi": 65,
+ "pagine": 245,
  "tipi": {
-  "culture": 23,
+  "culture": 21,
   "dinner": 17,
   "show": 2,
   "concert": 4,
   "painting": 2,
-  "yoga": 1,
-  "tour": 6,
+  "tour": 7,
   "cinema": 3,
   "festival": 4
  },
- "aggiornato": "2026-09-21T06:49:40.458Z"
+ "aggiornato": "2026-09-22T06:36:35.765Z"
 }
