@@ -1,16 +1,16 @@
 {
  "slug": "bergamo",
  "nome": "Bergamo",
- "eventi": 772,
- "pagine": 2756,
+ "eventi": 785,
+ "pagine": 2784,
  "tipi": {
-  "yoga": 7,
-  "festival": 53,
-  "running": 27,
+  "yoga": 13,
+  "festival": 54,
+  "running": 28,
   "walking": 0,
   "estivo": 6,
   "dinner": 35,
-  "padel": 93,
+  "padel": 94,
   "concert": 90,
   "market": 181,
   "culture": 90,
@@ -25,10 +25,11 @@
   "hiking": 5,
   "painting": 6,
   "cinema": 6,
+  "gardening": 3,
   "fair": 9,
   "ceramics": 4,
   "cycling": 4,
   "match": 11
  },
- "aggiornato": "2026-09-22T06:33:09.857Z"
+ "aggiornato": "2026-09-22T08:52:05.560Z"
 }

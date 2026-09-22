@@ -1,12 +1,12 @@
 {
  "slug": "padova",
  "nome": "Padova",
- "eventi": 353,
+ "eventi": 351,
  "pagine": 1019,
  "tipi": {
   "culture": 130,
   "dinner": 39,
-  "yoga": 15,
+  "yoga": 13,
   "hiking": 1,
   "show": 33,
   "festival": 19,
@@ -18,5 +18,5 @@
   "exhibition": 5,
   "concert": 56
  },
- "aggiornato": "2026-09-22T06:35:36.617Z"
+ "aggiornato": "2026-09-22T08:54:23.002Z"
 }

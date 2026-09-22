@@ -1,11 +1,11 @@
 {
  "slug": "torino",
  "nome": "Torino",
- "eventi": 1024,
+ "eventi": 1023,
  "pagine": 2995,
  "tipi": {
   "padel": 46,
-  "dinner": 111,
+  "dinner": 110,
   "culture": 335,
   "tour": 80,
   "painting": 22,
@@ -30,5 +30,5 @@
   "ceramics": 7,
   "gardening": 4
  },
- "aggiornato": "2026-09-22T06:33:51.496Z"
+ "aggiornato": "2026-09-22T08:52:47.906Z"
 }
