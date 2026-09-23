@@ -1,13 +1,13 @@
 {
  "slug": "treviso",
  "nome": "Treviso",
- "eventi": 159,
- "pagine": 525,
+ "eventi": 164,
+ "pagine": 543,
  "tipi": {
   "yoga": 9,
   "culture": 36,
   "concert": 21,
-  "dinner": 38,
+  "dinner": 43,
   "show": 21,
   "exhibition": 3,
   "dancing": 4,
@@ -16,5 +16,5 @@
   "running": 3,
   "tour": 5
  },
- "aggiornato": "2026-09-22T11:04:42.737Z"
+ "aggiornato": "2026-09-23T06:23:35.407Z"
 }

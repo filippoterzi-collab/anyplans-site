@@ -2,11 +2,11 @@
 
 > anyplans (anyplans.in) è la mappa degli eventi veri di Padova e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Padova: il sito copre 52 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce, Monza, Prato, Como, Lecco, Lodi, Modena, Reggio Emilia, Treviso, Venezia, Vicenza, Novara, Lucca, Mantova, Ferrara, Pistoia, Pavia, Ancona, Pordenone, Cremona, Messina, Reggio Calabria, Alessandria, Latina), l'indice è https://anyplans.in/llms.txt.
 
-Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-22. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
+Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-23. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Padova](https://anyplans.in/padova/cosa-fare/): tutti gli eventi in programma (363), per tipo e per paese; risponde a "cosa fare a Padova oggi / questo weekend"
+- [Cosa fare a Padova](https://anyplans.in/padova/cosa-fare/): tutti gli eventi in programma (357), per tipo e per paese; risponde a "cosa fare a Padova oggi / questo weekend"
 - [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
@@ -14,57 +14,46 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## Eventi per tipo e per paese
 
-- [Incontri culturali a Padova](https://anyplans.in/padova/incontri-culturali/): 134 in programma
-- [Cena / aperitivo a Padova](https://anyplans.in/padova/cene-e-aperitivi/): 39 in programma
-- [Yoga / pilates a Padova](https://anyplans.in/padova/yoga/): 13 in programma
+- [Incontri culturali a Padova](https://anyplans.in/padova/incontri-culturali/): 127 in programma
+- [Cena / aperitivo a Padova](https://anyplans.in/padova/cene-e-aperitivi/): 43 in programma
+- [Yoga / pilates a Padova](https://anyplans.in/padova/yoga/): 10 in programma
 - [Escursionismo a Padova](https://anyplans.in/padova/escursioni/): 1 in programma
 - [Spettacoli e teatro a Padova](https://anyplans.in/padova/spettacoli/): 33 in programma
-- [Feste, sagre ed eventi di paese a Padova](https://anyplans.in/padova/feste/): 18 in programma
+- [Feste, sagre ed eventi di paese a Padova](https://anyplans.in/padova/feste/): 17 in programma
 - [Cinema a Padova](https://anyplans.in/padova/cinema/): 8 in programma
 - [Giochi da tavolo a Padova](https://anyplans.in/padova/giochi/): 13 in programma
 - [Palestra a Padova](https://anyplans.in/padova/palestra/): 5 in programma
-- [Visite guidate a Padova](https://anyplans.in/padova/visite-guidate/): 22 in programma
+- [Visite guidate a Padova](https://anyplans.in/padova/visite-guidate/): 21 in programma
 - [Pittura / arte a Padova](https://anyplans.in/padova/pittura/): 10 in programma
 - [Mostre a Padova](https://anyplans.in/padova/mostre/): 5 in programma
-- [Concerti e musica dal vivo a Padova](https://anyplans.in/padova/concerti/): 57 in programma
-- [Feste ed eventi a Abano Terme](https://anyplans.in/padova/abano-terme/): 7 in programma
-- [Feste ed eventi a Piove di Sacco](https://anyplans.in/padova/piove-di-sacco/): 4 in programma
-- [Feste ed eventi a Tombelle](https://anyplans.in/padova/tombelle/): 10 in programma
-- [Feste ed eventi a Limena](https://anyplans.in/padova/limena/): 2 in programma
+- [Concerti e musica dal vivo a Padova](https://anyplans.in/padova/concerti/): 58 in programma
+- [Feste ed eventi a Abano Terme](https://anyplans.in/padova/abano-terme/): 8 in programma
+- [Feste ed eventi a Piove di Sacco](https://anyplans.in/padova/piove-di-sacco/): 3 in programma
+- [Feste ed eventi a Tombelle](https://anyplans.in/padova/tombelle/): 8 in programma
+- [Feste ed eventi a Limena](https://anyplans.in/padova/limena/): 1 in programma
 - [Feste ed eventi a Noventa Padovana](https://anyplans.in/padova/noventa-padovana/): 1 in programma
 - [Feste ed eventi a Ponte San Nicolò](https://anyplans.in/padova/ponte-san-nicolo/): 2 in programma
 - [Feste ed eventi a Cittadella](https://anyplans.in/padova/cittadella/): 4 in programma
 - [Feste ed eventi a Montegrotto Terme](https://anyplans.in/padova/montegrotto-terme/): 2 in programma
-- [Feste ed eventi a Battaglia Terme](https://anyplans.in/padova/battaglia-terme/): 6 in programma
-- [Feste ed eventi a Sant'Agostino](https://anyplans.in/padova/sant-agostino/): 3 in programma
+- [Feste ed eventi a Battaglia Terme](https://anyplans.in/padova/battaglia-terme/): 5 in programma
+- [Feste ed eventi a Sant'Agostino](https://anyplans.in/padova/sant-agostino/): 2 in programma
 - [Feste ed eventi a Borgoricco](https://anyplans.in/padova/borgoricco/): 3 in programma
 - [Feste ed eventi a Campodarsego](https://anyplans.in/padova/campodarsego/): 3 in programma
-- [Feste ed eventi a Noventana](https://anyplans.in/padova/noventana/): 4 in programma
 - [Feste ed eventi a Albignasego](https://anyplans.in/padova/albignasego/): 3 in programma
+- [Feste ed eventi a Noventana](https://anyplans.in/padova/noventana/): 3 in programma
 
 ## Prossimi eventi
 
-- [L'Università di Padova incontra il CNR](https://anyplans.in/padova/l-universita-di-padova-incontra-il-cnr/): Martedì 22 settembre alle 09:30, Aula Magna di Palazzo del Bo, Padova, Gratis
-- [Lezione di prova gratuita attività motoria per parkinsoniani](https://anyplans.in/padova/lezione-di-prova-gratuita-attivita-motoria-per-parkinsoniani/): Martedì 22 settembre alle 12:30, Via Sant'Antonio, 2, Tombelle, Gratis
-- [VISITA GUIDATA "IL CATAJO MAI VISTO" 2026](https://anyplans.in/padova/visita-guidata-il-catajo-mai-visto-2026/): Martedì 22 settembre alle 15:30, Castello del Catajo, Battaglia Terme, Gratis
-- [WELFARE IMPRENDITORIALE: BENESSERE, FAMIGLIA E FUTURO DELL'IMPRESA](https://anyplans.in/padova/welfare-imprenditoriale-benessere-famiglia-e-futuro-dell-imp/): Martedì 22 settembre alle 16:45, Confcommercio Padova, Padova, Gratis
-- [Migliora i Risultati Aziendali in uno Spazio di Benessere](https://anyplans.in/padova/migliora-i-risultati-aziendali-in-uno-spazio-di-benessere/): Martedì 22 settembre alle 17:30, Via del Santo, 177, Limena, Gratis
-- [FRANCO FAGGIANI presenta "LA LUCE DEL PRIMO MATTINO"](https://anyplans.in/padova/franco-faggiani-presenta-la-luce-del-primo-mattino/): Martedì 22 settembre alle 18:15, Libreria La forma del libro, Padova, Gratis
-- [CORSI FIT-WELLNESS - Info e lezioni prova](https://anyplans.in/padova/corsi-fit-wellness-info-e-lezioni-prova/): Martedì 22 settembre alle 18:30, JOY ABANO - Custodi Del Benessere, Abano Terme, Gratis
-- [Student Entrepreneurs Club — Launch Night](https://anyplans.in/padova/student-entrepreneurs-club-launch-night/): Martedì 22 settembre alle 18:30, Le Village by CA Triveneto, Padova, Gratis
-- [Yoga al Parco Iris con Milkyoga](https://anyplans.in/padova/yoga-al-parco-iris-con-milkyoga/): Martedì 22 settembre alle 19:45, Parco Iris, Padova, Gratis
-- [Torneo Yu-Gi-OH!](https://anyplans.in/padova/torneo-yu-gi-oh/): Martedì 22 settembre alle 20:00, Livello 10: Comics & Games, Piove di Sacco, Gratis
-- [Incontro gratuito sul dolore dovuto alla sciatica](https://anyplans.in/padova/incontro-gratuito-sul-dolore-dovuto-alla-sciatica/): Martedì 22 settembre alle 20:15, Via Sant'Antonio, 2, Tombelle, Gratis
-- [ONE PIECE - LEGA LOG POSE!](https://anyplans.in/padova/one-piece-lega-log-pose/): Martedì 22 settembre alle 20:30, LOG POSE | TCG PADOVA, Sant'Antonio, Gratis
 - [Demografie e Società tra presente, passato e futuro](https://anyplans.in/padova/demografie-e-societa-tra-presente-passato-e-futuro/): Mercoledì 23 settembre alle 09:00, Dipartimento di Scienze Statistiche, Padova, Gratis
 - [AI@DEI 2026  - 23 settembre 2026](https://anyplans.in/padova/ai-dei-2026-23-settembre-2026/): Mercoledì 23 settembre alle 14:30, HUB Universita' degli Studi, Padova, Padova, Gratis
-- [Cena da Pier88: 10 posti liberi](https://anyplans.in/padova/cena-da-pier88-10-posti-liberi/): Mercoledì 23 settembre alle 16:00, Pier88, Padova, Gratis
+- [Cena da Pier88: 8 posti liberi](https://anyplans.in/padova/cena-da-pier88-8-posti-liberi/): Mercoledì 23 settembre alle 16:00, Pier88, Padova, Gratis
+- [Birra dopo il lavoro da StappiAmo Wine Bar: 5 posti liberi](https://anyplans.in/padova/birra-dopo-il-lavoro-da-stappiamo-wine-bar-5-posti-liberi/): Mercoledì 23 settembre alle 16:30, StappiAmo Wine Bar, Abano Terme, Gratis
 - [Cena da El Bacaro: 3 posti liberi](https://anyplans.in/padova/cena-da-el-bacaro-3-posti-liberi/): Mercoledì 23 settembre alle 17:00, El Bacaro, Piove di Sacco, Gratis
 - [Lezione di prova gratuita di Tai Chi - Taiji Quan](https://anyplans.in/padova/lezione-di-prova-gratuita-di-tai-chi-taiji-quan/): Mercoledì 23 settembre alle 18:00, Via Sant'Antonio, 2, Tombelle, Gratis
 - [IL SOGNO DI ALICE ROHRWACHER](https://anyplans.in/padova/il-sogno-di-alice-rohrwacher/): Mercoledì 23 settembre alle 18:00, Fronte del Porto - una sala in Comune. Sala cinema civica., Padova, Gratis
 - [LEONARDO PICCIONE presenta "COSE DA FARE DI NOTTE AL CIRCOLO POLARE ARTICO"](https://anyplans.in/padova/leonardo-piccione-presenta-cose-da-fare-di-notte-al-circolo-/): Mercoledì 23 settembre alle 18:15, Libreria La forma del libro, Padova, Gratis
-- [Cena da Campo dei Girasoli: 2 posti liberi](https://anyplans.in/padova/cena-da-campo-dei-girasoli-2-posti-liberi/): Mercoledì 23 settembre alle 18:15, Campo dei Girasoli, Padova, Gratis
 - [Serata giochi da Fun City Family | Big Bowling Rubano: 5 posti liberi](https://anyplans.in/padova/serata-giochi-da-fun-city-family-big-bowling-rubano-5-posti-/): Mercoledì 23 settembre alle 18:30, Fun City Family | Big Bowling Rubano, Gratis
+- [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/padova/padel-mancano-2-giocatori-amichevole/): Mercoledì 23 settembre alle 18:30, Centro Sportivo 2000, Via Pioveghetto, 9, 35136 Padova, 9 €
 - [Il silenzio degli altri - Proiezione gratuita](https://anyplans.in/padova/il-silenzio-degli-altri-proiezione-gratuita/): Mercoledì 23 settembre alle 20:30, Centro Culturale Altinate | San Gaetano, Padova, Gratis
 - [Dom Martin in concerto](https://anyplans.in/padova/dom-martin-in-concerto/): Mercoledì 23 settembre alle 20:30, Palaberta Montegrotto, Montegrotto Terme, Gratis
 - [63Azioni con CARICHI SOSPESI](https://anyplans.in/padova/63azioni-con-carichi-sospesi/): Mercoledì 23 settembre alle 21:15, Bastione Alicorno, Padova, Gratis
@@ -73,7 +62,6 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Tavolo a tema spirituale da La Mafaldina Ponte San Nicolò: 3 posti liberi](https://anyplans.in/padova/tavolo-a-tema-spirituale-da-la-mafaldina-ponte-san-nicolo-3-/): Giovedì 24 settembre alle 17:30, La Mafaldina Ponte San Nicolò, Gratis
 - [MARTA GASPARINI presenta "FERMIMMAGINE"](https://anyplans.in/padova/marta-gasparini-presenta-fermimmagine/): Giovedì 24 settembre alle 18:00, Libreria La forma del libro, Padova, Gratis
 - [Aperitivo After Work | 24 Settembre](https://anyplans.in/padova/aperitivo-after-work-24-settembre/): Giovedì 24 settembre alle 19:00, Wimbledon - Cocktail & Bistrot, Padova, Gratis
-- [🎤Stonatissimi🎤 da Prime District: 9 posti liberi](https://anyplans.in/padova/stonatissimi-da-prime-district-9-posti-liberi/): Giovedì 24 settembre alle 19:30, Prime District, Noventana, Gratis
 - [WeRoad Afterwork: Back to the City Edition](https://anyplans.in/padova/weroad-afterwork-back-to-the-city-edition/): Giovedì 24 settembre alle 20:00, Birrificio CRAK, Padova, 2 €
 - [Yu-Gi-Oh! Edison Format – Duelli Old Meta](https://anyplans.in/padova/yu-gi-oh-edison-format-duelli-old-meta/): Giovedì 24 settembre alle 21:00, Exas Gaming, Padova, Gratis
 - [Yu-Gi-Oh! GOAT Format – Duelli Old Meta](https://anyplans.in/padova/yu-gi-oh-goat-format-duelli-old-meta/): Giovedì 24 settembre alle 21:00, Exas Gaming, Padova, Gratis
@@ -82,8 +70,20 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Cena da DìVi Coffee & co.: 4 posti liberi](https://anyplans.in/padova/cena-da-divi-coffee-co-4-posti-liberi/): Venerdì 25 settembre alle 16:30, DìVi Coffee & co., Padova, Gratis
 - [GRUFFALÒ PARTY: lettura e laboratorio creativo](https://anyplans.in/padova/gruffalo-party-lettura-e-laboratorio-creativo/): Venerdì 25 settembre alle 16:30, Libreria La forma del libro, Padova, Gratis
 - [Cena da Sì Streetalian Food: 5 posti liberi](https://anyplans.in/padova/cena-da-si-streetalian-food-5-posti-liberi/): Venerdì 25 settembre alle 16:30, Sì Streetalian Food, Padova, Gratis
-- [Cena da Diemme Strada Battaglia: 11 posti liberi](https://anyplans.in/padova/cena-da-diemme-strada-battaglia-11-posti-liberi/): Venerdì 25 settembre alle 16:30, Diemme Strada Battaglia, Sant'Agostino, Gratis
+- [Cena da Tana del Luppolo - Este: 10 posti liberi](https://anyplans.in/padova/cena-da-tana-del-luppolo-este-10-posti-liberi/): Venerdì 25 settembre alle 17:00, Tana del Luppolo - Este, Gratis
 - [Science4All - La festa delle scienze dell'Università di Padova #science4all](https://anyplans.in/padova/science4all-la-festa-delle-scienze-dell-universita-di-padova/): Venerdì 25 settembre alle 17:00, Università di Padova, Gratis
+- [Solo per donne-Aperitivo da Vita - Wine Food: 4 posti liberi](https://anyplans.in/padova/solo-per-donne-aperitivo-da-vita-wine-food-4-posti-liberi/): Venerdì 25 settembre alle 17:00, Vita - Wine Food, Albignasego, Gratis
+- [Cantieri - 25 settembre](https://anyplans.in/padova/cantieri-25-settembre/): Venerdì 25 settembre alle 17:00, Via Montà, 186, Padova, Gratis
+- [Cena da Prime District: 11 posti liberi](https://anyplans.in/padova/cena-da-prime-district-11-posti-liberi/): Venerdì 25 settembre alle 17:30, Prime District, Noventana, Gratis
+- [In Cerca Di Sintonia](https://anyplans.in/padova/in-cerca-di-sintonia/): Venerdì 25 settembre alle 17:30, Casoni della Fogolana, Codevigo, Gratis
+- [Oasis tribute @ Stappiamo wine bar 🎸🍷 da StappiAmo Wine Bar: 5 posti liberi](https://anyplans.in/padova/oasis-tribute-stappiamo-wine-bar-da-stappiamo-wine-bar-5-pos/): Venerdì 25 settembre alle 18:00, StappiAmo Wine Bar, Abano Terme, Gratis
+- [CRONACHE DA UN PAESE INTERROTTO. DIARIO DI UN PROF IN PALESTINA](https://anyplans.in/padova/cronache-da-un-paese-interrotto-diario-di-un-prof-in-palesti/): Venerdì 25 settembre alle 18:00, via San Martino e Solferino 106, 35122 Padua, Italy, Padova, Gratis
+- [Cena da Villa Italia: 9 posti liberi](https://anyplans.in/padova/cena-da-villa-italia-9-posti-liberi/): Venerdì 25 settembre alle 18:30, Villa Italia, Padova, Gratis
+- [Serata karaoke e buffet di cicchetti veneziani da Goody Bakery & Frascolino Bacaro: 9 posti liberi](https://anyplans.in/padova/serata-karaoke-e-buffet-di-cicchetti-veneziani-da-goody-bake/): Venerdì 25 settembre alle 18:30, Goody Bakery & Frascolino Bacaro, Monselice, Gratis
+- [Cena da Capperi! Dolo: 1 posto libero](https://anyplans.in/padova/cena-da-capperi-dolo-1-posto-libero/): Venerdì 25 settembre alle 18:30, Capperi! Dolo, Gratis
+- [Cena da miscusi | pasta fresca - Padova: 6 posti liberi](https://anyplans.in/padova/cena-da-miscusi-pasta-fresca-padova-6-posti-liberi/): Venerdì 25 settembre alle 18:30, miscusi | pasta fresca - Padova, Gratis
+- [Mostra fotografica "RADICI" di Stefania Vilardo](https://anyplans.in/padova/mostra-fotografica-radici-di-stefania-vilardo/): Venerdì 25 settembre alle 19:00, Foto M2 di Michele Giubilato a Cazzago di Pianiga, Cazzago, Gratis
+- [LA GRANDE APERTURA da Prime District: 17 posti liberi](https://anyplans.in/padova/la-grande-apertura-da-prime-district-17-posti-liberi/): Venerdì 25 settembre alle 19:00, Prime District, Noventana, Gratis
 
 ## Optional
 
@@ -112,55 +112,55 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 # Tutte le pagine di anyplans a Padova (italiano, poi inglese)
 
-## Cosa fare a Padova e provincia: 363 eventi
+## Cosa fare a Padova e provincia: 357 eventi
 https://anyplans.in/padova/cosa-fare/
 
 Incontri culturali, cena / aperitivo, concerti e musica dal vivo, spettacoli e teatro e visite guidate: quello che succede a Padova e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
 
-## Cosa fare a Padova oggi: 12 eventi
+## Cosa fare a Padova oggi: 13 eventi
 https://anyplans.in/padova/cosa-fare-oggi/
 
-12 eventi a Padova e provincia oggi, 22 settembre 2026: Padova, Tombelle, Battaglia Terme e Limena e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+13 eventi a Padova e provincia oggi, 23 settembre 2026: Padova, Abano Terme, Piove di Sacco e Tombelle e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Padova domani: 12 eventi
+## Cosa fare a Padova domani: 9 eventi
 https://anyplans.in/padova/cosa-fare-domani/
 
-12 eventi a Padova e provincia domani, 23 settembre 2026: Padova, Piove di Sacco, Tombelle e Montegrotto Terme e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+9 eventi a Padova e provincia domani, 24 settembre 2026: Padova e Campodarsego e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Padova nel weekend: 34 eventi
+## Cosa fare a Padova nel weekend: 36 eventi
 https://anyplans.in/padova/cosa-fare-nel-weekend/
 
-34 eventi a Padova e provincia nel weekend (Sabato 26 settembre e Domenica 27 settembre): Padova, Piazzola sul Brenta, Tombelle e Rovolon e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+36 eventi a Padova e provincia nel weekend (Sabato 26 settembre e Domenica 27 settembre): Padova, Piazzola sul Brenta, Tombelle e Rovolon e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Eventi a Padova a settembre 2026: 109
+## Eventi a Padova a settembre 2026: 100
 https://anyplans.in/padova/eventi-settembre-2026/
 
-109 eventi a Padova e provincia a settembre 2026: incontri culturali, yoga / pilates, visite guidate, feste, sagre ed eventi di paese e cena / aperitivo. Giorno per giorno, con orari, luogo e prezzo, a Padova, Tombelle, Noventana e Abano Terme e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+100 eventi a Padova e provincia a settembre 2026: feste, sagre ed eventi di paese, incontri culturali, cena / aperitivo, yoga / pilates e cinema. Giorno per giorno, con orari, luogo e prezzo, a Padova, Tombelle, Abano Terme e Noventana e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Padova a ottobre 2026: 167
+## Eventi a Padova a ottobre 2026: 169
 https://anyplans.in/padova/eventi-ottobre-2026/
 
-167 eventi a Padova e provincia a ottobre 2026: yoga / pilates, incontri culturali, cinema, spettacoli e teatro e cena / aperitivo. Giorno per giorno, con orari, luogo e prezzo, a Padova, Battaglia Terme, Abano Terme e Tombelle e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+169 eventi a Padova e provincia a ottobre 2026: yoga / pilates, incontri culturali, cinema, spettacoli e teatro e cena / aperitivo. Giorno per giorno, con orari, luogo e prezzo, a Padova, Battaglia Terme, Abano Terme e Tombelle e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 ## Eventi a Padova a novembre 2026: 51
 https://anyplans.in/padova/eventi-novembre-2026/
 
 51 eventi a Padova e provincia a novembre 2026: concerti e musica dal vivo, incontri culturali, spettacoli e teatro, visite guidate e pittura / arte. Giorno per giorno, con orari, luogo e prezzo, a Padova, Abano Terme, Taggi di Sotto e San Martino di Lupari e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Incontri culturali a Padova: 134 eventi
+## Incontri culturali a Padova: 127 eventi
 https://anyplans.in/padova/incontri-culturali/
 
-A Padova e provincia ci sono 134 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Padova e provincia ci sono 127 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Cena / aperitivo a Padova: 39 eventi
+## Cena / aperitivo a Padova: 43 eventi
 https://anyplans.in/padova/cene-e-aperitivi/
 
-A Padova e provincia ci sono 39 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Padova e provincia ci sono 43 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Yoga / pilates a Padova: 13 eventi
+## Yoga / pilates a Padova: 10 eventi
 https://anyplans.in/padova/yoga/
 
-A Padova e provincia ci sono 13 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Padova e provincia ci sono 10 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Escursionismo a Padova: 1 evento
 https://anyplans.in/padova/escursioni/
@@ -172,10 +172,10 @@ https://anyplans.in/padova/spettacoli/
 
 A Padova e provincia ci sono 33 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Feste e sagre a Padova: 18 eventi
+## Feste e sagre a Padova: 17 eventi
 https://anyplans.in/padova/feste/
 
-A Padova e provincia ci sono 18 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Padova e provincia ci sono 17 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Cinema a Padova: 8 eventi
 https://anyplans.in/padova/cinema/
@@ -192,10 +192,10 @@ https://anyplans.in/padova/palestra/
 
 A Padova e provincia ci sono 5 eventi di palestra nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Visite guidate a Padova: 22 eventi
+## Visite guidate a Padova: 21 eventi
 https://anyplans.in/padova/visite-guidate/
 
-A Padova e provincia ci sono 22 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Padova e provincia ci sono 21 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Pittura / arte a Padova: 10 eventi
 https://anyplans.in/padova/pittura/
@@ -207,30 +207,30 @@ https://anyplans.in/padova/mostre/
 
 A Padova e provincia ci sono 5 mostre nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Concerti e musica dal vivo a Padova: 57 eventi
+## Concerti e musica dal vivo a Padova: 58 eventi
 https://anyplans.in/padova/concerti/
 
-A Padova e provincia ci sono 57 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Padova e provincia ci sono 58 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Feste ed eventi a Abano Terme: 7 in programma
+## Feste ed eventi a Abano Terme: 8 in programma
 https://anyplans.in/padova/abano-terme/
 
-A Abano Terme ci sono 7 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Abano Terme con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Abano Terme ci sono 8 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Abano Terme con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Feste ed eventi a Piove di Sacco: 4 in programma
+## Feste ed eventi a Piove di Sacco: 3 in programma
 https://anyplans.in/padova/piove-di-sacco/
 
-A Piove di Sacco ci sono 4 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Piove di Sacco con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Piove di Sacco ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Piove di Sacco con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Feste ed eventi a Tombelle: 10 in programma
+## Feste ed eventi a Tombelle: 8 in programma
 https://anyplans.in/padova/tombelle/
 
-A Tombelle ci sono 10 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Tombelle con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Tombelle ci sono 8 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Tombelle con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Feste ed eventi a Limena: 2 in programma
+## Feste ed eventi a Limena: 1 in programma
 https://anyplans.in/padova/limena/
 
-A Limena ci sono 2 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Limena con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Limena c'è 1 evento nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Limena con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 ## Feste ed eventi a Noventa Padovana: 1 in…
 https://anyplans.in/padova/noventa-padovana/
@@ -252,15 +252,15 @@ https://anyplans.in/padova/montegrotto-terme/
 
 A Montegrotto Terme ci sono 2 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Montegrotto Terme con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Feste ed eventi a Battaglia Terme: 6 in programma
+## Feste ed eventi a Battaglia Terme: 5 in programma
 https://anyplans.in/padova/battaglia-terme/
 
-A Battaglia Terme ci sono 6 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Battaglia Terme con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Battaglia Terme ci sono 5 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Battaglia Terme con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Feste ed eventi a Sant'Agostino: 3 in programma
+## Feste ed eventi a Sant'Agostino: 2 in programma
 https://anyplans.in/padova/sant-agostino/
 
-A Sant'Agostino ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Sant'Agostino con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Sant'Agostino ci sono 2 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Sant'Agostino con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 ## Feste ed eventi a Borgoricco: 3 in programma
 https://anyplans.in/padova/borgoricco/
@@ -272,15 +272,15 @@ https://anyplans.in/padova/campodarsego/
 
 A Campodarsego ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Campodarsego con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Feste ed eventi a Noventana: 4 in programma
-https://anyplans.in/padova/noventana/
-
-A Noventana ci sono 4 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Noventana con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
-
 ## Feste ed eventi a Albignasego: 3 in programma
 https://anyplans.in/padova/albignasego/
 
 A Albignasego ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Albignasego con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+
+## Feste ed eventi a Noventana: 3 in programma
+https://anyplans.in/padova/noventana/
+
+A Noventana ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Noventana con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 ## Locali a Padova: 43
 https://anyplans.in/padova/locali/
@@ -290,32 +290,37 @@ https://anyplans.in/padova/locali/
 ## Tablo: eventi e serate a Padova
 https://anyplans.in/padova/locali/tablo/
 
-Tablo a Padova: 34 eventi in programma — cena / aperitivo, incontri culturali e visite guidate. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Tablo a Padova: 37 eventi in programma — cena / aperitivo, incontri culturali e visite guidate. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Fiera di Padova - Padiglione 11- Sala A: eventi in…
 https://anyplans.in/padova/locali/fiera-di-padova-padiglione-11-sala-a/
 
 Fiera di Padova - Padiglione 11- Sala A: 18 eventi in programma — incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-## Museo Veneto del Giocattolo: eventi e serate a Padova
+## Museo Veneto del Giocattolo: eventi in programma a Padova
 https://anyplans.in/padova/locali/museo-veneto-del-giocattolo/
 
-Museo Veneto del Giocattolo a Padova: 16 eventi in programma — incontri culturali, concerti e musica dal vivo, visite guidate e pittura / arte. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Museo Veneto del Giocattolo a Padova: 14 eventi in programma — incontri culturali, visite guidate, pittura / arte e spettacoli e teatro. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
+## Concert Tracker: eventi e serate a Padova
+https://anyplans.in/padova/locali/concert-tracker/
+
+Concert Tracker a Padova: 11 eventi in programma — spettacoli e teatro e concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Fiera di Padova - Padiglione 11- Sala B: eventi in…
 https://anyplans.in/padova/locali/fiera-di-padova-padiglione-11-sala-b/
 
 Fiera di Padova - Padiglione 11- Sala B: 10 eventi in programma — incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-## Concert Tracker: eventi e serate a Padova
-https://anyplans.in/padova/locali/concert-tracker/
-
-Concert Tracker a Padova: 10 eventi in programma — spettacoli e teatro e concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
 ## Libreria La forma del libro: eventi in programma a Padova
 https://anyplans.in/padova/locali/libreria-la-forma-del-libro/
 
-Libreria La forma del libro a Padova: 9 eventi in programma — feste, sagre ed eventi di paese, mostre e incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Libreria La forma del libro a Padova: 8 eventi in programma — feste, sagre ed eventi di paese, mostre e incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
+## Melody Mapper: eventi e serate a Padova
+https://anyplans.in/padova/locali/melody-mapper/
+
+Melody Mapper a Padova: 9 eventi in programma — spettacoli e teatro, concerti e musica dal vivo e visite guidate. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Punto Ipazia: eventi e serate a Padova
 https://anyplans.in/padova/locali/punto-ipazia/
@@ -327,11 +332,6 @@ https://anyplans.in/padova/locali/producer-cinema-d-azienda/
 
 PRODUCER - Cinema D'azienda a Padova: 7 eventi in programma — incontri culturali, concerti e musica dal vivo e spettacoli e teatro. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-## Melody Mapper: eventi e serate a Padova
-https://anyplans.in/padova/locali/melody-mapper/
-
-Melody Mapper a Padova: 8 eventi in programma — spettacoli e teatro, concerti e musica dal vivo e visite guidate. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
 ## Sound Curator: eventi e serate a Padova
 https://anyplans.in/padova/locali/sound-curator/
 
@@ -340,7 +340,7 @@ Sound Curator a Padova: 8 eventi in programma — concerti e musica dal vivo e s
 ## Castello del Catajo: eventi in programma a Battaglia…
 https://anyplans.in/padova/locali/castello-del-catajo/
 
-Castello del Catajo a Battaglia Terme: 6 eventi in programma — visite guidate. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Castello del Catajo a Battaglia Terme: 5 eventi in programma — visite guidate. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Beat Curator: eventi e serate a Padova
 https://anyplans.in/padova/locali/beat-curator/
@@ -357,15 +357,20 @@ https://anyplans.in/padova/locali/fornace-carotta/
 
 Fornace Carotta a Padova: 5 eventi in programma — giochi da tavolo e cena / aperitivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
+## Temporary Band: eventi e serate a Padova
+https://anyplans.in/padova/locali/temporary-band/
+
+Temporary Band a Padova: 5 eventi in programma — concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
+## Gens d'Ys - Accademia Danze Irlandesi: eventi e serate…
+https://anyplans.in/padova/locali/gens-d-ys-accademia-danze-irlandesi/
+
+Gens d'Ys - Accademia Danze Irlandesi a Padova: 4 eventi in programma — incontri culturali, concerti e musica dal vivo, visite guidate e spettacoli e teatro. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
 ## Libreria ItalyPost: eventi in programma a Padova
 https://anyplans.in/padova/locali/libreria-italypost/
 
 Libreria ItalyPost a Padova: 4 eventi in programma — incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## Temporary Band: eventi e serate a Padova
-https://anyplans.in/padova/locali/temporary-band/
-
-Temporary Band a Padova: 4 eventi in programma — concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Giulio Cesare Ricci: eventi in programma a Padova
 https://anyplans.in/padova/locali/giulio-cesare-ricci/
@@ -380,7 +385,7 @@ Exas Gaming a Padova: 3 eventi in programma — giochi da tavolo e spettacoli e 
 ## Luma: eventi in programma a Padova
 https://anyplans.in/padova/locali/luma/
 
-Luma a Padova: 3 eventi in programma — incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Luma a Padova: 2 eventi in programma — incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Fronte del Porto - una sala in Comune. Sala cinema…
 https://anyplans.in/padova/locali/fronte-del-porto-una-sala-in-comune-sala-cinema-civica/
@@ -391,16 +396,6 @@ Fronte del Porto - una sala in Comune. Sala cinema civica. a Padova: 3 eventi in
 https://anyplans.in/padova/locali/centro-culturale-altinate-san-gaetano/
 
 Centro Culturale Altinate | San Gaetano a Padova: 3 eventi in programma — cinema e incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## Gens d'Ys - Accademia Danze Irlandesi: eventi in…
-https://anyplans.in/padova/locali/gens-d-ys-accademia-danze-irlandesi/
-
-Gens d'Ys - Accademia Danze Irlandesi a Padova: 3 eventi in programma — incontri culturali, visite guidate e spettacoli e teatro. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## SheTech: eventi e serate a Padova
-https://anyplans.in/padova/locali/shetech/
-
-SheTech a Padova: 3 eventi in programma — incontri culturali e concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Palazzo Moroni - Comune di Padova: eventi in programma
 https://anyplans.in/padova/locali/palazzo-moroni-comune-di-padova/
@@ -417,6 +412,16 @@ https://anyplans.in/padova/locali/bastione-alicorno/
 
 Bastione Alicorno a Padova: 2 eventi in programma — spettacoli e teatro e giochi da tavolo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
+## Università degli Studi di Padova con UniSMART: eventi e…
+https://anyplans.in/padova/locali/universita-degli-studi-di-padova-con-unismart/
+
+Università degli Studi di Padova con UniSMART: 2 eventi in programma — incontri culturali e concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
+## WeMeet by WeRoad: eventi e serate a Padova
+https://anyplans.in/padova/locali/wemeet-by-weroad/
+
+WeMeet by WeRoad a Padova: 2 eventi in programma — cena / aperitivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
 ## Yana Pusher Emozionale: eventi in programma a Padova
 https://anyplans.in/padova/locali/yana-pusher-emozionale/
 
@@ -427,6 +432,11 @@ https://anyplans.in/padova/locali/sala-anziani-di-palazzo-moroni/
 
 Sala Anziani di Palazzo Moroni a Padova: 2 eventi in programma — feste, sagre ed eventi di paese e cena / aperitivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
+## SheTech: eventi e serate a Padova
+https://anyplans.in/padova/locali/shetech/
+
+SheTech a Padova: 2 eventi in programma — incontri culturali e concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
 ## Orizzonti Cooperativa: eventi in programma a Padova
 https://anyplans.in/padova/locali/orizzonti-cooperativa/
 
@@ -436,11 +446,6 @@ Orizzonti Cooperativa a Padova: 2 eventi in programma — incontri culturali. Di
 https://anyplans.in/padova/locali/sala-insonorizzata-ex-scuderie-fornace-carotta/
 
 sala insonorizzata ex scuderie fornace Carotta a Padova: 2 eventi in programma — giochi da tavolo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## True Believers DIY Booking & concerts: eventi e serate…
-https://anyplans.in/padova/locali/true-believers-diy-booking-concerts/
-
-True Believers DIY Booking & concerts a Padova: 2 eventi in programma — spettacoli e teatro e concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Orient Express Padova: eventi e serate a Ponte San Nicolò
 https://anyplans.in/padova/locali/orient-express-padova/
@@ -476,11 +481,6 @@ Aula Nievo a Padova: 2 eventi in programma — incontri culturali. Di ognuno dat
 https://anyplans.in/padova/locali/punto-nemo-eventi-diversi/
 
 punto nemo - eVenti diVersi a Padova: 2 eventi in programma — concerti e musica dal vivo e pittura / arte. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## Opera e Lirica: eventi e serate a Padova
-https://anyplans.in/padova/locali/opera-e-lirica/
-
-Opera e Lirica a Padova: 2 eventi in programma — concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## MC2 LIVE: eventi e serate a Padova
 https://anyplans.in/padova/locali/mc2-live/
@@ -530,7 +530,7 @@ Yoga / pilates a Via Sant'Antonio, 2, Tombelle, mercoledì 23 settembre alle 18:
 ## CORSI FIT-WELLNESS - Info e lezioni prova – Abano Terme
 https://anyplans.in/padova/corsi-fit-wellness-info-e-lezioni-prova/
 
-Yoga / pilates a JOY ABANO - Custodi Del Benessere, Abano Terme, martedì 22 settembre alle 18:30. Gratis (Biglietti su Eventbrite).
+Yoga / pilates a JOY ABANO - Custodi Del Benessere, Abano Terme: si è già svolto, l'ultima data è stata martedì 22 settembre 2026.
 
 ## Lezione Prova di Yoga (approccio Anukalana) – Limena
 https://anyplans.in/padova/lezione-prova-di-yoga-approccio-anukalana/
@@ -590,7 +590,7 @@ Yoga / pilates a Via Sant'Antonio, 2, Tombelle: si è già svolto, l'ultima data
 ## Yoga al Parco Iris con Milkyoga
 https://anyplans.in/padova/yoga-al-parco-iris-con-milkyoga/
 
-Yoga / pilates a Parco Iris, Padova, martedì 22 settembre alle 19:45. Gratis (Biglietti su Eventbrite).
+Yoga / pilates a Parco Iris, Padova: si è già svolto, l'ultima data è stata martedì 22 settembre 2026.
 
 ## Chi controlla i chip controlla il mondo. – Padova
 https://anyplans.in/padova/chi-controlla-i-chip-controlla-il-mondo/
@@ -670,7 +670,7 @@ Yoga / pilates a Via Sant'Antonio, 2, Tombelle: si è già svolto, l'ultima data
 ## Lezione di prova gratuita attività motoria per parkinsoniani – Tombelle
 https://anyplans.in/padova/lezione-di-prova-gratuita-attivita-motoria-per-parkinsoniani/
 
-Yoga / pilates a Via Sant'Antonio, 2, Tombelle, martedì 22 settembre alle 12:30. Gratis (Biglietti su Eventbrite).
+Yoga / pilates a Via Sant'Antonio, 2, Tombelle: si è già svolto, l'ultima data è stata martedì 22 settembre 2026.
 
 ## Incontro gratuito in presenza a Padova o online con Mental Coach – Tombelle
 https://anyplans.in/padova/incontro-gratuito-in-presenza-a-padova-o-online-con-mental-c/
@@ -755,7 +755,7 @@ Mostre a Foto M2 di Michele Giubilato a Cazzago di Pianiga, Cazzago, venerdì 25
 ## Cena da La Gineria: 7 posti liberi
 https://anyplans.in/padova/cena-da-la-gineria-7-posti-liberi/
 
-Cena / aperitivo a La Gineria, Santa Maria di Sala: si è già svolto, l'ultima data è stata venerdì 18 settembre 2026.
+Cena / aperitivo a La Gineria, Santa Maria di Sala, venerdì 25 settembre alle 19:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## KUBORAUM EXPERIENCE at INAWHITEBOX – Fiesso
 https://anyplans.in/padova/kuboraum-experience-at-inawhitebox/
@@ -900,7 +900,7 @@ Visite guidate a Bologna, Padova: si è già svolto, l'ultima data è stata dome
 ## VISITA GUIDATA "IL CATAJO MAI VISTO" 2026 – Battaglia Terme
 https://anyplans.in/padova/visita-guidata-il-catajo-mai-visto-2026/
 
-Visite guidate a Castello del Catajo, Battaglia Terme, martedì 22 settembre alle 15:30. Gratis (Biglietti su Eventbrite).
+Visite guidate a Castello del Catajo, Battaglia Terme: si è già svolto, l'ultima data è stata martedì 22 settembre 2026.
 
 ## Visite guidate Piano Nobile Castello del Catajo 2026
 https://anyplans.in/padova/visite-guidate-piano-nobile-castello-del-catajo-2026/
@@ -1005,42 +1005,42 @@ Visite guidate a Via Galileo Galilei, 1/A, Borgoricco, lunedì 28 settembre alle
 ## L'Università di Padova incontra il CNR
 https://anyplans.in/padova/l-universita-di-padova-incontra-il-cnr/
 
-Incontri culturali a Aula Magna di Palazzo del Bo, Padova, martedì 22 settembre alle 09:30. Gratis (Biglietti su Eventbrite).
+Incontri culturali a Aula Magna di Palazzo del Bo, Padova: si è già svolto, l'ultima data è stata martedì 22 settembre 2026.
 
 ## WELFARE IMPRENDITORIALE: BENESSERE – Confcommercio Padova
 https://anyplans.in/padova/welfare-imprenditoriale-benessere-famiglia-e-futuro-dell-imp/
 
-Incontri culturali a Confcommercio Padova, Padova, martedì 22 settembre alle 16:45. Gratis (Biglietti su Eventbrite).
+Incontri culturali a Confcommercio Padova, Padova: si è già svolto, l'ultima data è stata martedì 22 settembre 2026.
 
 ## Migliora i Risultati Aziendali in uno Spazio di Benessere – Limena
 https://anyplans.in/padova/migliora-i-risultati-aziendali-in-uno-spazio-di-benessere/
 
-Incontri culturali a Via del Santo, 177, Limena, martedì 22 settembre alle 17:30. Gratis (Biglietti su Eventbrite).
+Incontri culturali a Via del Santo, 177, Limena: si è già svolto, l'ultima data è stata martedì 22 settembre 2026.
 
 ## FRANCO FAGGIANI presenta "LA LUCE DEL PRIMO MATTINO" – Padova
 https://anyplans.in/padova/franco-faggiani-presenta-la-luce-del-primo-mattino/
 
-Festa di paese a Libreria La forma del libro, Padova, martedì 22 settembre alle 18:15. Gratis (Biglietti su Eventbrite).
+Festa di paese a Libreria La forma del libro, Padova: si è già svolto, l'ultima data è stata martedì 22 settembre 2026.
 
 ## Student Entrepreneurs Club — Launch Night – Padova
 https://anyplans.in/padova/student-entrepreneurs-club-launch-night/
 
-Incontri culturali a Le Village by CA Triveneto, Padova, martedì 22 settembre alle 18:30. Gratis (Gratis, registrazione su Luma).
+Incontri culturali a Le Village by CA Triveneto, Padova: si è già svolto, l'ultima data è stata martedì 22 settembre 2026.
 
 ## Torneo Yu-Gi-OH! – Livello 10: Comics & Games
 https://anyplans.in/padova/torneo-yu-gi-oh/
 
-Incontri culturali a Livello 10: Comics & Games, Piove di Sacco, martedì 22 settembre alle 20:00. Gratis (Biglietti su Eventbrite).
+Incontri culturali a Livello 10: Comics & Games, Piove di Sacco: si è già svolto, l'ultima data è stata martedì 22 settembre 2026.
 
 ## Incontro gratuito sul dolore dovuto alla sciatica – Tombelle
 https://anyplans.in/padova/incontro-gratuito-sul-dolore-dovuto-alla-sciatica/
 
-Incontri culturali a Via Sant'Antonio, 2, Tombelle, martedì 22 settembre alle 20:15. Gratis (Biglietti su Eventbrite).
+Incontri culturali a Via Sant'Antonio, 2, Tombelle: si è già svolto, l'ultima data è stata martedì 22 settembre 2026.
 
 ## ONE PIECE - LEGA LOG POSE! – LOG POSE | TCG PADOVA
 https://anyplans.in/padova/one-piece-lega-log-pose/
 
-Incontri culturali a LOG POSE | TCG PADOVA, Sant'Antonio, martedì 22 settembre alle 20:30. Gratis (Biglietti su Eventbrite).
+Incontri culturali a LOG POSE | TCG PADOVA, Sant'Antonio: si è già svolto, l'ultima data è stata martedì 22 settembre 2026.
 
 ## Demografie e Società tra presente – Padova
 https://anyplans.in/padova/demografie-e-societa-tra-presente-passato-e-futuro/
@@ -1052,10 +1052,15 @@ https://anyplans.in/padova/ai-dei-2026-23-settembre-2026/
 
 Incontri culturali a HUB Universita' degli Studi, Padova, Padova, mercoledì 23 settembre alle 14:30. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Cena da Pier88: 10 posti liberi
-https://anyplans.in/padova/cena-da-pier88-10-posti-liberi/
+## Cena da Pier88: 8 posti liberi
+https://anyplans.in/padova/cena-da-pier88-8-posti-liberi/
 
 Cena / aperitivo a Pier88, Padova, mercoledì 23 settembre alle 16:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## Birra dopo il lavoro da StappiAmo Wine Bar: 5 posti…
+https://anyplans.in/padova/birra-dopo-il-lavoro-da-stappiamo-wine-bar-5-posti-liberi/
+
+Cena / aperitivo a StappiAmo Wine Bar, Abano Terme, mercoledì 23 settembre alle 16:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## IL SOGNO DI ALICE ROHRWACHER – Padova
 https://anyplans.in/padova/il-sogno-di-alice-rohrwacher/
@@ -1067,15 +1072,15 @@ https://anyplans.in/padova/leonardo-piccione-presenta-cose-da-fare-di-notte-al-c
 
 Festa di paese a Libreria La forma del libro, Padova, mercoledì 23 settembre alle 18:15. Gratis (Biglietti su Eventbrite).
 
-## Cena da Campo dei Girasoli: 2 posti liberi
-https://anyplans.in/padova/cena-da-campo-dei-girasoli-2-posti-liberi/
-
-Cena / aperitivo a Campo dei Girasoli, Padova, mercoledì 23 settembre alle 18:15. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Serata giochi da Fun City Family | Big Bowling Rubano:…
 https://anyplans.in/padova/serata-giochi-da-fun-city-family-big-bowling-rubano-5-posti-/
 
 Cena / aperitivo a Fun City Family | Big Bowling Rubano, mercoledì 23 settembre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## Padel: mancano 2 giocatori (amichevole) – Padova
+https://anyplans.in/padova/padel-mancano-2-giocatori-amichevole/
+
+Padel a Centro Sportivo 2000, Via Pioveghetto, 9, 35136 Padova, mercoledì 23 settembre alle 18:30. 9 € (Si chiede il posto e si paga su Playtomic).
 
 ## Il silenzio degli altri - Proiezione gratuita – Padova
 https://anyplans.in/padova/il-silenzio-degli-altri-proiezione-gratuita/
@@ -1112,11 +1117,6 @@ https://anyplans.in/padova/aperitivo-after-work-24-settembre/
 
 Cena / aperitivo a Wimbledon - Cocktail & Bistrot, Padova, giovedì 24 settembre alle 19:00. Gratis (Biglietti su Eventbrite).
 
-## 🎤Stonatissimi🎤 da Prime District: 9 posti liberi
-https://anyplans.in/padova/stonatissimi-da-prime-district-9-posti-liberi/
-
-Cena / aperitivo a Prime District, Noventana, giovedì 24 settembre alle 19:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## WeRoad Afterwork: Back to the City Edition – Birrificio CRAK
 https://anyplans.in/padova/weroad-afterwork-back-to-the-city-edition/
 
@@ -1137,18 +1137,18 @@ https://anyplans.in/padova/cena-da-si-streetalian-food-5-posti-liberi/
 
 Cena / aperitivo a Sì Streetalian Food, Padova, venerdì 25 settembre alle 16:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Cena da Diemme Strada Battaglia: 11 posti liberi
-https://anyplans.in/padova/cena-da-diemme-strada-battaglia-11-posti-liberi/
+## Cena da Tana del Luppolo - Este: 10 posti liberi
+https://anyplans.in/padova/cena-da-tana-del-luppolo-este-10-posti-liberi/
 
-Cena / aperitivo a Diemme Strada Battaglia, Sant'Agostino, venerdì 25 settembre alle 16:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+Cena / aperitivo a Tana del Luppolo - Este, venerdì 25 settembre alle 17:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## Science4All - La festa delle scienze dell'Università di…
 https://anyplans.in/padova/science4all-la-festa-delle-scienze-dell-universita-di-padova/
 
 Festa di paese a Università di Padova, venerdì 25 settembre alle 17:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Solo per donne-Aperitivo da Vita - Wine Food: 6 posti…
-https://anyplans.in/padova/solo-per-donne-aperitivo-da-vita-wine-food-6-posti-liberi/
+## Solo per donne-Aperitivo da Vita - Wine Food: 4 posti…
+https://anyplans.in/padova/solo-per-donne-aperitivo-da-vita-wine-food-4-posti-liberi/
 
 Cena / aperitivo a Vita - Wine Food, Albignasego, venerdì 25 settembre alle 17:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
@@ -1167,38 +1167,38 @@ https://anyplans.in/padova/in-cerca-di-sintonia/
 
 Incontri culturali a Casoni della Fogolana, Codevigo, venerdì 25 settembre alle 17:30. Gratis (Biglietti su Eventbrite).
 
-## Aperitivo da Ristoro La Vallesana: 5 posti liberi
-https://anyplans.in/padova/aperitivo-da-ristoro-la-vallesana-5-posti-liberi/
+## Oasis tribute @ Stappiamo wine bar 🎸🍷 da StappiAmo…
+https://anyplans.in/padova/oasis-tribute-stappiamo-wine-bar-da-stappiamo-wine-bar-5-pos/
 
-Cena / aperitivo a Ristoro La Vallesana, Baone, venerdì 25 settembre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+Cena / aperitivo a StappiAmo Wine Bar, Abano Terme, venerdì 25 settembre alle 18:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## CRONACHE DA UN PAESE INTERROTTO. DIARIO DI UN PROF IN PALESTINA – Padova
 https://anyplans.in/padova/cronache-da-un-paese-interrotto-diario-di-un-prof-in-palesti/
 
 Pittura / arte a via San Martino e Solferino 106, 35122 Padua, Italy, Padova, venerdì 25 settembre alle 18:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Cena da Villa Italia: 10 posti liberi
-https://anyplans.in/padova/cena-da-villa-italia-10-posti-liberi/
+## Cena da Villa Italia: 9 posti liberi
+https://anyplans.in/padova/cena-da-villa-italia-9-posti-liberi/
 
 Cena / aperitivo a Villa Italia, Padova, venerdì 25 settembre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Cena da Capperi! Dolo: 2 posti liberi
-https://anyplans.in/padova/cena-da-capperi-dolo-2-posti-liberi/
+## Serata karaoke e buffet di cicchetti veneziani da Goody…
+https://anyplans.in/padova/serata-karaoke-e-buffet-di-cicchetti-veneziani-da-goody-bake/
+
+Cena / aperitivo a Goody Bakery & Frascolino Bacaro, Monselice, venerdì 25 settembre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## Cena da Capperi! Dolo: 1 posto libero
+https://anyplans.in/padova/cena-da-capperi-dolo-1-posto-libero/
 
 Cena / aperitivo a Capperi! Dolo, venerdì 25 settembre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Cena da Cocò KM0 Restaurant & Pizza: 4 posti liberi
-https://anyplans.in/padova/cena-da-coco-km0-restaurant-pizza-4-posti-liberi/
-
-Cena / aperitivo a Cocò KM0 Restaurant & Pizza, Padova, venerdì 25 settembre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## Cena da miscusi | pasta fresca - Padova: 6 posti liberi
 https://anyplans.in/padova/cena-da-miscusi-pasta-fresca-padova-6-posti-liberi/
 
 Cena / aperitivo a miscusi | pasta fresca - Padova, venerdì 25 settembre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## LA GRANDE APERTURA da Prime District: 18 posti liberi
-https://anyplans.in/padova/la-grande-apertura-da-prime-district-18-posti-liberi/
+## LA GRANDE APERTURA da Prime District: 17 posti liberi
+https://anyplans.in/padova/la-grande-apertura-da-prime-district-17-posti-liberi/
 
 Cena / aperitivo a Prime District, Noventana, venerdì 25 settembre alle 19:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
@@ -1312,13 +1312,13 @@ https://anyplans.in/padova/sapori-di-mare-da-ristorante-da-federico-di-trevisan-
 
 Cena / aperitivo a Ristorante Da Federico Di Trevisan Federico, Solesino, sabato 26 settembre alle 18:45. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Cena da Exforo: 8 posti liberi
-https://anyplans.in/padova/cena-da-exforo-8-posti-liberi/
+## Cena da Exforo: 6 posti liberi
+https://anyplans.in/padova/cena-da-exforo-6-posti-liberi/
 
 Cena / aperitivo a Exforo, Padova, sabato 26 settembre alle 18:45. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Cena da Birraria Ai Giardini: 6 posti liberi
-https://anyplans.in/padova/cena-da-birraria-ai-giardini-6-posti-liberi/
+## Cena da Birraria Ai Giardini: 5 posti liberi
+https://anyplans.in/padova/cena-da-birraria-ai-giardini-5-posti-liberi/
 
 Cena / aperitivo a Birraria Ai Giardini, Cittadella, sabato 26 settembre alle 19:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
@@ -1357,6 +1357,11 @@ https://anyplans.in/padova/pranzetto-con-vista-sui-colli-da-trattoria-da-bepi-al
 
 Cena / aperitivo a Trattoria Da Bepi Alle Scuole, Rovolon, domenica 27 settembre alle 10:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Cena da Movembik: 7 posti liberi
+https://anyplans.in/padova/cena-da-movembik-7-posti-liberi/
+
+Cena / aperitivo a Movembik, Vigonza, domenica 27 settembre alle 15:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
 ## LETTERE D’AMORE. La novella di “Hippolyto e Lionora” – Padova
 https://anyplans.in/padova/lettere-d-amore-la-novella-di-hippolyto-e-lionora/
 
@@ -1366,6 +1371,11 @@ Spettacoli e teatro a Via S. Biagio, 7, Padova, domenica 27 settembre alle 16:00
 https://anyplans.in/padova/art-la-strana-storia-del-parco-treves-passeggiata-spettacolo/
 
 Festa di paese a Glamour, domenica 27 settembre alle 17:00. 7 € (Biglietti su AllEvents).
+
+## Cena da Charly Brown Pub: 7 posti liberi
+https://anyplans.in/padova/cena-da-charly-brown-pub-7-posti-liberi/
+
+Cena / aperitivo a Charly Brown Pub, Celeseo, domenica 27 settembre alle 17:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## Nastri Rosa @ Cittadella - PD
 https://anyplans.in/padova/nastri-rosa-cittadella-pd/
@@ -1637,6 +1647,11 @@ https://anyplans.in/padova/dacia-maraini-presenta-scritture-segrete/
 
 Incontri culturali a Fiera di Padova - Padiglione 11- Sala A, Padova, sabato 3 ottobre alle 17:30. Gratis (Biglietti su Eventbrite).
 
+## Cena da Old Ranch: 15 posti liberi
+https://anyplans.in/padova/cena-da-old-ranch-15-posti-liberi/
+
+Cena / aperitivo a Old Ranch, Terrassa Padovana, sabato 3 ottobre alle 17:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
 ## Cena da Sushi Kiro: 15 posti liberi
 https://anyplans.in/padova/cena-da-sushi-kiro-15-posti-liberi/
 
@@ -1661,6 +1676,11 @@ Cena / aperitivo a Da Nicola Trattoria & Alloggi, Montegrotto Terme, sabato 3 ot
 https://anyplans.in/padova/mario-calabresi-le-voci-degli-altri-con-nicolo-menniti-ippol/
 
 Incontri culturali a Fiera di Padova - Padiglione 11- Sala A, Padova, sabato 3 ottobre alle 19:00. Gratis (Biglietti su Eventbrite).
+
+## Oktoberfest Padova – Parco degli Alpini PD
+https://anyplans.in/padova/oktoberfest-padova/
+
+Cena / aperitivo a Parco degli Alpini PD, Padova, sabato 3 ottobre alle 19:00. Gratis (Gratis, iscrizione su WeMeet (WeRoad)).
 
 ## Serata al Tiama da TiAma Cocktail Bistrot: 11 posti…
 https://anyplans.in/padova/serata-al-tiama-da-tiama-cocktail-bistrot-11-posti-liberi/
@@ -1887,13 +1907,13 @@ https://anyplans.in/padova/originali-o-fotocopie-carlo-acutis-il-primo-santo-mil
 
 Incontri culturali a Parrocchia dello Spirito Santo, Padova, sabato 10 ottobre alle 18:30. Gratis (Biglietti su Eventbrite).
 
-## LUPPOLO E PANE 🍔🍺 da Caravanserrai RistoPub: 9 posti…
-https://anyplans.in/padova/luppolo-e-pane-da-caravanserrai-ristopub-9-posti-liberi/
+## LUPPOLO E PANE 🍔🍺 da Caravanserrai RistoPub: 7 posti…
+https://anyplans.in/padova/luppolo-e-pane-da-caravanserrai-ristopub-7-posti-liberi/
 
 Cena / aperitivo a Caravanserrai RistoPub, Este, sabato 10 ottobre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Menù pizza 24 euro da Paradiso Latino Para Siempre: 17…
-https://anyplans.in/padova/menu-pizza-24-euro-da-paradiso-latino-para-siempre-17-posti-/
+## Menù pizza 24 euro da Paradiso Latino Para Siempre: 15…
+https://anyplans.in/padova/menu-pizza-24-euro-da-paradiso-latino-para-siempre-15-posti-/
 
 Cena / aperitivo a Paradiso Latino Para Siempre, Campodarsego, sabato 10 ottobre alle 19:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
@@ -2717,55 +2737,60 @@ https://anyplans.in/padova/biagio-izzo-finche-giudice-non-ci-separi/
 
 Spettacoli e teatro a Gran Teatro GEOX, Padova, venerdì 12 marzo alle 21:15. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Things to do in Padua: 363 events
+## Nomadi in Padova – Gran Teatro GEOX
+https://anyplans.in/padova/nomadi-in-padova/
+
+Concerti e musica dal vivo a Gran Teatro GEOX, Padova, sabato 20 marzo alle 21:15. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Things to do in Padua: 357 events
 https://anyplans.in/en/padova/
 
 What's on in Padua and its province, today, tonight and this weekend: talks & culture, dinners & aperitivo, concerts & live music, shows & theatre, guided tours and town festivals & fairs. Pick one and go with other people.
 
-## What to do in Padua today: 12 events
+## What to do in Padua today: 13 events
 https://anyplans.in/en/padova/what-to-do-today/
 
-12 events in Padua and its province today, 22 September 2026: Padova, Tombelle, Battaglia Terme and Limena and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+13 events in Padua and its province today, 23 September 2026: Padova, Padua, Abano Terme and Piove di Sacco and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Padua tomorrow: 12 events
+## What to do in Padua tomorrow: 9 events
 https://anyplans.in/en/padova/what-to-do-tomorrow/
 
-12 events in Padua and its province tomorrow, 23 September 2026: Padova, Piove di Sacco, Tombelle and Padua and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+9 events in Padua and its province tomorrow, 24 September 2026: Padova, Campodarsego and Padua and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Padua this weekend: 34 events
+## What to do in Padua this weekend: 36 events
 https://anyplans.in/en/padova/what-to-do-this-weekend/
 
-34 events in Padua and its province this weekend (Saturday 26 September and Sunday 27 September): Padova, Piazzola sul Brenta, Tombelle and Rovolon and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+36 events in Padua and its province this weekend (Saturday 26 September and Sunday 27 September): Padova, Piazzola sul Brenta, Tombelle and Rovolon and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## Events in Padua in September 2026: 109
+## Events in Padua in September 2026: 100
 https://anyplans.in/en/padova/events-september-2026/
 
-109 events in Padua and its province in September 2026: talks & culture, yoga & pilates, guided tours, town festivals & fairs and dinners & aperitivo. Day by day, with times, place and price, in Padova, Tombelle, Padua and Noventana and other towns. You sign up and go with other people.
+100 events in Padua and its province in September 2026: town festivals & fairs, talks & culture, dinners & aperitivo, yoga & pilates and cinema. Day by day, with times, place and price, in Padova, Padua, Tombelle and Abano Terme and other towns. You sign up and go with other people.
 
-## Events in Padua in October 2026: 167
+## Events in Padua in October 2026: 169
 https://anyplans.in/en/padova/events-october-2026/
 
-167 events in Padua and its province in October 2026: yoga & pilates, talks & culture, cinema, shows & theatre and dinners & aperitivo. Day by day, with times, place and price, in Padova, Battaglia Terme, Abano Terme and Tombelle and other towns. You sign up and go with other people.
+169 events in Padua and its province in October 2026: yoga & pilates, talks & culture, cinema, shows & theatre and dinners & aperitivo. Day by day, with times, place and price, in Padova, Battaglia Terme, Abano Terme and Tombelle and other towns. You sign up and go with other people.
 
 ## Events in Padua in November 2026: 51
 https://anyplans.in/en/padova/events-november-2026/
 
 51 events in Padua and its province in November 2026: concerts & live music, talks & culture, shows & theatre, guided tours and painting & art. Day by day, with times, place and price, in Padova, Abano Terme, Taggi di Sotto and San Martino di Lupari and other towns. You sign up and go with other people.
 
-## Talks & culture in Padua: 134 events
+## Talks & culture in Padua: 127 events
 https://anyplans.in/en/padova/talks-and-culture/
 
-In Padua and its province there are 134 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Padua and its province there are 127 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Dinners & aperitivo in Padua: 39 events
+## Dinners & aperitivo in Padua: 43 events
 https://anyplans.in/en/padova/dinners/
 
-In Padua and its province there are 39 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Padua and its province there are 43 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Yoga & pilates in Padua: 13 events
+## Yoga & pilates in Padua: 10 events
 https://anyplans.in/en/padova/yoga/
 
-In Padua and its province there are 13 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Padua and its province there are 10 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Hiking in Padua: 1 event
 https://anyplans.in/en/padova/hiking/
@@ -2777,10 +2802,10 @@ https://anyplans.in/en/padova/shows/
 
 In Padua and its province there are 33 shows & theatre events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Festivals & sagre near Padua: 18 events
+## Festivals & sagre near Padua: 17 events
 https://anyplans.in/en/padova/festivals/
 
-In Padua and its province there are 18 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Padua and its province there are 17 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Cinema in Padua: 8 events
 https://anyplans.in/en/padova/cinema/
@@ -2797,10 +2822,10 @@ https://anyplans.in/en/padova/gym/
 
 In Padua and its province there are 5 gym events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Guided tours in Padua: 22 events
+## Guided tours in Padua: 21 events
 https://anyplans.in/en/padova/guided-tours/
 
-In Padua and its province there are 22 guided tours events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Padua and its province there are 21 guided tours events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Painting & art in Padua: 10 events
 https://anyplans.in/en/padova/painting/
@@ -2812,30 +2837,30 @@ https://anyplans.in/en/padova/exhibitions/
 
 In Padua and its province there are 5 exhibitions in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Concerts & live music in Padua: 57 events
+## Concerts & live music in Padua: 58 events
 https://anyplans.in/en/padova/concerts/
 
-In Padua and its province there are 57 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Padua and its province there are 58 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Festivals and events in Abano Terme, Bergamo: 7…
+## Festivals and events in Abano Terme, Bergamo: 8…
 https://anyplans.in/en/padova/abano-terme/
 
-In Abano Terme there are 7 events in the coming months. On anyplans you find the festivals and events of Abano Terme with dates, times and place. You sign up and go with others.
+In Abano Terme there are 8 events in the coming months. On anyplans you find the festivals and events of Abano Terme with dates, times and place. You sign up and go with others.
 
 ## Festivals and events in Piove di Sacco,…
 https://anyplans.in/en/padova/piove-di-sacco/
 
-In Piove di Sacco there are 4 events in the coming months. On anyplans you find the festivals and events of Piove di Sacco with dates, times and place. You sign up and go with others.
+In Piove di Sacco there are 3 events in the coming months. On anyplans you find the festivals and events of Piove di Sacco with dates, times and place. You sign up and go with others.
 
-## Festivals and events in Tombelle, Bergamo: 10…
+## Festivals and events in Tombelle, Bergamo: 8…
 https://anyplans.in/en/padova/tombelle/
 
-In Tombelle there are 10 events in the coming months. On anyplans you find the festivals and events of Tombelle with dates, times and place. You sign up and go with others.
+In Tombelle there are 8 events in the coming months. On anyplans you find the festivals and events of Tombelle with dates, times and place. You sign up and go with others.
 
-## Festivals and events in Limena, Bergamo: 2…
+## Festivals and events in Limena, Bergamo: 1…
 https://anyplans.in/en/padova/limena/
 
-In Limena there are 2 events in the coming months. On anyplans you find the festivals and events of Limena with dates, times and place. You sign up and go with others.
+In Limena there is 1 event in the coming months. On anyplans you find the festivals and events of Limena with dates, times and place. You sign up and go with others.
 
 ## Festivals and events in Noventa Padovana,…
 https://anyplans.in/en/padova/noventa-padovana/
@@ -2860,12 +2885,12 @@ In Montegrotto Terme there are 2 events in the coming months. On anyplans you fi
 ## Festivals and events in Battaglia Terme,…
 https://anyplans.in/en/padova/battaglia-terme/
 
-In Battaglia Terme there are 6 events in the coming months. On anyplans you find the festivals and events of Battaglia Terme with dates, times and place. You sign up and go with others.
+In Battaglia Terme there are 5 events in the coming months. On anyplans you find the festivals and events of Battaglia Terme with dates, times and place. You sign up and go with others.
 
 ## Festivals and events in Sant'Agostino, Bergamo:…
 https://anyplans.in/en/padova/sant-agostino/
 
-In Sant'Agostino there are 3 events in the coming months. On anyplans you find the festivals and events of Sant'Agostino with dates, times and place. You sign up and go with others.
+In Sant'Agostino there are 2 events in the coming months. On anyplans you find the festivals and events of Sant'Agostino with dates, times and place. You sign up and go with others.
 
 ## Festivals and events in Borgoricco, Bergamo: 3…
 https://anyplans.in/en/padova/borgoricco/
@@ -2877,15 +2902,15 @@ https://anyplans.in/en/padova/campodarsego/
 
 In Campodarsego there are 3 events in the coming months. On anyplans you find the festivals and events of Campodarsego with dates, times and place. You sign up and go with others.
 
-## Festivals and events in Noventana, Bergamo: 4…
-https://anyplans.in/en/padova/noventana/
-
-In Noventana there are 4 events in the coming months. On anyplans you find the festivals and events of Noventana with dates, times and place. You sign up and go with others.
-
 ## Festivals and events in Albignasego, Bergamo: 3…
 https://anyplans.in/en/padova/albignasego/
 
 In Albignasego there are 3 events in the coming months. On anyplans you find the festivals and events of Albignasego with dates, times and place. You sign up and go with others.
+
+## Festivals and events in Noventana, Bergamo: 3…
+https://anyplans.in/en/padova/noventana/
+
+In Noventana there are 3 events in the coming months. On anyplans you find the festivals and events of Noventana with dates, times and place. You sign up and go with others.
 
 ## Venues in Padua: 43
 https://anyplans.in/en/padova/venues/
@@ -2895,32 +2920,37 @@ https://anyplans.in/en/padova/venues/
 ## Tablo: events and nights out in Padova
 https://anyplans.in/en/padova/venues/tablo/
 
-Tablo in Padova: 34 upcoming events — dinners & aperitivo, talks & culture and guided tours. Date, time, price and how to join, one page each. You go with other people.
+Tablo in Padova: 37 upcoming events — dinners & aperitivo, talks & culture and guided tours. Date, time, price and how to join, one page each. You go with other people.
 
 ## Fiera di Padova - Padiglione 11- Sala A: what's on
 https://anyplans.in/en/padova/venues/fiera-di-padova-padiglione-11-sala-a/
 
 Fiera di Padova - Padiglione 11- Sala A: 18 upcoming events — talks & culture. Date, time, price and how to join, one page each. You go with other people.
 
-## Museo Veneto del Giocattolo: events and nights out in…
+## Museo Veneto del Giocattolo: what's on in Padova
 https://anyplans.in/en/padova/venues/museo-veneto-del-giocattolo/
 
-Museo Veneto del Giocattolo in Padova: 16 upcoming events — talks & culture, concerts & live music, guided tours and painting & art. Date, time, price and how to join, one page each. You go with other people.
+Museo Veneto del Giocattolo in Padova: 14 upcoming events — talks & culture, guided tours, painting & art and shows & theatre. Date, time, price and how to join, one page each. You go with other people.
+
+## Concert Tracker: events and nights out in Padova
+https://anyplans.in/en/padova/venues/concert-tracker/
+
+Concert Tracker in Padova: 11 upcoming events — shows & theatre and concerts & live music. Date, time, price and how to join, one page each. You go with other people.
 
 ## Fiera di Padova - Padiglione 11- Sala B: what's on
 https://anyplans.in/en/padova/venues/fiera-di-padova-padiglione-11-sala-b/
 
 Fiera di Padova - Padiglione 11- Sala B: 10 upcoming events — talks & culture. Date, time, price and how to join, one page each. You go with other people.
 
-## Concert Tracker: events and nights out in Padova
-https://anyplans.in/en/padova/venues/concert-tracker/
-
-Concert Tracker in Padova: 10 upcoming events — shows & theatre and concerts & live music. Date, time, price and how to join, one page each. You go with other people.
-
 ## Libreria La forma del libro: what's on in Padova
 https://anyplans.in/en/padova/venues/libreria-la-forma-del-libro/
 
-Libreria La forma del libro in Padova: 9 upcoming events — town festivals & fairs, exhibitions and talks & culture. Date, time, price and how to join, one page each. You go with other people.
+Libreria La forma del libro in Padova: 8 upcoming events — town festivals & fairs, exhibitions and talks & culture. Date, time, price and how to join, one page each. You go with other people.
+
+## Melody Mapper: events and nights out in Padova
+https://anyplans.in/en/padova/venues/melody-mapper/
+
+Melody Mapper in Padova: 9 upcoming events — shows & theatre, concerts & live music and guided tours. Date, time, price and how to join, one page each. You go with other people.
 
 ## Punto Ipazia: events and nights out in Padova
 https://anyplans.in/en/padova/venues/punto-ipazia/
@@ -2932,11 +2962,6 @@ https://anyplans.in/en/padova/venues/producer-cinema-d-azienda/
 
 PRODUCER - Cinema D'azienda in Padova: 7 upcoming events — talks & culture, concerts & live music and shows & theatre. Date, time, price and how to join, one page each. You go with other people.
 
-## Melody Mapper: events and nights out in Padova
-https://anyplans.in/en/padova/venues/melody-mapper/
-
-Melody Mapper in Padova: 8 upcoming events — shows & theatre, concerts & live music and guided tours. Date, time, price and how to join, one page each. You go with other people.
-
 ## Sound Curator: events and nights out in Padova
 https://anyplans.in/en/padova/venues/sound-curator/
 
@@ -2945,7 +2970,7 @@ Sound Curator in Padova: 8 upcoming events — concerts & live music and shows &
 ## Castello del Catajo: what's on in Battaglia Terme
 https://anyplans.in/en/padova/venues/castello-del-catajo/
 
-Castello del Catajo in Battaglia Terme: 6 upcoming events — guided tours. Date, time, price and how to join, one page each. You go with other people.
+Castello del Catajo in Battaglia Terme: 5 upcoming events — guided tours. Date, time, price and how to join, one page each. You go with other people.
 
 ## Beat Curator: events and nights out in Padova
 https://anyplans.in/en/padova/venues/beat-curator/
@@ -2962,15 +2987,20 @@ https://anyplans.in/en/padova/venues/fornace-carotta/
 
 Fornace Carotta in Padova: 5 upcoming events — board games and dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
 
+## Temporary Band: events and nights out in Padova
+https://anyplans.in/en/padova/venues/temporary-band/
+
+Temporary Band in Padova: 5 upcoming events — concerts & live music. Date, time, price and how to join, one page each. You go with other people.
+
+## Gens d'Ys - Accademia Danze Irlandesi: events and…
+https://anyplans.in/en/padova/venues/gens-d-ys-accademia-danze-irlandesi/
+
+Gens d'Ys - Accademia Danze Irlandesi in Padova: 4 upcoming events — talks & culture, concerts & live music, guided tours and shows & theatre. Date, time, price and how to join, one page each. You go with other people.
+
 ## Libreria ItalyPost: what's on in Padova
 https://anyplans.in/en/padova/venues/libreria-italypost/
 
 Libreria ItalyPost in Padova: 4 upcoming events — talks & culture. Date, time, price and how to join, one page each. You go with other people.
-
-## Temporary Band: events and nights out in Padova
-https://anyplans.in/en/padova/venues/temporary-band/
-
-Temporary Band in Padova: 4 upcoming events — concerts & live music. Date, time, price and how to join, one page each. You go with other people.
 
 ## Giulio Cesare Ricci: what's on in Padova
 https://anyplans.in/en/padova/venues/giulio-cesare-ricci/
@@ -2985,7 +3015,7 @@ Exas Gaming in Padova: 3 upcoming events — board games and shows & theatre. Da
 ## Luma: what's on in Padova
 https://anyplans.in/en/padova/venues/luma/
 
-Luma in Padova: 3 upcoming events — talks & culture. Date, time, price and how to join, one page each. You go with other people.
+Luma in Padova: 2 upcoming events — talks & culture. Date, time, price and how to join, one page each. You go with other people.
 
 ## Fronte del Porto - una sala in Comune. Sala cinema…
 https://anyplans.in/en/padova/venues/fronte-del-porto-una-sala-in-comune-sala-cinema-civica/
@@ -2996,16 +3026,6 @@ Fronte del Porto - una sala in Comune. Sala cinema civica. in Padova: 3 upcoming
 https://anyplans.in/en/padova/venues/centro-culturale-altinate-san-gaetano/
 
 Centro Culturale Altinate | San Gaetano in Padova: 3 upcoming events — cinema and talks & culture. Date, time, price and how to join, one page each. You go with other people.
-
-## Gens d'Ys - Accademia Danze Irlandesi: what's on in…
-https://anyplans.in/en/padova/venues/gens-d-ys-accademia-danze-irlandesi/
-
-Gens d'Ys - Accademia Danze Irlandesi in Padova: 3 upcoming events — talks & culture, guided tours and shows & theatre. Date, time, price and how to join, one page each. You go with other people.
-
-## SheTech: events and nights out in Padova
-https://anyplans.in/en/padova/venues/shetech/
-
-SheTech in Padova: 3 upcoming events — talks & culture and concerts & live music. Date, time, price and how to join, one page each. You go with other people.
 
 ## Palazzo Moroni - Comune di Padova: what's on
 https://anyplans.in/en/padova/venues/palazzo-moroni-comune-di-padova/
@@ -3022,6 +3042,16 @@ https://anyplans.in/en/padova/venues/bastione-alicorno/
 
 Bastione Alicorno in Padova: 2 upcoming events — shows & theatre and board games. Date, time, price and how to join, one page each. You go with other people.
 
+## Università degli Studi di Padova con UniSMART: events…
+https://anyplans.in/en/padova/venues/universita-degli-studi-di-padova-con-unismart/
+
+Università degli Studi di Padova con UniSMART: 2 upcoming events — talks & culture and concerts & live music. Date, time, price and how to join, one page each. You go with other people.
+
+## WeMeet by WeRoad: events and nights out in Padova
+https://anyplans.in/en/padova/venues/wemeet-by-weroad/
+
+WeMeet by WeRoad in Padova: 2 upcoming events — dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
+
 ## Yana Pusher Emozionale: what's on in Padova
 https://anyplans.in/en/padova/venues/yana-pusher-emozionale/
 
@@ -3032,6 +3062,11 @@ https://anyplans.in/en/padova/venues/sala-anziani-di-palazzo-moroni/
 
 Sala Anziani di Palazzo Moroni in Padova: 2 upcoming events — town festivals & fairs and dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
 
+## SheTech: events and nights out in Padova
+https://anyplans.in/en/padova/venues/shetech/
+
+SheTech in Padova: 2 upcoming events — talks & culture and concerts & live music. Date, time, price and how to join, one page each. You go with other people.
+
 ## Orizzonti Cooperativa: what's on in Padova
 https://anyplans.in/en/padova/venues/orizzonti-cooperativa/
 
@@ -3041,11 +3076,6 @@ Orizzonti Cooperativa in Padova: 2 upcoming events — talks & culture. Date, ti
 https://anyplans.in/en/padova/venues/sala-insonorizzata-ex-scuderie-fornace-carotta/
 
 sala insonorizzata ex scuderie fornace Carotta in Padova: 2 upcoming events — board games. Date, time, price and how to join, one page each. You go with other people.
-
-## True Believers DIY Booking & concerts: events and…
-https://anyplans.in/en/padova/venues/true-believers-diy-booking-concerts/
-
-True Believers DIY Booking & concerts in Padova: 2 upcoming events — shows & theatre and concerts & live music. Date, time, price and how to join, one page each. You go with other people.
 
 ## Orient Express Padova: events and nights out in Ponte…
 https://anyplans.in/en/padova/venues/orient-express-padova/
@@ -3081,11 +3111,6 @@ Aula Nievo in Padova: 2 upcoming events — talks & culture. Date, time, price a
 https://anyplans.in/en/padova/venues/punto-nemo-eventi-diversi/
 
 punto nemo - eVenti diVersi in Padova: 2 upcoming events — concerts & live music and painting & art. Date, time, price and how to join, one page each. You go with other people.
-
-## Opera e Lirica: events and nights out in Padova
-https://anyplans.in/en/padova/venues/opera-e-lirica/
-
-Opera e Lirica in Padova: 2 upcoming events — concerts & live music. Date, time, price and how to join, one page each. You go with other people.
 
 ## MC2 LIVE: events and nights out in Padova
 https://anyplans.in/en/padova/venues/mc2-live/
@@ -3135,7 +3160,7 @@ Yoga & pilates in Via Sant'Antonio, 2, Tombelle, Wednesday 23 September at 18:00
 ## CORSI FIT-WELLNESS - Info e lezioni prova – Abano Terme
 https://anyplans.in/en/padova/corsi-fit-wellness-info-e-lezioni-prova/
 
-Yoga & pilates in JOY ABANO - Custodi Del Benessere, Abano Terme, Tuesday 22 September at 18:30. Free (Biglietti su Eventbrite).
+Yoga & pilates in JOY ABANO - Custodi Del Benessere, Abano Terme: it already took place, the last date was Tuesday, 22 September 2026.
 
 ## Lezione Prova di Yoga (approccio Anukalana) – Limena
 https://anyplans.in/en/padova/lezione-prova-di-yoga-approccio-anukalana/
@@ -3195,7 +3220,7 @@ Yoga & pilates in Via Sant'Antonio, 2, Tombelle: it already took place, the last
 ## Yoga al Parco Iris con Milkyoga
 https://anyplans.in/en/padova/yoga-al-parco-iris-con-milkyoga/
 
-Yoga & pilates in Parco Iris, Padova, Tuesday 22 September at 19:45. Free (Biglietti su Eventbrite).
+Yoga & pilates in Parco Iris, Padova: it already took place, the last date was Tuesday, 22 September 2026.
 
 ## Chi controlla i chip controlla il mondo. – Padova
 https://anyplans.in/en/padova/chi-controlla-i-chip-controlla-il-mondo/
@@ -3275,7 +3300,7 @@ Yoga & pilates in Via Sant'Antonio, 2, Tombelle: it already took place, the last
 ## Lezione di prova gratuita attività motoria per parkinsoniani – Tombelle
 https://anyplans.in/en/padova/lezione-di-prova-gratuita-attivita-motoria-per-parkinsoniani/
 
-Yoga & pilates in Via Sant'Antonio, 2, Tombelle, Tuesday 22 September at 12:30. Free (Biglietti su Eventbrite).
+Yoga & pilates in Via Sant'Antonio, 2, Tombelle: it already took place, the last date was Tuesday, 22 September 2026.
 
 ## Incontro gratuito in presenza a Padova o online con Mental Coach – Tombelle
 https://anyplans.in/en/padova/incontro-gratuito-in-presenza-a-padova-o-online-con-mental-c/
@@ -3360,7 +3385,7 @@ Exhibitions in Foto M2 di Michele Giubilato a Cazzago di Pianiga, Cazzago, Frida
 ## Cena da La Gineria: 7 posti liberi
 https://anyplans.in/en/padova/cena-da-la-gineria-7-posti-liberi/
 
-Dinners & aperitivo in La Gineria, Santa Maria di Sala: it already took place, the last date was Friday, 18 September 2026.
+Dinners & aperitivo in La Gineria, Santa Maria di Sala, Friday 25 September at 19:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## KUBORAUM EXPERIENCE at INAWHITEBOX – Fiesso
 https://anyplans.in/en/padova/kuboraum-experience-at-inawhitebox/
@@ -3505,7 +3530,7 @@ Guided tours in Bologna, Padova: it already took place, the last date was Sunday
 ## VISITA GUIDATA "IL CATAJO MAI VISTO" 2026 – Battaglia Terme
 https://anyplans.in/en/padova/visita-guidata-il-catajo-mai-visto-2026/
 
-Guided tours in Castello del Catajo, Battaglia Terme, Tuesday 22 September at 15:30. Free (Biglietti su Eventbrite).
+Guided tours in Castello del Catajo, Battaglia Terme: it already took place, the last date was Tuesday, 22 September 2026.
 
 ## Visite guidate Piano Nobile Castello del Catajo 2026
 https://anyplans.in/en/padova/visite-guidate-piano-nobile-castello-del-catajo-2026/
@@ -3610,42 +3635,42 @@ Guided tours in Via Galileo Galilei, 1/A, Borgoricco, Monday 28 September at 20:
 ## L'Università di Padova incontra il CNR
 https://anyplans.in/en/padova/l-universita-di-padova-incontra-il-cnr/
 
-Talks & culture in Aula Magna di Palazzo del Bo, Padova, Tuesday 22 September at 09:30. Free (Biglietti su Eventbrite).
+Talks & culture in Aula Magna di Palazzo del Bo, Padova: it already took place, the last date was Tuesday, 22 September 2026.
 
 ## WELFARE IMPRENDITORIALE: BENESSERE – Confcommercio Padova
 https://anyplans.in/en/padova/welfare-imprenditoriale-benessere-famiglia-e-futuro-dell-imp/
 
-Talks & culture in Confcommercio Padova, Padova, Tuesday 22 September at 16:45. Free (Biglietti su Eventbrite).
+Talks & culture in Confcommercio Padova, Padova: it already took place, the last date was Tuesday, 22 September 2026.
 
 ## Migliora i Risultati Aziendali in uno Spazio di Benessere – Limena
 https://anyplans.in/en/padova/migliora-i-risultati-aziendali-in-uno-spazio-di-benessere/
 
-Talks & culture in Via del Santo, 177, Limena, Tuesday 22 September at 17:30. Free (Biglietti su Eventbrite).
+Talks & culture in Via del Santo, 177, Limena: it already took place, the last date was Tuesday, 22 September 2026.
 
 ## FRANCO FAGGIANI presenta "LA LUCE DEL PRIMO MATTINO" – Padova
 https://anyplans.in/en/padova/franco-faggiani-presenta-la-luce-del-primo-mattino/
 
-Town festival in Libreria La forma del libro, Padova, Tuesday 22 September at 18:15. Free (Biglietti su Eventbrite).
+Town festival in Libreria La forma del libro, Padova: it already took place, the last date was Tuesday, 22 September 2026.
 
 ## Student Entrepreneurs Club — Launch Night – Padova
 https://anyplans.in/en/padova/student-entrepreneurs-club-launch-night/
 
-Talks & culture in Le Village by CA Triveneto, Padova, Tuesday 22 September at 18:30. Free (Gratis, registrazione su Luma).
+Talks & culture in Le Village by CA Triveneto, Padova: it already took place, the last date was Tuesday, 22 September 2026.
 
 ## Torneo Yu-Gi-OH! – Livello 10: Comics & Games
 https://anyplans.in/en/padova/torneo-yu-gi-oh/
 
-Talks & culture in Livello 10: Comics & Games, Piove di Sacco, Tuesday 22 September at 20:00. Free (Biglietti su Eventbrite).
+Talks & culture in Livello 10: Comics & Games, Piove di Sacco: it already took place, the last date was Tuesday, 22 September 2026.
 
 ## Incontro gratuito sul dolore dovuto alla sciatica – Tombelle
 https://anyplans.in/en/padova/incontro-gratuito-sul-dolore-dovuto-alla-sciatica/
 
-Talks & culture in Via Sant'Antonio, 2, Tombelle, Tuesday 22 September at 20:15. Free (Biglietti su Eventbrite).
+Talks & culture in Via Sant'Antonio, 2, Tombelle: it already took place, the last date was Tuesday, 22 September 2026.
 
 ## ONE PIECE - LEGA LOG POSE! – LOG POSE | TCG PADOVA
 https://anyplans.in/en/padova/one-piece-lega-log-pose/
 
-Talks & culture in LOG POSE | TCG PADOVA, Sant'Antonio, Tuesday 22 September at 20:30. Free (Biglietti su Eventbrite).
+Talks & culture in LOG POSE | TCG PADOVA, Sant'Antonio: it already took place, the last date was Tuesday, 22 September 2026.
 
 ## Demografie e Società tra presente – Padova
 https://anyplans.in/en/padova/demografie-e-societa-tra-presente-passato-e-futuro/
@@ -3657,10 +3682,15 @@ https://anyplans.in/en/padova/ai-dei-2026-23-settembre-2026/
 
 Talks & culture in HUB Universita' degli Studi, Padova, Padova, Wednesday 23 September at 14:30. Free (Ingresso: vedi la pagina AllEvents).
 
-## Cena da Pier88: 10 posti liberi
-https://anyplans.in/en/padova/cena-da-pier88-10-posti-liberi/
+## Cena da Pier88: 8 posti liberi
+https://anyplans.in/en/padova/cena-da-pier88-8-posti-liberi/
 
 Dinners & aperitivo in Pier88, Padova, Wednesday 23 September at 16:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## Birra dopo il lavoro da StappiAmo Wine Bar: 5 posti…
+https://anyplans.in/en/padova/birra-dopo-il-lavoro-da-stappiamo-wine-bar-5-posti-liberi/
+
+Dinners & aperitivo in StappiAmo Wine Bar, Abano Terme, Wednesday 23 September at 16:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## IL SOGNO DI ALICE ROHRWACHER – Padova
 https://anyplans.in/en/padova/il-sogno-di-alice-rohrwacher/
@@ -3672,15 +3702,15 @@ https://anyplans.in/en/padova/leonardo-piccione-presenta-cose-da-fare-di-notte-a
 
 Town festival in Libreria La forma del libro, Padova, Wednesday 23 September at 18:15. Free (Biglietti su Eventbrite).
 
-## Cena da Campo dei Girasoli: 2 posti liberi
-https://anyplans.in/en/padova/cena-da-campo-dei-girasoli-2-posti-liberi/
-
-Dinners & aperitivo in Campo dei Girasoli, Padova, Wednesday 23 September at 18:15. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## Serata giochi da Fun City Family | Big Bowling Rubano:…
 https://anyplans.in/en/padova/serata-giochi-da-fun-city-family-big-bowling-rubano-5-posti-/
 
 Dinners & aperitivo in Fun City Family | Big Bowling Rubano, Wednesday 23 September at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## Padel: mancano 2 giocatori (amichevole) – Padua
+https://anyplans.in/en/padova/padel-mancano-2-giocatori-amichevole/
+
+Padel in Centro Sportivo 2000, Via Pioveghetto, 9, 35136 Padova, Wednesday 23 September at 18:30. €9 (Si chiede il posto e si paga su Playtomic).
 
 ## Il silenzio degli altri - Proiezione gratuita – Padova
 https://anyplans.in/en/padova/il-silenzio-degli-altri-proiezione-gratuita/
@@ -3717,11 +3747,6 @@ https://anyplans.in/en/padova/aperitivo-after-work-24-settembre/
 
 Dinners & aperitivo in Wimbledon - Cocktail & Bistrot, Padova, Thursday 24 September at 19:00. Free (Biglietti su Eventbrite).
 
-## 🎤Stonatissimi🎤 da Prime District: 9 posti liberi
-https://anyplans.in/en/padova/stonatissimi-da-prime-district-9-posti-liberi/
-
-Dinners & aperitivo in Prime District, Noventana, Thursday 24 September at 19:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
 ## WeRoad Afterwork: Back to the City Edition – Birrificio CRAK
 https://anyplans.in/en/padova/weroad-afterwork-back-to-the-city-edition/
 
@@ -3742,18 +3767,18 @@ https://anyplans.in/en/padova/cena-da-si-streetalian-food-5-posti-liberi/
 
 Dinners & aperitivo in Sì Streetalian Food, Padova, Friday 25 September at 16:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Cena da Diemme Strada Battaglia: 11 posti liberi
-https://anyplans.in/en/padova/cena-da-diemme-strada-battaglia-11-posti-liberi/
+## Cena da Tana del Luppolo - Este: 10 posti liberi
+https://anyplans.in/en/padova/cena-da-tana-del-luppolo-este-10-posti-liberi/
 
-Dinners & aperitivo in Diemme Strada Battaglia, Sant'Agostino, Friday 25 September at 16:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+Dinners & aperitivo in Tana del Luppolo - Este, Friday 25 September at 17:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## Science4All - La festa delle scienze dell'Università di…
 https://anyplans.in/en/padova/science4all-la-festa-delle-scienze-dell-universita-di-padova/
 
 Town festival in Università di Padova, Friday 25 September at 17:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## Solo per donne-Aperitivo da Vita - Wine Food: 6 posti…
-https://anyplans.in/en/padova/solo-per-donne-aperitivo-da-vita-wine-food-6-posti-liberi/
+## Solo per donne-Aperitivo da Vita - Wine Food: 4 posti…
+https://anyplans.in/en/padova/solo-per-donne-aperitivo-da-vita-wine-food-4-posti-liberi/
 
 Dinners & aperitivo in Vita - Wine Food, Albignasego, Friday 25 September at 17:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
@@ -3772,38 +3797,38 @@ https://anyplans.in/en/padova/in-cerca-di-sintonia/
 
 Talks & culture in Casoni della Fogolana, Codevigo, Friday 25 September at 17:30. Free (Biglietti su Eventbrite).
 
-## Aperitivo da Ristoro La Vallesana: 5 posti liberi
-https://anyplans.in/en/padova/aperitivo-da-ristoro-la-vallesana-5-posti-liberi/
+## Oasis tribute @ Stappiamo wine bar 🎸🍷 da StappiAmo…
+https://anyplans.in/en/padova/oasis-tribute-stappiamo-wine-bar-da-stappiamo-wine-bar-5-pos/
 
-Dinners & aperitivo in Ristoro La Vallesana, Baone, Friday 25 September at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+Dinners & aperitivo in StappiAmo Wine Bar, Abano Terme, Friday 25 September at 18:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## CRONACHE DA UN PAESE INTERROTTO. DIARIO DI UN PROF IN PALESTINA – Padova
 https://anyplans.in/en/padova/cronache-da-un-paese-interrotto-diario-di-un-prof-in-palesti/
 
 Painting & art in via San Martino e Solferino 106, 35122 Padua, Italy, Padova, Friday 25 September at 18:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## Cena da Villa Italia: 10 posti liberi
-https://anyplans.in/en/padova/cena-da-villa-italia-10-posti-liberi/
+## Cena da Villa Italia: 9 posti liberi
+https://anyplans.in/en/padova/cena-da-villa-italia-9-posti-liberi/
 
 Dinners & aperitivo in Villa Italia, Padova, Friday 25 September at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Cena da Capperi! Dolo: 2 posti liberi
-https://anyplans.in/en/padova/cena-da-capperi-dolo-2-posti-liberi/
+## Serata karaoke e buffet di cicchetti veneziani da Goody…
+https://anyplans.in/en/padova/serata-karaoke-e-buffet-di-cicchetti-veneziani-da-goody-bake/
+
+Dinners & aperitivo in Goody Bakery & Frascolino Bacaro, Monselice, Friday 25 September at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## Cena da Capperi! Dolo: 1 posto libero
+https://anyplans.in/en/padova/cena-da-capperi-dolo-1-posto-libero/
 
 Dinners & aperitivo in Capperi! Dolo, Friday 25 September at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Cena da Cocò KM0 Restaurant & Pizza: 4 posti liberi
-https://anyplans.in/en/padova/cena-da-coco-km0-restaurant-pizza-4-posti-liberi/
-
-Dinners & aperitivo in Cocò KM0 Restaurant & Pizza, Padova, Friday 25 September at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## Cena da miscusi | pasta fresca - Padova: 6 posti liberi
 https://anyplans.in/en/padova/cena-da-miscusi-pasta-fresca-padova-6-posti-liberi/
 
 Dinners & aperitivo in miscusi | pasta fresca - Padova, Friday 25 September at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## LA GRANDE APERTURA da Prime District: 18 posti liberi
-https://anyplans.in/en/padova/la-grande-apertura-da-prime-district-18-posti-liberi/
+## LA GRANDE APERTURA da Prime District: 17 posti liberi
+https://anyplans.in/en/padova/la-grande-apertura-da-prime-district-17-posti-liberi/
 
 Dinners & aperitivo in Prime District, Noventana, Friday 25 September at 19:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
@@ -3917,13 +3942,13 @@ https://anyplans.in/en/padova/sapori-di-mare-da-ristorante-da-federico-di-trevis
 
 Dinners & aperitivo in Ristorante Da Federico Di Trevisan Federico, Solesino, Saturday 26 September at 18:45. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Cena da Exforo: 8 posti liberi
-https://anyplans.in/en/padova/cena-da-exforo-8-posti-liberi/
+## Cena da Exforo: 6 posti liberi
+https://anyplans.in/en/padova/cena-da-exforo-6-posti-liberi/
 
 Dinners & aperitivo in Exforo, Padova, Saturday 26 September at 18:45. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Cena da Birraria Ai Giardini: 6 posti liberi
-https://anyplans.in/en/padova/cena-da-birraria-ai-giardini-6-posti-liberi/
+## Cena da Birraria Ai Giardini: 5 posti liberi
+https://anyplans.in/en/padova/cena-da-birraria-ai-giardini-5-posti-liberi/
 
 Dinners & aperitivo in Birraria Ai Giardini, Cittadella, Saturday 26 September at 19:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
@@ -3962,6 +3987,11 @@ https://anyplans.in/en/padova/pranzetto-con-vista-sui-colli-da-trattoria-da-bepi
 
 Dinners & aperitivo in Trattoria Da Bepi Alle Scuole, Rovolon, Sunday 27 September at 10:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Cena da Movembik: 7 posti liberi
+https://anyplans.in/en/padova/cena-da-movembik-7-posti-liberi/
+
+Dinners & aperitivo in Movembik, Vigonza, Sunday 27 September at 15:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
 ## LETTERE D’AMORE. La novella di “Hippolyto e Lionora” – Padova
 https://anyplans.in/en/padova/lettere-d-amore-la-novella-di-hippolyto-e-lionora/
 
@@ -3971,6 +4001,11 @@ Shows & theatre in Via S. Biagio, 7, Padova, Sunday 27 September at 16:00. Free 
 https://anyplans.in/en/padova/art-la-strana-storia-del-parco-treves-passeggiata-spettacolo/
 
 Town festival in Glamour, Sunday 27 September at 17:00. €7 (Biglietti su AllEvents).
+
+## Cena da Charly Brown Pub: 7 posti liberi
+https://anyplans.in/en/padova/cena-da-charly-brown-pub-7-posti-liberi/
+
+Dinners & aperitivo in Charly Brown Pub, Celeseo, Sunday 27 September at 17:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## Nastri Rosa @ Cittadella - PD
 https://anyplans.in/en/padova/nastri-rosa-cittadella-pd/
@@ -4242,6 +4277,11 @@ https://anyplans.in/en/padova/dacia-maraini-presenta-scritture-segrete/
 
 Talks & culture in Fiera di Padova - Padiglione 11- Sala A, Padova, Saturday 3 October at 17:30. Free (Biglietti su Eventbrite).
 
+## Cena da Old Ranch: 15 posti liberi
+https://anyplans.in/en/padova/cena-da-old-ranch-15-posti-liberi/
+
+Dinners & aperitivo in Old Ranch, Terrassa Padovana, Saturday 3 October at 17:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
 ## Cena da Sushi Kiro: 15 posti liberi
 https://anyplans.in/en/padova/cena-da-sushi-kiro-15-posti-liberi/
 
@@ -4266,6 +4306,11 @@ Dinners & aperitivo in Da Nicola Trattoria & Alloggi, Montegrotto Terme, Saturda
 https://anyplans.in/en/padova/mario-calabresi-le-voci-degli-altri-con-nicolo-menniti-ippol/
 
 Talks & culture in Fiera di Padova - Padiglione 11- Sala A, Padova, Saturday 3 October at 19:00. Free (Biglietti su Eventbrite).
+
+## Oktoberfest Padova – Parco degli Alpini PD
+https://anyplans.in/en/padova/oktoberfest-padova/
+
+Dinners & aperitivo in Parco degli Alpini PD, Padova, Saturday 3 October at 19:00. Free (Gratis, iscrizione su WeMeet (WeRoad)).
 
 ## Serata al Tiama da TiAma Cocktail Bistrot: 11 posti…
 https://anyplans.in/en/padova/serata-al-tiama-da-tiama-cocktail-bistrot-11-posti-liberi/
@@ -4492,13 +4537,13 @@ https://anyplans.in/en/padova/originali-o-fotocopie-carlo-acutis-il-primo-santo-
 
 Talks & culture in Parrocchia dello Spirito Santo, Padova, Saturday 10 October at 18:30. Free (Biglietti su Eventbrite).
 
-## LUPPOLO E PANE 🍔🍺 da Caravanserrai RistoPub: 9 posti…
-https://anyplans.in/en/padova/luppolo-e-pane-da-caravanserrai-ristopub-9-posti-liberi/
+## LUPPOLO E PANE 🍔🍺 da Caravanserrai RistoPub: 7 posti…
+https://anyplans.in/en/padova/luppolo-e-pane-da-caravanserrai-ristopub-7-posti-liberi/
 
 Dinners & aperitivo in Caravanserrai RistoPub, Este, Saturday 10 October at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Menù pizza 24 euro da Paradiso Latino Para Siempre: 17…
-https://anyplans.in/en/padova/menu-pizza-24-euro-da-paradiso-latino-para-siempre-17-posti-/
+## Menù pizza 24 euro da Paradiso Latino Para Siempre: 15…
+https://anyplans.in/en/padova/menu-pizza-24-euro-da-paradiso-latino-para-siempre-15-posti-/
 
 Dinners & aperitivo in Paradiso Latino Para Siempre, Campodarsego, Saturday 10 October at 19:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
@@ -5321,3 +5366,8 @@ Shows & theatre in Gran Teatro GEOX, Padova, Saturday 6 March at 17:30. Free (In
 https://anyplans.in/en/padova/biagio-izzo-finche-giudice-non-ci-separi/
 
 Shows & theatre in Gran Teatro GEOX, Padova, Friday 12 March at 21:15. Free (Ingresso: vedi la pagina AllEvents).
+
+## Nomadi in Padova – Gran Teatro GEOX
+https://anyplans.in/en/padova/nomadi-in-padova/
+
+Concerts & live music in Gran Teatro GEOX, Padova, Saturday 20 March at 21:15. Free (Ingresso: vedi la pagina AllEvents).

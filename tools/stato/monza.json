@@ -2,25 +2,25 @@
  "slug": "monza",
  "nome": "Monza",
  "eventi": 359,
- "pagine": 1241,
+ "pagine": 1287,
  "tipi": {
-  "padel": 146,
-  "dinner": 65,
+  "padel": 136,
+  "dinner": 72,
   "running": 1,
   "culture": 52,
-  "games": 4,
-  "festival": 9,
+  "games": 3,
+  "festival": 10,
   "karaoke": 3,
-  "concert": 13,
-  "hiking": 10,
+  "concert": 12,
+  "hiking": 12,
   "exhibition": 2,
-  "yoga": 16,
+  "yoga": 17,
   "show": 7,
   "painting": 3,
-  "tour": 6,
+  "tour": 5,
   "fair": 3,
   "cycling": 4,
-  "nightlife": 4
+  "nightlife": 5
  },
- "aggiornato": "2026-09-22T11:04:07.707Z"
+ "aggiornato": "2026-09-23T06:23:03.094Z"
 }
