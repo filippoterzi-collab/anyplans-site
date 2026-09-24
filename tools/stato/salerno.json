@@ -1,18 +1,18 @@
 {
  "slug": "salerno",
  "nome": "Salerno",
- "eventi": 97,
- "pagine": 449,
+ "eventi": 99,
+ "pagine": 461,
  "tipi": {
-  "dinner": 25,
+  "dinner": 26,
   "culture": 19,
   "exhibition": 0,
-  "show": 9,
-  "cinema": 9,
+  "show": 8,
+  "cinema": 10,
   "tour": 5,
   "concert": 21,
   "hiking": 2,
   "festival": 5
  },
- "aggiornato": "2026-09-23T06:22:55.886Z"
+ "aggiornato": "2026-09-24T06:32:17.455Z"
 }

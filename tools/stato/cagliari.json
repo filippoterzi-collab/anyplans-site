@@ -1,19 +1,19 @@
 {
  "slug": "cagliari",
  "nome": "Cagliari",
- "eventi": 127,
- "pagine": 417,
+ "eventi": 125,
+ "pagine": 423,
  "tipi": {
-  "culture": 33,
-  "dinner": 22,
-  "padel": 0,
+  "culture": 35,
+  "dinner": 18,
+  "padel": 3,
   "tour": 6,
   "gym": 2,
   "yoga": 3,
-  "hiking": 5,
-  "festival": 8,
-  "concert": 24,
+  "hiking": 3,
+  "festival": 7,
+  "concert": 25,
   "show": 18
  },
- "aggiornato": "2026-09-23T06:22:17.385Z"
+ "aggiornato": "2026-09-24T06:31:38.352Z"
 }

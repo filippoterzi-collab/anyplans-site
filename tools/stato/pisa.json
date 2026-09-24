@@ -1,12 +1,12 @@
 {
  "slug": "pisa",
  "nome": "Pisa",
- "eventi": 88,
- "pagine": 299,
+ "eventi": 94,
+ "pagine": 319,
  "tipi": {
-  "dinner": 18,
-  "culture": 30,
-  "games": 3,
+  "dinner": 20,
+  "culture": 32,
+  "games": 4,
   "hiking": 3,
   "tour": 3,
   "yoga": 2,
@@ -14,5 +14,5 @@
   "festival": 4,
   "show": 9
  },
- "aggiornato": "2026-09-23T06:22:49.889Z"
+ "aggiornato": "2026-09-24T06:32:11.078Z"
 }
