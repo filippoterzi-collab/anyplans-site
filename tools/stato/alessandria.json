@@ -1,17 +1,18 @@
 {
  "slug": "alessandria",
  "nome": "Alessandria",
- "eventi": 77,
- "pagine": 237,
+ "eventi": 75,
+ "pagine": 241,
  "tipi": {
-  "dinner": 17,
+  "dinner": 14,
   "cinema": 1,
   "concert": 4,
   "show": 5,
+  "exhibition": 2,
   "culture": 36,
   "tour": 3,
   "festival": 4,
   "hiking": 3
  },
- "aggiornato": "2026-09-24T06:33:39.159Z"
+ "aggiornato": "2026-09-25T06:27:26.622Z"
 }

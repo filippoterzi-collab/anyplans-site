@@ -4,8 +4,8 @@
  "eventi": 89,
  "pagine": 281,
  "tipi": {
-  "dinner": 13,
-  "culture": 10,
+  "dinner": 11,
+  "culture": 11,
   "festival": 5,
   "concert": 14,
   "tour": 3,
@@ -13,5 +13,5 @@
   "exhibition": 5,
   "yoga": 5
  },
- "aggiornato": "2026-09-24T06:31:53.882Z"
+ "aggiornato": "2026-09-25T06:25:55.897Z"
 }
