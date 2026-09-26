@@ -1,14 +1,14 @@
 {
  "slug": "novara",
  "nome": "Novara",
- "eventi": 69,
- "pagine": 279,
+ "eventi": 70,
+ "pagine": 289,
  "tipi": {
   "dinner": 8,
-  "culture": 14,
-  "padel": 3,
-  "concert": 7,
-  "tour": 4,
+  "culture": 13,
+  "padel": 5,
+  "concert": 6,
+  "tour": 5,
   "festival": 13,
   "hiking": 1,
   "painting": 4,
@@ -16,5 +16,5 @@
   "exhibition": 3,
   "show": 7
  },
- "aggiornato": "2026-09-25T06:27:01.326Z"
+ "aggiornato": "2026-09-26T06:28:50.404Z"
 }

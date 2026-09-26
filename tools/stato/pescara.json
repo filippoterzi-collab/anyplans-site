@@ -1,17 +1,17 @@
 {
  "slug": "pescara",
  "nome": "Pescara",
- "eventi": 89,
- "pagine": 281,
+ "eventi": 85,
+ "pagine": 283,
  "tipi": {
-  "dinner": 11,
+  "dinner": 8,
   "culture": 11,
-  "festival": 5,
-  "concert": 14,
+  "festival": 4,
+  "concert": 13,
   "tour": 3,
-  "show": 28,
+  "show": 29,
   "exhibition": 5,
   "yoga": 5
  },
- "aggiornato": "2026-09-25T06:25:55.897Z"
+ "aggiornato": "2026-09-26T06:27:31.401Z"
 }

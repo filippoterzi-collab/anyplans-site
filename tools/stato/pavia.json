@@ -1,15 +1,15 @@
 {
  "slug": "pavia",
  "nome": "Pavia",
- "eventi": 37,
- "pagine": 119,
+ "eventi": 34,
+ "pagine": 121,
  "tipi": {
-  "padel": 3,
-  "dinner": 10,
+  "padel": 2,
+  "dinner": 9,
   "culture": 11,
   "concert": 2,
-  "festival": 4,
+  "festival": 3,
   "cinema": 5
  },
- "aggiornato": "2026-09-25T06:27:14.424Z"
+ "aggiornato": "2026-09-26T06:29:07.740Z"
 }
