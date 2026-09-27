@@ -1,19 +1,18 @@
 {
  "slug": "vicenza",
  "nome": "Vicenza",
- "eventi": 124,
- "pagine": 439,
+ "eventi": 131,
+ "pagine": 459,
  "tipi": {
-  "dinner": 16,
-  "culture": 44,
-  "concert": 16,
+  "dinner": 18,
+  "culture": 45,
+  "concert": 18,
   "yoga": 4,
-  "festival": 7,
+  "festival": 8,
   "dancing": 4,
   "show": 20,
-  "painting": 2,
-  "tour": 4,
+  "tour": 5,
   "gym": 4
  },
- "aggiornato": "2026-09-26T06:28:47.273Z"
+ "aggiornato": "2026-09-27T06:57:29.478Z"
 }

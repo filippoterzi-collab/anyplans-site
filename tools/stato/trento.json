@@ -1,11 +1,11 @@
 {
  "slug": "trento",
  "nome": "Trento",
- "eventi": 127,
- "pagine": 453,
+ "eventi": 105,
+ "pagine": 445,
  "tipi": {
-  "festival": 5,
-  "culture": 59,
+  "festival": 4,
+  "culture": 42,
   "padel": 3,
   "show": 6,
   "games": 1,
@@ -13,9 +13,9 @@
   "yoga": 6,
   "fair": 1,
   "painting": 3,
-  "dinner": 5,
-  "tour": 5,
-  "hiking": 6
+  "dinner": 3,
+  "tour": 4,
+  "hiking": 5
  },
- "aggiornato": "2026-09-26T06:27:28.269Z"
+ "aggiornato": "2026-09-27T06:56:10.500Z"
 }
