@@ -1,18 +1,18 @@
 {
  "slug": "pistoia",
  "nome": "Pistoia",
- "eventi": 52,
- "pagine": 233,
+ "eventi": 51,
+ "pagine": 235,
  "tipi": {
-  "dinner": 12,
-  "culture": 10,
-  "concert": 6,
-  "padel": 2,
+  "dinner": 15,
+  "culture": 9,
+  "concert": 5,
+  "padel": 3,
   "cinema": 3,
   "yoga": 1,
-  "hiking": 4,
-  "show": 9,
+  "hiking": 2,
+  "show": 8,
   "festival": 3
  },
- "aggiornato": "2026-09-27T06:57:45.063Z"
+ "aggiornato": "2026-09-28T07:23:07.359Z"
 }

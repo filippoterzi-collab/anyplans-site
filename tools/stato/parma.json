@@ -1,22 +1,22 @@
 {
  "slug": "parma",
  "nome": "Parma",
- "eventi": 137,
- "pagine": 511,
+ "eventi": 134,
+ "pagine": 527,
  "tipi": {
-  "dinner": 19,
-  "culture": 32,
+  "dinner": 21,
+  "culture": 31,
   "running": 1,
   "painting": 2,
   "festival": 16,
-  "concert": 14,
+  "concert": 13,
   "dancing": 2,
   "padel": 1,
   "match": 12,
   "hiking": 9,
   "show": 14,
-  "tour": 5,
+  "tour": 3,
   "yoga": 3
  },
- "aggiornato": "2026-09-27T06:55:54.356Z"
+ "aggiornato": "2026-09-28T07:21:22.624Z"
 }
