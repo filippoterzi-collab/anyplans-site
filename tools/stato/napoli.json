@@ -2,7 +2,7 @@
  "slug": "napoli",
  "nome": "Napoli",
  "eventi": 538,
- "pagine": 2331,
+ "pagine": 2335,
  "tipi": {
   "dinner": 90,
   "tour": 26,
@@ -28,7 +28,7 @@
   "raccolta:aperitivi": 5,
   "raccolta:natale": 10,
   "raccolta:sagre": 30,
-  "raccolta:gratis": 516,
+  "raccolta:gratis": 515,
   "raccolta:libri-e-letture": 9,
   "raccolta:fotografia": 3,
   "raccolta:arte": 4,
@@ -42,5 +42,5 @@
   "raccolta:brunch": 4,
   "raccolta:castelli-e-borghi": 6
  },
- "aggiornato": "2026-09-29T13:24:58.014Z"
+ "aggiornato": "2026-09-29T13:52:33.435Z"
 }

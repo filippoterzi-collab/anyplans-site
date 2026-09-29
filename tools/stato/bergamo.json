@@ -1,8 +1,8 @@
 {
  "slug": "bergamo",
  "nome": "Bergamo",
- "eventi": 1303,
- "pagine": 4878,
+ "eventi": 1302,
+ "pagine": 4876,
  "tipi": {
   "yoga": 16,
   "festival": 46,
@@ -22,7 +22,7 @@
   "tour": 12,
   "exhibition": 4,
   "show": 146,
-  "hiking": 10,
+  "hiking": 9,
   "painting": 2,
   "cinema": 11,
   "gardening": 4,
@@ -57,5 +57,5 @@
   "raccolta:castelli-e-borghi": 42,
   "raccolta:stelle-e-astronomia": 11
  },
- "aggiornato": "2026-09-29T13:21:26.647Z"
+ "aggiornato": "2026-09-29T13:49:02.201Z"
 }

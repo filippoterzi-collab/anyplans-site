@@ -1,8 +1,8 @@
 {
  "slug": "brescia",
  "nome": "Brescia",
- "eventi": 261,
- "pagine": 1343,
+ "eventi": 260,
+ "pagine": 1341,
  "tipi": {
   "festival": 54,
   "culture": 60,
@@ -10,7 +10,7 @@
   "yoga": 2,
   "market": 6,
   "show": 25,
-  "padel": 6,
+  "padel": 5,
   "cinema": 2,
   "concert": 27,
   "singles": 1,
@@ -36,5 +36,5 @@
   "raccolta:classica-e-jazz": 7,
   "raccolta:castelli-e-borghi": 8
  },
- "aggiornato": "2026-09-29T13:24:47.717Z"
+ "aggiornato": "2026-09-29T13:52:23.242Z"
 }
