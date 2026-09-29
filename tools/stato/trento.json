@@ -2,7 +2,7 @@
  "slug": "trento",
  "nome": "Trento",
  "eventi": 96,
- "pagine": 483,
+ "pagine": 489,
  "tipi": {
   "festival": 3,
   "culture": 34,
@@ -16,7 +16,11 @@
   "painting": 3,
   "dinner": 4,
   "tour": 4,
-  "hiking": 3
+  "hiking": 3,
+  "raccolta:sagre": 3,
+  "raccolta:gratis": 78,
+  "raccolta:tornei": 4,
+  "raccolta:classica-e-jazz": 4
  },
- "aggiornato": "2026-09-29T10:44:16.539Z"
+ "aggiornato": "2026-09-29T11:36:05.264Z"
 }

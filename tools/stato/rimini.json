@@ -2,7 +2,7 @@
  "slug": "rimini",
  "nome": "Rimini",
  "eventi": 53,
- "pagine": 325,
+ "pagine": 329,
  "tipi": {
   "culture": 16,
   "dinner": 15,
@@ -12,7 +12,8 @@
   "tour": 2,
   "festival": 1,
   "dancing": 2,
-  "hiking": 3
+  "hiking": 3,
+  "raccolta:gratis": 52
  },
- "aggiornato": "2026-09-29T10:44:34.156Z"
+ "aggiornato": "2026-09-29T11:36:24.300Z"
 }

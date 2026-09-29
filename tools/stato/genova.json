@@ -2,7 +2,7 @@
  "slug": "genova",
  "nome": "Genova",
  "eventi": 232,
- "pagine": 915,
+ "pagine": 935,
  "tipi": {
   "dinner": 25,
   "dancing": 12,
@@ -24,7 +24,13 @@
   "raccolta:bambini": 3,
   "raccolta:halloween": 5,
   "raccolta:vino-e-degustazioni": 5,
-  "raccolta:aperitivi": 3
+  "raccolta:aperitivi": 3,
+  "raccolta:sagre": 10,
+  "raccolta:biblioteca": 5,
+  "raccolta:gratis": 216,
+  "raccolta:comedy": 3,
+  "raccolta:scambi-linguistici": 5,
+  "raccolta:classica-e-jazz": 7
  },
- "aggiornato": "2026-09-29T10:43:38.644Z"
+ "aggiornato": "2026-09-29T11:35:26.609Z"
 }

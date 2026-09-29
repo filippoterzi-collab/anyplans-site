@@ -2,7 +2,7 @@
  "slug": "novara",
  "nome": "Novara",
  "eventi": 63,
- "pagine": 303,
+ "pagine": 313,
  "tipi": {
   "dinner": 6,
   "culture": 9,
@@ -14,7 +14,10 @@
   "painting": 3,
   "yoga": 2,
   "exhibition": 2,
-  "show": 7
+  "show": 7,
+  "raccolta:sagre": 16,
+  "raccolta:gratis": 56,
+  "raccolta:classica-e-jazz": 3
  },
- "aggiornato": "2026-09-29T10:45:51.356Z"
+ "aggiornato": "2026-09-29T11:37:43.794Z"
 }

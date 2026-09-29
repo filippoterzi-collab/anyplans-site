@@ -2,14 +2,16 @@
  "slug": "latina",
  "nome": "Latina",
  "eventi": 67,
- "pagine": 225,
+ "pagine": 229,
  "tipi": {
   "dinner": 13,
   "festival": 3,
   "show": 18,
   "tour": 3,
   "gym": 2,
-  "culture": 20
+  "culture": 20,
+  "raccolta:sagre": 3,
+  "raccolta:gratis": 65
  },
- "aggiornato": "2026-09-29T10:46:29.982Z"
+ "aggiornato": "2026-09-29T11:38:21.269Z"
 }

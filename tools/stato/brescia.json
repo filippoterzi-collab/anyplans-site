@@ -1,15 +1,15 @@
 {
  "slug": "brescia",
  "nome": "Brescia",
- "eventi": 260,
- "pagine": 1303,
+ "eventi": 261,
+ "pagine": 1341,
  "tipi": {
   "festival": 54,
   "culture": 60,
   "dinner": 37,
   "yoga": 3,
   "market": 6,
-  "show": 24,
+  "show": 25,
   "padel": 6,
   "cinema": 2,
   "concert": 27,
@@ -24,7 +24,16 @@
   "running": 3,
   "raccolta:halloween": 6,
   "raccolta:aperitivi": 8,
-  "raccolta:natale": 5
+  "raccolta:natale": 5,
+  "raccolta:sagre": 54,
+  "raccolta:biblioteca": 4,
+  "raccolta:gratis": 243,
+  "raccolta:libri-e-letture": 4,
+  "raccolta:arte": 5,
+  "raccolta:musei": 7,
+  "raccolta:scambi-linguistici": 5,
+  "raccolta:classica-e-jazz": 7,
+  "raccolta:castelli-e-borghi": 8
  },
- "aggiornato": "2026-09-29T10:42:24.719Z"
+ "aggiornato": "2026-09-29T11:34:20.676Z"
 }

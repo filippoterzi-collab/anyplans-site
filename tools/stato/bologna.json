@@ -1,8 +1,8 @@
 {
  "slug": "bologna",
  "nome": "Bologna",
- "eventi": 519,
- "pagine": 1921,
+ "eventi": 517,
+ "pagine": 1957,
  "tipi": {
   "dinner": 50,
   "volleyball": 3,
@@ -22,14 +22,29 @@
   "painting": 14,
   "match": 12,
   "exhibition": 9,
-  "hiking": 6,
+  "hiking": 5,
   "nightlife": 1,
   "ceramics": 2,
   "raccolta:bambini": 6,
   "raccolta:vino-e-degustazioni": 3,
   "raccolta:aperitivi": 11,
   "raccolta:castagne-e-autunno": 3,
-  "raccolta:natale": 5
+  "raccolta:natale": 5,
+  "raccolta:sagre": 32,
+  "raccolta:biblioteca": 8,
+  "raccolta:gratis": 462,
+  "raccolta:libri-e-letture": 6,
+  "raccolta:fotografia": 5,
+  "raccolta:arte": 9,
+  "raccolta:birra": 6,
+  "raccolta:comedy": 6,
+  "raccolta:scambi-linguistici": 4,
+  "raccolta:meditazione-e-benessere": 6,
+  "raccolta:tornei": 3,
+  "raccolta:classica-e-jazz": 7,
+  "raccolta:pride": 3,
+  "raccolta:castelli-e-borghi": 9,
+  "raccolta:stelle-e-astronomia": 3
  },
- "aggiornato": "2026-09-29T10:42:12.931Z"
+ "aggiornato": "2026-09-29T11:34:06.998Z"
 }

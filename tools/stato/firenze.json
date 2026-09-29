@@ -2,7 +2,7 @@
  "slug": "firenze",
  "nome": "Firenze",
  "eventi": 373,
- "pagine": 1423,
+ "pagine": 1457,
  "tipi": {
   "dinner": 44,
   "painting": 8,
@@ -12,7 +12,7 @@
   "culture": 87,
   "games": 6,
   "gym": 1,
-  "show": 58,
+  "show": 59,
   "padel": 16,
   "dancing": 3,
   "karaoke": 3,
@@ -24,7 +24,19 @@
   "raccolta:bambini": 3,
   "raccolta:halloween": 7,
   "raccolta:vino-e-degustazioni": 7,
-  "raccolta:aperitivi": 5
+  "raccolta:aperitivi": 5,
+  "raccolta:sagre": 29,
+  "raccolta:biblioteca": 4,
+  "raccolta:gratis": 340,
+  "raccolta:libri-e-letture": 12,
+  "raccolta:arte": 9,
+  "raccolta:musei": 4,
+  "raccolta:birra": 3,
+  "raccolta:comedy": 3,
+  "raccolta:scambi-linguistici": 6,
+  "raccolta:meditazione-e-benessere": 4,
+  "raccolta:tornei": 4,
+  "raccolta:classica-e-jazz": 14
  },
- "aggiornato": "2026-09-29T10:43:29.818Z"
+ "aggiornato": "2026-09-29T11:35:14.902Z"
 }

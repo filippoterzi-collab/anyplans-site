@@ -1,26 +1,30 @@
 {
  "slug": "parma",
  "nome": "Parma",
- "eventi": 153,
- "pagine": 571,
+ "eventi": 151,
+ "pagine": 591,
  "tipi": {
   "dinner": 31,
   "culture": 36,
-  "running": 2,
+  "running": 1,
   "painting": 2,
   "festival": 16,
   "concert": 13,
   "dancing": 2,
   "padel": 1,
   "match": 12,
-  "hiking": 10,
+  "hiking": 9,
   "show": 14,
   "tour": 4,
   "cooking": 3,
   "yoga": 3,
   "raccolta:halloween": 3,
   "raccolta:vino-e-degustazioni": 4,
-  "raccolta:aperitivi": 4
+  "raccolta:aperitivi": 4,
+  "raccolta:sagre": 16,
+  "raccolta:gratis": 147,
+  "raccolta:birra": 4,
+  "raccolta:castelli-e-borghi": 3
  },
- "aggiornato": "2026-09-29T10:43:56.573Z"
+ "aggiornato": "2026-09-29T11:35:46.676Z"
 }

@@ -1,11 +1,11 @@
 {
  "slug": "salerno",
  "nome": "Salerno",
- "eventi": 75,
- "pagine": 517,
+ "eventi": 73,
+ "pagine": 523,
  "tipi": {
   "dinner": 18,
-  "culture": 17,
+  "culture": 16,
   "exhibition": 0,
   "show": 8,
   "cinema": 0,
@@ -13,7 +13,11 @@
   "concert": 17,
   "hiking": 1,
   "festival": 4,
-  "raccolta:natale": 3
+  "raccolta:natale": 3,
+  "raccolta:sagre": 5,
+  "raccolta:gratis": 69,
+  "raccolta:classica-e-jazz": 9,
+  "raccolta:castelli-e-borghi": 6
  },
- "aggiornato": "2026-09-29T10:44:47.339Z"
+ "aggiornato": "2026-09-29T11:36:38.393Z"
 }

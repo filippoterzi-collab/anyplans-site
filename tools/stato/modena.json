@@ -1,8 +1,8 @@
 {
  "slug": "modena",
  "nome": "Modena",
- "eventi": 139,
- "pagine": 609,
+ "eventi": 137,
+ "pagine": 625,
  "tipi": {
   "dinner": 34,
   "padel": 1,
@@ -15,7 +15,14 @@
   "yoga": 2,
   "tour": 5,
   "raccolta:bambini": 3,
-  "raccolta:vino-e-degustazioni": 3
+  "raccolta:vino-e-degustazioni": 3,
+  "raccolta:sagre": 3,
+  "raccolta:biblioteca": 4,
+  "raccolta:gratis": 125,
+  "raccolta:libri-e-letture": 3,
+  "raccolta:birra": 3,
+  "raccolta:classica-e-jazz": 5,
+  "raccolta:stelle-e-astronomia": 3
  },
- "aggiornato": "2026-09-29T10:45:28.579Z"
+ "aggiornato": "2026-09-29T11:37:19.202Z"
 }

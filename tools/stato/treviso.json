@@ -2,7 +2,7 @@
  "slug": "treviso",
  "nome": "Treviso",
  "eventi": 179,
- "pagine": 721,
+ "pagine": 737,
  "tipi": {
   "yoga": 8,
   "culture": 41,
@@ -16,7 +16,12 @@
   "tour": 4,
   "raccolta:bambini": 3,
   "raccolta:vino-e-degustazioni": 6,
-  "raccolta:castagne-e-autunno": 5
+  "raccolta:castagne-e-autunno": 5,
+  "raccolta:sagre": 11,
+  "raccolta:gratis": 178,
+  "raccolta:libri-e-letture": 7,
+  "raccolta:arte": 3,
+  "raccolta:meditazione-e-benessere": 4
  },
- "aggiornato": "2026-09-29T10:45:36.885Z"
+ "aggiornato": "2026-09-29T11:37:27.584Z"
 }

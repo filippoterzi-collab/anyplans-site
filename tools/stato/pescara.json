@@ -2,7 +2,7 @@
  "slug": "pescara",
  "nome": "Pescara",
  "eventi": 93,
- "pagine": 309,
+ "pagine": 319,
  "tipi": {
   "dinner": 15,
   "culture": 12,
@@ -13,7 +13,11 @@
   "show": 30,
   "cinema": 1,
   "exhibition": 4,
-  "yoga": 4
+  "yoga": 4,
+  "raccolta:sagre": 4,
+  "raccolta:gratis": 83,
+  "raccolta:classica-e-jazz": 3,
+  "raccolta:castelli-e-borghi": 4
  },
- "aggiornato": "2026-09-29T10:44:20.070Z"
+ "aggiornato": "2026-09-29T11:36:09.607Z"
 }

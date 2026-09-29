@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://anyplans.in/modena/cosa-fare/</loc><lastmod>2026-09-29</lastmod></url>
-  <url><loc>https://anyplans.in/modena/cosa-fare-oggi/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/cosa-fare-domani/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/cosa-fare-nel-weekend/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/eventi-settembre-2026/</loc><lastmod>2026-09-29</lastmod></url>
@@ -19,6 +18,13 @@
   <url><loc>https://anyplans.in/modena/visite-guidate/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/bambini/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/vino-e-degustazioni/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/modena/sagre/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/modena/biblioteca/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/modena/gratis/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/modena/libri-e-letture/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/modena/birra/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/modena/classica-e-jazz/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/modena/stelle-e-astronomia/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/vignola/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/marzaglia-nuova/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/carpi/</loc><lastmod>2026-09-29</lastmod></url>
@@ -29,15 +35,17 @@
   <url><loc>https://anyplans.in/modena/formigine/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/sassuolo/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/locali/</loc><lastmod>2026-09-29</lastmod></url>
-  <url><loc>https://anyplans.in/modena/locali/tablo/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/modena/locali/gilda-bar/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/locali/victoria-cinema/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/locali/temporary-band/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://anyplans.in/modena/locali/feverup-events/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://anyplans.in/modena/locali/fuoricitta-country-club/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/locali/cassetto-culturale/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://anyplans.in/modena/locali/bar-manzolino/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/locali/la-scienza-dei-magi/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://anyplans.in/modena/locali/doppio-malto-modena/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/locali/chiesa-di-san-carlo/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/locali/biblioteca-dell-accademia-nazionale-di-scienze/</loc><lastmod>2026-09-29</lastmod></url>
-  <url><loc>https://anyplans.in/modena/locali/parco-giardino-ducale-estense/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/locali/future-education-modena/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://anyplans.in/modena/locali/forum-guido-monzani-srl/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/modena/locali/teatro-carani/</loc><lastmod>2026-09-29</lastmod></url>
@@ -305,7 +313,6 @@
   <url><loc>https://anyplans.in/modena/pink-floyd-immersion-beyond-the-moon/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://anyplans.in/modena/modena-suona-buena-vista-social-club-sesion-cubana-al-teatro/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/</loc><lastmod>2026-09-29</lastmod></url>
-  <url><loc>https://anyplans.in/en/modena/what-to-do-today/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/what-to-do-tomorrow/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/what-to-do-this-weekend/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/events-september-2026/</loc><lastmod>2026-09-29</lastmod></url>
@@ -323,6 +330,13 @@
   <url><loc>https://anyplans.in/en/modena/guided-tours/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/kids/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/wine-tastings/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/en/modena/food-fairs/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/en/modena/libraries/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/en/modena/free/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/en/modena/books/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/en/modena/beer/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/en/modena/classical-and-jazz/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/en/modena/stargazing/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/vignola/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/marzaglia-nuova/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/carpi/</loc><lastmod>2026-09-29</lastmod></url>
@@ -333,15 +347,17 @@
   <url><loc>https://anyplans.in/en/modena/formigine/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/sassuolo/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/venues/</loc><lastmod>2026-09-29</lastmod></url>
-  <url><loc>https://anyplans.in/en/modena/venues/tablo/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/en/modena/venues/gilda-bar/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/venues/victoria-cinema/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/venues/temporary-band/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/venues/feverup-events/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://anyplans.in/en/modena/venues/fuoricitta-country-club/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/venues/cassetto-culturale/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://anyplans.in/en/modena/venues/bar-manzolino/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/venues/la-scienza-dei-magi/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://anyplans.in/en/modena/venues/doppio-malto-modena/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/venues/chiesa-di-san-carlo/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/venues/biblioteca-dell-accademia-nazionale-di-scienze/</loc><lastmod>2026-09-29</lastmod></url>
-  <url><loc>https://anyplans.in/en/modena/venues/parco-giardino-ducale-estense/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/venues/future-education-modena/</loc><lastmod>2026-09-28</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/venues/forum-guido-monzani-srl/</loc><lastmod>2026-09-29</lastmod></url>
   <url><loc>https://anyplans.in/en/modena/venues/teatro-carani/</loc><lastmod>2026-09-29</lastmod></url>

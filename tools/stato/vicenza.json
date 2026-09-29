@@ -2,7 +2,7 @@
  "slug": "vicenza",
  "nome": "Vicenza",
  "eventi": 129,
- "pagine": 483,
+ "pagine": 497,
  "tipi": {
   "dinner": 20,
   "culture": 43,
@@ -12,7 +12,12 @@
   "dancing": 3,
   "show": 20,
   "tour": 5,
-  "gym": 4
+  "gym": 4,
+  "raccolta:sagre": 7,
+  "raccolta:gratis": 124,
+  "raccolta:meditazione-e-benessere": 4,
+  "raccolta:tornei": 3,
+  "raccolta:classica-e-jazz": 5
  },
- "aggiornato": "2026-09-29T10:45:47.398Z"
+ "aggiornato": "2026-09-29T11:37:39.598Z"
 }
