@@ -403,6 +403,34 @@ body.mapmode .mapbtn{background:var(--ink);color:#fff}
   body.mapmode .map{border-top:1px solid var(--hair)}
 }
 @media(max-width:900px){.mapinfo{display:none}}
+/* 29/09/2026: a schermo intero sopra la mappa c'è la riga dei filtri, come su Nomadtable
+   ("Tutti (3) · Oggi ▾ · 🍽️ Cucina e cene (1)"): senza, sul telefono si vedeva solo un mucchio di pin
+   e non si capiva che eventi ci fossero. Riusa gli stessi filtri della lista (giorno e categoria),
+   con i conteggi di quello che è davvero sulla mappa. Da non registrati non c'è: la mappa è sfocata. */
+.mapbar{display:none}
+body.mapmode:not(.mapgate) .mapbar{display:flex;position:absolute;left:0;right:0;top:66px;z-index:6;gap:8px;
+  padding:2px 12px 8px;overflow-x:auto;overflow-y:hidden;scrollbar-width:none;-webkit-overflow-scrolling:touch;
+  touch-action:pan-x;overscroll-behavior-x:contain}
+.mapbar::-webkit-scrollbar{display:none}
+.mapbar>*{flex:none}
+.mapbar .mb{display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 14px;border-radius:999px;background:#fff;
+  border:0;font:inherit;font-size:13.5px;font-weight:800;color:var(--ink);box-shadow:0 3px 12px rgba(25,25,25,.18);
+  white-space:nowrap;cursor:pointer;-webkit-appearance:none;appearance:none}
+.mapbar .mb .i{font-size:16px;line-height:1}
+.mapbar .mb b{font-weight:800;color:var(--grey)}
+.mapbar .mb.on{background:var(--blue);color:#fff}
+.mapbar .mb.on b{color:rgba(255,255,255,.75)}
+.mapbar .mb.on .i{filter:none}
+/* il giorno è una tendina nativa (sul telefono apre la rotella di iOS): vestita da pillola con la freccina */
+.mapbar .mbday{position:relative}
+.mapbar .mbday select{position:absolute;inset:0;width:100%;height:100%;opacity:0;cursor:pointer;font-size:16px}
+.mapbar .mbday::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;
+  transform:translateY(-2px) rotate(45deg);margin-left:2px}
+/* lo zoom scende sotto la riga dei filtri */
+body.mapmode .map .maplibregl-ctrl-top-right{top:120px}
+/* da computer, a schermo intero, i giorni e le categorie stanno nella riga sulla mappa: nella
+   barra sopra restano solo Dove · Quando · Cosa e i Filtri */
+@media(min-width:901px){ body.mapmode .sbwrap .dates,body.mapmode .sbwrap .catwrap{display:none} }
 /* giorni */
 .dayh{display:flex;align-items:baseline;gap:10px;margin:22px 0 10px}
 .dayh h2{font-size:20px}
@@ -871,6 +899,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
         <div class="lock" id="maplock" hidden><div>🔒<b>Registrati per vedere la mappa</b><p>Gli eventi vicino a te, con chi ci va. Trenta secondi, gratis.</p><a class="btn" href="/bergamo/login.html" data-gate="mappa">Registrati</a></div></div>
         <button class="mapbtn" id="mapbtn" data-gate="mappa">🗺️ Apri la mappa</button>
         <div class="mapinfo" id="mapinfo"></div>
+        <div class="mapbar" id="mapbar" role="toolbar" aria-label="Filtri della mappa"></div>
       </div>
     </aside>
   </div>
@@ -948,7 +977,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1790684364"></script>
+<script src="/bergamo/app.js?v=1790687985"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1156,13 +1185,13 @@ async function loadRestDays(center, seq, toEv){
 // ---------- filtri ----------
 const F = { where: new Set(), city: new Set(), town: new Set(), place: new Set(), day: new Set(), date: new Set(), cat: new Set(), price: new Set(), hour: new Set(), who: new Set(), going: new Set() };
 let PLACE = null, QTEXT = "";
-function passes(e, ignoreDay){
+function passes(e, ignoreDay, ignoreCat){
   if (F.where.size && e.km > 15) return false;
   if (e.km > 30) return false;   // il feed copre 50 km: la home mostra la città e i dintorni
   if (ignoreDay) {}
   else if (F.date.size) { if (!F.date.has(e.ymd)) return false; }
   else if (F.day.size) { const d = [...F.day][0]; if (d === "oggi" && e.ymd !== TODAY) return false; if (d === "domani" && e.ymd !== addDays(TODAY, 1)) return false; if (d === "weekend" && !WEEKEND.includes(e.ymd)) return false; if (d === "sera" && !(e.ymd === TODAY && e.h >= 18)) return false; }
-  if (F.cat.size) { const c = CATBY[[...F.cat][0]]; if (c && c.s && !c.s.includes(e.sport)) return false; }
+  if (F.cat.size && !ignoreCat) { const c = CATBY[[...F.cat][0]]; if (c && c.s && !c.s.includes(e.sport)) return false; }
   if (QTEXT) { const q = QTEXT.toLowerCase(); if (!(e.title + " " + (e.meeting_point_text || "") + " " + (e.community_name || e.club_name || e.host_name || "")).toLowerCase().includes(q)) return false; }
   if (F.price.size) { const p = [...F.price][0]; const c = e.price_cents || 0; if (p === "free" && !isFree(e)) return false; if (p === "cheap" && !(isFree(e) || (c > 0 && c <= 1000))) return false; if (p === "paid" && !c) return false; }   // (22/09/2026) "gratis" = gratis davvero, non prezzo ignoto
   if (F.hour.size) { const h = [...F.hour][0]; if (h === "am" && e.h >= 12) return false; if (h === "pm" && (e.h < 12 || e.h >= 18)) return false; if (h === "eve" && e.h < 18) return false; }
@@ -1218,23 +1247,48 @@ function render(){
     const what = cat ? (cat.n || "eventi").toLowerCase() : F.price.size ? "eventi gratis" : F.going.size ? "eventi con qualcuno che ci va" : QTEXT ? `eventi per '${esc(QTEXT)}'` : "eventi";
     list.innerHTML = `<div class="nores"><div class="tile">${cat && cat.i ? cat.i : "🔎"}</div><h3>${when} niente ${what}<span>${esc(summarize())}</span></h3>${next ? `<p>Il prossimo è ${next.ymd === addDays(TODAY, 1) ? "domani" : fmtDay.format(next.d)}:</p>` : `<p>Non ce ne sono nemmeno nei prossimi giorni. Oppure inizia tu.</p>`}<div class="btns"><button class="btn ghosty" id="allday">Vedi tutti i giorni</button>${next ? "" : `<a class="btn" href="/bergamo/crea.html" data-gate="crea">Crea un evento</a>`}</div></div>` + (next ? `<div class="dayh"><h2>${next.ymd === TODAY ? "Oggi" : next.ymd === addDays(TODAY, 1) ? "Domani" : fmtDay.format(next.d)}</h2><span>${fmtDay.format(next.d)}</span></div>` + card(next) : "");
     document.getElementById("allday").onclick = () => { F.day.clear(); F.date.clear(); syncChips(); render(); };
-    document.getElementById("showmore").hidden = true; document.getElementById("listlock2").hidden = true; drawPins(mapRows(rows)); return;
+    document.getElementById("showmore").hidden = true; document.getElementById("listlock2").hidden = true; drawPins(mapRows(rows)); syncMapBar(); return;
   }
   if (!rows.length) {
     list.innerHTML = `<div class="nores"><div class="tile">🔎</div><h3>Qui non c'è ancora niente<span>${esc(summarize())}</span></h3><p>Prova a togliere un filtro, allarga il raggio, o guarda i giorni vicini. Oppure inizia tu.</p><div class="btns"><button class="btn ghosty" id="undo">Togli l'ultimo filtro</button><button class="btn" id="clear2">Cancella tutto</button><a class="btn ghosty" href="/bergamo/crea.html" data-gate="crea">Crea un evento</a></div></div>`;
     document.getElementById("clear2").onclick = clearAll; document.getElementById("undo").onclick = () => { if (lastToggled) F[lastToggled.f].delete(lastToggled.v); syncChips(); render(); };
-    document.getElementById("showmore").hidden = true; document.getElementById("listlock2").hidden = true; drawPins(mapRows(rows)); return;
+    document.getElementById("showmore").hidden = true; document.getElementById("listlock2").hidden = true; drawPins(mapRows(rows)); syncMapBar(); return;
   }
   const shown = rows.slice(0, LOCKED ? 6 : visibleN); let h = "", lastDay = null;
   shown.forEach(e => { if (sort === "time" && e.ymd !== lastDay) { lastDay = e.ymd; const lab = e.ymd === TODAY ? "Oggi" : e.ymd === addDays(TODAY, 1) ? "Domani" : fmtDayLong.format(e.d); const n = rows.filter(x => x.ymd === e.ymd).length; h += `<div class="dayh"><h2>${lab}</h2><span>${e.ymd === TODAY || e.ymd === addDays(TODAY, 1) ? fmtDay.format(e.d) + " · " : ""}${n} event${n === 1 ? "o" : "i"}</span></div>`; } h += card(e); });
   list.innerHTML = h;
   document.getElementById("showmore").hidden = LOCKED || rows.length <= visibleN;
   document.getElementById("listlock2").hidden = !LOCKED; document.getElementById("lockn").textContent = (rows.length >= 1000 ? "più di " : "") + Math.max(0, rows.length - 4);
-  drawPins(mapRows(rows));
+  drawPins(mapRows(rows)); syncMapBar();
 }
 // sulla mappa solo gli eventi di oggi (deciso 15/09/2026: "metti solo oggi"); con un giorno scelto, quelli del giorno
-let MAP_TODAY = true;
-function mapRows(rows){ if (F.day.size || F.date.size) { MAP_TODAY = false; return rows; } const today = rows.filter(e => e.ymd === TODAY); MAP_TODAY = today.length > 0; return today.length ? today : rows.slice(0, 40); }
+let MAP_TODAY = true, MAP_ALL = false;   // MAP_ALL: "Tutti i giorni" scelto dalla riga sulla mappa (29/09/2026)
+function mapRows(rows){ if (F.day.size || F.date.size || MAP_ALL) { MAP_TODAY = false; return rows; } const today = rows.filter(e => e.ymd === TODAY); MAP_TODAY = today.length > 0; return today.length ? today : rows.slice(0, 40); }
+// ---------- la riga dei filtri sopra la mappa a schermo intero (29/09/2026, come Nomadtable) ----------
+// "Tutti (N)" · giorno ▾ · le categorie che hanno almeno un evento sulla mappa, coi conteggi · Gratis · Qualcuno ci va.
+// I conteggi si fanno sugli eventi che passano gli altri filtri, categoria esclusa, con lo stesso giorno della mappa.
+function syncMapBar(){
+  const bar = document.getElementById("mapbar"); if (!bar || !document.body.classList.contains("mapmode")) return;
+  const base = mapRows(EV.filter(e => passes(e, false, true)));
+  const cc = {}; base.forEach(e => { CATS.forEach(c => { if (c.s && c.s.includes(e.sport)) cc[c.k] = (cc[c.k] || 0) + 1; }); });
+  const cur = F.cat.size ? [...F.cat][0] : "";
+  const nFree = base.filter(isFree).length, nGoing = base.filter(e => e.going_count > 0).length;
+  const dayV = F.date.size ? "data" : F.day.size ? [...F.day][0] : MAP_ALL ? "tutti" : "oggi";
+  const dayTxt = F.date.size ? fmtDay.format(new Date([...F.date][0] + "T12:00:00Z")) : { oggi: MAP_TODAY || F.day.size ? "Oggi" : "Prossimi", domani: "Domani", weekend: "Fine settimana", sera: "Stasera", tutti: "Tutti i giorni" }[dayV];
+  const opts = [["oggi","Oggi"],["domani","Domani"],["weekend","Fine settimana"],["sera","Stasera"],["tutti","Tutti i giorni"]];
+  if (F.date.size) opts.unshift(["data", dayTxt]);
+  let h = `<button type="button" class="mb ${cur ? "" : "on"}" data-mbcat="">Tutti <b>(${base.length})</b></button>`;
+  h += `<span class="mb mbday"><span class="i">📅</span>${dayTxt}<select aria-label="Quando">${opts.map(([v, t]) => `<option value="${v}" ${v === dayV ? "selected" : ""}>${t}</option>`).join("")}</select></span>`;
+  CATS.filter(c => c.k && (cc[c.k] || c.k === cur)).forEach(c => { h += `<button type="button" class="mb ${c.k === cur ? "on" : ""}" data-mbcat="${c.k}"><span class="i">${c.i}</span>${c.n} <b>(${cc[c.k] || 0})</b></button>`; });
+  if (nFree || F.price.has("free")) h += `<button type="button" class="mb ${F.price.has("free") ? "on" : ""}" data-mbfree><span class="i">🆓</span>Gratis <b>(${nFree})</b></button>`;
+  if (nGoing || F.going.size) h += `<button type="button" class="mb ${F.going.size ? "on" : ""}" data-mbgoing><span class="i">👋</span>Qualcuno ci va <b>(${nGoing})</b></button>`;
+  bar.innerHTML = h;
+  const after = () => { visibleN = 30; syncChips(); render(); setTimeout(() => fitMap(mapRows(lastRows)), 30); };
+  bar.querySelectorAll("[data-mbcat]").forEach(b => b.addEventListener("click", () => { F.cat.clear(); QTEXT = ""; if (b.dataset.mbcat) F.cat.add(b.dataset.mbcat); track("mappa_filtro", b.dataset.mbcat || "tutti"); after(); }));
+  const fb = bar.querySelector("[data-mbfree]"); if (fb) fb.addEventListener("click", () => { F.price.has("free") ? F.price.clear() : (F.price.clear(), F.price.add("free")); after(); });
+  const gb = bar.querySelector("[data-mbgoing]"); if (gb) gb.addEventListener("click", () => { F.going.size ? F.going.clear() : F.going.add("1"); after(); });
+  bar.querySelector("select").addEventListener("change", e => { const v = e.target.value; if (v === "data") return; F.day.clear(); F.date.clear(); MAP_ALL = v === "tutti"; if (!MAP_ALL) F.day.add(v); track("mappa_giorno", v); after(); });
+}
 
 // ---------- pannelli, categorie, città ----------
 function buildStatic(){
@@ -1632,6 +1686,7 @@ function setSbh(){ const sb = document.querySelector(".sbwrap"); if (sb) documen
 window.addEventListener("resize", () => { if (document.body.classList.contains("mapmode")) setSbh(); });
 function toggleMap(){ const on = document.body.classList.toggle("mapmode"); document.body.classList.remove("pinpicked"); if (on) setSbh();
   if (typeof GATE_EVENTS !== "undefined" && GATE_EVENTS && on) track("wall_view", "mappa"); document.getElementById("mapfab").textContent = on ? "☰ Lista" : "🗺️ Mappa"; document.getElementById("mapbtn").textContent = on ? "✕ Chiudi la mappa" : "🗺️ Apri la mappa"; window.scrollTo({ top: 0 });   // anche alla chiusura: su iPhone la pagina sotto la mappa fissa scorre lo stesso e si riapriva su "Viaggi di gruppo" (17/09/2026)
+  if (on) syncMapBar();
   setTimeout(() => { if (map) { map.resize(); fitMap(mapRows(lastRows)); } }, 80); }
 document.getElementById("mapfab").addEventListener("click", () => { if (!LOCKED) toggleMap(); });
 document.getElementById("mapbtn").addEventListener("click", e => {
@@ -1681,6 +1736,16 @@ function loadMapLib(){
   addEventListener("mousemove", e => { if (!down) return; const dx = e.clientX - x0; if (!moved && Math.abs(dx) < 5) return; moved = true; row.classList.add("drag"); row.scrollLeft = sl - dx; e.preventDefault(); });
   addEventListener("mouseup", () => { if (!down) return; down = false; setTimeout(() => row.classList.remove("drag"), 0); });
   row.addEventListener("click", e => { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+})();
+// la riga dei filtri sulla mappa: col mouse si trascina, e la rotella verticale la fa scorrere di lato (29/09/2026)
+(function(){
+  const row = document.getElementById("mapbar"); if (!row) return;
+  let down = false, x0 = 0, sl = 0, moved = false;
+  row.addEventListener("mousedown", e => { if (e.button !== 0 || e.target.tagName === "SELECT") return; down = true; moved = false; x0 = e.clientX; sl = row.scrollLeft; });
+  addEventListener("mousemove", e => { if (!down) return; const dx = e.clientX - x0; if (!moved && Math.abs(dx) < 5) return; moved = true; row.scrollLeft = sl - dx; e.preventDefault(); });
+  addEventListener("mouseup", () => { down = false; });
+  row.addEventListener("click", e => { if (moved) { e.preventDefault(); e.stopPropagation(); } }, true);
+  row.addEventListener("wheel", e => { if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) { row.scrollLeft += e.deltaY; e.preventDefault(); } }, { passive: false });
 })();
 // ---------- righe che scorrono col dito (categorie, date, file) ----------
 // La direzione la decide il primo movimento: di lato scorre la riga (e la pagina sta ferma, 15/09/2026: su iPhone
