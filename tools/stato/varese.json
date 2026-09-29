@@ -1,10 +1,10 @@
 {
  "slug": "varese",
  "nome": "Varese",
- "eventi": 256,
- "pagine": 1063,
+ "eventi": 261,
+ "pagine": 1077,
  "tipi": {
-  "dinner": 49,
+  "dinner": 53,
   "padel": 38,
   "yoga": 10,
   "culture": 48,
@@ -12,21 +12,21 @@
   "singles": 3,
   "concert": 19,
   "tour": 4,
-  "hiking": 7,
+  "hiking": 8,
   "gym": 4,
   "show": 41,
   "nightlife": 3,
-  "raccolta:bambini": 7,
+  "raccolta:bambini": 8,
   "raccolta:halloween": 3,
   "raccolta:aperitivi": 9,
   "raccolta:castagne-e-autunno": 3,
   "raccolta:natale": 3,
   "raccolta:sagre": 25,
-  "raccolta:gratis": 192,
+  "raccolta:gratis": 196,
   "raccolta:arte": 3,
   "raccolta:meditazione-e-benessere": 3,
-  "raccolta:tornei": 4,
+  "raccolta:tornei": 5,
   "raccolta:castelli-e-borghi": 4
  },
- "aggiornato": "2026-09-29T13:53:25.667Z"
+ "aggiornato": "2026-09-29T15:06:53.031Z"
 }

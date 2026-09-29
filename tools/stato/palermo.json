@@ -1,12 +1,12 @@
 {
  "slug": "palermo",
  "nome": "Palermo",
- "eventi": 148,
- "pagine": 729,
+ "eventi": 151,
+ "pagine": 737,
  "tipi": {
-  "dinner": 32,
+  "dinner": 34,
   "culture": 26,
-  "tour": 12,
+  "tour": 13,
   "yoga": 4,
   "show": 23,
   "concert": 24,
@@ -21,9 +21,9 @@
   "games": 3,
   "raccolta:aperitivi": 4,
   "raccolta:sagre": 4,
-  "raccolta:gratis": 144,
+  "raccolta:gratis": 147,
   "raccolta:birra": 5,
   "raccolta:castelli-e-borghi": 8
  },
- "aggiornato": "2026-09-29T13:54:23.397Z"
+ "aggiornato": "2026-09-29T15:08:05.097Z"
 }

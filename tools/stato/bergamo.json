@@ -1,16 +1,16 @@
 {
  "slug": "bergamo",
  "nome": "Bergamo",
- "eventi": 1302,
- "pagine": 4876,
+ "eventi": 1311,
+ "pagine": 4900,
  "tipi": {
   "yoga": 16,
   "festival": 46,
   "running": 28,
   "walking": 116,
   "estivo": 2,
-  "dinner": 36,
-  "padel": 76,
+  "dinner": 39,
+  "padel": 82,
   "concert": 83,
   "market": 180,
   "culture": 449,
@@ -38,13 +38,13 @@
   "raccolta:natale": 17,
   "raccolta:sagre": 47,
   "raccolta:biblioteca": 193,
-  "raccolta:gratis": 1082,
+  "raccolta:gratis": 1084,
   "raccolta:libri-e-letture": 77,
   "raccolta:fotografia": 3,
   "raccolta:arte": 16,
   "raccolta:musei": 11,
   "raccolta:vintage-e-usato": 7,
-  "raccolta:birra": 6,
+  "raccolta:birra": 7,
   "raccolta:comedy": 4,
   "raccolta:scambi-linguistici": 5,
   "raccolta:meditazione-e-benessere": 9,
@@ -57,5 +57,5 @@
   "raccolta:castelli-e-borghi": 42,
   "raccolta:stelle-e-astronomia": 11
  },
- "aggiornato": "2026-09-29T13:49:02.201Z"
+ "aggiornato": "2026-09-29T15:01:57.888Z"
 }

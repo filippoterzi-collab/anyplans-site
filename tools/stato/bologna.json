@@ -1,15 +1,15 @@
 {
  "slug": "bologna",
  "nome": "Bologna",
- "eventi": 518,
- "pagine": 1961,
+ "eventi": 524,
+ "pagine": 1971,
  "tipi": {
-  "dinner": 50,
+  "dinner": 57,
   "volleyball": 3,
   "padel": 10,
   "culture": 130,
   "show": 62,
-  "tour": 33,
+  "tour": 32,
   "concert": 96,
   "cinema": 20,
   "games": 8,
@@ -32,11 +32,11 @@
   "raccolta:natale": 5,
   "raccolta:sagre": 32,
   "raccolta:biblioteca": 8,
-  "raccolta:gratis": 464,
+  "raccolta:gratis": 470,
   "raccolta:libri-e-letture": 6,
   "raccolta:fotografia": 5,
   "raccolta:arte": 9,
-  "raccolta:birra": 6,
+  "raccolta:birra": 5,
   "raccolta:comedy": 6,
   "raccolta:scambi-linguistici": 4,
   "raccolta:meditazione-e-benessere": 6,
@@ -46,5 +46,5 @@
   "raccolta:castelli-e-borghi": 9,
   "raccolta:stelle-e-astronomia": 3
  },
- "aggiornato": "2026-09-29T13:52:09.938Z"
+ "aggiornato": "2026-09-29T15:05:40.186Z"
 }

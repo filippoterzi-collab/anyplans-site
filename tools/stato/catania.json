@@ -1,8 +1,8 @@
 {
  "slug": "catania",
  "nome": "Catania",
- "eventi": 99,
- "pagine": 469,
+ "eventi": 98,
+ "pagine": 467,
  "tipi": {
   "dinner": 23,
   "culture": 21,
@@ -19,9 +19,9 @@
   "gardening": 1,
   "exhibition": 3,
   "raccolta:sagre": 6,
-  "raccolta:gratis": 97,
+  "raccolta:gratis": 96,
   "raccolta:arte": 3,
   "raccolta:castelli-e-borghi": 4
  },
- "aggiornato": "2026-09-29T13:54:43.058Z"
+ "aggiornato": "2026-09-29T15:08:29.007Z"
 }

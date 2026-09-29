@@ -1,10 +1,10 @@
 {
  "slug": "firenze",
  "nome": "Firenze",
- "eventi": 373,
- "pagine": 1461,
+ "eventi": 376,
+ "pagine": 1471,
  "tipi": {
-  "dinner": 44,
+  "dinner": 47,
   "painting": 8,
   "concert": 61,
   "festival": 27,
@@ -27,7 +27,7 @@
   "raccolta:aperitivi": 5,
   "raccolta:sagre": 29,
   "raccolta:biblioteca": 4,
-  "raccolta:gratis": 340,
+  "raccolta:gratis": 343,
   "raccolta:libri-e-letture": 12,
   "raccolta:arte": 9,
   "raccolta:musei": 4,
@@ -36,7 +36,8 @@
   "raccolta:scambi-linguistici": 6,
   "raccolta:meditazione-e-benessere": 4,
   "raccolta:tornei": 4,
-  "raccolta:classica-e-jazz": 14
+  "raccolta:classica-e-jazz": 14,
+  "raccolta:castelli-e-borghi": 3
  },
- "aggiornato": "2026-09-29T13:53:38.333Z"
+ "aggiornato": "2026-09-29T15:07:06.636Z"
 }

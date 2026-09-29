@@ -1,12 +1,12 @@
 {
  "slug": "torino",
  "nome": "Torino",
- "eventi": 1050,
- "pagine": 3839,
+ "eventi": 1059,
+ "pagine": 3851,
  "tipi": {
-  "padel": 38,
-  "dinner": 111,
-  "culture": 344,
+  "padel": 46,
+  "dinner": 113,
+  "culture": 343,
   "tour": 88,
   "painting": 17,
   "cinema": 10,
@@ -38,7 +38,7 @@
   "raccolta:natale": 6,
   "raccolta:sagre": 90,
   "raccolta:biblioteca": 21,
-  "raccolta:gratis": 804,
+  "raccolta:gratis": 805,
   "raccolta:libri-e-letture": 14,
   "raccolta:fotografia": 8,
   "raccolta:arte": 21,
@@ -57,5 +57,5 @@
   "raccolta:castelli-e-borghi": 26,
   "raccolta:stelle-e-astronomia": 5
  },
- "aggiornato": "2026-09-29T13:50:37.840Z"
+ "aggiornato": "2026-09-29T15:04:01.109Z"
 }

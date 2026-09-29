@@ -1,10 +1,10 @@
 {
  "slug": "reggio-emilia",
  "nome": "Reggio Emilia",
- "eventi": 76,
- "pagine": 323,
+ "eventi": 75,
+ "pagine": 319,
  "tipi": {
-  "dinner": 14,
+  "dinner": 13,
   "tour": 4,
   "culture": 26,
   "games": 15,
@@ -14,7 +14,7 @@
   "cooking": 3,
   "raccolta:bambini": 4,
   "raccolta:sagre": 4,
-  "raccolta:gratis": 76
+  "raccolta:gratis": 75
  },
- "aggiornato": "2026-09-29T13:56:06.173Z"
+ "aggiornato": "2026-09-29T15:09:57.088Z"
 }

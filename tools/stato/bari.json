@@ -1,19 +1,19 @@
 {
  "slug": "bari",
  "nome": "Bari",
- "eventi": 332,
- "pagine": 1397,
+ "eventi": 336,
+ "pagine": 1411,
  "tipi": {
   "padel": 7,
-  "dinner": 63,
+  "dinner": 66,
   "yoga": 3,
-  "karaoke": 3,
+  "karaoke": 5,
   "show": 55,
   "festival": 12,
   "culture": 80,
   "exhibition": 7,
   "tour": 16,
-  "hiking": 3,
+  "hiking": 2,
   "concert": 61,
   "painting": 2,
   "running": 1,
@@ -26,12 +26,12 @@
   "raccolta:natale": 5,
   "raccolta:sagre": 14,
   "raccolta:biblioteca": 15,
-  "raccolta:gratis": 315,
+  "raccolta:gratis": 319,
   "raccolta:libri-e-letture": 18,
   "raccolta:arte": 4,
   "raccolta:birra": 5,
   "raccolta:classica-e-jazz": 18,
   "raccolta:castelli-e-borghi": 6
  },
- "aggiornato": "2026-09-29T13:53:56.918Z"
+ "aggiornato": "2026-09-29T15:07:29.558Z"
 }

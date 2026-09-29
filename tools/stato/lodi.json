@@ -1,17 +1,17 @@
 {
  "slug": "lodi",
  "nome": "Lodi",
- "eventi": 49,
- "pagine": 231,
+ "eventi": 52,
+ "pagine": 235,
  "tipi": {
   "festival": 4,
-  "padel": 23,
-  "dinner": 8,
+  "padel": 27,
+  "dinner": 7,
   "culture": 1,
   "games": 3,
   "raccolta:sagre": 5,
   "raccolta:gratis": 28,
-  "raccolta:tornei": 6
+  "raccolta:tornei": 7
  },
- "aggiornato": "2026-09-29T13:55:56.157Z"
+ "aggiornato": "2026-09-29T15:09:48.082Z"
 }

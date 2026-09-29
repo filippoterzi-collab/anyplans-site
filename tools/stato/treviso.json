@@ -1,13 +1,13 @@
 {
  "slug": "treviso",
  "nome": "Treviso",
- "eventi": 179,
- "pagine": 737,
+ "eventi": 180,
+ "pagine": 739,
  "tipi": {
   "yoga": 8,
   "culture": 41,
   "concert": 22,
-  "dinner": 40,
+  "dinner": 41,
   "show": 36,
   "exhibition": 4,
   "dancing": 5,
@@ -18,10 +18,10 @@
   "raccolta:vino-e-degustazioni": 6,
   "raccolta:castagne-e-autunno": 5,
   "raccolta:sagre": 11,
-  "raccolta:gratis": 178,
+  "raccolta:gratis": 179,
   "raccolta:libri-e-letture": 7,
   "raccolta:arte": 3,
   "raccolta:meditazione-e-benessere": 4
  },
- "aggiornato": "2026-09-29T13:56:10.680Z"
+ "aggiornato": "2026-09-29T15:10:01.227Z"
 }

@@ -1095,7 +1095,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1790689638"></script>
+<script src="/bergamo/app.js?v=1790693963"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1391,10 +1391,14 @@ function syncMapBar(){
   const cc = {}; base.forEach(e => { CATS.forEach(c => { if (c.s && c.s.includes(e.sport)) cc[c.k] = (cc[c.k] || 0) + 1; }); });
   const cur = F.cat.size ? [...F.cat][0] : "";
   const nFree = base.filter(isFree).length, nGoing = base.filter(e => e.going_count > 0).length;
-  const dayV = F.date.size ? "data" : F.day.size ? [...F.day][0] : MAP_ALL ? "tutti" : "oggi";
-  const dayTxt = F.date.size ? fmtDay.format(new Date([...F.date][0] + "T12:00:00Z")) : { oggi: MAP_TODAY || F.day.size ? "Oggi" : "Prossimi", domani: "Domani", weekend: "Fine settimana", sera: "Stasera", tutti: "Tutti i giorni" }[dayV];
-  const opts = [["oggi","Oggi"],["domani","Domani"],["weekend","Fine settimana"],["sera","Stasera"],["tutti","Tutti i giorni"]];
-  if (F.date.size) opts.unshift(["data", dayTxt]);
+  // il giorno: Oggi, Domani, poi i 12 giorni seguenti con la data (chiesto il 29/09/2026: "non solo fine settimana"), Fine settimana, Stasera, Tutti
+  const dayV = F.date.size ? [...F.date][0] : F.day.size ? [...F.day][0] : MAP_ALL ? "tutti" : "oggi";
+  const dayLab = y => capFirst(fmtDay.format(new Date(y + "T12:00:00Z")));
+  const dayTxt = F.date.size ? dayLab(dayV) : { oggi: MAP_TODAY || F.day.size ? "Oggi" : "Prossimi", domani: "Domani", weekend: "Fine settimana", sera: "Stasera", tutti: "Tutti i giorni" }[dayV];
+  const opts = [["oggi","Oggi"],["domani","Domani"]];
+  for (let i = 2; i < 14; i++) { const y = addDays(TODAY, i); opts.push([y, dayLab(y)]); }
+  if (F.date.size && !opts.some(o => o[0] === dayV)) opts.push([dayV, dayTxt]);
+  opts.push(["weekend","Fine settimana"],["sera","Stasera"],["tutti","Tutti i giorni"]);
   let h = `<button type="button" class="mb ${cur ? "" : "on"}" data-mbcat="">Tutti <b>(${base.length})</b></button>`;
   h += `<span class="mb mbday"><span class="i">📅</span>${dayTxt}<select aria-label="Quando">${opts.map(([v, t]) => `<option value="${v}" ${v === dayV ? "selected" : ""}>${t}</option>`).join("")}</select></span>`;
   CATS.filter(c => c.k && (cc[c.k] || c.k === cur)).forEach(c => { h += `<button type="button" class="mb ${c.k === cur ? "on" : ""}" data-mbcat="${c.k}"><span class="i">${c.i}</span>${c.n} <b>(${cc[c.k] || 0})</b></button>`; });
@@ -1405,7 +1409,7 @@ function syncMapBar(){
   bar.querySelectorAll("[data-mbcat]").forEach(b => b.addEventListener("click", () => { F.cat.clear(); QTEXT = ""; if (b.dataset.mbcat) F.cat.add(b.dataset.mbcat); track("mappa_filtro", b.dataset.mbcat || "tutti"); after(); }));
   const fb = bar.querySelector("[data-mbfree]"); if (fb) fb.addEventListener("click", () => { F.price.has("free") ? F.price.clear() : (F.price.clear(), F.price.add("free")); after(); });
   const gb = bar.querySelector("[data-mbgoing]"); if (gb) gb.addEventListener("click", () => { F.going.size ? F.going.clear() : F.going.add("1"); after(); });
-  bar.querySelector("select").addEventListener("change", e => { const v = e.target.value; if (v === "data") return; F.day.clear(); F.date.clear(); MAP_ALL = v === "tutti"; if (!MAP_ALL) F.day.add(v); track("mappa_giorno", v); after(); });
+  bar.querySelector("select").addEventListener("change", e => { const v = e.target.value; F.day.clear(); F.date.clear(); MAP_ALL = v === "tutti"; if (/^\d{4}-\d{2}-\d{2}$/.test(v)) F.date.add(v); else if (!MAP_ALL) F.day.add(v); track("mappa_giorno", v); after(); });
 }
 
 // ---------- pannelli, categorie, città ----------

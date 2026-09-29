@@ -1,10 +1,10 @@
 {
  "slug": "roma",
  "nome": "Roma",
- "eventi": 1516,
- "pagine": 5605,
+ "eventi": 1523,
+ "pagine": 5623,
  "tipi": {
-  "dinner": 279,
+  "dinner": 286,
   "concert": 155,
   "culture": 324,
   "tour": 136,
@@ -34,18 +34,18 @@
   "raccolta:bambini": 12,
   "raccolta:halloween": 26,
   "raccolta:vino-e-degustazioni": 31,
-  "raccolta:aperitivi": 70,
+  "raccolta:aperitivi": 72,
   "raccolta:castagne-e-autunno": 17,
   "raccolta:natale": 9,
   "raccolta:capodanno": 3,
-  "raccolta:sagre": 109,
+  "raccolta:sagre": 110,
   "raccolta:biblioteca": 6,
-  "raccolta:gratis": 1064,
+  "raccolta:gratis": 1071,
   "raccolta:libri-e-letture": 23,
   "raccolta:fotografia": 13,
   "raccolta:arte": 28,
   "raccolta:musei": 7,
-  "raccolta:vintage-e-usato": 7,
+  "raccolta:vintage-e-usato": 6,
   "raccolta:birra": 12,
   "raccolta:comedy": 23,
   "raccolta:scambi-linguistici": 7,
@@ -61,5 +61,5 @@
   "raccolta:castelli-e-borghi": 44,
   "raccolta:stelle-e-astronomia": 12
  },
- "aggiornato": "2026-09-29T13:51:11.737Z"
+ "aggiornato": "2026-09-29T15:04:38.899Z"
 }

@@ -1,14 +1,14 @@
 {
  "slug": "verona",
  "nome": "Verona",
- "eventi": 307,
- "pagine": 1277,
+ "eventi": 311,
+ "pagine": 1285,
  "tipi": {
   "festival": 20,
-  "padel": 18,
+  "padel": 20,
   "culture": 120,
   "concert": 26,
-  "dinner": 42,
+  "dinner": 44,
   "hiking": 2,
   "show": 31,
   "gym": 3,
@@ -22,10 +22,10 @@
   "karaoke": 3,
   "raccolta:bambini": 5,
   "raccolta:halloween": 5,
-  "raccolta:aperitivi": 6,
+  "raccolta:aperitivi": 7,
   "raccolta:sagre": 23,
   "raccolta:biblioteca": 12,
-  "raccolta:gratis": 258,
+  "raccolta:gratis": 260,
   "raccolta:fotografia": 4,
   "raccolta:arte": 9,
   "raccolta:vintage-e-usato": 3,
@@ -36,5 +36,5 @@
   "raccolta:tornei": 10,
   "raccolta:classica-e-jazz": 8
  },
- "aggiornato": "2026-09-29T13:52:50.222Z"
+ "aggiornato": "2026-09-29T15:06:32.685Z"
 }
