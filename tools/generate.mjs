@@ -497,8 +497,14 @@ const types = [...typeIdx].filter(([, l]) => l.length >= MIN_INDEX)
 // categorie con un'espressione sul titolo (testi.json "raccolte") e si comporta come un tipo:
 // stessa pagina, stesso gemello "oggi", stessi link fra città. Niente da cambiare nel database.
 for (const r of (TESTI.raccolte || [])) {
-  const rx = new RegExp(r.regex, "i");
-  const list = pages.filter(p => rx.test(p.title));
+  // "gratis": niente espressione, si prende chi non fa pagare (price_cents a zero o assente: è quello che fmtPrice scrive "gratis")
+  const rx = r.regex ? new RegExp(r.regex, "i") : null;
+  // "dove": l'espressione guarda anche il luogo. Un incontro in biblioteca si chiama "Burraco" o
+  // "Letture ad alta voce", la biblioteca sta nel ritrovo.
+  const testo = r.dove ? (p => `${p.title} ${p.meeting || ""} ${p.club || ""}`) : (p => p.title);
+  // "tipi": categorie che entrano in blocco (le sagre sono tutte le feste di paese, più chi ha "sagra" nel nome)
+  const tipi = new Set(r.tipi || []);
+  const list = pages.filter(p => tipi.has(p.sport) || ((r.gratis ? (p.price_cents == null || Number(p.price_cents) <= 0) : true) && (rx ? rx.test(testo(p)) : true)));
   if (list.filter(p => !p.isPast).length < MIN_INDEX) continue;
   const sport = "raccolta:" + r.key;
   types.push({ kind: "tipo", sport, raccolta: true, slug: r.key, list,
@@ -522,11 +528,27 @@ const GENERICI = new Set(["sala polivalente", "sala civica", "pista di atletica"
   "palazzetto dello sport", "area feste", "oratorio", "campo sportivo", "palazzetto", "palestra comunale",
   "centro anziani", "sala consiliare", "auditorium", "biblioteca comunale", "teatro comunale", "cinema teatro",
   "piazza del mercato", "centro civico", "casa della comunita", "parco comunale", "campo sportivo comunale"]);
+// un organizzatore non è un locale: "Gruppo di cammino di Albino" o "Pro Loco Zogno" dicono chi
+// organizza, e "Tablo" è la piattaforma da cui arriva l'evento. Il posto, per loro, sta nel ritrovo.
+const ORGANIZZATORI = /^(gruppo|gruppi|associazione|ass\.|a\.?s\.?d\.?|asd\b|pro ?loco|comune di|citt[aà] di|polisportiva|parrocchia|comitato|oratorio|us\b|u\.s\.|gs\b|g\.s\.|team|amici d|cooperativa|coop\b|consorzio|comunit[aà]|banda|coro\b|collettivo|onlus|aps\b|ets\b|federazione|lega\b|club alpino|cai\b|avis\b|aido\b|auser|anteas|caritas|croce|protezione civile|alpini|ana\b|carabinieri|running club|run club|walking)/i;
+// il nome di un locale come lo scrive la fonte: "🍥 MITO SUSHI RESTAURANT - CURNO 🍥" (Tablo) diventa
+// "Mito Sushi Restaurant": via le emoji, via il paese dopo il trattino, e il TUTTO MAIUSCOLO torna normale
+const pulisciNome = (t) => {
+  let n = String(t || "").replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}\u{200D}]/gu, "").trim();
+  // si spezza sulla virgola, non sul trattino: "Bergamo - Biblioteca Tiraboschi" e "Teatro Nuovo Treviglio - TNT"
+  // sono già online con quell'indirizzo e Google li conosce così
+  n = n.split(/\s*[,–|]\s*/)[0].trim();
+  if (n.length > 3 && n === n.toUpperCase() && /[A-Z]/.test(n)) n = n.toLowerCase().replace(/(^|[\s'’-])(\p{L})/gu, (m, a, b) => a + b.toUpperCase());
+  return n;
+};
+const ORGANIZZATORE_DENTRO = /\b(run club|running club|gruppo di cammino|gruppi di cammino|walking group|training)\b/i;
+const eOrganizzatore = (n) => PIATTAFORME.has(norm(n)) || ORGANIZZATORI.test(n) || ORGANIZZATORE_DENTRO.test(n);
 const nomeLocale = (p) => {
-  const raw = String(p.club || String(p.meeting || "").split(/\s*[,–]\s*/)[0] || "").trim();
-  if (raw.length < 4 || raw.length > 60) return "";
+  const club = pulisciNome(p.club);
+  const raw = club && !eOrganizzatore(club) ? club : pulisciNome(p.meeting);
+  if (raw.length < 4 || raw.length > 60 || eOrganizzatore(raw)) return "";
   // un indirizzo non è un locale, e nemmeno il nome del paese o un nome che hanno tutti i paesi
-  if (/^(via|viale|v\.le|piazza|p\.zza|piazzale|p\.le|corso|c\.so|largo|vicolo|strada|contrada|localit|lungo|parcheggio|oratorio di|centro sportivo di)\b/i.test(raw)) return "";
+  if (/^(via|viale|v\.le|piazza|p\.zza|piazzale|p\.le|corso|c\.so|largo|vicolo|strada|contrada|localit|lungo|parcheggio|oratorio di|centro sportivo di|davanti|di fronte|ritrovo|partenza|ingresso|presso|c\/o|frazione|fraz\.)\b/i.test(raw)) return "";
   if (PAESI.has(norm(raw)) || GENERICI.has(norm(raw))) return "";
   return raw;
 };
@@ -551,9 +573,16 @@ const venues = [...venueIdx.values()]
   // e i locali fermi ma con una storia vera (cinque eventi passati) la pagina ce l'hanno lo stesso:
   // il Circolino Astino d'estate fa una rassegna e d'inverno chiude, ma "circolino astino" vale 629
   // impressioni al mese su Google e chi lo cerca vuole sapere se c'è qualcosa, anche quando non c'è.
-  .filter(v => { const f = v.list.filter(p => !p.isPast).length;
+  // f conta le date in programma, non le pagine: "mito sushi curno" fa 1.965 impressioni al mese
+  // (Search Console, 29/09/2026) e rispondiamo con la pagina di un evento, perché al Mito Sushi c'è
+  // un solo evento ricorrente (i tavoli di Tablo) con dieci date. Dieci serate sono un locale vivo.
+  .filter(v => { const f = v.list.filter(p => !p.isPast).reduce((n, p) => n + Math.max(1, (p.up || []).length), 0);
                  return (f >= 1 && (f >= MIN_LOCALE || v.list.length >= 3)) || (f === 0 && v.list.length >= 5); })
   .sort((a, b) => b.list.length - a.list.length);
+// dal locale alla sua pagina: serve alla pagina evento per linkarla (prima nessun evento la linkava,
+// e Google la trovava solo dalla lista dei locali: un link su duemila pagine invece di uno ogni evento)
+const venueDi = new Map(venues.map(v => [v.slug, v]));
+const localeDi = (p) => { const n = nomeLocale(p); return n ? venueDi.get(slugify(n)) || null : null; };
 // i gemelli "oggi" degli indici di tipo: solo dove oggi c'è abbastanza (MIN_WHEN)
 const MIN_WHEN = 3;   // spostata qui sopra: serve anche ai gemelli "oggi" degli indici
 const OGGI_KEY = dateKey(NOW, DEFAULT_TZ);
@@ -620,15 +649,27 @@ const titoliRipetuti = new Set();
 // posto solo (titoloEvento) e il conteggio si fa su quello che esce davvero, per lingua.
 // Il posto nel titolo serve anche a rispondere alle ricerche che già ci portano gente:
 // "festa oratorio alzano sopra", "festa conca fiorita bergamo" (Search Console, 16/09/2026).
+// "🍥 MITO SUSHI RESTAURANT - CURNO 🍥" → "Mito Sushi Restaurant - Curno": via le emoji, e un titolo tutto
+// maiuscolo torna con le iniziali (241 pagine su Bergamo, 29/09/2026). Vale solo per <title> e descrizione.
+function titoloPulito(t) {
+  let n = String(t || "").replace(/[\u{1F000}-\u{1FAFF}\u{2600}-\u{27BF}\u{FE0F}\u{200D}\u{2B50}\u{2B06}\u{2194}-\u{21AA}]/gu, "").replace(/\s{2,}/g, " ").trim();
+  // parola per parola: "ANNULLATA Camminata" → "Annullata Camminata", "ALESSANDRA SELMI" → "Alessandra Selmi";
+  // le sigle corte restano (TNT, CUS, MRC, DJ)
+  n = n.replace(/\p{Lu}[\p{Lu}'’]{3,}/gu, w => w[0] + w.slice(1).toLowerCase());
+  return n || String(t || "");
+}
 function titoloEvento(p, conData) {
+  // nel <title> il nome dell'evento arriva pulito: senza emoji e senza TUTTO MAIUSCOLO. Nella pagina
+  // resta come l'ha scritto chi organizza; qui è il nostro campo, e Google lo mostra in blu.
+  const p_title = titoloPulito(p.title);
   const where = placeShort(p);
   const tz = p.tz;
   const first = p.up[0] || p.dates[p.dates.length - 1];
-  const intero = `${p.title} ${en() ? "in" : "a"} ${where}, ${fmtShort(first.start, tz)}`;
+  const intero = `${p_title} ${en() ? "in" : "a"} ${where}, ${fmtShort(first.start, tz)}`;
   if (intero.length <= 49 && !conData) return intero;
   // "Festa X, Oratorio Y – Paese" → "Festa X" quando quella parte sta in piedi da sola
-  const head = p.title.split(/ – |, /)[0];
-  const base = head.length >= 12 && head.length <= 49 ? head : p.title;
+  const head = p_title.split(/ – |, /)[0];
+  const base = head.length >= 12 && head.length <= 49 ? head : p_title;
   // il posto da mettere nel titolo è il paese; se manca, il nome del ritrovo — ma non un indirizzo
   // ("Via G. Frua", "Piazza Dante"): la via non distingue niente e ruba spazio al titolo.
   // solo chi comincia come una via è un indirizzo: "27 Padel" e "MERATE A 4" sono nomi di circoli.
@@ -1083,21 +1124,22 @@ function eventPage(p) {
   // nella descrizione il ritrovo va col nome corto ("Bridge Brew Bar", non "Bridge Brew Bar -
   // Birreria, Cocktails & Sport Bar, Napoli"): l'indirizzo intero si mangiava i 160 caratteri e
   // quello che distingue l'evento non ci entrava più.
-  const dove = String(where || "").split(/\s*[,–]\s*/)[0].trim() || where;
+  const dove = titoloPulito(String(where || "").split(/\s*[,–]\s*/)[0].trim() || where);
   // la descrizione comincia dal nome dell'evento: prima non c'era, e sedici eventi diversi dello stesso
   // organizzatore nello stesso bar (i networking di Eventbrite, che dalla fonte arrivano tutti con la
   // stessa frase) finivano con la stessa identica descrizione. Sul sito erano 249 pagine (16/09/2026).
   const descr = en()
     ? (p.isPast
-      ? cut(`${cut(p.title, 60)}: ${tLabel(t).toLowerCase()} in ${dove}. Last date: ${fmtShort(first.start, tz)}. This event is over: on anyplans you find the next dates and similar events.`, 160)
-      : cut(`${cut(p.title, 60)}: ${tLabel(t).toLowerCase()} in ${dove}, ${fmtDay(first.start, tz)} at ${fmtTime(first.start, tz)}. ${cut(p.description, 70)} ${fmtPrice(p.price_cents)}. Go with others.`.replace(/\s+/g, " ").replace(/\.\s*\./g, "."), 160))
+      ? cut(`${cut(titoloPulito(p.title), 60)}: ${tLabel(t).toLowerCase()} in ${dove}. Last date: ${fmtShort(first.start, tz)}. This event is over: on anyplans you find the next dates and similar events.`, 160)
+      : cut(`${cut(titoloPulito(p.title), 60)}: ${tLabel(t).toLowerCase()} in ${dove}, ${fmtDay(first.start, tz)} at ${fmtTime(first.start, tz)}. ${cut(p.description, 70)} ${fmtPrice(p.price_cents)}. Go with others.`.replace(/\s+/g, " ").replace(/\.\s*\./g, "."), 160))
     : p.isPast
-    ? cut(`${cut(p.title, 60)}: ${t.label.toLowerCase()} a ${dove}. Ultima data: ${fmtShort(first.start, tz)}. Questo evento è passato: su anyplans trovi le prossime date e gli eventi simili.`, 160)
-    : cut(`${cut(p.title, 60)}: ${t.label.toLowerCase()} a ${dove} ${fmtDay(first.start, tz).toLowerCase()} alle ${fmtTime(first.start, tz)}. ${cut(p.description, 70)} ${fmtPrice(p.price_cents)}. Ci vai insieme ad altri.`.replace(/\s+/g, " ").replace(/\.\s*\./g, "."), 160);
+    ? cut(`${cut(titoloPulito(p.title), 60)}: ${t.label.toLowerCase()} a ${dove}. Ultima data: ${fmtShort(first.start, tz)}. Questo evento è passato: su anyplans trovi le prossime date e gli eventi simili.`, 160)
+    : cut(`${cut(titoloPulito(p.title), 60)}: ${t.label.toLowerCase()} a ${dove} ${fmtDay(first.start, tz).toLowerCase()} alle ${fmtTime(first.start, tz)}. ${cut(p.description, 70)} ${fmtPrice(p.price_cents)}. Ci vai insieme ad altri.`.replace(/\s+/g, " ").replace(/\.\s*\./g, "."), 160);
   const image = p.photo ? photoSrc(p.photo) : OG_DEFAULT;
   const sim = similar(p);
   const typeIndex = types.find(x => x.sport === p.sport);
   const townIndex = towns.find(x => norm(x.town) === norm(paeseDi(p))) || null;
+  const venue = localeDi(p);
   const crumbItems = [["anyplans", L.home], [CITY_NAME, rel(hubUrl())]];
   if (typeIndex) crumbItems.push([tLabel(t), rel(indexUrl(typeIndex))]);
   crumbItems.push([p.title, null]);
@@ -1126,7 +1168,7 @@ function eventPage(p) {
   const body = `
 ${crumbs(crumbItems)}
 <div class="cover">${hasMap ? `<a id="map" href="${esc(mapsUrl(p.lat, p.lng))}" rel="noopener" aria-label="${S.maps}"></a>` : p.photo ? `<img src="${esc(photoSrc(p.photo))}" alt="${esc(p.title)}" width="800" height="230" loading="lazy" decoding="async">` : p.emoji}</div>
-<div class="chips"><span class="chip">${p.emoji} ${esc(tLabel(t))}</span><span class="chip w">${esc(fmtPrice(p.price_cents))}</span>${p.isPast ? `<span class="chip past">${S.past}</span>` : ""}${townIndex ? `<a class="chip w" href="${rel(indexUrl(townIndex))}">${esc(p.town)}</a>` : ""}</div>
+<div class="chips"><span class="chip">${p.emoji} ${esc(tLabel(t))}</span><span class="chip w">${esc(fmtPrice(p.price_cents))}</span>${p.isPast ? `<span class="chip past">${S.past}</span>` : ""}${townIndex ? `<a class="chip w" href="${rel(indexUrl(townIndex))}">${esc(p.town)}</a>` : ""}${venue ? `<a class="chip w" href="${rel(venueUrl(venue))}">📍 ${esc(venue.nome)}</a>` : ""}</div>
 <h1>${esc(p.title)}</h1>
 ${p.isPast ? "" : `<div class="when hero-when"><div class="datebox"><div class="mo">${esc(fmtMonthShort(first.start, tz))}</div><div class="d">${esc(fmtDayNum(first.start, tz))}</div></div>
   <div><div class="t"><span class="rel-day" data-start="${first.start.toISOString()}"></span>${esc(fmtDay(first.start, tz))} · <b>${esc(fmtTime(first.start, tz))}</b>${first.end ? ` <span class="s">(${S.until} ${esc(fmtTime(first.end, tz))})</span>` : ""}<b class="rel" data-start="${first.start.toISOString()}"${first.end ? ` data-end="${first.end.toISOString()}"` : ""}></b></div>
@@ -1172,6 +1214,7 @@ ${p.co.length ? `<div class="box"><h2>${S.with}</h2><div class="tags">${p.co.map
   ${external && p.isPast ? `<a class="lnk" href="${esc(p.source_url)}" rel="noopener nofollow">${S.official}</a>` : ""}
 </div>
 ${faqHtml(faq)}
+${venue ? `<p class="m"><a class="lnk" href="${rel(venueUrl(venue))}">${E ? `All events at ${esc(venue.nome)}` : `Tutti gli eventi al ${esc(venue.nome)}`} (${venue.list.filter(x => !x.isPast).length})</a></p>` : ""}
 ${sim.length ? `<h2>${S.similar}</h2>${listHtml(sim)}` : ""}
 `;
   // Logged-in visitors (session in storage, same key as app.js) jump to the app page, which has join state, faces and
@@ -1282,7 +1325,8 @@ ${faqHtml(FAQ_EN)}
 function runningHubIt() {
   const url = runningUrl();
   const T = TESTI.running_club || {};
-  const title = cut(T.titolo || `Running club a ${CITY_NAME}: ${runClubs.length} gruppi di corsa`, 49) + " | anyplans";
+  const titolo = (T.titolo || "").replace("{citta}", CITY_NAME);
+  const title = cut(titolo || `Run club a ${CITY_NAME}: ${runClubs.length} gruppi di corsa`, 49) + " | anyplans";
   const descr = cut(T.sotto || `${runClubs.length} run club a ${CITY_NAME} e provincia, uno quasi ogni sera: scegli il giorno, vai, corri insieme ad altri. Quasi tutti gratis.`, 160);
   const byDay = WEEKDAYS.map((d, i) => ({ d, i, rows: schedules.filter(s => s.weekday === i && runClubs.some(g => g.slug === s.community_slug)) }));
   const withDay = new Set(schedules.map(s => s.community_slug));
@@ -1291,7 +1335,7 @@ function runningHubIt() {
     itemListElement: runClubs.map((g, i) => ({ "@type": "ListItem", position: i + 1, url: groupUrl(g), name: g.name })) });
   const body = `
 ${crumbs([["anyplans", "/"], [CITY_NAME, rel(hubUrl())], ["Gruppi", rel(groupsUrl())], ["Running club", null]])}
-<h1>${esc(T.titolo || `Running club a ${CITY_NAME} e provincia`)}</h1>
+<h1>${esc(titolo || `Run club a ${CITY_NAME} e provincia`)}</h1>
 <p class="lead">${esc(T.sotto || descr)}</p>
 <div class="rc-days">${byDay.map(x => `<a href="${x.rows.length ? rel(dayUrl(x.i)) : "#"}"${x.rows.length ? "" : ' aria-disabled="true"'}>${x.d}</a>`).join("")}${noDay.length ? `<a href="#altri">Senza giorno fisso</a>` : ""}</div>
 ${byDay.filter(x => x.rows.length).map(x => `
@@ -1504,7 +1548,7 @@ function groupsIndexEn() {
     { q: `What is a group on anyplans?`, a: `A group is an association, a club, a run club, a pro loco or a parish that organises events open to everyone and publishes them on anyplans. In ${CITY_NAME} and its province there are ${groups.length} groups${runClubs.length ? `, ${runClubs.length} of them run clubs` : ""}${active ? `; ${active} ${active === 1 ? "has" : "have"} upcoming events right now` : ""}.` },
     { q: `How do I follow a group?`, a: `Sign up on anyplans with your email, open the group's page and press "Follow the group": from then on its events appear among those of the groups you follow, and you see right away when it publishes a new one.` },
     { q: `How do I meet people in ${CITY_NAME}?`, a: `Join something that already happens every week: a run club (there ${runClubs.length === 1 ? "is" : "are"} ${runClubs.length} in ${CITY_NAME} and its province), a walk, a dinner, a town festival. On anyplans you see who organises it and who else is going before you show up, so you never arrive alone. It works for people who have just moved here, students and expats as much as for locals.` },
-    { q: `I'm visiting Bergamo: can I join these groups?`, a: `Yes. Run clubs, walks, dinners and festivals are open to everyone, for one evening too. Pick an event, say you're going and show up: you see in advance who organises it and who else is coming.` },
+    { q: `I'm visiting ${CITY_NAME}: can I join these groups?`, a: `Yes. Run clubs, walks, dinners and festivals are open to everyone, for one evening too. Pick an event, say you're going and show up: you see in advance who organises it and who else is coming.` },
     { q: `How do I create a group for my association?`, a: `Sign up, choose "Create your group" and enter name, description and contacts. Then publish the dates: whoever follows you sees them on the map and can say they're going. Every group also gets a public page on anyplans, like these.` },
   ];
   const body = `

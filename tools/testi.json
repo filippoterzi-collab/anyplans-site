@@ -373,8 +373,8 @@
   "frase": "Su anyplans trovi le feste e gli eventi di {paese} con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri."
  },
  "running_club": {
-  "titolo": "Running club a Bergamo e provincia",
-  "sotto": "Tutti i run club di Bergamo e provincia: gruppi di corsa che escono insieme, uno quasi ogni sera. Scegli il giorno, vai, corri con altri. Nessuno corre da solo, e quasi tutti sono gratis."
+  "titolo": "Run club a {citta} e provincia: gruppi di corsa",
+  "sotto": "Tutti i run club e i running club di {citta} e provincia: gruppi di corsa che escono insieme, uno quasi ogni sera. Scegli il giorno, vai, corri con altri. Nessuno corre da solo, e quasi tutti sono gratis."
  },
  "raccolte": [
   {
@@ -460,6 +460,322 @@
    "conta": "festa di Capodanno|feste di Capodanno",
    "regex": "capodanno|new year|san silvestro|veglione|31 dicembre",
    "frase": "Cenoni, veglioni e feste in piazza per la notte di San Silvestro."
+  },
+  {
+   "key": "sagre",
+   "key_en": "food-fairs",
+   "e": "🍝",
+   "label": "Sagre",
+   "label_en": "Food fairs and village festivals",
+   "titolo": "Sagre e feste di paese",
+   "noun_en": "food fairs and village festivals",
+   "conta": "sagra|sagre",
+   "regex": "\\bsagr[ae]\\b|patronal|festa campestre|castagnata|polentata|salamell|\\bfest\\b|festa (del|della|dei|delle|di) (paese|patron|santo|san\\b|sant')|festa dell?[aoe']? ?(birra|patat|pizza|polent|zucc|mel[ae]|castagn|uva|vino|salsicc|fungh|formagg|tortell|raviol|casoncell|porchett|pesce|fritt)",
+   "frase": "Le sagre di paese e le feste col cibo: stand gastronomici, cucina del posto e musica dal vivo, quasi sempre gratis a entrare.",
+   "tipi": [
+    "festival"
+   ]
+  },
+  {
+   "key": "biblioteca",
+   "key_en": "libraries",
+   "e": "📚",
+   "label": "In biblioteca",
+   "label_en": "Library events",
+   "titolo": "Eventi in biblioteca",
+   "noun_en": "library events: readings, talks, courses and workshops",
+   "conta": "evento in biblioteca|eventi in biblioteca",
+   "dove": true,
+   "regex": "bibliotec|\\blibrary\\b",
+   "frase": "Letture, presentazioni di libri, corsi, laboratori e gruppi di lettura nelle biblioteche: quasi tutto gratis e aperto a chiunque."
+  },
+  {
+   "key": "gratis",
+   "key_en": "free",
+   "e": "🆓",
+   "label": "Gratis",
+   "label_en": "Free events",
+   "titolo": "Eventi gratis",
+   "noun_en": "free events",
+   "conta": "evento gratis|eventi gratis",
+   "gratis": true,
+   "frase": "Solo gli eventi a ingresso libero: feste, concerti, camminate, incontri e mostre dove non si paga niente."
+  },
+  {
+   "key": "libri-e-letture",
+   "key_en": "books",
+   "e": "📖",
+   "label": "Libri e letture",
+   "label_en": "Books and readings",
+   "titolo": "Presentazioni di libri e letture",
+   "noun_en": "book launches, readings and literary talks",
+   "conta": "incontro|incontri",
+   "regex": "\\blibr[oi]\\b|lettur|presentazione del|presenta il|scrittor|scrittric|romanz|poesi|poeti|reading|book|autor[ei] |gruppo di lettura|bookclub",
+   "frase": "Presentazioni di libri con l'autore, letture, poesia e gruppi di lettura: si entra, si ascolta, si fanno domande."
+  },
+  {
+   "key": "fotografia",
+   "key_en": "photography",
+   "e": "📷",
+   "label": "Fotografia",
+   "label_en": "Photography",
+   "titolo": "Fotografia: mostre, corsi e photowalk",
+   "noun_en": "photography exhibitions, courses and photo walks",
+   "conta": "evento|eventi",
+   "regex": "fotograf|photo|\\bfoto\\b|scatt[io]\\b|camera oscura|reportage",
+   "frase": "Mostre fotografiche, corsi di fotografia e uscite a scattare insieme, per chi ha una reflex e per chi ha solo il telefono."
+  },
+  {
+   "key": "arte",
+   "key_en": "arts",
+   "e": "🎨",
+   "label": "Arte",
+   "label_en": "Art and drawing",
+   "titolo": "Arte: dipinti, disegno e laboratori",
+   "noun_en": "art events: paintings, drawing, sculpture and workshops",
+   "conta": "evento|eventi",
+   "regex": "dipint|pittur|pittor|acquerell|disegn|scultur|scultor|street ?art|illustraz|mosaic|incision|affresc|arte contemporanea|art\\b|artist|atelier|opere d",
+   "frase": "Dipinti da vedere e pennelli da prendere in mano: mostre di pittura, corsi di disegno, laboratori d'arte e visite in atelier."
+  },
+  {
+   "key": "musei",
+   "key_en": "museums",
+   "e": "🏛️",
+   "label": "Musei",
+   "label_en": "Museums",
+   "titolo": "Musei: aperture, visite e serate",
+   "noun_en": "museum openings, tours and evening events",
+   "conta": "evento|eventi",
+   "regex": "muse[oi]\\b|museum|pinacoteca|accademia carrara|gamec|\\bmuse[oi] |museale|notte dei musei|domenica al museo",
+   "frase": "Visite guidate, aperture serali, laboratori e le domeniche gratis nei musei: la data giusta per entrarci, insieme ad altri."
+  },
+  {
+   "key": "vintage-e-usato",
+   "key_en": "vintage",
+   "e": "🧥",
+   "label": "Vintage e usato",
+   "label_en": "Vintage and second-hand",
+   "titolo": "Mercatini vintage, usato e scambio",
+   "noun_en": "vintage markets, swap parties and second-hand fairs",
+   "conta": "mercatino|mercatini",
+   "regex": "vintage|usato|second ?hand|swap|scambio|baratto|antiquariato|collezionism|modernariato|svuota ?cantin|garage sale|mercatino dell",
+   "frase": "Mercatini vintage, banchi dell'usato, swap party e antiquariato: si gira, si tratta, si torna a casa con qualcosa."
+  },
+  {
+   "key": "birra",
+   "key_en": "beer",
+   "e": "🍺",
+   "label": "Birra",
+   "label_en": "Beer",
+   "titolo": "Birra: feste, birrifici e degustazioni",
+   "noun_en": "beer festivals, brewery nights and tastings",
+   "conta": "evento|eventi",
+   "regex": "\\bbirr|\\bbeer|brew|luppol|oktoberfest|birrific|pub crawl",
+   "frase": "Feste della birra, birrifici aperti, degustazioni e serate al pub: per chi la birra la beve con calma e in compagnia."
+  },
+  {
+   "key": "street-food",
+   "key_en": "street-food",
+   "e": "🌮",
+   "label": "Street food",
+   "label_en": "Street food",
+   "titolo": "Street food e food truck",
+   "noun_en": "street food festivals and food truck events",
+   "conta": "evento|eventi",
+   "regex": "street ?food|food ?truck|cibo di strada|finger ?food|food ?festival|festival del cibo|mercato del gusto|fritt[oa] mist",
+   "frase": "Festival dello street food, raduni di food truck e mercati del gusto: si mangia in piedi, si prova un po' di tutto."
+  },
+  {
+   "key": "comedy",
+   "key_en": "comedy",
+   "e": "🎤",
+   "label": "Comedy e stand-up",
+   "label_en": "Comedy and stand-up",
+   "titolo": "Stand-up comedy e cabaret",
+   "noun_en": "stand-up comedy nights and cabaret shows",
+   "conta": "serata|serate",
+   "regex": "stand ?up|comedy|comic[oaih]|cabaret|risat|improvvisaz|open mic|umorist|satir",
+   "frase": "Serate di stand-up comedy, open mic e cabaret: si ride, e nessuno ti obbliga a sederti in prima fila."
+  },
+  {
+   "key": "scambi-linguistici",
+   "key_en": "language-exchange",
+   "e": "🗣️",
+   "label": "Lingue",
+   "label_en": "Language exchange",
+   "titolo": "Scambi linguistici e aperitivi in lingua",
+   "noun_en": "language exchange nights and conversation tables",
+   "conta": "incontro|incontri",
+   "regex": "tandem|language exchange|language|\\benglish\\b|inglese|spagnolo|francese|tedesco|conversazion|linguistic|in lingua|polyglot|speak",
+   "frase": "Tavoli di conversazione, tandem e aperitivi in inglese, spagnolo o tedesco: parli, sbagli, nessuno ti corregge con la penna rossa."
+  },
+  {
+   "key": "meditazione-e-benessere",
+   "key_en": "wellness",
+   "e": "🧘",
+   "label": "Benessere",
+   "label_en": "Meditation and wellness",
+   "titolo": "Meditazione, benessere e respiro",
+   "noun_en": "meditation, wellness and breathwork sessions",
+   "conta": "incontro|incontri",
+   "regex": "meditaz|mindful|benesser|wellness|sound ?bath|bagno di suon|campane tibetane|respir|breath|rilassament|olistic|reiki|gong|pilates|stretching",
+   "frase": "Meditazioni guidate, bagni di suono, pilates e sessioni di respiro: un'ora per staccare, insieme ad altri che ne avevano bisogno."
+  },
+  {
+   "key": "tornei",
+   "key_en": "tournaments",
+   "e": "🏆",
+   "label": "Tornei",
+   "label_en": "Tournaments",
+   "titolo": "Tornei aperti a tutti",
+   "noun_en": "open tournaments, amateur and for fun",
+   "conta": "torneo|tornei",
+   "regex": "torne[oi]\\b|tournament|campionato amator|coppa\\b|\\bgara\\b|contest|challenge|open\\b",
+   "frase": "Tornei di padel, calcetto, burraco, beach volley e scacchi: ci si iscrive, si gioca, chi perde offre."
+  },
+  {
+   "key": "classica-e-jazz",
+   "key_en": "classical-and-jazz",
+   "e": "🎻",
+   "label": "Classica, jazz e opera",
+   "label_en": "Classical, jazz and opera",
+   "titolo": "Musica classica, jazz e opera",
+   "noun_en": "classical concerts, jazz nights and opera",
+   "conta": "concerto|concerti",
+   "regex": "jazz|classic|orchestr|sinfon|\\bopera\\b|liric|quartett|pianist|pianofort|violin|barocc|cameristic|coro\\b|coral|organo\\b|recital|donizetti|verdi|mozart|bach|beethoven|chopin|vivaldi|puccini",
+   "frase": "Concerti di musica classica, serate jazz, opera e recital: l'abito buono non serve, l'orecchio sì."
+  },
+  {
+   "key": "carnevale",
+   "key_en": "carnival",
+   "e": "🎭",
+   "label": "Carnevale",
+   "label_en": "Carnival",
+   "titolo": "Carnevale: sfilate e feste in maschera",
+   "noun_en": "carnival parades and costume parties",
+   "conta": "evento|eventi",
+   "regex": "carneval|carnival|mascher|coriandol|carri allegorici|martedì grasso|giovedì grasso",
+   "frase": "Sfilate dei carri, feste in maschera per grandi e piccoli, chiacchiere e coriandoli."
+  },
+  {
+   "key": "pasqua",
+   "key_en": "easter",
+   "e": "🐣",
+   "label": "Pasqua",
+   "label_en": "Easter",
+   "titolo": "Pasqua e Pasquetta: gite e feste",
+   "noun_en": "Easter and Easter Monday events",
+   "conta": "evento|eventi",
+   "regex": "pasqu|easter|caccia alle uova|uova di pasqua|settimana santa|via crucis",
+   "frase": "Caccia alle uova, gite di Pasquetta, mercatini e riti della settimana santa: cosa fare a Pasqua fuori casa."
+  },
+  {
+   "key": "san-valentino",
+   "key_en": "valentines-day",
+   "e": "💘",
+   "label": "San Valentino",
+   "label_en": "Valentine's Day",
+   "titolo": "San Valentino: cene, serate e idee",
+   "noun_en": "Valentine's Day dinners and events",
+   "conta": "evento|eventi",
+   "regex": "valentin|innamorat|\\blove\\b|cuori|romantic|anti[- ]?valentin",
+   "frase": "Cene, concerti, serate e alternative per chi San Valentino lo festeggia in due, in gruppo o per niente."
+  },
+  {
+   "key": "festa-della-donna",
+   "key_en": "womens-day",
+   "e": "💐",
+   "label": "8 marzo",
+   "label_en": "Women's Day",
+   "titolo": "8 marzo, festa della donna",
+   "noun_en": "International Women's Day events",
+   "conta": "evento|eventi",
+   "regex": "8 marzo|otto marzo|festa della donna|mimos|women'?s day|donne\\b",
+   "frase": "Incontri, spettacoli, camminate e serate per l'8 marzo: la festa della donna fuori dai luoghi comuni."
+  },
+  {
+   "key": "brunch",
+   "key_en": "brunch",
+   "e": "🥞",
+   "label": "Brunch",
+   "label_en": "Brunch",
+   "titolo": "Brunch e colazioni insieme",
+   "noun_en": "brunches and social breakfasts",
+   "conta": "brunch|brunch",
+   "regex": "brunch|colazion|breakfast|merenda",
+   "frase": "Brunch della domenica, colazioni di gruppo e merende: il modo più facile per conoscere gente, con le uova davanti."
+  },
+  {
+   "key": "con-il-cane",
+   "key_en": "dogs",
+   "e": "🐶",
+   "label": "Con il cane",
+   "label_en": "Dog-friendly",
+   "titolo": "Eventi con il cane",
+   "noun_en": "dog-friendly walks and events",
+   "conta": "evento|eventi",
+   "regex": "\\bcan[ei]\\b|\\bdog|cinofil|a sei zampe|4 zampe|quattro zampe|pet\\b|guinzaglio",
+   "frase": "Passeggiate, raduni e feste dove il cane è invitato: si esce in compagnia, tutti e due."
+  },
+  {
+   "key": "pride",
+   "key_en": "pride",
+   "e": "🏳️‍🌈",
+   "label": "Pride e LGBT+",
+   "label_en": "Pride and LGBTQ+",
+   "titolo": "Pride, serate e incontri LGBT+",
+   "noun_en": "Pride and LGBTQ+ events",
+   "conta": "evento|eventi",
+   "regex": "pride|lgbt|queer|arcobalen|drag\\b|rainbow",
+   "frase": "Il Pride, le serate e gli incontri della comunità LGBT+: aperti a tutti, alleati compresi."
+  },
+  {
+   "key": "studenti",
+   "key_en": "students",
+   "e": "🎓",
+   "label": "Studenti ed Erasmus",
+   "label_en": "Students and Erasmus",
+   "titolo": "Eventi per studenti ed Erasmus",
+   "noun_en": "events for students and Erasmus",
+   "conta": "evento|eventi",
+   "regex": "student|universit|erasmus|matricol|campus|esn\\b|goliard|laurea",
+   "frase": "Feste universitarie, serate Erasmus, aperitivi di facoltà e incontri per chi è appena arrivato in città."
+  },
+  {
+   "key": "all-aperto",
+   "key_en": "outdoors",
+   "e": "🌳",
+   "label": "All'aperto",
+   "label_en": "Outdoors",
+   "titolo": "Eventi all'aperto: parchi e piazze",
+   "noun_en": "open-air events in parks and squares",
+   "conta": "evento|eventi",
+   "regex": "all'aperto|all’aperto|outdoor|open ?air|nel parco|al parco|in piazza|sotto le stelle|en plein air|picnic|pic-nic|in giardino|sul prato",
+   "frase": "Concerti in piazza, cinema sotto le stelle, picnic e yoga nel parco: quello che si fa fuori, quando il tempo lo permette."
+  },
+  {
+   "key": "castelli-e-borghi",
+   "key_en": "castles-and-villages",
+   "e": "🏰",
+   "label": "Castelli e borghi",
+   "label_en": "Castles and villages",
+   "titolo": "Castelli, ville e borghi da visitare",
+   "noun_en": "castle openings, villa tours and village walks",
+   "conta": "visita|visite",
+   "regex": "castell|\\bvill[ae] \\b|borgh|dimor|palazz|rocca\\b|fortezz|torre\\b|abbazi|monaster|chiostr|basilic",
+   "frase": "Aperture di castelli e ville, visite ai borghi, abbazie e palazzi che di solito sono chiusi: la data in cui si entra."
+  },
+  {
+   "key": "stelle-e-astronomia",
+   "key_en": "stargazing",
+   "e": "🔭",
+   "label": "Stelle e astronomia",
+   "label_en": "Stargazing and astronomy",
+   "titolo": "Stelle, astronomia e planetario",
+   "noun_en": "stargazing nights and astronomy events",
+   "conta": "serata|serate",
+   "regex": "stell[ae]\\b|astronom|planetari|telescop|luna\\b|eclissi|perseid|san lorenzo|osservatorio",
+   "frase": "Serate al telescopio, planetario, notte di San Lorenzo e osservatori aperti: si guarda in su, insieme."
   }
  ]
 }
