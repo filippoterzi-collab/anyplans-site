@@ -246,7 +246,7 @@ const INSTAGRAM = "https://instagram.com/anyplans_bergamo";
 const ORG = { "@type": "Organization", "@id": SITE + "/#org", name: "anyplans", url: SITE + "/", email: "hello@anyplans.in",
   logo: { "@type": "ImageObject", url: SITE + "/favicon-192.png", width: 192, height: 192 },
   // anyplans e' una sola: la sua descrizione e' nazionale e finiva in ogni pagina di ogni citta dicendo "Bergamo"
-  description: `La mappa degli eventi veri d'Italia: feste di paese, concerti, mercati, corsi, volontariato, sport e cene in ${CITTA.length} città. Ne scegli uno e ci vai insieme ad altri. Solo maggiorenni.`,
+  description: `La mappa degli eventi veri d'Italia: feste di paese, teatro, concerti, mercati, incontri, visite guidate, camminate, corsi, volontariato, sport e cene in ${CITTA.length} città. Ne scegli uno e ci vai insieme ad altri. Solo maggiorenni.`,
   foundingLocation: { "@type": "City", name: "Bergamo" }, areaServed: { "@type": "Country", name: "Italia" }, sameAs: [INSTAGRAM],
   founder: { "@type": "Person", name: "Filippo Terzi", image: SITE + "/founder.jpg", jobTitle: "Fondatore" } };
 const fmtDate = (d) => new Intl.DateTimeFormat(L.intl, { timeZone: DEFAULT_TZ, day: "numeric", month: "long", year: "numeric" }).format(d);
@@ -296,9 +296,16 @@ async function rpcPaged(name, body, page = 500, max = 20000) {
     const rows = await rpcRetry(name, { ...body, p_limit: page, p_offset: off });
     if (!Array.isArray(rows)) throw new Error(`rpc ${name}: risposta inattesa`);
     out.push(...rows);
-    if (rows.length < page) break;
+    // Non ci si ferma alla prima pagina corta: con l'offset su dati vivi una pagina può tornare
+    // incompleta anche a metà (righe inserite o nascoste mentre si pagina), e lì si perdeva tutto
+    // il resto. Il 29/09/2026 la corsa notturna ha letto 4.396 righe su 5.164 per Bergamo — mancavano
+    // le 774 camminate dei gruppi ATS, il 15% della città, e la pagina /camminata/ ne mostrava 2.
+    // Si va avanti finché una pagina torna VUOTA, che è l'unico segnale sicuro di fine.
+    if (rows.length === 0) break;
   }
-  return out;
+  // l'offset che scorre su dati che cambiano può restituire due volte la stessa riga
+  const visti = new Set();
+  return out.filter(r => { const k = r && r.id; if (!k) return true; if (visti.has(k)) return false; visti.add(k); return true; });
 }
 // the RPC (migration 0061) takes no parameters and returns future + recent past rows: the 13-month window is applied here
 // dal 15/09/2026 (migrazione 0086) la RPC accetta centro e raggio: il sito fa le pagine di UNA città, e senza
@@ -1655,7 +1662,9 @@ function indexPageIt(ix) {
     // "mercatini" è come lo chiamiamo noi, "mercato di Rovetta" è come lo cerca la gente: il titolo
     // della categoria porta tutte e due le parole (testi.json "titolo").
     h1 = `${ix.t.titolo || ix.t.label} a ${CITY_NAME} e provincia`; emoji = ix.t.e;
-    title = cut(`${ix.t.titolo || ix.t.label} a ${CITY_NAME}`, 36) + (up.length ? `: ${up.length} ${up.length === 1 ? "evento" : "eventi"}` : "") + " | anyplans";
+    // 36 caratteri tagliavano i nomi nuovi ("Camminate e gruppi di cammino a…"): il conteggio in coda
+    // vale meno del nome intero, che è quello che la gente cerca
+    title = cut(`${ix.t.titolo || ix.t.label} a ${CITY_NAME}`, 46) + (up.length ? `: ${up.length} ${up.length === 1 ? "evento" : "eventi"}` : "") + " | anyplans";
     // "8 mostre", non "8 eventi di mostre": ogni tipo dice come si chiama quando lo si conta (testi.json "conta")
     const [sing, plur] = String(ix.t.conta || `evento di ${ix.t.label.toLowerCase()}|eventi di ${ix.t.label.toLowerCase()}`).split("|");
     const quanti = `${up.length} ${up.length === 1 ? sing : plur}`;
@@ -1666,7 +1675,9 @@ function indexPageIt(ix) {
     intro = `${up.length ? `A ${ix.town} ${up.length === 1 ? "c'è 1 evento" : "ci sono " + up.length + " eventi"} nei prossimi mesi.` : `A ${ix.town} non c'è niente in programma adesso: qui sotto le feste già passate, che spesso tornano ogni anno.`} ${TESTI.paese.frase.replace("{paese}", ix.town)}`;
   }
   const descr = cut(intro, 160);
-  const what = ix.kind === "tipo" ? `${ix.t.label.toLowerCase()} a ${CITY_NAME} e provincia` : `feste ed eventi a ${ix.town}`;
+  // "Quali camminata ci sono" era sgrammaticato: si usa il plurale di testi.json ("camminate")
+  const plurale = String(ix.kind === "tipo" ? (ix.t.conta || "") : "").split("|")[1] || (ix.kind === "tipo" ? ix.t.label.toLowerCase() : "");
+  const what = ix.kind === "tipo" ? `${plurale} a ${CITY_NAME} e provincia` : `feste ed eventi a ${ix.town}`;
   const evLine = (p) => `${p.title} (${evTown(p)}${whenLabel(p).toLowerCase()})`;
   const free = up.filter(p => !(p.price_cents > 0)).length;
   const faq = [
@@ -1963,7 +1974,7 @@ function llmsTxt() {
   const altre = CITTA.filter(c => c.slug !== CITY).map(c => c.nome);
   return `# anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di ${CITY_NAME} e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di ${CITY_NAME}: il sito copre ${CITTA.length} città italiane (${altre.join(", ")}), l'indice è ${SITE}/llms.txt.
+> anyplans (anyplans.in) è la mappa degli eventi veri di ${CITY_NAME} e provincia: feste di paese e sagre, teatro e spettacoli, concerti, mercati, incontri e conferenze, visite guidate, camminate e gruppi di cammino, mostre, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di ${CITY_NAME}: il sito copre ${CITTA.length} città italiane (${altre.join(", ")}), l'indice è ${SITE}/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: ${NOW.toISOString().slice(0, 10)}. Instagram: ${INSTAGRAM}. Contatto: hello@anyplans.in.
 ${section("Pagine principali", [
@@ -2170,8 +2181,9 @@ if (INDICE) {
   const tot = stato.reduce((n, c) => n + c.eventi, 0);
   await writeFile(path.join(OUT, "llms.txt"), `# anyplans
 
-> La mappa degli eventi veri d'Italia: ${tot} eventi in programma in ${stato.length} città. Feste di paese, concerti,
-> mercati, cene con sconosciuti, uscite di corsa, partite di padel aperte. Di ognuno: data, luogo, prezzo,
+> La mappa degli eventi veri d'Italia: ${tot} eventi in programma in ${stato.length} città. Feste di paese e sagre,
+> teatro e spettacoli, concerti, mercati, incontri e conferenze, visite guidate, camminate e gruppi di
+> cammino, mostre, corsi, cene e aperitivi, partite di padel aperte. Di ognuno: data, luogo, prezzo,
 > chi organizza e come iscriversi. Si entra con l'email, solo maggiorenni. Aggiornato ogni notte.
 > Ha anche una pagina che confronta i viaggi di gruppo per chi parte da solo (WeRoad, SiVola, Zest Family).
 
