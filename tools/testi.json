@@ -375,5 +375,91 @@
  "running_club": {
   "titolo": "Running club a Bergamo e provincia",
   "sotto": "Tutti i run club di Bergamo e provincia: gruppi di corsa che escono insieme, uno quasi ogni sera. Scegli il giorno, vai, corri con altri. Nessuno corre da solo, e quasi tutti sono gratis."
- }
+ },
+ "raccolte": [
+  {
+   "key": "bambini",
+   "key_en": "kids",
+   "e": "🎈",
+   "label": "Bambini e famiglie",
+   "label_en": "Kids and families",
+   "titolo": "Eventi per bambini e famiglie",
+   "noun_en": "events for kids and families",
+   "conta": "evento per bambini|eventi per bambini e famiglie",
+   "regex": "bambin|famigli|\\bkids?\\b|ragazz|junior|per i più piccoli|\\bbaby\\b",
+   "frase": "Laboratori, spettacoli, letture e feste pensati per i bambini, con genitori e nonni al seguito."
+  },
+  {
+   "key": "halloween",
+   "key_en": "halloween",
+   "e": "🎃",
+   "label": "Halloween",
+   "label_en": "Halloween",
+   "titolo": "Halloween: feste ed eventi",
+   "noun_en": "Halloween parties and events",
+   "conta": "evento di Halloween|feste ed eventi di Halloween",
+   "regex": "halloween|\\bzucc|horror|\\bpaur[ao]\\b|streg|notte delle streghe|dolcetto",
+   "frase": "Feste in maschera, notti delle streghe, laboratori con le zucche e serate horror: tutto quello che c'è per Halloween."
+  },
+  {
+   "key": "vino-e-degustazioni",
+   "key_en": "wine-tastings",
+   "e": "🍷",
+   "label": "Vino e degustazioni",
+   "label_en": "Wine and tastings",
+   "titolo": "Vino e degustazioni",
+   "noun_en": "wine tastings and food events",
+   "conta": "degustazione|degustazioni",
+   "regex": "degustazion|\\bvin[oi]\\b|\\bwine\\b|cantin[ae]|vendemmia|enolog|sommelier|calici",
+   "frase": "Degustazioni, cantine aperte, serate col sommelier e calici in piazza."
+  },
+  {
+   "key": "aperitivi",
+   "key_en": "aperitivo",
+   "e": "🍸",
+   "label": "Aperitivi",
+   "label_en": "Aperitivo and drinks",
+   "titolo": "Aperitivi e apericene",
+   "noun_en": "aperitivo nights",
+   "conta": "aperitivo|aperitivi",
+   "regex": "aperitiv|apericen|happy hour|\\bspritz\\b",
+   "frase": "Aperitivi in compagnia, apericene e happy hour dove conoscere gente nuova."
+  },
+  {
+   "key": "castagne-e-autunno",
+   "key_en": "autumn-festivals",
+   "e": "🌰",
+   "label": "Castagne e feste d'autunno",
+   "label_en": "Chestnut and autumn festivals",
+   "titolo": "Castagne, Oktoberfest e feste d'autunno",
+   "noun_en": "autumn festivals",
+   "conta": "festa d'autunno|feste d'autunno",
+   "regex": "castagn|caldarrost|oktoberfest|festa della birra|beer ?fest|\\bfunghi\\b|\\bvendemmia\\b|\\bautunn",
+   "frase": "Castagnate, caldarroste, feste della birra e sagre d'autunno, paese per paese."
+  },
+  {
+   "key": "natale",
+   "key_en": "christmas",
+   "e": "🎄",
+   "label": "Natale e mercatini",
+   "label_en": "Christmas",
+   "titolo": "Natale: mercatini, concerti e presepi",
+   "noun_en": "Christmas markets and events",
+   "conta": "evento di Natale|eventi di Natale",
+   "regex": "natal[ei]|christmas|\\bnatalizi|presep|befana|santa lucia|villaggio di babbo",
+   "frase": "Mercatini di Natale, concerti, presepi e villaggi di Babbo Natale."
+  },
+  {
+   "key": "capodanno",
+   "key_en": "new-years-eve",
+   "e": "🎆",
+   "label": "Capodanno",
+   "label_en": "New Year's Eve",
+   "titolo": "Capodanno: cenoni e feste",
+   "noun_en": "New Year's Eve parties",
+   "conta": "festa di Capodanno|feste di Capodanno",
+   "regex": "capodanno|new year|san silvestro|veglione|31 dicembre",
+   "frase": "Cenoni, veglioni e feste in piazza per la notte di San Silvestro."
+  }
+ ]
 }

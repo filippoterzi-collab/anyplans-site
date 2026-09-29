@@ -226,8 +226,8 @@ function mapsUrl(lat, lng, label) {
 }
 const tipo = (sport) => ({ sport, ...(TIPI[sport] || { key: slugify(sport), e: "📍", label: cap(sport || "Evento"), c: "altro", frase: "" }) });
 // label / slug / phrase of a type in the active language
-const tLabel = (t) => en() ? (EN_TYPES[t.sport]?.[1] || t.label) : t.label;
-const tSlug = (t) => en() ? (EN_TYPES[t.sport]?.[0] || t.key) : t.key;
+const tLabel = (t) => en() ? (EN_TYPES[t.sport]?.[1] || t.label_en || t.label) : t.label;
+const tSlug = (t) => en() ? (EN_TYPES[t.sport]?.[0] || t.key_en || t.key) : t.key;
 // le frasi di testi.json e di EN_TYPES parlano di Bergamo ("le valli orobiche", "le sagre bergamasche"):
 // nelle altre citta sarebbero false, quindi li' l'indice vive di lead + lista + domande, senza frase
 const tPhrase = (t) => CITY !== HOME_CITY ? GENERIC_PHRASE() : en() ? (EN_TYPES[t.sport]?.[2] || "") : t.frase;
@@ -489,6 +489,22 @@ for (const p of pages) {
 }
 const types = [...typeIdx].filter(([, l]) => l.length >= MIN_INDEX)
   .map(([sport, list]) => ({ kind: "tipo", sport, t: tipo(sport), slug: tipo(sport).key, list }));
+// ── le raccolte: pagine trasversali alle categorie, definite da parole nel titolo ─────────────
+// Google Trends e Search Console (29/09/2026) dicono che la gente cerca per occasione e per
+// pubblico — "halloween bergamo", "cosa fare con i bambini", "aperitivo bergamo alta", "mercatini
+// di natale 2026" già a fine settembre — e nessuna categoria del database corrisponde: una festa
+// di Halloween è "festival", un laboratorio per bambini è "culture". La raccolta pesca in tutte le
+// categorie con un'espressione sul titolo (testi.json "raccolte") e si comporta come un tipo:
+// stessa pagina, stesso gemello "oggi", stessi link fra città. Niente da cambiare nel database.
+for (const r of (TESTI.raccolte || [])) {
+  const rx = new RegExp(r.regex, "i");
+  const list = pages.filter(p => rx.test(p.title));
+  if (list.filter(p => !p.isPast).length < MIN_INDEX) continue;
+  const sport = "raccolta:" + r.key;
+  types.push({ kind: "tipo", sport, raccolta: true, slug: r.key, list,
+               t: { sport, key: r.key, key_en: r.key_en, e: r.e, label: r.label, label_en: r.label_en,
+                    titolo: r.titolo, conta: r.conta, frase: r.frase, noun_en: r.noun_en, c: "cultura" } });
+}
 let towns = [...townIdx.values()].filter(t => t.list.length >= MIN_INDEX)
   .map(t => { const town = [...t.nomi.entries()].sort((a, b) => b[1] - a[1])[0][0]; return { kind: "paese", town, slug: slugify(town), list: t.list }; });
 
@@ -1633,7 +1649,7 @@ function indexPageEn(ix) {
     title = cut(`${ix.sport === "festival" ? "Festivals & sagre near" : label + " in"} ${CITY_NAME}${ix.oggi ? " today" : ""}`, 44) + (up.length ? `: ${up.length} ${up.length === 1 ? "event" : "events"}` : "") + " | anyplans";
     if (ix.oggi) h1 = `${h1.replace(/ in .*$/, "")} in ${CITY_NAME} today, ${fmtDate(NOW)}`;
     const nounIntro = { festival: "town festivals and sagre", estivo: "summer venue evenings", dinner: "dinners and aperitivo", running: "group runs and races", padel: "padel matches and tournaments", walking: "group walks",
-                        dancing: "dance nights and classes", nightlife: "club nights and dj sets", match: "matches to watch", cinema: "screenings", games: "board game nights", exhibition: "exhibitions", singles: "singles nights" }[ix.sport] || `${label.toLowerCase()} events`;
+                        dancing: "dance nights and classes", nightlife: "club nights and dj sets", match: "matches to watch", cinema: "screenings", games: "board game nights", exhibition: "exhibitions", singles: "singles nights" }[ix.sport] || ix.t.noun_en || `${label.toLowerCase()} events`;
     intro = ix.oggi ? `Today, ${fmtDate(NOW)}, in ${CITY_NAME} and its province: ${up.length} ${nounIntro}. Each with time, place, price and how to join.` : `${up.length ? `In ${CITY_NAME} and its province there are ${up.length} ${nounIntro} in the coming months.` : `There are no ${nounIntro} scheduled right now: below, the past ones.`} ${tPhrase(ix.t)}`;
   } else {
     h1 = `Festivals and events in ${ix.town} (Bergamo)`; emoji = "🎉";
