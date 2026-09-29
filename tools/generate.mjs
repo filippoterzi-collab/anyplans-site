@@ -139,12 +139,12 @@ const EN_TYPES = {
 };
 const LOCALES = {
   it: { code: "it", tag: "it-IT", og: "it_IT", intl: "it-IT", prefix: "", hub: "cosa-fare", groups: "gruppi", running: "running-club",
-        when: { oggi: "cosa-fare-oggi", domani: "cosa-fare-domani", weekend: "cosa-fare-nel-weekend" },
+        when: { oggi: "cosa-fare-oggi", stasera: "cosa-fare-stasera", domani: "cosa-fare-domani", weekend: "cosa-fare-nel-weekend" },
         monthSlug: (label) => "eventi-" + slugify(label),
         days: ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"], daySlug: ["lunedi", "martedi", "mercoledi", "giovedi", "venerdi", "sabato", "domenica"],
         and: " e ", free: "Gratis", privacy: "/privacy-it.html", terms: "/terms-it.html", home: "/", citta: "citta", locali: "locali" },
   en: { code: "en", tag: "en", og: "en_GB", intl: "en-GB", prefix: "/en", hub: "things-to-do", groups: "groups", running: "running-clubs",
-        when: { oggi: "what-to-do-today", domani: "what-to-do-tomorrow", weekend: "what-to-do-this-weekend" },
+        when: { oggi: "what-to-do-today", stasera: "what-to-do-tonight", domani: "what-to-do-tomorrow", weekend: "what-to-do-this-weekend" },
         monthSlug: (label) => "events-" + slugify(label),
         days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], daySlug: ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"],
         and: " and ", free: "Free", privacy: "/privacy.html", terms: "/terms.html", home: "/en/", citta: "cities", locali: "venues" },
@@ -538,11 +538,18 @@ const venues = [...venueIdx.values()]
   .filter(v => { const f = v.list.filter(p => !p.isPast).length;
                  return (f >= 1 && (f >= MIN_LOCALE || v.list.length >= 3)) || (f === 0 && v.list.length >= 5); })
   .sort((a, b) => b.list.length - a.list.length);
+// i gemelli "oggi" degli indici di tipo: solo dove oggi c'è abbastanza (MIN_WHEN)
+const MIN_WHEN = 3;   // spostata qui sopra: serve anche ai gemelli "oggi" degli indici
+const OGGI_KEY = dateKey(NOW, DEFAULT_TZ);
+const typesOggi = types.map(ix => ({ ...ix, oggi: true, list: ix.list.filter(p => !p.isPast && (p.up || p.dates.filter(d => d.start >= NOW)).some(d => dateKey(d.start, d.tz) === OGGI_KEY)) }))
+  .filter(ix => ix.list.length >= MIN_WHEN);
+const oggiDi = new Map(typesOggi.map(ix => [ix.sport, ix]));
 const indexSlugs = new Set();
-for (const ix of types) {
+for (const ix of [...types, ...typesOggi]) {
   if (RESERVED.has(ix.slug)) { console.error(`indice "${ix.slug}" collide con un nome riservato: mi fermo`); process.exit(1); }
-  if (indexSlugs.has(ix.slug)) { console.error(`tipo "${ix.slug}" duplicato: mi fermo`); process.exit(1); }
-  indexSlugs.add(ix.slug);
+  const sl = ix.oggi ? ix.slug + "-oggi" : ix.slug;
+  if (indexSlugs.has(sl)) { console.error(`tipo "${sl}" duplicato: mi fermo`); process.exit(1); }
+  indexSlugs.add(sl);
 }
 // un paese che finirebbe sullo stesso indirizzo di un tipo (o di un altro paese) si toglie e basta:
 // i tipi sono gli stessi in tutte le città, i paesi no, e una corsa non deve fermarsi per questo.
@@ -558,6 +565,7 @@ if (townsScartati.length) console.error(`paesi saltati, l'indirizzo era già pre
 // lo slug dell'evento è lo stesso per /bergamo/ e /en/bergamo/). I mesi si riservano per un anno avanti.
 for (const code of ["it", "en"]) inLocale(code, () => {
   for (const k of Object.keys(L.when)) indexSlugs.add(L.when[k]);
+  for (const ix of typesOggi) indexSlugs.add(tSlug(ix.t) + (en() ? "-today" : "-oggi"));
   for (let i = 0; i < 12; i++) {
     const d = new Date(Date.UTC(NOW.getUTCFullYear(), NOW.getUTCMonth() + i, 15));
     const t = new Intl.DateTimeFormat(L.intl, { timeZone: DEFAULT_TZ, month: "long", year: "numeric" }).format(d);
@@ -670,7 +678,10 @@ const dayUrl = (i) => `${runningUrl()}${L.daySlug[i]}/`;
 // "cosa fare a Bergamo oggi / domani / nel weekend" e "eventi a Bergamo a ottobre": le ricerche più frequenti
 const whenUrl = (k) => `${base()}/${L.when[k]}/`;
 const monthUrl = (m) => `${base()}/${L.monthSlug(monthLabel(m))}/`;
-const ixSlug = (ix) => ix.kind === "tipo" ? tSlug(ix.t) : ix.slug;
+// "sagre oggi a bergamo e provincia" +300% in una settimana (Google Trends, 29/09/2026): la gente
+// cerca la categoria E il giorno insieme. Ogni indice di tipo con abbastanza eventi oggi ha un gemello
+// /<citta>/<tipo>-oggi/ (in inglese -today) con solo quelli di oggi.
+const ixSlug = (ix) => (ix.kind === "tipo" ? tSlug(ix.t) : ix.slug) + (ix.oggi ? (en() ? "-today" : "-oggi") : "");
 const indexUrl = (ix) => `${base()}/${ixSlug(ix)}/`;
 const rel = (u) => u.slice(SITE.length);
 const groupBySlug = new Map(groups.map(g => [g.slug, g]));
@@ -679,7 +690,6 @@ const upcomingPages = pages.filter(p => !p.isPast).sort(byDate);
 
 // ── quando: oggi, domani, weekend, e i prossimi mesi ──────────────────────────
 // Una pagina per ognuno, solo con almeno MIN_WHEN eventi (niente pagine vuote su Google).
-const MIN_WHEN = 3;
 const MONTHS_AHEAD = 3;
 const dowEn = (d) => new Intl.DateTimeFormat("en-US", { timeZone: DEFAULT_TZ, weekday: "short" }).format(d);
 const dayAfter = (n) => new Date(NOW.getTime() + n * 86400e3);
@@ -691,6 +701,9 @@ const TOMORROW_KEY = dateKey(dayAfter(1), DEFAULT_TZ);
 const weekendKeys = [...Array(8).keys()].map(dayAfter).filter(d => ["Sat", "Sun"].includes(dowEn(d))).slice(0, 2).map(d => dateKey(d, DEFAULT_TZ));
 const WHEN = {
   oggi: { keys: [TODAY_KEY], list: upcomingPages.filter(p => onDay(p, TODAY_KEY)) },
+  // "cosa fare stasera a bergamo" +70% in una settimana (Google Trends, 29/09/2026): la sera è una
+  // domanda a sé, non un pezzo di "oggi". Stasera = oggi, dalle 18 in avanti (ora locale dell'evento).
+  stasera: { keys: [TODAY_KEY], list: upcomingPages.filter(p => datesOf(p).some(d => dateKey(d.start, d.tz) === TODAY_KEY && +fmtTime(d.start, d.tz).slice(0, 2) >= 18)) },
   domani: { keys: [TOMORROW_KEY], list: upcomingPages.filter(p => onDay(p, TOMORROW_KEY)) },
   weekend: { keys: weekendKeys, list: upcomingPages.filter(p => weekendKeys.some(k => onDay(p, k))) },
 };
@@ -1611,15 +1624,17 @@ function indexPage(ix) { return en() ? indexPageEn(ix) : indexPageIt(ix); }
 function indexPageEn(ix) {
   const url = indexUrl(ix);
   const list = ix.list.slice().sort(byDate);
-  const up = list.filter(p => !p.isPast), past = list.filter(p => p.isPast).reverse().slice(0, Math.max(0, Math.min(20, 100 - up.length)));
+  const up = list.filter(p => !p.isPast && (!ix.oggi || onDay(p, TODAY_KEY))),
+        past = ix.oggi ? [] : list.filter(p => p.isPast).reverse().slice(0, Math.max(0, Math.min(20, 100 - up.length)));
   let h1, title, intro, emoji;
   const label = ix.kind === "tipo" ? tLabel(ix.t) : "";
   if (ix.kind === "tipo") {
     h1 = ix.sport === "festival" ? `Town festivals and sagre in ${CITY_NAME} and its province` : ix.sport === "estivo" ? `Summer venues in ${CITY_NAME}: open-air bars and evenings` : `${label} in ${CITY_NAME} and its province`; emoji = ix.t.e;
-    title = cut(`${ix.sport === "festival" ? "Festivals & sagre near" : label + " in"} ${CITY_NAME}`, 36) + (up.length ? `: ${up.length} ${up.length === 1 ? "event" : "events"}` : "") + " | anyplans";
+    title = cut(`${ix.sport === "festival" ? "Festivals & sagre near" : label + " in"} ${CITY_NAME}${ix.oggi ? " today" : ""}`, 44) + (up.length ? `: ${up.length} ${up.length === 1 ? "event" : "events"}` : "") + " | anyplans";
+    if (ix.oggi) h1 = `${h1.replace(/ in .*$/, "")} in ${CITY_NAME} today, ${fmtDate(NOW)}`;
     const nounIntro = { festival: "town festivals and sagre", estivo: "summer venue evenings", dinner: "dinners and aperitivo", running: "group runs and races", padel: "padel matches and tournaments", walking: "group walks",
                         dancing: "dance nights and classes", nightlife: "club nights and dj sets", match: "matches to watch", cinema: "screenings", games: "board game nights", exhibition: "exhibitions", singles: "singles nights" }[ix.sport] || `${label.toLowerCase()} events`;
-    intro = `${up.length ? `In ${CITY_NAME} and its province there are ${up.length} ${nounIntro} in the coming months.` : `There are no ${nounIntro} scheduled right now: below, the past ones.`} ${tPhrase(ix.t)}`;
+    intro = ix.oggi ? `Today, ${fmtDate(NOW)}, in ${CITY_NAME} and its province: ${up.length} ${nounIntro}. Each with time, place, price and how to join.` : `${up.length ? `In ${CITY_NAME} and its province there are ${up.length} ${nounIntro} in the coming months.` : `There are no ${nounIntro} scheduled right now: below, the past ones.`} ${tPhrase(ix.t)}`;
   } else {
     h1 = `Festivals and events in ${ix.town} (Bergamo)`; emoji = "🎉";
     title = cut(`Festivals and events in ${ix.town}, Bergamo${up.length ? ": " + up.length + " upcoming" : ""}`, 49) + " | anyplans";
@@ -1656,19 +1671,20 @@ ${faqHtml(faq)}
 function indexPageIt(ix) {
   const url = indexUrl(ix);
   const list = ix.list.slice().sort(byDate);
-  const up = list.filter(p => !p.isPast), past = list.filter(p => p.isPast).reverse().slice(0, Math.max(0, Math.min(20, 100 - up.length)));
+  const up = list.filter(p => !p.isPast && (!ix.oggi || onDay(p, TODAY_KEY))),
+        past = ix.oggi ? [] : list.filter(p => p.isPast).reverse().slice(0, Math.max(0, Math.min(20, 100 - up.length)));
   let h1, title, intro, emoji;
   if (ix.kind === "tipo") {
     // "mercatini" è come lo chiamiamo noi, "mercato di Rovetta" è come lo cerca la gente: il titolo
     // della categoria porta tutte e due le parole (testi.json "titolo").
-    h1 = `${ix.t.titolo || ix.t.label} a ${CITY_NAME} e provincia`; emoji = ix.t.e;
+    h1 = `${ix.t.titolo || ix.t.label}${ix.oggi ? " oggi" : ""} a ${CITY_NAME} e provincia`; emoji = ix.t.e;
     // 36 caratteri tagliavano i nomi nuovi ("Camminate e gruppi di cammino a…"): il conteggio in coda
     // vale meno del nome intero, che è quello che la gente cerca
-    title = cut(`${ix.t.titolo || ix.t.label} a ${CITY_NAME}`, 46) + (up.length ? `: ${up.length} ${up.length === 1 ? "evento" : "eventi"}` : "") + " | anyplans";
+    title = cut(`${ix.t.titolo || ix.t.label}${ix.oggi ? " oggi" : ""} a ${CITY_NAME}`, 46) + (up.length ? `: ${up.length} ${up.length === 1 ? "evento" : "eventi"}` : "") + " | anyplans";
     // "8 mostre", non "8 eventi di mostre": ogni tipo dice come si chiama quando lo si conta (testi.json "conta")
     const [sing, plur] = String(ix.t.conta || `evento di ${ix.t.label.toLowerCase()}|eventi di ${ix.t.label.toLowerCase()}`).split("|");
     const quanti = `${up.length} ${up.length === 1 ? sing : plur}`;
-    intro = `${up.length ? `A ${CITY_NAME} e provincia ci sono ${quanti} nei prossimi mesi.` : `Al momento non ci sono ${plur} in programma: qui sotto quelli già passati.`} ${tPhrase(ix.t)}`;
+    intro = ix.oggi ? `Oggi, ${fmtDate(NOW)}, a ${CITY_NAME} e provincia: ${quanti}. Di ognuno ora, posto, prezzo e come iscriversi.` : `${up.length ? `A ${CITY_NAME} e provincia ci sono ${quanti} nei prossimi mesi.` : `Al momento non ci sono ${plur} in programma: qui sotto quelli già passati.`} ${tPhrase(ix.t)}`;
   } else {
     h1 = `Feste ed eventi a ${ix.town}`; emoji = "🎉";
     title = cut(`Feste ed eventi a ${ix.town}${up.length ? ": " + up.length + " in programma" : ""}`, 49) + " | anyplans";
@@ -1836,11 +1852,11 @@ ${faqHtml(faq)}
 // Rispondono alle ricerche vere ("cosa fare a Bergamo stasera", "eventi Bergamo ottobre"): stessa lista
 // del sito, ma con un testo che dice cosa c'è, dove e a che ora, e le domande frequenti con i numeri veri.
 const ixOf = (sport) => [...types].find(x => x.sport === sport) || null;
-function typeChips(list) {
+function typeChips(list, soloOggi = false) {
   const byType = new Map();
   for (const p of list) byType.set(p.sport, (byType.get(p.sport) || 0) + 1);
   return [...byType].sort((a, b) => b[1] - a[1]).map(([sport, n]) => {
-    const t = tipo(sport), ix = ixOf(sport);
+    const t = tipo(sport), ix = (soloOggi && oggiDi.get(sport)) || ixOf(sport);
     const label = `${t.e} ${esc(tLabel(t))} (${n})`;
     return ix ? `<a href="${rel(indexUrl(ix))}">${label}</a>` : `<span>${label}</span>`;
   }).join("");
@@ -1851,14 +1867,21 @@ function townLine(list) {
   for (const p of list) { const t0 = localityOf(p), t = t0 === "Bergamo Città" ? CITY_NAME : t0; if (t) byTown.set(t, (byTown.get(t) || 0) + 1); }
   return [...byTown].sort((a, b) => b[1] - a[1]).slice(0, 8).map(([t, n]) => `${t} (${n})`);
 }
-const whenOther = (kind) => ["oggi", "domani", "weekend"].filter(k => k !== kind && WHEN[k].list.length >= MIN_WHEN);
-const whenName = (k) => en() ? ({ oggi: "today", domani: "tomorrow", weekend: "this weekend" })[k] : ({ oggi: "oggi", domani: "domani", weekend: "nel weekend" })[k];
+const WHEN_KINDS = ["oggi", "stasera", "domani", "weekend"];
+const whenOther = (kind) => WHEN_KINDS.filter(k => k !== kind && WHEN[k].list.length >= MIN_WHEN);
+const whenName = (k) => en() ? ({ oggi: "today", stasera: "tonight", domani: "tomorrow", weekend: "this weekend" })[k]
+                             : ({ oggi: "oggi", stasera: "stasera", domani: "domani", weekend: "nel weekend" })[k];
+// le stesse quattro parole nelle forme che servono alle frasi della pagina
+const W_EN = { weekend: "this weekend", oggi: "today", stasera: "tonight", domani: "tomorrow" };
+const W_EN_CAP = { weekend: "This weekend", oggi: "Today", stasera: "Tonight", domani: "Tomorrow" };
+const W_IT = { weekend: "nel weekend", oggi: "oggi", stasera: "stasera", domani: "domani" };
+const W_IT_Q = { weekend: "questo weekend", oggi: "oggi", stasera: "stasera", domani: "domani" };
 
-const whenLinksIt = () => { const l = ["oggi", "domani", "weekend"].filter(k => WHEN[k].list.length >= MIN_WHEN)
+const whenLinksIt = () => { const l = WHEN_KINDS.filter(k => WHEN[k].list.length >= MIN_WHEN)
     .map(k => `<a href="${rel(whenUrl(k))}">Cosa fare ${whenName(k)} (${WHEN[k].list.length})</a>`)
     .concat(months.map(m => `<a href="${rel(monthUrl(m))}">Eventi a ${monthLabel(m)} (${monthIdx.get(m).length})</a>`));
   return l.length ? `<h2>Quando</h2><div class="tags">${l.join("")}</div>` : ""; };
-const whenLinksEn = () => { const l = ["oggi", "domani", "weekend"].filter(k => WHEN[k].list.length >= MIN_WHEN)
+const whenLinksEn = () => { const l = WHEN_KINDS.filter(k => WHEN[k].list.length >= MIN_WHEN)
     .map(k => `<a href="${rel(whenUrl(k))}">What to do ${whenName(k)} (${WHEN[k].list.length})</a>`)
     .concat(months.map(m => `<a href="${rel(monthUrl(m))}">Events in ${monthLabel(m)} (${monthIdx.get(m).length})</a>`));
   return l.length ? `<h2>When</h2><div class="tags">${l.join("")}</div>` : ""; };
@@ -1871,9 +1894,10 @@ function whenPage(kind) {
   const towns = townLine(list);
   const when = kind === "weekend" ? (en() ? `this weekend (${joinIt(dayNames)})` : `nel weekend (${joinIt(dayNames)})`)
              : kind === "oggi" ? (en() ? `today, ${fmtDate(NOW)}` : `oggi, ${fmtDate(NOW)}`)
+             : kind === "stasera" ? (en() ? `tonight, ${fmtDate(NOW)}, from 6 pm` : `stasera, ${fmtDate(NOW)}, dalle 18`)
              : (en() ? `tomorrow, ${fmtDate(dayAfter(1))}` : `domani, ${fmtDate(dayAfter(1))}`);
-  const h1 = en() ? `What to do in ${CITY_NAME} ${kind === "weekend" ? "this weekend" : kind === "oggi" ? "today" : "tomorrow"}`
-                  : `Cosa fare a ${CITY_NAME} ${kind === "weekend" ? "nel weekend" : kind === "oggi" ? "oggi" : "domani"}`;
+  const h1 = en() ? `What to do in ${CITY_NAME} ${W_EN[kind]}`
+                  : `Cosa fare a ${CITY_NAME} ${W_IT[kind]}`;
   const title = cut(h1, 44) + `: ${list.length} ${en() ? "events" : "eventi"} | anyplans`;
   const lead = en()
     ? `${list.length} events in ${CITY_NAME} and its province ${when}: ${joinIt(towns.slice(0, 4).map(t => t.replace(/ \(\d+\)$/, "")))} and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.`
@@ -1881,16 +1905,16 @@ function whenPage(kind) {
   const descr = cut(lead, 160);
   const first = list.slice(0, 8).map(p => `${p.title}${evTown(p) ? (en() ? " in " : " a ") + evTown(p).replace(/, $/, "") : ""}`);
   const faq = en() ? [
-    { q: `What is on in ${CITY_NAME} ${kind === "weekend" ? "this weekend" : kind === "oggi" ? "today" : "tomorrow"}?`,
+    { q: `What is on in ${CITY_NAME} ${W_EN[kind]}?`,
       a: `${list.length} events ${when}: ${joinIt(first)}${list.length > 8 ? " and more, all in the list above" : ""}.` },
-    { q: `Is there anything free ${kind === "weekend" ? "this weekend" : kind === "oggi" ? "today" : "tomorrow"} in ${CITY_NAME}?`,
+    { q: `Is there anything free ${W_EN[kind]} in ${CITY_NAME}?`,
       a: `${free} of the ${list.length} are free, mostly town festivals, markets and group walks. When there is a ticket or a fee, the price is on the event page.` },
     { q: `Where are they?`, a: `In ${CITY_NAME} and its province: ${joinIt(towns)}. Every page has the meeting point and a link to the map.` },
     { q: `Can I go alone?`, a: `Yes, that is the point: on anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.` },
   ] : [
-    { q: `Cosa si fa a ${CITY_NAME} ${kind === "weekend" ? "questo weekend" : kind === "oggi" ? "oggi" : "domani"}?`,
+    { q: `Cosa si fa a ${CITY_NAME} ${W_IT_Q[kind]}?`,
       a: `${list.length} eventi ${when}: ${joinIt(first)}${list.length > 8 ? " e altri, tutti nella lista qui sopra" : ""}.` },
-    { q: `C'è qualcosa di gratis ${kind === "weekend" ? "questo weekend" : kind === "oggi" ? "oggi" : "domani"} a ${CITY_NAME}?`,
+    { q: `C'è qualcosa di gratis ${W_IT_Q[kind]} a ${CITY_NAME}?`,
       a: `${free} eventi su ${list.length} sono gratis: soprattutto feste di paese, mercati e camminate di gruppo. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.` },
     { q: `In che paesi?`, a: `A ${CITY_NAME} e in provincia: ${joinIt(towns)}. In ogni pagina c'è il punto di ritrovo e il link alla mappa.` },
     { q: `Ci posso andare da solo?`, a: `Sì, è il senso di anyplans: vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.` },
@@ -1900,11 +1924,11 @@ function whenPage(kind) {
   const others = whenOther(kind).map(k => `<a href="${rel(whenUrl(k))}">${en() ? "What to do " : "Cosa fare "}${whenName(k)}</a>`)
     .concat(months.map(m => `<a href="${rel(monthUrl(m))}">${en() ? "Events in " : "Eventi a "}${monthLabel(m)}</a>`)).join("");
   const body = `
-${crumbs([["anyplans", L.home], [CITY_NAME, rel(hubUrl())], [en() ? (kind === "weekend" ? "This weekend" : kind === "oggi" ? "Today" : "Tomorrow") : cap(whenName(kind)), null]])}
+${crumbs([["anyplans", L.home], [CITY_NAME, rel(hubUrl())], [en() ? (W_EN_CAP[kind]) : cap(whenName(kind)), null]])}
 <h1>${esc(h1)}</h1>
 <p class="lead">${esc(lead)}</p>
 <div class="cta"><a class="btn" href="${MAP_URL}">${en() ? "See them on the map" : "Vedili sulla mappa"}</a><a class="btn ghost" href="${rel(hubUrl())}">${en() ? "All events" : "Tutti gli eventi"}</a></div>
-${list.length ? `<h2>${en() ? "By kind" : "Per tipo"}</h2><div class="tags">${typeChips(list)}</div>` : ""}
+${list.length ? `<h2>${en() ? "By kind" : "Per tipo"}</h2><div class="tags">${typeChips(list, kind === "oggi")}</div>` : ""}
 <h2>${en() ? "The list" : "La lista"}</h2>
 ${listHtml(list.slice(0, 80))}
 ${others ? `<h2>${en() ? "Other days" : "Altri giorni"}</h2><div class="tags">${others}</div>` : ""}
@@ -2252,14 +2276,14 @@ const relOf = (u) => rel(u).replace(/^\/|\/$/g, "");
 for (const code of ["it", "en"]) {
   setLocale(code);
   const hub = hubPage(); await writePage(relOf(hubUrl()), hub.html); addUrl(hubUrl(), hub.lastmod);
-  for (const k of SOLO_HUB ? [] : ["oggi", "domani", "weekend"]) {       // "cosa fare a Bergamo oggi/domani/nel weekend"
+  for (const k of SOLO_HUB ? [] : WHEN_KINDS) {                          // "cosa fare a Bergamo oggi/stasera/domani/nel weekend"
     if (WHEN[k].list.length < MIN_WHEN) continue;
     const r = whenPage(k); await writePage(relOf(whenUrl(k)), r.html); addUrl(whenUrl(k), r.lastmod);
   }
   for (const m of (SOLO_HUB ? [] : months)) {                            // "eventi a Bergamo a ottobre"
     const r = monthPage(m); await writePage(relOf(monthUrl(m)), r.html); addUrl(monthUrl(m), r.lastmod);
   }
-  for (const ix of (SOLO_HUB ? [] : [...types, ...towns])) { const r = indexPage(ix); await writePage(relOf(indexUrl(ix)), r.html); addUrl(indexUrl(ix), r.lastmod); }
+  for (const ix of (SOLO_HUB ? [] : [...types, ...towns, ...typesOggi])) { const r = indexPage(ix); await writePage(relOf(indexUrl(ix)), r.html); addUrl(indexUrl(ix), r.lastmod); }
   if (groups.length) { await writePage(relOf(groupsUrl()), groupsIndex()); addUrl(groupsUrl(), NOW); }
   if (!SOLO_HUB && venues.length) {                                       // "circolino astino", "vog summer club": la gente cerca il posto per nome
     await writePage(relOf(venuesUrl()), venuesIndex()); addUrl(venuesUrl(), NOW);
