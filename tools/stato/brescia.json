@@ -2,7 +2,7 @@
  "slug": "brescia",
  "nome": "Brescia",
  "eventi": 260,
- "pagine": 1297,
+ "pagine": 1303,
  "tipi": {
   "festival": 54,
   "culture": 60,
@@ -21,7 +21,10 @@
   "hiking": 7,
   "dancing": 2,
   "games": 2,
-  "running": 3
+  "running": 3,
+  "raccolta:halloween": 6,
+  "raccolta:aperitivi": 8,
+  "raccolta:natale": 5
  },
- "aggiornato": "2026-09-29T10:24:52.659Z"
+ "aggiornato": "2026-09-29T10:42:24.719Z"
 }

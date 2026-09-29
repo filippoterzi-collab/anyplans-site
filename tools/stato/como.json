@@ -2,7 +2,7 @@
  "slug": "como",
  "nome": "Como",
  "eventi": 115,
- "pagine": 535,
+ "pagine": 537,
  "tipi": {
   "padel": 37,
   "dinner": 18,
@@ -13,7 +13,8 @@
   "tour": 2,
   "yoga": 2,
   "festival": 6,
-  "exhibition": 9
+  "exhibition": 9,
+  "raccolta:aperitivi": 4
  },
- "aggiornato": "2026-09-29T10:27:32.518Z"
+ "aggiornato": "2026-09-29T10:45:16.858Z"
 }

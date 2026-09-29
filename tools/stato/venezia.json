@@ -2,7 +2,7 @@
  "slug": "venezia",
  "nome": "Venezia",
  "eventi": 172,
- "pagine": 651,
+ "pagine": 653,
  "tipi": {
   "culture": 52,
   "dinner": 19,
@@ -15,7 +15,8 @@
   "exhibition": 11,
   "cinema": 0,
   "painting": 2,
-  "yoga": 2
+  "yoga": 2,
+  "raccolta:vino-e-degustazioni": 4
  },
- "aggiornato": "2026-09-29T10:27:56.778Z"
+ "aggiornato": "2026-09-29T10:45:42.688Z"
 }

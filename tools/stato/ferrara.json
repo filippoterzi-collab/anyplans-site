@@ -2,7 +2,7 @@
  "slug": "ferrara",
  "nome": "Ferrara",
  "eventi": 100,
- "pagine": 371,
+ "pagine": 375,
  "tipi": {
   "yoga": 6,
   "concert": 22,
@@ -13,7 +13,9 @@
   "show": 9,
   "festival": 15,
   "hiking": 3,
-  "cinema": 3
+  "cinema": 3,
+  "raccolta:halloween": 4,
+  "raccolta:castagne-e-autunno": 6
  },
- "aggiornato": "2026-09-29T10:28:20.230Z"
+ "aggiornato": "2026-09-29T10:46:01.709Z"
 }

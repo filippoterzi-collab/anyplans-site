@@ -2,7 +2,7 @@
  "slug": "torino",
  "nome": "Torino",
  "eventi": 1043,
- "pagine": 3715,
+ "pagine": 3727,
  "tipi": {
   "padel": 39,
   "dinner": 112,
@@ -29,7 +29,13 @@
   "match": 24,
   "market": 1,
   "ceramics": 7,
-  "gardening": 4
+  "gardening": 4,
+  "raccolta:bambini": 16,
+  "raccolta:halloween": 22,
+  "raccolta:vino-e-degustazioni": 9,
+  "raccolta:aperitivi": 21,
+  "raccolta:castagne-e-autunno": 14,
+  "raccolta:natale": 5
  },
- "aggiornato": "2026-09-29T10:23:13.444Z"
+ "aggiornato": "2026-09-29T10:40:44.103Z"
 }

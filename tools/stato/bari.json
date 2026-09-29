@@ -2,7 +2,7 @@
  "slug": "bari",
  "nome": "Bari",
  "eventi": 334,
- "pagine": 1353,
+ "pagine": 1361,
  "tipi": {
   "padel": 7,
   "dinner": 63,
@@ -19,7 +19,11 @@
   "running": 2,
   "cinema": 7,
   "nightlife": 3,
-  "dancing": 5
+  "dancing": 5,
+  "raccolta:halloween": 4,
+  "raccolta:vino-e-degustazioni": 3,
+  "raccolta:castagne-e-autunno": 4,
+  "raccolta:natale": 5
  },
- "aggiornato": "2026-09-29T10:26:08.338Z"
+ "aggiornato": "2026-09-29T10:43:44.242Z"
 }

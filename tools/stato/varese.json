@@ -2,7 +2,7 @@
  "slug": "varese",
  "nome": "Varese",
  "eventi": 257,
- "pagine": 1031,
+ "pagine": 1041,
  "tipi": {
   "dinner": 49,
   "padel": 39,
@@ -15,7 +15,12 @@
   "hiking": 7,
   "gym": 4,
   "show": 41,
-  "nightlife": 3
+  "nightlife": 3,
+  "raccolta:bambini": 7,
+  "raccolta:halloween": 3,
+  "raccolta:aperitivi": 9,
+  "raccolta:castagne-e-autunno": 3,
+  "raccolta:natale": 3
  },
- "aggiornato": "2026-09-29T10:25:43.731Z"
+ "aggiornato": "2026-09-29T10:43:21.996Z"
 }

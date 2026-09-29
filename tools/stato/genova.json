@@ -2,7 +2,7 @@
  "slug": "genova",
  "nome": "Genova",
  "eventi": 232,
- "pagine": 907,
+ "pagine": 915,
  "tipi": {
   "dinner": 25,
   "dancing": 12,
@@ -20,7 +20,11 @@
   "exhibition": 4,
   "cinema": 1,
   "match": 8,
-  "cooking": 3
+  "cooking": 3,
+  "raccolta:bambini": 3,
+  "raccolta:halloween": 5,
+  "raccolta:vino-e-degustazioni": 5,
+  "raccolta:aperitivi": 3
  },
- "aggiornato": "2026-09-29T10:26:02.251Z"
+ "aggiornato": "2026-09-29T10:43:38.644Z"
 }

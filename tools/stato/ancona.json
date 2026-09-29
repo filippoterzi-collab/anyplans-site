@@ -2,7 +2,7 @@
  "slug": "ancona",
  "nome": "Ancona",
  "eventi": 48,
- "pagine": 313,
+ "pagine": 315,
  "tipi": {
   "dinner": 13,
   "gym": 6,
@@ -15,7 +15,8 @@
   "games": 0,
   "show": 7,
   "tour": 1,
-  "dancing": 3
+  "dancing": 3,
+  "raccolta:aperitivi": 4
  },
- "aggiornato": "2026-09-29T10:28:29.910Z"
+ "aggiornato": "2026-09-29T10:46:13.327Z"
 }

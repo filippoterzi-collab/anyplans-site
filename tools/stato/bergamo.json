@@ -1,8 +1,8 @@
 {
  "slug": "bergamo",
  "nome": "Bergamo",
- "eventi": 1216,
- "pagine": 4594,
+ "eventi": 1217,
+ "pagine": 4608,
  "tipi": {
   "yoga": 16,
   "festival": 46,
@@ -28,8 +28,14 @@
   "gardening": 4,
   "fair": 7,
   "ceramics": 4,
-  "cycling": 7,
-  "match": 12
+  "cycling": 8,
+  "match": 12,
+  "raccolta:bambini": 32,
+  "raccolta:halloween": 14,
+  "raccolta:vino-e-degustazioni": 3,
+  "raccolta:aperitivi": 12,
+  "raccolta:castagne-e-autunno": 9,
+  "raccolta:natale": 15
  },
- "aggiornato": "2026-09-29T10:21:52.083Z"
+ "aggiornato": "2026-09-29T10:39:24.042Z"
 }

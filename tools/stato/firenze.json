@@ -1,13 +1,13 @@
 {
  "slug": "firenze",
  "nome": "Firenze",
- "eventi": 374,
- "pagine": 1415,
+ "eventi": 373,
+ "pagine": 1423,
  "tipi": {
   "dinner": 44,
   "painting": 8,
   "concert": 60,
-  "festival": 28,
+  "festival": 27,
   "hiking": 7,
   "culture": 87,
   "games": 6,
@@ -20,7 +20,11 @@
   "exhibition": 15,
   "tour": 16,
   "nightlife": 4,
-  "cinema": 5
+  "cinema": 5,
+  "raccolta:bambini": 3,
+  "raccolta:halloween": 7,
+  "raccolta:vino-e-degustazioni": 7,
+  "raccolta:aperitivi": 5
  },
- "aggiornato": "2026-09-29T10:25:52.202Z"
+ "aggiornato": "2026-09-29T10:43:29.818Z"
 }

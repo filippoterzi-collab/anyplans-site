@@ -2,7 +2,7 @@
  "slug": "modena",
  "nome": "Modena",
  "eventi": 139,
- "pagine": 605,
+ "pagine": 609,
  "tipi": {
   "dinner": 34,
   "padel": 1,
@@ -13,7 +13,9 @@
   "show": 11,
   "painting": 1,
   "yoga": 2,
-  "tour": 5
+  "tour": 5,
+  "raccolta:bambini": 3,
+  "raccolta:vino-e-degustazioni": 3
  },
- "aggiornato": "2026-09-29T10:27:43.407Z"
+ "aggiornato": "2026-09-29T10:45:28.579Z"
 }

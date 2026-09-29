@@ -1,10 +1,10 @@
 {
  "slug": "napoli",
  "nome": "Napoli",
- "eventi": 537,
- "pagine": 2257,
+ "eventi": 535,
+ "pagine": 2267,
  "tipi": {
-  "dinner": 91,
+  "dinner": 90,
   "tour": 26,
   "culture": 120,
   "painting": 10,
@@ -16,12 +16,17 @@
   "festival": 29,
   "hiking": 9,
   "cinema": 20,
-  "show": 87,
+  "show": 86,
   "padel": 3,
   "running": 2,
   "yoga": 4,
   "exhibition": 8,
-  "tennis": 1
+  "tennis": 1,
+  "raccolta:bambini": 5,
+  "raccolta:halloween": 11,
+  "raccolta:vino-e-degustazioni": 6,
+  "raccolta:aperitivi": 5,
+  "raccolta:natale": 10
  },
- "aggiornato": "2026-09-29T10:25:01.113Z"
+ "aggiornato": "2026-09-29T10:42:34.893Z"
 }

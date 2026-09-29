@@ -2,7 +2,7 @@
  "slug": "treviso",
  "nome": "Treviso",
  "eventi": 179,
- "pagine": 715,
+ "pagine": 721,
  "tipi": {
   "yoga": 8,
   "culture": 41,
@@ -13,7 +13,10 @@
   "dancing": 5,
   "games": 2,
   "festival": 11,
-  "tour": 4
+  "tour": 4,
+  "raccolta:bambini": 3,
+  "raccolta:vino-e-degustazioni": 6,
+  "raccolta:castagne-e-autunno": 5
  },
- "aggiornato": "2026-09-29T10:27:51.231Z"
+ "aggiornato": "2026-09-29T10:45:36.885Z"
 }

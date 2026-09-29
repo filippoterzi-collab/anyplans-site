@@ -2,7 +2,7 @@
  "slug": "roma",
  "nome": "Roma",
  "eventi": 1501,
- "pagine": 5437,
+ "pagine": 5455,
  "tipi": {
   "dinner": 272,
   "concert": 152,
@@ -30,7 +30,14 @@
   "swimming": 1,
   "match": 26,
   "cycling": 5,
-  "walking": 3
+  "walking": 3,
+  "raccolta:bambini": 12,
+  "raccolta:halloween": 25,
+  "raccolta:vino-e-degustazioni": 29,
+  "raccolta:aperitivi": 64,
+  "raccolta:castagne-e-autunno": 15,
+  "raccolta:natale": 9,
+  "raccolta:capodanno": 3
  },
- "aggiornato": "2026-09-29T10:23:46.588Z"
+ "aggiornato": "2026-09-29T10:41:16.573Z"
 }

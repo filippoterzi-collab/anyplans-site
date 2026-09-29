@@ -2,7 +2,7 @@
  "slug": "verona",
  "nome": "Verona",
  "eventi": 307,
- "pagine": 1233,
+ "pagine": 1239,
  "tipi": {
   "festival": 20,
   "padel": 18,
@@ -19,7 +19,10 @@
   "tour": 14,
   "painting": 1,
   "cycling": 3,
-  "karaoke": 3
+  "karaoke": 3,
+  "raccolta:bambini": 5,
+  "raccolta:halloween": 4,
+  "raccolta:aperitivi": 6
  },
- "aggiornato": "2026-09-29T10:25:26.444Z"
+ "aggiornato": "2026-09-29T10:42:48.960Z"
 }

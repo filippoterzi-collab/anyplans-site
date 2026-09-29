@@ -1,14 +1,14 @@
 {
  "slug": "milano",
  "nome": "Milano",
- "eventi": 1463,
- "pagine": 6003,
+ "eventi": 1462,
+ "pagine": 6015,
  "tipi": {
   "tour": 75,
   "dinner": 248,
   "painting": 31,
   "culture": 291,
-  "padel": 195,
+  "padel": 194,
   "exhibition": 8,
   "show": 108,
   "tennis": 5,
@@ -31,7 +31,13 @@
   "dancing": 5,
   "ceramics": 4,
   "singles": 1,
-  "cooking": 4
+  "cooking": 4,
+  "raccolta:bambini": 9,
+  "raccolta:halloween": 21,
+  "raccolta:vino-e-degustazioni": 19,
+  "raccolta:aperitivi": 67,
+  "raccolta:castagne-e-autunno": 16,
+  "raccolta:natale": 3
  },
- "aggiornato": "2026-09-29T10:20:56.408Z"
+ "aggiornato": "2026-09-29T10:38:29.505Z"
 }

@@ -2,7 +2,7 @@
  "slug": "bologna",
  "nome": "Bologna",
  "eventi": 519,
- "pagine": 1911,
+ "pagine": 1921,
  "tipi": {
   "dinner": 50,
   "volleyball": 3,
@@ -24,7 +24,12 @@
   "exhibition": 9,
   "hiking": 6,
   "nightlife": 1,
-  "ceramics": 2
+  "ceramics": 2,
+  "raccolta:bambini": 6,
+  "raccolta:vino-e-degustazioni": 3,
+  "raccolta:aperitivi": 11,
+  "raccolta:castagne-e-autunno": 3,
+  "raccolta:natale": 5
  },
- "aggiornato": "2026-09-29T10:24:40.452Z"
+ "aggiornato": "2026-09-29T10:42:12.931Z"
 }

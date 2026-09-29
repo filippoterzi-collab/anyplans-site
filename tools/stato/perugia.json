@@ -2,7 +2,7 @@
  "slug": "perugia",
  "nome": "Perugia",
  "eventi": 146,
- "pagine": 455,
+ "pagine": 457,
  "tipi": {
   "dinner": 5,
   "tour": 6,
@@ -12,7 +12,8 @@
   "hiking": 4,
   "games": 2,
   "concert": 19,
-  "show": 11
+  "show": 11,
+  "raccolta:halloween": 3
  },
- "aggiornato": "2026-09-29T10:26:16.810Z"
+ "aggiornato": "2026-09-29T10:43:52.792Z"
 }
