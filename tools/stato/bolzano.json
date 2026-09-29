@@ -1,15 +1,15 @@
 {
  "slug": "bolzano",
  "nome": "Bolzano",
- "eventi": 38,
- "pagine": 149,
+ "eventi": 41,
+ "pagine": 181,
  "tipi": {
-  "dinner": 4,
+  "dinner": 5,
   "festival": 3,
   "culture": 10,
-  "concert": 9,
+  "concert": 11,
   "show": 5,
   "hiking": 1
  },
- "aggiornato": "2026-09-28T07:21:55.679Z"
+ "aggiornato": "2026-09-29T07:20:22.062Z"
 }

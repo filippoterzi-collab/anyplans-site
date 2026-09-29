@@ -1,13 +1,13 @@
 {
  "slug": "reggio-calabria",
  "nome": "Reggio Calabria",
- "eventi": 27,
- "pagine": 77,
+ "eventi": 32,
+ "pagine": 87,
  "tipi": {
-  "dinner": 0,
+  "dinner": 1,
   "show": 7,
-  "culture": 7,
-  "concert": 10
+  "culture": 8,
+  "concert": 13
  },
- "aggiornato": "2026-09-28T07:23:22.636Z"
+ "aggiornato": "2026-09-29T07:22:01.493Z"
 }

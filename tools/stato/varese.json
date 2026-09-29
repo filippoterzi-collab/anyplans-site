@@ -1,21 +1,21 @@
 {
  "slug": "varese",
  "nome": "Varese",
- "eventi": 210,
- "pagine": 919,
+ "eventi": 257,
+ "pagine": 1027,
  "tipi": {
-  "dinner": 38,
-  "padel": 34,
-  "yoga": 10,
-  "culture": 42,
-  "festival": 26,
+  "dinner": 49,
+  "padel": 39,
+  "yoga": 9,
+  "culture": 47,
+  "festival": 27,
   "singles": 3,
-  "concert": 15,
+  "concert": 19,
   "tour": 4,
   "hiking": 7,
-  "gym": 6,
-  "show": 17,
+  "gym": 4,
+  "show": 41,
   "nightlife": 3
  },
- "aggiornato": "2026-09-28T07:20:52.771Z"
+ "aggiornato": "2026-09-29T07:19:01.383Z"
 }

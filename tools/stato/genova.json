@@ -1,26 +1,26 @@
 {
  "slug": "genova",
  "nome": "Genova",
- "eventi": 219,
- "pagine": 867,
+ "eventi": 228,
+ "pagine": 889,
  "tipi": {
-  "dinner": 19,
-  "dancing": 11,
+  "dinner": 27,
+  "dancing": 12,
   "culture": 64,
-  "festival": 8,
+  "festival": 9,
   "concert": 35,
-  "tour": 9,
+  "tour": 8,
   "painting": 6,
   "karaoke": 3,
-  "padel": 1,
+  "padel": 0,
   "yoga": 1,
-  "hiking": 3,
-  "games": 1,
-  "show": 36,
+  "hiking": 4,
+  "games": 2,
+  "show": 35,
   "exhibition": 4,
   "cinema": 1,
   "match": 8,
   "cooking": 3
  },
- "aggiornato": "2026-09-28T07:21:08.013Z"
+ "aggiornato": "2026-09-29T07:19:20.607Z"
 }
