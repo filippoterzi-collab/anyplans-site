@@ -6,7 +6,8 @@
   "lng": 9.19,
   "km": 30,
   "prov": "MI",
-  "nome_en": "Milan"
+  "nome_en": "Milan",
+  "zoom_mappa": 13
  },
  {
   "slug": "bergamo",

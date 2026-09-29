@@ -656,6 +656,10 @@ function titoloPulito(t) {
   // parola per parola: "ANNULLATA Camminata" → "Annullata Camminata", "ALESSANDRA SELMI" → "Alessandra Selmi";
   // le sigle corte restano (TNT, CUS, MRC, DJ)
   n = n.replace(/\p{Lu}[\p{Lu}'’]{3,}/gu, w => w[0] + w.slice(1).toLowerCase());
+  // e le paroline in mezzo ("Gruppo Ottoni DEL Conservatorio") tornano minuscole
+  n = n.replace(/(?<=\S\s)\b(DEL|DELLA|DELLE|DEGLI|DEI|DELLO|DI|DA|DAL|DALLA|LA|IL|LE|LO|GLI|ED|AL|ALLA|ALLE|IN|CON|PER|SU|SUL|TRA|FRA|UN|UNA|THE|OF|AND)\b/g, w => w.toLowerCase());
+  // in testa: "LA Reginetta" → "La Reginetta" (ma "DJ set" resta DJ: dopo non c'è una parola con l'iniziale)
+  n = n.replace(/^(LA|IL|LE|LO|GLI|UN|UNA|THE)(?=\s\p{Lu}\p{Ll})/u, w => w[0] + w.slice(1).toLowerCase());
   return n || String(t || "");
 }
 function titoloEvento(p, conData) {
