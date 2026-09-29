@@ -2,14 +2,14 @@
  "slug": "firenze",
  "nome": "Firenze",
  "eventi": 373,
- "pagine": 1457,
+ "pagine": 1461,
  "tipi": {
   "dinner": 44,
   "painting": 8,
-  "concert": 60,
+  "concert": 61,
   "festival": 27,
   "hiking": 7,
-  "culture": 87,
+  "culture": 86,
   "games": 6,
   "gym": 1,
   "show": 59,
@@ -38,5 +38,5 @@
   "raccolta:tornei": 4,
   "raccolta:classica-e-jazz": 14
  },
- "aggiornato": "2026-09-29T12:25:16.912Z"
+ "aggiornato": "2026-09-29T13:25:48.466Z"
 }

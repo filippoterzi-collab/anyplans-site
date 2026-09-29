@@ -2,9 +2,9 @@
  "slug": "monza",
  "nome": "Monza",
  "eventi": 326,
- "pagine": 1489,
+ "pagine": 1491,
  "tipi": {
-  "padel": 121,
+  "padel": 120,
   "dinner": 71,
   "running": 1,
   "culture": 46,
@@ -25,12 +25,12 @@
   "raccolta:halloween": 4,
   "raccolta:aperitivi": 12,
   "raccolta:sagre": 6,
-  "raccolta:gratis": 148,
+  "raccolta:gratis": 149,
   "raccolta:birra": 5,
   "raccolta:meditazione-e-benessere": 5,
   "raccolta:tornei": 29,
   "raccolta:brunch": 4,
   "raccolta:castelli-e-borghi": 4
  },
- "aggiornato": "2026-09-29T12:26:52.281Z"
+ "aggiornato": "2026-09-29T13:27:37.145Z"
 }
