@@ -1,12 +1,12 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Firenze e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Firenze: il sito copre 52 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce, Monza, Prato, Como, Lecco, Lodi, Modena, Reggio Emilia, Treviso, Venezia, Vicenza, Novara, Lucca, Mantova, Ferrara, Pistoia, Pavia, Ancona, Pordenone, Cremona, Messina, Reggio Calabria, Alessandria, Latina), l'indice è https://anyplans.in/llms.txt.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Firenze e provincia: feste di paese e sagre, teatro e spettacoli, concerti, mercati, incontri e conferenze, visite guidate, camminate e gruppi di cammino, mostre, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Firenze: il sito copre 52 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce, Monza, Prato, Como, Lecco, Lodi, Modena, Reggio Emilia, Treviso, Venezia, Vicenza, Novara, Lucca, Mantova, Ferrara, Pistoia, Pavia, Ancona, Pordenone, Cremona, Messina, Reggio Calabria, Alessandria, Latina), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-29. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Firenze](https://anyplans.in/firenze/cosa-fare/): tutti gli eventi in programma (353), per tipo e per paese; risponde a "cosa fare a Firenze oggi / questo weekend"
+- [Cosa fare a Firenze](https://anyplans.in/firenze/cosa-fare/): tutti gli eventi in programma (374), per tipo e per paese; risponde a "cosa fare a Firenze oggi / questo weekend"
 - [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
@@ -14,46 +14,57 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## Eventi per tipo e per paese
 
-- [Cena / aperitivo a Firenze](https://anyplans.in/firenze/cene-e-aperitivi/): 43 in programma
-- [Pittura / arte a Firenze](https://anyplans.in/firenze/pittura/): 7 in programma
-- [Concerti e musica dal vivo a Firenze](https://anyplans.in/firenze/concerti/): 57 in programma
-- [Feste, sagre ed eventi di paese a Firenze](https://anyplans.in/firenze/feste/): 24 in programma
-- [Escursionismo a Firenze](https://anyplans.in/firenze/escursioni/): 5 in programma
-- [Incontri culturali a Firenze](https://anyplans.in/firenze/incontri-culturali/): 82 in programma
+- [Cena / aperitivo a Firenze](https://anyplans.in/firenze/cene-e-aperitivi/): 44 in programma
+- [Pittura / arte a Firenze](https://anyplans.in/firenze/pittura/): 8 in programma
+- [Concerti e musica dal vivo a Firenze](https://anyplans.in/firenze/concerti/): 60 in programma
+- [Feste, sagre ed eventi di paese a Firenze](https://anyplans.in/firenze/feste/): 28 in programma
+- [Escursionismo a Firenze](https://anyplans.in/firenze/escursioni/): 7 in programma
+- [Incontri culturali a Firenze](https://anyplans.in/firenze/incontri-culturali/): 87 in programma
 - [Giochi da tavolo a Firenze](https://anyplans.in/firenze/giochi/): 6 in programma
 - [Palestra a Firenze](https://anyplans.in/firenze/palestra/): 1 in programma
 - [Spettacoli e teatro a Firenze](https://anyplans.in/firenze/spettacoli/): 58 in programma
 - [Padel a Firenze](https://anyplans.in/firenze/padel/): 16 in programma
 - [Ballo e danza a Firenze](https://anyplans.in/firenze/ballo/): 3 in programma
-- [Karaoke a Firenze](https://anyplans.in/firenze/karaoke/): 2 in programma
-- [Yoga / pilates a Firenze](https://anyplans.in/firenze/yoga/): 7 in programma
-- [Mostre a Firenze](https://anyplans.in/firenze/mostre/): 14 in programma
+- [Karaoke a Firenze](https://anyplans.in/firenze/karaoke/): 3 in programma
+- [Yoga / pilates a Firenze](https://anyplans.in/firenze/yoga/): 8 in programma
+- [Mostre a Firenze](https://anyplans.in/firenze/mostre/): 15 in programma
 - [Visite guidate a Firenze](https://anyplans.in/firenze/visite-guidate/): 16 in programma
-- [Serate e discoteca a Firenze](https://anyplans.in/firenze/serate/): 3 in programma
+- [Serate e discoteca a Firenze](https://anyplans.in/firenze/serate/): 4 in programma
 - [Cinema a Firenze](https://anyplans.in/firenze/cinema/): 5 in programma
-- [Feste ed eventi a Scandicci](https://anyplans.in/firenze/scandicci/): 4 in programma
-- [Feste ed eventi a Montelupo Fiorentino](https://anyplans.in/firenze/montelupo-fiorentino/): 4 in programma
+- [Feste ed eventi a Scandicci](https://anyplans.in/firenze/scandicci/): 6 in programma
+- [Feste ed eventi a Montelupo Fiorentino](https://anyplans.in/firenze/montelupo-fiorentino/): 5 in programma
 
 ## Prossimi eventi
 
 - [AIOTI Days 2026](https://anyplans.in/firenze/aioti-days-2026/): Lunedì 28 settembre alle 09:00, Innovation Center di Fondazione CR Firenze, Firenze, Gratis
-- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole/): Dal 29 settembre al 29 settembre, 2 date, Padel Firenze by Olympus, Via di Ripoli 88 , 50126 Firenze, 10 €
+- [Explore Florence: "The Medici's Secret Elixir" City Quest](https://anyplans.in/firenze/explore-florence-the-medici-s-secret-elixir-city-quest/): Martedì 29 settembre alle 10:30, Florence, Florence, Gratis
+- [Firenze Avventura Urbana: "Caccia all'Elisir Segreto dei Medici"](https://anyplans.in/firenze/firenze-avventura-urbana-caccia-all-elisir-segreto-dei-medic/): Martedì 29 settembre alle 10:30, Via della Scala, 16, Firenze, Gratis
+- [Las Bellezas de Florencia – Free Walking tour (ES)](https://anyplans.in/firenze/las-bellezas-de-florencia-free-walking-tour-es/): Martedì 29 settembre alle 10:30, Piazza Santa Maria Novella, Firenze, Gratis
+- [Florence: Authentic Leather Craft Experience in a Historic Artisan Boutique](https://anyplans.in/firenze/florence-authentic-leather-craft-experience-in-a-historic-ar/): Martedì 29 settembre alle 12:00, Bojola Firenze, Firenze, Gratis
+- [Florence Highlights Audio Tour: Renaissance Masterpieces and Architectural Wonders](https://anyplans.in/firenze/florence-highlights-audio-tour-renaissance-masterpieces-and-/): Martedì 29 settembre alle 12:00, Basilica of Santa Maria Novella, Firenze, Gratis
+- [Florence Audio Tour: Renaissance Wonders](https://anyplans.in/firenze/florence-audio-tour-renaissance-wonders/): Martedì 29 settembre alle 12:00, Florence Baptistery, Firenze, Gratis
 - [Les Beautés de Florence (FR)](https://anyplans.in/firenze/les-beautes-de-florence-fr/): Martedì 29 settembre alle 17:30, Firenze, Firenze, Gratis
+- [Alla scoperta dei tesori di Firenze (IT)](https://anyplans.in/firenze/alla-scoperta-dei-tesori-di-firenze-it/): Martedì 29 settembre alle 17:30, Piazza Santa Maria Novella, Firenze, Gratis
 - [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/firenze/padel-mancano-3-giocatori-competitiva/): Martedì 29 settembre alle 17:30, Padel Firenze by Olympus, Via di Ripoli 88 , 50126 Firenze, 15 €
-- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole-2026-09-29/): Martedì 29 settembre alle 17:30, Padel 31 - Coverciano, Via della Chimera, 25, 50135 Firenze, 13 €
+- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole/): Martedì 29 settembre alle 17:30, Padel 31 - Coverciano, Via della Chimera, 25, 50135 Firenze, 13 €
 - [Community Meetup di Startup Geeks a Firenze](https://anyplans.in/firenze/community-meetup-di-startup-geeks-a-firenze/): Martedì 29 settembre alle 17:30, Murate Idea Park, Firenze, 6,55 €
 - [Un paseo por Florencia al atardecer (ES)](https://anyplans.in/firenze/un-paseo-por-florencia-al-atardecer-es/): Martedì 29 settembre alle 18:00, In the middle of the square, Firenze, Gratis
 - [The Four Seasons & Masterpieces – Orchestra da Camera Fiorentina](https://anyplans.in/firenze/the-four-seasons-masterpieces-orchestra-da-camera-fiorentina/): Martedì 29 settembre alle 18:00, Franco Zeffirelli Foundation, Firenze, Gratis
 - [Florence: Concert Matinée Experience](https://anyplans.in/firenze/florence-concert-matinee-experience/): Martedì 29 settembre alle 18:00, Auditorium Santa Croce al Tempio, Firenze, Gratis
 - [INTRECCI DI COMUNITÀ | Pratica artistica partecipata](https://anyplans.in/firenze/intrecci-di-comunita-pratica-artistica-partecipata/): Martedì 29 settembre alle 18:00, Casa delle Donne, Firenze, Gratis
+- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole-2026-09-29/): Martedì 29 settembre alle 18:30, Padel Firenze by Olympus, Via di Ripoli 88 , 50126 Firenze, 15 €
 - [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole-2026-09-29-2/): Martedì 29 settembre alle 18:30, Circolo Valleverde Firenze, Via del Carota, 3, 50126 Firenze, 15 €
 - [Pubblico — Open Studio](https://anyplans.in/firenze/pubblico-open-studio/): Martedì 29 settembre alle 19:00, Toast Project Studio, Firenze, Gratis
 - [Cup Pong](https://anyplans.in/firenze/cup-pong/): Martedì 29 settembre alle 20:00, YellowSquare Florence, Firenze, Gratis
 - [Tuesday Night Trivia](https://anyplans.in/firenze/tuesday-night-trivia/): Martedì 29 settembre alle 20:00, Surf Ventura, Firenze, Gratis
+- [MALEDETTO KARAOKE NIGHT | Ostello Bello Firenze](https://anyplans.in/firenze/maledetto-karaoke-night-ostello-bello-firenze/): Dal 29 settembre al 3 ottobre, 2 date, Ostello Bello Firenze, Firenze, Gratis
 - [CORSO DI MEDITAZIONE:LA GNOSI UNIVERSALE- Presentazione 29 sett.'26  ore 21](https://anyplans.in/firenze/corso-di-meditazione-la-gnosi-universale-presentazione-29-se/): Martedì 29 settembre alle 20:30, Nuova Accademia Gnostica S.A.W. di Firenze, Firenze, Gratis
 - [Padel: manca 1 giocatore (competitiva)](https://anyplans.in/firenze/padel-manca-1-giocatore-competitiva/): Martedì 29 settembre alle 21:00, Padel 31 - Grassina, Via Abebe Bikila, 50012 Grassina, 13 €
 - [Padel: manca 1 giocatore (amichevole)](https://anyplans.in/firenze/padel-manca-1-giocatore-amichevole/): Dal 29 settembre al 1 ottobre, 2 date, Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze, 15 €
+- [Florence: Italian Opera in Santa Monaca Church](https://anyplans.in/firenze/florence-italian-opera-in-santa-monaca-church/): Martedì 29 settembre alle 21:15, Chiesa di Santa Monaca, Firenze, Gratis
 - [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/firenze/padel-mancano-2-giocatori-competitiva/): Martedì 29 settembre alle 21:30, Padel Firenze by Olympus, Via di Ripoli 88 , 50126 Firenze, 15 €
+- [KARAOKE PARTY](https://anyplans.in/firenze/karaoke-party/): Martedì 29 settembre alle 22:30, P.za della Signoria, 30 R, Firenze, Gratis
+- [UNDERGROUND TUESDAY- by Florence at night BABYLON CLUB](https://anyplans.in/firenze/underground-tuesday-by-florence-at-night-babylon-club/): Martedì 29 settembre alle 23:30, Babylon Club, Firenze, Gratis
 - [The Beauties of Florence – Free Walking tour (EN)](https://anyplans.in/firenze/the-beauties-of-florence-free-walking-tour-en/): Mercoledì 30 settembre alle 10:30, In the middle of the square, Firenze, Gratis
 - [Volontariato Green: adotta una pianta!](https://anyplans.in/firenze/volontariato-green-adotta-una-pianta/): Mercoledì 30 settembre alle 12:00, Cafaggio del Vescovo, Firenze, Gratis
 - [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/firenze/padel-mancano-2-giocatori-amichevole/): Mercoledì 30 settembre alle 17:30, Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze, 15 €
@@ -65,17 +76,6 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Percorso Psicocorporeo Annuale - Arrendersi al corpo, avvicinarsi all'essere](https://anyplans.in/firenze/percorso-psicocorporeo-annuale-arrendersi-al-corpo-avvicinar/): Mercoledì 30 settembre alle 20:30, Via Capo di Mondo 52, Firenze, 50121 Florence, Italy, Firenze, Gratis
 - [Business Info Firenze - Mercoledì 30 Settembre ore 20.30](https://anyplans.in/firenze/business-info-firenze-mercoledi-30-settembre-ore-20-30/): Mercoledì 30 settembre alle 20:30, Confartigianato Imprese Firenze, Firenze, Gratis
 - [Game Night](https://anyplans.in/firenze/game-night/): Dal 30 settembre al 2 ottobre, 2 date, YellowSquare Florence, Firenze, Gratis
-- [L’Autogoverno Aziendale e la Prevenzione del Rischio](https://anyplans.in/firenze/l-autogoverno-aziendale-e-la-prevenzione-del-rischio/): Giovedì 1 ottobre alle 16:30, Confindustria Toscana Centro e Costa, Firenze, Gratis
-- [Birra dopo il lavoro da The Fiddler's Elbow Irish Pub: 11 posti liberi](https://anyplans.in/firenze/birra-dopo-il-lavoro-da-the-fiddler-s-elbow-irish-pub-11-pos/): Giovedì 1 ottobre alle 16:30, The Fiddler's Elbow Irish Pub, Firenze, Gratis
-- [Thai Yoga Massage: 65 euro (16 units) • Durata 60 min](https://anyplans.in/firenze/thai-yoga-massage-65-euro-16-units-durata-60-min/): Giovedì 1 ottobre alle 17:00, Cafaggio del Vescovo, Firenze, Gratis
-- [Il Cristianesimo nell'arte per tutti i tempi](https://anyplans.in/firenze/il-cristianesimo-nell-arte-per-tutti-i-tempi/): Giovedì 1 ottobre alle 17:30, Via Maurizio Bufalini, 17, Firenze, Gratis
-- [Cena da Lo Schiacciavino - Santa Croce: 5 posti liberi](https://anyplans.in/firenze/cena-da-lo-schiacciavino-santa-croce-5-posti-liberi/): Giovedì 1 ottobre alle 18:00, Lo Schiacciavino - Santa Croce, Firenze, Gratis
-- [BREVISSIME: Michele Dantini. CRISI](https://anyplans.in/firenze/brevissime-michele-dantini-crisi/): Giovedì 1 ottobre alle 18:15, Palazzo Corsini, Firenze, 5 €
-- [Nuovi amici e buon Cibo da Ciccia e Briciole - Burger Corner: 8 posti liberi](https://anyplans.in/firenze/nuovi-amici-e-buon-cibo-da-ciccia-e-briciole-burger-corner-8/): Giovedì 1 ottobre alle 18:30, Ciccia e Briciole - Burger Corner, Firenze, Gratis
-- [Aperitivo da Narciso Restaurant & Rooftop Pool Bar: 8 posti liberi](https://anyplans.in/firenze/aperitivo-da-narciso-restaurant-rooftop-pool-bar-8-posti-lib/): Giovedì 1 ottobre alle 18:30, Narciso Restaurant & Rooftop Pool Bar, Firenze, Gratis
-- [Cena da Aji Tei: 6 posti liberi](https://anyplans.in/firenze/cena-da-aji-tei-6-posti-liberi/): Giovedì 1 ottobre alle 18:30, Aji Tei, Firenze, Gratis
-- [BOOKCLUB: UNA CASA TUTTA PER NOI](https://anyplans.in/firenze/bookclub-una-casa-tutta-per-noi/): Giovedì 1 ottobre alle 18:30, Casa delle Donne Firenze, Firenze, Gratis
-- [partita guidata con Niccolò](https://anyplans.in/firenze/partita-guidata-con-niccolo/): Giovedì 1 ottobre alle 18:30, Padel Firenze by Olympus, Via di Ripoli 88 , 50126 Firenze, 25 €
 
 ## Optional
 
@@ -108,82 +108,82 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 # Tutte le pagine di anyplans a Firenze (italiano, poi inglese)
 
-## Cosa fare a Firenze e provincia: 353 eventi
+## Cosa fare a Firenze e provincia: 374 eventi
 https://anyplans.in/firenze/cosa-fare/
 
 Incontri culturali, cena / aperitivo, concerti e musica dal vivo, spettacoli e teatro e padel: quello che succede a Firenze e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
 
-## Cosa fare a Firenze oggi: 17 eventi
+## Cosa fare a Firenze oggi: 28 eventi
 https://anyplans.in/firenze/cosa-fare-oggi/
 
-17 eventi a Firenze e provincia oggi, 29 settembre 2026: Firenze e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+28 eventi a Firenze e provincia oggi, 29 settembre 2026: Firenze e Florence e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
 ## Cosa fare a Firenze domani: 11 eventi
 https://anyplans.in/firenze/cosa-fare-domani/
 
 11 eventi a Firenze e provincia domani, 30 settembre 2026: Firenze e San Vincenzo A Torri e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Firenze nel weekend: 40 eventi
+## Cosa fare a Firenze nel weekend: 41 eventi
 https://anyplans.in/firenze/cosa-fare-nel-weekend/
 
-40 eventi a Firenze e provincia nel weekend (Sabato 3 ottobre e Domenica 4 ottobre): Firenze, Pontassieve, Figline Valdarno e Antella e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+41 eventi a Firenze e provincia nel weekend (Sabato 3 ottobre e Domenica 4 ottobre): Firenze, Pontassieve, Figline Valdarno e Antella e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Eventi a Firenze a settembre 2026: 29
+## Eventi a Firenze a settembre 2026: 40
 https://anyplans.in/firenze/eventi-settembre-2026/
 
-29 eventi a Firenze e provincia a settembre 2026: incontri culturali, padel, feste, sagre ed eventi di paese, spettacoli e teatro e concerti e musica dal vivo. Giorno per giorno, con orari, luogo e prezzo, a Firenze e San Vincenzo A Torri e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+40 eventi a Firenze e provincia a settembre 2026: incontri culturali, cena / aperitivo, feste, sagre ed eventi di paese, ceramica e escursionismo. Giorno per giorno, con orari, luogo e prezzo, a Firenze, Florence e San Vincenzo A Torri e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Firenze a ottobre 2026: 232
+## Eventi a Firenze a ottobre 2026: 243
 https://anyplans.in/firenze/eventi-ottobre-2026/
 
-232 eventi a Firenze e provincia a ottobre 2026: padel, giochi da tavolo, incontri culturali, cena / aperitivo e yoga / pilates. Giorno per giorno, con orari, luogo e prezzo, a Firenze, Montelupo Fiorentino, Scandicci e Scarperia e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+243 eventi a Firenze e provincia a ottobre 2026: karaoke, padel, giochi da tavolo, cena / aperitivo e yoga / pilates. Giorno per giorno, con orari, luogo e prezzo, a Firenze, Scandicci, Montelupo Fiorentino e Scarperia e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 ## Eventi a Firenze a novembre 2026: 54
 https://anyplans.in/firenze/eventi-novembre-2026/
 
 54 eventi a Firenze e provincia a novembre 2026: feste, sagre ed eventi di paese, mostre, incontri culturali, concerti e musica dal vivo e spettacoli e teatro. Giorno per giorno, con orari, luogo e prezzo, a Firenze, Prulli di Sopra, Martignana e Presso e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Cena / aperitivo a Firenze: 43 eventi
+## Cene e aperitivi a Firenze: 44 eventi
 https://anyplans.in/firenze/cene-e-aperitivi/
 
-A Firenze e provincia ci sono 43 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Firenze e provincia ci sono 44 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Pittura / arte a Firenze: 7 eventi
+## Pittura e corsi d'arte a Firenze: 8 eventi
 https://anyplans.in/firenze/pittura/
 
-A Firenze e provincia ci sono 7 laboratori nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Firenze e provincia ci sono 8 laboratori nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Concerti e musica dal vivo a Firenze: 57 eventi
+## Concerti e musica dal vivo a Firenze: 60 eventi
 https://anyplans.in/firenze/concerti/
 
-A Firenze e provincia ci sono 57 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Firenze e provincia ci sono 60 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Feste e sagre a Firenze: 24 eventi
+## Feste e sagre a Firenze: 28 eventi
 https://anyplans.in/firenze/feste/
 
-A Firenze e provincia ci sono 24 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Firenze e provincia ci sono 28 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Escursionismo a Firenze: 5 eventi
+## Escursioni e trekking a Firenze: 7 eventi
 https://anyplans.in/firenze/escursioni/
 
-A Firenze e provincia ci sono 5 escursioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Firenze e provincia ci sono 7 escursioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Incontri culturali a Firenze: 82 eventi
+## Incontri, corsi e conferenze a Firenze: 87 eventi
 https://anyplans.in/firenze/incontri-culturali/
 
-A Firenze e provincia ci sono 82 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Firenze e provincia ci sono 87 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Giochi da tavolo a Firenze: 6 eventi
 https://anyplans.in/firenze/giochi/
 
 A Firenze e provincia ci sono 6 serate di giochi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Palestra a Firenze: 1 evento
+## Palestra e allenamenti a Firenze: 1 evento
 https://anyplans.in/firenze/palestra/
 
-A Firenze e provincia ci sono 1 evento di palestra nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Firenze e provincia ci sono 1 allenamento nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Spettacoli e teatro a Firenze: 58 eventi
+## Teatro e spettacoli a Firenze: 58 eventi
 https://anyplans.in/firenze/spettacoli/
 
 A Firenze e provincia ci sono 58 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
@@ -198,45 +198,45 @@ https://anyplans.in/firenze/ballo/
 
 A Firenze e provincia ci sono 3 serate di ballo nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Karaoke a Firenze: 2 eventi
+## Karaoke a Firenze: 3 eventi
 https://anyplans.in/firenze/karaoke/
 
-A Firenze e provincia ci sono 2 serate karaoke nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Firenze e provincia ci sono 3 serate karaoke nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Yoga / pilates a Firenze: 7 eventi
+## Yoga e pilates a Firenze: 8 eventi
 https://anyplans.in/firenze/yoga/
 
-A Firenze e provincia ci sono 7 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Firenze e provincia ci sono 8 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Mostre a Firenze: 14 eventi
+## Mostre ed esposizioni a Firenze: 15 eventi
 https://anyplans.in/firenze/mostre/
 
-A Firenze e provincia ci sono 14 mostre nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Firenze e provincia ci sono 15 mostre nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Visite guidate a Firenze: 16 eventi
+## Visite guidate e tour a Firenze: 16 eventi
 https://anyplans.in/firenze/visite-guidate/
 
 A Firenze e provincia ci sono 16 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Serate e discoteca a Firenze: 3 eventi
+## Serate e discoteca a Firenze: 4 eventi
 https://anyplans.in/firenze/serate/
 
-A Firenze e provincia ci sono 3 serate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Firenze e provincia ci sono 4 serate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Cinema a Firenze: 5 eventi
 https://anyplans.in/firenze/cinema/
 
 A Firenze e provincia ci sono 5 proiezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Feste ed eventi a Scandicci: 4 in programma
+## Feste ed eventi a Scandicci: 6 in programma
 https://anyplans.in/firenze/scandicci/
 
-A Scandicci ci sono 4 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Scandicci con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Scandicci ci sono 6 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Scandicci con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Feste ed eventi a Montelupo Fiorentino: 4 in…
+## Feste ed eventi a Montelupo Fiorentino: 5 in…
 https://anyplans.in/firenze/montelupo-fiorentino/
 
-A Montelupo Fiorentino ci sono 4 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Montelupo Fiorentino con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Montelupo Fiorentino ci sono 5 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Montelupo Fiorentino con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 ## Locali a Firenze: 55
 https://anyplans.in/firenze/locali/
@@ -326,7 +326,7 @@ Teatro Puccini a Firenze: 7 eventi in programma — spettacoli e teatro. Di ognu
 ## YellowSquare Florence: eventi e serate a Firenze
 https://anyplans.in/firenze/locali/yellowsquare-florence/
 
-YellowSquare Florence a Firenze: 5 eventi in programma — cena / aperitivo, giochi da tavolo e karaoke. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+YellowSquare Florence a Firenze: 6 eventi in programma — cena / aperitivo, giochi da tavolo, karaoke e pittura / arte. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Teatro Goldoni - Il Teatro delle Donne: eventi in…
 https://anyplans.in/firenze/locali/teatro-goldoni-il-teatro-delle-donne/
@@ -423,11 +423,6 @@ https://anyplans.in/firenze/locali/the-social-hub-florence-lavagnini/
 
 The Social Hub Florence Lavagnini a Firenze: 2 eventi in programma — incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-## Confindustria Toscana Centro e Costa: eventi in…
-https://anyplans.in/firenze/locali/confindustria-toscana-centro-e-costa/
-
-Confindustria Toscana Centro e Costa a Firenze: 3 eventi in programma — incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
 ## ALO PRIVATE EVENTS: eventi in programma a Firenze
 https://anyplans.in/firenze/locali/alo-private-events/
 
@@ -437,6 +432,11 @@ ALO PRIVATE EVENTS a Firenze: 3 eventi in programma — yoga / pilates e incontr
 https://anyplans.in/firenze/locali/luma/
 
 Luma a Firenze: 3 eventi in programma — spettacoli e teatro e incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
+## MMAB Montelupo Museo Archivio Biblioteca: eventi in…
+https://anyplans.in/firenze/locali/mmab-montelupo-museo-archivio-biblioteca/
+
+MMAB Montelupo Museo Archivio Biblioteca a Montelupo Fiorentino: 3 eventi in programma — visite guidate, escursionismo e incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Stand acquisto calici: eventi e serate a Firenze
 https://anyplans.in/firenze/locali/stand-acquisto-calici/
@@ -473,6 +473,11 @@ https://anyplans.in/firenze/locali/restaurant-of-the-week/
 
 Restaurant of the Week a Firenze: 2 eventi in programma — cena / aperitivo e feste, sagre ed eventi di paese. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
+## Oratorio Santa Maria Vergine della Croce al Tempio:…
+https://anyplans.in/firenze/locali/oratorio-santa-maria-vergine-della-croce-al-tempio/
+
+Oratorio Santa Maria Vergine della Croce al Tempio a Firenze: 2 eventi in programma — concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
 ## Casa delle Donne Firenze: eventi in programma
 https://anyplans.in/firenze/locali/casa-delle-donne-firenze/
 
@@ -488,20 +493,15 @@ https://anyplans.in/firenze/locali/palazzo-dei-vicari/
 
 Palazzo dei Vicari a Scarperia: 2 eventi in programma — feste, sagre ed eventi di paese e incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-## Santa Trinita: eventi e serate a Firenze
-https://anyplans.in/firenze/locali/santa-trinita/
-
-Santa Trinita a Firenze: 2 eventi in programma — spettacoli e teatro e concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
 ## Club 21: eventi e serate a Firenze
 https://anyplans.in/firenze/locali/club-21/
 
 Club 21 a Firenze: 2 eventi in programma — concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-## MMAB Montelupo Museo Archivio Biblioteca: eventi in…
-https://anyplans.in/firenze/locali/mmab-montelupo-museo-archivio-biblioteca/
+## Confindustria Toscana Centro e Costa: eventi in…
+https://anyplans.in/firenze/locali/confindustria-toscana-centro-e-costa/
 
-MMAB Montelupo Museo Archivio Biblioteca a Montelupo Fiorentino: 2 eventi in programma — visite guidate e escursionismo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Confindustria Toscana Centro e Costa a Firenze: 2 eventi in programma — incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Sala Vanni: eventi in programma a Firenze
 https://anyplans.in/firenze/locali/sala-vanni/
@@ -551,27 +551,27 @@ Festa di paese a Firenze, Firenze, martedì 29 settembre alle 17:30. Gratis (Big
 ## Florence: Authentic Leather Craft Experience in a Historic Artisan Boutique – Firenze
 https://anyplans.in/firenze/florence-authentic-leather-craft-experience-in-a-historic-ar/
 
-Ceramica a Bojola Firenze, Firenze: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Ceramica a Bojola Firenze, Firenze, martedì 29 settembre alle 12:00. Gratis (Biglietti su Eventbrite).
 
 ## Las Maravillas de Florencia_ Tour en Español – Firenze
 https://anyplans.in/firenze/las-maravillas-de-florencia-tour-en-espa-ol/
 
-Escursionismo a Piazza di San Lorenzo, Firenze: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Escursionismo a Piazza di San Lorenzo, Firenze: si è già svolto, l'ultima data è stata martedì 29 settembre 2026.
 
 ## The Wonders of Florence_ English Tour – Firenze
 https://anyplans.in/firenze/the-wonders-of-florence-english-tour/
 
-Escursionismo a Piazza di San Lorenzo, Firenze: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Escursionismo a Piazza di San Lorenzo, Firenze: si è già svolto, l'ultima data è stata martedì 29 settembre 2026.
 
 ## Explore Florence: "The Medici's Secret Elixir" City Quest
 https://anyplans.in/firenze/explore-florence-the-medici-s-secret-elixir-city-quest/
 
-Cena / aperitivo a Florence, Florence: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Cena / aperitivo a Florence, Florence, martedì 29 settembre alle 10:30. Gratis (Biglietti su Eventbrite).
 
 ## Firenze Avventura Urbana: "Caccia all'Elisir Segreto…
 https://anyplans.in/firenze/firenze-avventura-urbana-caccia-all-elisir-segreto-dei-medic/
 
-Incontri culturali a Via della Scala, 16, Firenze: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Incontri culturali a Via della Scala, 16, Firenze, martedì 29 settembre alle 10:30. Gratis (Biglietti su Eventbrite).
 
 ## Volontariato Green: adotta una pianta! – Firenze
 https://anyplans.in/firenze/volontariato-green-adotta-una-pianta/
@@ -596,7 +596,7 @@ Cena / aperitivo a Natalino - Enoteca, Firenze: si è già svolto, l'ultima data
 ## Alla scoperta dei tesori di Firenze (IT)
 https://anyplans.in/firenze/alla-scoperta-dei-tesori-di-firenze-it/
 
-Festa di paese a Piazza Santa Maria Novella, Firenze: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Festa di paese a Piazza Santa Maria Novella, Firenze, martedì 29 settembre alle 17:30. Gratis (Biglietti su Eventbrite).
 
 ## Welcome Wanderer - Introduzione all'installazione sonora – Firenze
 https://anyplans.in/firenze/welcome-wanderer-introduzione-all-installazione-sonora/
@@ -701,12 +701,12 @@ Concerti e musica dal vivo a Auditorium Santa Croce al Tempio, Firenze, mercoled
 ## Florence: Italian Opera in Santa Monaca Church – Firenze
 https://anyplans.in/firenze/florence-italian-opera-in-santa-monaca-church/
 
-Concerti e musica dal vivo a Chiesa di Santa Monaca, Firenze: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Concerti e musica dal vivo a Chiesa di Santa Monaca, Firenze, martedì 29 settembre alle 21:15. Gratis (Biglietti su Eventbrite).
 
 ## KARAOKE PARTY – P.za della Signoria
 https://anyplans.in/firenze/karaoke-party/
 
-Karaoke a P.za della Signoria, 30 R, Firenze: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Karaoke a P.za della Signoria, 30 R, Firenze, martedì 29 settembre alle 22:30. Gratis (Biglietti su Eventbrite).
 
 ## Presentazione italiana: World Investment Report 2026 di UNCTAD – Firenze
 https://anyplans.in/firenze/presentazione-italiana-world-investment-report-2026-di-uncta/
@@ -841,7 +841,7 @@ Padel a Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze: si è già s
 ## Las Bellezas de Florencia – Firenze
 https://anyplans.in/firenze/las-bellezas-de-florencia-free-walking-tour-es/
 
-Festa di paese a Piazza Santa Maria Novella, Firenze: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Festa di paese a Piazza Santa Maria Novella, Firenze, martedì 29 settembre alle 10:30. Gratis (Biglietti su Eventbrite).
 
 ## Partita Guidata con Franci – Padel 31 - Grassina
 https://anyplans.in/firenze/partita-guidata-con-franci/
@@ -1056,7 +1056,7 @@ Concerti e musica dal vivo a Auditorium Santa Croce al Tempio, Firenze, martedì
 ## OPEN: A new civic space for art and science | FREE ENTRANCE & GUIDED TOURS – Firenze
 https://anyplans.in/firenze/open-a-new-civic-space-for-art-and-science-free-entrance-gui/
 
-Mostre a Palazzo Buontalenti, Firenze: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Mostre a Palazzo Buontalenti, Firenze, sabato 3 ottobre alle 15:00. Gratis (Biglietti su Eventbrite).
 
 ## Open Day Accademia Cappiello - 19 Settembre 2026 – Firenze
 https://anyplans.in/firenze/open-day-accademia-cappiello-19-settembre-2026/
@@ -1126,7 +1126,7 @@ Cena / aperitivo a Atollo, Firenze: si è già svolto, l'ultima data è stata sa
 ## MALEDETTO KARAOKE NIGHT | Ostello Bello Firenze
 https://anyplans.in/firenze/maledetto-karaoke-night-ostello-bello-firenze/
 
-Karaoke a Ostello Bello Firenze, Firenze, sabato 3 ottobre alle 19:00. Gratis (Biglietti su Eventbrite).
+Karaoke a Ostello Bello Firenze, Firenze, martedì 29 settembre alle 20:30 (2 date, fino al 3 ottobre). Gratis (Biglietti su Eventbrite).
 
 ## Foodies + New Friends: Florence – Restaurant of the Week
 https://anyplans.in/firenze/foodies-new-friends-florence/
@@ -1301,22 +1301,22 @@ Cena / aperitivo a Bistrot Cafè 19.26 Firenze: si è già svolto, l'ultima data
 ## Reading hour (Florence) – Firenze
 https://anyplans.in/firenze/reading-hour-florence/
 
-Yoga / pilates a Piazza dei Ciompi, Firenze: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Yoga / pilates a Piazza dei Ciompi, Firenze, lunedì 5 ottobre alle 18:00. Gratis (Biglietti su Eventbrite).
 
 ## Come cambierà la mobilità a… – Sede del Quartiere 5, 21 settembre
 https://anyplans.in/firenze/come-cambiera-la-mobilita-a-firenze-incontro-nel-quartiere-5/
 
 Incontri culturali a Sede del Quartiere 5, Firenze: si è già svolto, l'ultima data è stata lunedì 21 settembre 2026.
 
-## Padel: mancano 3 giocatori… – Padel Firenze by Olympus, 29 settembre
+## Padel: mancano 3 giocatori… – Padel 31 - Coverciano, 29 settembre
 https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole/
 
-Padel a Padel Firenze by Olympus, Via di Ripoli 88 , 50126 Firenze, martedì 29 settembre alle 10:30 (2 date, fino al 29 settembre). 10 € (Si chiede il posto e si paga su Playtomic).
+Padel a Padel 31 - Coverciano, Via della Chimera, 25, 50135 Firenze, martedì 29 settembre alle 17:30. 13 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori… – Padel 31 - Coverciano, 29 settembre
+## Padel: mancano 3 giocatori… – Padel Firenze by Olympus, 29 settembre
 https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole-2026-09-29/
 
-Padel a Padel 31 - Coverciano, Via della Chimera, 25, 50135 Firenze, martedì 29 settembre alle 17:30. 13 € (Si chiede il posto e si paga su Playtomic).
+Padel a Padel Firenze by Olympus, Via di Ripoli 88 , 50126 Firenze, martedì 29 settembre alle 18:30. 15 € (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: mancano 3 giocatori… – Circolo Valleverde Firenze, 29 settembre
 https://anyplans.in/firenze/padel-mancano-3-giocatori-amichevole-2026-09-29-2/
@@ -1366,12 +1366,12 @@ Incontri culturali a Pablo Tango Firenze, Firenze: si è già svolto, l'ultima d
 ## Pictionary – YellowSquare Florence
 https://anyplans.in/firenze/pictionary/
 
-Pittura / arte a YellowSquare Florence, Firenze: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Pittura / arte a YellowSquare Florence, Firenze, lunedì 5 ottobre alle 21:00. Gratis (Biglietti su Eventbrite).
 
 ## Vivaldi’s The Four Seasons in Florence - by TIBi Ensemble – Firenze
 https://anyplans.in/firenze/vivaldi-s-the-four-seasons-in-florence-by-tibi-ensemble/
 
-Concerti e musica dal vivo a Oratorio Santa Maria Vergine della Croce al Tempio, Firenze: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Concerti e musica dal vivo a Oratorio Santa Maria Vergine della Croce al Tempio, Firenze, lunedì 5 ottobre alle 21:00. Gratis (Biglietti su Eventbrite).
 
 ## YAB SMOOVE MONDAYS - by Florence at night YAB CLUB – Firenze
 https://anyplans.in/firenze/yab-smoove-mondays-by-florence-at-night-yab-club/
@@ -1386,7 +1386,7 @@ Incontri culturali a Nana Bianca, Firenze, martedì 13 ottobre alle 09:00. Grati
 ## Florence Highlights Audio Tour: Renaissance Masterpieces and… – Firenze
 https://anyplans.in/firenze/florence-highlights-audio-tour-renaissance-masterpieces-and-/
 
-Escursionismo a Basilica of Santa Maria Novella, Firenze: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Escursionismo a Basilica of Santa Maria Novella, Firenze, martedì 29 settembre alle 12:00. Gratis (Biglietti su Eventbrite).
 
 ## Longevity Economy Forum – Università degli Studi di Firenze
 https://anyplans.in/firenze/longevity-economy-forum/
@@ -1431,7 +1431,7 @@ Concerti e musica dal vivo a Certosa di Firenze, Firenze: si è già svolto, l'u
 ## UNDERGROUND TUESDAY- by Florence at night BABYLON CLUB
 https://anyplans.in/firenze/underground-tuesday-by-florence-at-night-babylon-club/
 
-Serate e discoteca a Babylon Club, Firenze: si è già svolto, l'ultima data è stata martedì 22 settembre 2026.
+Serate e discoteca a Babylon Club, Firenze, martedì 29 settembre alle 23:30. Gratis (Biglietti su Eventbrite).
 
 ## RankWit AI Visibility Lab - Il tuo hotel nelle risposte dell'AI – Firenze
 https://anyplans.in/firenze/rankwit-ai-visibility-lab-il-tuo-hotel-nelle-risposte-dell-a/
@@ -1446,7 +1446,7 @@ Padel a Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze, mercoledì 1
 ## Florence Audio Tour: Renaissance Wonders – Firenze
 https://anyplans.in/firenze/florence-audio-tour-renaissance-wonders/
 
-Escursionismo a Florence Baptistery, Firenze: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Escursionismo a Florence Baptistery, Firenze, martedì 29 settembre alle 12:00. Gratis (Biglietti su Eventbrite).
 
 ## Tavolo per chi è nuovo in città da Arancin: 7 posti…
 https://anyplans.in/firenze/tavolo-per-chi-e-nuovo-in-citta-da-arancin-7-posti-liberi/
@@ -2118,11 +2118,6 @@ https://anyplans.in/firenze/business-info-firenze-mercoledi-30-settembre-ore-20-
 
 Incontri culturali a Confartigianato Imprese Firenze, Firenze, mercoledì 30 settembre alle 20:30. Gratis (Biglietti su Eventbrite).
 
-## L’Autogoverno Aziendale e la Prevenzione del Rischio – Firenze
-https://anyplans.in/firenze/l-autogoverno-aziendale-e-la-prevenzione-del-rischio/
-
-Incontri culturali a Confindustria Toscana Centro e Costa, Firenze, giovedì 1 ottobre alle 16:30. Gratis (Biglietti su Eventbrite).
-
 ## Birra dopo il lavoro da The Fiddler's Elbow Irish Pub:…
 https://anyplans.in/firenze/birra-dopo-il-lavoro-da-the-fiddler-s-elbow-irish-pub-11-pos/
 
@@ -2173,6 +2168,11 @@ https://anyplans.in/firenze/gianluca-gotto-questione-di-karma/
 
 Spettacoli e teatro a Teatro Cartiere Carrara, Firenze, giovedì 1 ottobre alle 21:00. Gratis (Ingresso: vedi la pagina del Tacco di Bacco).
 
+## MD 2026 / Q5 Casa della Carità / SEMPLICEMENTE ORNELLA – Firenze
+https://anyplans.in/firenze/md-2026-q5-casa-della-carita-semplicemente-ornella/
+
+Concerti e musica dal vivo a Casa della Carità - Caritas Diocesana di Firenze, Firenze, giovedì 1 ottobre alle 21:00. Gratis (Biglietti su Eventbrite).
+
 ## Blue Velvet il Giovedi
 https://anyplans.in/firenze/blue-velvet-il-giovedi/
 
@@ -2182,6 +2182,11 @@ Incontri culturali a Blue Velvet, Firenze, giovedì 1 ottobre alle 23:50. Gratis
 https://anyplans.in/firenze/blue-velvet-boiler-room/
 
 Serate e discoteca a Blue Velvet, Firenze, giovedì 1 ottobre alle 23:59. Gratis (Biglietti su Eventbrite).
+
+## L'evoluzione dei controlli della Corte dei Conti fino alla legge n. 1/2026. – Firenze
+https://anyplans.in/firenze/l-evoluzione-dei-controlli-della-corte-dei-conti-fino-alla-l/
+
+Incontri culturali a Regione Toscana - Palazzo Guadagni Strozzi Sacrati, Firenze, venerdì 2 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## Oltrarno Night: Calici & Santo Spirito 🍷✨ da Il…
 https://anyplans.in/firenze/oltrarno-night-calici-santo-spirito-da-il-santino-11-posti-l/
@@ -2237,11 +2242,6 @@ Cena / aperitivo a Autoctono Wine - Enoteca emozionale di vitigni autoctoni ital
 https://anyplans.in/firenze/le-mani-di-llatzer-garcia/
 
 Spettacoli e teatro a Teatro della Limonaia Sesto Fiorentino, Sesto Fiorentino, venerdì 2 ottobre alle 20:30. Gratis (Ingresso: vedi la pagina del Tacco di Bacco).
-
-## Choir Concert "Trinity" – Santa Trinita
-https://anyplans.in/firenze/choir-concert-trinity/
-
-Spettacoli e teatro a Santa Trinita, Firenze, venerdì 2 ottobre alle 21:00. Gratis (Biglietti su Eventbrite).
 
 ## BRIO | Blend Manifattura
 https://anyplans.in/firenze/brio-blend-manifattura/
@@ -2448,8 +2448,8 @@ https://anyplans.in/firenze/attraversamenti-umani/
 
 Festa di paese a Istituto Tecnico per il Turismo Marco Polo, Firenze, martedì 6 ottobre alle 16:00. Gratis (Biglietti su Eventbrite).
 
-## Estratti degli spettacoli: "Iliade" e "La città invisibile" – Firenze
-https://anyplans.in/firenze/estratti-degli-spettacoli-iliade-e-la-citta-invisibile/
+## Serate dedicata a Gianfranco Pedullà – Firenze
+https://anyplans.in/firenze/serate-dedicata-a-gianfranco-pedulla/
 
 Spettacoli e teatro a Istituto Tecnico per il Turismo Marco Polo, Firenze, martedì 6 ottobre alle 18:00. Gratis (Biglietti su Eventbrite).
 
@@ -2573,6 +2573,11 @@ https://anyplans.in/firenze/parliamone-il-talk-show-sul-lavoro-reale-arriva-a-fi
 
 Spettacoli e teatro a Piazza della Madonna della Neve, 6, Firenze, giovedì 8 ottobre alle 17:30. Gratis (Gratis, registrazione su Luma).
 
+## SOTF 10th Anniversary Party – SOTF FIRENZE
+https://anyplans.in/firenze/sotf-10th-anniversary-party/
+
+Festa di paese a SOTF FIRENZE, Firenze, giovedì 8 ottobre alle 18:00. Gratis (Biglietti su Eventbrite).
+
 ## Punch Needle Workshop - Workshop di Ricamo con l'Ago Magico – Firenze
 https://anyplans.in/firenze/punch-needle-workshop-workshop-di-ricamo-con-l-ago-magico/
 
@@ -2653,6 +2658,11 @@ https://anyplans.in/firenze/firenze-oscura-diavoli-streghe-demoni-e-misteri-al-c
 
 Incontri culturali a Piazza de' Rucellai, 50123 Firenze FI, Italia, Firenze, venerdì 9 ottobre alle 20:30 (2 date, fino al 9 ottobre). Gratis (Biglietti su Eventbrite).
 
+## Open Mic – Stand Up Comedy Night | Firenze – Binomio Firenze
+https://anyplans.in/firenze/open-mic-stand-up-comedy-night-firenze/
+
+Spettacoli e teatro a Binomio Firenze, Firenze, venerdì 9 ottobre alle 21:00. Gratis (Biglietti su Eventbrite).
+
 ## Anastacia in Firenze – Teatro Verdi
 https://anyplans.in/firenze/anastacia-in-firenze/
 
@@ -2693,7 +2703,12 @@ https://anyplans.in/firenze/caccia-al-tesoro/
 
 Escursionismo a MMAB Montelupo Museo Archivio Biblioteca, Montelupo Fiorentino, sabato 10 ottobre alle 20:45. Gratis (Biglietti su Eventbrite).
 
-## Gli Wine Tour di Degustavino in Via Gioberti - non più di 5 ettari – Firenze
+## Il pianeta ci cura: abbi cura del pianeta – Montelupo Fiorentino
+https://anyplans.in/firenze/il-pianeta-ci-cura-abbi-cura-del-pianeta/
+
+Incontri culturali a MMAB Montelupo Museo Archivio Biblioteca, Montelupo Fiorentino, sabato 10 ottobre alle 20:45. Gratis (Biglietti su Eventbrite).
+
+## Gli Wine Tour di Degustavino in Via Gioberti - Non più di 5 ettari – Firenze
 https://anyplans.in/firenze/gli-wine-tour-di-degustavino-in-via-gioberti-non-piu-di-5-et/
 
 Cena / aperitivo a Stand acquisto calici, lato piazza Beccaria, Firenze, domenica 11 ottobre alle 15:00. Gratis (Biglietti su Eventbrite).
@@ -2717,6 +2732,11 @@ Serate e discoteca a The Social Hub Florence Belfiore, Firenze, domenica 11 otto
 https://anyplans.in/firenze/rinfresco-serale-devadatta-fest-firenze/
 
 Cena / aperitivo a Via Arcangelo Corelli, 33C, Firenze, domenica 11 ottobre alle 20:00. Gratis (Biglietti su Eventbrite).
+
+## Open Day Thermal – Scandicci
+https://anyplans.in/firenze/open-day-thermal/
+
+Incontri culturali a Via del Ponte a Greve, 68, Scandicci, lunedì 12 ottobre alle 09:30. Gratis (Biglietti su Eventbrite).
 
 ## CORSI A L'APPARTAMENTO AUTUNNO 2026! – Firenze
 https://anyplans.in/firenze/corsi-a-l-appartamento-autunno-2026/
@@ -2778,6 +2798,11 @@ https://anyplans.in/firenze/brevissime-mario-iozzo-il-vaso-fran-ois-rex-vasorum/
 
 Mostre a Museo Stefano Bardini, Firenze, giovedì 15 ottobre alle 18:45. Gratis (Biglietti su Eventbrite).
 
+## Palestinesi sono  i tuoi occhi – Teatro Cantiere Florida
+https://anyplans.in/firenze/palestinesi-sono-i-tuoi-occhi/
+
+Festa di paese a Teatro Cantiere Florida, Firenze, giovedì 15 ottobre alle 19:00. Gratis (Biglietti su Eventbrite).
+
 ## "Anche gli eroi muoiono" - Kid Yugi – Nelson Mandela Forum
 https://anyplans.in/firenze/anche-gli-eroi-muoiono-kid-yugi/
 
@@ -2794,7 +2819,7 @@ https://anyplans.in/firenze/md-2026-q4-pala-bigmat-gia-palazzo-wanny-quadri-bole
 Concerti e musica dal vivo a Palazzo Wanny, Firenze, giovedì 15 ottobre alle 21:00. Gratis (Biglietti su Eventbrite).
 
 ## Tropical Animals with JUAAN – Club 21
-https://anyplans.in/firenze/tropical-animals-with-juaan-gabriele-sdelci-and-more/
+https://anyplans.in/firenze/tropical-animals-with-juaan-fettedilimone-b2b-haze-and-wise/
 
 Concerti e musica dal vivo a Club 21, Firenze, giovedì 15 ottobre alle 23:00. Gratis (Biglietti su Eventbrite).
 
@@ -3048,6 +3073,11 @@ https://anyplans.in/firenze/walter-riviera-mi-ai-rubato-il-lavoro/
 
 Spettacoli e teatro a Teatro Cartiere Carrara, Firenze, domenica 25 ottobre alle 21:00. Gratis (Ingresso: vedi la pagina del Tacco di Bacco).
 
+## Nano Experince Work Shop – Scandicci
+https://anyplans.in/firenze/nano-experince-work-shop/
+
+Incontri culturali a Via del Ponte a Greve, 68, Scandicci, lunedì 26 ottobre alle 09:30. Gratis (Biglietti su Eventbrite).
+
 ## Made in Florence: "La Firenze degli anni 80" di Bruno…
 https://anyplans.in/firenze/made-in-florence-la-firenze-degli-anni-80-di-bruno-casini/
 
@@ -3072,6 +3102,11 @@ Incontri culturali a Cafaggio del Vescovo, Firenze, martedì 27 ottobre alle 18:
 https://anyplans.in/firenze/l-antidote-redi-hasa/
 
 Cena / aperitivo a Teatro Cartiere Carrara, Firenze, mercoledì 28 ottobre alle 21:30. Gratis (Ingresso: vedi la pagina del Tacco di Bacco).
+
+## Laboratori del Pensiero – The social Hub Coworking Firenze
+https://anyplans.in/firenze/laboratori-del-pensiero/
+
+Incontri culturali a The social Hub Coworking Firenze, Firenze, giovedì 29 ottobre alle 16:30. Gratis (Biglietti su Eventbrite).
 
 ## La Botanica: "Botanica Workshop" di Lapo Morgantini – Firenze
 https://anyplans.in/firenze/la-botanica-botanica-workshop-di-lapo-morgantini/
@@ -3588,70 +3623,70 @@ https://anyplans.in/firenze/vincenzo-comunale-in-prima-pagina/
 
 Spettacoli e teatro a Teatro Puccini, Firenze, martedì 13 aprile alle 21:00. Gratis (Ingresso: vedi la pagina del Tacco di Bacco).
 
-## Things to do in Florence: 353 events
+## Things to do in Florence: 374 events
 https://anyplans.in/en/firenze/
 
 What's on in Florence and its province, today, tonight and this weekend: talks & culture, dinners & aperitivo, concerts & live music, shows & theatre, padel and town festivals & fairs. Pick one and go with other people.
 
-## What to do in Florence today: 17 events
+## What to do in Florence today: 28 events
 https://anyplans.in/en/firenze/what-to-do-today/
 
-17 events in Florence and its province today, 29 September 2026: Firenze and Florence and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+28 events in Florence and its province today, 29 September 2026: Firenze and Florence and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
 ## What to do in Florence tomorrow: 11 events
 https://anyplans.in/en/firenze/what-to-do-tomorrow/
 
 11 events in Florence and its province tomorrow, 30 September 2026: Firenze, Florence and San Vincenzo A Torri and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Florence this weekend: 40 events
+## What to do in Florence this weekend: 41 events
 https://anyplans.in/en/firenze/what-to-do-this-weekend/
 
-40 events in Florence and its province this weekend (Saturday 3 October and Sunday 4 October): Firenze, Florence, Pontassieve and Figline Valdarno and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+41 events in Florence and its province this weekend (Saturday 3 October and Sunday 4 October): Firenze, Florence, Pontassieve and Figline Valdarno and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## Events in Florence in September 2026: 29
+## Events in Florence in September 2026: 40
 https://anyplans.in/en/firenze/events-september-2026/
 
-29 events in Florence and its province in September 2026: talks & culture, padel, town festivals & fairs, shows & theatre and concerts & live music. Day by day, with times, place and price, in Firenze, Florence and San Vincenzo A Torri and other towns. You sign up and go with other people.
+40 events in Florence and its province in September 2026: talks & culture, dinners & aperitivo, town festivals & fairs, pottery and hiking. Day by day, with times, place and price, in Firenze, Florence and San Vincenzo A Torri and other towns. You sign up and go with other people.
 
-## Events in Florence in October 2026: 232
+## Events in Florence in October 2026: 243
 https://anyplans.in/en/firenze/events-october-2026/
 
-232 events in Florence and its province in October 2026: padel, board games, talks & culture, dinners & aperitivo and yoga & pilates. Day by day, with times, place and price, in Firenze, Florence, Montelupo Fiorentino and Scandicci and other towns. You sign up and go with other people.
+243 events in Florence and its province in October 2026: karaoke, padel, board games, dinners & aperitivo and yoga & pilates. Day by day, with times, place and price, in Firenze, Florence, Scandicci and Montelupo Fiorentino and other towns. You sign up and go with other people.
 
 ## Events in Florence in November 2026: 54
 https://anyplans.in/en/firenze/events-november-2026/
 
 54 events in Florence and its province in November 2026: town festivals & fairs, exhibitions, talks & culture, concerts & live music and shows & theatre. Day by day, with times, place and price, in Firenze, Prulli di Sopra, Martignana and Florence and other towns. You sign up and go with other people.
 
-## Dinners & aperitivo in Florence: 43 events
+## Dinners & aperitivo in Florence: 44 events
 https://anyplans.in/en/firenze/dinners/
 
-In Florence and its province there are 43 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Florence and its province there are 44 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Painting & art in Florence: 7 events
+## Painting & art in Florence: 8 events
 https://anyplans.in/en/firenze/painting/
 
-In Florence and its province there are 7 painting & art events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Florence and its province there are 8 painting & art events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Concerts & live music in Florence: 57 events
+## Concerts & live music in Florence: 60 events
 https://anyplans.in/en/firenze/concerts/
 
-In Florence and its province there are 57 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Florence and its province there are 60 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Festivals & sagre near Florence: 24 events
+## Festivals & sagre near Florence: 28 events
 https://anyplans.in/en/firenze/festivals/
 
-In Florence and its province there are 24 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Florence and its province there are 28 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Hiking in Florence: 5 events
+## Hiking in Florence: 7 events
 https://anyplans.in/en/firenze/hiking/
 
-In Florence and its province there are 5 hiking events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Florence and its province there are 7 hiking events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Talks & culture in Florence: 82 events
+## Talks & culture in Florence: 87 events
 https://anyplans.in/en/firenze/talks-and-culture/
 
-In Florence and its province there are 82 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Florence and its province there are 87 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Board games in Florence: 6 events
 https://anyplans.in/en/firenze/board-games/
@@ -3678,45 +3713,45 @@ https://anyplans.in/en/firenze/dancing/
 
 In Florence and its province there are 3 dance nights and classes in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Karaoke in Florence: 2 events
+## Karaoke in Florence: 3 events
 https://anyplans.in/en/firenze/karaoke/
 
-In Florence and its province there are 2 karaoke events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Florence and its province there are 3 karaoke events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Yoga & pilates in Florence: 7 events
+## Yoga & pilates in Florence: 8 events
 https://anyplans.in/en/firenze/yoga/
 
-In Florence and its province there are 7 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Florence and its province there are 8 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Exhibitions in Florence: 14 events
+## Exhibitions in Florence: 15 events
 https://anyplans.in/en/firenze/exhibitions/
 
-In Florence and its province there are 14 exhibitions in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Florence and its province there are 15 exhibitions in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Guided tours in Florence: 16 events
 https://anyplans.in/en/firenze/guided-tours/
 
 In Florence and its province there are 16 guided tours events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Nights out in Florence: 3 events
+## Nights out in Florence: 4 events
 https://anyplans.in/en/firenze/nights-out/
 
-In Florence and its province there are 3 club nights and dj sets in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Florence and its province there are 4 club nights and dj sets in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Cinema in Florence: 5 events
 https://anyplans.in/en/firenze/cinema/
 
 In Florence and its province there are 5 screenings in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Festivals and events in Scandicci, Bergamo: 4…
+## Festivals and events in Scandicci, Bergamo: 6…
 https://anyplans.in/en/firenze/scandicci/
 
-In Scandicci there are 4 events in the coming months. On anyplans you find the festivals and events of Scandicci with dates, times and place. You sign up and go with others.
+In Scandicci there are 6 events in the coming months. On anyplans you find the festivals and events of Scandicci with dates, times and place. You sign up and go with others.
 
 ## Festivals and events in Montelupo Fiorentino,…
 https://anyplans.in/en/firenze/montelupo-fiorentino/
 
-In Montelupo Fiorentino there are 4 events in the coming months. On anyplans you find the festivals and events of Montelupo Fiorentino with dates, times and place. You sign up and go with others.
+In Montelupo Fiorentino there are 5 events in the coming months. On anyplans you find the festivals and events of Montelupo Fiorentino with dates, times and place. You sign up and go with others.
 
 ## Venues in Florence: 55
 https://anyplans.in/en/firenze/venues/
@@ -3806,7 +3841,7 @@ Teatro Puccini in Firenze: 7 upcoming events — shows & theatre. Date, time, pr
 ## YellowSquare Florence: events and nights out in Firenze
 https://anyplans.in/en/firenze/venues/yellowsquare-florence/
 
-YellowSquare Florence in Firenze: 5 upcoming events — dinners & aperitivo, board games and karaoke. Date, time, price and how to join, one page each. You go with other people.
+YellowSquare Florence in Firenze: 6 upcoming events — dinners & aperitivo, board games, karaoke and painting & art. Date, time, price and how to join, one page each. You go with other people.
 
 ## Teatro Goldoni - Il Teatro delle Donne: what's on in…
 https://anyplans.in/en/firenze/venues/teatro-goldoni-il-teatro-delle-donne/
@@ -3903,11 +3938,6 @@ https://anyplans.in/en/firenze/venues/the-social-hub-florence-lavagnini/
 
 The Social Hub Florence Lavagnini in Firenze: 2 upcoming events — talks & culture. Date, time, price and how to join, one page each. You go with other people.
 
-## Confindustria Toscana Centro e Costa: what's on in…
-https://anyplans.in/en/firenze/venues/confindustria-toscana-centro-e-costa/
-
-Confindustria Toscana Centro e Costa in Firenze: 3 upcoming events — talks & culture. Date, time, price and how to join, one page each. You go with other people.
-
 ## ALO PRIVATE EVENTS: what's on in Firenze
 https://anyplans.in/en/firenze/venues/alo-private-events/
 
@@ -3917,6 +3947,11 @@ ALO PRIVATE EVENTS in Firenze: 3 upcoming events — yoga & pilates and talks & 
 https://anyplans.in/en/firenze/venues/luma/
 
 Luma in Firenze: 3 upcoming events — shows & theatre and talks & culture. Date, time, price and how to join, one page each. You go with other people.
+
+## MMAB Montelupo Museo Archivio Biblioteca: what's on in…
+https://anyplans.in/en/firenze/venues/mmab-montelupo-museo-archivio-biblioteca/
+
+MMAB Montelupo Museo Archivio Biblioteca in Montelupo Fiorentino: 3 upcoming events — guided tours, hiking and talks & culture. Date, time, price and how to join, one page each. You go with other people.
 
 ## Stand acquisto calici: events and nights out in Firenze
 https://anyplans.in/en/firenze/venues/stand-acquisto-calici/
@@ -3953,6 +3988,11 @@ https://anyplans.in/en/firenze/venues/restaurant-of-the-week/
 
 Restaurant of the Week in Firenze: 2 upcoming events — dinners & aperitivo and town festivals & fairs. Date, time, price and how to join, one page each. You go with other people.
 
+## Oratorio Santa Maria Vergine della Croce al Tempio:…
+https://anyplans.in/en/firenze/venues/oratorio-santa-maria-vergine-della-croce-al-tempio/
+
+Oratorio Santa Maria Vergine della Croce al Tempio in Firenze: 2 upcoming events — concerts & live music. Date, time, price and how to join, one page each. You go with other people.
+
 ## Casa delle Donne Firenze: what's on
 https://anyplans.in/en/firenze/venues/casa-delle-donne-firenze/
 
@@ -3968,20 +4008,15 @@ https://anyplans.in/en/firenze/venues/palazzo-dei-vicari/
 
 Palazzo dei Vicari in Scarperia: 2 upcoming events — town festivals & fairs and talks & culture. Date, time, price and how to join, one page each. You go with other people.
 
-## Santa Trinita: events and nights out in Firenze
-https://anyplans.in/en/firenze/venues/santa-trinita/
-
-Santa Trinita in Firenze: 2 upcoming events — shows & theatre and concerts & live music. Date, time, price and how to join, one page each. You go with other people.
-
 ## Club 21: events and nights out in Firenze
 https://anyplans.in/en/firenze/venues/club-21/
 
 Club 21 in Firenze: 2 upcoming events — concerts & live music. Date, time, price and how to join, one page each. You go with other people.
 
-## MMAB Montelupo Museo Archivio Biblioteca: what's on in…
-https://anyplans.in/en/firenze/venues/mmab-montelupo-museo-archivio-biblioteca/
+## Confindustria Toscana Centro e Costa: what's on in…
+https://anyplans.in/en/firenze/venues/confindustria-toscana-centro-e-costa/
 
-MMAB Montelupo Museo Archivio Biblioteca in Montelupo Fiorentino: 2 upcoming events — guided tours and hiking. Date, time, price and how to join, one page each. You go with other people.
+Confindustria Toscana Centro e Costa in Firenze: 2 upcoming events — talks & culture. Date, time, price and how to join, one page each. You go with other people.
 
 ## Sala Vanni: what's on in Firenze
 https://anyplans.in/en/firenze/venues/sala-vanni/
@@ -4031,27 +4066,27 @@ Town festival in Firenze, Firenze, Tuesday 29 September at 17:30. Free (Bigliett
 ## Florence: Authentic Leather Craft Experience in a Historic Artisan Boutique – Firenze
 https://anyplans.in/en/firenze/florence-authentic-leather-craft-experience-in-a-historic-ar/
 
-Pottery in Bojola Firenze, Firenze: it already took place, the last date was Monday, 28 September 2026.
+Pottery in Bojola Firenze, Firenze, Tuesday 29 September at 12:00. Free (Biglietti su Eventbrite).
 
 ## Las Maravillas de Florencia_ Tour en Español – Firenze
 https://anyplans.in/en/firenze/las-maravillas-de-florencia-tour-en-espa-ol/
 
-Hiking in Piazza di San Lorenzo, Firenze: it already took place, the last date was Monday, 28 September 2026.
+Hiking in Piazza di San Lorenzo, Firenze: it already took place, the last date was Tuesday, 29 September 2026.
 
 ## The Wonders of Florence_ English Tour – Firenze
 https://anyplans.in/en/firenze/the-wonders-of-florence-english-tour/
 
-Hiking in Piazza di San Lorenzo, Firenze: it already took place, the last date was Monday, 28 September 2026.
+Hiking in Piazza di San Lorenzo, Firenze: it already took place, the last date was Tuesday, 29 September 2026.
 
 ## Explore Florence: "The Medici's Secret Elixir" City Quest
 https://anyplans.in/en/firenze/explore-florence-the-medici-s-secret-elixir-city-quest/
 
-Dinners & aperitivo in Florence, Florence: it already took place, the last date was Monday, 28 September 2026.
+Dinners & aperitivo in Florence, Florence, Tuesday 29 September at 10:30. Free (Biglietti su Eventbrite).
 
 ## Firenze Avventura Urbana: "Caccia all'Elisir Segreto…
 https://anyplans.in/en/firenze/firenze-avventura-urbana-caccia-all-elisir-segreto-dei-medic/
 
-Talks & culture in Via della Scala, 16, Firenze: it already took place, the last date was Monday, 28 September 2026.
+Talks & culture in Via della Scala, 16, Firenze, Tuesday 29 September at 10:30. Free (Biglietti su Eventbrite).
 
 ## Volontariato Green: adotta una pianta! – Firenze
 https://anyplans.in/en/firenze/volontariato-green-adotta-una-pianta/
@@ -4076,7 +4111,7 @@ Dinners & aperitivo in Natalino - Enoteca, Firenze: it already took place, the l
 ## Alla scoperta dei tesori di Firenze (IT)
 https://anyplans.in/en/firenze/alla-scoperta-dei-tesori-di-firenze-it/
 
-Town festival in Piazza Santa Maria Novella, Firenze: it already took place, the last date was Monday, 28 September 2026.
+Town festival in Piazza Santa Maria Novella, Firenze, Tuesday 29 September at 17:30. Free (Biglietti su Eventbrite).
 
 ## Welcome Wanderer - Introduzione all'installazione sonora – Firenze
 https://anyplans.in/en/firenze/welcome-wanderer-introduzione-all-installazione-sonora/
@@ -4181,12 +4216,12 @@ Concerts & live music in Auditorium Santa Croce al Tempio, Firenze, Wednesday 7 
 ## Florence: Italian Opera in Santa Monaca Church – Firenze
 https://anyplans.in/en/firenze/florence-italian-opera-in-santa-monaca-church/
 
-Concerts & live music in Chiesa di Santa Monaca, Firenze: it already took place, the last date was Monday, 28 September 2026.
+Concerts & live music in Chiesa di Santa Monaca, Firenze, Tuesday 29 September at 21:15. Free (Biglietti su Eventbrite).
 
 ## KARAOKE PARTY – P.za della Signoria
 https://anyplans.in/en/firenze/karaoke-party/
 
-Karaoke in P.za della Signoria, 30 R, Firenze: it already took place, the last date was Monday, 28 September 2026.
+Karaoke in P.za della Signoria, 30 R, Firenze, Tuesday 29 September at 22:30. Free (Biglietti su Eventbrite).
 
 ## Presentazione italiana: World Investment Report 2026 di UNCTAD – Firenze
 https://anyplans.in/en/firenze/presentazione-italiana-world-investment-report-2026-di-uncta/
@@ -4321,7 +4356,7 @@ Padel in Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze: it already 
 ## Las Bellezas de Florencia – Firenze
 https://anyplans.in/en/firenze/las-bellezas-de-florencia-free-walking-tour-es/
 
-Town festival in Piazza Santa Maria Novella, Firenze: it already took place, the last date was Monday, 28 September 2026.
+Town festival in Piazza Santa Maria Novella, Firenze, Tuesday 29 September at 10:30. Free (Biglietti su Eventbrite).
 
 ## Partita Guidata con Franci – Padel 31 - Grassina
 https://anyplans.in/en/firenze/partita-guidata-con-franci/
@@ -4536,7 +4571,7 @@ Concerts & live music in Auditorium Santa Croce al Tempio, Firenze, Tuesday 29 S
 ## OPEN: A new civic space for art and science | FREE ENTRANCE & GUIDED TOURS – Firenze
 https://anyplans.in/en/firenze/open-a-new-civic-space-for-art-and-science-free-entrance-gui/
 
-Exhibitions in Palazzo Buontalenti, Firenze: it already took place, the last date was Monday, 28 September 2026.
+Exhibitions in Palazzo Buontalenti, Firenze, Saturday 3 October at 15:00. Free (Biglietti su Eventbrite).
 
 ## Open Day Accademia Cappiello - 19 Settembre 2026 – Firenze
 https://anyplans.in/en/firenze/open-day-accademia-cappiello-19-settembre-2026/
@@ -4606,7 +4641,7 @@ Dinners & aperitivo in Atollo, Firenze: it already took place, the last date was
 ## MALEDETTO KARAOKE NIGHT | Ostello Bello Firenze
 https://anyplans.in/en/firenze/maledetto-karaoke-night-ostello-bello-firenze/
 
-Karaoke in Ostello Bello Firenze, Firenze, Saturday 3 October at 19:00. Free (Biglietti su Eventbrite).
+Karaoke in Ostello Bello Firenze, Firenze, Tuesday 29 September at 20:30 (2 dates, until 3 October). Free (Biglietti su Eventbrite).
 
 ## Foodies + New Friends: Florence – Restaurant of the Week
 https://anyplans.in/en/firenze/foodies-new-friends-florence/
@@ -4781,22 +4816,22 @@ Dinners & aperitivo in Bistrot Cafè 19.26 Firenze: it already took place, the l
 ## Reading hour (Florence) – Firenze
 https://anyplans.in/en/firenze/reading-hour-florence/
 
-Yoga & pilates in Piazza dei Ciompi, Firenze: it already took place, the last date was Monday, 28 September 2026.
+Yoga & pilates in Piazza dei Ciompi, Firenze, Monday 5 October at 18:00. Free (Biglietti su Eventbrite).
 
 ## Come cambierà la mobilità a… – Sede del Quartiere 5, 21 September
 https://anyplans.in/en/firenze/come-cambiera-la-mobilita-a-firenze-incontro-nel-quartiere-5/
 
 Talks & culture in Sede del Quartiere 5, Firenze: it already took place, the last date was Monday, 21 September 2026.
 
-## Padel: mancano 3 giocatori… – Padel Firenze by Olympus, 29 September
+## Padel: mancano 3 giocatori… – Padel 31 - Coverciano, 29 September
 https://anyplans.in/en/firenze/padel-mancano-3-giocatori-amichevole/
 
-Padel in Padel Firenze by Olympus, Via di Ripoli 88 , 50126 Firenze, Tuesday 29 September at 10:30 (2 dates, until 29 September). €10 (Si chiede il posto e si paga su Playtomic).
+Padel in Padel 31 - Coverciano, Via della Chimera, 25, 50135 Firenze, Tuesday 29 September at 17:30. €13 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori… – Padel 31 - Coverciano, 29 September
+## Padel: mancano 3 giocatori… – Padel Firenze by Olympus, 29 September
 https://anyplans.in/en/firenze/padel-mancano-3-giocatori-amichevole-2026-09-29/
 
-Padel in Padel 31 - Coverciano, Via della Chimera, 25, 50135 Firenze, Tuesday 29 September at 17:30. €13 (Si chiede il posto e si paga su Playtomic).
+Padel in Padel Firenze by Olympus, Via di Ripoli 88 , 50126 Firenze, Tuesday 29 September at 18:30. €15 (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: mancano 3 giocatori… – Circolo Valleverde Firenze, 29 September
 https://anyplans.in/en/firenze/padel-mancano-3-giocatori-amichevole-2026-09-29-2/
@@ -4846,12 +4881,12 @@ Talks & culture in Pablo Tango Firenze, Firenze: it already took place, the last
 ## Pictionary – YellowSquare Florence
 https://anyplans.in/en/firenze/pictionary/
 
-Painting & art in YellowSquare Florence, Firenze: it already took place, the last date was Monday, 28 September 2026.
+Painting & art in YellowSquare Florence, Firenze, Monday 5 October at 21:00. Free (Biglietti su Eventbrite).
 
 ## Vivaldi’s The Four Seasons in Florence - by TIBi Ensemble – Firenze
 https://anyplans.in/en/firenze/vivaldi-s-the-four-seasons-in-florence-by-tibi-ensemble/
 
-Concerts & live music in Oratorio Santa Maria Vergine della Croce al Tempio, Firenze: it already took place, the last date was Monday, 28 September 2026.
+Concerts & live music in Oratorio Santa Maria Vergine della Croce al Tempio, Firenze, Monday 5 October at 21:00. Free (Biglietti su Eventbrite).
 
 ## YAB SMOOVE MONDAYS - by Florence at night YAB CLUB – Firenze
 https://anyplans.in/en/firenze/yab-smoove-mondays-by-florence-at-night-yab-club/
@@ -4866,7 +4901,7 @@ Talks & culture in Nana Bianca, Firenze, Tuesday 13 October at 09:00. Free (Bigl
 ## Florence Highlights Audio Tour: Renaissance Masterpieces and… – Firenze
 https://anyplans.in/en/firenze/florence-highlights-audio-tour-renaissance-masterpieces-and-/
 
-Hiking in Basilica of Santa Maria Novella, Firenze: it already took place, the last date was Monday, 28 September 2026.
+Hiking in Basilica of Santa Maria Novella, Firenze, Tuesday 29 September at 12:00. Free (Biglietti su Eventbrite).
 
 ## Longevity Economy Forum – Università degli Studi di Firenze
 https://anyplans.in/en/firenze/longevity-economy-forum/
@@ -4911,7 +4946,7 @@ Concerts & live music in Certosa di Firenze, Firenze: it already took place, the
 ## UNDERGROUND TUESDAY- by Florence at night BABYLON CLUB
 https://anyplans.in/en/firenze/underground-tuesday-by-florence-at-night-babylon-club/
 
-Nights out in Babylon Club, Firenze: it already took place, the last date was Tuesday, 22 September 2026.
+Nights out in Babylon Club, Firenze, Tuesday 29 September at 23:30. Free (Biglietti su Eventbrite).
 
 ## RankWit AI Visibility Lab - Il tuo hotel nelle risposte dell'AI – Firenze
 https://anyplans.in/en/firenze/rankwit-ai-visibility-lab-il-tuo-hotel-nelle-risposte-dell-a/
@@ -4926,7 +4961,7 @@ Padel in Rondinella Padel Club, Via Edoardo Detti 23, 50143 Firenze, Wednesday 1
 ## Florence Audio Tour: Renaissance Wonders – Firenze
 https://anyplans.in/en/firenze/florence-audio-tour-renaissance-wonders/
 
-Hiking in Florence Baptistery, Firenze: it already took place, the last date was Monday, 28 September 2026.
+Hiking in Florence Baptistery, Firenze, Tuesday 29 September at 12:00. Free (Biglietti su Eventbrite).
 
 ## Tavolo per chi è nuovo in città da Arancin: 7 posti…
 https://anyplans.in/en/firenze/tavolo-per-chi-e-nuovo-in-citta-da-arancin-7-posti-liberi/
@@ -5598,11 +5633,6 @@ https://anyplans.in/en/firenze/business-info-firenze-mercoledi-30-settembre-ore-
 
 Talks & culture in Confartigianato Imprese Firenze, Firenze, Wednesday 30 September at 20:30. Free (Biglietti su Eventbrite).
 
-## L’Autogoverno Aziendale e la Prevenzione del Rischio – Firenze
-https://anyplans.in/en/firenze/l-autogoverno-aziendale-e-la-prevenzione-del-rischio/
-
-Talks & culture in Confindustria Toscana Centro e Costa, Firenze, Thursday 1 October at 16:30. Free (Biglietti su Eventbrite).
-
 ## Birra dopo il lavoro da The Fiddler's Elbow Irish Pub:…
 https://anyplans.in/en/firenze/birra-dopo-il-lavoro-da-the-fiddler-s-elbow-irish-pub-11-pos/
 
@@ -5653,6 +5683,11 @@ https://anyplans.in/en/firenze/gianluca-gotto-questione-di-karma/
 
 Shows & theatre in Teatro Cartiere Carrara, Firenze, Thursday 1 October at 21:00. Free (Ingresso: vedi la pagina del Tacco di Bacco).
 
+## MD 2026 / Q5 Casa della Carità / SEMPLICEMENTE ORNELLA – Firenze
+https://anyplans.in/en/firenze/md-2026-q5-casa-della-carita-semplicemente-ornella/
+
+Concerts & live music in Casa della Carità - Caritas Diocesana di Firenze, Firenze, Thursday 1 October at 21:00. Free (Biglietti su Eventbrite).
+
 ## Blue Velvet il Giovedi
 https://anyplans.in/en/firenze/blue-velvet-il-giovedi/
 
@@ -5662,6 +5697,11 @@ Talks & culture in Blue Velvet, Firenze, Thursday 1 October at 23:50. Free (Bigl
 https://anyplans.in/en/firenze/blue-velvet-boiler-room/
 
 Nights out in Blue Velvet, Firenze, Thursday 1 October at 23:59. Free (Biglietti su Eventbrite).
+
+## L'evoluzione dei controlli della Corte dei Conti fino alla legge n. 1/2026. – Firenze
+https://anyplans.in/en/firenze/l-evoluzione-dei-controlli-della-corte-dei-conti-fino-alla-l/
+
+Talks & culture in Regione Toscana - Palazzo Guadagni Strozzi Sacrati, Firenze, Friday 2 October at 10:00. Free (Biglietti su Eventbrite).
 
 ## Oltrarno Night: Calici & Santo Spirito 🍷✨ da Il…
 https://anyplans.in/en/firenze/oltrarno-night-calici-santo-spirito-da-il-santino-11-posti-l/
@@ -5717,11 +5757,6 @@ Dinners & aperitivo in Autoctono Wine - Enoteca emozionale di vitigni autoctoni 
 https://anyplans.in/en/firenze/le-mani-di-llatzer-garcia/
 
 Shows & theatre in Teatro della Limonaia Sesto Fiorentino, Sesto Fiorentino, Friday 2 October at 20:30. Free (Ingresso: vedi la pagina del Tacco di Bacco).
-
-## Choir Concert "Trinity" – Santa Trinita
-https://anyplans.in/en/firenze/choir-concert-trinity/
-
-Shows & theatre in Santa Trinita, Firenze, Friday 2 October at 21:00. Free (Biglietti su Eventbrite).
 
 ## BRIO | Blend Manifattura
 https://anyplans.in/en/firenze/brio-blend-manifattura/
@@ -5928,8 +5963,8 @@ https://anyplans.in/en/firenze/attraversamenti-umani/
 
 Town festival in Istituto Tecnico per il Turismo Marco Polo, Firenze, Tuesday 6 October at 16:00. Free (Biglietti su Eventbrite).
 
-## Estratti degli spettacoli: "Iliade" e "La città invisibile" – Firenze
-https://anyplans.in/en/firenze/estratti-degli-spettacoli-iliade-e-la-citta-invisibile/
+## Serate dedicata a Gianfranco Pedullà – Firenze
+https://anyplans.in/en/firenze/serate-dedicata-a-gianfranco-pedulla/
 
 Shows & theatre in Istituto Tecnico per il Turismo Marco Polo, Firenze, Tuesday 6 October at 18:00. Free (Biglietti su Eventbrite).
 
@@ -6053,6 +6088,11 @@ https://anyplans.in/en/firenze/parliamone-il-talk-show-sul-lavoro-reale-arriva-a
 
 Shows & theatre in Piazza della Madonna della Neve, 6, Firenze, Thursday 8 October at 17:30. Free (Gratis, registrazione su Luma).
 
+## SOTF 10th Anniversary Party – SOTF FIRENZE
+https://anyplans.in/en/firenze/sotf-10th-anniversary-party/
+
+Town festival in SOTF FIRENZE, Firenze, Thursday 8 October at 18:00. Free (Biglietti su Eventbrite).
+
 ## Punch Needle Workshop - Workshop di Ricamo con l'Ago Magico – Firenze
 https://anyplans.in/en/firenze/punch-needle-workshop-workshop-di-ricamo-con-l-ago-magico/
 
@@ -6133,6 +6173,11 @@ https://anyplans.in/en/firenze/firenze-oscura-diavoli-streghe-demoni-e-misteri-a
 
 Talks & culture in Piazza de' Rucellai, 50123 Firenze FI, Italia, Firenze, Friday 9 October at 20:30 (2 dates, until 9 October). Free (Biglietti su Eventbrite).
 
+## Open Mic – Stand Up Comedy Night | Firenze – Binomio Firenze
+https://anyplans.in/en/firenze/open-mic-stand-up-comedy-night-firenze/
+
+Shows & theatre in Binomio Firenze, Firenze, Friday 9 October at 21:00. Free (Biglietti su Eventbrite).
+
 ## Anastacia in Firenze – Teatro Verdi
 https://anyplans.in/en/firenze/anastacia-in-firenze/
 
@@ -6173,7 +6218,12 @@ https://anyplans.in/en/firenze/caccia-al-tesoro/
 
 Hiking in MMAB Montelupo Museo Archivio Biblioteca, Montelupo Fiorentino, Saturday 10 October at 20:45. Free (Biglietti su Eventbrite).
 
-## Gli Wine Tour di Degustavino in Via Gioberti - non più di 5 ettari – Firenze
+## Il pianeta ci cura: abbi cura del pianeta – Montelupo Fiorentino
+https://anyplans.in/en/firenze/il-pianeta-ci-cura-abbi-cura-del-pianeta/
+
+Talks & culture in MMAB Montelupo Museo Archivio Biblioteca, Montelupo Fiorentino, Saturday 10 October at 20:45. Free (Biglietti su Eventbrite).
+
+## Gli Wine Tour di Degustavino in Via Gioberti - Non più di 5 ettari – Firenze
 https://anyplans.in/en/firenze/gli-wine-tour-di-degustavino-in-via-gioberti-non-piu-di-5-et/
 
 Dinners & aperitivo in Stand acquisto calici, lato piazza Beccaria, Firenze, Sunday 11 October at 15:00. Free (Biglietti su Eventbrite).
@@ -6197,6 +6247,11 @@ Nights out in The Social Hub Florence Belfiore, Firenze, Sunday 11 October at 17
 https://anyplans.in/en/firenze/rinfresco-serale-devadatta-fest-firenze/
 
 Dinners & aperitivo in Via Arcangelo Corelli, 33C, Firenze, Sunday 11 October at 20:00. Free (Biglietti su Eventbrite).
+
+## Open Day Thermal – Scandicci
+https://anyplans.in/en/firenze/open-day-thermal/
+
+Talks & culture in Via del Ponte a Greve, 68, Scandicci, Monday 12 October at 09:30. Free (Biglietti su Eventbrite).
 
 ## CORSI A L'APPARTAMENTO AUTUNNO 2026! – Firenze
 https://anyplans.in/en/firenze/corsi-a-l-appartamento-autunno-2026/
@@ -6258,6 +6313,11 @@ https://anyplans.in/en/firenze/brevissime-mario-iozzo-il-vaso-fran-ois-rex-vasor
 
 Exhibitions in Museo Stefano Bardini, Firenze, Thursday 15 October at 18:45. Free (Biglietti su Eventbrite).
 
+## Palestinesi sono  i tuoi occhi – Teatro Cantiere Florida
+https://anyplans.in/en/firenze/palestinesi-sono-i-tuoi-occhi/
+
+Town festival in Teatro Cantiere Florida, Firenze, Thursday 15 October at 19:00. Free (Biglietti su Eventbrite).
+
 ## "Anche gli eroi muoiono" - Kid Yugi – Nelson Mandela Forum
 https://anyplans.in/en/firenze/anche-gli-eroi-muoiono-kid-yugi/
 
@@ -6274,7 +6334,7 @@ https://anyplans.in/en/firenze/md-2026-q4-pala-bigmat-gia-palazzo-wanny-quadri-b
 Concerts & live music in Palazzo Wanny, Firenze, Thursday 15 October at 21:00. Free (Biglietti su Eventbrite).
 
 ## Tropical Animals with JUAAN – Club 21
-https://anyplans.in/en/firenze/tropical-animals-with-juaan-gabriele-sdelci-and-more/
+https://anyplans.in/en/firenze/tropical-animals-with-juaan-fettedilimone-b2b-haze-and-wise/
 
 Concerts & live music in Club 21, Firenze, Thursday 15 October at 23:00. Free (Biglietti su Eventbrite).
 
@@ -6528,6 +6588,11 @@ https://anyplans.in/en/firenze/walter-riviera-mi-ai-rubato-il-lavoro/
 
 Shows & theatre in Teatro Cartiere Carrara, Firenze, Sunday 25 October at 21:00. Free (Ingresso: vedi la pagina del Tacco di Bacco).
 
+## Nano Experince Work Shop – Scandicci
+https://anyplans.in/en/firenze/nano-experince-work-shop/
+
+Talks & culture in Via del Ponte a Greve, 68, Scandicci, Monday 26 October at 09:30. Free (Biglietti su Eventbrite).
+
 ## Made in Florence: "La Firenze degli anni 80" di Bruno…
 https://anyplans.in/en/firenze/made-in-florence-la-firenze-degli-anni-80-di-bruno-casini/
 
@@ -6552,6 +6617,11 @@ Talks & culture in Cafaggio del Vescovo, Firenze, Tuesday 27 October at 18:30. F
 https://anyplans.in/en/firenze/l-antidote-redi-hasa/
 
 Dinners & aperitivo in Teatro Cartiere Carrara, Firenze, Wednesday 28 October at 21:30. Free (Ingresso: vedi la pagina del Tacco di Bacco).
+
+## Laboratori del Pensiero – The social Hub Coworking Firenze
+https://anyplans.in/en/firenze/laboratori-del-pensiero/
+
+Talks & culture in The social Hub Coworking Firenze, Firenze, Thursday 29 October at 16:30. Free (Biglietti su Eventbrite).
 
 ## La Botanica: "Botanica Workshop" di Lapo Morgantini – Firenze
 https://anyplans.in/en/firenze/la-botanica-botanica-workshop-di-lapo-morgantini/

@@ -1,12 +1,12 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Torino e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Torino: il sito copre 52 città italiane (Milano, Bergamo, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce, Monza, Prato, Como, Lecco, Lodi, Modena, Reggio Emilia, Treviso, Venezia, Vicenza, Novara, Lucca, Mantova, Ferrara, Pistoia, Pavia, Ancona, Pordenone, Cremona, Messina, Reggio Calabria, Alessandria, Latina), l'indice è https://anyplans.in/llms.txt.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Torino e provincia: feste di paese e sagre, teatro e spettacoli, concerti, mercati, incontri e conferenze, visite guidate, camminate e gruppi di cammino, mostre, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Torino: il sito copre 52 città italiane (Milano, Bergamo, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce, Monza, Prato, Como, Lecco, Lodi, Modena, Reggio Emilia, Treviso, Venezia, Vicenza, Novara, Lucca, Mantova, Ferrara, Pistoia, Pavia, Ancona, Pordenone, Cremona, Messina, Reggio Calabria, Alessandria, Latina), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-29. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Torino](https://anyplans.in/torino/cosa-fare/): tutti gli eventi in programma (1016), per tipo e per paese; risponde a "cosa fare a Torino oggi / questo weekend"
+- [Cosa fare a Torino](https://anyplans.in/torino/cosa-fare/): tutti gli eventi in programma (1043), per tipo e per paese; risponde a "cosa fare a Torino oggi / questo weekend"
 - [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
@@ -16,24 +16,24 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 - [Padel a Torino](https://anyplans.in/torino/padel/): 39 in programma
 - [Cena / aperitivo a Torino](https://anyplans.in/torino/cene-e-aperitivi/): 112 in programma
-- [Incontri culturali a Torino](https://anyplans.in/torino/incontri-culturali/): 336 in programma
-- [Visite guidate a Torino](https://anyplans.in/torino/visite-guidate/): 82 in programma
+- [Incontri culturali a Torino](https://anyplans.in/torino/incontri-culturali/): 339 in programma
+- [Visite guidate a Torino](https://anyplans.in/torino/visite-guidate/): 84 in programma
 - [Pittura / arte a Torino](https://anyplans.in/torino/pittura/): 17 in programma
 - [Cinema a Torino](https://anyplans.in/torino/cinema/): 10 in programma
 - [Volley a Torino](https://anyplans.in/torino/volley/): 9 in programma
-- [Yoga / pilates a Torino](https://anyplans.in/torino/yoga/): 28 in programma
+- [Yoga / pilates a Torino](https://anyplans.in/torino/yoga/): 33 in programma
 - [Fiere a Torino](https://anyplans.in/torino/fiere/): 0 in programma
-- [Concerti e musica dal vivo a Torino](https://anyplans.in/torino/concerti/): 88 in programma
-- [Mostre a Torino](https://anyplans.in/torino/mostre/): 18 in programma
+- [Concerti e musica dal vivo a Torino](https://anyplans.in/torino/concerti/): 87 in programma
+- [Mostre a Torino](https://anyplans.in/torino/mostre/): 20 in programma
 - [Serate per single a Torino](https://anyplans.in/torino/single/): 3 in programma
 - [Palestra a Torino](https://anyplans.in/torino/palestra/): 7 in programma
-- [Spettacoli e teatro a Torino](https://anyplans.in/torino/spettacoli/): 77 in programma
-- [Bici da strada a Torino](https://anyplans.in/torino/bici/): 3 in programma
-- [Escursionismo a Torino](https://anyplans.in/torino/escursioni/): 17 in programma
-- [Feste, sagre ed eventi di paese a Torino](https://anyplans.in/torino/feste/): 79 in programma
+- [Spettacoli e teatro a Torino](https://anyplans.in/torino/spettacoli/): 79 in programma
+- [Bici da strada a Torino](https://anyplans.in/torino/bici/): 4 in programma
+- [Escursionismo a Torino](https://anyplans.in/torino/escursioni/): 19 in programma
+- [Feste, sagre ed eventi di paese a Torino](https://anyplans.in/torino/feste/): 80 in programma
 - [Ballo e danza a Torino](https://anyplans.in/torino/ballo/): 6 in programma
 - [Karaoke a Torino](https://anyplans.in/torino/karaoke/): 4 in programma
-- [Giochi da tavolo a Torino](https://anyplans.in/torino/giochi/): 19 in programma
+- [Giochi da tavolo a Torino](https://anyplans.in/torino/giochi/): 29 in programma
 - [Serate e discoteca a Torino](https://anyplans.in/torino/serate/): 5 in programma
 - [Corsa a Torino](https://anyplans.in/torino/corsa/): 19 in programma
 - [Partite da vedere a Torino](https://anyplans.in/torino/partite/): 24 in programma
@@ -42,12 +42,12 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Giardinaggio / volontariato a Torino](https://anyplans.in/torino/volontariato/): 4 in programma
 - [Feste ed eventi a Lingotto](https://anyplans.in/torino/lingotto/): 3 in programma
 - [Feste ed eventi a Collegno](https://anyplans.in/torino/collegno/): 4 in programma
-- [Feste ed eventi a Settimo Torinese](https://anyplans.in/torino/settimo-torinese/): 37 in programma
+- [Feste ed eventi a Settimo Torinese](https://anyplans.in/torino/settimo-torinese/): 38 in programma
 - [Feste ed eventi a Centro](https://anyplans.in/torino/centro/): 27 in programma
 - [Feste ed eventi a Festival delle Arti Popolari](https://anyplans.in/torino/festival-delle-arti-popolari/): 0 in programma
 - [Feste ed eventi a Santa Rita](https://anyplans.in/torino/santa-rita/): 6 in programma
 - [Feste ed eventi a Lucento](https://anyplans.in/torino/lucento/): 3 in programma
-- [Feste ed eventi a Rivoli](https://anyplans.in/torino/rivoli/): 2 in programma
+- [Feste ed eventi a Rivoli](https://anyplans.in/torino/rivoli/): 3 in programma
 - [Feste ed eventi a Chieri](https://anyplans.in/torino/chieri/): 3 in programma
 - [Feste ed eventi a Grugliasco](https://anyplans.in/torino/grugliasco/): 8 in programma
 - [Feste ed eventi a Fondazione Paideia](https://anyplans.in/torino/fondazione-paideia/): 0 in programma
@@ -56,12 +56,13 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Feste ed eventi a Colletta](https://anyplans.in/torino/colletta/): 3 in programma
 - [Feste ed eventi a Vanchiglietta](https://anyplans.in/torino/vanchiglietta/): 4 in programma
 - [Feste ed eventi a Alpignano](https://anyplans.in/torino/alpignano/): 2 in programma
-- [Feste ed eventi a Nichelino](https://anyplans.in/torino/nichelino/): 5 in programma
+- [Feste ed eventi a Nichelino](https://anyplans.in/torino/nichelino/): 4 in programma
 - [Feste ed eventi a Moncalieri](https://anyplans.in/torino/moncalieri/): 1 in programma
 - [Feste ed eventi a La Verdina](https://anyplans.in/torino/la-verdina/): 1 in programma
-- [Feste ed eventi a Turin](https://anyplans.in/torino/turin/): 1 in programma
+- [Feste ed eventi a Turin](https://anyplans.in/torino/turin/): 2 in programma
 - [Feste ed eventi a Venaria Reale](https://anyplans.in/torino/venaria-reale/): 5 in programma
 - [Feste ed eventi a Non distante dalla Reggia di Venaria](https://anyplans.in/torino/non-distante-dalla-reggia-di-venaria/): 2 in programma
+- [Feste ed eventi a Chivasso](https://anyplans.in/torino/chivasso/): 1 in programma
 - [Feste ed eventi a Aurora](https://anyplans.in/torino/aurora/): 7 in programma
 - [Feste ed eventi a Crocetta](https://anyplans.in/torino/crocetta/): 2 in programma
 - [Feste ed eventi a Superga](https://anyplans.in/torino/superga/): 1 in programma
@@ -72,8 +73,11 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## Prossimi eventi
 
+- [Unlock Turin’s hidden mysteries with a thrilling outdoor escape game!](https://anyplans.in/torino/unlock-turin-s-hidden-mysteries-with-a-thrilling-outdoor-esc/): Martedì 29 settembre alle 10:00, Cattedrale di San Giovanni Battista, Torino, Gratis
 - [Dealer Forum Settembre 2026](https://anyplans.in/torino/dealer-forum-settembre-2026/): Martedì 29 settembre alle 10:00, VOLTAB, Torino, Gratis
+- [Dare voce alle emozioni: crea e canta la tua canzone](https://anyplans.in/torino/dare-voce-alle-emozioni-crea-e-canta-la-tua-canzone/): Martedì 29 settembre alle 10:30, Ipercoop, Torino, Gratis
 - [Lezione promo con Nacho](https://anyplans.in/torino/lezione-promo-con-nacho/): Martedì 29 settembre alle 12:00, Sporting Friends, Via Genova 62, 10098 Rivoli, 20 €
+- [Turin Highlights Audio Tour: Royal Wonders and Architectural Grandeur](https://anyplans.in/torino/turin-highlights-audio-tour-royal-wonders-and-architectural-/): Martedì 29 settembre alle 12:00, Piazza San Carlo, Torino, Gratis
 - [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-2-giocatori-competitiva/): Dal 29 settembre al 30 settembre, 2 date, Centro Sportivo Robilant, Piazza Generale di Robilant, 16, 10141 Torino, 12 €
 - [🔥 LUNCH BREAK – TORNEO MIDDAY | PADEL CITY🔥](https://anyplans.in/torino/lunch-break-torneo-midday-padel-city/): Dal 29 settembre al 22 dicembre, 25 date, PadelCity Sport Friendly Leinì, Via Giuseppe Peano 70, 10040 Leini, 10 €
 - [☀️afternoon paradise☀️](https://anyplans.in/torino/afternoon-paradise/): Dal 29 settembre al 29 dicembre, 14 date, Paradise Padel Torino, VIA GIOACCHINO QUARELLO 43, 10135 Torino, 15 €
@@ -82,13 +86,13 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Cena da Il Tagliere Gourmet: 5 posti liberi](https://anyplans.in/torino/cena-da-il-tagliere-gourmet-5-posti-liberi/): Martedì 29 settembre alle 16:30, Il Tagliere Gourmet, Torino, Gratis
 - [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-3-giocatori-competitiva-2026-09-29/): Dal 29 settembre al 30 settembre, 4 date, Centro Sportivo Altessano, strada altessano 58A, 10151 Torino, 8 €
 - [Lezione Promo con Yamila](https://anyplans.in/torino/lezione-promo-con-yamila/): Martedì 29 settembre alle 17:00, Sporting Friends, Via Genova 62, 10098 Rivoli, 22 €
+- [Artista X 30](https://anyplans.in/torino/artista-x-30/): Martedì 29 settembre alle 17:00, Ad Maiora Art - Galleria e Showroom, Torino, Gratis
 - [Uno smash da campione](https://anyplans.in/torino/uno-smash-da-campione/): Martedì 29 settembre alle 17:30, Sporting Friends, Via Genova 62, 10098 Rivoli, 25 €
 - [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/torino/padel-mancano-2-giocatori-competitiva-2026-09-29-2/): Martedì 29 settembre alle 17:30, Padelife Settimo Cielo, Via Niccolò Paganini SNC, 10036 Settimo Torinese, 16 €
 - [Cena da Old Wild West - Moncalieri 45° Nord Entertainment: 9 posti liberi](https://anyplans.in/torino/cena-da-old-wild-west-moncalieri-45-nord-entertainment-9-pos/): Martedì 29 settembre alle 17:30, Old Wild West - Moncalieri 45° Nord Entertainment, Gratis
 - [Recruitment BitPolito](https://anyplans.in/torino/recruitment-bitpolito/): Martedì 29 settembre alle 17:30, Polytechnic University of Turin, Torino, Gratis
 - [DIRE FARE CREARE. Esperienze espressive a scuola](https://anyplans.in/torino/dire-fare-creare-esperienze-espressive-a-scuola/): Martedì 29 settembre alle 17:30, Via S. Massimo, 21, Torino, Gratis
 - [Tablo letterario da Sicily food & beverage: 5 posti liberi](https://anyplans.in/torino/tablo-letterario-da-sicily-food-beverage-5-posti-liberi/): Martedì 29 settembre alle 17:30, Sicily food & beverage, Torino, Gratis
-- [Fare l’Europa – Guardare più lontano](https://anyplans.in/torino/fare-l-europa-guardare-piu-lontano/): Martedì 29 settembre alle 18:00, Museo Nazionale del Cinema - Fondazione Maria Adriana Prolo, Torino, Gratis
 - [A TORINO IL PRIMO INCONTRO SULLA TRAGEDIA IN NEPAL: STEFANO LOTUMOLO RACCON](https://anyplans.in/torino/a-torino-il-primo-incontro-sulla-tragedia-in-nepal-stefano-l/): Martedì 29 settembre alle 18:00, Liceo Madre Mazzarello, Torino, Gratis
 - [Una serata con Valentina Vannicola e Lorenzo Livrieri](https://anyplans.in/torino/una-serata-con-valentina-vannicola-e-lorenzo-livrieri/): Martedì 29 settembre alle 18:00, Biblioteca Civica Tancredi Milone, Venaria Reale, Gratis
 - [Cena da Il Trullo Torino Trattoria Pugliese: 4 posti liberi](https://anyplans.in/torino/cena-da-il-trullo-torino-trattoria-pugliese-4-posti-liberi/): Martedì 29 settembre alle 18:00, Il Trullo Torino Trattoria Pugliese, Gratis
@@ -109,9 +113,6 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Ajò Maialetto Disagiato](https://anyplans.in/torino/ajo-maialetto-disagiato/): Martedì 29 settembre alle 20:00, Torino, Campidoglio, 6 €
 - [ESCP Running Club Turin x SPF #004 NIGHT RUN](https://anyplans.in/torino/escp-running-club-turin-x-spf-004-night-run/): Martedì 29 settembre alle 20:15, Monumental Arch to the Artillery Force, Torino, Gratis
 - [Morto dal Vivo - Gran Funerale (X Edizione) @ La Cricca (Torino) - Martedì 29 settembre 2026](https://anyplans.in/torino/morto-dal-vivo-gran-funerale-x-edizione-la-cricca-torino-mar/): Martedì 29 settembre alle 20:30, La Cricca Circolo Arci, Torino, Gratis
-- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/torino/padel-mancano-3-giocatori-amichevole/): Martedì 29 settembre alle 21:00, Gar Sempione, Via Gottardo 10, 10155 Torino, 10 €
-- [Una serata con Enrica Tesio](https://anyplans.in/torino/una-serata-con-enrica-tesio/): Martedì 29 settembre alle 21:00, Passami Il Sale, Venaria Reale, Gratis
-- [BLUES NIGHT with MAX ALTIERI & Friends - Gilgamesh Live](https://anyplans.in/torino/blues-night-with-max-altieri-friends-gilgamesh-live/): Martedì 29 settembre alle 21:00, Il Magazzino di Gilgamesh, Torino, Gratis
 
 ## Optional
 
@@ -153,62 +154,62 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 # Tutte le pagine di anyplans a Torino (italiano, poi inglese)
 
-## Cosa fare a Torino e provincia: 1016 eventi
+## Cosa fare a Torino e provincia: 1043 eventi
 https://anyplans.in/torino/cosa-fare/
 
 Incontri culturali, cena / aperitivo, concerti e musica dal vivo, visite guidate e padel: quello che succede a Torino e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
 
-## Cosa fare a Torino oggi: 44 eventi
+## Cosa fare a Torino oggi: 47 eventi
 https://anyplans.in/torino/cosa-fare-oggi/
 
-44 eventi a Torino e provincia oggi, 29 settembre 2026: Torino, Venaria Reale, Chieri e Corso Vigevano e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+47 eventi a Torino e provincia oggi, 29 settembre 2026: Torino, Venaria Reale, Chieri e Corso Vigevano e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
 ## Cosa fare a Torino domani: 40 eventi
 https://anyplans.in/torino/cosa-fare-domani/
 
-40 eventi a Torino e provincia domani, 30 settembre 2026: Torino, Settimo Torinese, Fonderie Limone di Moncalieri Moncalieri e Pozzo Strada e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+40 eventi a Torino e provincia domani, 30 settembre 2026: Torino, Turin, Fonderie Limone di Moncalieri Moncalieri e Pozzo Strada e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Torino nel weekend: 132 eventi
+## Cosa fare a Torino nel weekend: 136 eventi
 https://anyplans.in/torino/cosa-fare-nel-weekend/
 
-132 eventi a Torino e provincia nel weekend (Sabato 3 ottobre e Domenica 4 ottobre): Torino, Grugliasco, Settimo Torinese e Centro e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+136 eventi a Torino e provincia nel weekend (Sabato 3 ottobre e Domenica 4 ottobre): Torino, Grugliasco, Settimo Torinese e Centro e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Eventi a Torino a settembre 2026: 80
+## Eventi a Torino a settembre 2026: 83
 https://anyplans.in/torino/eventi-settembre-2026/
 
-80 eventi a Torino e provincia a settembre 2026: incontri culturali, padel, cena / aperitivo, feste, sagre ed eventi di paese e spettacoli e teatro. Giorno per giorno, con orari, luogo e prezzo, a Torino, Venaria Reale, Chieri e Corso Vigevano e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+83 eventi a Torino e provincia a settembre 2026: escursionismo, incontri culturali, yoga / pilates, padel e cena / aperitivo. Giorno per giorno, con orari, luogo e prezzo, a Torino, Venaria Reale, Chieri e Corso Vigevano e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Torino a ottobre 2026: 740
+## Eventi a Torino a ottobre 2026: 763
 https://anyplans.in/torino/eventi-ottobre-2026/
 
-740 eventi a Torino e provincia a ottobre 2026: padel, volley, giochi da tavolo, spettacoli e teatro e visite guidate. Giorno per giorno, con orari, luogo e prezzo, a Torino, Settimo Torinese, Centro e Grugliasco e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+763 eventi a Torino e provincia a ottobre 2026: padel, volley, giochi da tavolo, spettacoli e teatro e visite guidate. Giorno per giorno, con orari, luogo e prezzo, a Torino, Settimo Torinese, Centro e Grugliasco e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Torino a novembre 2026: 119
+## Eventi a Torino a novembre 2026: 120
 https://anyplans.in/torino/eventi-novembre-2026/
 
-119 eventi a Torino e provincia a novembre 2026: padel, volley, spettacoli e teatro, escursionismo e pittura / arte. Giorno per giorno, con orari, luogo e prezzo, a Torino, Centro, Lingotto e Non distante dalla Reggia di Venaria e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+120 eventi a Torino e provincia a novembre 2026: padel, volley, spettacoli e teatro, escursionismo e pittura / arte. Giorno per giorno, con orari, luogo e prezzo, a Torino, Centro, Lingotto e Non distante dalla Reggia di Venaria e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 ## Padel a Torino: 39 eventi
 https://anyplans.in/torino/padel/
 
 A Torino e provincia ci sono 39 partite di padel nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Cena / aperitivo a Torino: 112 eventi
+## Cene e aperitivi a Torino: 112 eventi
 https://anyplans.in/torino/cene-e-aperitivi/
 
 A Torino e provincia ci sono 112 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Incontri culturali a Torino: 336 eventi
+## Incontri, corsi e conferenze a Torino: 339 eventi
 https://anyplans.in/torino/incontri-culturali/
 
-A Torino e provincia ci sono 336 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Torino e provincia ci sono 339 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Visite guidate a Torino: 82 eventi
+## Visite guidate e tour a Torino: 84 eventi
 https://anyplans.in/torino/visite-guidate/
 
-A Torino e provincia ci sono 82 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Torino e provincia ci sono 84 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Pittura / arte a Torino: 17 eventi
+## Pittura e corsi d'arte a Torino: 17 eventi
 https://anyplans.in/torino/pittura/
 
 A Torino e provincia ci sono 17 laboratori nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
@@ -223,55 +224,55 @@ https://anyplans.in/torino/volley/
 
 A Torino e provincia ci sono 9 eventi di volley nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Yoga / pilates a Torino: 28 eventi
+## Yoga e pilates a Torino: 33 eventi
 https://anyplans.in/torino/yoga/
 
-A Torino e provincia ci sono 28 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Torino e provincia ci sono 33 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Fiere a Torino
 https://anyplans.in/torino/fiere/
 
 Al momento non ci sono fiere in programma: qui sotto quelli già passati. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Concerti e musica dal vivo a Torino: 88 eventi
+## Concerti e musica dal vivo a Torino: 87 eventi
 https://anyplans.in/torino/concerti/
 
-A Torino e provincia ci sono 88 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Torino e provincia ci sono 87 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Mostre a Torino: 18 eventi
+## Mostre ed esposizioni a Torino: 20 eventi
 https://anyplans.in/torino/mostre/
 
-A Torino e provincia ci sono 18 mostre nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Torino e provincia ci sono 20 mostre nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Serate per single a Torino: 3 eventi
 https://anyplans.in/torino/single/
 
 A Torino e provincia ci sono 3 serate per single nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Palestra a Torino: 7 eventi
+## Palestra e allenamenti a Torino: 7 eventi
 https://anyplans.in/torino/palestra/
 
-A Torino e provincia ci sono 7 eventi di palestra nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Torino e provincia ci sono 7 allenamenti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Spettacoli e teatro a Torino: 77 eventi
+## Teatro e spettacoli a Torino: 79 eventi
 https://anyplans.in/torino/spettacoli/
 
-A Torino e provincia ci sono 77 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Torino e provincia ci sono 79 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Bici da strada a Torino: 3 eventi
+## Bici da strada a Torino: 4 eventi
 https://anyplans.in/torino/bici/
 
-A Torino e provincia ci sono 3 eventi di bici da strada nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Torino e provincia ci sono 4 eventi di bici da strada nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Escursionismo a Torino: 17 eventi
+## Escursioni e trekking a Torino: 19 eventi
 https://anyplans.in/torino/escursioni/
 
-A Torino e provincia ci sono 17 escursioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Torino e provincia ci sono 19 escursioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Feste e sagre a Torino: 79 eventi
+## Feste e sagre a Torino: 80 eventi
 https://anyplans.in/torino/feste/
 
-A Torino e provincia ci sono 79 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Torino e provincia ci sono 80 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Ballo e danza a Torino: 6 eventi
 https://anyplans.in/torino/ballo/
@@ -283,17 +284,17 @@ https://anyplans.in/torino/karaoke/
 
 A Torino e provincia ci sono 4 serate karaoke nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Giochi da tavolo a Torino: 19 eventi
+## Giochi da tavolo a Torino: 29 eventi
 https://anyplans.in/torino/giochi/
 
-A Torino e provincia ci sono 19 serate di giochi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Torino e provincia ci sono 29 serate di giochi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Serate e discoteca a Torino: 5 eventi
 https://anyplans.in/torino/serate/
 
 A Torino e provincia ci sono 5 serate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Corsa a Torino: 19 eventi
+## Corse e gare podistiche a Torino: 19 eventi
 https://anyplans.in/torino/corsa/
 
 A Torino e provincia ci sono 19 uscite di corsa nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
@@ -328,10 +329,10 @@ https://anyplans.in/torino/collegno/
 
 A Collegno ci sono 4 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Collegno con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Feste ed eventi a Settimo Torinese: 37 in…
+## Feste ed eventi a Settimo Torinese: 38 in…
 https://anyplans.in/torino/settimo-torinese/
 
-A Settimo Torinese ci sono 37 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Settimo Torinese con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Settimo Torinese ci sono 38 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Settimo Torinese con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 ## Feste ed eventi a Centro: 27 in programma
 https://anyplans.in/torino/centro/
@@ -353,10 +354,10 @@ https://anyplans.in/torino/lucento/
 
 A Lucento ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Lucento con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Feste ed eventi a Rivoli: 2 in programma
+## Feste ed eventi a Rivoli: 3 in programma
 https://anyplans.in/torino/rivoli/
 
-A Rivoli ci sono 2 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Rivoli con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Rivoli ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Rivoli con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 ## Feste ed eventi a Chieri: 3 in programma
 https://anyplans.in/torino/chieri/
@@ -398,10 +399,10 @@ https://anyplans.in/torino/alpignano/
 
 A Alpignano ci sono 2 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Alpignano con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Feste ed eventi a Nichelino: 5 in programma
+## Feste ed eventi a Nichelino: 4 in programma
 https://anyplans.in/torino/nichelino/
 
-A Nichelino ci sono 5 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Nichelino con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Nichelino ci sono 4 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Nichelino con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 ## Feste ed eventi a Moncalieri: 1 in programma
 https://anyplans.in/torino/moncalieri/
@@ -413,10 +414,10 @@ https://anyplans.in/torino/la-verdina/
 
 A La Verdina c'è 1 evento nei prossimi mesi. Su anyplans trovi le feste e gli eventi di La Verdina con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Feste ed eventi a Turin: 1 in programma
+## Feste ed eventi a Turin: 2 in programma
 https://anyplans.in/torino/turin/
 
-A Turin c'è 1 evento nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Turin con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Turin ci sono 2 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Turin con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 ## Feste ed eventi a Venaria Reale: 5 in programma
 https://anyplans.in/torino/venaria-reale/
@@ -427,6 +428,11 @@ A Venaria Reale ci sono 5 eventi nei prossimi mesi. Su anyplans trovi le feste e
 https://anyplans.in/torino/non-distante-dalla-reggia-di-venaria/
 
 A Non distante dalla Reggia di Venaria ci sono 2 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Non distante dalla Reggia di Venaria con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+
+## Feste ed eventi a Chivasso: 1 in programma
+https://anyplans.in/torino/chivasso/
+
+A Chivasso c'è 1 evento nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Chivasso con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 ## Feste ed eventi a Aurora: 7 in programma
 https://anyplans.in/torino/aurora/
@@ -463,10 +469,10 @@ https://anyplans.in/torino/centro-piazza-castello/
 
 A Centro- Piazza Castello ci sono 5 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Centro- Piazza Castello con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Locali a Torino: 119
+## Locali a Torino: 123
 https://anyplans.in/torino/locali/
 
-119 locali a Torino e provincia dove c'è qualcosa in programma: circoli, bar, centri sportivi, teatri e piazze. Ognuno ha la sua pagina con le prossime date.
+123 locali a Torino e provincia dove c'è qualcosa in programma: circoli, bar, centri sportivi, teatri e piazze. Ognuno ha la sua pagina con le prossime date.
 
 ## Tablo: eventi e serate a Torino
 https://anyplans.in/torino/locali/tablo/
@@ -481,7 +487,7 @@ Vivid Events a Torino: 40 eventi in programma — partite da vedere, visite guid
 ## Docks Dora: eventi in programma a Torino
 https://anyplans.in/torino/locali/docks-dora/
 
-Docks Dora a Torino: 25 eventi in programma — incontri culturali, feste, sagre ed eventi di paese, spettacoli e teatro e ceramica. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Docks Dora a Torino: 26 eventi in programma — incontri culturali, feste, sagre ed eventi di paese, spettacoli e teatro e ceramica. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Ladies & Gentlemen: eventi e serate a Centro
 https://anyplans.in/torino/locali/ladies-gentlemen/
@@ -547,6 +553,11 @@ Barrio La Cumpa de Micky🔥 a Aurora: 9 eventi in programma — cena / aperitiv
 https://anyplans.in/torino/locali/fablab-torino/
 
 Fablab Torino: 12 eventi in programma — visite guidate, incontri culturali e concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
+## Arcade Food+Games: eventi in programma a Torino
+https://anyplans.in/torino/locali/arcade-food-games/
+
+Arcade Food+Games a Torino: 11 eventi in programma — giochi da tavolo e feste, sagre ed eventi di paese. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Ramo d'Oro & San Pietro in Vincoli: eventi e serate a…
 https://anyplans.in/torino/locali/ramo-d-oro-san-pietro-in-vincoli/
@@ -673,11 +684,6 @@ https://anyplans.in/torino/locali/quality-beer-academy/
 
 Quality Beer Academy a Torino: al momento non c'è niente in programma. Qui sotto gli ultimi 6 eventi che ci sono stati; le date nuove compaiono su questa pagina appena le pubblicano.
 
-## Cartiera: eventi e serate a Torino
-https://anyplans.in/torino/locali/cartiera/
-
-Cartiera a Torino: 6 eventi in programma — incontri culturali, spettacoli e teatro e cena / aperitivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
 ## Toolbox Coworking: eventi in programma a Torino
 https://anyplans.in/torino/locali/toolbox-coworking/
 
@@ -722,6 +728,11 @@ Caffè Costadoro a Torino: al momento non c'è niente in programma. Qui sotto gl
 https://anyplans.in/torino/locali/casa-nat-e-dintorni/
 
 Casa Nat e dintorni a Torino: 5 eventi in programma — volley, incontri culturali, cena / aperitivo e yoga / pilates. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
+## Cartiera: eventi e serate a Torino
+https://anyplans.in/torino/locali/cartiera/
+
+Cartiera a Torino: 5 eventi in programma — incontri culturali e cena / aperitivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Moonstone: eventi in programma a Torino
 https://anyplans.in/torino/locali/moonstone/
@@ -918,6 +929,11 @@ https://anyplans.in/torino/locali/davanti-ingresso-teatro-regio/
 
 Davanti Ingresso Teatro Regio a Torino: 2 eventi in programma — feste, sagre ed eventi di paese. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
+## Cattedrale di San Giovanni Battista: eventi in…
+https://anyplans.in/torino/locali/cattedrale-di-san-giovanni-battista/
+
+Cattedrale di San Giovanni Battista a Torino: 2 eventi in programma — escursionismo e feste, sagre ed eventi di paese. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
 ## Rinascimenti Sociali: eventi in programma a Torino
 https://anyplans.in/torino/locali/rinascimenti-sociali/
 
@@ -942,6 +958,11 @@ Sermig Arsenale della Pace a Torino: 2 eventi in programma — visite guidate e 
 https://anyplans.in/torino/locali/ecosistema-fotosfera/
 
 Ecosistema Fotosfera a Centro: 2 eventi in programma — pittura / arte. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
+## Teatro Café Müller: eventi in programma a Torino
+https://anyplans.in/torino/locali/teatro-cafe-muller/
+
+Teatro Café Müller a Torino: 2 eventi in programma — spettacoli e teatro. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Vino & Cultura: eventi e serate a Torino
 https://anyplans.in/torino/locali/vino-cultura/
@@ -1007,6 +1028,11 @@ Vincenzo Cipriani a Torino: 2 eventi in programma — pittura / arte e visite gu
 https://anyplans.in/torino/locali/giardini-reali-di-torino/
 
 Giardini Reali di Torino: 2 eventi in programma — visite guidate. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
+## Biblioteca Della Regione Piemonte Umberto Eco: eventi…
+https://anyplans.in/torino/locali/biblioteca-della-regione-piemonte-umberto-eco/
+
+Biblioteca Della Regione Piemonte Umberto Eco a Torino: 2 eventi in programma — incontri culturali e visite guidate. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Magic Lair: eventi in programma a Torino
 https://anyplans.in/torino/locali/magic-lair/
@@ -1296,7 +1322,7 @@ Volley a Torino, Lingotto, martedì 29 settembre alle 21:20 (8 date, fino al 10 
 ## Dare voce alle emozioni: crea e canta la tua canzone – Torino
 https://anyplans.in/torino/dare-voce-alle-emozioni-crea-e-canta-la-tua-canzone/
 
-Yoga / pilates a Ipercoop, Torino: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Yoga / pilates a Ipercoop, Torino, martedì 29 settembre alle 10:30. Gratis (Biglietti su Eventbrite).
 
 ## "IL SEGNO DELLA RINASCITA" – Torino
 https://anyplans.in/torino/il-segno-della-rinascita/
@@ -1426,7 +1452,7 @@ Cena / aperitivo a Via Maria Vittoria, 23b, Torino: si è già svolto, l'ultima 
 ## APERITIVO LETTERARIO - COSTO PARTECIPAZIONE 5€ – Settimo Torinese
 https://anyplans.in/torino/aperitivo-letterario-costo-partecipazione-5/
 
-Cena / aperitivo a Piazza Garzena, Settimo Torinese, mercoledì 30 settembre alle 19:30. Gratis (Biglietti su Eventbrite).
+Cena / aperitivo a Via G. Matteotti, 6, Settimo Torinese, martedì 13 ottobre alle 19:30. Gratis (Biglietti su Eventbrite).
 
 ## Tavolo genitori single da La LLama: 11 posti liberi
 https://anyplans.in/torino/tavolo-genitori-single-da-la-llama-11-posti-liberi/
@@ -1856,22 +1882,22 @@ Visite guidate a Via Santa Chiara, 40/H, Torino: si è già svolto, l'ultima dat
 ## Daisy Primaria Internazionale - Open Week – Chieri
 https://anyplans.in/torino/daisy-primaria-internazionale-open-week/
 
-Incontri culturali a Via Giacomo Nel, 4, Chieri: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Incontri culturali a Via Giacomo Nel, 4, Chieri: si è già svolto, l'ultima data è stata martedì 29 settembre 2026.
 
 ## Artista X 30 – Ad Maiora Art - Galleria e Showroom
 https://anyplans.in/torino/artista-x-30/
 
-Mostre a Ad Maiora Art - Galleria e Showroom, Torino: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Mostre a Ad Maiora Art - Galleria e Showroom, Torino, martedì 29 settembre alle 17:00. Gratis (Biglietti su Eventbrite).
 
 ## Scuola Media Internazionale Holden - Open Week – Chieri
 https://anyplans.in/torino/scuola-media-internazionale-holden-open-week/
 
-Incontri culturali a Via S. Filippo, 2, Chieri: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Incontri culturali a Via S. Filippo, 2, Chieri: si è già svolto, l'ultima data è stata martedì 29 settembre 2026.
 
 ## Licei Pascal - Open Week – Chieri
 https://anyplans.in/torino/licei-pascal-open-week/
 
-Incontri culturali a Via S. Filippo, 2, Chieri: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Incontri culturali a Via S. Filippo, 2, Chieri: si è già svolto, l'ultima data è stata martedì 29 settembre 2026.
 
 ## I'M BLUE - Vernissage mostra collettiva – Torino
 https://anyplans.in/torino/i-m-blue-vernissage-mostra-collettiva/
@@ -2571,7 +2597,7 @@ Visite guidate a Basilica Di Superga. Torino, Torino: si è già svolto, l'ultim
 ## ༻ Join our online Meditation Community! – Turin
 https://anyplans.in/torino/join-our-online-meditation-community/
 
-Yoga / pilates a Turin, Turin: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Yoga / pilates a Turin, Turin, mercoledì 30 settembre alle 08:00. Gratis (Biglietti su Eventbrite).
 
 ## ESCP Running Club Turin Welcome Run #001 – Torino
 https://anyplans.in/torino/escp-running-club-turin-welcome-run-001/
@@ -3066,7 +3092,7 @@ Festa di paese a Via Fréjus, 8, Torino: si è già svolto, l'ultima data è sta
 ## Unlock Turin’s hidden mysteries with a thrilling outdoor escape game! – Torino
 https://anyplans.in/torino/unlock-turin-s-hidden-mysteries-with-a-thrilling-outdoor-esc/
 
-Escursionismo a Cattedrale di San Giovanni Battista, Torino: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Escursionismo a Cattedrale di San Giovanni Battista, Torino, martedì 29 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## Aperitivo da Brunch Republic Torino: 10 posti liberi
 https://anyplans.in/torino/aperitivo-da-brunch-republic-torino-10-posti-liberi/
@@ -3241,7 +3267,7 @@ Cena / aperitivo a DAPPER Coffee | Specialty Coffee Bar, Torino: si è già svol
 ## Turin Highlights Audio Tour: Royal Wonders and Architectural Grandeur – Torino
 https://anyplans.in/torino/turin-highlights-audio-tour-royal-wonders-and-architectural-/
 
-Escursionismo a Piazza San Carlo, Torino: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Escursionismo a Piazza San Carlo, Torino, martedì 29 settembre alle 12:00. Gratis (Biglietti su Eventbrite).
 
 ## Laboratorio di food pairing con El Dorado Grill Cucina Peruviana – Torino, 25 settembre
 https://anyplans.in/torino/laboratorio-di-food-pairing-con-el-dorado-grill-cucina-peruv/
@@ -3511,7 +3537,7 @@ Incontri culturali a Costadoro Social Coffee Factory, Torino: si è già svolto,
 ## Veralab Days presso Store Veralab Torino | dal 21 al 30…
 https://anyplans.in/torino/veralab-days-presso-store-veralab-torino-dal-21-al-30-settem/
 
-Incontri culturali a Veralab Store Torino, Torino: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Incontri culturali a Veralab Store Torino, Torino: si è già svolto, l'ultima data è stata martedì 29 settembre 2026.
 
 ## Future4Cities 2026 a OGR Torino, 25 settembre
 https://anyplans.in/torino/future4cities-2026/
@@ -4603,11 +4629,6 @@ https://anyplans.in/torino/tablo-letterario-da-sicily-food-beverage-5-posti-libe
 
 Cena / aperitivo a Sicily food & beverage, Torino, martedì 29 settembre alle 17:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Fare l’Europa – Torino
-https://anyplans.in/torino/fare-l-europa-guardare-piu-lontano/
-
-Festa di paese a Museo Nazionale del Cinema - Fondazione Maria Adriana Prolo, Torino, martedì 29 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
-
 ## A TORINO IL PRIMO INCONTRO SULLA TRAGEDIA IN NEPAL:…
 https://anyplans.in/torino/a-torino-il-primo-incontro-sulla-tragedia-in-nepal-stefano-l/
 
@@ -4718,10 +4739,15 @@ https://anyplans.in/torino/il-quartiere-liberty/
 
 Pittura / arte a Casa Fenoglio-Lafleur, Torino, mercoledì 30 settembre alle 10:00. 17,22 € (Biglietti su AllEvents).
 
-## Visita Guidata al MUSEO LAVAZZA gratuita in lingua…
+## Visita Guidata al MUSEO LAVAZZA gratuita in lingua…, 30 settembre
 https://anyplans.in/torino/visita-guidata-al-museo-lavazza-gratuita-in-lingua-italiana/
 
 Visite guidate a Museo Lavazza, Torino, mercoledì 30 settembre alle 16:30. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Visita Guidata al MUSEO LAVAZZA gratuita in lingua…, 3 ottobre
+https://anyplans.in/torino/visita-guidata-al-museo-lavazza-gratuita-in-lingua-italiana-2026-10-03/
+
+Visite guidate a Museo Lavazza, Torino, sabato 3 ottobre alle 10:30. Gratis (Biglietti su Eventbrite).
 
 ## Officina Koinè – Torino
 https://anyplans.in/torino/officina-koine-un-luogo-di-incontro-gioco-e-meraviglia/
@@ -4873,11 +4899,6 @@ https://anyplans.in/torino/le-azioni-che-contano-criptovalute-e-blockchain/
 
 Incontri culturali a Palazzo Cavour, Torino, giovedì 1 ottobre alle 18:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## 4 for "Peter" Angela - Tribute to Piero Angela – Nichelino
-https://anyplans.in/torino/4-for-peter-angela-tribute-to-piero-angela/
-
-Concerti e musica dal vivo a Via Torino, 103, Nichelino, giovedì 1 ottobre alle 18:30. Gratis (Biglietti su Eventbrite).
-
 ## Incontro gratuito di Mindful Yoga – Torino
 https://anyplans.in/torino/incontro-gratuito-di-mindful-yoga/
 
@@ -4983,10 +5004,20 @@ https://anyplans.in/torino/lezione-promo-90-minuti-con-yamila/
 
 Padel a Sporting Friends, Via Genova 62, 10098 Rivoli, venerdì 2 ottobre alle 20:00. 25 € (Iscrizione e pagamento su Playtomic).
 
+## Arcade Game Night: Baraonda – Arcade Food+Games
+https://anyplans.in/torino/arcade-game-night-baraonda/
+
+Giochi da tavolo a Arcade Food+Games, Torino, venerdì 2 ottobre alle 20:00. Gratis (Biglietti su Eventbrite).
+
 ## LEZIONE 2 DI 10 GIA SALDATA – Gar Sempione
 https://anyplans.in/torino/lezione-2-di-10-gia-saldata/
 
 Padel a Gar Sempione, Via Gottardo 10, 10155 Torino, venerdì 2 ottobre alle 20:00. Gratis (Iscrizione su Playtomic).
+
+## MOVIMENTI SULL'IDENTITA' – Teatro Café Müller
+https://anyplans.in/torino/movimenti-sull-identita/
+
+Spettacoli e teatro a Teatro Café Müller, Torino, venerdì 2 ottobre alle 20:00. Gratis (Biglietti su Eventbrite).
 
 ## Wild Angels Piemonte - Bocciofila Portofino Torino
 https://anyplans.in/torino/wild-angels-piemonte-bocciofila-portofino-torino/
@@ -5107,6 +5138,11 @@ Incontri culturali a Docks Dora, Torino, sabato 3 ottobre alle 12:00. Gratis (Bi
 https://anyplans.in/torino/ahi-ahi-social/
 
 Festa di paese a Docks Dora, Torino, sabato 3 ottobre alle 14:30. Gratis (Biglietti su Eventbrite).
+
+## CoderDojo a Docks Dora, Torino, 3 ottobre
+https://anyplans.in/torino/coderdojo/
+
+Incontri culturali a Docks Dora, Torino, sabato 3 ottobre alle 14:30. Gratis (Biglietti su Eventbrite).
 
 ## Farsi Casa - Sentirsi a casa dentro e fuori di sé – Torino
 https://anyplans.in/torino/farsi-casa-sentirsi-a-casa-dentro-e-fuori-di-se/
@@ -5233,11 +5269,6 @@ https://anyplans.in/torino/ocialcrazia-la-democrazia-alla-prova-dei-social/
 
 Incontri culturali a Docks Dora, Torino, sabato 3 ottobre alle 17:30. Gratis (Biglietti su Eventbrite).
 
-## BAJ BAJ GUERRA! a Cartiera, Torino, 3 ottobre
-https://anyplans.in/torino/baj-baj-guerra/
-
-Spettacoli e teatro a Cartiera, Torino, sabato 3 ottobre alle 17:30. Gratis (Biglietti su Eventbrite).
-
 ## PAPER ART - Vernissage mostra collettiva – Torino
 https://anyplans.in/torino/paper-art-vernissage-mostra-collettiva/
 
@@ -5277,6 +5308,11 @@ Mostre a Con/Temporary Spaces - ArtàPorter, Torino, sabato 3 ottobre alle 18:30
 https://anyplans.in/torino/cena-da-birreria-manhattan-4-posti-liberi/
 
 Cena / aperitivo a Birreria Manhattan, Torino, sabato 3 ottobre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## ISTINTI D'ARTE – Torino
+https://anyplans.in/torino/istinti-d-arte/
+
+Incontri culturali a Artàporter Con/Temporary Spaces | Santa Teresa (ex Teatro Macario), Torino, sabato 3 ottobre alle 18:30. Gratis (Biglietti su Eventbrite).
 
 ## Cena da L'Antica pizzeria da Michele: 11 posti liberi
 https://anyplans.in/torino/cena-da-l-antica-pizzeria-da-michele-11-posti-liberi/
@@ -5408,6 +5444,11 @@ https://anyplans.in/torino/corso-di-rammendo-base-con-rapazebu/
 
 Ceramica a Leumann Hub - Solarium, Grugliasco, domenica 4 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
 
+## 10AM MORNING CLUB X NOMAD W. BAZAART from NIKKI BEACH SAINT-TROPEZ – Torino
+https://anyplans.in/torino/10am-morning-club-x-nomad-w-bazaart-from-nikki-beach-saint-t/
+
+Cena / aperitivo a Nomad - The Colonial, Torino, domenica 4 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
+
 ## Amalgària  - teatro e musica [Rest to Fest] – Parco Colletta
 https://anyplans.in/torino/amalgaria-teatro-e-musica-rest-to-fest/
 
@@ -5427,6 +5468,11 @@ Cena / aperitivo a Costadoro Coffee Lab Diamond, Torino, domenica 4 ottobre alle
 https://anyplans.in/torino/10am-morning-club-la-reale-venaria/
 
 Cena / aperitivo a La Reale Sporting Club, Venaria Reale, domenica 4 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
+
+## SUICIDIO: falsi miti e segnali d'allarme – Rivarossa
+https://anyplans.in/torino/suicidio-falsi-miti-e-segnali-d-allarme/
+
+Yoga / pilates a Il giorno dopo - a casa di Andrea, Rivarossa, domenica 4 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## Festival dello Sviluppo Sostenibile ad Avigliana – Torino
 https://anyplans.in/torino/festival-dello-sviluppo-sostenibile-ad-avigliana/
@@ -5618,11 +5664,6 @@ https://anyplans.in/torino/porcini-freschi-mega-cena-a-30-euro-anche-per-vegetar
 
 Cena / aperitivo a Torino, Zona Crocetta, domenica 4 ottobre alle 20:00 (2 date, fino al 25 ottobre). 6 € (Accredito su comehome; il resto si paga in loco).
 
-## Il Secolo è Mobile – Chieri
-https://anyplans.in/torino/il-secolo-e-mobile-la-storia-delle-migrazioni-in-europa-vist/
-
-Festa di paese a Via Montessori, 2, Chieri, domenica 4 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
-
 ## To Listen To - Festival dell'ascolto sperimentale – Torino
 https://anyplans.in/torino/to-listen-to-festival-dell-ascolto-sperimentale/
 
@@ -5632,6 +5673,11 @@ Incontri culturali a State Music Conservatory "Giuseppe Verdi", Torino, domenica
 https://anyplans.in/torino/sulle-tracce-di-gustavo-adolfo-rol-tour-guidato/
 
 Visite guidate a Torino, Centro, domenica 4 ottobre alle 20:30. 15 € (Accredito su comehome; il resto si paga in loco).
+
+## Il Secolo è Mobile – Chieri
+https://anyplans.in/torino/il-secolo-e-mobile-la-storia-delle-migrazioni-in-europa-vist/
+
+Festa di paese a Via Montessori, 2, Chieri, domenica 4 ottobre alle 21:00. Gratis (Biglietti su Eventbrite).
 
 ## LAUNCHCAMP | AI EDITION – Feat. House
 https://anyplans.in/torino/launchcamp-ai-edition/
@@ -5697,11 +5743,6 @@ Visite guidate a Winelivery Bar & Enoteca Torino, Torino, martedì 6 ottobre all
 https://anyplans.in/torino/un-altro-giro-roaming-aperitivo-with-profounders-enzo-ventur/
 
 Cena / aperitivo a Torino, martedì 6 ottobre alle 18:30. Gratis (Gratis, registrazione su Luma).
-
-## Aperitivo con Boscolo a Torino – Caffè Platti
-https://anyplans.in/torino/aperitivo-con-boscolo-a-torino/
-
-Cena / aperitivo a Caffè Platti, Torino, martedì 6 ottobre alle 18:30. Gratis (Biglietti su Eventbrite).
 
 ## TeenVentures Demo Night a Torino, 6 ottobre
 https://anyplans.in/torino/teenventures-demo-night/
@@ -6308,6 +6349,11 @@ https://anyplans.in/torino/fears-and-dreams-what-are-we-putting-into-orbit/
 
 Incontri culturali a Villa Sanquirico, Torino, giovedì 8 ottobre alle 20:00. Gratis (Gratis, registrazione su Luma).
 
+## Arcade Risiko Night – Arcade Food+Games
+https://anyplans.in/torino/arcade-risiko-night/
+
+Giochi da tavolo a Arcade Food+Games, Torino, giovedì 8 ottobre alle 20:00. Gratis (Biglietti su Eventbrite).
+
 ## Paella & Karaoke - Mangia – Torino
 https://anyplans.in/torino/paella-karaoke-mangia-canta-e-balla/
 
@@ -6327,6 +6373,11 @@ Cena / aperitivo a Cambiano, Ingresso paese, giovedì 8 ottobre alle 20:25. 5 �
 https://anyplans.in/torino/club-homecoming-dinner-special-event-for-international-membe/
 
 Cena / aperitivo a Turin, Torino, giovedì 8 ottobre alle 20:30. Gratis (Gratis, registrazione su Luma).
+
+## La criminologia sale sul tram storico – Torino
+https://anyplans.in/torino/la-criminologia-sale-sul-tram-storico/
+
+Spettacoli e teatro a Piazza Castello Torino  (lato Teatro Regio), Torino, giovedì 8 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
 
 ## Fabio De Luigi – Teatro Colosseo
 https://anyplans.in/torino/fabio-de-luigi/
@@ -6518,6 +6569,11 @@ https://anyplans.in/torino/just-for-joy-street-art-festival-2026-edizione/
 
 Festa di paese a Just for Joy Street Art Festival, venerdì 9 ottobre alle 20:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## Arcade Game Night: Squadre – Arcade Food+Games
+https://anyplans.in/torino/arcade-game-night-squadre/
+
+Giochi da tavolo a Arcade Food+Games, Torino, venerdì 9 ottobre alle 20:00. Gratis (Biglietti su Eventbrite).
+
 ## Stand up comedy night live – Torino porta Nuova
 https://anyplans.in/torino/stand-up-comedy-night-live/
 
@@ -6623,10 +6679,10 @@ https://anyplans.in/torino/workshop-di-degustazione-dell-acqua/
 
 Cena / aperitivo a Ecomuseo del Freidano, Settimo Torinese, sabato 10 ottobre alle 09:30. Gratis (Biglietti su Eventbrite).
 
-## OPEN HOUSE POLIZIA SCIENTIFICA – Torino
-https://anyplans.in/torino/open-house-polizia-scientifica/
+## PSICOSINTESI ACADEMY – Torino
+https://anyplans.in/torino/psicosintesi-academy/
 
-Incontri culturali a Via Veglia, 44, Torino, sabato 10 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
+Yoga / pilates a Via Massena, 3, Torino, sabato 10 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## L'ORA DEL RACCONTO - REAZIONI A CATENA – Festival Diffuso
 https://anyplans.in/torino/l-ora-del-racconto-reazioni-a-catena/
@@ -6662,6 +6718,11 @@ Festa di paese a Festival Diffuso, Settimo Torinese, sabato 10 ottobre alle 11:3
 https://anyplans.in/torino/l-immaginario-artificiale/
 
 Incontri culturali a Festival Diffuso, Settimo Torinese, sabato 10 ottobre alle 12:00. Gratis (Biglietti su Eventbrite).
+
+## OCCULTA. Il corpo dell’archivio – Rivoli
+https://anyplans.in/torino/occulta-il-corpo-dell-archivio/
+
+Spettacoli e teatro a Castello di Rivoli Museo d'Arte Contemporanea, Rivoli, sabato 10 ottobre alle 14:00. Gratis (Biglietti su Eventbrite).
 
 ## vinci la racchetta babolat!!! – Centro Sportivo Altessano
 https://anyplans.in/torino/vinci-la-racchetta-babolat/
@@ -6738,13 +6799,18 @@ https://anyplans.in/torino/piante-in-movimento/
 
 Festa di paese a Festival Diffuso, Settimo Torinese, sabato 10 ottobre alle 17:00. Gratis (Biglietti su Eventbrite).
 
+## Le Madri del ‘46 – Torino
+https://anyplans.in/torino/le-madri-del-46/
+
+Visite guidate a Biblioteca Della Regione Piemonte Umberto Eco, Torino, sabato 10 ottobre alle 17:30. Gratis (Biglietti su Eventbrite).
+
 ## LA CHIMICA DELL'IRONIA – Festival Diffuso
 https://anyplans.in/torino/la-chimica-dell-ironia/
 
 Incontri culturali a Festival Diffuso, Settimo Torinese, sabato 10 ottobre alle 17:30. Gratis (Biglietti su Eventbrite).
 
-## Presentazione Libro: «FUGURUMA» di Rosanna Frattaruolo – Torino
-https://anyplans.in/torino/presentazione-libro-fuguruma-di-rosanna-frattaruolo/
+## Presentazione Libro: "Fuguruma - Bozzetti per profili informi" – Torino
+https://anyplans.in/torino/presentazione-libro-fuguruma-bozzetti-per-profili-informi/
 
 Incontri culturali a Senior Living: Specht Residenzen Torino, Torino, sabato 10 ottobre alle 17:30. Gratis (Biglietti su Eventbrite).
 
@@ -7123,6 +7189,11 @@ https://anyplans.in/torino/danze-rumene/
 
 Concerti e musica dal vivo a Conservatorio Di Torino, Torino, martedì 13 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
 
+## Convegno CSI Xperience 2026 | L’innovazione che unisce – Torino
+https://anyplans.in/torino/convegno-csi-xperience-2026-l-innovazione-che-unisce/
+
+Incontri culturali a Auditorium CSI NEXT, Torino, mercoledì 14 ottobre alle 09:00. Gratis (Biglietti su Eventbrite).
+
 ## Open Studio / Picnic progettuali – Quadrilatero Design
 https://anyplans.in/torino/open-studio-picnic-progettuali/
 
@@ -7132,6 +7203,11 @@ Pittura / arte a Quadrilatero Design, Torino, mercoledì 14 ottobre alle 12:30. 
 https://anyplans.in/torino/roadshow-coenergia-il-14-10-2026-a-caselle-torinese-to/
 
 Incontri culturali a Jet Hotel, Caselle Torinese, mercoledì 14 ottobre alle 13:40. Gratis (Biglietti su Eventbrite).
+
+## CSI Xperience 2026 | Visite guidate tra AI e Data Center – Torino
+https://anyplans.in/torino/csi-xperience-2026-visite-guidate-tra-ai-e-data-center/
+
+Incontri culturali a CSI NEXT, Torino, mercoledì 14 ottobre alle 14:00. Gratis (Biglietti su Eventbrite).
 
 ## La forza mite della cura. – Torino
 https://anyplans.in/torino/la-forza-mite-della-cura/
@@ -7212,6 +7288,11 @@ Cena / aperitivo a Torino, San Salvario, mercoledì 14 ottobre alle 20:00. 5 �
 https://anyplans.in/torino/stornelli-romani-e-l-apecorino-l-apericena-romana/
 
 Cena / aperitivo a Torino, quadrilatero, mercoledì 14 ottobre alle 20:28. 6 € (Accredito su comehome; il resto si paga in loco).
+
+## Arcade Bless Night – Arcade Food+Games
+https://anyplans.in/torino/arcade-bless-night/
+
+Giochi da tavolo a Arcade Food+Games, Torino, mercoledì 14 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
 
 ## La bottega degli orrori – Torino
 https://anyplans.in/torino/la-bottega-degli-orrori-visita-guidata-vol-3/
@@ -7478,6 +7559,11 @@ https://anyplans.in/torino/tu-be-or-not-tu-be/
 
 Spettacoli e teatro a Teatro Café Müller, Torino, sabato 17 ottobre alle 18:00. Gratis (Biglietti su Eventbrite).
 
+## Arcade Detective Night – Arcade Food+Games
+https://anyplans.in/torino/arcade-detective-night/
+
+Giochi da tavolo a Arcade Food+Games, Torino, sabato 17 ottobre alle 19:00. Gratis (Biglietti su Eventbrite).
+
 ## Oktoberfest Experience – Parco della Pellerina
 https://anyplans.in/torino/oktoberfest-experience-monaco-a-torino/
 
@@ -7557,6 +7643,11 @@ Partite da vedere a Allianz Stadium - Turin, Torino, sabato 17 ottobre alle 23:5
 https://anyplans.in/torino/strawoman-humanitas-torino/
 
 Palestra a Parco del Valentino, Torino, domenica 18 ottobre alle 08:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Gravel del Mais - Vigone (TO)
+https://anyplans.in/torino/gravel-del-mais-vigone-to/
+
+Bici da strada a Piazza Clemente Corte, Vigone, TO, Vigone, domenica 18 ottobre alle 08:00. Gratis (Biglietti su Eventbrite).
 
 ## BUNKER VINYL MARKET - FIERA DEL DISCO E DEL CD - 3a…
 https://anyplans.in/torino/bunker-vinyl-market-fiera-del-disco-e-del-cd-3a-edizione/
@@ -7698,6 +7789,11 @@ https://anyplans.in/torino/il-naufragio-di-cutro-94-migranti-morti/
 
 Incontri culturali a Via Sestriere, 34, Torino, martedì 20 ottobre alle 18:30. Gratis (Biglietti su Eventbrite).
 
+## GRUPPO LETTURA ROMANZI – Settimo Torinese
+https://anyplans.in/torino/gruppo-lettura-romanzi/
+
+Festa di paese a Piazza Garzena, Settimo Torinese, martedì 20 ottobre alle 19:30. Gratis (Biglietti su Eventbrite).
+
 ## Gianluca Gotto - Questione di Karma – Teatro Colosseo
 https://anyplans.in/torino/gianluca-gotto-questione-di-karma/
 
@@ -7727,6 +7823,11 @@ Incontri culturali a Università di Torino Dipartimento di Informatica, Torino, 
 https://anyplans.in/torino/on-bim-2026-ai-bim-e-nuovi-flussi-per-la-progettazione/
 
 Incontri culturali a Lavanderia a Vapore, Collegno, mercoledì 21 ottobre alle 14:00. Gratis (Biglietti su Eventbrite).
+
+## NO FILTERS －WE ❤️ PITCHING – Torino
+https://anyplans.in/torino/no-filters-we-pitching/
+
+Mostre a Via Antonio Banfo, 43, Torino, mercoledì 21 ottobre alle 17:30. Gratis (Biglietti su Eventbrite).
 
 ## La Boheme ...spiegata ...come non mai! – Torino
 https://anyplans.in/torino/la-boheme-spiegata-come-non-mai/
@@ -7778,6 +7879,11 @@ https://anyplans.in/torino/mindstone-turin-october-ai-meetup/
 
 Incontri culturali a OGR Torino powered by Fondazione CRT, Turin, giovedì 22 ottobre alle 18:30. Gratis (Biglietti su Eventbrite).
 
+## Arcade Masterland Night – Arcade Food+Games
+https://anyplans.in/torino/arcade-masterland-night/
+
+Giochi da tavolo a Arcade Food+Games, Torino, giovedì 22 ottobre alle 20:00. Gratis (Biglietti su Eventbrite).
+
 ## Salotto letterario-culturale di Mar & Mar(vol.8) – Torino
 https://anyplans.in/torino/salotto-letterario-culturale-di-mar-mar-vol-8/
 
@@ -7786,12 +7892,17 @@ Yoga / pilates a Torino, Santa Rita, giovedì 22 ottobre alle 20:30. 20 € (Ac
 ## International Students Gathering – Torino
 https://anyplans.in/torino/international-students-gathering/
 
-Festa di paese a Via S. Giuseppe Benedetto Cottolengo, 24 bis, Torino, venerdì 23 ottobre alle 16:00. Gratis (Biglietti su Eventbrite).
+Festa di paese a Via S. Giuseppe Benedetto Cottolengo, 24 bis, Torino, venerdì 23 ottobre alle 17:00. Gratis (Biglietti su Eventbrite).
 
 ## Serata creativa in relax a Torino, 23 ottobre
 https://anyplans.in/torino/serata-creativa-in-relax/
 
 Yoga / pilates a Torino, venerdì 23 ottobre alle 18:00. 6 € (Accredito su comehome; il resto si paga in loco).
+
+## Arcade Game Night: Top Chart – Arcade Food+Games
+https://anyplans.in/torino/arcade-game-night-top-chart/
+
+Giochi da tavolo a Arcade Food+Games, Torino, venerdì 23 ottobre alle 20:00. Gratis (Biglietti su Eventbrite).
 
 ## Banchetto d'Autunno – Torino
 https://anyplans.in/torino/banchetto-d-autunno/
@@ -7958,6 +8069,11 @@ https://anyplans.in/torino/shuttle-bus-torino-sacra-di-san-michele/
 
 Escursionismo a Somewhere Tours & Events, torino, domenica 25 ottobre alle 09:15. Gratis (Biglietti su Eventbrite).
 
+## Gioco di ruolo live: caccia al serial killer! – Chivasso
+https://anyplans.in/torino/gioco-di-ruolo-live-caccia-al-serial-killer/
+
+Giochi da tavolo a Campus delle Associazioni, Chivasso, domenica 25 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
+
 ## Manifesti fuori posto I Graphic Days® Workshop Kids – Torino
 https://anyplans.in/torino/manifesti-fuori-posto-i-graphic-days-workshop-kids/
 
@@ -8108,6 +8224,11 @@ https://anyplans.in/torino/fiorella-mannoia/
 
 Incontri culturali a Teatro Colosseo, Torino, mercoledì 28 ottobre alle 20:30. Gratis (Ingresso: vedi la pagina del Tacco di Bacco).
 
+## Arcade Magic Night – Arcade Food+Games
+https://anyplans.in/torino/arcade-magic-night/
+
+Giochi da tavolo a Arcade Food+Games, Torino, mercoledì 28 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
+
 ## Workshop AI e Terzo Settore - Analisi dati e valutazione dei risultati – Torino
 https://anyplans.in/torino/workshop-ai-e-terzo-settore-analisi-dati-e-valutazione-dei-r/
 
@@ -8127,6 +8248,11 @@ Incontri culturali a Piazza Santa Giulia, 7, Torino, giovedì 29 ottobre alle 17
 https://anyplans.in/torino/inaugurazione-mostra-racconti-dal-confine-disegni-e-parole-d/
 
 Mostre a Via Gianfrancesco Fiochetto, 15, Torino, giovedì 29 ottobre alle 18:00. Gratis (Biglietti su Eventbrite).
+
+## Arcade Chess Night – Arcade Food+Games
+https://anyplans.in/torino/arcade-chess-night/
+
+Giochi da tavolo a Arcade Food+Games, Torino, giovedì 29 ottobre alle 19:30. Gratis (Biglietti su Eventbrite).
 
 ## Mezze o Piene? Carambola! #Pentathlon – Torino
 https://anyplans.in/torino/mezze-o-piene-carambola-pentathlon/
@@ -8227,6 +8353,11 @@ Festa di paese a Via Santa Chiara, 20, Torino, sabato 31 ottobre alle 18:15. Gra
 https://anyplans.in/torino/torino-notturno-a-palazzo-madama/
 
 Festa di paese a Via Santa Chiara, 20, Torino, sabato 31 ottobre alle 18:30. Gratis (Biglietti su Eventbrite).
+
+## Arcade Cena con Delitto — Halloween – Arcade Food+Games
+https://anyplans.in/torino/arcade-cena-con-delitto-halloween/
+
+Festa di paese a Arcade Food+Games, Torino, sabato 31 ottobre alle 19:00. Gratis (Biglietti su Eventbrite).
 
 ## Menù Halloween di pesce a 29 euro – Torino
 https://anyplans.in/torino/menu-halloween-di-pesce-a-29-euro-ma-non-solo/
@@ -8562,6 +8693,11 @@ Cena / aperitivo a Torino, venerdì 13 novembre alle 21:00. 5 € (Accredito su
 https://anyplans.in/torino/radikal/
 
 Serate e discoteca a Via Giuseppe Regaldi, 7, Torino, venerdì 13 novembre alle 22:00. Gratis (Biglietti su Eventbrite).
+
+## Presentazione del libro «Analisi esistenziale» di…
+https://anyplans.in/torino/presentazione-del-libro-analisi-esistenziale-di-lodovico-ber/
+
+Yoga / pilates a Villa Amoretti "Villa Rignon", Torino, sabato 14 novembre alle 10:30. Gratis (Biglietti su Eventbrite).
 
 ## CioccolaTIAMO – Torino
 https://anyplans.in/torino/cioccolatiamo-esperienza-sensoriale-per-single-golosi/
@@ -9273,40 +9409,40 @@ https://anyplans.in/torino/francesco-paolantoni-salotto-paolantoni/
 
 Spettacoli e teatro a Teatro Colosseo, Torino, lunedì 12 aprile alle 20:30. Gratis (Ingresso: vedi la pagina del Tacco di Bacco).
 
-## Things to do in Turin: 1016 events
+## Things to do in Turin: 1043 events
 https://anyplans.in/en/torino/
 
 What's on in Turin and its province, today, tonight and this weekend: talks & culture, dinners & aperitivo, concerts & live music, guided tours, padel and town festivals & fairs. Pick one and go with other people.
 
-## What to do in Turin today: 44 events
+## What to do in Turin today: 47 events
 https://anyplans.in/en/torino/what-to-do-today/
 
-44 events in Turin and its province today, 29 September 2026: Torino, Turin, Venaria Reale and Chieri and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+47 events in Turin and its province today, 29 September 2026: Torino, Turin, Venaria Reale and Chieri and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
 ## What to do in Turin tomorrow: 40 events
 https://anyplans.in/en/torino/what-to-do-tomorrow/
 
-40 events in Turin and its province tomorrow, 30 September 2026: Torino, Turin, Settimo Torinese and Fonderie Limone di Moncalieri Moncalieri and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+40 events in Turin and its province tomorrow, 30 September 2026: Turin, Torino, Fonderie Limone di Moncalieri Moncalieri and Pozzo Strada and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Turin this weekend: 132 events
+## What to do in Turin this weekend: 136 events
 https://anyplans.in/en/torino/what-to-do-this-weekend/
 
-132 events in Turin and its province this weekend (Saturday 3 October and Sunday 4 October): Torino, Turin, Grugliasco and Settimo Torinese and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+136 events in Turin and its province this weekend (Saturday 3 October and Sunday 4 October): Torino, Turin, Grugliasco and Settimo Torinese and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## Events in Turin in September 2026: 80
+## Events in Turin in September 2026: 83
 https://anyplans.in/en/torino/events-september-2026/
 
-80 events in Turin and its province in September 2026: talks & culture, padel, dinners & aperitivo, town festivals & fairs and shows & theatre. Day by day, with times, place and price, in Torino, Turin, Venaria Reale and Chieri and other towns. You sign up and go with other people.
+83 events in Turin and its province in September 2026: hiking, talks & culture, yoga & pilates, padel and dinners & aperitivo. Day by day, with times, place and price, in Torino, Turin, Venaria Reale and Chieri and other towns. You sign up and go with other people.
 
-## Events in Turin in October 2026: 740
+## Events in Turin in October 2026: 763
 https://anyplans.in/en/torino/events-october-2026/
 
-740 events in Turin and its province in October 2026: padel, volleyball, board games, shows & theatre and guided tours. Day by day, with times, place and price, in Torino, Turin, Settimo Torinese and Centro and other towns. You sign up and go with other people.
+763 events in Turin and its province in October 2026: padel, volleyball, board games, shows & theatre and guided tours. Day by day, with times, place and price, in Torino, Turin, Settimo Torinese and Centro and other towns. You sign up and go with other people.
 
-## Events in Turin in November 2026: 119
+## Events in Turin in November 2026: 120
 https://anyplans.in/en/torino/events-november-2026/
 
-119 events in Turin and its province in November 2026: padel, volleyball, shows & theatre, hiking and painting & art. Day by day, with times, place and price, in Torino, Turin, Centro and torino and other towns. You sign up and go with other people.
+120 events in Turin and its province in November 2026: padel, volleyball, shows & theatre, hiking and painting & art. Day by day, with times, place and price, in Torino, Turin, Centro and torino and other towns. You sign up and go with other people.
 
 ## Padel in Turin: 39 events
 https://anyplans.in/en/torino/padel/
@@ -9318,15 +9454,15 @@ https://anyplans.in/en/torino/dinners/
 
 In Turin and its province there are 112 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Talks & culture in Turin: 336 events
+## Talks & culture in Turin: 339 events
 https://anyplans.in/en/torino/talks-and-culture/
 
-In Turin and its province there are 336 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Turin and its province there are 339 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Guided tours in Turin: 82 events
+## Guided tours in Turin: 84 events
 https://anyplans.in/en/torino/guided-tours/
 
-In Turin and its province there are 82 guided tours events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Turin and its province there are 84 guided tours events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Painting & art in Turin: 17 events
 https://anyplans.in/en/torino/painting/
@@ -9343,25 +9479,25 @@ https://anyplans.in/en/torino/volleyball/
 
 In Turin and its province there are 9 volleyball events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Yoga & pilates in Turin: 28 events
+## Yoga & pilates in Turin: 33 events
 https://anyplans.in/en/torino/yoga/
 
-In Turin and its province there are 28 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Turin and its province there are 33 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Fairs in Turin
 https://anyplans.in/en/torino/fairs/
 
 There are no fairs events scheduled right now: below, the past ones. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Concerts & live music in Turin: 88 events
+## Concerts & live music in Turin: 87 events
 https://anyplans.in/en/torino/concerts/
 
-In Turin and its province there are 88 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Turin and its province there are 87 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Exhibitions in Turin: 18 events
+## Exhibitions in Turin: 20 events
 https://anyplans.in/en/torino/exhibitions/
 
-In Turin and its province there are 18 exhibitions in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Turin and its province there are 20 exhibitions in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Singles nights in Turin: 3 events
 https://anyplans.in/en/torino/singles/
@@ -9373,25 +9509,25 @@ https://anyplans.in/en/torino/gym/
 
 In Turin and its province there are 7 gym events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Shows & theatre in Turin: 77 events
+## Shows & theatre in Turin: 79 events
 https://anyplans.in/en/torino/shows/
 
-In Turin and its province there are 77 shows & theatre events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Turin and its province there are 79 shows & theatre events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Road cycling in Turin: 3 events
+## Road cycling in Turin: 4 events
 https://anyplans.in/en/torino/road-cycling/
 
-In Turin and its province there are 3 road cycling events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Turin and its province there are 4 road cycling events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Hiking in Turin: 17 events
+## Hiking in Turin: 19 events
 https://anyplans.in/en/torino/hiking/
 
-In Turin and its province there are 17 hiking events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Turin and its province there are 19 hiking events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Festivals & sagre near Turin: 79 events
+## Festivals & sagre near Turin: 80 events
 https://anyplans.in/en/torino/festivals/
 
-In Turin and its province there are 79 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Turin and its province there are 80 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Dancing in Turin: 6 events
 https://anyplans.in/en/torino/dancing/
@@ -9403,10 +9539,10 @@ https://anyplans.in/en/torino/karaoke/
 
 In Turin and its province there are 4 karaoke events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Board games in Turin: 19 events
+## Board games in Turin: 29 events
 https://anyplans.in/en/torino/board-games/
 
-In Turin and its province there are 19 board game nights in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Turin and its province there are 29 board game nights in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Nights out in Turin: 5 events
 https://anyplans.in/en/torino/nights-out/
@@ -9451,7 +9587,7 @@ In Collegno there are 4 events in the coming months. On anyplans you find the fe
 ## Festivals and events in Settimo Torinese,…
 https://anyplans.in/en/torino/settimo-torinese/
 
-In Settimo Torinese there are 37 events in the coming months. On anyplans you find the festivals and events of Settimo Torinese with dates, times and place. You sign up and go with others.
+In Settimo Torinese there are 38 events in the coming months. On anyplans you find the festivals and events of Settimo Torinese with dates, times and place. You sign up and go with others.
 
 ## Festivals and events in Centro, Bergamo: 27…
 https://anyplans.in/en/torino/centro/
@@ -9473,10 +9609,10 @@ https://anyplans.in/en/torino/lucento/
 
 In Lucento there are 3 events in the coming months. On anyplans you find the festivals and events of Lucento with dates, times and place. You sign up and go with others.
 
-## Festivals and events in Rivoli, Bergamo: 2…
+## Festivals and events in Rivoli, Bergamo: 3…
 https://anyplans.in/en/torino/rivoli/
 
-In Rivoli there are 2 events in the coming months. On anyplans you find the festivals and events of Rivoli with dates, times and place. You sign up and go with others.
+In Rivoli there are 3 events in the coming months. On anyplans you find the festivals and events of Rivoli with dates, times and place. You sign up and go with others.
 
 ## Festivals and events in Chieri, Bergamo: 3…
 https://anyplans.in/en/torino/chieri/
@@ -9518,10 +9654,10 @@ https://anyplans.in/en/torino/alpignano/
 
 In Alpignano there are 2 events in the coming months. On anyplans you find the festivals and events of Alpignano with dates, times and place. You sign up and go with others.
 
-## Festivals and events in Nichelino, Bergamo: 5…
+## Festivals and events in Nichelino, Bergamo: 4…
 https://anyplans.in/en/torino/nichelino/
 
-In Nichelino there are 5 events in the coming months. On anyplans you find the festivals and events of Nichelino with dates, times and place. You sign up and go with others.
+In Nichelino there are 4 events in the coming months. On anyplans you find the festivals and events of Nichelino with dates, times and place. You sign up and go with others.
 
 ## Festivals and events in Moncalieri, Bergamo: 1…
 https://anyplans.in/en/torino/moncalieri/
@@ -9533,10 +9669,10 @@ https://anyplans.in/en/torino/la-verdina/
 
 In La Verdina there is 1 event in the coming months. On anyplans you find the festivals and events of La Verdina with dates, times and place. You sign up and go with others.
 
-## Festivals and events in Turin, Bergamo: 1…
+## Festivals and events in Turin, Bergamo: 2…
 https://anyplans.in/en/torino/turin/
 
-In Turin there is 1 event in the coming months. On anyplans you find the festivals and events of Turin with dates, times and place. You sign up and go with others.
+In Turin there are 2 events in the coming months. On anyplans you find the festivals and events of Turin with dates, times and place. You sign up and go with others.
 
 ## Festivals and events in Venaria Reale, Bergamo:…
 https://anyplans.in/en/torino/venaria-reale/
@@ -9547,6 +9683,11 @@ In Venaria Reale there are 5 events in the coming months. On anyplans you find t
 https://anyplans.in/en/torino/non-distante-dalla-reggia-di-venaria/
 
 In Non distante dalla Reggia di Venaria there are 2 events in the coming months. On anyplans you find the festivals and events of Non distante dalla Reggia di Venaria with dates, times and place. You sign up and go with others.
+
+## Festivals and events in Chivasso, Bergamo: 1…
+https://anyplans.in/en/torino/chivasso/
+
+In Chivasso there is 1 event in the coming months. On anyplans you find the festivals and events of Chivasso with dates, times and place. You sign up and go with others.
 
 ## Festivals and events in Aurora, Bergamo: 7…
 https://anyplans.in/en/torino/aurora/
@@ -9583,10 +9724,10 @@ https://anyplans.in/en/torino/centro-piazza-castello/
 
 In Centro- Piazza Castello there are 5 events in the coming months. On anyplans you find the festivals and events of Centro- Piazza Castello with dates, times and place. You sign up and go with others.
 
-## Venues in Turin: 119
+## Venues in Turin: 123
 https://anyplans.in/en/torino/venues/
 
-119 venues in Turin and its province with something on: clubs, bars, sports centres, theatres and squares. One page each, with the upcoming dates.
+123 venues in Turin and its province with something on: clubs, bars, sports centres, theatres and squares. One page each, with the upcoming dates.
 
 ## Tablo: events and nights out in Torino
 https://anyplans.in/en/torino/venues/tablo/
@@ -9601,7 +9742,7 @@ Vivid Events in Torino: 40 upcoming events — live sport, guided tours and talk
 ## Docks Dora: what's on in Torino
 https://anyplans.in/en/torino/venues/docks-dora/
 
-Docks Dora in Torino: 25 upcoming events — talks & culture, town festivals & fairs, shows & theatre and pottery. Date, time, price and how to join, one page each. You go with other people.
+Docks Dora in Torino: 26 upcoming events — talks & culture, town festivals & fairs, shows & theatre and pottery. Date, time, price and how to join, one page each. You go with other people.
 
 ## Ladies & Gentlemen: events and nights out in Centro
 https://anyplans.in/en/torino/venues/ladies-gentlemen/
@@ -9667,6 +9808,11 @@ Barrio La Cumpa de Micky🔥 in Aurora: 9 upcoming events — dinners & aperitiv
 https://anyplans.in/en/torino/venues/fablab-torino/
 
 Fablab Torino: 12 upcoming events — guided tours, talks & culture and concerts & live music. Date, time, price and how to join, one page each. You go with other people.
+
+## Arcade Food+Games: what's on in Torino
+https://anyplans.in/en/torino/venues/arcade-food-games/
+
+Arcade Food+Games in Torino: 11 upcoming events — board games and town festivals & fairs. Date, time, price and how to join, one page each. You go with other people.
 
 ## Ramo d'Oro & San Pietro in Vincoli: events and nights…
 https://anyplans.in/en/torino/venues/ramo-d-oro-san-pietro-in-vincoli/
@@ -9793,11 +9939,6 @@ https://anyplans.in/en/torino/venues/quality-beer-academy/
 
 Quality Beer Academy in Torino: nothing on right now. Below are the last 6 events held here; new dates show up on this page as soon as they are announced.
 
-## Cartiera: events and nights out in Torino
-https://anyplans.in/en/torino/venues/cartiera/
-
-Cartiera in Torino: 6 upcoming events — talks & culture, shows & theatre and dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
-
 ## Toolbox Coworking: what's on in Torino
 https://anyplans.in/en/torino/venues/toolbox-coworking/
 
@@ -9842,6 +9983,11 @@ Caffè Costadoro in Torino: nothing on right now. Below are the last 5 events he
 https://anyplans.in/en/torino/venues/casa-nat-e-dintorni/
 
 Casa Nat e dintorni in Turin: 5 upcoming events — volleyball, talks & culture, dinners & aperitivo and yoga & pilates. Date, time, price and how to join, one page each. You go with other people.
+
+## Cartiera: events and nights out in Torino
+https://anyplans.in/en/torino/venues/cartiera/
+
+Cartiera in Torino: 5 upcoming events — talks & culture and dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
 
 ## Moonstone: what's on in Torino
 https://anyplans.in/en/torino/venues/moonstone/
@@ -10038,6 +10184,11 @@ https://anyplans.in/en/torino/venues/davanti-ingresso-teatro-regio/
 
 Davanti Ingresso Teatro Regio in Torino: 2 upcoming events — town festivals & fairs. Date, time, price and how to join, one page each. You go with other people.
 
+## Cattedrale di San Giovanni Battista: what's on in Torino
+https://anyplans.in/en/torino/venues/cattedrale-di-san-giovanni-battista/
+
+Cattedrale di San Giovanni Battista in Torino: 2 upcoming events — hiking and town festivals & fairs. Date, time, price and how to join, one page each. You go with other people.
+
 ## Rinascimenti Sociali: what's on in Torino
 https://anyplans.in/en/torino/venues/rinascimenti-sociali/
 
@@ -10062,6 +10213,11 @@ Sermig Arsenale della Pace in Torino: 2 upcoming events — guided tours and con
 https://anyplans.in/en/torino/venues/ecosistema-fotosfera/
 
 Ecosistema Fotosfera in Centro: 2 upcoming events — painting & art. Date, time, price and how to join, one page each. You go with other people.
+
+## Teatro Café Müller: what's on in Torino
+https://anyplans.in/en/torino/venues/teatro-cafe-muller/
+
+Teatro Café Müller in Torino: 2 upcoming events — shows & theatre. Date, time, price and how to join, one page each. You go with other people.
 
 ## Vino & Cultura: events and nights out in Turin
 https://anyplans.in/en/torino/venues/vino-cultura/
@@ -10127,6 +10283,11 @@ Vincenzo Cipriani in Torino: 2 upcoming events — painting & art and guided tou
 https://anyplans.in/en/torino/venues/giardini-reali-di-torino/
 
 Giardini Reali di Torino: 2 upcoming events — guided tours. Date, time, price and how to join, one page each. You go with other people.
+
+## Biblioteca Della Regione Piemonte Umberto Eco: what's…
+https://anyplans.in/en/torino/venues/biblioteca-della-regione-piemonte-umberto-eco/
+
+Biblioteca Della Regione Piemonte Umberto Eco in Torino: 2 upcoming events — talks & culture and guided tours. Date, time, price and how to join, one page each. You go with other people.
 
 ## Magic Lair: what's on in Torino
 https://anyplans.in/en/torino/venues/magic-lair/
@@ -10416,7 +10577,7 @@ Volleyball in Torino, Lingotto, Tuesday 29 September at 21:20 (8 dates, until 10
 ## Dare voce alle emozioni: crea e canta la tua canzone – Torino
 https://anyplans.in/en/torino/dare-voce-alle-emozioni-crea-e-canta-la-tua-canzone/
 
-Yoga & pilates in Ipercoop, Torino: it already took place, the last date was Monday, 28 September 2026.
+Yoga & pilates in Ipercoop, Torino, Tuesday 29 September at 10:30. Free (Biglietti su Eventbrite).
 
 ## "IL SEGNO DELLA RINASCITA" – Torino
 https://anyplans.in/en/torino/il-segno-della-rinascita/
@@ -10546,7 +10707,7 @@ Dinners & aperitivo in Via Maria Vittoria, 23b, Torino: it already took place, t
 ## APERITIVO LETTERARIO - COSTO PARTECIPAZIONE 5€ – Settimo Torinese
 https://anyplans.in/en/torino/aperitivo-letterario-costo-partecipazione-5/
 
-Dinners & aperitivo in Piazza Garzena, Settimo Torinese, Wednesday 30 September at 19:30. Free (Biglietti su Eventbrite).
+Dinners & aperitivo in Via G. Matteotti, 6, Settimo Torinese, Tuesday 13 October at 19:30. Free (Biglietti su Eventbrite).
 
 ## Tavolo genitori single da La LLama: 11 posti liberi
 https://anyplans.in/en/torino/tavolo-genitori-single-da-la-llama-11-posti-liberi/
@@ -10976,22 +11137,22 @@ Guided tours in Via Santa Chiara, 40/H, Torino: it already took place, the last 
 ## Daisy Primaria Internazionale - Open Week – Chieri
 https://anyplans.in/en/torino/daisy-primaria-internazionale-open-week/
 
-Talks & culture in Via Giacomo Nel, 4, Chieri: it already took place, the last date was Monday, 28 September 2026.
+Talks & culture in Via Giacomo Nel, 4, Chieri: it already took place, the last date was Tuesday, 29 September 2026.
 
 ## Artista X 30 – Ad Maiora Art - Galleria e Showroom
 https://anyplans.in/en/torino/artista-x-30/
 
-Exhibitions in Ad Maiora Art - Galleria e Showroom, Torino: it already took place, the last date was Monday, 28 September 2026.
+Exhibitions in Ad Maiora Art - Galleria e Showroom, Torino, Tuesday 29 September at 17:00. Free (Biglietti su Eventbrite).
 
 ## Scuola Media Internazionale Holden - Open Week – Chieri
 https://anyplans.in/en/torino/scuola-media-internazionale-holden-open-week/
 
-Talks & culture in Via S. Filippo, 2, Chieri: it already took place, the last date was Monday, 28 September 2026.
+Talks & culture in Via S. Filippo, 2, Chieri: it already took place, the last date was Tuesday, 29 September 2026.
 
 ## Licei Pascal - Open Week – Chieri
 https://anyplans.in/en/torino/licei-pascal-open-week/
 
-Talks & culture in Via S. Filippo, 2, Chieri: it already took place, the last date was Monday, 28 September 2026.
+Talks & culture in Via S. Filippo, 2, Chieri: it already took place, the last date was Tuesday, 29 September 2026.
 
 ## I'M BLUE - Vernissage mostra collettiva – Torino
 https://anyplans.in/en/torino/i-m-blue-vernissage-mostra-collettiva/
@@ -11691,7 +11852,7 @@ Guided tours in Basilica Di Superga. Torino, Torino: it already took place, the 
 ## ༻ Join our online Meditation Community! – Turin
 https://anyplans.in/en/torino/join-our-online-meditation-community/
 
-Yoga & pilates in Turin, Turin: it already took place, the last date was Monday, 28 September 2026.
+Yoga & pilates in Turin, Turin, Wednesday 30 September at 08:00. Free (Biglietti su Eventbrite).
 
 ## ESCP Running Club Turin Welcome Run #001 – Torino
 https://anyplans.in/en/torino/escp-running-club-turin-welcome-run-001/
@@ -12186,7 +12347,7 @@ Town festival in Via Fréjus, 8, Torino: it already took place, the last date wa
 ## Unlock Turin’s hidden mysteries with a thrilling outdoor escape game! – Torino
 https://anyplans.in/en/torino/unlock-turin-s-hidden-mysteries-with-a-thrilling-outdoor-esc/
 
-Hiking in Cattedrale di San Giovanni Battista, Torino: it already took place, the last date was Monday, 28 September 2026.
+Hiking in Cattedrale di San Giovanni Battista, Torino, Tuesday 29 September at 10:00. Free (Biglietti su Eventbrite).
 
 ## Aperitivo da Brunch Republic Torino: 10 posti liberi
 https://anyplans.in/en/torino/aperitivo-da-brunch-republic-torino-10-posti-liberi/
@@ -12361,7 +12522,7 @@ Dinners & aperitivo in DAPPER Coffee | Specialty Coffee Bar, Torino: it already 
 ## Turin Highlights Audio Tour: Royal Wonders and Architectural Grandeur – Torino
 https://anyplans.in/en/torino/turin-highlights-audio-tour-royal-wonders-and-architectural-/
 
-Hiking in Piazza San Carlo, Torino: it already took place, the last date was Monday, 28 September 2026.
+Hiking in Piazza San Carlo, Torino, Tuesday 29 September at 12:00. Free (Biglietti su Eventbrite).
 
 ## Laboratorio di food pairing con El Dorado Grill Cucina Peruviana – Torino, 25 September
 https://anyplans.in/en/torino/laboratorio-di-food-pairing-con-el-dorado-grill-cucina-peruv/
@@ -12631,7 +12792,7 @@ Talks & culture in Costadoro Social Coffee Factory, Torino: it already took plac
 ## Veralab Days presso Store Veralab Torino | dal 21 al 30…
 https://anyplans.in/en/torino/veralab-days-presso-store-veralab-torino-dal-21-al-30-settem/
 
-Talks & culture in Veralab Store Torino, Torino: it already took place, the last date was Monday, 28 September 2026.
+Talks & culture in Veralab Store Torino, Torino: it already took place, the last date was Tuesday, 29 September 2026.
 
 ## Future4Cities 2026 in OGR Torino, 25 September
 https://anyplans.in/en/torino/future4cities-2026/
@@ -13723,11 +13884,6 @@ https://anyplans.in/en/torino/tablo-letterario-da-sicily-food-beverage-5-posti-l
 
 Dinners & aperitivo in Sicily food & beverage, Torino, Tuesday 29 September at 17:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
-## Fare l’Europa – Torino
-https://anyplans.in/en/torino/fare-l-europa-guardare-piu-lontano/
-
-Town festival in Museo Nazionale del Cinema - Fondazione Maria Adriana Prolo, Torino, Tuesday 29 September at 18:00. Free (Biglietti su Eventbrite).
-
 ## A TORINO IL PRIMO INCONTRO SULLA TRAGEDIA IN NEPAL:…
 https://anyplans.in/en/torino/a-torino-il-primo-incontro-sulla-tragedia-in-nepal-stefano-l/
 
@@ -13838,10 +13994,15 @@ https://anyplans.in/en/torino/il-quartiere-liberty/
 
 Painting & art in Casa Fenoglio-Lafleur, Torino, Wednesday 30 September at 10:00. €17.22 (Biglietti su AllEvents).
 
-## Visita Guidata al MUSEO LAVAZZA gratuita in lingua…
+## Visita Guidata al MUSEO LAVAZZA gratuita in lingua…, 30 September
 https://anyplans.in/en/torino/visita-guidata-al-museo-lavazza-gratuita-in-lingua-italiana/
 
 Guided tours in Museo Lavazza, Torino, Wednesday 30 September at 16:30. Free (Ingresso: vedi la pagina AllEvents).
+
+## Visita Guidata al MUSEO LAVAZZA gratuita in lingua…, 3 October
+https://anyplans.in/en/torino/visita-guidata-al-museo-lavazza-gratuita-in-lingua-italiana-2026-10-03/
+
+Guided tours in Museo Lavazza, Torino, Saturday 3 October at 10:30. Free (Biglietti su Eventbrite).
 
 ## Officina Koinè – Torino
 https://anyplans.in/en/torino/officina-koine-un-luogo-di-incontro-gioco-e-meraviglia/
@@ -13993,11 +14154,6 @@ https://anyplans.in/en/torino/le-azioni-che-contano-criptovalute-e-blockchain/
 
 Talks & culture in Palazzo Cavour, Torino, Thursday 1 October at 18:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## 4 for "Peter" Angela - Tribute to Piero Angela – Nichelino
-https://anyplans.in/en/torino/4-for-peter-angela-tribute-to-piero-angela/
-
-Concerts & live music in Via Torino, 103, Nichelino, Thursday 1 October at 18:30. Free (Biglietti su Eventbrite).
-
 ## Incontro gratuito di Mindful Yoga – Torino
 https://anyplans.in/en/torino/incontro-gratuito-di-mindful-yoga/
 
@@ -14103,10 +14259,20 @@ https://anyplans.in/en/torino/lezione-promo-90-minuti-con-yamila/
 
 Padel in Sporting Friends, Via Genova 62, 10098 Rivoli, Friday 2 October at 20:00. €25 (Iscrizione e pagamento su Playtomic).
 
+## Arcade Game Night: Baraonda – Arcade Food+Games
+https://anyplans.in/en/torino/arcade-game-night-baraonda/
+
+Board games in Arcade Food+Games, Torino, Friday 2 October at 20:00. Free (Biglietti su Eventbrite).
+
 ## LEZIONE 2 DI 10 GIA SALDATA – Gar Sempione
 https://anyplans.in/en/torino/lezione-2-di-10-gia-saldata/
 
 Padel in Gar Sempione, Via Gottardo 10, 10155 Torino, Friday 2 October at 20:00. Free (Iscrizione su Playtomic).
+
+## MOVIMENTI SULL'IDENTITA' – Teatro Café Müller
+https://anyplans.in/en/torino/movimenti-sull-identita/
+
+Shows & theatre in Teatro Café Müller, Torino, Friday 2 October at 20:00. Free (Biglietti su Eventbrite).
 
 ## Wild Angels Piemonte - Bocciofila Portofino Torino
 https://anyplans.in/en/torino/wild-angels-piemonte-bocciofila-portofino-torino/
@@ -14227,6 +14393,11 @@ Talks & culture in Docks Dora, Torino, Saturday 3 October at 12:00. Free (Biglie
 https://anyplans.in/en/torino/ahi-ahi-social/
 
 Town festival in Docks Dora, Torino, Saturday 3 October at 14:30. Free (Biglietti su Eventbrite).
+
+## CoderDojo in Docks Dora, Torino, 3 October
+https://anyplans.in/en/torino/coderdojo/
+
+Talks & culture in Docks Dora, Torino, Saturday 3 October at 14:30. Free (Biglietti su Eventbrite).
 
 ## Farsi Casa - Sentirsi a casa dentro e fuori di sé – Torino
 https://anyplans.in/en/torino/farsi-casa-sentirsi-a-casa-dentro-e-fuori-di-se/
@@ -14353,11 +14524,6 @@ https://anyplans.in/en/torino/ocialcrazia-la-democrazia-alla-prova-dei-social/
 
 Talks & culture in Docks Dora, Torino, Saturday 3 October at 17:30. Free (Biglietti su Eventbrite).
 
-## BAJ BAJ GUERRA! in Cartiera, Torino, 3 October
-https://anyplans.in/en/torino/baj-baj-guerra/
-
-Shows & theatre in Cartiera, Torino, Saturday 3 October at 17:30. Free (Biglietti su Eventbrite).
-
 ## PAPER ART - Vernissage mostra collettiva – Torino
 https://anyplans.in/en/torino/paper-art-vernissage-mostra-collettiva/
 
@@ -14397,6 +14563,11 @@ Exhibitions in Con/Temporary Spaces - ArtàPorter, Torino, Saturday 3 October at
 https://anyplans.in/en/torino/cena-da-birreria-manhattan-4-posti-liberi/
 
 Dinners & aperitivo in Birreria Manhattan, Torino, Saturday 3 October at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## ISTINTI D'ARTE – Torino
+https://anyplans.in/en/torino/istinti-d-arte/
+
+Talks & culture in Artàporter Con/Temporary Spaces | Santa Teresa (ex Teatro Macario), Torino, Saturday 3 October at 18:30. Free (Biglietti su Eventbrite).
 
 ## Cena da L'Antica pizzeria da Michele: 11 posti liberi
 https://anyplans.in/en/torino/cena-da-l-antica-pizzeria-da-michele-11-posti-liberi/
@@ -14528,6 +14699,11 @@ https://anyplans.in/en/torino/corso-di-rammendo-base-con-rapazebu/
 
 Pottery in Leumann Hub - Solarium, Grugliasco, Sunday 4 October at 10:00. Free (Biglietti su Eventbrite).
 
+## 10AM MORNING CLUB X NOMAD W. BAZAART from NIKKI BEACH SAINT-TROPEZ – Torino
+https://anyplans.in/en/torino/10am-morning-club-x-nomad-w-bazaart-from-nikki-beach-saint-t/
+
+Dinners & aperitivo in Nomad - The Colonial, Torino, Sunday 4 October at 10:00. Free (Biglietti su Eventbrite).
+
 ## Amalgària  - teatro e musica [Rest to Fest] – Parco Colletta
 https://anyplans.in/en/torino/amalgaria-teatro-e-musica-rest-to-fest/
 
@@ -14547,6 +14723,11 @@ Dinners & aperitivo in Costadoro Coffee Lab Diamond, Torino, Sunday 4 October at
 https://anyplans.in/en/torino/10am-morning-club-la-reale-venaria/
 
 Dinners & aperitivo in La Reale Sporting Club, Venaria Reale, Sunday 4 October at 10:00. Free (Biglietti su Eventbrite).
+
+## SUICIDIO: falsi miti e segnali d'allarme – Rivarossa
+https://anyplans.in/en/torino/suicidio-falsi-miti-e-segnali-d-allarme/
+
+Yoga & pilates in Il giorno dopo - a casa di Andrea, Rivarossa, Sunday 4 October at 10:00. Free (Biglietti su Eventbrite).
 
 ## Festival dello Sviluppo Sostenibile ad Avigliana – Turin
 https://anyplans.in/en/torino/festival-dello-sviluppo-sostenibile-ad-avigliana/
@@ -14738,11 +14919,6 @@ https://anyplans.in/en/torino/porcini-freschi-mega-cena-a-30-euro-anche-per-vege
 
 Dinners & aperitivo in Torino, Zona Crocetta, Sunday 4 October at 20:00 (2 dates, until 25 October). €6 (Accredito su comehome; il resto si paga in loco).
 
-## Il Secolo è Mobile – Chieri
-https://anyplans.in/en/torino/il-secolo-e-mobile-la-storia-delle-migrazioni-in-europa-vist/
-
-Town festival in Via Montessori, 2, Chieri, Sunday 4 October at 20:30. Free (Biglietti su Eventbrite).
-
 ## To Listen To - Festival dell'ascolto sperimentale – Torino
 https://anyplans.in/en/torino/to-listen-to-festival-dell-ascolto-sperimentale/
 
@@ -14752,6 +14928,11 @@ Talks & culture in State Music Conservatory "Giuseppe Verdi", Torino, Sunday 4 O
 https://anyplans.in/en/torino/sulle-tracce-di-gustavo-adolfo-rol-tour-guidato/
 
 Guided tours in Torino, Centro, Sunday 4 October at 20:30. €15 (Accredito su comehome; il resto si paga in loco).
+
+## Il Secolo è Mobile – Chieri
+https://anyplans.in/en/torino/il-secolo-e-mobile-la-storia-delle-migrazioni-in-europa-vist/
+
+Town festival in Via Montessori, 2, Chieri, Sunday 4 October at 21:00. Free (Biglietti su Eventbrite).
 
 ## LAUNCHCAMP | AI EDITION – Feat. House
 https://anyplans.in/en/torino/launchcamp-ai-edition/
@@ -14817,11 +14998,6 @@ Guided tours in Winelivery Bar & Enoteca Torino, Torino, Tuesday 6 October at 18
 https://anyplans.in/en/torino/un-altro-giro-roaming-aperitivo-with-profounders-enzo-ventur/
 
 Dinners & aperitivo in Torino, Tuesday 6 October at 18:30. Free (Gratis, registrazione su Luma).
-
-## Aperitivo con Boscolo a Torino – Caffè Platti
-https://anyplans.in/en/torino/aperitivo-con-boscolo-a-torino/
-
-Dinners & aperitivo in Caffè Platti, Torino, Tuesday 6 October at 18:30. Free (Biglietti su Eventbrite).
 
 ## TeenVentures Demo Night in Torino, 6 October
 https://anyplans.in/en/torino/teenventures-demo-night/
@@ -15428,6 +15604,11 @@ https://anyplans.in/en/torino/fears-and-dreams-what-are-we-putting-into-orbit/
 
 Talks & culture in Villa Sanquirico, Torino, Thursday 8 October at 20:00. Free (Gratis, registrazione su Luma).
 
+## Arcade Risiko Night – Arcade Food+Games
+https://anyplans.in/en/torino/arcade-risiko-night/
+
+Board games in Arcade Food+Games, Torino, Thursday 8 October at 20:00. Free (Biglietti su Eventbrite).
+
 ## Paella & Karaoke - Mangia – Torino
 https://anyplans.in/en/torino/paella-karaoke-mangia-canta-e-balla/
 
@@ -15447,6 +15628,11 @@ Dinners & aperitivo in Cambiano, Ingresso paese, Thursday 8 October at 20:25. �
 https://anyplans.in/en/torino/club-homecoming-dinner-special-event-for-international-membe/
 
 Dinners & aperitivo in Turin, Torino, Thursday 8 October at 20:30. Free (Gratis, registrazione su Luma).
+
+## La criminologia sale sul tram storico – Torino
+https://anyplans.in/en/torino/la-criminologia-sale-sul-tram-storico/
+
+Shows & theatre in Piazza Castello Torino  (lato Teatro Regio), Torino, Thursday 8 October at 20:30. Free (Biglietti su Eventbrite).
 
 ## Fabio De Luigi – Teatro Colosseo
 https://anyplans.in/en/torino/fabio-de-luigi/
@@ -15638,6 +15824,11 @@ https://anyplans.in/en/torino/just-for-joy-street-art-festival-2026-edizione/
 
 Town festival in Just for Joy Street Art Festival, Friday 9 October at 20:00. Free (Ingresso: vedi la pagina AllEvents).
 
+## Arcade Game Night: Squadre – Arcade Food+Games
+https://anyplans.in/en/torino/arcade-game-night-squadre/
+
+Board games in Arcade Food+Games, Torino, Friday 9 October at 20:00. Free (Biglietti su Eventbrite).
+
 ## Stand up comedy night live – Torino porta Nuova
 https://anyplans.in/en/torino/stand-up-comedy-night-live/
 
@@ -15743,10 +15934,10 @@ https://anyplans.in/en/torino/workshop-di-degustazione-dell-acqua/
 
 Dinners & aperitivo in Ecomuseo del Freidano, Settimo Torinese, Saturday 10 October at 09:30. Free (Biglietti su Eventbrite).
 
-## OPEN HOUSE POLIZIA SCIENTIFICA – Torino
-https://anyplans.in/en/torino/open-house-polizia-scientifica/
+## PSICOSINTESI ACADEMY – Torino
+https://anyplans.in/en/torino/psicosintesi-academy/
 
-Talks & culture in Via Veglia, 44, Torino, Saturday 10 October at 10:00. Free (Biglietti su Eventbrite).
+Yoga & pilates in Via Massena, 3, Torino, Saturday 10 October at 10:00. Free (Biglietti su Eventbrite).
 
 ## L'ORA DEL RACCONTO - REAZIONI A CATENA – Festival Diffuso
 https://anyplans.in/en/torino/l-ora-del-racconto-reazioni-a-catena/
@@ -15782,6 +15973,11 @@ Town festival in Festival Diffuso, Settimo Torinese, Saturday 10 October at 11:3
 https://anyplans.in/en/torino/l-immaginario-artificiale/
 
 Talks & culture in Festival Diffuso, Settimo Torinese, Saturday 10 October at 12:00. Free (Biglietti su Eventbrite).
+
+## OCCULTA. Il corpo dell’archivio – Rivoli
+https://anyplans.in/en/torino/occulta-il-corpo-dell-archivio/
+
+Shows & theatre in Castello di Rivoli Museo d'Arte Contemporanea, Rivoli, Saturday 10 October at 14:00. Free (Biglietti su Eventbrite).
 
 ## vinci la racchetta babolat!!! – Centro Sportivo Altessano
 https://anyplans.in/en/torino/vinci-la-racchetta-babolat/
@@ -15858,13 +16054,18 @@ https://anyplans.in/en/torino/piante-in-movimento/
 
 Town festival in Festival Diffuso, Settimo Torinese, Saturday 10 October at 17:00. Free (Biglietti su Eventbrite).
 
+## Le Madri del ‘46 – Torino
+https://anyplans.in/en/torino/le-madri-del-46/
+
+Guided tours in Biblioteca Della Regione Piemonte Umberto Eco, Torino, Saturday 10 October at 17:30. Free (Biglietti su Eventbrite).
+
 ## LA CHIMICA DELL'IRONIA – Festival Diffuso
 https://anyplans.in/en/torino/la-chimica-dell-ironia/
 
 Talks & culture in Festival Diffuso, Settimo Torinese, Saturday 10 October at 17:30. Free (Biglietti su Eventbrite).
 
-## Presentazione Libro: «FUGURUMA» di Rosanna Frattaruolo – Torino
-https://anyplans.in/en/torino/presentazione-libro-fuguruma-di-rosanna-frattaruolo/
+## Presentazione Libro: "Fuguruma - Bozzetti per profili informi" – Torino
+https://anyplans.in/en/torino/presentazione-libro-fuguruma-bozzetti-per-profili-informi/
 
 Talks & culture in Senior Living: Specht Residenzen Torino, Torino, Saturday 10 October at 17:30. Free (Biglietti su Eventbrite).
 
@@ -16243,6 +16444,11 @@ https://anyplans.in/en/torino/danze-rumene/
 
 Concerts & live music in Conservatorio Di Torino, Torino, Tuesday 13 October at 20:30. Free (Biglietti su Eventbrite).
 
+## Convegno CSI Xperience 2026 | L’innovazione che unisce – Torino
+https://anyplans.in/en/torino/convegno-csi-xperience-2026-l-innovazione-che-unisce/
+
+Talks & culture in Auditorium CSI NEXT, Torino, Wednesday 14 October at 09:00. Free (Biglietti su Eventbrite).
+
 ## Open Studio / Picnic progettuali – Quadrilatero Design
 https://anyplans.in/en/torino/open-studio-picnic-progettuali/
 
@@ -16252,6 +16458,11 @@ Painting & art in Quadrilatero Design, Torino, Wednesday 14 October at 12:30. Fr
 https://anyplans.in/en/torino/roadshow-coenergia-il-14-10-2026-a-caselle-torinese-to/
 
 Talks & culture in Jet Hotel, Caselle Torinese, Wednesday 14 October at 13:40. Free (Biglietti su Eventbrite).
+
+## CSI Xperience 2026 | Visite guidate tra AI e Data Center – Torino
+https://anyplans.in/en/torino/csi-xperience-2026-visite-guidate-tra-ai-e-data-center/
+
+Talks & culture in CSI NEXT, Torino, Wednesday 14 October at 14:00. Free (Biglietti su Eventbrite).
 
 ## La forza mite della cura. – Torino
 https://anyplans.in/en/torino/la-forza-mite-della-cura/
@@ -16332,6 +16543,11 @@ Dinners & aperitivo in Torino, San Salvario, Wednesday 14 October at 20:00. €5
 https://anyplans.in/en/torino/stornelli-romani-e-l-apecorino-l-apericena-romana/
 
 Dinners & aperitivo in Torino, quadrilatero, Wednesday 14 October at 20:28. €6 (Accredito su comehome; il resto si paga in loco).
+
+## Arcade Bless Night – Arcade Food+Games
+https://anyplans.in/en/torino/arcade-bless-night/
+
+Board games in Arcade Food+Games, Torino, Wednesday 14 October at 20:30. Free (Biglietti su Eventbrite).
 
 ## La bottega degli orrori – Torino
 https://anyplans.in/en/torino/la-bottega-degli-orrori-visita-guidata-vol-3/
@@ -16598,6 +16814,11 @@ https://anyplans.in/en/torino/tu-be-or-not-tu-be/
 
 Shows & theatre in Teatro Café Müller, Torino, Saturday 17 October at 18:00. Free (Biglietti su Eventbrite).
 
+## Arcade Detective Night – Arcade Food+Games
+https://anyplans.in/en/torino/arcade-detective-night/
+
+Board games in Arcade Food+Games, Torino, Saturday 17 October at 19:00. Free (Biglietti su Eventbrite).
+
 ## Oktoberfest Experience – Parco della Pellerina
 https://anyplans.in/en/torino/oktoberfest-experience-monaco-a-torino/
 
@@ -16677,6 +16898,11 @@ Live sport in Allianz Stadium - Turin, Torino, Saturday 17 October at 23:59. Fre
 https://anyplans.in/en/torino/strawoman-humanitas-torino/
 
 Gym in Parco del Valentino, Torino, Sunday 18 October at 08:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## Gravel del Mais - Vigone (TO)
+https://anyplans.in/en/torino/gravel-del-mais-vigone-to/
+
+Road cycling in Piazza Clemente Corte, Vigone, TO, Vigone, Sunday 18 October at 08:00. Free (Biglietti su Eventbrite).
 
 ## BUNKER VINYL MARKET - FIERA DEL DISCO E DEL CD - 3a…
 https://anyplans.in/en/torino/bunker-vinyl-market-fiera-del-disco-e-del-cd-3a-edizione/
@@ -16818,6 +17044,11 @@ https://anyplans.in/en/torino/il-naufragio-di-cutro-94-migranti-morti/
 
 Talks & culture in Via Sestriere, 34, Torino, Tuesday 20 October at 18:30. Free (Biglietti su Eventbrite).
 
+## GRUPPO LETTURA ROMANZI – Settimo Torinese
+https://anyplans.in/en/torino/gruppo-lettura-romanzi/
+
+Town festival in Piazza Garzena, Settimo Torinese, Tuesday 20 October at 19:30. Free (Biglietti su Eventbrite).
+
 ## Gianluca Gotto - Questione di Karma – Teatro Colosseo
 https://anyplans.in/en/torino/gianluca-gotto-questione-di-karma/
 
@@ -16847,6 +17078,11 @@ Talks & culture in Università di Torino Dipartimento di Informatica, Torino, We
 https://anyplans.in/en/torino/on-bim-2026-ai-bim-e-nuovi-flussi-per-la-progettazione/
 
 Talks & culture in Lavanderia a Vapore, Collegno, Wednesday 21 October at 14:00. Free (Biglietti su Eventbrite).
+
+## NO FILTERS －WE ❤️ PITCHING – Torino
+https://anyplans.in/en/torino/no-filters-we-pitching/
+
+Exhibitions in Via Antonio Banfo, 43, Torino, Wednesday 21 October at 17:30. Free (Biglietti su Eventbrite).
 
 ## La Boheme ...spiegata ...come non mai! – Torino
 https://anyplans.in/en/torino/la-boheme-spiegata-come-non-mai/
@@ -16898,6 +17134,11 @@ https://anyplans.in/en/torino/mindstone-turin-october-ai-meetup/
 
 Talks & culture in OGR Torino powered by Fondazione CRT, Turin, Thursday 22 October at 18:30. Free (Biglietti su Eventbrite).
 
+## Arcade Masterland Night – Arcade Food+Games
+https://anyplans.in/en/torino/arcade-masterland-night/
+
+Board games in Arcade Food+Games, Torino, Thursday 22 October at 20:00. Free (Biglietti su Eventbrite).
+
 ## Salotto letterario-culturale di Mar & Mar(vol.8) – Torino
 https://anyplans.in/en/torino/salotto-letterario-culturale-di-mar-mar-vol-8/
 
@@ -16906,12 +17147,17 @@ Yoga & pilates in Torino, Santa Rita, Thursday 22 October at 20:30. €20 (Accre
 ## International Students Gathering – Torino
 https://anyplans.in/en/torino/international-students-gathering/
 
-Town festival in Via S. Giuseppe Benedetto Cottolengo, 24 bis, Torino, Friday 23 October at 16:00. Free (Biglietti su Eventbrite).
+Town festival in Via S. Giuseppe Benedetto Cottolengo, 24 bis, Torino, Friday 23 October at 17:00. Free (Biglietti su Eventbrite).
 
 ## Serata creativa in relax in Torino, 23 October
 https://anyplans.in/en/torino/serata-creativa-in-relax/
 
 Yoga & pilates in Torino, Friday 23 October at 18:00. €6 (Accredito su comehome; il resto si paga in loco).
+
+## Arcade Game Night: Top Chart – Arcade Food+Games
+https://anyplans.in/en/torino/arcade-game-night-top-chart/
+
+Board games in Arcade Food+Games, Torino, Friday 23 October at 20:00. Free (Biglietti su Eventbrite).
 
 ## Banchetto d'Autunno – Torino
 https://anyplans.in/en/torino/banchetto-d-autunno/
@@ -17078,6 +17324,11 @@ https://anyplans.in/en/torino/shuttle-bus-torino-sacra-di-san-michele/
 
 Hiking in Somewhere Tours & Events, torino, Sunday 25 October at 09:15. Free (Biglietti su Eventbrite).
 
+## Gioco di ruolo live: caccia al serial killer! – Chivasso
+https://anyplans.in/en/torino/gioco-di-ruolo-live-caccia-al-serial-killer/
+
+Board games in Campus delle Associazioni, Chivasso, Sunday 25 October at 10:00. Free (Biglietti su Eventbrite).
+
 ## Manifesti fuori posto I Graphic Days® Workshop Kids – Torino
 https://anyplans.in/en/torino/manifesti-fuori-posto-i-graphic-days-workshop-kids/
 
@@ -17228,6 +17479,11 @@ https://anyplans.in/en/torino/fiorella-mannoia/
 
 Talks & culture in Teatro Colosseo, Torino, Wednesday 28 October at 20:30. Free (Ingresso: vedi la pagina del Tacco di Bacco).
 
+## Arcade Magic Night – Arcade Food+Games
+https://anyplans.in/en/torino/arcade-magic-night/
+
+Board games in Arcade Food+Games, Torino, Wednesday 28 October at 20:30. Free (Biglietti su Eventbrite).
+
 ## Workshop AI e Terzo Settore - Analisi dati e valutazione dei risultati – Torino
 https://anyplans.in/en/torino/workshop-ai-e-terzo-settore-analisi-dati-e-valutazione-dei-r/
 
@@ -17247,6 +17503,11 @@ Talks & culture in Piazza Santa Giulia, 7, Torino, Thursday 29 October at 17:30.
 https://anyplans.in/en/torino/inaugurazione-mostra-racconti-dal-confine-disegni-e-parole-d/
 
 Exhibitions in Via Gianfrancesco Fiochetto, 15, Torino, Thursday 29 October at 18:00. Free (Biglietti su Eventbrite).
+
+## Arcade Chess Night – Arcade Food+Games
+https://anyplans.in/en/torino/arcade-chess-night/
+
+Board games in Arcade Food+Games, Torino, Thursday 29 October at 19:30. Free (Biglietti su Eventbrite).
 
 ## Mezze o Piene? Carambola! #Pentathlon – Torino
 https://anyplans.in/en/torino/mezze-o-piene-carambola-pentathlon/
@@ -17347,6 +17608,11 @@ Town festival in Via Santa Chiara, 20, Torino, Saturday 31 October at 18:15. Fre
 https://anyplans.in/en/torino/torino-notturno-a-palazzo-madama/
 
 Town festival in Via Santa Chiara, 20, Torino, Saturday 31 October at 18:30. Free (Biglietti su Eventbrite).
+
+## Arcade Cena con Delitto — Halloween – Arcade Food+Games
+https://anyplans.in/en/torino/arcade-cena-con-delitto-halloween/
+
+Town festival in Arcade Food+Games, Torino, Saturday 31 October at 19:00. Free (Biglietti su Eventbrite).
 
 ## Menù Halloween di pesce a 29 euro – Torino
 https://anyplans.in/en/torino/menu-halloween-di-pesce-a-29-euro-ma-non-solo/
@@ -17682,6 +17948,11 @@ Dinners & aperitivo in Torino, Friday 13 November at 21:00. €5 (Accredito su c
 https://anyplans.in/en/torino/radikal/
 
 Nights out in Via Giuseppe Regaldi, 7, Torino, Friday 13 November at 22:00. Free (Biglietti su Eventbrite).
+
+## Presentazione del libro «Analisi esistenziale» di…
+https://anyplans.in/en/torino/presentazione-del-libro-analisi-esistenziale-di-lodovico-ber/
+
+Yoga & pilates in Villa Amoretti "Villa Rignon", Torino, Saturday 14 November at 10:30. Free (Biglietti su Eventbrite).
 
 ## CioccolaTIAMO – torino
 https://anyplans.in/en/torino/cioccolatiamo-esperienza-sensoriale-per-single-golosi/

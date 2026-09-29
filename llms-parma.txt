@@ -1,12 +1,12 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Parma e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Parma: il sito copre 52 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce, Monza, Prato, Como, Lecco, Lodi, Modena, Reggio Emilia, Treviso, Venezia, Vicenza, Novara, Lucca, Mantova, Ferrara, Pistoia, Pavia, Ancona, Pordenone, Cremona, Messina, Reggio Calabria, Alessandria, Latina), l'indice è https://anyplans.in/llms.txt.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Parma e provincia: feste di paese e sagre, teatro e spettacoli, concerti, mercati, incontri e conferenze, visite guidate, camminate e gruppi di cammino, mostre, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Parma: il sito copre 52 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce, Monza, Prato, Como, Lecco, Lodi, Modena, Reggio Emilia, Treviso, Venezia, Vicenza, Novara, Lucca, Mantova, Ferrara, Pistoia, Pavia, Ancona, Pordenone, Cremona, Messina, Reggio Calabria, Alessandria, Latina), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-29. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Parma](https://anyplans.in/parma/cosa-fare/): tutti gli eventi in programma (141), per tipo e per paese; risponde a "cosa fare a Parma oggi / questo weekend"
+- [Cosa fare a Parma](https://anyplans.in/parma/cosa-fare/): tutti gli eventi in programma (153), per tipo e per paese; risponde a "cosa fare a Parma oggi / questo weekend"
 - [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
@@ -14,21 +14,21 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## Eventi per tipo e per paese
 
-- [Cena / aperitivo a Parma](https://anyplans.in/parma/cene-e-aperitivi/): 22 in programma
-- [Incontri culturali a Parma](https://anyplans.in/parma/incontri-culturali/): 34 in programma
-- [Corsa a Parma](https://anyplans.in/parma/corsa/): 1 in programma
+- [Cena / aperitivo a Parma](https://anyplans.in/parma/cene-e-aperitivi/): 31 in programma
+- [Incontri culturali a Parma](https://anyplans.in/parma/incontri-culturali/): 36 in programma
+- [Corsa a Parma](https://anyplans.in/parma/corsa/): 2 in programma
 - [Pittura / arte a Parma](https://anyplans.in/parma/pittura/): 2 in programma
 - [Feste, sagre ed eventi di paese a Parma](https://anyplans.in/parma/feste/): 16 in programma
-- [Concerti e musica dal vivo a Parma](https://anyplans.in/parma/concerti/): 14 in programma
+- [Concerti e musica dal vivo a Parma](https://anyplans.in/parma/concerti/): 13 in programma
 - [Ballo e danza a Parma](https://anyplans.in/parma/ballo/): 2 in programma
 - [Padel a Parma](https://anyplans.in/parma/padel/): 1 in programma
 - [Partite da vedere a Parma](https://anyplans.in/parma/partite/): 12 in programma
-- [Escursionismo a Parma](https://anyplans.in/parma/escursioni/): 9 in programma
+- [Escursionismo a Parma](https://anyplans.in/parma/escursioni/): 10 in programma
 - [Spettacoli e teatro a Parma](https://anyplans.in/parma/spettacoli/): 14 in programma
 - [Visite guidate a Parma](https://anyplans.in/parma/visite-guidate/): 4 in programma
 - [Cucina a Parma](https://anyplans.in/parma/cucina/): 3 in programma
 - [Yoga / pilates a Parma](https://anyplans.in/parma/yoga/): 3 in programma
-- [Feste ed eventi a Fidenza](https://anyplans.in/parma/fidenza/): 4 in programma
+- [Feste ed eventi a Fidenza](https://anyplans.in/parma/fidenza/): 12 in programma
 - [Feste ed eventi a Sant'Ilario d'Enza](https://anyplans.in/parma/sant-ilario-d-enza/): 2 in programma
 - [Feste ed eventi a Quartiere Spip](https://anyplans.in/parma/quartiere-spip/): 1 in programma
 - [Feste ed eventi a Il Rumore del Lutto Festival](https://anyplans.in/parma/il-rumore-del-lutto-festival/): 5 in programma
@@ -36,7 +36,9 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## Prossimi eventi
 
-- [Salumificio Trascinelli:PROSCIUTTO DI PARMA E SOSTENIBILITA'](https://anyplans.in/parma/salumificio-trascinelli-prosciutto-di-parma-e-sostenibilita/): Martedì 29 settembre alle 10:00, SALUMIFICIO Trascinelli Pietro srl, Basilicanova, Gratis
+- [Discover Parma’s treasures with a scavenger hunt by World City Trail!](https://anyplans.in/parma/discover-parma-s-treasures-with-a-scavenger-hunt-by-world-ci/): Martedì 29 settembre alle 10:00, Parco Ducale, Parma, Gratis
+- [Crack the codes of Parma with our thrilling outdoor escape game!](https://anyplans.in/parma/crack-the-codes-of-parma-with-our-thrilling-outdoor-escape-g/): Martedì 29 settembre alle 10:00, Parco Ducale, Parma, Gratis
+- [Salumificio Trascinelli:PROSCIUTTO DI PARMA E SOSTENIBILITA'](https://anyplans.in/parma/salumificio-trascinelli-prosciutto-di-parma-e-sostenibilita/): Dal 29 settembre al 13 ottobre, 2 date, SALUMIFICIO Trascinelli Pietro srl, Basilicanova, Gratis
 - [Cento Cuori](https://anyplans.in/parma/cento-cuori/): Martedì 29 settembre alle 18:30, Laboratorio Aperto di Parma, Parma, Gratis
 - [TORNEO METALVEBA](https://anyplans.in/parma/torneo-metalveba/): Martedì 29 settembre alle 20:00, PADEL HERO PARMA, STRADA VIAZZA DI MARTORANO SNC, 43123 Parma, 25 €
 - [Alla scoperta del mondo Custom](https://anyplans.in/parma/alla-scoperta-del-mondo-custom/): Mercoledì 30 settembre alle 10:00, Custom, Ponte Taro, Gratis
@@ -45,6 +47,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Cena da Zinelli bistrot winebar: 2 posti liberi](https://anyplans.in/parma/cena-da-zinelli-bistrot-winebar-2-posti-liberi/): Giovedì 1 ottobre alle 18:00, Zinelli bistrot winebar, Parma, Gratis
 - [Fracasso](https://anyplans.in/parma/fracasso/): Giovedì 1 ottobre alle 21:00, Insolito Festival, Gratis
 - [Enjoy Consorzio Agrario Parma!](https://anyplans.in/parma/enjoy-consorzio-agrario-parma/): Venerdì 2 ottobre alle 10:00, Consorzio Agrario di Parma, Parma, Gratis
+- [Visit Rizzoli Emanuelli: Da 120 anni quel Riz in più](https://anyplans.in/parma/visit-rizzoli-emanuelli-da-120-anni-quel-riz-in-piu/): Venerdì 2 ottobre alle 10:00, Rizzoli Emanuelli Spa, Parma, Gratis
 - [Fabbriche Elettriche 2026 @ LATERLITE](https://anyplans.in/parma/fabbriche-elettriche-2026-laterlite/): Venerdì 2 ottobre alle 14:15, Laterlite S.p.A., Rubbiano, Gratis
 - [Cena da Arte & Gusto: 7 posti liberi](https://anyplans.in/parma/cena-da-arte-gusto-7-posti-liberi/): Venerdì 2 ottobre alle 16:00, Arte & Gusto, Parma, Gratis
 - [Aperitivo da Barino: 4 posti liberi](https://anyplans.in/parma/aperitivo-da-barino-4-posti-liberi/): Venerdì 2 ottobre alle 17:00, Barino, Parma, Gratis
@@ -53,29 +56,26 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Tavolo per chi è nuovo in città da Anima Verace Sant’ilario D’enza: 7 posti liberi](https://anyplans.in/parma/tavolo-per-chi-e-nuovo-in-citta-da-anima-verace-sant-ilario-/): Venerdì 2 ottobre alle 19:45, Anima Verace Sant’ilario D’enza, Sant'Ilario d'Enza, Gratis
 - [Cena da Pub Birreria La Corriera: 4 posti liberi](https://anyplans.in/parma/cena-da-pub-birreria-la-corriera-4-posti-liberi/): Venerdì 2 ottobre alle 19:45, Pub Birreria La Corriera, Parma, Gratis
 - [Keeley Forsyth & Matthew Bourne | Hand to mouth | Il Rumore del Lutto Festival](https://anyplans.in/parma/keeley-forsyth-matthew-bourne-hand-to-mouth-il-rumore-del-lu/): Venerdì 2 ottobre alle 21:00, Il Rumore del Lutto Festival, Gratis
-- [Ore 10,30 – Dal Latte al Formaggio – Laboratorio  per Piccoli Casari](https://anyplans.in/parma/ore-10-30-dal-latte-al-formaggio-laboratorio-per-piccoli-cas/): Sabato 3 ottobre alle 10:30, Piazza Giuseppe Garibaldi, Fidenza, Gratis
+- [Visit IREN - Termovalorizzatore e ReCaP](https://anyplans.in/parma/visit-iren-termovalorizzatore-e-recap/): Sabato 3 ottobre alle 10:00, Polo Ambientale Integrato Iren di Parma, Parma, Gratis
+- [Dal Latte al Formaggio – Laboratorio  per Piccoli Casari](https://anyplans.in/parma/dal-latte-al-formaggio-laboratorio-per-piccoli-casari/): Sabato 3 ottobre alle 10:30, Piazza Giuseppe Garibaldi, Fidenza, Gratis
 - [Corso di cucina - Polpette per tutti](https://anyplans.in/parma/corso-di-cucina-polpette-per-tutti/): Sabato 3 ottobre alle 10:30, Smeg Store Guastalla, Guastalla, Gratis
+- [Dolci tradizioni e dolci... novità!](https://anyplans.in/parma/dolci-tradizioni-e-dolci-novita/): Sabato 3 ottobre alle 12:00, Piazza Giuseppe Garibaldi, Fidenza, Gratis
 - [Parma chiama Italia: salviamo Alan e Larry](https://anyplans.in/parma/parma-chiama-italia-salviamo-alan-e-larry/): Sabato 3 ottobre alle 15:00, Piazzale Della Pace, Parma, Gratis
 - [Emilia Tango Weekend 3 e 4 Ottobre 2026](https://anyplans.in/parma/emilia-tango-weekend-3-e-4-ottobre-2026/): Sabato 3 ottobre alle 15:00, Palaenza, Parma, Gratis
+- [Sostenibilità in cucina: ricette zero sprechi](https://anyplans.in/parma/sostenibilita-in-cucina-ricette-zero-sprechi/): Sabato 3 ottobre alle 15:00, Piazza Giuseppe Garibaldi, Fidenza, Gratis
 - [Impresa Natura, dietro le quinte di una riqualificazione ambientale](https://anyplans.in/parma/impresa-natura-dietro-le-quinte-di-una-riqualificazione-ambi/): Sabato 3 ottobre alle 15:00, Parcheggio cimitero, Parma, Gratis
 - [IL LINGUAGGIO DEI SOGNI](https://anyplans.in/parma/il-linguaggio-dei-sogni/): Sabato 3 ottobre alle 15:30, Via Alfredo Zerbini, 10, Parma, Gratis
 - [SGUARDI SULL'INVISIBILE](https://anyplans.in/parma/sguardi-sull-invisibile/): Sabato 3 ottobre alle 15:30, Via Alfredo Zerbini, 10, Parma, Gratis
 - [QUARTASA FEST @CDC PARMA](https://anyplans.in/parma/quartasa-fest-cdc-parma/): Sabato 3 ottobre alle 17:00, WE WANT PUNK, Gratis
+- [I sapori della terra: prodotti che seguono le stagioni](https://anyplans.in/parma/i-sapori-della-terra-prodotti-che-seguono-le-stagioni/): Sabato 3 ottobre alle 17:30, Piazza Giuseppe Garibaldi, Fidenza, Gratis
 - [Alla Scoperta di Parma Musicale e Teatrale: un viaggio tra note e palcoscenici](https://anyplans.in/parma/alla-scoperta-di-parma-musicale-e-teatrale-un-viaggio-tra-no/): Dal 3 ottobre al 3 ottobre, 2 date, Piazza della Pilotta, 43121 Parma PR, Italia, Parma, Gratis
-- [La Parma Noire: un tour nella cronaca nera del passato](https://anyplans.in/parma/la-parma-noire-un-tour-nella-cronaca-nera-del-passato/): Dal 3 ottobre al 3 ottobre, 2 date, Piazza Giuseppe Garibaldi, 43121 Parma PR, Italia, Parma, Gratis
+- [La Parma Noire: un tour nella cronaca nera del passato](https://anyplans.in/parma/la-parma-noire-un-tour-nella-cronaca-nera-del-passato/): Dal 3 ottobre al 10 ottobre, 4 date, Piazza Giuseppe Garibaldi, 43121 Parma PR, Italia, Parma, Gratis
 - [GALA IN NERO - IL RUMORE DEL LUTTO FESTIVAL](https://anyplans.in/parma/gala-in-nero-il-rumore-del-lutto-festival/): Sabato 3 ottobre alle 18:00, Il Rumore del Lutto Festival, Gratis
 - [Cena da Hosteria Caseificio Bertinelli: 3 posti liberi](https://anyplans.in/parma/cena-da-hosteria-caseificio-bertinelli-3-posti-liberi/): Sabato 3 ottobre alle 18:30, Hosteria Caseificio Bertinelli, Noceto, Gratis
 - [CUBO Bistrot --> Cena + Ballo da Cubo Bistrot: 11 posti liberi](https://anyplans.in/parma/cubo-bistrot-cena-ballo-da-cubo-bistrot-11-posti-liberi/): Sabato 3 ottobre alle 18:30, Cubo Bistrot, Parma, Gratis
 - [Cena da Crudo Parma: 4 posti liberi](https://anyplans.in/parma/cena-da-crudo-parma-4-posti-liberi/): Sabato 3 ottobre alle 18:30, Crudo Parma, Gratis
 - [Concerts by Candlelight - Parma](https://anyplans.in/parma/concerts-by-candlelight-parma/): Sabato 3 ottobre alle 19:00, Strada della Repubblica, 57, 43121 Parma PR, Italia, Parma, Gratis
 - [Aperitivo Conoscitivo!](https://anyplans.in/parma/aperitivo-conoscitivo/): Sabato 3 ottobre alle 19:00, Parma, 45 €
-- [Tavolo per chi è nuovo in città da Gustincanto BAR: 11 posti liberi](https://anyplans.in/parma/tavolo-per-chi-e-nuovo-in-citta-da-gustincanto-bar-11-posti-/): Sabato 3 ottobre alle 19:00, Gustincanto BAR, Fidenza, Gratis
-- [Cena da MIC Ramen Parma: 5 posti liberi](https://anyplans.in/parma/cena-da-mic-ramen-parma-5-posti-liberi/): Sabato 3 ottobre alle 19:30, MIC Ramen Parma, Gratis
-- [La zona blu](https://anyplans.in/parma/la-zona-blu/): Sabato 3 ottobre alle 21:00, Manzini Off - Wopa, Parma, Gratis
-- [IRIS - il nuovo sabato Over 25 di Parma](https://anyplans.in/parma/iris-il-nuovo-sabato-over-25-di-parma/): Sabato 3 ottobre alle 23:30, Via Alfredo Zerbini, 10, Parma, Gratis
-- [Worship Service](https://anyplans.in/parma/worship-service/): Domenica 4 ottobre alle 10:00, Strada Felice Cavallotti 15, Parma, Emilia-Romagna, Italy, Parma, Gratis
-- [Sagra della Lotta Antispecista - Parma](https://anyplans.in/parma/sagra-della-lotta-antispecista-parma/): Domenica 4 ottobre alle 10:00, Via Montanara, Parma, Gratis
-- [Visita Guidata al Complesso Monumentale della Pilotta](https://anyplans.in/parma/visita-guidata-al-complesso-monumentale-della-pilotta/): Dal 4 ottobre al 4 ottobre, 2 date, Piazza della Pilotta, 5, 43121 Parma PR, Italia, Parma, Gratis
 
 ## Optional
 
@@ -105,57 +105,57 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 # Tutte le pagine di anyplans a Parma (italiano, poi inglese)
 
-## Cosa fare a Parma e provincia: 141 eventi
+## Cosa fare a Parma e provincia: 153 eventi
 https://anyplans.in/parma/cosa-fare/
 
 Incontri culturali, cena / aperitivo, feste, sagre ed eventi di paese, concerti e musica dal vivo e spettacoli e teatro: quello che succede a Parma e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
 
-## Cosa fare a Parma oggi: 3 eventi
+## Cosa fare a Parma oggi: 5 eventi
 https://anyplans.in/parma/cosa-fare-oggi/
 
-3 eventi a Parma e provincia oggi, 29 settembre 2026: Parma e Basilicanova e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+5 eventi a Parma e provincia oggi, 29 settembre 2026: Parma e Basilicanova e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
 ## Cosa fare a Parma domani: 3 eventi
 https://anyplans.in/parma/cosa-fare-domani/
 
 3 eventi a Parma e provincia domani, 30 settembre 2026: Ponte Taro, Parma e Basilicanova e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Parma nel weekend: 29 eventi
+## Cosa fare a Parma nel weekend: 36 eventi
 https://anyplans.in/parma/cosa-fare-nel-weekend/
 
-29 eventi a Parma e provincia nel weekend (Sabato 3 ottobre e Domenica 4 ottobre): Parma, Fidenza, Guastalla e WE WANT PUNK e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+36 eventi a Parma e provincia nel weekend (Sabato 3 ottobre e Domenica 4 ottobre): Parma, Fidenza, Guastalla e WE WANT PUNK e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Eventi a Parma a settembre 2026: 6
+## Eventi a Parma a settembre 2026: 8
 https://anyplans.in/parma/eventi-settembre-2026/
 
-6 eventi a Parma e provincia a settembre 2026: cena / aperitivo, giardinaggio / volontariato, padel e incontri culturali. Giorno per giorno, con orari, luogo e prezzo, a Parma, Basilicanova e Ponte Taro e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+8 eventi a Parma e provincia a settembre 2026: corsa, escursionismo, cena / aperitivo, giardinaggio / volontariato e padel. Giorno per giorno, con orari, luogo e prezzo, a Parma, Basilicanova e Ponte Taro e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Parma a ottobre 2026: 106
+## Eventi a Parma a ottobre 2026: 117
 https://anyplans.in/parma/eventi-ottobre-2026/
 
-106 eventi a Parma e provincia a ottobre 2026: cena / aperitivo, feste, sagre ed eventi di paese, incontri culturali, cucina e yoga / pilates. Giorno per giorno, con orari, luogo e prezzo, a Parma, Fidenza, Il Rumore del Lutto Festival e Insolito Festival e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+117 eventi a Parma e provincia a ottobre 2026: cena / aperitivo, feste, sagre ed eventi di paese, incontri culturali, cucina e yoga / pilates. Giorno per giorno, con orari, luogo e prezzo, a Parma, Fidenza, Il Rumore del Lutto Festival e Insolito Festival e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 ## Eventi a Parma a novembre 2026: 16
 https://anyplans.in/parma/eventi-novembre-2026/
 
 16 eventi a Parma e provincia a novembre 2026: incontri culturali, cucina, feste, sagre ed eventi di paese, partite da vedere e spettacoli e teatro. Giorno per giorno, con orari, luogo e prezzo, a Parma, Guastalla, Il Rumore del Lutto Festival e Mantova e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Cena / aperitivo a Parma: 22 eventi
+## Cene e aperitivi a Parma: 31 eventi
 https://anyplans.in/parma/cene-e-aperitivi/
 
-A Parma e provincia ci sono 22 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Parma e provincia ci sono 31 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Incontri culturali a Parma: 34 eventi
+## Incontri, corsi e conferenze a Parma: 36 eventi
 https://anyplans.in/parma/incontri-culturali/
 
-A Parma e provincia ci sono 34 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Parma e provincia ci sono 36 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Corsa a Parma: 1 evento
+## Corse e gare podistiche a Parma: 2 eventi
 https://anyplans.in/parma/corsa/
 
-A Parma e provincia ci sono 1 uscita di corsa nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Parma e provincia ci sono 2 uscite di corsa nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Pittura / arte a Parma: 2 eventi
+## Pittura e corsi d'arte a Parma: 2 eventi
 https://anyplans.in/parma/pittura/
 
 A Parma e provincia ci sono 2 laboratori nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
@@ -165,10 +165,10 @@ https://anyplans.in/parma/feste/
 
 A Parma e provincia ci sono 16 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Concerti e musica dal vivo a Parma: 14 eventi
+## Concerti e musica dal vivo a Parma: 13 eventi
 https://anyplans.in/parma/concerti/
 
-A Parma e provincia ci sono 14 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Parma e provincia ci sono 13 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Ballo e danza a Parma: 2 eventi
 https://anyplans.in/parma/ballo/
@@ -185,17 +185,17 @@ https://anyplans.in/parma/partite/
 
 A Parma e provincia ci sono 12 partite nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Escursionismo a Parma: 9 eventi
+## Escursioni e trekking a Parma: 10 eventi
 https://anyplans.in/parma/escursioni/
 
-A Parma e provincia ci sono 9 escursioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Parma e provincia ci sono 10 escursioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Spettacoli e teatro a Parma: 14 eventi
+## Teatro e spettacoli a Parma: 14 eventi
 https://anyplans.in/parma/spettacoli/
 
 A Parma e provincia ci sono 14 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Visite guidate a Parma: 4 eventi
+## Visite guidate e tour a Parma: 4 eventi
 https://anyplans.in/parma/visite-guidate/
 
 A Parma e provincia ci sono 4 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
@@ -205,15 +205,15 @@ https://anyplans.in/parma/cucina/
 
 A Parma e provincia ci sono 3 corsi di cucina nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Yoga / pilates a Parma: 3 eventi
+## Yoga e pilates a Parma: 3 eventi
 https://anyplans.in/parma/yoga/
 
 A Parma e provincia ci sono 3 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Feste ed eventi a Fidenza: 4 in programma
+## Feste ed eventi a Fidenza: 12 in programma
 https://anyplans.in/parma/fidenza/
 
-A Fidenza ci sono 4 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Fidenza con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Fidenza ci sono 12 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Fidenza con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 ## Feste ed eventi a Sant'Ilario d'Enza: 2 in…
 https://anyplans.in/parma/sant-ilario-d-enza/
@@ -235,10 +235,10 @@ https://anyplans.in/parma/guastalla/
 
 A Guastalla ci sono 5 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Guastalla con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
-## Locali a Parma: 9
+## Locali a Parma: 11
 https://anyplans.in/parma/locali/
 
-9 locali a Parma e provincia dove c'è qualcosa in programma: circoli, bar, centri sportivi, teatri e piazze. Ognuno ha la sua pagina con le prossime date.
+11 locali a Parma e provincia dove c'è qualcosa in programma: circoli, bar, centri sportivi, teatri e piazze. Ognuno ha la sua pagina con le prossime date.
 
 ## Tablo: eventi e serate a Parma
 https://anyplans.in/parma/locali/tablo/
@@ -260,6 +260,11 @@ https://anyplans.in/parma/locali/padel-hero-parma/
 
 PADEL HERO PARMA: 1 evento in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
+## Polo Ambientale Integrato Iren di Parma: eventi in…
+https://anyplans.in/parma/locali/polo-ambientale-integrato-iren-di-parma/
+
+Polo Ambientale Integrato Iren di Parma: 2 eventi in programma — incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
 ## Concert Tracker: eventi in programma a Parma
 https://anyplans.in/parma/locali/concert-tracker/
 
@@ -269,6 +274,11 @@ Concert Tracker a Parma: 1 evento in programma — spettacoli e teatro. Di ognun
 https://anyplans.in/parma/locali/smeg-store-guastalla/
 
 Smeg Store Guastalla: 3 eventi in programma — cucina. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
+## Parco Ducale: eventi in programma a Parma
+https://anyplans.in/parma/locali/parco-ducale/
+
+Parco Ducale a Parma: 2 eventi in programma — corsa e escursionismo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Custom: eventi in programma a Ponte Taro
 https://anyplans.in/parma/locali/custom/
@@ -498,12 +508,12 @@ Pittura / arte a Laboratorio Aperto di Parma, Parma: si è già svolto, l'ultima
 ## Discover Parma’s treasures with a scavenger hunt by…
 https://anyplans.in/parma/discover-parma-s-treasures-with-a-scavenger-hunt-by-world-ci/
 
-Corsa a Parco Ducale, Parma: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Corsa a Parco Ducale, Parma, martedì 29 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## Crack the codes of Parma with our thrilling outdoor…
 https://anyplans.in/parma/crack-the-codes-of-parma-with-our-thrilling-outdoor-escape-g/
 
-Escursionismo a Parco Ducale, Parma: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Escursionismo a Parco Ducale, Parma, martedì 29 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## Monte delle Vigne: Alla scoperta del mondo del vino:…
 https://anyplans.in/parma/monte-delle-vigne-alla-scoperta-del-mondo-del-vino-dalla-vig/
@@ -803,7 +813,7 @@ Cinema a Borgo Santa Brigida 5/a, Parma: si è già svolto, l'ultima data è sta
 ## Salumificio Trascinelli:PROSCIUTTO DI PARMA E SOSTENIBILITA' – Basilicanova
 https://anyplans.in/parma/salumificio-trascinelli-prosciutto-di-parma-e-sostenibilita/
 
-Cena / aperitivo a SALUMIFICIO Trascinelli Pietro srl, Basilicanova, martedì 29 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
+Cena / aperitivo a SALUMIFICIO Trascinelli Pietro srl, Basilicanova, martedì 29 settembre alle 10:00 (2 date, fino al 13 ottobre). Gratis (Biglietti su Eventbrite).
 
 ## Cento Cuori – Laboratorio Aperto di Parma
 https://anyplans.in/parma/cento-cuori/
@@ -845,6 +855,11 @@ https://anyplans.in/parma/enjoy-consorzio-agrario-parma/
 
 Incontri culturali a Consorzio Agrario di Parma, Parma, venerdì 2 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
 
+## Visit Rizzoli Emanuelli: Da 120 anni quel Riz in più – Parma
+https://anyplans.in/parma/visit-rizzoli-emanuelli-da-120-anni-quel-riz-in-piu/
+
+Cena / aperitivo a Rizzoli Emanuelli Spa, Parma, venerdì 2 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
+
 ## Fabbriche Elettriche 2026 @ LATERLITE – Laterlite S.p.A.
 https://anyplans.in/parma/fabbriche-elettriche-2026-laterlite/
 
@@ -885,8 +900,13 @@ https://anyplans.in/parma/keeley-forsyth-matthew-bourne-hand-to-mouth-il-rumore-
 
 Festa di paese a Il Rumore del Lutto Festival, venerdì 2 ottobre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Ore 10,30 – Dal Latte al Formaggio – Laboratorio per Piccoli Casari – Fidenza
-https://anyplans.in/parma/ore-10-30-dal-latte-al-formaggio-laboratorio-per-piccoli-cas/
+## Visit IREN - Termovalorizzatore e ReCaP – Parma
+https://anyplans.in/parma/visit-iren-termovalorizzatore-e-recap/
+
+Incontri culturali a Polo Ambientale Integrato Iren di Parma, Parma, sabato 3 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
+
+## Dal Latte al Formaggio – Fidenza
+https://anyplans.in/parma/dal-latte-al-formaggio-laboratorio-per-piccoli-casari/
 
 Cena / aperitivo a Piazza Giuseppe Garibaldi, Fidenza, sabato 3 ottobre alle 10:30. Gratis (Biglietti su Eventbrite).
 
@@ -894,6 +914,11 @@ Cena / aperitivo a Piazza Giuseppe Garibaldi, Fidenza, sabato 3 ottobre alle 10:
 https://anyplans.in/parma/corso-di-cucina-polpette-per-tutti/
 
 Cucina a Smeg Store Guastalla, Guastalla, sabato 3 ottobre alle 10:30. Gratis (Biglietti su Eventbrite).
+
+## Dolci tradizioni e dolci... novità! – Fidenza
+https://anyplans.in/parma/dolci-tradizioni-e-dolci-novita/
+
+Cena / aperitivo a Piazza Giuseppe Garibaldi, Fidenza, sabato 3 ottobre alle 12:00. Gratis (Biglietti su Eventbrite).
 
 ## Parma chiama Italia: salviamo Alan e Larry
 https://anyplans.in/parma/parma-chiama-italia-salviamo-alan-e-larry/
@@ -904,6 +929,11 @@ Yoga / pilates a Piazzale Della Pace, Parma, sabato 3 ottobre alle 15:00. Gratis
 https://anyplans.in/parma/emilia-tango-weekend-3-e-4-ottobre-2026/
 
 Ballo e danza a Palaenza, Parma, sabato 3 ottobre alle 15:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Sostenibilità in cucina: ricette zero sprechi – Fidenza
+https://anyplans.in/parma/sostenibilita-in-cucina-ricette-zero-sprechi/
+
+Cena / aperitivo a Piazza Giuseppe Garibaldi, Fidenza, sabato 3 ottobre alle 15:00. Gratis (Biglietti su Eventbrite).
 
 ## Impresa Natura – Parcheggio cimitero
 https://anyplans.in/parma/impresa-natura-dietro-le-quinte-di-una-riqualificazione-ambi/
@@ -925,6 +955,11 @@ https://anyplans.in/parma/quartasa-fest-cdc-parma/
 
 Festa di paese a WE WANT PUNK, sabato 3 ottobre alle 17:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## I sapori della terra: prodotti che seguono le stagioni – Fidenza
+https://anyplans.in/parma/i-sapori-della-terra-prodotti-che-seguono-le-stagioni/
+
+Cena / aperitivo a Piazza Giuseppe Garibaldi, Fidenza, sabato 3 ottobre alle 17:30. Gratis (Biglietti su Eventbrite).
+
 ## Alla Scoperta di Parma Musicale e Teatrale: un viaggio…
 https://anyplans.in/parma/alla-scoperta-di-parma-musicale-e-teatrale-un-viaggio-tra-no/
 
@@ -933,7 +968,7 @@ Incontri culturali a Piazza della Pilotta, 43121 Parma PR, Italia, Parma, sabato
 ## La Parma Noire: un tour nella cronaca nera del passato
 https://anyplans.in/parma/la-parma-noire-un-tour-nella-cronaca-nera-del-passato/
 
-Festa di paese a Piazza Giuseppe Garibaldi, 43121 Parma PR, Italia, Parma, sabato 3 ottobre alle 18:00 (2 date, fino al 3 ottobre). Gratis (Biglietti su Eventbrite).
+Festa di paese a Piazza Giuseppe Garibaldi, 43121 Parma PR, Italia, Parma, sabato 3 ottobre alle 18:00 (4 date, fino al 10 ottobre). Gratis (Biglietti su Eventbrite).
 
 ## GALA IN NERO - IL RUMORE DEL LUTTO FESTIVAL
 https://anyplans.in/parma/gala-in-nero-il-rumore-del-lutto-festival/
@@ -975,11 +1010,6 @@ https://anyplans.in/parma/la-zona-blu/
 
 Incontri culturali a Manzini Off - Wopa, Parma, sabato 3 ottobre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## IRIS - il nuovo sabato Over 25 di Parma
-https://anyplans.in/parma/iris-il-nuovo-sabato-over-25-di-parma/
-
-Incontri culturali a Via Alfredo Zerbini, 10, Parma, sabato 3 ottobre alle 23:30. Gratis (Biglietti su Eventbrite).
-
 ## Sagra della Lotta Antispecista - Parma
 https://anyplans.in/parma/sagra-della-lotta-antispecista-parma/
 
@@ -995,6 +1025,11 @@ https://anyplans.in/parma/handmade-wine/
 
 Cena / aperitivo a Guastalla, Guastalla, domenica 4 ottobre alle 11:00. Gratis (Biglietti su Eventbrite).
 
+## Degustazione... al buio! - Un incontro pieno di assaggi... innovativi – Fidenza
+https://anyplans.in/parma/degustazione-al-buio-un-incontro-pieno-di-assaggi-innovativi/
+
+Cena / aperitivo a Piazza Giuseppe Garibaldi, Fidenza, domenica 4 ottobre alle 12:00. Gratis (Biglietti su Eventbrite).
+
 ## Visita Guidata al Castello di Torrechiara: Fortezza inespugnabile e nido… – Provincia di Parma
 https://anyplans.in/parma/visita-guidata-al-castello-di-torrechiara-fortezza-inespugna/
 
@@ -1004,6 +1039,11 @@ Visite guidate a Str. del Castello, 43013 Langhirano PR, Italia, Provincia di Pa
 https://anyplans.in/parma/correggio-e-parmigianino-la-sfida-che-rese-parma-immortale/
 
 Mostre a Str. Giuseppe Garibaldi, 16/a, 43121 Parma PR, Italy, Parma, domenica 4 ottobre alle 15:00 (2 date, fino al 4 ottobre). Gratis (Biglietti su Eventbrite).
+
+## Fast Food? Vacci piano! – Fidenza
+https://anyplans.in/parma/fast-food-vacci-piano/
+
+Cena / aperitivo a Piazza Giuseppe Garibaldi, Fidenza, domenica 4 ottobre alle 15:30. Gratis (Biglietti su Eventbrite).
 
 ## URBAN NATURE 2026 - Waggle Dance - Danza Creativa (dai 3 ai 5 anni) – Parma
 https://anyplans.in/parma/urban-nature-2026-waggle-dance-danza-creativa-dai-3-ai-5-ann/
@@ -1015,10 +1055,20 @@ https://anyplans.in/parma/tracce-sparse-iii-edizione/
 
 Incontri culturali a Chiesa Santa Maria della Concezione Carbognano, Carbognano, domenica 4 ottobre alle 16:00. Gratis (Ingresso: vedi la pagina del Tacco di Bacco).
 
+## Comprendere la Qualità – Fidenza
+https://anyplans.in/parma/comprendere-la-qualita/
+
+Cena / aperitivo a Piazza Giuseppe Garibaldi, Fidenza, domenica 4 ottobre alle 17:00. Gratis (Biglietti su Eventbrite).
+
 ## SYLVAINE - FAGELLE - COLONNE 28 PARMA – Borgo Delle Colonne
 https://anyplans.in/parma/sylvaine-fagelle-colonne-28-parma/
 
 Pittura / arte a Borgo Delle Colonne, 28, 43121 Parma PR, Italia, Parma, domenica 4 ottobre alle 18:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Verdure in fermento: antiche tecnologie per nuovi modi di vivere la tavola – Fidenza
+https://anyplans.in/parma/verdure-in-fermento-antiche-tecnologie-per-nuovi-modi-di-viv/
+
+Cena / aperitivo a Piazza Giuseppe Garibaldi, Fidenza, domenica 4 ottobre alle 18:30. Gratis (Biglietti su Eventbrite).
 
 ## Visit Sidel a Sidel, Parma, 6 ottobre
 https://anyplans.in/parma/visit-sidel/
@@ -1059,6 +1109,11 @@ Incontri culturali a Lincotek Surface Solutions, Rubbiano di Solignano, (Parma),
 https://anyplans.in/parma/visit-cantina-oinoe-visita-alla-cantina-e-ai-luoghi-di-affin/
 
 Cena / aperitivo a Oinoe La Città del Vino, Guardasone, venerdì 9 ottobre alle 10:30. Gratis (Biglietti su Eventbrite).
+
+## Il Culatello di Zibello DOP – Fidenza
+https://anyplans.in/parma/il-culatello-di-zibello-dop/
+
+Cena / aperitivo a Piazza Giuseppe Garibaldi, Fidenza, venerdì 9 ottobre alle 11:30. Gratis (Biglietti su Eventbrite).
 
 ## Atti degli apostoli – Insolito Festival
 https://anyplans.in/parma/atti-degli-apostoli/
@@ -1120,6 +1175,11 @@ https://anyplans.in/parma/sabato-10-ottobre-hobos-miracle-blades-rudo-arci-cdc-p
 
 Concerti e musica dal vivo a Arci CDC Parma, Parma, sabato 10 ottobre alle 21:30. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## IRIS - il nuovo sabato Over 25 di Parma
+https://anyplans.in/parma/iris-il-nuovo-sabato-over-25-di-parma/
+
+Incontri culturali a Via Alfredo Zerbini, 10, Parma, sabato 10 ottobre alle 23:30. Gratis (Biglietti su Eventbrite).
+
 ## "CAMMINA CON NOI" PER BATTERE IL TEMPO - DOMENICA 11 OTTOBRE 2026 – Colorno
 https://anyplans.in/parma/cammina-con-noi-per-battere-il-tempo-domenica-11-ottobre-202/
 
@@ -1145,10 +1205,10 @@ https://anyplans.in/parma/je-vous-aime/
 
 Incontri culturali a Manzini Off - Wopa, Parma, martedì 13 ottobre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Visit ParmaCotto - Chi siamo – Parmacotto Spa
-https://anyplans.in/parma/visit-parmacotto-chi-siamo/
+## Aperi-Keto | L'aperitivo Chetogenico – Parma
+https://anyplans.in/parma/aperi-keto-l-aperitivo-chetogenico/
 
-Cena / aperitivo a Parmacotto Spa, Parma, giovedì 15 ottobre alle 09:00. Gratis (Biglietti su Eventbrite).
+Cena / aperitivo a Dott.ssa Serena Ravasini - Biologa Nutrizionista Parma, Parma, giovedì 15 ottobre alle 18:30. Gratis (Biglietti su Eventbrite).
 
 ## Visit First Point – Fidenza
 https://anyplans.in/parma/visit-first-point/
@@ -1174,11 +1234,6 @@ Visite guidate a Bugnion - Ufficio consulenza Marchi e Brevetti, Parma, sabato 1
 https://anyplans.in/parma/remira-market-a-parma-presso-la-galleria-17-ottobre/
 
 Spettacoli e teatro a La Galleria, Parma, sabato 17 ottobre alle 10:30. Gratis (Biglietti su Eventbrite).
-
-## Opera in carcere a C. R. PARMA, Parma, 17 ottobre
-https://anyplans.in/parma/opera-in-carcere/
-
-Concerti e musica dal vivo a C. R. PARMA, Parma, sabato 17 ottobre alle 11:00. Gratis (Biglietti su Eventbrite).
 
 ## The Jury Experience – Teatro al Parco
 https://anyplans.in/parma/the-jury-experience-il-colpo-da-20-milioni-di-dollari/
@@ -1304,6 +1359,11 @@ Incontri culturali a Fiere di Parma, Parma, giovedì 29 ottobre alle 10:00. Grat
 https://anyplans.in/parma/notevole-assenza/
 
 Spettacoli e teatro a Lenz Teatro, Parma, giovedì 29 ottobre alle 19:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Delitti e Misteri a Parma
+https://anyplans.in/parma/delitti-e-misteri-a-parma/
+
+Incontri culturali a Parma, Parma, sabato 31 ottobre alle 15:00. Gratis (Biglietti su Eventbrite).
 
 ## Halloween – Vicofertile
 https://anyplans.in/parma/halloween/
@@ -1455,55 +1515,55 @@ https://anyplans.in/parma/parma-vs-lazio-at-stadio-ennio-tardini/
 
 Partite da vedere a Stadio Ennio Tardini, Parma, sabato 20 marzo alle 23:59. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Things to do in Parma: 141 events
+## Things to do in Parma: 153 events
 https://anyplans.in/en/parma/
 
 What's on in Parma and its province, today, tonight and this weekend: talks & culture, dinners & aperitivo, town festivals & fairs, concerts & live music, shows & theatre and live sport. Pick one and go with other people.
 
-## What to do in Parma today: 3 events
+## What to do in Parma today: 5 events
 https://anyplans.in/en/parma/what-to-do-today/
 
-3 events in Parma and its province today, 29 September 2026: Parma and Basilicanova and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+5 events in Parma and its province today, 29 September 2026: Parma and Basilicanova and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
 ## What to do in Parma tomorrow: 3 events
 https://anyplans.in/en/parma/what-to-do-tomorrow/
 
 3 events in Parma and its province tomorrow, 30 September 2026: Ponte Taro, Parma and Basilicanova and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Parma this weekend: 29 events
+## What to do in Parma this weekend: 36 events
 https://anyplans.in/en/parma/what-to-do-this-weekend/
 
-29 events in Parma and its province this weekend (Saturday 3 October and Sunday 4 October): Parma, Fidenza, Guastalla and WE WANT PUNK and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+36 events in Parma and its province this weekend (Saturday 3 October and Sunday 4 October): Parma, Fidenza, Guastalla and WE WANT PUNK and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## Events in Parma in September 2026: 6
+## Events in Parma in September 2026: 8
 https://anyplans.in/en/parma/events-september-2026/
 
-6 events in Parma and its province in September 2026: dinners & aperitivo, gardening & volunteering, padel and talks & culture. Day by day, with times, place and price, in Parma, Basilicanova and Ponte Taro and other towns. You sign up and go with other people.
+8 events in Parma and its province in September 2026: running, hiking, dinners & aperitivo, gardening & volunteering and padel. Day by day, with times, place and price, in Parma, Basilicanova and Ponte Taro and other towns. You sign up and go with other people.
 
-## Events in Parma in October 2026: 106
+## Events in Parma in October 2026: 117
 https://anyplans.in/en/parma/events-october-2026/
 
-106 events in Parma and its province in October 2026: dinners & aperitivo, town festivals & fairs, talks & culture, cooking classes and yoga & pilates. Day by day, with times, place and price, in Parma, Fidenza, Il Rumore del Lutto Festival and Insolito Festival and other towns. You sign up and go with other people.
+117 events in Parma and its province in October 2026: dinners & aperitivo, town festivals & fairs, talks & culture, cooking classes and yoga & pilates. Day by day, with times, place and price, in Parma, Fidenza, Il Rumore del Lutto Festival and Insolito Festival and other towns. You sign up and go with other people.
 
 ## Events in Parma in November 2026: 16
 https://anyplans.in/en/parma/events-november-2026/
 
 16 events in Parma and its province in November 2026: talks & culture, cooking classes, town festivals & fairs, live sport and shows & theatre. Day by day, with times, place and price, in Parma, Guastalla, Il Rumore del Lutto Festival and Mantova and other towns. You sign up and go with other people.
 
-## Dinners & aperitivo in Parma: 22 events
+## Dinners & aperitivo in Parma: 31 events
 https://anyplans.in/en/parma/dinners/
 
-In Parma and its province there are 22 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Parma and its province there are 31 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Talks & culture in Parma: 34 events
+## Talks & culture in Parma: 36 events
 https://anyplans.in/en/parma/talks-and-culture/
 
-In Parma and its province there are 34 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Parma and its province there are 36 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Running in Parma: 1 event
+## Running in Parma: 2 events
 https://anyplans.in/en/parma/running/
 
-In Parma and its province there are 1 group runs and races in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Parma and its province there are 2 group runs and races in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Painting & art in Parma: 2 events
 https://anyplans.in/en/parma/painting/
@@ -1515,10 +1575,10 @@ https://anyplans.in/en/parma/festivals/
 
 In Parma and its province there are 16 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Concerts & live music in Parma: 14 events
+## Concerts & live music in Parma: 13 events
 https://anyplans.in/en/parma/concerts/
 
-In Parma and its province there are 14 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Parma and its province there are 13 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Dancing in Parma: 2 events
 https://anyplans.in/en/parma/dancing/
@@ -1535,10 +1595,10 @@ https://anyplans.in/en/parma/live-sport/
 
 In Parma and its province there are 12 matches to watch in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Hiking in Parma: 9 events
+## Hiking in Parma: 10 events
 https://anyplans.in/en/parma/hiking/
 
-In Parma and its province there are 9 hiking events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Parma and its province there are 10 hiking events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Shows & theatre in Parma: 14 events
 https://anyplans.in/en/parma/shows/
@@ -1560,10 +1620,10 @@ https://anyplans.in/en/parma/yoga/
 
 In Parma and its province there are 3 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Festivals and events in Fidenza, Bergamo: 4…
+## Festivals and events in Fidenza, Bergamo: 12…
 https://anyplans.in/en/parma/fidenza/
 
-In Fidenza there are 4 events in the coming months. On anyplans you find the festivals and events of Fidenza with dates, times and place. You sign up and go with others.
+In Fidenza there are 12 events in the coming months. On anyplans you find the festivals and events of Fidenza with dates, times and place. You sign up and go with others.
 
 ## Festivals and events in Sant'Ilario d'Enza,…
 https://anyplans.in/en/parma/sant-ilario-d-enza/
@@ -1585,10 +1645,10 @@ https://anyplans.in/en/parma/guastalla/
 
 In Guastalla there are 5 events in the coming months. On anyplans you find the festivals and events of Guastalla with dates, times and place. You sign up and go with others.
 
-## Venues in Parma: 9
+## Venues in Parma: 11
 https://anyplans.in/en/parma/venues/
 
-9 venues in Parma and its province with something on: clubs, bars, sports centres, theatres and squares. One page each, with the upcoming dates.
+11 venues in Parma and its province with something on: clubs, bars, sports centres, theatres and squares. One page each, with the upcoming dates.
 
 ## Tablo: events and nights out in Parma
 https://anyplans.in/en/parma/venues/tablo/
@@ -1610,6 +1670,11 @@ https://anyplans.in/en/parma/venues/padel-hero-parma/
 
 PADEL HERO PARMA: 1 upcoming event — padel. Date, time, price and how to join, one page each. You go with other people.
 
+## Polo Ambientale Integrato Iren di Parma: what's on
+https://anyplans.in/en/parma/venues/polo-ambientale-integrato-iren-di-parma/
+
+Polo Ambientale Integrato Iren di Parma: 2 upcoming events — talks & culture. Date, time, price and how to join, one page each. You go with other people.
+
 ## Concert Tracker: what's on in Parma
 https://anyplans.in/en/parma/venues/concert-tracker/
 
@@ -1619,6 +1684,11 @@ Concert Tracker in Parma: 1 upcoming event — shows & theatre. Date, time, pric
 https://anyplans.in/en/parma/venues/smeg-store-guastalla/
 
 Smeg Store Guastalla: 3 upcoming events — cooking classes. Date, time, price and how to join, one page each. You go with other people.
+
+## Parco Ducale: what's on in Parma
+https://anyplans.in/en/parma/venues/parco-ducale/
+
+Parco Ducale in Parma: 2 upcoming events — running and hiking. Date, time, price and how to join, one page each. You go with other people.
 
 ## Custom: what's on in Ponte Taro
 https://anyplans.in/en/parma/venues/custom/
@@ -1848,12 +1918,12 @@ Painting & art in Laboratorio Aperto di Parma, Parma: it already took place, the
 ## Discover Parma’s treasures with a scavenger hunt by…
 https://anyplans.in/en/parma/discover-parma-s-treasures-with-a-scavenger-hunt-by-world-ci/
 
-Running in Parco Ducale, Parma: it already took place, the last date was Monday, 28 September 2026.
+Running in Parco Ducale, Parma, Tuesday 29 September at 10:00. Free (Biglietti su Eventbrite).
 
 ## Crack the codes of Parma with our thrilling outdoor…
 https://anyplans.in/en/parma/crack-the-codes-of-parma-with-our-thrilling-outdoor-escape-g/
 
-Hiking in Parco Ducale, Parma: it already took place, the last date was Monday, 28 September 2026.
+Hiking in Parco Ducale, Parma, Tuesday 29 September at 10:00. Free (Biglietti su Eventbrite).
 
 ## Monte delle Vigne: Alla scoperta del mondo del vino:…
 https://anyplans.in/en/parma/monte-delle-vigne-alla-scoperta-del-mondo-del-vino-dalla-vig/
@@ -2153,7 +2223,7 @@ Cinema in Borgo Santa Brigida 5/a, Parma: it already took place, the last date w
 ## Salumificio Trascinelli:PROSCIUTTO DI PARMA E SOSTENIBILITA' – Basilicanova
 https://anyplans.in/en/parma/salumificio-trascinelli-prosciutto-di-parma-e-sostenibilita/
 
-Dinners & aperitivo in SALUMIFICIO Trascinelli Pietro srl, Basilicanova, Tuesday 29 September at 10:00. Free (Biglietti su Eventbrite).
+Dinners & aperitivo in SALUMIFICIO Trascinelli Pietro srl, Basilicanova, Tuesday 29 September at 10:00 (2 dates, until 13 October). Free (Biglietti su Eventbrite).
 
 ## Cento Cuori – Laboratorio Aperto di Parma
 https://anyplans.in/en/parma/cento-cuori/
@@ -2195,6 +2265,11 @@ https://anyplans.in/en/parma/enjoy-consorzio-agrario-parma/
 
 Talks & culture in Consorzio Agrario di Parma, Parma, Friday 2 October at 10:00. Free (Biglietti su Eventbrite).
 
+## Visit Rizzoli Emanuelli: Da 120 anni quel Riz in più – Parma
+https://anyplans.in/en/parma/visit-rizzoli-emanuelli-da-120-anni-quel-riz-in-piu/
+
+Dinners & aperitivo in Rizzoli Emanuelli Spa, Parma, Friday 2 October at 10:00. Free (Biglietti su Eventbrite).
+
 ## Fabbriche Elettriche 2026 @ LATERLITE – Laterlite S.p.A.
 https://anyplans.in/en/parma/fabbriche-elettriche-2026-laterlite/
 
@@ -2235,8 +2310,13 @@ https://anyplans.in/en/parma/keeley-forsyth-matthew-bourne-hand-to-mouth-il-rumo
 
 Town festival in Il Rumore del Lutto Festival, Friday 2 October at 21:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## Ore 10,30 – Dal Latte al Formaggio – Laboratorio per Piccoli Casari – Fidenza
-https://anyplans.in/en/parma/ore-10-30-dal-latte-al-formaggio-laboratorio-per-piccoli-cas/
+## Visit IREN - Termovalorizzatore e ReCaP – Parma
+https://anyplans.in/en/parma/visit-iren-termovalorizzatore-e-recap/
+
+Talks & culture in Polo Ambientale Integrato Iren di Parma, Parma, Saturday 3 October at 10:00. Free (Biglietti su Eventbrite).
+
+## Dal Latte al Formaggio – Fidenza
+https://anyplans.in/en/parma/dal-latte-al-formaggio-laboratorio-per-piccoli-casari/
 
 Dinners & aperitivo in Piazza Giuseppe Garibaldi, Fidenza, Saturday 3 October at 10:30. Free (Biglietti su Eventbrite).
 
@@ -2244,6 +2324,11 @@ Dinners & aperitivo in Piazza Giuseppe Garibaldi, Fidenza, Saturday 3 October at
 https://anyplans.in/en/parma/corso-di-cucina-polpette-per-tutti/
 
 Cooking classes in Smeg Store Guastalla, Guastalla, Saturday 3 October at 10:30. Free (Biglietti su Eventbrite).
+
+## Dolci tradizioni e dolci... novità! – Fidenza
+https://anyplans.in/en/parma/dolci-tradizioni-e-dolci-novita/
+
+Dinners & aperitivo in Piazza Giuseppe Garibaldi, Fidenza, Saturday 3 October at 12:00. Free (Biglietti su Eventbrite).
 
 ## Parma chiama Italia: salviamo Alan e Larry
 https://anyplans.in/en/parma/parma-chiama-italia-salviamo-alan-e-larry/
@@ -2254,6 +2339,11 @@ Yoga & pilates in Piazzale Della Pace, Parma, Saturday 3 October at 15:00. Free 
 https://anyplans.in/en/parma/emilia-tango-weekend-3-e-4-ottobre-2026/
 
 Dancing in Palaenza, Parma, Saturday 3 October at 15:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## Sostenibilità in cucina: ricette zero sprechi – Fidenza
+https://anyplans.in/en/parma/sostenibilita-in-cucina-ricette-zero-sprechi/
+
+Dinners & aperitivo in Piazza Giuseppe Garibaldi, Fidenza, Saturday 3 October at 15:00. Free (Biglietti su Eventbrite).
 
 ## Impresa Natura – Parcheggio cimitero
 https://anyplans.in/en/parma/impresa-natura-dietro-le-quinte-di-una-riqualificazione-ambi/
@@ -2275,6 +2365,11 @@ https://anyplans.in/en/parma/quartasa-fest-cdc-parma/
 
 Town festival in WE WANT PUNK, Saturday 3 October at 17:00. Free (Ingresso: vedi la pagina AllEvents).
 
+## I sapori della terra: prodotti che seguono le stagioni – Fidenza
+https://anyplans.in/en/parma/i-sapori-della-terra-prodotti-che-seguono-le-stagioni/
+
+Dinners & aperitivo in Piazza Giuseppe Garibaldi, Fidenza, Saturday 3 October at 17:30. Free (Biglietti su Eventbrite).
+
 ## Alla Scoperta di Parma Musicale e Teatrale: un viaggio…
 https://anyplans.in/en/parma/alla-scoperta-di-parma-musicale-e-teatrale-un-viaggio-tra-no/
 
@@ -2283,7 +2378,7 @@ Talks & culture in Piazza della Pilotta, 43121 Parma PR, Italia, Parma, Saturday
 ## La Parma Noire: un tour nella cronaca nera del passato
 https://anyplans.in/en/parma/la-parma-noire-un-tour-nella-cronaca-nera-del-passato/
 
-Town festival in Piazza Giuseppe Garibaldi, 43121 Parma PR, Italia, Parma, Saturday 3 October at 18:00 (2 dates, until 3 October). Free (Biglietti su Eventbrite).
+Town festival in Piazza Giuseppe Garibaldi, 43121 Parma PR, Italia, Parma, Saturday 3 October at 18:00 (4 dates, until 10 October). Free (Biglietti su Eventbrite).
 
 ## GALA IN NERO - IL RUMORE DEL LUTTO FESTIVAL
 https://anyplans.in/en/parma/gala-in-nero-il-rumore-del-lutto-festival/
@@ -2325,11 +2420,6 @@ https://anyplans.in/en/parma/la-zona-blu/
 
 Talks & culture in Manzini Off - Wopa, Parma, Saturday 3 October at 21:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## IRIS - il nuovo sabato Over 25 di Parma
-https://anyplans.in/en/parma/iris-il-nuovo-sabato-over-25-di-parma/
-
-Talks & culture in Via Alfredo Zerbini, 10, Parma, Saturday 3 October at 23:30. Free (Biglietti su Eventbrite).
-
 ## Sagra della Lotta Antispecista - Parma
 https://anyplans.in/en/parma/sagra-della-lotta-antispecista-parma/
 
@@ -2345,6 +2435,11 @@ https://anyplans.in/en/parma/handmade-wine/
 
 Dinners & aperitivo in Guastalla, Guastalla, Sunday 4 October at 11:00. Free (Biglietti su Eventbrite).
 
+## Degustazione... al buio! - Un incontro pieno di assaggi... innovativi – Fidenza
+https://anyplans.in/en/parma/degustazione-al-buio-un-incontro-pieno-di-assaggi-innovativi/
+
+Dinners & aperitivo in Piazza Giuseppe Garibaldi, Fidenza, Sunday 4 October at 12:00. Free (Biglietti su Eventbrite).
+
 ## Visita Guidata al Castello di Torrechiara: Fortezza inespugnabile e nido… – Provincia di Parma
 https://anyplans.in/en/parma/visita-guidata-al-castello-di-torrechiara-fortezza-inespugna/
 
@@ -2354,6 +2449,11 @@ Guided tours in Str. del Castello, 43013 Langhirano PR, Italia, Provincia di Par
 https://anyplans.in/en/parma/correggio-e-parmigianino-la-sfida-che-rese-parma-immortale/
 
 Exhibitions in Str. Giuseppe Garibaldi, 16/a, 43121 Parma PR, Italy, Parma, Sunday 4 October at 15:00 (2 dates, until 4 October). Free (Biglietti su Eventbrite).
+
+## Fast Food? Vacci piano! – Fidenza
+https://anyplans.in/en/parma/fast-food-vacci-piano/
+
+Dinners & aperitivo in Piazza Giuseppe Garibaldi, Fidenza, Sunday 4 October at 15:30. Free (Biglietti su Eventbrite).
 
 ## URBAN NATURE 2026 - Waggle Dance - Danza Creativa (dai 3 ai 5 anni) – Parma
 https://anyplans.in/en/parma/urban-nature-2026-waggle-dance-danza-creativa-dai-3-ai-5-ann/
@@ -2365,10 +2465,20 @@ https://anyplans.in/en/parma/tracce-sparse-iii-edizione/
 
 Talks & culture in Chiesa Santa Maria della Concezione Carbognano, Carbognano, Sunday 4 October at 16:00. Free (Ingresso: vedi la pagina del Tacco di Bacco).
 
+## Comprendere la Qualità – Fidenza
+https://anyplans.in/en/parma/comprendere-la-qualita/
+
+Dinners & aperitivo in Piazza Giuseppe Garibaldi, Fidenza, Sunday 4 October at 17:00. Free (Biglietti su Eventbrite).
+
 ## SYLVAINE - FAGELLE - COLONNE 28 PARMA – Borgo Delle Colonne
 https://anyplans.in/en/parma/sylvaine-fagelle-colonne-28-parma/
 
 Painting & art in Borgo Delle Colonne, 28, 43121 Parma PR, Italia, Parma, Sunday 4 October at 18:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## Verdure in fermento: antiche tecnologie per nuovi modi di vivere la tavola – Fidenza
+https://anyplans.in/en/parma/verdure-in-fermento-antiche-tecnologie-per-nuovi-modi-di-viv/
+
+Dinners & aperitivo in Piazza Giuseppe Garibaldi, Fidenza, Sunday 4 October at 18:30. Free (Biglietti su Eventbrite).
 
 ## Visit Sidel in Sidel, Parma, 6 October
 https://anyplans.in/en/parma/visit-sidel/
@@ -2409,6 +2519,11 @@ Talks & culture in Lincotek Surface Solutions, Rubbiano di Solignano, (Parma), F
 https://anyplans.in/en/parma/visit-cantina-oinoe-visita-alla-cantina-e-ai-luoghi-di-affin/
 
 Dinners & aperitivo in Oinoe La Città del Vino, Guardasone, Friday 9 October at 10:30. Free (Biglietti su Eventbrite).
+
+## Il Culatello di Zibello DOP – Fidenza
+https://anyplans.in/en/parma/il-culatello-di-zibello-dop/
+
+Dinners & aperitivo in Piazza Giuseppe Garibaldi, Fidenza, Friday 9 October at 11:30. Free (Biglietti su Eventbrite).
 
 ## Atti degli apostoli – Insolito Festival
 https://anyplans.in/en/parma/atti-degli-apostoli/
@@ -2470,6 +2585,11 @@ https://anyplans.in/en/parma/sabato-10-ottobre-hobos-miracle-blades-rudo-arci-cd
 
 Concerts & live music in Arci CDC Parma, Parma, Saturday 10 October at 21:30. Free (Ingresso: vedi la pagina AllEvents).
 
+## IRIS - il nuovo sabato Over 25 di Parma
+https://anyplans.in/en/parma/iris-il-nuovo-sabato-over-25-di-parma/
+
+Talks & culture in Via Alfredo Zerbini, 10, Parma, Saturday 10 October at 23:30. Free (Biglietti su Eventbrite).
+
 ## "CAMMINA CON NOI" PER BATTERE IL TEMPO - DOMENICA 11 OTTOBRE 2026 – Colorno
 https://anyplans.in/en/parma/cammina-con-noi-per-battere-il-tempo-domenica-11-ottobre-202/
 
@@ -2495,10 +2615,10 @@ https://anyplans.in/en/parma/je-vous-aime/
 
 Talks & culture in Manzini Off - Wopa, Parma, Tuesday 13 October at 21:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## Visit ParmaCotto - Chi siamo – Parmacotto Spa
-https://anyplans.in/en/parma/visit-parmacotto-chi-siamo/
+## Aperi-Keto | L'aperitivo Chetogenico – Parma
+https://anyplans.in/en/parma/aperi-keto-l-aperitivo-chetogenico/
 
-Dinners & aperitivo in Parmacotto Spa, Parma, Thursday 15 October at 09:00. Free (Biglietti su Eventbrite).
+Dinners & aperitivo in Dott.ssa Serena Ravasini - Biologa Nutrizionista Parma, Parma, Thursday 15 October at 18:30. Free (Biglietti su Eventbrite).
 
 ## Visit First Point – Fidenza
 https://anyplans.in/en/parma/visit-first-point/
@@ -2524,11 +2644,6 @@ Guided tours in Bugnion - Ufficio consulenza Marchi e Brevetti, Parma, Saturday 
 https://anyplans.in/en/parma/remira-market-a-parma-presso-la-galleria-17-ottobre/
 
 Shows & theatre in La Galleria, Parma, Saturday 17 October at 10:30. Free (Biglietti su Eventbrite).
-
-## Opera in carcere – C. R. PARMA
-https://anyplans.in/en/parma/opera-in-carcere/
-
-Concerts & live music in C. R. PARMA, Parma, Saturday 17 October at 11:00. Free (Biglietti su Eventbrite).
 
 ## The Jury Experience – Teatro al Parco
 https://anyplans.in/en/parma/the-jury-experience-il-colpo-da-20-milioni-di-dollari/
@@ -2654,6 +2769,11 @@ Talks & culture in Fiere di Parma, Parma, Thursday 29 October at 10:00. Free (Bi
 https://anyplans.in/en/parma/notevole-assenza/
 
 Shows & theatre in Lenz Teatro, Parma, Thursday 29 October at 19:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## Delitti e Misteri a Parma
+https://anyplans.in/en/parma/delitti-e-misteri-a-parma/
+
+Talks & culture in Parma, Parma, Saturday 31 October at 15:00. Free (Biglietti su Eventbrite).
 
 ## Halloween – Vicofertile
 https://anyplans.in/en/parma/halloween/

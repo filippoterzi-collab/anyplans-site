@@ -1,8 +1,8 @@
 {
  "slug": "taranto",
  "nome": "Taranto",
- "eventi": 96,
- "pagine": 439,
+ "eventi": 97,
+ "pagine": 443,
  "tipi": {
   "culture": 22,
   "dinner": 18,
@@ -10,10 +10,10 @@
   "show": 15,
   "concert": 24,
   "festival": 4,
-  "tour": 4,
+  "tour": 5,
   "cinema": 2,
   "karaoke": 2,
   "nightlife": 2
  },
- "aggiornato": "2026-09-29T07:20:28.307Z"
+ "aggiornato": "2026-09-29T10:12:51.964Z"
 }

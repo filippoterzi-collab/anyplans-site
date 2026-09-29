@@ -1,12 +1,12 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Milano e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Milano: il sito copre 52 città italiane (Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce, Monza, Prato, Como, Lecco, Lodi, Modena, Reggio Emilia, Treviso, Venezia, Vicenza, Novara, Lucca, Mantova, Ferrara, Pistoia, Pavia, Ancona, Pordenone, Cremona, Messina, Reggio Calabria, Alessandria, Latina), l'indice è https://anyplans.in/llms.txt.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Milano e provincia: feste di paese e sagre, teatro e spettacoli, concerti, mercati, incontri e conferenze, visite guidate, camminate e gruppi di cammino, mostre, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Milano: il sito copre 52 città italiane (Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce, Monza, Prato, Como, Lecco, Lodi, Modena, Reggio Emilia, Treviso, Venezia, Vicenza, Novara, Lucca, Mantova, Ferrara, Pistoia, Pavia, Ancona, Pordenone, Cremona, Messina, Reggio Calabria, Alessandria, Latina), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-29. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Milano](https://anyplans.in/milano/cosa-fare/): tutti gli eventi in programma (1448), per tipo e per paese; risponde a "cosa fare a Milano oggi / questo weekend"
+- [Cosa fare a Milano](https://anyplans.in/milano/cosa-fare/): tutti gli eventi in programma (1463), per tipo e per paese; risponde a "cosa fare a Milano oggi / questo weekend"
 - [Running club a Milano](https://anyplans.in/milano/running-club/): 9 run club per giorno della settimana, con ritrovo, orario e domande frequenti
 - [Gruppi a Milano](https://anyplans.in/milano/gruppi/): 12 associazioni, club e comunità che pubblicano eventi
 - [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
@@ -16,31 +16,31 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## Eventi per tipo e per paese
 
-- [Visite guidate a Milano](https://anyplans.in/milano/visite-guidate/): 74 in programma
-- [Cena / aperitivo a Milano](https://anyplans.in/milano/cene-e-aperitivi/): 245 in programma
-- [Pittura / arte a Milano](https://anyplans.in/milano/pittura/): 29 in programma
-- [Incontri culturali a Milano](https://anyplans.in/milano/incontri-culturali/): 290 in programma
-- [Padel a Milano](https://anyplans.in/milano/padel/): 198 in programma
+- [Visite guidate a Milano](https://anyplans.in/milano/visite-guidate/): 75 in programma
+- [Cena / aperitivo a Milano](https://anyplans.in/milano/cene-e-aperitivi/): 248 in programma
+- [Pittura / arte a Milano](https://anyplans.in/milano/pittura/): 31 in programma
+- [Incontri culturali a Milano](https://anyplans.in/milano/incontri-culturali/): 291 in programma
+- [Padel a Milano](https://anyplans.in/milano/padel/): 195 in programma
 - [Mostre a Milano](https://anyplans.in/milano/mostre/): 8 in programma
-- [Spettacoli e teatro a Milano](https://anyplans.in/milano/spettacoli/): 105 in programma
+- [Spettacoli e teatro a Milano](https://anyplans.in/milano/spettacoli/): 108 in programma
 - [Tennis a Milano](https://anyplans.in/milano/tennis/): 5 in programma
 - [Cinema a Milano](https://anyplans.in/milano/cinema/): 9 in programma
-- [Yoga / pilates a Milano](https://anyplans.in/milano/yoga/): 36 in programma
+- [Yoga / pilates a Milano](https://anyplans.in/milano/yoga/): 37 in programma
 - [Giardinaggio / volontariato a Milano](https://anyplans.in/milano/volontariato/): 3 in programma
 - [Corsa a Milano](https://anyplans.in/milano/corsa/): 21 in programma
-- [Feste, sagre ed eventi di paese a Milano](https://anyplans.in/milano/feste/): 85 in programma
-- [Giochi da tavolo a Milano](https://anyplans.in/milano/giochi/): 25 in programma
+- [Feste, sagre ed eventi di paese a Milano](https://anyplans.in/milano/feste/): 90 in programma
+- [Giochi da tavolo a Milano](https://anyplans.in/milano/giochi/): 26 in programma
 - [Volley a Milano](https://anyplans.in/milano/volley/): 8 in programma
-- [Concerti e musica dal vivo a Milano](https://anyplans.in/milano/concerti/): 175 in programma
+- [Concerti e musica dal vivo a Milano](https://anyplans.in/milano/concerti/): 176 in programma
 - [Palestra a Milano](https://anyplans.in/milano/palestra/): 5 in programma
-- [Escursionismo a Milano](https://anyplans.in/milano/escursioni/): 20 in programma
+- [Escursionismo a Milano](https://anyplans.in/milano/escursioni/): 22 in programma
 - [Serate e discoteca a Milano](https://anyplans.in/milano/serate/): 25 in programma
 - [Karaoke a Milano](https://anyplans.in/milano/karaoke/): 11 in programma
 - [Bici da strada a Milano](https://anyplans.in/milano/bici/): 41 in programma
-- [Fiere a Milano](https://anyplans.in/milano/fiere/): 1 in programma
+- [Fiere a Milano](https://anyplans.in/milano/fiere/): 2 in programma
 - [Partite da vedere a Milano](https://anyplans.in/milano/partite/): 4 in programma
 - [Mercatini a Milano](https://anyplans.in/milano/mercatini/): 5 in programma
-- [Ballo e danza a Milano](https://anyplans.in/milano/ballo/): 8 in programma
+- [Ballo e danza a Milano](https://anyplans.in/milano/ballo/): 5 in programma
 - [Ceramica a Milano](https://anyplans.in/milano/ceramica/): 4 in programma
 - [Serate per single a Milano](https://anyplans.in/milano/single/): 1 in programma
 - [Cucina a Milano](https://anyplans.in/milano/cucina/): 4 in programma
@@ -52,6 +52,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Feste ed eventi a Assago](https://anyplans.in/milano/assago/): 9 in programma
 - [Feste ed eventi a Cerello-battuello](https://anyplans.in/milano/cerello-battuello/): 1 in programma
 - [Feste ed eventi a Locate di Triulzi](https://anyplans.in/milano/locate-di-triulzi/): 0 in programma
+- [Feste ed eventi a Lainate](https://anyplans.in/milano/lainate/): 1 in programma
 - [Feste ed eventi a Affori](https://anyplans.in/milano/affori/): 1 in programma
 - [Feste ed eventi a Porta Romana](https://anyplans.in/milano/porta-romana/): 17 in programma
 - [Feste ed eventi a Garibaldi](https://anyplans.in/milano/garibaldi/): 1 in programma
@@ -73,6 +74,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Feste ed eventi a Sempione](https://anyplans.in/milano/sempione/): 2 in programma
 - [Feste ed eventi a Porta Genova](https://anyplans.in/milano/porta-genova/): 3 in programma
 - [Feste ed eventi a Arco della pace](https://anyplans.in/milano/arco-della-pace/): 3 in programma
+- [Feste ed eventi a San Donato Milanese](https://anyplans.in/milano/san-donato-milanese/): 2 in programma
 - [Feste ed eventi a Navigli](https://anyplans.in/milano/navigli/): 4 in programma
 - [Feste ed eventi a Porta Venezia](https://anyplans.in/milano/porta-venezia/): 4 in programma
 - [Feste ed eventi a Duomo](https://anyplans.in/milano/duomo/): 6 in programma
@@ -106,44 +108,44 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 - [GIOIA PADEL LEAGUE A](https://anyplans.in/milano/gioia-padel-league-a/): Lunedì 14 settembre alle 23:45, Gioia Padel, via risorgimento 14, 20016 Pero, 30 €
 - [Milan: Bernina Train Guided Tour - Daily](https://anyplans.in/milano/milan-bernina-train-guided-tour-daily/): Martedì 29 settembre alle 07:15, Piazza Duca d'Aosta, 20124 Milano MI, Italia, Milano, Gratis
-- [*Lezione con M.BARNABA*](https://anyplans.in/milano/lezione-con-m-barnaba/): Dal 29 settembre al 4 ottobre, 32 date, Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, 35 €
-- [Lezione con Claudio R.](https://anyplans.in/milano/lezione-con-claudio-r/): Dal 29 settembre al 28 ottobre, 50 date, Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, 50 €
-- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole/): Martedì 29 settembre alle 09:00, Padel Lorenteggio, Via Francesco Gonin 16 -  Tel. 02.48300873 - Mob. 345 4689789, 20147 Milano, 10 €
-- [Lezione individuale](https://anyplans.in/milano/lezione-individuale/): Dal 29 settembre al 2 ottobre, 33 date, Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, 60 €
-- [Livellamento](https://anyplans.in/milano/livellamento/): Dal 29 settembre al 2 ottobre, 33 date, Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, 25 €
-- [Migliora il tuo padel con Tommy !](https://anyplans.in/milano/migliora-il-tuo-padel-con-tommy/): Dal 29 settembre al 2 ottobre, 4 date, GOLARSA ACADEMY, Via dei Ciclamini 18, 20147 Milano, 20 €
 - [Ritrovo Urbano 29/09- Lato B](https://anyplans.in/milano/ritrovo-urbano-29-09-lato-b/): Martedì 29 settembre alle 09:00, Lato B Milano, Milano, Gratis
 - [Advanced TV Conference 2026](https://anyplans.in/milano/advanced-tv-conference-2026/): Martedì 29 settembre alle 09:00, Teatro Lirico Giorgio Gaber, Milano, Gratis
-- [Lezione con 🇦🇷 Valentina Mago](https://anyplans.in/milano/lezione-con-valentina-mago/): Dal 29 settembre al 2 ottobre, 12 date, VAMOS PADEL PERO, Via Papa Giovanni XXIII, 10, 20016 Pero MI, Italia Pero (MI), 20016 Pero, 27,50 €
-- [​🔥​AGONISTICA TOP LEVEL](https://anyplans.in/milano/agonistica-top-level/): Dal 29 settembre al 3 novembre, 6 date, PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, 35 €
-- [lezione personalizzata](https://anyplans.in/milano/lezione-personalizzata/): Dal 29 settembre al 26 ottobre, 8 date, Area Padel Club, via della Resistenza 31/1, 20068 Peschiera Borromeo, 50 €
-- [Lezione Individuale con Michael Cosenza🎓](https://anyplans.in/milano/lezione-individuale-con-michael-cosenza/): Dal 29 settembre al 5 ottobre, 11 date, 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, 32 €
 - [🔥🦁 BEST CORBETTA MORNING LEAGUE 🦁🔥](https://anyplans.in/milano/best-corbetta-morning-league/): Dal 29 settembre al 1 ottobre, 2 date, Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, 15 €
-- [Imparo a giocare](https://anyplans.in/milano/imparo-a-giocare/): Dal 29 settembre al 30 novembre, 44 date, Myland Padel, via Riccardo Lombardi 19/12, 20153 Milano, 15 €
-- [Partita guidata con 🇦🇷 Valentina Mago](https://anyplans.in/milano/partita-guidata-con-valentina-mago/): Dal 29 settembre al 2 ottobre, 4 date, VAMOS PADEL PERO, Via Papa Giovanni XXIII, 10, 20016 Pero MI, Italia Pero (MI), 20016 Pero, 25 €
-- [LEZIONE](https://anyplans.in/milano/lezione/): Dal 29 settembre al 16 ottobre, 30 date, HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, 45 €
-- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva/): Martedì 29 settembre alle 10:30, Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, 13 €
-- [ALLENAMENTO IN 4 + PARTITA CON AGUS](https://anyplans.in/milano/allenamento-in-4-partita-con-agus/): Martedì 29 settembre alle 10:30, MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano, 30 €
+- [Dive into Milan’s secrets with an unforgettable outdoor escape game!](https://anyplans.in/milano/dive-into-milan-s-secrets-with-an-unforgettable-outdoor-esca/): Martedì 29 settembre alle 10:00, Sforzesco Castle, Milano, Gratis
 - [Allenamento / Partita](https://anyplans.in/milano/allenamento-partita/): Martedì 29 settembre alle 11:00, MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano, 40 €
+- [Vintage Shopping Tour with Italian Breakfast](https://anyplans.in/milano/vintage-shopping-tour-with-italian-breakfast/): Martedì 29 settembre alle 11:00, Vintage Shopping Tour, Milan, Gratis
+- [Milan: Vintage Shopping Tour](https://anyplans.in/milano/milan-vintage-shopping-tour/): Martedì 29 settembre alle 11:00, Via Edmondo de Amicis, 39, Milano, MI, Italia, Milano, Gratis
+- [Milan: Vintage Shopping Guide](https://anyplans.in/milano/milan-vintage-shopping-guide/): Martedì 29 settembre alle 11:00, Milano, Milano, Gratis
+- [Workshop di Pittura su Ceramica|Paint Your Own Pottery](https://anyplans.in/milano/workshop-di-pittura-su-ceramica-paint-your-own-pottery/): Martedì 29 settembre alle 11:00, Via Felice Casati, 26, Milano, Gratis
 - [Pranzo da Shiny Sushi Ristorante Giapponese: 5 posti liberi](https://anyplans.in/milano/pranzo-da-shiny-sushi-ristorante-giapponese-5-posti-liberi/): Martedì 29 settembre alle 11:15, Shiny Sushi Ristorante Giapponese, Milano, Gratis
+- [LEZIONE](https://anyplans.in/milano/lezione/): Dal 29 settembre al 16 ottobre, 29 date, HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, 45 €
 - [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva/): Martedì 29 settembre alle 11:30, Giuriati Sport Center, via Pascal, 6, 20133 Milano, 7,50 €
+- [The secrets of pasta and tiramisu in my family house](https://anyplans.in/milano/the-secrets-of-pasta-and-tiramisu-in-my-family-house/): Martedì 29 settembre alle 12:00, V. Giuseppe Dezza, 47, Milano, Gratis
+- [*Lezione con M.BARNABA*](https://anyplans.in/milano/lezione-con-m-barnaba/): Dal 29 settembre al 4 ottobre, 29 date, Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, 30 €
+- [Lezione con Claudio R.](https://anyplans.in/milano/lezione-con-claudio-r/): Dal 29 settembre al 28 ottobre, 48 date, Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, 50 €
+- [Lezione con 🇦🇷 Valentina Mago](https://anyplans.in/milano/lezione-con-valentina-mago/): Dal 29 settembre al 2 ottobre, 11 date, VAMOS PADEL PERO, Via Papa Giovanni XXIII, 10, 20016 Pero MI, Italia Pero (MI), 20016 Pero, 27,50 €
+- [Lezione individuale](https://anyplans.in/milano/lezione-individuale/): Dal 29 settembre al 2 ottobre, 30 date, Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, 60 €
+- [Livellamento](https://anyplans.in/milano/livellamento/): Dal 29 settembre al 2 ottobre, 30 date, Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, 25 €
+- [Milan Highlights Audio Tour: Historic Treasures and Artistic Masterpieces](https://anyplans.in/milano/milan-highlights-audio-tour-historic-treasures-and-artistic-/): Martedì 29 settembre alle 12:00, Milan Cathedral, Milano, Gratis
 - [livellamento](https://anyplans.in/milano/livellamento-2026-09-29/): Dal 29 settembre al 6 ottobre, 2 date, CSF Padel & Sports Club, Via Carlo Salerno snc, 20090 Trezzano sul Naviglio, 25 €
 - [ALLENAMENTO AGONISTICO MARTEDI](https://anyplans.in/milano/allenamento-agonistico-martedi/): Martedì 29 settembre alle 12:30, Easy Village, Via per Caronno, 6, 21040 Origgio VA, Italia, 21040 Origgio, 25 €
 - [🎾🎾🚹🚺🍀GIRO  MIX ENTRY MARTEDI DI COACH AURE](https://anyplans.in/milano/giro-mix-entry-martedi-di-coach-aure/): Martedì 29 settembre alle 13:00, Clover Sport Village, Via Comasina 115, 20161 Milano, 10 €
 - [Lezione Individuale Con David 🇪🇸](https://anyplans.in/milano/lezione-individuale-con-david/): Dal 29 settembre al 2 ottobre, 5 date, 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, 32 €
 - [Padel: manca 1 giocatore (competitiva)](https://anyplans.in/milano/padel-manca-1-giocatore-competitiva/): Dal 29 settembre al 29 settembre, 3 date, Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, 13 €
-- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-29/): Martedì 29 settembre alle 15:00, PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, 13,25 €
+- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva/): Martedì 29 settembre alle 15:00, PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, 13,25 €
 - [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole/): Martedì 29 settembre alle 15:00, PadeLand Milano, Via Vincenzo Toffetti, 17, 20139 Milano, 12 €
 - [Padel Accademy](https://anyplans.in/milano/padel-accademy/): Dal 29 settembre al 2 ottobre, 6 date, Palapadel Sacarla Por Tres, Via Sondrio 9, 20020 Lainate, 35 €
 - [​🔥​AGONISTICA ENTRY LEVEL ​🔥​](https://anyplans.in/milano/agonistica-entry-level/): Dal 29 settembre al 3 novembre, 6 date, PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, 35 €
 - [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-29/): Martedì 29 settembre alle 16:30, HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, 12,34 €
-- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-29/): Dal 29 settembre al 30 settembre, 3 date, Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, 13,34 €
+- [Padel: mancano 3 giocatori (amichevole)](https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole/): Dal 29 settembre al 30 settembre, 3 date, Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, 13,34 €
 - [*Livellamento PLAYTOMIC con M.BARNABA*](https://anyplans.in/milano/livellamento-playtomic-con-m-barnaba/): Dal 29 settembre al 3 ottobre, 12 date, Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, 25 €
+- [Paint & Sip Workshop](https://anyplans.in/milano/paint-sip-workshop/): Martedì 29 settembre alle 17:00, Milano, Milano, Gratis
 - [Performance musicale | Duo Cattaneo](https://anyplans.in/milano/performance-musicale-duo-cattaneo/): Martedì 29 settembre alle 17:00, Museo del Novecento, Milano, Gratis
 - [Fringe Milano Off International Festival 2026, programma completo](https://anyplans.in/milano/fringe-milano-off-international-festival-2026-programma-comp/): Martedì 29 settembre alle 17:00, diverse location  Milano, Gratis
 - [Cena da Zona Locanda: 12 posti liberi](https://anyplans.in/milano/cena-da-zona-locanda-12-posti-liberi/): Martedì 29 settembre alle 17:00, Zona Locanda, Milano, Gratis
 - [Padel: mancano 2 giocatori (amichevole)](https://anyplans.in/milano/padel-mancano-2-giocatori-amichevole-2026-09-29/): Martedì 29 settembre alle 17:30, Centro Scarioni Milano, Via Tucidide 10, 20134 Milano, 15 €
 - [Lezione doppia con Michael Cosenza🎓](https://anyplans.in/milano/lezione-doppia-con-michael-cosenza/): Dal 29 settembre al 2 ottobre, 4 date, 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, 21 €
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/milano/padel-mancano-3-giocatori-competitiva-2026-09-29-2/): Martedì 29 settembre alle 17:30, Centro Sportivo Falcone E Borsellino - Cormano, Via Europa 7, 20032 Cormano, 14,50 €
 
 ## Optional
 
@@ -189,7 +191,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 # Tutte le pagine di anyplans a Milano (italiano, poi inglese)
 
-## Cosa fare a Milano e provincia: 1448 eventi
+## Cosa fare a Milano e provincia: 1463 eventi
 https://anyplans.in/milano/cosa-fare/
 
 Padel, cena / aperitivo, incontri culturali, concerti e musica dal vivo e spettacoli e teatro: quello che succede a Milano e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
@@ -199,65 +201,65 @@ https://anyplans.in/milano/cosa-fare-oggi/
 
 95 eventi a Milano e provincia oggi, 29 settembre 2026: Milano, diverse location  Milano, Rovello Porro e Dateo/ corso Indipendenza e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Milano domani: 109 eventi
+## Cosa fare a Milano domani: 111 eventi
 https://anyplans.in/milano/cosa-fare-domani/
 
-109 eventi a Milano e provincia domani, 30 settembre 2026: Milano, P.ta Genova/S. Agostino, Grancia e Cerello-battuello e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+111 eventi a Milano e provincia domani, 30 settembre 2026: Milano, San Donato Milanese, P.ta Genova/S. Agostino e Grancia e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Cosa fare a Milano nel weekend: 251 eventi
+## Cosa fare a Milano nel weekend: 254 eventi
 https://anyplans.in/milano/cosa-fare-nel-weekend/
 
-251 eventi a Milano e provincia nel weekend (Sabato 3 ottobre e Domenica 4 ottobre): Milano, Saronno, Porta Romana e Assago e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+254 eventi a Milano e provincia nel weekend (Sabato 3 ottobre e Domenica 4 ottobre): Milano, Saronno, Porta Romana e Assago e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-## Eventi a Milano a settembre 2026: 186
+## Eventi a Milano a settembre 2026: 193
 https://anyplans.in/milano/eventi-settembre-2026/
 
-186 eventi a Milano e provincia a settembre 2026: padel, visite guidate, feste, sagre ed eventi di paese, incontri culturali e cena / aperitivo. Giorno per giorno, con orari, luogo e prezzo, a Milano, Porta Romana, diverse location  Milano e Rovello Porro e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+193 eventi a Milano e provincia a settembre 2026: padel, visite guidate, feste, sagre ed eventi di paese, incontri culturali e escursionismo. Giorno per giorno, con orari, luogo e prezzo, a Milano, Porta Romana, diverse location  Milano e Rovello Porro e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Milano a ottobre 2026: 1096
+## Eventi a Milano a ottobre 2026: 1101
 https://anyplans.in/milano/eventi-ottobre-2026/
 
-1096 eventi a Milano e provincia a ottobre 2026: padel, cena / aperitivo, bici da strada, corsa e volley. Giorno per giorno, con orari, luogo e prezzo, a Milano, Porta Romana, Legnano e Saronno e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+1101 eventi a Milano e provincia a ottobre 2026: padel, cena / aperitivo, bici da strada, corsa e volley. Giorno per giorno, con orari, luogo e prezzo, a Milano, Porta Romana, Legnano e Saronno e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Milano a novembre 2026: 171
+## Eventi a Milano a novembre 2026: 173
 https://anyplans.in/milano/eventi-novembre-2026/
 
-171 eventi a Milano e provincia a novembre 2026: padel, yoga / pilates, cena / aperitivo, giochi da tavolo e incontri culturali. Giorno per giorno, con orari, luogo e prezzo, a Milano, Legnano, Portello e Assago e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+173 eventi a Milano e provincia a novembre 2026: padel, yoga / pilates, cena / aperitivo, giochi da tavolo e incontri culturali. Giorno per giorno, con orari, luogo e prezzo, a Milano, Legnano, Portello e Assago e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Visite guidate a Milano: 74 eventi
+## Visite guidate e tour a Milano: 75 eventi
 https://anyplans.in/milano/visite-guidate/
 
-A Milano e provincia ci sono 74 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 75 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Cena / aperitivo a Milano: 245 eventi
+## Cene e aperitivi a Milano: 248 eventi
 https://anyplans.in/milano/cene-e-aperitivi/
 
-A Milano e provincia ci sono 245 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 248 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Pittura / arte a Milano: 29 eventi
+## Pittura e corsi d'arte a Milano: 31 eventi
 https://anyplans.in/milano/pittura/
 
-A Milano e provincia ci sono 29 laboratori nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 31 laboratori nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Incontri culturali a Milano: 290 eventi
+## Incontri, corsi e conferenze a Milano: 291 eventi
 https://anyplans.in/milano/incontri-culturali/
 
-A Milano e provincia ci sono 290 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 291 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Padel a Milano: 198 eventi
+## Padel a Milano: 195 eventi
 https://anyplans.in/milano/padel/
 
-A Milano e provincia ci sono 198 partite di padel nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 195 partite di padel nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Mostre a Milano: 8 eventi
+## Mostre ed esposizioni a Milano: 8 eventi
 https://anyplans.in/milano/mostre/
 
 A Milano e provincia ci sono 8 mostre nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Spettacoli e teatro a Milano: 105 eventi
+## Teatro e spettacoli a Milano: 108 eventi
 https://anyplans.in/milano/spettacoli/
 
-A Milano e provincia ci sono 105 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 108 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Tennis a Milano: 5 eventi
 https://anyplans.in/milano/tennis/
@@ -269,50 +271,50 @@ https://anyplans.in/milano/cinema/
 
 A Milano e provincia ci sono 9 proiezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Yoga / pilates a Milano: 36 eventi
+## Yoga e pilates a Milano: 37 eventi
 https://anyplans.in/milano/yoga/
 
-A Milano e provincia ci sono 36 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 37 lezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Giardinaggio / volontariato a Milano: 3 eventi
 https://anyplans.in/milano/volontariato/
 
 A Milano e provincia ci sono 3 eventi di giardinaggio / volontariato nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Corsa a Milano: 21 eventi
+## Corse e gare podistiche a Milano: 21 eventi
 https://anyplans.in/milano/corsa/
 
 A Milano e provincia ci sono 21 uscite di corsa nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Feste e sagre a Milano: 85 eventi
+## Feste e sagre a Milano: 90 eventi
 https://anyplans.in/milano/feste/
 
-A Milano e provincia ci sono 85 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 90 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Giochi da tavolo a Milano: 25 eventi
+## Giochi da tavolo a Milano: 26 eventi
 https://anyplans.in/milano/giochi/
 
-A Milano e provincia ci sono 25 serate di giochi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 26 serate di giochi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Volley a Milano: 8 eventi
 https://anyplans.in/milano/volley/
 
 A Milano e provincia ci sono 8 eventi di volley nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Concerti e musica dal vivo a Milano: 175 eventi
+## Concerti e musica dal vivo a Milano: 176 eventi
 https://anyplans.in/milano/concerti/
 
-A Milano e provincia ci sono 175 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 176 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Palestra a Milano: 5 eventi
+## Palestra e allenamenti a Milano: 5 eventi
 https://anyplans.in/milano/palestra/
 
-A Milano e provincia ci sono 5 eventi di palestra nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 5 allenamenti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Escursionismo a Milano: 20 eventi
+## Escursioni e trekking a Milano: 22 eventi
 https://anyplans.in/milano/escursioni/
 
-A Milano e provincia ci sono 20 escursioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 22 escursioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Serate e discoteca a Milano: 25 eventi
 https://anyplans.in/milano/serate/
@@ -329,10 +331,10 @@ https://anyplans.in/milano/bici/
 
 A Milano e provincia ci sono 41 eventi di bici da strada nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Fiere a Milano: 1 evento
+## Fiere a Milano: 2 eventi
 https://anyplans.in/milano/fiere/
 
-A Milano e provincia ci sono 1 fiera nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 2 fiere nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Partite da vedere a Milano: 4 eventi
 https://anyplans.in/milano/partite/
@@ -344,10 +346,10 @@ https://anyplans.in/milano/mercatini/
 
 A Milano e provincia ci sono 5 mercatini nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Ballo e danza a Milano: 8 eventi
+## Ballo e danza a Milano: 5 eventi
 https://anyplans.in/milano/ballo/
 
-A Milano e provincia ci sono 8 serate di ballo nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Milano e provincia ci sono 5 serate di ballo nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 ## Ceramica a Milano: 4 eventi
 https://anyplans.in/milano/ceramica/
@@ -403,6 +405,11 @@ A Cerello-battuello c'è 1 evento nei prossimi mesi. Su anyplans trovi le feste 
 https://anyplans.in/milano/locate-di-triulzi/
 
 A Locate di Triulzi non c'è niente in programma adesso: qui sotto le feste già passate, che spesso tornano ogni anno. Su anyplans trovi le feste e gli eventi di Locate di Triulzi con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+
+## Feste ed eventi a Lainate: 1 in programma
+https://anyplans.in/milano/lainate/
+
+A Lainate c'è 1 evento nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Lainate con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 ## Feste ed eventi a Affori: 1 in programma
 https://anyplans.in/milano/affori/
@@ -509,6 +516,11 @@ https://anyplans.in/milano/arco-della-pace/
 
 A Arco della pace ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Arco della pace con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
+## Feste ed eventi a San Donato Milanese: 2 in…
+https://anyplans.in/milano/san-donato-milanese/
+
+A San Donato Milanese ci sono 2 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di San Donato Milanese con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+
 ## Feste ed eventi a Navigli: 4 in programma
 https://anyplans.in/milano/navigli/
 
@@ -572,7 +584,7 @@ Concert Tracker a Milano: 23 eventi in programma — concerti e musica dal vivo,
 ## MUP - Milano Urban Padel: eventi in programma
 https://anyplans.in/milano/locali/mup-milano-urban-padel/
 
-MUP - Milano Urban Padel: 7 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+MUP - Milano Urban Padel: 6 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Beat Curator: eventi e serate a Milano
 https://anyplans.in/milano/locali/beat-curator/
@@ -664,15 +676,10 @@ https://anyplans.in/milano/locali/vamos-padel-cimiano/
 
 Vamos Padel Cimiano a Milano: 3 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-## Gattopardo Milano: eventi e serate
-https://anyplans.in/milano/locali/gattopardo-milano/
-
-Gattopardo Milano: 9 eventi in programma — ballo e danza e concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
 ## Alveare Culturale Studio ETS: eventi e serate a Milano
 https://anyplans.in/milano/locali/alveare-culturale-studio-ets/
 
-Alveare Culturale Studio ETS a Milano: 6 eventi in programma — concerti e musica dal vivo, spettacoli e teatro, mostre e yoga / pilates. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Alveare Culturale Studio ETS a Milano: 7 eventi in programma — concerti e musica dal vivo, pittura / arte, spettacoli e teatro e mostre. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Teatro Franco Parenti: eventi in programma a Milano
 https://anyplans.in/milano/locali/teatro-franco-parenti/
@@ -717,7 +724,7 @@ HANGAR PADEL SEGRATE a Milano: 2 eventi in programma — padel. Di ognuno data, 
 ## Padel Lorenteggio: eventi in programma a Milano
 https://anyplans.in/milano/locali/padel-lorenteggio/
 
-Padel Lorenteggio a Milano: 4 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Padel Lorenteggio a Milano: 3 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## SPH - Milano Barona: eventi in programma
 https://anyplans.in/milano/locali/sph-milano-barona/
@@ -758,6 +765,11 @@ Easy Village a Milano: 4 eventi in programma — padel. Di ognuno data, ora, pre
 https://anyplans.in/milano/locali/hrc-milan-live/
 
 HRC MILAN LIVE a Milano: al momento non c'è niente in programma. Qui sotto gli ultimi 9 eventi che ci sono stati; le date nuove compaiono su questa pagina appena le pubblicano.
+
+## Gattopardo Milano: eventi e serate
+https://anyplans.in/milano/locali/gattopardo-milano/
+
+Gattopardo Milano: 6 eventi in programma — ballo e danza e concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Gattopardo: eventi e serate a Milano
 https://anyplans.in/milano/locali/gattopardo/
@@ -887,7 +899,7 @@ Enjoy your time: smile! a Vigentino: 4 eventi in programma — cena / aperitivo,
 ## Padel Club Ripamonti Climatizzato: eventi in programma…
 https://anyplans.in/milano/locali/padel-club-ripamonti-climatizzato/
 
-Padel Club Ripamonti Climatizzato a Milano: 4 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Padel Club Ripamonti Climatizzato a Milano: 3 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Centro Sportivo Falcone E Borsellino - Cormano: eventi…
 https://anyplans.in/milano/locali/centro-sportivo-falcone-e-borsellino-cormano/
@@ -1044,6 +1056,11 @@ https://anyplans.in/milano/locali/randagi-in-the-nights/
 
 Randagi in the nights ✨ a Milano: 5 eventi in programma — cinema, cena / aperitivo, incontri culturali e serate e discoteca. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
+## BASE Milano: eventi in programma
+https://anyplans.in/milano/locali/base-milano/
+
+BASE Milano: 5 eventi in programma — incontri culturali e feste, sagre ed eventi di paese. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
 ## Teatro Gerolamo Milano: eventi e serate
 https://anyplans.in/milano/locali/teatro-gerolamo-milano/
 
@@ -1134,6 +1151,11 @@ https://anyplans.in/milano/locali/libreria-esoterica-ecumenica-1968/
 
 Libreria Esoterica Ecumenica 1968 a Milano: 3 eventi in programma — yoga / pilates e incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
+## Lom Dopolavoro: eventi in programma a Milano
+https://anyplans.in/milano/locali/lom-dopolavoro/
+
+Lom Dopolavoro a Milano: 2 eventi in programma — yoga / pilates e ceramica. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
 ## FONDAZIONE AEM_Milano: eventi in programma
 https://anyplans.in/milano/locali/fondazione-aem-milano/
 
@@ -1162,12 +1184,12 @@ Passeggiate guidate a Milano: 3 eventi in programma — visite guidate. Di ognun
 ## Mudec: eventi in programma a Milano
 https://anyplans.in/milano/locali/mudec/
 
-Mudec a Milano: 3 eventi in programma — incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Mudec a Milano: 4 eventi in programma — incontri culturali e visite guidate. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Meatball Family: eventi e serate a Milano
 https://anyplans.in/milano/locali/meatball-family/
 
-Meatball Family a Milano: 3 eventi in programma — cena / aperitivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Meatball Family a Milano: 4 eventi in programma — cena / aperitivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Centro Milano Donna - Municipio 1: eventi in programma
 https://anyplans.in/milano/locali/centro-milano-donna-municipio-1/
@@ -1183,11 +1205,6 @@ The Hive - Stella33 a Milano: 4 eventi in programma — incontri culturali. Di o
 https://anyplans.in/milano/locali/indipendente-concerti/
 
 Indipendente Concerti a Milano: 4 eventi in programma — concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## BASE Milano: eventi in programma
-https://anyplans.in/milano/locali/base-milano/
-
-BASE Milano: 4 eventi in programma — incontri culturali e feste, sagre ed eventi di paese. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Kick Off San Donato: eventi in programma a Milano
 https://anyplans.in/milano/locali/kick-off-san-donato/
@@ -1283,11 +1300,6 @@ Accademia del Comico a Milano: 2 eventi in programma — spettacoli e teatro. Di
 https://anyplans.in/milano/locali/forever-anta-young/
 
 Forever ANTA-YOUNG a Centro: 2 eventi in programma — cena / aperitivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-## Lom Dopolavoro: eventi in programma a Milano
-https://anyplans.in/milano/locali/lom-dopolavoro/
-
-Lom Dopolavoro a Milano: 1 evento in programma — ceramica. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 ## Lato B Milano: eventi in programma
 https://anyplans.in/milano/locali/lato-b-milano/
@@ -1627,7 +1639,7 @@ Incontri culturali a Milano Luiss Hub for makers and students: si è già svolto
 ## Partita guidata con 🇦🇷 Valentina Mago – VAMOS PADEL PERO
 https://anyplans.in/milano/partita-guidata-con-valentina-mago/
 
-Padel a VAMOS PADEL PERO, Via Papa Giovanni XXIII, 10, 20016 Pero MI, Italia Pero (MI), 20016 Pero, martedì 29 settembre alle 10:30 (4 date, fino al 2 ottobre). 25 € (Iscrizione e pagamento su Playtomic).
+Padel a VAMOS PADEL PERO, Via Papa Giovanni XXIII, 10, 20016 Pero MI, Italia Pero (MI), 20016 Pero, mercoledì 30 settembre alle 10:30 (3 date, fino al 2 ottobre). 25 € (Iscrizione e pagamento su Playtomic).
 
 ## Cena da Birreria Danè: 5 posti liberi
 https://anyplans.in/milano/cena-da-birreria-dane-5-posti-liberi/
@@ -1642,7 +1654,7 @@ Cena / aperitivo a Milano navigli: si è già svolto, l'ultima data è stata lun
 ## LEZIONE – HANGAR PADEL SEGRATE
 https://anyplans.in/milano/lezione/
 
-Padel a HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, martedì 29 settembre alle 10:30 (30 date, fino al 16 ottobre). 45 € (Iscrizione e pagamento su Playtomic).
+Padel a HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, martedì 29 settembre alle 11:30 (29 date, fino al 16 ottobre). 45 € (Iscrizione e pagamento su Playtomic).
 
 ## GIOIA PADEL LEAGUE A
 https://anyplans.in/milano/gioia-padel-league-a/
@@ -1659,43 +1671,38 @@ https://anyplans.in/milano/domina-il-campo/
 
 Padel a MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
-## Padel: mancano 2… – Padel Club Ripamonti Climatizzato, 29 settembre
-https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva/
-
-Padel a Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, martedì 29 settembre alle 10:30. 13 € (Si chiede il posto e si paga su Playtomic).
-
 ## Padel: mancano 2 giocatori… – PADEL ZENTER SEGRATE MILANO, 29 settembre
-https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-29/
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva/
 
 Padel a PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, martedì 29 settembre alle 15:00. 13,25 € (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: mancano 2 giocatori… – Centro Scarioni Milano, 29 settembre
-https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-2/
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-29/
 
 Padel a Centro Scarioni Milano, Via Tucidide 10, 20134 Milano, martedì 29 settembre alle 18:30. 15 € (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: mancano 2 giocatori (competitiva) – NRG Padel Club
-https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-3/
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-2/
 
 Padel a NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo, martedì 29 settembre alle 18:30 (2 date, fino al 30 settembre). 15 € (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: mancano 2 giocatori… – Centro Sportivo De Nicola, 29 settembre
-https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-4/
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-3/
 
 Padel a Centro Sportivo De Nicola, Via Enrico De Nicola, 3, 20142 Milano, martedì 29 settembre alle 18:30. 15 € (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: mancano 2 giocatori… – Padel Arena Quintosole, 29 settembre
-https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-5/
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-4/
 
 Padel a Padel Arena Quintosole, Via Quintosole, 42/23, 20141 Milano, martedì 29 settembre alle 20:00. 13 € (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: mancano 2 giocatori (competitiva) – SH PADEL GRAF
-https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-6/
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-5/
 
 Padel a SH PADEL GRAF, Via Arturo Graf, 4, 20157 Milano, martedì 29 settembre alle 20:00. 11 € (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: mancano 2 giocatori… – Centro Sportivo Tuberose, 29 settembre
-https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-7/
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-6/
 
 Padel a Centro Sportivo Tuberose, Via Giò Ponti 1, 20147 Milano, martedì 29 settembre alle 21:00 (2 date, fino al 30 settembre). 15 € (Si chiede il posto e si paga su Playtomic).
 
@@ -1718,6 +1725,11 @@ Padel a Murat4All, Via Gioacchino Murat 29, 20159 Milano, mercoledì 30 settembr
 https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-10-01/
 
 Padel a Mamapadel Melzo, via Martiri della Libertà 46, 20066 Melzo, giovedì 1 ottobre alle 18:30. 13,50 € (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2… – Padel Club Ripamonti Climatizzato, 29 settembre
+https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-7/
+
+Padel a Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano: si è già svolto, l'ultima data è stata martedì 29 settembre 2026.
 
 ## Padel: mancano 2 giocatori (competitiva) – PadeLand Milano
 https://anyplans.in/milano/padel-mancano-2-giocatori-competitiva-2026-09-28/
@@ -1907,12 +1919,12 @@ Padel a Quanta Club, Via Assietta 19, 20161 Milano: si è già svolto, l'ultima 
 ## lezione personalizzata – Area Padel Club
 https://anyplans.in/milano/lezione-personalizzata/
 
-Padel a Area Padel Club, via della Resistenza 31/1, 20068 Peschiera Borromeo, martedì 29 settembre alle 10:00 (8 date, fino al 26 ottobre). 50 € (Iscrizione e pagamento su Playtomic).
+Padel a Area Padel Club, via della Resistenza 31/1, 20068 Peschiera Borromeo, mercoledì 30 settembre alle 10:00 (7 date, fino al 26 ottobre). 50 € (Iscrizione e pagamento su Playtomic).
 
 ## Lezione Individuale con Michael Cosenza🎓 – Milano
 https://anyplans.in/milano/lezione-individuale-con-michael-cosenza/
 
-Padel a 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, martedì 29 settembre alle 10:00 (11 date, fino al 5 ottobre). 32 € (Iscrizione e pagamento su Playtomic).
+Padel a 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, mercoledì 30 settembre alle 09:30 (9 date, fino al 5 ottobre). 32 € (Iscrizione e pagamento su Playtomic).
 
 ## 🔥🦁 BEST CORBETTA MORNING LEAGUE 🦁🔥 – Milano
 https://anyplans.in/milano/best-corbetta-morning-league/
@@ -2399,10 +2411,10 @@ https://anyplans.in/milano/partita-guidata-mbpower-con-m-barnaba/
 
 Padel a Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, mercoledì 30 settembre alle 15:00 (5 date, fino al 3 ottobre). 40 € (Iscrizione e pagamento su Playtomic).
 
-## The secrets of pasta and tiramisu in… – V. Giuseppe Dezza, 28 settembre
+## The secrets of pasta and tiramisu in… – V. Giuseppe Dezza, 29 settembre
 https://anyplans.in/milano/the-secrets-of-pasta-and-tiramisu-in-my-family-house/
 
-Cena / aperitivo a V. Giuseppe Dezza, 47, Milano: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Cena / aperitivo a V. Giuseppe Dezza, 47, Milano, martedì 29 settembre alle 12:00. Gratis (Biglietti su Eventbrite).
 
 ## The secrets of pasta and tiramisu in… – V. Giuseppe Dezza, 15 settembre
 https://anyplans.in/milano/the-secrets-of-pasta-and-tiramisu-in-my-family-house-2026-09-15/
@@ -2447,12 +2459,12 @@ Padel a Milago Padel, Via Indipendenza, 3, 20090 Buccinasco MI, Italia, 20090 Bu
 ## *Lezione con M.BARNABA* – Padel San Siro Gescal Boys
 https://anyplans.in/milano/lezione-con-m-barnaba/
 
-Padel a Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, martedì 29 settembre alle 09:00 (32 date, fino al 4 ottobre). 35 € (Iscrizione e pagamento su Playtomic).
+Padel a Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, martedì 29 settembre alle 12:00 (29 date, fino al 4 ottobre). 30 € (Iscrizione e pagamento su Playtomic).
 
 ## Lezione con Claudio R. – Corbetta Padel e Fitness
 https://anyplans.in/milano/lezione-con-claudio-r/
 
-Padel a Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, martedì 29 settembre alle 09:00 (50 date, fino al 28 ottobre). 50 € (Iscrizione e pagamento su Playtomic).
+Padel a Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, martedì 29 settembre alle 12:00 (48 date, fino al 28 ottobre). 50 € (Iscrizione e pagamento su Playtomic).
 
 ## 🎾🎾🚹🚺🍀GIRO  MIX ENTRY MARTEDI DI COACH AURE – Milano
 https://anyplans.in/milano/giro-mix-entry-martedi-di-coach-aure/
@@ -2729,15 +2741,15 @@ https://anyplans.in/milano/open-day-flexx-club-milano-crea-relazioni-d-affari-e-
 
 Incontri culturali a Flexx Club, Milano: si è già svolto, l'ultima data è stata martedì 15 settembre 2026.
 
-## Padel: mancano 3 giocatori (amichevole) – Padel Lorenteggio
+## Padel: mancano 3… – Padel Club Ripamonti Climatizzato, 29 settembre
 https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole/
 
-Padel a Padel Lorenteggio, Via Francesco Gonin 16 -  Tel. 02.48300873 - Mob. 345 4689789, 20147 Milano, martedì 29 settembre alle 09:00. 10 € (Si chiede il posto e si paga su Playtomic).
+Padel a Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, martedì 29 settembre alle 16:30 (3 date, fino al 30 settembre). 13,34 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3… – Padel Club Ripamonti Climatizzato, 29 settembre
+## Padel: mancano 3 giocatori (amichevole) – Padel Lorenteggio
 https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-29/
 
-Padel a Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, martedì 29 settembre alle 16:30 (3 date, fino al 30 settembre). 13,34 € (Si chiede il posto e si paga su Playtomic).
+Padel a Padel Lorenteggio, Via Francesco Gonin 16 -  Tel. 02.48300873 - Mob. 345 4689789, 20147 Milano: si è già svolto, l'ultima data è stata martedì 29 settembre 2026.
 
 ## Padel: mancano 3 giocatori… – Padel Segrate CLIMATIZZATO, 29 settembre
 https://anyplans.in/milano/padel-mancano-3-giocatori-amichevole-2026-09-29-2/
@@ -2907,7 +2919,7 @@ Mostre a MEET Digital Culture Center, Milano: si è già svolto, l'ultima data �
 ## Lezione con 🇦🇷 Valentina Mago – VAMOS PADEL PERO
 https://anyplans.in/milano/lezione-con-valentina-mago/
 
-Padel a VAMOS PADEL PERO, Via Papa Giovanni XXIII, 10, 20016 Pero MI, Italia Pero (MI), 20016 Pero, martedì 29 settembre alle 09:30 (12 date, fino al 2 ottobre). 27,50 € (Iscrizione e pagamento su Playtomic).
+Padel a VAMOS PADEL PERO, Via Papa Giovanni XXIII, 10, 20016 Pero MI, Italia Pero (MI), 20016 Pero, martedì 29 settembre alle 12:00 (11 date, fino al 2 ottobre). 27,50 € (Iscrizione e pagamento su Playtomic).
 
 ## Padel: manca 1… – Padel Club Ripamonti Climatizzato, 29 settembre
 https://anyplans.in/milano/padel-manca-1-giocatore-competitiva/
@@ -3202,12 +3214,12 @@ Cena / aperitivo a Milano, Dateo: si è già svolto, l'ultima data è stata mart
 ## Lezione individuale – Padel Segrate CLIMATIZZATO
 https://anyplans.in/milano/lezione-individuale/
 
-Padel a Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, martedì 29 settembre alle 09:00 (33 date, fino al 2 ottobre). 60 € (Iscrizione e pagamento su Playtomic).
+Padel a Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, martedì 29 settembre alle 12:00 (30 date, fino al 2 ottobre). 60 € (Iscrizione e pagamento su Playtomic).
 
 ## Livellamento – Padel Segrate CLIMATIZZATO
 https://anyplans.in/milano/livellamento/
 
-Padel a Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, martedì 29 settembre alle 09:00 (33 date, fino al 2 ottobre). 25 € (Iscrizione e pagamento su Playtomic).
+Padel a Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, martedì 29 settembre alle 12:00 (30 date, fino al 2 ottobre). 25 € (Iscrizione e pagamento su Playtomic).
 
 ## livellamento – CSF Padel & Sports Club
 https://anyplans.in/milano/livellamento-2026-09-29/
@@ -5712,7 +5724,7 @@ Incontri culturali a Milan,Italy, Milano: si è già svolto, l'ultima data è st
 ## Tecniche di Illustrazione con Martina Valle – Milano
 https://anyplans.in/milano/tecniche-di-illustrazione-con-martina-valle/
 
-Pittura / arte a Alveare Culturale Studio ETS, Milano: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Pittura / arte a Alveare Culturale Studio ETS, Milano, lunedì 5 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
 
 ## Satsang in Milano – ARCI Bellezza
 https://anyplans.in/milano/satsang-in-milano/
@@ -6134,8 +6146,13 @@ https://anyplans.in/milano/ravensburger-game-night-da-old-wild-west-milano-corso
 
 Cena / aperitivo a Old Wild West - Milano Corso Sempione: si è già svolto, l'ultima data è stata mercoledì 23 settembre 2026.
 
-## Mindstone AI meetup Milan: ButterflAI Effect – Talent Garden
+## Mindstone AI meetup Milan: ButterflAI Effect – Talent Garden, 22 ottobre
 https://anyplans.in/milano/mindstone-ai-meetup-milan-butterflai-effect/
+
+Incontri culturali a Talent Garden, Milano, giovedì 22 ottobre alle 18:30. Gratis (Biglietti su Eventbrite).
+
+## Mindstone AI meetup Milan: ButterflAI Effect – Talent Garden, 23 settembre
+https://anyplans.in/milano/mindstone-ai-meetup-milan-butterflai-effect-2026-09-23/
 
 Incontri culturali a Talent Garden, Milano: si è già svolto, l'ultima data è stata mercoledì 23 settembre 2026.
 
@@ -6312,12 +6329,12 @@ Mostre a Via Romagnosi, 8, Milano: si è già svolto, l'ultima data è stata gio
 ## Vintage Shopping Tour with Italian Breakfast
 https://anyplans.in/milano/vintage-shopping-tour-with-italian-breakfast/
 
-Spettacoli e teatro a Vintage Shopping Tour, Milan: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Spettacoli e teatro a Vintage Shopping Tour, Milan, martedì 29 settembre alle 11:00. Gratis (Biglietti su Eventbrite).
 
 ## Workshop di Ceramica a Mano|Handbuilding Pottery Workshop – Milano
 https://anyplans.in/milano/workshop-di-ceramica-a-mano-handbuilding-pottery-workshop/
 
-Ceramica a Via Felice Casati, 26, Milano: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Ceramica a Via Felice Casati, 26, Milano: si è già svolto, l'ultima data è stata martedì 29 settembre 2026.
 
 ## Recarlo - LINK-E – Milano
 https://anyplans.in/milano/recarlo-link-e/
@@ -6327,17 +6344,17 @@ Spettacoli e teatro a Via S. Pietro All'Orto, 26, Milano: si è già svolto, l'u
 ## Milan: Vintage Shopping Tour – Milano
 https://anyplans.in/milano/milan-vintage-shopping-tour/
 
-Spettacoli e teatro a Via Edmondo de Amicis, 39, Milano, MI, Italia, Milano: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Spettacoli e teatro a Via Edmondo de Amicis, 39, Milano, MI, Italia, Milano, martedì 29 settembre alle 11:00. Gratis (Biglietti su Eventbrite).
 
 ## Milan: Vintage Shopping Guide – Milano
 https://anyplans.in/milano/milan-vintage-shopping-guide/
 
-Spettacoli e teatro a Milano, Milano: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Spettacoli e teatro a Milano, Milano, martedì 29 settembre alle 11:00. Gratis (Biglietti su Eventbrite).
 
 ## Workshop di Tornio Ceramico | Wheel Throwing Workshop – Milano
 https://anyplans.in/milano/workshop-di-tornio-ceramico-wheel-throwing-workshop/
 
-Ceramica a Via Felice Casati, 26, Milano: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Ceramica a Via Felice Casati, 26, Milano: si è già svolto, l'ultima data è stata martedì 29 settembre 2026.
 
 ## Milan Model Casting – Navigli
 https://anyplans.in/milano/milan-model-casting/
@@ -6362,7 +6379,7 @@ Incontri culturali a Momenteeria, Milano: si è già svolto, l'ultima data è st
 ## Paint & Sip Workshop – Milano
 https://anyplans.in/milano/paint-sip-workshop/
 
-Cena / aperitivo a Milano, Milano: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Cena / aperitivo a Milano, Milano, martedì 29 settembre alle 17:00. Gratis (Biglietti su Eventbrite).
 
 ## lezione doppia – Vamos Padel Cimiano
 https://anyplans.in/milano/lezione-doppia/
@@ -6789,15 +6806,15 @@ https://anyplans.in/milano/run-with-qura-milano/
 
 Corsa a Arco della Pace, Milano: si è già svolto, l'ultima data è stata venerdì 25 settembre 2026.
 
-## ​🔥​AGONISTICA TOP LEVEL – PADEL ZENTER SEGRATE MILANO
+## 🔥​AGONISTICA TOP LEVEL 🔥​ – PADEL ZENTER SEGRATE MILANO
 https://anyplans.in/milano/agonistica-top-level/
 
-Padel a PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, martedì 29 settembre alle 09:30 (6 date, fino al 3 novembre). 35 € (Iscrizione e pagamento su Playtomic).
-
-## 🔥​AGONISTICA TOP LEVEL 🔥​ – PADEL ZENTER SEGRATE MILANO
-https://anyplans.in/milano/agonistica-top-level-2026-10-02/
-
 Padel a PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, venerdì 2 ottobre alle 09:00 (6 date, fino al 6 novembre). 35 € (Iscrizione e pagamento su Playtomic).
+
+## ​🔥​AGONISTICA TOP LEVEL – PADEL ZENTER SEGRATE MILANO
+https://anyplans.in/milano/agonistica-top-level-2026-10-06/
+
+Padel a PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, martedì 6 ottobre alle 09:30 (5 date, fino al 3 novembre). 35 € (Iscrizione e pagamento su Playtomic).
 
 ## Giornate Europee del Patrimonio all’Università Statale…
 https://anyplans.in/milano/giornate-europee-del-patrimonio-all-universita-statale-di-mi/
@@ -6807,7 +6824,7 @@ Incontri culturali a Università degli Studi di Milano Milano, Milano: si è gi�
 ## Workshop di Pittura su Ceramica|Paint Your Own Pottery – Milano
 https://anyplans.in/milano/workshop-di-pittura-su-ceramica-paint-your-own-pottery/
 
-Pittura / arte a Via Felice Casati, 26, Milano: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Pittura / arte a Via Felice Casati, 26, Milano, martedì 29 settembre alle 11:00. Gratis (Biglietti su Eventbrite).
 
 ## PARTITA - ALLENAMENTO AGONISMO – MUP - Milano Urban Padel
 https://anyplans.in/milano/partita-allenamento-agonismo/
@@ -7637,7 +7654,7 @@ Cena / aperitivo a WAO Isola, Milano: si è già svolto, l'ultima data è stata 
 ## Milan Highlights Audio Tour: Historic Treasures and Artistic Masterpieces – Milano
 https://anyplans.in/milano/milan-highlights-audio-tour-historic-treasures-and-artistic-/
 
-Escursionismo a Milan Cathedral, Milano: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Escursionismo a Milan Cathedral, Milano, martedì 29 settembre alle 12:00. Gratis (Biglietti su Eventbrite).
 
 ## MACRON CUP - FEMMINILE - LADIES ENTRY - Liv 0.5-1.5 - RODEO – Milano
 https://anyplans.in/milano/macron-cup-femminile-ladies-entry-liv-0-5-1-5-rodeo/
@@ -7837,7 +7854,7 @@ Cena / aperitivo a WAO Isola, Milano: si è già svolto, l'ultima data è stata 
 ## Visita Guidata + workshop gratuiti - "Deutsche Bank Artist of the Year" – Milano
 https://anyplans.in/milano/visita-guidata-workshop-gratuiti-deutsche-bank-artist-of-the/
 
-Visite guidate a Mudec, Milano: si è già svolto, l'ultima data è stata sabato 26 settembre 2026.
+Visite guidate a Mudec, Milano, sabato 10 ottobre alle 16:00. Gratis (Biglietti su Eventbrite).
 
 ## Long Run Libre Ritmo 031 x 2LR Club – Magnolia
 https://anyplans.in/milano/long-run-libre-ritmo-031-x-2lr-club/
@@ -8302,7 +8319,7 @@ Concerti e musica dal vivo a Arci Bellezza, Milano: si è già svolto, l'ultima 
 ## Dive into Milan’s secrets with an unforgettable outdoor escape game! – Milano
 https://anyplans.in/milano/dive-into-milan-s-secrets-with-an-unforgettable-outdoor-esca/
 
-Escursionismo a Sforzesco Castle, Milano: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Escursionismo a Sforzesco Castle, Milano, martedì 29 settembre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## beMIV Festival - Giornata del benessere animale e medicina naturale – Arese
 https://anyplans.in/milano/bemiv-festival-giornata-del-benessere-animale-e-medicina-nat/
@@ -8359,10 +8376,10 @@ https://anyplans.in/milano/meatball-family-lab-polpette-classiche/
 
 Cena / aperitivo a Meatball Family, Milano, domenica 4 ottobre alle 10:45. 22,55 € (Biglietti su AllEvents).
 
-## Meatball Family LAB - POLPETTE CLASSICHE, 27 settembre
-https://anyplans.in/milano/meatball-family-lab-polpette-classiche-2026-09-27/
+## Meatball Family LAB - POLPETTE CLASSICHE, 8 novembre
+https://anyplans.in/milano/meatball-family-lab-polpette-classiche-2026-11-08/
 
-Cena / aperitivo a Meatball Family, Milano: si è già svolto, l'ultima data è stata domenica 27 settembre 2026.
+Cena / aperitivo a Meatball Family, Milano, domenica 8 novembre alle 10:45. Gratis (Biglietti su Eventbrite).
 
 ## Sunday Outdoor Yoga in Milan with Ozzy – Parco Sempione
 https://anyplans.in/milano/sunday-outdoor-yoga-in-milan-with-ozzy/
@@ -8727,12 +8744,12 @@ Incontri culturali a Twiga Milano, Milano: si è già svolto, l'ultima data è s
 ## Migliora il tuo padel con Tommy ! – GOLARSA ACADEMY
 https://anyplans.in/milano/migliora-il-tuo-padel-con-tommy/
 
-Padel a GOLARSA ACADEMY, Via dei Ciclamini 18, 20147 Milano, martedì 29 settembre alle 09:00 (4 date, fino al 2 ottobre). 20 € (Iscrizione e pagamento su Playtomic).
+Padel a GOLARSA ACADEMY, Via dei Ciclamini 18, 20147 Milano, mercoledì 30 settembre alle 09:00 (3 date, fino al 2 ottobre). 20 € (Iscrizione e pagamento su Playtomic).
 
 ## Imparo a giocare – Myland Padel
 https://anyplans.in/milano/imparo-a-giocare/
 
-Padel a Myland Padel, via Riccardo Lombardi 19/12, 20153 Milano, martedì 29 settembre alle 10:00 (44 date, fino al 30 novembre). 15 € (Iscrizione e pagamento su Playtomic).
+Padel a Myland Padel, via Riccardo Lombardi 19/12, 20153 Milano, mercoledì 30 settembre alle 10:00 (43 date, fino al 30 novembre). 15 € (Iscrizione e pagamento su Playtomic).
 
 ## Ritrovo Urbano 28/09 - 21 House of Stories Città Studi
 https://anyplans.in/milano/ritrovo-urbano-28-09-21-house-of-stories-citta-studi/
@@ -8742,7 +8759,7 @@ Festa di paese a 21 House of Stories Città Studi, Milano: si è già svolto, l'
 ## Renzo Bongiovanni Radice. Un lungo e meditato atto d’amore – Milano
 https://anyplans.in/milano/renzo-bongiovanni-radice-un-lungo-e-meditato-atto-d-amore/
 
-Mostre a Fondazione Adolfo Pini, Milano: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Mostre a Fondazione Adolfo Pini, Milano: si è già svolto, l'ultima data è stata martedì 29 settembre 2026.
 
 ## LEZIONE + PARTITA GUIDATA – HANGAR PADEL SEGRATE
 https://anyplans.in/milano/lezione-partita-guidata/
@@ -8832,7 +8849,7 @@ Mostre a Open, Milano: si è già svolto, l'ultima data è stata lunedì 28 sett
 ## Pottery Wheel Experience – Milano
 https://anyplans.in/milano/pottery-wheel-experience-crea-il-tuo-primo-oggetto-al-tornio/
 
-Giochi da tavolo a Via Giuseppe Biancardi, 6, Milano: si è già svolto, l'ultima data è stata lunedì 28 settembre 2026.
+Giochi da tavolo a Via Giuseppe Biancardi, 6, Milano, martedì 29 settembre alle 19:00. Gratis (Biglietti su Eventbrite).
 
 ## Copia di Aperitivi di Corso - Scienze Linguistiche – Milano
 https://anyplans.in/milano/copia-di-aperitivi-di-corso-scienze-linguistiche/
@@ -8902,7 +8919,7 @@ Visite guidate a Piazza Duca d'Aosta, 20124 Milano MI, Italia, Milano, martedì 
 ## ALLENAMENTO IN 4 + PARTITA CON AGUS – Milano
 https://anyplans.in/milano/allenamento-in-4-partita-con-agus/
 
-Padel a MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano, martedì 29 settembre alle 10:30. 30 € (Iscrizione e pagamento su Playtomic).
+Padel a MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano: si è già svolto, l'ultima data è stata martedì 29 settembre 2026.
 
 ## Ritrovo Urbano 29/09- Lato B – Lato B Milano
 https://anyplans.in/milano/ritrovo-urbano-29-09-lato-b/
@@ -8913,6 +8930,16 @@ Festa di paese a Lato B Milano, Milano, martedì 29 settembre alle 09:00. Gratis
 https://anyplans.in/milano/advanced-tv-conference-2026/
 
 Incontri culturali a Teatro Lirico Giorgio Gaber, Milano, martedì 29 settembre alle 09:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Veralab Days presso Store Veralab Arese | dal 21 al 30 Settembre – Lainate
+https://anyplans.in/milano/veralab-days-presso-store-veralab-arese-dal-21-al-30-settemb/
+
+Incontri culturali a Veralab Store Arese, Lainate: si è già svolto, l'ultima data è stata martedì 29 settembre 2026.
+
+## Veralab Days Store Veralab Milano Guido d'Arezzo | dal…
+https://anyplans.in/milano/veralab-days-store-veralab-milano-guido-d-arezzo-dal-21-al-3/
+
+Incontri culturali a Veralab Store Milano, Milano: si è già svolto, l'ultima data è stata martedì 29 settembre 2026.
 
 ## Pranzo da Shiny Sushi Ristorante Giapponese: 5 posti…
 https://anyplans.in/milano/pranzo-da-shiny-sushi-ristorante-giapponese-5-posti-liberi/
@@ -9099,6 +9126,11 @@ https://anyplans.in/milano/agonistica-situazioni-tattiche/
 
 Padel a GOLARSA ACADEMY, Via dei Ciclamini 18, 20147 Milano, mercoledì 30 settembre alle 12:30 (5 date, fino al 28 ottobre). 30 € (Iscrizione e pagamento su Playtomic).
 
+## BMW GEN M TOUR 2026 – San Donato Milanese
+https://anyplans.in/milano/bmw-gen-m-tour-2026/
+
+Fiere a BMW BYmyCAR Milano San Donato Zavattini, San Donato Milanese, mercoledì 30 settembre alle 15:00. Gratis (Biglietti su Eventbrite).
+
 ## Lezione+pratica: porta il tuo profilo IG e te lo sistemo io! – P.ta Genova/S. Agostino
 https://anyplans.in/milano/lezione-pratica-porta-il-tuo-profilo-ig-e-te-lo-sistemo-io/
 
@@ -9128,6 +9160,11 @@ Cena / aperitivo a Zona Locanda, Milano, mercoledì 30 settembre alle 17:00. Gra
 https://anyplans.in/milano/la-mente-radiosa/
 
 Yoga / pilates a SAP Italia, Milano, mercoledì 30 settembre alle 17:30. Gratis (Biglietti su Eventbrite).
+
+## ARMO'NIA – Milano
+https://anyplans.in/milano/armo-nia/
+
+Festa di paese a Via dei Missaglia, 97/edificio b3, Milano, mercoledì 30 settembre alle 18:00. Gratis (Biglietti su Eventbrite).
 
 ## Corso prematrimoniale laico per matrimoni e unioni civili - 5a edizione – Milano
 https://anyplans.in/milano/corso-prematrimoniale-laico-per-matrimoni-e-unioni-civili-5a/
@@ -10064,11 +10101,6 @@ https://anyplans.in/milano/gran-gala-dell-alta-fedelta-di-milano-3-4-ottobre-202
 
 Pittura / arte a Quark Hotel Milano, Milano, sabato 3 ottobre alle 10:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## La forza del silenzio – Fondazione Culturale San Fedele
-https://anyplans.in/milano/la-forza-del-silenzio/
-
-Incontri culturali a Fondazione Culturale San Fedele, Milano, sabato 3 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
-
 ## COMBO Festival a COMBO Festival, 3 ottobre
 https://anyplans.in/milano/combo-festival/
 
@@ -10093,6 +10125,11 @@ Incontri culturali a Viale Monza, 4, Milano, sabato 3 ottobre alle 10:00. Gratis
 https://anyplans.in/milano/breathwork-con-piante-limpias/
 
 Yoga / pilates a Libreria Esoterica Ecumenica 1968, Milano, sabato 3 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
+
+## Vintage market al Mercato ISOLA Milano 3-4 Ottobre
+https://anyplans.in/milano/vintage-market-al-mercato-isola-milano-3-4-ottobre/
+
+Spettacoli e teatro a Mercato Isola, Milano, sabato 3 ottobre alle 10:30. Gratis (Biglietti su Eventbrite).
 
 ## Atelier di Famiglia - I murales del quartiere – Milano
 https://anyplans.in/milano/atelier-di-famiglia-i-murales-del-quartiere/
@@ -10208,6 +10245,11 @@ Incontri culturali a mosso, Milano, sabato 3 ottobre alle 14:00. 22,55 € (Big
 https://anyplans.in/milano/karaoke-da-locanda-alla-mano-7-posti-liberi/
 
 Karaoke a Locanda Alla Mano, Milano, sabato 3 ottobre alle 14:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## MAG TO MAG 2026 TALK: Tra le righe – BASE Milano
+https://anyplans.in/milano/mag-to-mag-2026-talk-tra-le-righe/
+
+Incontri culturali a BASE Milano, Milano, sabato 3 ottobre alle 14:30. Gratis (Biglietti su Eventbrite).
 
 ## Vengo anch’io – Giardini Pubblici Indro Montanelli
 https://anyplans.in/milano/vengo-anch-io-si-tu-si/
@@ -10413,6 +10455,11 @@ Cena / aperitivo a Nomad Club, Milano, sabato 3 ottobre alle 18:00. Gratis (Ognu
 https://anyplans.in/milano/padel-night-club-il-torneo/
 
 Padel a Padel 8, Via Diomede angolo piazzale Lotto, 20148 Milano, sabato 3 ottobre alle 18:00. 25 € (Iscrizione e pagamento su Playtomic).
+
+## MCP AT MINIMARKET – Minimarket Milan
+https://anyplans.in/milano/mcp-at-minimarket/
+
+Concerti e musica dal vivo a Minimarket Milan, Milano, sabato 3 ottobre alle 18:00. Gratis (Biglietti su Eventbrite).
 
 ## Cena da Pizza al Trancio Milano - Pizzeria Magica: 3…
 https://anyplans.in/milano/cena-da-pizza-al-trancio-milano-pizzeria-magica-3-posti-libe/
@@ -10718,6 +10765,11 @@ Pittura / arte a Ganci Argenterie, Milano, domenica 4 ottobre alle 10:00. Gratis
 https://anyplans.in/milano/storie-di-bicicletta-in-cascina/
 
 Incontri culturali a Cascina San Gregorio Vecchio, Via Bonfadini 55, Milano, domenica 4 ottobre alle 10:00. Gratis.
+
+## Via Altaguardia e Dintorni in Festa 2026 - 2°edizione – Milano
+https://anyplans.in/milano/via-altaguardia-e-dintorni-in-festa-2026-2-edizione/
+
+Festa di paese a Via Altaguardia, Milano, domenica 4 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## Relax al Wakeparadise – Peschiera Borromeo
 https://anyplans.in/milano/relax-al-wakeparadise/
@@ -11264,11 +11316,6 @@ https://anyplans.in/milano/food-lovers-milan-good-vibes-great-food-new-friends/
 
 Incontri culturali a Officina Del Riso (Milano, Navigli), Milano, martedì 6 ottobre alle 20:30. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## STAND UP COMEDY NOLO - OPEN MIC SPAZIO VIBES – Milano
-https://anyplans.in/milano/stand-up-comedy-nolo-open-mic-spazio-vibes/
-
-Spettacoli e teatro a Via Giulio e Corrado Venini, Milano, martedì 6 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
-
 ## ED O'BRIEN – Teatro Lirico Giorgio Gaber
 https://anyplans.in/milano/ed-o-brien/
 
@@ -11278,11 +11325,6 @@ Concerti e musica dal vivo a Teatro Lirico Giorgio Gaber, Milano, martedì 6 ott
 https://anyplans.in/milano/amaro-del-ciclista-talk/
 
 Incontri culturali a Barbruto, Via Giovanni Battista Piranesi 10, Milano, martedì 6 ottobre alle 21:00. Gratis.
-
-## Homecoming dance - Oh My Gattopardo – Gattopardo Milano
-https://anyplans.in/milano/homecoming-dance-oh-my-gattopardo/
-
-Ballo e danza a Gattopardo Milano, Milano, martedì 6 ottobre alle 23:30. Gratis (Biglietti su Eventbrite).
 
 ## Odissea - Il viaggio di Ulisse: colazione filosofica – Milano
 https://anyplans.in/milano/odissea-il-viaggio-di-ulisse-colazione-filosofica/
@@ -12384,6 +12426,11 @@ https://anyplans.in/milano/roshelle-in-milano/
 
 Concerti e musica dal vivo a Blue Note, Milano, domenica 11 ottobre alle 20:30. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## Ritrovo Urbano 12/10 - 21 House of Stories Città Studi
+https://anyplans.in/milano/ritrovo-urbano-12-10-21-house-of-stories-citta-studi/
+
+Festa di paese a 21 House of Stories Città Studi, Milano, lunedì 12 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
+
 ## Il MuseoLeonardo3 apre le porte alle scuole:scopri il nuovo Piano Didattico – Milano
 https://anyplans.in/milano/il-museoleonardo3-apre-le-porte-alle-scuole-scopri-il-nuovo-/
 
@@ -12598,11 +12645,6 @@ Incontri culturali a Talent Garden, Milano, giovedì 15 ottobre alle 19:00. Grat
 https://anyplans.in/milano/ri-scatti-mostra-fotografica-gratuita-pizza/
 
 Visite guidate a Milano, Palestro, giovedì 15 ottobre alle 19:00. 3 € (Accredito su comehome; il resto si paga in loco).
-
-## EXECUTIVE NETWORKING DINNER Cena Imprenditori e Manager…
-https://anyplans.in/milano/executive-networking-dinner-cena-imprenditori-e-manager-a-mi/
-
-Incontri culturali a Maison Milano, Milano, giovedì 15 ottobre alle 19:30. Gratis (Biglietti su Eventbrite).
 
 ## CENA Business Networking per Imprenditori e Manager a…
 https://anyplans.in/milano/cena-business-networking-per-imprenditori-e-manager-a-milano/
@@ -12874,6 +12916,11 @@ https://anyplans.in/milano/la-cura-del-possibile-festival-incontro-2026/
 
 Festa di paese a Teatro Franco Parenti, Milano, sabato 17 ottobre alle 10:30. Gratis (Biglietti su Eventbrite).
 
+## V·yin·il Yoga – Lom Dopolavoro
+https://anyplans.in/milano/v-yin-il-yoga/
+
+Yoga / pilates a Lom Dopolavoro, Milano, sabato 17 ottobre alle 11:00. Gratis (Biglietti su Eventbrite).
+
 ## BeachVolley by Ile vol. 22/Autunno Vibes – Assago
 https://anyplans.in/milano/beachvolley-by-ile-vol-22-autunno-vibes/
 
@@ -13089,6 +13136,11 @@ https://anyplans.in/milano/pittarosso-pink-parade-2026/
 
 Incontri culturali a Milano, Italia, Milano, domenica 18 ottobre alle 10:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## Le ottanta domande di Atena Ferraris – Rozzano
+https://anyplans.in/milano/le-ottanta-domande-di-atena-ferraris/
+
+Festa di paese a Centro Culturale Cascina Grande Rozzano, Rozzano, domenica 18 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
+
 ## Ragionevoli utopie | Festival INCONTRO 2026 – Milano
 https://anyplans.in/milano/ragionevoli-utopie-festival-incontro-2026/
 
@@ -13288,11 +13340,6 @@ Concerti e musica dal vivo a Teatro degli Arcimboldi, Milano, martedì 20 ottobr
 https://anyplans.in/milano/club-tour-2026-di-willie-peyote/
 
 Visite guidate a Fabrique, Milano, martedì 20 ottobre alle 21:00. Gratis (Ingresso: vedi la pagina del Tacco di Bacco).
-
-## Polimi Party - Oh My Gattopardo – Gattopardo Milano
-https://anyplans.in/milano/polimi-party-oh-my-gattopardo/
-
-Ballo e danza a Gattopardo Milano, Milano, martedì 20 ottobre alle 23:30. Gratis (Biglietti su Eventbrite).
 
 ## Conferenza CSCMP Supply Chain Edge Italy 2026 – Assago
 https://anyplans.in/milano/conferenza-cscmp-supply-chain-edge-italy-2026/
@@ -13553,6 +13600,11 @@ Festa di paese a Vitadacani, sabato 24 ottobre alle 10:00. Gratis (Ingresso: ved
 https://anyplans.in/milano/se-i-tuoi-clienti-chiedono-a-chatgpt-tu-ci-sei/
 
 Golf a Golf Le Rovedine, Noverasco, sabato 24 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
+
+## Bookclub Proibito: Ipnocrazia feat. Magnifica Humanitas (doppietta!) – Milano
+https://anyplans.in/milano/bookclub-proibito-ipnocrazia-feat-magnifica-humanitas-doppie/
+
+Festa di paese a Mercato del Suffragio (sala riservata), Milano, sabato 24 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## Cimitero Monumentale Gratis + Chinatown – Milano
 https://anyplans.in/milano/cimitero-monumentale-gratis-chinatown/
@@ -13818,11 +13870,6 @@ Visite guidate a MAGAZZINI GENERALI, Milano, martedì 27 ottobre alle 21:00. Gra
 https://anyplans.in/milano/azymuth-x-jz-rf-series-milano-arci-bellezza/
 
 Incontri culturali a Arci Bellezza, Milano, martedì 27 ottobre alle 21:30. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## Bocconi Party - Oh My Gattopardo – Gattopardo Milano
-https://anyplans.in/milano/bocconi-party-oh-my-gattopardo/
-
-Ballo e danza a Gattopardo Milano, Milano, martedì 27 ottobre alle 23:30. Gratis (Biglietti su Eventbrite).
 
 ## Milan vs Bologna at San Siro - Milan
 https://anyplans.in/milano/milan-vs-bologna-at-san-siro-milan/
@@ -14604,6 +14651,11 @@ https://anyplans.in/milano/19-cvday/
 
 Incontri culturali a Monte Rosa 91, Milano, giovedì 19 novembre alle 09:00. Gratis (Biglietti su Eventbrite).
 
+## EXECUTIVE NETWORKING DINNER Cena Imprenditori e Manager…
+https://anyplans.in/milano/executive-networking-dinner-cena-imprenditori-e-manager-a-mi/
+
+Incontri culturali a Maison Milano, Milano, giovedì 19 novembre alle 19:00. Gratis (Biglietti su Eventbrite).
+
 ## Ariete / Alcatraz - Milano
 https://anyplans.in/milano/ariete-alcatraz-milano/
 
@@ -15109,7 +15161,7 @@ https://anyplans.in/milano/snarky-puppy/
 
 Incontri culturali a Fabrique, Milano, sabato 10 aprile alle 10:00. Gratis (Ingresso: vedi la pagina del Tacco di Bacco).
 
-## Things to do in Milan: 1448 events
+## Things to do in Milan: 1463 events
 https://anyplans.in/en/milano/
 
 What's on in Milan and its province, today, tonight and this weekend: padel, dinners & aperitivo, talks & culture, concerts & live music, shows & theatre and town festivals & fairs. Pick one and go with other people.
@@ -15119,65 +15171,65 @@ https://anyplans.in/en/milano/what-to-do-today/
 
 95 events in Milan and its province today, 29 September 2026: Milan, diverse location  Milano, Rovello Porro and Dateo/ corso Indipendenza and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Milan tomorrow: 109 events
+## What to do in Milan tomorrow: 111 events
 https://anyplans.in/en/milano/what-to-do-tomorrow/
 
-109 events in Milan and its province tomorrow, 30 September 2026: Milan, P.ta Genova/S. Agostino, Grancia and Cerello-battuello and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+111 events in Milan and its province tomorrow, 30 September 2026: Milan, San Donato Milanese, P.ta Genova/S. Agostino and Grancia and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## What to do in Milan this weekend: 251 events
+## What to do in Milan this weekend: 254 events
 https://anyplans.in/en/milano/what-to-do-this-weekend/
 
-251 events in Milan and its province this weekend (Saturday 3 October and Sunday 4 October): Milan, Saronno, Porta Romana and Assago and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+254 events in Milan and its province this weekend (Saturday 3 October and Sunday 4 October): Milan, Saronno, Porta Romana and Assago and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-## Events in Milan in September 2026: 186
+## Events in Milan in September 2026: 193
 https://anyplans.in/en/milano/events-september-2026/
 
-186 events in Milan and its province in September 2026: padel, guided tours, town festivals & fairs, talks & culture and dinners & aperitivo. Day by day, with times, place and price, in Milan, Porta Romana, diverse location  Milano and Rovello Porro and other towns. You sign up and go with other people.
+193 events in Milan and its province in September 2026: padel, guided tours, town festivals & fairs, talks & culture and hiking. Day by day, with times, place and price, in Milan, Porta Romana, diverse location  Milano and Rovello Porro and other towns. You sign up and go with other people.
 
-## Events in Milan in October 2026: 1096
+## Events in Milan in October 2026: 1101
 https://anyplans.in/en/milano/events-october-2026/
 
-1096 events in Milan and its province in October 2026: padel, dinners & aperitivo, road cycling, running and volleyball. Day by day, with times, place and price, in Milan, Porta Romana, Legnano and Saronno and other towns. You sign up and go with other people.
+1101 events in Milan and its province in October 2026: padel, dinners & aperitivo, road cycling, running and volleyball. Day by day, with times, place and price, in Milan, Porta Romana, Legnano and Saronno and other towns. You sign up and go with other people.
 
-## Events in Milan in November 2026: 171
+## Events in Milan in November 2026: 173
 https://anyplans.in/en/milano/events-november-2026/
 
-171 events in Milan and its province in November 2026: padel, yoga & pilates, dinners & aperitivo, board games and talks & culture. Day by day, with times, place and price, in Milan, Legnano, Portello and Assago and other towns. You sign up and go with other people.
+173 events in Milan and its province in November 2026: padel, yoga & pilates, dinners & aperitivo, board games and talks & culture. Day by day, with times, place and price, in Milan, Legnano, Portello and Assago and other towns. You sign up and go with other people.
 
-## Guided tours in Milan: 74 events
+## Guided tours in Milan: 75 events
 https://anyplans.in/en/milano/guided-tours/
 
-In Milan and its province there are 74 guided tours events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milan and its province there are 75 guided tours events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Dinners & aperitivo in Milan: 245 events
+## Dinners & aperitivo in Milan: 248 events
 https://anyplans.in/en/milano/dinners/
 
-In Milan and its province there are 245 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milan and its province there are 248 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Painting & art in Milan: 29 events
+## Painting & art in Milan: 31 events
 https://anyplans.in/en/milano/painting/
 
-In Milan and its province there are 29 painting & art events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milan and its province there are 31 painting & art events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Talks & culture in Milan: 290 events
+## Talks & culture in Milan: 291 events
 https://anyplans.in/en/milano/talks-and-culture/
 
-In Milan and its province there are 290 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milan and its province there are 291 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Padel in Milan: 198 events
+## Padel in Milan: 195 events
 https://anyplans.in/en/milano/padel/
 
-In Milan and its province there are 198 padel matches and tournaments in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milan and its province there are 195 padel matches and tournaments in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Exhibitions in Milan: 8 events
 https://anyplans.in/en/milano/exhibitions/
 
 In Milan and its province there are 8 exhibitions in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Shows & theatre in Milan: 105 events
+## Shows & theatre in Milan: 108 events
 https://anyplans.in/en/milano/shows/
 
-In Milan and its province there are 105 shows & theatre events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milan and its province there are 108 shows & theatre events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Tennis in Milan: 5 events
 https://anyplans.in/en/milano/tennis/
@@ -15189,10 +15241,10 @@ https://anyplans.in/en/milano/cinema/
 
 In Milan and its province there are 9 screenings in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Yoga & pilates in Milan: 36 events
+## Yoga & pilates in Milan: 37 events
 https://anyplans.in/en/milano/yoga/
 
-In Milan and its province there are 36 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milan and its province there are 37 yoga & pilates events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Gardening & volunteering in Milan: 3 events
 https://anyplans.in/en/milano/volunteering/
@@ -15204,35 +15256,35 @@ https://anyplans.in/en/milano/running/
 
 In Milan and its province there are 21 group runs and races in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Festivals & sagre near Milan: 85 events
+## Festivals & sagre near Milan: 90 events
 https://anyplans.in/en/milano/festivals/
 
-In Milan and its province there are 85 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milan and its province there are 90 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Board games in Milan: 25 events
+## Board games in Milan: 26 events
 https://anyplans.in/en/milano/board-games/
 
-In Milan and its province there are 25 board game nights in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milan and its province there are 26 board game nights in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Volleyball in Milan: 8 events
 https://anyplans.in/en/milano/volleyball/
 
 In Milan and its province there are 8 volleyball events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Concerts & live music in Milan: 175 events
+## Concerts & live music in Milan: 176 events
 https://anyplans.in/en/milano/concerts/
 
-In Milan and its province there are 175 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milan and its province there are 176 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Gym in Milan: 5 events
 https://anyplans.in/en/milano/gym/
 
 In Milan and its province there are 5 gym events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Hiking in Milan: 20 events
+## Hiking in Milan: 22 events
 https://anyplans.in/en/milano/hiking/
 
-In Milan and its province there are 20 hiking events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milan and its province there are 22 hiking events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Nights out in Milan: 25 events
 https://anyplans.in/en/milano/nights-out/
@@ -15249,10 +15301,10 @@ https://anyplans.in/en/milano/road-cycling/
 
 In Milan and its province there are 41 road cycling events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Fairs in Milan: 1 event
+## Fairs in Milan: 2 events
 https://anyplans.in/en/milano/fairs/
 
-In Milan and its province there are 1 fairs events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milan and its province there are 2 fairs events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Live sport in Milan: 4 events
 https://anyplans.in/en/milano/live-sport/
@@ -15264,10 +15316,10 @@ https://anyplans.in/en/milano/markets/
 
 In Milan and its province there are 5 markets events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Dancing in Milan: 8 events
+## Dancing in Milan: 5 events
 https://anyplans.in/en/milano/dancing/
 
-In Milan and its province there are 8 dance nights and classes in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Milan and its province there are 5 dance nights and classes in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Pottery in Milan: 4 events
 https://anyplans.in/en/milano/pottery/
@@ -15323,6 +15375,11 @@ In Cerello-battuello there is 1 event in the coming months. On anyplans you find
 https://anyplans.in/en/milano/locate-di-triulzi/
 
 Nothing is scheduled in Locate di Triulzi right now: below, the past festivals, which often come back every year. On anyplans you find the festivals and events of Locate di Triulzi with dates, times and place. You sign up and go with others.
+
+## Festivals and events in Lainate, Bergamo: 1…
+https://anyplans.in/en/milano/lainate/
+
+In Lainate there is 1 event in the coming months. On anyplans you find the festivals and events of Lainate with dates, times and place. You sign up and go with others.
 
 ## Festivals and events in Affori, Bergamo: 1…
 https://anyplans.in/en/milano/affori/
@@ -15429,6 +15486,11 @@ https://anyplans.in/en/milano/arco-della-pace/
 
 In Arco della pace there are 3 events in the coming months. On anyplans you find the festivals and events of Arco della pace with dates, times and place. You sign up and go with others.
 
+## Festivals and events in San Donato Milanese,…
+https://anyplans.in/en/milano/san-donato-milanese/
+
+In San Donato Milanese there are 2 events in the coming months. On anyplans you find the festivals and events of San Donato Milanese with dates, times and place. You sign up and go with others.
+
 ## Festivals and events in Navigli, Bergamo: 4…
 https://anyplans.in/en/milano/navigli/
 
@@ -15492,7 +15554,7 @@ Concert Tracker in Milan: 23 upcoming events — concerts & live music, talks & 
 ## MUP - Milano Urban Padel: what's on
 https://anyplans.in/en/milano/venues/mup-milano-urban-padel/
 
-MUP - Milano Urban Padel: 7 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
+MUP - Milano Urban Padel: 6 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
 
 ## Beat Curator: events and nights out in Milan
 https://anyplans.in/en/milano/venues/beat-curator/
@@ -15584,15 +15646,10 @@ https://anyplans.in/en/milano/venues/vamos-padel-cimiano/
 
 Vamos Padel Cimiano in Milan: 3 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
 
-## Gattopardo Milano: events and nights out
-https://anyplans.in/en/milano/venues/gattopardo-milano/
-
-Gattopardo Milano: 9 upcoming events — dancing and concerts & live music. Date, time, price and how to join, one page each. You go with other people.
-
 ## Alveare Culturale Studio ETS: events and nights out in…
 https://anyplans.in/en/milano/venues/alveare-culturale-studio-ets/
 
-Alveare Culturale Studio ETS in Milan: 6 upcoming events — concerts & live music, shows & theatre, exhibitions and yoga & pilates. Date, time, price and how to join, one page each. You go with other people.
+Alveare Culturale Studio ETS in Milan: 7 upcoming events — concerts & live music, painting & art, shows & theatre and exhibitions. Date, time, price and how to join, one page each. You go with other people.
 
 ## Teatro Franco Parenti: what's on in Milan
 https://anyplans.in/en/milano/venues/teatro-franco-parenti/
@@ -15637,7 +15694,7 @@ HANGAR PADEL SEGRATE in Milan: 2 upcoming events — padel. Date, time, price an
 ## Padel Lorenteggio: what's on in Milan
 https://anyplans.in/en/milano/venues/padel-lorenteggio/
 
-Padel Lorenteggio in Milan: 4 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
+Padel Lorenteggio in Milan: 3 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
 
 ## SPH - Milano Barona: what's on
 https://anyplans.in/en/milano/venues/sph-milano-barona/
@@ -15678,6 +15735,11 @@ Easy Village in Milan: 4 upcoming events — padel. Date, time, price and how to
 https://anyplans.in/en/milano/venues/hrc-milan-live/
 
 HRC MILAN LIVE: nothing on right now. Below are the last 9 events held here; new dates show up on this page as soon as they are announced.
+
+## Gattopardo Milano: events and nights out
+https://anyplans.in/en/milano/venues/gattopardo-milano/
+
+Gattopardo Milano: 6 upcoming events — dancing and concerts & live music. Date, time, price and how to join, one page each. You go with other people.
 
 ## Gattopardo: events and nights out in Milan
 https://anyplans.in/en/milano/venues/gattopardo/
@@ -15807,7 +15869,7 @@ Enjoy your time: smile! in Vigentino: 4 upcoming events — dinners & aperitivo,
 ## Padel Club Ripamonti Climatizzato: what's on in Milan
 https://anyplans.in/en/milano/venues/padel-club-ripamonti-climatizzato/
 
-Padel Club Ripamonti Climatizzato in Milan: 4 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
+Padel Club Ripamonti Climatizzato in Milan: 3 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
 
 ## Centro Sportivo Falcone E Borsellino - Cormano: what's…
 https://anyplans.in/en/milano/venues/centro-sportivo-falcone-e-borsellino-cormano/
@@ -15964,6 +16026,11 @@ https://anyplans.in/en/milano/venues/randagi-in-the-nights/
 
 Randagi in the nights ✨ in Milan: 5 upcoming events — cinema, dinners & aperitivo, talks & culture and nights out. Date, time, price and how to join, one page each. You go with other people.
 
+## BASE Milano: what's on
+https://anyplans.in/en/milano/venues/base-milano/
+
+BASE Milano: 5 upcoming events — talks & culture and town festivals & fairs. Date, time, price and how to join, one page each. You go with other people.
+
 ## Teatro Gerolamo Milano: events and nights out
 https://anyplans.in/en/milano/venues/teatro-gerolamo-milano/
 
@@ -16054,6 +16121,11 @@ https://anyplans.in/en/milano/venues/libreria-esoterica-ecumenica-1968/
 
 Libreria Esoterica Ecumenica 1968 in Milan: 3 upcoming events — yoga & pilates and talks & culture. Date, time, price and how to join, one page each. You go with other people.
 
+## Lom Dopolavoro: what's on in Milan
+https://anyplans.in/en/milano/venues/lom-dopolavoro/
+
+Lom Dopolavoro in Milan: 2 upcoming events — yoga & pilates and pottery. Date, time, price and how to join, one page each. You go with other people.
+
 ## FONDAZIONE AEM_Milano: what's on
 https://anyplans.in/en/milano/venues/fondazione-aem-milano/
 
@@ -16082,12 +16154,12 @@ Passeggiate guidate in Milan: 3 upcoming events — guided tours. Date, time, pr
 ## Mudec: what's on in Milan
 https://anyplans.in/en/milano/venues/mudec/
 
-Mudec in Milan: 3 upcoming events — talks & culture. Date, time, price and how to join, one page each. You go with other people.
+Mudec in Milan: 4 upcoming events — talks & culture and guided tours. Date, time, price and how to join, one page each. You go with other people.
 
 ## Meatball Family: events and nights out in Milan
 https://anyplans.in/en/milano/venues/meatball-family/
 
-Meatball Family in Milan: 3 upcoming events — dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
+Meatball Family in Milan: 4 upcoming events — dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
 
 ## Centro Milano Donna - Municipio 1: what's on
 https://anyplans.in/en/milano/venues/centro-milano-donna-municipio-1/
@@ -16103,11 +16175,6 @@ The Hive - Stella33 in Milan: 4 upcoming events — talks & culture. Date, time,
 https://anyplans.in/en/milano/venues/indipendente-concerti/
 
 Indipendente Concerti in Milan: 4 upcoming events — concerts & live music. Date, time, price and how to join, one page each. You go with other people.
-
-## BASE Milano: what's on
-https://anyplans.in/en/milano/venues/base-milano/
-
-BASE Milano: 4 upcoming events — talks & culture and town festivals & fairs. Date, time, price and how to join, one page each. You go with other people.
 
 ## Kick Off San Donato: what's on in Milan
 https://anyplans.in/en/milano/venues/kick-off-san-donato/
@@ -16203,11 +16270,6 @@ Accademia del Comico in Milan: 2 upcoming events — shows & theatre. Date, time
 https://anyplans.in/en/milano/venues/forever-anta-young/
 
 Forever ANTA-YOUNG in Centro: 2 upcoming events — dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
-
-## Lom Dopolavoro: what's on in Milan
-https://anyplans.in/en/milano/venues/lom-dopolavoro/
-
-Lom Dopolavoro in Milan: 1 upcoming event — pottery. Date, time, price and how to join, one page each. You go with other people.
 
 ## Lato B Milano: what's on
 https://anyplans.in/en/milano/venues/lato-b-milano/
@@ -16547,7 +16609,7 @@ Talks & culture in Milano Luiss Hub for makers and students: it already took pla
 ## Partita guidata con 🇦🇷 Valentina Mago – VAMOS PADEL PERO
 https://anyplans.in/en/milano/partita-guidata-con-valentina-mago/
 
-Padel in VAMOS PADEL PERO, Via Papa Giovanni XXIII, 10, 20016 Pero MI, Italia Pero (MI), 20016 Pero, Tuesday 29 September at 10:30 (4 dates, until 2 October). €25 (Iscrizione e pagamento su Playtomic).
+Padel in VAMOS PADEL PERO, Via Papa Giovanni XXIII, 10, 20016 Pero MI, Italia Pero (MI), 20016 Pero, Wednesday 30 September at 10:30 (3 dates, until 2 October). €25 (Iscrizione e pagamento su Playtomic).
 
 ## Cena da Birreria Danè: 5 posti liberi
 https://anyplans.in/en/milano/cena-da-birreria-dane-5-posti-liberi/
@@ -16562,7 +16624,7 @@ Dinners & aperitivo in Milano navigli: it already took place, the last date was 
 ## LEZIONE – HANGAR PADEL SEGRATE
 https://anyplans.in/en/milano/lezione/
 
-Padel in HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, Tuesday 29 September at 10:30 (30 dates, until 16 October). €45 (Iscrizione e pagamento su Playtomic).
+Padel in HANGAR PADEL SEGRATE, VIA ENRICO MATTEI SNC, 20054 Segrate, Tuesday 29 September at 11:30 (29 dates, until 16 October). €45 (Iscrizione e pagamento su Playtomic).
 
 ## GIOIA PADEL LEAGUE A
 https://anyplans.in/en/milano/gioia-padel-league-a/
@@ -16579,43 +16641,38 @@ https://anyplans.in/en/milano/domina-il-campo/
 
 Padel in MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano: it already took place, the last date was Tuesday, 15 September 2026.
 
-## Padel: mancano 2… – Padel Club Ripamonti Climatizzato, 29 September
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva/
-
-Padel in Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, Tuesday 29 September at 10:30. €13 (Si chiede il posto e si paga su Playtomic).
-
 ## Padel: mancano 2 giocatori… – PADEL ZENTER SEGRATE MILANO, 29 September
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-29/
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva/
 
 Padel in PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, Tuesday 29 September at 15:00. €13.25 (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: mancano 2 giocatori… – Centro Scarioni Milano, 29 September
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-2/
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-29/
 
 Padel in Centro Scarioni Milano, Via Tucidide 10, 20134 Milano, Tuesday 29 September at 18:30. €15 (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: mancano 2 giocatori (competitiva) – NRG Padel Club
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-3/
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-2/
 
 Padel in NRG Padel Club, Viale del Lavoro, 46-48, 20003 Casorezzo, Tuesday 29 September at 18:30 (2 dates, until 30 September). €15 (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: mancano 2 giocatori… – Centro Sportivo De Nicola, 29 September
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-4/
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-3/
 
 Padel in Centro Sportivo De Nicola, Via Enrico De Nicola, 3, 20142 Milano, Tuesday 29 September at 18:30. €15 (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: mancano 2 giocatori… – Padel Arena Quintosole, 29 September
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-5/
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-4/
 
 Padel in Padel Arena Quintosole, Via Quintosole, 42/23, 20141 Milano, Tuesday 29 September at 20:00. €13 (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: mancano 2 giocatori (competitiva) – SH PADEL GRAF
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-6/
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-5/
 
 Padel in SH PADEL GRAF, Via Arturo Graf, 4, 20157 Milano, Tuesday 29 September at 20:00. €11 (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: mancano 2 giocatori… – Centro Sportivo Tuberose, 29 September
-https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-7/
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-6/
 
 Padel in Centro Sportivo Tuberose, Via Giò Ponti 1, 20147 Milano, Tuesday 29 September at 21:00 (2 dates, until 30 September). €15 (Si chiede il posto e si paga su Playtomic).
 
@@ -16638,6 +16695,11 @@ Padel in Murat4All, Via Gioacchino Murat 29, 20159 Milano, Wednesday 30 Septembe
 https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-10-01/
 
 Padel in Mamapadel Melzo, via Martiri della Libertà 46, 20066 Melzo, Thursday 1 October at 18:30. €13.50 (Si chiede il posto e si paga su Playtomic).
+
+## Padel: mancano 2… – Padel Club Ripamonti Climatizzato, 29 September
+https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-29-7/
+
+Padel in Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano: it already took place, the last date was Tuesday, 29 September 2026.
 
 ## Padel: mancano 2 giocatori (competitiva) – PadeLand Milano
 https://anyplans.in/en/milano/padel-mancano-2-giocatori-competitiva-2026-09-28/
@@ -16827,12 +16889,12 @@ Padel in Quanta Club, Via Assietta 19, 20161 Milano: it already took place, the 
 ## lezione personalizzata – Area Padel Club
 https://anyplans.in/en/milano/lezione-personalizzata/
 
-Padel in Area Padel Club, via della Resistenza 31/1, 20068 Peschiera Borromeo, Tuesday 29 September at 10:00 (8 dates, until 26 October). €50 (Iscrizione e pagamento su Playtomic).
+Padel in Area Padel Club, via della Resistenza 31/1, 20068 Peschiera Borromeo, Wednesday 30 September at 10:00 (7 dates, until 26 October). €50 (Iscrizione e pagamento su Playtomic).
 
 ## Lezione Individuale con Michael Cosenza🎓 – Milan
 https://anyplans.in/en/milano/lezione-individuale-con-michael-cosenza/
 
-Padel in 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, Tuesday 29 September at 10:00 (11 dates, until 5 October). €32 (Iscrizione e pagamento su Playtomic).
+Padel in 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese, Wednesday 30 September at 09:30 (9 dates, until 5 October). €32 (Iscrizione e pagamento su Playtomic).
 
 ## 🔥🦁 BEST CORBETTA MORNING LEAGUE 🦁🔥 – Milan
 https://anyplans.in/en/milano/best-corbetta-morning-league/
@@ -17319,10 +17381,10 @@ https://anyplans.in/en/milano/partita-guidata-mbpower-con-m-barnaba/
 
 Padel in Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, Wednesday 30 September at 15:00 (5 dates, until 3 October). €40 (Iscrizione e pagamento su Playtomic).
 
-## The secrets of pasta and tiramisu in… – V. Giuseppe Dezza, 28 September
+## The secrets of pasta and tiramisu in… – V. Giuseppe Dezza, 29 September
 https://anyplans.in/en/milano/the-secrets-of-pasta-and-tiramisu-in-my-family-house/
 
-Dinners & aperitivo in V. Giuseppe Dezza, 47, Milano: it already took place, the last date was Monday, 28 September 2026.
+Dinners & aperitivo in V. Giuseppe Dezza, 47, Milano, Tuesday 29 September at 12:00. Free (Biglietti su Eventbrite).
 
 ## The secrets of pasta and tiramisu in… – V. Giuseppe Dezza, 15 September
 https://anyplans.in/en/milano/the-secrets-of-pasta-and-tiramisu-in-my-family-house-2026-09-15/
@@ -17367,12 +17429,12 @@ Padel in Milago Padel, Via Indipendenza, 3, 20090 Buccinasco MI, Italia, 20090 B
 ## *Lezione con M.BARNABA* – Padel San Siro Gescal Boys
 https://anyplans.in/en/milano/lezione-con-m-barnaba/
 
-Padel in Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, Tuesday 29 September at 09:00 (32 dates, until 4 October). €35 (Iscrizione e pagamento su Playtomic).
+Padel in Padel San Siro Gescal Boys, Via Alessio Olivieri 9, 20152 Milano, Tuesday 29 September at 12:00 (29 dates, until 4 October). €30 (Iscrizione e pagamento su Playtomic).
 
 ## Lezione con Claudio R. – Corbetta Padel e Fitness
 https://anyplans.in/en/milano/lezione-con-claudio-r/
 
-Padel in Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, Tuesday 29 September at 09:00 (50 dates, until 28 October). €50 (Iscrizione e pagamento su Playtomic).
+Padel in Corbetta Padel e Fitness, Via Zara 15, 20011 Corbetta, Tuesday 29 September at 12:00 (48 dates, until 28 October). €50 (Iscrizione e pagamento su Playtomic).
 
 ## 🎾🎾🚹🚺🍀GIRO  MIX ENTRY MARTEDI DI COACH AURE – Milan
 https://anyplans.in/en/milano/giro-mix-entry-martedi-di-coach-aure/
@@ -17649,15 +17711,15 @@ https://anyplans.in/en/milano/open-day-flexx-club-milano-crea-relazioni-d-affari
 
 Talks & culture in Flexx Club, Milano: it already took place, the last date was Tuesday, 15 September 2026.
 
-## Padel: mancano 3 giocatori (amichevole) – Padel Lorenteggio
+## Padel: mancano 3… – Padel Club Ripamonti Climatizzato, 29 September
 https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole/
 
-Padel in Padel Lorenteggio, Via Francesco Gonin 16 -  Tel. 02.48300873 - Mob. 345 4689789, 20147 Milano, Tuesday 29 September at 09:00. €10 (Si chiede il posto e si paga su Playtomic).
+Padel in Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, Tuesday 29 September at 16:30 (3 dates, until 30 September). €13.34 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3… – Padel Club Ripamonti Climatizzato, 29 September
+## Padel: mancano 3 giocatori (amichevole) – Padel Lorenteggio
 https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole-2026-09-29/
 
-Padel in Padel Club Ripamonti Climatizzato, VIA CASCINA BELCASULE 15, 20141 Milano, Tuesday 29 September at 16:30 (3 dates, until 30 September). €13.34 (Si chiede il posto e si paga su Playtomic).
+Padel in Padel Lorenteggio, Via Francesco Gonin 16 -  Tel. 02.48300873 - Mob. 345 4689789, 20147 Milano: it already took place, the last date was Tuesday, 29 September 2026.
 
 ## Padel: mancano 3 giocatori… – Padel Segrate CLIMATIZZATO, 29 September
 https://anyplans.in/en/milano/padel-mancano-3-giocatori-amichevole-2026-09-29-2/
@@ -17827,7 +17889,7 @@ Exhibitions in MEET Digital Culture Center, Milano: it already took place, the l
 ## Lezione con 🇦🇷 Valentina Mago – VAMOS PADEL PERO
 https://anyplans.in/en/milano/lezione-con-valentina-mago/
 
-Padel in VAMOS PADEL PERO, Via Papa Giovanni XXIII, 10, 20016 Pero MI, Italia Pero (MI), 20016 Pero, Tuesday 29 September at 09:30 (12 dates, until 2 October). €27.50 (Iscrizione e pagamento su Playtomic).
+Padel in VAMOS PADEL PERO, Via Papa Giovanni XXIII, 10, 20016 Pero MI, Italia Pero (MI), 20016 Pero, Tuesday 29 September at 12:00 (11 dates, until 2 October). €27.50 (Iscrizione e pagamento su Playtomic).
 
 ## Padel: manca 1… – Padel Club Ripamonti Climatizzato, 29 September
 https://anyplans.in/en/milano/padel-manca-1-giocatore-competitiva/
@@ -18122,12 +18184,12 @@ Dinners & aperitivo in Milano, Dateo: it already took place, the last date was T
 ## Lezione individuale – Padel Segrate CLIMATIZZATO
 https://anyplans.in/en/milano/lezione-individuale/
 
-Padel in Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, Tuesday 29 September at 09:00 (33 dates, until 2 October). €60 (Iscrizione e pagamento su Playtomic).
+Padel in Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, Tuesday 29 September at 12:00 (30 dates, until 2 October). €60 (Iscrizione e pagamento su Playtomic).
 
 ## Livellamento – Padel Segrate CLIMATIZZATO
 https://anyplans.in/en/milano/livellamento/
 
-Padel in Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, Tuesday 29 September at 09:00 (33 dates, until 2 October). €25 (Iscrizione e pagamento su Playtomic).
+Padel in Padel Segrate CLIMATIZZATO, Via Rugacesio 5, 20054 Segrate, Tuesday 29 September at 12:00 (30 dates, until 2 October). €25 (Iscrizione e pagamento su Playtomic).
 
 ## livellamento – CSF Padel & Sports Club
 https://anyplans.in/en/milano/livellamento-2026-09-29/
@@ -20632,7 +20694,7 @@ Talks & culture in Milan,Italy, Milano: it already took place, the last date was
 ## Tecniche di Illustrazione con Martina Valle – Milan
 https://anyplans.in/en/milano/tecniche-di-illustrazione-con-martina-valle/
 
-Painting & art in Alveare Culturale Studio ETS, Milano: it already took place, the last date was Monday, 28 September 2026.
+Painting & art in Alveare Culturale Studio ETS, Milano, Monday 5 October at 20:30. Free (Biglietti su Eventbrite).
 
 ## Satsang in Milano – ARCI Bellezza
 https://anyplans.in/en/milano/satsang-in-milano/
@@ -21054,8 +21116,13 @@ https://anyplans.in/en/milano/ravensburger-game-night-da-old-wild-west-milano-co
 
 Dinners & aperitivo in Old Wild West - Milano Corso Sempione: it already took place, the last date was Wednesday, 23 September 2026.
 
-## Mindstone AI meetup Milan: ButterflAI Effect – Talent Garden
+## Mindstone AI meetup Milan: ButterflAI Effect – Talent Garden, 22 October
 https://anyplans.in/en/milano/mindstone-ai-meetup-milan-butterflai-effect/
+
+Talks & culture in Talent Garden, Milano, Thursday 22 October at 18:30. Free (Biglietti su Eventbrite).
+
+## Mindstone AI meetup Milan: ButterflAI Effect – Talent Garden, 23 September
+https://anyplans.in/en/milano/mindstone-ai-meetup-milan-butterflai-effect-2026-09-23/
 
 Talks & culture in Talent Garden, Milano: it already took place, the last date was Wednesday, 23 September 2026.
 
@@ -21232,12 +21299,12 @@ Exhibitions in Via Romagnosi, 8, Milano: it already took place, the last date wa
 ## Vintage Shopping Tour with Italian Breakfast
 https://anyplans.in/en/milano/vintage-shopping-tour-with-italian-breakfast/
 
-Shows & theatre in Vintage Shopping Tour, Milan: it already took place, the last date was Monday, 28 September 2026.
+Shows & theatre in Vintage Shopping Tour, Milan, Tuesday 29 September at 11:00. Free (Biglietti su Eventbrite).
 
 ## Workshop di Ceramica a Mano|Handbuilding Pottery Workshop – Milan
 https://anyplans.in/en/milano/workshop-di-ceramica-a-mano-handbuilding-pottery-workshop/
 
-Pottery in Via Felice Casati, 26, Milano: it already took place, the last date was Monday, 28 September 2026.
+Pottery in Via Felice Casati, 26, Milano: it already took place, the last date was Tuesday, 29 September 2026.
 
 ## Recarlo - LINK-E – Milan
 https://anyplans.in/en/milano/recarlo-link-e/
@@ -21247,17 +21314,17 @@ Shows & theatre in Via S. Pietro All'Orto, 26, Milano: it already took place, th
 ## Milan: Vintage Shopping Tour
 https://anyplans.in/en/milano/milan-vintage-shopping-tour/
 
-Shows & theatre in Via Edmondo de Amicis, 39, Milano, MI, Italia, Milano: it already took place, the last date was Monday, 28 September 2026.
+Shows & theatre in Via Edmondo de Amicis, 39, Milano, MI, Italia, Milano, Tuesday 29 September at 11:00. Free (Biglietti su Eventbrite).
 
 ## Milan: Vintage Shopping Guide – Milano
 https://anyplans.in/en/milano/milan-vintage-shopping-guide/
 
-Shows & theatre in Milano, Milano: it already took place, the last date was Monday, 28 September 2026.
+Shows & theatre in Milano, Milano, Tuesday 29 September at 11:00. Free (Biglietti su Eventbrite).
 
 ## Workshop di Tornio Ceramico | Wheel Throwing Workshop – Milan
 https://anyplans.in/en/milano/workshop-di-tornio-ceramico-wheel-throwing-workshop/
 
-Pottery in Via Felice Casati, 26, Milano: it already took place, the last date was Monday, 28 September 2026.
+Pottery in Via Felice Casati, 26, Milano: it already took place, the last date was Tuesday, 29 September 2026.
 
 ## Milan Model Casting – Navigli
 https://anyplans.in/en/milano/milan-model-casting/
@@ -21282,7 +21349,7 @@ Talks & culture in Momenteeria, Milano: it already took place, the last date was
 ## Paint & Sip Workshop – Milano
 https://anyplans.in/en/milano/paint-sip-workshop/
 
-Dinners & aperitivo in Milano, Milano: it already took place, the last date was Monday, 28 September 2026.
+Dinners & aperitivo in Milano, Milano, Tuesday 29 September at 17:00. Free (Biglietti su Eventbrite).
 
 ## lezione doppia – Vamos Padel Cimiano
 https://anyplans.in/en/milano/lezione-doppia/
@@ -21709,15 +21776,15 @@ https://anyplans.in/en/milano/run-with-qura-milano/
 
 Running in Arco della Pace, Milano: it already took place, the last date was Friday, 25 September 2026.
 
-## ​🔥​AGONISTICA TOP LEVEL – PADEL ZENTER SEGRATE MILANO
+## 🔥​AGONISTICA TOP LEVEL 🔥​ – PADEL ZENTER SEGRATE MILANO
 https://anyplans.in/en/milano/agonistica-top-level/
 
-Padel in PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, Tuesday 29 September at 09:30 (6 dates, until 3 November). €35 (Iscrizione e pagamento su Playtomic).
-
-## 🔥​AGONISTICA TOP LEVEL 🔥​ – PADEL ZENTER SEGRATE MILANO
-https://anyplans.in/en/milano/agonistica-top-level-2026-10-02/
-
 Padel in PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, Friday 2 October at 09:00 (6 dates, until 6 November). €35 (Iscrizione e pagamento su Playtomic).
+
+## ​🔥​AGONISTICA TOP LEVEL – PADEL ZENTER SEGRATE MILANO
+https://anyplans.in/en/milano/agonistica-top-level-2026-10-06/
+
+Padel in PADEL ZENTER SEGRATE MILANO, via Marche 2, 20054 Segrate, Tuesday 6 October at 09:30 (5 dates, until 3 November). €35 (Iscrizione e pagamento su Playtomic).
 
 ## Giornate Europee del Patrimonio all’Università Statale…
 https://anyplans.in/en/milano/giornate-europee-del-patrimonio-all-universita-statale-di-mi/
@@ -21727,7 +21794,7 @@ Talks & culture in Università degli Studi di Milano Milano, Milano: it already 
 ## Workshop di Pittura su Ceramica|Paint Your Own Pottery – Milan
 https://anyplans.in/en/milano/workshop-di-pittura-su-ceramica-paint-your-own-pottery/
 
-Painting & art in Via Felice Casati, 26, Milano: it already took place, the last date was Monday, 28 September 2026.
+Painting & art in Via Felice Casati, 26, Milano, Tuesday 29 September at 11:00. Free (Biglietti su Eventbrite).
 
 ## PARTITA - ALLENAMENTO AGONISMO – MUP - Milano Urban Padel
 https://anyplans.in/en/milano/partita-allenamento-agonismo/
@@ -22557,7 +22624,7 @@ Dinners & aperitivo in WAO Isola, Milano: it already took place, the last date w
 ## Milan Highlights Audio Tour: Historic Treasures and…
 https://anyplans.in/en/milano/milan-highlights-audio-tour-historic-treasures-and-artistic-/
 
-Hiking in Milan Cathedral, Milano: it already took place, the last date was Monday, 28 September 2026.
+Hiking in Milan Cathedral, Milano, Tuesday 29 September at 12:00. Free (Biglietti su Eventbrite).
 
 ## MACRON CUP - FEMMINILE - LADIES ENTRY - Liv 0.5-1.5 - RODEO – Milan
 https://anyplans.in/en/milano/macron-cup-femminile-ladies-entry-liv-0-5-1-5-rodeo/
@@ -22757,7 +22824,7 @@ Dinners & aperitivo in WAO Isola, Milano: it already took place, the last date w
 ## Visita Guidata + workshop gratuiti - "Deutsche Bank Artist of the Year" – Milan
 https://anyplans.in/en/milano/visita-guidata-workshop-gratuiti-deutsche-bank-artist-of-the/
 
-Guided tours in Mudec, Milano: it already took place, the last date was Saturday, 26 September 2026.
+Guided tours in Mudec, Milano, Saturday 10 October at 16:00. Free (Biglietti su Eventbrite).
 
 ## Long Run Libre Ritmo 031 x 2LR Club – Magnolia
 https://anyplans.in/en/milano/long-run-libre-ritmo-031-x-2lr-club/
@@ -23222,7 +23289,7 @@ Concerts & live music in Arci Bellezza, Milano: it already took place, the last 
 ## Dive into Milan’s secrets with an unforgettable outdoor…
 https://anyplans.in/en/milano/dive-into-milan-s-secrets-with-an-unforgettable-outdoor-esca/
 
-Hiking in Sforzesco Castle, Milano: it already took place, the last date was Monday, 28 September 2026.
+Hiking in Sforzesco Castle, Milano, Tuesday 29 September at 10:00. Free (Biglietti su Eventbrite).
 
 ## beMIV Festival - Giornata del benessere animale e medicina naturale – Arese
 https://anyplans.in/en/milano/bemiv-festival-giornata-del-benessere-animale-e-medicina-nat/
@@ -23279,10 +23346,10 @@ https://anyplans.in/en/milano/meatball-family-lab-polpette-classiche/
 
 Dinners & aperitivo in Meatball Family, Milano, Sunday 4 October at 10:45. €22.55 (Biglietti su AllEvents).
 
-## Meatball Family LAB - POLPETTE CLASSICHE, 27 September
-https://anyplans.in/en/milano/meatball-family-lab-polpette-classiche-2026-09-27/
+## Meatball Family LAB - POLPETTE CLASSICHE, 8 November
+https://anyplans.in/en/milano/meatball-family-lab-polpette-classiche-2026-11-08/
 
-Dinners & aperitivo in Meatball Family, Milano: it already took place, the last date was Sunday, 27 September 2026.
+Dinners & aperitivo in Meatball Family, Milano, Sunday 8 November at 10:45. Free (Biglietti su Eventbrite).
 
 ## Sunday Outdoor Yoga in Milan with Ozzy – Parco Sempione
 https://anyplans.in/en/milano/sunday-outdoor-yoga-in-milan-with-ozzy/
@@ -23647,12 +23714,12 @@ Talks & culture in Twiga Milano, Milano: it already took place, the last date wa
 ## Migliora il tuo padel con Tommy ! – GOLARSA ACADEMY
 https://anyplans.in/en/milano/migliora-il-tuo-padel-con-tommy/
 
-Padel in GOLARSA ACADEMY, Via dei Ciclamini 18, 20147 Milano, Tuesday 29 September at 09:00 (4 dates, until 2 October). €20 (Iscrizione e pagamento su Playtomic).
+Padel in GOLARSA ACADEMY, Via dei Ciclamini 18, 20147 Milano, Wednesday 30 September at 09:00 (3 dates, until 2 October). €20 (Iscrizione e pagamento su Playtomic).
 
 ## Imparo a giocare – Myland Padel
 https://anyplans.in/en/milano/imparo-a-giocare/
 
-Padel in Myland Padel, via Riccardo Lombardi 19/12, 20153 Milano, Tuesday 29 September at 10:00 (44 dates, until 30 November). €15 (Iscrizione e pagamento su Playtomic).
+Padel in Myland Padel, via Riccardo Lombardi 19/12, 20153 Milano, Wednesday 30 September at 10:00 (43 dates, until 30 November). €15 (Iscrizione e pagamento su Playtomic).
 
 ## Ritrovo Urbano 28/09 - 21 House of Stories Città Studi
 https://anyplans.in/en/milano/ritrovo-urbano-28-09-21-house-of-stories-citta-studi/
@@ -23662,7 +23729,7 @@ Town festival in 21 House of Stories Città Studi, Milano: it already took place
 ## Renzo Bongiovanni Radice. Un lungo e meditato atto d’amore – Milan
 https://anyplans.in/en/milano/renzo-bongiovanni-radice-un-lungo-e-meditato-atto-d-amore/
 
-Exhibitions in Fondazione Adolfo Pini, Milano: it already took place, the last date was Monday, 28 September 2026.
+Exhibitions in Fondazione Adolfo Pini, Milano: it already took place, the last date was Tuesday, 29 September 2026.
 
 ## LEZIONE + PARTITA GUIDATA – HANGAR PADEL SEGRATE
 https://anyplans.in/en/milano/lezione-partita-guidata/
@@ -23752,7 +23819,7 @@ Exhibitions in Open, Milano: it already took place, the last date was Monday, 28
 ## Pottery Wheel Experience – Milan
 https://anyplans.in/en/milano/pottery-wheel-experience-crea-il-tuo-primo-oggetto-al-tornio/
 
-Board games in Via Giuseppe Biancardi, 6, Milano: it already took place, the last date was Monday, 28 September 2026.
+Board games in Via Giuseppe Biancardi, 6, Milano, Tuesday 29 September at 19:00. Free (Biglietti su Eventbrite).
 
 ## Copia di Aperitivi di Corso - Scienze Linguistiche – Milan
 https://anyplans.in/en/milano/copia-di-aperitivi-di-corso-scienze-linguistiche/
@@ -23822,7 +23889,7 @@ Guided tours in Piazza Duca d'Aosta, 20124 Milano MI, Italia, Milano, Tuesday 29
 ## ALLENAMENTO IN 4 + PARTITA CON AGUS – Milan
 https://anyplans.in/en/milano/allenamento-in-4-partita-con-agus/
 
-Padel in MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano, Tuesday 29 September at 10:30. €30 (Iscrizione e pagamento su Playtomic).
+Padel in MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano: it already took place, the last date was Tuesday, 29 September 2026.
 
 ## Ritrovo Urbano 29/09- Lato B – Lato B Milano
 https://anyplans.in/en/milano/ritrovo-urbano-29-09-lato-b/
@@ -23833,6 +23900,16 @@ Town festival in Lato B Milano, Milano, Tuesday 29 September at 09:00. Free (Big
 https://anyplans.in/en/milano/advanced-tv-conference-2026/
 
 Talks & culture in Teatro Lirico Giorgio Gaber, Milano, Tuesday 29 September at 09:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## Veralab Days presso Store Veralab Arese | dal 21 al 30 Settembre – Lainate
+https://anyplans.in/en/milano/veralab-days-presso-store-veralab-arese-dal-21-al-30-settemb/
+
+Talks & culture in Veralab Store Arese, Lainate: it already took place, the last date was Tuesday, 29 September 2026.
+
+## Veralab Days Store Veralab Milano Guido d'Arezzo | dal…
+https://anyplans.in/en/milano/veralab-days-store-veralab-milano-guido-d-arezzo-dal-21-al-3/
+
+Talks & culture in Veralab Store Milano, Milano: it already took place, the last date was Tuesday, 29 September 2026.
 
 ## Pranzo da Shiny Sushi Ristorante Giapponese: 5 posti…
 https://anyplans.in/en/milano/pranzo-da-shiny-sushi-ristorante-giapponese-5-posti-liberi/
@@ -24019,6 +24096,11 @@ https://anyplans.in/en/milano/agonistica-situazioni-tattiche/
 
 Padel in GOLARSA ACADEMY, Via dei Ciclamini 18, 20147 Milano, Wednesday 30 September at 12:30 (5 dates, until 28 October). €30 (Iscrizione e pagamento su Playtomic).
 
+## BMW GEN M TOUR 2026 – San Donato Milanese
+https://anyplans.in/en/milano/bmw-gen-m-tour-2026/
+
+Fairs in BMW BYmyCAR Milano San Donato Zavattini, San Donato Milanese, Wednesday 30 September at 15:00. Free (Biglietti su Eventbrite).
+
 ## Lezione+pratica: porta il tuo profilo IG e te lo sistemo io! – P.ta Genova/S. Agostino
 https://anyplans.in/en/milano/lezione-pratica-porta-il-tuo-profilo-ig-e-te-lo-sistemo-io/
 
@@ -24048,6 +24130,11 @@ Dinners & aperitivo in Zona Locanda, Milano, Wednesday 30 September at 17:00. Fr
 https://anyplans.in/en/milano/la-mente-radiosa/
 
 Yoga & pilates in SAP Italia, Milano, Wednesday 30 September at 17:30. Free (Biglietti su Eventbrite).
+
+## ARMO'NIA – Milan
+https://anyplans.in/en/milano/armo-nia/
+
+Town festival in Via dei Missaglia, 97/edificio b3, Milano, Wednesday 30 September at 18:00. Free (Biglietti su Eventbrite).
 
 ## Corso prematrimoniale laico per matrimoni e unioni civili - 5a edizione – Milan
 https://anyplans.in/en/milano/corso-prematrimoniale-laico-per-matrimoni-e-unioni-civili-5a/
@@ -24984,11 +25071,6 @@ https://anyplans.in/en/milano/gran-gala-dell-alta-fedelta-di-milano-3-4-ottobre-
 
 Painting & art in Quark Hotel Milano, Milano, Saturday 3 October at 10:00. Free (Ingresso: vedi la pagina AllEvents).
 
-## La forza del silenzio – Fondazione Culturale San Fedele
-https://anyplans.in/en/milano/la-forza-del-silenzio/
-
-Talks & culture in Fondazione Culturale San Fedele, Milano, Saturday 3 October at 10:00. Free (Biglietti su Eventbrite).
-
 ## COMBO Festival in COMBO Festival, 3 October
 https://anyplans.in/en/milano/combo-festival/
 
@@ -25013,6 +25095,11 @@ Talks & culture in Viale Monza, 4, Milano, Saturday 3 October at 10:00. Free (In
 https://anyplans.in/en/milano/breathwork-con-piante-limpias/
 
 Yoga & pilates in Libreria Esoterica Ecumenica 1968, Milano, Saturday 3 October at 10:00. Free (Biglietti su Eventbrite).
+
+## Vintage market al Mercato ISOLA Milano 3-4 Ottobre
+https://anyplans.in/en/milano/vintage-market-al-mercato-isola-milano-3-4-ottobre/
+
+Shows & theatre in Mercato Isola, Milano, Saturday 3 October at 10:30. Free (Biglietti su Eventbrite).
 
 ## Atelier di Famiglia - I murales del quartiere – Milan
 https://anyplans.in/en/milano/atelier-di-famiglia-i-murales-del-quartiere/
@@ -25128,6 +25215,11 @@ Talks & culture in mosso, Milano, Saturday 3 October at 14:00. €22.55 (Bigliet
 https://anyplans.in/en/milano/karaoke-da-locanda-alla-mano-7-posti-liberi/
 
 Karaoke in Locanda Alla Mano, Milano, Saturday 3 October at 14:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
+## MAG TO MAG 2026 TALK: Tra le righe – BASE Milano
+https://anyplans.in/en/milano/mag-to-mag-2026-talk-tra-le-righe/
+
+Talks & culture in BASE Milano, Milano, Saturday 3 October at 14:30. Free (Biglietti su Eventbrite).
 
 ## Vengo anch’io – Giardini Pubblici Indro Montanelli
 https://anyplans.in/en/milano/vengo-anch-io-si-tu-si/
@@ -25333,6 +25425,11 @@ Dinners & aperitivo in Nomad Club, Milano, Saturday 3 October at 18:00. Free (Og
 https://anyplans.in/en/milano/padel-night-club-il-torneo/
 
 Padel in Padel 8, Via Diomede angolo piazzale Lotto, 20148 Milano, Saturday 3 October at 18:00. €25 (Iscrizione e pagamento su Playtomic).
+
+## MCP AT MINIMARKET – Minimarket Milan
+https://anyplans.in/en/milano/mcp-at-minimarket/
+
+Concerts & live music in Minimarket Milan, Milano, Saturday 3 October at 18:00. Free (Biglietti su Eventbrite).
 
 ## Cena da Pizza al Trancio Milano - Pizzeria Magica: 3…
 https://anyplans.in/en/milano/cena-da-pizza-al-trancio-milano-pizzeria-magica-3-posti-libe/
@@ -25638,6 +25735,11 @@ Painting & art in Ganci Argenterie, Milano, Sunday 4 October at 10:00. Free (Ing
 https://anyplans.in/en/milano/storie-di-bicicletta-in-cascina/
 
 Talks & culture in Cascina San Gregorio Vecchio, Via Bonfadini 55, Milano, Sunday 4 October at 10:00. Free.
+
+## Via Altaguardia e Dintorni in Festa 2026 - 2°edizione – Milan
+https://anyplans.in/en/milano/via-altaguardia-e-dintorni-in-festa-2026-2-edizione/
+
+Town festival in Via Altaguardia, Milano, Sunday 4 October at 10:00. Free (Biglietti su Eventbrite).
 
 ## Relax al Wakeparadise – Peschiera Borromeo
 https://anyplans.in/en/milano/relax-al-wakeparadise/
@@ -26184,11 +26286,6 @@ https://anyplans.in/en/milano/food-lovers-milan-good-vibes-great-food-new-friend
 
 Talks & culture in Officina Del Riso (Milano, Navigli), Milano, Tuesday 6 October at 20:30. Free (Ingresso: vedi la pagina AllEvents).
 
-## STAND UP COMEDY NOLO - OPEN MIC SPAZIO VIBES – Milan
-https://anyplans.in/en/milano/stand-up-comedy-nolo-open-mic-spazio-vibes/
-
-Shows & theatre in Via Giulio e Corrado Venini, Milano, Tuesday 6 October at 20:30. Free (Biglietti su Eventbrite).
-
 ## ED O'BRIEN – Teatro Lirico Giorgio Gaber
 https://anyplans.in/en/milano/ed-o-brien/
 
@@ -26198,11 +26295,6 @@ Concerts & live music in Teatro Lirico Giorgio Gaber, Milano, Tuesday 6 October 
 https://anyplans.in/en/milano/amaro-del-ciclista-talk/
 
 Talks & culture in Barbruto, Via Giovanni Battista Piranesi 10, Milano, Tuesday 6 October at 21:00. Free.
-
-## Homecoming dance - Oh My Gattopardo – Gattopardo Milano
-https://anyplans.in/en/milano/homecoming-dance-oh-my-gattopardo/
-
-Dancing in Gattopardo Milano, Milano, Tuesday 6 October at 23:30. Free (Biglietti su Eventbrite).
 
 ## Odissea - Il viaggio di Ulisse: colazione filosofica – Milan
 https://anyplans.in/en/milano/odissea-il-viaggio-di-ulisse-colazione-filosofica/
@@ -27304,6 +27396,11 @@ https://anyplans.in/en/milano/roshelle-in-milano/
 
 Concerts & live music in Blue Note, Milano, Sunday 11 October at 20:30. Free (Ingresso: vedi la pagina AllEvents).
 
+## Ritrovo Urbano 12/10 - 21 House of Stories Città Studi
+https://anyplans.in/en/milano/ritrovo-urbano-12-10-21-house-of-stories-citta-studi/
+
+Town festival in 21 House of Stories Città Studi, Milano, Monday 12 October at 10:00. Free (Biglietti su Eventbrite).
+
 ## Il MuseoLeonardo3 apre le porte alle scuole:scopri il nuovo Piano Didattico – Milan
 https://anyplans.in/en/milano/il-museoleonardo3-apre-le-porte-alle-scuole-scopri-il-nuovo-/
 
@@ -27518,11 +27615,6 @@ Talks & culture in Talent Garden, Milano, Thursday 15 October at 19:00. Free (Gr
 https://anyplans.in/en/milano/ri-scatti-mostra-fotografica-gratuita-pizza/
 
 Guided tours in Milano, Palestro, Thursday 15 October at 19:00. €3 (Accredito su comehome; il resto si paga in loco).
-
-## EXECUTIVE NETWORKING DINNER Cena Imprenditori e Manager…
-https://anyplans.in/en/milano/executive-networking-dinner-cena-imprenditori-e-manager-a-mi/
-
-Talks & culture in Maison Milano, Milano, Thursday 15 October at 19:30. Free (Biglietti su Eventbrite).
 
 ## CENA Business Networking per Imprenditori e Manager a…
 https://anyplans.in/en/milano/cena-business-networking-per-imprenditori-e-manager-a-milano/
@@ -27794,6 +27886,11 @@ https://anyplans.in/en/milano/la-cura-del-possibile-festival-incontro-2026/
 
 Town festival in Teatro Franco Parenti, Milano, Saturday 17 October at 10:30. Free (Biglietti su Eventbrite).
 
+## V·yin·il Yoga – Lom Dopolavoro
+https://anyplans.in/en/milano/v-yin-il-yoga/
+
+Yoga & pilates in Lom Dopolavoro, Milano, Saturday 17 October at 11:00. Free (Biglietti su Eventbrite).
+
 ## BeachVolley by Ile vol. 22/Autunno Vibes – Assago
 https://anyplans.in/en/milano/beachvolley-by-ile-vol-22-autunno-vibes/
 
@@ -28009,6 +28106,11 @@ https://anyplans.in/en/milano/pittarosso-pink-parade-2026/
 
 Talks & culture in Milano, Italia, Milano, Sunday 18 October at 10:00. Free (Ingresso: vedi la pagina AllEvents).
 
+## Le ottanta domande di Atena Ferraris – Rozzano
+https://anyplans.in/en/milano/le-ottanta-domande-di-atena-ferraris/
+
+Town festival in Centro Culturale Cascina Grande Rozzano, Rozzano, Sunday 18 October at 10:00. Free (Biglietti su Eventbrite).
+
 ## Ragionevoli utopie | Festival INCONTRO 2026 – Milan
 https://anyplans.in/en/milano/ragionevoli-utopie-festival-incontro-2026/
 
@@ -28208,11 +28310,6 @@ Concerts & live music in Teatro degli Arcimboldi, Milano, Tuesday 20 October at 
 https://anyplans.in/en/milano/club-tour-2026-di-willie-peyote/
 
 Guided tours in Fabrique, Milano, Tuesday 20 October at 21:00. Free (Ingresso: vedi la pagina del Tacco di Bacco).
-
-## Polimi Party - Oh My Gattopardo – Gattopardo Milano
-https://anyplans.in/en/milano/polimi-party-oh-my-gattopardo/
-
-Dancing in Gattopardo Milano, Milano, Tuesday 20 October at 23:30. Free (Biglietti su Eventbrite).
 
 ## Conferenza CSCMP Supply Chain Edge Italy 2026 – Assago
 https://anyplans.in/en/milano/conferenza-cscmp-supply-chain-edge-italy-2026/
@@ -28473,6 +28570,11 @@ Town festival in Vitadacani, Saturday 24 October at 10:00. Free (Ingresso: vedi 
 https://anyplans.in/en/milano/se-i-tuoi-clienti-chiedono-a-chatgpt-tu-ci-sei/
 
 Golf in Golf Le Rovedine, Noverasco, Saturday 24 October at 10:00. Free (Biglietti su Eventbrite).
+
+## Bookclub Proibito: Ipnocrazia feat. Magnifica Humanitas (doppietta!) – Milan
+https://anyplans.in/en/milano/bookclub-proibito-ipnocrazia-feat-magnifica-humanitas-doppie/
+
+Town festival in Mercato del Suffragio (sala riservata), Milano, Saturday 24 October at 10:00. Free (Biglietti su Eventbrite).
 
 ## Cimitero Monumentale Gratis + Chinatown – Milano
 https://anyplans.in/en/milano/cimitero-monumentale-gratis-chinatown/
@@ -28738,11 +28840,6 @@ Guided tours in MAGAZZINI GENERALI, Milano, Tuesday 27 October at 21:00. Free (I
 https://anyplans.in/en/milano/azymuth-x-jz-rf-series-milano-arci-bellezza/
 
 Talks & culture in Arci Bellezza, Milano, Tuesday 27 October at 21:30. Free (Ingresso: vedi la pagina AllEvents).
-
-## Bocconi Party - Oh My Gattopardo – Gattopardo Milano
-https://anyplans.in/en/milano/bocconi-party-oh-my-gattopardo/
-
-Dancing in Gattopardo Milano, Milano, Tuesday 27 October at 23:30. Free (Biglietti su Eventbrite).
 
 ## Milan vs Bologna at San Siro - Milan
 https://anyplans.in/en/milano/milan-vs-bologna-at-san-siro-milan/
@@ -29523,6 +29620,11 @@ Town festival in Ex Manifattura Tabacchi, Milano, Thursday 19 November at 09:00.
 https://anyplans.in/en/milano/19-cvday/
 
 Talks & culture in Monte Rosa 91, Milano, Thursday 19 November at 09:00. Free (Biglietti su Eventbrite).
+
+## EXECUTIVE NETWORKING DINNER Cena Imprenditori e Manager…
+https://anyplans.in/en/milano/executive-networking-dinner-cena-imprenditori-e-manager-a-mi/
+
+Talks & culture in Maison Milano, Milano, Thursday 19 November at 19:00. Free (Biglietti su Eventbrite).
 
 ## Ariete / Alcatraz - Milano
 https://anyplans.in/en/milano/ariete-alcatraz-milano/

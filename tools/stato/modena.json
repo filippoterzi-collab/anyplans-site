@@ -1,19 +1,19 @@
 {
  "slug": "modena",
  "nome": "Modena",
- "eventi": 132,
- "pagine": 589,
+ "eventi": 139,
+ "pagine": 605,
  "tipi": {
   "dinner": 34,
   "padel": 1,
-  "culture": 30,
+  "culture": 33,
   "concert": 38,
   "festival": 3,
   "gym": 1,
-  "show": 10,
+  "show": 11,
   "painting": 1,
   "yoga": 2,
-  "tour": 4
+  "tour": 5
  },
- "aggiornato": "2026-09-29T07:21:10.146Z"
+ "aggiornato": "2026-09-29T10:13:36.741Z"
 }

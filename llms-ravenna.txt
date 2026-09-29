@@ -1,12 +1,12 @@
 # anyplans
 
-> anyplans (anyplans.in) è la mappa degli eventi veri di Ravenna e provincia: feste di paese e sagre, concerti, mercati, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Ravenna: il sito copre 52 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce, Monza, Prato, Como, Lecco, Lodi, Modena, Reggio Emilia, Treviso, Venezia, Vicenza, Novara, Lucca, Mantova, Ferrara, Pistoia, Pavia, Ancona, Pordenone, Cremona, Messina, Reggio Calabria, Alessandria, Latina), l'indice è https://anyplans.in/llms.txt.
+> anyplans (anyplans.in) è la mappa degli eventi veri di Ravenna e provincia: feste di paese e sagre, teatro e spettacoli, concerti, mercati, incontri e conferenze, visite guidate, camminate e gruppi di cammino, mostre, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Ravenna: il sito copre 52 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce, Monza, Prato, Como, Lecco, Lodi, Modena, Reggio Emilia, Treviso, Venezia, Vicenza, Novara, Lucca, Mantova, Ferrara, Pistoia, Pavia, Ancona, Pordenone, Cremona, Messina, Reggio Calabria, Alessandria, Latina), l'indice è https://anyplans.in/llms.txt.
 
 Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-09-29. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Ravenna](https://anyplans.in/ravenna/cosa-fare/): tutti gli eventi in programma (64), per tipo e per paese; risponde a "cosa fare a Ravenna oggi / questo weekend"
+- [Cosa fare a Ravenna](https://anyplans.in/ravenna/cosa-fare/): tutti gli eventi in programma (68), per tipo e per paese; risponde a "cosa fare a Ravenna oggi / questo weekend"
 - [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
@@ -14,16 +14,16 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## Eventi per tipo e per paese
 
-- [Incontri culturali a Ravenna](https://anyplans.in/ravenna/incontri-culturali/): 20 in programma
+- [Incontri culturali a Ravenna](https://anyplans.in/ravenna/incontri-culturali/): 22 in programma
 - [Cena / aperitivo a Ravenna](https://anyplans.in/ravenna/cene-e-aperitivi/): 20 in programma
 - [Karaoke a Ravenna](https://anyplans.in/ravenna/karaoke/): 1 in programma
 - [Spettacoli e teatro a Ravenna](https://anyplans.in/ravenna/spettacoli/): 2 in programma
 - [Concerti e musica dal vivo a Ravenna](https://anyplans.in/ravenna/concerti/): 4 in programma
 - [Pittura / arte a Ravenna](https://anyplans.in/ravenna/pittura/): 0 in programma
 - [Visite guidate a Ravenna](https://anyplans.in/ravenna/visite-guidate/): 6 in programma
-- [Cinema a Ravenna](https://anyplans.in/ravenna/cinema/): 1 in programma
-- [Feste, sagre ed eventi di paese a Ravenna](https://anyplans.in/ravenna/feste/): 3 in programma
-- [Feste ed eventi a Forlì](https://anyplans.in/ravenna/forli/): 8 in programma
+- [Cinema a Ravenna](https://anyplans.in/ravenna/cinema/): 2 in programma
+- [Feste, sagre ed eventi di paese a Ravenna](https://anyplans.in/ravenna/feste/): 4 in programma
+- [Feste ed eventi a Forlì](https://anyplans.in/ravenna/forli/): 10 in programma
 - [Feste ed eventi a Faenza](https://anyplans.in/ravenna/faenza/): 6 in programma
 - [Feste ed eventi a Forlimpopoli](https://anyplans.in/ravenna/forlimpopoli/): 3 in programma
 - [Feste ed eventi a Lugo](https://anyplans.in/ravenna/lugo/): 2 in programma
@@ -41,6 +41,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Cervellone Social Table da iGinGini: 12 posti liberi](https://anyplans.in/ravenna/cervellone-social-table-da-igingini-12-posti-liberi/): Giovedì 1 ottobre alle 18:30, iGinGini, Ravenna, Gratis
 - [Cena da Lug: 5 posti liberi](https://anyplans.in/ravenna/cena-da-lug-5-posti-liberi/): Giovedì 1 ottobre alle 19:30, Lug, Lugo, Gratis
 - [Ci fai o ci sei? da Umami Cafè Cucina • Forlì: 7 posti liberi](https://anyplans.in/ravenna/ci-fai-o-ci-sei-da-umami-cafe-cucina-forli-7-posti-liberi/): Venerdì 2 ottobre alle 16:00, Umami Cafè Cucina • Forlì, Gratis
+- [Ricordando Teodorico](https://anyplans.in/ravenna/ricordando-teodorico/): Venerdì 2 ottobre alle 18:00, Giardini Speyer, Ravenna, Gratis
 - [Fuorigiri Table da iGinGini: 12 posti liberi](https://anyplans.in/ravenna/fuorigiri-table-da-igingini-12-posti-liberi/): Venerdì 2 ottobre alle 19:00, iGinGini, Ravenna, Gratis
 - [Cena da Il Demodé: 3 posti liberi](https://anyplans.in/ravenna/cena-da-il-demode-3-posti-liberi/): Venerdì 2 ottobre alle 19:00, Il Demodé, Forlì, Gratis
 - [Non ho mai... da Bar Lè Chic Forlì: 1 posto libero](https://anyplans.in/ravenna/non-ho-mai-da-bar-le-chic-forli-1-posto-libero/): Venerdì 2 ottobre alle 19:00, Bar Lè Chic Forlì, Gratis
@@ -59,17 +60,16 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Cena da La Birreria: 5 posti liberi](https://anyplans.in/ravenna/cena-da-la-birreria-5-posti-liberi/): Domenica 4 ottobre alle 19:15, La Birreria, Faenza, Gratis
 - [Karaoke da Figo Burger Pizza & Sushi: 4 posti liberi](https://anyplans.in/ravenna/karaoke-da-figo-burger-pizza-sushi-4-posti-liberi/): Lunedì 5 ottobre alle 18:30, Figo Burger Pizza & Sushi, Ravenna, Gratis
 - [Giochi da tavolo da Games Bond: 10 posti liberi](https://anyplans.in/ravenna/giochi-da-tavolo-da-games-bond-10-posti-liberi/): Lunedì 5 ottobre alle 19:00, Games Bond, Forlì, Gratis
+- [Il diritto di opporsi](https://anyplans.in/ravenna/il-diritto-di-opporsi/): Sabato 10 ottobre alle 10:00, Piazza Campostrino, 4, Forlì, Gratis
 - [Area Gdr Ludifa 3° Edizione 10-11 Ottobre](https://anyplans.in/ravenna/area-gdr-ludifa-3-edizione-10-11-ottobre/): Sabato 10 ottobre alle 14:00, Salesiani 2.0, Faenza, Gratis
 - [Forlì segreta: Caterina Sforza, Borgia e Rocca di Ravaldino](https://anyplans.in/ravenna/forli-segreta-caterina-sforza-borgia-e-rocca-di-ravaldino/): Sabato 10 ottobre alle 16:00, Rocca di Ravaldino (FC), Forlì, 15 €
 - [Colpo Grosso al Ludifa - Multitavolo Daggerheart](https://anyplans.in/ravenna/colpo-grosso-al-ludifa-multitavolo-daggerheart/): Sabato 10 ottobre alle 20:30, Faventia Sales, Faenza, Gratis
 - [Latinità e Fascismo: Dante strumento di propaganda](https://anyplans.in/ravenna/latinita-e-fascismo-dante-strumento-di-propaganda/): Domenica 11 ottobre alle 11:00, Viale Farini, Ravenna, Gratis
+- [Visita il Faro di Marina di Ravenna](https://anyplans.in/ravenna/visita-il-faro-di-marina-di-ravenna/): Mercoledì 14 ottobre alle 10:00, Faro di Marina di Ravenna, Marina di Ravenna, Gratis
 - [Il Valore Umano nell'era dell'intelligenza artificiale.](https://anyplans.in/ravenna/il-valore-umano-nell-era-dell-intelligenza-artificiale/): Giovedì 15 ottobre alle 16:00, Darsena del Sale, Cervia, Gratis
 - [OPEN DAY SCHERMA STORICA](https://anyplans.in/ravenna/open-day-scherma-storica/): Giovedì 15 ottobre alle 20:00, Via Chiarissimo Falconieri, 26, 48124 Ravenna RA, Italia, Ravenna, Gratis
 - [Stormo - Bronson Club, Ravenna](https://anyplans.in/ravenna/stormo-bronson-club-ravenna/): Venerdì 16 ottobre alle 21:00, Bronson, Gratis
 - [I PESISSIMI (contiene SKIANTOS DOC) live @Beer Garden (Cotignola, BO)](https://anyplans.in/ravenna/i-pesissimi-contiene-skiantos-doc-live-beer-garden-cotignola/): Venerdì 16 ottobre alle 22:00, Beer Garden, Cotignola, Gratis
-- [Forlì e la dinastia degli OrdeLaffi: assedi, tradimenti](https://anyplans.in/ravenna/forli-e-la-dinastia-degli-ordelaffi-assedi-tradimenti/): Sabato 17 ottobre alle 16:00, Forlì, Forlì, Gratis
-- [Educational per docenti  MAF e Museo Ecologia di Cesena | AmaParco Academy](https://anyplans.in/ravenna/educational-per-docenti-maf-e-museo-ecologia-di-cesena-amapa/): Domenica 18 ottobre alle 10:30, MAF - Museo Archeologico "T.Aldini" di Forlimpopoli, Forlimpopoli, Gratis
-- [L'ULTIIMO RIFUGIO DI DANTE](https://anyplans.in/ravenna/l-ultiimo-rifugio-di-dante/): Domenica 18 ottobre alle 11:00, Porta Sisi, Ravenna, Gratis
 
 ## Optional
 
@@ -94,7 +94,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 # Tutte le pagine di anyplans a Ravenna (italiano, poi inglese)
 
-## Cosa fare a Ravenna e provincia: 64 eventi
+## Cosa fare a Ravenna e provincia: 68 eventi
 https://anyplans.in/ravenna/cosa-fare/
 
 Cena / aperitivo, incontri culturali, visite guidate, concerti e musica dal vivo e feste, sagre ed eventi di paese: quello che succede a Ravenna e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
@@ -114,22 +114,22 @@ https://anyplans.in/ravenna/eventi-settembre-2026/
 
 7 eventi a Ravenna e provincia a settembre 2026: cena / aperitivo, incontri culturali e visite guidate. Giorno per giorno, con orari, luogo e prezzo, a Ravenna, Lugo e Forlì e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Eventi a Ravenna a ottobre 2026: 44
+## Eventi a Ravenna a ottobre 2026: 48
 https://anyplans.in/ravenna/eventi-ottobre-2026/
 
-44 eventi a Ravenna e provincia a ottobre 2026: cena / aperitivo, incontri culturali, bici da strada, karaoke e giochi da tavolo. Giorno per giorno, con orari, luogo e prezzo, a Ravenna, Forlì, Faenza e Forlimpopoli e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+48 eventi a Ravenna e provincia a ottobre 2026: cena / aperitivo, incontri culturali, bici da strada, karaoke e cinema. Giorno per giorno, con orari, luogo e prezzo, a Ravenna, Forlì, Faenza e Forlimpopoli e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 ## Eventi a Ravenna a novembre 2026: 8
 https://anyplans.in/ravenna/eventi-novembre-2026/
 
 8 eventi a Ravenna e provincia a novembre 2026: incontri culturali, serate per single, feste, sagre ed eventi di paese e spettacoli e teatro. Giorno per giorno, con orari, luogo e prezzo, a Ravenna e Bronson e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
-## Incontri culturali a Ravenna: 20 eventi
+## Incontri, corsi e conferenze a Ravenna: 22 eventi
 https://anyplans.in/ravenna/incontri-culturali/
 
-A Ravenna e provincia ci sono 20 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Ravenna e provincia ci sono 22 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Cena / aperitivo a Ravenna: 20 eventi
+## Cene e aperitivi a Ravenna: 20 eventi
 https://anyplans.in/ravenna/cene-e-aperitivi/
 
 A Ravenna e provincia ci sono 20 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
@@ -139,7 +139,7 @@ https://anyplans.in/ravenna/karaoke/
 
 A Ravenna e provincia ci sono 1 serata karaoke nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Spettacoli e teatro a Ravenna: 2 eventi
+## Teatro e spettacoli a Ravenna: 2 eventi
 https://anyplans.in/ravenna/spettacoli/
 
 A Ravenna e provincia ci sono 2 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
@@ -149,30 +149,30 @@ https://anyplans.in/ravenna/concerti/
 
 A Ravenna e provincia ci sono 4 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Pittura / arte a Ravenna
+## Pittura e corsi d'arte a Ravenna
 https://anyplans.in/ravenna/pittura/
 
 Al momento non ci sono laboratori in programma: qui sotto quelli già passati. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Visite guidate a Ravenna: 6 eventi
+## Visite guidate e tour a Ravenna: 6 eventi
 https://anyplans.in/ravenna/visite-guidate/
 
 A Ravenna e provincia ci sono 6 visite guidate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Cinema a Ravenna: 1 evento
+## Cinema a Ravenna: 2 eventi
 https://anyplans.in/ravenna/cinema/
 
-A Ravenna e provincia ci sono 1 proiezione nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Ravenna e provincia ci sono 2 proiezioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Feste e sagre a Ravenna: 3 eventi
+## Feste e sagre a Ravenna: 4 eventi
 https://anyplans.in/ravenna/feste/
 
-A Ravenna e provincia ci sono 3 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Ravenna e provincia ci sono 4 feste nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
-## Feste ed eventi a Forlì: 8 in programma
+## Feste ed eventi a Forlì: 10 in programma
 https://anyplans.in/ravenna/forli/
 
-A Forlì ci sono 8 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Forlì con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Forlì ci sono 10 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Forlì con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 ## Feste ed eventi a Faenza: 6 in programma
 https://anyplans.in/ravenna/faenza/
@@ -634,6 +634,11 @@ https://anyplans.in/ravenna/ci-fai-o-ci-sei-da-umami-cafe-cucina-forli-7-posti-l
 
 Cena / aperitivo a Umami Cafè Cucina • Forlì, venerdì 2 ottobre alle 16:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Ricordando Teodorico – Giardini Speyer
+https://anyplans.in/ravenna/ricordando-teodorico/
+
+Incontri culturali a Giardini Speyer, Ravenna, venerdì 2 ottobre alle 18:00. Gratis (Biglietti su Eventbrite).
+
 ## Cena da Il Demodé: 3 posti liberi
 https://anyplans.in/ravenna/cena-da-il-demode-3-posti-liberi/
 
@@ -714,6 +719,11 @@ https://anyplans.in/ravenna/karaoke-da-figo-burger-pizza-sushi-4-posti-liberi/
 
 Karaoke a Figo Burger Pizza & Sushi, Ravenna, lunedì 5 ottobre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Il diritto di opporsi – Forlì
+https://anyplans.in/ravenna/il-diritto-di-opporsi/
+
+Cinema a Piazza Campostrino, 4, Forlì, sabato 10 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
+
 ## Area Gdr Ludifa 3° Edizione 10-11 Ottobre – Salesiani 2.0
 https://anyplans.in/ravenna/area-gdr-ludifa-3-edizione-10-11-ottobre/
 
@@ -733,6 +743,11 @@ Giochi da tavolo a Faventia Sales, Faenza, sabato 10 ottobre alle 20:30. Gratis 
 https://anyplans.in/ravenna/latinita-e-fascismo-dante-strumento-di-propaganda/
 
 Incontri culturali a Viale Farini, Ravenna, domenica 11 ottobre alle 11:00. Gratis (Biglietti su Eventbrite).
+
+## Visita il Faro di Marina di Ravenna
+https://anyplans.in/ravenna/visita-il-faro-di-marina-di-ravenna/
+
+Incontri culturali a Faro di Marina di Ravenna, Marina di Ravenna, mercoledì 14 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
 
 ## Il Valore Umano nell'era dell'intelligenza artificiale. – Cervia
 https://anyplans.in/ravenna/il-valore-umano-nell-era-dell-intelligenza-artificiale/
@@ -804,6 +819,11 @@ https://anyplans.in/ravenna/the-fleshtones-50th-anniversary-special-bronson-club
 
 Incontri culturali a Bronson, Ravenna, venerdì 30 ottobre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## Pride a Piazza Campostrino, 4, Forlì, 31 ottobre
+https://anyplans.in/ravenna/pride/
+
+Festa di paese a Piazza Campostrino, 4, Forlì, sabato 31 ottobre alle 10:00. Gratis (Biglietti su Eventbrite).
+
 ## Uscita fuori porta da Casa Spadoni: 4 posti liberi
 https://anyplans.in/ravenna/uscita-fuori-porta-da-casa-spadoni-4-posti-liberi/
 
@@ -874,10 +894,10 @@ https://anyplans.in/ravenna/downtown-boys-bronson-club-ravenna/
 
 Visite guidate a Bronson, Ravenna, venerdì 18 dicembre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
-## Things to do in Ravenna: 64 events
+## Things to do in Ravenna: 68 events
 https://anyplans.in/en/ravenna/
 
-What's on in Ravenna and its province, today, tonight and this weekend: dinners & aperitivo, talks & culture, guided tours, concerts & live music, town festivals & fairs and karaoke. Pick one and go with other people.
+What's on in Ravenna and its province, today, tonight and this weekend: dinners & aperitivo, talks & culture, guided tours, concerts & live music, town festivals & fairs and cinema. Pick one and go with other people.
 
 ## What to do in Ravenna tomorrow: 5 events
 https://anyplans.in/en/ravenna/what-to-do-tomorrow/
@@ -894,20 +914,20 @@ https://anyplans.in/en/ravenna/events-september-2026/
 
 7 events in Ravenna and its province in September 2026: dinners & aperitivo, talks & culture and guided tours. Day by day, with times, place and price, in Ravenna, Lugo and Forlì and other towns. You sign up and go with other people.
 
-## Events in Ravenna in October 2026: 44
+## Events in Ravenna in October 2026: 48
 https://anyplans.in/en/ravenna/events-october-2026/
 
-44 events in Ravenna and its province in October 2026: dinners & aperitivo, talks & culture, road cycling, karaoke and board games. Day by day, with times, place and price, in Ravenna, Forlì, Faenza and Forlimpopoli and other towns. You sign up and go with other people.
+48 events in Ravenna and its province in October 2026: dinners & aperitivo, talks & culture, road cycling, karaoke and cinema. Day by day, with times, place and price, in Ravenna, Forlì, Faenza and Forlimpopoli and other towns. You sign up and go with other people.
 
 ## Events in Ravenna in November 2026: 8
 https://anyplans.in/en/ravenna/events-november-2026/
 
 8 events in Ravenna and its province in November 2026: talks & culture, singles nights, town festivals & fairs and shows & theatre. Day by day, with times, place and price, in Ravenna and Bronson and other towns. You sign up and go with other people.
 
-## Talks & culture in Ravenna: 20 events
+## Talks & culture in Ravenna: 22 events
 https://anyplans.in/en/ravenna/talks-and-culture/
 
-In Ravenna and its province there are 20 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Ravenna and its province there are 22 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 ## Dinners & aperitivo in Ravenna: 20 events
 https://anyplans.in/en/ravenna/dinners/
@@ -939,20 +959,20 @@ https://anyplans.in/en/ravenna/guided-tours/
 
 In Ravenna and its province there are 6 guided tours events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Cinema in Ravenna: 1 event
+## Cinema in Ravenna: 2 events
 https://anyplans.in/en/ravenna/cinema/
 
-In Ravenna and its province there are 1 screenings in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Ravenna and its province there are 2 screenings in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Festivals & sagre near Ravenna: 3 events
+## Festivals & sagre near Ravenna: 4 events
 https://anyplans.in/en/ravenna/festivals/
 
-In Ravenna and its province there are 3 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Ravenna and its province there are 4 town festivals and sagre in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
-## Festivals and events in Forlì, Bergamo: 8…
+## Festivals and events in Forlì, Bergamo: 10…
 https://anyplans.in/en/ravenna/forli/
 
-In Forlì there are 8 events in the coming months. On anyplans you find the festivals and events of Forlì with dates, times and place. You sign up and go with others.
+In Forlì there are 10 events in the coming months. On anyplans you find the festivals and events of Forlì with dates, times and place. You sign up and go with others.
 
 ## Festivals and events in Faenza, Bergamo: 6…
 https://anyplans.in/en/ravenna/faenza/
@@ -1414,6 +1434,11 @@ https://anyplans.in/en/ravenna/ci-fai-o-ci-sei-da-umami-cafe-cucina-forli-7-post
 
 Dinners & aperitivo in Umami Cafè Cucina • Forlì, Friday 2 October at 16:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Ricordando Teodorico – Giardini Speyer
+https://anyplans.in/en/ravenna/ricordando-teodorico/
+
+Talks & culture in Giardini Speyer, Ravenna, Friday 2 October at 18:00. Free (Biglietti su Eventbrite).
+
 ## Cena da Il Demodé: 3 posti liberi
 https://anyplans.in/en/ravenna/cena-da-il-demode-3-posti-liberi/
 
@@ -1494,6 +1519,11 @@ https://anyplans.in/en/ravenna/karaoke-da-figo-burger-pizza-sushi-4-posti-liberi
 
 Karaoke in Figo Burger Pizza & Sushi, Ravenna, Monday 5 October at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
+## Il diritto di opporsi – Forlì
+https://anyplans.in/en/ravenna/il-diritto-di-opporsi/
+
+Cinema in Piazza Campostrino, 4, Forlì, Saturday 10 October at 10:00. Free (Biglietti su Eventbrite).
+
 ## Area Gdr Ludifa 3° Edizione 10-11 Ottobre – Salesiani 2.0
 https://anyplans.in/en/ravenna/area-gdr-ludifa-3-edizione-10-11-ottobre/
 
@@ -1513,6 +1543,11 @@ Board games in Faventia Sales, Faenza, Saturday 10 October at 20:30. Free (Bigli
 https://anyplans.in/en/ravenna/latinita-e-fascismo-dante-strumento-di-propaganda/
 
 Talks & culture in Viale Farini, Ravenna, Sunday 11 October at 11:00. Free (Biglietti su Eventbrite).
+
+## Visita il Faro di Marina di Ravenna
+https://anyplans.in/en/ravenna/visita-il-faro-di-marina-di-ravenna/
+
+Talks & culture in Faro di Marina di Ravenna, Marina di Ravenna, Wednesday 14 October at 10:00. Free (Biglietti su Eventbrite).
 
 ## Il Valore Umano nell'era dell'intelligenza artificiale. – Cervia
 https://anyplans.in/en/ravenna/il-valore-umano-nell-era-dell-intelligenza-artificiale/
@@ -1583,6 +1618,11 @@ Talks & culture in Via di Roma, 53, 48121 Ravenna RA, Italia, Ravenna, Friday 30
 https://anyplans.in/en/ravenna/the-fleshtones-50th-anniversary-special-bronson-club-ravenna/
 
 Talks & culture in Bronson, Ravenna, Friday 30 October at 21:00. Free (Ingresso: vedi la pagina AllEvents).
+
+## Pride in Piazza Campostrino, 4, Forlì, 31 October
+https://anyplans.in/en/ravenna/pride/
+
+Town festival in Piazza Campostrino, 4, Forlì, Saturday 31 October at 10:00. Free (Biglietti su Eventbrite).
 
 ## Uscita fuori porta da Casa Spadoni: 4 posti liberi
 https://anyplans.in/en/ravenna/uscita-fuori-porta-da-casa-spadoni-4-posti-liberi/

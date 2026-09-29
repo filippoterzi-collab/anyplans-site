@@ -1,19 +1,20 @@
 {
  "slug": "lecco",
  "nome": "Lecco",
- "eventi": 53,
- "pagine": 245,
+ "eventi": 59,
+ "pagine": 263,
  "tipi": {
   "festival": 3,
   "market": 7,
   "padel": 7,
   "tour": 1,
-  "culture": 10,
+  "culture": 12,
   "dinner": 5,
   "hiking": 9,
   "show": 3,
   "running": 2,
+  "walking": 4,
   "yoga": 3
  },
- "aggiornato": "2026-09-29T07:21:02.897Z"
+ "aggiornato": "2026-09-29T10:13:30.572Z"
 }

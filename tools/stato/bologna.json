@@ -1,17 +1,17 @@
 {
  "slug": "bologna",
  "nome": "Bologna",
- "eventi": 504,
- "pagine": 1881,
+ "eventi": 519,
+ "pagine": 1905,
  "tipi": {
-  "dinner": 47,
+  "dinner": 50,
   "volleyball": 3,
   "padel": 11,
-  "culture": 127,
-  "show": 63,
+  "culture": 129,
+  "show": 62,
   "tour": 33,
   "concert": 95,
-  "cinema": 13,
+  "cinema": 20,
   "games": 8,
   "karaoke": 3,
   "yoga": 13,
@@ -21,10 +21,10 @@
   "festival": 31,
   "painting": 14,
   "match": 12,
-  "exhibition": 8,
-  "hiking": 4,
+  "exhibition": 9,
+  "hiking": 6,
   "nightlife": 1,
   "ceramics": 2
  },
- "aggiornato": "2026-09-29T07:18:07.438Z"
+ "aggiornato": "2026-09-29T10:09:58.001Z"
 }
