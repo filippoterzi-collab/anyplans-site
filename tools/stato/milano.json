@@ -1,16 +1,16 @@
 {
  "slug": "milano",
  "nome": "Milano",
- "eventi": 1457,
- "pagine": 6109,
+ "eventi": 1453,
+ "pagine": 6105,
  "tipi": {
   "tour": 75,
-  "dinner": 248,
+  "dinner": 247,
   "painting": 30,
   "culture": 291,
-  "padel": 193,
+  "padel": 191,
   "exhibition": 8,
-  "show": 106,
+  "show": 105,
   "tennis": 5,
   "cinema": 9,
   "yoga": 37,
@@ -39,12 +39,12 @@
   "raccolta:castagne-e-autunno": 16,
   "raccolta:natale": 3,
   "raccolta:sagre": 96,
-  "raccolta:gratis": 927,
+  "raccolta:gratis": 925,
   "raccolta:libri-e-letture": 20,
   "raccolta:fotografia": 8,
   "raccolta:arte": 33,
   "raccolta:musei": 3,
-  "raccolta:vintage-e-usato": 7,
+  "raccolta:vintage-e-usato": 6,
   "raccolta:birra": 14,
   "raccolta:comedy": 23,
   "raccolta:scambi-linguistici": 23,
@@ -57,5 +57,5 @@
   "raccolta:castelli-e-borghi": 11,
   "raccolta:stelle-e-astronomia": 5
  },
- "aggiornato": "2026-09-29T11:29:40.604Z"
+ "aggiornato": "2026-09-29T12:03:39.519Z"
 }

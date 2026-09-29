@@ -1,10 +1,10 @@
 {
  "slug": "como",
  "nome": "Como",
- "eventi": 115,
- "pagine": 555,
+ "eventi": 114,
+ "pagine": 553,
  "tipi": {
-  "padel": 37,
+  "padel": 36,
   "dinner": 18,
   "culture": 19,
   "concert": 7,
@@ -16,11 +16,11 @@
   "exhibition": 9,
   "raccolta:aperitivi": 4,
   "raccolta:sagre": 7,
-  "raccolta:gratis": 84,
+  "raccolta:gratis": 83,
   "raccolta:libri-e-letture": 3,
   "raccolta:tornei": 8,
   "raccolta:classica-e-jazz": 5,
   "raccolta:all-aperto": 3
  },
- "aggiornato": "2026-09-29T11:37:07.477Z"
+ "aggiornato": "2026-09-29T12:12:40.173Z"
 }

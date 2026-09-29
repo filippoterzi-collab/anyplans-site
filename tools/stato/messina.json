@@ -4,14 +4,14 @@
  "eventi": 29,
  "pagine": 113,
  "tipi": {
-  "culture": 10,
+  "culture": 11,
   "yoga": 1,
   "concert": 5,
   "tour": 2,
-  "festival": 5,
   "dinner": 2,
-  "raccolta:sagre": 5,
+  "festival": 4,
+  "raccolta:sagre": 4,
   "raccolta:gratis": 26
  },
- "aggiornato": "2026-09-29T11:38:13.871Z"
+ "aggiornato": "2026-09-29T12:13:51.679Z"
 }

@@ -1,12 +1,12 @@
 {
  "slug": "padova",
  "nome": "Padova",
- "eventi": 370,
+ "eventi": 369,
  "pagine": 1303,
  "tipi": {
   "culture": 129,
   "dinner": 55,
-  "yoga": 14,
+  "yoga": 13,
   "hiking": 3,
   "show": 30,
   "festival": 16,
@@ -24,7 +24,7 @@
   "raccolta:aperitivi": 4,
   "raccolta:castagne-e-autunno": 3,
   "raccolta:sagre": 16,
-  "raccolta:gratis": 353,
+  "raccolta:gratis": 352,
   "raccolta:libri-e-letture": 9,
   "raccolta:fotografia": 8,
   "raccolta:arte": 9,
@@ -37,5 +37,5 @@
   "raccolta:castelli-e-borghi": 6,
   "raccolta:stelle-e-astronomia": 3
  },
- "aggiornato": "2026-09-29T11:34:54.353Z"
+ "aggiornato": "2026-09-29T12:10:12.116Z"
 }
