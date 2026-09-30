@@ -1,13 +1,13 @@
 {
  "slug": "ancona",
  "nome": "Ancona",
- "eventi": 49,
+ "eventi": 45,
  "pagine": 327,
  "tipi": {
   "dinner": 14,
-  "gym": 6,
+  "gym": 3,
   "cinema": 0,
-  "yoga": 1,
+  "yoga": 0,
   "culture": 9,
   "concert": 3,
   "painting": 1,
@@ -18,8 +18,7 @@
   "dancing": 3,
   "raccolta:aperitivi": 4,
   "raccolta:sagre": 3,
-  "raccolta:gratis": 49,
-  "raccolta:arte": 3
+  "raccolta:gratis": 45
  },
- "aggiornato": "2026-09-29T15:10:57.055Z"
+ "aggiornato": "2026-09-30T07:13:03.067Z"
 }

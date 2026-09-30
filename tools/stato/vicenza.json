@@ -2,10 +2,10 @@
  "slug": "vicenza",
  "nome": "Vicenza",
  "eventi": 129,
- "pagine": 497,
+ "pagine": 503,
  "tipi": {
-  "dinner": 20,
-  "culture": 43,
+  "dinner": 21,
+  "culture": 42,
   "concert": 18,
   "yoga": 4,
   "festival": 7,
@@ -16,8 +16,7 @@
   "raccolta:sagre": 7,
   "raccolta:gratis": 124,
   "raccolta:meditazione-e-benessere": 4,
-  "raccolta:tornei": 3,
   "raccolta:classica-e-jazz": 5
  },
- "aggiornato": "2026-09-29T15:10:20.904Z"
+ "aggiornato": "2026-09-30T07:12:36.362Z"
 }

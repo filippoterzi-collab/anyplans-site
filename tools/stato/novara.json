@@ -1,12 +1,12 @@
 {
  "slug": "novara",
  "nome": "Novara",
- "eventi": 63,
- "pagine": 317,
+ "eventi": 62,
+ "pagine": 319,
  "tipi": {
   "dinner": 6,
   "culture": 9,
-  "padel": 4,
+  "padel": 3,
   "concert": 5,
   "tour": 4,
   "festival": 16,
@@ -19,5 +19,5 @@
   "raccolta:gratis": 57,
   "raccolta:classica-e-jazz": 3
  },
- "aggiornato": "2026-09-29T15:10:28.656Z"
+ "aggiornato": "2026-09-30T07:12:40.676Z"
 }
