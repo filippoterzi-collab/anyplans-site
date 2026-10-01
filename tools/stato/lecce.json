@@ -1,22 +1,21 @@
 {
  "slug": "lecce",
  "nome": "Lecce",
- "eventi": 123,
- "pagine": 485,
+ "eventi": 122,
+ "pagine": 489,
  "tipi": {
-  "dinner": 19,
+  "dinner": 20,
   "festival": 6,
-  "culture": 28,
+  "culture": 27,
   "show": 32,
   "concert": 19,
   "tour": 6,
   "yoga": 6,
   "raccolta:sagre": 6,
-  "raccolta:biblioteca": 3,
   "raccolta:gratis": 114,
   "raccolta:classica-e-jazz": 6,
   "raccolta:castelli-e-borghi": 7,
   "raccolta:stelle-e-astronomia": 3
  },
- "aggiornato": "2026-09-30T07:11:29.932Z"
+ "aggiornato": "2026-10-01T07:35:56.856Z"
 }

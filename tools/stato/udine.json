@@ -1,23 +1,24 @@
 {
  "slug": "udine",
  "nome": "Udine",
- "eventi": 147,
- "pagine": 437,
+ "eventi": 163,
+ "pagine": 487,
  "tipi": {
-  "dinner": 76,
-  "yoga": 8,
+  "dinner": 79,
+  "yoga": 10,
   "exhibition": 1,
-  "festival": 8,
+  "festival": 10,
   "match": 12,
-  "culture": 17,
-  "show": 5,
+  "culture": 18,
+  "show": 12,
   "concert": 15,
-  "raccolta:vino-e-degustazioni": 6,
+  "raccolta:bambini": 3,
+  "raccolta:vino-e-degustazioni": 7,
   "raccolta:castagne-e-autunno": 3,
-  "raccolta:sagre": 8,
-  "raccolta:gratis": 141,
+  "raccolta:sagre": 10,
+  "raccolta:gratis": 157,
   "raccolta:libri-e-letture": 3,
   "raccolta:meditazione-e-benessere": 3
  },
- "aggiornato": "2026-09-30T07:11:03.889Z"
+ "aggiornato": "2026-10-01T07:35:34.376Z"
 }

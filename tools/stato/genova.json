@@ -1,12 +1,12 @@
 {
  "slug": "genova",
  "nome": "Genova",
- "eventi": 225,
- "pagine": 935,
+ "eventi": 232,
+ "pagine": 969,
  "tipi": {
-  "dinner": 23,
+  "dinner": 29,
   "dancing": 11,
-  "culture": 65,
+  "culture": 63,
   "festival": 9,
   "concert": 35,
   "tour": 9,
@@ -14,9 +14,9 @@
   "karaoke": 3,
   "padel": 0,
   "yoga": 1,
-  "hiking": 4,
+  "hiking": 6,
   "games": 2,
-  "show": 34,
+  "show": 35,
   "exhibition": 4,
   "cinema": 1,
   "running": 2,
@@ -24,13 +24,14 @@
   "cooking": 3,
   "raccolta:bambini": 3,
   "raccolta:halloween": 5,
-  "raccolta:vino-e-degustazioni": 5,
+  "raccolta:vino-e-degustazioni": 7,
+  "raccolta:aperitivi": 3,
   "raccolta:sagre": 9,
   "raccolta:biblioteca": 5,
-  "raccolta:gratis": 210,
+  "raccolta:gratis": 217,
   "raccolta:comedy": 3,
   "raccolta:scambi-linguistici": 5,
   "raccolta:classica-e-jazz": 7
  },
- "aggiornato": "2026-09-30T07:10:08.343Z"
+ "aggiornato": "2026-10-01T07:34:39.898Z"
 }

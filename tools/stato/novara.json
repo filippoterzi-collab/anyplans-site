@@ -1,23 +1,23 @@
 {
  "slug": "novara",
  "nome": "Novara",
- "eventi": 62,
- "pagine": 319,
+ "eventi": 61,
+ "pagine": 317,
  "tipi": {
-  "dinner": 6,
-  "culture": 9,
-  "padel": 3,
+  "dinner": 8,
+  "culture": 11,
+  "padel": 1,
   "concert": 5,
-  "tour": 4,
+  "tour": 3,
   "festival": 16,
-  "hiking": 3,
-  "painting": 3,
+  "hiking": 2,
+  "painting": 2,
   "yoga": 2,
   "exhibition": 2,
   "show": 7,
   "raccolta:sagre": 16,
-  "raccolta:gratis": 57,
+  "raccolta:gratis": 58,
   "raccolta:classica-e-jazz": 3
  },
- "aggiornato": "2026-09-30T07:12:40.676Z"
+ "aggiornato": "2026-10-01T07:36:56.958Z"
 }
