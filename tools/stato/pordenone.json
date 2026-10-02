@@ -1,20 +1,20 @@
 {
  "slug": "pordenone",
  "nome": "Pordenone",
- "eventi": 47,
- "pagine": 225,
+ "eventi": 50,
+ "pagine": 237,
  "tipi": {
   "festival": 4,
   "hiking": 1,
   "dinner": 13,
   "concert": 2,
-  "show": 7,
+  "show": 6,
   "yoga": 5,
   "exhibition": 3,
-  "culture": 10,
-  "tour": 1,
+  "culture": 13,
+  "tour": 2,
   "raccolta:sagre": 4,
-  "raccolta:gratis": 47
+  "raccolta:gratis": 50
  },
- "aggiornato": "2026-10-01T07:37:25.725Z"
+ "aggiornato": "2026-10-02T07:24:18.769Z"
 }

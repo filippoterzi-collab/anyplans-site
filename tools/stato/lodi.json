@@ -1,18 +1,19 @@
 {
  "slug": "lodi",
  "nome": "Lodi",
- "eventi": 54,
- "pagine": 251,
+ "eventi": 56,
+ "pagine": 267,
  "tipi": {
-  "festival": 4,
+  "festival": 5,
   "padel": 27,
   "dinner": 8,
   "culture": 1,
-  "tour": 2,
-  "games": 3,
-  "raccolta:sagre": 5,
+  "tour": 3,
+  "show": 3,
+  "raccolta:sagre": 6,
   "raccolta:gratis": 26,
+  "raccolta:birra": 3,
   "raccolta:tornei": 7
  },
- "aggiornato": "2026-10-01T07:36:29.792Z"
+ "aggiornato": "2026-10-02T07:23:30.758Z"
 }

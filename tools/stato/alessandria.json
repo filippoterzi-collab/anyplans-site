@@ -1,23 +1,23 @@
 {
  "slug": "alessandria",
  "nome": "Alessandria",
- "eventi": 60,
- "pagine": 261,
+ "eventi": 55,
+ "pagine": 265,
  "tipi": {
-  "dinner": 18,
+  "dinner": 17,
   "cinema": 1,
   "concert": 2,
   "show": 5,
   "exhibition": 0,
-  "culture": 22,
+  "culture": 18,
   "tour": 2,
   "festival": 4,
   "hiking": 3,
   "raccolta:vino-e-degustazioni": 3,
   "raccolta:castagne-e-autunno": 3,
   "raccolta:sagre": 4,
-  "raccolta:gratis": 54,
+  "raccolta:gratis": 49,
   "raccolta:classica-e-jazz": 4
  },
- "aggiornato": "2026-10-01T07:37:37.649Z"
+ "aggiornato": "2026-10-02T07:24:29.768Z"
 }

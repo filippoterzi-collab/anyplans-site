@@ -1,28 +1,26 @@
 {
  "slug": "catania",
  "nome": "Catania",
- "eventi": 98,
- "pagine": 501,
+ "eventi": 100,
+ "pagine": 513,
  "tipi": {
-  "dinner": 21,
-  "culture": 22,
-  "gym": 1,
+  "dinner": 25,
+  "culture": 21,
+  "gym": 2,
   "show": 14,
   "ceramics": 1,
-  "yoga": 6,
+  "yoga": 5,
   "tour": 5,
   "painting": 1,
   "concert": 10,
-  "karaoke": 3,
+  "karaoke": 2,
   "festival": 5,
   "cinema": 1,
   "hiking": 1,
-  "gardening": 1,
   "exhibition": 3,
   "raccolta:sagre": 6,
-  "raccolta:gratis": 97,
-  "raccolta:arte": 3,
+  "raccolta:gratis": 99,
   "raccolta:castelli-e-borghi": 4
  },
- "aggiornato": "2026-10-01T07:35:26.722Z"
+ "aggiornato": "2026-10-02T07:22:29.369Z"
 }

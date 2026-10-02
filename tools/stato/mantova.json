@@ -1,21 +1,21 @@
 {
  "slug": "mantova",
  "nome": "Mantova",
- "eventi": 47,
- "pagine": 211,
+ "eventi": 50,
+ "pagine": 223,
  "tipi": {
   "dinner": 3,
-  "culture": 10,
+  "culture": 9,
   "festival": 11,
   "exhibition": 4,
   "games": 0,
   "concert": 2,
-  "tour": 4,
+  "tour": 8,
   "show": 8,
   "yoga": 3,
   "raccolta:sagre": 11,
-  "raccolta:gratis": 45,
-  "raccolta:castelli-e-borghi": 3
+  "raccolta:gratis": 44,
+  "raccolta:castelli-e-borghi": 5
  },
- "aggiornato": "2026-10-01T07:37:08.654Z"
+ "aggiornato": "2026-10-02T07:24:03.055Z"
 }

@@ -1,12 +1,12 @@
 {
  "slug": "ancona",
  "nome": "Ancona",
- "eventi": 49,
- "pagine": 347,
+ "eventi": 56,
+ "pagine": 365,
  "tipi": {
-  "dinner": 15,
-  "gym": 3,
-  "cinema": 1,
+  "dinner": 16,
+  "gym": 5,
+  "cinema": 2,
   "yoga": 0,
   "culture": 10,
   "concert": 3,
@@ -14,11 +14,13 @@
   "festival": 3,
   "games": 0,
   "show": 8,
+  "karaoke": 2,
   "tour": 1,
-  "dancing": 3,
+  "dancing": 4,
   "raccolta:aperitivi": 4,
   "raccolta:sagre": 3,
-  "raccolta:gratis": 48
+  "raccolta:gratis": 55,
+  "raccolta:arte": 3
  },
- "aggiornato": "2026-10-01T07:37:22.016Z"
+ "aggiornato": "2026-10-02T07:24:15.500Z"
 }

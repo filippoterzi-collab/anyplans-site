@@ -1,17 +1,17 @@
 {
  "slug": "messina",
  "nome": "Messina",
- "eventi": 30,
- "pagine": 115,
+ "eventi": 32,
+ "pagine": 121,
  "tipi": {
-  "culture": 11,
-  "yoga": 1,
+  "culture": 12,
+  "yoga": 0,
   "concert": 5,
   "tour": 2,
-  "dinner": 3,
+  "dinner": 4,
   "festival": 4,
   "raccolta:sagre": 4,
-  "raccolta:gratis": 27
+  "raccolta:gratis": 29
  },
- "aggiornato": "2026-10-01T07:37:32.270Z"
+ "aggiornato": "2026-10-02T07:24:24.837Z"
 }

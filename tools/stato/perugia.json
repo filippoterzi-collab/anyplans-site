@@ -1,22 +1,23 @@
 {
  "slug": "perugia",
  "nome": "Perugia",
- "eventi": 148,
- "pagine": 489,
+ "eventi": 150,
+ "pagine": 505,
  "tipi": {
   "dinner": 10,
   "tour": 6,
-  "culture": 56,
+  "exhibition": 2,
+  "culture": 57,
   "yoga": 2,
-  "festival": 33,
-  "hiking": 3,
+  "festival": 32,
+  "hiking": 4,
   "games": 2,
   "concert": 19,
   "show": 11,
   "raccolta:halloween": 3,
-  "raccolta:sagre": 34,
-  "raccolta:gratis": 138,
+  "raccolta:sagre": 33,
+  "raccolta:gratis": 139,
   "raccolta:scambi-linguistici": 3
  },
- "aggiornato": "2026-10-01T07:34:55.210Z"
+ "aggiornato": "2026-10-02T07:22:00.170Z"
 }

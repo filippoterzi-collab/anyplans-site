@@ -1,21 +1,22 @@
 {
  "slug": "pisa",
  "nome": "Pisa",
- "eventi": 94,
- "pagine": 409,
+ "eventi": 90,
+ "pagine": 417,
  "tipi": {
-  "dinner": 23,
-  "culture": 27,
-  "games": 4,
-  "tour": 5,
+  "dinner": 21,
+  "culture": 28,
+  "games": 2,
+  "hiking": 3,
+  "tour": 4,
   "yoga": 1,
   "padel": 6,
   "concert": 4,
   "festival": 2,
   "show": 9,
-  "raccolta:gratis": 88,
-  "raccolta:tornei": 7,
+  "raccolta:gratis": 84,
+  "raccolta:tornei": 8,
   "raccolta:classica-e-jazz": 3
  },
- "aggiornato": "2026-10-01T07:35:44.772Z"
+ "aggiornato": "2026-10-02T07:22:46.758Z"
 }
