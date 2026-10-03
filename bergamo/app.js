@@ -26,6 +26,7 @@ const EXT_SOURCES = [
   { rx: /^https:\/\/(www\.)?play2match\.it\//, name: "play2match", how: "Ci si iscrive su play2match da soli: le squadre le fanno loro, miste ed equilibrate, e dopo la partita c'è il terzo tempo." },
   { rx: /^https:\/\/share\.nomadtable\.app\//, name: "Nomadtable", cta: "Join chat su Nomadtable →", how: "L'evento vive nella chat di nomadtable: con \"Join chat\" entri nell'app e lì si decidono ora e posto." },
   { rx: /^https:\/\/(www\.)?allevents\.in\//, name: "AllEvents", cta: "Dettagli su AllEvents →", how: "L'evento è pubblicato su AllEvents: lì trovi i dettagli di chi organizza e, se servono, i biglietti." },
+  { rx: /^https:\/\/(site\.)?fourvenues\.com\//, name: "Fourvenues", cta: "Lista e biglietti su Fourvenues →", how: "Lista e biglietti si prendono su Fourvenues, dal locale." },
   { rx: /^https:\/\/(www\.)?choruslife\.com\//, name: "ChorusLife", cta: "Biglietti su ChorusLife →", how: "Biglietti e dettagli sono sul sito di ChorusLife." },
   { rx: /^https:\/\/(www\.)?eventi\.bergamo\.it\//, name: "eventi.bergamo.it", cta: "Programma su eventi.bergamo.it →", how: "L'evento è pubblicato su eventi.bergamo.it: programma, orari e contatti sono lì." },
   { rx: /^https:\/\/(www\.)?berghinfest\.it\//, name: "Berghinfest", cta: "Programma su Berghinfest →", how: "La festa è pubblicata su Berghinfest: programma e orari sono lì." },
