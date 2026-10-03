@@ -1,21 +1,21 @@
 {
  "slug": "ravenna",
  "nome": "Ravenna",
- "eventi": 69,
- "pagine": 367,
+ "eventi": 68,
+ "pagine": 377,
  "tipi": {
-  "culture": 21,
-  "dinner": 19,
+  "culture": 19,
+  "dinner": 17,
   "karaoke": 1,
   "show": 2,
   "concert": 4,
   "painting": 0,
+  "yoga": 2,
   "tour": 7,
   "cinema": 4,
-  "festival": 4,
-  "raccolta:sagre": 4,
-  "raccolta:gratis": 69,
-  "raccolta:birra": 4
+  "festival": 5,
+  "raccolta:sagre": 5,
+  "raccolta:gratis": 68
  },
- "aggiornato": "2026-10-02T07:22:33.656Z"
+ "aggiornato": "2026-10-03T06:57:21.129Z"
 }

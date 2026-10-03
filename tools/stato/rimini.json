@@ -1,19 +1,21 @@
 {
  "slug": "rimini",
  "nome": "Rimini",
- "eventi": 55,
- "pagine": 349,
+ "eventi": 58,
+ "pagine": 377,
  "tipi": {
-  "culture": 17,
-  "dinner": 18,
+  "culture": 18,
+  "dinner": 14,
   "show": 4,
-  "padel": 0,
+  "padel": 1,
   "concert": 2,
   "tour": 2,
-  "festival": 2,
+  "festival": 5,
   "dancing": 1,
   "hiking": 2,
-  "raccolta:gratis": 53
+  "raccolta:sagre": 5,
+  "raccolta:gratis": 57,
+  "raccolta:castelli-e-borghi": 3
  },
- "aggiornato": "2026-10-02T07:22:41.014Z"
+ "aggiornato": "2026-10-03T06:57:30.170Z"
 }

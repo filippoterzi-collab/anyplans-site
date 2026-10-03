@@ -1,14 +1,14 @@
 {
  "slug": "ferrara",
  "nome": "Ferrara",
- "eventi": 105,
- "pagine": 405,
+ "eventi": 104,
+ "pagine": 409,
  "tipi": {
   "yoga": 6,
   "concert": 22,
-  "games": 8,
+  "games": 9,
   "dinner": 10,
-  "culture": 21,
+  "culture": 19,
   "tour": 4,
   "show": 9,
   "festival": 14,
@@ -17,12 +17,11 @@
   "raccolta:halloween": 4,
   "raccolta:castagne-e-autunno": 4,
   "raccolta:sagre": 14,
-  "raccolta:gratis": 98,
-  "raccolta:arte": 3,
+  "raccolta:gratis": 97,
   "raccolta:birra": 4,
   "raccolta:meditazione-e-benessere": 4,
-  "raccolta:tornei": 5,
+  "raccolta:tornei": 7,
   "raccolta:castelli-e-borghi": 4
  },
- "aggiornato": "2026-10-02T07:24:05.987Z"
+ "aggiornato": "2026-10-03T06:59:15.982Z"
 }

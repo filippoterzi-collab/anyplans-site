@@ -1,22 +1,22 @@
 {
  "slug": "taranto",
  "nome": "Taranto",
- "eventi": 99,
- "pagine": 479,
+ "eventi": 91,
+ "pagine": 483,
  "tipi": {
-  "culture": 21,
-  "dinner": 22,
+  "culture": 19,
+  "dinner": 17,
   "hiking": 1,
   "show": 14,
   "concert": 24,
   "festival": 4,
-  "tour": 5,
+  "tour": 6,
   "cinema": 1,
-  "karaoke": 3,
+  "karaoke": 1,
   "nightlife": 2,
-  "raccolta:sagre": 5,
-  "raccolta:gratis": 97,
+  "raccolta:sagre": 4,
+  "raccolta:gratis": 87,
   "raccolta:classica-e-jazz": 3
  },
- "aggiornato": "2026-10-02T07:22:50.246Z"
+ "aggiornato": "2026-10-03T06:57:40.704Z"
 }

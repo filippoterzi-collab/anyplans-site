@@ -1,19 +1,20 @@
 {
  "slug": "prato",
  "nome": "Prato",
- "eventi": 49,
- "pagine": 309,
+ "eventi": 51,
+ "pagine": 315,
  "tipi": {
-  "padel": 4,
-  "dinner": 11,
+  "padel": 8,
+  "dinner": 7,
   "festival": 3,
-  "culture": 13,
+  "culture": 15,
   "concert": 4,
   "cinema": 2,
   "painting": 3,
   "show": 6,
   "raccolta:sagre": 3,
-  "raccolta:gratis": 42
+  "raccolta:gratis": 40,
+  "raccolta:tornei": 3
  },
- "aggiornato": "2026-10-02T07:23:19.906Z"
+ "aggiornato": "2026-10-03T06:58:21.295Z"
 }

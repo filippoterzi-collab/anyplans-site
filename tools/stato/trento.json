@@ -1,11 +1,11 @@
 {
  "slug": "trento",
  "nome": "Trento",
- "eventi": 97,
- "pagine": 513,
+ "eventi": 99,
+ "pagine": 519,
  "tipi": {
-  "festival": 3,
-  "culture": 33,
+  "festival": 2,
+  "culture": 36,
   "dancing": 1,
   "padel": 2,
   "show": 4,
@@ -14,13 +14,12 @@
   "yoga": 6,
   "fair": 1,
   "painting": 3,
-  "dinner": 11,
+  "dinner": 10,
   "tour": 4,
-  "hiking": 3,
-  "raccolta:sagre": 3,
-  "raccolta:gratis": 79,
-  "raccolta:tornei": 4,
+  "hiking": 4,
+  "raccolta:gratis": 81,
+  "raccolta:tornei": 5,
   "raccolta:classica-e-jazz": 4
  },
- "aggiornato": "2026-10-02T07:22:21.647Z"
+ "aggiornato": "2026-10-03T06:57:08.205Z"
 }

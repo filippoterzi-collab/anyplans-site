@@ -1,23 +1,22 @@
 {
  "slug": "vicenza",
  "nome": "Vicenza",
- "eventi": 124,
- "pagine": 519,
+ "eventi": 119,
+ "pagine": 521,
  "tipi": {
-  "dinner": 20,
+  "dinner": 19,
   "culture": 39,
   "concert": 18,
-  "yoga": 4,
+  "yoga": 3,
   "festival": 8,
-  "dancing": 3,
+  "dancing": 1,
   "show": 19,
   "tour": 5,
   "gym": 4,
   "raccolta:sagre": 8,
-  "raccolta:biblioteca": 3,
-  "raccolta:gratis": 119,
+  "raccolta:gratis": 114,
   "raccolta:meditazione-e-benessere": 5,
-  "raccolta:classica-e-jazz": 4
+  "raccolta:classica-e-jazz": 5
  },
- "aggiornato": "2026-10-02T07:23:52.309Z"
+ "aggiornato": "2026-10-03T06:58:59.210Z"
 }

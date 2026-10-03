@@ -1,20 +1,20 @@
 {
  "slug": "pavia",
  "nome": "Pavia",
- "eventi": 46,
+ "eventi": 44,
  "pagine": 229,
  "tipi": {
-  "padel": 4,
-  "dinner": 12,
-  "culture": 16,
-  "concert": 1,
+  "padel": 5,
+  "dinner": 8,
+  "culture": 15,
+  "concert": 2,
   "tour": 4,
   "festival": 4,
   "cinema": 4,
-  "raccolta:castagne-e-autunno": 3,
   "raccolta:sagre": 4,
-  "raccolta:gratis": 35,
-  "raccolta:libri-e-letture": 3
+  "raccolta:gratis": 32,
+  "raccolta:libri-e-letture": 3,
+  "raccolta:tornei": 3
  },
- "aggiornato": "2026-10-02T07:24:12.451Z"
+ "aggiornato": "2026-10-03T06:59:23.216Z"
 }

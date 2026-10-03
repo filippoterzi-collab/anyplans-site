@@ -1,10 +1,10 @@
 {
  "slug": "cagliari",
  "nome": "Cagliari",
- "eventi": 108,
- "pagine": 493,
+ "eventi": 106,
+ "pagine": 501,
  "tipi": {
-  "culture": 29,
+  "culture": 27,
   "dinner": 18,
   "padel": 0,
   "tour": 4,
@@ -12,13 +12,13 @@
   "yoga": 1,
   "hiking": 1,
   "festival": 6,
-  "concert": 20,
-  "show": 18,
+  "concert": 21,
+  "show": 17,
   "painting": 3,
   "raccolta:sagre": 6,
-  "raccolta:gratis": 95,
+  "raccolta:gratis": 93,
   "raccolta:classica-e-jazz": 4,
   "raccolta:all-aperto": 3
  },
- "aggiornato": "2026-10-02T07:22:08.976Z"
+ "aggiornato": "2026-10-03T06:56:53.998Z"
 }

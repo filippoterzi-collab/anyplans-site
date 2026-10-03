@@ -1,23 +1,23 @@
 {
  "slug": "lecco",
  "nome": "Lecco",
- "eventi": 55,
- "pagine": 263,
+ "eventi": 50,
+ "pagine": 257,
  "tipi": {
-  "festival": 2,
+  "festival": 1,
   "market": 7,
-  "padel": 7,
-  "tour": 1,
-  "culture": 12,
+  "padel": 5,
+  "tour": 2,
+  "culture": 7,
   "dinner": 4,
-  "hiking": 8,
+  "hiking": 11,
   "show": 3,
-  "running": 1,
   "walking": 4,
   "yoga": 3,
-  "raccolta:gratis": 41,
-  "raccolta:libri-e-letture": 4,
-  "raccolta:tornei": 3
+  "raccolta:castagne-e-autunno": 3,
+  "raccolta:gratis": 36,
+  "raccolta:tornei": 3,
+  "raccolta:castelli-e-borghi": 3
  },
- "aggiornato": "2026-10-02T07:23:27.615Z"
+ "aggiornato": "2026-10-03T06:58:30.899Z"
 }
