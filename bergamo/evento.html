@@ -292,8 +292,8 @@
   </div>
   <div class="hostcard" id="source" hidden>
     <div class="avatar" style="background:var(--tint); color:var(--blue)">↗</div>
-    <div><div class="n">Questo evento l'abbiamo trovato su un altro sito</div>
-      <div class="s"><a id="source-link" style="color:var(--blue); font-weight:700" target="_blank" rel="noopener">Apri l'annuncio originale</a> · orari e prezzi possono cambiare: controlla lì</div></div>
+    <div><div class="n" id="source-n">Questo evento l'abbiamo trovato su un altro sito</div>
+      <div class="s"><a id="source-link" style="color:var(--blue); font-weight:700" target="_blank" rel="noopener">Apri l'annuncio originale</a> <span id="source-s">· orari e prezzi possono cambiare: controlla lì</span></div></div>
   </div>
 
   <div id="desc-wrap" hidden>
@@ -407,7 +407,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1791106417"></script>
+<script src="app.js?v=1791106471"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -520,6 +520,14 @@
         document.getElementById("btn-ticket").hidden = true;
         document.getElementById("in-m").textContent = "Gli altri vedono che ci vai. Il posto lo prendi su " + extSrc.name + ", e lì c'è tutto il resto.";
       }
+    }
+    if (ev.host_name && ev.source_url) {
+      document.getElementById("source").hidden = false;
+      document.getElementById("source-n").textContent = "La pagina dell'evento";
+      document.getElementById("source-s").textContent = "· l'ha messa chi organizza: biglietti, programma, dettagli";
+      const sl = document.getElementById("source-link");
+      sl.href = ev.source_url; sl.textContent = "Apri la pagina →";
+      sl.onclick = () => track("source_open");
     }
     if (ev.description) {
       document.getElementById("desc-wrap").hidden = false;
