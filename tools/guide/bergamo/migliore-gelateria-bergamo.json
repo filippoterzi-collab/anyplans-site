@@ -22,62 +22,102 @@
    },
    "testo": [
     "Tre Coni, il massimo della guida, e il pistacchio giudicato il migliore d'Italia. Gelato a tiratura limitata con macchine del 1950, latte dall'Alpe Camisolo a duemila metri, fila che nei weekend arriva a un'ora e 45. Ne abbiamo scritto una pagina intera."
-   ]
+   ],
+   "embed": {
+    "url": "https://www.instagram.com/p/CsrEfMCNJNu/",
+    "account": "gelatocontadino",
+    "testo": "Il pistacchio del Gelato Contadino, su Instagram (@gelatocontadino)"
+   }
   },
   {
    "h2": "La Pasqualina, Almenno San Bartolomeo",
    "posto": {
     "nome": "La Pasqualina",
     "paese": "Almenno San Bartolomeo",
-    "ancora": "Tre Coni"
+    "ancora": "Tre Coni",
+    "instagram": "https://www.instagram.com/lapasqualina/",
+    "sito": "https://www.lapasqualina.it/"
    },
    "testo": [
-    "L'altra Tre Coni della provincia, a venti minuti da Bergamo verso la Valle Imagna. È la gelateria di Riccardo Schiavi, uno dei nomi più noti del gelato italiano, e vale il viaggio quanto il Contadino, con molta meno fila."
-   ]
+    "L'altra Tre Coni della provincia. È una gelateria e pasticceria di famiglia dal 1912, con sede ad Almenno San Bartolomeo, a venti minuti da Bergamo verso la Valle Imagna, e negozi anche a Bergamo e a Porto Cervo. La guida la mette allo stesso livello del Contadino, con molta meno fila."
+   ],
+   "embed": {
+    "url": "https://www.instagram.com/p/DdyCySxsipj/",
+    "account": "lapasqualina",
+    "testo": "Un cono de La Pasqualina (@lapasqualina)"
+   }
   },
   {
    "h2": "Pandizucchero, Almè",
    "posto": {
     "nome": "Pandizucchero",
     "paese": "Almè",
-    "ancora": "In guida"
+    "ancora": "In guida",
+    "indirizzo": "Via Antonio Locatelli 32, 24011 Almè",
+    "instagram": "https://www.instagram.com/gelateriapandizucchero/",
+    "sito": "https://www.gelateriapandizucchero.it/"
    },
    "testo": [
     "In guida, e il nome che i bergamaschi hanno scritto spontaneamente nei commenti quando abbiamo pubblicato il Contadino: «provate Pandizucchero». Ad Almè, all'imbocco della Valle Brembana."
-   ]
+   ],
+   "embed": {
+    "url": "https://www.instagram.com/p/Ddv2bkbRQB8/",
+    "account": "gelateriapandizucchero",
+    "testo": "Cialda e gelato da Pandizucchero (@gelateriapandizucchero)"
+   }
   },
   {
    "h2": "Mandorlacchio, Bergamo",
    "posto": {
     "nome": "Mandorlacchio",
     "paese": "Bergamo",
-    "ancora": "In guida, in crescita"
+    "ancora": "In guida, in crescita",
+    "instagram": "https://www.instagram.com/mandorlacchio/"
    },
    "testo": [
-    "In città, e quest'anno ha guadagnato un cono nella guida: è la gelateria che sta salendo."
-   ]
+    "In città, e quest'anno ha guadagnato un cono nella guida: è la gelateria che sta salendo. Parte sempre dal frutto fresco: in questi giorni ha il gelato all'uva americana, frullata e setacciata, e quello al fico d'india."
+   ],
+   "embed": {
+    "url": "https://www.instagram.com/p/DeBrEQXD0oP/",
+    "account": "mandorlacchio",
+    "testo": "Il gelato appena mantecato di Mandorlacchio (@mandorlacchio)"
+   }
   },
   {
    "h2": "Verderosa, Bergamo",
    "posto": {
     "nome": "Verderosa",
     "paese": "Bergamo",
-    "ancora": "In guida"
+    "ancora": "2 coni, Gambero Rosso",
+    "instagram": "https://www.instagram.com/gelateria.verderosa/",
+    "orari": "Aperta tutti i giorni, 9:30-22"
    },
    "testo": [
-    "Premiata dalla guida, in città. Una scelta più tranquilla del Contadino nei giorni in cui la fila è troppa."
-   ]
+    "Due coni del Gambero Rosso, gelato artigianale dal 1990, aperta sette giorni su sette dalle 9:30 alle 22. Una scelta più tranquilla del Contadino nei giorni in cui la fila è troppa."
+   ],
+   "embed": {
+    "url": "https://www.instagram.com/p/DcqKWT6DT-t/",
+    "account": "gelateria.verderosa",
+    "testo": "Gelateria Verderosa (@gelateria.verderosa)"
+   }
   },
   {
    "h2": "Gelateria Minù, Osio Sotto",
    "posto": {
     "nome": "Gelateria Minù",
     "paese": "Osio Sotto",
-    "ancora": "In guida"
+    "ancora": "Gambero Rosso e Top 100 Dissapore",
+    "instagram": "https://www.instagram.com/gelateriaminu/",
+    "sito": "https://gelateriaminu.it/"
    },
    "testo": [
-    "Premiata dalla guida, nella bassa, a Osio Sotto: la gelateria da fermarsi tornando da Treviglio o dall'autostrada."
-   ]
+    "Nella guida del Gambero Rosso e tra le cento migliori gelaterie di Dissapore, a Osio Sotto. Ha una cosa che le altre non hanno: è tutto senza glutine, anche le cialde e la pasticceria fredda. Ci si ferma tornando da Treviglio o dall'autostrada."
+   ],
+   "embed": {
+    "url": "https://www.instagram.com/p/DazzZpIDHfZ/",
+    "account": "gelateriaminu",
+    "testo": "Gelateria Minù nella guida del Gambero Rosso (@gelateriaminu)"
+   }
   },
   {
    "h2": "Le altre tre",
@@ -93,11 +133,15 @@
   },
   {
    "q": "Quante gelaterie di Bergamo sono premiate dal Gambero Rosso?",
-   "a": "Nove in provincia nella guida 2026. Due hanno i Tre Coni: Gelato Contadino e La Pasqualina."
+   "a": "Nove in provincia nella guida 2026. Due hanno i Tre Coni: Gelato Contadino e La Pasqualina. Verderosa ne ha due."
   },
   {
    "q": "Dov'è il miglior pistacchio?",
    "a": "Al Gelato Contadino di Bergamo: la guida del Gambero Rosso lo indica come il miglior pistacchio d'Italia."
+  },
+  {
+   "q": "C'è una gelateria senza glutine a Bergamo?",
+   "a": "Sì: la Gelateria Minù di Osio Sotto è tutta senza glutine, cialde e pasticceria fredda comprese. È nella guida del Gambero Rosso."
   }
  ],
  "fonti": [

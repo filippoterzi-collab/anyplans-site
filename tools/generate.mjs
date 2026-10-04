@@ -644,6 +644,10 @@ function placeLd(p) {
     address: { "@type": "PostalAddress", ...(p.indirizzo ? { streetAddress: p.indirizzo } : {}), addressLocality: p.paese || CITY_NAME, addressCountry: "IT" },
     ...(p.instagram || p.sito ? { sameAs: [p.instagram, p.sito].filter(Boolean) } : {}) };
 }
+// un post Instagram del posto, col codice ufficiale di Instagram (blockquote + embed.js): la foto resta
+// loro, con il nome dell'account e il link al profilo. È il modo di mostrare la foto vera di un locale
+// senza copiarla (regole delle foto in marketing/foto-bergamo/LEGGIMI.md, UI.md §3.12).
+const igEmbed = (e) => !e ? "" : `<blockquote class="instagram-media" data-instgrm-permalink="${esc(e.url)}?utm_source=ig_embed" data-instgrm-version="14" style="background:#fff;border:0;border-radius:12px;margin:16px 0;max-width:540px;min-width:280px;width:100%"><a href="${esc(e.url)}" rel="noopener">${esc(e.testo || `Un post di @${e.account} su Instagram`)}</a></blockquote>`;
 function guidePage(g) {
   const url = guideUrl(g);
   const image = g.copertina ? `${SITE}${g.copertina}` : OG_DEFAULT;
@@ -659,7 +663,8 @@ ${crumbs([["anyplans", "/"], [CITY_NAME, rel(hubUrl())], ["Guide", rel(guideInde
 <div class="m">${esc(fmtLong(data, DEFAULT_TZ))}${+agg !== +data ? ` · aggiornato ${esc(fmtShort(agg, DEFAULT_TZ))}` : ""} · di Filippo Terzi${g.instagram ? ` · <a class="lnk" href="${esc(g.instagram)}" rel="noopener">il post su Instagram</a>` : ""}</div>
 ${g.copertina ? `<div class="cover"><img src="${esc(g.copertina)}" alt="${esc(g.copertina_alt || g.titolo)}" width="800" height="450" loading="eager" decoding="async" style="object-fit:cover"></div>${g.copertina_credito ? `<div class="m" style="font-size:12.5px">${esc(g.copertina_credito)}</div>` : ""}` : ""}
 ${g.posto ? postoHtml(g.posto, g) : ""}
-${sezioni.map(x => `<section class="box"><h2>${esc(x.h2)}</h2>${postoHtml(x.posto, g)}${(x.testo || []).map(t => `<p>${esc(t)}</p>`).join("")}</section>`).join("\n")}
+${igEmbed(g.embed)}
+${sezioni.map(x => `<section class="box"><h2>${esc(x.h2)}</h2>${postoHtml(x.posto, g)}${(x.testo || []).map(t => `<p>${esc(t)}</p>`).join("")}${igEmbed(x.embed)}</section>`).join("\n")}
 ${faq.length ? faqHtml(faq) : ""}
 ${correlate.length ? `<h2>Leggi anche</h2><div class="tags">${correlate.map(c => `<a href="${esc(guideUrl(c))}">${esc(c.titolo)}</a>`).join("")}</div>` : ""}
 <div class="box"><h2>Cosa c'è oggi a ${esc(CITY_NAME)}</h2><p>${esc(`Le guide raccontano i posti; su anyplans ci sono gli eventi: ${upcomingPages.length} in programma a ${CITY_NAME} e provincia, con ora, luogo e chi ci va.`)}</p><div class="cta"><a class="btn" href="${rel(hubUrl())}">Cosa fare a ${esc(CITY_NAME)}</a><a class="btn ghost" href="${MAP_URL}">Vedi la mappa</a></div></div>
@@ -671,8 +676,10 @@ ${(g.fonti || []).length ? `<div class="m"><b>Fonti</b>: ${g.fonti.map(f => `<a 
     ...(posti.length === 1 ? { about: placeLd(posti[0]) } : {}) };
   const lista = g.tipo === "lista" && posti.length ? jsonld({ "@context": "https://schema.org", "@type": "ItemList", name: g.titolo, url,
     itemListElement: posti.map((p, i) => ({ "@type": "ListItem", position: i + 1, item: placeLd(p) })) }) : "";
+  const conEmbed = g.embed || sezioni.some(x => x.embed);
   return { html: layout({ title: cut(g.titolo, 60) + " | anyplans", description: cut(g.descrizione, 160), url, image, ogType: "article", modified: agg,
-    jsonLd: [jsonld(article), lista, faq.length ? faqLd(faq) : ""].filter(Boolean).join("\n"), body, alt: null }), lastmod: agg };
+    jsonLd: [jsonld(article), lista, faq.length ? faqLd(faq) : ""].filter(Boolean).join("\n"),
+    body: body + (conEmbed ? `<script async src="https://www.instagram.com/embed.js"></script>` : ""), alt: null }), lastmod: agg };
 }
 function guideIndex() {
   const url = guideIndexUrl();

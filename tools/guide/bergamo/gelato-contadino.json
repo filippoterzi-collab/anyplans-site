@@ -5,7 +5,7 @@
  "titolo": "Gelato Contadino, Bergamo: un'ora e 45 di fila per un cono",
  "h1": "Gelato Contadino, Bergamo: perché c'è un'ora e 45 di fila per un cono",
  "descrizione": "Gelato Contadino a Bergamo (piazzale Risorgimento 7, Loreto): Tre Coni del Gambero Rosso, il miglior pistacchio d'Italia, latte da un alpeggio a 2000 metri. Orari, prezzi e come si fa la fila.",
- "instagram": "https://www.instagram.com/anyplans_bergamo/",
+ "instagram": "https://www.instagram.com/p/DdltMwDCCnc/",
  "lead": "Si arriva alle 11, all'apertura. Si entra alle 12:45. È la gelateria più premiata di Bergamo e una delle poche in Italia con i Tre Coni del Gambero Rosso: qui c'è cosa aspettarsi, quanto costa e come non sbagliare giorno.",
  "posto": {
   "nome": "Gelato Contadino",
@@ -35,7 +35,12 @@
    "testo": [
     "Dall'Alpe Camisolo, l'alpeggio di Daniel Moioli: tre ore di cammino dal rifugio Grassi, su un sentiero impervio. È il dettaglio che spiega il prezzo e il sapore. «Zero fighetterie, zero robe autoreferenziali. Solo la ricerca della verità», dicono loro.",
     "C'è anche un patto per chi cammina: chi sale al Camisolo e porta giù due litri di quel latte riceve in cambio una vaschetta da un chilo. Offerta."
-   ]
+   ],
+   "embed": {
+    "url": "https://www.instagram.com/p/DcleLBioYdE/",
+    "account": "gelatocontadino",
+    "testo": "L'alpeggio di Daniel Moioli, da cui arriva il latte (@gelatocontadino)"
+   }
   },
   {
    "h2": "Quanto costa e come si fa la fila",
@@ -73,12 +78,17 @@
   },
   {
    "nome": "Il carosello di anyplans del 22/09/2026 (171.604 visualizzazioni)",
-   "url": "https://www.instagram.com/anyplans_bergamo/"
+   "url": "https://www.instagram.com/p/DdltMwDCCnc/"
   }
  ],
  "correlate": [
   "migliore-gelateria-bergamo",
   "cavour-1880"
  ],
- "slug": "gelato-contadino"
+ "slug": "gelato-contadino",
+ "embed": {
+  "url": "https://www.instagram.com/p/CsrEfMCNJNu/",
+  "account": "gelatocontadino",
+  "testo": "Il pistacchio del Gelato Contadino, su Instagram (@gelatocontadino)"
+ }
 }

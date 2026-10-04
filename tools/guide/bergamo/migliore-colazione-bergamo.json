@@ -19,22 +19,35 @@
     "prezzo": "Cappuccino 3,50 €, brioche 2,50 €",
     "instagram": "https://www.instagram.com/cavour1880/",
     "ancora": "Tre Torte (92 punti), Gambero Rosso",
-    "guida": "cavour-1880"
+    "guida": "cavour-1880",
+    "orari": "Chiuso il mercoledì"
    },
    "testo": [
     "Tre Torte con 92 punti nella guida Pasticceri & Pasticcerie 2026 del Gambero Rosso. Le brioche le fa la squadra del Da Vittorio, tre stelle Michelin; cappuccino e brioche costano 6 euro. È la colazione da fare presto, prima dei turisti, e ne abbiamo scritto una pagina intera."
-   ]
+   ],
+   "embed": {
+    "url": "https://www.instagram.com/p/Dc3NWR2DFmD/",
+    "account": "cavour1880",
+    "testo": "Colazione e piccola pasticceria al Cavour 1880 (@cavour1880)"
+   }
   },
   {
    "h2": "La Serra Pastry Lab, Almè",
    "posto": {
     "nome": "La Serra Pastry Lab",
     "paese": "Almè",
-    "ancora": "Pasticcere Emergente d'Italia, Gambero Rosso"
+    "ancora": "Pasticcere Emergente d'Italia, Gambero Rosso",
+    "indirizzo": "Via Papa Giovanni XXIII 1, 24011 Almè",
+    "instagram": "https://www.instagram.com/laserra_pastrylab/"
    },
    "testo": [
-    "Il laboratorio di Leonardo Tiraboschi, Pasticcere Emergente d'Italia per il Gambero Rosso: un premio nazionale, non regionale. Ad Almè, dieci minuti da Bergamo verso la Valle Brembana: la colazione del sabato fuori città."
-   ]
+    "Il laboratorio di Leonardo Tiraboschi, Pasticcere Emergente d'Italia per il Gambero Rosso: un premio nazionale, non regionale. Tiraboschi viene dall'ingegneria biomedica e il croissant lo tratta allo stesso modo, con anni di prove; il caffè è specialty e non si prenota. Ad Almè, dieci minuti da Bergamo verso la Valle Brembana: la colazione del sabato fuori città."
+   ],
+   "embed": {
+    "url": "https://www.instagram.com/p/DdErxSgjaqA/",
+    "account": "laserra_pastrylab",
+    "testo": "Il croissant de La Serra Pastry Lab (@laserra_pastrylab)"
+   }
   },
   {
    "h2": "Cosa manca",

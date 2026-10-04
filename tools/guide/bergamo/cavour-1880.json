@@ -7,7 +7,7 @@
  "descrizione": "Caffè Cavour 1880 in via Gombito 7, Città Alta: Tre Torte del Gambero Rosso (92 punti), le brioche del maître pâtissier del Da Vittorio, sei camere coi nomi dei pasticcini. Prezzi della colazione.",
  "copertina": "/guide/bergamo/cavour-facciata.jpg",
  "copertina_alt": "L'insegna della Pasticceria Cavour in via Gombito, Bergamo Alta, di sera",
- "instagram": "https://www.instagram.com/anyplans_bergamo/",
+ "instagram": "https://www.instagram.com/p/Dd6SPrYiL05/",
  "lead": "Una delle brioche più buone d'Italia si mangia in via Gombito, a Città Alta. Le fa ogni mattina la squadra del ristorante tre stelle Michelin Da Vittorio, e la guida del Gambero Rosso le dà il massimo. Costa 2,50 euro.",
  "posto": {
   "nome": "Caffè Cavour 1880",
@@ -16,7 +16,8 @@
   "indirizzo": "Via Gombito 7, 24129 Bergamo",
   "prezzo": "Cappuccino 3,50 €, brioche 2,50 €, spremuta 7,50 €",
   "instagram": "https://www.instagram.com/cavour1880/",
-  "ancora": "Tre Torte (92 punti), Gambero Rosso"
+  "ancora": "Tre Torte (92 punti), Gambero Rosso",
+  "orari": "Chiuso il mercoledì; aperto gli altri giorni"
  },
  "sezioni": [
   {
@@ -47,7 +48,7 @@
  "faq": [
   {
    "q": "Dove si trova il Caffè Cavour 1880?",
-   "a": "In via Gombito 7, a Bergamo Alta, lungo la via che dalla funicolare porta a piazza Vecchia."
+   "a": "In via Gombito 7, a Bergamo Alta, lungo la via che dalla funicolare porta a piazza Vecchia. È chiuso il mercoledì."
   },
   {
    "q": "Quanto costa la colazione al Cavour 1880?",
@@ -70,6 +71,10 @@
   {
    "nome": "Caffè Cavour 1880 su Instagram",
    "url": "https://www.instagram.com/cavour1880/"
+  },
+  {
+   "nome": "Il carosello di anyplans sul Cavour 1880",
+   "url": "https://www.instagram.com/p/Dd6SPrYiL05/"
   }
  ],
  "correlate": [
@@ -77,5 +82,10 @@
   "gelato-contadino"
  ],
  "slug": "cavour-1880",
- "copertina_credito": "Foto di Filippo Terzi"
+ "copertina_credito": "Foto di Filippo Terzi",
+ "embed": {
+  "url": "https://www.instagram.com/p/Dc3NWR2DFmD/",
+  "account": "cavour1880",
+  "testo": "Colazione e piccola pasticceria al Cavour 1880 (@cavour1880)"
+ }
 }
