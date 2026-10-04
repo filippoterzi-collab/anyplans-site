@@ -1,0 +1,54 @@
+{
+ "tipo": "articolo",
+ "data": "2026-10-04",
+ "aggiornato": "2026-10-04",
+ "titolo": "Halloween 2026 a Bergamo: feste, serate e cose per bambini",
+ "h1": "Halloween 2026 a Bergamo: le feste e le serate, per grandi e bambini",
+ "descrizione": "Halloween 2026 a Bergamo e provincia: le feste in discoteca, le serate a tema, le zucche e le feste per bambini, con data, ora e posto. Elenco aggiornato ogni notte fino al 31 ottobre.",
+ "lead": "Halloween cade di sabato, il 31 ottobre 2026: vuol dire un weekend intero di feste. Qui sotto ci sono quelle di Bergamo e provincia, dalle serate in discoteca alle feste delle zucche per i bambini, aggiornate ogni notte man mano che escono.",
+ "sezioni": [
+  {
+   "h2": "Quando cade",
+   "testo": [
+    "Sabato 31 ottobre 2026. Il giorno dopo, domenica 1 novembre, è Ognissanti, festa nazionale: le feste della notte di Halloween possono finire tardi senza pensare al lavoro, e molte cominciano già venerdì 30."
+   ]
+  },
+  {
+   "h2": "Per i bambini",
+   "testo": [
+    "Le feste delle zucche, i laboratori per intagliarle e il dolcetto o scherzetto organizzato dai comuni e dagli oratori: nell'elenco sono insieme alle serate per adulti, guarda il titolo e l'ora."
+   ]
+  }
+ ],
+ "eventi": {
+  "tipo": "raccolta:halloween",
+  "titolo": "Le feste di Halloween in programma",
+  "tutti": "Tutti gli eventi di Halloween a Bergamo",
+  "max": 15
+ },
+ "faq": [
+  {
+   "q": "Quando è Halloween nel 2026?",
+   "a": "Sabato 31 ottobre 2026. Domenica 1 novembre è Ognissanti, festa nazionale."
+  },
+  {
+   "q": "Dove festeggiare Halloween a Bergamo?",
+   "a": "L'elenco in questa pagina raccoglie le feste di Halloween 2026 a Bergamo e provincia, in discoteca, nei locali e nei paesi, con data, ora e luogo, e si aggiorna ogni notte."
+  },
+  {
+   "q": "Ci sono feste di Halloween per bambini a Bergamo?",
+   "a": "Sì: feste delle zucche, laboratori e dolcetto o scherzetto organizzati da comuni e oratori. Sono nell'elenco insieme alle serate per adulti."
+  }
+ ],
+ "fonti": [
+  {
+   "nome": "Eventi di Halloween a Bergamo, su anyplans",
+   "url": "https://anyplans.in/bergamo/halloween/"
+  }
+ ],
+ "correlate": [
+  "cosa-fare-a-bergamo-con-i-bambini",
+  "castagne-bergamo"
+ ],
+ "slug": "halloween-a-bergamo"
+}

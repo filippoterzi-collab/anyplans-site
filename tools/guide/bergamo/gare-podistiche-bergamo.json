@@ -1,0 +1,62 @@
+{
+ "tipo": "articolo",
+ "data": "2026-10-04",
+ "aggiornato": "2026-10-04",
+ "titolo": "Gare podistiche, maratone e trail a Bergamo: il calendario",
+ "h1": "Gare podistiche, mezze maratone e trail a Bergamo e provincia: il calendario",
+ "descrizione": "Il calendario delle corse a Bergamo e provincia: gare podistiche, mezze maratone, camminate non competitive e trail in montagna, con data, ora, paese e come iscriversi. Aggiornato ogni notte.",
+ "lead": "Ogni weekend in provincia di Bergamo c'è almeno una corsa: le non competitive dei paesi, le gare su strada, i trail nelle valli. Qui c'è il calendario dei prossimi giorni, aggiornato ogni notte, e la differenza tra una gara e una corsa da fare insieme agli altri.",
+ "sezioni": [
+  {
+   "h2": "Competitiva o non competitiva",
+   "testo": [
+    "Le non competitive (marce, camminate, «corse dei paesi») sono aperte a tutti: ci si iscrive la mattina stessa, si sceglie il percorso corto o lungo e spesso c'è il ristoro. Le competitive chiedono il certificato medico agonistico o il tesseramento: è scritto nella pagina della gara."
+   ]
+  },
+  {
+   "h2": "Il trail nelle valli",
+   "testo": [
+    "Le Orobie hanno un calendario di trail e corse in montagna da primavera ad autunno, dalle brevi corse in salita ai percorsi lunghi tra i rifugi. Sono nell'elenco insieme alle corse su strada, con la distanza nel titolo quando l'organizzatore la indica."
+   ]
+  },
+  {
+   "h2": "Allenarsi in gruppo",
+   "testo": [
+    "Per preparare una gara senza correre da soli ci sono i run club: a Bergamo ce n'è uno quasi ogni sera, quasi tutti gratis. Sono nella guida dei run club, giorno per giorno."
+   ]
+  }
+ ],
+ "eventi": {
+  "tipi": [
+   "running",
+   "trail"
+  ],
+  "titolo": "Le prossime corse a Bergamo e provincia",
+  "max": 15
+ },
+ "faq": [
+  {
+   "q": "Che gare podistiche ci sono a Bergamo questo weekend?",
+   "a": "L'elenco in questa pagina si aggiorna ogni notte con le corse dei prossimi giorni a Bergamo e provincia, con data, ora e paese."
+  },
+  {
+   "q": "Serve il certificato medico per una corsa non competitiva?",
+   "a": "Di solito no: per le non competitive ci si iscrive sul posto. Per le competitive serve il certificato medico agonistico o il tesseramento, come indicato nella pagina della gara."
+  },
+  {
+   "q": "Dove allenarsi in gruppo a Bergamo?",
+   "a": "Con i run club: ce n'è uno quasi ogni sera, quasi tutti gratis e aperti a chiunque. Sono elencati giorno per giorno nella guida dei run club di Bergamo."
+  }
+ ],
+ "fonti": [
+  {
+   "nome": "Corse e gare podistiche a Bergamo, su anyplans",
+   "url": "https://anyplans.in/bergamo/corsa/"
+  }
+ ],
+ "correlate": [
+  "run-club-bergamo",
+  "gruppi-di-cammino-bergamo"
+ ],
+ "slug": "gare-podistiche-bergamo"
+}

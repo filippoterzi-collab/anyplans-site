@@ -446,7 +446,7 @@
    "titolo": "Natale: mercatini, concerti e presepi",
    "noun_en": "Christmas markets and events",
    "conta": "evento di Natale|eventi di Natale",
-   "regex": "natal[ei]|christmas|\\bnatalizi|presep|befana|santa lucia|villaggio di babbo",
+   "regex": "natal[ei]|christmas|\\bnatalizi|presep|befana|^(?!.*cammino).*\\bsanta lucia\\b|villaggio di babbo",
    "frase": "Mercatini di Natale, concerti, presepi e villaggi di Babbo Natale."
   },
   {

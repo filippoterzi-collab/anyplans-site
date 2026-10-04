@@ -1,0 +1,58 @@
+{
+ "tipo": "articolo",
+ "data": "2026-10-04",
+ "aggiornato": "2026-10-04",
+ "titolo": "Gruppi di cammino a Bergamo: 118 gruppi in 96 comuni, gratis",
+ "h1": "Gruppi di cammino a Bergamo e provincia: dove, quando e come iscriversi (è gratis)",
+ "descrizione": "I gruppi di cammino di ATS Bergamo: 118 gruppi in 96 comuni, camminate di un'ora con un referente, iscrizione gratuita sul posto. Giorni, orari e punti di ritrovo dei prossimi giorni, aggiornati.",
+ "lead": "In 96 comuni della provincia di Bergamo, una o più volte a settimana, un gruppo di persone cammina insieme per un'ora con un referente. Sono i gruppi di cammino promossi da ATS Bergamo: gratis, aperti a tutti, e il modo più semplice per uscire di casa e conoscere qualcuno del paese.",
+ "sezioni": [
+  {
+   "h2": "Cosa sono",
+   "testo": [
+    "Camminate di gruppo a passo tranquillo, di solito di un'ora, con un ritrovo fisso (la piazza, il parco, il centro anziani) e un referente che guida il gruppo. Li promuove ATS Bergamo nell'ambito della promozione della salute: secondo l'elenco di ATS di fine settembre 2026 sono 118 gruppi in 96 comuni."
+   ]
+  },
+  {
+   "h2": "Come ci si iscrive",
+   "testo": [
+    "Ci si presenta al ritrovo: l'iscrizione è gratuita e si fa sul posto, firmando una liberatoria con il referente. Non servono attrezzature, bastano scarpe comode. Per informazioni ATS risponde a promosalute@ats-bg.it e al numero 035 2270372."
+   ]
+  }
+ ],
+ "eventi": {
+  "tipo": "walking",
+  "titolo": "Le prossime camminate",
+  "tutti": "Tutte le camminate a Bergamo",
+  "max": 15
+ },
+ "faq": [
+  {
+   "q": "Come mi iscrivo a un gruppo di cammino a Bergamo?",
+   "a": "Ti presenti al ritrovo del gruppo del tuo comune: l'iscrizione è gratuita e si fa sul posto con una liberatoria. Giorni, orari e ritrovi sono in questa pagina."
+  },
+  {
+   "q": "Quanto costa un gruppo di cammino?",
+   "a": "Niente: i gruppi di cammino promossi da ATS Bergamo sono gratuiti."
+  },
+  {
+   "q": "Quanti gruppi di cammino ci sono in provincia di Bergamo?",
+   "a": "Secondo l'elenco di ATS Bergamo di fine settembre 2026, 118 gruppi in 96 comuni."
+  },
+  {
+   "q": "Chi contattare per i gruppi di cammino?",
+   "a": "ATS Bergamo, promozione della salute: promosalute@ats-bg.it, 035 2270372."
+  }
+ ],
+ "fonti": [
+  {
+   "nome": "ATS Bergamo, gruppi di cammino",
+   "url": "https://ats-bg.it/gruppi-cammino"
+  }
+ ],
+ "correlate": [
+  "run-club-bergamo",
+  "gare-podistiche-bergamo"
+ ],
+ "slug": "gruppi-di-cammino-bergamo"
+}

@@ -1,0 +1,50 @@
+{
+ "tipo": "articolo",
+ "data": "2026-10-04",
+ "aggiornato": "2026-10-04",
+ "titolo": "Mercatini di Natale 2026 a Bergamo e provincia: date e paesi",
+ "h1": "Mercatini di Natale 2026 a Bergamo e provincia",
+ "descrizione": "I mercatini di Natale 2026 a Bergamo e in provincia, con date, orari e paesi, aggiornati ogni notte man mano che vengono annunciati: villaggi di Natale, presepi, concerti e Santa Lucia.",
+ "lead": "I mercatini di Natale a Bergamo e in provincia cominciano di solito a fine novembre e vanno avanti fino all'Epifania. Questa pagina si riempie man mano che vengono annunciati: data, orari e paese di ognuno, aggiornati ogni notte.",
+ "sezioni": [
+  {
+   "h2": "Santa Lucia, prima di Babbo Natale",
+   "testo": [
+    "A Bergamo i regali ai bambini, per tradizione, li porta Santa Lucia, nella notte tra il 12 e il 13 dicembre. Per questo dicembre qui comincia prima: le fiere e i mercatini di Santa Lucia arrivano prima di quelli di Natale."
+   ]
+  },
+  {
+   "h2": "Cosa c'è in un mercatino",
+   "testo": [
+    "Casette di legno con artigianato e decorazioni, vin brulé, dolci, presepi e spesso un concerto o il coro. Nei paesi della provincia molti mercatini durano un solo weekend: per questo conviene guardare le date."
+   ]
+  }
+ ],
+ "eventi": {
+  "tipo": "raccolta:natale",
+  "titolo": "Mercatini e feste di Natale in programma",
+  "tutti": "Tutti gli eventi di Natale a Bergamo",
+  "max": 15
+ },
+ "faq": [
+  {
+   "q": "Quando iniziano i mercatini di Natale a Bergamo?",
+   "a": "Di solito a fine novembre, e vanno avanti fino all'Epifania. Le date di ogni mercatino sono nell'elenco di questa pagina, aggiornato ogni notte."
+  },
+  {
+   "q": "Chi porta i regali ai bambini a Bergamo?",
+   "a": "Per tradizione Santa Lucia, nella notte tra il 12 e il 13 dicembre."
+  }
+ ],
+ "fonti": [
+  {
+   "nome": "Eventi di Natale a Bergamo, su anyplans",
+   "url": "https://anyplans.in/bergamo/natale/"
+  }
+ ],
+ "correlate": [
+  "sagre-bergamasche-cosa-si-mangia",
+  "cosa-fare-a-bergamo-con-i-bambini"
+ ],
+ "slug": "mercatini-di-natale-bergamo"
+}

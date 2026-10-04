@@ -1,0 +1,60 @@
+{
+ "tipo": "articolo",
+ "data": "2026-10-04",
+ "aggiornato": "2026-10-04",
+ "titolo": "Cosa fare a Bergamo con i bambini: laboratori e feste",
+ "h1": "Cosa fare a Bergamo con i bambini questo weekend",
+ "descrizione": "Bergamo con i bambini: laboratori, letture in biblioteca, spettacoli e feste per famiglie dei prossimi giorni, aggiornati ogni notte, più i posti dove andare quando non c'è niente in programma.",
+ "lead": "Il weekend con i bambini a Bergamo e provincia: laboratori, letture in biblioteca, spettacoli e feste pensati per loro, con l'ora e il posto. L'elenco si aggiorna ogni notte; più sotto, i posti fissi per i giorni vuoti.",
+ "sezioni": [
+  {
+   "h2": "Le biblioteche",
+   "testo": [
+    "Le biblioteche della provincia fanno letture ad alta voce e laboratori per bambini quasi ogni settimana, gratis: sono la cosa più sottovalutata del weekend. Su anyplans le trovi tutte nella pagina degli eventi in biblioteca."
+   ]
+  },
+  {
+   "h2": "Città Alta a misura di bambino",
+   "testo": [
+    "La funicolare dalla città bassa, le Mura da percorrere a piedi e i cento rintocchi del Campanone alle 22 sono già una gita. Per i più grandi, l'Accademia Carrara organizza visite e laboratori per famiglie."
+   ]
+  },
+  {
+   "h2": "Le feste di paese",
+   "testo": [
+    "Da maggio a ottobre le sagre bergamasche sono il posto più facile per una serata con i figli: si entra gratis, si mangia alle tavolate e quasi sempre c'è uno spazio per i bambini."
+   ]
+  }
+ ],
+ "eventi": {
+  "tipo": "raccolta:bambini",
+  "titolo": "Per bambini e famiglie, nei prossimi giorni",
+  "tutti": "Tutti gli eventi per bambini",
+  "max": 12
+ },
+ "faq": [
+  {
+   "q": "Cosa fare a Bergamo con i bambini nel weekend?",
+   "a": "Laboratori, letture in biblioteca, spettacoli e feste per famiglie: l'elenco in questa pagina si aggiorna ogni notte con quelli dei prossimi giorni, con ora e luogo."
+  },
+  {
+   "q": "Ci sono attività gratis per bambini a Bergamo?",
+   "a": "Sì: le letture e i laboratori nelle biblioteche sono quasi sempre gratuiti, e alle sagre di paese si entra gratis."
+  },
+  {
+   "q": "Cosa fare con i bambini quando piove?",
+   "a": "Le biblioteche e i musei: l'Accademia Carrara organizza attività per famiglie. Gli eventi al chiuso dei prossimi giorni sono nella guida su cosa fare a Bergamo quando piove."
+  }
+ ],
+ "fonti": [
+  {
+   "nome": "Eventi per bambini e famiglie a Bergamo, su anyplans",
+   "url": "https://anyplans.in/bergamo/bambini/"
+  }
+ ],
+ "correlate": [
+  "cosa-fare-a-bergamo-quando-piove",
+  "sagre-bergamasche-cosa-si-mangia"
+ ],
+ "slug": "cosa-fare-a-bergamo-con-i-bambini"
+}

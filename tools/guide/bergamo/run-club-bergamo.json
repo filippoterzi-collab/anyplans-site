@@ -1,0 +1,62 @@
+{
+ "tipo": "articolo",
+ "data": "2026-10-04",
+ "aggiornato": "2026-10-04",
+ "titolo": "Run club a Bergamo: tutti, giorno per giorno",
+ "h1": "Tutti i run club di Bergamo, giorno per giorno: dove e quando si corre in gruppo",
+ "descrizione": "Tutti i run club di Bergamo e provincia con giorno, ora e punto di ritrovo, aggiornati dal database: quasi tutti gratis e aperti a chiunque. Come funziona la prima uscita, quanto si corre, cosa portare.",
+ "lead": "A Bergamo si può correre in gruppo quasi ogni sera della settimana, gratis e senza conoscere nessuno. Qui ci sono tutti i run club della città e della provincia, giorno per giorno, con l'ora e il posto del ritrovo, e quello che c'è da sapere prima della prima uscita.",
+ "sezioni": [
+  {
+   "h2": "Come funziona la prima volta",
+   "testo": [
+    "Ci si presenta al ritrovo dieci minuti prima, con scarpe da corsa e una giacca leggera. Non serve iscriversi né essere allenati: quasi tutti i gruppi corrono a ritmo tranquillo e spesso si dividono per passo, così nessuno resta indietro. Si fanno di solito tra i 5 e i 10 chilometri, in un'ora circa, e dopo spesso si va a bere qualcosa.",
+    "Per sapere se il gruppo esce davvero quella settimana, il posto giusto è il gruppo WhatsApp o l'Instagram del club: li trovi sotto, su ogni scheda."
+   ]
+  },
+  {
+   "h2": "Quanto costa",
+   "testo": [
+    "Nella maggior parte dei casi niente. Alcuni gruppi chiedono un tesseramento annuale o una piccola quota per l'assicurazione: quando c'è, è scritto sulla scheda del club."
+   ]
+  }
+ ],
+ "runclub": true,
+ "eventi": {
+  "tipi": [
+   "running",
+   "trail"
+  ],
+  "titolo": "Le prossime corse e gare",
+  "max": 8
+ },
+ "faq": [
+  {
+   "q": "Quali run club ci sono a Bergamo?",
+   "a": "L'elenco completo, con giorno, ora e ritrovo di ogni gruppo, è in questa pagina e si aggiorna dal database. Ce n'è uno quasi ogni sera della settimana, in città e in provincia."
+  },
+  {
+   "q": "Serve essere allenati per correre con un run club?",
+   "a": "No: quasi tutti sono aperti a chiunque, corrono a ritmo tranquillo e spesso si dividono per passo. Basta presentarsi al ritrovo."
+  },
+  {
+   "q": "I run club di Bergamo sono gratis?",
+   "a": "Quasi tutti sì. Alcuni chiedono un tesseramento annuale o una quota per l'assicurazione, indicata sulla scheda del club."
+  },
+  {
+   "q": "Quanti chilometri si corrono?",
+   "a": "Di solito tra 5 e 10, in un'ora circa. Le uscite in pista sono allenamenti più strutturati; quelle del weekend possono essere più lunghe."
+  }
+ ],
+ "fonti": [
+  {
+   "nome": "I run club di Bergamo, su anyplans",
+   "url": "https://anyplans.in/bergamo/running-club/"
+  }
+ ],
+ "correlate": [
+  "gare-podistiche-bergamo",
+  "gruppi-di-cammino-bergamo"
+ ],
+ "slug": "run-club-bergamo"
+}

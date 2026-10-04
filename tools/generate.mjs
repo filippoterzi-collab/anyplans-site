@@ -660,12 +660,27 @@ function placeLd(p) {
 const igEmbed = (e) => !e ? "" : `<blockquote class="instagram-media" data-instgrm-permalink="${esc(e.url)}?utm_source=ig_embed" data-instgrm-version="14" style="background:#fff;border:0;border-radius:12px;margin:16px 0;max-width:540px;min-width:280px;width:100%"><a href="${esc(e.url)}" rel="noopener">${esc(e.testo || `Un post di @${e.account} su Instagram`)}</a></blockquote>`;
 // "eventi": la guida mostra gli eventi veri in programma di un tipo o di una raccolta (le sagre, le
 // visite guidate, le castagnate), presi dal database a ogni corsa: il testo resta, la lista non invecchia
+// i run club della città giorno per giorno, dal database (gruppi e ritrovi fissi), come nella pagina
+// dei run club: la guida li racconta, questa lista resta sempre vera
+function runClubGuida() {
+  if (!runClubs.length) return "";
+  const byDay = WEEKDAYS.map((d, i) => ({ d, rows: schedules.filter(s => s.weekday === i && runClubs.some(g => g.slug === s.community_slug)) })).filter(x => x.rows.length);
+  const conGiorno = new Set(schedules.map(s => s.community_slug));
+  const senza = runClubs.filter(g => !conGiorno.has(g.slug));
+  return `<h2>Tutti i run club, giorno per giorno</h2>
+${byDay.map(x => `<div class="rc-day"><h2>${esc(x.d)}</h2><span class="n">${x.rows.length} ${x.rows.length === 1 ? "ritrovo" : "ritrovi"}</span></div>
+<div class="rc-grid">${x.rows.map(r => rcCard(runClubs.find(g => g.slug === r.community_slug), r)).join("\n")}</div>`).join("\n")}
+${senza.length ? `<div class="rc-day"><h2>Senza giorno fisso</h2><span class="n">${senza.length}</span></div><div class="rc-grid">${senza.map(g => rcCard(g, null)).join("\n")}</div>` : ""}
+<p class="m"><a class="lnk" href="${esc(runningUrl())}">La pagina dei run club di ${esc(CITY_NAME)}</a></p>`;
+}
 function eventiGuida(g) {
   const e = g.eventi; if (!e) return "";
-  const ix = types.find(x => x.sport === e.tipo) || null;
-  const up = (ix ? ix.list : []).filter(p => !p.isPast).sort(byDate).slice(0, e.max || 8);
+  // un tipo solo ("tipo") o più tipi insieme ("tipi": mostre + spettacoli + cinema per "quando piove")
+  const ixs = (e.tipi || [e.tipo]).map(t => types.find(x => x.sport === t)).filter(Boolean);
+  const ix = ixs[0] || null;
+  const up = [...new Set(ixs.flatMap(x => x.list))].filter(p => !p.isPast).sort(byDate).slice(0, e.max || 8);
   if (!up.length) return "";
-  return `<h2>${esc(e.titolo || "In programma")}</h2>${listHtml(up)}${ix ? `<p class="m"><a class="lnk" href="${esc(indexUrl(ix))}">${esc(e.tutti || "Vedi tutti")} (${ix.list.filter(p => !p.isPast).length})</a></p>` : ""}`;
+  return `<h2>${esc(e.titolo || "In programma")}</h2>${listHtml(up)}${ixs.length ? `<p class="m">${ixs.map(x => `<a class="lnk" href="${esc(indexUrl(x))}">${esc(ixs.length === 1 ? (e.tutti || "Vedi tutti") : tLabel(x.t))} (${x.list.filter(p => !p.isPast).length})</a>`).join(" · ")}</p>` : ""}`;
 }
 function guidePage(g) {
   const url = guideUrl(g);
@@ -684,6 +699,7 @@ ${g.copertina ? `<div class="cover"><img src="${esc(g.copertina)}" alt="${esc(g.
 ${g.posto ? postoHtml(g.posto, g) : ""}
 ${igEmbed(g.embed)}
 ${sezioni.map(x => `<section class="box"><h2>${esc(x.h2)}</h2>${postoHtml(x.posto, g)}${(x.testo || []).map(t => `<p>${esc(t)}</p>`).join("")}${igEmbed(x.embed)}</section>`).join("\n")}
+${g.runclub ? runClubGuida() : ""}
 ${eventiGuida(g)}
 ${faq.length ? faqHtml(faq) : ""}
 ${correlate.length ? `<h2>Leggi anche</h2><div class="tags">${correlate.map(c => `<a href="${esc(guideUrl(c))}">${esc(c.titolo)}</a>`).join("")}</div>` : ""}
@@ -1392,7 +1408,10 @@ ${sim.length ? `<h2>${S.similar}</h2>${listHtml(sim)}` : ""}
 
 // ── run club (0070: community.sport = 'running' | 'walking', community_schedule) ────────────
 const WEEKDAYS_IT = ["Lunedì", "Martedì", "Mercoledì", "Giovedì", "Venerdì", "Sabato", "Domenica"];
-const WEEKDAYS = new Proxy([], { get: (_, k) => L.days[k] }); // day names in the active language
+// day names in the active language. Il Proxy deve dire anche quali indici esistono (has): senza, .map e
+// .filter su WEEKDAYS saltavano tutti e sette i giorni (il bersaglio è un array vuoto) e la pagina dei run
+// club mostrava solo i club "senza giorno fisso": 11 su 26, gli altri spariti (trovato il 4/10/2026)
+const WEEKDAYS = new Proxy([], { get: (_, k) => L.days[k], has: (_, k) => k in L.days });
 const isRunClub = g => g.sport === "running" || g.sport === "walking";
 const runClubs = groups.filter(isRunClub);
 const hhmm = t => String(t || "").slice(0, 5);
