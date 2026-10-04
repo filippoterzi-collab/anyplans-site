@@ -1,6 +1,6 @@
 # anyplans
 
-> La mappa degli eventi veri d'Italia: 12635 eventi in programma in 52 città. Feste di paese e sagre,
+> La mappa degli eventi veri d'Italia: 12618 eventi in programma in 52 città. Feste di paese e sagre,
 > teatro e spettacoli, concerti, mercati, incontri e conferenze, visite guidate, camminate e gruppi di
 > cammino, mostre, corsi, cene e aperitivi, partite di padel aperte. Di ognuno: data, luogo, prezzo,
 > chi organizza e come iscriversi. Si entra con l'email, solo maggiorenni. Aggiornato ogni notte.
@@ -13,12 +13,12 @@ riassunto e domande frequenti di ogni pagina.
 
 - [Milano](https://anyplans.in/milano/cosa-fare/): 2454 eventi in programma, 10035 pagine — testo completo: https://anyplans.in/llms-milano.txt
 - [Roma](https://anyplans.in/roma/cosa-fare/): 1369 eventi in programma, 6225 pagine — testo completo: https://anyplans.in/llms-roma.txt
-- [Bergamo](https://anyplans.in/bergamo/cosa-fare/): 1293 eventi in programma, 5496 pagine — testo completo: https://anyplans.in/llms-full.txt
+- [Bergamo](https://anyplans.in/bergamo/cosa-fare/): 1293 eventi in programma, 5497 pagine — testo completo: https://anyplans.in/llms-full.txt
 - [Torino](https://anyplans.in/torino/cosa-fare/): 1033 eventi in programma, 4277 pagine — testo completo: https://anyplans.in/llms-torino.txt
 - [Napoli](https://anyplans.in/napoli/cosa-fare/): 504 eventi in programma, 2687 pagine — testo completo: https://anyplans.in/llms-napoli.txt
 - [Bologna](https://anyplans.in/bologna/cosa-fare/): 486 eventi in programma, 2165 pagine — testo completo: https://anyplans.in/llms-bologna.txt
-- [Monza](https://anyplans.in/monza/cosa-fare/): 419 eventi in programma, 1222 pagine — testo completo: https://anyplans.in/llms-monza.txt
-- [Padova](https://anyplans.in/padova/cosa-fare/): 352 eventi in programma, 1537 pagine — testo completo: https://anyplans.in/llms-padova.txt
+- [Monza](https://anyplans.in/monza/cosa-fare/): 416 eventi in programma, 1222 pagine — testo completo: https://anyplans.in/llms-monza.txt
+- [Padova](https://anyplans.in/padova/cosa-fare/): 350 eventi in programma, 1535 pagine — testo completo: https://anyplans.in/llms-padova.txt
 - [Firenze](https://anyplans.in/firenze/cosa-fare/): 343 eventi in programma, 1573 pagine — testo completo: https://anyplans.in/llms-firenze.txt
 - [Bari](https://anyplans.in/bari/cosa-fare/): 283 eventi in programma, 1469 pagine — testo completo: https://anyplans.in/llms-bari.txt
 - [Brescia](https://anyplans.in/brescia/cosa-fare/): 278 eventi in programma, 904 pagine — testo completo: https://anyplans.in/llms-brescia.txt
@@ -31,30 +31,30 @@ riassunto e domande frequenti di ogni pagina.
 - [Perugia](https://anyplans.in/perugia/cosa-fare/): 140 eventi in programma, 304 pagine — testo completo: https://anyplans.in/llms-perugia.txt
 - [Parma](https://anyplans.in/parma/cosa-fare/): 131 eventi in programma, 380 pagine — testo completo: https://anyplans.in/llms-parma.txt
 - [Palermo](https://anyplans.in/palermo/cosa-fare/): 128 eventi in programma, 853 pagine — testo completo: https://anyplans.in/llms-palermo.txt
-- [Modena](https://anyplans.in/modena/cosa-fare/): 126 eventi in programma, 402 pagine — testo completo: https://anyplans.in/llms-modena.txt
-- [Vicenza](https://anyplans.in/vicenza/cosa-fare/): 108 eventi in programma, 304 pagine — testo completo: https://anyplans.in/llms-vicenza.txt
-- [Ferrara](https://anyplans.in/ferrara/cosa-fare/): 106 eventi in programma, 246 pagine — testo completo: https://anyplans.in/llms-ferrara.txt
-- [Lecce](https://anyplans.in/lecce/cosa-fare/): 104 eventi in programma, 283 pagine — testo completo: https://anyplans.in/llms-lecce.txt
+- [Modena](https://anyplans.in/modena/cosa-fare/): 125 eventi in programma, 402 pagine — testo completo: https://anyplans.in/llms-modena.txt
+- [Vicenza](https://anyplans.in/vicenza/cosa-fare/): 106 eventi in programma, 304 pagine — testo completo: https://anyplans.in/llms-vicenza.txt
+- [Ferrara](https://anyplans.in/ferrara/cosa-fare/): 105 eventi in programma, 246 pagine — testo completo: https://anyplans.in/llms-ferrara.txt
+- [Lecce](https://anyplans.in/lecce/cosa-fare/): 103 eventi in programma, 283 pagine — testo completo: https://anyplans.in/llms-lecce.txt
 - [Trento](https://anyplans.in/trento/cosa-fare/): 100 eventi in programma, 313 pagine — testo completo: https://anyplans.in/llms-trento.txt
-- [Catania](https://anyplans.in/catania/cosa-fare/): 97 eventi in programma, 535 pagine — testo completo: https://anyplans.in/llms-catania.txt
+- [Catania](https://anyplans.in/catania/cosa-fare/): 96 eventi in programma, 533 pagine — testo completo: https://anyplans.in/llms-catania.txt
 - [Cagliari](https://anyplans.in/cagliari/cosa-fare/): 95 eventi in programma, 285 pagine — testo completo: https://anyplans.in/llms-cagliari.txt
-- [Como](https://anyplans.in/como/cosa-fare/): 93 eventi in programma, 607 pagine — testo completo: https://anyplans.in/llms-como.txt
-- [Pisa](https://anyplans.in/pisa/cosa-fare/): 83 eventi in programma, 453 pagine — testo completo: https://anyplans.in/llms-pisa.txt
+- [Como](https://anyplans.in/como/cosa-fare/): 94 eventi in programma, 607 pagine — testo completo: https://anyplans.in/llms-como.txt
 - [Pescara](https://anyplans.in/pescara/cosa-fare/): 82 eventi in programma, 191 pagine — testo completo: https://anyplans.in/llms-pescara.txt
+- [Pisa](https://anyplans.in/pisa/cosa-fare/): 82 eventi in programma, 453 pagine — testo completo: https://anyplans.in/llms-pisa.txt
 - [Taranto](https://anyplans.in/taranto/cosa-fare/): 74 eventi in programma, 268 pagine — testo completo: https://anyplans.in/llms-taranto.txt
-- [Salerno](https://anyplans.in/salerno/cosa-fare/): 74 eventi in programma, 348 pagine — testo completo: https://anyplans.in/llms-salerno.txt
+- [Salerno](https://anyplans.in/salerno/cosa-fare/): 73 eventi in programma, 346 pagine — testo completo: https://anyplans.in/llms-salerno.txt
 - [Trieste](https://anyplans.in/trieste/cosa-fare/): 63 eventi in programma, 311 pagine — testo completo: https://anyplans.in/llms-trieste.txt
-- [Reggio Emilia](https://anyplans.in/reggio-emilia/cosa-fare/): 63 eventi in programma, 194 pagine — testo completo: https://anyplans.in/llms-reggio-emilia.txt
 - [Latina](https://anyplans.in/latina/cosa-fare/): 63 eventi in programma, 158 pagine — testo completo: https://anyplans.in/llms-latina.txt
 - [Ravenna](https://anyplans.in/ravenna/cosa-fare/): 62 eventi in programma, 221 pagine — testo completo: https://anyplans.in/llms-ravenna.txt
+- [Reggio Emilia](https://anyplans.in/reggio-emilia/cosa-fare/): 62 eventi in programma, 194 pagine — testo completo: https://anyplans.in/llms-reggio-emilia.txt
 - [Novara](https://anyplans.in/novara/cosa-fare/): 61 eventi in programma, 219 pagine — testo completo: https://anyplans.in/llms-novara.txt
 - [Bolzano](https://anyplans.in/bolzano/cosa-fare/): 58 eventi in programma, 146 pagine — testo completo: https://anyplans.in/llms-bolzano.txt
 - [Ancona](https://anyplans.in/ancona/cosa-fare/): 56 eventi in programma, 231 pagine — testo completo: https://anyplans.in/llms-ancona.txt
 - [Pordenone](https://anyplans.in/pordenone/cosa-fare/): 54 eventi in programma, 158 pagine — testo completo: https://anyplans.in/llms-pordenone.txt
-- [Cremona](https://anyplans.in/cremona/cosa-fare/): 54 eventi in programma, 184 pagine — testo completo: https://anyplans.in/llms-cremona.txt
-- [Lucca](https://anyplans.in/lucca/cosa-fare/): 53 eventi in programma, 223 pagine — testo completo: https://anyplans.in/llms-lucca.txt
 - [Rimini](https://anyplans.in/rimini/cosa-fare/): 52 eventi in programma, 367 pagine — testo completo: https://anyplans.in/llms-rimini.txt
 - [Prato](https://anyplans.in/prato/cosa-fare/): 52 eventi in programma, 192 pagine — testo completo: https://anyplans.in/llms-prato.txt
+- [Lucca](https://anyplans.in/lucca/cosa-fare/): 52 eventi in programma, 223 pagine — testo completo: https://anyplans.in/llms-lucca.txt
+- [Cremona](https://anyplans.in/cremona/cosa-fare/): 52 eventi in programma, 184 pagine — testo completo: https://anyplans.in/llms-cremona.txt
 - [Pistoia](https://anyplans.in/pistoia/cosa-fare/): 51 eventi in programma, 176 pagine — testo completo: https://anyplans.in/llms-pistoia.txt
 - [Mantova](https://anyplans.in/mantova/cosa-fare/): 50 eventi in programma, 151 pagine — testo completo: https://anyplans.in/llms-mantova.txt
 - [Alessandria](https://anyplans.in/alessandria/cosa-fare/): 46 eventi in programma, 148 pagine — testo completo: https://anyplans.in/llms-alessandria.txt
@@ -62,7 +62,7 @@ riassunto e domande frequenti di ogni pagina.
 - [Lecco](https://anyplans.in/lecco/cosa-fare/): 41 eventi in programma, 142 pagine — testo completo: https://anyplans.in/llms-lecco.txt
 - [Lodi](https://anyplans.in/lodi/cosa-fare/): 41 eventi in programma, 156 pagine — testo completo: https://anyplans.in/llms-lodi.txt
 - [Reggio Calabria](https://anyplans.in/reggio-calabria/cosa-fare/): 30 eventi in programma, 44 pagine — testo completo: https://anyplans.in/llms-reggio-calabria.txt
-- [Messina](https://anyplans.in/messina/cosa-fare/): 28 eventi in programma, 63 pagine — testo completo: https://anyplans.in/llms-messina.txt
+- [Messina](https://anyplans.in/messina/cosa-fare/): 27 eventi in programma, 63 pagine — testo completo: https://anyplans.in/llms-messina.txt
 
 ## Le guide
 
@@ -82,6 +82,7 @@ Articoli con fonti in fondo: i posti, i premi, le regole e gli eventi in program
 - [Mercatini di Natale 2026 a Bergamo e provincia: date e paesi](https://anyplans.in/bergamo/guide/mercatini-di-natale-bergamo/): I mercatini di Natale 2026 a Bergamo e in provincia, con date, orari e paesi, aggiornati ogni notte man mano che vengono annunciati: villaggi di Natale, presepi, concerti e Santa Lucia.
 - [Dove fare colazione a Bergamo: le brioche migliori, prezzi](https://anyplans.in/bergamo/guide/migliore-colazione-bergamo/): Dove fare colazione a Bergamo e dintorni: il Caffè Cavour 1880 di Città Alta (Tre Torte del Gambero Rosso, brioche del Da Vittorio, 2,50 €) e La Serra Pastry Lab di Almè (Pasticcere Emergente d'Italia). Prezzi e indirizzi.
 - [Miglior gelateria a Bergamo: Gelato Contadino e le premiate](https://anyplans.in/bergamo/guide/migliore-gelateria-bergamo/): La miglior gelateria di Bergamo per noi è il Gelato Contadino (piazzale Risorgimento 7): Tre Coni del Gambero Rosso, il miglior pistacchio d'Italia. Sotto, le altre gelaterie della provincia premiate dalla guida 2026.
+- [Parcheggio aeroporto Bergamo: gratis 30 minuti, P1, P2, P3](https://anyplans.in/bergamo/guide/parcheggio-aeroporto-bergamo/): Aeroporto di Bergamo (BGY), parcheggi ufficiali: al P1 Est i primi 30 minuti sono gratis, al P1 i primi 10. P2 a piedi dal terminal, P3 a 1 km con navetta gratuita 24 ore su 24. Tariffe, regole e come risparmiare prenotando online.
 - [I ristoranti più cercati a Bergamo: cosa dice Google Trends](https://anyplans.in/bergamo/guide/ristoranti-piu-cercati-bergamo/): I ristoranti di Bergamo e provincia che la gente cerca di più su Google nel 2026: Nonna Alda in Città Alta, Casa Romano ad Alzano Lombardo (Guida Michelin), il Cavour 1880 al Monastero di Astino, il Tre Noci di Spirano. Indirizzi, storia, orari.
 - [Run club a Bergamo: tutti, giorno per giorno](https://anyplans.in/bergamo/guide/run-club-bergamo/): Tutti i run club di Bergamo e provincia con giorno, ora e punto di ritrovo, aggiornati dal database: quasi tutti gratis e aperti a chiunque. Come funziona la prima uscita, quanto si corre, cosa portare.
 - [Sagre a Bergamo: cosa si mangia e quelle in programma](https://anyplans.in/bergamo/guide/sagre-bergamasche-cosa-si-mangia/): Cosa si mangia a una sagra in provincia di Bergamo (casoncelli, polenta taragna, i formaggi DOP delle valli), come funziona tra stand, fila e tavolate, e l'elenco delle sagre dei prossimi giorni, aggiornato ogni notte.

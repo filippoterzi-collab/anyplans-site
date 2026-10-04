@@ -53,7 +53,7 @@
   <url><loc>https://anyplans.in/monza/seregno/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/meda/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/verano-brianza/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://anyplans.in/monza/giussano/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://anyplans.in/monza/giussano/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/cusano-milanino/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/osnago/</loc><lastmod>2026-10-01</lastmod></url>
   <url><loc>https://anyplans.in/monza/paderno-dugnano/</loc><lastmod>2026-10-04</lastmod></url>
@@ -123,6 +123,7 @@
   <url><loc>https://anyplans.in/monza/locali/fabbrica-in-pedavena-lissone/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/locali/monza-grazie-vecchie/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://anyplans.in/monza/locali/slaughter-club/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/locali/centro-derby-monza/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/locali/seven-infinity-tennis-padel-club/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/locali/wipeout-pub-n-games/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/locali/biblioteca-civica-di-vimercate/</loc><lastmod>2026-10-04</lastmod></url>
@@ -133,7 +134,6 @@
   <url><loc>https://anyplans.in/monza/locali/doppio-malto-monza/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/locali/pomodoro-basilico/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/locali/notting-hill-monza/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/locali/zero3nove-cocktail-bar-monza/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/locali/kampobase-lombardia-vagabonda/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://anyplans.in/monza/locali/biblioteca-civica-ettore-pozzoli/</loc><lastmod>2026-10-01</lastmod></url>
   <url><loc>https://anyplans.in/monza/locali/ti-vedo/</loc><lastmod>2026-10-03</lastmod></url>
@@ -161,11 +161,9 @@
   <url><loc>https://anyplans.in/monza/locali/oasi-laghetto/</loc><lastmod>2026-10-01</lastmod></url>
   <url><loc>https://anyplans.in/monza/locali/legambiente-circolo-alexander-langer-monza/</loc><lastmod>2026-10-02</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-competitiva/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/padel-competitiva-2026-10-06/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/padel-competitiva-2026-10-06-2/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/padel-competitiva-2026-10-10/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-competitiva-2026-10-04/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-competitiva-2026-10-04-2/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://anyplans.in/monza/padel-competitiva-2026-10-04-3/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-competitiva-2026-10-03/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-competitiva-2026-10-03-2/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-competitiva-2026-10-03-3/</loc><lastmod>2026-10-04</lastmod></url>
@@ -207,6 +205,8 @@
   <url><loc>https://anyplans.in/monza/padel-competitiva-2026-09-24/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-competitiva-2026-09-24-2/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-competitiva-2026-09-24-3/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/padel-competitiva-2026-09-23/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://anyplans.in/monza/padel-competitiva-2026-09-23-2/</loc><lastmod>2026-09-23</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-competitiva-2026-09-22/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-competitiva-2026-09-22-2/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-competitiva-2026-09-22-3/</loc><lastmod>2026-10-04</lastmod></url>
@@ -230,7 +230,9 @@
   <url><loc>https://anyplans.in/monza/padel-amichevole/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-10-05/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-10-05-2/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/padel-amichevole-2026-10-05-3/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-10-06/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/padel-amichevole-2026-10-06-2/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-10-10/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-10-10-2/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-10-04/</loc><lastmod>2026-10-04</lastmod></url>
@@ -278,7 +280,6 @@
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-09-22-2/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-09-22-3/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-09-22-4/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/padel-amichevole-2026-09-22-5/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-09-21/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-09-21-2/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-09-21-3/</loc><lastmod>2026-10-04</lastmod></url>
@@ -293,7 +294,6 @@
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-09-17/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-09-17-2/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-09-17-3/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/padel-amichevole-2026-09-17-4/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-09-16/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-09-16-2/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/padel-amichevole-2026-09-16-3/</loc><lastmod>2026-10-04</lastmod></url>
@@ -303,12 +303,12 @@
   <url><loc>https://anyplans.in/monza/open-day-2026-09-19/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/open-day-2026-09-12/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/birretta-dopo-il-lavoro-da-doppio-malto-monza/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/birretta-dopo-il-lavoro-da-doppio-malto-monza-2026-09-14/</loc><lastmod>2026-09-14</lastmod></url>
+  <url><loc>https://anyplans.in/monza/birretta-dopo-il-lavoro-da-doppio-malto-monza-2026-09-14/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/every-day-open-day-donne/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-officine-libra/</loc><lastmod>2026-09-14</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-officine-libra/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/run-club/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/let-s-bowling/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/colazione-da-bar-cloe/</loc><lastmod>2026-09-15</lastmod></url>
+  <url><loc>https://anyplans.in/monza/colazione-da-bar-cloe/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/partita-guidata/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/partita-guidata-2026-10-01/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/partita-guidata-2026-09-29/</loc><lastmod>2026-10-04</lastmod></url>
@@ -324,11 +324,11 @@
   <url><loc>https://anyplans.in/monza/every-day-open-day-livello-1-5-3/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/every-day-open-day-livello-1-5-3-2026-09-25/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/every-day-open-day-over-60/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-amici-miei-cucina-pizza-s-margherita/</loc><lastmod>2026-09-15</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-tomi-sushi/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-tomi-sushi-2026-09-15/</loc><lastmod>2026-09-15</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-ficus/</loc><lastmod>2026-09-15</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-los-locos/</loc><lastmod>2026-09-15</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-amici-miei-cucina-pizza-s-margherita/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-tomi-sushi/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-tomi-sushi-2026-09-15/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-ficus/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-los-locos/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/promo-partita-guidata-con-elena/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/promo-partita-guidata-con-elena-2026-09-25/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/lezione-singola/</loc><lastmod>2026-10-04</lastmod></url>
@@ -336,25 +336,25 @@
   <url><loc>https://anyplans.in/monza/lezione-singola-2026-09-21/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/high-level-torneo/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/giro-a-8-ladies-edition/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-pane-trita-seregno/</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-pane-trita-seregno/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/cena-da-pomodoro-basilico/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-pomodoro-basilico-2026-09-30/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-pomodoro-basilico-2026-09-16/</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-pomodoro-basilico-2026-09-30/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-pomodoro-basilico-2026-09-16/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/6-lezione-hiit-tabata/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-bar-alla-stanga/</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-bar-alla-stanga-2026-09-16/</loc><lastmod>2026-09-16</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-bar-alla-stanga/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-bar-alla-stanga-2026-09-16/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/di-chi-sono-i-nostri-figli/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/il-cervellone-in-gioco-sfida-la-mente/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/mercoledi-sera-game-set-beer/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/girls-in-padel-giro-a-8-livello-0-5-2-5/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/giro-a-16-del-giovedi-90-minuti/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/giovebeer-da-notting-hill-monza/</loc><lastmod>2026-09-17</lastmod></url>
-  <url><loc>https://anyplans.in/monza/aperitivo-artistico-da-chalet-degli-amici/</loc><lastmod>2026-09-17</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-ristopub-le-giraffe/</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-ristopub-le-giraffe-2026-09-17/</loc><lastmod>2026-09-17</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-kino-bar-bistrot/</loc><lastmod>2026-09-17</lastmod></url>
+  <url><loc>https://anyplans.in/monza/giovebeer-da-notting-hill-monza/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/aperitivo-artistico-da-chalet-degli-amici/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-ristopub-le-giraffe/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-ristopub-le-giraffe-2026-09-17/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-kino-bar-bistrot/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/incontro-con-giacomo-agostini-oltre-il-talento-storie-di-spo/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/colazione-da-q-b-monza/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://anyplans.in/monza/colazione-da-q-b-monza/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/il-rodeo-del-venerdi/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/lezione-gratuita/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/lezione-gratuita-2026-10-08/</loc><lastmod>2026-10-04</lastmod></url>
@@ -366,28 +366,28 @@
   <url><loc>https://anyplans.in/monza/open-day-corsi-padel/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/giro-a-8-alle-18-livello-0-5-2-5/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/tavolo-a-tema-spirituale-da-bar-sotto-sopra-di-lupis-daniela/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/tablo-spa-da-pizzeria-noma-parrillada/</loc><lastmod>2026-09-18</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-zero3nove-cocktail-bar-monza/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-zero3nove-cocktail-bar-monza-2026-09-20/</loc><lastmod>2026-09-20</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-cantata-da-poss-bovisio-masciago/</loc><lastmod>2026-09-18</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-molto-club-restaurant/</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-molto-club-restaurant-2026-09-18/</loc><lastmod>2026-09-18</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-molto-club-restaurant-2026-09-18-2/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://anyplans.in/monza/tablo-spa-da-pizzeria-noma-parrillada/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-zero3nove-cocktail-bar-monza/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-zero3nove-cocktail-bar-monza-2026-09-20/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-cantata-da-poss-bovisio-masciago/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-molto-club-restaurant/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-molto-club-restaurant-2026-09-18/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-molto-club-restaurant-2026-09-18-2/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/americana-al-padellaro/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/palio-di-barlassina-2026/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/sport-fan-and-food-da-playup-bowling/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://anyplans.in/monza/sport-fan-and-food-da-playup-bowling/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/sagra-dei-porcini-seveso-2026/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/cena-da-fabbrica-in-pedavena-lissone/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-fabbrica-in-pedavena-lissone-2026-10-02/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-fabbrica-in-pedavena-lissone-2026-09-26/</loc><lastmod>2026-09-26</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-fabbrica-in-pedavena-lissone-2026-09-22/</loc><lastmod>2026-09-22</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-fabbrica-in-pedavena-lissone-2026-10-02/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-fabbrica-in-pedavena-lissone-2026-09-26/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-fabbrica-in-pedavena-lissone-2026-09-22/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/karaoke-da-pub-rock-on-the-road/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/cena-da-wipeout-pub-n-games/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/cena-da-wipeout-pub-n-games-2026-09-29/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/cena-e-musica-a-lume-di-candele/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-pub-rock-on-the-road/</loc><lastmod>2026-09-19</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-pub-rock-on-the-road-2026-09-18/</loc><lastmod>2026-09-18</lastmod></url>
-  <url><loc>https://anyplans.in/monza/it-s-friday-again/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-pub-rock-on-the-road/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-pub-rock-on-the-road-2026-09-18/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/it-s-friday-again/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/rockit-night-x-festival-ubiqua/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/cena-musica-live-e-dj-set-a-monza-opening-party/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/chill-games-il-dopocena-senza-pensieri-vol-2/</loc><lastmod>2026-10-04</lastmod></url>
@@ -404,38 +404,38 @@
   <url><loc>https://anyplans.in/monza/kampobase-beach-volley-fun-monza-vol-15/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/notre-dame-ananke-il-musical/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/karaoke-da-lab-di-revolution/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-milano-roma-ristorante/</loc><lastmod>2026-09-19</lastmod></url>
-  <url><loc>https://anyplans.in/monza/nuove-esperienze-in-liberta-da-la-maison-de-l-amour/</loc><lastmod>2026-09-19</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-milano-roma-ristorante/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/nuove-esperienze-in-liberta-da-la-maison-de-l-amour/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/cena-da-farinami-garden/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/amanti-del-formaggio-e-del-buon-cibo-a-raccolta/</loc><lastmod>2026-09-19</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-cantata-da-milano-roma-ristorante/</loc><lastmod>2026-09-19</lastmod></url>
+  <url><loc>https://anyplans.in/monza/amanti-del-formaggio-e-del-buon-cibo-a-raccolta/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-cantata-da-milano-roma-ristorante/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/farinami-party-anni-da-farinami-garden/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/party-s-90-aperitivo-a-buffet-cantato-e-ballato-da-farinami-/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/party-s-90-aperitivo-a-buffet-cantato-e-ballato-da-farinami--2026-09-19/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/karaoke-da-chaplin-cafe/</loc><lastmod>2026-09-19</lastmod></url>
   <url><loc>https://anyplans.in/monza/sagra-nazionale-del-gorgonzola-2026/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/sagra-della-patata-oreno-2026/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/aperitivo-da-enoteca-profumo-di-mosto-di-ma-lo-y-sas-o-liber/</loc><lastmod>2026-09-19</lastmod></url>
-  <url><loc>https://anyplans.in/monza/la-notte-della-fiorentina/</loc><lastmod>2026-09-17</lastmod></url>
+  <url><loc>https://anyplans.in/monza/aperitivo-da-enoteca-profumo-di-mosto-di-ma-lo-y-sas-o-liber/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/la-notte-della-fiorentina/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/karaoke-night-scateniamoci/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/giochi-da-tavolo-da-wipeout-pub-n-games/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/giochi-da-tavolo-da-wipeout-pub-n-games-2026-09-19/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/party-anni-90-ape-a-bordo-piscina/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-cacao-lounge/</loc><lastmod>2026-09-19</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-loft-american-bar/</loc><lastmod>2026-09-19</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-cacao-lounge/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-loft-american-bar/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/pool-garden-night-apericena-a-bordo-piscina/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/endless-summer-90s-aperitivo-in-piscina-welovethe90s/</loc><lastmod>2026-09-19</lastmod></url>
-  <url><loc>https://anyplans.in/monza/colazione-da-caffetteria-belle-epoque/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://anyplans.in/monza/endless-summer-90s-aperitivo-in-piscina-welovethe90s/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/colazione-da-caffetteria-belle-epoque/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/raduno-g-s-st-joseph-2026/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/primo-tavolo-da-cascina-costa-alta-bistro-ostello-eventi/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://anyplans.in/monza/primo-tavolo-da-cascina-costa-alta-bistro-ostello-eventi/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/breakfast-club/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/giro-biker-sul-lago-d-iseo/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/round-robin-tournament-entry-level/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/round-robin-tournament-entry-level-2026-09-27/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/open-day-msa-domenica-20-settembre-10-00-12-00/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/pizzoccheri-da-il-rifugio-valtellinese-pizzoccheri-sciatt-e-/</loc><lastmod>2026-09-20</lastmod></url>
-  <url><loc>https://anyplans.in/monza/colazione-da-amo-trattoria-di-mare/</loc><lastmod>2026-09-20</lastmod></url>
-  <url><loc>https://anyplans.in/monza/colazione-da-tomi-sushi/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://anyplans.in/monza/pizzoccheri-da-il-rifugio-valtellinese-pizzoccheri-sciatt-e-/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/colazione-da-amo-trattoria-di-mare/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/colazione-da-tomi-sushi/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/back-to-oratorio/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/s-padel-liv-entry-white-maschile/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/s-padel-liv-entry-white-maschile-2026-12-27/</loc><lastmod>2026-10-04</lastmod></url>
@@ -444,16 +444,16 @@
   <url><loc>https://anyplans.in/monza/over-50-open-ranking-32/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/adam-papke-watercolor-demo-gratuita/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/d2-padel-tour/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/sagra-del-gorgonzola-vol-3/</loc><lastmod>2026-09-19</lastmod></url>
+  <url><loc>https://anyplans.in/monza/sagra-del-gorgonzola-vol-3/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/crea-il-tuo-terrarium-con-workshop-sui-segreti-e-strategie/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-leaf-bar-o-libero/</loc><lastmod>2026-09-20</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-leaf-bar-o-libero/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/visita-guidata-in-birrificio-aperitivo-e-birra-al-pub-vol-11/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/italiana-a-6-su-due-livelli-da-2-0-a-4-5-pt/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/torneo-lady-su-due-livelli/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/magnalonga-besana-in-brianza-2026/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/il-gusto-dell-estate-in-un-cocktail/</loc><lastmod>2026-09-18</lastmod></url>
+  <url><loc>https://anyplans.in/monza/il-gusto-dell-estate-in-un-cocktail/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/pizzaut-with-friends/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/l-apetivo-divino-di-monza-lo-abbiamo-solo-noi/</loc><lastmod>2026-09-19</lastmod></url>
+  <url><loc>https://anyplans.in/monza/l-apetivo-divino-di-monza-lo-abbiamo-solo-noi/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/m3-start-week-giro-a-8/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/m3-start-week-giro-a-8-2026-09-21/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/best-rodeo-del-lunedi/</loc><lastmod>2026-10-04</lastmod></url>
@@ -476,32 +476,32 @@
   <url><loc>https://anyplans.in/monza/every-day-open-day-0-1-5/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/every-day-open-day-0-1-5-2026-09-23/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/every-day-open-day-marco-l/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/benessere-business-da-polaris-studios/</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-sushiya-restaurant/</loc><lastmod>2026-09-23</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-carrobiolo-brewpub/</loc><lastmod>2026-09-23</lastmod></url>
+  <url><loc>https://anyplans.in/monza/benessere-business-da-polaris-studios/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-sushiya-restaurant/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-carrobiolo-brewpub/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/neurodivergent-meeting/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/pizza-birra-e-karaoke/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/m3-only-over-50/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/giro-a-8/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/giro-a-8-lunch-edition-giovedi-12-30/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-the-millenium-pub/</loc><lastmod>2026-09-24</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-the-millenium-pub/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/funghi-meraviglie-della-natura/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/tablo-eng-da-pizzeria-noma-parrillada/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-raffaele-di-stasio-pizza-e-cucina-contemporanea-liss/</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://anyplans.in/monza/molto-closing-party-da-molto-club-restaurant/</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://anyplans.in/monza/tablo-eng-da-pizzeria-noma-parrillada/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-raffaele-di-stasio-pizza-e-cucina-contemporanea-liss/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/molto-closing-party-da-molto-club-restaurant/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/il-mondo-a-pezzi-dentro-il-caos-globale/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-sushi-land-mariano-comense-o-libero/</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://anyplans.in/monza/ultima-serata-17-apedisco-con-un-drink-da-molto-club-restaur/</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-sushi-land-mariano-comense-o-libero/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/ultima-serata-17-apedisco-con-un-drink-da-molto-club-restaur/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/agrate-brianza-bagno-di-gong-con-10-gong-planetari-e-campane/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/festa-della-madonna-d-ottobre-giussano-2026/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/americana-express/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-terrazza-mia-o-libero/</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://anyplans.in/monza/dinner-rock-al-parco-con-bia/</loc><lastmod>2026-09-24</lastmod></url>
-  <url><loc>https://anyplans.in/monza/pinsa-night-sulla-martesana/</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-allo-sporting-di-brugherio/</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-terrazza-mia-o-libero/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/dinner-rock-al-parco-con-bia/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/pinsa-night-sulla-martesana/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-allo-sporting-di-brugherio/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/trecentosessantagradi-di-musica-2-0/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/costellazioni-familiari/</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-totem-plaza-cafe/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-totem-plaza-cafe/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/un-drink-in-compagnia/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/trekking-alla-porta-di-prada-e-panorami-sul-lago-di-como/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/autumn-flow-yoga-pilates-massaggio-olistico/</loc><lastmod>2026-09-25</lastmod></url>
@@ -519,7 +519,7 @@
   <url><loc>https://anyplans.in/monza/giro-a-8-femminile/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/fraxcursia-greenland-l-ultimo-giro/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/torneo-principianti-0-2-0-playtomic/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/vendemmia-piedini-e-good-vibes-gita-nell-oltrepo-pavese/</loc><lastmod>2026-09-25</lastmod></url>
+  <url><loc>https://anyplans.in/monza/vendemmia-piedini-e-good-vibes-gita-nell-oltrepo-pavese/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/scratch-26-settembre/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/jorge-corpuna-workshop-di-acquarello/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/laboratori-per-bambini/</loc><lastmod>2026-10-04</lastmod></url>
@@ -527,23 +527,23 @@
   <url><loc>https://anyplans.in/monza/gir8-only-men-con-maestra-nadia/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/visita-guidata-alla-meravigliosa-villa-reale-di-monza/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/torneo-padel-sevi-start-0-1-99/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/grand-opening-moto-trainer-monza-26-settembre/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://anyplans.in/monza/grand-opening-moto-trainer-monza-26-settembre/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/farinami-party-single-da-farinami-garden/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/pinsa-pinsa-da-sig-duke-pinseria-la-pinsa-n-1-di-monza/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://anyplans.in/monza/pinsa-pinsa-da-sig-duke-pinseria-la-pinsa-n-1-di-monza/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/ape-drink-da-farinami-garden/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-cover-883-al-black-horse-da-fabbrica-in-pedavena-lisson/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-cover-883-al-black-horse-da-fabbrica-in-pedavena-lisson/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/torneo-padel-sevi-power-2-3-99/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/medium-level-da-3-0-5-0-pt/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/entry-level-da-1-5-3-5-pt-su-due-livelli/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-pizzaut-monza/</loc><lastmod>2026-09-26</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-pizza-club-no-limits-vimercate/</loc><lastmod>2026-09-26</lastmod></url>
-  <url><loc>https://anyplans.in/monza/grigliata-del-sabato-sera/</loc><lastmod>2026-09-26</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-il-posticino/</loc><lastmod>2026-09-26</lastmod></url>
-  <url><loc>https://anyplans.in/monza/serata-sangiovese-dal-prosecco-al-brunello-di-montalcino/</loc><lastmod>2026-09-26</lastmod></url>
-  <url><loc>https://anyplans.in/monza/a-tavola-tra-amici-cena-e-risate-in-compagnia/</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://anyplans.in/monza/first-meeting-un-brindisi-ai-nuovi-incontri/</loc><lastmod>2026-09-26</lastmod></url>
-  <url><loc>https://anyplans.in/monza/oktoberfest-in-cascina/</loc><lastmod>2026-09-25</lastmod></url>
-  <url><loc>https://anyplans.in/monza/serata-latina-allo-zoo-club-da-zoo-club/</loc><lastmod>2026-09-26</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-pizzaut-monza/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-pizza-club-no-limits-vimercate/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/grigliata-del-sabato-sera/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-il-posticino/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/serata-sangiovese-dal-prosecco-al-brunello-di-montalcino/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/a-tavola-tra-amici-cena-e-risate-in-compagnia/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/first-meeting-un-brindisi-ai-nuovi-incontri/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/oktoberfest-in-cascina/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/serata-latina-allo-zoo-club-da-zoo-club/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/whyld-x-wibe/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/oasi-zegna-trekk-monte-rubello-e-santuario-di-san-bernardo/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/walk-for-life-2026/</loc><lastmod>2026-09-26</lastmod></url>
@@ -553,12 +553,12 @@
   <url><loc>https://anyplans.in/monza/torneo-spritz-party/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/livello-intermedio-aperitivo-incluso/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/la-regina-di-macherio-2-0-vinci-il-premier-padel-milano/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/oktoberfest-in-cascina-a-cassina/</loc><lastmod>2026-09-27</lastmod></url>
+  <url><loc>https://anyplans.in/monza/oktoberfest-in-cascina-a-cassina/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/0km-club-ep-2/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/difesa-e-transizione/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/conosciamoci-con-la-mindfullness/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/dalla-brianza-al-nasdaq-scalare-l-innovazione/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-sconnessi-da-doppio-malto-monza/</loc><lastmod>2026-09-28</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-sconnessi-da-doppio-malto-monza/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/monday-night-entry-level/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/monday-night-entry-level-2026-09-28/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/ipnosi-ericksoniana/</loc><lastmod>2026-09-28</lastmod></url>
@@ -566,16 +566,16 @@
   <url><loc>https://anyplans.in/monza/incontro-con-demetrio-albertini-oltre-il-talento-storie-di-s/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/bandeja-e-volee-masterclass/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/nuova-sony-fx5-e-il-video-workflow/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-sushi-land-vimodrone/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-sushi-land-vimodrone-2026-10-01/</loc><lastmod>2026-10-01</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-sushi-land-vimodrone-2026-09-30/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-ristorante-pizzeria-del-centro/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-rosita-galletto-e-birra-nova/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-rosita-galletto-e-birra-nova-2026-09-30/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-bar-alla-stanga-o-libero/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-sushi-land-vimodrone/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-sushi-land-vimodrone-2026-10-01/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-sushi-land-vimodrone-2026-09-30/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-ristorante-pizzeria-del-centro/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-rosita-galletto-e-birra-nova/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-rosita-galletto-e-birra-nova-2026-09-30/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-bar-alla-stanga-o-libero/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/il-linguaggio-del-corpo-del-respiro-e-del-movimento/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://anyplans.in/monza/lo-spezzasettimana-aperitivo-a-buffet/</loc><lastmod>2026-09-30</lastmod></url>
-  <url><loc>https://anyplans.in/monza/paella-sangria-e-giochi-con-bia/</loc><lastmod>2026-09-30</lastmod></url>
+  <url><loc>https://anyplans.in/monza/lo-spezzasettimana-aperitivo-a-buffet/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/paella-sangria-e-giochi-con-bia/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/i-legnanesi-ricordi/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/partita-guidata-90-min-coach-luca-lampignani/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/karaoke-da-b-side-cibo-musica/</loc><lastmod>2026-10-04</lastmod></url>
@@ -583,31 +583,31 @@
   <url><loc>https://anyplans.in/monza/cena-da-feel-dinner-show-food-lounge/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/aperitivo-servito-cantato-con-dj-set-da-feel-dinner-show-foo/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/aperitivo-servito-cantato-con-dj-set-da-feel-dinner-show-foo-2026-10-01/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/weply-run-club-mariano-comense/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://anyplans.in/monza/weply-run-club-mariano-comense/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/genitori-adolescenti-conflitti-e-mindfulness/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/mi-fido-di-te-mostra-mercato-di-enogastronomia-e-artigianato/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/ufo-world-cup-finals-finali-mondiali-di-disc-dog/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/hata-yoga/</loc><lastmod>2026-09-30</lastmod></url>
   <url><loc>https://anyplans.in/monza/partita-guidata-da-1-ora-con-daniele/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/medfest-2026-testimonium-la-musica-dei-longobardi-monza/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-clars-tapas-grill-cocktail-o-libero/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-old-wild-west-vimercate-via-torri-bianche/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-clars-tapas-grill-cocktail-o-libero/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-old-wild-west-vimercate-via-torri-bianche/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/intrecci-d-arte-inaugurazione-per-la-festa-di-desio/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-notting-hill-monza/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://anyplans.in/monza/octobeer-festival-della-birra-milano/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-notting-hill-monza/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/octobeer-festival-della-birra-milano/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/oktoberfest-cinisello-balsamo/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-fresh-ramen/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-fresh-ramen/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/lezione-individuale/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/inaugurazione-della-nuova-stagione-al-noir-da-noir-club-rest/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-noir-club-restaurant/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-noir-club-restaurant-2026-10-02/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-noir-club-restaurant-2026-10-02-2/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://anyplans.in/monza/inaugurazione-noir-da-noir-club-restaurant/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-la-birreria-italiana-paderno-dugnano/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://anyplans.in/monza/apertura-invernale-apedisco-17-da-noir-club-restaurant/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://anyplans.in/monza/english-night-out-da-noma-parrillada/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://anyplans.in/monza/inaugurazione-della-nuova-stagione-al-noir-da-noir-club-rest/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-noir-club-restaurant/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-noir-club-restaurant-2026-10-02/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-noir-club-restaurant-2026-10-02-2/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/inaugurazione-noir-da-noir-club-restaurant/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-la-birreria-italiana-paderno-dugnano/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/apertura-invernale-apedisco-17-da-noir-club-restaurant/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/english-night-out-da-noma-parrillada/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/notte-bianca-in-via-don-luigi-vigano/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-bar-gelateria-la-coppa-d-oro/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-bar-gelateria-la-coppa-d-oro/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/adventure-night-serata-di-giochi-in-biblioteca/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/english-mojito-night-a-monza/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/buon-non-compleanno-apericena/</loc><lastmod>2026-10-04</lastmod></url>
@@ -620,7 +620,7 @@
   <url><loc>https://anyplans.in/monza/il-purgatorio-tratto-dalla-divina-commedia-di-dante-alighier/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/note-a-lume-di-candela-con-il-quartetto-d-archi-pop-elite/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/viaggiare-con-lentezza-racconti-di-viaggio/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-musica-live-e-dj-set-a-monza-vol-23/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-musica-live-e-dj-set-a-monza-vol-23/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/gattotoro-live-circolo-agora/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/la-valmalenco-tra-cascate-e-montagne/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/il-mercatino-del-vintage-di-cologno-monzese/</loc><lastmod>2026-10-04</lastmod></url>
@@ -635,11 +635,11 @@
   <url><loc>https://anyplans.in/monza/masterclass-calisthenics-open/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/ville-aperte-in-brianza-itinerario-arte-intorno/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/tre-santuari-mariani-della-martesana-sul-cammino-di-sant-ago/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cleanup-plastic-free-a-cambiago/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cleanup-plastic-free-a-cambiago/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/l-avventura-continua/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/storie-di-quartiere-quattro-passi-nel-900-al-quartiere-liber/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/colazione-da-goss-grill-burger-arcore/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/colazione-da-goss-grill-burger-arcore-2026-10-03/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://anyplans.in/monza/colazione-da-goss-grill-burger-arcore-2026-10-03/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/la-passeggiata-della-speranza/</loc><lastmod>2026-10-01</lastmod></url>
   <url><loc>https://anyplans.in/monza/piccino-piccio-d-estate-2026-la-bottega-dell-aria/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/yoga-e-psicologia/</loc><lastmod>2026-10-03</lastmod></url>
@@ -658,8 +658,8 @@
   <url><loc>https://anyplans.in/monza/qui-si-sogna-spettacolo-di-teatro-canzone-per-famiglie/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/fotografie-in-villa-inaugurazione-delle-mostre/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/chi-sara-il-re-della-pista/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-luce-panificio-delizia-cocktail-bar/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-carro-social-club-beats-bites/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-luce-panificio-delizia-cocktail-bar/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-carro-social-club-beats-bites/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/farinami-garden-da-farinami-garden/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/incontro-con-francesca-giannone-gli-anni-in-bianco-e-nero/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/ni-o-malo-tournament/</loc><lastmod>2026-10-04</lastmod></url>
@@ -670,28 +670,28 @@
   <url><loc>https://anyplans.in/monza/cena-da-calavera-restaurant-seregno/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/cena-da-calavera-restaurant-seregno-2026-10-10/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/il-tablo-non-fa-il-monaco-da-farinami-garden/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-pizzeria-la-dispensa/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-pizzeria-la-dispensa/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/forever-young-festa-per-i-25-anni-di-emergency-monza-e-brian/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/grande-momento-di-meditazione-integrata-mente-e-corpo/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://anyplans.in/monza/oktoberfest-party/</loc><lastmod>2026-10-02</lastmod></url>
-  <url><loc>https://anyplans.in/monza/aperitivo-social-a-bordo-piscina-al-farinami-garden/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://anyplans.in/monza/oktoberfest-party/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/aperitivo-social-a-bordo-piscina-al-farinami-garden/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/humulus-record-release-party-mondo-drag-early-moods-dal-vivo/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/cena-da-la-cantina-paderno-dugnano/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://anyplans.in/monza/summer-closing-party/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://anyplans.in/monza/canta-che-ti-passa-la-fame/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://anyplans.in/monza/cena-da-la-cantina-paderno-dugnano/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/summer-closing-party/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/monza/canta-che-ti-passa-la-fame/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/festival-organistico-internazionale-quentin-guerillot/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/back-to-the-19th-circolo-agora/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/affetti-instabili-apertura-della-stagione-teatrale/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/amalo-tributo-a-renato-zero/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/il-terno-al-lotto-commedia-brillante/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/sagra-di-san-francesco-dona-nobis-pacem-concerto-meditazione/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/aperitivo-e-serata-di-balli-latini/</loc><lastmod>2026-10-02</lastmod></url>
+  <url><loc>https://anyplans.in/monza/aperitivo-e-serata-di-balli-latini/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/francesco-di-bella-24-grana/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/musica-live-con-il-fuoco-di-soad-metallica-e-rammstein/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/silent-disco-centro-monza-cittadiniamonza-3-ottobre-2026/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/m-u-r-mercatino-dell-usato-e-del-riciclo/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/mercatino-da-forte-dei-marmi-ricordando-giorgio-armani/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/fiera-merceologica-della-madonna-d-ottobre/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://anyplans.in/monza/fiera-merceologica-della-madonna-d-ottobre/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/il-mercatino-del-vintage-di-sesto-san-giovanni/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/mercatini-di-arte-e-cultura-di-gorgonzola/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/vampiria-in-tour/</loc><lastmod>2026-10-04</lastmod></url>
@@ -767,7 +767,7 @@
   <url><loc>https://anyplans.in/monza/partita-di-beneficenza-cabiate-vs-nazionale-artisti-tv/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/risottiamoci-insieme-una-serata-5-risotti-what-else/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/giro-risotti-rebelot-cernusco-sul-naviglio-mi/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/monza/astrologo-e-suppli/</loc><lastmod>2026-10-03</lastmod></url>
+  <url><loc>https://anyplans.in/monza/astrologo-e-suppli/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/luci-per-la-vita-violino-pianoforte-e-danza/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/seveso-1976-la-nube-e-la-memoria/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/monza/arcore-per-gli-animali-nuovi-strumenti-di-tutela-della-legge/</loc><lastmod>2026-10-04</lastmod></url>
@@ -1114,7 +1114,7 @@
   <url><loc>https://anyplans.in/en/monza/seregno/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/en/monza/meda/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/en/monza/verano-brianza/</loc><lastmod>2026-10-03</lastmod></url>
-  <url><loc>https://anyplans.in/en/monza/giussano/</loc><lastmod>2026-10-01</lastmod></url>
+  <url><loc>https://anyplans.in/en/monza/giussano/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/en/monza/cusano-milanino/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/en/monza/osnago/</loc><lastmod>2026-10-01</lastmod></url>
   <url><loc>https://anyplans.in/en/monza/paderno-dugnano/</loc><lastmod>2026-10-04</lastmod></url>
@@ -1184,6 +1184,7 @@
   <url><loc>https://anyplans.in/en/monza/venues/fabbrica-in-pedavena-lissone/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/en/monza/venues/monza-grazie-vecchie/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://anyplans.in/en/monza/venues/slaughter-club/</loc><lastmod>2026-10-04</lastmod></url>
+  <url><loc>https://anyplans.in/en/monza/venues/centro-derby-monza/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/en/monza/venues/seven-infinity-tennis-padel-club/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/en/monza/venues/wipeout-pub-n-games/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/en/monza/venues/biblioteca-civica-di-vimercate/</loc><lastmod>2026-10-04</lastmod></url>
@@ -1194,7 +1195,6 @@
   <url><loc>https://anyplans.in/en/monza/venues/doppio-malto-monza/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/en/monza/venues/pomodoro-basilico/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/en/monza/venues/notting-hill-monza/</loc><lastmod>2026-10-04</lastmod></url>
-  <url><loc>https://anyplans.in/en/monza/venues/zero3nove-cocktail-bar-monza/</loc><lastmod>2026-10-04</lastmod></url>
   <url><loc>https://anyplans.in/en/monza/venues/kampobase-lombardia-vagabonda/</loc><lastmod>2026-10-03</lastmod></url>
   <url><loc>https://anyplans.in/en/monza/venues/biblioteca-civica-ettore-pozzoli/</loc><lastmod>2026-10-01</lastmod></url>
   <url><loc>https://anyplans.in/en/monza/venues/ti-vedo/</loc><lastmod>2026-10-03</lastmod></url>
