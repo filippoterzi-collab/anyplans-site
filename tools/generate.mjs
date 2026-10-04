@@ -78,10 +78,20 @@ if (!process.argv.includes("--citta") && !INDICE && !FIXTURE) {
   const self = fileURLToPath(import.meta.url);
   // deno serve per provarlo qui sul mac (node non c'è); in GitHub Actions gira node
   const base = globalThis.Deno ? [Deno.execPath(), "run", "-A", self] : [process.execPath, self];
-  for (const passo of [...CITTA.map(c => ["--citta", c.slug]), ["--indice"]]) {
-    const r = spawnSync(base[0], [...base.slice(1), "--out", OUT, ...passo], { stdio: "inherit" });
-    if (r.status !== 0) { console.error(`generate: "${passo.join(" ")}" è fallita, mi fermo`); process.exit(1); }
+  // Una città che fallisce non ferma le altre (4/10/2026: un timeout del database su Prato ha buttato
+  // la corsa di tutte e 52). Il processo di una città muore prima di toccare la sua cartella, quindi le
+  // sue pagine restano quelle di ieri; si riprova una volta alla fine, quando il database è più scarico.
+  // Si fallisce solo se le città saltate sono troppe (il problema non è un momento storto) o se salta l'indice.
+  const corri = (passo) => spawnSync(base[0], [...base.slice(1), "--out", OUT, ...passo], { stdio: "inherit" }).status === 0;
+  let saltate = [];
+  for (const c of CITTA) if (!corri(["--citta", c.slug])) { console.error(`generate: ${c.slug} è fallita, la riprovo alla fine`); saltate.push(c.slug); }
+  if (saltate.length) {
+    await new Promise(r => setTimeout(r, 30000));
+    saltate = saltate.filter(sl => !corri(["--citta", sl]));
   }
+  if (saltate.length) console.error(`generate: città rimaste a ieri: ${saltate.join(", ")}`);
+  if (saltate.length > Math.max(3, CITTA.length / 5)) { console.error(`generate: ${saltate.length} città saltate, mi fermo`); process.exit(1); }
+  if (!corri(["--indice"])) { console.error(`generate: l'indice è fallito, mi fermo`); process.exit(1); }
   process.exit(0);
 }
 
@@ -292,7 +302,7 @@ async function rpc(name, body) {
 // timeout": il database ci mette più del limite a rispondere quando la città è grossa e c'è carico.
 // Un errore così non è definitivo, è un momento storto: si riprova. Senza, salta la rigenerazione
 // di tutte e 29 le città e il sito resta fermo al giorno prima.
-async function rpcRetry(name, body, tentativi = 4) {
+async function rpcRetry(name, body, tentativi = 6) {
   let ultimo;
   for (let i = 0; i < tentativi; i++) {
     try { return await rpc(name, body); }
@@ -300,7 +310,7 @@ async function rpcRetry(name, body, tentativi = 4) {
       ultimo = e;
       const riprovabile = /HTTP (5\d\d|408|429)|timeout|fetch failed|ECONNRESET|socket/i.test(String(e && e.message));
       if (!riprovabile || i === tentativi - 1) throw e;
-      const attesa = 2000 * Math.pow(2, i);        // 2s, 4s, 8s
+      const attesa = Math.min(30000, 2000 * Math.pow(2, i));   // 2, 4, 8, 16, 30 secondi
       console.error(`rpc ${name}: ${String(e.message).slice(0, 90)} — riprovo fra ${attesa / 1000}s`);
       await new Promise(r => setTimeout(r, attesa));
     }
