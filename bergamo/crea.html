@@ -188,6 +188,14 @@
     <textarea id="desc" placeholder="Due righe per chi non ti conosce: cosa si fa, cosa portare…"></textarea>
   </div>
 
+  <!-- chi organizza ha spesso gia' una pagina sua (biglietti, programma, iscrizione): dal 04/10/2026 la puo' mettere qui.
+       E' un link in piu' dentro l'evento: l'iscrizione su anyplans e il bottone "Ci sono" non cambiano. -->
+  <div>
+    <label for="link">Hai una pagina dell'evento? <span style="color:var(--grey); font-weight:600">(se vuoi)</span></label>
+    <input id="link" type="url" inputmode="url" autocomplete="off" placeholder="https://… biglietti, programma, iscrizione">
+    <p class="hint">Il link compare dentro l'evento, per chi vuole i dettagli o il biglietto. Qui ci si iscrive come sempre.</p>
+  </div>
+
   <div>
     <label>Chi può venire?</label>
     <div class="seg" id="seg-gender">
@@ -267,7 +275,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1791106316"></script>
+<script src="app.js?v=1791106417"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -456,6 +464,7 @@
     }
     document.getElementById("place").value = a.meeting_point_text || "";
     document.getElementById("desc").value = a.description || "";
+    document.getElementById("link").value = a.source_url || "";
     if (a.max_participants) document.getElementById("maxp").value = a.max_participants;
     editCap = a.max_participants || null; editGoing = Number(a.going_count) || 0;
     editWaitlist = a.waitlist_enabled !== false; editWaitCount = Number(a.waitlist_count) || 0;
@@ -658,6 +667,13 @@
         : "Salvato, ma la lista d'attesa no. Riprova da \"Modifica l'evento\".");
   }
   // il valore del database: privato vince (l'approvazione, se c'è, va nel flag approval_required)
+  // il link dell'organizzatore: "" se vuoto o se non e' un indirizzo (meglio nessun link che uno rotto)
+  function eventLink(){
+    let v = (document.getElementById("link").value || "").trim();
+    if (!v) return "";
+    if (!/^https?:\/\//i.test(v)) v = "https://" + v;
+    try { const u = new URL(v); return u.hostname.includes(".") ? u.href : ""; } catch (_) { return ""; }
+  }
   function chosenVisibility(){
     if (privateOn) return "private";
     return chosenApproval() ? "request" : "open";
@@ -820,7 +836,8 @@
         p_clear_end: !endAt && editHadEnd,
         p_lat: point.lat, p_lng: point.lng,
         p_meeting_point_text: place,
-        p_max_participants: Number.isFinite(maxp) ? maxp : null
+        p_max_participants: Number.isFinite(maxp) ? maxp : null,
+        p_source_url: eventLink()      // "" per togliere il link: update_activity fa coalesce, con null resterebbe com'era
       });
       btn.disabled = false;
       if (ru && ru.ok) {
@@ -856,7 +873,8 @@
       p_timezone: "Europe/Rome",
       p_description: document.getElementById("desc").value.trim() || null,
       p_max_participants: Number.isFinite(maxp) ? maxp : null,
-      p_visibility: chosenVisibility() === "request" ? "request" : "open"
+      p_visibility: chosenVisibility() === "request" ? "request" : "open",
+      p_source_url: eventLink() || null
     });
     btn.disabled = false;
     if (r && r.ok) {
