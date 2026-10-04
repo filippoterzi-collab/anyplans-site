@@ -2061,6 +2061,20 @@ const whenLinksEn = () => { const l = WHEN_KINDS.filter(k => WHEN[k].list.length
     .concat(months.map(m => `<a href="${rel(monthUrl(m))}">Events in ${monthLabel(m)} (${monthIdx.get(m).length})</a>`));
   return l.length ? `<h2>When</h2><div class="tags">${l.join("")}</div>` : ""; };
 
+// l'ora di un evento in un dato giorno (la prima data di quel giorno)
+const oraNelGiorno = (p, key) => { const d = (p.dates || []).find(x => dateKey(x.start, x.tz) === key); return d ? +fmtTime(d.start, d.tz).slice(0, 2) : 12; };
+function giornataHtml(list, key) {
+  const E = en();
+  const fasce = [[E ? "Morning" : "Mattina", (h) => h < 12], [E ? "Afternoon" : "Pomeriggio", (h) => h >= 12 && h < 18], [E ? "Evening" : "Sera", (h) => h >= 18]];
+  // la giornata in breve: quanti per tipo, in prosa
+  const perTipo = [...list.reduce((m, p) => m.set(p.sport, (m.get(p.sport) || 0) + 1), new Map()).entries()].sort((a, b) => b[1] - a[1]).slice(0, 6)
+    .map(([sp, n]) => `${n} ${tLabel(tipo(sp)).toLowerCase()}`);
+  const spicchi = fasce.map(([nome, f]) => [nome, list.filter(p => f(oraNelGiorno(p, key)))]).filter(([, l]) => l.length);
+  const breve = E ? `In short: ${joinIt(perTipo)}. ${spicchi.map(([n, l]) => `${l.length} in the ${n.toLowerCase()}`).join(", ")}.`
+                  : `In breve: ${joinIt(perTipo)}. ${spicchi.map(([n, l]) => `${l.length} ${n === "Mattina" ? "al mattino" : n === "Pomeriggio" ? "al pomeriggio" : "la sera"}`).join(", ")}.`;
+  return `<p>${esc(breve)}</p>
+${spicchi.map(([nome, l]) => `<h2>${esc(nome)} <span class="s">(${l.length})</span></h2>\n${listHtml(l)}`).join("\n")}`;
+}
 function whenPage(kind) {
   const w = WHEN[kind], url = whenUrl(kind), list = w.list.slice().sort(byDate);
   const days = w.keys.map(k => { const [y, m, d] = k.split("-"); return new Date(Date.UTC(+y, +m - 1, +d, 12)); });
@@ -2071,9 +2085,14 @@ function whenPage(kind) {
              : kind === "oggi" ? (en() ? `today, ${fmtDate(NOW)}` : `oggi, ${fmtDate(NOW)}`)
              : kind === "stasera" ? (en() ? `tonight, ${fmtDate(NOW)}, from 6 pm` : `stasera, ${fmtDate(NOW)}, dalle 18`)
              : (en() ? `tomorrow, ${fmtDate(dayAfter(1))}` : `domani, ${fmtDate(dayAfter(1))}`);
-  const h1 = en() ? `What to do in ${CITY_NAME} ${W_EN[kind]}`
-                  : `Cosa fare a ${CITY_NAME} ${W_IT[kind]}`;
-  const title = cut(h1, 44) + `: ${list.length} ${en() ? "events" : "eventi"} | anyplans`;
+  // "oggi" e "domani" sono un articolo del giorno: la data sta nel titolo ("Cosa fare a Bergamo oggi,
+  // sabato 4 ottobre") e la lista è divisa in mattina, pomeriggio e sera. È la pagina che la gente
+  // cerca di più (Trends: "cosa fare oggi a bergamo" +180%, 29/09/2026) e deve leggersi come un giornale.
+  const giornata = kind === "oggi" || kind === "domani";
+  const dataBreve = giornata ? fmtDay(days[0], DEFAULT_TZ).toLowerCase() : "";
+  const h1 = en() ? `What to do in ${CITY_NAME} ${W_EN[kind]}${giornata ? `, ${fmtDay(days[0], DEFAULT_TZ)}` : ""}`
+                  : `Cosa fare a ${CITY_NAME} ${W_IT[kind]}${giornata ? `, ${dataBreve}` : ""}`;
+  const title = cut(h1, giornata ? 52 : 44) + `: ${list.length} ${en() ? "events" : "eventi"} | anyplans`;
   const lead = en()
     ? `${list.length} events in ${CITY_NAME} and its province ${when}: ${joinIt(towns.slice(0, 4).map(t => t.replace(/ \(\d+\)$/, "")))} and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.`
     : `${list.length} eventi a ${CITY_NAME} e provincia ${when}: ${joinIt(towns.slice(0, 4).map(t => t.replace(/ \(\d+\)$/, "")))} e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.`;
@@ -2095,7 +2114,10 @@ function whenPage(kind) {
     { q: `Ci posso andare da solo?`, a: `Sì, è il senso di anyplans: vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.` },
   ];
   const ld = jsonld({ "@context": "https://schema.org", "@type": "ItemList", name: h1, url,
-    itemListElement: list.slice(0, 50).map((p, i) => ({ "@type": "ListItem", position: i + 1, url: eventUrl(p), name: p.title })) });
+    itemListElement: list.slice(0, 50).map((p, i) => ({ "@type": "ListItem", position: i + 1, url: eventUrl(p), name: p.title })) })
+    + (giornata ? "\n" + jsonld({ "@context": "https://schema.org", "@type": "Article", headline: h1, description: descr, url, mainEntityOfPage: url,
+        datePublished: NOW.toISOString().slice(0, 10), dateModified: NOW.toISOString().slice(0, 10), inLanguage: en() ? "en" : "it-IT",
+        author: { "@type": "Organization", name: "anyplans", url: SITE }, publisher: { "@type": "Organization", name: "anyplans", url: SITE }, image: [OG_DEFAULT] }) : "");
   const others = whenOther(kind).map(k => `<a href="${rel(whenUrl(k))}">${en() ? "What to do " : "Cosa fare "}${whenName(k)}</a>`)
     .concat(months.map(m => `<a href="${rel(monthUrl(m))}">${en() ? "Events in " : "Eventi a "}${monthLabel(m)}</a>`)).join("");
   const body = `
@@ -2104,8 +2126,8 @@ ${crumbs([["anyplans", L.home], [CITY_NAME, rel(hubUrl())], [en() ? (W_EN_CAP[ki
 <p class="lead">${esc(lead)}</p>
 <div class="cta"><a class="btn" href="${MAP_URL}">${en() ? "See them on the map" : "Vedili sulla mappa"}</a><a class="btn ghost" href="${rel(hubUrl())}">${en() ? "All events" : "Tutti gli eventi"}</a></div>
 ${list.length ? `<h2>${en() ? "By kind" : "Per tipo"}</h2><div class="tags">${typeChips(list, kind === "oggi")}</div>` : ""}
-<h2>${en() ? "The list" : "La lista"}</h2>
-${listHtml(list.slice(0, 80))}
+${giornata ? giornataHtml(list, w.keys[0]) : `<h2>${en() ? "The list" : "La lista"}</h2>
+${listHtml(list)}`}
 ${others ? `<h2>${en() ? "Other days" : "Altri giorni"}</h2><div class="tags">${others}</div>` : ""}
 ${faqHtml(faq)}
 `;
