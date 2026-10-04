@@ -1,0 +1,86 @@
+{
+ "tipo": "articolo",
+ "data": "2026-10-04",
+ "aggiornato": "2026-10-04",
+ "titolo": "Cosa vedere a Bergamo Alta in un giorno: il giro a piedi",
+ "h1": "Cosa vedere a Bergamo Alta in un giorno: il giro a piedi, dalle Mura al Campanone",
+ "descrizione": "Bergamo Alta in un giorno: le Mura venete patrimonio UNESCO (6,2 km), Piazza Vecchia, la Cappella Colleoni, Santa Maria Maggiore con la tomba di Donizetti e i cento rintocchi del Campanone alle 22. Più le visite guidate in programma.",
+ "lead": "Città Alta si gira a piedi in una giornata, ma ha dentro cinque secoli. Qui c'è un giro che parte dalle Mura e finisce alle dieci di sera sotto il Campanone, con quello che c'è da sapere su ogni tappa e le visite guidate dei prossimi giorni, se lo vuoi fare con qualcuno.",
+ "sezioni": [
+  {
+   "h2": "Le Mura venete, patrimonio UNESCO",
+   "testo": [
+    "Le costruì la Repubblica di Venezia tra il 1561 e il 1588: 6,2 chilometri, quattordici baluardi e quattro porte (Sant'Agostino, San Giacomo, Sant'Alessandro e San Lorenzo, detta anche Porta Garibaldi). Dal 9 luglio 2017 sono patrimonio dell'umanità UNESCO, nel sito «Opere di difesa veneziane tra XVI e XVII secolo».",
+    "Il modo giusto per cominciare è da Porta San Giacomo, la più fotografata: si sale a piedi dalla città bassa e si entra in Città Alta come si entrava quattro secoli fa."
+   ]
+  },
+  {
+   "h2": "Piazza Vecchia",
+   "testo": [
+    "È il cuore di Città Alta: la fontana Contarini al centro, il Palazzo della Ragione da una parte e la Torre civica sopra. Da qui, passando sotto i portici del Palazzo della Ragione, si arriva in piazza del Duomo."
+   ]
+  },
+  {
+   "h2": "Cappella Colleoni e Santa Maria Maggiore",
+   "testo": [
+    "Una accanto all'altra. La Cappella Colleoni è il mausoleo del condottiero Bartolomeo Colleoni, opera di Giovanni Antonio Amadeo. Nella basilica di Santa Maria Maggiore c'è la tomba di Gaetano Donizetti, che a Bergamo era nato nel 1797. A due passi c'è il Duomo, dedicato a Sant'Alessandro, il patrono della città."
+   ]
+  },
+  {
+   "h2": "Il Campanone e i cento rintocchi delle 22",
+   "testo": [
+    "La Torre civica, il Campanone, si può salire (c'è anche l'ascensore). Ogni sera alle dieci la campana batte cento colpi: un tempo annunciavano la chiusura delle quattro porte delle Mura, oggi è una tradizione che la città tiene viva. Il 18 luglio, per ricordarlo, le porte vengono davvero chiuse e riaperte durante i cento rintocchi.",
+    "È il modo migliore per finire la giornata: un aperitivo in piazza Vecchia e alle 22 fermarsi a contare."
+   ]
+  },
+  {
+   "h2": "Come salire",
+   "testo": [
+    "Dalla città bassa si sale a piedi da Porta San Giacomo, oppure con la funicolare che arriva in piazza Mercato delle Scarpe. Da Città Alta, una seconda funicolare porta ancora più su, a San Vigilio, dove c'è il panorama su tutta la pianura."
+   ]
+  }
+ ],
+ "eventi": {
+  "tipo": "tour",
+  "titolo": "Le visite guidate in programma",
+  "tutti": "Tutte le visite guidate a Bergamo",
+  "max": 8
+ },
+ "faq": [
+  {
+   "q": "Quanto tempo serve per vedere Bergamo Alta?",
+   "a": "Una giornata basta per il giro principale: Mura e Porta San Giacomo, Piazza Vecchia, Cappella Colleoni, Santa Maria Maggiore, Duomo e Campanone. Per San Vigilio e la Rocca serve mezza giornata in più."
+  },
+  {
+   "q": "Perché il Campanone suona cento volte alle 22?",
+   "a": "Un tempo i cento rintocchi annunciavano la chiusura notturna delle quattro porte delle Mura venete. Oggi è una tradizione: suona ogni sera alle dieci."
+  },
+  {
+   "q": "Le Mura di Bergamo sono patrimonio UNESCO?",
+   "a": "Sì, dal 9 luglio 2017, nel sito seriale «Opere di difesa veneziane tra XVI e XVII secolo». Sono lunghe 6,2 chilometri, con 14 baluardi e 4 porte."
+  },
+  {
+   "q": "Dov'è la tomba di Donizetti?",
+   "a": "Nella basilica di Santa Maria Maggiore, in Città Alta, accanto alla Cappella Colleoni."
+  }
+ ],
+ "fonti": [
+  {
+   "nome": "Wikipedia, Mura venete di Bergamo",
+   "url": "https://it.wikipedia.org/wiki/Mura_venete_di_Bergamo"
+  },
+  {
+   "nome": "Wikipedia, Bergamo Alta",
+   "url": "https://it.wikipedia.org/wiki/Bergamo_Alta"
+  },
+  {
+   "nome": "Wikipedia, Torre civica di Bergamo",
+   "url": "https://it.wikipedia.org/wiki/Campanone_(Bergamo)"
+  }
+ ],
+ "correlate": [
+  "cavour-1880",
+  "migliore-colazione-bergamo"
+ ],
+ "slug": "citta-alta-in-un-giorno"
+}

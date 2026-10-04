@@ -2,13 +2,13 @@
  "tipo": "lista",
  "data": "2026-10-04",
  "aggiornato": "2026-10-04",
- "titolo": "Miglior gelateria a Bergamo: le premiate Gambero Rosso 2026",
- "h1": "Miglior gelateria a Bergamo: le sei premiate dal Gambero Rosso (e dove sono)",
- "descrizione": "Le gelaterie di Bergamo e provincia nella guida Gelaterie d'Italia 2026 del Gambero Rosso: le due Tre Coni (Gelato Contadino, La Pasqualina) e le altre premiate, con il paese e cosa le distingue.",
- "lead": "Non è una classifica nostra: è quella della guida Gelaterie d'Italia del Gambero Rosso, che in provincia di Bergamo premia nove gelaterie. Qui ci sono le sei che conosciamo di persona, a partire dalle due con i Tre Coni, il massimo.",
+ "titolo": "Miglior gelateria a Bergamo: Gelato Contadino e le premiate",
+ "h1": "Miglior gelateria a Bergamo: per noi è il Gelato Contadino",
+ "descrizione": "La miglior gelateria di Bergamo per noi è il Gelato Contadino (piazzale Risorgimento 7): Tre Coni del Gambero Rosso, il miglior pistacchio d'Italia. Sotto, le altre gelaterie della provincia premiate dalla guida 2026.",
+ "lead": "La nostra risposta è una sola: il Gelato Contadino, in piazzale Risorgimento. Tre Coni del Gambero Rosso, il miglior pistacchio d'Italia e un'ora e 45 di fila nei weekend che vale tutta. Sotto ci sono anche le altre gelaterie della provincia premiate dalla guida Gelaterie d'Italia 2026, con i loro premi: le mettiamo per completezza, la scelta resta quella.",
  "sezioni": [
   {
-   "h2": "Gelato Contadino, Bergamo (Loreto)",
+   "h2": "La nostra scelta: Gelato Contadino, Bergamo (Loreto)",
    "posto": {
     "nome": "Gelato Contadino",
     "paese": "Bergamo",
@@ -21,13 +21,19 @@
     "guida": "gelato-contadino"
    },
    "testo": [
-    "Tre Coni, il massimo della guida, e il pistacchio giudicato il migliore d'Italia. Gelato a tiratura limitata con macchine del 1950, latte dall'Alpe Camisolo a duemila metri, fila che nei weekend arriva a un'ora e 45. Ne abbiamo scritto una pagina intera."
+    "Tre Coni, il massimo della guida, e il pistacchio giudicato il migliore d'Italia. Gelato a tiratura limitata con macchine del 1950 e un bastone girato a mano, latte dall'Alpe Camisolo a duemila metri, e si chiude quando il gelato finisce. Ne abbiamo scritto una pagina intera, con orari e consigli per la fila."
    ],
    "embed": {
     "url": "https://www.instagram.com/p/CsrEfMCNJNu/",
     "account": "gelatocontadino",
     "testo": "Il pistacchio del Gelato Contadino, su Instagram (@gelatocontadino)"
    }
+  },
+  {
+   "h2": "Le altre premiate dalla guida",
+   "testo": [
+    "Queste sono le altre gelaterie della provincia nella guida Gelaterie d'Italia 2026 del Gambero Rosso, con il premio che hanno preso. Le elenchiamo perché chi cerca la migliore gelateria di Bergamo le trova citate ovunque."
+   ]
   },
   {
    "h2": "La Pasqualina, Almenno San Bartolomeo",
@@ -39,7 +45,7 @@
     "sito": "https://www.lapasqualina.it/"
    },
    "testo": [
-    "L'altra Tre Coni della provincia. È una gelateria e pasticceria di famiglia dal 1912, con sede ad Almenno San Bartolomeo, a venti minuti da Bergamo verso la Valle Imagna, e negozi anche a Bergamo e a Porto Cervo. La guida la mette allo stesso livello del Contadino, con molta meno fila."
+    "Tre Coni nella guida 2026. Gelateria e pasticceria di famiglia dal 1912, con sede ad Almenno San Bartolomeo e negozi anche a Bergamo e a Porto Cervo."
    ],
    "embed": {
     "url": "https://www.instagram.com/p/DdyCySxsipj/",
@@ -58,7 +64,7 @@
     "sito": "https://www.gelateriapandizucchero.it/"
    },
    "testo": [
-    "In guida, e il nome che i bergamaschi hanno scritto spontaneamente nei commenti quando abbiamo pubblicato il Contadino: «provate Pandizucchero». Ad Almè, all'imbocco della Valle Brembana."
+    "In guida. Ad Almè, all'imbocco della Valle Brembana."
    ],
    "embed": {
     "url": "https://www.instagram.com/p/Ddv2bkbRQB8/",
@@ -75,7 +81,7 @@
     "instagram": "https://www.instagram.com/mandorlacchio/"
    },
    "testo": [
-    "In città, e quest'anno ha guadagnato un cono nella guida: è la gelateria che sta salendo. Parte sempre dal frutto fresco: in questi giorni ha il gelato all'uva americana, frullata e setacciata, e quello al fico d'india."
+    "In guida, con un cono guadagnato quest'anno. In città."
    ],
    "embed": {
     "url": "https://www.instagram.com/p/DeBrEQXD0oP/",
@@ -93,7 +99,7 @@
     "orari": "Aperta tutti i giorni, 9:30-22"
    },
    "testo": [
-    "Due coni del Gambero Rosso, gelato artigianale dal 1990, aperta sette giorni su sette dalle 9:30 alle 22. Una scelta più tranquilla del Contadino nei giorni in cui la fila è troppa."
+    "Due coni nella guida. Gelato artigianale dal 1990, aperta tutti i giorni dalle 9:30 alle 22."
    ],
    "embed": {
     "url": "https://www.instagram.com/p/DcqKWT6DT-t/",
@@ -111,7 +117,7 @@
     "sito": "https://gelateriaminu.it/"
    },
    "testo": [
-    "Nella guida del Gambero Rosso e tra le cento migliori gelaterie di Dissapore, a Osio Sotto. Ha una cosa che le altre non hanno: è tutto senza glutine, anche le cialde e la pasticceria fredda. Ci si ferma tornando da Treviglio o dall'autostrada."
+    "Nella guida del Gambero Rosso e nella Top 100 di Dissapore, a Osio Sotto. È tutta senza glutine, cialde e pasticceria fredda comprese."
    ],
    "embed": {
     "url": "https://www.instagram.com/p/DazzZpIDHfZ/",
@@ -120,16 +126,16 @@
    }
   },
   {
-   "h2": "Le altre tre",
+   "h2": "Ne manca una?",
    "testo": [
-    "La guida 2026 premia nove gelaterie in provincia di Bergamo. Le sei qui sopra le conosciamo; le altre tre le aggiungiamo appena le proviamo. Se ne manca una che per te è la migliore, scrivicelo su Instagram."
+    "La guida 2026 premia nove gelaterie in provincia di Bergamo; qui ce ne sono sei. Se ne conosci una che batte il Contadino, scrivicelo su Instagram: la proviamo."
    ]
   }
  ],
  "faq": [
   {
    "q": "Qual è la miglior gelateria di Bergamo?",
-   "a": "Per la guida Gelaterie d'Italia 2026 del Gambero Rosso le due gelaterie con i Tre Coni, il massimo, sono il Gelato Contadino a Bergamo (piazzale Risorgimento 7) e La Pasqualina ad Almenno San Bartolomeo."
+   "a": "Per noi il Gelato Contadino, in piazzale Risorgimento 7 a Bergamo: Tre Coni del Gambero Rosso, il massimo della guida, e il miglior pistacchio d'Italia. L'altra gelateria della provincia con i Tre Coni è La Pasqualina di Almenno San Bartolomeo."
   },
   {
    "q": "Quante gelaterie di Bergamo sono premiate dal Gambero Rosso?",

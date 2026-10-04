@@ -1,0 +1,76 @@
+{
+ "tipo": "articolo",
+ "data": "2026-10-04",
+ "aggiornato": "2026-10-04",
+ "titolo": "Sagre a Bergamo: cosa si mangia e quelle in programma",
+ "h1": "Le sagre bergamasche: cosa si mangia, come funzionano e quelle in programma",
+ "descrizione": "Cosa si mangia a una sagra in provincia di Bergamo (casoncelli, polenta taragna, i formaggi DOP delle valli), come funziona tra stand, fila e tavolate, e l'elenco delle sagre dei prossimi giorni, aggiornato ogni notte.",
+ "lead": "In provincia di Bergamo, da maggio a ottobre, c'è una sagra quasi ogni weekend: la festa del paese, dell'oratorio, degli alpini. Qui c'è cosa ordinare, come funziona la serata e, in fondo, quelle in programma nei prossimi giorni.",
+ "sezioni": [
+  {
+   "h2": "I casoncelli",
+   "testo": [
+    "Il piatto bergamasco per eccellenza: una pasta ripiena a mezzaluna, documentata già nel 1386. Il ripieno tradizionale è dolce e salato insieme, con salame, carne di manzo, grana, pane grattato, uovo, scorza di limone, amaretti, pera e noce moscata: una ricetta che viene dalla cucina rinascimentale e dal dominio veneziano. Si condiscono con burro, pancetta, grana e salvia.",
+    "Quelli bresciani, i casonsei, hanno un ripieno più semplice e forme diverse: alla sagra bergamasca si chiamano casoncelli, e la differenza la senti."
+   ]
+  },
+  {
+   "h2": "La polenta taragna",
+   "testo": [
+    "Polenta di mais e grano saraceno, scura, con burro e formaggio delle valli fusi dentro. Alle sagre arriva quasi sempre accanto a salamelle, spezzatino o funghi, soprattutto da settembre."
+   ]
+  },
+  {
+   "h2": "I formaggi delle valli",
+   "testo": [
+    "Tre formaggi bergamaschi hanno la DOP: il Taleggio, lo Strachitunt della Val Taleggio e il Formai de Mut dell'Alta Valle Brembana. Nelle sagre di montagna li trovi sul tagliere o fusi nella polenta."
+   ]
+  },
+  {
+   "h2": "Come funziona la serata",
+   "testo": [
+    "Quasi sempre: si entra gratis, si fa la fila alla cassa, si ordina e si paga, poi si ritira al bancone e ci si siede alle tavolate in comune. Si mangia accanto a chi non conosci, e succede che a fine serata non sia più così. Poi c'è la musica, spesso dal vivo o il liscio, e la pesca di beneficenza.",
+    "Il consiglio pratico: arrivare presto, prima delle 19:30, perché i casoncelli finiscono e la fila alla cassa cresce."
+   ]
+  }
+ ],
+ "eventi": {
+  "tipo": "raccolta:sagre",
+  "titolo": "Le sagre in programma",
+  "tutti": "Tutte le sagre e le feste di paese",
+  "max": 10
+ },
+ "faq": [
+  {
+   "q": "Cosa si mangia a una sagra bergamasca?",
+   "a": "I casoncelli col burro e la salvia, la polenta taragna con salamelle o spezzatino, e i formaggi delle valli (Taleggio, Strachitunt e Formai de Mut sono DOP)."
+  },
+  {
+   "q": "Quanto costa andare a una sagra?",
+   "a": "Entrare è quasi sempre gratis; si paga quello che si mangia. Il prezzo dei piatti è scritto alla cassa."
+  },
+  {
+   "q": "Che sagre ci sono questo weekend a Bergamo?",
+   "a": "L'elenco in questa pagina si aggiorna ogni notte con le sagre e le feste di paese dei prossimi giorni, con data, ora e paese."
+  },
+  {
+   "q": "Che differenza c'è tra casoncelli e casonsei?",
+   "a": "I casoncelli bergamaschi hanno un ripieno dolce e salato (salame, manzo, amaretti, pera, uvetta o scorza di limone); i casonsei bresciani un ripieno più semplice, di pane, formaggio, aglio e manzo, e forme più varie."
+  }
+ ],
+ "fonti": [
+  {
+   "nome": "Wikipedia, Casoncelli",
+   "url": "https://it.wikipedia.org/wiki/Casoncelli"
+  },
+  {
+   "nome": "Le sagre e feste di paese in programma, su anyplans",
+   "url": "https://anyplans.in/bergamo/sagre/"
+  }
+ ],
+ "correlate": [
+  "castagne-bergamo",
+  "citta-alta-in-un-giorno"
+ ],
+ "slug": "sagre-bergamasche-cosa-si-mangia"
+}
