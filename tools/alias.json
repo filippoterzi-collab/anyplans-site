@@ -1,0 +1,6 @@
+{
+ "_nota": "Redirect scritti a mano: per città, vecchio slug → slug attuale (italiano). Servono quando una pagina indicizzata è sparita prima che il generatore sapesse tenerne traccia (slug_di nello stato). Il generatore scrive al vecchio indirizzo una pagina che rimanda alla nuova, finché la nuova esiste.",
+ "bergamo": {
+  "mito-sushi-curno-da-mito-sushi-restaurant-14-posti-liberi": "mito-sushi-restaurant-curno-da-mito-sushi-restaurant"
+ }
+}

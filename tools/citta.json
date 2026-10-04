@@ -7,7 +7,8 @@
   "km": 30,
   "prov": "MI",
   "nome_en": "Milan",
-  "zoom_mappa": 13
+  "zoom_mappa": 13,
+  "en_eventi": true
  },
  {
   "slug": "bergamo",
@@ -15,7 +16,8 @@
   "lat": 45.698,
   "lng": 9.67,
   "km": 50,
-  "prov": "BG"
+  "prov": "BG",
+  "en_eventi": true
  },
  {
   "slug": "torino",
@@ -24,7 +26,8 @@
   "lng": 7.6869,
   "km": 30,
   "prov": "TO",
-  "nome_en": "Turin"
+  "nome_en": "Turin",
+  "en_eventi": true
  },
  {
   "slug": "roma",
@@ -33,7 +36,8 @@
   "lng": 12.4964,
   "km": 30,
   "prov": "RM",
-  "nome_en": "Rome"
+  "nome_en": "Rome",
+  "en_eventi": true
  },
  {
   "slug": "bologna",
@@ -41,7 +45,8 @@
   "lat": 44.4949,
   "lng": 11.3426,
   "km": 30,
-  "prov": "BO"
+  "prov": "BO",
+  "en_eventi": true
  },
  {
   "slug": "brescia",
@@ -58,7 +63,8 @@
   "lng": 14.2681,
   "km": 30,
   "prov": "NA",
-  "nome_en": "Naples"
+  "nome_en": "Naples",
+  "en_eventi": true
  },
  {
   "slug": "verona",
@@ -66,7 +72,8 @@
   "lat": 45.4384,
   "lng": 10.9916,
   "km": 30,
-  "prov": "VR"
+  "prov": "VR",
+  "en_eventi": true
  },
  {
   "slug": "padova",
@@ -75,7 +82,8 @@
   "lng": 11.8768,
   "km": 30,
   "prov": "PD",
-  "nome_en": "Padua"
+  "nome_en": "Padua",
+  "en_eventi": true
  },
  {
   "slug": "varese",
@@ -92,7 +100,8 @@
   "lng": 11.2558,
   "km": 30,
   "prov": "FI",
-  "nome_en": "Florence"
+  "nome_en": "Florence",
+  "en_eventi": true
  },
  {
   "slug": "genova",
@@ -101,7 +110,8 @@
   "lng": 8.9463,
   "km": 30,
   "prov": "GE",
-  "nome_en": "Genoa"
+  "nome_en": "Genoa",
+  "en_eventi": true
  },
  {
   "slug": "bari",
@@ -109,7 +119,8 @@
   "lat": 41.1171,
   "lng": 16.8719,
   "km": 30,
-  "prov": "BA"
+  "prov": "BA",
+  "en_eventi": true
  },
  {
   "slug": "perugia",
@@ -141,7 +152,8 @@
   "lat": 38.1157,
   "lng": 13.3615,
   "km": 30,
-  "prov": "PA"
+  "prov": "PA",
+  "en_eventi": true
  },
  {
   "slug": "trieste",
@@ -149,7 +161,8 @@
   "lat": 45.6495,
   "lng": 13.7768,
   "km": 30,
-  "prov": "TS"
+  "prov": "TS",
+  "en_eventi": true
  },
  {
   "slug": "trento",
@@ -173,7 +186,8 @@
   "lat": 37.5079,
   "lng": 15.083,
   "km": 30,
-  "prov": "CT"
+  "prov": "CT",
+  "en_eventi": true
  },
  {
   "slug": "ravenna",
@@ -197,7 +211,8 @@
   "lat": 44.0678,
   "lng": 12.5695,
   "km": 30,
-  "prov": "RN"
+  "prov": "RN",
+  "en_eventi": true
  },
  {
   "slug": "bolzano",
@@ -213,7 +228,8 @@
   "lat": 43.7228,
   "lng": 10.4017,
   "km": 30,
-  "prov": "PI"
+  "prov": "PI",
+  "en_eventi": true
  },
  {
   "slug": "taranto",
@@ -261,7 +277,8 @@
   "lat": 45.808,
   "lng": 9.085,
   "km": 15,
-  "prov": "CO"
+  "prov": "CO",
+  "en_eventi": true
  },
  {
   "slug": "lecco",
@@ -310,7 +327,8 @@
   "lng": 12.327,
   "km": 20,
   "prov": "VE",
-  "nome_en": "Venice"
+  "nome_en": "Venice",
+  "en_eventi": true
  },
  {
   "slug": "vicenza",

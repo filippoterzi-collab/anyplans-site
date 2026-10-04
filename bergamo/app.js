@@ -35,6 +35,16 @@ const EXT_SOURCES = [
 ];
 // label of the external button: "Iscriviti su X →" unless the source says otherwise (nomadtable: "Join chat")
 function extCta(src){ return src.cta || ("Iscriviti su " + src.name + " →"); }
+// Un link che NON e' una pagina dove si entra all'evento non deve prendere il posto del "Ci sono" (04/10/2026).
+// Succedeva coi profili Instagram delle fonti: 147 eventi futuri mandavano la gente sul profilo di chi
+// ripubblica, non all'evento. Stessa cosa per le homepage nude: la home di un sito non e' l'annuncio.
+// In questi casi ci si iscrive qui e il link resta solo nella riga "l'abbiamo trovato su un altro sito".
+const NO_SIGNUP = [
+  /^https?:\/\/([a-z0-9-]+\.)*(instagram\.com|facebook\.com|fb\.com|fb\.me|threads\.(net|com)|tiktok\.com|(twitter|x)\.com|youtube\.com|youtu\.be|linkedin\.com|wa\.me|t\.me)(\/|$)/i,
+  /^https?:\/\/[^/]+\/?$/,                                 // la sola homepage, senza nemmeno un path
+  /^https?:\/\/(www\.)?ats-bg\.it\/gruppi-cammino/i,        // la lista dei gruppi di cammino, non la camminata
+];
+function noSignup(url){ return NO_SIGNUP.some(rx => rx.test(url || "")); }
 function extSourceOf(url){ return EXT_SOURCES.find(x => x.rx.test(url || "")) || null; }
 // the external source of an activity row (feed_activities / activity_by_id / public_activities_for_seo): a known one, or
 // for any aggregated event (source != 'ugc') a generic entry named after the domain. A user's own event that only links
@@ -42,7 +52,8 @@ function extSourceOf(url){ return EXT_SOURCES.find(x => x.rx.test(url || "")) ||
 function extSourceFor(x){
   if (!x || !x.source_url) return null;
   const known = extSourceOf(x.source_url);
-  if (known || x.source === "ugc") return known;
+  if (known) return known;                                  // fonte curata a mano: li' ci si iscrive davvero
+  if (x.source === "ugc" || noSignup(x.source_url)) return null;
   let host = ""; try { host = new URL(x.source_url).hostname.replace(/^www\./, ""); } catch (_) { return null; }
   if (!host) return null;
   return { name: host, cta: "Apri su " + host + " →", how: "L'evento è pubblicato su " + host + ": dettagli e iscrizione sono lì." };

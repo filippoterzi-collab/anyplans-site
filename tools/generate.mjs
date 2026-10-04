@@ -37,6 +37,12 @@ const C = CITTA.find(c => c.slug === argvCity);
 if (!C) { console.error(`città sconosciuta: ${argvCity} (in citta.json: ${CITTA.map(c => c.slug).join(", ")})`); process.exit(2); }
 const INDICE = process.argv.includes("--indice");   // niente pagine: scrive sitemap, robots, llms e /citta/
 const CITY = C.slug;
+// Le pagine evento in inglese solo dove c'è chi le cerca (en_eventi in citta.json: le città grandi e
+// turistiche). Il 4/10/2026 Search Console aveva 20.113 pagine "scoperte, non ancora indicizzate" e
+// metà degli url del sito erano le versioni inglesi degli eventi: la sagra di un paese in inglese non la
+// cerca nessuno, ma Google ci spendeva la scansione. Nelle altre città l'inglese resta per hub, indici e
+// locali; le pagine evento inglesi già indicizzate rimandano a quella italiana (vedi lapidi).
+const EN_EVENTI = !!C.en_eventi;
 // il nome della città nella lingua della pagina: chi cerca in inglese scrive "things to do in Naples",
 // non "in Napoli" (18/09/2026). L'indirizzo resta quello italiano: /en/napoli/ è già indicizzato.
 const CITY_NAME_IT = C.nome;
@@ -188,6 +194,19 @@ function plainText(s) {
   return troncato && t && !/[.!?…:;)»"'\]]$/.test(t) ? t + "…" : t;
 }
 // same as slugify() in bergamo/app.js: shared links /bergamo/<slug> must match
+// Il titolo di un evento cambia mentre si riempie ("14 posti liberi" → "8 posti", "mancano 3
+// giocatori" → "manca 1 giocatore") e lo slug lo seguiva: la pagina che Google aveva imparato spariva e
+// ne nasceva una nuova da zero. Il 4/10/2026 la seconda pagina del sito per click (201 in 28 giorni,
+// "mito sushi curno") era un 404 da due settimane. Qui si toglie dal titolo la parte che cambia.
+function stabile(t) {
+  const n = String(t ?? "")
+    .replace(/\(?\s*\d+\s*posti?(\s+(liberi|disponibili|rimasti))?\s*\)?/gi, " ")
+    .replace(/\bmanc(a|ano)\s+\d+\s+giocat\w*/gi, " ")
+    .replace(/\b\d+\s*\/\s*\d+\s*(giocatori|posti|iscritti)?/gi, " ")
+    .replace(/\b(sold ?out|ultimi posti|posti esauriti|esaurito|quasi pieno|last call|ultimi \d+ posti)\b/gi, " ")
+    .replace(/\s{2,}/g, " ").trim();
+  return n.length >= 6 ? n : String(t ?? "");
+}
 function slugify(t) {
   return String(t ?? "").toLowerCase()
     .replace(/[àáâä]/g, "a").replace(/[èéêë]/g, "e").replace(/[ìíîï]/g, "i")
@@ -403,7 +422,7 @@ const groups = (Array.isArray(rawGroups) ? rawGroups : []).filter(g => g.slug &&
 // ── group rows into pages: one page per slug (same title + same club = same event, all dates) ─
 const bySlug = new Map();
 for (const r of rows) {
-  const s = slugify(r.rawTitle);
+  const s = slugify(stabile(r.rawTitle));
   if (!s) continue; // the app links these with ?id=: no static page
   const key = norm(r.title) + "|" + norm(r.club);
   if (!bySlug.has(s)) bySlug.set(s, new Map());
@@ -723,7 +742,7 @@ const APP = `/${HOME_CITY}`;
 // compilato, mappa e lista li'. Prima si finiva su /bergamo/eventi.html?luogo=..., che e' un'altra
 // pagina e un altro design.
 const MAP_URL = `/?citta=${CITY}`;
-const eventUrl = (p) => `${base()}/${p.slug}/`;
+const eventUrl = (p) => (en() && !EN_EVENTI) ? `${SITE}/${CITY}/${p.slug}/` : `${base()}/${p.slug}/`;
 const groupUrl = (g) => `${base()}/${L.groups}/${g.slug}/`;
 // A Bergamo /bergamo/ e' la home dell'app web, quindi l'hub sta in /bergamo/cosa-fare/; nelle altre
 // citta l'indirizzo e' libero e l'hub sta li', che e' anche l'indirizzo che la gente prova a mano.
@@ -1250,7 +1269,7 @@ ${sim.length ? `<h2>${S.similar}</h2>${listHtml(sim)}` : ""}
   })();
 </script>`;
   return layout({ vecchio: vecchioDi(p), title, description: descr, url, image, jsonLd: [eventJsonLd(p, url), faqLd(faq)].filter(Boolean).join("\n"), body: body + mapScript + relScript, ogType: "article", modified: p.updated, head: mapHead,
-    alt: inLocale(E ? "it" : "en", () => eventUrl(p)) });
+    alt: EN_EVENTI ? inLocale(E ? "it" : "en", () => eventUrl(p)) : null });
 }
 
 // ── run club (0070: community.sport = 'running' | 'walking', community_schedule) ────────────
@@ -2314,6 +2333,28 @@ if (SOLO_HUB) console.log(`${CITY}: ${upcomingPages.length} eventi futuri, sotto
 // davvero: a quel punto Google l'ha tolta dall'indice e tenerla non serve a nessuno.
 const GIORNI_TOMBA = 60;
 const TOMBA = /<!--tomba:(\d{4}-\d{2}-\d{2})-->/;
+// Un indirizzo che si è spostato: la pagina vecchia rimanda a quella nuova (meta refresh + canonical, che
+// per Google vale come redirect: su GitHub Pages un 301 vero non si può fare). Si tiene finché esiste la
+// destinazione. Tre origini: lo slug cambiato (slug_di nello stato della città, per id dell'evento), il
+// titolo che prima aveva i posti dentro ("-14-posti-liberi"), e alias.json scritto a mano.
+const ALIAS = /<!--alias:([^>]+)-->/;
+const ALIAS_MANUALI = await (async () => { try { return JSON.parse(await readFile(path.join(HERE, "alias.json"), "utf8")); } catch { return {}; } })();
+function redirectPage(from, to, E) {
+  const h1 = E ? "This page has moved" : "Questa pagina si è spostata";
+  return `<!doctype html>
+<html lang="${E ? "en" : "it"}"><head><meta charset="utf-8">
+<title>${esc(h1)} | anyplans</title>
+<meta http-equiv="refresh" content="0; url=${esc(to)}">
+<link rel="canonical" href="${esc(to)}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--alias:${esc(to)}-->
+</head><body style="font-family:system-ui;padding:40px 16px;text-align:center">
+<p>${esc(h1)}: <a href="${esc(to)}">${esc(to)}</a></p>
+<script>location.replace(${JSON.stringify(to)});</script>
+</body></html>
+`;
+}
+const spostaDa = (s) => s.replace(/-\d+-posti(-(liberi|disponibili|rimasti))?(?=-|$)/g, "").replace(/-manc(a|ano)-\d+-giocator\w*/g, "").replace(/-{2,}/g, "-").replace(/^-|-$/g, "");
 async function cosaCera(dir) {
   const out = new Map();
   let voci = [];
@@ -2324,10 +2365,25 @@ async function cosaCera(dir) {
     try { h = await readFile(path.join(dir, e.name, "index.html"), "utf8"); } catch { continue; }
     const t = (h.match(/<title>(.*?)<\/title>/s) || [])[1] || "";
     const tomba = (h.match(TOMBA) || [])[1] || null;
-    out.set(e.name, { titolo: unesc(t).replace(/ \| anyplans$/, "").trim(), tomba });
+    const alias = (h.match(ALIAS) || [])[1] || null;
+    out.set(e.name, { titolo: unesc(t).replace(/ \| anyplans$/, "").trim(), tomba, alias });
   }
   return out;
 }
+// lo slug che ogni evento aveva alla corsa precedente (stato della città): se è cambiato, il vecchio
+// indirizzo rimanda al nuovo
+const slugNuovo = new Map();
+const slugDiOra = {};
+for (const p of pages) for (const d of p.dates) if (d.id) slugDiOra[d.id] = p.slug;
+try {
+  const prec = JSON.parse(await readFile(path.join(statoDir, CITY + ".json"), "utf8"));
+  for (const [id, vecchio] of Object.entries(prec.slug_di || {})) {
+    const nuovo = slugDiOra[id];
+    if (nuovo && nuovo !== vecchio && !slugNuovo.has(vecchio)) slugNuovo.set(vecchio, nuovo);
+  }
+  // e gli alias delle corse passate restano validi finché la destinazione esiste
+  for (const [vecchio, nuovo] of Object.entries(prec.alias || {})) if (!slugNuovo.has(vecchio)) slugNuovo.set(vecchio, nuovo);
+} catch { /* prima corsa */ }
 const ceraIt = await cosaCera(cityDir);
 const ceraEn = await cosaCera(path.join(OUT, "en", CITY));
 
@@ -2361,7 +2417,8 @@ for (const code of ["it", "en"]) {
     }
   }
   for (const g of groups) { const r = groupPage(g); await writePage(relOf(groupUrl(g)), r.html); addUrl(groupUrl(g), r.lastmod); }
-  for (const p of pages) { await writePage(relOf(eventUrl(p)), eventPage(p)); if (!vecchioDi(p)) addUrl(eventUrl(p), p.updated); }
+  if (code === "it" || EN_EVENTI)
+    for (const p of pages) { await writePage(relOf(eventUrl(p)), eventPage(p)); if (!vecchioDi(p)) addUrl(eventUrl(p), p.updated); }
 }
 setLocale('it');
 
@@ -2371,8 +2428,34 @@ async function lapidi(cera, prefisso, code) {
   const E = code === "en";
   const oggi = NOW.toISOString().slice(0, 10);
   let messe = 0, sepolte = 0;
+  // dove rimandare una pagina che non c'è più: la stessa pagina con lo slug nuovo (per id), lo slug senza
+  // i posti, l'alias scritto a mano, o — in inglese senza pagine evento — la pagina italiana
+  const scritteIt = (sl) => scritte.has(`${CITY}/${sl}`);
+  const scrittaQui = (sl) => scritte.has(`${prefisso}/${sl}`);
+  const dove = (slug, info) => {
+    const man = (ALIAS_MANUALI[CITY] || {})[slug];
+    if (man && scritteIt(man)) return (E && EN_EVENTI && scrittaQui(man)) ? `${SITE}/${prefisso}/${man}/` : `${SITE}/${CITY}/${man}/`;
+    const nuovo = slugNuovo.get(slug);
+    if (nuovo && scrittaQui(nuovo)) return `${SITE}/${prefisso}/${nuovo}/`;
+    const senza = spostaDa(slug);
+    if (senza !== slug && scrittaQui(senza)) return `${SITE}/${prefisso}/${senza}/`;
+    if (E && !EN_EVENTI && scritteIt(slug)) return `${SITE}/${CITY}/${slug}/`;
+    if (E && !EN_EVENTI && nuovo && scritteIt(nuovo)) return `${SITE}/${CITY}/${nuovo}/`;
+    if (info.alias && /^https:\/\/anyplans\.in\//.test(info.alias) && scritte.has(info.alias.replace(`${SITE}/`, "").replace(/\/$/, ""))) return info.alias;
+    return null;
+  };
+  let spostate = 0;
+  for (const [slug, target] of Object.entries(ALIAS_MANUALI[CITY] || {})) if (!cera.has(slug)) cera.set(slug, { titolo: "", tomba: null, alias: null, manuale: target });
   for (const [slug, info] of cera) {
-    if (scritte.has(`${prefisso}/${slug}`)) continue;
+    if (scrittaQui(slug)) continue;
+    const to = dove(slug, info);
+    if (to) {
+      const dir = path.join(OUT, prefisso, slug);
+      await mkdir(dir, { recursive: true });
+      await writeFile(path.join(dir, "index.html"), redirectPage(`${SITE}/${prefisso}/${slug}/`, to, E));
+      spostate++; continue;
+    }
+    if (info.manuale) continue;      // alias a mano verso una pagina che non c'è: niente da fare
     if (info.tomba && (NOW - new Date(info.tomba)) > GIORNI_TOMBA * 86400e3) { sepolte++; continue; }
     const nome = info.titolo && !/^anyplans$/i.test(info.titolo) ? info.titolo.split(/ [–|] /)[0].trim() : "";
     const url = `${SITE}/${prefisso}/${slug}/`;
@@ -2397,14 +2480,14 @@ ${vicineHtml()}
     await writeFile(path.join(dir, "index.html"), html);
     messe++;
   }
-  return { messe, sepolte };
+  return { messe, sepolte, spostate };
 }
 {
   const it = await lapidi(ceraIt, CITY, "it");
   const en = await lapidi(ceraEn, `en/${CITY}`, "en");
   setLocale('it');
-  if (it.messe + en.messe + it.sepolte + en.sepolte)
-    console.log(`${CITY}: lapidi ${it.messe + en.messe} (eventi spariti dalla fonte), tolte dopo ${GIORNI_TOMBA} giorni: ${it.sepolte + en.sepolte}`);
+  if (it.messe + en.messe + it.sepolte + en.sepolte + it.spostate + en.spostate)
+    console.log(`${CITY}: lapidi ${it.messe + en.messe} (eventi spariti dalla fonte), tolte dopo ${GIORNI_TOMBA} giorni: ${it.sepolte + en.sepolte}; redirect ${it.spostate + en.spostate} (slug cambiati, inglese → italiano, alias)`);
 }
 
 // ── /<citta>/ e' la home, gia' su quella citta' ───────────────────────────────
@@ -2447,6 +2530,7 @@ await mkdir(statoDir, { recursive: true });
 await writeFile(path.join(statoDir, CITY + ".json"), JSON.stringify(
   { slug: CITY, nome: CITY_NAME, eventi: upcomingPages.length, pagine: sitemapEntries.length,
     tipi: Object.fromEntries(types.map(x => [x.sport, x.list.filter(p => !p.isPast).length])),
+    slug_di: slugDiOra, alias: Object.fromEntries(slugNuovo),
     aggiornato: NOW.toISOString() }, null, 1));
 
 console.log(`${CITY}: ${rows.length} righe, ${pages.length} pagine (${upcomingPages.length} futuri, ${pages.length - upcomingPages.length} passati)`);
