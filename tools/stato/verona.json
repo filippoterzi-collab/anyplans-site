@@ -1,7 +1,7 @@
 {
  "slug": "verona",
  "nome": "Verona",
- "eventi": 253,
+ "eventi": 252,
  "pagine": 1297,
  "tipi": {
   "festival": 20,
@@ -14,19 +14,19 @@
   "gym": 3,
   "ceramics": 0,
   "market": 3,
-  "exhibition": 4,
+  "exhibition": 3,
   "yoga": 7,
   "tour": 9,
   "painting": 2,
   "cycling": 3,
   "karaoke": 1,
-  "raccolta:bambini": 4,
+  "raccolta:bambini": 3,
   "raccolta:halloween": 6,
   "raccolta:sagre": 24,
   "raccolta:biblioteca": 10,
-  "raccolta:gratis": 214,
+  "raccolta:gratis": 213,
   "raccolta:fotografia": 4,
-  "raccolta:arte": 9,
+  "raccolta:arte": 8,
   "raccolta:vintage-e-usato": 3,
   "raccolta:scambi-linguistici": 6,
   "raccolta:meditazione-e-benessere": 6,
@@ -812,5 +812,5 @@
   "00858646-666f-4afa-8b7a-5612d49c51d1": "raffaella-carra-dance-tribute"
  },
  "alias": {},
- "aggiornato": "2026-10-04T09:38:27.587Z"
+ "aggiornato": "2026-10-04T09:51:59.832Z"
 }
