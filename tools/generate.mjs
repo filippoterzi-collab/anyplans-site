@@ -2252,7 +2252,7 @@ ${section("Pagine principali", [
   line("Le regole di anyplans", `${SITE}/guidelines.html`),
   line("Privacy", `${SITE}/privacy-it.html`),
   line("Condizioni d'uso", `${SITE}/terms-it.html`),
-])}${section("Eventi per tipo e per paese", [
+])}${section(`Le guide di ${CITY_NAME}`, GUIDE.map(g => line(g.titolo, guideUrl(g), g.descrizione)))}${section("Eventi per tipo e per paese", [
   ...types.map(x => line(`${x.t.label} a ${CITY_NAME}`, `${SITE}/${CITY}/${x.slug}/`, `${x.list.filter(p => !p.isPast).length} in programma`)),
   ...towns.map(x => line(`Feste ed eventi a ${x.town}`, `${SITE}/${CITY}/${x.slug}/`, `${x.list.filter(p => !p.isPast).length} in programma`)),
 ])}${section("Running club per giorno", dayLines)}${section("Gruppi",
@@ -2394,7 +2394,12 @@ async function writePage(rel, html) {
   await writeFile(path.join(dir, "index.html"), html);
   const pick = (re) => { const m = html.match(re); return m ? unesc(m[1]).trim() : ""; };
   const title = pick(/<title>(.*?)<\/title>/s), descr = pick(/<meta name="description" content="(.*?)">/s), lead = pick(/<p class="lead">(.*?)<\/p>/s);
-  const faq = [...html.matchAll(/<h3>(.*?)<\/h3><p>(.*?)<\/p>/gs)].map(m => `**${unesc(m[1])}**\n${unesc(m[2])}`);
+  // le domande frequenti: faqHtml le scrive come <details><summary>…</summary><p>…</p>. Prima qui si
+  // cercavano solo gli <h3>, e nei file llms di tutte le città non arrivava nessuna FAQ (trovato il 4/10/2026)
+  // Solo dove le FAQ dicono qualcosa di proprio (indici, locali, guide, "oggi", run club): quelle delle
+  // singole pagine evento si ripetono quasi uguali e moltiplicavano per 4,5 il file (Milano ~11 MB).
+  const conFaq = /"@type":"(ItemList|Article|CollectionPage)"|#locale"/.test(html);
+  const faq = !conFaq ? [] : [...html.matchAll(/<(?:h3|summary)>(.*?)<\/(?:h3|summary)><p>(.*?)<\/p>/gs)].map(m => `**${unesc(m[1])}**\n${unesc(m[2])}`);
   fullTxt.push(`## ${title.replace(/ \| anyplans$/, "")}\n${SITE}/${rel}/\n\n${lead || descr}\n${faq.length ? "\n" + faq.join("\n\n") + "\n" : ""}`);
 }
 
@@ -2484,7 +2489,16 @@ riassunto e domande frequenti di ogni pagina.
 
 ${stato.map(c => `- [${c.nome}](${SITE}/${c.slug}/cosa-fare/): ${c.eventi} eventi in programma, ${c.pagine} pagine — testo completo: ${SITE}/${c.slug === HOME_CITY ? "llms-full.txt" : `llms-${c.slug}.txt`}`).join("\n")}
 
-## Il sito
+${await (async () => {
+  // le guide di tutte le città (branding/seo/guide/<citta>/*.json): l'indice le elenca, i motori di risposta partono da qui
+  const righe = [];
+  for (const c of CITTA) {
+    let files = [];
+    try { files = (await readdir(path.join(HERE, "guide", c.slug))).filter(f => f.endsWith(".json")).sort(); } catch { continue; }
+    for (const f of files) { try { const g = JSON.parse(await readFile(path.join(HERE, "guide", c.slug, f), "utf8")); righe.push(`- [${g.titolo}](${SITE}/${c.slug}/guide/${g.slug}/): ${g.descrizione}`); } catch {} }
+  }
+  return righe.length ? `## Le guide\n\nArticoli con fonti in fondo: i posti, i premi, le regole e gli eventi in programma.\n\n${righe.join("\n")}\n\n` : "";
+})()}## Il sito
 
 - [Tutte le città](${SITE}/citta/): l'elenco con quanti eventi ci sono in ognuna
 - [Viaggi di gruppo](${SITE}/viaggi-di-gruppo/): le partenze di WeRoad, SiVola e Zest Family a confronto (destinazione, date, durata, prezzo, età, volo); si prenota da loro
@@ -2604,7 +2618,13 @@ for (const code of ["it", "en"]) {
     for (const p of pages) { await writePage(relOf(eventUrl(p)), eventPage(p)); if (!vecchioDi(p)) addUrl(eventUrl(p), p.updated); }
   if (code === "it" && GUIDE.length) {
     const gi = guideIndex(); await writePage(relOf(guideIndexUrl()), gi.html); addUrl(guideIndexUrl(), gi.lastmod);
-    for (const g of GUIDE) { const r = guidePage(g); await writePage(relOf(guideUrl(g)), r.html); addUrl(guideUrl(g), r.lastmod); }
+    for (const g of GUIDE) {
+      const r = guidePage(g); await writePage(relOf(guideUrl(g)), r.html); addUrl(guideUrl(g), r.lastmod);
+      // nel file llms la guida va intera, non solo il riassunto: è il testo che un motore di risposta cita
+      const sez = (g.sezioni || []).map(x => `### ${x.h2}\n${(x.testo || []).join("\n\n")}`).join("\n\n");
+      const fonti = (g.fonti || []).map(f => `- ${f.nome}: ${f.url}`).join("\n");
+      fullTxt[fullTxt.length - 1] = `## ${g.titolo}\n${guideUrl(g)}\n\n${g.lead}\n\n${sez}\n\n${(g.faq || []).map(f => `**${f.q}**\n${f.a}`).join("\n\n")}${fonti ? `\n\nFonti:\n${fonti}` : ""}\n`;
+    }
   }
 }
 setLocale('it');

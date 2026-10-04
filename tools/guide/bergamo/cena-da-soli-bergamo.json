@@ -1,0 +1,67 @@
+{
+ "tipo": "articolo",
+ "data": "2026-10-04",
+ "aggiornato": "2026-10-04",
+ "titolo": "Cena da soli a Bergamo: i tavoli con altre persone, stasera",
+ "h1": "Cena da soli a Bergamo? Siediti a un tavolo con altre persone",
+ "descrizione": "Andare a cena da soli a Bergamo senza mangiare da soli: i tavoli sociali nei ristoranti (Tablo e simili), le cene e gli aperitivi aperti a chiunque dei prossimi giorni, con ora, posto e posti liberi. Aggiornato ogni giorno.",
+ "lead": "Se sei appena arrivato a Bergamo, o semplicemente i tuoi amici stasera non ci sono, non è detto che tu debba mangiare da solo. Ci sono tavoli in ristorante aperti a chiunque: qualcuno prenota per sei, i posti liberi si riempiono con chi vuole unirsi. Qui ci sono quelli dei prossimi giorni.",
+ "sezioni": [
+  {
+   "h2": "Come funziona un tavolo sociale",
+   "testo": [
+    "Su app come Tablo una persona apre un tavolo in un ristorante, con data, ora e numero di posti; chi vuole si aggiunge finché il tavolo è pieno. Si arriva, ci si presenta, si cena insieme e ognuno paga il suo. In tutta Italia Tablo dichiara 450.000 iscritti e circa 2.500 tavoli al mese.",
+    "Su anyplans i tavoli di Bergamo compaiono insieme alle altre cene e agli aperitivi aperti, con l'ora, il ristorante e i posti ancora liberi."
+   ]
+  },
+  {
+   "h2": "Perché è più facile di quanto sembra",
+   "testo": [
+    "Al tavolo nessuno si conosce, ed è proprio questo il punto: si parte tutti dallo stesso posto. Chi viene di solito è nella tua stessa situazione, nuovo in città, o con la voglia di conoscere gente fuori dal solito giro. E se la serata non va, è una cena: finisce alle dieci."
+   ]
+  },
+  {
+   "h2": "Le alternative senza tavolo",
+   "testo": [
+    "Se una cena intera con sconosciuti è troppo, ci sono gli aperitivi aperti, i giochi da tavolo nei pub e i run club: sono nelle altre guide e su anyplans, con chi ci va."
+   ]
+  }
+ ],
+ "eventi": {
+  "tipi": [
+   "dinner",
+   "singles"
+  ],
+  "titolo": "Cene e tavoli aperti nei prossimi giorni",
+  "max": 12
+ },
+ "faq": [
+  {
+   "q": "Come trovare persone con cui cenare a Bergamo?",
+   "a": "Con i tavoli sociali nei ristoranti, come quelli di Tablo: qualcuno apre un tavolo e gli altri si uniscono. In questa pagina ci sono le cene e i tavoli aperti dei prossimi giorni a Bergamo, con ora, posto e posti liberi."
+  },
+  {
+   "q": "È strano andare a cena da soli a un tavolo con sconosciuti?",
+   "a": "È il motivo per cui questi tavoli esistono: nessuno si conosce, si parte tutti dallo stesso posto. Chi viene di solito è nuovo in città o vuole conoscere gente nuova."
+  },
+  {
+   "q": "Quanto costa un tavolo sociale?",
+   "a": "Ognuno paga quello che mangia, al ristorante. Unirsi al tavolo di solito è gratis; quando c'è una quota, è scritta nella pagina dell'evento."
+  }
+ ],
+ "fonti": [
+  {
+   "nome": "Tablo",
+   "url": "https://www.tabloapp.com/it"
+  },
+  {
+   "nome": "Cene e aperitivi a Bergamo, su anyplans",
+   "url": "https://anyplans.in/bergamo/cene-e-aperitivi/"
+  }
+ ],
+ "correlate": [
+  "run-club-bergamo",
+  "ristoranti-piu-cercati-bergamo"
+ ],
+ "slug": "cena-da-soli-bergamo"
+}
