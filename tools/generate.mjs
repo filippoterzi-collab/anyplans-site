@@ -2114,7 +2114,9 @@ function giornataHtml(list, key) {
   const fasce = [[E ? "Morning" : "Mattina", (h) => h < 12], [E ? "Afternoon" : "Pomeriggio", (h) => h >= 12 && h < 18], [E ? "Evening" : "Sera", (h) => h >= 18]];
   // la giornata in breve: quanti per tipo, in prosa
   const perTipo = [...list.reduce((m, p) => m.set(p.sport, (m.get(p.sport) || 0) + 1), new Map()).entries()].sort((a, b) => b[1] - a[1]).slice(0, 6)
-    .map(([sp, n]) => `${n} ${tLabel(tipo(sp)).toLowerCase()}`);
+    // al plurale giusto ("8 cene e aperitivi", non "8 cena / aperitivo"): le forme stanno in testi.json (conta)
+    .map(([sp, n]) => { const t = tipo(sp); const [uno, molti] = String(t.conta || "").split("|");
+      return `${n} ${!E && uno && molti ? (n === 1 ? uno : molti) : tLabel(t).toLowerCase()}`; });
   const spicchi = fasce.map(([nome, f]) => [nome, list.filter(p => f(oraNelGiorno(p, key)))]).filter(([, l]) => l.length);
   const breve = E ? `In short: ${joinIt(perTipo)}. ${spicchi.map(([n, l]) => `${l.length} in the ${n.toLowerCase()}`).join(", ")}.`
                   : `In breve: ${joinIt(perTipo)}. ${spicchi.map(([n, l]) => `${l.length} ${n === "Mattina" ? "al mattino" : n === "Pomeriggio" ? "al pomeriggio" : "la sera"}`).join(", ")}.`;
