@@ -5,8 +5,8 @@
  "titolo": "Dove fare colazione a Bergamo: le brioche migliori, prezzi",
  "h1": "Miglior colazione a Bergamo: le pasticcerie con un premio nazionale",
  "descrizione": "Dove fare colazione a Bergamo e dintorni: il Caffè Cavour 1880 di Città Alta (Tre Torte del Gambero Rosso, brioche del Da Vittorio, 2,50 €) e La Serra Pastry Lab di Almè (Pasticcere Emergente d'Italia). Prezzi e indirizzi.",
- "copertina": "/guide/bergamo/colazione-bergamo.jpg",
- "copertina_alt": "La vetrina del Caffè Cavour 1880 a Bergamo Alta",
+ "copertina": "/guide/bergamo/cavour-facciata.jpg",
+ "copertina_alt": "L'insegna della Pasticceria Cavour in via Gombito, Bergamo Alta, di sera",
  "lead": "Due criteri, uno solo nostro: la brioche deve avere un premio di una guida nazionale (così la classifica non ce la siamo fatta da soli) e noi ci dobbiamo aver fatto colazione. Per ora sono due posti. La lista cresce man mano che li proviamo.",
  "sezioni": [
   {
@@ -67,5 +67,6 @@
   "cavour-1880",
   "migliore-gelateria-bergamo"
  ],
- "slug": "migliore-colazione-bergamo"
+ "slug": "migliore-colazione-bergamo",
+ "copertina_credito": "Foto di Filippo Terzi"
 }

@@ -5,8 +5,8 @@
  "titolo": "Caffè Cavour 1880, Bergamo Alta: la brioche da tre stelle",
  "h1": "Caffè Cavour 1880, Bergamo Alta: la colazione fatta dai pasticceri del Da Vittorio",
  "descrizione": "Caffè Cavour 1880 in via Gombito 7, Città Alta: Tre Torte del Gambero Rosso (92 punti), le brioche del maître pâtissier del Da Vittorio, sei camere coi nomi dei pasticcini. Prezzi della colazione.",
- "copertina": "/guide/bergamo/cavour-1880.jpg",
- "copertina_alt": "Cappuccino, brioche e spremuta al Caffè Cavour 1880, Bergamo Alta",
+ "copertina": "/guide/bergamo/cavour-facciata.jpg",
+ "copertina_alt": "L'insegna della Pasticceria Cavour in via Gombito, Bergamo Alta, di sera",
  "instagram": "https://www.instagram.com/anyplans_bergamo/",
  "lead": "Una delle brioche più buone d'Italia si mangia in via Gombito, a Città Alta. Le fa ogni mattina la squadra del ristorante tre stelle Michelin Da Vittorio, e la guida del Gambero Rosso le dà il massimo. Costa 2,50 euro.",
  "posto": {
@@ -76,5 +76,6 @@
   "migliore-colazione-bergamo",
   "gelato-contadino"
  ],
- "slug": "cavour-1880"
+ "slug": "cavour-1880",
+ "copertina_credito": "Foto di Filippo Terzi"
 }

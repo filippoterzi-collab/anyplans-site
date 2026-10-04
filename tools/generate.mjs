@@ -657,7 +657,7 @@ ${crumbs([["anyplans", "/"], [CITY_NAME, rel(hubUrl())], ["Guide", rel(guideInde
 <h1>${esc(g.h1 || g.titolo)}</h1>
 <p class="lead">${esc(g.lead || g.descrizione)}</p>
 <div class="m">${esc(fmtLong(data, DEFAULT_TZ))}${+agg !== +data ? ` · aggiornato ${esc(fmtShort(agg, DEFAULT_TZ))}` : ""} · di Filippo Terzi${g.instagram ? ` · <a class="lnk" href="${esc(g.instagram)}" rel="noopener">il post su Instagram</a>` : ""}</div>
-${g.copertina ? `<div class="cover"><img src="${esc(g.copertina)}" alt="${esc(g.copertina_alt || g.titolo)}" width="800" height="450" loading="eager" decoding="async" style="object-fit:cover"></div>` : ""}
+${g.copertina ? `<div class="cover"><img src="${esc(g.copertina)}" alt="${esc(g.copertina_alt || g.titolo)}" width="800" height="450" loading="eager" decoding="async" style="object-fit:cover"></div>${g.copertina_credito ? `<div class="m" style="font-size:12.5px">${esc(g.copertina_credito)}</div>` : ""}` : ""}
 ${g.posto ? postoHtml(g.posto, g) : ""}
 ${sezioni.map(x => `<section class="box"><h2>${esc(x.h2)}</h2>${postoHtml(x.posto, g)}${(x.testo || []).map(t => `<p>${esc(t)}</p>`).join("")}</section>`).join("\n")}
 ${faq.length ? faqHtml(faq) : ""}
