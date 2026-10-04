@@ -603,6 +603,93 @@ const venues = [...venueIdx.values()]
 // e Google la trovava solo dalla lista dei locali: un link su duemila pagine invece di uno ogni evento)
 const venueDi = new Map(venues.map(v => [v.slug, v]));
 const localeDi = (p) => { const n = nomeLocale(p); return n ? venueDi.get(slugify(n)) || null : null; };
+
+// ── le guide: il blog che non si vede (PRODUCT.md "Le guide", UI.md §3.12, 04/10/2026) ───────
+// Pagine editoriali da branding/seo/guide/<citta>/*.json: il ritratto di un posto ("gelato contadino"),
+// la lista dei migliori ("miglior gelateria bergamo"), l'articolo (le regole dei funghi). Fuori dal
+// menu: ci si arriva da Google, dai motori di risposta e dal link nei post Instagram. Solo in italiano.
+const GUIDE = INDICE ? [] : await (async () => {
+  const dir = path.join(HERE, "guide", CITY);
+  let files = [];
+  try { files = (await readdir(dir)).filter(f => f.endsWith(".json")).sort(); } catch { return []; }
+  const out = [];
+  for (const f of files) {
+    try { const g = JSON.parse(await readFile(path.join(dir, f), "utf8")); if (g.slug && g.titolo) out.push(g); }
+    catch (e) { console.error(`guida ${f} non leggibile: ${e.message}`); }
+  }
+  return out.sort((a, b) => String(b.data).localeCompare(String(a.data)));
+})();
+const guideUrl = (g) => `${SITE}/${CITY}/guide/${g.slug}/`;
+const guideIndexUrl = () => `${SITE}/${CITY}/guide/`;
+const mapsQuery = (q) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}`;
+const AUTORE = { "@type": "Person", name: "Filippo Terzi", url: "https://www.instagram.com/anyplans_bergamo/" };
+function postoHtml(p, guida) {
+  if (!p) return "";
+  const dove = [p.indirizzo || "", !p.indirizzo && p.paese ? p.paese : ""].filter(Boolean).join("");
+  const v = venueDi.get(slugify(p.nome));
+  const righe = [
+    p.ancora ? `<span class="chip">🏅 ${esc(p.ancora)}</span>` : "",
+    dove ? `<div>📍 <a class="lnk" href="${esc(mapsQuery(p.indirizzo ? p.indirizzo : `${p.nome}, ${p.paese}`))}" rel="noopener">${esc(dove)}</a></div>` : "",
+    p.orari ? `<div>🕒 ${esc(p.orari)}</div>` : "",
+    p.prezzo ? `<div>💶 ${esc(p.prezzo)}</div>` : "",
+    [p.instagram ? `<a class="lnk" href="${esc(p.instagram)}" rel="noopener">Instagram</a>` : "",
+     p.sito ? `<a class="lnk" href="${esc(p.sito)}" rel="noopener">Sito</a>` : "",
+     v ? `<a class="lnk" href="${esc(venueUrl(v))}">Gli eventi qui su anyplans</a>` : "",
+     p.guida && GUIDE.find(x => x.slug === p.guida) && (!guida || guida.slug !== p.guida) ? `<a class="lnk" href="${esc(guideUrl(GUIDE.find(x => x.slug === p.guida)))}">La pagina di ${esc(p.nome)}</a>` : ""].filter(Boolean).join(" · "),
+  ].filter(Boolean);
+  return righe.length ? `<div class="m posto">${righe.join("")}</div>` : "";
+}
+function placeLd(p) {
+  return { "@type": "Place", name: p.nome,
+    address: { "@type": "PostalAddress", ...(p.indirizzo ? { streetAddress: p.indirizzo } : {}), addressLocality: p.paese || CITY_NAME, addressCountry: "IT" },
+    ...(p.instagram || p.sito ? { sameAs: [p.instagram, p.sito].filter(Boolean) } : {}) };
+}
+function guidePage(g) {
+  const url = guideUrl(g);
+  const image = g.copertina ? `${SITE}${g.copertina}` : OG_DEFAULT;
+  const sezioni = g.sezioni || [];
+  const posti = [g.posto, ...sezioni.map(x => x.posto)].filter(Boolean);
+  const faq = g.faq || [];
+  const correlate = (g.correlate || []).map(sl => GUIDE.find(x => x.slug === sl)).filter(Boolean);
+  const data = new Date(g.data || NOW), agg = new Date(g.aggiornato || g.data || NOW);
+  const body = `
+${crumbs([["anyplans", "/"], [CITY_NAME, rel(hubUrl())], ["Guide", rel(guideIndexUrl())], [g.titolo, null]])}
+<h1>${esc(g.h1 || g.titolo)}</h1>
+<p class="lead">${esc(g.lead || g.descrizione)}</p>
+<div class="m">${esc(fmtLong(data, DEFAULT_TZ))}${+agg !== +data ? ` · aggiornato ${esc(fmtShort(agg, DEFAULT_TZ))}` : ""} · di Filippo Terzi${g.instagram ? ` · <a class="lnk" href="${esc(g.instagram)}" rel="noopener">il post su Instagram</a>` : ""}</div>
+${g.copertina ? `<div class="cover"><img src="${esc(g.copertina)}" alt="${esc(g.copertina_alt || g.titolo)}" width="800" height="450" loading="eager" decoding="async" style="object-fit:cover"></div>` : ""}
+${g.posto ? postoHtml(g.posto, g) : ""}
+${sezioni.map(x => `<section class="box"><h2>${esc(x.h2)}</h2>${postoHtml(x.posto, g)}${(x.testo || []).map(t => `<p>${esc(t)}</p>`).join("")}</section>`).join("\n")}
+${faq.length ? faqHtml(faq) : ""}
+${correlate.length ? `<h2>Leggi anche</h2><div class="tags">${correlate.map(c => `<a href="${esc(guideUrl(c))}">${esc(c.titolo)}</a>`).join("")}</div>` : ""}
+<div class="box"><h2>Cosa c'è oggi a ${esc(CITY_NAME)}</h2><p>${esc(`Le guide raccontano i posti; su anyplans ci sono gli eventi: ${upcomingPages.length} in programma a ${CITY_NAME} e provincia, con ora, luogo e chi ci va.`)}</p><div class="cta"><a class="btn" href="${rel(hubUrl())}">Cosa fare a ${esc(CITY_NAME)}</a><a class="btn ghost" href="${MAP_URL}">Vedi la mappa</a></div></div>
+${(g.fonti || []).length ? `<div class="m"><b>Fonti</b>: ${g.fonti.map(f => `<a class="lnk" href="${esc(f.url)}" rel="noopener">${esc(f.nome)}</a>`).join(" · ")}</div>` : ""}
+`;
+  const article = { "@context": "https://schema.org", "@type": "Article", headline: g.titolo, description: g.descrizione, image: [image],
+    datePublished: data.toISOString().slice(0, 10), dateModified: agg.toISOString().slice(0, 10), author: AUTORE,
+    publisher: { "@type": "Organization", name: "anyplans", url: SITE }, mainEntityOfPage: url, inLanguage: "it-IT",
+    ...(posti.length === 1 ? { about: placeLd(posti[0]) } : {}) };
+  const lista = g.tipo === "lista" && posti.length ? jsonld({ "@context": "https://schema.org", "@type": "ItemList", name: g.titolo, url,
+    itemListElement: posti.map((p, i) => ({ "@type": "ListItem", position: i + 1, item: placeLd(p) })) }) : "";
+  return { html: layout({ title: cut(g.titolo, 60) + " | anyplans", description: cut(g.descrizione, 160), url, image, ogType: "article", modified: agg,
+    jsonLd: [jsonld(article), lista, faq.length ? faqLd(faq) : ""].filter(Boolean).join("\n"), body, alt: null }), lastmod: agg };
+}
+function guideIndex() {
+  const url = guideIndexUrl();
+  const title = `Le guide di ${CITY_NAME}: posti, prezzi e regole | anyplans`;
+  const descr = cut(`${GUIDE.length} guide su ${CITY_NAME}: ${joinIt(GUIDE.slice(0, 4).map(g => g.titolo.split(":")[0]))}. Fatti verificati, fonti in fondo, e i link agli eventi nei posti.`, 160);
+  const body = `
+${crumbs([["anyplans", "/"], [CITY_NAME, rel(hubUrl())], ["Guide", null]])}
+<h1>Le guide di ${esc(CITY_NAME)}</h1>
+<p class="lead">I posti di ${esc(CITY_NAME)} raccontati con i fatti: premi delle guide nazionali, prezzi visti, indirizzi, regole. Niente classifiche inventate, le fonti sono in fondo a ogni pagina.</p>
+<div class="list">${GUIDE.map(g => `<a class="card" href="${esc(guideUrl(g))}"><span class="em">${g.tipo === "lista" ? "🏅" : g.tipo === "articolo" ? "📖" : "📍"}</span><span><span class="t">${esc(g.titolo)}</span><br><span class="m">${esc(cut(g.descrizione, 110))}</span></span></a>`).join("\n")}</div>
+<div class="cta"><a class="btn" href="${rel(hubUrl())}">Cosa fare a ${esc(CITY_NAME)}</a></div>
+`;
+  const ld = jsonld({ "@context": "https://schema.org", "@type": "CollectionPage", name: title, url,
+    hasPart: GUIDE.map(g => ({ "@type": "Article", headline: g.titolo, url: guideUrl(g) })) });
+  return { html: layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld, body, alt: null }), lastmod: NOW };
+}
+
 // i gemelli "oggi" degli indici di tipo: solo dove oggi c'è abbastanza (MIN_WHEN)
 const MIN_WHEN = 3;   // spostata qui sopra: serve anche ai gemelli "oggi" degli indici
 const OGGI_KEY = dateKey(NOW, DEFAULT_TZ);
@@ -1927,6 +2014,7 @@ ${towns.length ? `<h2>Per paese</h2><div class="tags">${towns.slice().sort((a, b
 ${runClubs.length >= 3 ? `<h2>Correre in compagnia</h2><div class="tags"><a href="${rel(runningUrl())}">🏃 Running club a ${esc(CITY_NAME)}</a></div>` : ""}
 ${groups.length ? `<h2>Gruppi</h2><div class="tags">${groups.map(g => `<a href="${esc(groupUrl(g))}">${g.emoji || "👥"} ${esc(g.name)}</a>`).join("")}</div>` : ""}
 ${venues.length ? `<h2>I locali</h2><p class="subl">I posti dove succedono le cose: circoli, bar, centri sportivi, teatri e piazze. Ognuno con le sue prossime date.</p><div class="tags">${venues.slice(0, 12).map(v => `<a href="${esc(venueUrl(v))}">📍 ${esc(v.nome)}</a>`).join("")}<a href="${rel(venuesUrl())}">Tutti i locali</a></div>` : ""}
+${GUIDE.length ? `<p class="m">Le guide di ${esc(CITY_NAME)}: ${GUIDE.slice(0, 3).map(g => `<a class="lnk" href="${esc(guideUrl(g))}">${esc(g.titolo.split(":")[0])}</a>`).join(" · ")} · <a class="lnk" href="${rel(guideIndexUrl())}">tutte</a></p>` : ""}
 ${vicineHtml()}
 <h2>Prossimi eventi</h2>
 ${next.length ? listHtml(next) : `<p class="lead">Niente in programma adesso.</p>`}
@@ -2446,6 +2534,10 @@ for (const code of ["it", "en"]) {
   for (const g of groups) { const r = groupPage(g); await writePage(relOf(groupUrl(g)), r.html); addUrl(groupUrl(g), r.lastmod); }
   if (code === "it" || EN_EVENTI)
     for (const p of pages) { await writePage(relOf(eventUrl(p)), eventPage(p)); if (!vecchioDi(p)) addUrl(eventUrl(p), p.updated); }
+  if (code === "it" && GUIDE.length) {
+    const gi = guideIndex(); await writePage(relOf(guideIndexUrl()), gi.html); addUrl(guideIndexUrl(), gi.lastmod);
+    for (const g of GUIDE) { const r = guidePage(g); await writePage(relOf(guideUrl(g)), r.html); addUrl(guideUrl(g), r.lastmod); }
+  }
 }
 setLocale('it');
 

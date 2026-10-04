@@ -1,0 +1,71 @@
+{
+ "tipo": "lista",
+ "data": "2026-10-04",
+ "aggiornato": "2026-10-04",
+ "titolo": "Dove fare colazione a Bergamo: le brioche migliori, prezzi",
+ "h1": "Miglior colazione a Bergamo: le pasticcerie con un premio nazionale",
+ "descrizione": "Dove fare colazione a Bergamo e dintorni: il Caffè Cavour 1880 di Città Alta (Tre Torte del Gambero Rosso, brioche del Da Vittorio, 2,50 €) e La Serra Pastry Lab di Almè (Pasticcere Emergente d'Italia). Prezzi e indirizzi.",
+ "copertina": "/guide/bergamo/colazione-bergamo.jpg",
+ "copertina_alt": "La vetrina del Caffè Cavour 1880 a Bergamo Alta",
+ "lead": "Due criteri, uno solo nostro: la brioche deve avere un premio di una guida nazionale (così la classifica non ce la siamo fatta da soli) e noi ci dobbiamo aver fatto colazione. Per ora sono due posti. La lista cresce man mano che li proviamo.",
+ "sezioni": [
+  {
+   "h2": "Caffè Cavour 1880, Bergamo Alta",
+   "posto": {
+    "nome": "Caffè Cavour 1880",
+    "paese": "Bergamo",
+    "quartiere": "Città Alta",
+    "indirizzo": "Via Gombito 7, 24129 Bergamo",
+    "prezzo": "Cappuccino 3,50 €, brioche 2,50 €",
+    "instagram": "https://www.instagram.com/cavour1880/",
+    "ancora": "Tre Torte (92 punti), Gambero Rosso",
+    "guida": "cavour-1880"
+   },
+   "testo": [
+    "Tre Torte con 92 punti nella guida Pasticceri & Pasticcerie 2026 del Gambero Rosso. Le brioche le fa la squadra del Da Vittorio, tre stelle Michelin; cappuccino e brioche costano 6 euro. È la colazione da fare presto, prima dei turisti, e ne abbiamo scritto una pagina intera."
+   ]
+  },
+  {
+   "h2": "La Serra Pastry Lab, Almè",
+   "posto": {
+    "nome": "La Serra Pastry Lab",
+    "paese": "Almè",
+    "ancora": "Pasticcere Emergente d'Italia, Gambero Rosso"
+   },
+   "testo": [
+    "Il laboratorio di Leonardo Tiraboschi, Pasticcere Emergente d'Italia per il Gambero Rosso: un premio nazionale, non regionale. Ad Almè, dieci minuti da Bergamo verso la Valle Brembana: la colazione del sabato fuori città."
+   ]
+  },
+  {
+   "h2": "Cosa manca",
+   "testo": [
+    "Bergamo ha decine di bar dove la colazione è buona; qui entrano solo quelli con un premio nazionale e che abbiamo provato. Se conosci una brioche che merita, scrivicelo su Instagram: la proviamo e, se regge, la aggiungiamo."
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "Dove fare la colazione migliore a Bergamo?",
+   "a": "Al Caffè Cavour 1880 in via Gombito 7, Città Alta: Tre Torte del Gambero Rosso, brioche fatte dalla squadra del Da Vittorio. Cappuccino e brioche costano 6 euro."
+  },
+  {
+   "q": "Quanto costa una colazione a Bergamo Alta?",
+   "a": "Al Cavour 1880, il bar più premiato: cappuccino 3,50 euro, brioche 2,50, spremuta 7,50. In un bar normale di Città Alta cappuccino e brioche stanno sui 4-5 euro."
+  },
+  {
+   "q": "C'è una pasticceria premiata fuori Bergamo?",
+   "a": "La Serra Pastry Lab ad Almè: Leonardo Tiraboschi è Pasticcere Emergente d'Italia per il Gambero Rosso."
+  }
+ ],
+ "fonti": [
+  {
+   "nome": "Gambero Rosso, guida Pasticceri & Pasticcerie 2026",
+   "url": "https://www.gamberorosso.it/pasticcerie/"
+  }
+ ],
+ "correlate": [
+  "cavour-1880",
+  "migliore-gelateria-bergamo"
+ ],
+ "slug": "migliore-colazione-bergamo"
+}

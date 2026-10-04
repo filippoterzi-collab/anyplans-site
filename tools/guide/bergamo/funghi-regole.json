@@ -1,0 +1,84 @@
+{
+ "tipo": "articolo",
+ "data": "2026-10-02",
+ "aggiornato": "2026-10-04",
+ "titolo": "Funghi a Bergamo: le cinque regole (e dove serve il permesso)",
+ "h1": "Funghi a Bergamo: le cinque regole che ti evitano la multa, e i 32 comuni dove serve il permesso",
+ "descrizione": "Raccolta funghi in provincia di Bergamo: tre chili al giorno, solo con le mani, cesto rigido, ovolo chiuso vietato, vendita solo certificata. Dove serve il permesso (32 comuni, 10 € al giorno) e dove farli controllare gratis.",
+ "copertina": "/guide/bergamo/funghi.jpg",
+ "copertina_alt": "Un porcino nel bosco, Orobie",
+ "instagram": "https://www.instagram.com/anyplans_bergamo/",
+ "lead": "Ottobre è il mese. Prima di entrare nel bosco: la legge regionale 31 del 2008 dice quanto puoi raccogliere, come e dove, e il controllo dei funghi è gratis all'ATS. Le castagnate e le uscite nei boschi sono su anyplans.",
+ "sezioni": [
+  {
+   "h2": "1. Tre chili al giorno a testa",
+   "testo": [
+    "Lo dice la legge regionale 31 del 2008: ogni chilo in più costa 25 euro e il raccolto te lo sequestrano. Con 43 chili nel baule la multa supera i mille euro. I chiodini sono l'unica eccezione: per quelli il limite non c'è."
+   ]
+  },
+  {
+   "h2": "2. Solo con le mani",
+   "testo": [
+    "Niente attrezzi, niente rastrelli, e soprattutto è vietato smuovere il terriccio: è lì che resta il micelio, cioè il fungo dell'anno prossimo."
+   ]
+  },
+  {
+   "h2": "3. Il cesto dev'essere rigido e aerato",
+   "testo": [
+    "Non è folklore, è legge: serve a far cadere le spore mentre cammini. Il sacchetto di plastica è vietato."
+   ]
+  },
+  {
+   "h2": "4. L'ovolo chiuso non si tocca",
+   "testo": [
+    "Finché è un uovo bianco, l'ovolo buono è identico all'amanita che ti ammazza: stessa forma, stesso colore. Per questo raccoglierlo chiuso è vietato: va lasciato lì finché non si apre e si vede cos'è."
+   ]
+  },
+  {
+   "h2": "5. Se li vendi, vanno certificati",
+   "testo": [
+    "Vendere funghi freschi sfusi senza certificazione costa da 258 a 1.032 euro, e vale anche per il banchetto alla sagra."
+   ]
+  },
+  {
+   "h2": "Dove serve il permesso",
+   "testo": [
+    "A Bergamo serve solo in 32 comuni: ventiquattro in Valle Brembana, quattro in Val di Scalve e quattro in alta Valle Seriana (Ardesio, Gandellino, Gromo, Oltressenda Alta). Lì costa 10 euro al giorno e 60 per tutto l'anno. In tutti gli altri comuni della provincia non serve niente."
+   ]
+  },
+  {
+   "h2": "Il controllo è gratis",
+   "testo": [
+    "L'Ispettorato Micologico di ATS Bergamo è aperto fino al 28 novembre su appuntamento, in via Borgo Palazzo 130 a Bergamo, a Trescore e a Treviglio. I micologi rispondono al pronto soccorso 24 ore su 24. Portali interi: non sgambati, non lavati, non precotti, in frigo."
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "Quanti funghi si possono raccogliere a Bergamo?",
+   "a": "Tre chili al giorno a persona (legge regionale 31/2008). Ogni chilo in più costa 25 euro di multa e il raccolto viene sequestrato. Per i chiodini non c'è limite."
+  },
+  {
+   "q": "Serve il permesso per raccogliere funghi in provincia di Bergamo?",
+   "a": "Solo in 32 comuni: 24 in Valle Brembana, 4 in Val di Scalve e 4 in alta Valle Seriana. Costa 10 euro al giorno o 60 l'anno. Negli altri comuni non serve."
+  },
+  {
+   "q": "Dove far controllare i funghi a Bergamo?",
+   "a": "All'Ispettorato Micologico di ATS Bergamo, gratis e su appuntamento, in via Borgo Palazzo 130 a Bergamo, a Trescore Balneario e a Treviglio, fino al 28 novembre. In caso di sospetta intossicazione i micologi rispondono al pronto soccorso 24 ore su 24."
+  }
+ ],
+ "fonti": [
+  {
+   "nome": "Regione Lombardia, legge regionale 31/2008 (raccolta funghi)",
+   "url": "https://normelombardia.consiglio.regione.lombardia.it/"
+  },
+  {
+   "nome": "ATS Bergamo, Ispettorato Micologico",
+   "url": "https://www.ats-bg.it/"
+  }
+ ],
+ "correlate": [
+  "migliore-gelateria-bergamo"
+ ],
+ "slug": "funghi-regole"
+}

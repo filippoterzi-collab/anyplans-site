@@ -1,0 +1,86 @@
+{
+ "tipo": "ritratto",
+ "data": "2026-09-22",
+ "aggiornato": "2026-10-04",
+ "titolo": "Gelato Contadino, Bergamo: un'ora e 45 di fila per un cono",
+ "h1": "Gelato Contadino, Bergamo: perché c'è un'ora e 45 di fila per un cono",
+ "descrizione": "Gelato Contadino a Bergamo (piazzale Risorgimento 7, Loreto): Tre Coni del Gambero Rosso, il miglior pistacchio d'Italia, latte da un alpeggio a 2000 metri. Orari, prezzi e come si fa la fila.",
+ "copertina": "/guide/bergamo/gelato-contadino.jpg",
+ "copertina_alt": "La fila davanti al Gelato Contadino, a Bergamo",
+ "instagram": "https://www.instagram.com/anyplans_bergamo/",
+ "lead": "Si arriva alle 11, all'apertura. Si entra alle 12:45. È la gelateria più premiata di Bergamo e una delle poche in Italia con i Tre Coni del Gambero Rosso: qui c'è cosa aspettarsi, quanto costa e come non sbagliare giorno.",
+ "posto": {
+  "nome": "Gelato Contadino",
+  "paese": "Bergamo",
+  "quartiere": "Loreto",
+  "indirizzo": "Piazzale Risorgimento 7, 24128 Bergamo",
+  "orari": "Chiuso lunedì e martedì. Apre alle 11 e chiude quando il gelato finisce.",
+  "prezzo": "24 € al chilo",
+  "instagram": "https://www.instagram.com/gelatocontadino/",
+  "ancora": "Tre Coni, Gambero Rosso"
+ },
+ "sezioni": [
+  {
+   "h2": "Il miglior pistacchio d'Italia non è in Sicilia",
+   "testo": [
+    "È a Bergamo, in piazzale Risorgimento, nel quartiere di Loreto. Lo dice la guida Gelaterie d'Italia del Gambero Rosso, che al Gelato Contadino dà i Tre Coni: il massimo, e in provincia di Bergamo li ha solo un'altra gelateria (La Pasqualina, ad Almenno San Bartolomeo)."
+   ]
+  },
+  {
+   "h2": "A tiratura limitata",
+   "testo": [
+    "Sveglia alle quattro, macchine del 1950, gelato girato a mano con un bastone. Si produce quello che si riesce a produrre e si chiude quando finisce: per questo la fila comincia prima dell'apertura e per questo, certi giorni, alle 14 non c'è più niente."
+   ]
+  },
+  {
+   "h2": "Il latte arriva da duemila metri",
+   "testo": [
+    "Dall'Alpe Camisolo, l'alpeggio di Daniel Moioli: tre ore di cammino dal rifugio Grassi, su un sentiero impervio. È il dettaglio che spiega il prezzo e il sapore. «Zero fighetterie, zero robe autoreferenziali. Solo la ricerca della verità», dicono loro.",
+    "C'è anche un patto per chi cammina: chi sale al Camisolo e porta giù due litri di quel latte riceve in cambio una vaschetta da un chilo. Offerta."
+   ]
+  },
+  {
+   "h2": "Quanto costa e come si fa la fila",
+   "testo": [
+    "Ventiquattro euro al chilo. La fila si fa fuori, in piedi, e nei weekend di sole arriva a un'ora e 45: il modo per accorciarla è venire nei giorni feriali verso l'apertura, o nel tardo pomeriggio sapendo che qualche gusto può essere finito. Chiuso lunedì e martedì."
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "Dove si trova il Gelato Contadino a Bergamo?",
+   "a": "In piazzale Risorgimento 7, nel quartiere di Loreto, a Bergamo bassa. Dal centro si arriva a piedi in un quarto d'ora o con i bus della linea per Loreto."
+  },
+  {
+   "q": "Quanto si aspetta al Gelato Contadino?",
+   "a": "Nei weekend di bel tempo fino a un'ora e 45 dall'apertura delle 11. Nei giorni feriali la fila è molto più corta. Il gelato è a tiratura limitata: quando finisce, chiudono."
+  },
+  {
+   "q": "Quali giorni è chiuso il Gelato Contadino?",
+   "a": "Lunedì e martedì. Negli altri giorni apre alle 11."
+  },
+  {
+   "q": "Quanto costa il gelato al Gelato Contadino?",
+   "a": "24 euro al chilo. Si paga a peso, non a palline."
+  }
+ ],
+ "fonti": [
+  {
+   "nome": "Gambero Rosso, guida Gelaterie d'Italia 2026",
+   "url": "https://www.gamberorosso.it/gelaterie/"
+  },
+  {
+   "nome": "Gelato Contadino su Instagram",
+   "url": "https://www.instagram.com/gelatocontadino/"
+  },
+  {
+   "nome": "Il carosello di anyplans del 22/09/2026 (171.604 visualizzazioni)",
+   "url": "https://www.instagram.com/anyplans_bergamo/"
+  }
+ ],
+ "correlate": [
+  "migliore-gelateria-bergamo",
+  "cavour-1880"
+ ],
+ "slug": "gelato-contadino"
+}

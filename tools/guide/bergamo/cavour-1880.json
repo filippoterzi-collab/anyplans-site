@@ -1,0 +1,80 @@
+{
+ "tipo": "ritratto",
+ "data": "2026-09-29",
+ "aggiornato": "2026-10-04",
+ "titolo": "Caffè Cavour 1880, Bergamo Alta: la brioche da tre stelle",
+ "h1": "Caffè Cavour 1880, Bergamo Alta: la colazione fatta dai pasticceri del Da Vittorio",
+ "descrizione": "Caffè Cavour 1880 in via Gombito 7, Città Alta: Tre Torte del Gambero Rosso (92 punti), le brioche del maître pâtissier del Da Vittorio, sei camere coi nomi dei pasticcini. Prezzi della colazione.",
+ "copertina": "/guide/bergamo/cavour-1880.jpg",
+ "copertina_alt": "Cappuccino, brioche e spremuta al Caffè Cavour 1880, Bergamo Alta",
+ "instagram": "https://www.instagram.com/anyplans_bergamo/",
+ "lead": "Una delle brioche più buone d'Italia si mangia in via Gombito, a Città Alta. Le fa ogni mattina la squadra del ristorante tre stelle Michelin Da Vittorio, e la guida del Gambero Rosso le dà il massimo. Costa 2,50 euro.",
+ "posto": {
+  "nome": "Caffè Cavour 1880",
+  "paese": "Bergamo",
+  "quartiere": "Città Alta",
+  "indirizzo": "Via Gombito 7, 24129 Bergamo",
+  "prezzo": "Cappuccino 3,50 €, brioche 2,50 €, spremuta 7,50 €",
+  "instagram": "https://www.instagram.com/cavour1880/",
+  "ancora": "Tre Torte (92 punti), Gambero Rosso"
+ },
+ "sezioni": [
+  {
+   "h2": "Le brioche le fanno i pasticceri del Da Vittorio",
+   "testo": [
+    "Il Cavour è della famiglia Cerea dal 1994, la stessa del Da Vittorio di Brusaporto, tre stelle Michelin. Le brioche escono ogni mattina dalle mani di Simone Finazzi, maître pâtissier del gruppo. È per questo che una colazione in un bar storico di Città Alta ha il livello di un ristorante stellato."
+   ]
+  },
+  {
+   "h2": "Tre Torte, 92 punti",
+   "testo": [
+    "È il massimo che dà la guida Pasticceri & Pasticcerie del Gambero Rosso, e in Italia lo prendono pochissime pasticcerie. Il locale è aperto dal 1880: l'insegna è la stessa, il bancone è quello di una pasticceria di famiglia."
+   ]
+  },
+  {
+   "h2": "E sopra ci dormi",
+   "testo": [
+    "Sopra la pasticceria ci sono sei camere, e ognuna ha il nome di un pasticcino: Babà, Cannoncino, Bignè, Bacio di Dama, Cantuccio, Fruttino."
+   ]
+  },
+  {
+   "h2": "La colazione: cosa si paga",
+   "testo": [
+    "Cappuccino 3,50 euro, brioche 2,50, spremuta 7,50: 13,50 euro per una colazione da tre stelle. Al bancone si chiacchiera: «Ci si incontra con le persone che vengono alla stessa ora. È facile stringere amicizia, non solo con loro ma anche con chi sta al bancone», dicono. Il momento migliore è presto, prima che Città Alta si riempia di turisti."
+   ]
+  }
+ ],
+ "faq": [
+  {
+   "q": "Dove si trova il Caffè Cavour 1880?",
+   "a": "In via Gombito 7, a Bergamo Alta, lungo la via che dalla funicolare porta a piazza Vecchia."
+  },
+  {
+   "q": "Quanto costa la colazione al Cavour 1880?",
+   "a": "Cappuccino 3,50 euro, brioche 2,50, spremuta 7,50. Cappuccino e brioche insieme fanno 6 euro."
+  },
+  {
+   "q": "Chi fa le brioche del Cavour 1880?",
+   "a": "La squadra di pasticceria del gruppo Da Vittorio, guidata dal maître pâtissier Simone Finazzi. Il Cavour è della famiglia Cerea dal 1994."
+  },
+  {
+   "q": "Il Cavour 1880 è premiato?",
+   "a": "Sì: Tre Torte con 92 punti nella guida Pasticceri & Pasticcerie 2026 del Gambero Rosso, il massimo della guida."
+  }
+ ],
+ "fonti": [
+  {
+   "nome": "Gambero Rosso, guida Pasticceri & Pasticcerie 2026",
+   "url": "https://www.gamberorosso.it/pasticcerie/"
+  },
+  {
+   "nome": "Caffè Cavour 1880 su Instagram",
+   "url": "https://www.instagram.com/cavour1880/"
+  }
+ ],
+ "correlate": [
+  "migliore-colazione-bergamo",
+  "gelato-contadino"
+ ],
+ "slug": "cavour-1880"
+}
