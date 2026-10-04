@@ -18,6 +18,7 @@
 // Every subdirectory of <out>/<citta>/ and the whole <out>/en/<citta>/ are removed and regenerated: they must contain only generated pages.
 
 import { mkdir, writeFile, readFile, readdir, rm, stat } from "node:fs/promises";
+import { createHash } from "node:crypto";
 import path from "node:path";
 import { readFileSync as fsReadSync } from "node:fs";
 import { fileURLToPath } from "node:url";
@@ -679,6 +680,9 @@ function titoloPulito(t) {
   n = n.replace(/(?<=\S\s)\b(DEL|DELLA|DELLE|DEGLI|DEI|DELLO|DI|DA|DAL|DALLA|LA|IL|LE|LO|GLI|ED|AL|ALLA|ALLE|IN|CON|PER|SU|SUL|TRA|FRA|UN|UNA|THE|OF|AND)\b/g, w => w.toLowerCase());
   // in testa: "LA Reginetta" → "La Reginetta" (ma "DJ set" resta DJ: dopo non c'è una parola con l'iniziale)
   n = n.replace(/^(LA|IL|LE|LO|GLI|UN|UNA|THE)(?=\s\p{Lu}\p{Ll})/u, w => w[0] + w.slice(1).toLowerCase());
+  // i tavoli di Tablo si chiamano "Mito Sushi Restaurant - Curno da Mito Sushi Restaurant": il locale
+  // due volte. Resta la prima, col paese.
+  n = n.replace(/^(.{5,60}?)(\s*[-–]\s*[^-–]{2,30})?\s+da\s+\1\b.*$/i, "$1$2").trim();
   return n || String(t || "");
 }
 function titoloEvento(p, conData) {
@@ -2144,7 +2148,20 @@ Allow: /
 Sitemap: ${SITE}/sitemap.xml
 `;
 const sitemapEntries = []; // {loc, lastmod}
-const addUrl = (loc, lastmod) => sitemapEntries.push({ loc, lastmod: (lastmod || NOW).toISOString().slice(0, 10) });
+// Il lastmod della sitemap dice quando la pagina è cambiata davvero, non quando la fonte ha ritoccato
+// updated_at: il 4/10/2026 la sitemap di Milano dava 3.196 pagine "modificate ieri" e 2.410 "tre giorni
+// fa", quasi tutte identiche a prima. Un lastmod che mente Google smette di leggerlo, e le pagine nuove
+// aspettano in coda con le altre (20.113 "scoperte, non indicizzate"). L'impronta della pagina (senza le
+// date ISO che cambiano da sole) sta nello stato della città: se è uguale a ieri, il lastmod resta quello.
+const impronte = {};
+const addUrl = (loc, lastmod) => {
+  const r = loc.replace(SITE, "").replace(/^\/|\/$/g, "");
+  const dichiarato = (lastmod || NOW).toISOString().slice(0, 10);
+  const imp = impronte[r];
+  const m = imp ? (imp.m || dichiarato) : dichiarato;
+  if (imp) imp.m = m;
+  sitemapEntries.push({ loc, lastmod: m });
+};
 const LLMS_FILE = CITY === HOME_CITY ? "llms-full.txt" : `llms-${CITY}.txt`;
 // una sitemap per citta (sitemap-milano.xml) e un indice che le tiene insieme: Google vuole al massimo
 // 50.000 url per file e, soprattutto, cosi si vede in Search Console quale citta e' indicizzata e quale no
@@ -2206,8 +2223,16 @@ ${sitemapEntries.map(e => `  <url><loc>${esc(e.loc)}</loc><lastmod>${e.lastmod}<
 const unesc = (t) => String(t ?? "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'");
 const fullTxt = [];
 const scritte = new Set();          // quello che questa corsa ha scritto: serve alle lapidi
+const SENZA_DATE_ISO = /\d{4}-\d{2}-\d{2}T[\d:.]+(Z|[+-]\d{2}:\d{2})?|<lastmod>[^<]*<\/lastmod>/g;
 async function writePage(rel, html) {
   scritte.add(rel);
+  {
+    const h = createHash("sha1").update(html.replace(SENZA_DATE_ISO, "")).digest("hex").slice(0, 8);
+    const prev = (precStato.pagine || {})[rel];          // "impronta|lastmod", compatto: sono migliaia di righe
+    const [ph, pm] = prev ? String(prev).split("|") : [null, null];
+    // uguale a ieri: resta il lastmod di ieri; cambiata: oggi; mai vista: lo decide addUrl (updated_at)
+    impronte[rel] = { h, m: ph ? (ph === h ? pm : NOW.toISOString().slice(0, 10)) : null };
+  }
   const dir = path.join(OUT, rel);
   await mkdir(dir, { recursive: true });
   await writeFile(path.join(dir, "index.html"), html);
@@ -2260,6 +2285,8 @@ ${faqHtml(faq)}
 
 const cityDir = path.join(OUT, CITY);
 const statoDir = path.join(OUT, "tools", "stato");
+// lo stato della corsa precedente di questa città: slug per id (redirect) e impronte delle pagine (lastmod)
+const precStato = await (async () => { try { return JSON.parse(await readFile(path.join(statoDir, CITY + ".json"), "utf8")); } catch { return {}; } })();
 
 // ── --indice: nessuna città, solo i file che tengono insieme il sito ──────────
 if (INDICE) {
@@ -2375,15 +2402,15 @@ async function cosaCera(dir) {
 const slugNuovo = new Map();
 const slugDiOra = {};
 for (const p of pages) for (const d of p.dates) if (d.id) slugDiOra[d.id] = p.slug;
-try {
-  const prec = JSON.parse(await readFile(path.join(statoDir, CITY + ".json"), "utf8"));
+{
+  const prec = precStato;
   for (const [id, vecchio] of Object.entries(prec.slug_di || {})) {
     const nuovo = slugDiOra[id];
     if (nuovo && nuovo !== vecchio && !slugNuovo.has(vecchio)) slugNuovo.set(vecchio, nuovo);
   }
   // e gli alias delle corse passate restano validi finché la destinazione esiste
   for (const [vecchio, nuovo] of Object.entries(prec.alias || {})) if (!slugNuovo.has(vecchio)) slugNuovo.set(vecchio, nuovo);
-} catch { /* prima corsa */ }
+}
 const ceraIt = await cosaCera(cityDir);
 const ceraEn = await cosaCera(path.join(OUT, "en", CITY));
 
@@ -2531,7 +2558,8 @@ await writeFile(path.join(statoDir, CITY + ".json"), JSON.stringify(
   { slug: CITY, nome: CITY_NAME, eventi: upcomingPages.length, pagine: sitemapEntries.length,
     tipi: Object.fromEntries(types.map(x => [x.sport, x.list.filter(p => !p.isPast).length])),
     slug_di: slugDiOra, alias: Object.fromEntries(slugNuovo),
-    aggiornato: NOW.toISOString() }, null, 1));
+    pagine: Object.fromEntries(Object.entries(impronte).map(([r, x]) => [r, `${x.h}|${x.m || ""}`])),
+    aggiornato: NOW.toISOString() }));
 
 console.log(`${CITY}: ${rows.length} righe, ${pages.length} pagine (${upcomingPages.length} futuri, ${pages.length - upcomingPages.length} passati)`);
 console.log(`indici: ${types.length} tipi (${types.map(x => x.slug).join(", ")}), ${towns.length} paesi`);
