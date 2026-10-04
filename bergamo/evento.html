@@ -407,7 +407,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1791106471"></script>
+<script src="app.js?v=1791107162"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -481,6 +481,10 @@
     const pz = priceLabel(ev), cpz = document.getElementById("chip-price");   // vuoto = prezzo ignoto: niente chip
     cpz.textContent = pz; cpz.hidden = !pz;
     extSrc = extSourceFor(ev);   // app.js: nota, o generica dal dominio per ogni aggregata; serve prima della riga del prezzo
+    // Evento di una persona che ha messo anche un link suo (biglietteria, programma): ci si iscrive QUI.
+    // Senza questa riga i testi promettevano "Con Ci sono si apre Fourvenues" mentre il bottone era quello di
+    // anyplans, perche' il bottone esterno vive solo nel ramo delle aggregate (04/10/2026). Il link si vede sotto.
+    if (ev.host_name) extSrc = null;
     renderPay();
     document.getElementById("title").textContent = ev.title;
     document.getElementById("d-month").textContent = MONTHS[when.getMonth()].slice(0, 3);
@@ -522,11 +526,12 @@
       }
     }
     if (ev.host_name && ev.source_url) {
+      const noto = extSourceOf(ev.source_url);   // se e' una piattaforma che conosciamo si usa il suo nome
       document.getElementById("source").hidden = false;
-      document.getElementById("source-n").textContent = "La pagina dell'evento";
-      document.getElementById("source-s").textContent = "· l'ha messa chi organizza: biglietti, programma, dettagli";
+      document.getElementById("source-n").textContent = noto ? "Biglietti e dettagli su " + noto.name : "La pagina dell'evento";
+      document.getElementById("source-s").textContent = noto ? "· " + noto.how : "· l'ha messa chi organizza: biglietti, programma, dettagli";
       const sl = document.getElementById("source-link");
-      sl.href = ev.source_url; sl.textContent = "Apri la pagina →";
+      sl.href = ev.source_url; sl.textContent = noto ? extCta(noto) : "Apri la pagina →";
       sl.onclick = () => track("source_open");
     }
     if (ev.description) {
