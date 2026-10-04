@@ -2228,7 +2228,7 @@ async function writePage(rel, html) {
   scritte.add(rel);
   {
     const h = createHash("sha1").update(html.replace(SENZA_DATE_ISO, "")).digest("hex").slice(0, 8);
-    const prev = (precStato.pagine || {})[rel];          // "impronta|lastmod", compatto: sono migliaia di righe
+    const prev = (precStato.impronte || {})[rel];          // "impronta|lastmod", compatto: sono migliaia di righe
     const [ph, pm] = prev ? String(prev).split("|") : [null, null];
     // uguale a ieri: resta il lastmod di ieri; cambiata: oggi; mai vista: lo decide addUrl (updated_at)
     impronte[rel] = { h, m: ph ? (ph === h ? pm : NOW.toISOString().slice(0, 10)) : null };
@@ -2558,7 +2558,7 @@ await writeFile(path.join(statoDir, CITY + ".json"), JSON.stringify(
   { slug: CITY, nome: CITY_NAME, eventi: upcomingPages.length, pagine: sitemapEntries.length,
     tipi: Object.fromEntries(types.map(x => [x.sport, x.list.filter(p => !p.isPast).length])),
     slug_di: slugDiOra, alias: Object.fromEntries(slugNuovo),
-    pagine: Object.fromEntries(Object.entries(impronte).map(([r, x]) => [r, `${x.h}|${x.m || ""}`])),
+    impronte: Object.fromEntries(Object.entries(impronte).map(([r, x]) => [r, `${x.h}|${x.m || ""}`])),
     aggiornato: NOW.toISOString() }));
 
 console.log(`${CITY}: ${rows.length} righe, ${pages.length} pagine (${upcomingPages.length} futuri, ${pages.length - upcomingPages.length} passati)`);
