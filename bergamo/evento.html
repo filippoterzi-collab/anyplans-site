@@ -407,7 +407,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1791136212"></script>
+<script src="app.js?v=1791212055"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -435,15 +435,13 @@
       const r1 = await rpc("activity_by_id", { p_id: id });
       if (r1 && r1.ok) { const rows = await r1.json().catch(() => []); ev = rows[0] || null; }
     }
-    if (!ev) {
-      // l'evento non ha (ancora) una pagina statica: si cerca per slug intorno alla citta del link
-      const centro = (typeof CITTA_CENTRI !== "undefined" && CITTA_CENTRI[(params.get("city") || "").toLowerCase()]) || [45.698, 9.670];
-      const r = await rpc("feed_activities", { lat: centro[0], lng: centro[1], radius_m: 50000 });
-      if (!r || !r.ok) return notFound();
-      const rows = await r.json();
-      ev = id ? rows.find(x => x.id === id)
-              : rows.filter(x => slugify(x.title) === wantSlug)
-                    .sort((a, b) => new Date(a.start_at) - new Date(b.start_at))[0];
+    if (!ev && wantSlug) {
+      // L'evento non ha (ancora) la sua pagina statica: lo slug si risolve sul server, una riga (0090).
+      // Prima si cercava dentro feed_activities, che restituisce 1000 righe (~3 giorni): un link appena
+      // condiviso non si apriva, e si apriva "dopo", quando il workflow seo generava la pagina. Era anche
+      // 1,4 MB di egress per ogni link aperto (05/10/2026).
+      const r2 = await rpc("activity_by_slug", { p_slug: wantSlug, p_city: params.get("city") || null });
+      if (r2 && r2.ok) { const rows = await r2.json().catch(() => []); ev = rows[0] || null; }
     }
     if (!ev) return notFound();
     renderEvent();
