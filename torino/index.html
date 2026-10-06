@@ -541,9 +541,11 @@ body.pinpicked .mapfab,body.pinpicked .map .maplibregl-ctrl-top-right,body.pinpi
 .ev .m .now{color:var(--ok);font-weight:700}
 .ev .who{grid-column:2;display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--grey);margin-top:2px;flex-wrap:wrap}
 .ev .who .going{display:inline-flex;align-items:center;gap:5px;font-weight:700;color:var(--ink)}
-.ev .who .going .dots{display:inline-flex}
-.ev .who .going .dots i{width:18px;height:18px;border-radius:999px;background:var(--tint);border:2px solid #fff;margin-left:-6px;display:inline-block;font-style:normal;font-size:10px;text-align:center;line-height:14px;color:var(--blue);font-weight:800}
-.ev .who .going .dots i:first-child{margin-left:0}
+.ev .who .going{color:#137333}
+.ev .who .going .dot{width:8px;height:8px;border-radius:999px;background:#1E8E3E;display:inline-block}
+.ev .solorow{grid-column:2;margin-top:4px}
+.solo{display:inline-block;font-size:12px;font-weight:600;line-height:22px;height:22px;padding:0 8px;border-radius:999px;background:var(--tint);color:var(--blue);white-space:nowrap}
+.solo.pick{background:var(--blue);color:#fff}
 .ev .side{grid-column:3;grid-row:1/4;display:flex;flex-direction:column;align-items:flex-end;gap:8px;min-width:120px}
 .ev .price{font-weight:800;font-size:15px}
 .ev .price.free{color:var(--ok)}
@@ -831,6 +833,48 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   .mhead::before{content:"";position:absolute;top:6px;left:50%;transform:translateX(-50%);
                  width:40px;height:4px;border-radius:2px;background:rgba(25,25,25,.18)}
 }
+
+/* ---- ruota "Non so cosa fare" (UI.md §3.13, 06/10/2026) ---- */
+/* chip della ruota: come gli altri, con il bollino "Nuovo" sull'angolo (06/10/2026) */
+.wheelchip{position:relative;color:var(--blue);border-color:var(--blue);margin-left:6px}
+.wheelchip::after{content:"Nuovo";position:absolute;top:-8px;left:-8px;background:var(--blue);color:#fff;font-size:10px;font-weight:800;line-height:1;padding:4px 7px;border-radius:999px;letter-spacing:.01em;box-shadow:0 0 0 2px var(--bg)}
+.msquick,.dates .chips{padding-top:8px}
+.wbg{position:fixed;inset:0;background:rgba(25,25,25,.42);z-index:90}
+.wsheet{position:fixed;left:0;right:0;bottom:0;z-index:91;background:var(--card);border-radius:24px 24px 0 0;box-shadow:0 -12px 40px rgba(25,25,25,.16);padding:10px 18px calc(18px + env(safe-area-inset-bottom,0px));max-width:560px;margin:0 auto;max-height:92vh;overflow-y:auto;display:flex;flex-direction:column;gap:12px}
+.wsheet .wh{width:40px;height:5px;border-radius:3px;background:var(--hair);margin:0 auto}
+.wsheet .wx{position:absolute;right:10px;top:10px;width:44px;height:44px;border-radius:50%;background:transparent;font-size:22px;color:var(--grey)}
+.wsheet h2{font-size:24px;margin:4px 0 0}
+.wsheet .wsub{color:var(--grey);font-size:14px;margin:0}
+.wwrap{position:relative;width:200px;height:200px;margin:4px auto 0;flex:none}
+.wdisc{width:200px;height:200px;border-radius:50%;border:2px solid var(--hair);position:relative;transition:transform 1000ms cubic-bezier(.2,.8,.2,1);background:conic-gradient(var(--tint) 0 60deg,#fff 60deg 120deg,var(--tint) 120deg 180deg,#fff 180deg 240deg,var(--tint) 240deg 300deg,#fff 300deg 360deg)}
+.wdisc span{position:absolute;left:50%;top:50%;font-size:26px;line-height:1}
+.wptr{position:absolute;left:50%;top:-9px;transform:translateX(-50%);width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid var(--blue);z-index:1}
+.wlab{font-size:13px;color:var(--grey);margin:0}
+.wwhere b{color:var(--ink);font-weight:700}.wwhere a{color:var(--blue);font-weight:700;text-decoration:none;padding:8px 0}
+.wsheet.askcity .wwhere{display:none}
+.wcity{display:flex;flex-direction:column;gap:10px}
+.wcities{display:flex;flex-wrap:wrap;gap:8px}
+.wcities button{height:44px;padding:0 14px;border-radius:999px;border:1.5px solid rgba(25,25,25,.14);background:var(--card);font-weight:700;font-size:14px;color:var(--ink)}
+.wcities button.wme{border-color:var(--blue);color:var(--blue)}
+.wsheet.askcity .wwrap,.wsheet.askcity .wfil,.wsheet.askcity #wcount,.wsheet.askcity #wspin,.wsheet.askcity .wlab.wfl{display:none}
+.wfil{display:flex;gap:8px;flex-wrap:wrap}
+.wfil .chip.on{background:var(--blue);border-color:var(--blue);color:#fff}
+.wbtn{display:block;width:100%;height:56px;border-radius:999px;background:var(--blue);color:#fff;font-weight:800;font-size:16px;text-align:center;line-height:56px;text-decoration:none;border:0}
+.wbtn[disabled]{opacity:.45}
+.wghost{display:block;width:100%;height:48px;border-radius:999px;background:transparent;border:1.5px solid rgba(25,25,25,.14);font-weight:700;font-size:15px;color:var(--ink)}
+.wres{display:flex;flex-direction:column;gap:10px}
+.wres .wtop{font-size:13px;color:var(--grey);margin:0}
+.wres .wcard{display:grid;grid-template-columns:56px minmax(0,1fr);gap:12px;align-items:start}
+.wres .wtile{width:56px;height:56px;border-radius:14px;background:var(--tint);display:grid;place-items:center;font-size:28px}
+.wres .wt{font-weight:800;font-size:18px;line-height:1.2;color:var(--ink);text-decoration:none;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.wres .wm{font-size:13px;color:var(--grey)}
+.wres .wgo{font-size:13px;color:#137333;font-weight:700;display:inline-flex;align-items:center;gap:6px}
+.wres .wgo .dot{width:8px;height:8px;border-radius:999px;background:#1E8E3E;display:inline-block}
+.wres .wmore{display:inline-block;margin-top:8px;padding:8px 0;font-size:14px;font-weight:700;color:var(--blue);text-decoration:none}
+.wempty{font-size:14px;color:var(--grey)}
+.wempty a{color:var(--blue);font-weight:700}
+@media (prefers-reduced-motion: reduce){.wdisc{transition:none}}
+
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://anyplans.in/#website", "name": "anyplans", "alternateName": "anyplans?", "url": "https://anyplans.in/", "description": "Gli eventi della tua città in una mappa: feste di paese, concerti, mercati, corsi, sport e cene, in 29 città italiane. Ti iscrivi e ci vai insieme ad altri.", "inLanguage": "it-IT", "publisher": {"@id": "https://anyplans.in/#org"}}, {"@type": "Organization", "@id": "https://anyplans.in/#org", "name": "anyplans", "url": "https://anyplans.in/", "logo": {"@type": "ImageObject", "url": "https://anyplans.in/favicon-192.png", "width": 192, "height": 192}, "email": "hello@anyplans.in", "description": "La mappa degli eventi veri d'Italia: feste di paese, concerti, mercati, corsi, volontariato, sport e cene in 29 città. Ne scegli uno e ci vai insieme ad altri. Solo maggiorenni.", "foundingLocation": {"@type": "City", "name": "Bergamo"}, "areaServed": {"@type": "Country", "name": "Italia"}, "sameAs": ["https://instagram.com/anyplans_bergamo"], "founder": {"@type": "Person", "name": "Filippo Terzi", "image": "https://anyplans.in/founder.jpg", "jobTitle": "Fondatore"}}, {"@type": "FAQPage", "@id": "https://anyplans.in/#faq", "mainEntity": [{"@type": "Question", "name": "Cos'è anyplans?", "acceptedAnswer": {"@type": "Answer", "text": "La mappa degli eventi veri della tua città a cui puoi unirti insieme ad altri: chi organizza c'è già, tu scegli e ci vai."}}, {"@type": "Question", "name": "anyplans è gratis?", "acceptedAnswer": {"@type": "Answer", "text": "Sì. Ti registri con la tua email e vedi tutti gli eventi. Se un evento ha un biglietto, lo compri da chi lo organizza."}}, {"@type": "Question", "name": "In quali città c'è anyplans?", "acceptedAnswer": {"@type": "Answer", "text": "Gli eventi ci sono in tutta Italia. Scrivi la tua città nella barra: se non c'è ancora niente, lo diciamo."}}, {"@type": "Question", "name": "Chi può usare anyplans?", "acceptedAnswer": {"@type": "Answer", "text": "Chi ha almeno 18 anni. Gli eventi hanno un organizzatore reale: non è un'app per incontrare sconosciuti uno a uno."}}, {"@type": "Question", "name": "Come funziona \"Ci sono\"?", "acceptedAnswer": {"@type": "Answer", "text": "Apri un evento e tocchi \"Ci sono\": da quel momento vedi chi organizza e chi altro viene, e loro vedono te."}}, {"@type": "Question", "name": "Cosa sono i viaggi di gruppo su anyplans?", "acceptedAnswer": {"@type": "Answer", "text": "Le partenze di WeRoad, SiVola e Zest Family messe a confronto: destinazione, date, durata, prezzo, fascia d'età e volo incluso o no. Da noi confronti, da loro prenoti: tutti i viaggi di gruppo."}}, {"@type": "Question", "name": "Organizzo eventi: come li pubblico?", "acceptedAnswer": {"@type": "Answer", "text": "Ti registri, crei il tuo gruppo (associazione, club, run club, pro loco) e pubblichi le date. Chi ti segue le vede sulla mappa."}}]}]}</script>
 <script>window.ANYPLANS_CITY="torino";</script>
@@ -884,10 +928,10 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
       <button class="cgmore" id="cgmore">Un'altra città →</button>
     </div>
     <div class="msquick">
-      <button class="chip" data-quick="sera">Stasera</button>
-      <button class="chip" data-quick="weekend">Weekend</button>
-      <button class="chip" data-quick="me">Vicino a me</button>
-      <button class="chip" data-quick="free">Gratis</button>
+      <!-- 06/10/2026: solo tre scelte sotto la barra (prima Stasera/Weekend/Vicino a me/Gratis, che restano nei filtri) -->
+      <button class="chip" data-quick="oggi">Oggi</button>
+      <button class="chip" data-quick="domani">Domani</button>
+      <button class="chip wheelchip" id="wheelopen" type="button" aria-haspopup="dialog">Se non lo sai, tira a sorte</button>
     </div>
   </section>
   <section class="hero">
@@ -941,6 +985,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
     <div class="dates" aria-label="Quando">
       <div class="chips" data-f="day">
         <button class="chip" data-v="oggi" data-gate="quando">Oggi</button><button class="chip" data-v="domani" data-gate="quando">Domani</button><button class="chip" data-v="weekend" data-gate="quando">Fine settimana</button>
+        <button class="chip wheelchip" id="wheelopen2" type="button" aria-haspopup="dialog">Se non lo sai, tira a sorte</button>
         <label class="chip" data-gate="quando"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10 L20.5 10"/><path d="M8 3 L8 7"/><path d="M16 3 L16 7"/></svg><span id="date-txt">Un altro giorno</span><input type="date" id="freedate2" aria-label="Scegli un giorno"></label>
       </div>
     </div>
@@ -1095,7 +1140,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1791300159"></script>
+<script src="/bergamo/app.js?v=1791318709"></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1244,7 +1289,8 @@ function relTxt(e){
 }
 const priceTxt = e => e.price_cents > 0 ? `<span class="price">${esc(fmtPrice(e.price_cents))}</span>` : (isFree(e) ? `<span class="price free">Gratis</span>` : "");
 const cta = e => `<a class="btn" href="${EVURL(e)}" data-gate="ci-sono">Ci sono</a>`;
-function goingTxtH(e){ const n = e.going_count || 0; if (!n) return ""; const dots = Array.from({ length: Math.min(n, 3) }, (_, i) => `<i>${"ABC"[i]}</i>`).join(""); return `<span class="going"><span class="dots">${dots}</span>${n === 1 ? "1 ci va" : n + " ci vanno"}</span>`; }
+// solo il numero, mai i nomi (UI.md §3.15): pallino verde + frase di goingPhrase (app.js); da 0 niente nella card
+function goingTxtH(e){ const n = e.going_count || 0; if (!n) return ""; return `<span class="going"><i class="dot" aria-hidden="true"></i>${goingPhrase(n, e)}</span>`; }
 function card(e){
   const who = e.community_name || e.club_name || e.host_name || null;
   const tm = tmTxt(e);
@@ -1252,6 +1298,7 @@ function card(e){
     <div class="lft"><div class="tm">${tm}</div><div class="tile" aria-hidden="true">${e.emoji}</div></div>
     <a class="t" href="${EVURL(e)}" data-gate="evento">${esc(e.title)}</a>
     <div class="m"><span class="wt">${whenTxt(e)} · </span>${esc((e.meeting_point_text || e.tw).split(",").slice(0, 2).join(",").slice(0, 60))}${e.km > 1 ? ` · ${e.km.toFixed(0)} km` : ""}</div>
+    ${soloChip(e) ? `<div class="solorow">${soloChip(e)}</div>` : ""}
     <div class="who">${goingTxtH(e)}${who ? `<span>${goingTxtH(e) ? "· " : ""}${e.source === "ugc" ? "proposto da" : "organizza"} <b>${esc(who)}</b></span>` : ""}</div>
     <div class="side">${priceTxt(e)}${cta(e)}</div>
   </article>`;
@@ -1596,7 +1643,7 @@ function bindAll(){
     const box = document.getElementById("cgcities"); if (!box) return;
     if (SAVEDCITY && SAVEDCITY.slug) {
       window.CHOSEN = true;
-      if (SAVEDCITY.slug !== HOME.slug) { F.city.add(SAVEDCITY.slug); loadEvents({ ...SAVEDCITY }); }
+      if (SAVEDCITY.slug !== HOME.slug) F.city.add(SAVEDCITY.slug);   // il caricamento lo fa la riga finale (SAVED_START)
       const t = document.getElementById("mcity2"); if (t) t.textContent = SAVEDCITY.nome;
       return;
     }
@@ -1634,6 +1681,7 @@ function bindAll(){
     openModal();
     setTimeout(() => { if (msq) msq.focus({ preventScroll: true }); }, 120);
   }
+  window.openSearchFromWheel = openSearch;   // la ruota, senza città, manda qui con "Un'altra città →"
   if (msf) msf.addEventListener("click", e => { e.stopPropagation(); openSearch(); });
   // 17/09/2026: la ricerca resta libera anche da non registrati. Mandare alla registrazione
   // appena si toccava il campo creava un giro chiuso: scrivi la citta, ti manda a registrarti,
@@ -1660,12 +1708,12 @@ function bindAll(){
   }, true);
 
   // le quattro scorciatoie in pagina: un tocco solo, niente foglio
-  document.querySelectorAll(".msquick .chip").forEach(c => c.addEventListener("click", e => {
+  document.querySelectorAll(".msquick .chip[data-quick]").forEach(c => c.addEventListener("click", e => {
     e.preventDefault(); if (LOCKED) { location.href = "/bergamo/login.html"; return; }
     const q = c.dataset.quick; const was = c.classList.contains("on");
-    document.querySelectorAll(".msquick .chip").forEach(x => x.classList.remove("on"));
+    document.querySelectorAll(".msquick .chip[data-quick]").forEach(x => x.classList.remove("on"));
     if (!was) c.classList.add("on");
-    if (q === "sera" || q === "weekend") { F.day.clear(); F.date.clear(); if (!was) F.day.add(q); }
+    if (["sera", "weekend", "oggi", "domani"].includes(q)) { F.day.clear(); F.date.clear(); if (!was) F.day.add(q); }
     else if (q === "free") { F.price.clear(); if (!was) F.price.add("free"); }
     else if (q === "me") { const me = document.querySelector('.chips[data-f="where"] .chip[data-v="me"]'); if (me) { me.click(); return; } }
     syncChips(); render(); syncMsField(); track("scorciatoia_" + q);
@@ -2014,8 +2062,184 @@ if (CITTA_URL) {   // stessa strada di quando la città si sceglie a mano: chip 
   const t = document.getElementById("mcity2"); if (t) t.textContent = CITTA_URL.nome;
   syncChips();
 }
-loadEvents(CITTA_URL || HOME);
+// 06/10/2026: la città salvata (anyplans_city) vinceva solo per un attimo: cityGate caricava Milano e
+// questa riga ricaricava Bergamo sopra. Ora la città salvata vale come quella nell'indirizzo.
+const SAVED_START = !CITTA_URL && SAVEDCITY && SAVEDCITY.slug && SAVEDCITY.slug !== HOME.slug ? (CITIES.find(c => c.slug === SAVEDCITY.slug) || SAVEDCITY) : null;
+if (SAVED_START) { window.CHOSEN = true; F.city.clear(); F.city.add(SAVED_START.slug); markCity(); syncChips(); }
+loadEvents(CITTA_URL || SAVED_START || HOME);
 setTimeout(loadMapLib, 200);   // la mappa è nella prima schermata: si carica subito, senza aspettare lo scroll
+</script>
+<div class="wbg" id="wbg" hidden></div>
+<div class="wsheet" id="wsheet" role="dialog" aria-modal="true" aria-labelledby="wtitle" hidden>
+  <div class="wh"></div>
+  <button class="wx" id="wclose" type="button" aria-label="Chiudi">×</button>
+  <h2 id="wtitle">Ci penso io</h2>
+  <p class="wsub">Ti scelgo io una cosa di oggi o domani, qui vicino. Tu devi solo presentarti.</p>
+  <p class="wlab wwhere" id="wwhere" hidden>📍 <b id="wwheretxt"></b> · <a href="#" id="wchange">Cambia</a></p>
+  <div class="wcity" id="wcity" hidden>
+    <p class="wlab">Prima dimmi dove sei: anyplans è in tutta Italia.</p>
+    <div class="wcities" id="wcities"></div>
+    <button class="wghost" id="wcitymore" type="button">Un'altra città →</button>
+  </div>
+  <div class="wwrap"><div class="wptr"></div><div class="wdisc" id="wdisc"></div></div>
+  <p class="wlab wfl">Se vuoi, prima dimmi cosa ti va</p>
+  <div class="wfil" id="wfil">
+    <button class="chip" type="button" data-w="free">Gratis</button>
+    <button class="chip" type="button" data-w="sport">Sport</button>
+    <button class="chip" type="button" data-w="sera">Serata</button>
+    <button class="chip" type="button" data-w="cena">Cena</button>
+  </div>
+  <p class="wlab" id="wcount" aria-live="polite"></p>
+  <button class="wbtn" id="wspin" type="button">Scegli tu</button>
+  <div class="wres" id="wres" hidden aria-live="polite"></div>
+</div>
+<script>
+// ruota "Non so cosa fare" (UI.md §3.13, spec design/aggregatore-sociale-spec.md §5). Usa EV gia' caricato: nessuna chiamata nuova.
+(function(){
+  const $ = id => document.getElementById(id);
+  const open = $("wheelopen"); if (!open) return;
+  // sei spicchi, uno per gruppo; l'ordine decide dove si ferma la ruota
+  const SLICES = [
+    { e: "🏃", s: ["running","trail","walking","hiking","cycling","mtb","padel","tennis","football","volleyball","basketball","gym","climbing","swimming","yoga"] },
+    { e: "🎨", s: ["ceramics","painting","cooking","gardening"] },
+    { e: "🍽️", s: ["dinner"] },
+    { e: "🎲", s: ["games"] },
+    { e: "🎤", s: ["concert","karaoke","nightlife","dancing","show","cinema"] },
+    { e: "📚", s: ["culture","tour","festival","fair","match"] }
+  ];
+  const SPORT = SLICES[0].s;
+  const sliceOf = e => { const i = SLICES.findIndex(x => x.s.includes(e.sport)); return i < 0 ? 5 : i; };
+  const disc = $("wdisc");
+  SLICES.forEach((x, i) => { const sp = document.createElement("span"); const a = (i * 60 + 30) * Math.PI / 180; sp.textContent = x.e; sp.style.transform = `translate(${Math.sin(a) * 70}px, ${-Math.cos(a) * 70}px) translate(-50%,-50%)`; sp.setAttribute("aria-hidden", "true"); disc.appendChild(sp); });
+  let rot = 0, giro = 0, seen = new Set(), FW = new Set(), busy = false;
+  const LEFT_MAX = 3;
+  function pool(){
+    const now = Date.now(), tom = addDays(TODAY, 1);
+    return EV.filter(e => {
+      if (e.ymd !== TODAY && e.ymd !== tom) return false;
+      if (e.multi) return false;
+      if (e.end_at && (new Date(e.end_at) - e.d) > 20 * 3600e3) return false;
+      if (e.d.getTime() < now + 3600e3) return false;
+      if (!(e.km <= 12)) return false;
+      if (["market","exhibition","singles"].includes(e.sport)) return false;
+      if (e.visibility === "request" || e.visibility === "private") return false;
+      if (e.max_participants && (e.going_count || 0) >= e.max_participants) return false;
+      if (FW.has("free") && !isFree(e)) return false;
+      if (FW.has("sport") && !SPORT.includes(e.sport)) return false;
+      if (FW.has("sera") && e.h < 18) return false;
+      if (FW.has("cena") && !["dinner","cooking"].includes(e.sport)) return false;
+      return true;
+    });
+  }
+  function countTxt(){
+    const n = pool().length;
+    const loading = !EV.length;
+    $("wcount").textContent = loading ? "Carico gli eventi…" : n === 0 ? "" : n === 1 ? "C'è un solo evento: te lo mostro" : `Scelgo tra ${n} eventi`;
+    $("wspin").disabled = loading || n === 0;
+    if (!loading && n === 0) showEmpty();
+    else if ($("wres").dataset.empty) { $("wres").hidden = true; $("wres").dataset.empty = ""; }
+  }
+  function showEmpty(){
+    const r = $("wres"); r.hidden = false; r.dataset.empty = "1";
+    r.innerHTML = FW.size ? `<p class="wempty">Con questi filtri oggi e domani qui vicino non c'è niente. Prova a toglierne uno.</p>` : `<p class="wempty">Oggi e domani qui vicino è tranquillo. <a href="#" id="wnext">Guarda i prossimi giorni →</a></p>`;
+    track("ruota_vuota");
+    const nx = $("wnext"); if (nx) nx.addEventListener("click", ev => { ev.preventDefault(); close(); });
+  }
+  function pick(){
+    const p = pool().filter(e => !seen.has(e.id)); if (!p.length) return null;
+    const w = p.map(e => { const l = soloLevel(e); return l === "pick" ? 4 : l === "auto" ? 2 : 1; }); let t = Math.random() * w.reduce((a, b) => a + b, 0);
+    for (let i = 0; i < p.length; i++) { t -= w[i]; if (t <= 0) return p[i]; }
+    return p[p.length - 1];
+  }
+  function result(e){
+    const left = LEFT_MAX - (giro - 1);
+    const day = e.ymd === TODAY ? "Oggi" : "Domani";
+    const hh = e.d.toLocaleTimeString("it-IT", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Rome" });
+    const mins = Math.round((e.d - Date.now()) / 60000); const tra = mins < 24 * 60 ? (mins < 90 ? ` · tra ${mins} min` : ` · tra ${Math.round(mins / 60)} h`) : "";
+    const place = esc((e.meeting_point_text || e.tw || "").split(",").slice(0, 2).join(",").slice(0, 60));
+    const price = e.price_cents > 0 ? ` · ${esc(fmtPrice(e.price_cents))}` : (isFree(e) ? " · Gratis" : "");
+    const n = e.going_count || 0, ext = e.source && e.source !== "ugc";
+    const go = n ? `<div class="wgo"><i class="dot" aria-hidden="true"></i>${goingPhrase(n, e)}</div>` : `<div class="wm">${goingPhrase(0, e)}</div>`;
+    const mine = e.my_status === "going";
+    const r = $("wres"); r.hidden = false; r.dataset.empty = "";
+    r.innerHTML = `<p class="wtop">${e.ymd === TODAY ? "Stasera vai qui" : "Domani vai qui"}</p>
+      <div class="wcard"><div class="wtile" aria-hidden="true">${e.emoji}</div><div>
+        <a class="wt" href="${EVURL(e)}" data-gate="evento">${esc(e.title)}</a>
+        <div class="wm">${day} alle ${hh}${tra}</div>
+        <div class="wm">${place}${e.km > 1 ? ` · ${e.km.toFixed(0)} km` : ""}${price}</div>
+        ${go}${soloChip(e) ? `<div class="solorow">${soloChip(e)}</div>` : ""}
+        <a class="wmore" href="${EVURL(e)}" data-gate="evento">Dimmi di più →</a>
+      </div></div>
+      <a class="wbtn" id="wjoin" href="${EVURL(e)}${mine ? "" : "&join=1"}" data-gate="ci-sono">${mine ? "✓ Ci sei" : "Ci sono"}</a>
+      ${left > 0 ? `<button class="wghost" id="wagain" type="button">Un'altra · ne ${left === 1 ? "resta" : "restano"} ${left}</button>` : `<a class="wempty" href="#" id="wall">Giri finiti. Guarda tutto quello che c'è stasera →</a>`}`;
+    $("wjoin").addEventListener("click", () => track("ruota_join", "/evento/" + e.id + "?giro=" + giro));
+    const ag = $("wagain"); if (ag) ag.addEventListener("click", spin);
+    const al = $("wall"); if (al) al.addEventListener("click", ev => { ev.preventDefault(); close(); const c = document.querySelector('.msquick .chip[data-quick="sera"]'); if (c && !c.classList.contains("on")) c.click(); });
+  }
+  function spin(){
+    if (busy) return; const e = pick();
+    if (!e) { const r = $("wres"); r.hidden = false; r.innerHTML = `<p class="wempty">Li hai visti tutti: erano questi. <a href="#" id="wall2">Guarda la lista completa →</a></p>`; const a = $("wall2"); if (a) a.addEventListener("click", ev => { ev.preventDefault(); close(); }); return; }
+    busy = true; seen.add(e.id); giro++; track("ruota_gira", "/ruota?giro=" + giro);
+    $("wspin").hidden = true; const ag = $("wagain"); if (ag) ag.disabled = true;
+    const target = 360 - (sliceOf(e) * 60 + 30);
+    const reduce = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+    rot += (reduce ? 0 : 720) + (((target - rot) % 360) + 360) % 360;   // due giri interi e poi lo spicchio giusto sotto la freccia
+    disc.style.transform = `rotate(${rot}deg)`;
+    setTimeout(() => { busy = false; result(e); $("wres").scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "end" }); }, reduce ? 50 : 1000);
+  }
+  // la home parte su Bergamo per default, ma anyplans è in tutta Italia: finché nessuno ha scelto una città
+  // o "Vicino a me", la ruota non tira a sorte su Bergamo, chiede prima dove sei (06/10/2026)
+  const hasPlace = () => document.body.classList.contains("hascity") || !!window.CHOSEN || !!PLACE || REF.lat !== HOME.lat || REF.lng !== HOME.lng;
+  function waitFeed(){
+    $("wcount").textContent = "Carico gli eventi…"; $("wspin").disabled = true;
+    const t = setInterval(() => { if ($("wsheet").hidden) { clearInterval(t); return; } if (!loading && EV.length) { clearInterval(t); countTxt(); } }, 300);
+  }
+  // dove sta cercando, e il link per cambiare: cosi' chi ha salvato Bergamo una volta non resta incastrato
+  function showWhere(){
+    const nome = (PLACE && PLACE.nome) || (CENTER && CENTER.nome) || "Vicino a me";
+    $("wwheretxt").textContent = nome; $("wwhere").hidden = false;
+  }
+  function askCity(){
+    $("wwhere").hidden = true;
+    $("wsheet").classList.add("askcity"); $("wcity").hidden = false;
+    const box = $("wcities");
+    box.innerHTML = '<button type="button" class="wme" data-me="1">📍 Vicino a me</button>' + CITIES.slice(0, 8).map(c => `<button type="button" data-slug="${c.slug}">${esc(c.nome)}</button>`).join("");
+    box.onclick = ev => {
+      const b = ev.target.closest("button"); if (!b) return; ev.preventDefault();
+      if (b.dataset.me) { const me = document.querySelector('.chips[data-f="where"] .chip[data-v="me"]'); if (me) me.click(); }
+      else { const c = CITIES.find(x => x.slug === b.dataset.slug); if (!c) return; window.CHOSEN = true; F.city.clear(); F.city.add(c.slug); saveCity(c); const t = $("mcity2"); if (t) t.textContent = c.nome; syncChips(); loadEvents({ ...c }); track("ruota_citta", c.slug); }
+      $("wsheet").classList.remove("askcity"); $("wcity").hidden = true; waitFeed();
+      setTimeout(showWhere, 400);
+    };
+    $("wcitymore").onclick = ev => { ev.preventDefault(); close(); if (window.openSearchFromWheel) openSearchFromWheel(); };
+  }
+  function openSheet(){
+    giro = 0; seen = new Set(); FW.clear();
+    $("wsheet").classList.remove("askcity"); $("wcity").hidden = true;
+    document.querySelectorAll("#wfil .chip").forEach(c => c.classList.remove("on"));
+    $("wres").hidden = true; $("wres").innerHTML = ""; $("wspin").hidden = false;
+    $("wbg").hidden = false; $("wsheet").hidden = false; document.body.style.overflow = "hidden";
+    track("ruota_open");
+    if (!hasPlace()) { askCity(); return; }
+    showWhere(); countTxt();
+    if (!EV.length) { const t = setInterval(() => { if ($("wsheet").hidden) clearInterval(t); else if (EV.length) { clearInterval(t); countTxt(); } }, 400); }
+    const f = document.querySelector("#wfil .chip"); if (f) f.focus();
+  }
+  function close(){ $("wbg").hidden = true; $("wsheet").hidden = true; document.body.style.overflow = ""; open.focus(); }
+  open.addEventListener("click", ev => { ev.preventDefault(); openSheet(); });
+  $("wchange").addEventListener("click", ev => { ev.preventDefault(); giro = 0; seen = new Set(); $("wres").hidden = true; $("wres").innerHTML = ""; $("wspin").hidden = false; askCity(); });
+  const open2 = $("wheelopen2"); if (open2) open2.addEventListener("click", ev => { ev.preventDefault(); openSheet(); });
+  $("wclose").addEventListener("click", close); $("wbg").addEventListener("click", close);
+  document.addEventListener("keydown", ev => { if (ev.key === "Escape" && !$("wsheet").hidden) close(); });
+  $("wspin").addEventListener("click", spin);
+  document.querySelectorAll("#wfil .chip").forEach(c => c.addEventListener("click", () => {
+    const k = c.dataset.w;
+    if (k === "free") { FW.has("free") ? FW.delete("free") : FW.add("free"); }
+    else { const had = FW.has(k); ["sport","sera","cena"].forEach(x => FW.delete(x)); if (!had) FW.add(k); }
+    document.querySelectorAll("#wfil .chip").forEach(x => x.classList.toggle("on", FW.has(x.dataset.w)));
+    seen = new Set(); countTxt();
+  }));
+})();
 </script>
 </body>
 </html>
