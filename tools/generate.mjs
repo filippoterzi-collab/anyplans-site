@@ -268,7 +268,7 @@ const catLabel = (c) => en() ? ({ sport: "Sports", cucina: "Food", creatività: 
 // visite delle pagine statiche (16/09/2026): stesso evento page_view dell'app, stesso rpc, chiave anon gia' pubblica in app.js.
 // Senza, le 13.990 pagine erano invisibili: non si sapeva se Google o i motori di risposta le mandassero qualcuno.
 // I crawler che eseguono js (Googlebot in primis) non contano: appena online, il 16/09, i primi page_view erano loro.
-const TRACK = `<script>(function(){try{if(location.protocol==="file:")return;if(navigator.webdriver||/bot|crawl|spider|slurp|headless|lighthouse|gptbot|claudebot|perplexity/i.test(navigator.userAgent))return;var r="";try{r=document.referrer?new URL(document.referrer).hostname:""}catch(e){}if(r===location.hostname)r="";var v=null;try{v=localStorage.getItem("anyplans_visitor");if(!v){v=Math.random().toString(36).slice(2,12)+Date.now().toString(36);localStorage.setItem("anyplans_visitor",v)}}catch(e){}fetch("${SB_URL}/rest/v1/rpc/log_site_event",{method:"POST",keepalive:true,headers:{"apikey":"${SB_ANON}","Content-Type":"application/json"},body:JSON.stringify({p_name:"page_view",p_path:location.pathname,p_ref:r||null,p_city:"${CITY}",p_visitor:v})}).catch(function(){})}catch(e){}})();</script>
+const TRACK = `<script>(function(){try{if(location.protocol==="file:")return;if(navigator.webdriver||/bot|crawl|spider|slurp|headless|lighthouse|gptbot|claudebot|perplexity/i.test(navigator.userAgent))return;var r="";try{r=document.referrer?new URL(document.referrer).hostname:""}catch(e){}if(r===location.hostname)r="";var v=null;try{v=localStorage.getItem("anyplans_visitor");if(!v){v=Math.random().toString(36).slice(2,12)+Date.now().toString(36);localStorage.setItem("anyplans_visitor",v)}}catch(e){}var send=function(n,p){fetch("${SB_URL}/rest/v1/rpc/log_site_event",{method:"POST",keepalive:true,headers:{"apikey":"${SB_ANON}","Content-Type":"application/json"},body:JSON.stringify({p_name:n,p_path:p,p_ref:r||null,p_city:"${CITY}",p_visitor:v})}).catch(function(){})};window.apTrack=send;send("page_view",location.pathname)}catch(e){}})();</script>
 `;
 const jsonld = (o) => `<script type="application/ld+json">${JSON.stringify(o).replace(/</g, "\\u003c")}</script>`;
 const INSTAGRAM = "https://instagram.com/anyplans_bergamo";
@@ -950,6 +950,17 @@ main{max-width:860px;margin:0 auto;padding:16px 22px 70px;display:flex;flex-dire
 .cover img{width:100%;height:100%;object-fit:cover;display:block}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
 .chip{background:var(--tint);color:var(--blue);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+.chip.solo{font-weight:600;font-size:12px;padding:0 8px;line-height:22px;white-space:nowrap}.chip.solo.pick{background:var(--blue);color:#fff}
+.solowhy{display:flex;align-items:flex-start;gap:8px;font-size:13.5px;color:var(--ink);line-height:1.35}
+.nearby{display:flex;flex-direction:column;gap:8px}.nearby h2{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.045em;line-height:1}
+.nearby ul{list-style:none;background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:16px;overflow:hidden}
+.nearby li+li{border-top:1px solid rgba(25,25,25,.08)}.nearby li a{display:grid;grid-template-columns:44px minmax(0,1fr) 16px;gap:12px;align-items:center;padding:10px 12px;min-height:64px;color:inherit;text-decoration:none}
+.nearby .em{width:44px;height:44px;border-radius:12px;background:var(--tint);display:grid;place-items:center;font-size:22px}
+.nearby .c{display:flex;flex-direction:column;gap:2px;min-width:0}.nearby .t{font-weight:700;font-size:15px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nearby .m{font-size:13px;color:var(--grey)}.nearby .m .soon{color:#B4530A}.nearby .m .now{color:#137333}
+.nearby .m3{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-top:2px}.nearby .g{font-size:13px;font-weight:700;color:#137333}
+.nearby .ar{color:var(--grey);font-size:16px}.nearby .lnk{display:inline-block;padding:12px 0;font-weight:700}
+@media (max-width:599px){.nearby li:nth-child(n+4){display:none}}
 .chip.w{background:#fff;border:1.5px solid rgba(25,25,25,.12);color:var(--ink)}
 .chip.past{background:#fff;border:1.5px solid rgba(25,25,25,.12);color:var(--grey)}
 .box{background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:18px;padding:20px 22px;display:flex;flex-direction:column;gap:12px}
@@ -1119,6 +1130,118 @@ function cardHtml(p) {
   return `<a class="card${p.isPast ? " old" : ""}" href="${esc(eventUrl(p))}"><span class="em">${p.emoji}</span><span><span class="t">${esc(p.title)}</span><br><span class="m">${esc(whenLabel(p))} · ${esc(placeShort(p))}</span></span></a>`;
 }
 const listHtml = (list) => `<div class="list">${list.map(cardHtml).join("\n")}</div>`;
+
+// ── "Ci puoi andare da solo" (UI.md §3.14). COPIA della regola di branding/legal/bergamo/app.js (soloLevel): se cambia lì, cambia qui ─
+const SOLO_GROUPS = { corsa: ["running", "trail", "walking", "hiking"], lab: ["ceramics", "painting", "cooking"], corso: ["culture", "yoga", "dancing"],
+  gioco: ["games"], squadra: ["padel", "tennis", "volleyball", "football"], tavolo: ["dinner"] };
+const SOLO_WHY = {
+  corsa: "Si parte tutti insieme dal ritrovo: non serve conoscere nessuno.",
+  lab: "Ognuno ha il suo posto al tavolo da lavoro: si viene anche senza compagnia.",
+  corso: "Si va per imparare o per ascoltare: arrivare con qualcuno non serve.",
+  gioco: "Squadre e coppie si formano lì: chi organizza cerca proprio chi manca.",
+  squadra: "Squadre e coppie si formano lì: chi organizza cerca proprio chi manca.",
+  tavolo: "Il tavolo è aperto apposta: ci si siede con chi c'è.",
+  pick: "Ritrovo fisso, ogni settimana: si parte insieme e chi arriva da solo si accoda al gruppo.",
+};
+const SOLO_WHY_EN = {
+  corsa: "Everyone sets off together from the meeting point: you don't need to know anyone.",
+  lab: "Everyone has their own spot at the work table: you can come on your own.",
+  corso: "You go to learn or to listen: bringing someone along isn't needed.",
+  gioco: "Teams and pairs are formed there: the organiser is looking for exactly who's missing.",
+  squadra: "Teams and pairs are formed there: the organiser is looking for exactly who's missing.",
+  tavolo: "The table is open on purpose: you sit with whoever is there.",
+  pick: "Fixed weekly meet-up: everyone sets off together and whoever comes alone joins the group.",
+};
+const soloGroup = (p) => Object.keys(SOLO_GROUPS).find(g => SOLO_GROUPS[g].includes(p.sport)) || null;
+const isMultiDay = (p) => !!(p.end && p.start && p.end - p.start > 12 * 3600e3);
+function soloLevel(p) {
+  if (!p || p.sport === "singles" || isMultiDay(p)) return null;
+  const g = soloGroup(p); if (!g) return null;
+  const u = p.source_url || "";
+  if (g === "squadra" && !/play2match\.it/.test(u)) return null;
+  if (g === "tavolo" && !/tabloapp\.com/.test(u)) return null;
+  if (g === "corsa" && p.community_name && ["running", "trail"].includes(p.sport)) return "pick";
+  return "auto";
+}
+const soloWhy = (p) => { const l = soloLevel(p); return !l ? "" : (en() ? SOLO_WHY_EN : SOLO_WHY)[l === "pick" ? "pick" : soloGroup(p)]; };
+const SOLO_TXT = () => en() ? "You can go alone" : "Ci puoi andare da solo";
+const soloChip = (p) => { const l = soloLevel(p); return l ? `<span class="chip solo${l === "pick" ? " pick" : ""}">${SOLO_TXT()}</span>` : ""; };
+// conteggio (UI.md §3.15): solo il numero; "da anyplans" sulle importate, perché il nostro numero non è il totale della sagra
+function goingPhrase(n, p, long) {
+  n = Number(n) || 0; const ext = !!(p.source && p.source !== "ugc");
+  if (en()) { if (!n) return ""; return ext ? `${n} from anyplans ${n === 1 ? "is" : "are"} going` : `${n} ${n === 1 ? "person is" : "people are"} going`; }
+  if (!n) return "";
+  if (ext) return n === 1 ? (long ? "1 persona da anyplans ci va" : "1 da anyplans ci va") : `${n}${long ? " persone" : ""} da anyplans ci vanno`;
+  return n === 1 ? "1 persona ci va" : `${n} persone ci vanno`;
+}
+
+// ── "Altre cose vicino, stasera" (UI.md §3.17): candidati scritti nella pagina alla generazione, filtrati alla visita senza rete ─
+const NEARBY_KM = 10, NEARBY_MAX = 12;
+function nearbyCandidates(p) {
+  if (p.lat == null || p.lng == null) return [];
+  const d0 = dateKey(NOW, p.tz), d1 = dateKey(new Date(NOW.getTime() + 86400e3), p.tz);
+  const out = [];
+  for (const q of upcomingPages) {
+    if (q.slug === p.slug || q.id === p.id) continue;
+    if (q.lat == null || q.lng == null) continue;
+    if (["market", "exhibition", "singles"].includes(q.sport)) continue;
+    for (const d of q.up) {
+      const dk = dateKey(d.start, q.tz); if (dk !== d0 && dk !== d1) continue;
+      if (d.end && d.end - d.start > 12 * 3600e3) continue;
+      if (q.max && q.going >= q.max) continue;
+      const km = distKm(p, q); if (km > NEARBY_KM) continue;
+      out.push({ u: rel(eventUrl(q)), t: cut(q.title, 70), e: q.emoji, s: d.start.toISOString(), en: d.end ? d.end.toISOString() : null,
+                 w: cut(String(q.meeting || q.town || "").split(",").slice(0, 2).join(","), 60), km: Math.round(km), g: q.going, x: q.source !== "ugc" ? 1 : 0, solo: soloLevel(q) });
+      break;   // una data per evento
+    }
+  }
+  out.sort((a, b) => a.s.localeCompare(b.s) || a.km - b.km);
+  const seen = new Set(); return out.filter(c => !seen.has(c.u) && seen.add(c.u)).slice(0, NEARBY_MAX);
+}
+function nearbyHtml(p) {
+  const c = nearbyCandidates(p); if (!c.length) return "";
+  const E = en(), d0 = dateKey(NOW, p.tz);
+  const tonight = c.filter(x => dateKey(new Date(x.s), p.tz) === d0 && new Date(x.s).getUTCHours() >= 0 && Number(fmtTime(new Date(x.s), p.tz).slice(0, 2)) >= 18).slice(0, 4);
+  const rows = (tonight.length ? tonight : c.slice(0, 4));
+  const row = (x) => `<li><a href="${esc(x.u)}" aria-label="${esc(x.t)}, ${esc(fmtTime(new Date(x.s), p.tz))}${x.w ? ", " + esc(x.w) : ""}${x.km >= 1 ? `, ${x.km} km` : ""}"><span class="em" aria-hidden="true">${x.e}</span><span class="c"><span class="t">${esc(x.t)}</span><span class="m">${esc(fmtTime(new Date(x.s), p.tz))}${x.w ? ` · ${esc(x.w)}` : ""}${x.km >= 1 ? ` · ${x.km} km` : ""}</span>${x.g > 0 || x.solo ? `<span class="m3">${x.g > 0 ? `<span class="g">${esc(goingPhrase(x.g, { source: x.x ? "scraper" : "ugc" }))}</span>` : ""}${x.solo ? `<span class="chip solo${x.solo === "pick" ? " pick" : ""}">${SOLO_TXT()}</span>` : ""}</span>` : ""}</span><span class="ar" aria-hidden="true">›</span></a></li>`;
+  const place = p.town || paeseDi(p) || "";
+  const title = p.isPast ? (E ? "It's over, but tonight there's more nearby" : "È già passato, ma stasera qui vicino c'è altro") : (E ? "More things nearby" : "Altre cose da fare qui vicino");
+  return `<section class="nearby" id="vicino" data-past="${p.isPast ? 1 : 0}" data-place="${esc(place)}">
+<h2 id="vicino-h">${title}</h2>
+<p class="m" id="vicino-sub">${place ? (E ? `Within 10 km of ${esc(place)}.` : `A meno di 10 km da ${esc(place)}.`) : (E ? "Within 10 km of here." : "A meno di 10 km da qui.")}</p>
+<ul id="vicino-list">${rows.map(row).join("")}</ul>
+<a class="lnk" id="vicino-map" href="${MAP_URL}&quando=sera">${E ? "All tonight's events on the map →" : "Tutti gli eventi di stasera sulla mappa →"}</a>
+<script type="application/json" id="vicino-data">${JSON.stringify(c).replace(/</g, "\\u003c")}</script>
+</section>`;
+}
+const NEARBY_SCRIPT = (E, citySlug) => `<script>
+(function(){ var sec = document.getElementById("vicino"), raw = document.getElementById("vicino-data"); if (!sec || !raw) return;
+  var C; try { C = JSON.parse(raw.textContent); } catch (_) { return; }
+  var T = ${JSON.stringify(E ? { tonight: "More things nearby, tonight", tomorrow: "More things nearby, tomorrow evening", pastT: "It's over, but tonight there's more nearby", pastTm: "It's over, but tomorrow evening there's more nearby", mapT: "All tonight's events on the map →", mapTm: "All tomorrow's events on the map →", empty: "Nothing else nearby tonight.", next: "The next few days on the map →", inMin: "in ", min: " min", now: "happening now", solo: "You can go alone", g1: " is going", gN: " are going", from: " from anyplans" }
+                                : { tonight: "Altre cose vicino, stasera", tomorrow: "Altre cose vicino, domani sera", pastT: "È già passato, ma stasera qui vicino c'è altro", pastTm: "È già passato, ma domani sera qui vicino c'è altro", mapT: "Tutti gli eventi di stasera sulla mappa →", mapTm: "Tutti gli eventi di domani sulla mappa →", empty: "Per stasera qui vicino non c'è altro.", next: "I prossimi giorni sulla mappa →", inMin: "tra ", min: " min", now: "in corso" })};
+  var past = sec.dataset.past === "1", esc = function(t){ return String(t).replace(/[&<>"]/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var fmt = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+  var dk = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" });
+  function gp(x){ if (!x.g) return ""; return ${E ? `x.g + (x.x ? T.from : "") + (x.g === 1 ? T.g1 : T.gN)` : `x.x ? (x.g === 1 ? "1 da anyplans ci va" : x.g + " da anyplans ci vanno") : (x.g === 1 ? "1 persona ci va" : x.g + " persone ci vanno")}`}; }
+  function build(){
+    var now = new Date(), today = dk.format(now), tom = dk.format(new Date(now.getTime() + 864e5));
+    var live = C.filter(function(x){ var s = new Date(x.s), e = x.en ? new Date(x.en) : new Date(s.getTime() + 3 * 36e5); return e > now && s.getTime() >= now.getTime() - 30 * 6e4; });
+    var hour = function(x){ return +fmt.format(new Date(x.s)).slice(0, 2); };
+    var ton = live.filter(function(x){ return dk.format(new Date(x.s)) === today && hour(x) >= 18; }), day = "sera", rows = ton;
+    if (ton.length < 2) { var tm = live.filter(function(x){ return dk.format(new Date(x.s)) === tom; }), tme = tm.filter(function(x){ return hour(x) >= 18; }); rows = tme.length >= 2 ? tme : tme.concat(tm.filter(function(x){ return hour(x) < 18; })); day = "domani"; if (!rows.length && ton.length) { rows = ton; day = "sera"; } }
+    var h = document.getElementById("vicino-h"), sub = document.getElementById("vicino-sub"), ul = document.getElementById("vicino-list"), mp = document.getElementById("vicino-map");
+    if (!rows.length) { h.textContent = past ? T.pastT : T.tonight; ul.innerHTML = ""; sub.textContent = T.empty; mp.textContent = T.next; mp.href = "/?citta=${citySlug}"; return; }
+    h.textContent = past ? (day === "sera" ? T.pastT : T.pastTm) : (day === "sera" ? T.tonight : T.tomorrow);
+    mp.textContent = day === "sera" ? T.mapT : T.mapTm; mp.href = "/?citta=${citySlug}&quando=" + day;
+    ul.innerHTML = rows.slice(0, 4).map(function(x, i){ var s = new Date(x.s), min = Math.round((s - now) / 6e4), rel = min < 0 ? '<b class="now">' + T.now + '</b>' : min <= 90 ? '<b class="soon">' + T.inMin + min + T.min + '</b>' : "";
+      return '<li><a href="' + esc(x.u) + '" data-pos="' + (i + 1) + '"><span class="em" aria-hidden="true">' + x.e + '</span><span class="c"><span class="t">' + esc(x.t) + '</span><span class="m">' + fmt.format(s) + (rel ? " · " + rel : "") + (x.w ? " · " + esc(x.w) : "") + (x.km >= 1 ? " · " + x.km + " km" : "") + '</span>' + (x.g > 0 || x.solo ? '<span class="m3">' + (x.g > 0 ? '<span class="g">' + gp(x) + '</span>' : '') + (x.solo ? '<span class="chip solo' + (x.solo === "pick" ? " pick" : "") + '">' + T.solo + '</span>' : '') + '</span>' : '') + '</span><span class="ar" aria-hidden="true">›</span></a></li>'; }).join("");
+    ul.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ if (window.apTrack) apTrack("seo_vicino_tap", a.getAttribute("href") + "?pos=" + a.dataset.pos); }); });
+    mp.onclick = function(){ if (window.apTrack) apTrack("seo_vicino_mappa", location.pathname + "?d=" + day); };
+    if (!build.seen && "IntersectionObserver" in window) { build.seen = true; new IntersectionObserver(function(en, o){ if (en.some(function(x){ return x.isIntersecting; })) { o.disconnect(); if (window.apTrack) apTrack("seo_vicino_view", location.pathname + "?n=" + Math.min(rows.length, 4) + "&d=" + day); } }, { threshold: .5 }).observe(sec); }
+  }
+  build(); setInterval(build, 60e3);
+})();
+</script>`;
 
 // ── event page ────────────────────────────────────────────────────────────────
 function organizer(p) {
@@ -1293,7 +1416,9 @@ function eventPage(p) {
     ? cut(`${cut(titoloPulito(p.title), 60)}: ${t.label.toLowerCase()} a ${dove}. Ultima data: ${fmtShort(first.start, tz)}. Questo evento è passato: su anyplans trovi le prossime date e gli eventi simili.`, 160)
     : cut(`${cut(titoloPulito(p.title), 60)}: ${t.label.toLowerCase()} a ${dove} ${fmtDay(first.start, tz).toLowerCase()} alle ${fmtTime(first.start, tz)}. ${cut(p.description, 70)} ${fmtPrice(p.price_cents)}. Ci vai insieme ad altri.`.replace(/\s+/g, " ").replace(/\.\s*\./g, "."), 160);
   const image = p.photo ? photoSrc(p.photo) : OG_DEFAULT;
-  const sim = similar(p);
+  const nearby = nearbyHtml(p);
+  const nearbyUrls = new Set((nearby.match(/href="([^"]+)"/g) || []).map(h => h.slice(6, -1)));
+  const sim = similar(p, 8).filter(q => !nearbyUrls.has(rel(eventUrl(q)))).slice(0, 4);   // niente doppioni con "Altre cose vicino"
   const typeIndex = types.find(x => x.sport === p.sport);
   const townIndex = towns.find(x => norm(x.town) === norm(paeseDi(p))) || null;
   const venue = localeDi(p);
@@ -1325,17 +1450,18 @@ function eventPage(p) {
   const body = `
 ${crumbs(crumbItems)}
 <div class="cover">${hasMap ? `<a id="map" href="${esc(mapsUrl(p.lat, p.lng))}" rel="noopener" aria-label="${S.maps}"></a>` : p.photo ? `<img src="${esc(photoSrc(p.photo))}" alt="${esc(p.title)}" width="800" height="230" loading="lazy" decoding="async">` : p.emoji}</div>
-<div class="chips"><span class="chip">${p.emoji} ${esc(tLabel(t))}</span><span class="chip w">${esc(fmtPrice(p.price_cents))}</span>${p.isPast ? `<span class="chip past">${S.past}</span>` : ""}${townIndex ? `<a class="chip w" href="${rel(indexUrl(townIndex))}">${esc(p.town)}</a>` : ""}${venue ? `<a class="chip w" href="${rel(venueUrl(venue))}">📍 ${esc(venue.nome)}</a>` : ""}</div>
+<div class="chips"><span class="chip">${p.emoji} ${esc(tLabel(t))}</span><span class="chip w">${esc(fmtPrice(p.price_cents))}</span>${p.isPast ? `<span class="chip past">${S.past}</span>` : soloChip(p)}${townIndex ? `<a class="chip w" href="${rel(indexUrl(townIndex))}">${esc(p.town)}</a>` : ""}${venue ? `<a class="chip w" href="${rel(venueUrl(venue))}">📍 ${esc(venue.nome)}</a>` : ""}</div>
 <h1>${esc(p.title)}</h1>
 ${p.isPast ? "" : `<div class="when hero-when"><div class="datebox"><div class="mo">${esc(fmtMonthShort(first.start, tz))}</div><div class="d">${esc(fmtDayNum(first.start, tz))}</div></div>
   <div><div class="t"><span class="rel-day" data-start="${first.start.toISOString()}"></span>${esc(fmtDay(first.start, tz))} · <b>${esc(fmtTime(first.start, tz))}</b>${first.end ? ` <span class="s">(${S.until} ${esc(fmtTime(first.end, tz))})</span>` : ""}<b class="rel" data-start="${first.start.toISOString()}"${first.end ? ` data-end="${first.end.toISOString()}"` : ""}></b></div>
   ${hasMap ? `<a class="s place" href="${esc(mapsUrl(p.lat, p.lng))}" rel="noopener">${esc(p.meeting || S.zone)} · ${S.openMaps}</a>` : p.meeting ? `<div class="s">${esc(p.meeting)}</div>` : ""}</div></div>
 <div class="box">
   <h2>${joinTitle}</h2>
-  <div class="cta">${joinBtn}<span class="m">${p.going > 0 ? `${p.going === 1 ? S.going1 : S.goingN}${spots}` : S.first}</span></div>
+  <div class="cta">${joinBtn}<span class="m">${p.going > 0 ? `<b style="color:#137333">${esc(goingPhrase(p.going, p, true))}</b>${spots}` : S.first}</span></div>
+  ${soloLevel(p) ? `<p class="solowhy">${soloChip(p)}<span>${esc(soloWhy(p))}</span></p>` : ""}
 </div>`}
 <p class="lead">${esc(eventSummary(p, org, first))}</p>
-${p.isPast ? `<div class="box in"><h2>${S.pastTitle}</h2><div class="m">${S.pastTxt}</div><div class="cta"><a class="btn" href="${MAP_URL}">${S.now}</a></div></div>` : ""}
+${p.isPast ? `<div class="box in"><h2>${S.pastTitle}</h2><div class="m">${S.pastTxt}</div><div class="cta"><a class="btn" href="${MAP_URL}">${S.now}</a></div></div>${nearby}` : ""}
 ${p.isPast || p.up.length > 1 || p.past.length ? `<div class="box">
   <h2>${p.up.length > 1 ? S.dates : S.when}</h2>
   ${p.up.map(d => whenRow(d, tz, false)).join("\n")}
@@ -1353,7 +1479,7 @@ ${p.description ? `<div class="box"><h2>${S.about}</h2>${E ? `<div class="m">${/
 </div>
 ${p.going > 0 && !p.isPast ? `<div class="box">
   <h2>${S.who} <span class="s">(${p.going})</span></h2>
-  <div><b style="color:#1E8E3E">${p.going === 1 ? (E ? "1 is going" : "1 ci va") : (E ? `${p.going} are going` : `${p.going} ci vanno`)}</b>${p.max ? ` <span class="m">· ${p.going >= p.max ? S.full : `${p.max - p.going} ${p.max - p.going === 1 ? S.free1 : S.freeN} ${S.of} ${p.max}`}</span>` : ""}</div>
+  <div><b style="color:#137333">${esc(goingPhrase(p.going, p, true))}</b>${p.max ? ` <span class="m">· ${p.going >= p.max ? S.full : `${p.max - p.going} ${p.max - p.going === 1 ? S.free1 : S.freeN} ${S.of} ${p.max}`}</span>` : ""}</div>
   ${p.max ? `<div style="height:8px;border-radius:999px;background:#E6F4EA;overflow:hidden"><i style="display:block;height:100%;width:${Math.min(100, Math.round(p.going / p.max * 100))}%;background:${p.going >= p.max ? "#B3261E" : "#1E8E3E"};border-radius:999px"></i></div>` : ""}
   <div class="m">${S.whoSee}</div>
 </div>` : ""}
@@ -1370,6 +1496,7 @@ ${p.co.length ? `<div class="box"><h2>${S.with}</h2><div class="tags">${p.co.map
   <a class="btn ghost" href="${MAP_URL}">${S.allEvents}</a>
   ${external && p.isPast ? `<a class="lnk" href="${esc(p.source_url)}" rel="noopener nofollow">${S.official}</a>` : ""}
 </div>
+${p.isPast ? "" : nearby}
 ${faqHtml(faq)}
 ${venue ? `<p class="m"><a class="lnk" href="${rel(venueUrl(venue))}">${E ? `All events at ${esc(venue.nome)}` : `Tutti gli eventi al ${esc(venue.nome)}`} (${venue.list.filter(x => !x.isPast).length})</a></p>` : ""}
 ${sim.length ? `<h2>${S.similar}</h2>${listHtml(sim)}` : ""}
@@ -1388,6 +1515,7 @@ ${sim.length ? `<h2>${S.similar}</h2>${listHtml(sim)}` : ""}
     new maplibregl.Marker({ element: el }).setLngLat([lng, lat]).addTo(map);
   })();
 </script>` : "";
+  const nearbyScript = nearby ? NEARBY_SCRIPT(E, CITY) : "";
   const relScript = p.isPast ? "" : `<script>
   (function(){ var el = document.querySelector(".rel"), day = document.querySelector(".rel-day"); if (!el) return;
     var s = new Date(el.dataset.start), e = el.dataset.end ? new Date(el.dataset.end) : new Date(s.getTime() + 3 * 3600e3), now = new Date();
@@ -1402,7 +1530,7 @@ ${sim.length ? `<h2>${S.similar}</h2>${listHtml(sim)}` : ""}
     el.textContent = txt ? "· " + txt : "";
   })();
 </script>`;
-  return layout({ vecchio: vecchioDi(p), title, description: descr, url, image, jsonLd: [eventJsonLd(p, url), faqLd(faq)].filter(Boolean).join("\n"), body: body + mapScript + relScript, ogType: "article", modified: p.updated, head: mapHead,
+  return layout({ vecchio: vecchioDi(p), title, description: descr, url, image, jsonLd: [eventJsonLd(p, url), faqLd(faq)].filter(Boolean).join("\n"), body: body + mapScript + relScript + nearbyScript, ogType: "article", modified: p.updated, head: mapHead,
     alt: EN_EVENTI ? inLocale(E ? "it" : "en", () => eventUrl(p)) : null });
 }
 

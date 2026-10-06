@@ -427,6 +427,49 @@ function fmtAmount(c){ return fmtPrice(c).replace("\u00a0€", ""); }
 function isFree(e){ if (!e || e.price_cents > 0) return false;
   if (e.source && e.source !== "ugc") return /gratis|gratuit|libero|free/i.test(e.price_note || "");
   return true; }
+// ---- "Ci puoi andare da solo" (UI.md §3.14, spec design/aggregatore-sociale-spec.md §3) ----
+// Livello automatico per categoria; "pick" (scelto a mano) per i gruppi con ritrovo fisso che abbiamo
+// verificato noi (i run club con community su anyplans). Niente campo nello schema per ora: la lista
+// vive qui e in branding/seo/generate.mjs (copia, stesso commento). Esclusi sempre singles e multi-giorno.
+const SOLO_GROUPS = {
+  corsa: ["running", "trail", "walking", "hiking"],
+  lab: ["ceramics", "painting", "cooking"],
+  corso: ["culture", "yoga", "dancing"],
+  gioco: ["games"],
+  squadra: ["padel", "tennis", "volleyball", "football"],
+  tavolo: ["dinner"],
+};
+const SOLO_WHY = {
+  corsa: "Si parte tutti insieme dal ritrovo: non serve conoscere nessuno.",
+  lab: "Ognuno ha il suo posto al tavolo da lavoro: si viene anche senza compagnia.",
+  corso: "Si va per imparare o per ascoltare: arrivare con qualcuno non serve.",
+  gioco: "Squadre e coppie si formano lì: chi organizza cerca proprio chi manca.",
+  squadra: "Squadre e coppie si formano lì: chi organizza cerca proprio chi manca.",
+  tavolo: "Il tavolo è aperto apposta: ci si siede con chi c'è.",
+  pick: "Ritrovo fisso, ogni settimana: si parte insieme e chi arriva da solo si accoda al gruppo.",
+};
+function soloGroup(e){ return Object.keys(SOLO_GROUPS).find(g => SOLO_GROUPS[g].includes(e && e.sport)) || null; }
+function isMultiDay(e){ if (!e || !e.end_at || !e.start_at) return false; return new Date(e.end_at) - new Date(e.start_at) > 12 * 3600e3; }
+// → "pick" | "auto" | null
+function soloLevel(e){
+  if (!e || e.sport === "singles" || isMultiDay(e)) return null;
+  const g = soloGroup(e); if (!g) return null;
+  const u = e.source_url || "";
+  if (g === "squadra" && !/play2match\.it/.test(u)) return null;      // tornei a coppie: no; partita aperta Playtomic: TODO 10
+  if (g === "tavolo" && !/tabloapp\.com/.test(u)) return null;
+  if (g === "corsa" && e.community_name && ["running", "trail"].includes(e.sport)) return "pick";   // i run club con gruppo su anyplans
+  return "auto";
+}
+function soloWhy(e){ const l = soloLevel(e); if (!l) return ""; return l === "pick" ? SOLO_WHY.pick : SOLO_WHY[soloGroup(e)]; }
+function soloChip(e){ const l = soloLevel(e); return l ? `<span class="solo ${l}">Ci puoi andare da solo</span>` : ""; }
+// ---- conteggio: solo il numero, mai i nomi (UI.md §3.15, spec §4). Sulle importate "da anyplans", perché il
+// nostro conteggio non e' il totale della sagra o del concerto (UI.md §4 regola 3). ----
+function goingPhrase(n, e, long){
+  n = Number(n) || 0; const ext = !!(e && e.source && e.source !== "ugc");
+  if (!n) return e && e.community_id ? "Organizzato da " + (e.host_name || e.community_name || "un gruppo") + ": sei il primo ad aggiungerti" : "Nessuno ancora, sei il primo?";
+  if (ext) return n === 1 ? (long ? "1 persona da anyplans ci va" : "1 da anyplans ci va") : n + (long ? " persone" : "") + " da anyplans ci vanno";
+  return n === 1 ? "1 persona ci va" : n + " persone ci vanno";
+}
 function priceLabel(e){ if (!e) return "";
   if (e.price_cents > 0) return fmtPrice(e.price_cents);
   if (isFree(e)) return "Gratis";
@@ -554,7 +597,7 @@ function mountNav(active, opts){
   const initial = ((session && session.email) || "?")[0].toUpperCase();
   const h = document.createElement("header"); h.className = "sn";
   h.innerHTML = `<div class="nav">
-    <a class="brand" href="/bergamo/eventi.html"><img src="/logo.png" alt=""><span>anyplans<span style="font-size:.92em">?</span></span></a>
+    <a class="brand" href="/"><img src="/logo.png" alt=""><span>anyplans<span style="font-size:.92em">?</span></span></a>
     ${links.map(([k, l, href]) => `<a class="lnk${k === active ? " on" : ""}" href="${href}">${l}</a>`).join("")}
     <div class="right">
       <a class="cta" href="crea.html">Crea evento</a>

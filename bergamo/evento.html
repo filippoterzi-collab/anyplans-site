@@ -57,6 +57,10 @@
   .cover{width:100%; height:230px; background:var(--tint); border-radius:22px; display:flex;
          align-items:center; justify-content:center; font-size:96px;}
   .chips{display:flex; gap:8px; flex-wrap:wrap;}
+  /* "Ci puoi andare da solo" (UI.md §3.14): tinta = regola per categoria, piena = verificato da noi */
+  .chip.solo{background:var(--tint); color:var(--blue); border:0;} .chip.solo.pick{background:var(--blue); color:#fff;}
+  .solowhy{display:flex; align-items:flex-start; gap:8px; font-size:13.5px; color:var(--ink); line-height:1.35; margin:8px 0 0;}
+  .solowhy .solo{flex-shrink:0; display:inline-block; font-size:12px; font-weight:600; line-height:22px; height:22px; padding:0 8px; border-radius:999px; background:var(--tint); color:var(--blue); white-space:nowrap;} .solowhy .solo.pick{background:var(--blue); color:#fff;}
   .chip{background:var(--tint); color:var(--blue); font-weight:700; font-size:13px;
         padding:6px 12px; border-radius:999px;}
   .chip.w{background:#fff; border:1.5px solid rgba(25,25,25,.12); color:var(--ink);}
@@ -167,7 +171,7 @@
 
 <header>
   <div class="nav">
-    <a class="brand" href="/bergamo/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
+    <a class="brand" href="/"><img src="/logo.png" alt=""><span>anyplans<span class="q">?</span></span></a>
     <a class="btn" id="nav-cta" href="login.html">Registrati</a>
   </div>
 </header>
@@ -180,6 +184,7 @@
     <span class="chip w" id="chip-full" hidden></span>
     <span class="chip w" id="chip-req" hidden>Con approvazione</span>
     <span class="chip w" id="chip-gender" hidden></span>
+    <span class="chip solo" id="chip-solo" hidden>Ci puoi andare da solo</span>
     <span class="chip w" id="chip-priv" hidden>🔒 Privato · solo con il link</span>
     <span class="chip w" id="chip-agg" hidden>Da un altro sito</span>
   </div>
@@ -228,6 +233,7 @@
       <a class="lnk" id="lnk-others" hidden href="eventi.html">Guarda gli altri eventi →</a>
       <span class="note" id="going-join"></span>
     </div>
+    <p class="solowhy" id="solowhy" hidden></p>
     <p class="pay" id="pay-join" hidden></p>
   </div>
   <div class="box" id="box-wait" hidden>
@@ -407,7 +413,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script src="app.js?v=1791300159"></script>
+<script src="app.js?v=1791318709"></script>
 <script>
   const params = new URLSearchParams(location.search);
   const id = params.get("id");
@@ -474,6 +480,9 @@
     document.getElementById("chip-cat").textContent = (ev.emoji || cat.e || "") + " " + (cat.l || ev.sport);
     document.getElementById("chip-req").hidden = !isReq;
     const cg = document.getElementById("chip-gender"); cg.hidden = !ev.gender_allowed;
+    { const lv = soloLevel(ev), cs = document.getElementById("chip-solo"), sw = document.getElementById("solowhy"), past = !isCurrent(ev.start_at, ev.end_at);
+      cs.hidden = !lv || past; cs.classList.toggle("pick", lv === "pick");
+      sw.hidden = !lv || past; if (lv) sw.innerHTML = `<span class="solo${lv === "pick" ? " pick" : ""}">Ci puoi andare da solo</span><span>${esc(soloWhy(ev))}</span>`; }
     cg.textContent = ev.gender_allowed === "donna" ? "Solo donne" : ev.gender_allowed === "uomo" ? "Solo uomini" : "";
     document.getElementById("chip-priv").hidden = ev.visibility !== "private";
     const pz = priceLabel(ev), cpz = document.getElementById("chip-price");   // vuoto = prezzo ignoto: niente chip
@@ -660,8 +669,7 @@
     const fila = wl ? " · " + wl + " in lista d'attesa" : "";
     const lk = lockState(ev);
     const gtxt = (lk === "closed" ? "Nessuno ci va ancora" : lk === "waiting" ? "1 persona: ne manca una perché si faccia"
-                  : going === 0 ? (ev.community_id ? "Organizzato da " + (ev.host_name || "un gruppo") + ": sei il primo ad aggiungerti" : "Nessuno ancora, sei il primo?")
-                  : going === 1 ? "1 persona ci va" : going + " ci vanno") + seatsTxt() + fila;
+                  : goingPhrase(going, ev, true)) + seatsTxt() + fila;   // "N persone (da anyplans) ci vanno" — app.js, UI.md §3.15
     ["going-guest","going-join","going-in","going-req","going-host","going-wait","going-lock"].forEach(x => document.getElementById(x).textContent = gtxt);
     const chip = document.getElementById("chip-full");
     chip.hidden = !isFull(); chip.textContent = fullTxt(going, ev.max_participants, wl);
