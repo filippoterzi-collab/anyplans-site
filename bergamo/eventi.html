@@ -391,7 +391,7 @@
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1791212055"></script>
+<script src="app.js?v=1791300159"></script>
 <script>
   // sessione passata via #s= quando il browser blocca lo storage (safari su file://)
   if (!session && location.hash.startsWith("#s=")) {
@@ -441,17 +441,20 @@
   }
 
   // 25 km attorno a Bergamo: a 50 km entravano le partite di padel di Milano sotto "Eventi a Bergamo" (audit 17/09/2026, #5)
-  let loadSeq = 0, feedRadius = 25000;
+  let loadSeq = 0, feedRadius = 25000, feedDays = "";
   async function loadEvents(center, keepView, radiusM){
     center = center || BG;
     radiusM = radiusM || 25000;
     const seq = ++loadSeq;
     const list = document.getElementById("list");
     list.innerHTML = '<div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div>';
-    const r = await rpc(FEED_LISTA, { lat: center.lat, lng: center.lng, radius_m: radiusM });
+    const giorni = giorniScelti();
+    const rs = await Promise.all((giorni || [null]).map(g =>
+      rpc(FEED_LISTA, { lat: center.lat, lng: center.lng, radius_m: radiusM, ...(g ? { day: g } : {}) })));
     if (seq !== loadSeq) return;   // nel frattempo è partito un altro caricamento (mappa trascinata ancora)
-    if (!r || !r.ok) { list.innerHTML = '<div class="empty">Non riesco a caricare gli eventi. Ricarica la pagina.</div>'; return; }
-    const rows = await r.json();
+    if (rs.some(x => !x || !x.ok)) { list.innerHTML = '<div class="empty">Non riesco a caricare gli eventi. Ricarica la pagina.</div>'; return; }
+    const rows = (await Promise.all(rs.map(x => x.json()))).flat();
+    feedDays = (giorni || []).join(",");
     // su telefono, all'apertura, niente inquadratura a 50 km (i pin si sovrapponevano): resta lo zoom città;
     // con keepView (mappa trascinata verso un'altra città, 14/09/2026) l'inquadratura resta quella dell'utente
     refit = keepView ? false : (center !== BG || !mobileFilters.matches);
@@ -572,6 +575,21 @@
   let day = "oggi", dateSel = null, where = null, qText = "", parsed = null, cardOpen = false, locating = false;
   let refit = false, lastVisible = [], savedSearches = [], lastEmptyKey = "";
   const isoLocal = d => d.getFullYear() + "-" + String(d.getMonth() + 1).padStart(2, "0") + "-" + String(d.getDate()).padStart(2, "0");
+  // il sabato e la domenica di questo fine settimana (di domenica, il sabato e' ieri: il weekend e' oggi)
+  function weekendDays(){
+    const n = new Date(); n.setHours(0, 0, 0, 0);
+    const sab = new Date(n); sab.setDate(n.getDate() + (n.getDay() === 0 ? -1 : 6 - n.getDay()));
+    const dom = new Date(sab); dom.setDate(sab.getDate() + 1);
+    return [sab, dom];
+  }
+  // Quando il filtro e' su giorni precisi, quei giorni si chiedono al server uno per uno.
+  // Il feed torna al massimo 1000 righe ordinate per data: a 50 km da Bergamo finivano il giorno dopo
+  // domani, quindi "Nel fine settimana" (e una data scelta piu' in la') non trovava niente (06/10/2026).
+  function giorniScelti(){
+    if (day === "data" && dateSel) return [isoLocal(dateSel)];
+    if (day === "weekend") return weekendDays().map(isoLocal);
+    return null;
+  }
   const mobileFilters = window.matchMedia("(max-width:700px)");
   const fl = document.getElementById("fl");
   const isSheetOpen = () => fl.classList.contains("fl-open");
@@ -738,8 +756,10 @@
     if (!day) return true;
     if (day === "data") return !!dateSel && dayKey(d) === dayKey(dateSel);
     if (day === "weekend") {
-      const wd = d.getDay(), diff = (d - Date.now()) / 86400000;
-      return (wd === 0 || wd === 6) && diff < 7;
+      // prima bastava "sabato o domenica entro 7 giorni", e un corso cominciato sabato scorso e ancora
+      // in corso finiva nel fine settimana che deve ancora arrivare (06/10/2026)
+      const [sab, dom] = weekendDays(), oggi = new Date(); oggi.setHours(0, 0, 0, 0);
+      return d >= oggi && (dayKey(d) === dayKey(sab) || dayKey(d) === dayKey(dom));
     }
     return dayKind(d) === day;
   }
@@ -747,6 +767,8 @@
   function choose(){
     if (!isSheetOpen()) cardOpen = false;
     syncCard(); render();
+    // il filtro e' passato a (o uscito da) giorni precisi: quei giorni vanno chiesti al server
+    if ((giorniScelti() || []).join(",") !== feedDays) loadEvents(feedCenter, false, feedRadius);
   }
 
   // ── dove ─────────────────────────────────────────────────────────
