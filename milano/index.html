@@ -2226,9 +2226,13 @@ setTimeout(loadMapLib, 200);   // la mappa è nella prima schermata: si carica s
     const f = document.querySelector("#wfil .chip"); if (f) f.focus();
   }
   function close(){ $("wbg").hidden = true; $("wsheet").hidden = true; document.body.style.overflow = ""; open.focus(); }
-  open.addEventListener("click", ev => { ev.preventDefault(); openSheet(); });
+  // dal 07/10/2026 la ruota chiede la registrazione anche qui, come nelle pagine "quando" (UI.md §3.13, §3.18):
+  // da non registrati si va al login e si torna con #ruota, che apre la ruota da sola
+  const gateWheel = (ev) => { ev.preventDefault(); if (!logged) { toLogin("ruota", "/#ruota"); return; } openSheet(); };
+  open.addEventListener("click", gateWheel);
   $("wchange").addEventListener("click", ev => { ev.preventDefault(); giro = 0; seen = new Set(); $("wres").hidden = true; $("wres").innerHTML = ""; $("wspin").hidden = false; askCity(); });
-  const open2 = $("wheelopen2"); if (open2) open2.addEventListener("click", ev => { ev.preventDefault(); openSheet(); });
+  const open2 = $("wheelopen2"); if (open2) open2.addEventListener("click", gateWheel);
+  if (logged && location.hash === "#ruota") { history.replaceState(null, "", location.pathname + location.search); openSheet(); }
   $("wclose").addEventListener("click", close); $("wbg").addEventListener("click", close);
   document.addEventListener("keydown", ev => { if (ev.key === "Escape" && !$("wsheet").hidden) close(); });
   $("wspin").addEventListener("click", spin);
