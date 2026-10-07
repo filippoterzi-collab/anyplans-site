@@ -534,7 +534,11 @@ for (const r of (TESTI.raccolte || [])) {
   const testo = r.dove ? (p => `${p.title} ${p.meeting || ""} ${p.club || ""}`) : (p => p.title);
   // "tipi": categorie che entrano in blocco (le sagre sono tutte le feste di paese, più chi ha "sagra" nel nome)
   const tipi = new Set(r.tipi || []);
-  const list = pages.filter(p => tipi.has(p.sport) || ((r.gratis ? (p.price_cents == null || Number(p.price_cents) <= 0) : true) && (rx ? rx.test(testo(p)) : true)));
+  // "solo": la raccolta resta dentro queste categorie; "ricorrenti": solo chi si ripete (i run club, almeno 3 date);
+  // "singole": solo eventi di una data (le gare, i tornei). Servono a Run club e Competizioni (07/10/2026).
+  const solo = r.solo ? new Set(r.solo) : null, nDate = (p) => (p.dates || []).length;
+  const list = pages.filter(p => (tipi.has(p.sport) || ((r.gratis ? (p.price_cents == null || Number(p.price_cents) <= 0) : true) && (rx ? rx.test(testo(p)) : true)))
+    && (!solo || solo.has(p.sport)) && (!r.ricorrenti || nDate(p) >= 3) && (!r.singole || nDate(p) <= 1));
   if (list.filter(p => !p.isPast).length < MIN_INDEX) continue;
   const sport = "raccolta:" + r.key;
   types.push({ kind: "tipo", sport, raccolta: true, slug: r.key, list,

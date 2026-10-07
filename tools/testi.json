@@ -802,6 +802,33 @@
    "tipi": ["running", "trail", "hiking", "cycling", "mtb", "padel", "tennis", "football", "volleyball", "basketball", "gym", "climbing", "swimming", "yoga", "hyrox", "skating", "paddling"],
    "regex": "calcetto|torneo di padel|partitella|\\bsport\\b",
    "frase": "Corsa, padel, calcetto, bici, arrampicata e palestra in gruppo: partite a cui manca un giocatore, run club e uscite dove ti unisci anche da solo."
+  },
+  {
+   "key": "run-club",
+   "key_en": "run-clubs",
+   "e": "🏃",
+   "label": "Run club",
+   "label_en": "Run clubs",
+   "titolo": "Run club: le corse di gruppo di ogni settimana",
+   "noun_en": "weekly group runs",
+   "conta": "uscita di gruppo|uscite di gruppo",
+   "solo": ["running", "trail"],
+   "ricorrenti": true,
+   "frase": "I gruppi che corrono ogni settimana, con giorno, ora e ritrovo: ti presenti e parti con loro, al tuo passo."
+  },
+  {
+   "key": "competizioni",
+   "key_en": "races",
+   "e": "🏅",
+   "label": "Gare e competizioni",
+   "label_en": "Races and competitions",
+   "titolo": "Gare, tornei e competizioni",
+   "noun_en": "races and tournaments",
+   "conta": "gara|gare",
+   "solo": ["running", "trail", "hiking", "walking", "cycling", "mtb", "padel", "tennis", "football", "volleyball", "basketball", "climbing", "swimming", "hyrox"],
+   "singole": true,
+   "regex": "gara|maratona|mezza|trail|torneo|trofeo|campionato|coppa|staffetta|gran ?fondo|\\d+ ?km|\\bcup\\b|memorial|sgambada|marcia|corsa|camminata|everest|pozzo",
+   "frase": "Corse su strada, trail, granfondo e tornei: le gare a cui ti iscrivi anche da solo, con data, ritrovo e come partecipare."
   }
  ]
 }
