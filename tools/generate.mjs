@@ -2450,7 +2450,12 @@ function whenPage(kind) {
   const dataBreve = giornata ? fmtDay(days[0], DEFAULT_TZ).toLowerCase() : "";
   const h1 = en() ? `What to do in ${CITY_NAME} ${W_EN[kind]}${giornata ? `, ${fmtDay(days[0], DEFAULT_TZ)}` : ""}`
                   : `Cosa fare a ${CITY_NAME} ${W_IT[kind]}${giornata ? `, ${dataBreve}` : ""}`;
-  const title = cut(h1, giornata ? 52 : 44) + `: ${list.length} ${en() ? "events" : "eventi"} | anyplans`;
+  // Il titolo comincia con "Eventi oggi a …" e tiene "cosa fare" in coda (07/10/2026). Su ChatGPT la gente
+  // scrive "eventi oggi a Bergamo" e ChatGPT cerca su Bing, che pesa le parole esatte del titolo più di Google:
+  // per quella domanda citava L'Eco e VisitBergamo. L'h1 resta "Cosa fare a Bergamo oggi", la forma di Google.
+  const title = cut(en()
+    ? `Events ${W_EN[kind]} in ${CITY_NAME}${giornata ? `, ${fmtDay(days[0], DEFAULT_TZ)}` : ""}: what to do (${list.length})`
+    : `Eventi ${W_IT[kind]} a ${CITY_NAME}${giornata ? `, ${dataBreve}` : ""}: cosa fare (${list.length})`, 68) + " | anyplans";
   const lead = en()
     ? `${list.length} events in ${CITY_NAME} and its province ${when}: ${joinIt(towns.slice(0, 4).map(t => t.replace(/ \(\d+\)$/, "")))} and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.`
     : `${list.length} eventi a ${CITY_NAME} e provincia ${when}: ${joinIt(towns.slice(0, 4).map(t => t.replace(/ \(\d+\)$/, "")))} e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.`;
