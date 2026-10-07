@@ -125,13 +125,21 @@ const joinIt = (a) => a.length <= 1 ? a.join("") : a.slice(0, -1).join(", ") + "
 const altri = names.length > 4 ? ` e altri ${names.length - 4} operatori` : "";
 const operatorsLong = names.length > 4 ? names.slice(0, 4).join(", ") + altri : joinIt(names);
 const operatorsShort = names.length > 4 ? names.slice(0, 4).map(n => n.replace(/ Family$/, "")).join(", ") + altri : joinIt(names.map(n => n.replace(/ Family$/, "")));
-const page = (await readFile(path.join(HERE, "travel", "index.template.html"), "utf8"))
+let page = (await readFile(path.join(HERE, "travel", "index.template.html"), "utf8"))
   .replaceAll("__TRIPS_JSON__", JSON.stringify({ seen: seen ? fmtIt(seen) : "—", ops, world: WORLD, trips }).replace(/</g, "\\u003c"))
   .replaceAll("__SEEN__", seen ? fmtIt(seen) : "—")
   .replaceAll("__OPERATORS__", operatorsLong)
   .replaceAll("__OPERATORS_SHORT__", operatorsShort)
   .replaceAll("__DATE_MODIFIED__", (modified || seen || "").slice(0, 10));
 if (/__[A-Z_]+__/.test(page)) { console.error("viaggi: segnaposto non riempiti nel template", page.match(/__[A-Z_]+__/g)); process.exit(1); }
+// SEO e AEO (07/10/2026): pagine statiche per paese, Capodanno, mesi, operatori, confronto; llms-viaggi.txt e
+// sitemap-viaggi.xml; e nella pagina principale un blocco di link veri prima delle domande frequenti
+const { scriviPagineSeo } = await import("./travel/seo.mjs");
+const seo = await scriviPagineSeo({ OUT, trips, ops, WORLD, seenIt: seen ? fmtIt(seen) : "—", oggi: new Date().toISOString().slice(0, 10) });
+const ANCORA_FAQ = '<section class="sec">\n    <h2>Domande frequenti</h2>';
+if (page.includes(ANCORA_FAQ)) page = page.replace(ANCORA_FAQ, seo.blocco + "\n\n  " + ANCORA_FAQ);
+else console.error("viaggi: non trovo le domande frequenti nel template, il blocco dei link per destinazione resta fuori");
+console.log(`viaggi seo: ${seo.paesi} paesi, ${seo.mesi} mesi, ${seo.operatori} operatori, ${seo.pagine.length} pagine statiche + llms-viaggi.txt + sitemap-viaggi.xml`);
 await mkdir(path.join(OUT, "viaggi-di-gruppo"), { recursive: true });
 await writeFile(path.join(OUT, "viaggi-di-gruppo", "index.html"), page);
 await mkdir(path.join(OUT, "tools", "stato"), { recursive: true });

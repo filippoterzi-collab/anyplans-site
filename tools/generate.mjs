@@ -2784,6 +2784,8 @@ if (INDICE) {
   addUrl(SITE + "/blog.html", NOW);
   await writeFile(path.join(OUT, "sitemap-sito.xml"), sitemapXml());
   sitemaps.push("sitemap-sito.xml", ...stato.map(c => `sitemap-${c.slug}.xml`));
+  // i viaggi di gruppo hanno la loro sitemap: la scrive generate-travel.mjs (passo --travel, prima dell'indice)
+  try { await stat(path.join(OUT, "sitemap-viaggi.xml")); sitemaps.push("sitemap-viaggi.xml"); } catch { /* niente viaggi stanotte */ }
   await writeFile(path.join(OUT, "sitemap.xml"), sitemapIndexXml(sitemaps));
   await writeFile(path.join(OUT, "robots.txt"), ROBOTS);
   const tot = stato.reduce((n, c) => n + c.eventi, 0);
@@ -2793,7 +2795,8 @@ if (INDICE) {
 > teatro e spettacoli, concerti, mercati, incontri e conferenze, visite guidate, camminate e gruppi di
 > cammino, mostre, corsi, cene e aperitivi, partite di padel aperte. Di ognuno: data, luogo, prezzo,
 > chi organizza e come iscriversi. Si entra con l'email, solo maggiorenni. Aggiornato ogni notte.
-> Ha anche una pagina che confronta i viaggi di gruppo per chi parte da solo (WeRoad, SiVola, Zest Family).
+> Confronta anche i viaggi di gruppo per chi parte da solo: decine di operatori italiani (WeRoad, SiVola, Avventure nel Mondo,
+> Zest Family e altri), una pagina per paese, per Capodanno e per operatore. Testo completo: https://anyplans.in/llms-viaggi.txt
 
 Le pagine sono statiche e leggibili senza javascript. Ogni città ha il suo file completo con titolo,
 riassunto e domande frequenti di ogni pagina.
@@ -2814,7 +2817,7 @@ ${await (async () => {
 })()}## Il sito
 
 - [Tutte le città](${SITE}/citta/): l'elenco con quanti eventi ci sono in ognuna
-- [Viaggi di gruppo](${SITE}/viaggi-di-gruppo/): le partenze di WeRoad, SiVola e Zest Family a confronto (destinazione, date, durata, prezzo, età, volo); si prenota da loro
+- [Viaggi di gruppo](${SITE}/viaggi-di-gruppo/): le partenze degli operatori di viaggi di gruppo a confronto (destinazione, date, durata, prezzo, età, volo); si prenota da loro. Una pagina per paese (es. ${SITE}/viaggi-di-gruppo/giappone/), Capodanno (${SITE}/viaggi-di-gruppo/capodanno/), operatori a confronto (${SITE}/viaggi-di-gruppo/confronto-operatori/); testo completo: ${SITE}/llms-viaggi.txt
 - [Sitemap](${SITE}/sitemap.xml): l'indice delle sitemap, una per città
 - [Le regole](${SITE}/guidelines.html) · [Privacy](${SITE}/privacy-it.html) · [Condizioni](${SITE}/terms-it.html)
 
