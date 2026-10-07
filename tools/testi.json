@@ -827,7 +827,7 @@
    "conta": "gara|gare",
    "solo": ["running", "trail", "hiking", "walking", "cycling", "mtb", "padel", "tennis", "football", "volleyball", "basketball", "climbing", "swimming", "hyrox"],
    "singole": true,
-   "regex": "gara|maratona|mezza|trail|torneo|trofeo|campionato|coppa|staffetta|gran ?fondo|\\d+ ?km|\\bcup\\b|memorial|sgambada|marcia|corsa|camminata|everest|pozzo",
+   "regex": "gara|maratona|mezza|trail|torneo|trofeo|campionato|coppa|staffetta|gran ?fondo|\\d+ ?km|\\bcup\\b|memorial|sgambada|marcia|corsa|camminata|everest|pozzo|pedalata|\\bride\\b|biciclettata",
    "frase": "Corse su strada, trail, granfondo e tornei: le gare a cui ti iscrivi anche da solo, con data, ritrovo e come partecipare."
   }
  ]
