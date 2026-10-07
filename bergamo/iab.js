@@ -20,7 +20,7 @@
 
     var st = document.createElement("style");
     st.textContent = "#iab{position:fixed;left:0;right:0;bottom:0;z-index:9999;display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:12px 14px calc(12px + env(safe-area-inset-bottom,0px));background:#1B4FD8;color:#FBF9F5;font:15px/1.35 -apple-system,BlinkMacSystemFont,'Helvetica Neue',Arial,sans-serif;box-shadow:0 -4px 16px rgba(0,0,0,.18)}" +
-      "#iab span{flex:1 1 180px}#iab a{flex:0 0 auto;background:#FBF9F5;color:#1B4FD8;font-weight:700;text-decoration:none;padding:9px 14px;border-radius:999px}" +
+      "#iab span{flex:1 1 140px}#iab a{flex:0 0 auto;background:#FBF9F5;color:#1B4FD8;font-weight:700;text-decoration:none;padding:9px 14px;border-radius:999px}" +
       "#iab button{flex:0 0 auto;background:none;border:0;color:#FBF9F5;font-size:22px;line-height:1;padding:4px 6px;opacity:.85}";
     document.head.appendChild(st);
 
