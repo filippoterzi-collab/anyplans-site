@@ -776,6 +776,31 @@
    "conta": "serata|serate",
    "regex": "stell[ae]\\b|astronom|planetari|telescop|luna\\b|eclissi|perseid|san lorenzo|osservatorio",
    "frase": "Serate al telescopio, planetario, notte di San Lorenzo e osservatori aperti: si guarda in su, insieme."
+  },
+  {
+   "key": "montagna",
+   "key_en": "mountains",
+   "e": "🥾",
+   "label": "Montagna ed escursioni",
+   "label_en": "Mountains and hiking",
+   "titolo": "Montagna, escursioni e trekking",
+   "noun_en": "hikes and mountain outings",
+   "conta": "uscita in montagna|uscite in montagna",
+   "tipi": ["hiking", "trail", "mtb", "climbing", "skitouring"],
+   "regex": "trekking|escursion|rifugio|sentier|ciaspol|alpeggi|in vetta|camminata in montagna",
+   "frase": "Escursioni, trekking, rifugi e uscite in mountain bike sulle Orobie e sui colli, con chi le organizza: ti unisci al gruppo e parti con loro."
+  },
+  {
+   "key": "sport",
+   "key_en": "sports",
+   "e": "🏃",
+   "label": "Sport",
+   "label_en": "Sports",
+   "titolo": "Sport di gruppo: corsa, padel, calcetto, bici",
+   "noun_en": "group sports",
+   "conta": "evento di sport|eventi di sport",
+   "tipi": ["running", "trail", "hiking", "cycling", "mtb", "padel", "tennis", "football", "volleyball", "basketball", "gym", "climbing", "swimming", "yoga", "hyrox", "skating", "paddling"],
+   "frase": "Corsa, padel, calcetto, bici, arrampicata e palestra in gruppo: partite a cui manca un giocatore, run club e uscite dove ti unisci anche da solo."
   }
  ]
 }
