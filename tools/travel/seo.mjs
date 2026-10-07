@@ -313,6 +313,18 @@ ${llms.join("\n")}`);
 ${[`${BASE}/`, ...pagine].map(u => `  <url><loc>${SITE}${u}</loc><lastmod>${oggiIso}</lastmod></url>`).join("\n")}
 </urlset>
 `);
+  // Bing (e da lì ChatGPT e Copilot) e Yandex: le pagine dei viaggi cambiano ogni notte (prezzi, posti), si
+  // avvisano tutte. Solo dentro GitHub Actions: i giri di prova sul Mac non avvisano nessuno. Stessa chiave di generate.mjs.
+  if (process.env.GITHUB_ACTIONS === "true") {
+    const K = "ed8417d88e2a8753c9aa9f07b772d44d";
+    const urlList = [`${SITE}${BASE}/`, ...pagine.map(u => SITE + u), `${SITE}/llms-viaggi.txt`];
+    for (const ep of ["https://www.bing.com/indexnow", "https://yandex.com/indexnow"]) {
+      try {
+        const r = await fetch(ep, { method: "POST", headers: { "content-type": "application/json; charset=utf-8" }, body: JSON.stringify({ host: "anyplans.in", key: K, keyLocation: `${SITE}/${K}.txt`, urlList }) });
+        console.log(`viaggi indexnow ${new URL(ep).hostname}: ${urlList.length} url → HTTP ${r.status}`);
+      } catch (e) { console.log(`viaggi indexnow ${ep}: non risponde (${e.message})`); }
+    }
+  }
   return { blocco, pagine, paesi: paesi.length, mesi: mesiPagine.length, operatori: opsPagine.length };
 }
 
