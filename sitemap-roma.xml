@@ -35,6 +35,7 @@
   <url><loc>https://anyplans.in/roma/partite/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/bici/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/camminata/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/fiere/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/bambini/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/halloween/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/vino-e-degustazioni/</loc><lastmod>2026-10-07</lastmod></url>
@@ -132,16 +133,15 @@
   <url><loc>https://anyplans.in/roma/festival-della-divina-sapienza/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/bergamo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/cene-e-aperitivi-oggi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/concerti-oggi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/incontri-culturali-oggi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/padel-oggi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/yoga-oggi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/feste-oggi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/spettacoli-oggi/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/escursioni-oggi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/vino-e-degustazioni-oggi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/sagre-oggi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/gratis-oggi/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/montagna-oggi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/sport-oggi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/le-mille-e-una-roma/</loc><lastmod>2026-10-07</lastmod></url>
@@ -157,27 +157,29 @@
   <url><loc>https://anyplans.in/roma/locali/panic-crew/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/melody-mapper/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/elle-for-women/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/monk-roma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/etoile-23-live-club-disco/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/auditorium-parco-della-musica-ennio-morricone/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/maxxi-museo-nazionale-delle-arti-del-xxi-secolo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/sporting-club-ostiense/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/fanfulla-5-a-circolo-arci/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/tra-sabbia-e-sanpietrini/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/locali/monk-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/la-libreria-erickson-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/teatro-eduardo-de-filippo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/mondadori-bookstore/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/palazzo-venezia/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/ostello-bello-roma-colosseo-hostel-and-bar/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/sapienza-universita-di-roma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/welcrome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/concert-tracker/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/sound-curator/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/eventiamo-da-angela/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/locali/welcrome/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/locali/fanfulla-5-a-circolo-arci/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/roma-esoterica/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/teatro-ateneo-sapienza-universita-di-roma/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/locali/etoile-23-live-club-disco/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/bellaroma-info/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/charity-cafe/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/happiness-is-a-butterfly/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/laboratorio-104-tour-e-visite-guidate-a-roma/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/locali/roma-esoterica/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/amici-e-amiche-di-dencs/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/momart/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/parco-della-pace/</loc><lastmod>2026-10-07</lastmod></url>
@@ -190,7 +192,6 @@
   <url><loc>https://anyplans.in/roma/locali/riva-marconi-ristorante-e-location-roma-sud/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/monk/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/feverup-events/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/locali/bellaroma-info/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/sunset-padel-club/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/palazzo-valentini/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/party-mood-on/</loc><lastmod>2026-10-07</lastmod></url>
@@ -199,6 +200,7 @@
   <url><loc>https://anyplans.in/roma/locali/teatro-biblioteca-quarticciolo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/chill-game-crew/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/museo-nazionale-romano/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/one-day-chef/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/sempre-in-giro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/italia-in-tour/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/auditorium-della-conciliazione/</loc><lastmod>2026-10-07</lastmod></url>
@@ -228,6 +230,7 @@
   <url><loc>https://anyplans.in/roma/locali/aloha-aperitivi-cocktails-e-sale-per-eventi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/tibidabo-beach/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/lux-cocktail-bar/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/eventos-de-ceci/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/romantrica/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/ludico-game-ludopub-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/la-stanza-della-musica/</loc><lastmod>2026-10-07</lastmod></url>
@@ -241,6 +244,7 @@
   <url><loc>https://anyplans.in/roma/locali/casa-del-quartiere/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/the-academy-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/crew-dei-viandanti/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/teatro-vascello/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/il-club-del-buon-gusto-e-della-strategia/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/innesto/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/teatro-centrale/</loc><lastmod>2026-10-07</lastmod></url>
@@ -248,17 +252,18 @@
   <url><loc>https://anyplans.in/roma/locali/padel-sport-academy-energy-center/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/centro-arca/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/chiesa-di-san-paolo-entro-le-mura/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/locali/eventos-de-ceci/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/geronimo-s-restaurant-live-music/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/roma-breaking-news/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/night-connections/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/metro-core-circolo-arci/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/hacienda-roma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/ars-in-urbe-aps/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/kram-pigneto/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/ministero-dei-beni-e-delle-attivita-culturali/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/locali/one-day-chef/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/freetime-sporting-club-ssd/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/open-your-eyes/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/puro-eur-ristorante-e-spazio-eventi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/crew-sentieri-e-scarponi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/viaggi-nella-storia-di-laura-d/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/teatro-ghione/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/adventures-dreamer/</loc><lastmod>2026-10-07</lastmod></url>
@@ -278,11 +283,11 @@
   <url><loc>https://anyplans.in/roma/locali/tts-food-by-mela-eventi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/reserva-padel-club-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/satyrus-temporary-bar/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/roberta-coen/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/sheisinrome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/freeda-mood/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/almus-sporting-village/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/stazione-birra/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/locali/ars-in-urbe-aps/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/lapsicocrew/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/angeli-rock/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/casa-clandestina/</loc><lastmod>2026-10-07</lastmod></url>
@@ -299,15 +304,17 @@
   <url><loc>https://anyplans.in/roma/locali/macro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/vivi-le-serre/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/moby-dick-biblioteca-hub-culturale/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/locali/crew-sentieri-e-scarponi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/anim-leggere-pamy-eventi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/latta-fermenti-e-miscele/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/teatro-nuovo-dogana/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/sally-brown-rude-pub/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/salotto-morgagni-caffetteria-bistrot-aperitivi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/friccicore/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/villaggio-globale/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/primo-piano/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/horti-magici/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/hotel-cristoforo-colombo/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/traffic-live/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/altamira-events/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/location-provided-after-booking/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/teatro-donizetti/</loc><lastmod>2026-10-07</lastmod></url>
@@ -324,13 +331,18 @@
   <url><loc>https://anyplans.in/roma/locali/limoni-eventi-discoteche-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/universita-degli-studi-link-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/roma-eur/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/malajunta-milonga/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/v-di-tor-cervara/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/fontana-del-giardino-di-piazza-vittorio/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/centrale-montemartini/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/trivel/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/piccolo-teatro-san-paolo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/teatro-furio-camillo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/walkzone/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/materia-terrazza-macro/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/direct-to-digital-rome-film-festival/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/chiesa-di-san-paolo-dentro-le-mura/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/locali/the-myelomas/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/sweet-n-smoke-bbq-academy-supply-store/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/v-po/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/locali/eataly-roma-aula-dominici/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2057,6 +2069,7 @@
   <url><loc>https://anyplans.in/roma/karaoke-sushi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/festa-di-quartiere-bottega-quarticciolo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/storia-di-un-cinghiale-qualcosa-su-riccardo-iii-francesco-mo/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/slomosa-year-of-the-horse-tour-kryptograf-traffic-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/joseph-bros/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/cena-di-meta-settimana-giochiamo-a-conoscerci-vol-3/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/serata-divertente-a-teatro-tra-amici/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2066,6 +2079,7 @@
   <url><loc>https://anyplans.in/roma/luci-dell-avanspettacolo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/la-stand-up-comedy-a-roma-sud/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/marco-ceccotti-stefano-borghetti/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/piccola-discoteca/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/jero-x-efw/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/masterclass-sul-gioco-offensivo-giovedi-ore-08-30/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/2nd-world-congress-on-biomedical-science-and-engineering/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2098,6 +2112,7 @@
   <url><loc>https://anyplans.in/roma/cena-da-blume-lounge/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/giochi-da-tavolo-da-golden-age-club/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/chi-ride-e-fuori-da-c-rnesa-churrascaria-brasiliana-circo-ma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/film-i-quando-tutto-tornera-a-essere-come-non-e-mai-stato/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/torneo-di-fifa-27/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/fever-il-nuovo-giovedi-del-vinile-aperishow-con-live-party-c/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/cena-in-bocciofila-amatriciana/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2115,6 +2130,7 @@
   <url><loc>https://anyplans.in/roma/sotto-il-segno-dello-streaming-serie-tv-quiz-night/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/rosa-di-sciuva-plf/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/primogenito-live-al-monk-roma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/neo-geodesia-uk-from-chinabot-collective-live-aftershow-by-b/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/baile-global-sound-state-of-mind/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/i-documentari-di-internazionale-a-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/corso-di-gnatologia-osteopatica-integrata/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2160,7 +2176,9 @@
   <url><loc>https://anyplans.in/roma/un-ultimo-assaggio-d-estate-a-base-di-pesce/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/spettacolo-drink-e-rock-n-roll/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/il-venerdi-vintage/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/last-rust-evelyn-roger-xabaras-alvarado-street/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/roma-maledetta-streghe-spettri-e-alchimisti/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/il-battito-degli-anni-80-live-show-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/hellucination-release-party-jumpscare-astral-emptiness-defra/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/cattura-il-mio-cuore-il-gioco-dei-sensi-a-tavola/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/escape-room-on-the-road-all-aperto-corsa-contro-il-tempo/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2168,8 +2186,7 @@
   <url><loc>https://anyplans.in/roma/aperitivo-in-piazza/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/una-serata-in-tirolo-a-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/il-gioco-della-bottiglia-vol-8-la-fortuna-ti-bacia/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/gioca-e-conosci-un-esperienza-di-socializzazione/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/torneo-beach-volley-di-roma-sud-2h-ape-tiramisu-e-post/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/torneo-beach-volley-di-roma-sud-ape-tiramisu-e-post/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/fratelli/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/traindeville-nuovi-racconti-romani-all-ottobrata-monticiana/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/roma-aliena-x-files-ufo-e-misteri-venuti-dal-cielo/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2189,17 +2206,23 @@
   <url><loc>https://anyplans.in/roma/festa-dell-unita-2026-piazza-testaccio/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/francesco-renga-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/sottocasatua-daniele-silvestri-e-karima-con-l-orchestra-da-c/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/case-d-autore-6-noche-espa-ola/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/night-connections-una-serata-per-conoscersi-davvero/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/burlesque-l-arte-di-sedurre-tra-ombre-luci-e-desiderio/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/perche-no-serata-giochi-da-tavolo-sfida-tra-strateghi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/grain-suzi3-live-friccicore/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/malajunta/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/suoni-dal-futuro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/suoni-dal-futuro-2026-10-10/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/improv-show-a-favore-di-passi-in-liberta/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/la-divina/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/tutti-qui-live-serata-tributo-claudio-baglioni/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/uragano-revue/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/i-nuovi-persiani-ricomporre-l-infranto/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/japan-anime-music-world-japan-night-all-stars-jam-let-it-bee/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/anticaja-e-petrella-special-edition-show-daniel-montano-tdj/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/nicky-singer-performer-uk-levy-levy-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/daniele-corvasce-gipsy-jazz-quartet-presentazione-gipsy-impr/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/high-school-days-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/women-of-nations-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/spadellata-con-maestro/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2214,6 +2237,7 @@
   <url><loc>https://anyplans.in/roma/urban-rafting-con-riverside-roma-asd/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/la-quarta-dimensione-del-quarto-potere-il-giornalismo-nel-xx/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/workshop-di-acquerello/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/workshop-4-rilascio-del-trauma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/tai-chi-piazza-vittorio/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/poesia-e-profezia/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/captain-traeger-academy/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2236,7 +2260,7 @@
   <url><loc>https://anyplans.in/roma/visita-alla-liuteria-d-arte-di-mathias-menanteau-ottobrata-m/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/suppli-tour-cuori-filanti-e-sampietrini-lunchedition-vol-2/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/la-basilica-di-san-giovanni-in-laterano-la-mater-ecclesiae-c/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/yoga-for-mental-health-free-session-in-rome/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/yoga-per-benessere-mentale-sessione-gratuita-a-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/in-itinere-roma-passeggiata-filosofica-tempo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/una-giornata-al-colosseo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/futuri-preferibili-tecnologia-potere-nuovi-predatori/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2246,6 +2270,7 @@
   <url><loc>https://anyplans.in/roma/tenuta-di-tor-marancia-mini-trek-con-guida/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/presentazione-de-il-partito-disarmato/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/workshop-di-disegno-spazio-lea/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/delitto-pasolini-un-mistero-lungo-50-anni-crime-trek/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/il-pezzo-mancante-l-atomo-nel-puzzle-dell-energia/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/quartiere-vino-pigneto-l-ottobrata/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/viaggiando-nel-tango/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2265,6 +2290,7 @@
   <url><loc>https://anyplans.in/roma/workshop-di-tappeti-persiani-morteza-khaleghi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/la-storia-del-campidoglio-e-santa-maria-in-ara-coeli-il-cuor/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/mostra-sul-pontorno-e-apericena/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/visita-mostra-moda-in-luce-1955-75/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/costruisci-e-decora-l-aquilone-con-noi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/cerimonia-del-cacao-di-luna-nuova/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/beach-volley-cena/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2301,7 +2327,10 @@
   <url><loc>https://anyplans.in/roma/conclusioni-lancio-del-ministero-del-futuro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/aperitivo-con-delitto-una-stella-in-cucina/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/ozone-dehumanizer-defrag-roma-10-10-2026/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/ozone-dehumanizer-click-head-doye-defrag-roma-10-10-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/aperitivo-astronomico-acqua-dal-tevere-al-sistema-solare/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/tieni-il-tempo-live-show-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/collettivo-rock-italiano-dinner-primo-piano-dinner-concert/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/gdr-roulette/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/cosidanzi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/gli-anni-d-oro-cover-band-883-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2329,9 +2358,16 @@
   <url><loc>https://anyplans.in/roma/close-party-da-kalaya-bamboo-experience/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/sangria-a-volonta-un-dopo-cena-rinfrescante-nel-parco/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/brillante-open-mic-musicale/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/milonga-sentimental-il-sabato-porte-o-tdj-pancho/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/klaxon-live-friccicore/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/silentxyouth-at-aereonautica-militare/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/strada-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/jump-aces-bluesnight/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/883-fattore-s-live-etoile-23-live-club-disco/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/vrouwencirkel/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/sam-paganini-at-cieloterra-rome-italy/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/neo-rave-alibi-roma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/abanico-noche-de-fuego-prenota-il-tuo-ventaglio/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/lazio-vs-monza-at-stadio-olimpico/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/roma-sulle-tracce-dei-templari-e-dei-fantasmi-della-citta-et/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/walk-for-a-cause-with-commun-it-y-cares/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2339,11 +2375,13 @@
   <url><loc>https://anyplans.in/roma/colazione-da-vivi-le-serre/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/il-grab-a-piedi-con-rebeltrek/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/walkzone-roma-tevere-day-edition-2026/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/car-club-capitolino-expo-ottobre/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/fili-d-erba-e-parole-passi-lenti-nuovi-legami/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/vintage-wine-tour/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/trekking-ombra-il-perduto-eremo-del-lago-degustazione/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/yoga-sound-class-jivamukti-yoga-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/benessere-in-natura-incontri-di-mindfulness-a-villa-borghese/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/ara-pacis-augusto-e-la-costruzione-della-memoria/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/scampagnata-della-domenica-hike-barbecue/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/caccia-al-tesoro-edizione-picnic/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/bagno-di-foliage-per-staccare-dalla-routine/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2358,11 +2396,13 @@
   <url><loc>https://anyplans.in/roma/foliage-a-roma-passeggiata-e-bagno-di-foresta/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/i-giorni-di-via-tasso-visita-guidata/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/spettacolo-per-bambini-la-bella-addormentata-nel-bosco/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/la-fiesta-de-los-pueblos-america-latina-que-pasa-edizione-20/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/she-is-in-flow/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/kitchen-dating-lab-mani-in-pasta-4-cooking-class/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/pranzo-da-il-gianfornaio-piazza-di-spagna/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/sunday-brunch-live-dj-set-in-terrazza/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/schuster-gioca-sunday-edition-11-10-26/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/ottobrata-romana-al-lago-di-castel-gandolfo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/fettuccine-ai-funghi-porcini-biliardino/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/matinee-latino-l-evento-che-cambia-le-tue-domeniche/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/pranzo-della-domenica-gulash-e-tarocchi/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2378,6 +2418,7 @@
   <url><loc>https://anyplans.in/roma/roma-western-buffalo-bill-cowboy-e-il-far-west-nella-capital/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/acquerello-all-aria-aperta-bordi-belle-arti/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/tour-di-esplorazione-sonora/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/the-apartment-milonga-11-10-2026-tdj-davide-patriarca/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/cena-da-executive-lounge-hilton-la-lama/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/lazio-in-calice/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/presentazione-de-la-cattedrale/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2391,9 +2432,12 @@
   <url><loc>https://anyplans.in/roma/a-spasso-con-cristina-di-svezia/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/cena-da-bubble-bar/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/eur-urbanistica-arte-e-storia/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/tour-guidato-alla-scoperta-del-gianicolo-aperitivo-vol-3/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/aperitivo-e-paintball/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/la-centrale-antonella-scida-dj-domenica-11-ottobre/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/un-nerd-al-museo-l-inizio-viaggio-nella-storia-del-gaming/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/torneo-beach-volley-di-roma-sud-per-tutti-apericena/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/brandon-lopez-solo-duo-with-mirco-ballabene/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/offline-chpt-vi-materia-terrazza-macro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/nel-regno-del-padel-con-torta-a-sorpresa/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/la-via-degli-dei/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2426,6 +2470,7 @@
   <url><loc>https://anyplans.in/roma/italian-groove-collective-funk-soul/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/l-educatrice-sessuale-ti-spiega-comunicazione-sessuale/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/diplomazia-in-cammino/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/viennoiserie-d-autore-con-davide-del-chierico/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/aa40-cross-examination-lab-in-collaboration-with-oxera/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/torte-monumentali-tecnica-struttura-e-design-con-giuliano-ca/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/ripartire-si-puo/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2435,17 +2480,18 @@
   <url><loc>https://anyplans.in/roma/immaginare-l-impossibile-con-caterina-balivo-dialoga-con-tiz/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/la-tosca-le-piu-importanti-arie-e-tour-di-sant-andrea-della-/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/stand-up-comedy-quello-che-vuoi/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/maschi-vs-femmine-4-la-guerra-dei-giochi-da-tavolo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/opera-in-roma-le-quattro-stagioni-di-vivaldi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/voci-dalla-shoah-reading-tratto-da-il-libro-della-shoah-ital/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/la-domenica-dell-attore/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/extra-comodi-open-mic-deluxe/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/greta-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/5-crediti-a-roma-13-ottobre-evento-su-ottimizzazione-fiscale/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/presentazione-del-xvi-rapporto-annuale-sull-economia-dell-im/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/talk-in-embassy-on-ayurveda-and-its-benefits/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/natura-documentata-paesaggi-e-visioni-contemporanee/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/rivoluzione-ecodigital/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/la-bolla-vox-in-excelso-e-il-destino-dei-templari/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/frames-lucia-iuorio/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/presentazione-di-quando-pinocchio-non-c-era/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/artificio-by-sparso-off-rassegna-cinematografica-oltre-l-orr/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/exclusive-one-on-one-meeting-in-rome/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2456,11 +2502,13 @@
   <url><loc>https://anyplans.in/roma/sabor-de-mexico-y-lime-apericena/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/giochiamo-a-ping-pong-vol-12/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/evento-nuova-audi-q7-e-nuova-audi-a6-allroad/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/30-minutes-made-of-purple/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/speed-date-roma-ponte-milvio-45-65/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/anagramma-di-madre-e-com-e-profondo-il-male-con-antonio-guer/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/stand-up-comedy-e-burlesque-a-teatro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/apericena-e-stand-up-comedy-vol-4-tante-risate-in-compagnia/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/benji-amp-fede-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/andy-s-corner-60s-70s-classicrock-soul-folk-and-more/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/benji-fede/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/ridi-che-ti-passa-cabaret-buffet-e-1000-risate/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/la-noche-del-cottage/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2478,8 +2526,11 @@
   <url><loc>https://anyplans.in/roma/apericena-con-frida-vol-7/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/aperisingle-pizza/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/serata-al-bowling-con-cena/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/calici-e-farina-degustazione-esclusiva-in-forno/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/la-vera-cena-cinese-tra-amici/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/spezza-settimana-con-formula-sushie-drink-non-limits/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/all-you-can-eat-de-fish-and-drink-vol-2/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/mercoledi-14-ottobre-nuova-stagione-cafetin-de-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/sacrestanze-maurizio-abate-alberto-danzi-live-maria-violenza/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/barcelona-costa-del-maresme/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/forum-serramenti-vetro-2026/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2511,19 +2562,23 @@
   <url><loc>https://anyplans.in/roma/serata-dr-why-ritorna-il-live-quiz-piu-famoso/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/apericena-rompighiaccio-connessioni-a-piccoli-sorsi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/giovedi-divino-oktoberfest-edition/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/rock-n-roll-invasion-night/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/corso-di-astronomia-pratica-online-e-in-presenza/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/calcetto-tra-ragazze/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/giovedi-senza-pensieri/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/stand-up-comedy-vol-12-drink-or-dinner/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/kirtan-club-sattvayogaroma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/passeggiata-romana-vol-3/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/irradia-alternative-nu-metal-big-fat-lizard-hard-heavy-terzo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/leo-middea-noticias-de-puglia-tour-monk/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/gaia-guia-friends-plf/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/albertino-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/jam-session-jazz-dedicata-a-miles-davis-gege-munari-5et/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/serp-conf-rome-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/4-dev-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/il-palazzo-del-quirinale-una-passeggiata-barocca-venerdi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/il-palazzo-del-quirinale-una-passeggiata-barocca-venerdi-2026-12-04/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/giornata-mondiale-della-colonna-vertebrale-2026-la-salute-de/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/la-persona-al-centro-convegno-su-prevenzione-cura-e-rinascit/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/incontro-di-meditazione-guidata/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/sport-fan-and-food-da-pizzeria-da-romolo-al-kipling/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2537,9 +2592,11 @@
   <url><loc>https://anyplans.in/roma/duello-del-gusto-pizza-edition-bimby-vs-tradizione/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/lascia-fuori-il-copione/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/rome-carnage-extreme-fest-2026/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/mille-giorni-di-te-e-di-me-live-show-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/a-cena-con-la-tua-meta-sbagliata/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/la-cena-del-venerdi-ai-castelli-vol-7/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/bowling-night-eat-strike-dance-vol-11/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/gioca-e-conosci-un-esperienza-di-socializzazione/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/il-beach-volley-serale-di-roma-sud-al-coperto-ape-e-post/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/e-adesso-musical/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/roma-eretica-inquisizione-roghi-abiure-e-condanne-capitali/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2550,14 +2607,19 @@
   <url><loc>https://anyplans.in/roma/una-serata-a-tavola-tra-nuove-amicizie/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/festivalbars-live-music-il-ritrovo-degli-indimenticabili/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/adbacadabra-tributo-abba/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/korn-30-years-of-life-is-peachy-guests-limp-bizkit-incubus-t/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/echi-di-gente/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/polladeperro-ep-1-seconda-stagione/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/al-pub-irlandese-con-l-irlandese-rock-pop-live-music/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/napoli-violenta-cranial-torment-live-friccicore/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/volver-la-milonga-milonguera/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/stand-up-comedy-cena-in-compagnia/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/gli-antartici-nucleari-live-16-ottobre-2026-k-ll-joy/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/horror-night-una-serata-da-brividi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/black-lizard-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/mindfulness-e-parole/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/dal-capitale-naturale-all-ecoturismo-nei-parchi-anniversario/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/millennium-expo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/hai-gia-provato-diete-ma-i-risultati-quando-ci-sono-non-sono/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/d-f-t-pistol-program-2026-2027-rata-2/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/amd-developer-hackathon-act-iii-rome/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2569,6 +2631,7 @@
   <url><loc>https://anyplans.in/roma/c-era-una-volta-un-ulivo-generoso-5-edizione/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/oltre-il-sentiero-il-benessere-nella-pratica-dell-accompagna/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/tribe-acquerello-per-principianti-en-plain-air-ed-ii/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/i-grandi-lievitati-di-natale-con-oscar-pagani/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/la-soffitta-di-pietralata/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/sabato-sport-e-divertimento-al-parco-con-personal-trainer/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/mit-apertura-collezione-d-arte-contemporanea/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2592,11 +2655,13 @@
   <url><loc>https://anyplans.in/roma/cena-da-snoopy-food-x-veganize-it-roma-70/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/beach-volley-cena-ping-pong/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/rewilding-bronagh-slevin/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/laboratorio-di-scrittura-terapeutica-e-mindfulness/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/tribe-cube-challenges-rompicapi-nuove-amicizie/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/inaugurazione/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/long-day-play-ikea-porte-di-roma-sabato-17-ottobre-dalle-18-/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/memorie-di-un-sovversivo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/musorgskij-e-prokofieff/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/inland-stories-giulia-parisi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/irina-rimes-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/tour-d-eccellenza-in-cantina-tra-vini-e-salumi-laziali/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/presentazione-libro-autobiografico-di-christos-roussos/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2608,6 +2673,7 @@
   <url><loc>https://anyplans.in/roma/teatro-happy-birth-day-stelle-terrestri-piece-ed-oltre/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/raf-infinito-palasport-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/shakespeare-outta-love/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/80-voglia-di-90-groove-it-live-show-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/interactive-horror-night/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/la-cena-dove-arrivi-da-solo-e-esci-con-nuove-conoscenze/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/stasera-80-voglia-di-90-groove-it-e-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2622,10 +2688,15 @@
   <url><loc>https://anyplans.in/roma/roma-vs-genoa-at-stadio-olimpico/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/mi-ricordo-barbe-a-papa-teatro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/digitalism-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/omopatia-live-guests/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/anche-secondo-me-ho-ragione-io-incontrarie/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/siamo-tutti-s-connessi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/liberi-liberi-tributo-vasco-rossi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/la-seconda-eclisse-broken-tower-blues-machine-live-alvarado-/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/ramen-e-chiacchiere/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/unconventional-slow-walking-dating/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/storie-di-rock-p-a-o-live-art-rock/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/sabato-17-ottobre-krypta-metamorphosis-postpunk-goth-80-90-n/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/moa-anbessa-on-jah-station-soundsystem-live-session-csa-inti/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/dodo-run-yoga-011/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/orvieto-e-lago-di-bolsena-gita-in-pullman/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2653,6 +2724,8 @@
   <url><loc>https://anyplans.in/roma/workshop-di-pizzica-salentina-alla-caffarella/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/presentazione-di-compagno-di-vittorio/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/festa-argentina-musica-dal-vivo-tango-asado-ed-empanadas/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/brunch-ingalleria-al-niji/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/festa-argentina-la-grande-festa-di-fine-estate/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/morning-club-soft-clubbing/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/brunch-della-domenica-in-giardino-da-giulietta-vol-2/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/lasagna-day-pranzo-della-domenica/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2693,6 +2766,7 @@
   <url><loc>https://anyplans.in/roma/the-golden-rule-film-screening-red-carpet/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/francesco-e-i-suoi-fratelli-con-sylvain-piron/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/liberta-da-liberta-di-il-training-autogeno-per-autorigenerar/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/baby-beard-live-maximum-kawaii-chaos-traffic-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/fabric-days-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/the-golden-rule-summit-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/b2bookingsmed/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2701,6 +2775,7 @@
   <url><loc>https://anyplans.in/roma/the-three-tenors-in-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/hotpot-racconti-di-viaggi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/home-teatro-lab/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/marinera-il-viaggio-ricomincia-con-yanina-erramouspe-dj/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/indoor-paintball-vol-2-dopo-la-sfida-si-va-al-mcdonald/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/la-formazione-per-la-conservazione-negli-archivi-e-nelle-bib/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/stati-generali-delle-librerie/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2737,7 +2812,6 @@
   <url><loc>https://anyplans.in/roma/una-serata-tutta-ravioli-vol-9/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/cenetta-greca-in-locale-stiloso-vol-14/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/giovedi-senza-pensieri-vol-2/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/the-dinner-date-la-cena-della-seduzione-vol-113/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/tribe-cena-con-delitto-season-2-episodio-3/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/karaoke-quiz-night-vol-2/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/rock-e-dance-80-e-90-al-chattanooga-appia-con-i-sonix/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2761,13 +2835,16 @@
   <url><loc>https://anyplans.in/roma/aria-fresca/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/equippers-x-conference/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/i-magnifici-anni-80/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/orbita-attira-nuovi-amici-giardinoninfa-free-entry/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/orbita-attira-nuovi-amici-giardinoninfa-dress-code/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/urlando-contro-il-cielo-una-serata-a-tutto-ligabue/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/una-serata-esplosiva-a-base-di-paella/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/alla-scoperta-del-bosco-immaginario/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/padel-time-v-33-friday-edition-indoor/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/oktoberfest-a-casa-mia-vol-3/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/apericena-pictionary-bastardo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/lady-gaga-show-tribute/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/bon-jovi-def-leppard-live-letitbeer/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/planet-earth-project-tributo-ai-duran-duran/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/le-posizioni-dell-amore-il-kamasutra-a-modo-nostro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/roma-plays-lucio-battisti-plf/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/quando-la-festa-si-fa-infuocata/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2783,11 +2860,14 @@
   <url><loc>https://anyplans.in/roma/mostra-piero-guccione-racconti-dello-sguardo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/xv-forum-aicp-2026-il-gioco-dello-sport/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/l-abbazia-delle-tre-fontane-tra-silenzio-storia-e-spirituali/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/il-medioevo-a-roma-il-complesso-dei-santi-quattro-coronati/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/trekking-riserva-naturale-castel-di-guido-e-picnic/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/visita-ai-capolavori-di-palazzo-barberini-e-al-suo-giardino/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/cimitero-acattolico-tour-guidato-esclusivo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/trekking-alla-riserva-di-veio-picnic/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/pranzo-sul-caicco-pesce-vino-mare/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/techdojo-2-0-2026-tecnologia-per-il-bene-comune/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/clanfastino-24-ottobre/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/villa-ada-savoia-autunno-trekking-storico-naturalistico/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/aperitrekking-le-cascate-di-rio-scuro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/e-con-il-tuo-spirito-il-giro-della-morte-capitolino/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2800,6 +2880,7 @@
   <url><loc>https://anyplans.in/roma/a-b-c-di-vino-mini-corso-di-avvicinamento-al-vino/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/presentazione-ciclica-di-donatella-fiacchino/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/alexis-kossenko-in-concerto-flauti-storici/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/pino-daniele-tribute-band-dinner-live-at-primo-piano/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/cena-indiana-del-nord-english-conversation/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/negramaro-tribute-djset-live-percussion-show/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/sapori-d-autunno-e-giochi-da-tavolo/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2819,6 +2900,7 @@
   <url><loc>https://anyplans.in/roma/claudio-baglioni-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/che-notte-e-questa-claudio-baglioni/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/menu-del-giorno-bellavita/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/mathias-p-live-dark-synth-pop-night/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/pizza-chiacchiere-e-nuove-conoscenze/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/xvi-mkk-kompleanno-della-mazurka-klandestina-di-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/david-rodigan-a-roma/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2852,15 +2934,18 @@
   <url><loc>https://anyplans.in/roma/un-viaggio-dal-cielo-al-silenzio-dal-silenzio-al-cuore/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/trastevere-come-non-l-hai-mai-visto-in-e-bike-vol-5/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/4-bianchi-e-4-rossi-masterclass-viniamo-d-autunno/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/mangia-prega-ama-in-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/still-alive/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/beach-volley-arcade-food-con-biliardini-gratis/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/swap-party-con-aperitivo/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/mandala-a-quel-paese/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/foret/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/spettacolo-teatrale-ride-di-me-signorina/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/omissis-osservatorio-drammaturgico-reverse-la-fanzine/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/cooking-class-by-pizza-chonnection-vol-3/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/il-calcetto-di-roma-sud/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/story-slam-roma-ottobre-2026/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/matt-waldon-acoustic-duo-early-concert/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/the-lemonheads-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/aperitivi-musicali-in-terrazza-vol-9-pop-e-comicita/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/roma-by-night-da-piazza-di-spagna-al-tempio-di-adriano/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2886,7 +2971,9 @@
   <url><loc>https://anyplans.in/roma/avvicinarsi-al-vino-corso-di-avvicinamento-al-mondo-del-vino/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/bowling-nuove-amicizie/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/roma-vs-cagliari-at-stadio-olimpico/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/serata-romana-cena-conoscenze-a-la-zanzara/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/francesco-de-gregori-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/rome-business-breakfast-cosaporto-con-wellhub-e-zest/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/green-building-forum-italia-2026-costruire-l-italia-di-doman/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/era-italy-fuel-2026-convention/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/b2b-mixer-rome-100-networking-event-making-referrals/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2899,7 +2986,9 @@
   <url><loc>https://anyplans.in/roma/vioflesh-live-in-rome-reload-speakeasy-live-in-modalita-spea/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/fink-live-al-monk-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/aspettando-l-america-i-mercoledi-dell-asino-d-oro-al-teatrob/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/la-medium-marta-cuscuna/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/francesco-ceruzzi-rita-nora-plf/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/blues-jam-friends-the-black-cat-bones/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/4th-international-conference-on-clinical-case-reports-hybrid/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/forum-sostenibilita-2026-focus-giovani-dalle-scuole-alle-imp/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/roadshow-coenergia-il-29-10-2026-a-roma/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2911,13 +3000,17 @@
   <url><loc>https://anyplans.in/roma/hallow-ing-idea-party/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/the-fright-crawl-rome-halloween-bar-crawl-2026-thursday-octo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/trio-pentro-in-concerto-nuovo-mondo-da-camera/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/aperitivo-social/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/pamela-villoresi-in-mitiche-donne/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/concerto-cover-oasis/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/imperfetti-conosciuti/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/sirlene/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/maledetto-il-giorno-comedy-improv/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/jam-session-jazz-mark-murphy/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/le-castagne-del-monte-amiata/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/parco-dei-castelli-romani-dal-capitale-naturale-all-ecoturis/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/roma-riflessa-seconda-edizione-workshop-di-fotografia/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/ramen-con-mitsuko-takei-30-ottobre-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/friday-vibes-aperitivo-new-friends/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/burracodi-torneo-di-burraco-halloween-edition/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/the-fright-crawl-rome-s-hottest-halloween-bar-crawl-2026-fri/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2953,6 +3046,7 @@
   <url><loc>https://anyplans.in/roma/mauro-palmas-e-giacomo-verdeu-il-liuto-cantabile-e-la-sardeg/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/speciale-halloween-la-reggio-del-popol-giost-tra-storie-e-cu/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/mostruosamente-forte-2026-feat-vibronics-e-radikal-guru/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/catalogo-marta-ciappina/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/the-fright-crawl-rome-s-1-halloween-bar-crawl-2026-sat-oct-3/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/cartoon-party-and-live-music-for-cartoon-addicted/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/social-table-halloween-party-apericena/</loc><lastmod>2026-10-07</lastmod></url>
@@ -2971,6 +3065,7 @@
   <url><loc>https://anyplans.in/roma/anni-80-90-halloween-party-musica-dal-vivo-vol-12/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/brividi-e-bollicine/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/frati-battisti-tributo-lucio-battisti/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/malajunta-halloween-s-night/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/halloween-con-i-cartoon-dreamers-al-chattanooga-saloon/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/la-noche-de-los-muertos-halloween-party/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/eponymous-ghost-tribute-live-defrag-halloween-party-2-big-2-/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3007,6 +3102,7 @@
   <url><loc>https://anyplans.in/roma/caduta-delle-stelle-con-vittorio-lingiardi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/la-dolce-vita-by-paybis/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/lettura-scenica-cutter-di-don-gabriele-vecchione/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/paolo-jannacci-band-jannacci-arrenditi-la-citta-ascolta-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/malika-ayane/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/appalti-e-rischi-derivanti-dalle-interferenze/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/at-work-2026/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3034,9 +3130,11 @@
   <url><loc>https://anyplans.in/roma/mario-biondi-in-concerto/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/mario-biondi-in-concerto-2026-12-14/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/2-congresso-amcop-nuovi-orizzonti-terapeutici-in-elastodonzi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/formazioni-psicogenealogia-junghiana-e-costellazioni-psicoge/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/roma-seminario-di-danza-sensibile-con-claude-coldy/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/spettacolo-teatrale-la-ballata-di-un-uomo-qualunque/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/spettacolo-teatrale-la-ballata-di-un-uomo-qualunque-2026-11-07/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/yangui-si-biir-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/oscurita-con-tutti-fenomeni/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/un-viaggio-nel-cuore-del-rosso-toscano-degustazione-guidata/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/tra-mito-e-bonta-la-grecia-in-tavola/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3054,12 +3152,14 @@
   <url><loc>https://anyplans.in/roma/san-martino-ogni-mosto-diventa-vino/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/techdojo-2-0-2026-scienza-ai-e-futuro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/basilica-di-san-pietro-con-una-superguida-tutta-per-noi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/santa-maria-maggiore-e-il-quadrato-magico-del-sator/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/laghetti-del-celio-visita-speleologica-apertura-speciale/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/come-il-canto-per-gli-uccelli-e-a-spoken-word-selecta/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/amoreamaro-maria-mazzotta-e-antonino-de-luca/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/maria-mazzotta/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/viaggio-al-termine-della-notte-con-david-le-breton-e-marco-d/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/apericolors-one-piece/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/roma-grindcore-vol-2-vulvectomy-grumo-neid-disforia-necrogor/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/scopri-la-voce-misteriosa-candlelight-dinner-v-31/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/cena-alla-carta-tutti-insieme/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/social-table-apericena-con-buffet-tutti-insieme/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3068,9 +3168,11 @@
   <url><loc>https://anyplans.in/roma/cena-social-eating-a-casa-della-pochini-a-tutto-pesce/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/un-sabato-sera-che-sa-di-mare/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/roma-vs-sassuolo-at-stadio-olimpico/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/woman-in-blues-bluesnight/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/roma-1943-dentro-la-citta-occupata/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/leggende-e-silenzi-in-alta-quota/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/foliage-nel-parco-dei-lepini-con-arrivo-al-semprevisa/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/trekking-monte-fogliano-eremo-di-san-girolamo-con-foliage/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/roma-dal-tevere-walk-social-picnic-2/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/mindful-walk-e-yoga-lungo-l-appia-antica/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/costellazioni-familiari-spirituali-la-ferita-del-rifiuto/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3081,6 +3183,8 @@
   <url><loc>https://anyplans.in/roma/pranzo-di-pesce-una-domenica-tra-nuove-conoscenze/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/sapori-de-roma-vol-3/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/e-tu-di-che-segno-sei-experience-v-52-pranzo-e-merenda/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/aperi-lab-il-look-da-sera-in-3-mosse/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/la-roma-di-pasolini/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/il-the-delle-cinque-una-merenda-in-compagnia-vol7/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/forza-venite-gente-il-musical/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/pwr-furia-imperiale/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3123,6 +3227,7 @@
   <url><loc>https://anyplans.in/roma/social-table-apericena-con-buffet/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/cena-con-delitto-escape-sherlock-cluedo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/fruttato-piccante-altro-degustiamo-il-mio-olio-evo/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/king-alpha-fikir-amlak-w-blue-zone-hi-fi-14-nov-fusolab/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/vie-cave-di-pitigliano-terme-saturnia-aperitivo-guida-aigae/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/maratona-aire-de-papirusas/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/a-centennial-celebration-pilgrimage-with-the-sister-annella-/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3170,9 +3275,11 @@
   <url><loc>https://anyplans.in/roma/back-to-hawkins-stranger-things-fan-tribute/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/back-to-hawkins/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/back-to-hawkins-2027-02-17/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/soror-dolorosa-instant-lake-guests-live-traffic-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/immanuel-casto-roma-largo-venue-20-11-26-formato-non-riconos/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/michele-bravi-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/2-ore-di-festa-in-limobus-al-centro-con-aperitivo/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/giulia-salsone-jazz-4tet-jazznight/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/accompagnamento-di-persone-con-disabilita-motoria/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/open-day-in-presenza-lauree-triennali-e-magistrali-a-ciclo-u/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/toyday-borsa-scambio-del-giocattolo-vintage/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3190,11 +3297,14 @@
   <url><loc>https://anyplans.in/roma/il-linguaggio-nella-definizione-dei-ruoli-di-genere/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/boxing-night-vol-8/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/voglio-vederti-danzare/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/henge-mark-the-hammer-live-al-monk-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/flo-in-brave-ragazze-con-cristiano-califano/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/steve-hackett-racconta-i-genesis/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/serata-red-week-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/pesce-e-dintorni-la-cena-vista-mare-vol-3/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/cena-di-pesce-candlelight-reading/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/sapori-del-sud-polenta-con-brasato/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/monkey-business-bluesnight/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/bellaire-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/isola-del-liri-castello-cartiere-apertura-speciale/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/il-corpo-delle-donne-oggetti-sacrificali-di-ricatti-globali/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3237,15 +3347,19 @@
   <url><loc>https://anyplans.in/roma/odoo-academy-contabilita-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/due-separazioni-in-casa-pamphilj-in-eta-moderna/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/libellula-bookclub-roma-la-ragazza-di-palermo-di-eugenia/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/musei-capitolini-ingresso-gratuito-residenti-visita-guidata-/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/chill-photo-lab-night-photography/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/drag-me-up-queer-art-festival/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/il-venerdi-sera-a-casa-mia-e-zuppa-di-pesce-vol3/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/wrath-of-the-titans-ii/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/scp-italy-festeggia-15-anni/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/costellazioni-familiari-sistemiche-colpa-o-diritto/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/bed-by-10pm-is-coming-to-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/bed-by-10pm-in-rome-30-clubbing-experience/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/anna-cerca-maria-pe-roma-fa-er-giro-de-peppe-passeggiata-tra/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/luci-d-artista-opere-che-illuminano-la-citta-e-presepi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/casa-dei-cavalieri-di-rodi-apertura-straordinaria/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/casa-dei-cavalieri-di-rodi-apertura-straordinaria-2026-12-12/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/magia-d-autunno-la-cena-che-scalda-i-cuori/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/francesca-michielin/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/g-r-di-muri-abbattuti-e-cuori-aperti-cies-ets-matemu/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3276,6 +3390,7 @@
   <url><loc>https://anyplans.in/roma/desire-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/joss-stone-merry-christmas-love-with-live-symphony-orchestra/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/lucio-corsi-palasport-2026/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/sadist-live-tribe-30th-anniversary-show-guests-traffic-club-/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/lazio-vs-atalanta-at-stadio-olimpico/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/the-one-events-26/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/sharm-el-sheikh-egitto-6-13-dicembre-2026-lo-que-faltaba-en-/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3288,13 +3403,13 @@
   <url><loc>https://anyplans.in/roma/moon-walker-wasteland-country-tour-live-in-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/roma-tango-festival-2026-dancing-the-magic-of-rome-10-14-dec/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/scultura-del-rinascimento-nuovi-nomi-nuove-persone/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/roma/hospitality-suite-francesco-scianna-sergio-romano/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/dance-with-the-devil-soul-weekender/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/rzym-w-1-dzie/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/n8n-rome-for-young-innovators-build-your-first-a-i-the-spot-/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/flos-olei-tour-in-rome-extravergine-day-at-the-westin-excels/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/corso-logica-posturale-1-liv-roma-12-13-dicembre-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/bbq-sandwich-best-from-the-west/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/roma/casa-dei-cavalieri-di-rodi-apertura-straordinaria/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/manu-theron-e-damien-toumi-duo-lavoa-lapo-il-canto-occitano/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/roman-holiday-event-for-women/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/roma/bastard-sunday/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3461,6 +3576,7 @@
   <url><loc>https://anyplans.in/en/roma/live-sport/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/road-cycling/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/walking/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/fairs/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/kids/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/halloween/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/wine-tastings/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3558,16 +3674,15 @@
   <url><loc>https://anyplans.in/en/roma/festival-della-divina-sapienza/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/bergamo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/dinners-today/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/concerts-today/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/talks-and-culture-today/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/padel-today/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/yoga-today/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/festivals-today/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/shows-today/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/hiking-today/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/wine-tastings-today/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/food-fairs-today/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/free-today/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/mountains-today/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/sports-today/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/le-mille-e-una-roma/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3583,27 +3698,29 @@
   <url><loc>https://anyplans.in/en/roma/venues/panic-crew/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/melody-mapper/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/elle-for-women/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/monk-roma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/etoile-23-live-club-disco/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/auditorium-parco-della-musica-ennio-morricone/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/maxxi-museo-nazionale-delle-arti-del-xxi-secolo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/sporting-club-ostiense/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/fanfulla-5-a-circolo-arci/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/tra-sabbia-e-sanpietrini/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/venues/monk-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/la-libreria-erickson-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/teatro-eduardo-de-filippo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/mondadori-bookstore/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/palazzo-venezia/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/ostello-bello-roma-colosseo-hostel-and-bar/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/sapienza-universita-di-roma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/welcrome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/concert-tracker/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/sound-curator/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/eventiamo-da-angela/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/venues/welcrome/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/venues/fanfulla-5-a-circolo-arci/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/roma-esoterica/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/teatro-ateneo-sapienza-universita-di-roma/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/venues/etoile-23-live-club-disco/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/bellaroma-info/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/charity-cafe/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/happiness-is-a-butterfly/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/laboratorio-104-tour-e-visite-guidate-a-roma/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/venues/roma-esoterica/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/amici-e-amiche-di-dencs/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/momart/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/parco-della-pace/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3616,7 +3733,6 @@
   <url><loc>https://anyplans.in/en/roma/venues/riva-marconi-ristorante-e-location-roma-sud/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/monk/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/feverup-events/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/venues/bellaroma-info/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/sunset-padel-club/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/palazzo-valentini/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/party-mood-on/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3625,6 +3741,7 @@
   <url><loc>https://anyplans.in/en/roma/venues/teatro-biblioteca-quarticciolo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/chill-game-crew/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/museo-nazionale-romano/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/one-day-chef/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/sempre-in-giro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/italia-in-tour/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/auditorium-della-conciliazione/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3654,6 +3771,7 @@
   <url><loc>https://anyplans.in/en/roma/venues/aloha-aperitivi-cocktails-e-sale-per-eventi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/tibidabo-beach/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/lux-cocktail-bar/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/eventos-de-ceci/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/romantrica/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/ludico-game-ludopub-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/la-stanza-della-musica/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3667,6 +3785,7 @@
   <url><loc>https://anyplans.in/en/roma/venues/casa-del-quartiere/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/the-academy-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/crew-dei-viandanti/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/teatro-vascello/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/il-club-del-buon-gusto-e-della-strategia/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/innesto/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/teatro-centrale/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3674,17 +3793,18 @@
   <url><loc>https://anyplans.in/en/roma/venues/padel-sport-academy-energy-center/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/centro-arca/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/chiesa-di-san-paolo-entro-le-mura/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/venues/eventos-de-ceci/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/geronimo-s-restaurant-live-music/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/roma-breaking-news/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/night-connections/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/metro-core-circolo-arci/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/hacienda-roma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/ars-in-urbe-aps/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/kram-pigneto/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/ministero-dei-beni-e-delle-attivita-culturali/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/venues/one-day-chef/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/freetime-sporting-club-ssd/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/open-your-eyes/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/puro-eur-ristorante-e-spazio-eventi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/crew-sentieri-e-scarponi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/viaggi-nella-storia-di-laura-d/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/teatro-ghione/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/adventures-dreamer/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3704,11 +3824,11 @@
   <url><loc>https://anyplans.in/en/roma/venues/tts-food-by-mela-eventi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/reserva-padel-club-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/satyrus-temporary-bar/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/roberta-coen/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/sheisinrome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/freeda-mood/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/almus-sporting-village/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/stazione-birra/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/venues/ars-in-urbe-aps/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/lapsicocrew/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/angeli-rock/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/casa-clandestina/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3725,15 +3845,17 @@
   <url><loc>https://anyplans.in/en/roma/venues/macro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/vivi-le-serre/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/moby-dick-biblioteca-hub-culturale/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/venues/crew-sentieri-e-scarponi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/anim-leggere-pamy-eventi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/latta-fermenti-e-miscele/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/teatro-nuovo-dogana/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/sally-brown-rude-pub/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/salotto-morgagni-caffetteria-bistrot-aperitivi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/friccicore/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/villaggio-globale/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/primo-piano/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/horti-magici/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/hotel-cristoforo-colombo/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/traffic-live/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/altamira-events/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/location-provided-after-booking/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/teatro-donizetti/</loc><lastmod>2026-10-07</lastmod></url>
@@ -3750,13 +3872,18 @@
   <url><loc>https://anyplans.in/en/roma/venues/limoni-eventi-discoteche-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/universita-degli-studi-link-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/roma-eur/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/malajunta-milonga/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/v-di-tor-cervara/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/fontana-del-giardino-di-piazza-vittorio/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/centrale-montemartini/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/trivel/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/piccolo-teatro-san-paolo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/teatro-furio-camillo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/walkzone/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/materia-terrazza-macro/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/direct-to-digital-rome-film-festival/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/chiesa-di-san-paolo-dentro-le-mura/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/venues/the-myelomas/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/sweet-n-smoke-bbq-academy-supply-store/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/v-po/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/venues/eataly-roma-aula-dominici/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5483,6 +5610,7 @@
   <url><loc>https://anyplans.in/en/roma/karaoke-sushi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/festa-di-quartiere-bottega-quarticciolo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/storia-di-un-cinghiale-qualcosa-su-riccardo-iii-francesco-mo/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/slomosa-year-of-the-horse-tour-kryptograf-traffic-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/joseph-bros/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/cena-di-meta-settimana-giochiamo-a-conoscerci-vol-3/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/serata-divertente-a-teatro-tra-amici/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5492,6 +5620,7 @@
   <url><loc>https://anyplans.in/en/roma/luci-dell-avanspettacolo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/la-stand-up-comedy-a-roma-sud/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/marco-ceccotti-stefano-borghetti/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/piccola-discoteca/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/jero-x-efw/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/masterclass-sul-gioco-offensivo-giovedi-ore-08-30/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/2nd-world-congress-on-biomedical-science-and-engineering/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5524,6 +5653,7 @@
   <url><loc>https://anyplans.in/en/roma/cena-da-blume-lounge/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/giochi-da-tavolo-da-golden-age-club/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/chi-ride-e-fuori-da-c-rnesa-churrascaria-brasiliana-circo-ma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/film-i-quando-tutto-tornera-a-essere-come-non-e-mai-stato/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/torneo-di-fifa-27/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/fever-il-nuovo-giovedi-del-vinile-aperishow-con-live-party-c/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/cena-in-bocciofila-amatriciana/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5541,6 +5671,7 @@
   <url><loc>https://anyplans.in/en/roma/sotto-il-segno-dello-streaming-serie-tv-quiz-night/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/rosa-di-sciuva-plf/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/primogenito-live-al-monk-roma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/neo-geodesia-uk-from-chinabot-collective-live-aftershow-by-b/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/baile-global-sound-state-of-mind/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/i-documentari-di-internazionale-a-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/corso-di-gnatologia-osteopatica-integrata/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5586,7 +5717,9 @@
   <url><loc>https://anyplans.in/en/roma/un-ultimo-assaggio-d-estate-a-base-di-pesce/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/spettacolo-drink-e-rock-n-roll/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/il-venerdi-vintage/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/last-rust-evelyn-roger-xabaras-alvarado-street/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/roma-maledetta-streghe-spettri-e-alchimisti/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/il-battito-degli-anni-80-live-show-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/hellucination-release-party-jumpscare-astral-emptiness-defra/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/cattura-il-mio-cuore-il-gioco-dei-sensi-a-tavola/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/escape-room-on-the-road-all-aperto-corsa-contro-il-tempo/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5594,8 +5727,7 @@
   <url><loc>https://anyplans.in/en/roma/aperitivo-in-piazza/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/una-serata-in-tirolo-a-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/il-gioco-della-bottiglia-vol-8-la-fortuna-ti-bacia/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/gioca-e-conosci-un-esperienza-di-socializzazione/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/torneo-beach-volley-di-roma-sud-2h-ape-tiramisu-e-post/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/torneo-beach-volley-di-roma-sud-ape-tiramisu-e-post/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/fratelli/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/traindeville-nuovi-racconti-romani-all-ottobrata-monticiana/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/roma-aliena-x-files-ufo-e-misteri-venuti-dal-cielo/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5615,17 +5747,23 @@
   <url><loc>https://anyplans.in/en/roma/festa-dell-unita-2026-piazza-testaccio/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/francesco-renga-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/sottocasatua-daniele-silvestri-e-karima-con-l-orchestra-da-c/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/case-d-autore-6-noche-espa-ola/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/night-connections-una-serata-per-conoscersi-davvero/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/burlesque-l-arte-di-sedurre-tra-ombre-luci-e-desiderio/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/perche-no-serata-giochi-da-tavolo-sfida-tra-strateghi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/grain-suzi3-live-friccicore/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/malajunta/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/suoni-dal-futuro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/suoni-dal-futuro-2026-10-10/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/improv-show-a-favore-di-passi-in-liberta/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/la-divina/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/tutti-qui-live-serata-tributo-claudio-baglioni/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/uragano-revue/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/i-nuovi-persiani-ricomporre-l-infranto/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/japan-anime-music-world-japan-night-all-stars-jam-let-it-bee/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/anticaja-e-petrella-special-edition-show-daniel-montano-tdj/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/nicky-singer-performer-uk-levy-levy-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/daniele-corvasce-gipsy-jazz-quartet-presentazione-gipsy-impr/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/high-school-days-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/women-of-nations-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/spadellata-con-maestro/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5640,6 +5778,7 @@
   <url><loc>https://anyplans.in/en/roma/urban-rafting-con-riverside-roma-asd/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/la-quarta-dimensione-del-quarto-potere-il-giornalismo-nel-xx/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/workshop-di-acquerello/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/workshop-4-rilascio-del-trauma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/tai-chi-piazza-vittorio/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/poesia-e-profezia/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/captain-traeger-academy/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5662,7 +5801,7 @@
   <url><loc>https://anyplans.in/en/roma/visita-alla-liuteria-d-arte-di-mathias-menanteau-ottobrata-m/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/suppli-tour-cuori-filanti-e-sampietrini-lunchedition-vol-2/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/la-basilica-di-san-giovanni-in-laterano-la-mater-ecclesiae-c/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/yoga-for-mental-health-free-session-in-rome/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/yoga-per-benessere-mentale-sessione-gratuita-a-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/in-itinere-roma-passeggiata-filosofica-tempo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/una-giornata-al-colosseo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/futuri-preferibili-tecnologia-potere-nuovi-predatori/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5672,6 +5811,7 @@
   <url><loc>https://anyplans.in/en/roma/tenuta-di-tor-marancia-mini-trek-con-guida/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/presentazione-de-il-partito-disarmato/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/workshop-di-disegno-spazio-lea/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/delitto-pasolini-un-mistero-lungo-50-anni-crime-trek/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/il-pezzo-mancante-l-atomo-nel-puzzle-dell-energia/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/quartiere-vino-pigneto-l-ottobrata/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/viaggiando-nel-tango/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5691,6 +5831,7 @@
   <url><loc>https://anyplans.in/en/roma/workshop-di-tappeti-persiani-morteza-khaleghi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/la-storia-del-campidoglio-e-santa-maria-in-ara-coeli-il-cuor/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/mostra-sul-pontorno-e-apericena/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/visita-mostra-moda-in-luce-1955-75/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/costruisci-e-decora-l-aquilone-con-noi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/cerimonia-del-cacao-di-luna-nuova/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/beach-volley-cena/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5727,7 +5868,10 @@
   <url><loc>https://anyplans.in/en/roma/conclusioni-lancio-del-ministero-del-futuro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/aperitivo-con-delitto-una-stella-in-cucina/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/ozone-dehumanizer-defrag-roma-10-10-2026/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/ozone-dehumanizer-click-head-doye-defrag-roma-10-10-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/aperitivo-astronomico-acqua-dal-tevere-al-sistema-solare/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/tieni-il-tempo-live-show-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/collettivo-rock-italiano-dinner-primo-piano-dinner-concert/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/gdr-roulette/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/cosidanzi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/gli-anni-d-oro-cover-band-883-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5755,9 +5899,16 @@
   <url><loc>https://anyplans.in/en/roma/close-party-da-kalaya-bamboo-experience/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/sangria-a-volonta-un-dopo-cena-rinfrescante-nel-parco/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/brillante-open-mic-musicale/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/milonga-sentimental-il-sabato-porte-o-tdj-pancho/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/klaxon-live-friccicore/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/silentxyouth-at-aereonautica-militare/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/strada-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/jump-aces-bluesnight/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/883-fattore-s-live-etoile-23-live-club-disco/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/vrouwencirkel/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/sam-paganini-at-cieloterra-rome-italy/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/neo-rave-alibi-roma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/abanico-noche-de-fuego-prenota-il-tuo-ventaglio/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/lazio-vs-monza-at-stadio-olimpico/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/roma-sulle-tracce-dei-templari-e-dei-fantasmi-della-citta-et/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/walk-for-a-cause-with-commun-it-y-cares/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5765,11 +5916,13 @@
   <url><loc>https://anyplans.in/en/roma/colazione-da-vivi-le-serre/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/il-grab-a-piedi-con-rebeltrek/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/walkzone-roma-tevere-day-edition-2026/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/car-club-capitolino-expo-ottobre/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/fili-d-erba-e-parole-passi-lenti-nuovi-legami/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/vintage-wine-tour/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/trekking-ombra-il-perduto-eremo-del-lago-degustazione/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/yoga-sound-class-jivamukti-yoga-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/benessere-in-natura-incontri-di-mindfulness-a-villa-borghese/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/ara-pacis-augusto-e-la-costruzione-della-memoria/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/scampagnata-della-domenica-hike-barbecue/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/caccia-al-tesoro-edizione-picnic/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/bagno-di-foliage-per-staccare-dalla-routine/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5784,11 +5937,13 @@
   <url><loc>https://anyplans.in/en/roma/foliage-a-roma-passeggiata-e-bagno-di-foresta/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/i-giorni-di-via-tasso-visita-guidata/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/spettacolo-per-bambini-la-bella-addormentata-nel-bosco/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/la-fiesta-de-los-pueblos-america-latina-que-pasa-edizione-20/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/she-is-in-flow/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/kitchen-dating-lab-mani-in-pasta-4-cooking-class/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/pranzo-da-il-gianfornaio-piazza-di-spagna/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/sunday-brunch-live-dj-set-in-terrazza/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/schuster-gioca-sunday-edition-11-10-26/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/ottobrata-romana-al-lago-di-castel-gandolfo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/fettuccine-ai-funghi-porcini-biliardino/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/matinee-latino-l-evento-che-cambia-le-tue-domeniche/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/pranzo-della-domenica-gulash-e-tarocchi/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5804,6 +5959,7 @@
   <url><loc>https://anyplans.in/en/roma/roma-western-buffalo-bill-cowboy-e-il-far-west-nella-capital/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/acquerello-all-aria-aperta-bordi-belle-arti/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/tour-di-esplorazione-sonora/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/the-apartment-milonga-11-10-2026-tdj-davide-patriarca/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/cena-da-executive-lounge-hilton-la-lama/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/lazio-in-calice/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/presentazione-de-la-cattedrale/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5817,9 +5973,12 @@
   <url><loc>https://anyplans.in/en/roma/a-spasso-con-cristina-di-svezia/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/cena-da-bubble-bar/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/eur-urbanistica-arte-e-storia/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/tour-guidato-alla-scoperta-del-gianicolo-aperitivo-vol-3/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/aperitivo-e-paintball/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/la-centrale-antonella-scida-dj-domenica-11-ottobre/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/un-nerd-al-museo-l-inizio-viaggio-nella-storia-del-gaming/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/torneo-beach-volley-di-roma-sud-per-tutti-apericena/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/brandon-lopez-solo-duo-with-mirco-ballabene/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/offline-chpt-vi-materia-terrazza-macro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/nel-regno-del-padel-con-torta-a-sorpresa/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/la-via-degli-dei/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5852,6 +6011,7 @@
   <url><loc>https://anyplans.in/en/roma/italian-groove-collective-funk-soul/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/l-educatrice-sessuale-ti-spiega-comunicazione-sessuale/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/diplomazia-in-cammino/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/viennoiserie-d-autore-con-davide-del-chierico/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/aa40-cross-examination-lab-in-collaboration-with-oxera/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/torte-monumentali-tecnica-struttura-e-design-con-giuliano-ca/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/ripartire-si-puo/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5861,17 +6021,18 @@
   <url><loc>https://anyplans.in/en/roma/immaginare-l-impossibile-con-caterina-balivo-dialoga-con-tiz/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/la-tosca-le-piu-importanti-arie-e-tour-di-sant-andrea-della-/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/stand-up-comedy-quello-che-vuoi/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/maschi-vs-femmine-4-la-guerra-dei-giochi-da-tavolo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/opera-in-roma-le-quattro-stagioni-di-vivaldi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/voci-dalla-shoah-reading-tratto-da-il-libro-della-shoah-ital/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/la-domenica-dell-attore/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/extra-comodi-open-mic-deluxe/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/greta-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/5-crediti-a-roma-13-ottobre-evento-su-ottimizzazione-fiscale/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/presentazione-del-xvi-rapporto-annuale-sull-economia-dell-im/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/talk-in-embassy-on-ayurveda-and-its-benefits/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/natura-documentata-paesaggi-e-visioni-contemporanee/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/rivoluzione-ecodigital/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/la-bolla-vox-in-excelso-e-il-destino-dei-templari/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/frames-lucia-iuorio/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/presentazione-di-quando-pinocchio-non-c-era/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/artificio-by-sparso-off-rassegna-cinematografica-oltre-l-orr/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/exclusive-one-on-one-meeting-in-rome/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5882,11 +6043,13 @@
   <url><loc>https://anyplans.in/en/roma/sabor-de-mexico-y-lime-apericena/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/giochiamo-a-ping-pong-vol-12/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/evento-nuova-audi-q7-e-nuova-audi-a6-allroad/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/30-minutes-made-of-purple/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/speed-date-roma-ponte-milvio-45-65/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/anagramma-di-madre-e-com-e-profondo-il-male-con-antonio-guer/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/stand-up-comedy-e-burlesque-a-teatro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/apericena-e-stand-up-comedy-vol-4-tante-risate-in-compagnia/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/benji-amp-fede-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/andy-s-corner-60s-70s-classicrock-soul-folk-and-more/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/benji-fede/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/ridi-che-ti-passa-cabaret-buffet-e-1000-risate/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/la-noche-del-cottage/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5904,8 +6067,11 @@
   <url><loc>https://anyplans.in/en/roma/apericena-con-frida-vol-7/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/aperisingle-pizza/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/serata-al-bowling-con-cena/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/calici-e-farina-degustazione-esclusiva-in-forno/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/la-vera-cena-cinese-tra-amici/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/spezza-settimana-con-formula-sushie-drink-non-limits/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/all-you-can-eat-de-fish-and-drink-vol-2/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/mercoledi-14-ottobre-nuova-stagione-cafetin-de-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/sacrestanze-maurizio-abate-alberto-danzi-live-maria-violenza/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/barcelona-costa-del-maresme/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/forum-serramenti-vetro-2026/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5937,19 +6103,23 @@
   <url><loc>https://anyplans.in/en/roma/serata-dr-why-ritorna-il-live-quiz-piu-famoso/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/apericena-rompighiaccio-connessioni-a-piccoli-sorsi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/giovedi-divino-oktoberfest-edition/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/rock-n-roll-invasion-night/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/corso-di-astronomia-pratica-online-e-in-presenza/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/calcetto-tra-ragazze/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/giovedi-senza-pensieri/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/stand-up-comedy-vol-12-drink-or-dinner/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/kirtan-club-sattvayogaroma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/passeggiata-romana-vol-3/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/irradia-alternative-nu-metal-big-fat-lizard-hard-heavy-terzo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/leo-middea-noticias-de-puglia-tour-monk/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/gaia-guia-friends-plf/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/albertino-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/jam-session-jazz-dedicata-a-miles-davis-gege-munari-5et/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/serp-conf-rome-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/4-dev-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/il-palazzo-del-quirinale-una-passeggiata-barocca-venerdi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/il-palazzo-del-quirinale-una-passeggiata-barocca-venerdi-2026-12-04/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/giornata-mondiale-della-colonna-vertebrale-2026-la-salute-de/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/la-persona-al-centro-convegno-su-prevenzione-cura-e-rinascit/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/incontro-di-meditazione-guidata/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/sport-fan-and-food-da-pizzeria-da-romolo-al-kipling/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5963,9 +6133,11 @@
   <url><loc>https://anyplans.in/en/roma/duello-del-gusto-pizza-edition-bimby-vs-tradizione/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/lascia-fuori-il-copione/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/rome-carnage-extreme-fest-2026/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/mille-giorni-di-te-e-di-me-live-show-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/a-cena-con-la-tua-meta-sbagliata/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/la-cena-del-venerdi-ai-castelli-vol-7/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/bowling-night-eat-strike-dance-vol-11/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/gioca-e-conosci-un-esperienza-di-socializzazione/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/il-beach-volley-serale-di-roma-sud-al-coperto-ape-e-post/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/e-adesso-musical/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/roma-eretica-inquisizione-roghi-abiure-e-condanne-capitali/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5976,14 +6148,19 @@
   <url><loc>https://anyplans.in/en/roma/una-serata-a-tavola-tra-nuove-amicizie/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/festivalbars-live-music-il-ritrovo-degli-indimenticabili/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/adbacadabra-tributo-abba/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/korn-30-years-of-life-is-peachy-guests-limp-bizkit-incubus-t/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/echi-di-gente/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/polladeperro-ep-1-seconda-stagione/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/al-pub-irlandese-con-l-irlandese-rock-pop-live-music/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/napoli-violenta-cranial-torment-live-friccicore/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/volver-la-milonga-milonguera/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/stand-up-comedy-cena-in-compagnia/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/gli-antartici-nucleari-live-16-ottobre-2026-k-ll-joy/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/horror-night-una-serata-da-brividi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/black-lizard-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/mindfulness-e-parole/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/dal-capitale-naturale-all-ecoturismo-nei-parchi-anniversario/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/millennium-expo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/hai-gia-provato-diete-ma-i-risultati-quando-ci-sono-non-sono/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/d-f-t-pistol-program-2026-2027-rata-2/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/amd-developer-hackathon-act-iii-rome/</loc><lastmod>2026-10-07</lastmod></url>
@@ -5995,6 +6172,7 @@
   <url><loc>https://anyplans.in/en/roma/c-era-una-volta-un-ulivo-generoso-5-edizione/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/oltre-il-sentiero-il-benessere-nella-pratica-dell-accompagna/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/tribe-acquerello-per-principianti-en-plain-air-ed-ii/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/i-grandi-lievitati-di-natale-con-oscar-pagani/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/la-soffitta-di-pietralata/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/sabato-sport-e-divertimento-al-parco-con-personal-trainer/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/mit-apertura-collezione-d-arte-contemporanea/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6018,11 +6196,13 @@
   <url><loc>https://anyplans.in/en/roma/cena-da-snoopy-food-x-veganize-it-roma-70/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/beach-volley-cena-ping-pong/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/rewilding-bronagh-slevin/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/laboratorio-di-scrittura-terapeutica-e-mindfulness/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/tribe-cube-challenges-rompicapi-nuove-amicizie/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/inaugurazione/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/long-day-play-ikea-porte-di-roma-sabato-17-ottobre-dalle-18-/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/memorie-di-un-sovversivo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/musorgskij-e-prokofieff/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/inland-stories-giulia-parisi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/irina-rimes-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/tour-d-eccellenza-in-cantina-tra-vini-e-salumi-laziali/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/presentazione-libro-autobiografico-di-christos-roussos/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6034,6 +6214,7 @@
   <url><loc>https://anyplans.in/en/roma/teatro-happy-birth-day-stelle-terrestri-piece-ed-oltre/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/raf-infinito-palasport-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/shakespeare-outta-love/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/80-voglia-di-90-groove-it-live-show-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/interactive-horror-night/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/la-cena-dove-arrivi-da-solo-e-esci-con-nuove-conoscenze/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/stasera-80-voglia-di-90-groove-it-e-dj-set/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6048,10 +6229,15 @@
   <url><loc>https://anyplans.in/en/roma/roma-vs-genoa-at-stadio-olimpico/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/mi-ricordo-barbe-a-papa-teatro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/digitalism-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/omopatia-live-guests/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/anche-secondo-me-ho-ragione-io-incontrarie/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/siamo-tutti-s-connessi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/liberi-liberi-tributo-vasco-rossi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/la-seconda-eclisse-broken-tower-blues-machine-live-alvarado-/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/ramen-e-chiacchiere/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/unconventional-slow-walking-dating/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/storie-di-rock-p-a-o-live-art-rock/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/sabato-17-ottobre-krypta-metamorphosis-postpunk-goth-80-90-n/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/moa-anbessa-on-jah-station-soundsystem-live-session-csa-inti/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/dodo-run-yoga-011/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/orvieto-e-lago-di-bolsena-gita-in-pullman/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6079,6 +6265,8 @@
   <url><loc>https://anyplans.in/en/roma/workshop-di-pizzica-salentina-alla-caffarella/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/presentazione-di-compagno-di-vittorio/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/festa-argentina-musica-dal-vivo-tango-asado-ed-empanadas/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/brunch-ingalleria-al-niji/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/festa-argentina-la-grande-festa-di-fine-estate/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/morning-club-soft-clubbing/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/brunch-della-domenica-in-giardino-da-giulietta-vol-2/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/lasagna-day-pranzo-della-domenica/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6119,6 +6307,7 @@
   <url><loc>https://anyplans.in/en/roma/the-golden-rule-film-screening-red-carpet/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/francesco-e-i-suoi-fratelli-con-sylvain-piron/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/liberta-da-liberta-di-il-training-autogeno-per-autorigenerar/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/baby-beard-live-maximum-kawaii-chaos-traffic-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/fabric-days-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/the-golden-rule-summit-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/b2bookingsmed/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6127,6 +6316,7 @@
   <url><loc>https://anyplans.in/en/roma/the-three-tenors-in-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/hotpot-racconti-di-viaggi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/home-teatro-lab/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/marinera-il-viaggio-ricomincia-con-yanina-erramouspe-dj/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/indoor-paintball-vol-2-dopo-la-sfida-si-va-al-mcdonald/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/la-formazione-per-la-conservazione-negli-archivi-e-nelle-bib/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/stati-generali-delle-librerie/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6163,7 +6353,6 @@
   <url><loc>https://anyplans.in/en/roma/una-serata-tutta-ravioli-vol-9/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/cenetta-greca-in-locale-stiloso-vol-14/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/giovedi-senza-pensieri-vol-2/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/the-dinner-date-la-cena-della-seduzione-vol-113/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/tribe-cena-con-delitto-season-2-episodio-3/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/karaoke-quiz-night-vol-2/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/rock-e-dance-80-e-90-al-chattanooga-appia-con-i-sonix/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6187,13 +6376,16 @@
   <url><loc>https://anyplans.in/en/roma/aria-fresca/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/equippers-x-conference/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/i-magnifici-anni-80/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/orbita-attira-nuovi-amici-giardinoninfa-free-entry/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/orbita-attira-nuovi-amici-giardinoninfa-dress-code/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/urlando-contro-il-cielo-una-serata-a-tutto-ligabue/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/una-serata-esplosiva-a-base-di-paella/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/alla-scoperta-del-bosco-immaginario/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/padel-time-v-33-friday-edition-indoor/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/oktoberfest-a-casa-mia-vol-3/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/apericena-pictionary-bastardo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/lady-gaga-show-tribute/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/bon-jovi-def-leppard-live-letitbeer/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/planet-earth-project-tributo-ai-duran-duran/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/le-posizioni-dell-amore-il-kamasutra-a-modo-nostro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/roma-plays-lucio-battisti-plf/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/quando-la-festa-si-fa-infuocata/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6209,11 +6401,14 @@
   <url><loc>https://anyplans.in/en/roma/mostra-piero-guccione-racconti-dello-sguardo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/xv-forum-aicp-2026-il-gioco-dello-sport/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/l-abbazia-delle-tre-fontane-tra-silenzio-storia-e-spirituali/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/il-medioevo-a-roma-il-complesso-dei-santi-quattro-coronati/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/trekking-riserva-naturale-castel-di-guido-e-picnic/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/visita-ai-capolavori-di-palazzo-barberini-e-al-suo-giardino/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/cimitero-acattolico-tour-guidato-esclusivo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/trekking-alla-riserva-di-veio-picnic/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/pranzo-sul-caicco-pesce-vino-mare/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/techdojo-2-0-2026-tecnologia-per-il-bene-comune/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/clanfastino-24-ottobre/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/villa-ada-savoia-autunno-trekking-storico-naturalistico/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/aperitrekking-le-cascate-di-rio-scuro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/e-con-il-tuo-spirito-il-giro-della-morte-capitolino/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6226,6 +6421,7 @@
   <url><loc>https://anyplans.in/en/roma/a-b-c-di-vino-mini-corso-di-avvicinamento-al-vino/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/presentazione-ciclica-di-donatella-fiacchino/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/alexis-kossenko-in-concerto-flauti-storici/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/pino-daniele-tribute-band-dinner-live-at-primo-piano/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/cena-indiana-del-nord-english-conversation/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/negramaro-tribute-djset-live-percussion-show/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/sapori-d-autunno-e-giochi-da-tavolo/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6245,6 +6441,7 @@
   <url><loc>https://anyplans.in/en/roma/claudio-baglioni-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/che-notte-e-questa-claudio-baglioni/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/menu-del-giorno-bellavita/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/mathias-p-live-dark-synth-pop-night/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/pizza-chiacchiere-e-nuove-conoscenze/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/xvi-mkk-kompleanno-della-mazurka-klandestina-di-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/david-rodigan-a-roma/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6278,15 +6475,18 @@
   <url><loc>https://anyplans.in/en/roma/un-viaggio-dal-cielo-al-silenzio-dal-silenzio-al-cuore/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/trastevere-come-non-l-hai-mai-visto-in-e-bike-vol-5/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/4-bianchi-e-4-rossi-masterclass-viniamo-d-autunno/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/mangia-prega-ama-in-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/still-alive/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/beach-volley-arcade-food-con-biliardini-gratis/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/swap-party-con-aperitivo/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/mandala-a-quel-paese/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/foret/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/spettacolo-teatrale-ride-di-me-signorina/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/omissis-osservatorio-drammaturgico-reverse-la-fanzine/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/cooking-class-by-pizza-chonnection-vol-3/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/il-calcetto-di-roma-sud/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/story-slam-roma-ottobre-2026/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/matt-waldon-acoustic-duo-early-concert/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/the-lemonheads-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/aperitivi-musicali-in-terrazza-vol-9-pop-e-comicita/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/roma-by-night-da-piazza-di-spagna-al-tempio-di-adriano/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6312,7 +6512,9 @@
   <url><loc>https://anyplans.in/en/roma/avvicinarsi-al-vino-corso-di-avvicinamento-al-mondo-del-vino/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/bowling-nuove-amicizie/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/roma-vs-cagliari-at-stadio-olimpico/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/serata-romana-cena-conoscenze-a-la-zanzara/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/francesco-de-gregori-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/rome-business-breakfast-cosaporto-con-wellhub-e-zest/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/green-building-forum-italia-2026-costruire-l-italia-di-doman/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/era-italy-fuel-2026-convention/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/b2b-mixer-rome-100-networking-event-making-referrals/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6325,7 +6527,9 @@
   <url><loc>https://anyplans.in/en/roma/vioflesh-live-in-rome-reload-speakeasy-live-in-modalita-spea/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/fink-live-al-monk-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/aspettando-l-america-i-mercoledi-dell-asino-d-oro-al-teatrob/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/la-medium-marta-cuscuna/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/francesco-ceruzzi-rita-nora-plf/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/blues-jam-friends-the-black-cat-bones/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/4th-international-conference-on-clinical-case-reports-hybrid/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/forum-sostenibilita-2026-focus-giovani-dalle-scuole-alle-imp/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/roadshow-coenergia-il-29-10-2026-a-roma/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6337,13 +6541,17 @@
   <url><loc>https://anyplans.in/en/roma/hallow-ing-idea-party/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/the-fright-crawl-rome-halloween-bar-crawl-2026-thursday-octo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/trio-pentro-in-concerto-nuovo-mondo-da-camera/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/aperitivo-social/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/pamela-villoresi-in-mitiche-donne/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/concerto-cover-oasis/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/imperfetti-conosciuti/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/sirlene/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/maledetto-il-giorno-comedy-improv/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/jam-session-jazz-mark-murphy/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/le-castagne-del-monte-amiata/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/parco-dei-castelli-romani-dal-capitale-naturale-all-ecoturis/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/roma-riflessa-seconda-edizione-workshop-di-fotografia/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/ramen-con-mitsuko-takei-30-ottobre-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/friday-vibes-aperitivo-new-friends/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/burracodi-torneo-di-burraco-halloween-edition/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/the-fright-crawl-rome-s-hottest-halloween-bar-crawl-2026-fri/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6379,6 +6587,7 @@
   <url><loc>https://anyplans.in/en/roma/mauro-palmas-e-giacomo-verdeu-il-liuto-cantabile-e-la-sardeg/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/speciale-halloween-la-reggio-del-popol-giost-tra-storie-e-cu/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/mostruosamente-forte-2026-feat-vibronics-e-radikal-guru/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/catalogo-marta-ciappina/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/the-fright-crawl-rome-s-1-halloween-bar-crawl-2026-sat-oct-3/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/cartoon-party-and-live-music-for-cartoon-addicted/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/social-table-halloween-party-apericena/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6397,6 +6606,7 @@
   <url><loc>https://anyplans.in/en/roma/anni-80-90-halloween-party-musica-dal-vivo-vol-12/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/brividi-e-bollicine/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/frati-battisti-tributo-lucio-battisti/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/malajunta-halloween-s-night/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/halloween-con-i-cartoon-dreamers-al-chattanooga-saloon/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/la-noche-de-los-muertos-halloween-party/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/eponymous-ghost-tribute-live-defrag-halloween-party-2-big-2-/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6433,6 +6643,7 @@
   <url><loc>https://anyplans.in/en/roma/caduta-delle-stelle-con-vittorio-lingiardi/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/la-dolce-vita-by-paybis/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/lettura-scenica-cutter-di-don-gabriele-vecchione/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/paolo-jannacci-band-jannacci-arrenditi-la-citta-ascolta-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/malika-ayane/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/appalti-e-rischi-derivanti-dalle-interferenze/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/at-work-2026/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6460,9 +6671,11 @@
   <url><loc>https://anyplans.in/en/roma/mario-biondi-in-concerto/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/mario-biondi-in-concerto-2026-12-14/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/2-congresso-amcop-nuovi-orizzonti-terapeutici-in-elastodonzi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/formazioni-psicogenealogia-junghiana-e-costellazioni-psicoge/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/roma-seminario-di-danza-sensibile-con-claude-coldy/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/spettacolo-teatrale-la-ballata-di-un-uomo-qualunque/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/spettacolo-teatrale-la-ballata-di-un-uomo-qualunque-2026-11-07/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/yangui-si-biir-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/oscurita-con-tutti-fenomeni/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/un-viaggio-nel-cuore-del-rosso-toscano-degustazione-guidata/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/tra-mito-e-bonta-la-grecia-in-tavola/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6480,12 +6693,14 @@
   <url><loc>https://anyplans.in/en/roma/san-martino-ogni-mosto-diventa-vino/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/techdojo-2-0-2026-scienza-ai-e-futuro/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/basilica-di-san-pietro-con-una-superguida-tutta-per-noi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/santa-maria-maggiore-e-il-quadrato-magico-del-sator/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/laghetti-del-celio-visita-speleologica-apertura-speciale/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/come-il-canto-per-gli-uccelli-e-a-spoken-word-selecta/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/amoreamaro-maria-mazzotta-e-antonino-de-luca/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/maria-mazzotta/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/viaggio-al-termine-della-notte-con-david-le-breton-e-marco-d/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/apericolors-one-piece/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/roma-grindcore-vol-2-vulvectomy-grumo-neid-disforia-necrogor/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/scopri-la-voce-misteriosa-candlelight-dinner-v-31/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/cena-alla-carta-tutti-insieme/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/social-table-apericena-con-buffet-tutti-insieme/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6494,9 +6709,11 @@
   <url><loc>https://anyplans.in/en/roma/cena-social-eating-a-casa-della-pochini-a-tutto-pesce/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/un-sabato-sera-che-sa-di-mare/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/roma-vs-sassuolo-at-stadio-olimpico/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/woman-in-blues-bluesnight/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/roma-1943-dentro-la-citta-occupata/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/leggende-e-silenzi-in-alta-quota/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/foliage-nel-parco-dei-lepini-con-arrivo-al-semprevisa/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/trekking-monte-fogliano-eremo-di-san-girolamo-con-foliage/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/roma-dal-tevere-walk-social-picnic-2/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/mindful-walk-e-yoga-lungo-l-appia-antica/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/costellazioni-familiari-spirituali-la-ferita-del-rifiuto/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6507,6 +6724,8 @@
   <url><loc>https://anyplans.in/en/roma/pranzo-di-pesce-una-domenica-tra-nuove-conoscenze/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/sapori-de-roma-vol-3/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/e-tu-di-che-segno-sei-experience-v-52-pranzo-e-merenda/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/aperi-lab-il-look-da-sera-in-3-mosse/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/la-roma-di-pasolini/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/il-the-delle-cinque-una-merenda-in-compagnia-vol7/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/forza-venite-gente-il-musical/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/pwr-furia-imperiale/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6549,6 +6768,7 @@
   <url><loc>https://anyplans.in/en/roma/social-table-apericena-con-buffet/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/cena-con-delitto-escape-sherlock-cluedo/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/fruttato-piccante-altro-degustiamo-il-mio-olio-evo/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/king-alpha-fikir-amlak-w-blue-zone-hi-fi-14-nov-fusolab/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/vie-cave-di-pitigliano-terme-saturnia-aperitivo-guida-aigae/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/maratona-aire-de-papirusas/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/a-centennial-celebration-pilgrimage-with-the-sister-annella-/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6596,9 +6816,11 @@
   <url><loc>https://anyplans.in/en/roma/back-to-hawkins-stranger-things-fan-tribute/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/back-to-hawkins/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/back-to-hawkins-2027-02-17/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/soror-dolorosa-instant-lake-guests-live-traffic-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/immanuel-casto-roma-largo-venue-20-11-26-formato-non-riconos/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/michele-bravi-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/2-ore-di-festa-in-limobus-al-centro-con-aperitivo/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/giulia-salsone-jazz-4tet-jazznight/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/accompagnamento-di-persone-con-disabilita-motoria/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/open-day-in-presenza-lauree-triennali-e-magistrali-a-ciclo-u/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/toyday-borsa-scambio-del-giocattolo-vintage/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6616,11 +6838,14 @@
   <url><loc>https://anyplans.in/en/roma/il-linguaggio-nella-definizione-dei-ruoli-di-genere/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/boxing-night-vol-8/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/voglio-vederti-danzare/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/henge-mark-the-hammer-live-al-monk-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/flo-in-brave-ragazze-con-cristiano-califano/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/steve-hackett-racconta-i-genesis/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/serata-red-week-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/pesce-e-dintorni-la-cena-vista-mare-vol-3/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/cena-di-pesce-candlelight-reading/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/sapori-del-sud-polenta-con-brasato/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/monkey-business-bluesnight/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/bellaire-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/isola-del-liri-castello-cartiere-apertura-speciale/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/il-corpo-delle-donne-oggetti-sacrificali-di-ricatti-globali/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6663,15 +6888,19 @@
   <url><loc>https://anyplans.in/en/roma/odoo-academy-contabilita-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/due-separazioni-in-casa-pamphilj-in-eta-moderna/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/libellula-bookclub-roma-la-ragazza-di-palermo-di-eugenia/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/musei-capitolini-ingresso-gratuito-residenti-visita-guidata-/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/chill-photo-lab-night-photography/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/drag-me-up-queer-art-festival/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/il-venerdi-sera-a-casa-mia-e-zuppa-di-pesce-vol3/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/wrath-of-the-titans-ii/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/scp-italy-festeggia-15-anni/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/costellazioni-familiari-sistemiche-colpa-o-diritto/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/bed-by-10pm-is-coming-to-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/bed-by-10pm-in-rome-30-clubbing-experience/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/anna-cerca-maria-pe-roma-fa-er-giro-de-peppe-passeggiata-tra/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/luci-d-artista-opere-che-illuminano-la-citta-e-presepi/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/casa-dei-cavalieri-di-rodi-apertura-straordinaria/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/casa-dei-cavalieri-di-rodi-apertura-straordinaria-2026-12-12/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/magia-d-autunno-la-cena-che-scalda-i-cuori/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/francesca-michielin/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/g-r-di-muri-abbattuti-e-cuori-aperti-cies-ets-matemu/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6702,6 +6931,7 @@
   <url><loc>https://anyplans.in/en/roma/desire-in-roma/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/joss-stone-merry-christmas-love-with-live-symphony-orchestra/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/lucio-corsi-palasport-2026/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/sadist-live-tribe-30th-anniversary-show-guests-traffic-club-/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/lazio-vs-atalanta-at-stadio-olimpico/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/the-one-events-26/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/sharm-el-sheikh-egitto-6-13-dicembre-2026-lo-que-faltaba-en-/</loc><lastmod>2026-10-07</lastmod></url>
@@ -6714,13 +6944,13 @@
   <url><loc>https://anyplans.in/en/roma/moon-walker-wasteland-country-tour-live-in-rome/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/roma-tango-festival-2026-dancing-the-magic-of-rome-10-14-dec/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/scultura-del-rinascimento-nuovi-nomi-nuove-persone/</loc><lastmod>2026-10-07</lastmod></url>
+  <url><loc>https://anyplans.in/en/roma/hospitality-suite-francesco-scianna-sergio-romano/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/dance-with-the-devil-soul-weekender/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/rzym-w-1-dzie/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/n8n-rome-for-young-innovators-build-your-first-a-i-the-spot-/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/flos-olei-tour-in-rome-extravergine-day-at-the-westin-excels/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/corso-logica-posturale-1-liv-roma-12-13-dicembre-2026/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/bbq-sandwich-best-from-the-west/</loc><lastmod>2026-10-07</lastmod></url>
-  <url><loc>https://anyplans.in/en/roma/casa-dei-cavalieri-di-rodi-apertura-straordinaria/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/manu-theron-e-damien-toumi-duo-lavoa-lapo-il-canto-occitano/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/roman-holiday-event-for-women/</loc><lastmod>2026-10-07</lastmod></url>
   <url><loc>https://anyplans.in/en/roma/bastard-sunday/</loc><lastmod>2026-10-07</lastmod></url>
