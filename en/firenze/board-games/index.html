@@ -116,7 +116,67 @@ footer .wrap{max-width:860px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 2
 footer a:hover{color:var(--ink)}
 @media (max-width:600px){h1{font-size:28px}.cover{height:180px;font-size:72px}
 .nav{height:auto;flex-wrap:wrap;gap:8px 12px;padding:10px 0}.nav>.row{width:100%;justify-content:space-between}}</style>
-
+<style>
+[hidden]{display:none!important}
+.wsum{font-size:15px;color:var(--grey)}.wsum b{color:var(--ink)}
+.wmap{position:relative;margin:0 -22px;height:340px;background:#EDEAE3;overflow:hidden}
+@media (min-width:700px){.wmap{margin:0;border-radius:22px;height:400px}}
+.wmap .maplibregl-canvas{outline:none}
+.wcount{position:absolute;z-index:2;top:12px;left:12px;background:#fff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:14px;box-shadow:0 2px 8px rgba(25,25,25,.18)}
+.wcount b{color:var(--blue)}
+.wmapbar{position:absolute;z-index:2;left:12px;right:12px;bottom:12px;display:flex;justify-content:space-between;align-items:flex-end;gap:8px}
+.wwheel{position:relative;border:1.5px solid var(--blue);background:#fff;color:var(--blue);border-radius:999px;padding:10px 14px;font:inherit;font-weight:800;font-size:14px;box-shadow:0 2px 10px rgba(25,25,25,.18);cursor:pointer}
+.wwheel::after{content:attr(data-new);position:absolute;top:-9px;left:-6px;background:var(--blue);color:#fff;font-size:10px;font-weight:800;line-height:1;padding:4px 7px;border-radius:999px;box-shadow:0 0 0 2px #fff}
+.wfull{background:var(--ink);color:#fff;border-radius:999px;padding:10px 14px;font-weight:800;font-size:14px;box-shadow:0 2px 10px rgba(25,25,25,.18);white-space:nowrap}
+.wpin{display:block;width:34px;height:40px;cursor:pointer}
+.wpin i{display:grid;place-items:center;width:34px;height:34px;border-radius:50% 50% 50% 4px;transform:rotate(-45deg);background:#fff;box-shadow:0 2px 8px rgba(25,25,25,.28)}
+.wpin span{transform:rotate(45deg);font-size:17px;line-height:1;font-style:normal}
+.wpin.wsolo i{background:var(--blue)}
+.wbar{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid rgba(25,25,25,.08)}
+.wseg{display:flex;background:#fff;border:1.5px solid rgba(25,25,25,.10);border-radius:999px;padding:3px}
+.wseg:empty{display:none}
+.wseg button{flex:1;border:0;background:none;border-radius:999px;padding:8px 4px;font:inherit;font-weight:800;font-size:14.5px;color:var(--grey);display:flex;flex-direction:column;align-items:center;line-height:1.1;cursor:pointer}
+.wseg button small{font-weight:600;font-size:11.5px}
+.wseg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.wsub{background:transparent;border:0;padding:0;gap:6px}
+.wsub button{flex:1;border:1.5px solid rgba(25,25,25,.12);background:#fff;padding:6px 4px;font-size:13.5px}
+.wsub button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.wchips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -22px;padding:0 22px}
+.wchips::-webkit-scrollbar{display:none}
+.wchips button{flex:none;border:1.5px solid rgba(25,25,25,.12);background:#fff;border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;font-weight:700;white-space:nowrap;cursor:pointer;color:var(--ink)}
+.wchips button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.wf h2{margin:18px 0 2px;font-size:24px}.wf h2 .s{font-family:var(--round);font-size:14px;font-weight:600;letter-spacing:0}
+.wr,.wgh{display:grid;grid-template-columns:50px 44px minmax(0,1fr);gap:10px;align-items:start;padding:13px 0;border-bottom:1px solid rgba(25,25,25,.08)}
+.wgh{grid-template-columns:50px 44px minmax(0,1fr) auto;align-items:center}
+.wr time,.wgh time{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em;font-variant-numeric:tabular-nums;padding-top:3px}
+.tile{width:44px;height:44px;border-radius:12px;background:var(--tint);display:grid;place-items:center;font-size:22px}
+.wb{min-width:0;display:flex;flex-direction:column}
+.wb .t{font-weight:800;font-size:16px;line-height:1.25}
+.wb .m{font-size:13.5px;color:var(--grey)}
+.solo{align-self:flex-start;margin-top:6px;font-size:12px;font-weight:800;color:var(--blue);background:var(--tint);border-radius:6px;padding:3px 7px}
+.wgh .arr{color:var(--blue);font-weight:800;font-size:14px}
+.wgi{display:none}.wg.open .wgi{display:block}
+.wcut{filter:blur(5px);opacity:.5;pointer-events:none;user-select:none}
+.wlock{position:relative;margin:-8px auto 8px;width:min(100%,360px);background:#fff;border:1.5px solid var(--blue);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:8px;text-align:center;box-shadow:0 8px 30px rgba(25,25,25,.14);z-index:3}
+.wlock b{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.04em}
+.wlock span{font-size:14px;color:var(--grey)}
+.wbg{position:fixed;inset:0;background:rgba(25,25,25,.42);z-index:90}
+.wsheet{position:fixed;left:0;right:0;bottom:0;z-index:91;background:#fff;border-radius:24px 24px 0 0;box-shadow:0 -12px 40px rgba(25,25,25,.16);padding:10px 18px calc(18px + env(safe-area-inset-bottom,0px));max-width:560px;margin:0 auto;max-height:92vh;overflow-y:auto;display:flex;flex-direction:column;gap:12px}
+.wsheet .wh{width:40px;height:5px;border-radius:3px;background:rgba(25,25,25,.14);margin:0 auto}
+.wsheet .wx{position:absolute;right:10px;top:10px;width:44px;height:44px;border:0;border-radius:50%;background:transparent;font-size:22px;color:var(--grey);cursor:pointer}
+.wsheet h2{font-size:24px}
+.wwrap{position:relative;width:200px;height:200px;margin:4px auto 0;flex:none}
+.wdisc{width:200px;height:200px;border-radius:50%;border:2px solid rgba(25,25,25,.12);position:relative;transition:transform 1000ms cubic-bezier(.2,.8,.2,1);background:conic-gradient(var(--tint) 0 60deg,#fff 60deg 120deg,var(--tint) 120deg 180deg,#fff 180deg 240deg,var(--tint) 240deg 300deg,#fff 300deg 360deg)}
+.wdisc span{position:absolute;left:50%;top:50%;font-size:26px;line-height:1}
+.wptr{position:absolute;left:50%;top:-9px;transform:translateX(-50%);width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid var(--blue);z-index:1}
+.wfil{display:flex;gap:8px;flex-wrap:wrap}
+.wfil button{border:1.5px solid rgba(25,25,25,.12);background:#fff;border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.wfil button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+#wres{display:flex;flex-direction:column;gap:10px}#wres[hidden]{display:none}
+#wres .wr{border:0;padding:0}
+.wsheet .btn{width:100%}
+@media (prefers-reduced-motion: reduce){.wdisc{transition:none}}
+</style>
 </head>
 <body>
 <header><div class="nav">
@@ -129,17 +189,170 @@ footer a:hover{color:var(--ink)}
 <div class="chips"><span class="chip">🎲 Culture</span></div>
 <h1>Board games in Florence and its province</h1>
 <p class="lead">In Florence and its province there are 6 board game nights in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.</p>
-<div class="cta"><a class="btn" href="/?citta=firenze">See all events</a></div>
-<h2>Upcoming</h2><div class="list"><a class="card" href="https://anyplans.in/en/firenze/volontariato-green-adotta-una-pianta/"><span class="em">🎲</span><span><span class="t">Volontariato Green: adotta una pianta!</span><br><span class="m">Wednesday 7 October at 12:00 · Cafaggio del Vescovo, Firenze</span></span></a>
-<a class="card" href="https://anyplans.in/en/firenze/florence-quiz-night/"><span class="em">🎲</span><span><span class="t">Florence Quiz Night</span><br><span class="m">Wednesday 7 October at 21:00 · YellowSquare Florence, Firenze</span></span></a>
-<a class="card" href="https://anyplans.in/en/firenze/game-night/"><span class="em">🎲</span><span><span class="t">Game Night</span><br><span class="m">From 9 October to 11 October, 2 dates · Surf Ventura, Firenze</span></span></a>
-<a class="card" href="https://anyplans.in/en/firenze/sessinio-di-pathfinder-ludo-in-fiera-organized-play-italia/"><span class="em">🎲</span><span><span class="t">Sessinio di Pathfinder - Ludo in Fiera - Organized Play Italia</span><br><span class="m">Saturday 10 October at 11:00 · Piazzale della Resistenza, Scandicci</span></span></a>
-<a class="card" href="https://anyplans.in/en/firenze/burraco-e-birrette-ostello-bello-firenze/"><span class="em">🎲</span><span><span class="t">BURRACO E BIRRETTE | Ostello Bello Firenze</span><br><span class="m">Sunday 11 October at 16:00 · Ostello Bello Firenze - Hostel and Bar, Firenze</span></span></a>
-<a class="card" href="https://anyplans.in/en/firenze/telaio-a-cornice-tessere-insieme-liberamente/"><span class="em">🎲</span><span><span class="t">Telaio a cornice_ Tessere insieme liberamente</span><br><span class="m">Saturday 17 October at 15:00 · Kumi Ceramica &amp; Spazio Creativo, Firenze</span></span></a></div>
+
+<p class="wsum"><b>5 events</b> in the next 7 days · 5 you can go to alone</p>
+<div class="wmap" id="wmap" aria-label="Map of the events"><span class="wcount" id="wcount"></span><div class="wmapbar"><button class="wwheel" id="wwheel" type="button" data-gate="ruota">Not sure? Spin the wheel</button><a class="wfull" href="/?citta=firenze" data-gate="mappa">Open the map</a></div></div>
+<div class="wbar"><div class="wseg" id="wseg"></div><div class="wseg wsub" id="wsub"></div><div class="wchips" id="wchips"></div></div>
+<div id="wlist"><div class="wday" data-key="2026-10-07"><section class="wf" data-f="pom"><h2>Afternoon <span class="s">1</span></h2><a class="wr" href="https://anyplans.in/en/firenze/volontariato-green-adotta-una-pianta/" data-f="pom" data-c="giochi" data-s="1" data-free="1" data-ts="1791367200000" data-e="🎲" data-ll="43.77528,11.25719"><time>12:00</time><span class="tile">🎲</span><span class="wb"><span class="t">Volontariato Green: adotta una pianta!</span><span class="m">Firenze</span><span class="solo">You can go alone</span></span></a></section><section class="wf" data-f="sera"><h2>Evening <span class="s">1</span></h2><a class="wr" href="https://anyplans.in/en/firenze/florence-quiz-night/" data-f="sera" data-c="giochi" data-s="1" data-free="1" data-ts="1791399600000" data-e="🎲" data-ll="43.78418,11.24205"><time>21:00</time><span class="tile">🎲</span><span class="wb"><span class="t">Florence Quiz Night</span><span class="m">Firenze</span><span class="solo">You can go alone</span></span></a></section></div><div class="wday" data-key="2026-10-09"><section class="wf" data-f="sera"><h2>Evening <span class="s">1</span></h2><a class="wr" href="https://anyplans.in/en/firenze/game-night/" data-f="sera" data-c="giochi" data-s="1" data-free="1" data-ts="1791565200000" data-e="🎲" data-ll="43.76279,11.27146"><time>19:00</time><span class="tile">🎲</span><span class="wb"><span class="t">Game Night</span><span class="m">Firenze</span><span class="solo">You can go alone</span></span></a></section></div><div class="wday" data-key="2026-10-10"><section class="wf" data-f="mat"><h2>Morning <span class="s">1</span></h2><a class="wr" href="https://anyplans.in/en/firenze/sessinio-di-pathfinder-ludo-in-fiera-organized-play-italia/" data-f="mat" data-c="giochi" data-s="1" data-free="1" data-ts="1791622800000" data-e="🎲" data-ll="43.75815,11.18227"><time>11:00</time><span class="tile">🎲</span><span class="wb"><span class="t">Sessinio di Pathfinder - Ludo in Fiera - Organized Play Italia</span><span class="m">Scandicci</span><span class="solo">You can go alone</span></span></a></section></div><div class="wday" data-key="2026-10-11"><section class="wf" data-f="pom"><h2>Afternoon <span class="s">1</span></h2><a class="wr" href="https://anyplans.in/en/firenze/burraco-e-birrette-ostello-bello-firenze/" data-f="pom" data-c="giochi" data-s="1" data-free="1" data-ts="1791727200000" data-e="🎲" data-ll="43.77804,11.25102"><time>16:00</time><span class="tile">🎲</span><span class="wb"><span class="t">BURRACO E BIRRETTE | Ostello Bello Firenze</span><span class="m">Ostello Bello Firenze - Hostel and Bar, Firenze</span><span class="solo">You can go alone</span></span></a></section><section class="wf" data-f="sera"><h2>Evening <span class="s">1</span></h2><a class="wr" href="https://anyplans.in/en/firenze/game-night/" data-f="sera" data-c="giochi" data-s="1" data-free="1" data-ts="1791738000000" data-e="🎲" data-ll="43.76279,11.27146"><time>19:00</time><span class="tile">🎲</span><span class="wb"><span class="t">Game Night</span><span class="m">Firenze</span><span class="solo">You can go alone</span></span></a></section></div></div>
+<div class="wlock" id="wlock" hidden><b>Sign up, it's free</b><span id="wlockn"></span><a class="btn" href="/bergamo/login.html" data-gate="lista">Sign up for free</a></div>
+<div class="wbg" id="wbg" hidden></div><div class="wsheet" id="wsheet" role="dialog" aria-modal="true" aria-labelledby="wsh" hidden><span class="wh"></span><button class="wx" id="wx" type="button" aria-label="Close">×</button><h2 id="wsh">Leave it to me</h2><p class="s">I'll pick something for you today or tomorrow, nearby. You just show up.</p><div class="wfil" id="wfil"></div><div class="wwrap"><div class="wptr"></div><div class="wdisc" id="wdisc"></div></div><div id="wres" hidden></div><button class="btn" id="wspin" type="button">Pick for me</button><button class="btn ghost" id="wagain" type="button" hidden></button></div>
+<script type="application/json" id="wcfg">{"kind":"tipo","keys":["2026-10-07","2026-10-09","2026-10-10","2026-10-11"],"tz":"Europe/Rome","city":[11.2558,43.7696],"login":"/bergamo/login.html","map":"/?citta=firenze","city_slug":"firenze","h1":["What to do in Florence undefined, Wednesday 7 October","What to do in Florence undefined, Friday 9 October","What to do in Florence undefined, Saturday 10 October","What to do in Florence undefined, Sunday 11 October"],"T":{"regT":"Sign up, it's free","reg":"Sign up for free","more":"more events","only":"All you need is an email.","map":"Open the map","wheel":"Not sure? Spin the wheel","nuovo":"New","wheelT":"Leave it to me","wheelS":"I'll pick something for you today or tomorrow, nearby. You just show up.","pick":"Pick for me","go":"Go here","another":"Another one · ","left":" left","none":"Nothing left for today: try tomorrow.","all":"All","solo":"Alone","f":{"Gratis":"Free","Sport":"Sports","Serata":"Night out","Cena":"Dinner"},"ci":"I'm in","soloL":"You can go alone"},"chips":{"sport":"Sports","tavola":"Food","lab":"Workshops","serate":"Nights out","cultura":"Culture","giochi":"Games","feste":"Festivals","mercati":"Markets","altro":"Other"},"fasce":{"mat":"Morning","pom":"Afternoon","sera":"Evening"},"when":{"mat":"this morning","pom":"this afternoon","sera":"tonight"},"dayLabels":["Wed 7","Fri 9","Sat 10","Sun 11"],"rel":true,"words":{"oggi":"Today","domani":"Tomorrow","st":{"mat":"this morning","pom":"this afternoon","sera":"tonight"}}}</script><h2>Later on</h2><div class="list"><a class="card" href="https://anyplans.in/en/firenze/telaio-a-cornice-tessere-insieme-liberamente/"><span class="em">🎲</span><span><span class="t">Telaio a cornice_ Tessere insieme liberamente</span><br><span class="m">Saturday 17 October at 15:00 · Kumi Ceramica &amp; Spazio Creativo, Firenze</span></span></a></div>
 <h2>Past</h2><div class="list"><a class="card old" href="https://anyplans.in/en/firenze/tuesday-night-trivia/"><span class="em">🎲</span><span><span class="t">Tuesday Night Trivia</span><br><span class="m">From 22 September to 6 October, 3 dates · Surf Ventura, Firenze</span></span></a>
 <a class="card old" href="https://anyplans.in/en/firenze/pathfinder-2e-organized-play-italia-gigacon-tuscany/"><span class="em">🎲</span><span><span class="t">Pathfinder 2e - Organized Play Italia, Gigacon Tuscany</span><br><span class="m">Saturday 19 September at 10:30 · Piazzale della Resistenza, Scandicci</span></span></a></div>
 <h2>Board games in other cities</h2><div class="tags"><a href="/en/pisa/board-games/">Board games in Pisa</a><a href="/en/bologna/board-games/">Board games in Bologna</a><a href="/en/reggio-emilia/board-games/">Board games in Reggio Emilia</a><a href="/en/ferrara/board-games/">Board games in Ferrara</a><a href="/en/padova/board-games/">Board games in Padova</a><a href="/en/genova/board-games/">Board games in Genova</a><a href="/en/brescia/board-games/">Board games in Brescia</a><a href="/en/roma/board-games/">Board games in Roma</a><a href="/en/cities/">All the cities</a></div>
 <div class="box" id="domande"><h2>Frequently asked questions</h2><details><summary>Which board games events in Florence and its province are coming up?</summary><p>There are 6 events: Volontariato Green: adotta una pianta! (Firenze, Wednesday 7 October at 12:00), Florence Quiz Night (Firenze, Wednesday 7 October at 21:00), Game Night (Firenze, from 9 October to 11 October, 2 dates), Sessinio di Pathfinder - Ludo in Fiera - Organized Play Italia (Scandicci, Saturday 10 October at 11:00), BURRACO E BIRRETTE | Ostello Bello Firenze (Sunday 11 October at 16:00) and Telaio a cornice_ Tessere insieme liberamente (Firenze, Saturday 17 October at 15:00).</p></details><details><summary>When is the next board games event?</summary><p>Volontariato Green: adotta una pianta!, Wednesday 7 October at 12:00, in Firenze. Free.</p></details><details><summary>Board games events in Florence and its province: are they free?</summary><p>Yes, all of them. When there is a ticket or a fee, the price is on the event&#39;s page.</p></details></div>
+<script>
+(function(){
+  var cfg = JSON.parse(document.getElementById("wcfg").textContent), T = cfg.T;
+  var $ = function(id){ return document.getElementById(id); };
+  var logged = false;
+  try { var s = JSON.parse(localStorage.getItem("anyplans_session") || sessionStorage.getItem("anyplans_session") || "null"); logged = !!(s && s.access_token); } catch (e) {}
+  var track = function(n, p){ try { window.apTrack && window.apTrack(n, p); } catch (e) {} };
+  function toLogin(why, next){
+    try { sessionStorage.setItem("anyplans_next", next || location.pathname); } catch (e) {}
+    track("wall_tap", location.pathname + "?" + why + "&quando");
+    location.href = cfg.login;
+  }
+  // il giorno vero, a Bergamo: se la pagina è di ieri (il lavoro notturno è in ritardo) si passa al giorno dopo
+  var today = new Intl.DateTimeFormat("en-CA", { timeZone: cfg.tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  var nowH = +new Intl.DateTimeFormat("it-IT", { timeZone: cfg.tz, hour: "2-digit", hourCycle: "h23" }).format(new Date());
+  var days = [].slice.call(document.querySelectorAll(".wday"));
+  var weekend = cfg.kind === "weekend" || cfg.kind === "tipo", di = 0;
+  var tomorrow = (function(){ var p = today.split("-"); var d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + 1)); return d.toISOString().slice(0, 10); })();
+  // nelle categorie: "Oggi" e "Domani" secondo la data vera, i giorni già passati non si mostrano
+  if (cfg.rel) cfg.dayLabels = cfg.keys.map(function(k, i){ return k === today ? cfg.words.oggi : k === tomorrow ? cfg.words.domani : cfg.dayLabels[i]; });
+  function dayFascia(){ var l = cfg.dayLabels[di]; if (cfg.rel && cfg.keys[di] === today) return cfg.words.st[fascia]; return l.toLowerCase() + " " + cfg.fasce[fascia].toLowerCase(); }
+  if (!weekend && cfg.keys.length > 1 && today === cfg.keys[1]) {
+    di = 1; days[0].hidden = true; days[1].hidden = false;
+    var h1 = document.querySelector("h1"); if (h1) h1.textContent = cfg.h1[1];
+  }
+  if (weekend) { var wi = cfg.keys.indexOf(today); if (wi > 0) di = wi; if (cfg.rel && cfg.keys[di] < today) { var nx = cfg.keys.findIndex(function(k){ return k >= today; }); if (nx >= 0) di = nx; } days.forEach(function(d, i){ d.hidden = i !== di; }); }
+  var fascia = nowH < 12 ? "mat" : nowH < 18 ? "pom" : "sera", cat = "all";
+  function curDay(){ return days[di]; }
+  function present(f){ return curDay().querySelector('.wf[data-f="' + f + '"]'); }
+  // sul weekend la fascia di partenza è quella dell'ora vera solo se oggi è uno dei due giorni, altrimenti la mattina
+  if (weekend && cfg.keys[di] !== today) fascia = "mat";
+  function fixFascia(){ if (!present(fascia)) fascia = ["mat", "pom", "sera"].filter(present)[0] || fascia; }
+  fixFascia();
+  function rowsOn(){ return [].slice.call(curDay().querySelectorAll(".wr, .wg")); }
+  function visible(el){
+    if (el.getAttribute("data-f") !== fascia) return false;
+    if (cat === "solo") return el.getAttribute("data-s") === "1";
+    return cat === "all" || el.getAttribute("data-c") === cat;
+  }
+  var map = null, markers = [];
+  function render(){
+    var seg = $("wseg"), html = "";
+    var fh = "";
+    if (cfg.kind !== "stasera") ["mat", "pom", "sera"].forEach(function(f){ var sec = present(f); if (!sec) return; var n = sec.querySelectorAll(".wr").length; fh += '<button type="button" data-fa="' + f + '" aria-pressed="' + (f === fascia) + '">' + cfg.fasce[f] + "<small>" + n + "</small></button>"; });
+    // sul weekend due righe: Sabato · Domenica sopra, Mattina · Pomeriggio · Sera sotto (07/10/2026)
+    if (weekend) { cfg.keys.forEach(function(k, i){ if (cfg.rel && k < today) return; var n = days[i].querySelectorAll(".wr").length; html += '<button type="button" data-day="' + i + '" aria-pressed="' + (i === di) + '">' + cfg.dayLabels[i] + "<small>" + n + "</small></button>"; }); seg.innerHTML = html; $("wsub").innerHTML = fh; }
+    else { seg.innerHTML = fh; $("wsub").innerHTML = ""; }
+    var counts = {}, solo = 0;
+    rowsOn().forEach(function(el){ if (el.parentNode.classList.contains("wgi")) return; if (el.getAttribute("data-f") !== fascia) return; var c = el.getAttribute("data-c"); counts[c] = (counts[c] || 0) + 1; if (el.getAttribute("data-s") === "1") solo++; });
+    var chips = '<button type="button" data-cat="all" aria-pressed="' + (cat === "all") + '">' + T.all + "</button>";
+    if (solo) chips += '<button type="button" data-cat="solo" aria-pressed="' + (cat === "solo") + '">' + T.solo + "</button>";
+    Object.keys(counts).sort(function(a, b){ return counts[b] - counts[a]; }).forEach(function(c){ chips += '<button type="button" data-cat="' + c + '" aria-pressed="' + (cat === c) + '">' + (cfg.chips[c] || c) + "</button>"; });
+    $("wchips").innerHTML = chips;
+    // sezioni e righe
+    [].slice.call(curDay().querySelectorAll(".wf")).forEach(function(sec){ sec.hidden = sec.getAttribute("data-f") !== fascia; });
+    var shown = 0, cut = 0, lockAfter = null;
+    [].slice.call(curDay().querySelectorAll(".wf > .wr, .wf > .wg")).forEach(function(el){
+      var ok = visible(el); el.hidden = !ok; el.classList.remove("wcut");
+      if (!ok) return;
+      shown++;
+      if (!logged && shown > 4) { el.classList.add("wcut"); cut += el.classList.contains("wg") ? el.querySelectorAll(".wr").length : 1; if (!lockAfter) lockAfter = el; }
+    });
+    var lock = $("wlock");
+    if (lockAfter) { lockAfter.parentNode.insertBefore(lock, lockAfter); lock.hidden = false; $("wlockn").textContent = T.more === "altri eventi" ? "Ci sono altri " + cut + " eventi " + (weekend ? dayFascia() : cfg.when[fascia]) + ". " + T.only : cut + " " + T.more + ". " + T.only; }
+    else lock.hidden = true;
+    var n = rowsOn().filter(function(el){ return el.classList.contains("wr") && !(el.closest(".wgi")) && visible(el); }).length + [].slice.call(curDay().querySelectorAll(".wg")).filter(visible).reduce(function(a, g){ return a + g.querySelectorAll(".wr").length; }, 0);
+    $("wcount").innerHTML = "<b>" + n + "</b> " + (weekend ? dayFascia() : cfg.kind === "stasera" ? cfg.when.sera : cfg.when[fascia]);
+    drawPins();
+  }
+  function pinRows(){ return [].slice.call(curDay().querySelectorAll(".wr")).filter(function(r){ var box = r.closest(".wg") || r; return visible(box) && r.getAttribute("data-ll"); }); }
+  function drawPins(){
+    if (!map) return;
+    markers.forEach(function(m){ m.remove(); }); markers = [];
+    pinRows().slice(0, 200).forEach(function(r){
+      var ll = r.getAttribute("data-ll").split(","), el = document.createElement("a");
+      el.className = "wpin" + (r.getAttribute("data-s") === "1" ? " wsolo" : ""); el.href = r.getAttribute("href");
+      el.setAttribute("aria-label", r.querySelector(".t").textContent);
+      el.innerHTML = "<i><span>" + r.getAttribute("data-e") + "</span></i>";
+      el.addEventListener("click", function(e){ if (!logged) { e.preventDefault(); toLogin("pin", r.getAttribute("href")); } });
+      markers.push(new maplibregl.Marker({ element: el, anchor: "bottom" }).setLngLat([+ll[1], +ll[0]]).addTo(map));
+    });
+  }
+  function loadMap(){
+    var css = document.createElement("link"); css.rel = "stylesheet"; css.href = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css"; document.head.appendChild(css);
+    var sc = document.createElement("script"); sc.src = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js";
+    sc.onload = function(){
+      map = new maplibregl.Map({ container: "wmap", style: "https://tiles.openfreemap.org/styles/liberty", center: cfg.city, zoom: 10.6, interactive: logged, attributionControl: false });
+      drawPins();   // i pin non aspettano lo stile e le mattonelle: su un telefono lento la mappa ci mette secondi
+    };
+    document.head.appendChild(sc);
+  }
+  loadMap();
+  $("wwheel").setAttribute("data-new", T.nuovo);
+  document.addEventListener("click", function(e){
+    var t = e.target.closest("button, a"); if (!t) return;
+    if (t.hasAttribute("data-fa")) { fascia = t.getAttribute("data-fa"); cat = "all"; render(); return; }
+    if (t.hasAttribute("data-day")) { days[di].hidden = true; di = +t.getAttribute("data-day"); days[di].hidden = false; cat = "all"; fixFascia(); render(); return; }
+    if (t.hasAttribute("data-cat")) { cat = t.getAttribute("data-cat"); render(); return; }
+    if (t.classList.contains("wgh")) { e.preventDefault(); if (!logged) { toLogin(t.getAttribute("data-gate"), location.pathname); return; } t.parentNode.classList.toggle("open"); return; }
+    if (t.id === "wwheel") { if (!logged) { toLogin("ruota", location.pathname + "#ruota"); return; } openWheel(); return; }
+    if (!logged && (t.classList.contains("wr") || t.classList.contains("wfull") || t.hasAttribute("data-gate"))) { e.preventDefault(); toLogin(t.getAttribute("data-gate") || "evento", t.classList.contains("wr") ? t.getAttribute("href") : t.classList.contains("wfull") ? t.getAttribute("href") : location.pathname); }
+  }, true);
+  // la ruota, come nella home (UI.md §3.13): sei spicchi, pesca tra gli eventi di oggi e domani che iniziano fra almeno un'ora
+  var SL = ["🏃", "🎨", "🍽️", "🎲", "🎤", "📚"], SLC = { sport: 0, lab: 1, tavola: 2, giochi: 3, serate: 4 };
+  var disc = $("wdisc");
+  SL.forEach(function(x, i){ var sp = document.createElement("span"), a = (i * 60 + 30) * Math.PI / 180; sp.textContent = x; sp.style.transform = "translate(" + (Math.sin(a) * 70) + "px," + (-Math.cos(a) * 70) + "px) translate(-50%,-50%)"; sp.setAttribute("aria-hidden", "true"); disc.appendChild(sp); });
+  var rot = 0, left = 3, seen = [];
+  function openWheel(){ left = 3; seen = []; $("wres").hidden = true; $("wagain").hidden = true; $("wspin").hidden = false;
+    $("wfil").innerHTML = ["Gratis", "Sport", "Serata", "Cena"].map(function(f){ return '<button type="button" data-wf="' + f + '" aria-pressed="false">' + T.f[f] + "</button>"; }).join("");
+    $("wbg").hidden = false; $("wsheet").hidden = false; track("ruota_open", location.pathname); }
+  function closeWheel(){ $("wbg").hidden = true; $("wsheet").hidden = true; }
+  $("wx").onclick = closeWheel; $("wbg").onclick = closeWheel;
+  $("wfil").addEventListener("click", function(e){ var b = e.target.closest("button"); if (b) b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") !== "true"); });
+  function pool(){
+    var on = [].slice.call($("wfil").querySelectorAll('[aria-pressed="true"]')).map(function(b){ return b.getAttribute("data-wf"); });
+    var soon = Date.now() + 3600e3;
+    return [].slice.call(document.querySelectorAll(".wday .wr")).filter(function(r){
+      if (r.closest(".wg")) return false;
+      if (+r.getAttribute("data-ts") < soon) return false;
+      if (seen.indexOf(r.getAttribute("href")) >= 0) return false;
+      var c = r.getAttribute("data-c"), h = +r.querySelector("time").textContent.slice(0, 2);
+      if (c === "mercati") return false;
+      if (on.indexOf("Gratis") >= 0 && r.getAttribute("data-free") !== "1") return false;
+      if (on.indexOf("Sport") >= 0 && c !== "sport") return false;
+      if (on.indexOf("Serata") >= 0 && h < 18) return false;
+      if (on.indexOf("Cena") >= 0 && c !== "tavola") return false;
+      return true;
+    });
+  }
+  function spin(){
+    var P = pool(), W = [];
+    P.forEach(function(r){ W.push(r); if (r.getAttribute("data-s") === "1") W.push(r); });
+    if (!W.length) { $("wres").innerHTML = '<p class="s">' + T.none + "</p>"; $("wres").hidden = false; $("wspin").hidden = true; return; }
+    var r = W[Math.floor(Math.random() * W.length)], sl = SLC[r.getAttribute("data-c")]; if (sl == null) sl = 5;
+    seen.push(r.getAttribute("href"));
+    var target = 360 - (sl * 60 + 30); rot += 3 * 360 + ((target - (rot % 360)) + 360) % 360;
+    disc.style.transform = "rotate(" + rot + "deg)"; $("wspin").hidden = true; $("wagain").hidden = true;
+    track("ruota_gira", location.pathname + "?giro=" + (4 - left));
+    setTimeout(function(){
+      left--;
+      var c = r.cloneNode(true); c.classList.remove("wcut"); c.hidden = false;
+      $("wres").innerHTML = '<span class="s">' + T.go + "</span>"; $("wres").appendChild(c);
+      var ci = document.createElement("a"); ci.className = "btn"; ci.href = r.getAttribute("href"); ci.textContent = T.ci; ci.onclick = function(){ track("ruota_join", r.getAttribute("href")); }; $("wres").appendChild(ci);
+      $("wres").hidden = false;
+      if (left > 0) { $("wagain").hidden = false; $("wagain").textContent = T.another + left + T.left; }
+    }, matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 1000);
+  }
+  $("wspin").onclick = spin; $("wagain").onclick = spin;
+  render();
+  if (logged && location.hash === "#ruota") openWheel();
+})();
+</script>
 
 </main>
 <footer><div class="wrap">

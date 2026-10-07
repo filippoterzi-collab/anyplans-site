@@ -116,7 +116,67 @@ footer .wrap{max-width:860px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 2
 footer a:hover{color:var(--ink)}
 @media (max-width:600px){h1{font-size:28px}.cover{height:180px;font-size:72px}
 .nav{height:auto;flex-wrap:wrap;gap:8px 12px;padding:10px 0}.nav>.row{width:100%;justify-content:space-between}}</style>
-
+<style>
+[hidden]{display:none!important}
+.wsum{font-size:15px;color:var(--grey)}.wsum b{color:var(--ink)}
+.wmap{position:relative;margin:0 -22px;height:340px;background:#EDEAE3;overflow:hidden}
+@media (min-width:700px){.wmap{margin:0;border-radius:22px;height:400px}}
+.wmap .maplibregl-canvas{outline:none}
+.wcount{position:absolute;z-index:2;top:12px;left:12px;background:#fff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:14px;box-shadow:0 2px 8px rgba(25,25,25,.18)}
+.wcount b{color:var(--blue)}
+.wmapbar{position:absolute;z-index:2;left:12px;right:12px;bottom:12px;display:flex;justify-content:space-between;align-items:flex-end;gap:8px}
+.wwheel{position:relative;border:1.5px solid var(--blue);background:#fff;color:var(--blue);border-radius:999px;padding:10px 14px;font:inherit;font-weight:800;font-size:14px;box-shadow:0 2px 10px rgba(25,25,25,.18);cursor:pointer}
+.wwheel::after{content:attr(data-new);position:absolute;top:-9px;left:-6px;background:var(--blue);color:#fff;font-size:10px;font-weight:800;line-height:1;padding:4px 7px;border-radius:999px;box-shadow:0 0 0 2px #fff}
+.wfull{background:var(--ink);color:#fff;border-radius:999px;padding:10px 14px;font-weight:800;font-size:14px;box-shadow:0 2px 10px rgba(25,25,25,.18);white-space:nowrap}
+.wpin{display:block;width:34px;height:40px;cursor:pointer}
+.wpin i{display:grid;place-items:center;width:34px;height:34px;border-radius:50% 50% 50% 4px;transform:rotate(-45deg);background:#fff;box-shadow:0 2px 8px rgba(25,25,25,.28)}
+.wpin span{transform:rotate(45deg);font-size:17px;line-height:1;font-style:normal}
+.wpin.wsolo i{background:var(--blue)}
+.wbar{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid rgba(25,25,25,.08)}
+.wseg{display:flex;background:#fff;border:1.5px solid rgba(25,25,25,.10);border-radius:999px;padding:3px}
+.wseg:empty{display:none}
+.wseg button{flex:1;border:0;background:none;border-radius:999px;padding:8px 4px;font:inherit;font-weight:800;font-size:14.5px;color:var(--grey);display:flex;flex-direction:column;align-items:center;line-height:1.1;cursor:pointer}
+.wseg button small{font-weight:600;font-size:11.5px}
+.wseg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.wsub{background:transparent;border:0;padding:0;gap:6px}
+.wsub button{flex:1;border:1.5px solid rgba(25,25,25,.12);background:#fff;padding:6px 4px;font-size:13.5px}
+.wsub button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.wchips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -22px;padding:0 22px}
+.wchips::-webkit-scrollbar{display:none}
+.wchips button{flex:none;border:1.5px solid rgba(25,25,25,.12);background:#fff;border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;font-weight:700;white-space:nowrap;cursor:pointer;color:var(--ink)}
+.wchips button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.wf h2{margin:18px 0 2px;font-size:24px}.wf h2 .s{font-family:var(--round);font-size:14px;font-weight:600;letter-spacing:0}
+.wr,.wgh{display:grid;grid-template-columns:50px 44px minmax(0,1fr);gap:10px;align-items:start;padding:13px 0;border-bottom:1px solid rgba(25,25,25,.08)}
+.wgh{grid-template-columns:50px 44px minmax(0,1fr) auto;align-items:center}
+.wr time,.wgh time{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em;font-variant-numeric:tabular-nums;padding-top:3px}
+.tile{width:44px;height:44px;border-radius:12px;background:var(--tint);display:grid;place-items:center;font-size:22px}
+.wb{min-width:0;display:flex;flex-direction:column}
+.wb .t{font-weight:800;font-size:16px;line-height:1.25}
+.wb .m{font-size:13.5px;color:var(--grey)}
+.solo{align-self:flex-start;margin-top:6px;font-size:12px;font-weight:800;color:var(--blue);background:var(--tint);border-radius:6px;padding:3px 7px}
+.wgh .arr{color:var(--blue);font-weight:800;font-size:14px}
+.wgi{display:none}.wg.open .wgi{display:block}
+.wcut{filter:blur(5px);opacity:.5;pointer-events:none;user-select:none}
+.wlock{position:relative;margin:-8px auto 8px;width:min(100%,360px);background:#fff;border:1.5px solid var(--blue);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:8px;text-align:center;box-shadow:0 8px 30px rgba(25,25,25,.14);z-index:3}
+.wlock b{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.04em}
+.wlock span{font-size:14px;color:var(--grey)}
+.wbg{position:fixed;inset:0;background:rgba(25,25,25,.42);z-index:90}
+.wsheet{position:fixed;left:0;right:0;bottom:0;z-index:91;background:#fff;border-radius:24px 24px 0 0;box-shadow:0 -12px 40px rgba(25,25,25,.16);padding:10px 18px calc(18px + env(safe-area-inset-bottom,0px));max-width:560px;margin:0 auto;max-height:92vh;overflow-y:auto;display:flex;flex-direction:column;gap:12px}
+.wsheet .wh{width:40px;height:5px;border-radius:3px;background:rgba(25,25,25,.14);margin:0 auto}
+.wsheet .wx{position:absolute;right:10px;top:10px;width:44px;height:44px;border:0;border-radius:50%;background:transparent;font-size:22px;color:var(--grey);cursor:pointer}
+.wsheet h2{font-size:24px}
+.wwrap{position:relative;width:200px;height:200px;margin:4px auto 0;flex:none}
+.wdisc{width:200px;height:200px;border-radius:50%;border:2px solid rgba(25,25,25,.12);position:relative;transition:transform 1000ms cubic-bezier(.2,.8,.2,1);background:conic-gradient(var(--tint) 0 60deg,#fff 60deg 120deg,var(--tint) 120deg 180deg,#fff 180deg 240deg,var(--tint) 240deg 300deg,#fff 300deg 360deg)}
+.wdisc span{position:absolute;left:50%;top:50%;font-size:26px;line-height:1}
+.wptr{position:absolute;left:50%;top:-9px;transform:translateX(-50%);width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid var(--blue);z-index:1}
+.wfil{display:flex;gap:8px;flex-wrap:wrap}
+.wfil button{border:1.5px solid rgba(25,25,25,.12);background:#fff;border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.wfil button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+#wres{display:flex;flex-direction:column;gap:10px}#wres[hidden]{display:none}
+#wres .wr{border:0;padding:0}
+.wsheet .btn{width:100%}
+@media (prefers-reduced-motion: reduce){.wdisc{transition:none}}
+</style>
 </head>
 <body>
 <header><div class="nav">
@@ -129,46 +189,14 @@ footer a:hover{color:var(--ink)}
 <div class="chips"><span class="chip">🆓 Culture</span></div>
 <h1>Free events in Lucca and its province</h1>
 <p class="lead">In Lucca and its province there are 54 free events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.</p>
-<div class="cta"><a class="btn" href="/?citta=lucca">See all events</a></div>
-<h2>Upcoming</h2><div class="list"><a class="card" href="https://anyplans.in/lucca/oracle-bistrot-t-max-lainox-26-by-andrea-palatresi/"><span class="em">🍽️</span><span><span class="t">ORACLE BISTROT |T-MAX-LAINOX | 07/10/26  by Andrea Palatresi</span><br><span class="m">Wednesday 7 October at 11:30 · T-Max Srl, Capannori</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/dalla-cantina-alla-tavola/"><span class="em">🍽️</span><span><span class="t">Dalla Cantina alla Tavola</span><br><span class="m">Thursday 8 October at 19:00 · Via della Tinaia, 9, Montecarlo</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/aperipittura-con-bianca-8-di-ottobre/"><span class="em">📚</span><span><span class="t">AperiPittura con Bianca 8 di Ottobre</span><br><span class="m">Thursday 8 October at 19:30 · Colab Coworking Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/cerimonia-apertura-epc-anno-accademico-1-lucca-paper-forum/"><span class="em">📚</span><span><span class="t">Cerimonia apertura EPC anno accademico 2026/2027 - 1° Lucca Paper Forum</span><br><span class="m">Friday 9 October at 09:30 · Via dell&#39;Angelo Custode, 30, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/anche-un-fiore-puo-cambiare-una-storia/"><span class="em">🌱</span><span><span class="t">ANCHE UN FIORE PUÒ CAMBIARE UNA STORIA!</span><br><span class="m">Friday 9 October at 15:00 · Biblioteca Civica Agorà, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/i-minerali-raccontano-la-storia-della-terra-a-cura-di-terrax/"><span class="em">📚</span><span><span class="t">I MINERALI RACCONTANO LA STORIA DELLA TERRA! a cura di TerraX</span><br><span class="m">Friday 9 October at 15:00 · Orto botanico di Lucca, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/plant-challenge-alla-scoperta-del-mondo-verde/"><span class="em">📚</span><span><span class="t">PLANT CHALLENGE: ALLA SCOPERTA DEL MONDO VERDE</span><br><span class="m">Friday 9 October at 15:00 · Orto botanico di Lucca, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/letture-animate/"><span class="em">📚</span><span><span class="t">LETTURE ANIMATE</span><br><span class="m">Friday 9 October at 16:00 · Biblioteca Civica Agorà, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/seed-room-il-segreto-per-uscire-dal-cambiamento-climatico/"><span class="em">📚</span><span><span class="t">SEED ROOM: IL SEGRETO PER USCIRE DAL CAMBIAMENTO CLIMATICO</span><br><span class="m">Friday 9 October at 16:30 · Orto botanico di Lucca, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/naturalisti-per-un-giorno-a-cura-di-xterra/"><span class="em">🥾</span><span><span class="t">NATURALISTI PER UN GIORNO a cura di: XTerra</span><br><span class="m">From 9 October to 10 October, 2 dates · Orto botanico di Lucca, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/la-valigia-del-mare-a-cura-di-marevivo/"><span class="em">🌱</span><span><span class="t">LA VALIGIA DEL MARE a cura di: Marevivo</span><br><span class="m">Friday 9 October at 16:30 · Biblioteca Civica Agorà, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/la-sala-della-musica-aperitivo-e-concerto-nella-casa-dell-ar/"><span class="em">🍽️</span><span><span class="t">La sala della musica: aperitivo  e concerto nella casa dell&#39;artista a Lucca</span><br><span class="m">Friday 9 October at 17:30 · Via Piana, 1785/C, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/degustazione-conviviale-sensoriale-del-borgo/"><span class="em">🍽️</span><span><span class="t">DEGUSTAZIONE CONVIVIALE SENSORIALE DEL BORGO</span><br><span class="m">Friday 9 October at 19:00 · Via della Tinaia, 9, Montecarlo</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/reloo-cena-djset-inaugurazione-da-reloo-caffe-o-libero/"><span class="em">🍽️</span><span><span class="t">💎RELOÒ💎 Cena/DJSet 🔥InAuGuRaZiOnE🔥 da Reloò Caffè: 1 posto libero</span><br><span class="m">Friday 9 October at 19:00 · Reloò Caffè, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/2-verita-e-1-bugia-da-vinarkia-della-pavona-vineria-cocktail/"><span class="em">🍽️</span><span><span class="t">2 Verità e 1 Bugia da Vinarkia Della Pavona - Vineria | Cocktail Bar | Ristorante: 6 posti liberi</span><br><span class="m">Friday 9 October at 19:30 · Vinarkia Della Pavona - Vineria | Cocktail Bar | Ristorante, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/la-grande-riffa-da-reloo-caffe/"><span class="em">🍽️</span><span><span class="t">La grande riffa da Reloò Caffè: 8 posti liberi</span><br><span class="m">Friday 9 October at 21:00 · Reloò Caffè, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/visite-guidate-all-arboreto-dell-orto-botanico-e-al-pomario/"><span class="em">🥾</span><span><span class="t">Visite guidate all&#39;Arboreto dell&#39;Orto Botanico e al Pomario</span><br><span class="m">Saturday 10 October at 09:30 · Orto botanico di Lucca, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/alberi-e-citta-piccolo-manuale-di-convivenza-intelligente/"><span class="em">🎉</span><span><span class="t">ALBERI E CITTÀ: PICCOLO MANUALE DI CONVIVENZA INTELLIGENTE</span><br><span class="m">Saturday 10 October at 10:00 · Orto botanico di Lucca, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/disegnare-il-pianeta-che-verra-con-jeugov/"><span class="em">📚</span><span><span class="t">DISEGNARE IL PIANETA CHE VERRÀ con JEUGOV</span><br><span class="m">Saturday 10 October at 10:00 · Biblioteca Civica Agorà, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/trame-di-polline-il-linguaggio-segreto-dei-fiori/"><span class="em">📚</span><span><span class="t">TRAME DI POLLINE: IL LINGUAGGIO SEGRETO DEI FIORI</span><br><span class="m">Saturday 10 October at 10:00 · Orto botanico di Lucca, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/i-messaggeri-del-profumo-a-cura-di-edu-care/"><span class="em">🎭</span><span><span class="t">I MESSAGGERI DEL PROFUMO a cura di Edu_care</span><br><span class="m">From 10 October to 11 October, 2 dates · Orto botanico di Lucca, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/mamme-in-movimento-x-villa-reale/"><span class="em">📚</span><span><span class="t">Mamme In Movimento X Villa Reale</span><br><span class="m">Saturday 10 October at 10:15 · Villa Reale , Marlia (LU), Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/i-colori-delle-piante-laboratorio-di-chimica-naturale/"><span class="em">📚</span><span><span class="t">I COLORI DELLE PIANTE – Laboratorio di chimica naturale</span><br><span class="m">Saturday 10 October at 10:30 · Biblioteca Civica Agorà, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/l-oro-delle-api-specchio-della-biodiversita-a-cura-di-edu-ca/"><span class="em">📚</span><span><span class="t">L&#39;ORO DELLE API: SPECCHIO DELLA BIODIVERSITÀ a cura di: Edu_Care</span><br><span class="m">From 10 October to 11 October, 2 dates · Orto botanico di Lucca, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/ho-visto-un-alce-in-giardino-con-elena-rossini-e-irene-penaz/"><span class="em">📚</span><span><span class="t">HO VISTO UN ALCE IN GIARDINO con: ELENA ROSSINI e IRENE PENAZZI</span><br><span class="m">Saturday 10 October at 15:00 · Biblioteca Civica Agorà, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/hotel-per-insetti-a-cura-di-edu-care/"><span class="em">🎉</span><span><span class="t">HOTEL PER INSETTI a cura di Edu_Care</span><br><span class="m">From 10 October to 11 October, 2 dates · Orto botanico di Lucca, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/ceppo-vivo-dove-ogni-ronzio-e-una-stanza-con-vista-a-cura-di/"><span class="em">🎭</span><span><span class="t">CEPPO VIVO: DOVE OGNI RONZIO È UNA STANZA CON VISTA a cura di: A.Di.P.A.</span><br><span class="m">Saturday 10 October at 15:00 · Orto botanico di Lucca, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/ore-15-laboratori-interattivi-per-tutti/"><span class="em">📚</span><span><span class="t">Ore 15 - Laboratori interattivi per tutti</span><br><span class="m">Saturday 10 October at 15:00 · Complesso Monumentale Di San Micheletto, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/lettura-animata-e-sketchshow-animali-superstar/"><span class="em">📚</span><span><span class="t">Lettura animata e sketchshow: ANIMALI SUPERSTAR</span><br><span class="m">Saturday 10 October at 16:00 · Biblioteca Civica Agorà, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/come-te-come-me-con-carolina-zanier/"><span class="em">🎭</span><span><span class="t">COME TE, COME ME con: CAROLINA ZANIER</span><br><span class="m">Saturday 10 October at 16:30 · Biblioteca Civica Agorà, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/borgo-delle-esperienze-reservations/"><span class="em">🍽️</span><span><span class="t">BORGO DELLE ESPERIENZE — RESERVATIONS.</span><br><span class="m">Saturday 10 October at 19:00 · Via della Tinaia, 9, Montecarlo</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/a-night-out-in-lucca-dinner-with-new-friends/"><span class="em">🍽️</span><span><span class="t">A Night Out in Lucca | Dinner with New Friends</span><br><span class="m">Saturday 10 October at 19:00 · Restaurant of the Week, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/cena-da-zen-sushi-restaurant-lucca/"><span class="em">🍽️</span><span><span class="t">Cena da ZEN sushi Restaurant (Lucca): 6 posti liberi</span><br><span class="m">Saturday 10 October at 19:00 · ZEN sushi Restaurant (Lucca)</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/cena-da-alidoro/"><span class="em">🍽️</span><span><span class="t">Cena da Alidoro: 17 posti liberi</span><br><span class="m">Saturday 10 October at 20:00 · Alidoro, Collodi</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/rinfresco-serale-devadatta-fest-lucca/"><span class="em">🍽️</span><span><span class="t">Rinfresco serale DEVADATTA FEST Lucca</span><br><span class="m">Saturday 10 October at 20:00 · Viale Europa, 76C, Capannori</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/gianni-maestro-a-cura-di-parco-della-fantasia-gianni-rodari/"><span class="em">🎉</span><span><span class="t">GIANNI MAESTRO a cura di: Parco della Fantasia &quot;Gianni Rodari&quot;</span><br><span class="m">Sunday 11 October at 10:00 · Biblioteca Civica Agorà, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/voce-del-verbo-con-carolina-zanier/"><span class="em">📚</span><span><span class="t">VOCE DEL VERBO con: CAROLINA ZANIER</span><br><span class="m">Sunday 11 October at 11:30 · Biblioteca Civica Agorà, Lucca</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/titolare-non-tuttofare-gli-ingredienti-della-delega/"><span class="em">📚</span><span><span class="t">Titolare, non tuttofare — Gli ingredienti della delega</span><br><span class="m">Tuesday 13 October at 14:00 · crescITA srl, Capannori</span></span></a>
-<a class="card" href="https://anyplans.in/lucca/il-corso-di-pittura-base/"><span class="em">📚</span><span><span class="t">Il corso di Pittura base</span><br><span class="m">Wednesday 14 October at 19:30 · Colab Coworking Lucca</span></span></a>
+
+<p class="wsum"><b>38 events</b> in the next 7 days · 23 you can go to alone</p>
+<div class="wmap" id="wmap" aria-label="Map of the events"><span class="wcount" id="wcount"></span><div class="wmapbar"><button class="wwheel" id="wwheel" type="button" data-gate="ruota">Not sure? Spin the wheel</button><a class="wfull" href="/?citta=lucca" data-gate="mappa">Open the map</a></div></div>
+<div class="wbar"><div class="wseg" id="wseg"></div><div class="wseg wsub" id="wsub"></div><div class="wchips" id="wchips"></div></div>
+<div id="wlist"><div class="wday" data-key="2026-10-07"><section class="wf" data-f="mat"><h2>Morning <span class="s">1</span></h2><a class="wr" href="https://anyplans.in/lucca/oracle-bistrot-t-max-lainox-26-by-andrea-palatresi/" data-f="mat" data-c="tavola" data-free="1" data-ts="1791365400000" data-e="🍽️" data-ll="43.85500,10.56637"><time>11:30</time><span class="tile">🍽️</span><span class="wb"><span class="t">ORACLE BISTROT |T-MAX-LAINOX | 07/10/26  by Andrea Palatresi</span><span class="m">Capannori</span></span></a></section></div><div class="wday" data-key="2026-10-08"><section class="wf" data-f="sera"><h2>Evening <span class="s">2</span></h2><a class="wr" href="https://anyplans.in/lucca/dalla-cantina-alla-tavola/" data-f="sera" data-c="tavola" data-free="1" data-ts="1791478800000" data-e="🍽️" data-ll="43.84817,10.64619"><time>19:00</time><span class="tile">🍽️</span><span class="wb"><span class="t">Dalla Cantina alla Tavola</span><span class="m">Montecarlo</span></span></a><a class="wr" href="https://anyplans.in/lucca/aperipittura-con-bianca-8-di-ottobre/" data-f="sera" data-c="cultura" data-s="1" data-free="1" data-ts="1791480600000" data-e="📚" data-ll="43.83913,10.51151"><time>19:30</time><span class="tile">📚</span><span class="wb"><span class="t">AperiPittura con Bianca 8 di Ottobre</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a></section></div><div class="wday" data-key="2026-10-09"><section class="wf" data-f="mat"><h2>Morning <span class="s">1</span></h2><a class="wr" href="https://anyplans.in/lucca/cerimonia-apertura-epc-anno-accademico-1-lucca-paper-forum/" data-f="mat" data-c="cultura" data-s="1" data-free="1" data-ts="1791531000000" data-e="📚" data-ll="43.84431,10.50806"><time>09:30</time><span class="tile">📚</span><span class="wb"><span class="t">Cerimonia apertura EPC anno accademico 2026/2027 - 1° Lucca Paper Forum</span><span class="m">Via dell&#39;Angelo Custode, 30, Lucca</span><span class="solo">You can go alone</span></span></a></section><section class="wf" data-f="pom"><h2>Afternoon <span class="s">8</span></h2><a class="wr" href="https://anyplans.in/lucca/anche-un-fiore-puo-cambiare-una-storia/" data-f="pom" data-c="lab" data-free="1" data-ts="1791550800000" data-e="🌱" data-ll="43.84184,10.50613"><time>15:00</time><span class="tile">🌱</span><span class="wb"><span class="t">ANCHE UN FIORE PUÒ CAMBIARE UNA STORIA!</span><span class="m">Lucca</span></span></a><a class="wr" href="https://anyplans.in/lucca/i-minerali-raccontano-la-storia-della-terra-a-cura-di-terrax/" data-f="pom" data-c="cultura" data-s="1" data-free="1" data-ts="1791550800000" data-e="📚" data-ll="43.84134,10.51031"><time>15:00</time><span class="tile">📚</span><span class="wb"><span class="t">I MINERALI RACCONTANO LA STORIA DELLA TERRA! a cura di TerraX</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/plant-challenge-alla-scoperta-del-mondo-verde/" data-f="pom" data-c="cultura" data-s="1" data-free="1" data-ts="1791550800000" data-e="📚" data-ll="43.84134,10.51031"><time>15:00</time><span class="tile">📚</span><span class="wb"><span class="t">PLANT CHALLENGE: ALLA SCOPERTA DEL MONDO VERDE</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/letture-animate/" data-f="pom" data-c="cultura" data-s="1" data-free="1" data-ts="1791554400000" data-e="📚" data-ll="43.84184,10.50613"><time>16:00</time><span class="tile">📚</span><span class="wb"><span class="t">LETTURE ANIMATE</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/seed-room-il-segreto-per-uscire-dal-cambiamento-climatico/" data-f="pom" data-c="cultura" data-s="1" data-free="1" data-ts="1791556200000" data-e="📚" data-ll="43.84134,10.51031"><time>16:30</time><span class="tile">📚</span><span class="wb"><span class="t">SEED ROOM: IL SEGRETO PER USCIRE DAL CAMBIAMENTO CLIMATICO</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/naturalisti-per-un-giorno-a-cura-di-xterra/" data-f="pom" data-c="sport" data-s="1" data-free="1" data-ts="1791556200000" data-e="🥾" data-ll="43.84134,10.51031"><time>16:30</time><span class="tile">🥾</span><span class="wb"><span class="t">NATURALISTI PER UN GIORNO a cura di: XTerra</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/la-valigia-del-mare-a-cura-di-marevivo/" data-f="pom" data-c="lab" data-free="1" data-ts="1791556200000" data-e="🌱" data-ll="43.84184,10.50613"><time>16:30</time><span class="tile">🌱</span><span class="wb"><span class="t">LA VALIGIA DEL MARE a cura di: Marevivo</span><span class="m">Lucca</span></span></a><a class="wr" href="https://anyplans.in/lucca/la-sala-della-musica-aperitivo-e-concerto-nella-casa-dell-ar/" data-f="pom" data-c="tavola" data-free="1" data-ts="1791559800000" data-e="🍽️" data-ll="43.87365,10.46218"><time>17:30</time><span class="tile">🍽️</span><span class="wb"><span class="t">La sala della musica: aperitivo  e concerto nella casa dell&#39;artista a Lucca</span><span class="m">Via Piana, 1785/C, Lucca</span></span></a></section><section class="wf" data-f="sera"><h2>Evening <span class="s">4</span></h2><a class="wr" href="https://anyplans.in/lucca/degustazione-conviviale-sensoriale-del-borgo/" data-f="sera" data-c="tavola" data-free="1" data-ts="1791565200000" data-e="🍽️" data-ll="43.84817,10.64619"><time>19:00</time><span class="tile">🍽️</span><span class="wb"><span class="t">DEGUSTAZIONE CONVIVIALE SENSORIALE DEL BORGO</span><span class="m">Montecarlo</span></span></a><a class="wr" href="https://anyplans.in/lucca/reloo-cena-djset-inaugurazione-da-reloo-caffe-o-libero/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791565200000" data-e="🍽️" data-ll="43.84167,10.52861"><time>19:00</time><span class="tile">🍽️</span><span class="wb"><span class="t">💎RELOÒ💎 Cena/DJSet 🔥InAuGuRaZiOnE🔥 da Reloò Caffè: 1 posto libero</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/2-verita-e-1-bugia-da-vinarkia-della-pavona-vineria-cocktail/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791567000000" data-e="🍽️" data-ll="43.84644,10.50730"><time>19:30</time><span class="tile">🍽️</span><span class="wb"><span class="t">2 Verità e 1 Bugia da Vinarkia Della Pavona - Vineria | Cocktail Bar | Ristorante: 6 posti liberi</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/la-grande-riffa-da-reloo-caffe/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791572400000" data-e="🍽️" data-ll="43.84167,10.52861"><time>21:00</time><span class="tile">🍽️</span><span class="wb"><span class="t">La grande riffa da Reloò Caffè: 8 posti liberi</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a></section></div><div class="wday" data-key="2026-10-10"><section class="wf" data-f="mat"><h2>Morning <span class="s">9</span></h2><a class="wr" href="https://anyplans.in/lucca/visite-guidate-all-arboreto-dell-orto-botanico-e-al-pomario/" data-f="mat" data-c="sport" data-s="1" data-free="1" data-ts="1791617400000" data-e="🥾" data-ll="43.84134,10.51031"><time>09:30</time><span class="tile">🥾</span><span class="wb"><span class="t">Visite guidate all&#39;Arboreto dell&#39;Orto Botanico e al Pomario</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/alberi-e-citta-piccolo-manuale-di-convivenza-intelligente/" data-f="mat" data-c="feste" data-free="1" data-ts="1791619200000" data-e="🎉" data-ll="43.84134,10.51031"><time>10:00</time><span class="tile">🎉</span><span class="wb"><span class="t">ALBERI E CITTÀ: PICCOLO MANUALE DI CONVIVENZA INTELLIGENTE</span><span class="m">Lucca</span></span></a><a class="wr" href="https://anyplans.in/lucca/disegnare-il-pianeta-che-verra-con-jeugov/" data-f="mat" data-c="cultura" data-s="1" data-free="1" data-ts="1791619200000" data-e="📚" data-ll="43.84184,10.50613"><time>10:00</time><span class="tile">📚</span><span class="wb"><span class="t">DISEGNARE IL PIANETA CHE VERRÀ con JEUGOV</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/trame-di-polline-il-linguaggio-segreto-dei-fiori/" data-f="mat" data-c="cultura" data-s="1" data-free="1" data-ts="1791619200000" data-e="📚" data-ll="43.84134,10.51031"><time>10:00</time><span class="tile">📚</span><span class="wb"><span class="t">TRAME DI POLLINE: IL LINGUAGGIO SEGRETO DEI FIORI</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/i-messaggeri-del-profumo-a-cura-di-edu-care/" data-f="mat" data-c="serate" data-free="1" data-ts="1791619200000" data-e="🎭" data-ll="43.84134,10.51031"><time>10:00</time><span class="tile">🎭</span><span class="wb"><span class="t">I MESSAGGERI DEL PROFUMO a cura di Edu_care</span><span class="m">Lucca</span></span></a><a class="wr" href="https://anyplans.in/lucca/mamme-in-movimento-x-villa-reale/" data-f="mat" data-c="cultura" data-s="1" data-free="1" data-ts="1791620100000" data-e="📚" data-ll="43.89902,10.55463"><time>10:15</time><span class="tile">📚</span><span class="wb"><span class="t">Mamme In Movimento X Villa Reale</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/i-colori-delle-piante-laboratorio-di-chimica-naturale/" data-f="mat" data-c="cultura" data-s="1" data-free="1" data-ts="1791621000000" data-e="📚" data-ll="43.84184,10.50613"><time>10:30</time><span class="tile">📚</span><span class="wb"><span class="t">I COLORI DELLE PIANTE – Laboratorio di chimica naturale</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/naturalisti-per-un-giorno-a-cura-di-xterra/" data-f="mat" data-c="sport" data-s="1" data-free="1" data-ts="1791624600000" data-e="🥾" data-ll="43.84134,10.51031"><time>11:30</time><span class="tile">🥾</span><span class="wb"><span class="t">NATURALISTI PER UN GIORNO a cura di: XTerra</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/l-oro-delle-api-specchio-della-biodiversita-a-cura-di-edu-ca/" data-f="mat" data-c="cultura" data-s="1" data-free="1" data-ts="1791624600000" data-e="📚" data-ll="43.84134,10.51031"><time>11:30</time><span class="tile">📚</span><span class="wb"><span class="t">L&#39;ORO DELLE API: SPECCHIO DELLA BIODIVERSITÀ a cura di: Edu_Care</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a></section><section class="wf" data-f="pom"><h2>Afternoon <span class="s">6</span></h2><a class="wr" href="https://anyplans.in/lucca/ho-visto-un-alce-in-giardino-con-elena-rossini-e-irene-penaz/" data-f="pom" data-c="cultura" data-s="1" data-free="1" data-ts="1791637200000" data-e="📚" data-ll="43.84184,10.50613"><time>15:00</time><span class="tile">📚</span><span class="wb"><span class="t">HO VISTO UN ALCE IN GIARDINO con: ELENA ROSSINI e IRENE PENAZZI</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/hotel-per-insetti-a-cura-di-edu-care/" data-f="pom" data-c="feste" data-free="1" data-ts="1791637200000" data-e="🎉" data-ll="43.84134,10.51031"><time>15:00</time><span class="tile">🎉</span><span class="wb"><span class="t">HOTEL PER INSETTI a cura di Edu_Care</span><span class="m">Lucca</span></span></a><a class="wr" href="https://anyplans.in/lucca/ceppo-vivo-dove-ogni-ronzio-e-una-stanza-con-vista-a-cura-di/" data-f="pom" data-c="serate" data-free="1" data-ts="1791637200000" data-e="🎭" data-ll="43.84134,10.51031"><time>15:00</time><span class="tile">🎭</span><span class="wb"><span class="t">CEPPO VIVO: DOVE OGNI RONZIO È UNA STANZA CON VISTA a cura di: A.Di.P.A.</span><span class="m">Lucca</span></span></a><a class="wr" href="https://anyplans.in/lucca/ore-15-laboratori-interattivi-per-tutti/" data-f="pom" data-c="cultura" data-s="1" data-free="1" data-ts="1791637200000" data-e="📚" data-ll="43.84246,10.51068"><time>15:00</time><span class="tile">📚</span><span class="wb"><span class="t">Ore 15 - Laboratori interattivi per tutti</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/lettura-animata-e-sketchshow-animali-superstar/" data-f="pom" data-c="cultura" data-s="1" data-free="1" data-ts="1791640800000" data-e="📚" data-ll="43.84184,10.50613"><time>16:00</time><span class="tile">📚</span><span class="wb"><span class="t">Lettura animata e sketchshow: ANIMALI SUPERSTAR</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/come-te-come-me-con-carolina-zanier/" data-f="pom" data-c="serate" data-free="1" data-ts="1791642600000" data-e="🎭" data-ll="43.84184,10.50613"><time>16:30</time><span class="tile">🎭</span><span class="wb"><span class="t">COME TE, COME ME con: CAROLINA ZANIER</span><span class="m">Lucca</span></span></a></section><section class="wf" data-f="sera"><h2>Evening <span class="s">5</span></h2><a class="wr" href="https://anyplans.in/lucca/borgo-delle-esperienze-reservations/" data-f="sera" data-c="tavola" data-free="1" data-ts="1791651600000" data-e="🍽️" data-ll="43.84817,10.64619"><time>19:00</time><span class="tile">🍽️</span><span class="wb"><span class="t">BORGO DELLE ESPERIENZE — RESERVATIONS.</span><span class="m">Montecarlo</span></span></a><a class="wr" href="https://anyplans.in/lucca/a-night-out-in-lucca-dinner-with-new-friends/" data-f="sera" data-c="tavola" data-free="1" data-ts="1791651600000" data-e="🍽️" data-ll="43.84269,10.50158"><time>19:00</time><span class="tile">🍽️</span><span class="wb"><span class="t">A Night Out in Lucca | Dinner with New Friends</span><span class="m">Restaurant of the Week, Lucca</span></span></a><a class="wr" href="https://anyplans.in/lucca/cena-da-zen-sushi-restaurant-lucca/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791651600000" data-e="🍽️" data-ll="43.85118,10.53081"><time>19:00</time><span class="tile">🍽️</span><span class="wb"><span class="t">Cena da ZEN sushi Restaurant (Lucca): 6 posti liberi</span><span class="m">ZEN sushi Restaurant (Lucca)</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/cena-da-alidoro/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791655200000" data-e="🍽️" data-ll="43.89156,10.66160"><time>20:00</time><span class="tile">🍽️</span><span class="wb"><span class="t">Cena da Alidoro: 17 posti liberi</span><span class="m">Collodi</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/rinfresco-serale-devadatta-fest-lucca/" data-f="sera" data-c="tavola" data-free="1" data-ts="1791655200000" data-e="🍽️" data-ll="43.87046,10.57767"><time>20:00</time><span class="tile">🍽️</span><span class="wb"><span class="t">Rinfresco serale DEVADATTA FEST Lucca</span><span class="m">Capannori</span></span></a></section></div><div class="wday" data-key="2026-10-11"><section class="wf" data-f="mat"><h2>Morning <span class="s">4</span></h2><a class="wr" href="https://anyplans.in/lucca/hotel-per-insetti-a-cura-di-edu-care/" data-f="mat" data-c="feste" data-free="1" data-ts="1791705600000" data-e="🎉" data-ll="43.84134,10.51031"><time>10:00</time><span class="tile">🎉</span><span class="wb"><span class="t">HOTEL PER INSETTI a cura di Edu_Care</span><span class="m">Lucca</span></span></a><a class="wr" href="https://anyplans.in/lucca/gianni-maestro-a-cura-di-parco-della-fantasia-gianni-rodari/" data-f="mat" data-c="feste" data-free="1" data-ts="1791705600000" data-e="🎉" data-ll="43.84184,10.50613"><time>10:00</time><span class="tile">🎉</span><span class="wb"><span class="t">GIANNI MAESTRO a cura di: Parco della Fantasia &quot;Gianni Rodari&quot;</span><span class="m">Lucca</span></span></a><a class="wr" href="https://anyplans.in/lucca/l-oro-delle-api-specchio-della-biodiversita-a-cura-di-edu-ca/" data-f="mat" data-c="cultura" data-s="1" data-free="1" data-ts="1791711000000" data-e="📚" data-ll="43.84134,10.51031"><time>11:30</time><span class="tile">📚</span><span class="wb"><span class="t">L&#39;ORO DELLE API: SPECCHIO DELLA BIODIVERSITÀ a cura di: Edu_Care</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/lucca/voce-del-verbo-con-carolina-zanier/" data-f="mat" data-c="cultura" data-s="1" data-free="1" data-ts="1791711000000" data-e="📚" data-ll="43.84184,10.50613"><time>11:30</time><span class="tile">📚</span><span class="wb"><span class="t">VOCE DEL VERBO con: CAROLINA ZANIER</span><span class="m">Lucca</span><span class="solo">You can go alone</span></span></a></section><section class="wf" data-f="pom"><h2>Afternoon <span class="s">1</span></h2><a class="wr" href="https://anyplans.in/lucca/i-messaggeri-del-profumo-a-cura-di-edu-care/" data-f="pom" data-c="serate" data-free="1" data-ts="1791723600000" data-e="🎭" data-ll="43.84134,10.51031"><time>15:00</time><span class="tile">🎭</span><span class="wb"><span class="t">I MESSAGGERI DEL PROFUMO a cura di Edu_care</span><span class="m">Lucca</span></span></a></section></div><div class="wday" data-key="2026-10-13"><section class="wf" data-f="pom"><h2>Afternoon <span class="s">1</span></h2><a class="wr" href="https://anyplans.in/lucca/titolare-non-tuttofare-gli-ingredienti-della-delega/" data-f="pom" data-c="cultura" data-s="1" data-free="1" data-ts="1791892800000" data-e="📚" data-ll="43.86414,10.58084"><time>14:00</time><span class="tile">📚</span><span class="wb"><span class="t">Titolare, non tuttofare — Gli ingredienti della delega</span><span class="m">Capannori</span><span class="solo">You can go alone</span></span></a></section></div></div>
+<div class="wlock" id="wlock" hidden><b>Sign up, it's free</b><span id="wlockn"></span><a class="btn" href="/bergamo/login.html" data-gate="lista">Sign up for free</a></div>
+<div class="wbg" id="wbg" hidden></div><div class="wsheet" id="wsheet" role="dialog" aria-modal="true" aria-labelledby="wsh" hidden><span class="wh"></span><button class="wx" id="wx" type="button" aria-label="Close">×</button><h2 id="wsh">Leave it to me</h2><p class="s">I'll pick something for you today or tomorrow, nearby. You just show up.</p><div class="wfil" id="wfil"></div><div class="wwrap"><div class="wptr"></div><div class="wdisc" id="wdisc"></div></div><div id="wres" hidden></div><button class="btn" id="wspin" type="button">Pick for me</button><button class="btn ghost" id="wagain" type="button" hidden></button></div>
+<script type="application/json" id="wcfg">{"kind":"tipo","keys":["2026-10-07","2026-10-08","2026-10-09","2026-10-10","2026-10-11","2026-10-13"],"tz":"Europe/Rome","city":[10.502,43.843],"login":"/bergamo/login.html","map":"/?citta=lucca","city_slug":"lucca","h1":["What to do in Lucca undefined, Wednesday 7 October","What to do in Lucca undefined, Thursday 8 October","What to do in Lucca undefined, Friday 9 October","What to do in Lucca undefined, Saturday 10 October","What to do in Lucca undefined, Sunday 11 October","What to do in Lucca undefined, Tuesday 13 October"],"T":{"regT":"Sign up, it's free","reg":"Sign up for free","more":"more events","only":"All you need is an email.","map":"Open the map","wheel":"Not sure? Spin the wheel","nuovo":"New","wheelT":"Leave it to me","wheelS":"I'll pick something for you today or tomorrow, nearby. You just show up.","pick":"Pick for me","go":"Go here","another":"Another one · ","left":" left","none":"Nothing left for today: try tomorrow.","all":"All","solo":"Alone","f":{"Gratis":"Free","Sport":"Sports","Serata":"Night out","Cena":"Dinner"},"ci":"I'm in","soloL":"You can go alone"},"chips":{"sport":"Sports","tavola":"Food","lab":"Workshops","serate":"Nights out","cultura":"Culture","giochi":"Games","feste":"Festivals","mercati":"Markets","altro":"Other"},"fasce":{"mat":"Morning","pom":"Afternoon","sera":"Evening"},"when":{"mat":"this morning","pom":"this afternoon","sera":"tonight"},"dayLabels":["Wed 7","Thu 8","Fri 9","Sat 10","Sun 11","Tue 13"],"rel":true,"words":{"oggi":"Today","domani":"Tomorrow","st":{"mat":"this morning","pom":"this afternoon","sera":"tonight"}}}</script><h2>Later on</h2><div class="list"><a class="card" href="https://anyplans.in/lucca/il-corso-di-pittura-base/"><span class="em">📚</span><span><span class="t">Il corso di Pittura base</span><br><span class="m">Wednesday 14 October at 19:30 · Colab Coworking Lucca</span></span></a>
 <a class="card" href="https://anyplans.in/lucca/innovazione-in-viaggio-toscana-i-edizione/"><span class="em">📚</span><span><span class="t">Innovazione in viaggio - Toscana I edizione</span><br><span class="m">Thursday 15 October at 16:30 · Polo Tecnologico Lucchese, Lucca</span></span></a>
 <a class="card" href="https://anyplans.in/lucca/apericeramica-colab-coworking-22-di-ottobre/"><span class="em">🏺</span><span><span class="t">AperiCeramica, Colab Coworking / 22 di Ottobre</span><br><span class="m">Thursday 22 October at 19:30 · Colab Coworking Lucca</span></span></a>
 <a class="card" href="https://anyplans.in/lucca/sylos-labini-l-augusta-festival/"><span class="em">📚</span><span><span class="t">Sylos Labini @ L&#39;Augusta festival</span><br><span class="m">Thursday 22 October at 21:00 · Casa del boia, Lucca</span></span></a>
@@ -206,6 +234,158 @@ footer a:hover{color:var(--ink)}
 <a class="card old" href="https://anyplans.in/lucca/il-sogno-di-francesco/"><span class="em">🎬</span><span><span class="t">Il sogno di Francesco</span><br><span class="m">Saturday 3 October at 15:00 · Complesso Monumentale Di San Micheletto, Lucca</span></span></a></div>
 <h2>Free events in other cities</h2><div class="tags"><a href="/en/pisa/free/">Free events in Pisa</a><a href="/en/pistoia/free/">Free events in Pistoia</a><a href="/en/prato/free/">Free events in Prato</a><a href="/en/firenze/free/">Free events in Firenze</a><a href="/en/modena/free/">Free events in Modena</a><a href="/en/reggio-emilia/free/">Free events in Reggio Emilia</a><a href="/en/bologna/free/">Free events in Bologna</a><a href="/en/parma/free/">Free events in Parma</a><a href="/en/cities/">All the cities</a></div>
 <div class="box" id="domande"><h2>Frequently asked questions</h2><details><summary>Which free events events in Lucca and its province are coming up?</summary><p>There are 54 events: ORACLE BISTROT |T-MAX-LAINOX | 07/10/26  by Andrea Palatresi (Capannori, Wednesday 7 October at 11:30), Dalla Cantina alla Tavola (Montecarlo, Thursday 8 October at 19:00), AperiPittura con Bianca 8 di Ottobre (Lucca, Thursday 8 October at 19:30), Cerimonia apertura EPC anno accademico 2026/2027 - 1° Lucca Paper Forum (Friday 9 October at 09:30), ANCHE UN FIORE PUÒ CAMBIARE UNA STORIA! (Lucca, Friday 9 October at 15:00) and I MINERALI RACCONTANO LA STORIA DELLA TERRA! a cura di TerraX (Lucca, Friday 9 October at 15:00) and more, all in the list above.</p></details><details><summary>When is the next free events event?</summary><p>ORACLE BISTROT |T-MAX-LAINOX | 07/10/26  by Andrea Palatresi, Wednesday 7 October at 11:30, in Capannori. Free.</p></details><details><summary>Free events events in Lucca and its province: are they free?</summary><p>Yes, all of them. When there is a ticket or a fee, the price is on the event&#39;s page.</p></details></div>
+<script>
+(function(){
+  var cfg = JSON.parse(document.getElementById("wcfg").textContent), T = cfg.T;
+  var $ = function(id){ return document.getElementById(id); };
+  var logged = false;
+  try { var s = JSON.parse(localStorage.getItem("anyplans_session") || sessionStorage.getItem("anyplans_session") || "null"); logged = !!(s && s.access_token); } catch (e) {}
+  var track = function(n, p){ try { window.apTrack && window.apTrack(n, p); } catch (e) {} };
+  function toLogin(why, next){
+    try { sessionStorage.setItem("anyplans_next", next || location.pathname); } catch (e) {}
+    track("wall_tap", location.pathname + "?" + why + "&quando");
+    location.href = cfg.login;
+  }
+  // il giorno vero, a Bergamo: se la pagina è di ieri (il lavoro notturno è in ritardo) si passa al giorno dopo
+  var today = new Intl.DateTimeFormat("en-CA", { timeZone: cfg.tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  var nowH = +new Intl.DateTimeFormat("it-IT", { timeZone: cfg.tz, hour: "2-digit", hourCycle: "h23" }).format(new Date());
+  var days = [].slice.call(document.querySelectorAll(".wday"));
+  var weekend = cfg.kind === "weekend" || cfg.kind === "tipo", di = 0;
+  var tomorrow = (function(){ var p = today.split("-"); var d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + 1)); return d.toISOString().slice(0, 10); })();
+  // nelle categorie: "Oggi" e "Domani" secondo la data vera, i giorni già passati non si mostrano
+  if (cfg.rel) cfg.dayLabels = cfg.keys.map(function(k, i){ return k === today ? cfg.words.oggi : k === tomorrow ? cfg.words.domani : cfg.dayLabels[i]; });
+  function dayFascia(){ var l = cfg.dayLabels[di]; if (cfg.rel && cfg.keys[di] === today) return cfg.words.st[fascia]; return l.toLowerCase() + " " + cfg.fasce[fascia].toLowerCase(); }
+  if (!weekend && cfg.keys.length > 1 && today === cfg.keys[1]) {
+    di = 1; days[0].hidden = true; days[1].hidden = false;
+    var h1 = document.querySelector("h1"); if (h1) h1.textContent = cfg.h1[1];
+  }
+  if (weekend) { var wi = cfg.keys.indexOf(today); if (wi > 0) di = wi; if (cfg.rel && cfg.keys[di] < today) { var nx = cfg.keys.findIndex(function(k){ return k >= today; }); if (nx >= 0) di = nx; } days.forEach(function(d, i){ d.hidden = i !== di; }); }
+  var fascia = nowH < 12 ? "mat" : nowH < 18 ? "pom" : "sera", cat = "all";
+  function curDay(){ return days[di]; }
+  function present(f){ return curDay().querySelector('.wf[data-f="' + f + '"]'); }
+  // sul weekend la fascia di partenza è quella dell'ora vera solo se oggi è uno dei due giorni, altrimenti la mattina
+  if (weekend && cfg.keys[di] !== today) fascia = "mat";
+  function fixFascia(){ if (!present(fascia)) fascia = ["mat", "pom", "sera"].filter(present)[0] || fascia; }
+  fixFascia();
+  function rowsOn(){ return [].slice.call(curDay().querySelectorAll(".wr, .wg")); }
+  function visible(el){
+    if (el.getAttribute("data-f") !== fascia) return false;
+    if (cat === "solo") return el.getAttribute("data-s") === "1";
+    return cat === "all" || el.getAttribute("data-c") === cat;
+  }
+  var map = null, markers = [];
+  function render(){
+    var seg = $("wseg"), html = "";
+    var fh = "";
+    if (cfg.kind !== "stasera") ["mat", "pom", "sera"].forEach(function(f){ var sec = present(f); if (!sec) return; var n = sec.querySelectorAll(".wr").length; fh += '<button type="button" data-fa="' + f + '" aria-pressed="' + (f === fascia) + '">' + cfg.fasce[f] + "<small>" + n + "</small></button>"; });
+    // sul weekend due righe: Sabato · Domenica sopra, Mattina · Pomeriggio · Sera sotto (07/10/2026)
+    if (weekend) { cfg.keys.forEach(function(k, i){ if (cfg.rel && k < today) return; var n = days[i].querySelectorAll(".wr").length; html += '<button type="button" data-day="' + i + '" aria-pressed="' + (i === di) + '">' + cfg.dayLabels[i] + "<small>" + n + "</small></button>"; }); seg.innerHTML = html; $("wsub").innerHTML = fh; }
+    else { seg.innerHTML = fh; $("wsub").innerHTML = ""; }
+    var counts = {}, solo = 0;
+    rowsOn().forEach(function(el){ if (el.parentNode.classList.contains("wgi")) return; if (el.getAttribute("data-f") !== fascia) return; var c = el.getAttribute("data-c"); counts[c] = (counts[c] || 0) + 1; if (el.getAttribute("data-s") === "1") solo++; });
+    var chips = '<button type="button" data-cat="all" aria-pressed="' + (cat === "all") + '">' + T.all + "</button>";
+    if (solo) chips += '<button type="button" data-cat="solo" aria-pressed="' + (cat === "solo") + '">' + T.solo + "</button>";
+    Object.keys(counts).sort(function(a, b){ return counts[b] - counts[a]; }).forEach(function(c){ chips += '<button type="button" data-cat="' + c + '" aria-pressed="' + (cat === c) + '">' + (cfg.chips[c] || c) + "</button>"; });
+    $("wchips").innerHTML = chips;
+    // sezioni e righe
+    [].slice.call(curDay().querySelectorAll(".wf")).forEach(function(sec){ sec.hidden = sec.getAttribute("data-f") !== fascia; });
+    var shown = 0, cut = 0, lockAfter = null;
+    [].slice.call(curDay().querySelectorAll(".wf > .wr, .wf > .wg")).forEach(function(el){
+      var ok = visible(el); el.hidden = !ok; el.classList.remove("wcut");
+      if (!ok) return;
+      shown++;
+      if (!logged && shown > 4) { el.classList.add("wcut"); cut += el.classList.contains("wg") ? el.querySelectorAll(".wr").length : 1; if (!lockAfter) lockAfter = el; }
+    });
+    var lock = $("wlock");
+    if (lockAfter) { lockAfter.parentNode.insertBefore(lock, lockAfter); lock.hidden = false; $("wlockn").textContent = T.more === "altri eventi" ? "Ci sono altri " + cut + " eventi " + (weekend ? dayFascia() : cfg.when[fascia]) + ". " + T.only : cut + " " + T.more + ". " + T.only; }
+    else lock.hidden = true;
+    var n = rowsOn().filter(function(el){ return el.classList.contains("wr") && !(el.closest(".wgi")) && visible(el); }).length + [].slice.call(curDay().querySelectorAll(".wg")).filter(visible).reduce(function(a, g){ return a + g.querySelectorAll(".wr").length; }, 0);
+    $("wcount").innerHTML = "<b>" + n + "</b> " + (weekend ? dayFascia() : cfg.kind === "stasera" ? cfg.when.sera : cfg.when[fascia]);
+    drawPins();
+  }
+  function pinRows(){ return [].slice.call(curDay().querySelectorAll(".wr")).filter(function(r){ var box = r.closest(".wg") || r; return visible(box) && r.getAttribute("data-ll"); }); }
+  function drawPins(){
+    if (!map) return;
+    markers.forEach(function(m){ m.remove(); }); markers = [];
+    pinRows().slice(0, 200).forEach(function(r){
+      var ll = r.getAttribute("data-ll").split(","), el = document.createElement("a");
+      el.className = "wpin" + (r.getAttribute("data-s") === "1" ? " wsolo" : ""); el.href = r.getAttribute("href");
+      el.setAttribute("aria-label", r.querySelector(".t").textContent);
+      el.innerHTML = "<i><span>" + r.getAttribute("data-e") + "</span></i>";
+      el.addEventListener("click", function(e){ if (!logged) { e.preventDefault(); toLogin("pin", r.getAttribute("href")); } });
+      markers.push(new maplibregl.Marker({ element: el, anchor: "bottom" }).setLngLat([+ll[1], +ll[0]]).addTo(map));
+    });
+  }
+  function loadMap(){
+    var css = document.createElement("link"); css.rel = "stylesheet"; css.href = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css"; document.head.appendChild(css);
+    var sc = document.createElement("script"); sc.src = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js";
+    sc.onload = function(){
+      map = new maplibregl.Map({ container: "wmap", style: "https://tiles.openfreemap.org/styles/liberty", center: cfg.city, zoom: 10.6, interactive: logged, attributionControl: false });
+      drawPins();   // i pin non aspettano lo stile e le mattonelle: su un telefono lento la mappa ci mette secondi
+    };
+    document.head.appendChild(sc);
+  }
+  loadMap();
+  $("wwheel").setAttribute("data-new", T.nuovo);
+  document.addEventListener("click", function(e){
+    var t = e.target.closest("button, a"); if (!t) return;
+    if (t.hasAttribute("data-fa")) { fascia = t.getAttribute("data-fa"); cat = "all"; render(); return; }
+    if (t.hasAttribute("data-day")) { days[di].hidden = true; di = +t.getAttribute("data-day"); days[di].hidden = false; cat = "all"; fixFascia(); render(); return; }
+    if (t.hasAttribute("data-cat")) { cat = t.getAttribute("data-cat"); render(); return; }
+    if (t.classList.contains("wgh")) { e.preventDefault(); if (!logged) { toLogin(t.getAttribute("data-gate"), location.pathname); return; } t.parentNode.classList.toggle("open"); return; }
+    if (t.id === "wwheel") { if (!logged) { toLogin("ruota", location.pathname + "#ruota"); return; } openWheel(); return; }
+    if (!logged && (t.classList.contains("wr") || t.classList.contains("wfull") || t.hasAttribute("data-gate"))) { e.preventDefault(); toLogin(t.getAttribute("data-gate") || "evento", t.classList.contains("wr") ? t.getAttribute("href") : t.classList.contains("wfull") ? t.getAttribute("href") : location.pathname); }
+  }, true);
+  // la ruota, come nella home (UI.md §3.13): sei spicchi, pesca tra gli eventi di oggi e domani che iniziano fra almeno un'ora
+  var SL = ["🏃", "🎨", "🍽️", "🎲", "🎤", "📚"], SLC = { sport: 0, lab: 1, tavola: 2, giochi: 3, serate: 4 };
+  var disc = $("wdisc");
+  SL.forEach(function(x, i){ var sp = document.createElement("span"), a = (i * 60 + 30) * Math.PI / 180; sp.textContent = x; sp.style.transform = "translate(" + (Math.sin(a) * 70) + "px," + (-Math.cos(a) * 70) + "px) translate(-50%,-50%)"; sp.setAttribute("aria-hidden", "true"); disc.appendChild(sp); });
+  var rot = 0, left = 3, seen = [];
+  function openWheel(){ left = 3; seen = []; $("wres").hidden = true; $("wagain").hidden = true; $("wspin").hidden = false;
+    $("wfil").innerHTML = ["Gratis", "Sport", "Serata", "Cena"].map(function(f){ return '<button type="button" data-wf="' + f + '" aria-pressed="false">' + T.f[f] + "</button>"; }).join("");
+    $("wbg").hidden = false; $("wsheet").hidden = false; track("ruota_open", location.pathname); }
+  function closeWheel(){ $("wbg").hidden = true; $("wsheet").hidden = true; }
+  $("wx").onclick = closeWheel; $("wbg").onclick = closeWheel;
+  $("wfil").addEventListener("click", function(e){ var b = e.target.closest("button"); if (b) b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") !== "true"); });
+  function pool(){
+    var on = [].slice.call($("wfil").querySelectorAll('[aria-pressed="true"]')).map(function(b){ return b.getAttribute("data-wf"); });
+    var soon = Date.now() + 3600e3;
+    return [].slice.call(document.querySelectorAll(".wday .wr")).filter(function(r){
+      if (r.closest(".wg")) return false;
+      if (+r.getAttribute("data-ts") < soon) return false;
+      if (seen.indexOf(r.getAttribute("href")) >= 0) return false;
+      var c = r.getAttribute("data-c"), h = +r.querySelector("time").textContent.slice(0, 2);
+      if (c === "mercati") return false;
+      if (on.indexOf("Gratis") >= 0 && r.getAttribute("data-free") !== "1") return false;
+      if (on.indexOf("Sport") >= 0 && c !== "sport") return false;
+      if (on.indexOf("Serata") >= 0 && h < 18) return false;
+      if (on.indexOf("Cena") >= 0 && c !== "tavola") return false;
+      return true;
+    });
+  }
+  function spin(){
+    var P = pool(), W = [];
+    P.forEach(function(r){ W.push(r); if (r.getAttribute("data-s") === "1") W.push(r); });
+    if (!W.length) { $("wres").innerHTML = '<p class="s">' + T.none + "</p>"; $("wres").hidden = false; $("wspin").hidden = true; return; }
+    var r = W[Math.floor(Math.random() * W.length)], sl = SLC[r.getAttribute("data-c")]; if (sl == null) sl = 5;
+    seen.push(r.getAttribute("href"));
+    var target = 360 - (sl * 60 + 30); rot += 3 * 360 + ((target - (rot % 360)) + 360) % 360;
+    disc.style.transform = "rotate(" + rot + "deg)"; $("wspin").hidden = true; $("wagain").hidden = true;
+    track("ruota_gira", location.pathname + "?giro=" + (4 - left));
+    setTimeout(function(){
+      left--;
+      var c = r.cloneNode(true); c.classList.remove("wcut"); c.hidden = false;
+      $("wres").innerHTML = '<span class="s">' + T.go + "</span>"; $("wres").appendChild(c);
+      var ci = document.createElement("a"); ci.className = "btn"; ci.href = r.getAttribute("href"); ci.textContent = T.ci; ci.onclick = function(){ track("ruota_join", r.getAttribute("href")); }; $("wres").appendChild(ci);
+      $("wres").hidden = false;
+      if (left > 0) { $("wagain").hidden = false; $("wagain").textContent = T.another + left + T.left; }
+    }, matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 1000);
+  }
+  $("wspin").onclick = spin; $("wagain").onclick = spin;
+  render();
+  if (logged && location.hash === "#ruota") openWheel();
+})();
+</script>
 
 </main>
 <footer><div class="wrap">

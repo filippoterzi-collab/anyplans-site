@@ -116,7 +116,67 @@ footer .wrap{max-width:860px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 2
 footer a:hover{color:var(--ink)}
 @media (max-width:600px){h1{font-size:28px}.cover{height:180px;font-size:72px}
 .nav{height:auto;flex-wrap:wrap;gap:8px 12px;padding:10px 0}.nav>.row{width:100%;justify-content:space-between}}</style>
-
+<style>
+[hidden]{display:none!important}
+.wsum{font-size:15px;color:var(--grey)}.wsum b{color:var(--ink)}
+.wmap{position:relative;margin:0 -22px;height:340px;background:#EDEAE3;overflow:hidden}
+@media (min-width:700px){.wmap{margin:0;border-radius:22px;height:400px}}
+.wmap .maplibregl-canvas{outline:none}
+.wcount{position:absolute;z-index:2;top:12px;left:12px;background:#fff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:14px;box-shadow:0 2px 8px rgba(25,25,25,.18)}
+.wcount b{color:var(--blue)}
+.wmapbar{position:absolute;z-index:2;left:12px;right:12px;bottom:12px;display:flex;justify-content:space-between;align-items:flex-end;gap:8px}
+.wwheel{position:relative;border:1.5px solid var(--blue);background:#fff;color:var(--blue);border-radius:999px;padding:10px 14px;font:inherit;font-weight:800;font-size:14px;box-shadow:0 2px 10px rgba(25,25,25,.18);cursor:pointer}
+.wwheel::after{content:attr(data-new);position:absolute;top:-9px;left:-6px;background:var(--blue);color:#fff;font-size:10px;font-weight:800;line-height:1;padding:4px 7px;border-radius:999px;box-shadow:0 0 0 2px #fff}
+.wfull{background:var(--ink);color:#fff;border-radius:999px;padding:10px 14px;font-weight:800;font-size:14px;box-shadow:0 2px 10px rgba(25,25,25,.18);white-space:nowrap}
+.wpin{display:block;width:34px;height:40px;cursor:pointer}
+.wpin i{display:grid;place-items:center;width:34px;height:34px;border-radius:50% 50% 50% 4px;transform:rotate(-45deg);background:#fff;box-shadow:0 2px 8px rgba(25,25,25,.28)}
+.wpin span{transform:rotate(45deg);font-size:17px;line-height:1;font-style:normal}
+.wpin.wsolo i{background:var(--blue)}
+.wbar{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid rgba(25,25,25,.08)}
+.wseg{display:flex;background:#fff;border:1.5px solid rgba(25,25,25,.10);border-radius:999px;padding:3px}
+.wseg:empty{display:none}
+.wseg button{flex:1;border:0;background:none;border-radius:999px;padding:8px 4px;font:inherit;font-weight:800;font-size:14.5px;color:var(--grey);display:flex;flex-direction:column;align-items:center;line-height:1.1;cursor:pointer}
+.wseg button small{font-weight:600;font-size:11.5px}
+.wseg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.wsub{background:transparent;border:0;padding:0;gap:6px}
+.wsub button{flex:1;border:1.5px solid rgba(25,25,25,.12);background:#fff;padding:6px 4px;font-size:13.5px}
+.wsub button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.wchips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -22px;padding:0 22px}
+.wchips::-webkit-scrollbar{display:none}
+.wchips button{flex:none;border:1.5px solid rgba(25,25,25,.12);background:#fff;border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;font-weight:700;white-space:nowrap;cursor:pointer;color:var(--ink)}
+.wchips button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.wf h2{margin:18px 0 2px;font-size:24px}.wf h2 .s{font-family:var(--round);font-size:14px;font-weight:600;letter-spacing:0}
+.wr,.wgh{display:grid;grid-template-columns:50px 44px minmax(0,1fr);gap:10px;align-items:start;padding:13px 0;border-bottom:1px solid rgba(25,25,25,.08)}
+.wgh{grid-template-columns:50px 44px minmax(0,1fr) auto;align-items:center}
+.wr time,.wgh time{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em;font-variant-numeric:tabular-nums;padding-top:3px}
+.tile{width:44px;height:44px;border-radius:12px;background:var(--tint);display:grid;place-items:center;font-size:22px}
+.wb{min-width:0;display:flex;flex-direction:column}
+.wb .t{font-weight:800;font-size:16px;line-height:1.25}
+.wb .m{font-size:13.5px;color:var(--grey)}
+.solo{align-self:flex-start;margin-top:6px;font-size:12px;font-weight:800;color:var(--blue);background:var(--tint);border-radius:6px;padding:3px 7px}
+.wgh .arr{color:var(--blue);font-weight:800;font-size:14px}
+.wgi{display:none}.wg.open .wgi{display:block}
+.wcut{filter:blur(5px);opacity:.5;pointer-events:none;user-select:none}
+.wlock{position:relative;margin:-8px auto 8px;width:min(100%,360px);background:#fff;border:1.5px solid var(--blue);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:8px;text-align:center;box-shadow:0 8px 30px rgba(25,25,25,.14);z-index:3}
+.wlock b{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.04em}
+.wlock span{font-size:14px;color:var(--grey)}
+.wbg{position:fixed;inset:0;background:rgba(25,25,25,.42);z-index:90}
+.wsheet{position:fixed;left:0;right:0;bottom:0;z-index:91;background:#fff;border-radius:24px 24px 0 0;box-shadow:0 -12px 40px rgba(25,25,25,.16);padding:10px 18px calc(18px + env(safe-area-inset-bottom,0px));max-width:560px;margin:0 auto;max-height:92vh;overflow-y:auto;display:flex;flex-direction:column;gap:12px}
+.wsheet .wh{width:40px;height:5px;border-radius:3px;background:rgba(25,25,25,.14);margin:0 auto}
+.wsheet .wx{position:absolute;right:10px;top:10px;width:44px;height:44px;border:0;border-radius:50%;background:transparent;font-size:22px;color:var(--grey);cursor:pointer}
+.wsheet h2{font-size:24px}
+.wwrap{position:relative;width:200px;height:200px;margin:4px auto 0;flex:none}
+.wdisc{width:200px;height:200px;border-radius:50%;border:2px solid rgba(25,25,25,.12);position:relative;transition:transform 1000ms cubic-bezier(.2,.8,.2,1);background:conic-gradient(var(--tint) 0 60deg,#fff 60deg 120deg,var(--tint) 120deg 180deg,#fff 180deg 240deg,var(--tint) 240deg 300deg,#fff 300deg 360deg)}
+.wdisc span{position:absolute;left:50%;top:50%;font-size:26px;line-height:1}
+.wptr{position:absolute;left:50%;top:-9px;transform:translateX(-50%);width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid var(--blue);z-index:1}
+.wfil{display:flex;gap:8px;flex-wrap:wrap}
+.wfil button{border:1.5px solid rgba(25,25,25,.12);background:#fff;border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.wfil button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+#wres{display:flex;flex-direction:column;gap:10px}#wres[hidden]{display:none}
+#wres .wr{border:0;padding:0}
+.wsheet .btn{width:100%}
+@media (prefers-reduced-motion: reduce){.wdisc{transition:none}}
+</style>
 </head>
 <body>
 <header><div class="nav">
@@ -129,48 +189,14 @@ footer a:hover{color:var(--ink)}
 <div class="chips"><span class="chip">🏆 Culture</span></div>
 <h1>Tournaments in Milan and its province</h1>
 <p class="lead">In Milan and its province there are 68 open tournaments, amateur and for fun in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.</p>
-<div class="cta"><a class="btn" href="/?citta=milano">See all events</a></div>
-<h2>Upcoming</h2><div class="list"><a class="card" href="https://anyplans.in/en/milano/open-wine-party-al-mib/"><span class="em">🌙</span><span><span class="t">Open Wine &amp; Party al MIB</span><br><span class="m">From 7 October to 14 October, 2 dates · MiB Milano, Via Gaetano Negri 10, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/l-ambrata-rooftop-comedy-open-mic/"><span class="em">🎭</span><span><span class="t">L&#39;Ambrata Rooftop Comedy - Open mic</span><br><span class="m">Wednesday 7 October at 20:30 · L&#39;Ambrata, terrazza di via Ventura, Via Privata Giovanni Ventura 16, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/stand-out-comedy-open-mic/"><span class="em">🎭</span><span><span class="t">STAND OUT COMEDY | OPEN MIC</span><br><span class="m">Wednesday 7 October at 21:00 · Cascina Cuccagna, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/non-fa-ridere-comedy-open-mic-all-ostello-bello-centrale/"><span class="em">🎭</span><span><span class="t">Non fa ridere - Comedy open mic all&#39;Ostello Bello Centrale</span><br><span class="m">Thursday 8 October at 20:30 · Ostello Bello Grande, Via Roberto Lepetit 33, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/birrofilahah-open-mic-di-stand-up/"><span class="em">🎭</span><span><span class="t">Birrofilahah - Open mic di stand-up</span><br><span class="m">Thursday 8 October at 21:00 · La Birrofila Brewpub, Via Sant&#39;Ampellio 14, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/stand-up-comedy-birrofilahah-open-mic/"><span class="em">🎭</span><span><span class="t">Stand Up Comedy - BIRROFILAHAH Open Mic</span><br><span class="m">Thursday 8 October at 21:00 · La Birrofila Brewpub, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/tech-startups-on-the-terrace-open-by-joivy-milan-12-edition/"><span class="em">📚</span><span><span class="t">Tech Startups on the Terrace  - Open by Joivy - Milan #12 Edition!</span><br><span class="m">Friday 9 October at 18:00 · Joivy, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/colnago-contest-la-bici-piu-bella-di-milano/"><span class="em">🚴</span><span><span class="t">Colnago Contest: la bici più bella di Milano</span><br><span class="m">Friday 9 October at 19:00 · Eroica Cafè viale Tunisia, Viale Tunisia 15, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/torneo-over-50/"><span class="em">🏸</span><span><span class="t">Torneo OVER 50</span><br><span class="m">Friday 9 October at 19:00 · Padel Club Tolcinasco, Castello Tolcinasco Golf Club, 20072 Pieve Emanuele</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/il-torneo-di-cruciverba-di-stazione-radio/"><span class="em">🎲</span><span><span class="t">Il torneo di cruciverba di Stazione Radio</span><br><span class="m">Friday 9 October at 19:00 · Stazione Radio, Via Tofane 45, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/true-story-raccontaci-una-storia-open-mic-di-storytelling/"><span class="em">🎭</span><span><span class="t">TRUE STORY • Raccontaci una storia (OPEN MIC di STORYTELLING)</span><br><span class="m">Friday 9 October at 19:20 · Open Casello | Giovani Milano, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/true-story-open-mic-di-storytelling/"><span class="em">🎭</span><span><span class="t">True Story - Open mic di storytelling</span><br><span class="m">Friday 9 October at 19:30 · Open Casello, Piazzale Antonio Cantore 14, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/house-party-open-spritz/"><span class="em">🌙</span><span><span class="t">House Party - Open Spritz!</span><br><span class="m">Friday 9 October at 20:00 · Milano, Loreto</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/biutiful-un-bellissimo-torneo-di-poetry-slam/"><span class="em">🎭</span><span><span class="t">Biutiful - Un bellissimo torneo di poetry slam</span><br><span class="m">Friday 9 October at 21:00 · Arci Bellezza, Via Giovanni Bellezza 16/A, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/torneo-americana-con-maestro/"><span class="em">🏸</span><span><span class="t">TORNEO AMERICANA con Maestro</span><br><span class="m">Saturday 10 October at 09:00 · Padel Lorenteggio, Via Francesco Gonin 16 -  Tel. 02.48300873 - Mob. 345 4689789, 20147 Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/open-day-piazzetta-10-ottobre-2026/"><span class="em">📚</span><span><span class="t">Open Day Piazzetta - 10 ottobre 2026</span><br><span class="m">Saturday 10 October at 09:00 · Via Giovanni Battista Piazzetta, 2, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/torneo-100-e-lode-over-50/"><span class="em">🏸</span><span><span class="t">torneo 100 e lode over 50</span><br><span class="m">Saturday 10 October at 09:30 · Europadel, Via 1° Maggio, 30, 20028 San Vittore Olona</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/seguro-in-festa-street-food-torneo-di-basket-e-dj-set/"><span class="em">🎉</span><span><span class="t">Seguro in Festa: street food, torneo di basket e dj set</span><br><span class="m">Saturday 10 October at 09:30 · Comune di Settimo Milanese</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/torneo-principianti-da-0-0-2-0-playtomic/"><span class="em">🏸</span><span><span class="t">🏆💥TORNEO PRINCIPIANTI💥🏆DA 0.0 – 2.0 PLAYTOMIC🏆</span><br><span class="m">From 10 October to 31 October, 3 dates · Easy Village, Via per Caronno, 6, 21040 Origgio VA, Italia, 21040 Origgio</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/torneo-entry-level-da-1-5-3-5-playtomic/"><span class="em">🏸</span><span><span class="t">🏆💥TORNEO ENTRY LEVEL💥🏆DA 1.5 – 3.5 PLAYTOMIC🏆</span><br><span class="m">From 10 October to 31 October, 4 dates · Easy Village, Via per Caronno, 6, 21040 Origgio VA, Italia, 21040 Origgio</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/torneo-level-zerodue/"><span class="em">🏸</span><span><span class="t">Torneo Level ZeroDue🟢🏆</span><br><span class="m">Saturday 10 October at 14:00 · 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/fondazione-its-ammi-open-day-2026-27-milano/"><span class="em">📚</span><span><span class="t">FONDAZIONE ITS AMMI - OPEN DAY 2026-27 (MILANO)</span><br><span class="m">Saturday 10 October at 14:00 · Via Plezzo, 10, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/dali-e-la-moda-con-challenge-e-drink/"><span class="em">🏛️</span><span><span class="t">Dalì e la Moda, con challenge e drink!</span><br><span class="m">Saturday 10 October at 14:30 · Duomo Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/super-torneo-a-16-player-coppie-fisse/"><span class="em">🏸</span><span><span class="t">SUPER TORNEO  A 16 PLAYER COPPIE FISSE</span><br><span class="m">Saturday 10 October at 15:00 · Lainate Padel, Via Circonvallazione Ovest 1, 20043 Lainate</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/torneo-del-sabato/"><span class="em">🏸</span><span><span class="t">TORNEO DEL SABATO</span><br><span class="m">Saturday 10 October at 16:00 · MC2 Padel Arena, Via Aldo Moro 1, 20090 Buccinasco</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/lezione-open-di-improvvisazione-teatrale-molla-il-copione/"><span class="em">📚</span><span><span class="t">Lezione open di Improvvisazione Teatrale: molla il copione!</span><br><span class="m">Saturday 10 October at 17:00 · Milano, Famagosta</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/spanish-night-open-sangria/"><span class="em">🍽️</span><span><span class="t">Spanish Night: Open Sangria</span><br><span class="m">Saturday 10 October at 20:00 · Money Club Milano, Viale Achille Papa 30, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/open-wine-spritz-therapy-postholiday-party/"><span class="em">🌙</span><span><span class="t">Open Wine&amp;Spritz Therapy | PostHoliday Party</span><br><span class="m">Saturday 10 October at 20:30 · Milano, Cenisio 🟣</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/tutta-colpa-di-cupido-l-aperitivo-con-open-spritz/"><span class="em">🍽️</span><span><span class="t">Tutta colpa di cupido - l aperitivo con open spritz ;-)</span><br><span class="m">Saturday 10 October at 20:30 · Milano corso magenta</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/open-saturday/"><span class="em">🌙</span><span><span class="t">OPEN SATURDAY</span><br><span class="m">Saturday 10 October at 23:30 · Viper Club, 1 Via Vincenzo Gioberti, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/open-al-sacarla/"><span class="em">🏸</span><span><span class="t">OPEN AL SACARLA</span><br><span class="m">From 11 October to 25 October, 3 dates · Palapadel Sacarla Por Tres, Via Sondrio 9, 20020 Lainate</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/torneo-level-zerotre/"><span class="em">🏸</span><span><span class="t">Torneo Level ZeroTre🔵🏆</span><br><span class="m">Sunday 11 October at 14:00 · 6Padel Pogliano Milanese, Via Aldo Moro, 5, 20005 Pogliano Milanese</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/montebello-open-rsvp-spettatori/"><span class="em">🎉</span><span><span class="t">Montebello Open (RSVP SPETTATORI)</span><br><span class="m">Sunday 11 October at 15:00 · EST RADIO</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/torneo-misto-premier-padel/"><span class="em">🏸</span><span><span class="t">TORNEO MISTO PREMIER PADEL</span><br><span class="m">Sunday 11 October at 15:30 · Lainate Padel, Via Circonvallazione Ovest 1, 20043 Lainate</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/torneo-entry-level-maschile-gold-silver-firmato-patio-centra/"><span class="em">🏸</span><span><span class="t">🎾 TORNEO ENTRY LEVEL MASCHILE – GOLD &amp; SILVER FIRMATO PATIO CENTRAL🏆</span><br><span class="m">Sunday 11 October at 16:30 · Patio Central Padel &amp; Tennis, VIA LESSONA 68 Milano Tel. 335 1416513 / Segr. 3343347742, 20157 Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/torneo-gilardoni-medium-1-5-3pt/"><span class="em">🏸</span><span><span class="t">TORNEO GILARDONI MEDIUM (1.5-3pt)</span><br><span class="m">From 11 October to 29 November, 7 dates · Mamapadel Melzo, via Martiri della Libertà 46, 20066 Melzo</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/open-coding-night/"><span class="em">📚</span><span><span class="t">Open Coding Night</span><br><span class="m">From 12 October to 26 October, 2 dates · WAO Isola, Via Luigi Porro Lambertenghi 7, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/comedy-night-open-mic/"><span class="em">🎭</span><span><span class="t">Comedy Night! | Open Mic</span><br><span class="m">Monday 12 October at 21:00 · Ostello Bello Milano Duomo, Via Medici, 4, 20123 Milano MI</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/stand-up-comedy-week-animali-da-palco-vol-1-open-mic/"><span class="em">🎭</span><span><span class="t">Stand Up Comedy Week | Animali da palco vol. 1 - Open mic</span><br><span class="m">Tuesday 13 October at 20:30 · Osteria Democratica, Via Ettore Troilo 14, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/yellowdicomedy-open-mic-di-stand-up-in-inglese/"><span class="em">🎭</span><span><span class="t">Yellowdicomedy: open mic di stand-up in inglese</span><br><span class="m">From 13 October to 10 November, 5 dates · Ostello Bello Grande, Via Roberto Lepetit 33, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/mettetevi-comedy-open-mic-vol-14/"><span class="em">🎭</span><span><span class="t">Mettetevi Comedy - open mic vol. 14</span><br><span class="m">Wednesday 14 October at 20:00 · Milano, Fermata Bicocca - metro lilla</span></span></a>
+
+<p class="wsum"><b>40 events</b> in the next 7 days · 6 you can go to alone</p>
+<div class="wmap" id="wmap" aria-label="Map of the events"><span class="wcount" id="wcount"></span><div class="wmapbar"><button class="wwheel" id="wwheel" type="button" data-gate="ruota">Not sure? Spin the wheel</button><a class="wfull" href="/?citta=milano" data-gate="mappa">Open the map</a></div></div>
+<div class="wbar"><div class="wseg" id="wseg"></div><div class="wseg wsub" id="wsub"></div><div class="wchips" id="wchips"></div></div>
+<div id="wlist"><div class="wday" data-key="2026-10-07"><section class="wf" data-f="sera"><h2>Evening <span class="s">3</span></h2><a class="wr" href="https://anyplans.in/en/milano/open-wine-party-al-mib/" data-f="sera" data-c="serate" data-ts="1791396000000" data-e="🌙" data-ll="45.46512,9.18377"><time>20:00</time><span class="tile">🌙</span><span class="wb"><span class="t">Open Wine &amp; Party al MIB</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/l-ambrata-rooftop-comedy-open-mic/" data-f="sera" data-c="serate" data-free="1" data-ts="1791397800000" data-e="🎭" data-ll="45.48406,9.24313"><time>20:30</time><span class="tile">🎭</span><span class="wb"><span class="t">L&#39;Ambrata Rooftop Comedy - Open mic</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/stand-out-comedy-open-mic/" data-f="sera" data-c="serate" data-free="1" data-ts="1791399600000" data-e="🎭" data-ll="45.45105,9.21153"><time>21:00</time><span class="tile">🎭</span><span class="wb"><span class="t">STAND OUT COMEDY | OPEN MIC</span><span class="m">Milan</span></span></a></section></div><div class="wday" data-key="2026-10-08"><section class="wf" data-f="sera"><h2>Evening <span class="s">3</span></h2><a class="wr" href="https://anyplans.in/en/milano/non-fa-ridere-comedy-open-mic-all-ostello-bello-centrale/" data-f="sera" data-c="serate" data-free="1" data-ts="1791484200000" data-e="🎭" data-ll="45.48421,9.20542"><time>20:30</time><span class="tile">🎭</span><span class="wb"><span class="t">Non fa ridere - Comedy open mic all&#39;Ostello Bello Centrale</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/birrofilahah-open-mic-di-stand-up/" data-f="sera" data-c="serate" data-free="1" data-ts="1791486000000" data-e="🎭" data-ll="45.43821,9.18458"><time>21:00</time><span class="tile">🎭</span><span class="wb"><span class="t">Birrofilahah - Open mic di stand-up</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/stand-up-comedy-birrofilahah-open-mic/" data-f="sera" data-c="serate" data-free="1" data-ts="1791486000000" data-e="🎭" data-ll="45.43812,9.18455"><time>21:00</time><span class="tile">🎭</span><span class="wb"><span class="t">Stand Up Comedy - BIRROFILAHAH Open Mic</span><span class="m">Milan</span></span></a></section></div><div class="wday" data-key="2026-10-09"><section class="wf" data-f="sera"><h2>Evening <span class="s">8</span></h2><a class="wr" href="https://anyplans.in/en/milano/tech-startups-on-the-terrace-open-by-joivy-milan-12-edition/" data-f="sera" data-c="cultura" data-s="1" data-free="1" data-ts="1791561600000" data-e="📚" data-ll="45.45278,9.20338"><time>18:00</time><span class="tile">📚</span><span class="wb"><span class="t">Tech Startups on the Terrace  - Open by Joivy - Milan #12 Edition!</span><span class="m">Joivy, Milano</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/en/milano/colnago-contest-la-bici-piu-bella-di-milano/" data-f="sera" data-c="sport" data-free="1" data-ts="1791565200000" data-e="🚴" data-ll="45.47755,9.20454"><time>19:00</time><span class="tile">🚴</span><span class="wb"><span class="t">Colnago Contest: la bici più bella di Milano</span><span class="m">Eroica Cafè viale Tunisia, Viale Tunisia 15, Milano</span></span></a><a class="wr" href="https://anyplans.in/en/milano/torneo-over-50/" data-f="sera" data-c="sport" data-ts="1791565200000" data-e="🏸" data-ll="45.36440,9.18845"><time>19:00</time><span class="tile">🏸</span><span class="wb"><span class="t">Torneo OVER 50</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/il-torneo-di-cruciverba-di-stazione-radio/" data-f="sera" data-c="giochi" data-s="1" data-free="1" data-ts="1791565200000" data-e="🎲" data-ll="45.49985,9.21661"><time>19:00</time><span class="tile">🎲</span><span class="wb"><span class="t">Il torneo di cruciverba di Stazione Radio</span><span class="m">Milan</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/en/milano/true-story-raccontaci-una-storia-open-mic-di-storytelling/" data-f="sera" data-c="serate" data-free="1" data-ts="1791566400000" data-e="🎭" data-ll="45.45573,9.17300"><time>19:20</time><span class="tile">🎭</span><span class="wb"><span class="t">TRUE STORY • Raccontaci una storia (OPEN MIC di STORYTELLING)</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/true-story-open-mic-di-storytelling/" data-f="sera" data-c="serate" data-free="1" data-ts="1791567000000" data-e="🎭" data-ll="45.45570,9.17303"><time>19:30</time><span class="tile">🎭</span><span class="wb"><span class="t">True Story - Open mic di storytelling</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/house-party-open-spritz/" data-f="sera" data-c="serate" data-ts="1791568800012" data-e="🌙" data-ll="45.48627,9.21442"><time>20:00</time><span class="tile">🌙</span><span class="wb"><span class="t">House Party - Open Spritz!</span><span class="m">Loreto</span></span></a><a class="wr" href="https://anyplans.in/en/milano/biutiful-un-bellissimo-torneo-di-poetry-slam/" data-f="sera" data-c="serate" data-ts="1791572400000" data-e="🎭" data-ll="45.44873,9.19501"><time>21:00</time><span class="tile">🎭</span><span class="wb"><span class="t">Biutiful - Un bellissimo torneo di poetry slam</span><span class="m">Milan</span></span></a></section></div><div class="wday" data-key="2026-10-10"><section class="wf" data-f="mat"><h2>Morning <span class="s">4</span></h2><a class="wr" href="https://anyplans.in/en/milano/torneo-americana-con-maestro/" data-f="mat" data-c="sport" data-ts="1791615600000" data-e="🏸" data-ll="45.44322,9.12540"><time>09:00</time><span class="tile">🏸</span><span class="wb"><span class="t">TORNEO AMERICANA con Maestro</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/open-day-piazzetta-10-ottobre-2026/" data-f="mat" data-c="cultura" data-s="1" data-free="1" data-ts="1791615600000" data-e="📚" data-ll="45.43614,9.22366"><time>09:00</time><span class="tile">📚</span><span class="wb"><span class="t">Open Day Piazzetta - 10 ottobre 2026</span><span class="m">Milan</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/en/milano/torneo-100-e-lode-over-50/" data-f="mat" data-c="sport" data-ts="1791617400000" data-e="🏸" data-ll="45.58166,8.95921"><time>09:30</time><span class="tile">🏸</span><span class="wb"><span class="t">torneo 100 e lode over 50</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/seguro-in-festa-street-food-torneo-di-basket-e-dj-set/" data-f="mat" data-c="feste" data-free="1" data-ts="1791617400000" data-e="🎉" data-ll="45.47276,9.06515"><time>09:30</time><span class="tile">🎉</span><span class="wb"><span class="t">Seguro in Festa: street food, torneo di basket e dj set</span><span class="m">Comune di Settimo Milanese</span></span></a></section><section class="wf" data-f="pom"><h2>Afternoon <span class="s">8</span></h2><a class="wr" href="https://anyplans.in/en/milano/torneo-principianti-da-0-0-2-0-playtomic/" data-f="pom" data-c="sport" data-ts="1791633600000" data-e="🏸" data-ll="45.59991,9.02504"><time>14:00</time><span class="tile">🏸</span><span class="wb"><span class="t">🏆💥TORNEO PRINCIPIANTI💥🏆DA 0.0 – 2.0 PLAYTOMIC🏆</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/torneo-entry-level-da-1-5-3-5-playtomic/" data-f="pom" data-c="sport" data-ts="1791633600000" data-e="🏸" data-ll="45.59991,9.02504"><time>14:00</time><span class="tile">🏸</span><span class="wb"><span class="t">🏆💥TORNEO ENTRY LEVEL💥🏆DA 1.5 – 3.5 PLAYTOMIC🏆</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/torneo-level-zerodue/" data-f="pom" data-c="sport" data-ts="1791633600000" data-e="🏸" data-ll="45.54439,8.99838"><time>14:00</time><span class="tile">🏸</span><span class="wb"><span class="t">Torneo Level ZeroDue🟢🏆</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/fondazione-its-ammi-open-day-2026-27-milano/" data-f="pom" data-c="cultura" data-s="1" data-free="1" data-ts="1791633600000" data-e="📚" data-ll="45.48721,9.23637"><time>14:00</time><span class="tile">📚</span><span class="wb"><span class="t">FONDAZIONE ITS AMMI - OPEN DAY 2026-27 (MILANO)</span><span class="m">Via Plezzo, 10, Milano</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/en/milano/dali-e-la-moda-con-challenge-e-drink/" data-f="pom" data-c="cultura" data-ts="1791635400001" data-e="🏛️" data-ll="45.46365,9.19152"><time>14:30</time><span class="tile">🏛️</span><span class="wb"><span class="t">Dalì e la Moda, con challenge e drink!</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/super-torneo-a-16-player-coppie-fisse/" data-f="pom" data-c="sport" data-ts="1791637200000" data-e="🏸" data-ll="45.56194,9.01808"><time>15:00</time><span class="tile">🏸</span><span class="wb"><span class="t">SUPER TORNEO  A 16 PLAYER COPPIE FISSE</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/torneo-del-sabato/" data-f="pom" data-c="sport" data-ts="1791640800000" data-e="🏸" data-ll="45.41698,9.12412"><time>16:00</time><span class="tile">🏸</span><span class="wb"><span class="t">TORNEO DEL SABATO</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/lezione-open-di-improvvisazione-teatrale-molla-il-copione/" data-f="pom" data-c="cultura" data-s="1" data-ts="1791644400003" data-e="📚" data-ll="45.43699,9.17478"><time>17:00</time><span class="tile">📚</span><span class="wb"><span class="t">Lezione open di Improvvisazione Teatrale: molla il copione!</span><span class="m">Famagosta</span><span class="solo">You can go alone</span></span></a></section><section class="wf" data-f="sera"><h2>Evening <span class="s">4</span></h2><a class="wr" href="https://anyplans.in/en/milano/spanish-night-open-sangria/" data-f="sera" data-c="tavola" data-ts="1791655200000" data-e="🍽️" data-ll="45.48956,9.14122"><time>20:00</time><span class="tile">🍽️</span><span class="wb"><span class="t">Spanish Night: Open Sangria</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/open-wine-spritz-therapy-postholiday-party/" data-f="sera" data-c="serate" data-ts="1791657000009" data-e="🌙" data-ll="45.48727,9.17421"><time>20:30</time><span class="tile">🌙</span><span class="wb"><span class="t">Open Wine&amp;Spritz Therapy | PostHoliday Party</span><span class="m">Cenisio 🟣</span></span></a><a class="wr" href="https://anyplans.in/en/milano/tutta-colpa-di-cupido-l-aperitivo-con-open-spritz/" data-f="sera" data-c="tavola" data-ts="1791657000015" data-e="🍽️" data-ll="45.46435,9.17593"><time>20:30</time><span class="tile">🍽️</span><span class="wb"><span class="t">Tutta colpa di cupido - l aperitivo con open spritz ;-)</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/open-saturday/" data-f="sera" data-c="serate" data-free="1" data-ts="1791667800000" data-e="🌙" data-ll="45.57296,8.95376"><time>23:30</time><span class="tile">🌙</span><span class="wb"><span class="t">OPEN SATURDAY</span><span class="m">Milan</span></span></a></section></div><div class="wday" data-key="2026-10-11"><section class="wf" data-f="mat"><h2>Morning <span class="s">1</span></h2><a class="wr" href="https://anyplans.in/en/milano/open-al-sacarla/" data-f="mat" data-c="sport" data-ts="1791707400000" data-e="🏸" data-ll="45.57348,9.00595"><time>10:30</time><span class="tile">🏸</span><span class="wb"><span class="t">OPEN AL SACARLA</span><span class="m">Milan</span></span></a></section><section class="wf" data-f="pom"><h2>Afternoon <span class="s">4</span></h2><a class="wr" href="https://anyplans.in/en/milano/torneo-level-zerotre/" data-f="pom" data-c="sport" data-ts="1791720000000" data-e="🏸" data-ll="45.54439,8.99838"><time>14:00</time><span class="tile">🏸</span><span class="wb"><span class="t">Torneo Level ZeroTre🔵🏆</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/montebello-open-rsvp-spettatori/" data-f="pom" data-c="feste" data-free="1" data-ts="1791723600000" data-e="🎉" data-ll="45.45242,9.16423"><time>15:00</time><span class="tile">🎉</span><span class="wb"><span class="t">Montebello Open (RSVP SPETTATORI)</span><span class="m">EST RADIO</span></span></a><a class="wr" href="https://anyplans.in/en/milano/torneo-misto-premier-padel/" data-f="pom" data-c="sport" data-ts="1791725400000" data-e="🏸" data-ll="45.56194,9.01808"><time>15:30</time><span class="tile">🏸</span><span class="wb"><span class="t">TORNEO MISTO PREMIER PADEL</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/torneo-entry-level-maschile-gold-silver-firmato-patio-centra/" data-f="pom" data-c="sport" data-ts="1791729000000" data-e="🏸" data-ll="45.52023,9.13612"><time>16:30</time><span class="tile">🏸</span><span class="wb"><span class="t">🎾 TORNEO ENTRY LEVEL MASCHILE – GOLD &amp; SILVER FIRMATO PATIO CENTRAL🏆</span><span class="m">Milan</span></span></a></section><section class="wf" data-f="sera"><h2>Evening <span class="s">1</span></h2><a class="wr" href="https://anyplans.in/en/milano/torneo-gilardoni-medium-1-5-3pt/" data-f="sera" data-c="sport" data-ts="1791734400000" data-e="🏸" data-ll="45.49631,9.42072"><time>18:00</time><span class="tile">🏸</span><span class="wb"><span class="t">TORNEO GILARDONI MEDIUM (1.5-3pt)</span><span class="m">Milan</span></span></a></section></div><div class="wday" data-key="2026-10-12"><section class="wf" data-f="sera"><h2>Evening <span class="s">2</span></h2><a class="wr" href="https://anyplans.in/en/milano/open-coding-night/" data-f="sera" data-c="cultura" data-s="1" data-free="1" data-ts="1791824400000" data-e="📚" data-ll="45.48937,9.18460"><time>19:00</time><span class="tile">📚</span><span class="wb"><span class="t">Open Coding Night</span><span class="m">Milan</span><span class="solo">You can go alone</span></span></a><a class="wr" href="https://anyplans.in/en/milano/comedy-night-open-mic/" data-f="sera" data-c="serate" data-free="1" data-ts="1791831600000" data-e="🎭" data-ll="45.46087,9.18104"><time>21:00</time><span class="tile">🎭</span><span class="wb"><span class="t">Comedy Night! | Open Mic</span><span class="m">Milan</span></span></a></section></div><div class="wday" data-key="2026-10-13"><section class="wf" data-f="sera"><h2>Evening <span class="s">2</span></h2><a class="wr" href="https://anyplans.in/en/milano/stand-up-comedy-week-animali-da-palco-vol-1-open-mic/" data-f="sera" data-c="serate" data-free="1" data-ts="1791916200000" data-e="🎭" data-ll="45.44623,9.17761"><time>20:30</time><span class="tile">🎭</span><span class="wb"><span class="t">Stand Up Comedy Week | Animali da palco vol. 1 - Open mic</span><span class="m">Milan</span></span></a><a class="wr" href="https://anyplans.in/en/milano/yellowdicomedy-open-mic-di-stand-up-in-inglese/" data-f="sera" data-c="serate" data-free="1" data-ts="1791918000000" data-e="🎭" data-ll="45.48421,9.20542"><time>21:00</time><span class="tile">🎭</span><span class="wb"><span class="t">Yellowdicomedy: open mic di stand-up in inglese</span><span class="m">Milan</span></span></a></section></div></div>
+<div class="wlock" id="wlock" hidden><b>Sign up, it's free</b><span id="wlockn"></span><a class="btn" href="/bergamo/login.html" data-gate="lista">Sign up for free</a></div>
+<div class="wbg" id="wbg" hidden></div><div class="wsheet" id="wsheet" role="dialog" aria-modal="true" aria-labelledby="wsh" hidden><span class="wh"></span><button class="wx" id="wx" type="button" aria-label="Close">×</button><h2 id="wsh">Leave it to me</h2><p class="s">I'll pick something for you today or tomorrow, nearby. You just show up.</p><div class="wfil" id="wfil"></div><div class="wwrap"><div class="wptr"></div><div class="wdisc" id="wdisc"></div></div><div id="wres" hidden></div><button class="btn" id="wspin" type="button">Pick for me</button><button class="btn ghost" id="wagain" type="button" hidden></button></div>
+<script type="application/json" id="wcfg">{"kind":"tipo","keys":["2026-10-07","2026-10-08","2026-10-09","2026-10-10","2026-10-11","2026-10-12","2026-10-13"],"tz":"Europe/Rome","city":[9.19,45.4642],"login":"/bergamo/login.html","map":"/?citta=milano","city_slug":"milano","h1":["What to do in Milan undefined, Wednesday 7 October","What to do in Milan undefined, Thursday 8 October","What to do in Milan undefined, Friday 9 October","What to do in Milan undefined, Saturday 10 October","What to do in Milan undefined, Sunday 11 October","What to do in Milan undefined, Monday 12 October","What to do in Milan undefined, Tuesday 13 October"],"T":{"regT":"Sign up, it's free","reg":"Sign up for free","more":"more events","only":"All you need is an email.","map":"Open the map","wheel":"Not sure? Spin the wheel","nuovo":"New","wheelT":"Leave it to me","wheelS":"I'll pick something for you today or tomorrow, nearby. You just show up.","pick":"Pick for me","go":"Go here","another":"Another one · ","left":" left","none":"Nothing left for today: try tomorrow.","all":"All","solo":"Alone","f":{"Gratis":"Free","Sport":"Sports","Serata":"Night out","Cena":"Dinner"},"ci":"I'm in","soloL":"You can go alone"},"chips":{"sport":"Sports","tavola":"Food","lab":"Workshops","serate":"Nights out","cultura":"Culture","giochi":"Games","feste":"Festivals","mercati":"Markets","altro":"Other"},"fasce":{"mat":"Morning","pom":"Afternoon","sera":"Evening"},"when":{"mat":"this morning","pom":"this afternoon","sera":"tonight"},"dayLabels":["Wed 7","Thu 8","Fri 9","Sat 10","Sun 11","Mon 12","Tue 13"],"rel":true,"words":{"oggi":"Today","domani":"Tomorrow","st":{"mat":"this morning","pom":"this afternoon","sera":"tonight"}}}</script><h2>Later on</h2><div class="list"><a class="card" href="https://anyplans.in/en/milano/mettetevi-comedy-open-mic-vol-14/"><span class="em">🎭</span><span><span class="t">Mettetevi Comedy - open mic vol. 14</span><br><span class="m">Wednesday 14 October at 20:00 · Milano, Fermata Bicocca - metro lilla</span></span></a>
 <a class="card" href="https://anyplans.in/en/milano/standup-comedy-mettetevi-comedy-open-mic/"><span class="em">🎭</span><span><span class="t">Standup comedy: Mettetevi Comedy Open Mic</span><br><span class="m">Wednesday 14 October at 21:00 · Piano Zero, Milano</span></span></a>
 <a class="card" href="https://anyplans.in/en/milano/portfolio-night-2026-and-open-day-raffles-milano/"><span class="em">📚</span><span><span class="t">Portfolio night 2026 and OPEN DAY - Raffles Milano</span><br><span class="m">Thursday 15 October at 17:00 · Raffles Milano - International Design Institute, Milano</span></span></a>
 <a class="card" href="https://anyplans.in/en/milano/una-partita-che-vale-torneo-l-abilita/"><span class="em">🏸</span><span><span class="t">UNA PARTITA CHE VALE - TORNEO L’ABILITÀ 💙</span><br><span class="m">Friday 16 October at 17:00 · MUP - Milano Urban Padel, Via Cardinale Giovanni Cagliero, 14/b, 20125 Milano</span></span></a>
@@ -220,6 +246,158 @@ footer a:hover{color:var(--ink)}
 <a class="card old" href="https://anyplans.in/en/milano/canta-che-ti-passa-open-spritz-live-music-experience/"><span class="em">🍽️</span><span><span class="t">Canta che ti passa! Open Spritz &amp; Live Music Experience</span><br><span class="m">Friday 2 October at 20:30 · Piperita Milano, Milano</span></span></a></div>
 <h2>Tournaments in other cities</h2><div class="tags"><a href="/en/monza/tournaments/">Tournaments in Monza</a><a href="/en/lodi/tournaments/">Tournaments in Lodi</a><a href="/en/como/tournaments/">Tournaments in Como</a><a href="/en/bergamo/tournaments/">Tournaments in Bergamo</a><a href="/en/varese/tournaments/">Tournaments in Varese</a><a href="/en/cremona/tournaments/">Tournaments in Cremona</a><a href="/en/brescia/tournaments/">Tournaments in Brescia</a><a href="/en/torino/tournaments/">Tournaments in Torino</a><a href="/en/cities/">All the cities</a></div>
 <div class="box" id="domande"><h2>Frequently asked questions</h2><details><summary>Which tournaments events in Milan and its province are coming up?</summary><p>There are 68 events: Open Wine &amp; Party al MIB (Milan, from 7 October to 14 October, 2 dates), L&#39;Ambrata Rooftop Comedy - Open mic (Milan, Wednesday 7 October at 20:30), STAND OUT COMEDY | OPEN MIC (Milan, Wednesday 7 October at 21:00), Non fa ridere - Comedy open mic all&#39;Ostello Bello Centrale (Milan, Thursday 8 October at 20:30), Birrofilahah - Open mic di stand-up (Milan, Thursday 8 October at 21:00) and Stand Up Comedy - BIRROFILAHAH Open Mic (Milan, Thursday 8 October at 21:00) and more, all in the list above.</p></details><details><summary>When is the next tournaments event?</summary><p>Open Wine &amp; Party al MIB, from 7 October to 14 October, 2 dates, in Milan. €15.</p></details><details><summary>Tournaments events in Milan and its province: are they free?</summary><p>35 out of 68. When there is a ticket or a fee, the price is on the event&#39;s page.</p></details></div>
+<script>
+(function(){
+  var cfg = JSON.parse(document.getElementById("wcfg").textContent), T = cfg.T;
+  var $ = function(id){ return document.getElementById(id); };
+  var logged = false;
+  try { var s = JSON.parse(localStorage.getItem("anyplans_session") || sessionStorage.getItem("anyplans_session") || "null"); logged = !!(s && s.access_token); } catch (e) {}
+  var track = function(n, p){ try { window.apTrack && window.apTrack(n, p); } catch (e) {} };
+  function toLogin(why, next){
+    try { sessionStorage.setItem("anyplans_next", next || location.pathname); } catch (e) {}
+    track("wall_tap", location.pathname + "?" + why + "&quando");
+    location.href = cfg.login;
+  }
+  // il giorno vero, a Bergamo: se la pagina è di ieri (il lavoro notturno è in ritardo) si passa al giorno dopo
+  var today = new Intl.DateTimeFormat("en-CA", { timeZone: cfg.tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  var nowH = +new Intl.DateTimeFormat("it-IT", { timeZone: cfg.tz, hour: "2-digit", hourCycle: "h23" }).format(new Date());
+  var days = [].slice.call(document.querySelectorAll(".wday"));
+  var weekend = cfg.kind === "weekend" || cfg.kind === "tipo", di = 0;
+  var tomorrow = (function(){ var p = today.split("-"); var d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + 1)); return d.toISOString().slice(0, 10); })();
+  // nelle categorie: "Oggi" e "Domani" secondo la data vera, i giorni già passati non si mostrano
+  if (cfg.rel) cfg.dayLabels = cfg.keys.map(function(k, i){ return k === today ? cfg.words.oggi : k === tomorrow ? cfg.words.domani : cfg.dayLabels[i]; });
+  function dayFascia(){ var l = cfg.dayLabels[di]; if (cfg.rel && cfg.keys[di] === today) return cfg.words.st[fascia]; return l.toLowerCase() + " " + cfg.fasce[fascia].toLowerCase(); }
+  if (!weekend && cfg.keys.length > 1 && today === cfg.keys[1]) {
+    di = 1; days[0].hidden = true; days[1].hidden = false;
+    var h1 = document.querySelector("h1"); if (h1) h1.textContent = cfg.h1[1];
+  }
+  if (weekend) { var wi = cfg.keys.indexOf(today); if (wi > 0) di = wi; if (cfg.rel && cfg.keys[di] < today) { var nx = cfg.keys.findIndex(function(k){ return k >= today; }); if (nx >= 0) di = nx; } days.forEach(function(d, i){ d.hidden = i !== di; }); }
+  var fascia = nowH < 12 ? "mat" : nowH < 18 ? "pom" : "sera", cat = "all";
+  function curDay(){ return days[di]; }
+  function present(f){ return curDay().querySelector('.wf[data-f="' + f + '"]'); }
+  // sul weekend la fascia di partenza è quella dell'ora vera solo se oggi è uno dei due giorni, altrimenti la mattina
+  if (weekend && cfg.keys[di] !== today) fascia = "mat";
+  function fixFascia(){ if (!present(fascia)) fascia = ["mat", "pom", "sera"].filter(present)[0] || fascia; }
+  fixFascia();
+  function rowsOn(){ return [].slice.call(curDay().querySelectorAll(".wr, .wg")); }
+  function visible(el){
+    if (el.getAttribute("data-f") !== fascia) return false;
+    if (cat === "solo") return el.getAttribute("data-s") === "1";
+    return cat === "all" || el.getAttribute("data-c") === cat;
+  }
+  var map = null, markers = [];
+  function render(){
+    var seg = $("wseg"), html = "";
+    var fh = "";
+    if (cfg.kind !== "stasera") ["mat", "pom", "sera"].forEach(function(f){ var sec = present(f); if (!sec) return; var n = sec.querySelectorAll(".wr").length; fh += '<button type="button" data-fa="' + f + '" aria-pressed="' + (f === fascia) + '">' + cfg.fasce[f] + "<small>" + n + "</small></button>"; });
+    // sul weekend due righe: Sabato · Domenica sopra, Mattina · Pomeriggio · Sera sotto (07/10/2026)
+    if (weekend) { cfg.keys.forEach(function(k, i){ if (cfg.rel && k < today) return; var n = days[i].querySelectorAll(".wr").length; html += '<button type="button" data-day="' + i + '" aria-pressed="' + (i === di) + '">' + cfg.dayLabels[i] + "<small>" + n + "</small></button>"; }); seg.innerHTML = html; $("wsub").innerHTML = fh; }
+    else { seg.innerHTML = fh; $("wsub").innerHTML = ""; }
+    var counts = {}, solo = 0;
+    rowsOn().forEach(function(el){ if (el.parentNode.classList.contains("wgi")) return; if (el.getAttribute("data-f") !== fascia) return; var c = el.getAttribute("data-c"); counts[c] = (counts[c] || 0) + 1; if (el.getAttribute("data-s") === "1") solo++; });
+    var chips = '<button type="button" data-cat="all" aria-pressed="' + (cat === "all") + '">' + T.all + "</button>";
+    if (solo) chips += '<button type="button" data-cat="solo" aria-pressed="' + (cat === "solo") + '">' + T.solo + "</button>";
+    Object.keys(counts).sort(function(a, b){ return counts[b] - counts[a]; }).forEach(function(c){ chips += '<button type="button" data-cat="' + c + '" aria-pressed="' + (cat === c) + '">' + (cfg.chips[c] || c) + "</button>"; });
+    $("wchips").innerHTML = chips;
+    // sezioni e righe
+    [].slice.call(curDay().querySelectorAll(".wf")).forEach(function(sec){ sec.hidden = sec.getAttribute("data-f") !== fascia; });
+    var shown = 0, cut = 0, lockAfter = null;
+    [].slice.call(curDay().querySelectorAll(".wf > .wr, .wf > .wg")).forEach(function(el){
+      var ok = visible(el); el.hidden = !ok; el.classList.remove("wcut");
+      if (!ok) return;
+      shown++;
+      if (!logged && shown > 4) { el.classList.add("wcut"); cut += el.classList.contains("wg") ? el.querySelectorAll(".wr").length : 1; if (!lockAfter) lockAfter = el; }
+    });
+    var lock = $("wlock");
+    if (lockAfter) { lockAfter.parentNode.insertBefore(lock, lockAfter); lock.hidden = false; $("wlockn").textContent = T.more === "altri eventi" ? "Ci sono altri " + cut + " eventi " + (weekend ? dayFascia() : cfg.when[fascia]) + ". " + T.only : cut + " " + T.more + ". " + T.only; }
+    else lock.hidden = true;
+    var n = rowsOn().filter(function(el){ return el.classList.contains("wr") && !(el.closest(".wgi")) && visible(el); }).length + [].slice.call(curDay().querySelectorAll(".wg")).filter(visible).reduce(function(a, g){ return a + g.querySelectorAll(".wr").length; }, 0);
+    $("wcount").innerHTML = "<b>" + n + "</b> " + (weekend ? dayFascia() : cfg.kind === "stasera" ? cfg.when.sera : cfg.when[fascia]);
+    drawPins();
+  }
+  function pinRows(){ return [].slice.call(curDay().querySelectorAll(".wr")).filter(function(r){ var box = r.closest(".wg") || r; return visible(box) && r.getAttribute("data-ll"); }); }
+  function drawPins(){
+    if (!map) return;
+    markers.forEach(function(m){ m.remove(); }); markers = [];
+    pinRows().slice(0, 200).forEach(function(r){
+      var ll = r.getAttribute("data-ll").split(","), el = document.createElement("a");
+      el.className = "wpin" + (r.getAttribute("data-s") === "1" ? " wsolo" : ""); el.href = r.getAttribute("href");
+      el.setAttribute("aria-label", r.querySelector(".t").textContent);
+      el.innerHTML = "<i><span>" + r.getAttribute("data-e") + "</span></i>";
+      el.addEventListener("click", function(e){ if (!logged) { e.preventDefault(); toLogin("pin", r.getAttribute("href")); } });
+      markers.push(new maplibregl.Marker({ element: el, anchor: "bottom" }).setLngLat([+ll[1], +ll[0]]).addTo(map));
+    });
+  }
+  function loadMap(){
+    var css = document.createElement("link"); css.rel = "stylesheet"; css.href = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css"; document.head.appendChild(css);
+    var sc = document.createElement("script"); sc.src = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js";
+    sc.onload = function(){
+      map = new maplibregl.Map({ container: "wmap", style: "https://tiles.openfreemap.org/styles/liberty", center: cfg.city, zoom: 10.6, interactive: logged, attributionControl: false });
+      drawPins();   // i pin non aspettano lo stile e le mattonelle: su un telefono lento la mappa ci mette secondi
+    };
+    document.head.appendChild(sc);
+  }
+  loadMap();
+  $("wwheel").setAttribute("data-new", T.nuovo);
+  document.addEventListener("click", function(e){
+    var t = e.target.closest("button, a"); if (!t) return;
+    if (t.hasAttribute("data-fa")) { fascia = t.getAttribute("data-fa"); cat = "all"; render(); return; }
+    if (t.hasAttribute("data-day")) { days[di].hidden = true; di = +t.getAttribute("data-day"); days[di].hidden = false; cat = "all"; fixFascia(); render(); return; }
+    if (t.hasAttribute("data-cat")) { cat = t.getAttribute("data-cat"); render(); return; }
+    if (t.classList.contains("wgh")) { e.preventDefault(); if (!logged) { toLogin(t.getAttribute("data-gate"), location.pathname); return; } t.parentNode.classList.toggle("open"); return; }
+    if (t.id === "wwheel") { if (!logged) { toLogin("ruota", location.pathname + "#ruota"); return; } openWheel(); return; }
+    if (!logged && (t.classList.contains("wr") || t.classList.contains("wfull") || t.hasAttribute("data-gate"))) { e.preventDefault(); toLogin(t.getAttribute("data-gate") || "evento", t.classList.contains("wr") ? t.getAttribute("href") : t.classList.contains("wfull") ? t.getAttribute("href") : location.pathname); }
+  }, true);
+  // la ruota, come nella home (UI.md §3.13): sei spicchi, pesca tra gli eventi di oggi e domani che iniziano fra almeno un'ora
+  var SL = ["🏃", "🎨", "🍽️", "🎲", "🎤", "📚"], SLC = { sport: 0, lab: 1, tavola: 2, giochi: 3, serate: 4 };
+  var disc = $("wdisc");
+  SL.forEach(function(x, i){ var sp = document.createElement("span"), a = (i * 60 + 30) * Math.PI / 180; sp.textContent = x; sp.style.transform = "translate(" + (Math.sin(a) * 70) + "px," + (-Math.cos(a) * 70) + "px) translate(-50%,-50%)"; sp.setAttribute("aria-hidden", "true"); disc.appendChild(sp); });
+  var rot = 0, left = 3, seen = [];
+  function openWheel(){ left = 3; seen = []; $("wres").hidden = true; $("wagain").hidden = true; $("wspin").hidden = false;
+    $("wfil").innerHTML = ["Gratis", "Sport", "Serata", "Cena"].map(function(f){ return '<button type="button" data-wf="' + f + '" aria-pressed="false">' + T.f[f] + "</button>"; }).join("");
+    $("wbg").hidden = false; $("wsheet").hidden = false; track("ruota_open", location.pathname); }
+  function closeWheel(){ $("wbg").hidden = true; $("wsheet").hidden = true; }
+  $("wx").onclick = closeWheel; $("wbg").onclick = closeWheel;
+  $("wfil").addEventListener("click", function(e){ var b = e.target.closest("button"); if (b) b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") !== "true"); });
+  function pool(){
+    var on = [].slice.call($("wfil").querySelectorAll('[aria-pressed="true"]')).map(function(b){ return b.getAttribute("data-wf"); });
+    var soon = Date.now() + 3600e3;
+    return [].slice.call(document.querySelectorAll(".wday .wr")).filter(function(r){
+      if (r.closest(".wg")) return false;
+      if (+r.getAttribute("data-ts") < soon) return false;
+      if (seen.indexOf(r.getAttribute("href")) >= 0) return false;
+      var c = r.getAttribute("data-c"), h = +r.querySelector("time").textContent.slice(0, 2);
+      if (c === "mercati") return false;
+      if (on.indexOf("Gratis") >= 0 && r.getAttribute("data-free") !== "1") return false;
+      if (on.indexOf("Sport") >= 0 && c !== "sport") return false;
+      if (on.indexOf("Serata") >= 0 && h < 18) return false;
+      if (on.indexOf("Cena") >= 0 && c !== "tavola") return false;
+      return true;
+    });
+  }
+  function spin(){
+    var P = pool(), W = [];
+    P.forEach(function(r){ W.push(r); if (r.getAttribute("data-s") === "1") W.push(r); });
+    if (!W.length) { $("wres").innerHTML = '<p class="s">' + T.none + "</p>"; $("wres").hidden = false; $("wspin").hidden = true; return; }
+    var r = W[Math.floor(Math.random() * W.length)], sl = SLC[r.getAttribute("data-c")]; if (sl == null) sl = 5;
+    seen.push(r.getAttribute("href"));
+    var target = 360 - (sl * 60 + 30); rot += 3 * 360 + ((target - (rot % 360)) + 360) % 360;
+    disc.style.transform = "rotate(" + rot + "deg)"; $("wspin").hidden = true; $("wagain").hidden = true;
+    track("ruota_gira", location.pathname + "?giro=" + (4 - left));
+    setTimeout(function(){
+      left--;
+      var c = r.cloneNode(true); c.classList.remove("wcut"); c.hidden = false;
+      $("wres").innerHTML = '<span class="s">' + T.go + "</span>"; $("wres").appendChild(c);
+      var ci = document.createElement("a"); ci.className = "btn"; ci.href = r.getAttribute("href"); ci.textContent = T.ci; ci.onclick = function(){ track("ruota_join", r.getAttribute("href")); }; $("wres").appendChild(ci);
+      $("wres").hidden = false;
+      if (left > 0) { $("wagain").hidden = false; $("wagain").textContent = T.another + left + T.left; }
+    }, matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 1000);
+  }
+  $("wspin").onclick = spin; $("wagain").onclick = spin;
+  render();
+  if (logged && location.hash === "#ruota") openWheel();
+})();
+</script>
 
 </main>
 <footer><div class="wrap">

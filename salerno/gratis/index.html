@@ -116,7 +116,67 @@ footer .wrap{max-width:860px;margin:0 auto;display:flex;flex-wrap:wrap;gap:8px 2
 footer a:hover{color:var(--ink)}
 @media (max-width:600px){h1{font-size:28px}.cover{height:180px;font-size:72px}
 .nav{height:auto;flex-wrap:wrap;gap:8px 12px;padding:10px 0}.nav>.row{width:100%;justify-content:space-between}}</style>
-
+<style>
+[hidden]{display:none!important}
+.wsum{font-size:15px;color:var(--grey)}.wsum b{color:var(--ink)}
+.wmap{position:relative;margin:0 -22px;height:340px;background:#EDEAE3;overflow:hidden}
+@media (min-width:700px){.wmap{margin:0;border-radius:22px;height:400px}}
+.wmap .maplibregl-canvas{outline:none}
+.wcount{position:absolute;z-index:2;top:12px;left:12px;background:#fff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:14px;box-shadow:0 2px 8px rgba(25,25,25,.18)}
+.wcount b{color:var(--blue)}
+.wmapbar{position:absolute;z-index:2;left:12px;right:12px;bottom:12px;display:flex;justify-content:space-between;align-items:flex-end;gap:8px}
+.wwheel{position:relative;border:1.5px solid var(--blue);background:#fff;color:var(--blue);border-radius:999px;padding:10px 14px;font:inherit;font-weight:800;font-size:14px;box-shadow:0 2px 10px rgba(25,25,25,.18);cursor:pointer}
+.wwheel::after{content:attr(data-new);position:absolute;top:-9px;left:-6px;background:var(--blue);color:#fff;font-size:10px;font-weight:800;line-height:1;padding:4px 7px;border-radius:999px;box-shadow:0 0 0 2px #fff}
+.wfull{background:var(--ink);color:#fff;border-radius:999px;padding:10px 14px;font-weight:800;font-size:14px;box-shadow:0 2px 10px rgba(25,25,25,.18);white-space:nowrap}
+.wpin{display:block;width:34px;height:40px;cursor:pointer}
+.wpin i{display:grid;place-items:center;width:34px;height:34px;border-radius:50% 50% 50% 4px;transform:rotate(-45deg);background:#fff;box-shadow:0 2px 8px rgba(25,25,25,.28)}
+.wpin span{transform:rotate(45deg);font-size:17px;line-height:1;font-style:normal}
+.wpin.wsolo i{background:var(--blue)}
+.wbar{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid rgba(25,25,25,.08)}
+.wseg{display:flex;background:#fff;border:1.5px solid rgba(25,25,25,.10);border-radius:999px;padding:3px}
+.wseg:empty{display:none}
+.wseg button{flex:1;border:0;background:none;border-radius:999px;padding:8px 4px;font:inherit;font-weight:800;font-size:14.5px;color:var(--grey);display:flex;flex-direction:column;align-items:center;line-height:1.1;cursor:pointer}
+.wseg button small{font-weight:600;font-size:11.5px}
+.wseg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.wsub{background:transparent;border:0;padding:0;gap:6px}
+.wsub button{flex:1;border:1.5px solid rgba(25,25,25,.12);background:#fff;padding:6px 4px;font-size:13.5px}
+.wsub button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.wchips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -22px;padding:0 22px}
+.wchips::-webkit-scrollbar{display:none}
+.wchips button{flex:none;border:1.5px solid rgba(25,25,25,.12);background:#fff;border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;font-weight:700;white-space:nowrap;cursor:pointer;color:var(--ink)}
+.wchips button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.wf h2{margin:18px 0 2px;font-size:24px}.wf h2 .s{font-family:var(--round);font-size:14px;font-weight:600;letter-spacing:0}
+.wr,.wgh{display:grid;grid-template-columns:50px 44px minmax(0,1fr);gap:10px;align-items:start;padding:13px 0;border-bottom:1px solid rgba(25,25,25,.08)}
+.wgh{grid-template-columns:50px 44px minmax(0,1fr) auto;align-items:center}
+.wr time,.wgh time{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em;font-variant-numeric:tabular-nums;padding-top:3px}
+.tile{width:44px;height:44px;border-radius:12px;background:var(--tint);display:grid;place-items:center;font-size:22px}
+.wb{min-width:0;display:flex;flex-direction:column}
+.wb .t{font-weight:800;font-size:16px;line-height:1.25}
+.wb .m{font-size:13.5px;color:var(--grey)}
+.solo{align-self:flex-start;margin-top:6px;font-size:12px;font-weight:800;color:var(--blue);background:var(--tint);border-radius:6px;padding:3px 7px}
+.wgh .arr{color:var(--blue);font-weight:800;font-size:14px}
+.wgi{display:none}.wg.open .wgi{display:block}
+.wcut{filter:blur(5px);opacity:.5;pointer-events:none;user-select:none}
+.wlock{position:relative;margin:-8px auto 8px;width:min(100%,360px);background:#fff;border:1.5px solid var(--blue);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:8px;text-align:center;box-shadow:0 8px 30px rgba(25,25,25,.14);z-index:3}
+.wlock b{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.04em}
+.wlock span{font-size:14px;color:var(--grey)}
+.wbg{position:fixed;inset:0;background:rgba(25,25,25,.42);z-index:90}
+.wsheet{position:fixed;left:0;right:0;bottom:0;z-index:91;background:#fff;border-radius:24px 24px 0 0;box-shadow:0 -12px 40px rgba(25,25,25,.16);padding:10px 18px calc(18px + env(safe-area-inset-bottom,0px));max-width:560px;margin:0 auto;max-height:92vh;overflow-y:auto;display:flex;flex-direction:column;gap:12px}
+.wsheet .wh{width:40px;height:5px;border-radius:3px;background:rgba(25,25,25,.14);margin:0 auto}
+.wsheet .wx{position:absolute;right:10px;top:10px;width:44px;height:44px;border:0;border-radius:50%;background:transparent;font-size:22px;color:var(--grey);cursor:pointer}
+.wsheet h2{font-size:24px}
+.wwrap{position:relative;width:200px;height:200px;margin:4px auto 0;flex:none}
+.wdisc{width:200px;height:200px;border-radius:50%;border:2px solid rgba(25,25,25,.12);position:relative;transition:transform 1000ms cubic-bezier(.2,.8,.2,1);background:conic-gradient(var(--tint) 0 60deg,#fff 60deg 120deg,var(--tint) 120deg 180deg,#fff 180deg 240deg,var(--tint) 240deg 300deg,#fff 300deg 360deg)}
+.wdisc span{position:absolute;left:50%;top:50%;font-size:26px;line-height:1}
+.wptr{position:absolute;left:50%;top:-9px;transform:translateX(-50%);width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid var(--blue);z-index:1}
+.wfil{display:flex;gap:8px;flex-wrap:wrap}
+.wfil button{border:1.5px solid rgba(25,25,25,.12);background:#fff;border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.wfil button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+#wres{display:flex;flex-direction:column;gap:10px}#wres[hidden]{display:none}
+#wres .wr{border:0;padding:0}
+.wsheet .btn{width:100%}
+@media (prefers-reduced-motion: reduce){.wdisc{transition:none}}
+</style>
 </head>
 <body>
 <header><div class="nav">
@@ -129,37 +189,14 @@ footer a:hover{color:var(--ink)}
 <div class="chips"><span class="chip">🆓 Cultura</span></div>
 <h1>Eventi gratis a Salerno e provincia</h1>
 <p class="lead">A Salerno e provincia ci sono 68 eventi gratis nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.</p>
-<div class="cta"><a class="btn" href="/?citta=salerno">Vedi tutti gli eventi</a></div>
-<h2>Prossimi</h2><div class="list"><a class="card" href="https://anyplans.in/salerno/cena-da-bar-antica-grecia/"><span class="em">🍽️</span><span><span class="t">Cena da Bar Antica Grecia: 5 posti liberi</span><br><span class="m">Mercoledì 7 ottobre alle 18:00 · Bar Antica Grecia, Ponte Barizzo</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/colazione-da-prunus-sushi-cocktails/"><span class="em">🍽️</span><span><span class="t">Colazione da Prunus - Sushi &amp; Cocktails: 11 posti liberi</span><br><span class="m">Giovedì 8 ottobre alle 10:30 · Prunus - Sushi &amp; Cocktails, Salerno</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/amici-di-amici-da-ristorante-pizzeria-i-della-rocca/"><span class="em">🍽️</span><span><span class="t">Amici di amici da Ristorante pizzeria i Della Rocca: 8 posti liberi</span><br><span class="m">Giovedì 8 ottobre alle 19:00 · Ristorante pizzeria i Della Rocca, Torchiati</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/serata-gusto-e-compagnia-da-polichetti-esperienze-di-pizza/"><span class="em">🍽️</span><span><span class="t">Serata Gusto e Compagnia🍕😋 da Polichetti, esperienze di pizza: 5 posti liberi</span><br><span class="m">Giovedì 8 ottobre alle 19:10 · Polichetti, esperienze di pizza, Casali-San Potito</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/cena-da-bowling-the-club/"><span class="em">🍽️</span><span><span class="t">Cena da Bowling The Club: 6 posti liberi</span><br><span class="m">Giovedì 8 ottobre alle 19:15 · Bowling The Club, Pontecagnano Faiano</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/salerno-tango-fest-2026/"><span class="em">💃</span><span><span class="t">Salerno Tango Fest 2026</span><br><span class="m">Giovedì 8 ottobre alle 20:00 · Mediterranea Hotel and Convention Center, Salerno</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/iii-edizione-sono-terra-festival-premio-solco-maggiore-e-con/"><span class="em">📚</span><span><span class="t">III Edizione &quot;Sono Terra Festival&quot;- Premio Solco Maggiore e Conversazione</span><br><span class="m">Venerdì 9 ottobre alle 18:30 · Basilica di San Pietro Alli Marmi, Eboli</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/cena-da-bedruid-s/"><span class="em">🍽️</span><span><span class="t">Cena da BeDruid&#39;s: 9 posti liberi</span><br><span class="m">Venerdì 9 ottobre alle 19:00 · BeDruid&#39;s, Cava de&#39; Tirreni</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/cena-da-pa-sa/"><span class="em">🍽️</span><span><span class="t">Cena da Pa&amp;Sá: 7 posti liberi</span><br><span class="m">Venerdì 9 ottobre alle 19:30 · Pa&amp;Sá, Cava de&#39; Tirreni</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/cena-da-madai-bakery-cafe/"><span class="em">🍽️</span><span><span class="t">Cena da Madai Bakery Café: 4 posti liberi</span><br><span class="m">Venerdì 9 ottobre alle 19:30 · Madai Bakery Café, Avellino</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/live-musc-e-karaoke-da-barabocchio/"><span class="em">🍽️</span><span><span class="t">Live Musc e Karaoke da Barabocchio: 5 posti liberi</span><br><span class="m">Venerdì 9 ottobre alle 19:30 · Barabocchio, Cava de&#39; Tirreni</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/avellino-jazz-al-castello-contaminazioni-jazz/"><span class="em">🏛️</span><span><span class="t">Avellino Jazz al Castello - Contaminazioni Jazz</span><br><span class="m">Venerdì 9 ottobre alle 19:30 · Auditorium “V. Vitale” Avellino, Avellino</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/inaugurazione-terzo-tempo-venerdi-da-terzo-tempo-village-o-l/"><span class="em">🍽️</span><span><span class="t">✨Inaugurazione Terzo Tempo venerdì da Terzo Tempo Village: 1 posto libero</span><br><span class="m">Venerdì 9 ottobre alle 19:45 · Terzo Tempo Village, San Mango Piemonte</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/stefano-di-battista-feat-paco-sery-in-for-miles/"><span class="em">🎸</span><span><span class="t">Stefano Di Battista feat. Paco Séry in Last Call for Miles</span><br><span class="m">Venerdì 9 ottobre alle 22:30 · Il Moro, Cava de&#39; Tirreni</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/iii-edizione-sono-terra-festival-bio-arch-2026/"><span class="em">📚</span><span><span class="t">III Edizione Sono Terra Festival  -  Bio.Arch. 2026</span><br><span class="m">Sabato 10 ottobre alle 09:30 · Museum of operation Avalanche, Eboli</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/tedx-montella-teatro-adele-solimene/"><span class="em">🎉</span><span><span class="t">TEDx Montella - Teatro Adele Solimene</span><br><span class="m">Sabato 10 ottobre alle 10:00 · Teatro Adele Solimene, Montella</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/la-casa-delle-zucche-cilento-outlet/"><span class="em">🎉</span><span><span class="t">La Casa delle Zucche - Cilento Outlet</span><br><span class="m">Sabato 10 ottobre alle 10:00 · Cilento Outlet, Eboli</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/cena-da-cerasella-ice-cream-coffee-and-dessert/"><span class="em">🍽️</span><span><span class="t">Cena da Cerasella Ice Cream, Coffee and Dessert: 10 posti liberi</span><br><span class="m">Sabato 10 ottobre alle 16:05 · Cerasella Ice Cream, Coffee and Dessert, Battipaglia</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/cena-da-capri-blu-castellammare-di-stabia-o-libero/"><span class="em">🍽️</span><span><span class="t">Cena da Capri Blu Castellammare di Stabia: 1 posto libero</span><br><span class="m">Sabato 10 ottobre alle 18:30 · Capri Blu Castellammare di Stabia</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/iii-edizione-sono-terra-festival-conversazione-e-spettacoli/"><span class="em">📚</span><span><span class="t">III Edizione &quot;Sono Terra Festival&quot;- Conversazione e Spettacoli</span><br><span class="m">Sabato 10 ottobre alle 18:30 · Basilica di San Pietro Alli Marmi, Eboli</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/tavolo-per-chi-e-nuovo-in-citta-da-porca-vacca-brace-e-dinto/"><span class="em">🍽️</span><span><span class="t">Tavolo per chi è nuovo in città da Porca Vacca - Brace e Dintorni: 6 posti liberi</span><br><span class="m">Sabato 10 ottobre alle 19:00 · Porca Vacca - Brace e Dintorni, Salerno</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/aperitivo-da-pizzeria-la-ruota-1950-a-ciccella/"><span class="em">🍽️</span><span><span class="t">Aperitivo da Pizzeria La Ruota 1950 &quot; A&#39; Ciccella&quot;: 9 posti liberi</span><br><span class="m">Sabato 10 ottobre alle 19:00 · Pizzeria La Ruota 1950 &quot; A&#39; Ciccella&quot;, Pagani</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/cena-da-tenuta-d-amore/"><span class="em">🍽️</span><span><span class="t">Cena da Tenuta D&#39;Amore: 7 posti liberi</span><br><span class="m">Sabato 10 ottobre alle 19:30 · Tenuta D&#39;Amore, San Mango Piemonte</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/cena-da-public-house/"><span class="em">🍽️</span><span><span class="t">Cena da Public House: 11 posti liberi</span><br><span class="m">Sabato 10 ottobre alle 19:30 · Public House, Cervito-Canfora</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/nocciole-a-occiano/"><span class="em">🍽️</span><span><span class="t">Nocciole a Occiano</span><br><span class="m">Sabato 10 ottobre alle 19:30 · Via Diana 6 Montecorvino Rovella, Montecorvino Rovella</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/carosonamente/"><span class="em">🎸</span><span><span class="t">CAROSONAMENTE</span><br><span class="m">Sabato 10 ottobre alle 20:30 · Teatro Augusteo Salerno, Salerno</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/sentiero-degli-dei-versione-integrale/"><span class="em">📚</span><span><span class="t">Sentiero degli Dei Versione Integrale</span><br><span class="m">Domenica 11 ottobre alle 09:30 · Piazza Paolo Capasso, Pianillo</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/concerto-all-archivio/"><span class="em">🎸</span><span><span class="t">Concerto all&#39;archivio</span><br><span class="m">Domenica 11 ottobre alle 11:00 · Largo Conforti, 7  Salerno, Salerno</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/eccellenze-locali/"><span class="em">🎸</span><span><span class="t">Eccellenze locali</span><br><span class="m">Domenica 11 ottobre alle 19:30 · Congrega del Rosario, Praiano</span></span></a>
-<a class="card" href="https://anyplans.in/salerno/serata-per-gli-amanti-del-sushi-da-unico-sushi-garden/"><span class="em">🍽️</span><span><span class="t">Serata per gli amanti del sushi da Unico Sushi Garden: 23 posti liberi</span><br><span class="m">Mercoledì 14 ottobre alle 19:00 · Unico Sushi Garden, Pompei</span></span></a>
+
+<p class="wsum"><b>29 eventi</b> nei prossimi 7 giorni · 21 dove puoi andare da solo</p>
+<div class="wmap" id="wmap" aria-label="Mappa degli eventi"><span class="wcount" id="wcount"></span><div class="wmapbar"><button class="wwheel" id="wwheel" type="button" data-gate="ruota">Se non lo sai, tira a sorte</button><a class="wfull" href="/?citta=salerno" data-gate="mappa">Apri la mappa</a></div></div>
+<div class="wbar"><div class="wseg" id="wseg"></div><div class="wseg wsub" id="wsub"></div><div class="wchips" id="wchips"></div></div>
+<div id="wlist"><div class="wday" data-key="2026-10-07"><section class="wf" data-f="sera"><h2>Sera <span class="s">1</span></h2><a class="wr" href="https://anyplans.in/salerno/cena-da-bar-antica-grecia/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791388800000" data-e="🍽️" data-ll="40.49528,15.01483"><time>18:00</time><span class="tile">🍽️</span><span class="wb"><span class="t">Cena da Bar Antica Grecia: 5 posti liberi</span><span class="m">Ponte Barizzo</span><span class="solo">Ci puoi andare da solo</span></span></a></section></div><div class="wday" data-key="2026-10-08"><section class="wf" data-f="mat"><h2>Mattina <span class="s">1</span></h2><a class="wr" href="https://anyplans.in/salerno/colazione-da-prunus-sushi-cocktails/" data-f="mat" data-c="tavola" data-s="1" data-free="1" data-ts="1791448200000" data-e="🍽️" data-ll="40.67214,14.77861"><time>10:30</time><span class="tile">🍽️</span><span class="wb"><span class="t">Colazione da Prunus - Sushi &amp; Cocktails: 11 posti liberi</span><span class="m">Salerno</span><span class="solo">Ci puoi andare da solo</span></span></a></section><section class="wf" data-f="sera"><h2>Sera <span class="s">4</span></h2><a class="wr" href="https://anyplans.in/salerno/amici-di-amici-da-ristorante-pizzeria-i-della-rocca/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791478800000" data-e="🍽️" data-ll="40.81902,14.80320"><time>19:00</time><span class="tile">🍽️</span><span class="wb"><span class="t">Amici di amici da Ristorante pizzeria i Della Rocca: 8 posti liberi</span><span class="m">Torchiati</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/serata-gusto-e-compagnia-da-polichetti-esperienze-di-pizza/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791479400000" data-e="🍽️" data-ll="40.76594,14.67465"><time>19:10</time><span class="tile">🍽️</span><span class="wb"><span class="t">Serata Gusto e Compagnia🍕😋 da Polichetti, esperienze di pizza: 5 posti liberi</span><span class="m">Casali-San Potito</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/cena-da-bowling-the-club/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791479700000" data-e="🍽️" data-ll="40.64982,14.87320"><time>19:15</time><span class="tile">🍽️</span><span class="wb"><span class="t">Cena da Bowling The Club: 6 posti liberi</span><span class="m">Pontecagnano Faiano</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/salerno-tango-fest-2026/" data-f="sera" data-c="serate" data-s="1" data-free="1" data-ts="1791482400000" data-e="💃" data-ll="40.65045,14.81142"><time>20:00</time><span class="tile">💃</span><span class="wb"><span class="t">Salerno Tango Fest 2026</span><span class="m">Mediterranea Hotel and Convention Center, Salerno</span><span class="solo">Ci puoi andare da solo</span></span></a></section></div><div class="wday" data-key="2026-10-09"><section class="wf" data-f="sera"><h2>Sera <span class="s">8</span></h2><a class="wr" href="https://anyplans.in/salerno/iii-edizione-sono-terra-festival-premio-solco-maggiore-e-con/" data-f="sera" data-c="cultura" data-s="1" data-free="1" data-ts="1791563400000" data-e="📚" data-ll="40.62295,15.05340"><time>18:30</time><span class="tile">📚</span><span class="wb"><span class="t">III Edizione &quot;Sono Terra Festival&quot;- Premio Solco Maggiore e Conversazione</span><span class="m">Eboli</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/cena-da-bedruid-s/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791565200000" data-e="🍽️" data-ll="40.70194,14.70800"><time>19:00</time><span class="tile">🍽️</span><span class="wb"><span class="t">Cena da BeDruid&#39;s: 9 posti liberi</span><span class="m">Cava de&#39; Tirreni</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/cena-da-pa-sa/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791567000000" data-e="🍽️" data-ll="40.69829,14.70992"><time>19:30</time><span class="tile">🍽️</span><span class="wb"><span class="t">Cena da Pa&amp;Sá: 7 posti liberi</span><span class="m">Cava de&#39; Tirreni</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/cena-da-madai-bakery-cafe/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791567000000" data-e="🍽️" data-ll="40.92848,14.79471"><time>19:30</time><span class="tile">🍽️</span><span class="wb"><span class="t">Cena da Madai Bakery Café: 4 posti liberi</span><span class="m">Avellino</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/live-musc-e-karaoke-da-barabocchio/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791567000000" data-e="🍽️" data-ll="40.69948,14.70922"><time>19:30</time><span class="tile">🍽️</span><span class="wb"><span class="t">Live Musc e Karaoke da Barabocchio: 5 posti liberi</span><span class="m">Cava de&#39; Tirreni</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/avellino-jazz-al-castello-contaminazioni-jazz/" data-f="sera" data-c="cultura" data-free="1" data-ts="1791567000000" data-e="🏛️" data-ll="40.91420,14.78888"><time>19:30</time><span class="tile">🏛️</span><span class="wb"><span class="t">Avellino Jazz al Castello - Contaminazioni Jazz</span><span class="m">Auditorium “V. Vitale” Avellino, Avellino</span></span></a><a class="wr" href="https://anyplans.in/salerno/inaugurazione-terzo-tempo-venerdi-da-terzo-tempo-village-o-l/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791567900000" data-e="🍽️" data-ll="40.69480,14.83414"><time>19:45</time><span class="tile">🍽️</span><span class="wb"><span class="t">✨Inaugurazione Terzo Tempo venerdì da Terzo Tempo Village: 1 posto libero</span><span class="m">San Mango Piemonte</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/stefano-di-battista-feat-paco-sery-in-for-miles/" data-f="sera" data-c="serate" data-free="1" data-ts="1791577800000" data-e="🎸" data-ll="40.69732,14.70968"><time>22:30</time><span class="tile">🎸</span><span class="wb"><span class="t">Stefano Di Battista feat. Paco Séry in Last Call for Miles</span><span class="m">Cava de&#39; Tirreni</span></span></a></section></div><div class="wday" data-key="2026-10-10"><section class="wf" data-f="mat"><h2>Mattina <span class="s">3</span></h2><a class="wr" href="https://anyplans.in/salerno/iii-edizione-sono-terra-festival-bio-arch-2026/" data-f="mat" data-c="cultura" data-s="1" data-free="1" data-ts="1791617400000" data-e="📚" data-ll="40.62236,15.05677"><time>09:30</time><span class="tile">📚</span><span class="wb"><span class="t">III Edizione Sono Terra Festival  -  Bio.Arch. 2026</span><span class="m">Eboli</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/tedx-montella-teatro-adele-solimene/" data-f="mat" data-c="feste" data-free="1" data-ts="1791619200000" data-e="🎉" data-ll="40.84697,15.01735"><time>10:00</time><span class="tile">🎉</span><span class="wb"><span class="t">TEDx Montella - Teatro Adele Solimene</span><span class="m">Teatro Adele Solimene, Montella</span></span></a><a class="wr" href="https://anyplans.in/salerno/la-casa-delle-zucche-cilento-outlet/" data-f="mat" data-c="feste" data-free="1" data-ts="1791619200000" data-e="🎉" data-ll="40.56195,14.99032"><time>10:00</time><span class="tile">🎉</span><span class="wb"><span class="t">La Casa delle Zucche - Cilento Outlet</span><span class="m">Eboli</span></span></a></section><section class="wf" data-f="pom"><h2>Pomeriggio <span class="s">1</span></h2><a class="wr" href="https://anyplans.in/salerno/cena-da-cerasella-ice-cream-coffee-and-dessert/" data-f="pom" data-c="tavola" data-s="1" data-free="1" data-ts="1791641100000" data-e="🍽️" data-ll="40.60929,14.98296"><time>16:05</time><span class="tile">🍽️</span><span class="wb"><span class="t">Cena da Cerasella Ice Cream, Coffee and Dessert: 10 posti liberi</span><span class="m">Battipaglia</span><span class="solo">Ci puoi andare da solo</span></span></a></section><section class="wf" data-f="sera"><h2>Sera <span class="s">8</span></h2><a class="wr" href="https://anyplans.in/salerno/cena-da-capri-blu-castellammare-di-stabia-o-libero/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791649800000" data-e="🍽️" data-ll="40.70132,14.48293"><time>18:30</time><span class="tile">🍽️</span><span class="wb"><span class="t">Cena da Capri Blu Castellammare di Stabia: 1 posto libero</span><span class="m">Salerno</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/iii-edizione-sono-terra-festival-conversazione-e-spettacoli/" data-f="sera" data-c="cultura" data-s="1" data-free="1" data-ts="1791649800000" data-e="📚" data-ll="40.62295,15.05340"><time>18:30</time><span class="tile">📚</span><span class="wb"><span class="t">III Edizione &quot;Sono Terra Festival&quot;- Conversazione e Spettacoli</span><span class="m">Eboli</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/tavolo-per-chi-e-nuovo-in-citta-da-porca-vacca-brace-e-dinto/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791651600000" data-e="🍽️" data-ll="40.67635,14.77701"><time>19:00</time><span class="tile">🍽️</span><span class="wb"><span class="t">Tavolo per chi è nuovo in città da Porca Vacca - Brace e Dintorni: 6 posti liberi</span><span class="m">Salerno</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/aperitivo-da-pizzeria-la-ruota-1950-a-ciccella/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791651600000" data-e="🍽️" data-ll="40.74797,14.61855"><time>19:00</time><span class="tile">🍽️</span><span class="wb"><span class="t">Aperitivo da Pizzeria La Ruota 1950 &quot; A&#39; Ciccella&quot;: 9 posti liberi</span><span class="m">Pagani</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/cena-da-tenuta-d-amore/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791653400000" data-e="🍽️" data-ll="40.69269,14.84727"><time>19:30</time><span class="tile">🍽️</span><span class="wb"><span class="t">Cena da Tenuta D&#39;Amore: 7 posti liberi</span><span class="m">San Mango Piemonte</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/cena-da-public-house/" data-f="sera" data-c="tavola" data-s="1" data-free="1" data-ts="1791653400000" data-e="🍽️" data-ll="40.78013,14.77072"><time>19:30</time><span class="tile">🍽️</span><span class="wb"><span class="t">Cena da Public House: 11 posti liberi</span><span class="m">Cervito-Canfora</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/nocciole-a-occiano/" data-f="sera" data-c="tavola" data-free="1" data-ts="1791653400000" data-e="🍽️" data-ll="40.69306,14.95967"><time>19:30</time><span class="tile">🍽️</span><span class="wb"><span class="t">Nocciole a Occiano</span><span class="m">Montecorvino Rovella</span></span></a><a class="wr" href="https://anyplans.in/salerno/carosonamente/" data-f="sera" data-c="serate" data-free="1" data-ts="1791657000000" data-e="🎸" data-ll="40.67849,14.75570"><time>20:30</time><span class="tile">🎸</span><span class="wb"><span class="t">CAROSONAMENTE</span><span class="m">Salerno</span></span></a></section></div><div class="wday" data-key="2026-10-11"><section class="wf" data-f="mat"><h2>Mattina <span class="s">2</span></h2><a class="wr" href="https://anyplans.in/salerno/sentiero-degli-dei-versione-integrale/" data-f="mat" data-c="cultura" data-s="1" data-free="1" data-ts="1791703800000" data-e="📚" data-ll="40.63010,14.54018"><time>09:30</time><span class="tile">📚</span><span class="wb"><span class="t">Sentiero degli Dei Versione Integrale</span><span class="m">Pianillo</span><span class="solo">Ci puoi andare da solo</span></span></a><a class="wr" href="https://anyplans.in/salerno/concerto-all-archivio/" data-f="mat" data-c="serate" data-free="1" data-ts="1791709200000" data-e="🎸" data-ll="40.68036,14.75945"><time>11:00</time><span class="tile">🎸</span><span class="wb"><span class="t">Concerto all&#39;archivio</span><span class="m">Salerno</span></span></a></section><section class="wf" data-f="sera"><h2>Sera <span class="s">1</span></h2><a class="wr" href="https://anyplans.in/salerno/eccellenze-locali/" data-f="sera" data-c="serate" data-free="1" data-ts="1791739800000" data-e="🎸" data-ll="40.61003,14.53009"><time>19:30</time><span class="tile">🎸</span><span class="wb"><span class="t">Eccellenze locali</span><span class="m">Praiano</span></span></a></section></div></div>
+<div class="wlock" id="wlock" hidden><b>Registrati, è gratis</b><span id="wlockn"></span><a class="btn" href="/bergamo/login.html" data-gate="lista">Registrati gratis</a></div>
+<div class="wbg" id="wbg" hidden></div><div class="wsheet" id="wsheet" role="dialog" aria-modal="true" aria-labelledby="wsh" hidden><span class="wh"></span><button class="wx" id="wx" type="button" aria-label="Chiudi">×</button><h2 id="wsh">Ci penso io</h2><p class="s">Ti scelgo io una cosa di oggi o domani, qui vicino. Tu devi solo presentarti.</p><div class="wfil" id="wfil"></div><div class="wwrap"><div class="wptr"></div><div class="wdisc" id="wdisc"></div></div><div id="wres" hidden></div><button class="btn" id="wspin" type="button">Scegli tu</button><button class="btn ghost" id="wagain" type="button" hidden></button></div>
+<script type="application/json" id="wcfg">{"kind":"tipo","keys":["2026-10-07","2026-10-08","2026-10-09","2026-10-10","2026-10-11"],"tz":"Europe/Rome","city":[14.7681,40.6824],"login":"/bergamo/login.html","map":"/?citta=salerno","city_slug":"salerno","h1":["Cosa fare a Salerno undefined, mercoledì 7 ottobre","Cosa fare a Salerno undefined, giovedì 8 ottobre","Cosa fare a Salerno undefined, venerdì 9 ottobre","Cosa fare a Salerno undefined, sabato 10 ottobre","Cosa fare a Salerno undefined, domenica 11 ottobre"],"T":{"regT":"Registrati, è gratis","reg":"Registrati gratis","more":"altri eventi","only":"Ti basta l'email.","map":"Apri la mappa","wheel":"Se non lo sai, tira a sorte","nuovo":"Nuovo","wheelT":"Ci penso io","wheelS":"Ti scelgo io una cosa di oggi o domani, qui vicino. Tu devi solo presentarti.","pick":"Scegli tu","go":"Vai qui","another":"Un'altra · ne restano ","left":"","none":"Per oggi non c'è più niente: prova domani.","all":"Tutto","solo":"Da solo","f":{"Gratis":"Gratis","Sport":"Sport","Serata":"Serata","Cena":"Cena"},"ci":"Ci sono","soloL":"Ci puoi andare da solo"},"chips":{"sport":"Sport","tavola":"A tavola","lab":"Laboratori","serate":"Serate","cultura":"Cultura","giochi":"Giochi","feste":"Feste","mercati":"Mercati","altro":"Altro"},"fasce":{"mat":"Mattina","pom":"Pomeriggio","sera":"Sera"},"when":{"mat":"stamattina","pom":"oggi pomeriggio","sera":"stasera"},"dayLabels":["Mer 7","Gio 8","Ven 9","Sab 10","Dom 11"],"rel":true,"words":{"oggi":"Oggi","domani":"Domani","st":{"mat":"stamattina","pom":"oggi pomeriggio","sera":"stasera"}}}</script><h2>Più avanti</h2><div class="list"><a class="card" href="https://anyplans.in/salerno/serata-per-gli-amanti-del-sushi-da-unico-sushi-garden/"><span class="em">🍽️</span><span><span class="t">Serata per gli amanti del sushi da Unico Sushi Garden: 23 posti liberi</span><br><span class="m">Mercoledì 14 ottobre alle 19:00 · Unico Sushi Garden, Pompei</span></span></a>
 <a class="card" href="https://anyplans.in/salerno/una-nuova-era-dell-energia-l-innovazione-incontra-salerno/"><span class="em">📚</span><span><span class="t">Una nuova era dell’energia – L’innovazione incontra Salerno</span><br><span class="m">Giovedì 15 ottobre alle 10:30 · La isla bonita, Pontecagnano Faiano</span></span></a>
 <a class="card" href="https://anyplans.in/salerno/cena-da-pepe-nero/"><span class="em">🍽️</span><span><span class="t">Cena da Pepe Nero: 2 posti liberi</span><br><span class="m">Venerdì 16 ottobre alle 19:15 · Pepe Nero, Salerno</span></span></a>
 <a class="card" href="https://anyplans.in/salerno/cena-da-piazza-vanvitelli/"><span class="em">🍽️</span><span><span class="t">Cena da Piazza Vanvitelli: 4 posti liberi</span><br><span class="m">Venerdì 16 ottobre alle 19:30 · Piazza Vanvitelli, Castellammare di Stabia</span></span></a>
@@ -220,6 +257,158 @@ footer a:hover{color:var(--ink)}
 <a class="card old" href="https://anyplans.in/salerno/castello-arechi-da-alla-ricerca-del-locale-perfetto/"><span class="em">🍽️</span><span><span class="t">Castello Arechi da Alla ricerca del locale perfetto: 4 posti liberi</span><br><span class="m">Sabato 3 ottobre alle 21:30 · Alla ricerca del locale perfetto, Salerno</span></span></a></div>
 <h2>Gratis nelle altre città</h2><div class="tags"><a href="/napoli/gratis/">Gratis a Napoli</a><a href="/latina/gratis/">Gratis a Latina</a><a href="/bari/gratis/">Gratis a Bari</a><a href="/pescara/gratis/">Gratis a Pescara</a><a href="/taranto/gratis/">Gratis a Taranto</a><a href="/roma/gratis/">Gratis a Roma</a><a href="/messina/gratis/">Gratis a Messina</a><a href="/lecce/gratis/">Gratis a Lecce</a><a href="/citta/">Tutte le città</a></div>
 <div class="box" id="domande"><h2>Domande frequenti</h2><details><summary>Quali eventi gratis a Salerno e provincia ci sono in programma?</summary><p>Ci sono 68 eventi: Cena da Bar Antica Grecia: 5 posti liberi (Ponte Barizzo, mercoledì 7 ottobre alle 18:00), Colazione da Prunus - Sushi &amp; Cocktails: 11 posti liberi (Salerno, giovedì 8 ottobre alle 10:30), Amici di amici da Ristorante pizzeria i Della Rocca: 8 posti liberi (Torchiati, giovedì 8 ottobre alle 19:00), Serata Gusto e Compagnia🍕😋 da Polichetti, esperienze di pizza: 5 posti liberi (Casali-San Potito, giovedì 8 ottobre alle 19:10), Cena da Bowling The Club: 6 posti liberi (Pontecagnano Faiano, giovedì 8 ottobre alle 19:15) e Salerno Tango Fest 2026 (giovedì 8 ottobre alle 20:00) e altri, tutti nella lista qui sopra.</p></details><details><summary>Quando è il prossimo evento di gratis?</summary><p>Cena da Bar Antica Grecia: 5 posti liberi, mercoledì 7 ottobre alle 18:00, a Ponte Barizzo. Gratis.</p></details><details><summary>Eventi gratis a Salerno e provincia: sono gratis?</summary><p>Sì, tutti. Quando c&#39;è un biglietto o una quota, il prezzo è scritto nella pagina dell&#39;evento.</p></details></div>
+<script>
+(function(){
+  var cfg = JSON.parse(document.getElementById("wcfg").textContent), T = cfg.T;
+  var $ = function(id){ return document.getElementById(id); };
+  var logged = false;
+  try { var s = JSON.parse(localStorage.getItem("anyplans_session") || sessionStorage.getItem("anyplans_session") || "null"); logged = !!(s && s.access_token); } catch (e) {}
+  var track = function(n, p){ try { window.apTrack && window.apTrack(n, p); } catch (e) {} };
+  function toLogin(why, next){
+    try { sessionStorage.setItem("anyplans_next", next || location.pathname); } catch (e) {}
+    track("wall_tap", location.pathname + "?" + why + "&quando");
+    location.href = cfg.login;
+  }
+  // il giorno vero, a Bergamo: se la pagina è di ieri (il lavoro notturno è in ritardo) si passa al giorno dopo
+  var today = new Intl.DateTimeFormat("en-CA", { timeZone: cfg.tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  var nowH = +new Intl.DateTimeFormat("it-IT", { timeZone: cfg.tz, hour: "2-digit", hourCycle: "h23" }).format(new Date());
+  var days = [].slice.call(document.querySelectorAll(".wday"));
+  var weekend = cfg.kind === "weekend" || cfg.kind === "tipo", di = 0;
+  var tomorrow = (function(){ var p = today.split("-"); var d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + 1)); return d.toISOString().slice(0, 10); })();
+  // nelle categorie: "Oggi" e "Domani" secondo la data vera, i giorni già passati non si mostrano
+  if (cfg.rel) cfg.dayLabels = cfg.keys.map(function(k, i){ return k === today ? cfg.words.oggi : k === tomorrow ? cfg.words.domani : cfg.dayLabels[i]; });
+  function dayFascia(){ var l = cfg.dayLabels[di]; if (cfg.rel && cfg.keys[di] === today) return cfg.words.st[fascia]; return l.toLowerCase() + " " + cfg.fasce[fascia].toLowerCase(); }
+  if (!weekend && cfg.keys.length > 1 && today === cfg.keys[1]) {
+    di = 1; days[0].hidden = true; days[1].hidden = false;
+    var h1 = document.querySelector("h1"); if (h1) h1.textContent = cfg.h1[1];
+  }
+  if (weekend) { var wi = cfg.keys.indexOf(today); if (wi > 0) di = wi; if (cfg.rel && cfg.keys[di] < today) { var nx = cfg.keys.findIndex(function(k){ return k >= today; }); if (nx >= 0) di = nx; } days.forEach(function(d, i){ d.hidden = i !== di; }); }
+  var fascia = nowH < 12 ? "mat" : nowH < 18 ? "pom" : "sera", cat = "all";
+  function curDay(){ return days[di]; }
+  function present(f){ return curDay().querySelector('.wf[data-f="' + f + '"]'); }
+  // sul weekend la fascia di partenza è quella dell'ora vera solo se oggi è uno dei due giorni, altrimenti la mattina
+  if (weekend && cfg.keys[di] !== today) fascia = "mat";
+  function fixFascia(){ if (!present(fascia)) fascia = ["mat", "pom", "sera"].filter(present)[0] || fascia; }
+  fixFascia();
+  function rowsOn(){ return [].slice.call(curDay().querySelectorAll(".wr, .wg")); }
+  function visible(el){
+    if (el.getAttribute("data-f") !== fascia) return false;
+    if (cat === "solo") return el.getAttribute("data-s") === "1";
+    return cat === "all" || el.getAttribute("data-c") === cat;
+  }
+  var map = null, markers = [];
+  function render(){
+    var seg = $("wseg"), html = "";
+    var fh = "";
+    if (cfg.kind !== "stasera") ["mat", "pom", "sera"].forEach(function(f){ var sec = present(f); if (!sec) return; var n = sec.querySelectorAll(".wr").length; fh += '<button type="button" data-fa="' + f + '" aria-pressed="' + (f === fascia) + '">' + cfg.fasce[f] + "<small>" + n + "</small></button>"; });
+    // sul weekend due righe: Sabato · Domenica sopra, Mattina · Pomeriggio · Sera sotto (07/10/2026)
+    if (weekend) { cfg.keys.forEach(function(k, i){ if (cfg.rel && k < today) return; var n = days[i].querySelectorAll(".wr").length; html += '<button type="button" data-day="' + i + '" aria-pressed="' + (i === di) + '">' + cfg.dayLabels[i] + "<small>" + n + "</small></button>"; }); seg.innerHTML = html; $("wsub").innerHTML = fh; }
+    else { seg.innerHTML = fh; $("wsub").innerHTML = ""; }
+    var counts = {}, solo = 0;
+    rowsOn().forEach(function(el){ if (el.parentNode.classList.contains("wgi")) return; if (el.getAttribute("data-f") !== fascia) return; var c = el.getAttribute("data-c"); counts[c] = (counts[c] || 0) + 1; if (el.getAttribute("data-s") === "1") solo++; });
+    var chips = '<button type="button" data-cat="all" aria-pressed="' + (cat === "all") + '">' + T.all + "</button>";
+    if (solo) chips += '<button type="button" data-cat="solo" aria-pressed="' + (cat === "solo") + '">' + T.solo + "</button>";
+    Object.keys(counts).sort(function(a, b){ return counts[b] - counts[a]; }).forEach(function(c){ chips += '<button type="button" data-cat="' + c + '" aria-pressed="' + (cat === c) + '">' + (cfg.chips[c] || c) + "</button>"; });
+    $("wchips").innerHTML = chips;
+    // sezioni e righe
+    [].slice.call(curDay().querySelectorAll(".wf")).forEach(function(sec){ sec.hidden = sec.getAttribute("data-f") !== fascia; });
+    var shown = 0, cut = 0, lockAfter = null;
+    [].slice.call(curDay().querySelectorAll(".wf > .wr, .wf > .wg")).forEach(function(el){
+      var ok = visible(el); el.hidden = !ok; el.classList.remove("wcut");
+      if (!ok) return;
+      shown++;
+      if (!logged && shown > 4) { el.classList.add("wcut"); cut += el.classList.contains("wg") ? el.querySelectorAll(".wr").length : 1; if (!lockAfter) lockAfter = el; }
+    });
+    var lock = $("wlock");
+    if (lockAfter) { lockAfter.parentNode.insertBefore(lock, lockAfter); lock.hidden = false; $("wlockn").textContent = T.more === "altri eventi" ? "Ci sono altri " + cut + " eventi " + (weekend ? dayFascia() : cfg.when[fascia]) + ". " + T.only : cut + " " + T.more + ". " + T.only; }
+    else lock.hidden = true;
+    var n = rowsOn().filter(function(el){ return el.classList.contains("wr") && !(el.closest(".wgi")) && visible(el); }).length + [].slice.call(curDay().querySelectorAll(".wg")).filter(visible).reduce(function(a, g){ return a + g.querySelectorAll(".wr").length; }, 0);
+    $("wcount").innerHTML = "<b>" + n + "</b> " + (weekend ? dayFascia() : cfg.kind === "stasera" ? cfg.when.sera : cfg.when[fascia]);
+    drawPins();
+  }
+  function pinRows(){ return [].slice.call(curDay().querySelectorAll(".wr")).filter(function(r){ var box = r.closest(".wg") || r; return visible(box) && r.getAttribute("data-ll"); }); }
+  function drawPins(){
+    if (!map) return;
+    markers.forEach(function(m){ m.remove(); }); markers = [];
+    pinRows().slice(0, 200).forEach(function(r){
+      var ll = r.getAttribute("data-ll").split(","), el = document.createElement("a");
+      el.className = "wpin" + (r.getAttribute("data-s") === "1" ? " wsolo" : ""); el.href = r.getAttribute("href");
+      el.setAttribute("aria-label", r.querySelector(".t").textContent);
+      el.innerHTML = "<i><span>" + r.getAttribute("data-e") + "</span></i>";
+      el.addEventListener("click", function(e){ if (!logged) { e.preventDefault(); toLogin("pin", r.getAttribute("href")); } });
+      markers.push(new maplibregl.Marker({ element: el, anchor: "bottom" }).setLngLat([+ll[1], +ll[0]]).addTo(map));
+    });
+  }
+  function loadMap(){
+    var css = document.createElement("link"); css.rel = "stylesheet"; css.href = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css"; document.head.appendChild(css);
+    var sc = document.createElement("script"); sc.src = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js";
+    sc.onload = function(){
+      map = new maplibregl.Map({ container: "wmap", style: "https://tiles.openfreemap.org/styles/liberty", center: cfg.city, zoom: 10.6, interactive: logged, attributionControl: false });
+      drawPins();   // i pin non aspettano lo stile e le mattonelle: su un telefono lento la mappa ci mette secondi
+    };
+    document.head.appendChild(sc);
+  }
+  loadMap();
+  $("wwheel").setAttribute("data-new", T.nuovo);
+  document.addEventListener("click", function(e){
+    var t = e.target.closest("button, a"); if (!t) return;
+    if (t.hasAttribute("data-fa")) { fascia = t.getAttribute("data-fa"); cat = "all"; render(); return; }
+    if (t.hasAttribute("data-day")) { days[di].hidden = true; di = +t.getAttribute("data-day"); days[di].hidden = false; cat = "all"; fixFascia(); render(); return; }
+    if (t.hasAttribute("data-cat")) { cat = t.getAttribute("data-cat"); render(); return; }
+    if (t.classList.contains("wgh")) { e.preventDefault(); if (!logged) { toLogin(t.getAttribute("data-gate"), location.pathname); return; } t.parentNode.classList.toggle("open"); return; }
+    if (t.id === "wwheel") { if (!logged) { toLogin("ruota", location.pathname + "#ruota"); return; } openWheel(); return; }
+    if (!logged && (t.classList.contains("wr") || t.classList.contains("wfull") || t.hasAttribute("data-gate"))) { e.preventDefault(); toLogin(t.getAttribute("data-gate") || "evento", t.classList.contains("wr") ? t.getAttribute("href") : t.classList.contains("wfull") ? t.getAttribute("href") : location.pathname); }
+  }, true);
+  // la ruota, come nella home (UI.md §3.13): sei spicchi, pesca tra gli eventi di oggi e domani che iniziano fra almeno un'ora
+  var SL = ["🏃", "🎨", "🍽️", "🎲", "🎤", "📚"], SLC = { sport: 0, lab: 1, tavola: 2, giochi: 3, serate: 4 };
+  var disc = $("wdisc");
+  SL.forEach(function(x, i){ var sp = document.createElement("span"), a = (i * 60 + 30) * Math.PI / 180; sp.textContent = x; sp.style.transform = "translate(" + (Math.sin(a) * 70) + "px," + (-Math.cos(a) * 70) + "px) translate(-50%,-50%)"; sp.setAttribute("aria-hidden", "true"); disc.appendChild(sp); });
+  var rot = 0, left = 3, seen = [];
+  function openWheel(){ left = 3; seen = []; $("wres").hidden = true; $("wagain").hidden = true; $("wspin").hidden = false;
+    $("wfil").innerHTML = ["Gratis", "Sport", "Serata", "Cena"].map(function(f){ return '<button type="button" data-wf="' + f + '" aria-pressed="false">' + T.f[f] + "</button>"; }).join("");
+    $("wbg").hidden = false; $("wsheet").hidden = false; track("ruota_open", location.pathname); }
+  function closeWheel(){ $("wbg").hidden = true; $("wsheet").hidden = true; }
+  $("wx").onclick = closeWheel; $("wbg").onclick = closeWheel;
+  $("wfil").addEventListener("click", function(e){ var b = e.target.closest("button"); if (b) b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") !== "true"); });
+  function pool(){
+    var on = [].slice.call($("wfil").querySelectorAll('[aria-pressed="true"]')).map(function(b){ return b.getAttribute("data-wf"); });
+    var soon = Date.now() + 3600e3;
+    return [].slice.call(document.querySelectorAll(".wday .wr")).filter(function(r){
+      if (r.closest(".wg")) return false;
+      if (+r.getAttribute("data-ts") < soon) return false;
+      if (seen.indexOf(r.getAttribute("href")) >= 0) return false;
+      var c = r.getAttribute("data-c"), h = +r.querySelector("time").textContent.slice(0, 2);
+      if (c === "mercati") return false;
+      if (on.indexOf("Gratis") >= 0 && r.getAttribute("data-free") !== "1") return false;
+      if (on.indexOf("Sport") >= 0 && c !== "sport") return false;
+      if (on.indexOf("Serata") >= 0 && h < 18) return false;
+      if (on.indexOf("Cena") >= 0 && c !== "tavola") return false;
+      return true;
+    });
+  }
+  function spin(){
+    var P = pool(), W = [];
+    P.forEach(function(r){ W.push(r); if (r.getAttribute("data-s") === "1") W.push(r); });
+    if (!W.length) { $("wres").innerHTML = '<p class="s">' + T.none + "</p>"; $("wres").hidden = false; $("wspin").hidden = true; return; }
+    var r = W[Math.floor(Math.random() * W.length)], sl = SLC[r.getAttribute("data-c")]; if (sl == null) sl = 5;
+    seen.push(r.getAttribute("href"));
+    var target = 360 - (sl * 60 + 30); rot += 3 * 360 + ((target - (rot % 360)) + 360) % 360;
+    disc.style.transform = "rotate(" + rot + "deg)"; $("wspin").hidden = true; $("wagain").hidden = true;
+    track("ruota_gira", location.pathname + "?giro=" + (4 - left));
+    setTimeout(function(){
+      left--;
+      var c = r.cloneNode(true); c.classList.remove("wcut"); c.hidden = false;
+      $("wres").innerHTML = '<span class="s">' + T.go + "</span>"; $("wres").appendChild(c);
+      var ci = document.createElement("a"); ci.className = "btn"; ci.href = r.getAttribute("href"); ci.textContent = T.ci; ci.onclick = function(){ track("ruota_join", r.getAttribute("href")); }; $("wres").appendChild(ci);
+      $("wres").hidden = false;
+      if (left > 0) { $("wagain").hidden = false; $("wagain").textContent = T.another + left + T.left; }
+    }, matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 1000);
+  }
+  $("wspin").onclick = spin; $("wagain").onclick = spin;
+  render();
+  if (logged && location.hash === "#ruota") openWheel();
+})();
+</script>
 
 </main>
 <footer><div class="wrap">
