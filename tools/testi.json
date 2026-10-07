@@ -800,6 +800,7 @@
    "noun_en": "group sports",
    "conta": "evento di sport|eventi di sport",
    "tipi": ["running", "trail", "hiking", "cycling", "mtb", "padel", "tennis", "football", "volleyball", "basketball", "gym", "climbing", "swimming", "yoga", "hyrox", "skating", "paddling"],
+   "regex": "calcetto|torneo di padel|partitella|\\bsport\\b",
    "frase": "Corsa, padel, calcetto, bici, arrampicata e palestra in gruppo: partite a cui manca un giocatore, run club e uscite dove ti unisci anche da solo."
   }
  ]
