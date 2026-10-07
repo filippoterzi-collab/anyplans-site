@@ -1,6 +1,6 @@
 # anyplans
 
-> La mappa degli eventi veri d'Italia: 13831 eventi in programma in 52 città. Feste di paese e sagre,
+> La mappa degli eventi veri d'Italia: 13861 eventi in programma in 52 città. Feste di paese e sagre,
 > teatro e spettacoli, concerti, mercati, incontri e conferenze, visite guidate, camminate e gruppi di
 > cammino, mostre, corsi, cene e aperitivi, partite di padel aperte. Di ognuno: data, luogo, prezzo,
 > chi organizza e come iscriversi. Si entra con l'email, solo maggiorenni. Aggiornato ogni notte.
@@ -11,58 +11,58 @@ riassunto e domande frequenti di ogni pagina.
 
 ## Le città
 
-- [Milano](https://anyplans.in/milano/cosa-fare/): 2535 eventi in programma, 10473 pagine — testo completo: https://anyplans.in/llms-milano.txt
-- [Roma](https://anyplans.in/roma/cosa-fare/): 1522 eventi in programma, 6771 pagine — testo completo: https://anyplans.in/llms-roma.txt
-- [Bergamo](https://anyplans.in/bergamo/cosa-fare/): 1317 eventi in programma, 5658 pagine — testo completo: https://anyplans.in/llms-full.txt
-- [Torino](https://anyplans.in/torino/cosa-fare/): 1140 eventi in programma, 4587 pagine — testo completo: https://anyplans.in/llms-torino.txt
-- [Napoli](https://anyplans.in/napoli/cosa-fare/): 583 eventi in programma, 2959 pagine — testo completo: https://anyplans.in/llms-napoli.txt
-- [Bologna](https://anyplans.in/bologna/cosa-fare/): 561 eventi in programma, 2391 pagine — testo completo: https://anyplans.in/llms-bologna.txt
-- [Monza](https://anyplans.in/monza/cosa-fare/): 439 eventi in programma, 1266 pagine — testo completo: https://anyplans.in/llms-monza.txt
-- [Padova](https://anyplans.in/padova/cosa-fare/): 402 eventi in programma, 1721 pagine — testo completo: https://anyplans.in/llms-padova.txt
-- [Bari](https://anyplans.in/bari/cosa-fare/): 397 eventi in programma, 1767 pagine — testo completo: https://anyplans.in/llms-bari.txt
-- [Firenze](https://anyplans.in/firenze/cosa-fare/): 377 eventi in programma, 1697 pagine — testo completo: https://anyplans.in/llms-firenze.txt
-- [Brescia](https://anyplans.in/brescia/cosa-fare/): 302 eventi in programma, 949 pagine — testo completo: https://anyplans.in/llms-brescia.txt
-- [Varese](https://anyplans.in/varese/cosa-fare/): 274 eventi in programma, 750 pagine — testo completo: https://anyplans.in/llms-varese.txt
-- [Verona](https://anyplans.in/verona/cosa-fare/): 272 eventi in programma, 1389 pagine — testo completo: https://anyplans.in/llms-verona.txt
-- [Genova](https://anyplans.in/genova/cosa-fare/): 225 eventi in programma, 1063 pagine — testo completo: https://anyplans.in/llms-genova.txt
-- [Venezia](https://anyplans.in/venezia/cosa-fare/): 200 eventi in programma, 845 pagine — testo completo: https://anyplans.in/llms-venezia.txt
+- [Milano](https://anyplans.in/milano/cosa-fare/): 2543 eventi in programma, 10557 pagine — testo completo: https://anyplans.in/llms-milano.txt
+- [Roma](https://anyplans.in/roma/cosa-fare/): 1530 eventi in programma, 6803 pagine — testo completo: https://anyplans.in/llms-roma.txt
+- [Bergamo](https://anyplans.in/bergamo/cosa-fare/): 1321 eventi in programma, 5684 pagine — testo completo: https://anyplans.in/llms-full.txt
+- [Torino](https://anyplans.in/torino/cosa-fare/): 1144 eventi in programma, 4623 pagine — testo completo: https://anyplans.in/llms-torino.txt
+- [Napoli](https://anyplans.in/napoli/cosa-fare/): 582 eventi in programma, 2979 pagine — testo completo: https://anyplans.in/llms-napoli.txt
+- [Bologna](https://anyplans.in/bologna/cosa-fare/): 560 eventi in programma, 2399 pagine — testo completo: https://anyplans.in/llms-bologna.txt
+- [Monza](https://anyplans.in/monza/cosa-fare/): 445 eventi in programma, 1280 pagine — testo completo: https://anyplans.in/llms-monza.txt
+- [Padova](https://anyplans.in/padova/cosa-fare/): 401 eventi in programma, 1729 pagine — testo completo: https://anyplans.in/llms-padova.txt
+- [Bari](https://anyplans.in/bari/cosa-fare/): 398 eventi in programma, 1779 pagine — testo completo: https://anyplans.in/llms-bari.txt
+- [Firenze](https://anyplans.in/firenze/cosa-fare/): 375 eventi in programma, 1711 pagine — testo completo: https://anyplans.in/llms-firenze.txt
+- [Brescia](https://anyplans.in/brescia/cosa-fare/): 303 eventi in programma, 956 pagine — testo completo: https://anyplans.in/llms-brescia.txt
+- [Verona](https://anyplans.in/verona/cosa-fare/): 275 eventi in programma, 1403 pagine — testo completo: https://anyplans.in/llms-verona.txt
+- [Varese](https://anyplans.in/varese/cosa-fare/): 274 eventi in programma, 753 pagine — testo completo: https://anyplans.in/llms-varese.txt
+- [Genova](https://anyplans.in/genova/cosa-fare/): 223 eventi in programma, 1061 pagine — testo completo: https://anyplans.in/llms-genova.txt
+- [Venezia](https://anyplans.in/venezia/cosa-fare/): 199 eventi in programma, 855 pagine — testo completo: https://anyplans.in/llms-venezia.txt
 - [Udine](https://anyplans.in/udine/cosa-fare/): 197 eventi in programma, 350 pagine — testo completo: https://anyplans.in/llms-udine.txt
-- [Treviso](https://anyplans.in/treviso/cosa-fare/): 191 eventi in programma, 513 pagine — testo completo: https://anyplans.in/llms-treviso.txt
-- [Parma](https://anyplans.in/parma/cosa-fare/): 160 eventi in programma, 424 pagine — testo completo: https://anyplans.in/llms-parma.txt
-- [Perugia](https://anyplans.in/perugia/cosa-fare/): 156 eventi in programma, 320 pagine — testo completo: https://anyplans.in/llms-perugia.txt
-- [Palermo](https://anyplans.in/palermo/cosa-fare/): 146 eventi in programma, 911 pagine — testo completo: https://anyplans.in/llms-palermo.txt
-- [Modena](https://anyplans.in/modena/cosa-fare/): 137 eventi in programma, 429 pagine — testo completo: https://anyplans.in/llms-modena.txt
-- [Taranto](https://anyplans.in/taranto/cosa-fare/): 134 eventi in programma, 348 pagine — testo completo: https://anyplans.in/llms-taranto.txt
-- [Cagliari](https://anyplans.in/cagliari/cosa-fare/): 120 eventi in programma, 317 pagine — testo completo: https://anyplans.in/llms-cagliari.txt
-- [Vicenza](https://anyplans.in/vicenza/cosa-fare/): 115 eventi in programma, 331 pagine — testo completo: https://anyplans.in/llms-vicenza.txt
-- [Lecce](https://anyplans.in/lecce/cosa-fare/): 109 eventi in programma, 299 pagine — testo completo: https://anyplans.in/llms-lecce.txt
-- [Ferrara](https://anyplans.in/ferrara/cosa-fare/): 108 eventi in programma, 252 pagine — testo completo: https://anyplans.in/llms-ferrara.txt
-- [Trento](https://anyplans.in/trento/cosa-fare/): 105 eventi in programma, 329 pagine — testo completo: https://anyplans.in/llms-trento.txt
-- [Como](https://anyplans.in/como/cosa-fare/): 104 eventi in programma, 643 pagine — testo completo: https://anyplans.in/llms-como.txt
-- [Catania](https://anyplans.in/catania/cosa-fare/): 103 eventi in programma, 559 pagine — testo completo: https://anyplans.in/llms-catania.txt
-- [Pescara](https://anyplans.in/pescara/cosa-fare/): 98 eventi in programma, 219 pagine — testo completo: https://anyplans.in/llms-pescara.txt
-- [Pisa](https://anyplans.in/pisa/cosa-fare/): 91 eventi in programma, 491 pagine — testo completo: https://anyplans.in/llms-pisa.txt
-- [Latina](https://anyplans.in/latina/cosa-fare/): 80 eventi in programma, 189 pagine — testo completo: https://anyplans.in/llms-latina.txt
-- [Salerno](https://anyplans.in/salerno/cosa-fare/): 72 eventi in programma, 353 pagine — testo completo: https://anyplans.in/llms-salerno.txt
-- [Ravenna](https://anyplans.in/ravenna/cosa-fare/): 71 eventi in programma, 232 pagine — testo completo: https://anyplans.in/llms-ravenna.txt
+- [Treviso](https://anyplans.in/treviso/cosa-fare/): 192 eventi in programma, 518 pagine — testo completo: https://anyplans.in/llms-treviso.txt
+- [Parma](https://anyplans.in/parma/cosa-fare/): 159 eventi in programma, 433 pagine — testo completo: https://anyplans.in/llms-parma.txt
+- [Perugia](https://anyplans.in/perugia/cosa-fare/): 157 eventi in programma, 321 pagine — testo completo: https://anyplans.in/llms-perugia.txt
+- [Palermo](https://anyplans.in/palermo/cosa-fare/): 143 eventi in programma, 913 pagine — testo completo: https://anyplans.in/llms-palermo.txt
+- [Modena](https://anyplans.in/modena/cosa-fare/): 138 eventi in programma, 438 pagine — testo completo: https://anyplans.in/llms-modena.txt
+- [Taranto](https://anyplans.in/taranto/cosa-fare/): 134 eventi in programma, 350 pagine — testo completo: https://anyplans.in/llms-taranto.txt
+- [Cagliari](https://anyplans.in/cagliari/cosa-fare/): 120 eventi in programma, 323 pagine — testo completo: https://anyplans.in/llms-cagliari.txt
+- [Vicenza](https://anyplans.in/vicenza/cosa-fare/): 114 eventi in programma, 332 pagine — testo completo: https://anyplans.in/llms-vicenza.txt
+- [Lecce](https://anyplans.in/lecce/cosa-fare/): 109 eventi in programma, 304 pagine — testo completo: https://anyplans.in/llms-lecce.txt
+- [Ferrara](https://anyplans.in/ferrara/cosa-fare/): 108 eventi in programma, 254 pagine — testo completo: https://anyplans.in/llms-ferrara.txt
+- [Trento](https://anyplans.in/trento/cosa-fare/): 105 eventi in programma, 331 pagine — testo completo: https://anyplans.in/llms-trento.txt
+- [Catania](https://anyplans.in/catania/cosa-fare/): 104 eventi in programma, 573 pagine — testo completo: https://anyplans.in/llms-catania.txt
+- [Como](https://anyplans.in/como/cosa-fare/): 103 eventi in programma, 645 pagine — testo completo: https://anyplans.in/llms-como.txt
+- [Pescara](https://anyplans.in/pescara/cosa-fare/): 97 eventi in programma, 221 pagine — testo completo: https://anyplans.in/llms-pescara.txt
+- [Pisa](https://anyplans.in/pisa/cosa-fare/): 91 eventi in programma, 503 pagine — testo completo: https://anyplans.in/llms-pisa.txt
+- [Latina](https://anyplans.in/latina/cosa-fare/): 79 eventi in programma, 196 pagine — testo completo: https://anyplans.in/llms-latina.txt
+- [Salerno](https://anyplans.in/salerno/cosa-fare/): 73 eventi in programma, 358 pagine — testo completo: https://anyplans.in/llms-salerno.txt
+- [Ravenna](https://anyplans.in/ravenna/cosa-fare/): 72 eventi in programma, 239 pagine — testo completo: https://anyplans.in/llms-ravenna.txt
 - [Novara](https://anyplans.in/novara/cosa-fare/): 68 eventi in programma, 232 pagine — testo completo: https://anyplans.in/llms-novara.txt
-- [Ancona](https://anyplans.in/ancona/cosa-fare/): 68 eventi in programma, 252 pagine — testo completo: https://anyplans.in/llms-ancona.txt
-- [Trieste](https://anyplans.in/trieste/cosa-fare/): 67 eventi in programma, 329 pagine — testo completo: https://anyplans.in/llms-trieste.txt
+- [Ancona](https://anyplans.in/ancona/cosa-fare/): 68 eventi in programma, 262 pagine — testo completo: https://anyplans.in/llms-ancona.txt
+- [Trieste](https://anyplans.in/trieste/cosa-fare/): 67 eventi in programma, 333 pagine — testo completo: https://anyplans.in/llms-trieste.txt
 - [Bolzano](https://anyplans.in/bolzano/cosa-fare/): 67 eventi in programma, 159 pagine — testo completo: https://anyplans.in/llms-bolzano.txt
-- [Reggio Emilia](https://anyplans.in/reggio-emilia/cosa-fare/): 63 eventi in programma, 210 pagine — testo completo: https://anyplans.in/llms-reggio-emilia.txt
-- [Cremona](https://anyplans.in/cremona/cosa-fare/): 62 eventi in programma, 199 pagine — testo completo: https://anyplans.in/llms-cremona.txt
-- [Pordenone](https://anyplans.in/pordenone/cosa-fare/): 61 eventi in programma, 179 pagine — testo completo: https://anyplans.in/llms-pordenone.txt
-- [Rimini](https://anyplans.in/rimini/cosa-fare/): 60 eventi in programma, 389 pagine — testo completo: https://anyplans.in/llms-rimini.txt
-- [Pistoia](https://anyplans.in/pistoia/cosa-fare/): 58 eventi in programma, 195 pagine — testo completo: https://anyplans.in/llms-pistoia.txt
-- [Prato](https://anyplans.in/prato/cosa-fare/): 54 eventi in programma, 207 pagine — testo completo: https://anyplans.in/llms-prato.txt
+- [Reggio Emilia](https://anyplans.in/reggio-emilia/cosa-fare/): 64 eventi in programma, 215 pagine — testo completo: https://anyplans.in/llms-reggio-emilia.txt
+- [Pordenone](https://anyplans.in/pordenone/cosa-fare/): 61 eventi in programma, 181 pagine — testo completo: https://anyplans.in/llms-pordenone.txt
+- [Cremona](https://anyplans.in/cremona/cosa-fare/): 61 eventi in programma, 198 pagine — testo completo: https://anyplans.in/llms-cremona.txt
+- [Rimini](https://anyplans.in/rimini/cosa-fare/): 60 eventi in programma, 393 pagine — testo completo: https://anyplans.in/llms-rimini.txt
+- [Pistoia](https://anyplans.in/pistoia/cosa-fare/): 60 eventi in programma, 201 pagine — testo completo: https://anyplans.in/llms-pistoia.txt
+- [Prato](https://anyplans.in/prato/cosa-fare/): 56 eventi in programma, 214 pagine — testo completo: https://anyplans.in/llms-prato.txt
 - [Lucca](https://anyplans.in/lucca/cosa-fare/): 54 eventi in programma, 230 pagine — testo completo: https://anyplans.in/llms-lucca.txt
-- [Mantova](https://anyplans.in/mantova/cosa-fare/): 52 eventi in programma, 156 pagine — testo completo: https://anyplans.in/llms-mantova.txt
-- [Pavia](https://anyplans.in/pavia/cosa-fare/): 51 eventi in programma, 172 pagine — testo completo: https://anyplans.in/llms-pavia.txt
+- [Mantova](https://anyplans.in/mantova/cosa-fare/): 52 eventi in programma, 162 pagine — testo completo: https://anyplans.in/llms-mantova.txt
+- [Pavia](https://anyplans.in/pavia/cosa-fare/): 52 eventi in programma, 171 pagine — testo completo: https://anyplans.in/llms-pavia.txt
 - [Alessandria](https://anyplans.in/alessandria/cosa-fare/): 49 eventi in programma, 158 pagine — testo completo: https://anyplans.in/llms-alessandria.txt
-- [Lecco](https://anyplans.in/lecco/cosa-fare/): 48 eventi in programma, 158 pagine — testo completo: https://anyplans.in/llms-lecco.txt
-- [Lodi](https://anyplans.in/lodi/cosa-fare/): 45 eventi in programma, 165 pagine — testo completo: https://anyplans.in/llms-lodi.txt
+- [Lecco](https://anyplans.in/lecco/cosa-fare/): 48 eventi in programma, 164 pagine — testo completo: https://anyplans.in/llms-lecco.txt
+- [Lodi](https://anyplans.in/lodi/cosa-fare/): 46 eventi in programma, 174 pagine — testo completo: https://anyplans.in/llms-lodi.txt
 - [Reggio Calabria](https://anyplans.in/reggio-calabria/cosa-fare/): 36 eventi in programma, 50 pagine — testo completo: https://anyplans.in/llms-reggio-calabria.txt
-- [Messina](https://anyplans.in/messina/cosa-fare/): 25 eventi in programma, 66 pagine — testo completo: https://anyplans.in/llms-messina.txt
+- [Messina](https://anyplans.in/messina/cosa-fare/): 24 eventi in programma, 65 pagine — testo completo: https://anyplans.in/llms-messina.txt
 
 ## Le guide
 
