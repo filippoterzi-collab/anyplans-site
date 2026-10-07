@@ -2177,7 +2177,7 @@ function whenAppHtml(kind, w, list) {
   const total = list.length, solo = list.filter(isSolo).length;
   return `<p class="wsum"><b>${total} ${E ? "events" : "eventi"}</b> ${E ? `in ${CITY_NAME} and its province` : `tra ${CITY_NAME} e provincia`} · ${solo} ${E ? "you can go to alone" : "dove puoi andare da solo"}</p>
 <div class="wmap" id="wmap" aria-label="${E ? "Map of the events" : "Mappa degli eventi"}"><span class="wcount" id="wcount"></span><div class="wmapbar"><button class="wwheel" id="wwheel" type="button" data-gate="ruota">${T.wheel}</button><a class="wfull" href="${MAP_URL}" data-gate="mappa">${T.map}</a></div></div>
-<div class="wbar"><div class="wseg" id="wseg"></div><div class="wchips" id="wchips"></div></div>
+<div class="wbar"><div class="wseg" id="wseg"></div><div class="wseg wsub" id="wsub"></div><div class="wchips" id="wchips"></div></div>
 <div id="wlist">${days.map((d, i) => whenDayHtml(d.rows, d.k, kind === "weekend" ? i > 0 : d.spare)).join("")}</div>
 <div class="wlock" id="wlock" hidden><b>${T.regT}</b><span id="wlockn"></span><a class="btn" href="${APP}/login.html" data-gate="lista">${T.reg}</a></div>
 <div class="wbg" id="wbg" hidden></div><div class="wsheet" id="wsheet" role="dialog" aria-modal="true" aria-labelledby="wsh" hidden><span class="wh"></span><button class="wx" id="wx" type="button" aria-label="${E ? "Close" : "Chiudi"}">×</button><h2 id="wsh">${T.wheelT}</h2><p class="s">${T.wheelS}</p><div class="wfil" id="wfil"></div><div class="wwrap"><div class="wptr"></div><div class="wdisc" id="wdisc"></div></div><div id="wres" hidden></div><button class="btn" id="wspin" type="button">${T.pick}</button><button class="btn ghost" id="wagain" type="button" hidden></button></div>
@@ -2205,6 +2205,9 @@ const WHEN_CSS = `
 .wseg button{flex:1;border:0;background:none;border-radius:999px;padding:8px 4px;font:inherit;font-weight:800;font-size:14.5px;color:var(--grey);display:flex;flex-direction:column;align-items:center;line-height:1.1;cursor:pointer}
 .wseg button small{font-weight:600;font-size:11.5px}
 .wseg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.wsub{background:transparent;border:0;padding:0;gap:6px}
+.wsub button{flex:1;border:1.5px solid rgba(25,25,25,.12);background:#fff;padding:6px 4px;font-size:13.5px}
+.wsub button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
 .wchips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -22px;padding:0 22px}
 .wchips::-webkit-scrollbar{display:none}
 .wchips button{flex:none;border:1.5px solid rgba(25,25,25,.12);background:#fff;border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;font-weight:700;white-space:nowrap;cursor:pointer;color:var(--ink)}
@@ -2267,27 +2270,32 @@ const WHEN_JS = String.raw`<script>
   var fascia = nowH < 12 ? "mat" : nowH < 18 ? "pom" : "sera", cat = "all";
   function curDay(){ return days[di]; }
   function present(f){ return curDay().querySelector('.wf[data-f="' + f + '"]'); }
-  if (!weekend && !present(fascia)) { fascia = ["mat", "pom", "sera"].filter(present)[0] || fascia; }
+  // sul weekend la fascia di partenza è quella dell'ora vera solo se oggi è uno dei due giorni, altrimenti la mattina
+  if (weekend && cfg.keys[di] !== today) fascia = "mat";
+  function fixFascia(){ if (!present(fascia)) fascia = ["mat", "pom", "sera"].filter(present)[0] || fascia; }
+  fixFascia();
   function rowsOn(){ return [].slice.call(curDay().querySelectorAll(".wr, .wg")); }
   function visible(el){
-    if (!weekend && el.getAttribute("data-f") !== fascia) return false;
+    if (el.getAttribute("data-f") !== fascia) return false;
     if (cat === "solo") return el.getAttribute("data-s") === "1";
     return cat === "all" || el.getAttribute("data-c") === cat;
   }
   var map = null, markers = [];
   function render(){
     var seg = $("wseg"), html = "";
-    if (weekend) cfg.keys.forEach(function(k, i){ var n = days[i].querySelectorAll(".wr").length; html += '<button type="button" data-day="' + i + '" aria-pressed="' + (i === di) + '">' + cfg.dayLabels[i] + "<small>" + n + "</small></button>"; });
-    else if (cfg.kind !== "stasera") ["mat", "pom", "sera"].forEach(function(f){ var sec = present(f); if (!sec) return; var n = sec.querySelectorAll(".wr").length; html += '<button type="button" data-fa="' + f + '" aria-pressed="' + (f === fascia) + '">' + cfg.fasce[f] + "<small>" + n + "</small></button>"; });
-    seg.innerHTML = html;
+    var fh = "";
+    if (cfg.kind !== "stasera") ["mat", "pom", "sera"].forEach(function(f){ var sec = present(f); if (!sec) return; var n = sec.querySelectorAll(".wr").length; fh += '<button type="button" data-fa="' + f + '" aria-pressed="' + (f === fascia) + '">' + cfg.fasce[f] + "<small>" + n + "</small></button>"; });
+    // sul weekend due righe: Sabato · Domenica sopra, Mattina · Pomeriggio · Sera sotto (07/10/2026)
+    if (weekend) { cfg.keys.forEach(function(k, i){ var n = days[i].querySelectorAll(".wr").length; html += '<button type="button" data-day="' + i + '" aria-pressed="' + (i === di) + '">' + cfg.dayLabels[i] + "<small>" + n + "</small></button>"; }); seg.innerHTML = html; $("wsub").innerHTML = fh; }
+    else { seg.innerHTML = fh; $("wsub").innerHTML = ""; }
     var counts = {}, solo = 0;
-    rowsOn().forEach(function(el){ if (el.parentNode.classList.contains("wgi")) return; if (!weekend && el.getAttribute("data-f") !== fascia) return; var c = el.getAttribute("data-c"); counts[c] = (counts[c] || 0) + 1; if (el.getAttribute("data-s") === "1") solo++; });
+    rowsOn().forEach(function(el){ if (el.parentNode.classList.contains("wgi")) return; if (el.getAttribute("data-f") !== fascia) return; var c = el.getAttribute("data-c"); counts[c] = (counts[c] || 0) + 1; if (el.getAttribute("data-s") === "1") solo++; });
     var chips = '<button type="button" data-cat="all" aria-pressed="' + (cat === "all") + '">' + T.all + "</button>";
     if (solo) chips += '<button type="button" data-cat="solo" aria-pressed="' + (cat === "solo") + '">' + T.solo + "</button>";
     Object.keys(counts).sort(function(a, b){ return counts[b] - counts[a]; }).forEach(function(c){ chips += '<button type="button" data-cat="' + c + '" aria-pressed="' + (cat === c) + '">' + (cfg.chips[c] || c) + "</button>"; });
     $("wchips").innerHTML = chips;
     // sezioni e righe
-    [].slice.call(curDay().querySelectorAll(".wf")).forEach(function(sec){ sec.hidden = !weekend && sec.getAttribute("data-f") !== fascia; });
+    [].slice.call(curDay().querySelectorAll(".wf")).forEach(function(sec){ sec.hidden = sec.getAttribute("data-f") !== fascia; });
     var shown = 0, cut = 0, lockAfter = null;
     [].slice.call(curDay().querySelectorAll(".wf > .wr, .wf > .wg")).forEach(function(el){
       var ok = visible(el); el.hidden = !ok; el.classList.remove("wcut");
@@ -2296,10 +2304,10 @@ const WHEN_JS = String.raw`<script>
       if (!logged && shown > 4) { el.classList.add("wcut"); cut += el.classList.contains("wg") ? el.querySelectorAll(".wr").length : 1; if (!lockAfter) lockAfter = el; }
     });
     var lock = $("wlock");
-    if (lockAfter) { lockAfter.parentNode.insertBefore(lock, lockAfter); lock.hidden = false; $("wlockn").textContent = T.more === "altri eventi" ? "Ci sono altri " + cut + " eventi " + (weekend ? cfg.dayLabels[di].toLowerCase() : cfg.when[fascia]) + ". " + T.only : cut + " " + T.more + ". " + T.only; }
+    if (lockAfter) { lockAfter.parentNode.insertBefore(lock, lockAfter); lock.hidden = false; $("wlockn").textContent = T.more === "altri eventi" ? "Ci sono altri " + cut + " eventi " + (weekend ? cfg.dayLabels[di].toLowerCase() + " " + cfg.fasce[fascia].toLowerCase() : cfg.when[fascia]) + ". " + T.only : cut + " " + T.more + ". " + T.only; }
     else lock.hidden = true;
     var n = rowsOn().filter(function(el){ return el.classList.contains("wr") && !(el.closest(".wgi")) && visible(el); }).length + [].slice.call(curDay().querySelectorAll(".wg")).filter(visible).reduce(function(a, g){ return a + g.querySelectorAll(".wr").length; }, 0);
-    $("wcount").innerHTML = "<b>" + n + "</b> " + (weekend ? cfg.dayLabels[di].toLowerCase() : cfg.kind === "stasera" ? cfg.when.sera : cfg.when[fascia]);
+    $("wcount").innerHTML = "<b>" + n + "</b> " + (weekend ? cfg.dayLabels[di].toLowerCase() + " " + cfg.fasce[fascia].toLowerCase() : cfg.kind === "stasera" ? cfg.when.sera : cfg.when[fascia]);
     drawPins();
   }
   function pinRows(){ return [].slice.call(curDay().querySelectorAll(".wr")).filter(function(r){ var box = r.closest(".wg") || r; return visible(box) && r.getAttribute("data-ll"); }); }
@@ -2329,7 +2337,7 @@ const WHEN_JS = String.raw`<script>
   document.addEventListener("click", function(e){
     var t = e.target.closest("button, a"); if (!t) return;
     if (t.hasAttribute("data-fa")) { fascia = t.getAttribute("data-fa"); cat = "all"; render(); return; }
-    if (t.hasAttribute("data-day")) { days[di].hidden = true; di = +t.getAttribute("data-day"); days[di].hidden = false; cat = "all"; render(); return; }
+    if (t.hasAttribute("data-day")) { days[di].hidden = true; di = +t.getAttribute("data-day"); days[di].hidden = false; cat = "all"; fixFascia(); render(); return; }
     if (t.hasAttribute("data-cat")) { cat = t.getAttribute("data-cat"); render(); return; }
     if (t.classList.contains("wgh")) { e.preventDefault(); if (!logged) { toLogin(t.getAttribute("data-gate"), location.pathname); return; } t.parentNode.classList.toggle("open"); return; }
     if (t.id === "wwheel") { if (!logged) { toLogin("ruota", location.pathname + "#ruota"); return; } openWheel(); return; }
