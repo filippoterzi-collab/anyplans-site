@@ -551,10 +551,12 @@ function firstTouch(){
     if (localStorage.getItem("anyplans_src")) return null;
     let ref = "";
     try { ref = document.referrer ? new URL(document.referrer).hostname : ""; } catch (_) {}
-    if (ref === location.hostname) return null;
     const q = new URLSearchParams(location.search);
     const utm = ["utm_source", "utm_medium", "utm_campaign", "utm_content"]
       .map(k => (q.get(k) || "").replace(/[^A-Za-z0-9._-]/g, "").slice(0, 40));
+    // le utm contano anche con referrer interno: il link in bio porta su /bergamo/, che rimanda qui con
+    // le utm e con anyplans.in come referrer (07/10/2026: prima quelle visite restavano senza sorgente)
+    if (ref === location.hostname && !utm.some(Boolean)) return null;
     const src = utm.some(Boolean) ? utm.join("/") : (ref || "diretto");
     localStorage.setItem("anyplans_src", src);
     return src;
