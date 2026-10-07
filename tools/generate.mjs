@@ -2320,7 +2320,7 @@ const WHEN_JS = String.raw`<script>
     var sc = document.createElement("script"); sc.src = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js";
     sc.onload = function(){
       map = new maplibregl.Map({ container: "wmap", style: "https://tiles.openfreemap.org/styles/liberty", center: cfg.city, zoom: 10.6, interactive: logged, attributionControl: false });
-      map.on("load", drawPins);
+      drawPins();   // i pin non aspettano lo stile e le mattonelle: su un telefono lento la mappa ci mette secondi
     };
     document.head.appendChild(sc);
   }
