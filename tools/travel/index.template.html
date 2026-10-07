@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Viaggi di gruppo per chi parte da solo: __OPERATORS_SHORT__ a confronto | anyplans</title>
+<meta name="description" content="Le partenze dei viaggi di gruppo di __OPERATORS__ una accanto all'altra: dove si va, quando, quanti giorni, a che prezzo, con che età, volo incluso o no. Scegli e prenoti da loro.">
+<link rel="canonical" href="https://anyplans.in/viaggi-di-gruppo/">
+<meta property="og:title" content="Viaggi di gruppo per chi parte da solo, a confronto">
+<meta property="og:description" content="__OPERATORS__: date, durata, prezzo, età e volo, tutti in una pagina. Prenoti da loro.">
+<meta property="og:image" content="https://anyplans.in/og.png">
+<meta property="og:url" content="https://anyplans.in/viaggi-di-gruppo/">
+<meta property="og:type" content="website">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+<link rel="icon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="preload" as="font" type="font/woff2" href="/bricolage-grotesque-latin-800-normal.woff2" crossorigin>
+<style>
+:root{
+  --blue:#1B4FD8; --blue-lo:#1440AF; --tint:#E9EEFB; --tint-lo:#DCE4F8;
+  --ink:#191919; --grey:#6E6E73; --hair:rgba(25,25,25,.10); --bg:#FBF9F5; --card:#FFFFFF;
+  --warn:#B4530A; --err:#B3261E;
+  --round: ui-rounded, "SF Pro Rounded", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --display: "Bricolage Grotesque", var(--round);
+  color-scheme: light;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--bg)}
+body{font-family:var(--round);color:var(--ink);background:var(--bg);line-height:1.5;-webkit-font-smoothing:antialiased;font-size:15px}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.display{font-family:var(--display);font-weight:800;letter-spacing:-.045em;line-height:1}
+h1,h2{font-family:var(--display);font-weight:800;letter-spacing:-.045em;line-height:1;text-wrap:balance}
+.wrap{max-width:860px;margin:0 auto;padding-inline:22px}
+@media(max-width:600px){.wrap{padding-inline:18px}}
+.blue{color:var(--blue)}
+.muted{color:var(--grey)}
+.tnum{font-variant-numeric:tabular-nums}
+
+/* mockup banner */
+
+/* nav */
+header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid var(--hair)}
+.nav{display:flex;align-items:center;gap:16px;height:60px;max-width:960px;margin:0 auto;padding-inline:22px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:-.045em;line-height:1}
+.brand svg{width:30px;height:30px;display:block}
+.section-lbl{font-weight:700;color:var(--grey);font-size:15px;margin-left:6px}
+.navright{margin-left:auto;display:flex;align-items:center;gap:10px}
+.ghost{display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 16px;border-radius:999px;border:1.5px solid var(--blue);color:var(--blue);font-weight:700;font-size:14px;background:#fff}
+.ghost:hover{background:var(--tint)}
+@media(max-width:600px){.section-lbl{display:none}.ghost{padding:0 12px;font-size:13px}}
+
+.crumbs{font-size:13px;color:var(--grey);padding-top:16px}
+.crumbs a:hover{color:var(--ink)}
+@media(max-width:600px){.crumbs{display:none}}
+
+/* hero */
+.tr-hero{text-align:center;padding:40px 0 26px}
+@media(max-width:600px){.tr-hero{padding:22px 0 18px}}
+.pill{display:inline-flex;align-items:center;gap:6px;background:var(--tint);color:var(--blue);font-weight:700;font-size:13.5px;padding:7px 14px;border-radius:999px;margin-bottom:14px}
+.tr-hero h1{font-size:clamp(30px,5vw,46px);max-width:640px;margin:0 auto}
+.tr-hero .sub{color:var(--grey);font-size:17px;max-width:620px;margin:14px auto 0;line-height:1.45}
+.tr-hero .honest{color:var(--grey);font-size:13.5px;max-width:620px;margin:12px auto 0}
+@media(max-width:600px){.tr-hero .sub{font-size:14.5px}}
+
+/* search bar (stile Airbnb) */
+.sbwrap{position:sticky;top:60px;z-index:30;background:var(--bg);padding:8px 0 4px;margin-top:-6px}
+.sbrow{display:flex;align-items:center;gap:12px}
+.sb{flex:1;display:grid;grid-template-columns:1.2fr 1fr 1fr auto;align-items:center;background:#fff;border:1.5px solid var(--hair);border-radius:999px;box-shadow:0 6px 24px rgba(25,25,25,.08);padding:4px 4px 4px 8px;min-height:64px}
+.seg{display:flex;flex-direction:column;justify-content:center;text-align:left;padding:8px 20px;border-radius:999px;min-height:56px;position:relative;min-width:0}
+.seg+.seg::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:1px;background:var(--hair)}
+.seg:hover{background:var(--tint)}
+.seg.open{background:#fff;box-shadow:0 4px 18px rgba(25,25,25,.14)}
+.seg.open::before,.seg.open+.seg::before{display:none}
+.seg .l{font-size:12px;font-weight:800;letter-spacing:.01em}
+.seg .v{font-size:14px;color:var(--grey);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.seg .v.set{color:var(--ink);font-weight:700}
+.sb .go{width:52px;height:52px;border-radius:999px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;margin-left:4px;flex:none}
+.sb .go:hover{background:var(--blue-lo)}
+.sb .go svg{width:20px;height:20px}
+.fbtn{display:inline-flex;align-items:center;gap:8px;height:48px;padding:0 16px;border-radius:14px;border:1.5px solid rgba(25,25,25,.14);background:#fff;font-weight:700;font-size:14px;flex:none;position:relative}
+.fbtn:hover{border-color:var(--ink)}
+.fbtn svg{width:18px;height:18px}
+.fbtn .badge{position:absolute;top:-7px;right:-7px;min-width:20px;height:20px;border-radius:999px;background:var(--blue);color:#fff;font-size:11.5px;font-weight:800;display:flex;align-items:center;justify-content:center;padding:0 5px}
+.fbtn .badge[hidden]{display:none}
+.panel{position:absolute;left:0;right:0;top:calc(100% + 10px);background:#fff;border:1.5px solid var(--hair);border-radius:24px;box-shadow:0 18px 50px rgba(25,25,25,.16);padding:22px 24px;z-index:35}
+.panel[hidden]{display:none}
+.panel h2{font-family:var(--round);font-weight:800;letter-spacing:0;font-size:15px;margin-bottom:12px;line-height:1.2}
+.sbrel{position:relative;flex:1}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-flex;align-items:center;height:38px;padding:0 14px;border-radius:999px;border:1.5px solid rgba(25,25,25,.14);background:#fff;font-weight:700;font-size:13.5px;color:var(--ink)}
+.chip:hover{border-color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:#fff}
+.chip[disabled]{opacity:.4;cursor:default}
+.chip:focus-visible,.btn:focus-visible,.ghost:focus-visible,.seg:focus-visible,.cat:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+.panel .pfoot{display:flex;justify-content:space-between;align-items:center;margin-top:16px;padding-top:12px;border-top:1px solid var(--hair)}
+.panel .pfoot .lnk{font-weight:700;font-size:14px;text-decoration:underline}
+.panel .pfoot .btn{width:auto;height:42px;padding:0 18px}
+.srch{display:flex;align-items:center;gap:10px;border:1.5px solid rgba(25,25,25,.14);border-radius:999px;padding:0 16px;height:46px;margin:14px 0 12px}
+.srch svg{width:18px;height:18px;color:var(--grey);flex:none}
+.srch input{border:0;outline:0;flex:1;font:inherit;font-size:14.5px;background:transparent;min-width:0}
+.cscroll{max-height:44vh;overflow:auto;padding-right:4px}
+.cgroup{margin-bottom:12px}
+.cgroup h3{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#999;font-weight:700;margin-bottom:8px;display:flex;justify-content:space-between}
+.cgroup h3 span{text-transform:none;letter-spacing:0;font-weight:600}
+.cgroup[hidden]{display:none}
+.chip .fl{margin-right:6px;font-size:15px}
+.chip small{font-weight:600;opacity:.65;margin-left:5px;font-size:12px}
+.chip[aria-pressed="true"] small{opacity:.8}
+.panel .hint{font-size:12.5px;color:var(--grey)}
+/* months grid in panel */
+.mgrid{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}
+.mgrid .chip{height:auto;flex-direction:column;align-items:center;justify-content:center;padding:10px 6px;border-radius:14px;gap:2px}
+.mgrid .chip small{font-size:11px;font-weight:600;opacity:.7}
+@media(max-width:600px){.mgrid{grid-template-columns:repeat(4,1fr)}}
+
+/* categories row (stile Airbnb) */
+.cats{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none;margin:10px 0 6px;border-bottom:1px solid var(--hair)}
+.cats::-webkit-scrollbar{display:none}
+.cat{flex:none;display:flex;flex-direction:column;align-items:center;gap:6px;padding:10px 12px 12px;color:var(--grey);font-size:12.5px;font-weight:700;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.cat .i{font-size:22px;line-height:1;filter:grayscale(1);opacity:.75}
+.cat:hover{color:var(--ink);border-bottom-color:rgba(25,25,25,.25)}
+.cat:hover .i{filter:none;opacity:1}
+.cat.on{color:var(--ink);border-bottom-color:var(--ink)}
+.cat.on .i{filter:none;opacity:1}
+
+/* modal filters */
+.modal{position:fixed;inset:0;z-index:60;display:flex;align-items:center;justify-content:center;background:rgba(25,25,25,.45);padding:20px}
+.modal[hidden]{display:none}
+.mbox{background:#fff;border-radius:24px;width:min(680px,100%);max-height:calc(100vh - 40px);display:flex;flex-direction:column;overflow:hidden}
+.mhead{display:flex;align-items:center;justify-content:center;position:relative;padding:18px;border-bottom:1px solid var(--hair);font-weight:800;font-size:16px}
+.mhead .x{position:absolute;left:14px;width:36px;height:36px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:18px}
+.mhead .x:hover{background:var(--tint)}
+.mbody{overflow:auto;padding:8px 24px}
+.mg{padding:20px 0;border-bottom:1px solid var(--hair)}
+.mg:last-child{border-bottom:0}
+.mg h2{font-family:var(--round);font-weight:800;letter-spacing:0;font-size:16px;margin-bottom:4px;line-height:1.2}
+.mg .hint{font-size:13px;color:var(--grey);margin-bottom:12px}
+.mfoot{display:flex;justify-content:space-between;align-items:center;padding:14px 24px;border-top:1px solid var(--hair);background:#fff}
+.mfoot .lnk{font-weight:700;font-size:14.5px;text-decoration:underline}
+.mfoot .btn{width:auto;height:46px;padding:0 22px}
+.mfoot .btn.zero{background:var(--grey)}
+@media(max-width:600px){
+  .sbwrap{top:60px}
+  .sb{grid-template-columns:1fr auto;min-height:56px;padding:4px}
+  .seg{padding:6px 12px;min-height:48px}
+  .seg.s2,.seg.s3{display:none}
+  .seg .l{font-size:11.5px}.seg .v{font-size:13px}
+  .sb .go{width:44px;height:44px}
+  .fbtn{height:44px;padding:0 12px}.fbtn span{display:none}
+  .panel{padding:18px 16px;border-radius:20px}
+  .modal{align-items:flex-end;padding:0}
+  .mbox{border-radius:22px 22px 0 0;max-height:88vh}
+}
+.countrow{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:14px 0 12px;font-size:13.5px;color:var(--grey);font-weight:600}
+.countrow select{height:38px;border-radius:999px;border:1.5px solid rgba(25,25,25,.14);background:#fff;padding:0 12px;font:inherit;font-weight:700;color:var(--ink);font-size:13.5px}
+
+/* trip card */
+.list{display:flex;flex-direction:column;gap:12px}
+.trip{background:var(--card);border:1.5px solid var(--hair);border-radius:16px;padding:16px 18px;display:grid;grid-template-columns:96px 1fr;gap:6px 16px}
+.trip .tile{width:96px;height:72px;border-radius:12px;background:var(--tint);display:flex;align-items:center;justify-content:center;font-size:30px;position:relative;grid-row:1/4}
+.trip .tile .plus{position:absolute;right:6px;bottom:4px;font-size:11px;font-weight:800;color:var(--blue)}
+.trip .top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.trip .t{font-weight:700;font-size:16px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.trip .t:hover{color:var(--blue)}
+.trip .oprow{display:flex;align-items:center;gap:6px;flex:none;font-size:12.5px;color:var(--grey);font-weight:600;white-space:nowrap}
+.op{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:999px;background:var(--tint);color:var(--blue);font-weight:700;font-size:12.5px}
+.trip .m{font-size:13.5px;color:var(--grey)}
+.trip .dep{grid-column:2;border-top:1px solid var(--hair);padding-top:12px;margin-top:6px}
+.trip .more{grid-column:2;font-size:13.5px;font-weight:700;color:var(--blue)}
+.trip .more.none{color:var(--grey);font-weight:600}
+@media(max-width:600px){
+  .trip{grid-template-columns:52px 1fr;padding:14px 16px}
+  .trip .tile{width:52px;height:52px;border-radius:13px;font-size:24px;grid-row:1/3}
+  .trip .top{flex-direction:column-reverse;gap:4px}
+  .trip .t{font-size:15px}.trip .m{font-size:12.5px}
+  .trip .dep{grid-column:1/-1;border:0;background:var(--tint);border-radius:12px;padding:12px;margin-top:8px}
+  .trip .more{grid-column:1/-1}
+}
+
+/* departure row */
+.dep{display:grid;grid-template-columns:200px 1fr 130px 190px;gap:8px 12px;align-items:center;min-height:44px}
+.dep .d{font-weight:700;font-size:14px}
+.dep .dm{font-size:12.5px;color:var(--grey)}
+.dep .pr{text-align:right}
+.price{font-weight:800;font-size:16px;white-space:nowrap}
+.price s{font-weight:600;font-size:13px;color:var(--grey);margin-left:5px}
+.price .from{font-size:12.5px;color:var(--grey);font-weight:600;margin-right:3px}
+.deal{display:inline-block;border:1.5px solid rgba(25,25,25,.14);border-radius:999px;font-size:11.5px;font-weight:700;padding:1px 7px;margin-left:6px;vertical-align:middle}
+.checked{font-size:12px;color:var(--grey);display:block}
+.checked.old{color:var(--err);font-weight:600}
+.seats{font-weight:600}.seats.last{color:var(--warn);font-weight:700}.seats.full{color:var(--grey);font-weight:700}
+.btn{display:inline-flex;align-items:center;justify-content:center;height:44px;padding:0 18px;border-radius:999px;background:var(--blue);color:#fff;font-weight:700;font-size:14.5px;white-space:nowrap;width:100%}
+.btn:hover{background:var(--blue-lo)}
+.dep.full .d,.dep.full .pr{opacity:.6}
+.dep .seeop{font-size:13.5px;color:var(--grey);font-weight:600;text-align:center}
+@media(max-width:600px){
+  .dep{grid-template-columns:1fr auto;gap:4px 10px}
+  .dep .d{grid-column:1}.dep .pr{grid-column:2;grid-row:1}
+  .dep .dm{grid-column:1/-1}.dep .go{grid-column:1/-1;margin-top:6px}
+  .btn{height:48px}
+}
+
+.showmore{display:flex;justify-content:center;margin-top:14px}
+.showmore .ghost{height:48px}
+
+/* nores */
+.nores{background:var(--card);border:1.5px solid var(--hair);border-radius:16px;padding:22px;text-align:center}
+.nores .tile{width:56px;height:56px;border-radius:14px;background:var(--tint);display:inline-flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:10px}
+.nores h3{font-size:18px;font-weight:800;letter-spacing:-.01em}
+.nores h3 span{display:block;color:var(--grey);font-size:14px;font-weight:600;margin-top:4px}
+.nores p{color:var(--grey);font-size:14px;margin:8px 0 12px}
+.nores .btns{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+.nores .btns .btn{width:auto;height:40px}.nores .btns .ghost{height:40px}
+.nores .alt{margin-top:14px;display:flex;flex-direction:column;gap:4px;font-size:13.5px}
+.nores .alt a{color:var(--blue);font-weight:700}
+
+.fly{font-weight:700}.fly.ok{color:#0E8A4A}.fly.no{color:var(--grey)}
+/* capodanno */
+.ny{margin-top:44px;background:var(--ink);color:#fff;border-radius:24px;padding:26px 24px 22px}
+.ny h2{color:#fff;font-size:26px}
+.ny .subl{color:rgba(255,255,255,.7);font-size:14px;margin-top:6px;max-width:560px}
+.ny .row{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;margin-top:18px;padding-bottom:4px}
+.ny .row::-webkit-scrollbar{display:none}
+.nyc{flex:none;width:250px;background:#fff;color:var(--ink);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.nyc .h{display:flex;align-items:center;gap:10px}
+.nyc .tile{width:44px;height:44px;border-radius:12px;background:var(--tint);display:flex;align-items:center;justify-content:center;font-size:22px;flex:none}
+.nyc .t{font-weight:700;font-size:14px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nyc .t:hover{color:var(--blue)}
+.nyc .d{font-weight:700;font-size:13.5px}
+.nyc .m{font-size:12.5px;color:var(--grey)}
+.nyc .pr{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-top:2px}
+.nyc .btn{height:40px;font-size:13.5px;margin-top:4px}
+.ny .all{display:inline-flex;align-items:center;gap:6px;margin-top:16px;color:#fff;font-weight:700;font-size:14px;text-decoration:underline}
+@media(max-width:600px){.ny{padding:20px 16px;border-radius:20px}.ny h2{font-size:22px}.nyc{width:230px}}
+
+/* sections */
+.sec{margin-top:44px}
+.sec h2{font-size:22px}
+.sec .subl{color:var(--grey);font-size:14px;margin-top:6px}
+.tr-conts{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.tr-conts a{background:var(--tint);color:var(--blue);font-weight:700;font-size:14px;height:40px;display:inline-flex;align-items:center;padding:0 14px;border-radius:999px}
+.tr-dests{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.city{background:var(--card);border:1.5px solid var(--hair);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.city:hover{border-color:var(--blue)}
+.city .flag{font-size:28px;line-height:1}
+.city .n{font-family:var(--display);font-weight:800;letter-spacing:-.045em;font-size:20px;line-height:1}
+.city .meta{font-size:12.5px;color:var(--grey)}
+@media(max-width:600px){.tr-dests{grid-template-columns:1fr 1fr}}
+.tr-months{display:flex;gap:10px;overflow-x:auto;padding:14px 0 6px;scrollbar-width:none}
+.tr-months::-webkit-scrollbar{display:none}
+.tr-months .city{flex:none;width:132px}
+.tr-months .city.off{opacity:.4;pointer-events:none}
+.tr-ops{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:14px}
+.opcard{background:var(--card);border:1.5px solid var(--hair);border-radius:16px;padding:18px;display:flex;flex-direction:column;gap:8px}
+.opcard .n{font-weight:800;font-size:17px}
+.opcard .meta{font-size:13px;color:var(--grey)}
+.opcard .links{display:flex;flex-direction:column;gap:4px;font-size:13.5px;font-weight:700;color:var(--blue);margin-top:4px}
+.opcard .links a:last-child{color:var(--grey);font-weight:600}
+@media(max-width:700px){.tr-ops{grid-template-columns:1fr}}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:12px 28px;margin-top:14px}
+.faq div h3{font-size:15px;font-weight:800;margin-bottom:4px}
+.faq div p{font-size:14px;color:var(--grey)}
+@media(max-width:600px){.faq{grid-template-columns:1fr}}
+.tr-foot{background:var(--tint);border-radius:16px;padding:18px 20px;margin-top:40px;font-size:14.5px}
+.tr-foot a{color:var(--blue);font-weight:700}
+footer{margin-top:60px;padding:36px 0 50px;border-top:1px solid var(--hair);color:var(--grey);font-size:14px}
+footer .cols{display:flex;flex-wrap:wrap;gap:30px 48px}
+footer h4{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:#999;margin-bottom:10px}
+footer li{list-style:none;margin-bottom:6px}
+footer li a.now{color:var(--blue);font-weight:700}
+
+/* ---- itinerary page (F) ---- */
+.fpage{display:none}
+.fpage.on{display:block}
+.hub.off{display:none}
+.chiprow{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 14px}
+.chiprow .op{height:30px;font-size:13.5px}
+.chiprow .k{display:inline-flex;align-items:center;height:30px;padding:0 11px;border-radius:999px;border:1.5px solid rgba(25,25,25,.14);font-weight:700;font-size:13.5px;background:#fff}
+.fpage h1{font-size:clamp(26px,4vw,32px)}
+.fpage .sub{color:var(--grey);font-size:15px;margin-top:10px}
+.fgrid{display:grid;grid-template-columns:1fr 320px;gap:28px;margin-top:22px;align-items:start}
+@media(max-width:760px){.fgrid{grid-template-columns:1fr}.fgrid .box{order:-1}}
+.box{background:var(--card);border:1.5px solid var(--hair);border-radius:18px;padding:20px 22px;position:sticky;top:76px}
+.box h2{font-size:20px}
+.box .bigp{margin-top:10px;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.box .bigp .display{font-size:32px}
+.box .bigp s{color:var(--grey);font-size:14px}
+.box .line{font-size:13.5px;color:var(--grey);margin-top:8px}
+.box .row{margin-top:14px;display:flex;flex-direction:column;gap:8px;align-items:stretch}
+.box .row a.small{font-size:13.5px;font-weight:700;color:var(--blue);text-align:center}
+.box .pay{font-size:12.5px;color:var(--grey);margin-top:12px}
+.fsec{margin-top:26px}
+.fsec h2{font-size:18px;margin-bottom:8px}
+.fsec p,.fsec li{font-size:15px;line-height:1.55}
+.fsec ul{padding-left:20px}
+.fsec li{margin-bottom:4px}
+.dep-table{width:100%;border-collapse:collapse;font-size:14px}
+.dep-table th{text-align:left;font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:#999;padding:8px 8px;border-bottom:1.5px solid var(--hair);font-weight:700}
+.dep-table td{padding:10px 8px;border-bottom:1px solid var(--hair);vertical-align:middle}
+.dep-table .btn{height:40px;font-size:13.5px;padding:0 14px}
+.dep-table tr.full td:not(.st){opacity:.6}
+.dep-table .st{white-space:nowrap}
+.tablewrap{overflow-x:auto}
+.summary{font-size:13.5px;color:var(--grey);margin-bottom:8px}
+.similar{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+@media(max-width:600px){.similar{grid-template-columns:1fr}}
+.similar .trip{grid-template-columns:52px 1fr;padding:12px 14px}
+.similar .trip .tile{width:52px;height:52px;font-size:24px;grid-row:1/3;border-radius:13px}
+.similar .trip .t{font-size:14.5px}
+.back{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--blue);margin-top:18px}
+@media(prefers-reduced-motion:no-preference){.trip,.city{transition:border-color .15s}}
+
+/* righe che scorrono col dito: solo a destra e sinistra, mai su e giù */
+.cats,.strip .row,.tr-months,.ny .row,.shortcuts,.carousel{touch-action:pan-x;overscroll-behavior-x:contain;-webkit-overflow-scrolling:touch}
+.sbwrap{transform:translateZ(0)}
+.lockx{position:absolute;inset:0;z-index:9;display:flex;align-items:center;justify-content:center;padding:20px;background:rgba(251,249,245,.35)}
+.lock[hidden]{display:none}
+.lock div{background:#fff;border-radius:18px;padding:20px 22px;box-shadow:0 12px 36px rgba(25,25,25,.18);text-align:center;max-width:300px}
+.lock b{display:block;font-family:var(--display);font-weight:800;letter-spacing:-.045em;font-size:22px;margin:6px 0 4px}
+.lock p{font-size:13.5px;color:var(--grey);margin-bottom:12px}
+.lock .btn{width:100%;height:44px}
+.listlock{position:relative}
+body.locked .listlock .trip:nth-child(n+5){filter:blur(6px);pointer-events:none;user-select:none}
+.lock2{position:absolute;left:0;right:0;bottom:0;height:min(55%,360px);z-index:9;display:flex;align-items:center;justify-content:center;padding:0 16px;background:linear-gradient(to bottom,rgba(251,249,245,0),rgba(251,249,245,.92) 30%,rgba(251,249,245,.92))}
+.lock2[hidden]{display:none}
+.lock2 div{background:#fff;border-radius:18px;padding:18px 22px;box-shadow:0 12px 36px rgba(25,25,25,.18);text-align:center;max-width:320px}
+.lock2 b{display:block;font-family:var(--display);font-weight:800;letter-spacing:-.045em;font-size:22px;margin-bottom:4px}
+.lock2 p{font-size:13.5px;color:var(--grey);margin-bottom:12px}
+.lock2 .btn{width:100%;height:44px}
+body.locked .showmore{display:none}
+body.locked .mk,body.locked .strip{display:none}
+@media(max-width:900px){.map{height:200px}.hero .sub{display:none}.hero{padding-bottom:10px}}
+/* selettore Eventi · Viaggi di gruppo (come Alloggi · Esperienze di Airbnb) */
+.kind{display:flex;justify-content:center;gap:4px;margin:0 0 10px}
+.kind a{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;font-weight:700;font-size:14.5px;color:var(--grey);border-bottom:2px solid transparent}
+.kind a .i{font-size:20px;line-height:1}
+.kind a.on{color:var(--ink);background:#fff;border:1.5px solid var(--hair)}
+.kind a:not(.on):hover{color:var(--ink)}
+/* fila viaggi nella home */
+.trips{margin-top:32px}
+.trips .head{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+.trips h2{font-size:22px}
+.trips .head a{font-size:13.5px;font-weight:700;color:var(--blue);white-space:nowrap}
+.trips .subl{color:var(--grey);font-size:14px;margin-top:6px}
+.trips .row{display:flex;gap:12px;overflow-x:auto;scrollbar-width:none;margin-top:14px;padding-bottom:4px;touch-action:pan-x;overscroll-behavior-x:contain}
+.trips .row::-webkit-scrollbar{display:none}
+.tcard{flex:none;width:230px;background:var(--card);border:1.5px solid var(--hair);border-radius:16px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.tcard .h{display:flex;gap:10px;align-items:center}
+.tcard .tile{width:44px;height:44px;border-radius:12px;background:var(--tint);display:flex;align-items:center;justify-content:center;font-size:24px;flex:none}
+.tcard .t{font-weight:700;font-size:14px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.tcard .m{font-size:12.5px;color:var(--grey)}
+.tcard .op{align-self:flex-start}
+.tcard .pr{display:flex;justify-content:space-between;align-items:baseline;margin-top:2px}
+.tcard .pr b{font-size:15px}
+.tcard .pr b small{font-weight:600;color:var(--grey);font-size:12px;margin-right:3px}
+.tcard .btn{height:38px;font-size:13px;margin-top:4px}
+.op{display:inline-flex;align-items:center;height:24px;padding:0 9px;border-radius:999px;background:var(--tint);color:var(--blue);font-weight:700;font-size:12px}
+@font-face{font-family:"Bricolage Grotesque";src:url("/bricolage-grotesque-latin-800-normal.woff2") format("woff2");font-weight:800;font-style:normal;font-display:swap;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Bricolage Grotesque";src:url("/bricolage-grotesque-latin-ext-800-normal.woff2") format("woff2");font-weight:800;font-style:normal;font-display:swap;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1D00-1DBF,U+1E00-1EFF,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+[hidden]{display:none!important}
+.brand img{width:30px;height:30px;display:block}.brand .q{font-size:.92em}
+.kind{display:flex;justify-content:center;gap:4px;margin:0 0 10px}
+.kind a{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;border-radius:999px;font-weight:700;font-size:14.5px;color:var(--grey);border:1.5px solid transparent}
+.kind a .i{font-size:20px;line-height:1}.kind a.on{color:var(--ink);background:#fff;border-color:var(--hair)}
+.tr-hero .honest b{color:var(--ink)}
+.seats{font-weight:700}.seats.ok{color:#0E8A4A}.seats.last{color:#B4530A}.seats.full{color:var(--grey)}
+.dep .dm{line-height:1.5}
+footer .copy{margin-top:28px;font-size:13px}
+/* la barra resta cliccabile da sloggati: il tap sulle categorie porta alla registrazione (data-gate) */
+
+/* barra in basso, la stessa della home (17/09/2026): da qui si torna agli eventi e al profilo */
+.tabbar{display:none}
+@media(max-width:900px){
+  .tabbar{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;left:0;right:0;bottom:0;height:66px;background:#fff;border-top:1px solid var(--hair);z-index:46;padding-bottom:env(safe-area-inset-bottom)}
+  .tabbar a{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;font-size:10.5px;font-weight:700;color:var(--grey);position:relative;text-align:center;line-height:1.1;padding:0 2px}
+  .tabbar a svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .tabbar a.on{color:var(--blue)}
+  body{padding-bottom:78px}
+}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebPage", "@id": "https://anyplans.in/viaggi-di-gruppo/#page", "url": "https://anyplans.in/viaggi-di-gruppo/", "name": "Viaggi di gruppo per chi parte da solo: __OPERATORS_SHORT__ a confronto", "inLanguage": "it-IT", "isPartOf": {"@id": "https://anyplans.in/#website"}, "dateModified": "__DATE_MODIFIED__"}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "anyplans", "item": "https://anyplans.in/"}, {"@type": "ListItem", "position": 2, "name": "Viaggi di gruppo", "item": "https://anyplans.in/viaggi-di-gruppo/"}]}, {"@type": "ItemList", "name": "Viaggi di gruppo", "numberOfItems": 697, "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Islanda: Aurora Expedition e Grotte di Ghiaccio", "url": "https://www.sivola.it/viaggi/islanda"}, {"@type": "ListItem", "position": 2, "name": "Giappone Winter: Rail Adventure", "url": "https://www.sivola.it/viaggi/giappone-winter-rail-adventure"}, {"@type": "ListItem", "position": 3, "name": "Giappone Express: Tokyo, Kamakura e Nikko", "url": "https://www.sivola.it/viaggi/tokyo-safari"}, {"@type": "ListItem", "position": 4, "name": "Lost in Japan: Tokyo, Kyoto & Osaka", "url": "https://www.sivola.it/viaggi/giappone-tokyo-kyoto-osaka"}, {"@type": "ListItem", "position": 5, "name": "Turchia: Cappadocia tour e Istanbul", "url": "https://www.sivola.it/viaggi/turchia-cappadocia-tour-e-istanbul"}, {"@type": "ListItem", "position": 6, "name": "Vietnam On the Road: Da Sud a Nord", "url": "https://www.sivola.it/viaggi/vietnam-on-the-road"}, {"@type": "ListItem", "position": 7, "name": "Cambogia", "url": "https://www.sivola.it/viaggi/cambogia"}, {"@type": "ListItem", "position": 8, "name": "Cina: Zaino in spalla", "url": "https://www.sivola.it/viaggi/cina"}, {"@type": "ListItem", "position": 9, "name": "New York: la magia di Natale", "url": "https://www.sivola.it/viaggi/new-york-natale"}, {"@type": "ListItem", "position": 10, "name": "New York: Saint Patrick's Day", "url": "https://www.sivola.it/viaggi/new-york-saint-patrick-s-day"}, {"@type": "ListItem", "position": 11, "name": "New York Thanksgiving", "url": "https://www.sivola.it/viaggi/new-york-thanksgiving"}, {"@type": "ListItem", "position": 12, "name": "Stati Uniti: I grandi parchi", "url": "https://www.sivola.it/viaggi/statiuniti_grandiparchi"}, {"@type": "ListItem", "position": 13, "name": "Florida: Tra Miami, studios e Amish", "url": "https://www.sivola.it/viaggi/florida-on-the-road"}, {"@type": "ListItem", "position": 14, "name": "Tanzania Safari - La grande migrazione", "url": "https://www.sivola.it/viaggi/tanzania-safari-la-grande-migrazione"}, {"@type": "ListItem", "position": 15, "name": "Corea del Sud", "url": "https://www.sivola.it/viaggi/corea-del-sud"}, {"@type": "ListItem", "position": 16, "name": "Brasile: Carnevale a Rio", "url": "https://www.sivola.it/viaggi/brasile-carnevale-rio-2025"}, {"@type": "ListItem", "position": 17, "name": "Nepal: Escape", "url": "https://www.sivola.it/viaggi/nepal-escape"}, {"@type": "ListItem", "position": 18, "name": "Giappone: Tohoku e Hokkaido", "url": "https://www.sivola.it/viaggi/giappone-tohoku-e-hokkaido"}, {"@type": "ListItem", "position": 19, "name": "Giappone: Tra geishe, templi e samurai", "url": "https://www.sivola.it/viaggi/giappone-geishe-templi-e-samurai"}, {"@type": "ListItem", "position": 20, "name": "Lapponia: Husky, TreeHouse & Aurora Boreale", "url": "https://www.sivola.it/viaggi/lapponia"}, {"@type": "ListItem", "position": 21, "name": "Egitto: Avventura sul Nilo", "url": "https://www.sivola.it/viaggi/egitto-avventura-sul-nilo"}, {"@type": "ListItem", "position": 22, "name": "Colombia & Amazzonia", "url": "https://www.sivola.it/viaggi/colombia-amazzonia"}, {"@type": "ListItem", "position": 23, "name": "Brasile: Natale a Rio e Paraty", "url": "https://www.sivola.it/viaggi/brasile-rio-paraty-natale"}, {"@type": "ListItem", "position": 24, "name": "Panama e Isole San Blas", "url": "https://www.sivola.it/viaggi/panama"}, {"@type": "ListItem", "position": 25, "name": "Lapponia: Aurora Boreale Expedition", "url": "https://www.sivola.it/viaggi/lapponia-expedition"}, {"@type": "ListItem", "position": 26, "name": "Vietnam e Cambogia: Risalendo il Mekong", "url": "https://www.sivola.it/viaggi/vietnam-e-cambogia"}, {"@type": "ListItem", "position": 27, "name": "Francia: Normandia, Bretagna e Castelli della Loira", "url": "https://www.sivola.it/viaggi/francia-normandia-bretagna-e-castelli-della-loira"}, {"@type": "ListItem", "position": 28, "name": "Sudafrica: On The Road", "url": "https://www.sivola.it/viaggi/sudafrica-on-the-road"}, {"@type": "ListItem", "position": 29, "name": "Messico Yucatán: Maya e Caraibi", "url": "https://www.sivola.it/viaggi/messico-yucatan-2026"}, {"@type": "ListItem", "position": 30, "name": "Patagonia: tra Argentina & Cile", "url": "https://www.sivola.it/viaggi/patagonia-argentina-cile"}, {"@type": "ListItem", "position": 31, "name": "Lapponia: la grande spedizione artica", "url": "https://www.sivola.it/viaggi/lapponia-spedizione-artica"}, {"@type": "ListItem", "position": 32, "name": "Canarie: Lanzarote & Fuerteventura", "url": "https://www.sivola.it/viaggi/canarie-lanzarote-e-fuerteventura"}, {"@type": "ListItem", "position": 33, "name": "Lapponia svedese: rotta tra i ghiacci", "url": "https://www.sivola.it/viaggi/lapponia-svedese-rotta-tra-i-ghiacci"}, {"@type": "ListItem", "position": 34, "name": "Thailandia: Zaino in spalla Winter Edition", "url": "https://www.sivola.it/viaggi/thailandia-zaino-in-spalla-winter"}, {"@type": "ListItem", "position": 35, "name": "Halloween in Transilvania: on the road tra castelli e leggende", "url": "https://www.sivola.it/viaggi/halloween-in-transilvania-on-the-road-tra-castelli-e-leggende"}, {"@type": "ListItem", "position": 36, "name": "Vietnam & Laos", "url": "https://www.sivola.it/viaggi/vietnam-e-laos"}, {"@type": "ListItem", "position": 37, "name": "Laos e Cambogia", "url": "https://www.sivola.it/viaggi/laos-cambogia"}, {"@type": "ListItem", "position": 38, "name": "Lapponia: Svezia & Finlandia: Rotta tra i ghiacci", "url": "https://www.sivola.it/viaggi/svezia-finlandia"}, {"@type": "ListItem", "position": 39, "name": "Giappone Kyushu", "url": "https://www.sivola.it/viaggi/giappone-kyushu"}, {"@type": "ListItem", "position": 40, "name": "Capodanno nelle Filippine: Underwater Adventure", "url": "https://www.sivola.it/viaggi/filippine-underwater-adventure"}, {"@type": "ListItem", "position": 41, "name": "India del Nord: Speciale Yoga Tour con Meg", "url": "https://www.sivola.it/viaggi/india-nord-megyoga"}, {"@type": "ListItem", "position": 42, "name": "Svezia & Finlandia: Rotta tra i ghiacci con Adrian Fartade", "url": "https://www.sivola.it/viaggi/svezia-finlandia-rotta-tra-i-ghiacci-con-adrian-fartade"}, {"@type": "ListItem", "position": 43, "name": "Lapponia: Babbo Natale & igloo di vetro", "url": "https://www.sivola.it/viaggi/lapponia-babbo-natale-igloo-di-vetro"}, {"@type": "ListItem", "position": 44, "name": "Scozia: Snorkeling tra gli squali elefante", "url": "https://www.sivola.it/viaggi/scozia-snorkeling"}, {"@type": "ListItem", "position": 45, "name": "Andalusia: On the road", "url": "https://www.sivola.it/viaggi/andalusia-sivola"}, {"@type": "ListItem", "position": 46, "name": "Cile & Bolivia", "url": "https://www.sivola.it/viaggi/cile-bolivia"}, {"@type": "ListItem", "position": 47, "name": "Sri Lanka: Avventura on the road", "url": "https://www.sivola.it/viaggi/sri-lanka-avventura-on-the-road"}, {"@type": "ListItem", "position": 48, "name": "Fuerteventura On the Road: tra oceano e deserto", "url": "https://www.sivola.it/viaggi/fuerteventura-freedom"}, {"@type": "ListItem", "position": 49, "name": "Marocco Surf & Sound", "url": "https://www.sivola.it/viaggi/sivola-marocco-surf"}, {"@type": "ListItem", "position": 50, "name": "Australia: Great Ocean Road e Tasmania", "url": "https://www.sivola.it/viaggi/australia-tasmania"}]}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Cos'è questa pagina?", "acceptedAnswer": {"@type": "Answer", "text": "Un confronto dei viaggi di gruppo per chi parte da solo. Mettiamo in fila i viaggi di __OPERATORS__ con durata, prezzo, età e volo, così li guardi tutti insieme invece che sito per sito."}}, {"@type": "Question", "name": "Prenoto qui?", "acceptedAnswer": {"@type": "Answer", "text": "No. Da noi confronti; il bottone ti porta sulla pagina dell'operatore, dove paghi e leggi le condizioni. Non prendiamo caparre né commissioni sul prezzo che paghi."}}, {"@type": "Question", "name": "I prezzi sono aggiornati?", "acceptedAnswer": {"@type": "Answer", "text": "Sono quelli letti dai siti degli operatori nella data scritta in cima alla pagina. Fa fede il prezzo sul sito dell'operatore al momento della prenotazione."}}, {"@type": "Question", "name": "Da dove si parte?", "acceptedAnswer": {"@type": "Answer", "text": "Dipende dal viaggio: SiVola include sempre il volo da Milano o Roma, WeRoad non lo include mai (lo compri tu), Utravel vende hotel e coordinatore e il volo lo aggiungi da una delle sue città di partenza, Zest parte spesso in bus da Milano."}}, {"@type": "Question", "name": "Cosa vuol dire \"fascia d'età\"?", "acceptedAnswer": {"@type": "Answer", "text": "Ogni operatore fa gruppi per età, per esempio 18–40 o 35–50. La fascia la decidono loro e la mostriamo com'è scritta da loro."}}, {"@type": "Question", "name": "Perché non ci sono altri operatori?", "acceptedAnswer": {"@type": "Answer", "text": "Partiamo con tre. Se organizzi viaggi di gruppo e vuoi esserci, scrivici a hello@anyplans.in."}}]}]}</script>
+</head>
+<body>
+
+<header><div class="nav">
+  <a class="brand" href="/" aria-label="anyplans, home"><img src="/logo.png" alt="" width="30" height="30"><span>anyplans<span class="q">?</span></span></a>
+  <span class="section-lbl">viaggi di gruppo</span>
+  <div class="navright"><a class="ghost" href="/">Eventi nella tua città</a></div>
+</div></header>
+
+<div class="hub" id="hub">
+<div class="wrap">
+  <nav class="crumbs" aria-label="Sei qui"><a href="/">anyplans</a> › Viaggi di gruppo</nav>
+
+  <section class="tr-hero">
+    <div class="pill" id="pill"></div>
+    <h1>Viaggi di gruppo per chi parte <span class="blue">da solo</span></h1>
+    <p class="sub">Le partenze di __OPERATORS__ una accanto all'altra: dove si va, quando, quanti giorni, a che prezzo, con che età. Scegli la tua e prenoti da loro.</p>
+    <p class="honest">Noi non vendiamo viaggi: confrontiamo e ti mandiamo sul sito di chi li organizza. I prezzi sono quelli letti dai loro siti il <b id="seen">__SEEN__</b>: fa fede il prezzo da loro.</p>
+  </section>
+
+  <div class="sbwrap">
+    <nav class="kind" aria-label="Cosa cerchi">
+      <a href="/"><span class="i">📍</span>Eventi</a>
+      <a href="/viaggi-di-gruppo/" class="on"><span class="i">✈️</span>Viaggi di gruppo</a>
+    </nav>
+    <div class="sbrow">
+      <div class="sbrel">
+        <div class="sb" role="search">
+          <button class="seg s1" data-seg="dove" data-gate="dove"><span class="l">Dove</span><span class="v" id="v-dove">Cerca destinazioni</span></button>
+          <button class="seg s2" data-seg="quando" data-gate="quando"><span class="l">Quando</span><span class="v" id="v-quando">Aggiungi date</span></button>
+          <button class="seg s3" data-seg="giorni" data-gate="giorni"><span class="l">Quanti giorni</span><span class="v" id="v-giorni">Qualsiasi durata</span></button>
+          <button class="go" id="gobtn" data-gate="cerca" aria-label="Cerca"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg></button>
+        </div>
+        <div class="panel" id="p-dove" hidden>
+          <h2>In che parte del mondo?</h2>
+          <div class="chips" data-f="cont" id="contchips"></div>
+          <div class="srch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg><input id="csearch" type="search" placeholder="Scrivi uno stato, per esempio Marocco" autocomplete="off" aria-label="Cerca uno stato"></div>
+          <div class="cscroll" id="clist"></div>
+          <div class="pfoot"><button class="lnk" data-clear="dove">Ovunque</button><button class="btn" data-next="quando">Avanti</button></div>
+        </div>
+        <div class="panel" id="p-quando" hidden>
+          <h2>Quando vuoi partire?</h2>
+          <div class="mgrid" data-f="month" id="mgrid"></div>
+          <p class="hint">I mesi contano le partenze pubblicate dagli operatori sui loro siti.</p>
+          <div class="pfoot"><button class="lnk" data-clear="month">Tutti i mesi</button><button class="btn" data-next="giorni">Avanti</button></div>
+        </div>
+        <div class="panel" id="p-giorni" hidden>
+          <h2>Quanto vuoi stare via?</h2>
+          <div class="chips" data-f="days">
+            <button class="chip" data-v="1-5">Fino a 5 giorni</button><button class="chip" data-v="6-9">6–9 giorni</button><button class="chip" data-v="10-14">10–14 giorni</button><button class="chip" data-v="15-99">15 e più</button></div>
+          <div class="pfoot"><button class="lnk" data-clear="days">Qualsiasi durata</button><button class="btn" data-next="close">Cerca</button></div>
+        </div>
+      </div>
+      <button class="fbtn" id="openfilters" data-gate="filtri"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h16"/><circle cx="9" cy="6" r="2.2" fill="#fff"/><circle cx="15" cy="12" r="2.2" fill="#fff"/><circle cx="7" cy="18" r="2.2" fill="#fff"/></svg><span>Filtri</span><b class="badge" id="fbadge" hidden>0</b></button>
+    </div>
+    <nav class="cats" id="cats" aria-label="Categorie"></nav>
+  </div>
+
+  <div class="modal" id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="mtitle">
+    <div class="mbox">
+      <div class="mhead"><button class="x" id="closefilters" aria-label="Chiudi">✕</button><span id="mtitle">Filtri</span></div>
+      <div class="mbody">
+        <div class="mg"><h2>Quanto vuoi spendere?</h2><p class="hint">Sul prezzo "da" pubblicato dall'operatore.</p><div class="chips" data-f="price">
+          <button class="chip" data-v="0-1000">Fino a 1.000 €</button><button class="chip" data-v="1000-2000">1.000–2.000 €</button><button class="chip" data-v="2000-3000">2.000–3.000 €</button><button class="chip" data-v="3000-99999">Oltre 3.000 €</button></div></div>
+        <div class="mg"><h2>Il volo</h2><p class="hint">Chi lo include lo dice nel prezzo; gli altri lo compri a parte.</p><div class="chips" data-f="flight"><button class="chip" data-v="si">✈︎ Volo incluso</button><button class="chip" data-v="no">Volo escluso</button></div></div>
+        <div class="mg"><h2>Chi organizza?</h2><p class="hint">Da noi confronti, da loro prenoti.</p><div class="chips" data-f="op" id="opchips"></div></div>
+        <div class="mg"><h2>Da dove parti?</h2><div class="chips" data-f="air" id="airchips"></div></div>
+        <div class="mg"><h2>Fascia d'età</h2><p class="hint">Com'è scritta dagli operatori. Non tutti la dichiarano.</p><div class="chips" data-f="age" id="agechips"></div></div>
+      </div>
+      <div class="mfoot"><button class="lnk" id="clearall">Cancella tutto</button><button class="btn" id="showbtn">Mostra viaggi</button></div>
+    </div>
+  </div>
+
+  <div class="countrow">
+    <span id="count" aria-live="polite"></span>
+    <label>Ordina&nbsp;<select id="sort" data-gate="ordina"><option value="mix">Tutti gli operatori</option><option value="next">Partenza più vicina</option><option value="plow">Prezzo più basso</option><option value="phigh">Prezzo più alto</option><option value="short">Più corto</option><option value="long">Più lungo</option></select></label>
+  </div>
+
+  <div class="listlock" id="listlock">
+    <div class="list" id="list"></div>
+    <div class="lock2" id="listlock2" hidden><div><b>Registrati per vedere tutti i viaggi</b><p>Questi sono i primi 4. Ce ne sono altri <span id="lockn">…</span>. Trenta secondi, gratis.</p><a class="btn" href="/bergamo/login.html" data-gate="lista">Registrati</a></div></div>
+  </div>
+  <div class="showmore" id="showmore" hidden><button class="ghost" id="morebtn">Mostra altri 30 viaggi</button></div>
+
+  <section class="ny" id="capodanno" aria-labelledby="nyh" hidden>
+    <h2 id="nyh">🎆 Capodanno in viaggio, in gruppo</h2>
+    <p class="subl">Le partenze che passano la notte del 31 fuori casa: si parte tra il 23 e il 31 dicembre, si rientra nel 2027. Con un gruppo e un coordinatore.</p>
+    <div class="row" id="nyrow"></div>
+    <a class="all" href="#" data-sc="ny:1" data-gate="capodanno">Tutte le partenze di Capodanno →</a>
+  </section>
+
+  <section class="sec">
+    <h2>Dove si va</h2><p class="subl">Gli stati con almeno un viaggio in catalogo.</p>
+    <div class="tr-conts" id="conts"></div>
+    <div class="tr-dests" id="dests"></div>
+  </section>
+
+  <section class="sec">
+    <h2>Chi organizza i viaggi</h2><p class="subl">Da noi li confronti, da loro prenoti. Ognuno ha le sue regole su caparra, cancellazione e assicurazione: leggile sul loro sito.</p>
+    <div class="tr-ops" id="ops"></div>
+  </section>
+
+  <section class="sec">
+    <h2>Domande frequenti</h2>
+    <div class="faq">
+      <div><h3>Cos'è questa pagina?</h3><p>Un confronto dei viaggi di gruppo per chi parte da solo. Mettiamo in fila i viaggi di __OPERATORS__ con durata, prezzo, età e volo, così li guardi tutti insieme invece che sito per sito.</p></div>
+      <div><h3>Prenoto qui?</h3><p>No. Da noi confronti; il bottone ti porta sulla pagina dell'operatore, dove paghi e leggi le condizioni. Non prendiamo caparre né commissioni sul prezzo che paghi.</p></div>
+      <div><h3>I prezzi sono aggiornati?</h3><p>Sono quelli letti dai siti degli operatori nella data scritta in cima alla pagina. Fa fede il prezzo sul sito dell'operatore al momento della prenotazione.</p></div>
+      <div><h3>Da dove si parte?</h3><p>Dipende dal viaggio: SiVola include sempre il volo da Milano o Roma, WeRoad non lo include mai (lo compri tu), Utravel vende hotel e coordinatore e il volo lo aggiungi da una delle sue città di partenza, Zest parte spesso in bus da Milano.</p></div>
+      <div><h3>Cosa vuol dire "fascia d'età"?</h3><p>Ogni operatore fa gruppi per età, per esempio 18–40 o 35–50. La fascia la decidono loro e la mostriamo com'è scritta da loro.</p></div>
+      <div><h3>Perché non ci sono altri operatori?</h3><p>Partiamo con tre. Se organizzi viaggi di gruppo e vuoi esserci, scrivici a hello@anyplans.in.</p></div>
+    </div>
+  </section>
+
+  <div class="tr-foot">Organizzi viaggi di gruppo e non ti vediamo qui? Scrivici a <a href="mailto:hello@anyplans.in">hello@anyplans.in</a>: aggiungiamo gli operatori che mandano la gente in giro davvero.</div>
+</div>
+</div>
+
+<footer><div class="wrap">
+  <div class="cols">
+    <div><h4>App</h4><ul><li><a href="/">Eventi nella tua città</a></li><li><a href="/citta/">Tutte le città</a></li><li><a href="/viaggi-di-gruppo/" class="now">Viaggi di gruppo</a></li><li><a href="/guidelines.html">Regole</a></li></ul></div>
+    <div><h4>Città</h4><ul><li><a href="/bergamo/">Bergamo</a></li><li><a href="/milano/">Milano</a></li><li><a href="/brescia/">Brescia</a></li><li><a href="/roma/">Roma</a></li></ul></div>
+    <div><h4>anyplans</h4><ul><li><a href="/privacy.html">Privacy</a></li><li><a href="/terms.html">Condizioni</a></li><li><a href="https://instagram.com/anyplans_bergamo" rel="noopener">Instagram</a></li></ul></div>
+  </div>
+  <p class="copy">© 2026 anyplans · I marchi __OPERATORS__ sono dei rispettivi proprietari.</p>
+</div></footer>
+
+<script id="trips" type="application/json">__TRIPS_JSON__</script>
+<script src="/bergamo/app.js"></script>
+<script>
+// ---------- il muro (come nella home): senza account l'assaggio, ogni tocco porta alla registrazione ----------
+const WALL = true;
+const logged = !!(session && session.access_token);
+const LOCKED = WALL && !logged;
+if (LOCKED) document.body.classList.add("locked");
+track("viaggi_view", "/viaggi-di-gruppo/");
+function toLogin(why){ try { sessionStorage.setItem("anyplans_next", "/viaggi-di-gruppo/"); } catch (_) {} track("wall_tap", "/viaggi-di-gruppo/?" + (why || "tap")); location.href = "/bergamo/login.html"; }
+document.addEventListener("click", e => { const g = e.target.closest("[data-gate]"); if (!g || !LOCKED) return; e.preventDefault(); e.stopPropagation(); toLogin(g.dataset.gate); }, true);
+document.addEventListener("mousedown", e => { if (LOCKED && e.target.closest("#sort")) { e.preventDefault(); toLogin("ordina"); } }, true);
+document.addEventListener("focusin", e => { if (LOCKED && e.target.closest("#csearch")) { e.target.blur(); toLogin("cerca"); } }, true);
+
+// ---------- dati: letti dai siti degli operatori (data in DATA.seen), niente inventato ----------
+const DATA = JSON.parse(document.getElementById("trips").textContent);
+const TRIPS = DATA.trips, OPS = DATA.ops, SEEN = DATA.seen, WORLD = DATA.world;
+const CONT_ALL = Object.keys(WORLD); const CONT = {}, NAME = {}, FLAG = {};
+const flagOf = iso => String.fromCodePoint(...[...iso].map(c => 0x1F1E6 + c.charCodeAt(0) - 65));
+for (const [c, list] of Object.entries(WORLD)) for (const [slug, name, iso] of list) { CONT[slug] = c; NAME[slug] = name; FLAG[slug] = iso === "SCT" ? "🏴󠁧󠁢󠁳󠁣󠁴󠁿" : flagOf(iso); }
+document.getElementById("seen").textContent = SEEN;
+const TODAY = new Date().toISOString().slice(0, 10);
+const MESI = ["gen","feb","mar","apr","mag","giu","lug","ago","set","ott","nov","dic"], MESI_L = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio","agosto","settembre","ottobre","novembre","dicembre"], GG = ["dom","lun","mar","mer","gio","ven","sab"];
+const fmtE = n => n == null ? "—" : n.toLocaleString("it-IT") + " €";
+function pd(s){ const d = new Date(s + "T00:00:00Z"); return { d, w: GG[d.getUTCDay()], day: d.getUTCDate(), m: d.getUTCMonth(), y: d.getUTCFullYear() }; }
+const thisYear = new Date().getFullYear();
+function fmtRange(s, e){ const a = pd(s); if (!e) return `<time datetime="${s}">${a.w} ${a.day} ${MESI[a.m]}${a.y !== thisYear ? " " + a.y : ""}</time>`; const b = pd(e); const yr = b.y !== thisYear ? " " + b.y : ""; if (a.m === b.m) return `<time datetime="${s}">${a.w} ${a.day}</time> → <time datetime="${e}">${b.w} ${b.day} ${MESI[b.m]}${yr}</time>`; return `<time datetime="${s}">${a.w} ${a.day} ${MESI[a.m]}</time> → <time datetime="${e}">${b.w} ${b.day} ${MESI[b.m]}${yr}</time>`; }
+const ym = s => s.slice(0, 7);
+const nextYear = thisYear + 1;
+const isNY = d => d.s >= `${thisYear}-12-23` && d.s <= `${thisYear}-12-31` && d.e && d.e >= `${nextYear}-01-01`;
+TRIPS.forEach(t => { t.deps = (t.deps || []).filter(d => d.s >= TODAY); t.next = t.deps[0] || null; t.cont = t.dest.map(d => CONT[d]).filter(Boolean); if (!t.cont.length && t.contHint) t.cont = [t.contHint]; });
+const flightTxt = t => t.flight === true ? `<span class="fly ok">✈︎ Volo incluso</span>` : t.flight === false ? `<span class="fly no">Volo escluso</span>` : "";
+function meta(t){ const ages = t.age || [...new Set(t.deps.map(d => d.age).filter(Boolean))].sort().join(" / "); return [t.dest.map(d => NAME[d]).join(", ") || t.destText || "", t.days ? `${t.days} giorn${t.days === 1 ? "o" : "i"}` : null, ages || null, t.type, t.air ? `da ${t.air}` : null, flightTxt(t)].filter(Boolean).join(" · "); }
+function tile(t){ const f = t.dest.length ? FLAG[t.dest[0]] : "✈️"; return `<a class="tile" href="${t.url}" target="_blank" rel="noopener nofollow" data-gate="viaggio">${f}${t.dest.length > 1 ? `<span class="plus">+${t.dest.length - 1}</span>` : ""}</a>`; }
+const STATUS = { CONFIRMED: ["✓ Confermata", "ok"], ALMOST_CONFIRMED: ["Quasi confermata", ""], PLANNED: ["In programma", ""], ALMOST_FULL: ["Ultimi posti", "last"], SOLD_OUT: ["Esaurita", "full"], ON_REQUEST: ["Su richiesta", ""], available: ["Disponibile", ""], few_left: ["Ultimi posti", "last"], sold_out: ["Esaurita", "full"] };
+function seatsTxt(d){ if (!d) return ""; const st = STATUS[d.st] || null; const bits = []; if (st) bits.push(`<span class="seats ${st[1]}">${st[0]}</span>`); if (d.free != null && d.st !== "SOLD_OUT") bits.push(`${d.free} post${d.free === 1 ? "o" : "i"} rimast${d.free === 1 ? "o" : "i"}`); if (d.toConfirm) bits.push(`mancano ${d.toConfirm} per confermare`); return bits.join(" · "); }
+function depRow(t, d){ const price = d && d.p != null ? d.p : t.from; const full = d && d.full ? d.full : (d ? null : t.full);
+  return `<div class="dep ${d && d.st === "SOLD_OUT" ? "full" : ""}">
+    <div class="d">${d ? fmtRange(d.s, d.e) : `Date sul sito di ${OPS[t.op].name}`}</div>
+    <div class="dm">${[t.days ? `${t.days} giorn${t.days === 1 ? "o" : "i"}` : null, d && d.age ? `età ${d.age}` : null, t.air ? `da ${t.air.split(" o ")[0]}` : null, seatsTxt(d), (!d && t.nDeps) ? `${t.nDeps} partenze` : null, (!d && t.months && t.months.length) ? t.months.slice(0, 4).join(", ").toLowerCase() : null].filter(Boolean).join(" · ")}</div>
+    <div class="pr">${price != null ? `<span class="price">${d && d.p != null ? "" : '<span class="from">da</span>'}${fmtE(price)}${full && full > price ? `<s>${fmtE(full)}</s><span class="deal">−${Math.round((1 - price / full) * 100)} %</span>` : ""}</span><span class="checked">Prezzo letto il ${SEEN}</span>` : `<span class="price"><span class="from">prezzo su ${OPS[t.op].name}</span></span>`}</div>
+    <div class="go">${d && d.st === "SOLD_OUT" ? `<a class="seeop" href="${t.url}" target="_blank" rel="noopener nofollow" data-gate="viaggio">Vedi su ${OPS[t.op].name} ↗</a>` : `<a class="btn" href="${t.url}" target="_blank" rel="noopener nofollow" data-gate="viaggio">${d ? "Prenota su" : "Vedi le date su"} ${OPS[t.op].name} →</a>`}</div>
+  </div>`; }
+function card(t){ const d = pickDep(t);
+  return `<article class="trip" data-id="${t.id}">
+    ${tile(t)}
+    <div class="top"><a class="t" href="${t.url}" target="_blank" rel="noopener nofollow" data-gate="viaggio">${esc(t.title)}</a><div class="oprow"><span class="op">${OPS[t.op].name}</span></div></div>
+    <div class="m">${meta(t)}</div>
+    ${depRow(t, d)}
+    ${t.deps.length > 1 ? `<a class="more" href="${t.url}" target="_blank" rel="noopener nofollow" data-gate="viaggio">Altre ${t.deps.length - 1} date su ${OPS[t.op].name} →</a>` : t.deps.length === 1 ? `<span class="more none">Solo questa data</span>` : ""}
+  </article>`; }
+
+// ---------- filtri ----------
+const F = { month: new Set(), cont: new Set(), dest: new Set(), days: new Set(), price: new Set(), op: new Set(), air: new Set(), age: new Set(), flight: new Set(), ny: new Set() };
+function pickDep(t){ let ds = t.deps.filter(d => d.st !== "SOLD_OUT"); if (F.month.size) ds = ds.filter(d => F.month.has(ym(d.s))); if (F.ny.size) ds = ds.filter(isNY); return ds[0] || null; }
+function passes(t){
+  if (F.dest.size) { if (!t.dest.some(d => F.dest.has(d))) return false; } else if (F.cont.size && !t.cont.some(c => F.cont.has(c))) return false;
+  if (F.month.size && t.deps.length && !t.deps.some(d => F.month.has(ym(d.s)))) return false;
+  if (F.ny.size && !t.deps.some(isNY)) return false;
+  if (F.days.size && !(t.days && [...F.days].some(r => { const [a, b] = r.split("-").map(Number); return t.days >= a && t.days <= b; }))) return false;
+  if (F.price.size && !(t.from != null && [...F.price].some(r => { const [a, b] = r.split("-").map(Number); return t.from >= a && t.from < b; }))) return false;
+  if (F.op.size && !F.op.has(t.op)) return false;
+  if (F.air.size && !(t.air && [...F.air].some(a => t.air.includes(a)))) return false;
+  if (F.age.size && !((t.age && [...F.age].some(a => t.age.includes(a))) || t.deps.some(d => d.age && F.age.has(d.age)))) return false;
+  if (F.flight.size && !F.flight.has(t.flight === true ? "si" : t.flight === false ? "no" : "?")) return false;
+  return true;
+}
+let visibleN = 30, lastToggled = null;
+function summarize(){ const p = [];
+  if (F.dest.size) p.push([...F.dest].map(d => NAME[d]).join(", ")); else if (F.cont.size) p.push([...F.cont].join(", "));
+  if (F.ny.size) p.push("Capodanno"); if (F.month.size) p.push([...F.month].sort().map(m => MESI_L[+m.slice(5) - 1]).join(", "));
+  if (F.days.size) p.push([...F.days].map(r => r === "1-5" ? "fino a 5 giorni" : r === "15-99" ? "15 giorni e più" : r.replace("-", "–") + " giorni").join(", "));
+  if (F.price.size) p.push([...F.price].map(r => { const [a, b] = r.split("-").map(Number); return b > 50000 ? `oltre ${fmtE(a)}` : a === 0 ? `fino a ${fmtE(b)}` : `${a.toLocaleString("it-IT")}–${fmtE(b)}`; }).join(", "));
+  if (F.op.size) p.push([...F.op].map(o => OPS[o].name).join(", ")); if (F.flight.size) p.push([...F.flight].map(v => v === "si" ? "volo incluso" : "volo escluso").join(", "));
+  if (F.air.size) p.push("da " + [...F.air].join(" o ")); if (F.age.size) p.push("età " + [...F.age].join(", "));
+  return p.join(" · "); }
+function syncBar(n){ const set = (id, txt, on) => { const el = document.getElementById(id); el.textContent = txt; el.classList.toggle("set", on); };
+  set("v-dove", F.dest.size ? [...F.dest].map(d => NAME[d]).join(", ") : F.cont.size ? [...F.cont].join(", ") : "Cerca destinazioni", !!(F.cont.size || F.dest.size));
+  set("v-quando", F.ny.size ? "Capodanno" : F.month.size ? [...F.month].sort().map(m => MESI[+m.slice(5) - 1].replace(/^\w/, c => c.toUpperCase())).join(", ") : "Aggiungi date", !!(F.month.size || F.ny.size));
+  set("v-giorni", F.days.size ? [...F.days].map(r => r === "1-5" ? "fino a 5 gg" : r === "15-99" ? "15+ gg" : r.replace("-", "–") + " gg").join(", ") : "Qualsiasi durata", !!F.days.size);
+  const nAdv = F.price.size + F.op.size + F.air.size + F.age.size + F.flight.size; const bd = document.getElementById("fbadge"); bd.hidden = !nAdv; bd.textContent = nAdv;
+  const sb = document.getElementById("showbtn"); sb.textContent = n ? `Mostra ${n} viagg${n === 1 ? "io" : "i"}` : "Nessun viaggio"; sb.classList.toggle("zero", !n);
+  const active = Object.entries(F).filter(([k, v]) => v.size); const key = active.length === 1 && active[0][1].size === 1 ? active[0][0] + ":" + [...active[0][1]][0] : (active.length ? null : "");
+  document.querySelectorAll(".cat").forEach(c => c.classList.toggle("on", c.dataset.cat === key)); }
+function syncChips(){ document.querySelectorAll(".chip[data-v]").forEach(c => { const f = c.closest("[data-f]").dataset.f; c.setAttribute("aria-pressed", F[f].has(c.dataset.v) ? "true" : "false"); }); }
+function clearAll(){ Object.values(F).forEach(s => s.clear()); syncChips(); render(); }
+function render(){
+  const sort = document.getElementById("sort").value;
+  let rows = TRIPS.filter(passes).map(t => ({ t, d: pickDep(t) }));
+  rows.sort((a, b) => { const pa = a.t.from ?? Infinity, pb = b.t.from ?? Infinity; if (sort === "plow") return pa - pb; if (sort === "phigh") return pb - pa; if (sort === "short") return (a.t.days || 99) - (b.t.days || 99); if (sort === "long") return (b.t.days || 0) - (a.t.days || 0); const na = a.d ? a.d.s : "9999", nb = b.d ? b.d.s : "9999"; return na < nb ? -1 : na > nb ? 1 : pa - pb; });
+  if (sort === "mix") { const byOp = {}; rows.forEach(r => (byOp[r.t.op] || (byOp[r.t.op] = [])).push(r)); const ops = Object.keys(byOp); const out = []; let k = 0; while (out.length < rows.length) { const q = byOp[ops[k % ops.length]]; if (q.length) out.push(q.shift()); k++; } rows = out; }
+  const nDeps = rows.reduce((n, r) => n + (r.t.deps.length || (r.t.nDeps || 0)), 0);
+  document.getElementById("count").textContent = `${rows.length} viaggi${nDeps ? ` · ${nDeps} partenze` : ""}${summarize() ? " · " + summarize() : ""}`;
+  syncBar(rows.length);
+  const list = document.getElementById("list");
+  if (!rows.length) { const alts = []; const byMonth = {}; TRIPS.forEach(t => t.deps.forEach(d => { byMonth[ym(d.s)] = (byMonth[ym(d.s)] || 0) + 1; })); Object.entries(byMonth).sort().slice(0, 3).forEach(([m, n]) => alts.push(`<a href="#" data-sc="month:${m}">A ${MESI_L[+m.slice(5) - 1]} ci sono ${n} partenze →</a>`));
+    list.innerHTML = `<div class="nores"><div class="tile">✈️</div><h3>Nessun viaggio così<span>${esc(summarize())}</span></h3><p>Prova a togliere un filtro, o guarda i mesi vicini.</p><div class="btns"><button class="ghost" id="undo">Togli l'ultimo filtro</button><button class="btn" id="clear2">Cancella tutto</button></div><div class="alt">${alts.join("")}</div></div>`;
+    document.getElementById("clear2").onclick = clearAll; document.getElementById("undo").onclick = () => { if (lastToggled) F[lastToggled.f].delete(lastToggled.v); syncChips(); render(); };
+    document.getElementById("showmore").hidden = true; document.getElementById("listlock2").hidden = true; return; }
+  const shown = rows.slice(0, LOCKED ? 6 : visibleN);
+  list.innerHTML = shown.map(r => card(r.t)).join("");
+  document.getElementById("showmore").hidden = LOCKED || rows.length <= visibleN;
+  document.getElementById("listlock2").hidden = !LOCKED; document.getElementById("lockn").textContent = Math.max(0, rows.length - 4);
+}
+function build(){
+  const cCount = {}, dCount = {}; TRIPS.forEach(t => { t.dest.forEach(d => { dCount[d] = (dCount[d] || 0) + 1; }); [...new Set(t.cont)].forEach(c => { cCount[c] = (cCount[c] || 0) + 1; }); });
+  document.getElementById("contchips").innerHTML = CONT_ALL.map(c => `<button class="chip" data-v="${c}" ${cCount[c] ? "" : "disabled"}>${c}<small>${cCount[c] || 0}</small></button>`).join("");
+  document.getElementById("clist").innerHTML = CONT_ALL.filter(c => cCount[c]).map(c => `<div class="cgroup" data-cont="${c}"><h3>${c}<span>${cCount[c]} viagg${cCount[c] === 1 ? "io" : "i"}</span></h3><div class="chips" data-f="dest">${WORLD[c].filter(([slug]) => dCount[slug]).map(([slug, name]) => `<button class="chip" data-v="${slug}" data-name="${name.toLowerCase()}"><span class="fl">${FLAG[slug]}</span>${name}<small>${dCount[slug]}</small></button>`).join("")}</div></div>`).join("");
+  document.getElementById("csearch").addEventListener("input", e => { const q = e.target.value.trim().toLowerCase(); document.querySelectorAll("#clist .cgroup").forEach(g => { let any = false; g.querySelectorAll(".chip").forEach(ch => { const ok = !q || ch.dataset.name.includes(q) || g.dataset.cont.toLowerCase().includes(q); ch.style.display = ok ? "" : "none"; any = any || ok; }); g.hidden = !any; }); });
+  document.getElementById("csearch").addEventListener("click", e => e.stopPropagation());
+  const counts = {}; TRIPS.forEach(t => t.deps.forEach(d => { counts[ym(d.s)] = (counts[ym(d.s)] || 0) + 1; }));
+  let h = ""; const d0 = new Date(); d0.setUTCDate(1); for (let i = 0; i < 12; i++) { const d = new Date(Date.UTC(d0.getUTCFullYear(), d0.getUTCMonth() + i, 1)); const k = d.toISOString().slice(0, 7); const n = counts[k] || 0; h += `<button class="chip" data-v="${k}" ${n ? "" : "disabled"}>${MESI[d.getUTCMonth()].replace(/^\w/, c => c.toUpperCase())}<small>${d.getUTCFullYear()} · ${n}</small></button>`; }
+  document.getElementById("mgrid").innerHTML = h;
+  document.getElementById("opchips").innerHTML = Object.keys(OPS).map(o => `<button class="chip" data-v="${o}">${OPS[o].name}</button>`).join("");
+  const airs = [...new Set(TRIPS.flatMap(t => (t.air || "").split(" o ").filter(Boolean)))];
+  document.getElementById("airchips").innerHTML = airs.map(a => `<button class="chip" data-v="${a}">${a}</button>`).join("");
+  const ages = [...new Set([...TRIPS.flatMap(t => (t.age || "").split(" / ").filter(Boolean)), ...TRIPS.flatMap(t => t.deps.map(d => d.age).filter(Boolean))])].sort();
+  document.getElementById("agechips").innerHTML = ages.map(a => `<button class="chip" data-v="${a}">${a}</button>`).join("");
+  const cats = [["", "Tutti", "✈️"], ...CONT_ALL.filter(c => cCount[c]).map(c => ["cont:" + c, c, { Europa: "🏰", Africa: "🐪", Asia: "⛩️", "Medio Oriente": "🕌", "Nord America": "🗽", "Sud America": "🦙", Oceania: "🦘" }[c] || "🌍"]), ["days:1-5", "Weekend lungo", "🎒"], ["ny:1", "Capodanno", "🎆"], ["days:10-99", "Due settimane", "🌍"], ["price:0-1000", "Sotto i 1.000 €", "🏷️"], ["flight:si", "Volo incluso", "🛫"]];
+  document.getElementById("cats").innerHTML = cats.map(([k, n, i]) => `<a href="#" class="cat ${k ? "" : "on"}" data-cat="${k}" data-gate="categoria"><span class="i">${i}</span>${n}</a>`).join("");
+  document.querySelectorAll(".chip[data-v]").forEach(c => { c.setAttribute("aria-pressed", "false"); c.addEventListener("click", e => { if (c.disabled) return; e.stopPropagation(); const f = c.closest("[data-f]").dataset.f, v = c.dataset.v; if (F[f].has(v)) F[f].delete(v); else { F[f].add(v); lastToggled = { f, v }; if (f === "dest") F.cont.clear(); if (f === "cont") F.dest.clear(); } visibleN = 30; syncChips(); render(); }); });
+  document.querySelectorAll(".cat").forEach(c => c.addEventListener("click", e => { e.preventDefault(); if (LOCKED) return; Object.values(F).forEach(s => s.clear()); if (c.dataset.cat) { const [f, v] = c.dataset.cat.split(":"); F[f].add(v); } visibleN = 30; syncChips(); render(); }));
+  document.addEventListener("click", e => { const a = e.target.closest("[data-sc]"); if (!a || LOCKED) return; e.preventDefault(); const [f, v] = a.dataset.sc.split(":"); Object.values(F).forEach(s => s.clear()); F[f].add(v); syncChips(); render(); document.getElementById("list").scrollIntoView({ behavior: "smooth", block: "start" }); });
+  document.getElementById("clearall").onclick = clearAll; document.getElementById("sort").onchange = render; document.getElementById("morebtn").onclick = () => { visibleN += 30; render(); };
+  const segs = document.querySelectorAll(".seg"); let openSeg = null;
+  function closePanels(){ document.querySelectorAll(".panel").forEach(p => p.hidden = true); segs.forEach(x => x.classList.remove("open")); openSeg = null; }
+  function openPanel(k){ closePanels(); openSeg = k; document.getElementById("p-" + k).hidden = false; document.querySelector(`.seg[data-seg="${k}"]`).classList.add("open"); }
+  segs.forEach(sg => sg.addEventListener("click", e => { if (LOCKED) return; e.stopPropagation(); openSeg === sg.dataset.seg ? closePanels() : openPanel(sg.dataset.seg); }));
+  document.querySelectorAll("[data-next]").forEach(b => b.addEventListener("click", e => { e.stopPropagation(); const n = b.dataset.next; n === "close" ? closePanels() : openPanel(n); }));
+  document.querySelectorAll("[data-clear]").forEach(b => b.addEventListener("click", e => { e.stopPropagation(); if (b.dataset.clear === "dove") { F.cont.clear(); F.dest.clear(); } else F[b.dataset.clear].clear(); syncChips(); render(); }));
+  document.querySelectorAll(".panel").forEach(p => p.addEventListener("click", e => e.stopPropagation()));
+  document.addEventListener("click", closePanels);
+  document.addEventListener("keydown", e => { if (e.key === "Escape") { closePanels(); closeModal(); } });
+  document.getElementById("gobtn").addEventListener("click", e => { if (LOCKED) return; e.stopPropagation(); closePanels(); document.getElementById("list").scrollIntoView({ behavior: "smooth", block: "start" }); });
+  const modal = document.getElementById("modal");
+  function openModal(){ closePanels(); modal.hidden = false; document.body.style.overflow = "hidden"; }
+  window.closeModal = function(){ modal.hidden = true; document.body.style.overflow = ""; };
+  document.getElementById("openfilters").addEventListener("click", e => { if (LOCKED) return; e.stopPropagation(); openModal(); });
+  document.getElementById("closefilters").addEventListener("click", closeModal); document.getElementById("showbtn").addEventListener("click", closeModal);
+  modal.addEventListener("click", e => { if (e.target === modal) closeModal(); }); document.querySelector(".mbox").addEventListener("click", e => e.stopPropagation());
+  // sezioni
+  const byDest = {}; TRIPS.forEach(t => t.dest.forEach(d => { const o = byDest[d] || (byDest[d] = { n: 0, min: Infinity }); o.n++; if (t.from != null) o.min = Math.min(o.min, t.from); }));
+  const ds = Object.entries(byDest).sort((a, b) => b[1].n - a[1].n);
+  document.getElementById("dests").innerHTML = ds.map(([d, o]) => `<a class="city" href="#" data-sc="dest:${d}" data-gate="destinazione"><span class="flag">${FLAG[d]}</span><span class="n">${NAME[d]}</span><span class="meta">${o.n} viagg${o.n === 1 ? "io" : "i"}${o.min < Infinity ? ` · da ${fmtE(o.min)}` : ""}</span></a>`).join("");
+  document.getElementById("conts").innerHTML = CONT_ALL.filter(c => cCount[c]).map(c => `<a href="#" data-sc="cont:${c}" data-gate="continente">${c} · ${cCount[c]}</a>`).join("");
+  document.getElementById("ops").innerHTML = Object.entries(OPS).map(([k, o]) => { const ts = TRIPS.filter(t => t.op === k); const deps = ts.reduce((n, t) => n + (t.deps.length || t.nDeps || 0), 0); const withF = ts.filter(t => t.flight === true).length, noF = ts.filter(t => t.flight === false).length; const fl = withF === ts.length ? "volo sempre incluso" : noF === ts.length ? "volo mai incluso" : withF ? `volo incluso in ${withF} su ${ts.length}` : "volo: lo dicono sul loro sito"; return `<div class="opcard"><div class="n">${o.name}</div><div class="meta">${ts.length} viaggi${deps ? ` · ${deps} partenze` : ""} · ${fl}</div><div class="links"><a href="#" data-sc="op:${k}" data-gate="operatore">Tutti i viaggi di ${o.name} →</a><a href="${o.url}" target="_blank" rel="noopener nofollow">Sito di ${o.name} ↗</a></div></div>`; }).join("");
+  const nDeps = TRIPS.reduce((n, t) => n + (t.deps.length || t.nDeps || 0), 0);
+  document.getElementById("pill").textContent = `✈️ ${TRIPS.length} viaggi${nDeps ? `, ${nDeps} partenze` : ""}, ${Object.keys(OPS).length} operatori`;
+  const ny = []; TRIPS.forEach(t => t.deps.forEach(d => { if (isNY(d)) ny.push({ t, d }); })); ny.sort((a, b) => (a.t.from ?? 1e9) - (b.t.from ?? 1e9));
+  if (ny.length) { document.getElementById("capodanno").hidden = false; document.getElementById("nyrow").innerHTML = ny.slice(0, 12).map(({ t, d }) => `<article class="nyc"><div class="h"><a class="tile" href="${t.url}" target="_blank" rel="noopener nofollow" data-gate="viaggio">${FLAG[t.dest[0]] || "✈️"}</a><a class="t" href="${t.url}" target="_blank" rel="noopener nofollow" data-gate="viaggio">${esc(t.title.split(":")[0])}</a></div><div class="d">${fmtRange(d.s, d.e)}</div><div class="m">${OPS[t.op].name} · ${t.days} giorni${t.age ? ` · ${t.age}` : ""} · ${flightTxt(t)}</div><div class="pr"><span class="price"><span class="from">da</span>${fmtE(t.from)}</span><span class="checked">letto il ${SEEN}</span></div><a class="btn" href="${t.url}" target="_blank" rel="noopener nofollow" data-gate="viaggio">Prenota su ${OPS[t.op].name} →</a></article>`).join(""); }
+}
+build(); render();
+</script>
+<nav class="tabbar" aria-label="Sezioni">
+  <a href="/"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.6-4.6"/></svg>Esplora</a>
+  <a href="/viaggi-di-gruppo/" class="on"><svg viewBox="0 0 24 24"><path d="M2.5 13.5l19-6.5-3 9-5.5-1.5-3.5 4-1-4.5z"/></svg>Viaggi</a>
+  <a href="/bergamo/miei.html" data-gate="miei"><svg viewBox="0 0 24 24"><path d="M5 5.5h14v15l-7-4-7 4z"/></svg>I miei eventi</a>
+  <a href="/bergamo/gruppi.html" data-gate="gruppi"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg>Gruppi</a>
+  <a href="/bergamo/profilo.html" data-gate="profilo"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>Profilo</a>
+</nav>
+</body>
+</html>
