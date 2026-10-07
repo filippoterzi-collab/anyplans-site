@@ -2107,22 +2107,285 @@ const whenLinksEn = () => { const l = WHEN_KINDS.filter(k => WHEN[k].list.length
     .concat(months.map(m => `<a href="${rel(monthUrl(m))}">Events in ${monthLabel(m)} (${monthIdx.get(m).length})</a>`));
   return l.length ? `<h2>When</h2><div class="tags">${l.join("")}</div>` : ""; };
 
-// l'ora di un evento in un dato giorno (la prima data di quel giorno)
-const oraNelGiorno = (p, key) => { const d = (p.dates || []).find(x => dateKey(x.start, x.tz) === key); return d ? +fmtTime(d.start, d.tz).slice(0, 2) : 12; };
-function giornataHtml(list, key) {
-  const E = en();
-  const fasce = [[E ? "Morning" : "Mattina", (h) => h < 12], [E ? "Afternoon" : "Pomeriggio", (h) => h >= 12 && h < 18], [E ? "Evening" : "Sera", (h) => h >= 18]];
-  // la giornata in breve: quanti per tipo, in prosa
-  const perTipo = [...list.reduce((m, p) => m.set(p.sport, (m.get(p.sport) || 0) + 1), new Map()).entries()].sort((a, b) => b[1] - a[1]).slice(0, 6)
-    // al plurale giusto ("8 cene e aperitivi", non "8 cena / aperitivo"): le forme stanno in testi.json (conta)
-    .map(([sp, n]) => { const t = tipo(sp); const [uno, molti] = String(t.conta || "").split("|");
-      return `${n} ${!E && uno && molti ? (n === 1 ? uno : molti) : tLabel(t).toLowerCase()}`; });
-  const spicchi = fasce.map(([nome, f]) => [nome, list.filter(p => f(oraNelGiorno(p, key)))]).filter(([, l]) => l.length);
-  const breve = E ? `In short: ${joinIt(perTipo)}. ${spicchi.map(([n, l]) => `${l.length} in the ${n.toLowerCase()}`).join(", ")}.`
-                  : `In breve: ${joinIt(perTipo)}. ${spicchi.map(([n, l]) => `${l.length} ${n === "Mattina" ? "al mattino" : n === "Pomeriggio" ? "al pomeriggio" : "la sera"}`).join(", ")}.`;
-  return `<p>${esc(breve)}</p>
-${spicchi.map(([nome, l]) => `<h2>${esc(nome)} <span class="s">(${l.length})</span></h2>\n${listHtml(l)}`).join("\n")}`;
+// ── pagine "quando" come app: mappa in cima, fasce, lista con muro (UI.md §3.18, 07/10/2026) ──────────
+// Mappa con i pin emoji, Mattina · Pomeriggio · Sera (o Sabato · Domenica), filtri in una riga, poi la lista:
+// da non registrati se ne vedono 4 per fascia, il resto è sfocato sotto "Registrati, è gratis", e ogni tocco
+// (evento, pin, mappa, ruota, mercati e camminate) porta alla registrazione e poi dritti dove si voleva andare.
+// Tutti i link restano nell'HTML: Google legge la pagina intera, lo sfocato è solo un velo per chi non è registrato.
+// La pagina di oggi porta con sé anche il giorno dopo: se il lavoro notturno parte tardi (GitHub lo fa partire
+// anche alle 9:50), dopo mezzanotte la pagina mostra da sola il giorno vero.
+const SOLO_SPORTS = new Set(["running", "trail", "walking", "hiking", "ceramics", "painting", "cooking", "culture", "yoga", "dancing", "games"]);
+const isSolo = (p) => SOLO_SPORTS.has(p.sport) || (p.sport === "dinner" && /tablo/i.test(`${p.source || ""} ${p.source_url || ""}`));
+const groupOf = (p) => p.sport === "market" ? "mercati" : (p.sport === "walking" && /^gruppo di cammino/i.test(p.title)) ? "cammino" : null;
+// categorie dei filtri: poche e larghe, come le cerca la gente
+const CHIP_OF = { running: "sport", trail: "sport", walking: "sport", hiking: "sport", cycling: "sport", mtb: "sport", padel: "sport", tennis: "sport", football: "sport",
+  volleyball: "sport", basketball: "sport", gym: "sport", climbing: "sport", swimming: "sport", yoga: "sport", hyrox: "sport", skating: "sport",
+  dinner: "tavola", cooking: "lab", ceramics: "lab", painting: "lab", gardening: "lab",
+  concert: "serate", karaoke: "serate", nightlife: "serate", dancing: "serate", show: "serate", cinema: "serate", singles: "serate",
+  culture: "cultura", tour: "cultura", exhibition: "cultura", games: "giochi", festival: "feste", fair: "feste", estivo: "feste", market: "mercati", match: "sport" };
+const CHIP_LABEL = { it: { sport: "Sport", tavola: "A tavola", lab: "Laboratori", serate: "Serate", cultura: "Cultura", giochi: "Giochi", feste: "Feste", mercati: "Mercati", altro: "Altro" },
+                     en: { sport: "Sports", tavola: "Food", lab: "Workshops", serate: "Nights out", cultura: "Culture", giochi: "Games", feste: "Festivals", mercati: "Markets", altro: "Other" } };
+const fasciaOf = (hh) => hh < 12 ? "mat" : hh < 18 ? "pom" : "sera";
+
+// una riga per evento in un dato giorno (l'ora è quella della prima data di quel giorno)
+function whenRows(list, key, onlyEvening) {
+  return list.map(p => {
+    const d = (p.dates || []).find(x => dateKey(x.start, x.tz) === key); if (!d) return null;
+    const hm = fmtTime(d.start, d.tz), hh = +hm.slice(0, 2);
+    if (onlyEvening && hh < 18) return null;
+    return { p, hm, f: fasciaOf(hh), g: groupOf(p), c: CHIP_OF[p.sport] || "altro", s: isSolo(p), free: !(p.price_cents > 0),
+             town: evTown(p).replace(/, $/, "") || placeShort(p), ts: d.start.getTime() };
+  }).filter(Boolean).sort((a, b) => a.ts - b.ts);
 }
+function whenRowHtml(r) {
+  const p = r.p, geo = p.visibility === "open" && p.lat != null && p.lng != null;
+  return `<a class="wr" href="${esc(eventUrl(p))}" data-f="${r.f}" data-c="${r.c}"${r.s ? ' data-s="1"' : ""}${r.free ? ' data-free="1"' : ""} data-ts="${r.ts}" data-e="${esc(p.emoji)}"${geo ? ` data-ll="${(+p.lat).toFixed(5)},${(+p.lng).toFixed(5)}"` : ""}><time>${r.hm}</time><span class="tile">${p.emoji}</span><span class="wb"><span class="t">${esc(p.title)}</span><span class="m">${esc(r.town)}</span>${r.s ? `<span class="solo">${en() ? "You can go alone" : "Ci puoi andare da solo"}</span>` : ""}</span></a>`;
+}
+function whenDayHtml(rows, key, hidden) {
+  const E = en(), F = E ? { mat: "Morning", pom: "Afternoon", sera: "Evening" } : { mat: "Mattina", pom: "Pomeriggio", sera: "Sera" };
+  const out = [];
+  for (const f of ["mat", "pom", "sera"]) {
+    const rs = rows.filter(r => r.f === f); if (!rs.length) continue;
+    const singles = rs.filter(r => !r.g), grp = {};
+    rs.filter(r => r.g).forEach(r => (grp[r.g] = grp[r.g] || []).push(r));
+    const grpHtml = Object.entries(grp).map(([g, arr]) => {
+      const ix = ixOf(g === "mercati" ? "market" : "walking");
+      const lab = g === "mercati" ? (E ? `${arr.length} town markets` : `${arr.length} mercati di paese`) : (E ? `${arr.length} walking groups` : `${arr.length} gruppi di cammino`);
+      const sub = g === "mercati" ? (E ? "In the morning, all over the province" : "Al mattino, in tutta la provincia") : (E ? "An hour walking together, free. You can go alone" : "Si cammina insieme un'ora, gratis. Ci puoi andare da solo");
+      return `<div class="wg" data-f="${f}" data-c="${g === "mercati" ? "mercati" : "sport"}"${g === "cammino" ? ' data-s="1"' : ""}><a class="wgh" href="${ix ? rel(indexUrl(ix)) : rel(hubUrl())}" data-gate="${g}"><time>${arr[0].hm}</time><span class="tile">${arr[0].p.emoji}</span><span class="wb"><span class="t">${lab}</span><span class="m">${sub}</span></span><span class="arr">${E ? "See" : "Vedi"}</span></a><div class="wgi">${arr.map(whenRowHtml).join("")}</div></div>`;
+    }).join("");
+    out.push(`<section class="wf" data-f="${f}"><h2>${F[f]} <span class="s">${rs.length}</span></h2>${singles.map(whenRowHtml).join("")}${grpHtml}</section>`);
+  }
+  return `<div class="wday" data-key="${key}"${hidden ? " hidden" : ""}>${out.join("") || `<p class="s">${E ? "Nothing on this day yet." : "Per ora qui non c'è niente."}</p>`}</div>`;
+}
+function whenAppHtml(kind, w, list) {
+  const E = en();
+  // i giorni della pagina; oggi e stasera portano anche domani, per quando il lavoro notturno parte tardi
+  const keys = kind === "weekend" ? w.keys : kind === "domani" ? [TOMORROW_KEY] : [TODAY_KEY, TOMORROW_KEY];
+  const evening = kind === "stasera";
+  const days = keys.map((k, i) => ({ k, rows: whenRows(i === 0 || kind === "weekend" ? list : upcomingPages.filter(p => onDay(p, k)), k, evening), spare: kind !== "weekend" && i > 0 }));
+  const dayName = (k) => { const [y, m, d] = k.split("-"); return fmtDay(new Date(Date.UTC(+y, +m - 1, +d, 12)), DEFAULT_TZ); };
+  const T = E ? { regT: "Sign up, it's free", reg: "Sign up for free", more: "more events", only: "All you need is an email.", map: "Open the map", wheel: "Not sure? Spin the wheel", nuovo: "New",
+                  wheelT: "Leave it to me", wheelS: "I'll pick something for you today or tomorrow, nearby. You just show up.", pick: "Pick for me", go: "Go here", another: "Another one · ", left: " left", none: "Nothing left for today: try tomorrow.", all: "All", solo: "Alone", f: { Gratis: "Free", Sport: "Sports", Serata: "Night out", Cena: "Dinner" }, ci: "I'm in", soloL: "You can go alone" }
+              : { regT: "Registrati, è gratis", reg: "Registrati gratis", more: "altri eventi", only: "Ti basta l'email.", map: "Apri la mappa", wheel: "Se non lo sai, tira a sorte", nuovo: "Nuovo",
+                  wheelT: "Ci penso io", wheelS: "Ti scelgo io una cosa di oggi o domani, qui vicino. Tu devi solo presentarti.", pick: "Scegli tu", go: "Vai qui", another: "Un'altra · ne restano ", left: "", none: "Per oggi non c'è più niente: prova domani.", all: "Tutto", solo: "Da solo", f: { Gratis: "Gratis", Sport: "Sport", Serata: "Serata", Cena: "Cena" }, ci: "Ci sono", soloL: "Ci puoi andare da solo" };
+  const cfg = { kind, keys, tz: DEFAULT_TZ, city: [CITY_CENTER.lng, CITY_CENTER.lat], login: `${APP}/login.html`, map: MAP_URL, city_slug: CITY,
+    h1: keys.map(k => E ? `What to do in ${CITY_NAME} ${W_EN[kind]}${kind === "weekend" ? "" : ", " + dayName(k)}` : `Cosa fare a ${CITY_NAME} ${W_IT[kind]}${kind === "weekend" ? "" : ", " + dayName(k).toLowerCase()}`),
+    T, chips: CHIP_LABEL[E ? "en" : "it"], fasce: E ? { mat: "Morning", pom: "Afternoon", sera: "Evening" } : { mat: "Mattina", pom: "Pomeriggio", sera: "Sera" },
+    when: E ? { mat: "this morning", pom: "this afternoon", sera: "tonight" } : { mat: "stamattina", pom: "oggi pomeriggio", sera: "stasera" },
+    dayLabels: keys.map(k => dayName(k).split(" ")[0]) };
+  const total = list.length, solo = list.filter(isSolo).length;
+  return `<p class="wsum"><b>${total} ${E ? "events" : "eventi"}</b> ${E ? `in ${CITY_NAME} and its province` : `tra ${CITY_NAME} e provincia`} · ${solo} ${E ? "you can go to alone" : "dove puoi andare da solo"}</p>
+<div class="wmap" id="wmap" aria-label="${E ? "Map of the events" : "Mappa degli eventi"}"><span class="wcount" id="wcount"></span><div class="wmapbar"><button class="wwheel" id="wwheel" type="button" data-gate="ruota">${T.wheel}</button><a class="wfull" href="${MAP_URL}" data-gate="mappa">${T.map}</a></div></div>
+<div class="wbar"><div class="wseg" id="wseg"></div><div class="wchips" id="wchips"></div></div>
+<div id="wlist">${days.map((d, i) => whenDayHtml(d.rows, d.k, kind === "weekend" ? i > 0 : d.spare)).join("")}</div>
+<div class="wlock" id="wlock" hidden><b>${T.regT}</b><span id="wlockn"></span><a class="btn" href="${APP}/login.html" data-gate="lista">${T.reg}</a></div>
+<div class="wbg" id="wbg" hidden></div><div class="wsheet" id="wsheet" role="dialog" aria-modal="true" aria-labelledby="wsh" hidden><span class="wh"></span><button class="wx" id="wx" type="button" aria-label="${E ? "Close" : "Chiudi"}">×</button><h2 id="wsh">${T.wheelT}</h2><p class="s">${T.wheelS}</p><div class="wfil" id="wfil"></div><div class="wwrap"><div class="wptr"></div><div class="wdisc" id="wdisc"></div></div><div id="wres" hidden></div><button class="btn" id="wspin" type="button">${T.pick}</button><button class="btn ghost" id="wagain" type="button" hidden></button></div>
+<script type="application/json" id="wcfg">${JSON.stringify(cfg).replace(/</g, "\\u003c")}</script>`;
+}
+const WHEN_CSS = `
+[hidden]{display:none!important}
+.wsum{font-size:15px;color:var(--grey)}.wsum b{color:var(--ink)}
+.wmap{position:relative;margin:0 -22px;height:340px;background:#EDEAE3;overflow:hidden}
+@media (min-width:700px){.wmap{margin:0;border-radius:22px;height:400px}}
+.wmap .maplibregl-canvas{outline:none}
+.wcount{position:absolute;z-index:2;top:12px;left:12px;background:#fff;border-radius:999px;padding:6px 12px;font-weight:800;font-size:14px;box-shadow:0 2px 8px rgba(25,25,25,.18)}
+.wcount b{color:var(--blue)}
+.wmapbar{position:absolute;z-index:2;left:12px;right:12px;bottom:12px;display:flex;justify-content:space-between;align-items:flex-end;gap:8px}
+.wwheel{position:relative;border:1.5px solid var(--blue);background:#fff;color:var(--blue);border-radius:999px;padding:10px 14px;font:inherit;font-weight:800;font-size:14px;box-shadow:0 2px 10px rgba(25,25,25,.18);cursor:pointer}
+.wwheel::after{content:attr(data-new);position:absolute;top:-9px;left:-6px;background:var(--blue);color:#fff;font-size:10px;font-weight:800;line-height:1;padding:4px 7px;border-radius:999px;box-shadow:0 0 0 2px #fff}
+.wfull{background:var(--ink);color:#fff;border-radius:999px;padding:10px 14px;font-weight:800;font-size:14px;box-shadow:0 2px 10px rgba(25,25,25,.18);white-space:nowrap}
+.wpin{display:block;width:34px;height:40px;cursor:pointer}
+.wpin i{display:grid;place-items:center;width:34px;height:34px;border-radius:50% 50% 50% 4px;transform:rotate(-45deg);background:#fff;box-shadow:0 2px 8px rgba(25,25,25,.28)}
+.wpin span{transform:rotate(45deg);font-size:17px;line-height:1;font-style:normal}
+.wpin.wsolo i{background:var(--blue)}
+.wbar{position:sticky;top:0;z-index:5;background:var(--bg);padding:10px 0;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid rgba(25,25,25,.08)}
+.wseg{display:flex;background:#fff;border:1.5px solid rgba(25,25,25,.10);border-radius:999px;padding:3px}
+.wseg:empty{display:none}
+.wseg button{flex:1;border:0;background:none;border-radius:999px;padding:8px 4px;font:inherit;font-weight:800;font-size:14.5px;color:var(--grey);display:flex;flex-direction:column;align-items:center;line-height:1.1;cursor:pointer}
+.wseg button small{font-weight:600;font-size:11.5px}
+.wseg button[aria-pressed="true"]{background:var(--ink);color:#fff}
+.wchips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;margin:0 -22px;padding:0 22px}
+.wchips::-webkit-scrollbar{display:none}
+.wchips button{flex:none;border:1.5px solid rgba(25,25,25,.12);background:#fff;border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;font-weight:700;white-space:nowrap;cursor:pointer;color:var(--ink)}
+.wchips button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.wf h2{margin:18px 0 2px;font-size:24px}.wf h2 .s{font-family:var(--round);font-size:14px;font-weight:600;letter-spacing:0}
+.wr,.wgh{display:grid;grid-template-columns:50px 44px minmax(0,1fr);gap:10px;align-items:start;padding:13px 0;border-bottom:1px solid rgba(25,25,25,.08)}
+.wgh{grid-template-columns:50px 44px minmax(0,1fr) auto;align-items:center}
+.wr time,.wgh time{font-family:var(--display);font-weight:800;font-size:17px;letter-spacing:-.02em;font-variant-numeric:tabular-nums;padding-top:3px}
+.tile{width:44px;height:44px;border-radius:12px;background:var(--tint);display:grid;place-items:center;font-size:22px}
+.wb{min-width:0;display:flex;flex-direction:column}
+.wb .t{font-weight:800;font-size:16px;line-height:1.25}
+.wb .m{font-size:13.5px;color:var(--grey)}
+.solo{align-self:flex-start;margin-top:6px;font-size:12px;font-weight:800;color:var(--blue);background:var(--tint);border-radius:6px;padding:3px 7px}
+.wgh .arr{color:var(--blue);font-weight:800;font-size:14px}
+.wgi{display:none}.wg.open .wgi{display:block}
+.wcut{filter:blur(5px);opacity:.5;pointer-events:none;user-select:none}
+.wlock{position:relative;margin:-8px auto 8px;width:min(100%,360px);background:#fff;border:1.5px solid var(--blue);border-radius:20px;padding:18px;display:flex;flex-direction:column;gap:8px;text-align:center;box-shadow:0 8px 30px rgba(25,25,25,.14);z-index:3}
+.wlock b{font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:-.04em}
+.wlock span{font-size:14px;color:var(--grey)}
+.wbg{position:fixed;inset:0;background:rgba(25,25,25,.42);z-index:90}
+.wsheet{position:fixed;left:0;right:0;bottom:0;z-index:91;background:#fff;border-radius:24px 24px 0 0;box-shadow:0 -12px 40px rgba(25,25,25,.16);padding:10px 18px calc(18px + env(safe-area-inset-bottom,0px));max-width:560px;margin:0 auto;max-height:92vh;overflow-y:auto;display:flex;flex-direction:column;gap:12px}
+.wsheet .wh{width:40px;height:5px;border-radius:3px;background:rgba(25,25,25,.14);margin:0 auto}
+.wsheet .wx{position:absolute;right:10px;top:10px;width:44px;height:44px;border:0;border-radius:50%;background:transparent;font-size:22px;color:var(--grey);cursor:pointer}
+.wsheet h2{font-size:24px}
+.wwrap{position:relative;width:200px;height:200px;margin:4px auto 0;flex:none}
+.wdisc{width:200px;height:200px;border-radius:50%;border:2px solid rgba(25,25,25,.12);position:relative;transition:transform 1000ms cubic-bezier(.2,.8,.2,1);background:conic-gradient(var(--tint) 0 60deg,#fff 60deg 120deg,var(--tint) 120deg 180deg,#fff 180deg 240deg,var(--tint) 240deg 300deg,#fff 300deg 360deg)}
+.wdisc span{position:absolute;left:50%;top:50%;font-size:26px;line-height:1}
+.wptr{position:absolute;left:50%;top:-9px;transform:translateX(-50%);width:0;height:0;border-left:11px solid transparent;border-right:11px solid transparent;border-top:18px solid var(--blue);z-index:1}
+.wfil{display:flex;gap:8px;flex-wrap:wrap}
+.wfil button{border:1.5px solid rgba(25,25,25,.12);background:#fff;border-radius:999px;padding:6px 12px;font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.wfil button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+#wres{display:flex;flex-direction:column;gap:10px}#wres[hidden]{display:none}
+#wres .wr{border:0;padding:0}
+.wsheet .btn{width:100%}
+@media (prefers-reduced-motion: reduce){.wdisc{transition:none}}
+`;
+// il comportamento della pagina: niente backtick e niente ${} qui dentro, è testo che finisce così com'è nell'HTML
+const WHEN_JS = String.raw`<script>
+(function(){
+  var cfg = JSON.parse(document.getElementById("wcfg").textContent), T = cfg.T;
+  var $ = function(id){ return document.getElementById(id); };
+  var logged = false;
+  try { var s = JSON.parse(localStorage.getItem("anyplans_session") || sessionStorage.getItem("anyplans_session") || "null"); logged = !!(s && s.access_token); } catch (e) {}
+  var track = function(n, p){ try { window.apTrack && window.apTrack(n, p); } catch (e) {} };
+  function toLogin(why, next){
+    try { sessionStorage.setItem("anyplans_next", next || location.pathname); } catch (e) {}
+    track("wall_tap", location.pathname + "?" + why + "&quando");
+    location.href = cfg.login;
+  }
+  // il giorno vero, a Bergamo: se la pagina è di ieri (il lavoro notturno è in ritardo) si passa al giorno dopo
+  var today = new Intl.DateTimeFormat("en-CA", { timeZone: cfg.tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+  var nowH = +new Intl.DateTimeFormat("it-IT", { timeZone: cfg.tz, hour: "2-digit", hourCycle: "h23" }).format(new Date());
+  var days = [].slice.call(document.querySelectorAll(".wday"));
+  var weekend = cfg.kind === "weekend", di = 0;
+  if (!weekend && cfg.keys.length > 1 && today === cfg.keys[1]) {
+    di = 1; days[0].hidden = true; days[1].hidden = false;
+    var h1 = document.querySelector("h1"); if (h1) h1.textContent = cfg.h1[1];
+  }
+  if (weekend) { var wi = cfg.keys.indexOf(today); if (wi > 0) di = wi; days.forEach(function(d, i){ d.hidden = i !== di; }); }
+  var fascia = nowH < 12 ? "mat" : nowH < 18 ? "pom" : "sera", cat = "all";
+  function curDay(){ return days[di]; }
+  function present(f){ return curDay().querySelector('.wf[data-f="' + f + '"]'); }
+  if (!weekend && !present(fascia)) { fascia = ["mat", "pom", "sera"].filter(present)[0] || fascia; }
+  function rowsOn(){ return [].slice.call(curDay().querySelectorAll(".wr, .wg")); }
+  function visible(el){
+    if (!weekend && el.getAttribute("data-f") !== fascia) return false;
+    if (cat === "solo") return el.getAttribute("data-s") === "1";
+    return cat === "all" || el.getAttribute("data-c") === cat;
+  }
+  var map = null, markers = [];
+  function render(){
+    var seg = $("wseg"), html = "";
+    if (weekend) cfg.keys.forEach(function(k, i){ var n = days[i].querySelectorAll(".wr").length; html += '<button type="button" data-day="' + i + '" aria-pressed="' + (i === di) + '">' + cfg.dayLabels[i] + "<small>" + n + "</small></button>"; });
+    else if (cfg.kind !== "stasera") ["mat", "pom", "sera"].forEach(function(f){ var sec = present(f); if (!sec) return; var n = sec.querySelectorAll(".wr").length; html += '<button type="button" data-fa="' + f + '" aria-pressed="' + (f === fascia) + '">' + cfg.fasce[f] + "<small>" + n + "</small></button>"; });
+    seg.innerHTML = html;
+    var counts = {}, solo = 0;
+    rowsOn().forEach(function(el){ if (el.parentNode.classList.contains("wgi")) return; if (!weekend && el.getAttribute("data-f") !== fascia) return; var c = el.getAttribute("data-c"); counts[c] = (counts[c] || 0) + 1; if (el.getAttribute("data-s") === "1") solo++; });
+    var chips = '<button type="button" data-cat="all" aria-pressed="' + (cat === "all") + '">' + T.all + "</button>";
+    if (solo) chips += '<button type="button" data-cat="solo" aria-pressed="' + (cat === "solo") + '">' + T.solo + "</button>";
+    Object.keys(counts).sort(function(a, b){ return counts[b] - counts[a]; }).forEach(function(c){ chips += '<button type="button" data-cat="' + c + '" aria-pressed="' + (cat === c) + '">' + (cfg.chips[c] || c) + "</button>"; });
+    $("wchips").innerHTML = chips;
+    // sezioni e righe
+    [].slice.call(curDay().querySelectorAll(".wf")).forEach(function(sec){ sec.hidden = !weekend && sec.getAttribute("data-f") !== fascia; });
+    var shown = 0, cut = 0, lockAfter = null;
+    [].slice.call(curDay().querySelectorAll(".wf > .wr, .wf > .wg")).forEach(function(el){
+      var ok = visible(el); el.hidden = !ok; el.classList.remove("wcut");
+      if (!ok) return;
+      shown++;
+      if (!logged && shown > 4) { el.classList.add("wcut"); cut += el.classList.contains("wg") ? el.querySelectorAll(".wr").length : 1; if (!lockAfter) lockAfter = el; }
+    });
+    var lock = $("wlock");
+    if (lockAfter) { lockAfter.parentNode.insertBefore(lock, lockAfter); lock.hidden = false; $("wlockn").textContent = T.more === "altri eventi" ? "Ci sono altri " + cut + " eventi " + (weekend ? cfg.dayLabels[di].toLowerCase() : cfg.when[fascia]) + ". " + T.only : cut + " " + T.more + ". " + T.only; }
+    else lock.hidden = true;
+    var n = rowsOn().filter(function(el){ return el.classList.contains("wr") && !(el.closest(".wgi")) && visible(el); }).length + [].slice.call(curDay().querySelectorAll(".wg")).filter(visible).reduce(function(a, g){ return a + g.querySelectorAll(".wr").length; }, 0);
+    $("wcount").innerHTML = "<b>" + n + "</b> " + (weekend ? cfg.dayLabels[di].toLowerCase() : cfg.kind === "stasera" ? cfg.when.sera : cfg.when[fascia]);
+    drawPins();
+  }
+  function pinRows(){ return [].slice.call(curDay().querySelectorAll(".wr")).filter(function(r){ var box = r.closest(".wg") || r; return visible(box) && r.getAttribute("data-ll"); }); }
+  function drawPins(){
+    if (!map) return;
+    markers.forEach(function(m){ m.remove(); }); markers = [];
+    pinRows().slice(0, 200).forEach(function(r){
+      var ll = r.getAttribute("data-ll").split(","), el = document.createElement("a");
+      el.className = "wpin" + (r.getAttribute("data-s") === "1" ? " wsolo" : ""); el.href = r.getAttribute("href");
+      el.setAttribute("aria-label", r.querySelector(".t").textContent);
+      el.innerHTML = "<i><span>" + r.getAttribute("data-e") + "</span></i>";
+      el.addEventListener("click", function(e){ if (!logged) { e.preventDefault(); toLogin("pin", r.getAttribute("href")); } });
+      markers.push(new maplibregl.Marker({ element: el, anchor: "bottom" }).setLngLat([+ll[1], +ll[0]]).addTo(map));
+    });
+  }
+  function loadMap(){
+    var css = document.createElement("link"); css.rel = "stylesheet"; css.href = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css"; document.head.appendChild(css);
+    var sc = document.createElement("script"); sc.src = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js";
+    sc.onload = function(){
+      map = new maplibregl.Map({ container: "wmap", style: "https://tiles.openfreemap.org/styles/liberty", center: cfg.city, zoom: 10.6, interactive: logged, attributionControl: false });
+      map.on("load", drawPins);
+    };
+    document.head.appendChild(sc);
+  }
+  loadMap();
+  $("wwheel").setAttribute("data-new", T.nuovo);
+  document.addEventListener("click", function(e){
+    var t = e.target.closest("button, a"); if (!t) return;
+    if (t.hasAttribute("data-fa")) { fascia = t.getAttribute("data-fa"); cat = "all"; render(); return; }
+    if (t.hasAttribute("data-day")) { days[di].hidden = true; di = +t.getAttribute("data-day"); days[di].hidden = false; cat = "all"; render(); return; }
+    if (t.hasAttribute("data-cat")) { cat = t.getAttribute("data-cat"); render(); return; }
+    if (t.classList.contains("wgh")) { e.preventDefault(); if (!logged) { toLogin(t.getAttribute("data-gate"), location.pathname); return; } t.parentNode.classList.toggle("open"); return; }
+    if (t.id === "wwheel") { if (!logged) { toLogin("ruota", location.pathname + "#ruota"); return; } openWheel(); return; }
+    if (!logged && (t.classList.contains("wr") || t.classList.contains("wfull") || t.hasAttribute("data-gate"))) { e.preventDefault(); toLogin(t.getAttribute("data-gate") || "evento", t.classList.contains("wr") ? t.getAttribute("href") : t.classList.contains("wfull") ? t.getAttribute("href") : location.pathname); }
+  }, true);
+  // la ruota, come nella home (UI.md §3.13): sei spicchi, pesca tra gli eventi di oggi e domani che iniziano fra almeno un'ora
+  var SL = ["🏃", "🎨", "🍽️", "🎲", "🎤", "📚"], SLC = { sport: 0, lab: 1, tavola: 2, giochi: 3, serate: 4 };
+  var disc = $("wdisc");
+  SL.forEach(function(x, i){ var sp = document.createElement("span"), a = (i * 60 + 30) * Math.PI / 180; sp.textContent = x; sp.style.transform = "translate(" + (Math.sin(a) * 70) + "px," + (-Math.cos(a) * 70) + "px) translate(-50%,-50%)"; sp.setAttribute("aria-hidden", "true"); disc.appendChild(sp); });
+  var rot = 0, left = 3, seen = [];
+  function openWheel(){ left = 3; seen = []; $("wres").hidden = true; $("wagain").hidden = true; $("wspin").hidden = false;
+    $("wfil").innerHTML = ["Gratis", "Sport", "Serata", "Cena"].map(function(f){ return '<button type="button" data-wf="' + f + '" aria-pressed="false">' + T.f[f] + "</button>"; }).join("");
+    $("wbg").hidden = false; $("wsheet").hidden = false; track("ruota_open", location.pathname); }
+  function closeWheel(){ $("wbg").hidden = true; $("wsheet").hidden = true; }
+  $("wx").onclick = closeWheel; $("wbg").onclick = closeWheel;
+  $("wfil").addEventListener("click", function(e){ var b = e.target.closest("button"); if (b) b.setAttribute("aria-pressed", b.getAttribute("aria-pressed") !== "true"); });
+  function pool(){
+    var on = [].slice.call($("wfil").querySelectorAll('[aria-pressed="true"]')).map(function(b){ return b.getAttribute("data-wf"); });
+    var soon = Date.now() + 3600e3;
+    return [].slice.call(document.querySelectorAll(".wday .wr")).filter(function(r){
+      if (r.closest(".wg")) return false;
+      if (+r.getAttribute("data-ts") < soon) return false;
+      if (seen.indexOf(r.getAttribute("href")) >= 0) return false;
+      var c = r.getAttribute("data-c"), h = +r.querySelector("time").textContent.slice(0, 2);
+      if (c === "mercati") return false;
+      if (on.indexOf("Gratis") >= 0 && r.getAttribute("data-free") !== "1") return false;
+      if (on.indexOf("Sport") >= 0 && c !== "sport") return false;
+      if (on.indexOf("Serata") >= 0 && h < 18) return false;
+      if (on.indexOf("Cena") >= 0 && c !== "tavola") return false;
+      return true;
+    });
+  }
+  function spin(){
+    var P = pool(), W = [];
+    P.forEach(function(r){ W.push(r); if (r.getAttribute("data-s") === "1") W.push(r); });
+    if (!W.length) { $("wres").innerHTML = '<p class="s">' + T.none + "</p>"; $("wres").hidden = false; $("wspin").hidden = true; return; }
+    var r = W[Math.floor(Math.random() * W.length)], sl = SLC[r.getAttribute("data-c")]; if (sl == null) sl = 5;
+    seen.push(r.getAttribute("href"));
+    var target = 360 - (sl * 60 + 30); rot += 3 * 360 + ((target - (rot % 360)) + 360) % 360;
+    disc.style.transform = "rotate(" + rot + "deg)"; $("wspin").hidden = true; $("wagain").hidden = true;
+    track("ruota_gira", location.pathname + "?giro=" + (4 - left));
+    setTimeout(function(){
+      left--;
+      var c = r.cloneNode(true); c.classList.remove("wcut"); c.hidden = false;
+      $("wres").innerHTML = '<span class="s">' + T.go + "</span>"; $("wres").appendChild(c);
+      var ci = document.createElement("a"); ci.className = "btn"; ci.href = r.getAttribute("href"); ci.textContent = T.ci; ci.onclick = function(){ track("ruota_join", r.getAttribute("href")); }; $("wres").appendChild(ci);
+      $("wres").hidden = false;
+      if (left > 0) { $("wagain").hidden = false; $("wagain").textContent = T.another + left + T.left; }
+    }, matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 1000);
+  }
+  $("wspin").onclick = spin; $("wagain").onclick = spin;
+  render();
+  if (logged && location.hash === "#ruota") openWheel();
+})();
+</script>`;
+
 function whenPage(kind) {
   const w = WHEN[kind], url = whenUrl(kind), list = w.list.slice().sort(byDate);
   const days = w.keys.map(k => { const [y, m, d] = k.split("-"); return new Date(Date.UTC(+y, +m - 1, +d, 12)); });
@@ -2171,16 +2434,15 @@ function whenPage(kind) {
   const body = `
 ${crumbs([["anyplans", L.home], [CITY_NAME, rel(hubUrl())], [en() ? (W_EN_CAP[kind]) : cap(whenName(kind)), null]])}
 <h1>${esc(h1)}</h1>
+${whenAppHtml(kind, w, list)}
 <p class="lead">${esc(lead)}</p>
-<div class="cta"><a class="btn" href="${MAP_URL}">${en() ? "See them on the map" : "Vedili sulla mappa"}</a><a class="btn ghost" href="${rel(hubUrl())}">${en() ? "All events" : "Tutti gli eventi"}</a></div>
 ${list.length ? `<h2>${en() ? "By kind" : "Per tipo"}</h2><div class="tags">${typeChips(list, kind === "oggi")}</div>` : ""}
-${giornata ? giornataHtml(list, w.keys[0]) : `<h2>${en() ? "The list" : "La lista"}</h2>
-${listHtml(list)}`}
 ${others ? `<h2>${en() ? "Other days" : "Altri giorni"}</h2><div class="tags">${others}</div>` : ""}
 ${faqHtml(faq)}
+${WHEN_JS}
 `;
   const lastmod = list.length ? new Date(Math.max(...list.map(p => p.updated))) : NOW;
-  return { html: layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld + "\n" + faqLd(faq), body, modified: lastmod, alt: inLocale(en() ? "it" : "en", () => whenUrl(kind)) }), lastmod };
+  return { html: layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld + "\n" + faqLd(faq), body, modified: lastmod, head: `<style>${WHEN_CSS}</style>`, alt: inLocale(en() ? "it" : "en", () => whenUrl(kind)) }), lastmod };
 }
 
 function monthPage(m) {
