@@ -1843,9 +1843,11 @@ ${faqHtml(faq)}
 // le categorie come le pagine "quando" (UI.md §3.18, 07/10/2026): i prossimi 7 giorni con eventi in schede,
 // sotto mattina/pomeriggio/sera, mappa e muro; quello che viene dopo la settimana resta in lista per Google
 function tipoApp(ix, up) {
-  if (ix.kind !== "tipo" || ix.oggi) return null;
-  const k7 = [...Array(7).keys()].map(i => dateKey(dayAfter(i), DEFAULT_TZ));
-  const inW = up.filter(p => k7.some(k => onDay(p, k)));
+  // tutte le pagine indice: categorie, raccolte, paesi; i gemelli "-oggi" hanno oggi e domani (domani serve
+  // quando il lavoro notturno parte tardi). "Da ora in poi tutti i link speciali così" (committente, 07/10/2026)
+  const k7 = [...Array(ix.oggi ? 2 : 7).keys()].map(i => dateKey(dayAfter(i), DEFAULT_TZ));
+  const pool = ix.oggi ? ((ixOf(ix.sport) || ix).list || []).filter(p => !p.isPast) : up;
+  const inW = pool.filter(p => k7.some(k => onDay(p, k)));
   const keys = k7.filter(k => inW.some(p => onDay(p, k)));
   if (!inW.length) return null;
   return { html: whenAppHtml("tipo", { keys }, inW), later: up.filter(p => !inW.includes(p)) };
