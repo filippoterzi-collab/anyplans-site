@@ -91,6 +91,11 @@ if (!process.argv.includes("--citta") && !INDICE && !FIXTURE) {
   }
   if (saltate.length) console.error(`generate: città rimaste a ieri: ${saltate.join(", ")}`);
   if (saltate.length > Math.max(3, CITTA.length / 5)) { console.error(`generate: ${saltate.length} città saltate, mi fermo`); process.exit(1); }
+  // i viaggi di gruppo (07/10/2026): un generatore a parte (generate-travel.mjs, tabelle trip del 0091) perché questo
+  // file è costruito attorno a una città. Se fallisce, la pagina resta quella di ieri e la notte delle città continua.
+  // ATTENZIONE: questo blocco va conservato a ogni push di tools/generate.mjs (il 07/10 un altro deploy l'ha cancellato).
+  const travel = spawnSync(base[0], [...base.slice(1, -1), path.join(HERE, "generate-travel.mjs"), "--out", OUT], { stdio: "inherit" });
+  if (travel.status !== 0) console.error("generate: viaggi di gruppo falliti, la pagina resta a ieri");
   if (!corri(["--indice"])) { console.error(`generate: l'indice è fallito, mi fermo`); process.exit(1); }
   process.exit(0);
 }
