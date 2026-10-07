@@ -1139,8 +1139,8 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1791359506"></script>
-<script src="/bergamo/iab.js?v=1791359506" defer></script>
+<script src="/bergamo/app.js?v=1791402505"></script>
+<script src="/bergamo/iab.js" defer></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
 // Storia: muro per tutti dal 15/09 sera (1 registrato su 25 visitatori della home), spento il 16/09 alle 13 per farsi
@@ -1313,7 +1313,14 @@ async function loadEvents(center){
   window.CHOSEN = !!(center.slug !== HOME.slug || PLACE || F.city.size || F.where.size || window.FORCEDCITY);
   if (window.CHOSEN) { document.getElementById("hcity").textContent = center.nome; document.getElementById("v-dove").textContent = center.nome; document.getElementById("v-dove").classList.add("set"); }
   document.getElementById("list").innerHTML = '<div class="sk"></div><div class="sk"></div><div class="sk"></div><div class="sk"></div>';
-  const r = await rpc(FEED_LISTA, { lat: center.lat, lng: center.lng, radius_m: 50000 });
+  // 07/10/2026: un 500 passeggero di Supabase (capita mentre gira il workflow SEO) lasciava la home vuota
+  // con "Non riesco a caricare": si riprova due volte, a 1,5 e 4 secondi, prima di arrendersi
+  let r = await rpc(FEED_LISTA, { lat: center.lat, lng: center.lng, radius_m: 50000 });
+  for (const wait of [1500, 4000]) {
+    if (r && r.ok) break;
+    await new Promise(res => setTimeout(res, wait)); if (seq !== loadSeq) return;
+    r = await rpc(FEED_LISTA, { lat: center.lat, lng: center.lng, radius_m: 50000 });
+  }
   if (seq !== loadSeq) return;
   if (!r || !r.ok) { loading = false; document.getElementById("list").innerHTML = '<div class="nores"><div class="tile">😕</div><h3>Non riesco a caricare gli eventi</h3><p>Ricarica la pagina.</p></div>'; return; }
   const rows = await r.json().catch(() => []);
@@ -2111,7 +2118,7 @@ setTimeout(loadMapLib, 200);   // la mappa è nella prima schermata: si carica s
   const sliceOf = e => { const i = SLICES.findIndex(x => x.s.includes(e.sport)); return i < 0 ? 5 : i; };
   const disc = $("wdisc");
   SLICES.forEach((x, i) => { const sp = document.createElement("span"); const a = (i * 60 + 30) * Math.PI / 180; sp.textContent = x.e; sp.style.transform = `translate(${Math.sin(a) * 70}px, ${-Math.cos(a) * 70}px) translate(-50%,-50%)`; sp.setAttribute("aria-hidden", "true"); disc.appendChild(sp); });
-  let rot = 0, giro = 0, seen = new Set(), FW = new Set(), busy = false;
+  let rot = 0, giro = 0, seen = new Set(), FW = new Set(), busy = false, emptyTracked = false;
   const LEFT_MAX = 3;
   function pool(){
     const now = Date.now(), tom = addDays(TODAY, 1);
@@ -2142,7 +2149,7 @@ setTimeout(loadMapLib, 200);   // la mappa è nella prima schermata: si carica s
   function showEmpty(){
     const r = $("wres"); r.hidden = false; r.dataset.empty = "1";
     r.innerHTML = FW.size ? `<p class="wempty">Con questi filtri oggi e domani qui vicino non c'è niente. Prova a toglierne uno.</p>` : `<p class="wempty">Oggi e domani qui vicino è tranquillo. <a href="#" id="wnext">Guarda i prossimi giorni →</a></p>`;
-    track("ruota_vuota");
+    if (!emptyTracked) { emptyTracked = true; track("ruota_vuota", FW.size ? "/ruota?filtri=" + [...FW].join(",") : "/ruota"); }   // una volta per apertura, non a ogni filtro (07/10/2026)
     const nx = $("wnext"); if (nx) nx.addEventListener("click", ev => { ev.preventDefault(); close(); });
   }
   function pick(){
@@ -2214,7 +2221,7 @@ setTimeout(loadMapLib, 200);   // la mappa è nella prima schermata: si carica s
     $("wcitymore").onclick = ev => { ev.preventDefault(); close(); if (window.openSearchFromWheel) openSearchFromWheel(); };
   }
   function openSheet(){
-    giro = 0; seen = new Set(); FW.clear();
+    giro = 0; seen = new Set(); FW.clear(); emptyTracked = false;
     $("wsheet").classList.remove("askcity"); $("wcity").hidden = true;
     document.querySelectorAll("#wfil .chip").forEach(c => c.classList.remove("on"));
     $("wres").hidden = true; $("wres").innerHTML = ""; $("wspin").hidden = false;
