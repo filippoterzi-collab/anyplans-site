@@ -2640,11 +2640,13 @@ const LLMS_FILE = CITY === HOME_CITY ? "llms-full.txt" : `llms-${CITY}.txt`;
 // gli indici e poco altro.
 // Si accende da solo dentro GitHub Actions (il file del workflow non si puo' toccare da qui: il token del
 // deploy non ha il permesso "workflow") oppure a mano con --indexnow. I giri di prova in locale non avvisano nessuno.
-const INDEXNOW_KEY = "7f26113ec56cadfa6f45d689241489b1";
-// api.indexnow.org e bing.com rispondono 403 a questo sito (la verifica della chiave non passa, non si sa
-// perche': il file c'e' ed e' raggiungibile). yandex.com accetta e per protocollo passa gli url agli altri,
-// Bing compreso: e' lo stesso endpoint che usa gia' deploy-site.sh. Verificato il 15/09/2026.
-const INDEXNOW_ENDPOINT = "https://yandex.com/indexnow";
+// Chiave nuova dal 07/10/2026. Con la vecchia (7f2611…) bing.com e api.indexnow.org rispondevano 403
+// "UserForbiddedToAccessSite" e si mandava solo a Yandex, contando che passasse gli url a Bing: non lo
+// faceva. Bing conosceva 55 pagine del sito contro le 16.307 di Google, e ChatGPT, che cerca su Bing, per
+// "eventi oggi a Bergamo" citava L'Eco e VisitBergamo. Con la chiave nuova Bing risponde 202: si manda a
+// Bing direttamente, e a Yandex per gli altri.
+const INDEXNOW_KEY = "ed8417d88e2a8753c9aa9f07b772d44d";
+const INDEXNOW_ENDPOINTS = ["https://www.bing.com/indexnow", "https://yandex.com/indexnow"];
 const INDEXNOW = args.includes("--indexnow") || process.env.GITHUB_ACTIONS === "true";
 async function indexNow() {
   if (!INDEXNOW || FIXTURE) return;
@@ -2659,14 +2661,14 @@ async function indexNow() {
   if (cambiati.length > TETTO) console.log(`indexnow: ${cambiati.length} pagine cambiate, ne mando ${TETTO} (le altre le trova dalla sitemap)`);
   for (let i = 0; i < urls.length; i += 10000) {
     const chunk = urls.slice(i, i + 10000);
-    try {
-      const res = await fetch(INDEXNOW_ENDPOINT, {
+    for (const ep of INDEXNOW_ENDPOINTS) try {
+      const res = await fetch(ep, {
         method: "POST", headers: { "content-type": "application/json; charset=utf-8" },
         body: JSON.stringify({ host: "anyplans.in", key: INDEXNOW_KEY, keyLocation: `${SITE}/${INDEXNOW_KEY}.txt`, urlList: chunk }),
       });
-      console.log(`indexnow: ${chunk.length} url → HTTP ${res.status}`);
+      console.log(`indexnow ${new URL(ep).hostname}: ${chunk.length} url → HTTP ${res.status}`);
     } catch (e) {
-      console.log(`indexnow: non risponde (${e.message}) — le pagine sono comunque nella sitemap`);
+      console.log(`indexnow ${ep}: non risponde (${e.message}) — le pagine sono comunque nella sitemap`);
     }
   }
 }
