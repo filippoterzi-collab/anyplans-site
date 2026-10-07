@@ -91,10 +91,6 @@ if (!process.argv.includes("--citta") && !INDICE && !FIXTURE) {
   }
   if (saltate.length) console.error(`generate: città rimaste a ieri: ${saltate.join(", ")}`);
   if (saltate.length > Math.max(3, CITTA.length / 5)) { console.error(`generate: ${saltate.length} città saltate, mi fermo`); process.exit(1); }
-  // i viaggi di gruppo (07/10/2026): un generatore a parte (generate-travel.mjs, tabelle trip del 0091) perché questo
-  // file è costruito attorno a una città. Se fallisce, la pagina resta quella di ieri e la notte delle città continua.
-  const travel = spawnSync(base[0], [...base.slice(1, -1), path.join(HERE, "generate-travel.mjs"), "--out", OUT], { stdio: "inherit" });
-  if (travel.status !== 0) console.error("generate: viaggi di gruppo falliti, la pagina resta a ieri");
   if (!corri(["--indice"])) { console.error(`generate: l'indice è fallito, mi fermo`); process.exit(1); }
   process.exit(0);
 }
@@ -1844,6 +1840,16 @@ ${faqHtml(faq)}
 }
 
 // ── index pages (type / town) and hub ─────────────────────────────────────────
+// le categorie come le pagine "quando" (UI.md §3.18, 07/10/2026): i prossimi 7 giorni con eventi in schede,
+// sotto mattina/pomeriggio/sera, mappa e muro; quello che viene dopo la settimana resta in lista per Google
+function tipoApp(ix, up) {
+  if (ix.kind !== "tipo" || ix.oggi) return null;
+  const k7 = [...Array(7).keys()].map(i => dateKey(dayAfter(i), DEFAULT_TZ));
+  const inW = up.filter(p => k7.some(k => onDay(p, k)));
+  const keys = k7.filter(k => inW.some(p => onDay(p, k)));
+  if (!inW.length) return null;
+  return { html: whenAppHtml("tipo", { keys }, inW), later: up.filter(p => !inW.includes(p)) };
+}
 function indexPage(ix) { return en() ? indexPageEn(ix) : indexPageIt(ix); }
 function indexPageEn(ix) {
   const url = indexUrl(ix);
@@ -1876,6 +1882,7 @@ function indexPageEn(ix) {
     { q: `When is the next ${nextNoun}${ix.kind === "tipo" ? "" : " in " + ix.town}?`, a: up.length ? `${up[0].title}, ${lc1(whenLabel(up[0]))}${evTown(up[0]) ? `, in ${evTown(up[0]).replace(/, $/, "")}` : ""}. ${fmtPrice(up[0].price_cents)}.` : `No date has been published yet. Sign up on anyplans: when it comes out, you see it on the map.` },
     { q: `${cap(what)}: are they free?`, a: up.length ? `${free === up.length ? "Yes, all of them" : `${free} out of ${up.length}`}. When there is a ticket or a fee, the price is on the event's page.` : `Almost always yes: town festivals, food fairs and group outings are free; if there is a fee it is on the event's page.` },
   ];
+  const app = tipoApp(ix, up);
   const ld = jsonld({ "@context": "https://schema.org", "@type": "ItemList", name: h1, url,
     itemListElement: up.map((p, i) => ({ "@type": "ListItem", position: i + 1, url: eventUrl(p), name: p.title })) });
   const body = `
@@ -1883,14 +1890,15 @@ ${crumbs([["anyplans", L.home], [CITY_NAME, rel(hubUrl())], [ix.kind === "tipo" 
 <div class="chips"><span class="chip">${emoji} ${esc(ix.kind === "tipo" ? ix.t.c ? catLabel(ix.t.c) : "" : "Town")}</span></div>
 <h1>${esc(h1)}</h1>
 <p class="lead">${esc(intro)}</p>
-<div class="cta"><a class="btn" href="${MAP_URL}">See all events</a></div>
-${up.length ? `<h2>Upcoming</h2>${listHtml(up)}` : ""}
+${app ? "" : `<div class="cta"><a class="btn" href="${MAP_URL}">See all events</a></div>`}
+${app ? app.html + (app.later.length ? `<h2>Later on</h2>${listHtml(app.later)}` : "") : up.length ? `<h2>Upcoming</h2>${listHtml(up)}` : ""}
 ${past.length ? `<h2>Past</h2>${listHtml(past)}` : ""}
 ${stessoTipoAltrove(ix)}
 ${faqHtml(faq)}
+${app ? WHEN_JS : ""}
 `;
   const lastmod = new Date(Math.max(...list.map(p => p.updated)));
-  return { html: layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld + "\n" + faqLd(faq), body, modified: lastmod, alt: inLocale("it", () => indexUrl(ix)) }), lastmod };
+  return { html: layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld + "\n" + faqLd(faq), body, modified: lastmod, head: app ? `<style>${WHEN_CSS}</style>` : "", alt: inLocale("it", () => indexUrl(ix)) }), lastmod };
 }
 function indexPageIt(ix) {
   const url = indexUrl(ix);
@@ -1925,6 +1933,7 @@ function indexPageIt(ix) {
     { q: `Quando è ${ix.kind === "tipo" ? "il prossimo evento di " + ix.t.label.toLowerCase() : "la prossima festa a " + ix.town}?`, a: up.length ? `${up[0].title}, ${whenLabel(up[0]).toLowerCase()}${evTown(up[0]) ? `, a ${evTown(up[0]).replace(/, $/, "")}` : ""}. ${fmtPrice(up[0].price_cents)}.` : `Non c'è ancora una data pubblicata. Registrati su anyplans: quando esce, la vedi sulla mappa.` },
     { q: `${cap(what)}: sono gratis?`, a: up.length ? `${free === up.length ? "Sì, tutti" : `${free} su ${up.length}`}. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.` : `Quasi sempre sì: feste di paese, sagre e uscite di gruppo sono gratis; se c'è una quota è scritta nella pagina dell'evento.` },
   ];
+  const app = tipoApp(ix, up);
   const ld = jsonld({ "@context": "https://schema.org", "@type": "ItemList", name: h1, url,
     itemListElement: up.map((p, i) => ({ "@type": "ListItem", position: i + 1, url: eventUrl(p), name: p.title })) });
   const body = `
@@ -1932,14 +1941,15 @@ ${crumbs([["anyplans", "/"], [CITY_NAME, rel(hubUrl())], [ix.kind === "tipo" ? i
 <div class="chips"><span class="chip">${emoji} ${esc(ix.kind === "tipo" ? ix.t.c ? cap(ix.t.c) : "" : "Paese")}</span></div>
 <h1>${esc(h1)}</h1>
 <p class="lead">${esc(intro)}</p>
-<div class="cta"><a class="btn" href="${MAP_URL}">Vedi tutti gli eventi</a></div>
-${up.length ? `<h2>Prossimi</h2>${listHtml(up)}` : ""}
+${app ? "" : `<div class="cta"><a class="btn" href="${MAP_URL}">Vedi tutti gli eventi</a></div>`}
+${app ? app.html + (app.later.length ? `<h2>Più avanti</h2>${listHtml(app.later)}` : "") : up.length ? `<h2>Prossimi</h2>${listHtml(up)}` : ""}
 ${past.length ? `<h2>Già passati</h2>${listHtml(past)}` : ""}
 ${stessoTipoAltrove(ix)}
 ${faqHtml(faq)}
+${app ? WHEN_JS : ""}
 `;
   const lastmod = new Date(Math.max(...list.map(p => p.updated)));
-  return { html: layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld + "\n" + faqLd(faq), body, modified: lastmod, alt: inLocale("en", () => indexUrl(ix)) }), lastmod };
+  return { html: layout({ title, description: descr, url, image: OG_DEFAULT, jsonLd: ld + "\n" + faqLd(faq), body, modified: lastmod, head: app ? `<style>${WHEN_CSS}</style>` : "", alt: inLocale("en", () => indexUrl(ix)) }), lastmod };
 }
 function hubPage() { return en() ? hubPageEn() : hubPageIt(); }
 // "Spritz & Burger (Clusone, 12 September)": the town only, and nothing when the town is already in the title
@@ -2121,6 +2131,7 @@ const whenLinksEn = () => { const l = WHEN_KINDS.filter(k => WHEN[k].list.length
 const SOLO_SPORTS = new Set(["running", "trail", "walking", "hiking", "ceramics", "painting", "cooking", "culture", "yoga", "dancing", "games"]);
 const isSolo = (p) => SOLO_SPORTS.has(p.sport) || (p.sport === "dinner" && /tablo/i.test(`${p.source || ""} ${p.source_url || ""}`));
 const groupOf = (p) => p.sport === "market" ? "mercati" : (p.sport === "walking" && /^gruppo di cammino/i.test(p.title)) ? "cammino" : null;
+// nelle pagine di categoria mercati e camminate non si raggruppano: lì sono loro la lista
 // categorie dei filtri: poche e larghe, come le cerca la gente
 const CHIP_OF = { running: "sport", trail: "sport", walking: "sport", hiking: "sport", cycling: "sport", mtb: "sport", padel: "sport", tennis: "sport", football: "sport",
   volleyball: "sport", basketball: "sport", gym: "sport", climbing: "sport", swimming: "sport", yoga: "sport", hyrox: "sport", skating: "sport",
@@ -2129,15 +2140,18 @@ const CHIP_OF = { running: "sport", trail: "sport", walking: "sport", hiking: "s
   culture: "cultura", tour: "cultura", exhibition: "cultura", games: "giochi", festival: "feste", fair: "feste", estivo: "feste", market: "mercati", match: "sport" };
 const CHIP_LABEL = { it: { sport: "Sport", tavola: "A tavola", lab: "Laboratori", serate: "Serate", cultura: "Cultura", giochi: "Giochi", feste: "Feste", mercati: "Mercati", altro: "Altro" },
                      en: { sport: "Sports", tavola: "Food", lab: "Workshops", serate: "Nights out", cultura: "Culture", giochi: "Games", feste: "Festivals", mercati: "Markets", altro: "Other" } };
+// "Ven 9": il giorno della settimana corto col numero, per le schede dei giorni nelle categorie
+const dayShortLabel = (k) => { const [y, m, d] = k.split("-"); const dt = new Date(Date.UTC(+y, +m - 1, +d, 12));
+  return cap(new Intl.DateTimeFormat(L.intl, { timeZone: DEFAULT_TZ, weekday: "short" }).format(dt).replace(".", "")) + " " + (+d); };
 const fasciaOf = (hh) => hh < 12 ? "mat" : hh < 18 ? "pom" : "sera";
 
 // una riga per evento in un dato giorno (l'ora è quella della prima data di quel giorno)
-function whenRows(list, key, onlyEvening) {
+function whenRows(list, key, onlyEvening, noGroup) {
   return list.map(p => {
     const d = (p.dates || []).find(x => dateKey(x.start, x.tz) === key); if (!d) return null;
     const hm = fmtTime(d.start, d.tz), hh = +hm.slice(0, 2);
     if (onlyEvening && hh < 18) return null;
-    return { p, hm, f: fasciaOf(hh), g: groupOf(p), c: CHIP_OF[p.sport] || "altro", s: isSolo(p), free: !(p.price_cents > 0),
+    return { p, hm, f: fasciaOf(hh), g: noGroup ? null : groupOf(p), c: CHIP_OF[p.sport] || "altro", s: isSolo(p), free: !(p.price_cents > 0),
              town: evTown(p).replace(/, $/, "") || placeShort(p), ts: d.start.getTime() };
   }).filter(Boolean).sort((a, b) => a.ts - b.ts);
 }
@@ -2165,9 +2179,10 @@ function whenDayHtml(rows, key, hidden) {
 function whenAppHtml(kind, w, list) {
   const E = en();
   // i giorni della pagina; oggi e stasera portano anche domani, per quando il lavoro notturno parte tardi
-  const keys = kind === "weekend" ? w.keys : kind === "domani" ? [TOMORROW_KEY] : [TODAY_KEY, TOMORROW_KEY];
+  const multi = kind === "weekend" || kind === "tipo";
+  const keys = multi ? w.keys : kind === "domani" ? [TOMORROW_KEY] : [TODAY_KEY, TOMORROW_KEY];
   const evening = kind === "stasera";
-  const days = keys.map((k, i) => ({ k, rows: whenRows(i === 0 || kind === "weekend" ? list : upcomingPages.filter(p => onDay(p, k)), k, evening), spare: kind !== "weekend" && i > 0 }));
+  const days = keys.map((k, i) => ({ k, rows: whenRows(i === 0 || multi ? list : upcomingPages.filter(p => onDay(p, k)), k, evening, kind === "tipo"), spare: !multi && i > 0 }));
   const dayName = (k) => { const [y, m, d] = k.split("-"); return fmtDay(new Date(Date.UTC(+y, +m - 1, +d, 12)), DEFAULT_TZ); };
   const T = E ? { regT: "Sign up, it's free", reg: "Sign up for free", more: "more events", only: "All you need is an email.", map: "Open the map", wheel: "Not sure? Spin the wheel", nuovo: "New",
                   wheelT: "Leave it to me", wheelS: "I'll pick something for you today or tomorrow, nearby. You just show up.", pick: "Pick for me", go: "Go here", another: "Another one · ", left: " left", none: "Nothing left for today: try tomorrow.", all: "All", solo: "Alone", f: { Gratis: "Free", Sport: "Sports", Serata: "Night out", Cena: "Dinner" }, ci: "I'm in", soloL: "You can go alone" }
@@ -2177,9 +2192,11 @@ function whenAppHtml(kind, w, list) {
     h1: keys.map(k => E ? `What to do in ${CITY_NAME} ${W_EN[kind]}${kind === "weekend" ? "" : ", " + dayName(k)}` : `Cosa fare a ${CITY_NAME} ${W_IT[kind]}${kind === "weekend" ? "" : ", " + dayName(k).toLowerCase()}`),
     T, chips: CHIP_LABEL[E ? "en" : "it"], fasce: E ? { mat: "Morning", pom: "Afternoon", sera: "Evening" } : { mat: "Mattina", pom: "Pomeriggio", sera: "Sera" },
     when: E ? { mat: "this morning", pom: "this afternoon", sera: "tonight" } : { mat: "stamattina", pom: "oggi pomeriggio", sera: "stasera" },
-    dayLabels: keys.map(k => dayName(k).split(" ")[0]) };
+    // sul weekend il nome intero (Sabato), nelle categorie il giorno corto col numero (Ven 9); "Oggi" e "Domani" li mette lo script
+    dayLabels: keys.map(k => kind === "tipo" ? dayShortLabel(k) : dayName(k).split(" ")[0]), rel: kind === "tipo",
+    words: E ? { oggi: "Today", domani: "Tomorrow", st: { mat: "this morning", pom: "this afternoon", sera: "tonight" } } : { oggi: "Oggi", domani: "Domani", st: { mat: "stamattina", pom: "oggi pomeriggio", sera: "stasera" } } };
   const total = list.length, solo = list.filter(isSolo).length;
-  return `<p class="wsum"><b>${total} ${E ? "events" : "eventi"}</b> ${E ? `in ${CITY_NAME} and its province` : `tra ${CITY_NAME} e provincia`} · ${solo} ${E ? "you can go to alone" : "dove puoi andare da solo"}</p>
+  return `<p class="wsum"><b>${total} ${E ? "events" : "eventi"}</b> ${kind === "tipo" ? (E ? "in the next 7 days" : "nei prossimi 7 giorni") : E ? `in ${CITY_NAME} and its province` : `tra ${CITY_NAME} e provincia`}${solo ? ` · ${solo} ${E ? "you can go to alone" : "dove puoi andare da solo"}` : ""}</p>
 <div class="wmap" id="wmap" aria-label="${E ? "Map of the events" : "Mappa degli eventi"}"><span class="wcount" id="wcount"></span><div class="wmapbar"><button class="wwheel" id="wwheel" type="button" data-gate="ruota">${T.wheel}</button><a class="wfull" href="${MAP_URL}" data-gate="mappa">${T.map}</a></div></div>
 <div class="wbar"><div class="wseg" id="wseg"></div><div class="wseg wsub" id="wsub"></div><div class="wchips" id="wchips"></div></div>
 <div id="wlist">${days.map((d, i) => whenDayHtml(d.rows, d.k, kind === "weekend" ? i > 0 : d.spare)).join("")}</div>
@@ -2265,12 +2282,16 @@ const WHEN_JS = String.raw`<script>
   var today = new Intl.DateTimeFormat("en-CA", { timeZone: cfg.tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
   var nowH = +new Intl.DateTimeFormat("it-IT", { timeZone: cfg.tz, hour: "2-digit", hourCycle: "h23" }).format(new Date());
   var days = [].slice.call(document.querySelectorAll(".wday"));
-  var weekend = cfg.kind === "weekend", di = 0;
+  var weekend = cfg.kind === "weekend" || cfg.kind === "tipo", di = 0;
+  var tomorrow = (function(){ var p = today.split("-"); var d = new Date(Date.UTC(+p[0], +p[1] - 1, +p[2] + 1)); return d.toISOString().slice(0, 10); })();
+  // nelle categorie: "Oggi" e "Domani" secondo la data vera, i giorni già passati non si mostrano
+  if (cfg.rel) cfg.dayLabels = cfg.keys.map(function(k, i){ return k === today ? cfg.words.oggi : k === tomorrow ? cfg.words.domani : cfg.dayLabels[i]; });
+  function dayFascia(){ var l = cfg.dayLabels[di]; if (cfg.rel && cfg.keys[di] === today) return cfg.words.st[fascia]; return l.toLowerCase() + " " + cfg.fasce[fascia].toLowerCase(); }
   if (!weekend && cfg.keys.length > 1 && today === cfg.keys[1]) {
     di = 1; days[0].hidden = true; days[1].hidden = false;
     var h1 = document.querySelector("h1"); if (h1) h1.textContent = cfg.h1[1];
   }
-  if (weekend) { var wi = cfg.keys.indexOf(today); if (wi > 0) di = wi; days.forEach(function(d, i){ d.hidden = i !== di; }); }
+  if (weekend) { var wi = cfg.keys.indexOf(today); if (wi > 0) di = wi; if (cfg.rel && cfg.keys[di] < today) { var nx = cfg.keys.findIndex(function(k){ return k >= today; }); if (nx >= 0) di = nx; } days.forEach(function(d, i){ d.hidden = i !== di; }); }
   var fascia = nowH < 12 ? "mat" : nowH < 18 ? "pom" : "sera", cat = "all";
   function curDay(){ return days[di]; }
   function present(f){ return curDay().querySelector('.wf[data-f="' + f + '"]'); }
@@ -2290,7 +2311,7 @@ const WHEN_JS = String.raw`<script>
     var fh = "";
     if (cfg.kind !== "stasera") ["mat", "pom", "sera"].forEach(function(f){ var sec = present(f); if (!sec) return; var n = sec.querySelectorAll(".wr").length; fh += '<button type="button" data-fa="' + f + '" aria-pressed="' + (f === fascia) + '">' + cfg.fasce[f] + "<small>" + n + "</small></button>"; });
     // sul weekend due righe: Sabato · Domenica sopra, Mattina · Pomeriggio · Sera sotto (07/10/2026)
-    if (weekend) { cfg.keys.forEach(function(k, i){ var n = days[i].querySelectorAll(".wr").length; html += '<button type="button" data-day="' + i + '" aria-pressed="' + (i === di) + '">' + cfg.dayLabels[i] + "<small>" + n + "</small></button>"; }); seg.innerHTML = html; $("wsub").innerHTML = fh; }
+    if (weekend) { cfg.keys.forEach(function(k, i){ if (cfg.rel && k < today) return; var n = days[i].querySelectorAll(".wr").length; html += '<button type="button" data-day="' + i + '" aria-pressed="' + (i === di) + '">' + cfg.dayLabels[i] + "<small>" + n + "</small></button>"; }); seg.innerHTML = html; $("wsub").innerHTML = fh; }
     else { seg.innerHTML = fh; $("wsub").innerHTML = ""; }
     var counts = {}, solo = 0;
     rowsOn().forEach(function(el){ if (el.parentNode.classList.contains("wgi")) return; if (el.getAttribute("data-f") !== fascia) return; var c = el.getAttribute("data-c"); counts[c] = (counts[c] || 0) + 1; if (el.getAttribute("data-s") === "1") solo++; });
@@ -2308,10 +2329,10 @@ const WHEN_JS = String.raw`<script>
       if (!logged && shown > 4) { el.classList.add("wcut"); cut += el.classList.contains("wg") ? el.querySelectorAll(".wr").length : 1; if (!lockAfter) lockAfter = el; }
     });
     var lock = $("wlock");
-    if (lockAfter) { lockAfter.parentNode.insertBefore(lock, lockAfter); lock.hidden = false; $("wlockn").textContent = T.more === "altri eventi" ? "Ci sono altri " + cut + " eventi " + (weekend ? cfg.dayLabels[di].toLowerCase() + " " + cfg.fasce[fascia].toLowerCase() : cfg.when[fascia]) + ". " + T.only : cut + " " + T.more + ". " + T.only; }
+    if (lockAfter) { lockAfter.parentNode.insertBefore(lock, lockAfter); lock.hidden = false; $("wlockn").textContent = T.more === "altri eventi" ? "Ci sono altri " + cut + " eventi " + (weekend ? dayFascia() : cfg.when[fascia]) + ". " + T.only : cut + " " + T.more + ". " + T.only; }
     else lock.hidden = true;
     var n = rowsOn().filter(function(el){ return el.classList.contains("wr") && !(el.closest(".wgi")) && visible(el); }).length + [].slice.call(curDay().querySelectorAll(".wg")).filter(visible).reduce(function(a, g){ return a + g.querySelectorAll(".wr").length; }, 0);
-    $("wcount").innerHTML = "<b>" + n + "</b> " + (weekend ? cfg.dayLabels[di].toLowerCase() + " " + cfg.fasce[fascia].toLowerCase() : cfg.kind === "stasera" ? cfg.when.sera : cfg.when[fascia]);
+    $("wcount").innerHTML = "<b>" + n + "</b> " + (weekend ? dayFascia() : cfg.kind === "stasera" ? cfg.when.sera : cfg.when[fascia]);
     drawPins();
   }
   function pinRows(){ return [].slice.call(curDay().querySelectorAll(".wr")).filter(function(r){ var box = r.closest(".wg") || r; return visible(box) && r.getAttribute("data-ll"); }); }
