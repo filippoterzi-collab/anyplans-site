@@ -88,6 +88,9 @@ const addDays = (iso, n) => { const d = new Date(iso + "T00:00:00Z"); d.setUTCDa
 const perOpCount = {}; for (const t of data.trips) perOpCount[t.operator] = (perOpCount[t.operator] || 0) + 1;
 const ops = {}; for (const o of [...data.operators].sort((a, b) => (perOpCount[b.slug] || 0) - (perOpCount[a.slug] || 0))) ops[o.slug] = { name: o.name, url: o.website_url };
 let seen = "", modified = "", nDeps = 0; const unmapped = new Map();
+// cosa il prezzo non comprende, operatore per operatore (Filippo 07/10/2026: "scrivi tu"): la cassa comune di Vagabondo
+// e della Compagnia dei Cammini non è nel prezzo pubblicato, e va detto accanto al prezzo
+const NOTE = { "vagabondo": "prezzo senza cassa comune", "compagnia-dei-cammini": "prezzo senza cassa comune, serve la tessera soci", "avventure-nel-mondo": "quota indicativa, il prezzo per data è sul loro sito" };
 const trips = data.trips.filter(t => ops[t.operator]).map(t => {
   const slugs = [...new Set(t.destinations.flatMap(slugsOf))];
   const hint = t.destinations.map(contOf).find(Boolean) || null;
@@ -112,7 +115,7 @@ const trips = data.trips.filter(t => ops[t.operator]).map(t => {
     op: t.operator, id: `${t.operator}-${t.external_id}`.slice(0, 80), title: t.title, url: t.source_url, days: t.duration_days,
     age: null, type: t.trip_type, air: t.departure_cities.length ? t.departure_cities.join(" o ") : null,
     from: eur(t.price_from_cents), full: eur(t.price_full_cents), flight: t.flight_included,
-    dest: slugs, destText: rest.join(", ") || null, contHint: hint, deps, nDeps: t.departures_count,
+    dest: slugs, destText: rest.join(", ") || null, contHint: hint, deps, nDeps: t.departures_count, note: NOTE[t.operator] || null,
   };
 });
 const fmtIt = (iso) => { const d = new Date(iso); return `${String(d.getUTCDate()).padStart(2, "0")}/${String(d.getUTCMonth() + 1).padStart(2, "0")}/${d.getUTCFullYear()}`; };

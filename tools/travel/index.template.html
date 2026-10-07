@@ -142,9 +142,9 @@ header{position:sticky;top:0;z-index:40;background:#fff;border-bottom:1px solid 
 .mfoot .btn.zero{background:var(--grey)}
 @media(max-width:600px){
   .sbwrap{top:60px}
-  .sb{grid-template-columns:1fr auto;min-height:56px;padding:4px}
-  .seg{padding:6px 12px;min-height:48px}
-  .seg.s2,.seg.s3{display:none}
+  .sb{grid-template-columns:1.1fr 1fr auto;min-height:56px;padding:4px}
+  .seg{padding:6px 10px;min-height:48px}
+  .seg.s3{display:none}   /* sul telefono restano Dove e Quando (Filippo 07/10/2026: "e quando anche, almeno il periodo"); la durata sta nei filtri */
   .seg .l{font-size:11.5px}.seg .v{font-size:13px}
   .sb .go{width:44px;height:44px}
   .fbtn{height:44px;padding:0 12px}.fbtn span{display:none}
@@ -539,7 +539,7 @@ const nextYear = thisYear + 1;
 const isNY = d => d.s >= `${thisYear}-12-23` && d.s <= `${thisYear}-12-31` && d.e && d.e >= `${nextYear}-01-01`;
 TRIPS.forEach(t => { t.deps = (t.deps || []).filter(d => d.s >= TODAY); t.next = t.deps[0] || null; t.cont = t.dest.map(d => CONT[d]).filter(Boolean); if (!t.cont.length && t.contHint) t.cont = [t.contHint]; });
 const flightTxt = t => t.flight === true ? `<span class="fly ok">✈︎ Volo incluso</span>` : t.flight === false ? `<span class="fly no">Volo escluso</span>` : "";
-function meta(t){ const ages = t.age || [...new Set(t.deps.map(d => d.age).filter(Boolean))].sort().join(" / "); return [t.dest.map(d => NAME[d]).join(", ") || t.destText || "", t.days ? `${t.days} giorn${t.days === 1 ? "o" : "i"}` : null, ages || null, t.type, t.air ? `da ${t.air}` : null, flightTxt(t)].filter(Boolean).join(" · "); }
+function meta(t){ const ages = t.age || [...new Set(t.deps.map(d => d.age).filter(Boolean))].sort().join(" / "); return [t.dest.map(d => NAME[d]).join(", ") || t.destText || "", t.days ? `${t.days} giorn${t.days === 1 ? "o" : "i"}` : null, ages || null, t.type, t.air ? `da ${t.air}` : null, flightTxt(t), t.note ? `<span class="fly no">${t.note}</span>` : null].filter(Boolean).join(" · "); }
 function tile(t){ const f = t.dest.length ? FLAG[t.dest[0]] : "✈️"; return `<a class="tile" href="${t.url}" target="_blank" rel="noopener nofollow" data-gate="viaggio">${f}${t.dest.length > 1 ? `<span class="plus">+${t.dest.length - 1}</span>` : ""}</a>`; }
 const STATUS = { CONFIRMED: ["✓ Confermata", "ok"], ALMOST_CONFIRMED: ["Quasi confermata", ""], PLANNED: ["In programma", ""], ALMOST_FULL: ["Ultimi posti", "last"], SOLD_OUT: ["Esaurita", "full"], ON_REQUEST: ["Su richiesta", ""], available: ["Disponibile", ""], few_left: ["Ultimi posti", "last"], sold_out: ["Esaurita", "full"] };
 function seatsTxt(d){ if (!d) return ""; const st = STATUS[d.st] || null; const bits = []; if (st) bits.push(`<span class="seats ${st[1]}">${st[0]}</span>`); if (d.free != null && d.st !== "SOLD_OUT") bits.push(`${d.free} post${d.free === 1 ? "o" : "i"} rimast${d.free === 1 ? "o" : "i"}`); if (d.toConfirm) bits.push(`mancano ${d.toConfirm} per confermare`); return bits.join(" · "); }
