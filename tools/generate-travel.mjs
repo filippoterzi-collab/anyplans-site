@@ -69,7 +69,17 @@ function slugsOf(dest) {
 const contOf = (dest) => CONTINENTS.get(norm(dest)) || null;
 
 // ── dati ─────────────────────────────────────────────────────────────────────────────────────────────────
-const data = FIXTURE ? JSON.parse(await readFile(FIXTURE, "utf8")) : await rpcRetry("public_trips_for_seo");
+// una chiamata per operatore (0092): con 43 operatori e 28.000 partenze la chiamata unica superava il timeout
+// della chiave anon (07/10/2026 sera) e la pagina restava a ieri. Prima l'elenco (p_operator = ''), poi uno alla volta.
+const data = FIXTURE ? JSON.parse(await readFile(FIXTURE, "utf8")) : await (async () => {
+  const head = await rpcRetry("public_trips_for_seo", { p_operator: "" });
+  const trips = [];
+  for (const o of head.operators) {
+    const part = await rpcRetry("public_trips_for_seo", { p_operator: o.slug });
+    trips.push(...(part.trips || []));
+  }
+  return { generated_at: head.generated_at, operators: head.operators, trips };
+})();
 if (!data || !Array.isArray(data.trips) || data.trips.length === 0) { console.error("viaggi: nessun viaggio dalla RPC, non tocco niente"); process.exit(1); }
 const STATUS = { available: "available", few_left: "few_left", sold_out: "sold_out", to_confirm: "PLANNED" };   // quelli che la pagina sa mostrare
 const eur = (c) => c == null ? null : Math.round(c) / 100;
