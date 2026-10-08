@@ -292,12 +292,99 @@ ${faqHtml(faq)}
     llms.push(`## Operatori di viaggi di gruppo a confronto\n${SITE}${url}\n\n${lead}\n\n${riga.map(r => `- ${opName(r.o)}: ${viaggi(r.n)}, ${partenze(r.dep)}${r.min != null ? `, da ${euro(r.min)}` : ""}, volo incluso ${r.volo}, ${r.nPaesi} paesi${r.eta.length ? `, età ${r.eta.join(", ")}` : ""}`).join("\n")}\n`);
   }
 
+  // ── le altre occasioni: Immacolata, Natale, Halloween (come Capodanno) ─────────────────────────
+  // finestre di partenza: si parte in quei giorni (o ci si è dentro) e si torna dopo la festa
+  const annoOcc = (mm) => +today.slice(0, 4) + (today.slice(5) > mm ? 1 : 0);
+  const aI = annoOcc("12-08"), aN = annoOcc("12-26"), aH = annoOcc("11-01");
+  const OCC = [
+    { key: "immacolata", slug: "ponte-immacolata", nome: `Ponte dell'Immacolata ${aI}`, emoji: "🎄", filtro: d => d.s >= `${aI}-12-03` && d.s <= `${aI}-12-08` && d.e >= `${aI}-12-07`,
+      lead: (n, min) => `${viaggi(n)} di gruppo per il ponte dell'Immacolata ${aI}: si parte tra il 3 e l'8 dicembre e si rientra dopo la festa${min != null ? `, da ${euro(min)}` : ""}. Il primo weekend lungo dell'inverno, buono per le capitali europee e i mercatini.` },
+    { key: "natale", slug: "natale", nome: `Natale ${aN} in viaggio`, emoji: "🎁", filtro: d => d.s >= `${aN}-12-19` && d.s <= `${aN}-12-25` && d.e >= `${aN}-12-25`,
+      lead: (n, min) => `${viaggi(n)} di gruppo che passano il 25 dicembre ${aN} fuori casa: si parte tra il 19 e il 25 dicembre${min != null ? `, da ${euro(min)}` : ""}. Per chi a Natale preferisce un gruppo e un posto nuovo al pranzo di famiglia.` },
+    { key: "halloween", slug: "halloween", nome: `Halloween ${aH} in viaggio`, emoji: "🎃", filtro: d => d.s >= `${aH}-10-28` && d.s <= `${aH}-10-31` && d.e >= `${aH}-10-31`,
+      lead: (n, min) => `${viaggi(n)} di gruppo con la notte del 31 ottobre ${aH} fuori casa, a cavallo del ponte di Ognissanti${min != null ? `, da ${euro(min)}` : ""}.` },
+  ];
+  const occasioni = { capodanno: capoList };
+  const occPagine = [];
+  for (const o of OCC) {
+    const list = vivi.map(t => ({ ...t, fut: t.fut.filter(o.filtro) })).filter(t => t.fut.length);
+    occasioni[o.key] = list;
+    if (list.length < 3) continue;
+    const url = `${BASE}/${o.slug}/`, min = minDi(list);
+    const dest = new Map(); for (const t of list) for (const x of t.dest) if (PAESE[x]) dest.set(x, (dest.get(x) || 0) + 1);
+    const topDest = [...dest.entries()].sort((a, b) => b[1] - a[1]);
+    const lead = o.lead(list.length, min) + (topDest.length ? ` Le mete con più partenze: ${joinIt(topDest.slice(0, 6).map(([x]) => PAESE[x].name))}.` : "");
+    const faq = [
+      { q: `Dove andare ${o.key === "immacolata" ? "al ponte dell'Immacolata" : o.key === "natale" ? "a Natale" : "a Halloween"} con un viaggio di gruppo?`, a: topDest.length ? `Le mete con più partenze sono ${joinIt(topDest.slice(0, 6).map(([x, n]) => `${PAESE[x].name} (${n})`))}; in tutto ${viaggi(list.length)} di ${new Set(list.map(t => t.op)).size} operatori.` : `Ci sono ${viaggi(list.length)} in calendario.` },
+      { q: `Quanto costa un viaggio di gruppo ${o.key === "immacolata" ? "per l'Immacolata" : o.key === "natale" ? "a Natale" : "ad Halloween"}?`, a: `${min != null ? `Si parte da ${euro(min)}` : "I prezzi sono sui siti degli operatori"}; il prezzo di ogni partenza è nell'elenco, letto dai cataloghi il ${seenIt}.` },
+      { q: `Ci si può andare da soli?`, a: `Sì: i viaggi di gruppo sono fatti per chi parte da solo, con un coordinatore e persone che non si conoscono.` },
+    ];
+    const body = `<h1>${o.emoji} ${esc(o.nome)}: i viaggi di gruppo</h1>
+<p class="lead">${esc(lead)}</p>
+<p class="m">Prezzi e date letti dai cataloghi degli operatori il ${esc(seenIt)}.</p>
+${topDest.length ? `<h2>Per destinazione</h2><div class="tags">${topDest.slice(0, 30).map(([x, n]) => `<a href="${perPaese.get(x)?.length >= MIN_PAESE ? urlPaese(x) : `${BASE}/`}">${PAESE[x].flag} ${esc(PAESE[x].name)}<small>${n}</small></a>`).join("")}</div>` : ""}
+<h2>Le partenze</h2>
+${ordina(list).slice(0, MAX_SCHEDE).map(t => scheda(t, 3)).join("\n")}
+${faqHtml(faq)}
+<p style="margin-top:22px"><a class="btn" href="${BASE}/domande/">Le domande sui viaggi di gruppo</a> <a class="btn ghost" href="${BASE}/">Tutti i viaggi</a></p>`;
+    await scrivi(OUT, url, layout({ title: `${cut(`${o.nome}: viaggi di gruppo${min != null ? ` da ${euro(min)}` : ""}`, 60)} | anyplans`, description: cut(lead, 158), url: SITE + url, body,
+      ld: [itemList(`${o.nome}: viaggi di gruppo`, SITE + url, ordina(list)), faqLd(faq)], crumbs: [["anyplans", "/"], ["Viaggi di gruppo", `${BASE}/`], [o.nome, null]] }));
+    pagine.push(url); occPagine.push([url, o.nome, list.length, o.emoji]);
+    llms.push(`## ${o.nome}: viaggi di gruppo\n${SITE}${url}\n\n${lead}\n`);
+  }
+  // le partenze delle occasioni per le pagine delle città ("Cosa fare a Capodanno a Bergamo?"): le legge
+  // generate.mjs la notte dopo da tools/stato/viaggi-occasioni.json
+  {
+    const compatto = (list) => ordina(list).slice(0, 400).map(t => ({ title: t.title, op: opName(t.op), url: t.url, days: t.days, from: minDi([t]), flight: !!t.flight, air: t.air || null,
+      dest: t.dest.filter(x => PAESE[x]).map(x => PAESE[x].name), s: t.fut[0].s }));
+    await mkdir(path.join(OUT, "tools", "stato"), { recursive: true });
+    await writeFile(path.join(OUT, "tools", "stato", "viaggi-occasioni.json"), JSON.stringify({ letti_il: seenIt,
+      pagine: { capodanno: `${BASE}/capodanno/`, ...Object.fromEntries(occPagine.map(([u], i) => [OCC.filter(o => (occasioni[o.key] || []).length >= 3)[i].key, u])) },
+      ...Object.fromEntries(Object.entries(occasioni).map(([k, l]) => [k, compatto(l)])) }));
+  }
+
+  // ── le domande: una pagina che risponde a quello che la gente chiede, con i numeri di oggi ─────────
+  {
+    const url = `${BASE}/domande/`;
+    const D = [];
+    const linkPaese = (x) => perPaese.get(x)?.length >= MIN_PAESE ? `${SITE}${urlPaese(x)}` : `${SITE}${BASE}/`;
+    const topPaesi = paesi.slice(0, 6);
+    const cheap = vivi.map(t => [t, minDi([t])]).filter(([, p]) => p != null).sort((a, b) => a[1] - b[1]);
+    const conVoloOps = riga.filter(r => r.volo === "sempre").map(r => opName(r.o));
+    const capoMin = minDi(capoList);
+    const capoDest = new Map(); for (const t of capoList) for (const x of t.dest) if (PAESE[x]) capoDest.set(x, (capoDest.get(x) || 0) + 1);
+    const capoTop = [...capoDest.entries()].sort((a, b) => b[1] - a[1]).slice(0, 6).map(([x]) => PAESE[x].name);
+    if (capoList.length) D.push({ q: "Dove andare a Capodanno da soli?", a: `Con un viaggio di gruppo: ci sono ${viaggi(capoList.length)} che passano il 31 dicembre fuori casa${capoMin != null ? `, da ${euro(capoMin)}` : ""}. Le mete con più partenze sono ${joinIt(capoTop)}. Si viaggia con persone che non si conoscono e un coordinatore.`, link: `${SITE}${BASE}/capodanno/` });
+    for (const [u, nome, n] of occPagine) D.push({ q: `Dove andare ${nome.startsWith("Ponte") ? "per il ponte dell'Immacolata" : nome.startsWith("Natale") ? "a Natale" : "ad Halloween"} con un viaggio di gruppo?`, a: `Ci sono ${viaggi(n)} in calendario per quei giorni, con le mete e i prezzi nella pagina dedicata.`, link: SITE + u });
+    for (const [u, nome, n] of mesiPagine.slice(0, 3)) D.push({ q: `Dove andare a ${nome} con un viaggio di gruppo?`, a: `Ci sono ${viaggi(n)} con partenza a ${nome}: le mete con più partenze e i prezzi sono nella pagina del mese.`, link: SITE + u });
+    if (cheap.length) D.push({ q: "Qual è il viaggio di gruppo più economico?", a: `Il prezzo più basso in calendario è ${euro(cheap[0][1])}: ${cheap[0][0].title} (${opName(cheap[0][0].op)}, ${cheap[0][0].days} giorni). I viaggi brevi in Italia e in Europa partono quasi tutti sotto i 500 €.`, link: cheap[0][0].url });
+    const corti = vivi.filter(t => t.days && t.days <= 4);
+    if (corti.length) D.push({ q: "Ci sono viaggi di gruppo di un weekend?", a: `Sì: ${viaggi(corti.length)} durano 4 giorni o meno${minDi(corti) != null ? `, da ${euro(minDi(corti))}` : ""}, soprattutto in Italia e nelle capitali europee.`, link: `${SITE}${BASE}/` });
+    if (conVoloOps.length) D.push({ q: "Quali viaggi di gruppo hanno il volo incluso?", a: `Il volo è sempre incluso nei viaggi di ${joinIt(conVoloOps.slice(0, 6))}; negli altri si compra a parte. Nel confronto tra gli operatori c'è la colonna del volo per ognuno.`, link: `${SITE}${BASE}/confronto-operatori/` });
+    const eta40 = riga.filter(r => r.eta.some(e => /^(3[5-9]|4\d|5\d)/.test(e) || /\+$/.test(e))).map(r => opName(r.o));
+    if (eta40.length) D.push({ q: "Ci sono viaggi di gruppo per over 40?", a: `Sì: ${joinIt(eta40.slice(0, 6))} hanno gruppi per fasce d'età più alte (per esempio 35-49 o 40+). La fascia è scritta su ogni partenza.`, link: `${SITE}${BASE}/confronto-operatori/` });
+    D.push({ q: "Come funziona un viaggio di gruppo per chi parte da solo?", a: "Si prenota un posto in un gruppo di persone che non si conoscono, di solito per fasce d'età, con un coordinatore che organizza le giornate. La camera spesso si divide con un'altra persona del gruppo dello stesso genere. Si prenota sul sito dell'operatore." });
+    D.push({ q: "Qual è il miglior operatore di viaggi di gruppo?", a: `Dipende da cosa cerchi: volo incluso, prezzo, destinazioni o età. Sono ${riga.length} operatori, i più grandi per numero di viaggi ${joinIt(riga.slice(0, 4).map(r => opName(r.o)))}. Il confronto li mette in una tabella.`, link: `${SITE}${BASE}/confronto-operatori/` });
+    if (riga[0] && riga[1]) D.push({ q: `${opName(riga[0].o)} o ${opName(riga[1].o)}?`, a: `${opName(riga[0].o)}: ${viaggi(riga[0].n)}${riga[0].min != null ? ` da ${euro(riga[0].min)}` : ""}, volo incluso ${riga[0].volo}. ${opName(riga[1].o)}: ${viaggi(riga[1].n)}${riga[1].min != null ? ` da ${euro(riga[1].min)}` : ""}, volo incluso ${riga[1].volo}.`, link: `${SITE}${BASE}/confronto-operatori/` });
+    for (const [x, l] of topPaesi) { const m = minDi(l); D.push({ q: `Quanto costa un viaggio di gruppo ${inPaese(PAESE[x].name)}?`, a: `${m != null ? `Da ${euro(m)}` : "I prezzi sono sui siti degli operatori"}: ci sono ${viaggi(l.length)} di ${new Set(l.map(t => t.op)).size} operatori, con ${partenze(nDep(l))} in calendario.`, link: linkPaese(x) }); }
+    const lead = `Le domande che si fanno su chi parte da solo con un viaggio di gruppo, con le risposte fatte sui dati di oggi: ${viaggi(vivi.length)} di ${riga.length} operatori, prezzi e date letti dai cataloghi il ${seenIt}.`;
+    const body = `<h1>Viaggi di gruppo: le domande, con le risposte di oggi</h1>
+<p class="lead">${esc(lead)}</p>
+${D.map(d => `<section class="box"><h2 style="margin-top:0">${esc(d.q)}</h2><p>${esc(d.a)}</p>${d.link ? `<p class="m"><a href="${esc(d.link)}"${d.link.startsWith(SITE) ? "" : ' rel="noopener nofollow"'}>Vedi →</a></p>` : ""}</section>`).join("\n")}
+<p style="margin-top:22px"><a class="btn" href="${BASE}/">Confronta tutti i viaggi</a></p>`;
+    const article = jsonld({ "@context": "https://schema.org", "@type": "Article", headline: "Viaggi di gruppo: le domande, con le risposte di oggi", description: cut(lead, 158), url: SITE + url, inLanguage: "it-IT", dateModified: today, author: { "@type": "Organization", name: "anyplans", url: SITE } });
+    await scrivi(OUT, url, layout({ title: "Viaggi di gruppo: le domande più cercate, con le risposte | anyplans", description: cut(lead, 158), url: SITE + url, body,
+      ld: [article, faqLd(D.map(d => ({ q: d.q, a: d.a })))], crumbs: [["anyplans", "/"], ["Viaggi di gruppo", `${BASE}/`], ["Domande", null]] }));
+    pagine.push(url);
+    llms.push(`## Viaggi di gruppo: le domande\n${SITE}${url}\n\n${D.map(d => `**${d.q}**\n${d.a}`).join("\n\n")}\n`);
+  }
+
   // ── il blocco di link veri per la pagina principale (JavaScript non lo tocca) ──
   const conts = [...new Set(paesi.map(([s]) => PAESE[s].cont))];
   const blocco = `<section class="sec" id="per-destinazione">
     <h2>Viaggi di gruppo per destinazione</h2><p class="subl">Una pagina per paese, con tutti gli operatori a confronto: prezzi, date, durata ed età.</p>
     ${conts.map(c => `<h3 style="margin:14px 0 8px;font-size:15px">${esc(c)}</h3><div class="tr-dests">${paesi.filter(([s]) => PAESE[s].cont === c).map(([s, l]) => `<a class="city" href="${urlPaese(s)}"><span class="flag">${PAESE[s].flag}</span><span class="n">${esc(PAESE[s].name)}</span><span class="meta">${viaggi(l.length)}${minDi(l) != null ? ` · da ${euro(minDi(l))}` : ""}</span></a>`).join("")}</div>`).join("\n    ")}
-    <h3 style="margin:18px 0 8px;font-size:15px">Per periodo</h3><div class="tr-dests">${pagine.includes(`${BASE}/capodanno/`) ? `<a class="city" href="${BASE}/capodanno/"><span class="flag">🎆</span><span class="n">Capodanno</span><span class="meta">${viaggi(capoList.length)}</span></a>` : ""}${mesiPagine.map(([u, n, c]) => `<a class="city" href="${u}"><span class="flag">📅</span><span class="n">${esc(n)}</span><span class="meta">${viaggi(c)}</span></a>`).join("")}</div>
+    <h3 style="margin:18px 0 8px;font-size:15px">Per periodo</h3><div class="tr-dests"><a class="city" href="${BASE}/domande/"><span class="flag">❓</span><span class="n">Le domande</span><span class="meta">con le risposte di oggi</span></a>${pagine.includes(`${BASE}/capodanno/`) ? `<a class="city" href="${BASE}/capodanno/"><span class="flag">🎆</span><span class="n">Capodanno</span><span class="meta">${viaggi(capoList.length)}</span></a>` : ""}${occPagine.map(([u, n, c, e]) => `<a class="city" href="${u}"><span class="flag">${e}</span><span class="n">${esc(n)}</span><span class="meta">${viaggi(c)}</span></a>`).join("")}${mesiPagine.map(([u, n, c]) => `<a class="city" href="${u}"><span class="flag">📅</span><span class="n">${esc(n)}</span><span class="meta">${viaggi(c)}</span></a>`).join("")}</div>
     <h3 style="margin:18px 0 8px;font-size:15px">Per operatore</h3><div class="tr-dests"><a class="city" href="${BASE}/confronto-operatori/"><span class="flag">⚖️</span><span class="n">Tutti a confronto</span><span class="meta">${riga.length} operatori</span></a>${opsPagine.map(([o, l]) => `<a class="city" href="${urlOp(o)}"><span class="flag">🧭</span><span class="n">${esc(opName(o))}</span><span class="meta">${viaggi(l.length)}</span></a>`).join("")}</div>
   </section>`;
 
