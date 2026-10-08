@@ -655,6 +655,16 @@ const OCCASIONI = (() => {
       periodo: "a dicembre, fino a Santo Stefano", esce: "Mercatini, presepi e concerti di Natale si annunciano tra novembre e dicembre: questa pagina si aggiorna ogni notte." },
     { key: "immacolata", slug: "ponte-dell-immacolata", nome: "ponte dell'Immacolata", quando: `al ponte dell'Immacolata ${yI}`, da: `${yI}-12-05`, a: `${yI}-12-08`, raccolta: null, emoji: "🎄",
       periodo: "tra il 5 e l'8 dicembre", esce: "Gli eventi del ponte si annunciano tra novembre e dicembre: questa pagina si aggiorna ogni notte." },
+    // temi di stagione (08/10/2026, Filippo: "anche eventi castagne robe così"): solo gli eventi a tema, niente viaggi
+    { key: "castagne", slug: "castagnate", nome: "castagnate e feste d'autunno", quando: "quest'autunno", tema: true, raccolta: "raccolta:castagne-e-autunno", emoji: "🌰",
+      domanda: (c) => `Castagnate a ${c}: dove mangiare le castagne quest'autunno?`, titolo: (c, n) => `Castagnate a ${c}${n ? `: ${n} feste d'autunno` : ""}`,
+      periodo: "tra ottobre e novembre", esce: "Le castagnate si annunciano settimana per settimana, soprattutto per i weekend di ottobre: questa pagina si aggiorna ogni notte." },
+    { key: "birra", slug: "feste-della-birra", nome: "feste della birra e serate nei birrifici", quando: "quest'autunno", tema: true, raccolta: "raccolta:birra", emoji: "🍺",
+      domanda: (c) => `Feste della birra e Oktoberfest a ${c}: dove e quando?`, titolo: (c, n) => `Feste della birra e Oktoberfest a ${c}${n ? `: ${n} date` : ""}`,
+      periodo: "nelle prossime settimane", esce: "Le feste della birra e le serate nei birrifici si aggiungono man mano: questa pagina si aggiorna ogni notte." },
+    { key: "vino", slug: "vino-e-degustazioni-dove", nome: "degustazioni di vino", quando: "nelle prossime settimane", tema: true, raccolta: "raccolta:vino-e-degustazioni", emoji: "🍷",
+      domanda: (c) => `Dove fare una degustazione di vino a ${c}?`, titolo: (c, n) => `Degustazioni e feste del vino a ${c}${n ? `: ${n} date` : ""}`,
+      periodo: "nelle prossime settimane", esce: "Cantine aperte, degustazioni e calici in piazza si aggiungono man mano: questa pagina si aggiorna ogni notte." },
   ];
 })();
 const occasioneUrl = (o) => `${SITE}/${CITY}/${o.slug}/`;
@@ -667,7 +677,7 @@ function eventiOccasioneDiviso(o) {
   const ix = o.raccolta ? types.find(x => x.sport === o.raccolta) : null;
   const tema = (ix ? ix.list.filter(p => !p.isPast) : []).sort(byDate);
   const inTema = new Set(tema);
-  const altri = pages.filter(p => !p.isPast && !inTema.has(p) && SPORT_FESTA.has(p.sport) && (p.up || []).some(d => { const k = dateKey(d.start, d.tz); return k >= o.da && k <= o.a; })).sort(byDate);
+  const altri = o.tema ? [] : pages.filter(p => !p.isPast && !inTema.has(p) && SPORT_FESTA.has(p.sport) && (p.up || []).some(d => { const k = dateKey(d.start, d.tz); return k >= o.da && k <= o.a; })).sort(byDate);
   return { tema, altri };
 }
 function eventiOccasione(o) { const { tema, altri } = eventiOccasioneDiviso(o); return [...tema, ...altri]; }
@@ -679,7 +689,7 @@ function viaggiDaQui(o) {
   return { daQui, senzaVolo, tutti: viaggiOccasioni?.totali?.[o.key] ?? list.length, pagina: viaggiOccasioni?.pagine?.[o.key] || null };
 }
 // un'occasione merita la pagina in una città se ci sono eventi, oppure se è una città grande (dove la domanda si fa comunque)
-const occasioneUtile = (o) => eventiOccasione(o).length >= 2 || (CITY_CFG_EN_EVENTI() && viaggiDaQui(o).tutti > 0);
+const occasioneUtile = (o) => o.tema ? eventiOccasioneDiviso(o).tema.length >= 2 : (eventiOccasione(o).length >= 2 || (CITY_CFG_EN_EVENTI() && viaggiDaQui(o).tutti > 0));
 function CITY_CFG_EN_EVENTI() { return EN_EVENTI; }
 const schedaViaggio = (t) => `<a class="card" href="${esc(t.url)}" rel="noopener nofollow"><span class="em">✈️</span><span><span class="t">${esc(t.title)}</span><br><span class="m">${esc(t.op)} · ${t.days} giorni · parte il ${esc(fmtShort(new Date(t.s + "T12:00:00Z"), DEFAULT_TZ))}${t.from != null ? ` · da ${Math.round(t.from)} €` : ""}${t.flight ? ` · volo da ${esc(t.air)}` : " · volo escluso"}</span></span></a>`;
 function occasionePage(o) {
@@ -687,13 +697,19 @@ function occasionePage(o) {
   const { tema, altri } = eventiOccasioneDiviso(o), ev = [...tema, ...altri], v = viaggiDaQui(o);
   const gratis = ev.filter(p => !(p.price_cents > 0)).length;
   const aer = (AEROPORTI[CITY] || []).slice(0, 2);
-  const h1 = `Cosa fare ${o.quando} a ${CITY_NAME}?`;
-  const risposta = ev.length
+  const h1 = o.domanda ? o.domanda(CITY_NAME) : `Cosa fare ${o.quando} a ${CITY_NAME}?`;
+  const risposta = o.tema
+    ? `A ${CITY_NAME} e provincia ci sono ${tema.length} ${o.nome} in programma ${o.periodo}${gratis ? ` (${gratis} gratis)` : ""}: ${joinIt(tema.slice(0, 4).map(p => p.title))}${tema.length > 4 ? " e altre" : ""}. ${o.esce}`
+    : ev.length
     ? `${o.quando[0].toUpperCase() + o.quando.slice(1)} a ${CITY_NAME} e provincia ci sono, per ora, ${ev.length} ${ev.length === 1 ? "evento" : "eventi"} in calendario${gratis ? ` (${gratis} gratis)` : ""}${tema.length ? `, ${tema.length} a tema: ${joinIt(tema.slice(0, 3).map(p => p.title))}${tema.length > 3 ? " e altri" : ""}` : `: ${joinIt(altri.slice(0, 3).map(p => p.title))}${altri.length > 3 ? " e altri" : ""}`}. ${o.esce}`
     : `Per ${o.periodo} a ${CITY_NAME} non è ancora uscito niente in calendario. ${o.esce}`;
   const partire = v.tutti ? ` Se invece vuoi partire, ci sono ${v.tutti} viaggi di gruppo per quei giorni${v.daQui.length ? `, ${v.daQui.length} con il volo da ${joinIt(aer)}` : ""}: si va con un gruppo e un coordinatore, anche da soli.` : "";
   const lead = risposta + partire;
-  const faq = [
+  const faq = o.tema ? [
+    { q: h1, a: lead },
+    { q: `Le ${o.nome} a ${CITY_NAME} sono gratis?`, a: `${gratis} su ${tema.length} sono gratis; quando c'è un biglietto o un costo per il piatto, è scritto nella pagina dell'evento.` },
+    { q: `Ci posso andare da solo?`, a: `Sì: su anyplans vedi chi altro ci va e ti unisci. Alle feste di paese si mangia alle tavolate, insieme a chi c'è.` },
+  ] : [
     { q: h1, a: lead },
     { q: `Ci sono eventi gratis ${o.quando} a ${CITY_NAME}?`, a: ev.length ? `${gratis} ${gratis === 1 ? "evento è" : "eventi sono"} gratis su ${ev.length}. Quando c'è un biglietto il prezzo è nella pagina dell'evento.` : `Il calendario non è ancora uscito: gli eventi gratis compaiono in questa pagina appena vengono annunciati.` },
     { q: `Cosa fare ${o.quando} a ${CITY_NAME} da soli?`, a: `Su anyplans vedi chi altro va a ogni evento e ti unisci: è pensato per chi esce da solo.${v.tutti ? ` Se vuoi partire, i viaggi di gruppo sono fatti apposta per chi viaggia da solo.` : ""}` },
@@ -713,12 +729,12 @@ ${v.tutti ? `<h2>Oppure parti: viaggi di gruppo ${esc(o.quando)}</h2>
 <div class="list">${[...v.daQui.slice(0, 8), ...v.senzaVolo.slice(0, v.daQui.length ? 4 : 10)].map(schedaViaggio).join("\n")}</div>
 ${v.pagina ? `<p class="m"><a class="lnk" href="${SITE}${v.pagina}">Tutti i ${v.tutti} viaggi di gruppo ${esc(o.quando)} →</a></p>` : ""}` : ""}
 ${faqHtml(faq)}
-<h2>Le altre domande</h2><div class="tags"><a href="${rel(domandeUrl())}">❓ Cosa fare a ${esc(CITY_NAME)}: tutte le domande</a>${altre.filter(occasioneUtile).map(x => `<a href="${rel(occasioneUrl(x))}">${x.emoji} Cosa fare ${esc(x.quando)}</a>`).join("")}</div>
+<h2>Le altre domande</h2><div class="tags"><a href="${rel(domandeUrl())}">❓ Cosa fare a ${esc(CITY_NAME)}: tutte le domande</a>${altre.filter(occasioneUtile).map(x => `<a href="${rel(occasioneUrl(x))}">${x.emoji} ${esc(x.domanda ? cap(x.nome) : `Cosa fare ${x.quando}`)}</a>`).join("")}</div>
 `;
   const ld = [jsonld({ "@context": "https://schema.org", "@type": "Article", headline: h1, description: cut(lead, 158), url, inLanguage: "it-IT", dateModified: dateKey(NOW, DEFAULT_TZ), author: { "@type": "Organization", name: "anyplans", url: SITE } }),
     ev.length ? jsonld({ "@context": "https://schema.org", "@type": "ItemList", name: h1, url, itemListElement: ev.slice(0, 30).map((p, i) => ({ "@type": "ListItem", position: i + 1, url: eventUrl(p), name: p.title })) }) : "",
     faqLd(faq)].filter(Boolean).join("\n");
-  return { html: layout({ title: `${cut(`Cosa fare ${o.quando} a ${CITY_NAME}${ev.length ? `: ${ev.length} eventi` : ""}`, 60)} | anyplans`, description: cut(lead, 160), url, image: OG_DEFAULT, jsonLd: ld, body, alt: null }), lastmod: NOW };
+  return { html: layout({ title: `${cut(o.titolo ? o.titolo(CITY_NAME, tema.length) : `Cosa fare ${o.quando} a ${CITY_NAME}${ev.length ? `: ${ev.length} eventi` : ""}`, 60)} | anyplans`, description: cut(lead, 160), url, image: OG_DEFAULT, jsonLd: ld, body, alt: null }), lastmod: NOW };
 }
 function domandePage() {
   const url = domandeUrl();
@@ -745,7 +761,7 @@ function domandePage() {
   const coperti = [...new Set(["exhibition", "show", "cinema", "culture"].flatMap(sp => fut(tipoIx(sp))))];
   add(`Cosa fare a ${CITY_NAME} quando piove?`, coperti.length ? `Al chiuso ci sono ${coperti.length} eventi tra mostre, teatro, cinema e incontri.` : "", null);
   if (venues.length) add(`Quali sono i locali con più eventi a ${CITY_NAME}?`, `${joinIt(venues.slice(0, 5).map(v => v.nome))}: ognuno ha la sua pagina con le prossime date.`, rel(venuesUrl()));
-  for (const o of OCCASIONI) if (occasioneUtile(o)) { const n = eventiOccasione(o).length; add(`Cosa fare ${o.quando} a ${CITY_NAME}?`, n ? `Per ora ci sono ${n} eventi in calendario; la pagina si aggiorna ogni notte e ha anche i viaggi di gruppo per quei giorni.` : `Il calendario non è ancora uscito; intanto ci sono i viaggi di gruppo per quei giorni.`, rel(occasioneUrl(o))); }
+  for (const o of OCCASIONI) if (occasioneUtile(o)) { const n = eventiOccasione(o).length; add(o.domanda ? o.domanda(CITY_NAME) : `Cosa fare ${o.quando} a ${CITY_NAME}?`, n ? (o.tema ? `${n} in programma ${o.periodo}, con data, ora e luogo di ognuna.` : `Per ora ci sono ${n} eventi in calendario; la pagina si aggiorna ogni notte e ha anche i viaggi di gruppo per quei giorni.`) : `Il calendario non è ancora uscito; intanto ci sono i viaggi di gruppo per quei giorni.`, rel(occasioneUrl(o))); }
   const h1 = `Cosa fare a ${CITY_NAME}: le domande, con le risposte di oggi`;
   const lead = `Le domande che si fanno su ${CITY_NAME}, a Google e agli assistenti, con le risposte fatte sui dati di stanotte: ${upcomingPages.length} eventi in programma a ${CITY_NAME} e provincia.`;
   const body = `
