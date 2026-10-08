@@ -339,6 +339,7 @@ ${faqHtml(faq)}
       dest: t.dest.filter(x => PAESE[x]).map(x => PAESE[x].name), s: t.fut[0].s }));
     await mkdir(path.join(OUT, "tools", "stato"), { recursive: true });
     await writeFile(path.join(OUT, "tools", "stato", "viaggi-occasioni.json"), JSON.stringify({ letti_il: seenIt,
+      totali: Object.fromEntries(Object.entries(occasioni).map(([k, l]) => [k, l.length])),
       pagine: { capodanno: `${BASE}/capodanno/`, ...Object.fromEntries(occPagine.map(([u], i) => [OCC.filter(o => (occasioni[o.key] || []).length >= 3)[i].key, u])) },
       ...Object.fromEntries(Object.entries(occasioni).map(([k, l]) => [k, compatto(l)])) }));
   }
