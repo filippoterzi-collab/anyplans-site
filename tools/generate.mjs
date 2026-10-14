@@ -109,6 +109,11 @@ if (!process.argv.includes("--citta") && !INDICE && !FIXTURE) {
   process.exit(0);
 }
 
+// Diagnostica (14/10/2026): in GitHub Actions ogni città scrive memoria e ora ogni 15 s, per capire perché la
+// macchina si spegne a metà Milano senza un errore. Si toglie quando le corse tornano a finire.
+if (process.env.GITHUB_ACTIONS) { const os = await import("node:os"), t0 = Date.now();
+  setInterval(() => { const m = process.memoryUsage();
+    console.log(`[diag ${Math.round((Date.now() - t0) / 1000)}s] rss ${(m.rss / 1e9).toFixed(2)} GB, heap ${(m.heapUsed / 1e9).toFixed(2)} GB, esterna ${(m.external / 1e9).toFixed(2)} GB, libera ${(os.freemem() / 1e9).toFixed(1)} GB, carico ${os.loadavg()[0].toFixed(1)}`); }, 15000).unref(); }
 const SB_URL = process.env.SUPABASE_URL;
 const SB_ANON = process.env.SUPABASE_ANON_KEY;
 
