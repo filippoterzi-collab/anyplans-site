@@ -77,12 +77,21 @@ if (!process.argv.includes("--citta") && !INDICE && !FIXTURE) {
   const { spawnSync } = await import("node:child_process");
   const self = fileURLToPath(import.meta.url);
   // deno serve per provarlo qui sul mac (node non c'è); in GitHub Actions gira node
-  const base = globalThis.Deno ? [Deno.execPath(), "run", "-A", self] : [process.execPath, self];
+  // Tetto alla memoria di ogni città (14/10/2026): dal 07/10 ogni corsa moriva con "the runner has received a
+  // shutdown signal" a metà di Milano, senza una riga di log. Con il tetto, se una città sfora muore solo lei
+  // (e si riprova alla fine), invece di far spegnere la macchina di GitHub con tutte le altre.
+  const base = globalThis.Deno ? [Deno.execPath(), "run", "-A", "--v8-flags=--max-old-space-size=4096", self] : [process.execPath, "--max-old-space-size=4096", self];
+  const os = await import("node:os"), { statfsSync } = await import("node:fs"), T0 = Date.now();
+  const risorse = () => { let disco = "?"; try { const f = statfsSync(OUT); disco = (f.bavail * f.bsize / 1e9).toFixed(1) + " GB"; } catch {}
+    return `memoria libera ${(os.freemem() / 1e9).toFixed(1)}/${(os.totalmem() / 1e9).toFixed(1)} GB, disco libero ${disco}, ${Math.round((Date.now() - T0) / 1000)} s`; };
   // Una città che fallisce non ferma le altre (4/10/2026: un timeout del database su Prato ha buttato
   // la corsa di tutte e 52). Il processo di una città muore prima di toccare la sua cartella, quindi le
   // sue pagine restano quelle di ieri; si riprova una volta alla fine, quando il database è più scarico.
   // Si fallisce solo se le città saltate sono troppe (il problema non è un momento storto) o se salta l'indice.
-  const corri = (passo) => spawnSync(base[0], [...base.slice(1), "--out", OUT, ...passo], { stdio: "inherit" }).status === 0;
+  const corri = (passo) => { console.log(`generate: ${passo.join(" ")} — ${risorse()}`);
+    const r = spawnSync(base[0], [...base.slice(1), "--out", OUT, ...passo], { stdio: "inherit" });
+    if (r.status !== 0) console.error(`generate: ${passo.join(" ")} uscita ${r.status} ${r.signal || ""}`);
+    return r.status === 0; };
   let saltate = [];
   for (const c of CITTA) if (!corri(["--citta", c.slug])) { console.error(`generate: ${c.slug} è fallita, la riprovo alla fine`); saltate.push(c.slug); }
   if (saltate.length) {
@@ -1339,22 +1348,36 @@ function goingPhrase(n, p, long) {
 
 // ── "Altre cose vicino, stasera" (UI.md §3.17): candidati scritti nella pagina alla generazione, filtrati alla visita senza rete ─
 const NEARBY_KM = 10, NEARBY_MAX = 12;
-function nearbyCandidates(p) {
-  if (p.lat == null || p.lng == null) return [];
-  const d0 = dateKey(NOW, p.tz), d1 = dateKey(new Date(NOW.getTime() + 86400e3), p.tz);
-  const out = [];
+// Gli eventi di oggi e di domani si calcolano UNA volta per fuso orario, non per ogni pagina (08/10/2026):
+// prima per ogni pagina si scorrevano tutti gli eventi futuri chiamando dateKey (Intl, lento) su ogni data,
+// decine di milioni di chiamate a Milano, e la corsa notturna veniva fermata da GitHub dopo un'ora.
+const _nearbyPool = new Map();
+function nearbyPool(tz) {
+  if (_nearbyPool.has(tz)) return _nearbyPool.get(tz);
+  const d0 = dateKey(NOW, tz), d1 = dateKey(new Date(NOW.getTime() + 86400e3), tz);
+  const pool = [];
   for (const q of upcomingPages) {
-    if (q.slug === p.slug || q.id === p.id) continue;
     if (q.lat == null || q.lng == null) continue;
     if (["market", "exhibition", "singles"].includes(q.sport)) continue;
+    if (q.max && q.going >= q.max) continue;
     for (const d of q.up) {
       const dk = dateKey(d.start, q.tz); if (dk !== d0 && dk !== d1) continue;
       if (d.end && d.end - d.start > 12 * 3600e3) continue;
-      if (q.max && q.going >= q.max) continue;
+      pool.push({ q, d }); break;   // una data per evento
+    }
+  }
+  _nearbyPool.set(tz, pool);
+  return pool;
+}
+function nearbyCandidates(p) {
+  if (p.lat == null || p.lng == null) return [];
+  const out = [];
+  for (const { q, d } of nearbyPool(p.tz)) {
+    if (q.slug === p.slug || q.id === p.id) continue;
+    {
       const km = distKm(p, q); if (km > NEARBY_KM) continue;
       out.push({ u: rel(eventUrl(q)), t: cut(q.title, 70), e: q.emoji, s: d.start.toISOString(), en: d.end ? d.end.toISOString() : null,
                  w: cut(String(q.meeting || q.town || "").split(",").slice(0, 2).join(","), 60), km: Math.round(km), g: q.going, x: q.source !== "ugc" ? 1 : 0, solo: soloLevel(q) });
-      break;   // una data per evento
     }
   }
   out.sort((a, b) => a.s.localeCompare(b.s) || a.km - b.km);
