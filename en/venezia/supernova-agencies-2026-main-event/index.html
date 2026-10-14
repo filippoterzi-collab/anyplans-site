@@ -46,6 +46,17 @@ main{max-width:860px;margin:0 auto;padding:16px 22px 70px;display:flex;flex-dire
 .cover img{width:100%;height:100%;object-fit:cover;display:block}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
 .chip{background:var(--tint);color:var(--blue);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+.chip.solo{font-weight:600;font-size:12px;padding:0 8px;line-height:22px;white-space:nowrap}.chip.solo.pick{background:var(--blue);color:#fff}
+.solowhy{display:flex;align-items:flex-start;gap:8px;font-size:13.5px;color:var(--ink);line-height:1.35}
+.nearby{display:flex;flex-direction:column;gap:8px}.nearby h2{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.045em;line-height:1}
+.nearby ul{list-style:none;background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:16px;overflow:hidden}
+.nearby li+li{border-top:1px solid rgba(25,25,25,.08)}.nearby li a{display:grid;grid-template-columns:44px minmax(0,1fr) 16px;gap:12px;align-items:center;padding:10px 12px;min-height:64px;color:inherit;text-decoration:none}
+.nearby .em{width:44px;height:44px;border-radius:12px;background:var(--tint);display:grid;place-items:center;font-size:22px}
+.nearby .c{display:flex;flex-direction:column;gap:2px;min-width:0}.nearby .t{font-weight:700;font-size:15px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nearby .m{font-size:13px;color:var(--grey)}.nearby .m .soon{color:#B4530A}.nearby .m .now{color:#137333}
+.nearby .m3{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-top:2px}.nearby .g{font-size:13px;font-weight:700;color:#137333}
+.nearby .ar{color:var(--grey);font-size:16px}.nearby .lnk{display:inline-block;padding:12px 0;font-weight:700}
+@media (max-width:599px){.nearby li:nth-child(n+4){display:none}}
 .chip.w{background:#fff;border:1.5px solid rgba(25,25,25,.12);color:var(--ink)}
 .chip.past{background:#fff;border:1.5px solid rgba(25,25,25,.12);color:var(--grey)}
 .box{background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:18px;padding:20px 22px;display:flex;flex-direction:column;gap:12px}
@@ -159,12 +170,13 @@ footer a:hover{color:var(--ink)}
   <a class="btn ghost" href="/?citta=venezia">See all events</a>
   <a class="lnk" href="https://luma.com/supernova-agencies-26" rel="noopener nofollow">Details on the official website</a>
 </div>
+
 <div class="box" id="domande"><h2>Frequently asked questions</h2><details><summary>When was Supernova Agencies 2026 | Main Event?</summary><p>Supernova Agencies 2026 | Main Event already took place: the last date was Thursday, 1 October 2026. If it comes back, the new dates appear on this anyplans page.</p></details><details><summary>Where is Supernova Agencies 2026 | Main Event?</summary><p>The meeting point is Via Adriano Olivetti, 1, Provincia di Treviso, in the province of Venice; the page has a link to the map.</p></details><details><summary>How much does Supernova Agencies 2026 | Main Event cost?</summary><p>Supernova Agencies 2026 | Main Event is free: no ticket needed (Gratis, registrazione su Luma).</p></details><details><summary>Who organises Supernova Agencies 2026 | Main Event?</summary><p>It is organised by Supernova Agencies 2026. anyplans collects the event and shows you who else is going.</p></details><details><summary>How do I join Supernova Agencies 2026 | Main Event?</summary><p>Sign up on anyplans with your email, open the event and say you&#39;re going: you see who organises it and who else is coming, so you don&#39;t go alone. You must be 18 or older.</p></details></div>
 <p class="m"><a class="lnk" href="/en/venezia/venues/supernova-agencies-2026/">All events at Supernova Agencies 2026 (0)</a></p>
-<h2>Similar events</h2><div class="list"><a class="card" href="https://anyplans.in/en/venezia/regolamento-ecodesign-regolamento-esg-washing-e-regolamento-/"><span class="em">📚</span><span><span class="t">Regolamento EcoDesign, Regolamento ESG Washing e Regolamento Rating ESG</span><br><span class="m">Thursday 8 October at 16:30 · Via Giacomo Matteotti, 3, Spinea</span></span></a>
-<a class="card" href="https://anyplans.in/en/venezia/visite-guidate-del-biodiversity-gateway/"><span class="em">📚</span><span><span class="t">Visite guidate del Biodiversity Gateway</span><br><span class="m">Friday 9 October at 15:00 · Palazzina Canonica CNR-ISMAR, Venezia</span></span></a>
-<a class="card" href="https://anyplans.in/en/venezia/guided-tour-eng-vdw-interior-design-2026/"><span class="em">📚</span><span><span class="t">Guided Tour (ENG) | VDW INTERIOR DESIGN 2026</span><br><span class="m">Friday 9 October at 15:00 · Combo, Venezia, Venezia</span></span></a>
-<a class="card" href="https://anyplans.in/en/venezia/voci-e-pagine-del-biodiversity-gateway/"><span class="em">📚</span><span><span class="t">Voci e Pagine del Biodiversity Gateway</span><br><span class="m">Friday 9 October at 17:00 · Palazzina Canonica CNR-ISMAR, Venezia</span></span></a></div>
+<h2>Similar events</h2><div class="list"><a class="card" href="https://anyplans.in/en/venezia/hidden-venice-secrets-and-stories/"><span class="em">📚</span><span><span class="t">Hidden Venice: Secrets and Stories</span><br><span class="m">Thursday 15 October at 10:30 · Campo della Maddalena, Venezia</span></span></a>
+<a class="card" href="https://anyplans.in/en/venezia/visite-guidate-in-italiano-geografie-della-tavola/"><span class="em">📚</span><span><span class="t">Visite Guidate (in italiano) | GEOGRAFIE DELLA TAVOLA</span><br><span class="m">Thursday 15 October at 11:00 · Oriental Art Museum in Venice, Venezia</span></span></a>
+<a class="card" href="https://anyplans.in/en/venezia/venice-hybrid-agenda-launch-event-2027/"><span class="em">📚</span><span><span class="t">Venice Hybrid Agenda Launch Event 2027</span><br><span class="m">Thursday 15 October at 16:00 · The Human Safety Net | Venice, Venezia</span></span></a>
+<a class="card" href="https://anyplans.in/en/venezia/conferenza-lo-spazio-che-cura/"><span class="em">📚</span><span><span class="t">Conferenza | LO SPAZIO CHE CURA</span><br><span class="m">Thursday 15 October at 16:30 · Università Iuav di Venezia – Terese, Venezia</span></span></a></div>
 
 </main>
 <footer><div class="wrap">

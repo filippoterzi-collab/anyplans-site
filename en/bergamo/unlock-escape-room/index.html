@@ -47,6 +47,17 @@ main{max-width:860px;margin:0 auto;padding:16px 22px 70px;display:flex;flex-dire
 .cover img{width:100%;height:100%;object-fit:cover;display:block}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
 .chip{background:var(--tint);color:var(--blue);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+.chip.solo{font-weight:600;font-size:12px;padding:0 8px;line-height:22px;white-space:nowrap}.chip.solo.pick{background:var(--blue);color:#fff}
+.solowhy{display:flex;align-items:flex-start;gap:8px;font-size:13.5px;color:var(--ink);line-height:1.35}
+.nearby{display:flex;flex-direction:column;gap:8px}.nearby h2{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.045em;line-height:1}
+.nearby ul{list-style:none;background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:16px;overflow:hidden}
+.nearby li+li{border-top:1px solid rgba(25,25,25,.08)}.nearby li a{display:grid;grid-template-columns:44px minmax(0,1fr) 16px;gap:12px;align-items:center;padding:10px 12px;min-height:64px;color:inherit;text-decoration:none}
+.nearby .em{width:44px;height:44px;border-radius:12px;background:var(--tint);display:grid;place-items:center;font-size:22px}
+.nearby .c{display:flex;flex-direction:column;gap:2px;min-width:0}.nearby .t{font-weight:700;font-size:15px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nearby .m{font-size:13px;color:var(--grey)}.nearby .m .soon{color:#B4530A}.nearby .m .now{color:#137333}
+.nearby .m3{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-top:2px}.nearby .g{font-size:13px;font-weight:700;color:#137333}
+.nearby .ar{color:var(--grey);font-size:16px}.nearby .lnk{display:inline-block;padding:12px 0;font-weight:700}
+@media (max-width:599px){.nearby li:nth-child(n+4){display:none}}
 .chip.w{background:#fff;border:1.5px solid rgba(25,25,25,.12);color:var(--ink)}
 .chip.past{background:#fff;border:1.5px solid rgba(25,25,25,.12);color:var(--grey)}
 .box{background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:18px;padding:20px 22px;display:flex;flex-direction:column;gap:12px}
@@ -127,7 +138,7 @@ footer a:hover{color:var(--ink)}
 
 <nav class="crumbs" aria-label="Breadcrumb"><a href="/en/">anyplans</a><span>›</span><a href="/en/bergamo/things-to-do/">Bergamo</a><span>›</span><a href="/en/bergamo/talks-and-culture/">Talks &amp; culture</a><span>›</span><span>Unlock escape room</span></nav>
 <div class="cover"><a id="map" href="https://www.google.com/maps/search/?api=1&amp;query=46.036017%2C10.006615" rel="noopener" aria-label="Open in Maps"></a></div>
-<div class="chips"><span class="chip">📚 Talks &amp; culture</span><span class="chip w">Free</span><a class="chip w" href="/en/bergamo/venues/bergamo-biblioteca-civica-antonio-tiraboschi/">📍 Bergamo - Biblioteca Civica Antonio Tiraboschi</a></div>
+<div class="chips"><span class="chip">📚 Talks &amp; culture</span><span class="chip w">Free</span><span class="chip solo">You can go alone</span><a class="chip w" href="/en/bergamo/venues/bergamo-biblioteca-civica-antonio-tiraboschi/">📍 Bergamo - Biblioteca Civica Antonio Tiraboschi</a></div>
 <h1>Unlock escape room</h1>
 <div class="when hero-when"><div class="datebox"><div class="mo">Nov</div><div class="d">14</div></div>
   <div><div class="t"><span class="rel-day" data-start="2026-11-14T13:30:00.000Z"></span>Saturday 14 November · <b>14:30</b><b class="rel" data-start="2026-11-14T13:30:00.000Z"></b></div>
@@ -135,6 +146,7 @@ footer a:hover{color:var(--ink)}
 <div class="box">
   <h2>Are you in?</h2>
   <div class="cta"><a class="btn" href="https://www.rbbg.it/library/bergamo-biblioteca-civica-antonio-tiraboschi/cal/CDF-aHR0cHM6Ly9iZXJnYW1vLmNvc2VkYWZhcmUubmV0L2V2ZW50aS9hdHRpdml0YS0vYXR0aXZpdGEtbHVkaWNoZS91bmxvY2stZXNjYXBlLXJvb20tNjM0NzEuaHRtbA/" rel="noopener nofollow">I'm going</a><span class="m">Organised by BERGAMO - BIBLIOTECA CIVICA ANTONIO TIRABOSCHI: be the first to join</span></div>
+  <p class="solowhy"><span class="chip solo">You can go alone</span><span>You go to learn or to listen: bringing someone along isn&#39;t needed.</span></p>
 </div>
 <p class="lead">Talks &amp; culture in Biblioteca civica Antonio Tiraboschi - Bergamo (Bergamo), Bergamo, Saturday 14 November at 14:30. Free (Verifica costo e prenotazione sulla scheda della biblioteca).</p>
 
@@ -157,12 +169,19 @@ footer a:hover{color:var(--ink)}
   <a class="btn ghost" href="/?citta=bergamo">See all events</a>
   
 </div>
+<section class="nearby" id="vicino" data-past="0" data-place="">
+<h2 id="vicino-h">More things nearby</h2>
+<p class="m" id="vicino-sub">Within 10 km of here.</p>
+<ul id="vicino-list"><li><a href="/en/bergamo/gdl-spaginando-la-lunga-vita-di-marianna-ucria-di-dacia-mara/" aria-label="GdL Spaginando: “La lunga vita di Marianna Ucria” di Dacia Maraini, 20:45, Biblioteca Gian Pietro Galizzi - Bergamo (Bergamo), Bergamo"><span class="em" aria-hidden="true">📚</span><span class="c"><span class="t">GdL Spaginando: “La lunga vita di Marianna Ucria” di Dacia Maraini</span><span class="m">20:45 · Biblioteca Gian Pietro Galizzi - Bergamo (Bergamo), Bergamo</span><span class="m3"><span class="chip solo">You can go alone</span></span></span><span class="ar" aria-hidden="true">›</span></a></li></ul>
+<a class="lnk" id="vicino-map" href="/?citta=bergamo&quando=sera">All tonight's events on the map →</a>
+<script type="application/json" id="vicino-data">[{"u":"/en/bergamo/gdl-spaginando-la-lunga-vita-di-marianna-ucria-di-dacia-mara/","t":"GdL Spaginando: “La lunga vita di Marianna Ucria” di Dacia Maraini","e":"📚","s":"2026-10-14T18:45:00.000Z","en":null,"w":"Biblioteca Gian Pietro Galizzi - Bergamo (Bergamo), Bergamo","km":0,"g":0,"x":1,"solo":"auto"},{"u":"/en/bergamo/ci-incontriamo-in-un-libro-giovedi-in-biblioteca-ambiveri/","t":"Ci Incontriamo In Un Libro? giovedì in biblioteca Ambiveri","e":"📚","s":"2026-10-15T14:45:00.000Z","en":null,"w":"Biblioteca Betty Ambiveri - Bergamo (Bergamo), Bergamo","km":0,"g":0,"x":1,"solo":"auto"},{"u":"/en/bergamo/i-meccanismi-dell-editoria/","t":"I meccanismi dell’editoria","e":"📚","s":"2026-10-15T16:00:00.000Z","en":null,"w":"Sala Mimmo Boninelli - Biblioteca civica Antonio…","km":0,"g":0,"x":1,"solo":"auto"}]</script>
+</section>
 <div class="box" id="domande"><h2>Frequently asked questions</h2><details><summary>When is Unlock escape room?</summary><p>Unlock escape room takes place on Saturday 14 November at 14:30, in Biblioteca civica Antonio Tiraboschi - Bergamo (Bergamo), Bergamo.</p></details><details><summary>Where is Unlock escape room?</summary><p>The meeting point is Biblioteca civica Antonio Tiraboschi - Bergamo (Bergamo), Bergamo, in the province of Bergamo; the page has a link to the map.</p></details><details><summary>How much does Unlock escape room cost?</summary><p>Unlock escape room is free: no ticket needed (Verifica costo e prenotazione sulla scheda della biblioteca).</p></details><details><summary>Who organises Unlock escape room?</summary><p>It is organised by BERGAMO - BIBLIOTECA CIVICA ANTONIO TIRABOSCHI. anyplans collects the event and shows you who else is going.</p></details><details><summary>How do I join Unlock escape room?</summary><p>Sign up on anyplans with your email, open the event and say you&#39;re going: you see who organises it and who else is coming, so you don&#39;t go alone. You must be 18 or older.</p></details></div>
-<p class="m"><a class="lnk" href="/en/bergamo/venues/bergamo-biblioteca-civica-antonio-tiraboschi/">All events at Bergamo - Biblioteca Civica Antonio Tiraboschi (30)</a></p>
-<h2>Similar events</h2><div class="list"><a class="card" href="https://anyplans.in/en/bergamo/si-colora-con-i-pastelli/"><span class="em">📚</span><span><span class="t">Si colora con i pastelli</span><br><span class="m">From 7 October to 16 December, 11 dates · Biblioteca Civica di Gorlago - Gorlago (Bergamo), Gorlago</span></span></a>
-<a class="card" href="https://anyplans.in/en/bergamo/storie-d-argento-a-tavola/"><span class="em">📚</span><span><span class="t">STORIE D&#39;ARGENTO A TAVOLA</span><br><span class="m">From 7 October to 8 October, 2 dates · Biblioteca comunale di Martinengo Il Filandone - Martinengo (Bergamo), Martinengo</span></span></a>
-<a class="card" href="https://anyplans.in/en/bergamo/a-tutta-scienza-lombrichetti-in-movimento/"><span class="em">📚</span><span><span class="t">A TUTTA SCIENZA! LOMBRICHETTI IN MOVIMENTO</span><br><span class="m">Wednesday 7 October at 16:30 · Biblioteca Don L. Milani di Verdellino - Verdellino (Bergamo), Verdellino</span></span></a>
-<a class="card" href="https://anyplans.in/en/bergamo/ci-incontriamo-in-un-libro-mercoledi-in-biblioteca-valtesse/"><span class="em">📚</span><span><span class="t">Ci Incontriamo In Un Libro? mercoledì in biblioteca Valtesse</span><br><span class="m">From 7 October to 28 October, 4 dates · Biblioteca di Valtesse - Bergamo (Bergamo), Bergamo</span></span></a></div>
+<p class="m"><a class="lnk" href="/en/bergamo/venues/bergamo-biblioteca-civica-antonio-tiraboschi/">All events at Bergamo - Biblioteca Civica Antonio Tiraboschi (26)</a></p>
+<h2>Similar events</h2><div class="list"><a class="card" href="https://anyplans.in/en/bergamo/aperitalking-a-i-al-lavoro-cosa-cambia-davvero/"><span class="em">📚</span><span><span class="t">APERITALKING  A.I. al lavoro...cosa cambia davvero</span><br><span class="m">Wednesday 14 October at 19:45 · Via dello Statuto, 25, Bergamo</span></span></a>
+<a class="card" href="https://anyplans.in/en/bergamo/gdl-brusaporto/"><span class="em">📚</span><span><span class="t">GDL BRUSAPORTO</span><br><span class="m">Wednesday 14 October at 20:30 · Biblioteca di Brusaporto - Centro Culturale - Brusaporto (Bergamo), Brusaporto</span></span></a>
+<a class="card" href="https://anyplans.in/en/bergamo/otto-ragazze-con-aurora-tamigio/"><span class="em">📚</span><span><span class="t">&quot;Otto ragazze&quot; con Aurora Tamigio</span><br><span class="m">Wednesday 14 October at 20:45 · Biblioteca Comunale, Pisogne</span></span></a>
+<a class="card" href="https://anyplans.in/en/bergamo/dove-va-il-mondo/"><span class="em">📚</span><span><span class="t">DOVE VA IL MONDO?</span><br><span class="m">Wednesday 14 October at 20:45 · Via E. Agazzi, 14</span></span></a></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script>
   (function(){ var lat = 46.036017, lng = 10.006615;
@@ -185,6 +204,32 @@ footer a:hover{color:var(--ink)}
     else if (min > 0 && diffDays <= 7) txt = T.in + diffDays + (diffDays === 1 ? T.day : T.days);
     el.textContent = txt ? "· " + txt : "";
   })();
+</script><script>
+(function(){ var sec = document.getElementById("vicino"), raw = document.getElementById("vicino-data"); if (!sec || !raw) return;
+  var C; try { C = JSON.parse(raw.textContent); } catch (_) { return; }
+  var T = {"tonight":"More things nearby, tonight","tomorrow":"More things nearby, tomorrow evening","pastT":"It's over, but tonight there's more nearby","pastTm":"It's over, but tomorrow evening there's more nearby","mapT":"All tonight's events on the map →","mapTm":"All tomorrow's events on the map →","empty":"Nothing else nearby tonight.","next":"The next few days on the map →","inMin":"in ","min":" min","now":"happening now","solo":"You can go alone","g1":" is going","gN":" are going","from":" from anyplans"};
+  var past = sec.dataset.past === "1", esc = function(t){ return String(t).replace(/[&<>"]/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var fmt = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+  var dk = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" });
+  function gp(x){ if (!x.g) return ""; return x.g + (x.x ? T.from : "") + (x.g === 1 ? T.g1 : T.gN); }
+  function build(){
+    var now = new Date(), today = dk.format(now), tom = dk.format(new Date(now.getTime() + 864e5));
+    var live = C.filter(function(x){ var s = new Date(x.s), e = x.en ? new Date(x.en) : new Date(s.getTime() + 3 * 36e5); return e > now && s.getTime() >= now.getTime() - 30 * 6e4; });
+    var hour = function(x){ return +fmt.format(new Date(x.s)).slice(0, 2); };
+    var ton = live.filter(function(x){ return dk.format(new Date(x.s)) === today && hour(x) >= 18; }), day = "sera", rows = ton;
+    if (ton.length < 2) { var tm = live.filter(function(x){ return dk.format(new Date(x.s)) === tom; }), tme = tm.filter(function(x){ return hour(x) >= 18; }); rows = tme.length >= 2 ? tme : tme.concat(tm.filter(function(x){ return hour(x) < 18; })); day = "domani"; if (!rows.length && ton.length) { rows = ton; day = "sera"; } }
+    var h = document.getElementById("vicino-h"), sub = document.getElementById("vicino-sub"), ul = document.getElementById("vicino-list"), mp = document.getElementById("vicino-map");
+    if (!rows.length) { h.textContent = past ? T.pastT : T.tonight; ul.innerHTML = ""; sub.textContent = T.empty; mp.textContent = T.next; mp.href = "/?citta=bergamo"; return; }
+    h.textContent = past ? (day === "sera" ? T.pastT : T.pastTm) : (day === "sera" ? T.tonight : T.tomorrow);
+    mp.textContent = day === "sera" ? T.mapT : T.mapTm; mp.href = "/?citta=bergamo&quando=" + day;
+    ul.innerHTML = rows.slice(0, 4).map(function(x, i){ var s = new Date(x.s), min = Math.round((s - now) / 6e4), rel = min < 0 ? '<b class="now">' + T.now + '</b>' : min <= 90 ? '<b class="soon">' + T.inMin + min + T.min + '</b>' : "";
+      return '<li><a href="' + esc(x.u) + '" data-pos="' + (i + 1) + '"><span class="em" aria-hidden="true">' + x.e + '</span><span class="c"><span class="t">' + esc(x.t) + '</span><span class="m">' + fmt.format(s) + (rel ? " · " + rel : "") + (x.w ? " · " + esc(x.w) : "") + (x.km >= 1 ? " · " + x.km + " km" : "") + '</span>' + (x.g > 0 || x.solo ? '<span class="m3">' + (x.g > 0 ? '<span class="g">' + gp(x) + '</span>' : '') + (x.solo ? '<span class="chip solo' + (x.solo === "pick" ? " pick" : "") + '">' + T.solo + '</span>' : '') + '</span>' : '') + '</span><span class="ar" aria-hidden="true">›</span></a></li>'; }).join("");
+    ul.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ if (window.apTrack) apTrack("seo_vicino_tap", a.getAttribute("href") + "?pos=" + a.dataset.pos); }); });
+    mp.onclick = function(){ if (window.apTrack) apTrack("seo_vicino_mappa", location.pathname + "?d=" + day); };
+    if (!build.seen && "IntersectionObserver" in window) { build.seen = true; new IntersectionObserver(function(en, o){ if (en.some(function(x){ return x.isIntersecting; })) { o.disconnect(); if (window.apTrack) apTrack("seo_vicino_view", location.pathname + "?n=" + Math.min(rows.length, 4) + "&d=" + day); } }, { threshold: .5 }).observe(sec); }
+  }
+  build(); setInterval(build, 60e3);
+})();
 </script>
 </main>
 <footer><div class="wrap">

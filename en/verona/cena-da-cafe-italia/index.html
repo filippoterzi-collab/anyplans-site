@@ -46,6 +46,17 @@ main{max-width:860px;margin:0 auto;padding:16px 22px 70px;display:flex;flex-dire
 .cover img{width:100%;height:100%;object-fit:cover;display:block}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
 .chip{background:var(--tint);color:var(--blue);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+.chip.solo{font-weight:600;font-size:12px;padding:0 8px;line-height:22px;white-space:nowrap}.chip.solo.pick{background:var(--blue);color:#fff}
+.solowhy{display:flex;align-items:flex-start;gap:8px;font-size:13.5px;color:var(--ink);line-height:1.35}
+.nearby{display:flex;flex-direction:column;gap:8px}.nearby h2{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.045em;line-height:1}
+.nearby ul{list-style:none;background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:16px;overflow:hidden}
+.nearby li+li{border-top:1px solid rgba(25,25,25,.08)}.nearby li a{display:grid;grid-template-columns:44px minmax(0,1fr) 16px;gap:12px;align-items:center;padding:10px 12px;min-height:64px;color:inherit;text-decoration:none}
+.nearby .em{width:44px;height:44px;border-radius:12px;background:var(--tint);display:grid;place-items:center;font-size:22px}
+.nearby .c{display:flex;flex-direction:column;gap:2px;min-width:0}.nearby .t{font-weight:700;font-size:15px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nearby .m{font-size:13px;color:var(--grey)}.nearby .m .soon{color:#B4530A}.nearby .m .now{color:#137333}
+.nearby .m3{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-top:2px}.nearby .g{font-size:13px;font-weight:700;color:#137333}
+.nearby .ar{color:var(--grey);font-size:16px}.nearby .lnk{display:inline-block;padding:12px 0;font-weight:700}
+@media (max-width:599px){.nearby li:nth-child(n+4){display:none}}
 .chip.w{background:#fff;border:1.5px solid rgba(25,25,25,.12);color:var(--ink)}
 .chip.past{background:#fff;border:1.5px solid rgba(25,25,25,.12);color:var(--grey)}
 .box{background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:18px;padding:20px 22px;display:flex;flex-direction:column;gap:12px}
@@ -130,7 +141,13 @@ footer a:hover{color:var(--ink)}
 <h1>Cena da Cafè Italia: 7 posti liberi</h1>
 
 <p class="lead">Dinners &amp; aperitivo in Cafè Italia, Bardolino: it already took place, the last date was Wednesday, 23 September 2026.</p>
-<div class="box in"><h2>This event is over</h2><div class="m">The last date was Wednesday, 23 September 2026. If it comes back, the new dates appear here.</div><div class="cta"><a class="btn" href="/?citta=verona">See what's on now</a></div></div>
+<div class="box in"><h2>This event is over</h2><div class="m">The last date was Wednesday, 23 September 2026. If it comes back, the new dates appear here.</div><div class="cta"><a class="btn" href="/?citta=verona">See what's on now</a></div></div><section class="nearby" id="vicino" data-past="1" data-place="Bardolino">
+<h2 id="vicino-h">It's over, but tonight there's more nearby</h2>
+<p class="m" id="vicino-sub">Within 10 km of Bardolino.</p>
+<ul id="vicino-list"><li><a href="/en/verona/cena-da-pizzeria-olimpia/" aria-label="Cena da Pizzeria Olimpia: 8 posti liberi, 18:00, Pizzeria Olimpia, Caprino Veronese, 10 km"><span class="em" aria-hidden="true">🍽️</span><span class="c"><span class="t">Cena da Pizzeria Olimpia: 8 posti liberi</span><span class="m">18:00 · Pizzeria Olimpia, Caprino Veronese · 10 km</span><span class="m3"><span class="chip solo">You can go alone</span></span></span><span class="ar" aria-hidden="true">›</span></a></li><li><a href="/en/verona/motown-avenue-soul/" aria-label="Motown avenue - Soul, 20:30, Pizzeria Olimpia, Caprino Veronese, 10 km"><span class="em" aria-hidden="true">🎭</span><span class="c"><span class="t">Motown avenue - Soul</span><span class="m">20:30 · Pizzeria Olimpia, Caprino Veronese · 10 km</span></span><span class="ar" aria-hidden="true">›</span></a></li></ul>
+<a class="lnk" id="vicino-map" href="/?citta=verona&quando=sera">All tonight's events on the map →</a>
+<script type="application/json" id="vicino-data">[{"u":"/en/verona/cena-da-pizzeria-olimpia/","t":"Cena da Pizzeria Olimpia: 8 posti liberi","e":"🍽️","s":"2026-10-15T16:00:00.000Z","en":"2026-10-15T18:30:00.000Z","w":"Pizzeria Olimpia, Caprino Veronese","km":10,"g":0,"x":1,"solo":"auto"},{"u":"/en/verona/motown-avenue-soul/","t":"Motown avenue - Soul","e":"🎭","s":"2026-10-15T18:30:00.000Z","en":"2026-10-15T20:30:00.000Z","w":"Pizzeria Olimpia, Caprino Veronese","km":10,"g":0,"x":1,"solo":null}]</script>
+</section>
 <div class="box">
   <h2>When</h2>
   
@@ -159,13 +176,40 @@ footer a:hover{color:var(--ink)}
   <a class="btn ghost" href="/?citta=verona">See all events</a>
   <a class="lnk" href="https://www.tabloapp.com/it" rel="noopener nofollow">Details on the official website</a>
 </div>
+
 <div class="box" id="domande"><h2>Frequently asked questions</h2><details><summary>When was Cena da Cafè Italia: 7 posti liberi?</summary><p>Cena da Cafè Italia: 7 posti liberi already took place: the last date was Wednesday, 23 September 2026. If it comes back, the new dates appear on this anyplans page.</p></details><details><summary>Where is Cena da Cafè Italia: 7 posti liberi?</summary><p>The meeting point is Cafè Italia, Bardolino, in the province of Verona; the page has a link to the map.</p></details><details><summary>How much does Cena da Cafè Italia: 7 posti liberi cost?</summary><p>Cena da Cafè Italia: 7 posti liberi is free: no ticket needed (Ognuno paga il suo al ristorante; ci si unisce nell&#39;app Tablo).</p></details><details><summary>Who organises Cena da Cafè Italia: 7 posti liberi?</summary><p>It is organised by Tablo. anyplans collects the event and shows you who else is going.</p></details><details><summary>How do I join Cena da Cafè Italia: 7 posti liberi?</summary><p>Sign up on anyplans with your email, open the event and say you&#39;re going: you see who organises it and who else is coming, so you don&#39;t go alone. You must be 18 or older.</p></details></div>
 
-<h2>Similar events</h2><div class="list"><a class="card" href="https://anyplans.in/en/verona/cena-da-spiller-verona/"><span class="em">🍽️</span><span><span class="t">Cena da Spiller | Verona: 2 posti liberi</span><br><span class="m">Wednesday 7 October at 17:00 · Spiller | Verona</span></span></a>
-<a class="card" href="https://anyplans.in/en/verona/cena-da-tramvai/"><span class="em">🍽️</span><span><span class="t">Cena da Tramvai: 5 posti liberi</span><br><span class="m">Wednesday 7 October at 18:00 · Tramvai, Verona</span></span></a>
-<a class="card" href="https://anyplans.in/en/verona/cena-da-lem-food-lounge/"><span class="em">🍽️</span><span><span class="t">Cena da LEM - Food &amp; Lounge: 6 posti liberi</span><br><span class="m">Wednesday 7 October at 18:15 · LEM - Food &amp; Lounge, San Martino Buon Albergo</span></span></a>
-<a class="card" href="https://anyplans.in/en/verona/amici-di-amici-da-pizzeria-e-ristorante-da-pino-verona/"><span class="em">🍽️</span><span><span class="t">Amici di amici da Pizzeria e Ristorante - Da Pino Verona: 8 posti liberi</span><br><span class="m">Friday 9 October at 18:00 · Pizzeria e Ristorante - Da Pino Verona</span></span></a></div>
-
+<h2>Similar events</h2><div class="list"><a class="card" href="https://anyplans.in/en/verona/english-social-night-aperitivo-in-english/"><span class="em">🍽️</span><span><span class="t">English Social Night | Aperitivo in English 🍹🇬🇧</span><br><span class="m">Thursday 15 October at 19:00 · Ristorante Bottiglieria Corsini, Verona</span></span></a>
+<a class="card" href="https://anyplans.in/en/verona/cena-da-osteria-ai-preti/"><span class="em">🍽️</span><span><span class="t">Cena da Osteria ai Preti: 2 posti liberi</span><br><span class="m">Thursday 15 October at 19:20 · Osteria ai Preti, Verona</span></span></a>
+<a class="card" href="https://anyplans.in/en/verona/workshop-creativi-speak-spritz-x-hostaria-2026/"><span class="em">🍽️</span><span><span class="t">Workshop creativi Speak &amp; Spritz x Hostaria 2026</span><br><span class="m">Friday 16 October at 18:00 · Cortile del Tribunale, Verona</span></span></a>
+<a class="card" href="https://anyplans.in/en/verona/dinner-show-al-piper-da-piper-verona-restaurant-and-clubbing/"><span class="em">🍽️</span><span><span class="t">✨ DINNER SHOW AL PIPER 🥂✨ da Piper Verona - Restaurant and Clubbing: 9 posti liberi</span><br><span class="m">Friday 16 October at 18:30 · Piper Verona - Restaurant and Clubbing</span></span></a></div>
+<script>
+(function(){ var sec = document.getElementById("vicino"), raw = document.getElementById("vicino-data"); if (!sec || !raw) return;
+  var C; try { C = JSON.parse(raw.textContent); } catch (_) { return; }
+  var T = {"tonight":"More things nearby, tonight","tomorrow":"More things nearby, tomorrow evening","pastT":"It's over, but tonight there's more nearby","pastTm":"It's over, but tomorrow evening there's more nearby","mapT":"All tonight's events on the map →","mapTm":"All tomorrow's events on the map →","empty":"Nothing else nearby tonight.","next":"The next few days on the map →","inMin":"in ","min":" min","now":"happening now","solo":"You can go alone","g1":" is going","gN":" are going","from":" from anyplans"};
+  var past = sec.dataset.past === "1", esc = function(t){ return String(t).replace(/[&<>"]/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var fmt = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+  var dk = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" });
+  function gp(x){ if (!x.g) return ""; return x.g + (x.x ? T.from : "") + (x.g === 1 ? T.g1 : T.gN); }
+  function build(){
+    var now = new Date(), today = dk.format(now), tom = dk.format(new Date(now.getTime() + 864e5));
+    var live = C.filter(function(x){ var s = new Date(x.s), e = x.en ? new Date(x.en) : new Date(s.getTime() + 3 * 36e5); return e > now && s.getTime() >= now.getTime() - 30 * 6e4; });
+    var hour = function(x){ return +fmt.format(new Date(x.s)).slice(0, 2); };
+    var ton = live.filter(function(x){ return dk.format(new Date(x.s)) === today && hour(x) >= 18; }), day = "sera", rows = ton;
+    if (ton.length < 2) { var tm = live.filter(function(x){ return dk.format(new Date(x.s)) === tom; }), tme = tm.filter(function(x){ return hour(x) >= 18; }); rows = tme.length >= 2 ? tme : tme.concat(tm.filter(function(x){ return hour(x) < 18; })); day = "domani"; if (!rows.length && ton.length) { rows = ton; day = "sera"; } }
+    var h = document.getElementById("vicino-h"), sub = document.getElementById("vicino-sub"), ul = document.getElementById("vicino-list"), mp = document.getElementById("vicino-map");
+    if (!rows.length) { h.textContent = past ? T.pastT : T.tonight; ul.innerHTML = ""; sub.textContent = T.empty; mp.textContent = T.next; mp.href = "/?citta=verona"; return; }
+    h.textContent = past ? (day === "sera" ? T.pastT : T.pastTm) : (day === "sera" ? T.tonight : T.tomorrow);
+    mp.textContent = day === "sera" ? T.mapT : T.mapTm; mp.href = "/?citta=verona&quando=" + day;
+    ul.innerHTML = rows.slice(0, 4).map(function(x, i){ var s = new Date(x.s), min = Math.round((s - now) / 6e4), rel = min < 0 ? '<b class="now">' + T.now + '</b>' : min <= 90 ? '<b class="soon">' + T.inMin + min + T.min + '</b>' : "";
+      return '<li><a href="' + esc(x.u) + '" data-pos="' + (i + 1) + '"><span class="em" aria-hidden="true">' + x.e + '</span><span class="c"><span class="t">' + esc(x.t) + '</span><span class="m">' + fmt.format(s) + (rel ? " · " + rel : "") + (x.w ? " · " + esc(x.w) : "") + (x.km >= 1 ? " · " + x.km + " km" : "") + '</span>' + (x.g > 0 || x.solo ? '<span class="m3">' + (x.g > 0 ? '<span class="g">' + gp(x) + '</span>' : '') + (x.solo ? '<span class="chip solo' + (x.solo === "pick" ? " pick" : "") + '">' + T.solo + '</span>' : '') + '</span>' : '') + '</span><span class="ar" aria-hidden="true">›</span></a></li>'; }).join("");
+    ul.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ if (window.apTrack) apTrack("seo_vicino_tap", a.getAttribute("href") + "?pos=" + a.dataset.pos); }); });
+    mp.onclick = function(){ if (window.apTrack) apTrack("seo_vicino_mappa", location.pathname + "?d=" + day); };
+    if (!build.seen && "IntersectionObserver" in window) { build.seen = true; new IntersectionObserver(function(en, o){ if (en.some(function(x){ return x.isIntersecting; })) { o.disconnect(); if (window.apTrack) apTrack("seo_vicino_view", location.pathname + "?n=" + Math.min(rows.length, 4) + "&d=" + day); } }, { threshold: .5 }).observe(sec); }
+  }
+  build(); setInterval(build, 60e3);
+})();
+</script>
 </main>
 <footer><div class="wrap">
   <span>© 2026 Filippo Terzi · anyplans</span>

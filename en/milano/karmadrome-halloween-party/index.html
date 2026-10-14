@@ -47,6 +47,17 @@ main{max-width:860px;margin:0 auto;padding:16px 22px 70px;display:flex;flex-dire
 .cover img{width:100%;height:100%;object-fit:cover;display:block}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
 .chip{background:var(--tint);color:var(--blue);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+.chip.solo{font-weight:600;font-size:12px;padding:0 8px;line-height:22px;white-space:nowrap}.chip.solo.pick{background:var(--blue);color:#fff}
+.solowhy{display:flex;align-items:flex-start;gap:8px;font-size:13.5px;color:var(--ink);line-height:1.35}
+.nearby{display:flex;flex-direction:column;gap:8px}.nearby h2{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.045em;line-height:1}
+.nearby ul{list-style:none;background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:16px;overflow:hidden}
+.nearby li+li{border-top:1px solid rgba(25,25,25,.08)}.nearby li a{display:grid;grid-template-columns:44px minmax(0,1fr) 16px;gap:12px;align-items:center;padding:10px 12px;min-height:64px;color:inherit;text-decoration:none}
+.nearby .em{width:44px;height:44px;border-radius:12px;background:var(--tint);display:grid;place-items:center;font-size:22px}
+.nearby .c{display:flex;flex-direction:column;gap:2px;min-width:0}.nearby .t{font-weight:700;font-size:15px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nearby .m{font-size:13px;color:var(--grey)}.nearby .m .soon{color:#B4530A}.nearby .m .now{color:#137333}
+.nearby .m3{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-top:2px}.nearby .g{font-size:13px;font-weight:700;color:#137333}
+.nearby .ar{color:var(--grey);font-size:16px}.nearby .lnk{display:inline-block;padding:12px 0;font-weight:700}
+@media (max-width:599px){.nearby li:nth-child(n+4){display:none}}
 .chip.w{background:#fff;border:1.5px solid rgba(25,25,25,.12);color:var(--ink)}
 .chip.past{background:#fff;border:1.5px solid rgba(25,25,25,.12);color:var(--grey)}
 .box{background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:18px;padding:20px 22px;display:flex;flex-direction:column;gap:12px}
@@ -135,6 +146,7 @@ footer a:hover{color:var(--ink)}
 <div class="box">
   <h2>Are you in?</h2>
   <div class="cta"><a class="btn" href="https://ra.co/events/2545008" rel="noopener nofollow">I'm going</a><span class="m">Organised by Karmadrome indie night: be the first to join</span></div>
+  
 </div>
 <p class="lead">Nights out in Detune, Via Felice Casati 24, Milano, Saturday 31 October at 22:00. Free (Ingresso gratuito con consumazione obbligatoria).</p>
 
@@ -157,12 +169,19 @@ footer a:hover{color:var(--ink)}
   <a class="btn ghost" href="/?citta=milano">See all events</a>
   
 </div>
+<section class="nearby" id="vicino" data-past="0" data-place="">
+<h2 id="vicino-h">More things nearby</h2>
+<p class="m" id="vicino-sub">Within 10 km of here.</p>
+<ul id="vicino-list"><li><a href="/en/milano/milano-by-night/" aria-label="Milano by Night, 18:00, Piazza Leonardo da Vinci, Milano, 2 km"><span class="em" aria-hidden="true">📚</span><span class="c"><span class="t">Milano by Night</span><span class="m">18:00 · Piazza Leonardo da Vinci, Milano · 2 km</span><span class="m3"><span class="chip solo">You can go alone</span></span></span><span class="ar" aria-hidden="true">›</span></a></li><li><a href="/en/milano/fenconnect-intelligenza-artificiale-e-affidabilita-nel-busin/" aria-label="FenConnect 14/10: Intelligenza Artificiale e Affidabilità nel Business, 18:30, UNGARO 1956, Milano"><span class="em" aria-hidden="true">📚</span><span class="c"><span class="t">FenConnect 14/10: Intelligenza Artificiale e Affidabilità nel Business</span><span class="m">18:30 · UNGARO 1956, Milano</span><span class="m3"><span class="chip solo">You can go alone</span></span></span><span class="ar" aria-hidden="true">›</span></a></li><li><a href="/en/milano/bang-gioca-anche-fuori-turno-fan-made-valle-delle-ombre/" aria-label="Bang - gioca anche fuori turno! Fan-Made &amp; Valle delle Ombre, 18:45, Milano, M4 Bolivar, 5 km"><span class="em" aria-hidden="true">🎲</span><span class="c"><span class="t">Bang - gioca anche fuori turno! Fan-Made &amp; Valle delle Ombre</span><span class="m">18:45 · Milano, M4 Bolivar · 5 km</span><span class="m3"><span class="chip solo">You can go alone</span></span></span><span class="ar" aria-hidden="true">›</span></a></li><li><a href="/en/milano/bardo-colombian-drone-mafia/" aria-label="Bardo: Colombian Drone Mafia, 19:00, BARDO, Via Plinio 42, 1 km"><span class="em" aria-hidden="true">🌙</span><span class="c"><span class="t">Bardo: Colombian Drone Mafia</span><span class="m">19:00 · BARDO, Via Plinio 42 · 1 km</span></span><span class="ar" aria-hidden="true">›</span></a></li></ul>
+<a class="lnk" id="vicino-map" href="/?citta=milano&quando=sera">All tonight's events on the map →</a>
+<script type="application/json" id="vicino-data">[{"u":"/en/milano/milano-by-night/","t":"Milano by Night","e":"📚","s":"2026-10-14T16:00:00.000Z","en":"2026-10-14T22:00:00.000Z","w":"Piazza Leonardo da Vinci, Milano","km":2,"g":0,"x":1,"solo":"auto"},{"u":"/en/milano/fenconnect-intelligenza-artificiale-e-affidabilita-nel-busin/","t":"FenConnect 14/10: Intelligenza Artificiale e Affidabilità nel Business","e":"📚","s":"2026-10-14T16:30:00.000Z","en":"2026-10-14T20:00:00.000Z","w":"UNGARO 1956, Milano","km":0,"g":0,"x":1,"solo":"auto"},{"u":"/en/milano/bang-gioca-anche-fuori-turno-fan-made-valle-delle-ombre/","t":"Bang - gioca anche fuori turno! Fan-Made & Valle delle Ombre","e":"🎲","s":"2026-10-14T16:45:00.000Z","en":"2026-10-14T19:45:00.000Z","w":"Milano, M4 Bolivar","km":5,"g":0,"x":1,"solo":"auto"},{"u":"/en/milano/bardo-colombian-drone-mafia/","t":"Bardo: Colombian Drone Mafia","e":"🌙","s":"2026-10-14T17:00:00.000Z","en":"2026-10-15T00:30:00.000Z","w":"BARDO, Via Plinio 42","km":1,"g":0,"x":1,"solo":null},{"u":"/en/milano/property-deal-network-milan-pdn-property-networking-event/","t":"Property Deal Network Milan - PDN - Property Networking Event","e":"📚","s":"2026-10-14T17:00:00.000Z","en":"2026-10-14T20:00:00.000Z","w":"Luma Cocktail Bar, Milano","km":2,"g":0,"x":1,"solo":"auto"},{"u":"/en/milano/cena-da-vegamore/","t":"Cena da VegAmore: 5 posti liberi","e":"🍽️","s":"2026-10-14T17:00:00.000Z","en":"2026-10-14T19:30:00.000Z","w":"VegAmore, Milano","km":3,"g":0,"x":1,"solo":"auto"},{"u":"/en/milano/anna-politkovskaja-una-voce-che-parla-ancora/","t":"Anna Politkovskaja: una voce che parla ancora","e":"📚","s":"2026-10-14T17:00:00.000Z","en":null,"w":"Arci Bellezza, Via Giovanni Bellezza 16/A","km":3,"g":0,"x":1,"solo":"auto"},{"u":"/en/milano/urban-runners-corsa-di-gruppo-del-mercoledi/","t":"Urban Runners: corsa di gruppo del mercoledì","e":"🏃","s":"2026-10-14T17:00:00.000Z","en":null,"w":"Campo Sportivo XXV Aprile, Via Cimabue 40","km":5,"g":0,"x":1,"solo":"auto"},{"u":"/en/milano/si-puo-fare-startup-da-soli-o-serve-per-forza-un-socio/","t":"Si può fare startup da soli, o serve per forza un socio?","e":"📚","s":"2026-10-14T17:15:00.000Z","en":"2026-10-14T20:00:00.000Z","w":"Futura Listening Bar, Milano","km":4,"g":0,"x":1,"solo":"auto"},{"u":"/en/milano/hablame-mucho-aperitivo-in-spagnolo/","t":"¡Háblame Mucho! Aperitivo in spagnolo","e":"🍽️","s":"2026-10-14T17:30:00.000Z","en":"2026-10-14T20:30:00.000Z","w":"Pacino Cafè, Piazzale Bacone 9","km":1,"g":0,"x":1,"solo":null},{"u":"/en/milano/global-runners-milano/","t":"Global Runners Milano","e":"🏃","s":"2026-10-14T17:30:00.000Z","en":null,"w":"Arco della Pace, Parco Sempione","km":2,"g":1,"x":0,"solo":"pick"},{"u":"/en/milano/astro-spritz-chiacchiere-astrologiche/","t":"Astro Spritz | Chiacchiere Astrologiche","e":"📚","s":"2026-10-14T17:30:00.000Z","en":"2026-10-14T19:30:00.000Z","w":"WAO Kitchen, Milano","km":2,"g":0,"x":1,"solo":"auto"}]</script>
+</section>
 <div class="box" id="domande"><h2>Frequently asked questions</h2><details><summary>When is Karmadrome: Halloween Party?</summary><p>Karmadrome: Halloween Party takes place on Saturday 31 October at 22:00 (until 02:30), in Detune, Via Felice Casati 24, Milano.</p></details><details><summary>Where is Karmadrome: Halloween Party?</summary><p>The meeting point is Detune, Via Felice Casati 24, Milano, in the province of Milan; the page has a link to the map.</p></details><details><summary>How much does Karmadrome: Halloween Party cost?</summary><p>Karmadrome: Halloween Party is free: no ticket needed (Ingresso gratuito con consumazione obbligatoria).</p></details><details><summary>Who organises Karmadrome: Halloween Party?</summary><p>It is organised by Karmadrome indie night. anyplans collects the event and shows you who else is going.</p></details><details><summary>How do I join Karmadrome: Halloween Party?</summary><p>Sign up on anyplans with your email, open the event and say you&#39;re going: you see who organises it and who else is coming, so you don&#39;t go alone. You must be 18 or older.</p></details></div>
-<p class="m"><a class="lnk" href="/en/milano/venues/karmadrome-indie-night/">All events at Karmadrome indie-night (4)</a></p>
-<h2>Similar events</h2><div class="list"><a class="card" href="https://anyplans.in/en/milano/internations-milan-official-event-di-ottobre/"><span class="em">🌙</span><span><span class="t">InterNations Milan: Official Event di ottobre</span><br><span class="m">Wednesday 7 October at 20:00 · JustMe Milano, Viale Luigi Camoens, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/open-wine-party-al-mib/"><span class="em">🌙</span><span><span class="t">Open Wine &amp; Party al MIB</span><br><span class="m">From 7 October to 14 October, 2 dates · MiB Milano, Via Gaetano Negri 10, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/one-two-al-the-club/"><span class="em">🌙</span><span><span class="t">One Two al The Club</span><br><span class="m">From 7 October to 21 October, 3 dates · The Club Milano, Corso Garibaldi 97, Milano</span></span></a>
-<a class="card" href="https://anyplans.in/en/milano/unicatt-welcome-party/"><span class="em">🌙</span><span><span class="t">UNICATT WELCOME PARTY</span><br><span class="m">Wednesday 7 October at 23:30 · Gattopardo Milano, Milano</span></span></a></div>
+<p class="m"><a class="lnk" href="/en/milano/venues/karmadrome-indie-night/">All events at Karmadrome indie-night (3)</a></p>
+<h2>Similar events</h2><div class="list"><a class="card" href="https://anyplans.in/en/milano/wednesday-night/"><span class="em">🌙</span><span><span class="t">Wednesday Night</span><br><span class="m">From 14 October to 21 October, 2 dates · Justme Milano, Viale Luigi Camoens, Milano, Milano</span></span></a>
+<a class="card" href="https://anyplans.in/en/milano/open-wine-party-al-mib/"><span class="em">🌙</span><span><span class="t">Open Wine &amp; Party al MIB</span><br><span class="m">Wednesday 14 October at 20:00 · MiB Milano, Via Gaetano Negri 10, Milano</span></span></a>
+<a class="card" href="https://anyplans.in/en/milano/one-two-al-the-club/"><span class="em">🌙</span><span><span class="t">One Two al The Club</span><br><span class="m">From 14 October to 21 October, 2 dates · The Club Milano, Corso Garibaldi 97, Milano</span></span></a>
+<a class="card" href="https://anyplans.in/en/milano/disco-pastrami-still-hungry-opening-night/"><span class="em">🌙</span><span><span class="t">Disco Pastrami: Still Hungry - opening night</span><br><span class="m">Thursday 15 October at 20:00 · Ragoo, Viale Monza 140, Milano</span></span></a></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script>
   (function(){ var lat = 45.4791317, lng = 9.2029345;
@@ -185,6 +204,32 @@ footer a:hover{color:var(--ink)}
     else if (min > 0 && diffDays <= 7) txt = T.in + diffDays + (diffDays === 1 ? T.day : T.days);
     el.textContent = txt ? "· " + txt : "";
   })();
+</script><script>
+(function(){ var sec = document.getElementById("vicino"), raw = document.getElementById("vicino-data"); if (!sec || !raw) return;
+  var C; try { C = JSON.parse(raw.textContent); } catch (_) { return; }
+  var T = {"tonight":"More things nearby, tonight","tomorrow":"More things nearby, tomorrow evening","pastT":"It's over, but tonight there's more nearby","pastTm":"It's over, but tomorrow evening there's more nearby","mapT":"All tonight's events on the map →","mapTm":"All tomorrow's events on the map →","empty":"Nothing else nearby tonight.","next":"The next few days on the map →","inMin":"in ","min":" min","now":"happening now","solo":"You can go alone","g1":" is going","gN":" are going","from":" from anyplans"};
+  var past = sec.dataset.past === "1", esc = function(t){ return String(t).replace(/[&<>"]/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var fmt = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+  var dk = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" });
+  function gp(x){ if (!x.g) return ""; return x.g + (x.x ? T.from : "") + (x.g === 1 ? T.g1 : T.gN); }
+  function build(){
+    var now = new Date(), today = dk.format(now), tom = dk.format(new Date(now.getTime() + 864e5));
+    var live = C.filter(function(x){ var s = new Date(x.s), e = x.en ? new Date(x.en) : new Date(s.getTime() + 3 * 36e5); return e > now && s.getTime() >= now.getTime() - 30 * 6e4; });
+    var hour = function(x){ return +fmt.format(new Date(x.s)).slice(0, 2); };
+    var ton = live.filter(function(x){ return dk.format(new Date(x.s)) === today && hour(x) >= 18; }), day = "sera", rows = ton;
+    if (ton.length < 2) { var tm = live.filter(function(x){ return dk.format(new Date(x.s)) === tom; }), tme = tm.filter(function(x){ return hour(x) >= 18; }); rows = tme.length >= 2 ? tme : tme.concat(tm.filter(function(x){ return hour(x) < 18; })); day = "domani"; if (!rows.length && ton.length) { rows = ton; day = "sera"; } }
+    var h = document.getElementById("vicino-h"), sub = document.getElementById("vicino-sub"), ul = document.getElementById("vicino-list"), mp = document.getElementById("vicino-map");
+    if (!rows.length) { h.textContent = past ? T.pastT : T.tonight; ul.innerHTML = ""; sub.textContent = T.empty; mp.textContent = T.next; mp.href = "/?citta=milano"; return; }
+    h.textContent = past ? (day === "sera" ? T.pastT : T.pastTm) : (day === "sera" ? T.tonight : T.tomorrow);
+    mp.textContent = day === "sera" ? T.mapT : T.mapTm; mp.href = "/?citta=milano&quando=" + day;
+    ul.innerHTML = rows.slice(0, 4).map(function(x, i){ var s = new Date(x.s), min = Math.round((s - now) / 6e4), rel = min < 0 ? '<b class="now">' + T.now + '</b>' : min <= 90 ? '<b class="soon">' + T.inMin + min + T.min + '</b>' : "";
+      return '<li><a href="' + esc(x.u) + '" data-pos="' + (i + 1) + '"><span class="em" aria-hidden="true">' + x.e + '</span><span class="c"><span class="t">' + esc(x.t) + '</span><span class="m">' + fmt.format(s) + (rel ? " · " + rel : "") + (x.w ? " · " + esc(x.w) : "") + (x.km >= 1 ? " · " + x.km + " km" : "") + '</span>' + (x.g > 0 || x.solo ? '<span class="m3">' + (x.g > 0 ? '<span class="g">' + gp(x) + '</span>' : '') + (x.solo ? '<span class="chip solo' + (x.solo === "pick" ? " pick" : "") + '">' + T.solo + '</span>' : '') + '</span>' : '') + '</span><span class="ar" aria-hidden="true">›</span></a></li>'; }).join("");
+    ul.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ if (window.apTrack) apTrack("seo_vicino_tap", a.getAttribute("href") + "?pos=" + a.dataset.pos); }); });
+    mp.onclick = function(){ if (window.apTrack) apTrack("seo_vicino_mappa", location.pathname + "?d=" + day); };
+    if (!build.seen && "IntersectionObserver" in window) { build.seen = true; new IntersectionObserver(function(en, o){ if (en.some(function(x){ return x.isIntersecting; })) { o.disconnect(); if (window.apTrack) apTrack("seo_vicino_view", location.pathname + "?n=" + Math.min(rows.length, 4) + "&d=" + day); } }, { threshold: .5 }).observe(sec); }
+  }
+  build(); setInterval(build, 60e3);
+})();
 </script>
 </main>
 <footer><div class="wrap">

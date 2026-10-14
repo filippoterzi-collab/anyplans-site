@@ -46,6 +46,17 @@ main{max-width:860px;margin:0 auto;padding:16px 22px 70px;display:flex;flex-dire
 .cover img{width:100%;height:100%;object-fit:cover;display:block}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
 .chip{background:var(--tint);color:var(--blue);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+.chip.solo{font-weight:600;font-size:12px;padding:0 8px;line-height:22px;white-space:nowrap}.chip.solo.pick{background:var(--blue);color:#fff}
+.solowhy{display:flex;align-items:flex-start;gap:8px;font-size:13.5px;color:var(--ink);line-height:1.35}
+.nearby{display:flex;flex-direction:column;gap:8px}.nearby h2{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.045em;line-height:1}
+.nearby ul{list-style:none;background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:16px;overflow:hidden}
+.nearby li+li{border-top:1px solid rgba(25,25,25,.08)}.nearby li a{display:grid;grid-template-columns:44px minmax(0,1fr) 16px;gap:12px;align-items:center;padding:10px 12px;min-height:64px;color:inherit;text-decoration:none}
+.nearby .em{width:44px;height:44px;border-radius:12px;background:var(--tint);display:grid;place-items:center;font-size:22px}
+.nearby .c{display:flex;flex-direction:column;gap:2px;min-width:0}.nearby .t{font-weight:700;font-size:15px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nearby .m{font-size:13px;color:var(--grey)}.nearby .m .soon{color:#B4530A}.nearby .m .now{color:#137333}
+.nearby .m3{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-top:2px}.nearby .g{font-size:13px;font-weight:700;color:#137333}
+.nearby .ar{color:var(--grey);font-size:16px}.nearby .lnk{display:inline-block;padding:12px 0;font-weight:700}
+@media (max-width:599px){.nearby li:nth-child(n+4){display:none}}
 .chip.w{background:#fff;border:1.5px solid rgba(25,25,25,.12);color:var(--ink)}
 .chip.past{background:#fff;border:1.5px solid rgba(25,25,25,.12);color:var(--grey)}
 .box{background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:18px;padding:20px 22px;display:flex;flex-direction:column;gap:12px}
@@ -163,12 +174,13 @@ Orari, prezzo e biglietti sulla pagina Eventbrite dell&#39;evento: l&#39;iscrizi
   <a class="btn ghost" href="/?citta=torino">See all events</a>
   <a class="lnk" href="https://www.eventbrite.it/e/surviving-in-natura-tickets-1991080676903" rel="noopener nofollow">Details on the official website</a>
 </div>
+
 <div class="box" id="domande"><h2>Frequently asked questions</h2><details><summary>When was Surviving in Natura?</summary><p>Surviving in Natura already took place: the last date was Sunday, 27 September 2026. If it comes back, the new dates appear on this anyplans page.</p></details><details><summary>Where is Surviving in Natura?</summary><p>The meeting point is Chiesa di San Giorgio, Aramengo, in the province of Turin; the page has a link to the map.</p></details><details><summary>How much does Surviving in Natura cost?</summary><p>Surviving in Natura is free: no ticket needed (Biglietti su Eventbrite).</p></details><details><summary>Who organises Surviving in Natura?</summary><p>It is organised by a member of anyplans.</p></details><details><summary>How do I join Surviving in Natura?</summary><p>Sign up on anyplans with your email, open the event and say you&#39;re going: you see who organises it and who else is coming, so you don&#39;t go alone. You must be 18 or older.</p></details></div>
 
-<h2>Similar events</h2><div class="list"><a class="card" href="https://anyplans.in/en/torino/open-day-valentino-flow-surfskate-clean-up-sharing-pic-nic/"><span class="em">🥾</span><span><span class="t">Open Day Valentino Flow: surfskate, clean up, sharing pic nic</span><br><span class="m">Saturday 10 October at 12:00 · Latteria Svizzera, Torino</span></span></a>
-<a class="card" href="https://anyplans.in/en/torino/camminata-cena-in-rifugio-e-stelle/"><span class="em">🥾</span><span><span class="t">Camminata, Cena in Rifugio e Stelle</span><br><span class="m">Saturday 10 October at 16:00 · Torino, Val Chisone, Villar Perosa</span></span></a>
-<a class="card" href="https://anyplans.in/en/torino/trekking-easy-nel-magico-borgo-di-vru-valli-di-lanzo/"><span class="em">🥾</span><span><span class="t">Trekking Easy nel magico Borgo di Vrù - Valli di Lanzo</span><br><span class="m">Sunday 11 October at 09:00 · Collegno - Zona Capolinea Metrò Fermi</span></span></a>
-<a class="card" href="https://anyplans.in/en/torino/camminata-in-montagna-e-pranzo-in-rifugio/"><span class="em">🥾</span><span><span class="t">Camminata in montagna e pranzo in rifugio</span><br><span class="m">Sunday 18 October at 08:30 · Torino, Viù</span></span></a></div>
+<h2>Similar events</h2><div class="list"><a class="card" href="https://anyplans.in/en/torino/foliage-tra-laghi-e-guje-in-valchiusella-e-in-val-di-chy/"><span class="em">🥾</span><span><span class="t">Foliage tra Laghi e Guje in Valchiusella e in Val di Chy</span><br><span class="m">Saturday 17 October at 08:45 · Collegno, Laghi della Valchiusella e GUJE di Garavot in Val di Chy</span></span></a>
+<a class="card" href="https://anyplans.in/en/torino/la-magia-della-sacra-di-san-michele-tour/"><span class="em">🥾</span><span><span class="t">La Magia della Sacra di San Michele Tour</span><br><span class="m">Sunday 18 October at 09:15 · Sacra di San Michele, Chiusa di San Michele</span></span></a>
+<a class="card" href="https://anyplans.in/en/torino/escursione-con-vista-panoramica-sul-monte-san-giorgio/"><span class="em">🥾</span><span><span class="t">Escursione con vista panoramica sul Monte San Giorgio!</span><br><span class="m">Sunday 18 October at 10:30 · Piossasco</span></span></a>
+<a class="card" href="https://anyplans.in/en/torino/collina-morenica-di-rivoli-una-passeggiata-e-una-domanda/"><span class="em">🥾</span><span><span class="t">Collina Morenica di Rivoli - Una passeggiata e una domanda</span><br><span class="m">Sunday 18 October at 11:00 · Rivoli</span></span></a></div>
 
 </main>
 <footer><div class="wrap">

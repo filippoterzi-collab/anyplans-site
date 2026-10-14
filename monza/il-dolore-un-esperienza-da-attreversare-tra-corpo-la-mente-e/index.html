@@ -44,6 +44,17 @@ main{max-width:860px;margin:0 auto;padding:16px 22px 70px;display:flex;flex-dire
 .cover img{width:100%;height:100%;object-fit:cover;display:block}
 .chips{display:flex;gap:8px;flex-wrap:wrap}
 .chip{background:var(--tint);color:var(--blue);font-weight:700;font-size:13px;padding:6px 12px;border-radius:999px}
+.chip.solo{font-weight:600;font-size:12px;padding:0 8px;line-height:22px;white-space:nowrap}.chip.solo.pick{background:var(--blue);color:#fff}
+.solowhy{display:flex;align-items:flex-start;gap:8px;font-size:13.5px;color:var(--ink);line-height:1.35}
+.nearby{display:flex;flex-direction:column;gap:8px}.nearby h2{font-family:var(--display);font-weight:800;font-size:20px;letter-spacing:-.045em;line-height:1}
+.nearby ul{list-style:none;background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:16px;overflow:hidden}
+.nearby li+li{border-top:1px solid rgba(25,25,25,.08)}.nearby li a{display:grid;grid-template-columns:44px minmax(0,1fr) 16px;gap:12px;align-items:center;padding:10px 12px;min-height:64px;color:inherit;text-decoration:none}
+.nearby .em{width:44px;height:44px;border-radius:12px;background:var(--tint);display:grid;place-items:center;font-size:22px}
+.nearby .c{display:flex;flex-direction:column;gap:2px;min-width:0}.nearby .t{font-weight:700;font-size:15px;line-height:1.25;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.nearby .m{font-size:13px;color:var(--grey)}.nearby .m .soon{color:#B4530A}.nearby .m .now{color:#137333}
+.nearby .m3{display:flex;flex-wrap:wrap;gap:6px 10px;align-items:center;margin-top:2px}.nearby .g{font-size:13px;font-weight:700;color:#137333}
+.nearby .ar{color:var(--grey);font-size:16px}.nearby .lnk{display:inline-block;padding:12px 0;font-weight:700}
+@media (max-width:599px){.nearby li:nth-child(n+4){display:none}}
 .chip.w{background:#fff;border:1.5px solid rgba(25,25,25,.12);color:var(--ink)}
 .chip.past{background:#fff;border:1.5px solid rgba(25,25,25,.12);color:var(--grey)}
 .box{background:#fff;border:1.5px solid rgba(25,25,25,.12);border-radius:18px;padding:20px 22px;display:flex;flex-direction:column;gap:12px}
@@ -128,7 +139,13 @@ footer a:hover{color:var(--ink)}
 <h1>IL DOLORE: UN&#39;ESPERIENZA DA ATTREVERSARE TRA  CORPO, LA MENTE E L&#39;AMBIENTE</h1>
 
 <p class="lead">Spettacoli e teatro a Via L. Cadorna, 47, Meda: si è già svolto, l&#39;ultima data è stata sabato 3 ottobre 2026.</p>
-<div class="box in"><h2>Questo evento è passato</h2><div class="m">L'ultima data è stata sabato 3 ottobre 2026. Se torna, le date nuove compaiono qui.</div><div class="cta"><a class="btn" href="/?citta=monza">Vedi cosa c'è adesso</a></div></div>
+<div class="box in"><h2>Questo evento è passato</h2><div class="m">L'ultima data è stata sabato 3 ottobre 2026. Se torna, le date nuove compaiono qui.</div><div class="cta"><a class="btn" href="/?citta=monza">Vedi cosa c'è adesso</a></div></div><section class="nearby" id="vicino" data-past="1" data-place="Meda">
+<h2 id="vicino-h">È già passato, ma stasera qui vicino c'è altro</h2>
+<p class="m" id="vicino-sub">A meno di 10 km da Meda.</p>
+<ul id="vicino-list"><li><a href="/monza/fare-musica-live/" aria-label="Fare Musica Live, 20:30, Arci Tambourine, Via Carlo Tenca 16, 4 km"><span class="em" aria-hidden="true">🎸</span><span class="c"><span class="t">Fare Musica Live</span><span class="m">20:30 · Arci Tambourine, Via Carlo Tenca 16 · 4 km</span></span><span class="ar" aria-hidden="true">›</span></a></li></ul>
+<a class="lnk" id="vicino-map" href="/?citta=monza&quando=sera">Tutti gli eventi di stasera sulla mappa →</a>
+<script type="application/json" id="vicino-data">[{"u":"/monza/fare-musica-live/","t":"Fare Musica Live","e":"🎸","s":"2026-10-14T18:30:00.000Z","en":null,"w":"Arci Tambourine, Via Carlo Tenca 16","km":4,"g":0,"x":1,"solo":null},{"u":"/monza/padel-amichevole-2026-10-15/","t":"Padel: mancano 3 giocatori (amichevole)","e":"🏸","s":"2026-10-15T07:30:00.000Z","en":"2026-10-15T09:00:00.000Z","w":"Moving Padel Monza, Via della Birona","km":10,"g":0,"x":1,"solo":null},{"u":"/monza/doppio-tennis/","t":"DOPPIO TENNIS","e":"🎾","s":"2026-10-15T08:00:00.000Z","en":"2026-10-15T10:00:00.000Z","w":"Padel Extreme Tennis, Via Como","km":2,"g":0,"x":1,"solo":null},{"u":"/monza/padel-amichevole-2026-10-15-2/","t":"Padel: manca 1 giocatore (amichevole)","e":"🏸","s":"2026-10-15T09:30:00.000Z","en":"2026-10-15T11:00:00.000Z","w":"Moving Padel Monza, Via della Birona","km":10,"g":0,"x":1,"solo":null},{"u":"/monza/giro-a-8-lunch-edition-giovedi-12-30/","t":"🎾🍽️ GIRO A 8 – LUNCH EDITION | GIOVEDÌ 12:30","e":"🏸","s":"2026-10-15T10:30:00.000Z","en":"2026-10-15T12:00:00.000Z","w":"Padel Extreme Tennis, Via Como","km":2,"g":0,"x":1,"solo":null},{"u":"/monza/girls-in-padel-giro-a-8-livello-0-5-2-5/","t":"👩‍🦰 GIRLS IN PADEL 🎾 GIRO A 8 🕕 LIVELLO 0.5 - 2.5","e":"🏸","s":"2026-10-15T11:00:00.000Z","en":"2026-10-15T12:30:00.000Z","w":"Moving Padel Monza, Via della Birona","km":10,"g":0,"x":1,"solo":null},{"u":"/monza/padel-competitiva/","t":"Padel: manca 1 giocatore (competitiva)","e":"🏸","s":"2026-10-15T15:30:00.000Z","en":"2026-10-15T17:00:00.000Z","w":"Mariano Sports Arena, VIA LAMBRO 15","km":5,"g":0,"x":1,"solo":null},{"u":"/monza/aperitivo-cantato-e-servito-con-dj-set-con-karaoke-da-feel-d/","t":"Aperitivo cantato e servito con dj set con karaoke da Feel Dinner…","e":"🍽️","s":"2026-10-15T16:30:00.000Z","en":"2026-10-15T18:00:00.000Z","w":"Feel Dinner Show, Food & Lounge","km":5,"g":0,"x":1,"solo":"auto"},{"u":"/monza/cena-da-playup-bowling/","t":"Cena da Playup Bowling: 7 posti liberi","e":"🍽️","s":"2026-10-15T17:15:00.000Z","en":"2026-10-15T19:45:00.000Z","w":"Playup Bowling, Lissone","km":9,"g":0,"x":1,"solo":"auto"},{"u":"/monza/cronache-di-resistenza-riccardo-enrico-anelli-marcello-aloe/","t":"Cronache di Resistenza: Riccardo Enrico Anelli + Marcello Aloe","e":"🎸","s":"2026-10-15T17:30:00.000Z","en":null,"w":"Arci Tambourine, Via Carlo Tenca 16","km":4,"g":0,"x":1,"solo":null},{"u":"/monza/cena-da-birra-gaia-birrificio-artigianale-e-brewpub/","t":"Cena da Birra Gaia | Birrificio Artigianale e BrewPub: 2 posti liberi","e":"🍽️","s":"2026-10-15T17:30:00.000Z","en":"2026-10-15T19:00:00.000Z","w":"Birra Gaia | Birrificio Artigianale e BrewPub, Carate…","km":6,"g":0,"x":1,"solo":"auto"},{"u":"/monza/partita-guidata-1-5h-con-gabriele/","t":"💥Partita guidata 1.5h con GABRIELE🎾","e":"🏸","s":"2026-10-15T18:00:00.000Z","en":"2026-10-15T19:30:00.000Z","w":"Padel Cesano Maderno, Via po' 55","km":3,"g":0,"x":1,"solo":null}]</script>
+</section>
 <div class="box">
   <h2>Quando</h2>
   
@@ -161,13 +178,40 @@ Orari, prezzo e biglietti sulla pagina Eventbrite dell&#39;evento: l&#39;iscrizi
   <a class="btn ghost" href="/?citta=monza">Vedi tutti gli eventi</a>
   <a class="lnk" href="https://www.eventbrite.com/e/il-dolore-unesperienza-da-attreversare-tra-corpo-la-mente-e-lambiente-tickets-1998380038490" rel="noopener nofollow">Dettagli sul sito ufficiale</a>
 </div>
+
 <div class="box" id="domande"><h2>Domande frequenti</h2><details><summary>Quando si tiene IL DOLORE: UN&#39;ESPERIENZA DA ATTREVERSARE TRA  CORPO, LA MENTE E L&#39;AMBIENTE?</summary><p>IL DOLORE: UN&#39;ESPERIENZA DA ATTREVERSARE TRA  CORPO, LA MENTE E L&#39;AMBIENTE si è già svolto: l&#39;ultima data è stata sabato 3 ottobre 2026. Se torna, le date nuove compaiono su questa pagina di anyplans.</p></details><details><summary>Dove si trova IL DOLORE: UN&#39;ESPERIENZA DA ATTREVERSARE TRA  CORPO, LA MENTE E L&#39;AMBIENTE?</summary><p>Il ritrovo è a Via L. Cadorna, 47, Meda, in provincia di Monza; nella pagina c&#39;è il collegamento alle mappe.</p></details><details><summary>Quanto costa IL DOLORE: UN&#39;ESPERIENZA DA ATTREVERSARE TRA  CORPO, LA MENTE E L&#39;AMBIENTE?</summary><p>IL DOLORE: UN&#39;ESPERIENZA DA ATTREVERSARE TRA  CORPO, LA MENTE E L&#39;AMBIENTE è gratis: non serve biglietto (Biglietti su Eventbrite).</p></details><details><summary>Chi organizza IL DOLORE: UN&#39;ESPERIENZA DA ATTREVERSARE TRA  CORPO, LA MENTE E L&#39;AMBIENTE?</summary><p>Lo organizza una persona registrata su anyplans.</p></details><details><summary>Come faccio a partecipare a IL DOLORE: UN&#39;ESPERIENZA DA ATTREVERSARE TRA  CORPO, LA MENTE E L&#39;AMBIENTE?</summary><p>Ti registri su anyplans con la tua email, apri l&#39;evento e dici che ci vai: così vedi chi organizza e chi altro viene, e non ci vai da solo. Serve avere almeno 18 anni.</p></details></div>
 
-<h2>Eventi simili</h2><div class="list"><a class="card" href="https://anyplans.in/monza/lezione-di-prova-laboratorio-teatrale-liberthub/"><span class="em">🎭</span><span><span class="t">LEZIONE DI PROVA - LABORATORIO TEATRALE LIBERTHUB</span><br><span class="m">Mercoledì 7 ottobre alle 20:00 · Viale Libertà 144, Monza (MB), Monza</span></span></a>
-<a class="card" href="https://anyplans.in/monza/il-giorno-piu-felice-della-mia-vita-compagnia-teatro-binario/"><span class="em">🎭</span><span><span class="t">Il giorno più felice della mia vita - Compagnia Teatro Binario 7</span><br><span class="m">Giovedì 8 ottobre alle 20:30 · Teatro Binario 7, Monza</span></span></a>
-<a class="card" href="https://anyplans.in/monza/luci-per-la-vita-violino-pianoforte-e-danza/"><span class="em">🎭</span><span><span class="t">Luci per la vita: violino, pianoforte e danza</span><br><span class="m">Venerdì 9 ottobre alle 20:45 · Teatro Binario 7, Via Turati 8, Monza</span></span></a>
-<a class="card" href="https://anyplans.in/monza/seveso-1976-la-nube-e-la-memoria/"><span class="em">🎭</span><span><span class="t">Seveso 1976 - La nube e la memoria</span><br><span class="m">Venerdì 9 ottobre alle 21:00 · Cine-Teatro San Marco, Cologno Monzese</span></span></a></div>
-
+<h2>Eventi simili</h2><div class="list"><a class="card" href="https://anyplans.in/monza/palestinesi-sono-i-tuoi-occhi-sei-racconti-e-quattro-voci-da/"><span class="em">🎭</span><span><span class="t">Palestinesi sono i tuoi occhi – Sei racconti e quattro voci da Gaza</span><br><span class="m">Giovedì 15 ottobre alle 20:30 · Teatro Binario 7, Monza</span></span></a>
+<a class="card" href="https://anyplans.in/monza/ho-visto-un-fo/"><span class="em">🎭</span><span><span class="t">Ho visto un Fo</span><br><span class="m">Giovedì 15 ottobre alle 21:00 · Cineteca Milano Metropolis, Via Oslavia 8, Paderno Dugnano</span></span></a>
+<a class="card" href="https://anyplans.in/monza/34050-spettacolo-teatrale-luoghi-non-comuni-festival/"><span class="em">🎭</span><span><span class="t">34050 - spettacolo teatrale | Luoghi (non) Comuni Festival</span><br><span class="m">Venerdì 16 ottobre alle 21:00 · Bloom, Via Curiel 39, Mezzago</span></span></a>
+<a class="card" href="https://anyplans.in/monza/le-cognate/"><span class="em">🎭</span><span><span class="t">Le cognate</span><br><span class="m">Sabato 17 ottobre alle 17:00 · Sala Argentia, Via Matteotti 30, Gorgonzola</span></span></a></div>
+<script>
+(function(){ var sec = document.getElementById("vicino"), raw = document.getElementById("vicino-data"); if (!sec || !raw) return;
+  var C; try { C = JSON.parse(raw.textContent); } catch (_) { return; }
+  var T = {"tonight":"Altre cose vicino, stasera","tomorrow":"Altre cose vicino, domani sera","pastT":"È già passato, ma stasera qui vicino c'è altro","pastTm":"È già passato, ma domani sera qui vicino c'è altro","mapT":"Tutti gli eventi di stasera sulla mappa →","mapTm":"Tutti gli eventi di domani sulla mappa →","empty":"Per stasera qui vicino non c'è altro.","next":"I prossimi giorni sulla mappa →","inMin":"tra ","min":" min","now":"in corso"};
+  var past = sec.dataset.past === "1", esc = function(t){ return String(t).replace(/[&<>"]/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var fmt = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+  var dk = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" });
+  function gp(x){ if (!x.g) return ""; return x.x ? (x.g === 1 ? "1 da anyplans ci va" : x.g + " da anyplans ci vanno") : (x.g === 1 ? "1 persona ci va" : x.g + " persone ci vanno")}; }
+  function build(){
+    var now = new Date(), today = dk.format(now), tom = dk.format(new Date(now.getTime() + 864e5));
+    var live = C.filter(function(x){ var s = new Date(x.s), e = x.en ? new Date(x.en) : new Date(s.getTime() + 3 * 36e5); return e > now && s.getTime() >= now.getTime() - 30 * 6e4; });
+    var hour = function(x){ return +fmt.format(new Date(x.s)).slice(0, 2); };
+    var ton = live.filter(function(x){ return dk.format(new Date(x.s)) === today && hour(x) >= 18; }), day = "sera", rows = ton;
+    if (ton.length < 2) { var tm = live.filter(function(x){ return dk.format(new Date(x.s)) === tom; }), tme = tm.filter(function(x){ return hour(x) >= 18; }); rows = tme.length >= 2 ? tme : tme.concat(tm.filter(function(x){ return hour(x) < 18; })); day = "domani"; if (!rows.length && ton.length) { rows = ton; day = "sera"; } }
+    var h = document.getElementById("vicino-h"), sub = document.getElementById("vicino-sub"), ul = document.getElementById("vicino-list"), mp = document.getElementById("vicino-map");
+    if (!rows.length) { h.textContent = past ? T.pastT : T.tonight; ul.innerHTML = ""; sub.textContent = T.empty; mp.textContent = T.next; mp.href = "/?citta=monza"; return; }
+    h.textContent = past ? (day === "sera" ? T.pastT : T.pastTm) : (day === "sera" ? T.tonight : T.tomorrow);
+    mp.textContent = day === "sera" ? T.mapT : T.mapTm; mp.href = "/?citta=monza&quando=" + day;
+    ul.innerHTML = rows.slice(0, 4).map(function(x, i){ var s = new Date(x.s), min = Math.round((s - now) / 6e4), rel = min < 0 ? '<b class="now">' + T.now + '</b>' : min <= 90 ? '<b class="soon">' + T.inMin + min + T.min + '</b>' : "";
+      return '<li><a href="' + esc(x.u) + '" data-pos="' + (i + 1) + '"><span class="em" aria-hidden="true">' + x.e + '</span><span class="c"><span class="t">' + esc(x.t) + '</span><span class="m">' + fmt.format(s) + (rel ? " · " + rel : "") + (x.w ? " · " + esc(x.w) : "") + (x.km >= 1 ? " · " + x.km + " km" : "") + '</span>' + (x.g > 0 || x.solo ? '<span class="m3">' + (x.g > 0 ? '<span class="g">' + gp(x) + '</span>' : '') + (x.solo ? '<span class="chip solo' + (x.solo === "pick" ? " pick" : "") + '">' + T.solo + '</span>' : '') + '</span>' : '') + '</span><span class="ar" aria-hidden="true">›</span></a></li>'; }).join("");
+    ul.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ if (window.apTrack) apTrack("seo_vicino_tap", a.getAttribute("href") + "?pos=" + a.dataset.pos); }); });
+    mp.onclick = function(){ if (window.apTrack) apTrack("seo_vicino_mappa", location.pathname + "?d=" + day); };
+    if (!build.seen && "IntersectionObserver" in window) { build.seen = true; new IntersectionObserver(function(en, o){ if (en.some(function(x){ return x.isIntersecting; })) { o.disconnect(); if (window.apTrack) apTrack("seo_vicino_view", location.pathname + "?n=" + Math.min(rows.length, 4) + "&d=" + day); } }, { threshold: .5 }).observe(sec); }
+  }
+  build(); setInterval(build, 60e3);
+})();
+</script>
 </main>
 <footer><div class="wrap">
   <span>© 2026 Filippo Terzi · anyplans</span>
