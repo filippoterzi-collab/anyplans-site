@@ -139,7 +139,13 @@ footer a:hover{color:var(--ink)}
 <h1>&quot;Respira il tuo Silenzio Interiore&quot; - pratica di yoga himalayano con Senia</h1>
 
 <p class="lead">Yoga / pilates a Tempio del Sé - Centro di Guarigione Olistica, Città Metropolitana di Firenze: si è già svolto, l&#39;ultima data è stata domenica 20 settembre 2026.</p>
-<div class="box in"><h2>Questo evento è passato</h2><div class="m">L'ultima data è stata domenica 20 settembre 2026. Se torna, le date nuove compaiono qui.</div><div class="cta"><a class="btn" href="/?citta=pistoia">Vedi cosa c'è adesso</a></div></div>
+<div class="box in"><h2>Questo evento è passato</h2><div class="m">L'ultima data è stata domenica 20 settembre 2026. Se torna, le date nuove compaiono qui.</div><div class="cta"><a class="btn" href="/?citta=pistoia">Vedi cosa c'è adesso</a></div></div><section class="nearby" id="vicino" data-past="1" data-place="Città Metropolitana di Firenze">
+<h2 id="vicino-h">È già passato, ma stasera qui vicino c'è altro</h2>
+<p class="m" id="vicino-sub">A meno di 10 km da Città Metropolitana di Firenze.</p>
+<ul id="vicino-list"><li><a href="/pistoia/non-ho-mai-da-pizzagram-fucecchio-pizzeria-al-taglio-e-da-as/" aria-label="Non ho mai... da Pizzagram Fucecchio pizzeria al taglio e da…, 18:15, Pizzagram Fucecchio pizzeria al taglio e da asporto, 3 km"><span class="em" aria-hidden="true">🍽️</span><span class="c"><span class="t">Non ho mai... da Pizzagram Fucecchio pizzeria al taglio e da…</span><span class="m">18:15 · Pizzagram Fucecchio pizzeria al taglio e da asporto · 3 km</span><span class="m3"><span class="chip solo">Ci puoi andare da solo</span></span></span><span class="ar" aria-hidden="true">›</span></a></li><li><a href="/pistoia/la-grande-riffa-da-mantra-ristorante-cocktail-bar-piscina/" aria-label="La grande riffa da Mantra Ristorante, cocktail bar &amp; Piscina: 10…, 21:20, Mantra Ristorante, cocktail bar &amp; Piscina, 9 km"><span class="em" aria-hidden="true">🍽️</span><span class="c"><span class="t">La grande riffa da Mantra Ristorante, cocktail bar &amp; Piscina: 10…</span><span class="m">21:20 · Mantra Ristorante, cocktail bar &amp; Piscina · 9 km</span><span class="m3"><span class="chip solo">Ci puoi andare da solo</span></span></span><span class="ar" aria-hidden="true">›</span></a></li></ul>
+<a class="lnk" id="vicino-map" href="/?citta=pistoia&quando=sera">Tutti gli eventi di stasera sulla mappa →</a>
+<script type="application/json" id="vicino-data">[{"u":"/pistoia/non-ho-mai-da-pizzagram-fucecchio-pizzeria-al-taglio-e-da-as/","t":"Non ho mai... da Pizzagram Fucecchio pizzeria al taglio e da…","e":"🍽️","s":"2026-10-16T16:15:00.000Z","en":"2026-10-16T18:45:00.000Z","w":"Pizzagram Fucecchio pizzeria al taglio e da asporto","km":3,"g":0,"x":1,"solo":"auto"},{"u":"/pistoia/la-grande-riffa-da-mantra-ristorante-cocktail-bar-piscina/","t":"La grande riffa da Mantra Ristorante, cocktail bar & Piscina: 10…","e":"🍽️","s":"2026-10-16T19:20:00.000Z","en":"2026-10-16T21:50:00.000Z","w":"Mantra Ristorante, cocktail bar & Piscina","km":9,"g":0,"x":1,"solo":"auto"}]</script>
+</section>
 <div class="box">
   <h2>Quando</h2>
   
@@ -173,9 +179,35 @@ footer a:hover{color:var(--ink)}
 <p class="m"><a class="lnk" href="/pistoia/locali/tempio-fest/">Tutti gli eventi al Tempio Fest (0)</a></p>
 <h2>Eventi simili</h2><div class="list"><a class="card" href="https://anyplans.in/pistoia/in-itinere-toscana-passeggiata-filosofica-silenzio/"><span class="em">🧘</span><span><span class="t">IN ITINERE TOSCANA | Passeggiata filosofica Silenzio</span><br><span class="m">Sabato 31 ottobre alle 14:30 · Villa Medicea la Magia, Quarrata</span></span></a>
 <a class="card" href="https://anyplans.in/pistoia/corso-di-fotografia-per-fotografi-con-reflex-e-smartphone/"><span class="em">🎨</span><span><span class="t">Corso di Fotografia per fotografi con Reflex e Smartphone</span><br><span class="m">Dal 14 settembre al 14 ottobre, 2 date · Vinci</span></span></a>
-<a class="card" href="https://anyplans.in/pistoia/copia-di-the-best-of-opera-and-viva-napoli-2026-edition/"><span class="em">🎸</span><span><span class="t">Copia di The best of Opera and Viva Napoli ! 2026 Edition</span><br><span class="m">Mercoledì 14 ottobre alle 21:15 · Grand Hotel Croce di Malta, Montecatini Terme</span></span></a>
+<a class="card" href="https://anyplans.in/pistoia/padel-competitiva/"><span class="em">🏸</span><span><span class="t">Padel: mancano 2 giocatori (competitiva)</span><br><span class="m">Dal 15 ottobre al 20 ottobre, 2 date · Agliana Padel Club, Via Giovannella 6 B, 51031 Agliana</span></span></a>
 <a class="card" href="https://anyplans.in/pistoia/giochi-da-tavolo-da-vcp/"><span class="em">📚</span><span><span class="t">Giochi da tavolo da VCP: 11 posti liberi</span><br><span class="m">Giovedì 15 ottobre alle 18:30 · VCP, Empoli</span></span></a></div>
-
+<script>
+(function(){ var sec = document.getElementById("vicino"), raw = document.getElementById("vicino-data"); if (!sec || !raw) return;
+  var C; try { C = JSON.parse(raw.textContent); } catch (_) { return; }
+  var T = {"tonight":"Altre cose vicino, stasera","tomorrow":"Altre cose vicino, domani sera","pastT":"È già passato, ma stasera qui vicino c'è altro","pastTm":"È già passato, ma domani sera qui vicino c'è altro","mapT":"Tutti gli eventi di stasera sulla mappa →","mapTm":"Tutti gli eventi di domani sulla mappa →","empty":"Per stasera qui vicino non c'è altro.","next":"I prossimi giorni sulla mappa →","inMin":"tra ","min":" min","now":"in corso"};
+  var past = sec.dataset.past === "1", esc = function(t){ return String(t).replace(/[&<>"]/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var fmt = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+  var dk = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" });
+  function gp(x){ if (!x.g) return ""; return x.x ? (x.g === 1 ? "1 da anyplans ci va" : x.g + " da anyplans ci vanno") : (x.g === 1 ? "1 persona ci va" : x.g + " persone ci vanno")}; }
+  function build(){
+    var now = new Date(), today = dk.format(now), tom = dk.format(new Date(now.getTime() + 864e5));
+    var live = C.filter(function(x){ var s = new Date(x.s), e = x.en ? new Date(x.en) : new Date(s.getTime() + 3 * 36e5); return e > now && s.getTime() >= now.getTime() - 30 * 6e4; });
+    var hour = function(x){ return +fmt.format(new Date(x.s)).slice(0, 2); };
+    var ton = live.filter(function(x){ return dk.format(new Date(x.s)) === today && hour(x) >= 18; }), day = "sera", rows = ton;
+    if (ton.length < 2) { var tm = live.filter(function(x){ return dk.format(new Date(x.s)) === tom; }), tme = tm.filter(function(x){ return hour(x) >= 18; }); rows = tme.length >= 2 ? tme : tme.concat(tm.filter(function(x){ return hour(x) < 18; })); day = "domani"; if (!rows.length && ton.length) { rows = ton; day = "sera"; } }
+    var h = document.getElementById("vicino-h"), sub = document.getElementById("vicino-sub"), ul = document.getElementById("vicino-list"), mp = document.getElementById("vicino-map");
+    if (!rows.length) { h.textContent = past ? T.pastT : T.tonight; ul.innerHTML = ""; sub.textContent = T.empty; mp.textContent = T.next; mp.href = "/?citta=pistoia"; return; }
+    h.textContent = past ? (day === "sera" ? T.pastT : T.pastTm) : (day === "sera" ? T.tonight : T.tomorrow);
+    mp.textContent = day === "sera" ? T.mapT : T.mapTm; mp.href = "/?citta=pistoia&quando=" + day;
+    ul.innerHTML = rows.slice(0, 4).map(function(x, i){ var s = new Date(x.s), min = Math.round((s - now) / 6e4), rel = min < 0 ? '<b class="now">' + T.now + '</b>' : min <= 90 ? '<b class="soon">' + T.inMin + min + T.min + '</b>' : "";
+      return '<li><a href="' + esc(x.u) + '" data-pos="' + (i + 1) + '"><span class="em" aria-hidden="true">' + x.e + '</span><span class="c"><span class="t">' + esc(x.t) + '</span><span class="m">' + fmt.format(s) + (rel ? " · " + rel : "") + (x.w ? " · " + esc(x.w) : "") + (x.km >= 1 ? " · " + x.km + " km" : "") + '</span>' + (x.g > 0 || x.solo ? '<span class="m3">' + (x.g > 0 ? '<span class="g">' + gp(x) + '</span>' : '') + (x.solo ? '<span class="chip solo' + (x.solo === "pick" ? " pick" : "") + '">' + T.solo + '</span>' : '') + '</span>' : '') + '</span><span class="ar" aria-hidden="true">›</span></a></li>'; }).join("");
+    ul.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ if (window.apTrack) apTrack("seo_vicino_tap", a.getAttribute("href") + "?pos=" + a.dataset.pos); }); });
+    mp.onclick = function(){ if (window.apTrack) apTrack("seo_vicino_mappa", location.pathname + "?d=" + day); };
+    if (!build.seen && "IntersectionObserver" in window) { build.seen = true; new IntersectionObserver(function(en, o){ if (en.some(function(x){ return x.isIntersecting; })) { o.disconnect(); if (window.apTrack) apTrack("seo_vicino_view", location.pathname + "?n=" + Math.min(rows.length, 4) + "&d=" + day); } }, { threshold: .5 }).observe(sec); }
+  }
+  build(); setInterval(build, 60e3);
+})();
+</script>
 </main>
 <footer><div class="wrap">
   <span>© 2026 Filippo Terzi · anyplans</span>

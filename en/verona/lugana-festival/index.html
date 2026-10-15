@@ -188,7 +188,13 @@ Dal 16 al 19 ottobre 2026 Sirmione ospiterà la prima edizione del Lugana Festiv
   <a class="btn ghost" href="/?citta=verona">See all events</a>
   
 </div>
-
+<section class="nearby" id="vicino" data-past="0" data-place="Sirmione">
+<h2 id="vicino-h">More things nearby</h2>
+<p class="m" id="vicino-sub">Within 10 km of Sirmione.</p>
+<ul id="vicino-list"><li><a href="/en/verona/padel-amichevole-2026-10-16/" aria-label="Padel: mancano 2 giocatori (amichevole), 17:00, Karma Padel, Via Sorre, 7 km"><span class="em" aria-hidden="true">🏸</span><span class="c"><span class="t">Padel: mancano 2 giocatori (amichevole)</span><span class="m">17:00 · Karma Padel, Via Sorre · 7 km</span></span><span class="ar" aria-hidden="true">›</span></a></li></ul>
+<a class="lnk" id="vicino-map" href="/?citta=verona&quando=sera">All tonight's events on the map →</a>
+<script type="application/json" id="vicino-data">[{"u":"/en/verona/padel-amichevole-2026-10-16/","t":"Padel: mancano 2 giocatori (amichevole)","e":"🏸","s":"2026-10-16T15:00:00.000Z","en":"2026-10-16T16:30:00.000Z","w":"Karma Padel, Via Sorre","km":7,"g":0,"x":1,"solo":null}]</script>
+</section>
 <div class="box" id="domande"><h2>Frequently asked questions</h2><details><summary>When is Lugana Festival?</summary><p>Lugana Festival has 4 dates, from 16 October to 19 October: Friday 16 October at 19:00, Saturday 17 October at 19:00, Sunday 18 October at 19:00 and Monday 19 October at 19:00.</p></details><details><summary>Where is Lugana Festival?</summary><p>The meeting point is Sirmione, BS, in the province of Verona; the page has a link to the map.</p></details><details><summary>How much does Lugana Festival cost?</summary><p>Lugana Festival is free: no ticket needed.</p></details><details><summary>Who organises Lugana Festival?</summary><p>It is a village event in Sirmione: anyplans collects it from the programme published by the town council, the parish or the association, and shows you who else is going.</p></details><details><summary>How do I join Lugana Festival?</summary><p>Sign up on anyplans with your email, open the event and say you&#39;re going: you see who organises it and who else is coming, so you don&#39;t go alone. You must be 18 or older.</p></details></div>
 
 <h2>Similar events</h2><div class="list"><a class="card" href="https://anyplans.in/en/verona/presentazione-del-libro-il-veneto-secondo-noi-dovesiba/"><span class="em">🎉</span><span><span class="t">Presentazione del libro “Il Veneto secondo noi” – Dovesiba</span><br><span class="m">Thursday 15 October at 19:00 · Via Venti Settembre, 120, Verona</span></span></a>
@@ -217,6 +223,32 @@ Dal 16 al 19 ottobre 2026 Sirmione ospiterà la prima edizione del Lugana Festiv
     else if (min > 0 && diffDays <= 7) txt = T.in + diffDays + (diffDays === 1 ? T.day : T.days);
     el.textContent = txt ? "· " + txt : "";
   })();
+</script><script>
+(function(){ var sec = document.getElementById("vicino"), raw = document.getElementById("vicino-data"); if (!sec || !raw) return;
+  var C; try { C = JSON.parse(raw.textContent); } catch (_) { return; }
+  var T = {"tonight":"More things nearby, tonight","tomorrow":"More things nearby, tomorrow evening","pastT":"It's over, but tonight there's more nearby","pastTm":"It's over, but tomorrow evening there's more nearby","mapT":"All tonight's events on the map →","mapTm":"All tomorrow's events on the map →","empty":"Nothing else nearby tonight.","next":"The next few days on the map →","inMin":"in ","min":" min","now":"happening now","solo":"You can go alone","g1":" is going","gN":" are going","from":" from anyplans"};
+  var past = sec.dataset.past === "1", esc = function(t){ return String(t).replace(/[&<>"]/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var fmt = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+  var dk = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" });
+  function gp(x){ if (!x.g) return ""; return x.g + (x.x ? T.from : "") + (x.g === 1 ? T.g1 : T.gN); }
+  function build(){
+    var now = new Date(), today = dk.format(now), tom = dk.format(new Date(now.getTime() + 864e5));
+    var live = C.filter(function(x){ var s = new Date(x.s), e = x.en ? new Date(x.en) : new Date(s.getTime() + 3 * 36e5); return e > now && s.getTime() >= now.getTime() - 30 * 6e4; });
+    var hour = function(x){ return +fmt.format(new Date(x.s)).slice(0, 2); };
+    var ton = live.filter(function(x){ return dk.format(new Date(x.s)) === today && hour(x) >= 18; }), day = "sera", rows = ton;
+    if (ton.length < 2) { var tm = live.filter(function(x){ return dk.format(new Date(x.s)) === tom; }), tme = tm.filter(function(x){ return hour(x) >= 18; }); rows = tme.length >= 2 ? tme : tme.concat(tm.filter(function(x){ return hour(x) < 18; })); day = "domani"; if (!rows.length && ton.length) { rows = ton; day = "sera"; } }
+    var h = document.getElementById("vicino-h"), sub = document.getElementById("vicino-sub"), ul = document.getElementById("vicino-list"), mp = document.getElementById("vicino-map");
+    if (!rows.length) { h.textContent = past ? T.pastT : T.tonight; ul.innerHTML = ""; sub.textContent = T.empty; mp.textContent = T.next; mp.href = "/?citta=verona"; return; }
+    h.textContent = past ? (day === "sera" ? T.pastT : T.pastTm) : (day === "sera" ? T.tonight : T.tomorrow);
+    mp.textContent = day === "sera" ? T.mapT : T.mapTm; mp.href = "/?citta=verona&quando=" + day;
+    ul.innerHTML = rows.slice(0, 4).map(function(x, i){ var s = new Date(x.s), min = Math.round((s - now) / 6e4), rel = min < 0 ? '<b class="now">' + T.now + '</b>' : min <= 90 ? '<b class="soon">' + T.inMin + min + T.min + '</b>' : "";
+      return '<li><a href="' + esc(x.u) + '" data-pos="' + (i + 1) + '"><span class="em" aria-hidden="true">' + x.e + '</span><span class="c"><span class="t">' + esc(x.t) + '</span><span class="m">' + fmt.format(s) + (rel ? " · " + rel : "") + (x.w ? " · " + esc(x.w) : "") + (x.km >= 1 ? " · " + x.km + " km" : "") + '</span>' + (x.g > 0 || x.solo ? '<span class="m3">' + (x.g > 0 ? '<span class="g">' + gp(x) + '</span>' : '') + (x.solo ? '<span class="chip solo' + (x.solo === "pick" ? " pick" : "") + '">' + T.solo + '</span>' : '') + '</span>' : '') + '</span><span class="ar" aria-hidden="true">›</span></a></li>'; }).join("");
+    ul.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ if (window.apTrack) apTrack("seo_vicino_tap", a.getAttribute("href") + "?pos=" + a.dataset.pos); }); });
+    mp.onclick = function(){ if (window.apTrack) apTrack("seo_vicino_mappa", location.pathname + "?d=" + day); };
+    if (!build.seen && "IntersectionObserver" in window) { build.seen = true; new IntersectionObserver(function(en, o){ if (en.some(function(x){ return x.isIntersecting; })) { o.disconnect(); if (window.apTrack) apTrack("seo_vicino_view", location.pathname + "?n=" + Math.min(rows.length, 4) + "&d=" + day); } }, { threshold: .5 }).observe(sec); }
+  }
+  build(); setInterval(build, 60e3);
+})();
 </script>
 </main>
 <footer><div class="wrap">
