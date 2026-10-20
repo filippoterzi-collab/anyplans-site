@@ -109,11 +109,6 @@ if (!process.argv.includes("--citta") && !INDICE && !FIXTURE) {
   process.exit(0);
 }
 
-// Diagnostica (14/10/2026): in GitHub Actions ogni città scrive memoria e ora ogni 15 s, per capire perché la
-// macchina si spegne a metà Milano senza un errore. Si toglie quando le corse tornano a finire.
-if (process.env.GITHUB_ACTIONS) { const os = await import("node:os"), t0 = Date.now();
-  setInterval(() => { const m = process.memoryUsage();
-    console.log(`[diag ${Math.round((Date.now() - t0) / 1000)}s] rss ${(m.rss / 1e9).toFixed(2)} GB, heap ${(m.heapUsed / 1e9).toFixed(2)} GB, esterna ${(m.external / 1e9).toFixed(2)} GB, libera ${(os.freemem() / 1e9).toFixed(1)} GB, carico ${os.loadavg()[0].toFixed(1)}`); }, 15000).unref(); }
 const SB_URL = process.env.SUPABASE_URL;
 const SB_ANON = process.env.SUPABASE_ANON_KEY;
 
@@ -246,15 +241,20 @@ function slugify(t) {
 const norm = (t) => String(t ?? "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, " ").trim();
 const cap = (s) => s ? s[0].toUpperCase() + s.slice(1) : s;
 const cut = (s, n) => { s = String(s ?? "").replace(/\s+/g, " ").trim(); return s.length <= n ? s : s.slice(0, n - 1).replace(/\s+\S*$/, "") + "…"; };
-const dateKey = (d, tz) => new Intl.DateTimeFormat("en-CA", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(d); // YYYY-MM-DD
-const fmtLong = (d, tz) => cap(new Intl.DateTimeFormat(L.intl, { timeZone: tz, weekday: "long", day: "numeric", month: "long", year: "numeric" }).format(d));
-const fmtShort = (d, tz) => new Intl.DateTimeFormat(L.intl, { timeZone: tz, day: "numeric", month: "long" }).format(d);
-const fmtDay = (d, tz) => cap(new Intl.DateTimeFormat(L.intl, { timeZone: tz, weekday: "long", day: "numeric", month: "long" }).format(d));
-const fmtTime = (d, tz) => new Intl.DateTimeFormat("it-IT", { timeZone: tz, hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(d);
-const fmtMonthShort = (d, tz) => cap(new Intl.DateTimeFormat(L.intl, { timeZone: tz, month: "short" }).format(d).replace(".", ""));
-const fmtDayNum = (d, tz) => new Intl.DateTimeFormat(L.intl, { timeZone: tz, day: "numeric" }).format(d);
+// Un formattatore Intl costa memoria nativa (ICU) che il garbage collector non vede: crearne uno nuovo per ogni
+// data portava Milano a 15 GB e GitHub spegneva la macchina (14-20/10/2026, sito fermo). Uno per combinazione, riusato.
+const _intl = new Map();
+const DTF = (loc, o) => { const k = "d" + loc + JSON.stringify(o); let f = _intl.get(k); if (!f) _intl.set(k, f = new Intl.DateTimeFormat(loc, o)); return f; };
+const NF = (loc, o) => { const k = "n" + loc + JSON.stringify(o || {}); let f = _intl.get(k); if (!f) _intl.set(k, f = new Intl.NumberFormat(loc, o)); return f; };
+const dateKey = (d, tz) => DTF("en-CA", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(d); // YYYY-MM-DD
+const fmtLong = (d, tz) => cap(DTF(L.intl, { timeZone: tz, weekday: "long", day: "numeric", month: "long", year: "numeric" }).format(d));
+const fmtShort = (d, tz) => DTF(L.intl, { timeZone: tz, day: "numeric", month: "long" }).format(d);
+const fmtDay = (d, tz) => cap(DTF(L.intl, { timeZone: tz, weekday: "long", day: "numeric", month: "long" }).format(d));
+const fmtTime = (d, tz) => DTF("it-IT", { timeZone: tz, hour: "2-digit", minute: "2-digit", hourCycle: "h23" }).format(d);
+const fmtMonthShort = (d, tz) => cap(DTF(L.intl, { timeZone: tz, month: "short" }).format(d).replace(".", ""));
+const fmtDayNum = (d, tz) => DTF(L.intl, { timeZone: tz, day: "numeric" }).format(d);
 function isoLocal(d, tz) {
-  const p = Object.fromEntries(new Intl.DateTimeFormat("en-US", { timeZone: tz, hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit", timeZoneName: "longOffset" }).formatToParts(d).map(x => [x.type, x.value]));
+  const p = Object.fromEntries(DTF("en-US", { timeZone: tz, hourCycle: "h23", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit", timeZoneName: "longOffset" }).formatToParts(d).map(x => [x.type, x.value]));
   const off = p.timeZoneName === "GMT" ? "+00:00" : p.timeZoneName.slice(3);
   return `${p.year}-${p.month}-${p.day}T${p.hour}:${p.minute}:${p.second}${off}`;
 }
@@ -301,12 +301,12 @@ const ORG = { "@type": "Organization", "@id": SITE + "/#org", name: "anyplans", 
   description: `La mappa degli eventi veri d'Italia: feste di paese, teatro, concerti, mercati, incontri, visite guidate, camminate, corsi, volontariato, sport e cene in ${CITTA.length} città. Ne scegli uno e ci vai insieme ad altri. Solo maggiorenni.`,
   foundingLocation: { "@type": "City", name: "Bergamo" }, areaServed: { "@type": "Country", name: "Italia" }, sameAs: [INSTAGRAM],
   founder: { "@type": "Person", name: "Filippo Terzi", image: SITE + "/founder.jpg", jobTitle: "Fondatore" } };
-const fmtDate = (d) => new Intl.DateTimeFormat(L.intl, { timeZone: DEFAULT_TZ, day: "numeric", month: "long", year: "numeric" }).format(d);
+const fmtDate = (d) => DTF(L.intl, { timeZone: DEFAULT_TZ, day: "numeric", month: "long", year: "numeric" }).format(d);
 // answer engines (ChatGPT, Perplexity, AI Overviews) lift question + short answer: every page gets a visible FAQ and its FAQPage schema
 // domande chiuse (details): si aprono al tocco, il testo resta nella pagina per Google (FAQPage in JSON-LD)
 const faqHtml = (faq) => `<div class="box" id="domande"><h2>${en() ? "Frequently asked questions" : "Domande frequenti"}</h2>${faq.map(f => `<details><summary>${esc(f.q)}</summary><p>${esc(f.a)}</p></details>`).join("")}</div>`;
 const faqLd = (faq) => jsonld({ "@context": "https://schema.org", "@type": "FAQPage", mainEntity: faq.map(f => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) });
-const nf = (n) => new Intl.NumberFormat(L.intl).format(n);   // 6.267, non 6267
+const nf = (n) => NF(L.intl).format(n);   // 6.267, non 6267
 const joinIt = (a) => a.length <= 1 ? a.join("") : a.slice(0, -1).join(", ") + L.and + a[a.length - 1];
 
 // ── data ──────────────────────────────────────────────────────────────────────
@@ -939,7 +939,7 @@ for (const code of ["it", "en"]) inLocale(code, () => {
   for (const ix of typesOggi) indexSlugs.add(tSlug(ix.t) + (en() ? "-today" : "-oggi"));
   for (let i = 0; i < 12; i++) {
     const d = new Date(Date.UTC(NOW.getUTCFullYear(), NOW.getUTCMonth() + i, 15));
-    const t = new Intl.DateTimeFormat(L.intl, { timeZone: DEFAULT_TZ, month: "long", year: "numeric" }).format(d);
+    const t = DTF(L.intl, { timeZone: DEFAULT_TZ, month: "long", year: "numeric" }).format(d);
     indexSlugs.add(L.monthSlug(en() ? cap(t) : t.toLowerCase()));
   }
 });
@@ -1081,7 +1081,7 @@ const upcomingPages = pages.filter(p => !p.isPast).sort(byDate);
 // ── quando: oggi, domani, weekend, e i prossimi mesi ──────────────────────────
 // Una pagina per ognuno, solo con almeno MIN_WHEN eventi (niente pagine vuote su Google).
 const MONTHS_AHEAD = 3;
-const dowEn = (d) => new Intl.DateTimeFormat("en-US", { timeZone: DEFAULT_TZ, weekday: "short" }).format(d);
+const dowEn = (d) => DTF("en-US", { timeZone: DEFAULT_TZ, weekday: "short" }).format(d);
 const dayAfter = (n) => new Date(NOW.getTime() + n * 86400e3);
 const datesOf = (p) => p.up || p.dates.filter(d => d.start >= NOW);
 const onDay = (p, key) => datesOf(p).some(d => dateKey(d.start, d.tz) === key);
@@ -1097,8 +1097,8 @@ const WHEN = {
   domani: { keys: [TOMORROW_KEY], list: upcomingPages.filter(p => onDay(p, TOMORROW_KEY)) },
   weekend: { keys: weekendKeys, list: upcomingPages.filter(p => weekendKeys.some(k => onDay(p, k))) },
 };
-const monthKey = (d) => new Intl.DateTimeFormat("en-CA", { timeZone: DEFAULT_TZ, year: "numeric", month: "2-digit" }).format(d).slice(0, 7);
-const monthLabel = (m) => { const [y, mm] = m.split("-"); const t = new Intl.DateTimeFormat(L.intl, { timeZone: DEFAULT_TZ, month: "long", year: "numeric" }).format(new Date(Date.UTC(+y, +mm - 1, 15))); return en() ? cap(t) : t.toLowerCase(); };
+const monthKey = (d) => DTF("en-CA", { timeZone: DEFAULT_TZ, year: "numeric", month: "2-digit" }).format(d).slice(0, 7);
+const monthLabel = (m) => { const [y, mm] = m.split("-"); const t = DTF(L.intl, { timeZone: DEFAULT_TZ, month: "long", year: "numeric" }).format(new Date(Date.UTC(+y, +mm - 1, 15))); return en() ? cap(t) : t.toLowerCase(); };
 const monthsWanted = [...Array(MONTHS_AHEAD).keys()].map(i => monthKey(new Date(Date.UTC(NOW.getUTCFullYear(), NOW.getUTCMonth() + i, 15))));
 const monthIdx = new Map(monthsWanted.map(m => [m, upcomingPages.filter(p => datesOf(p).some(d => monthKey(d.start) === m))]));
 const months = monthsWanted.filter(m => (monthIdx.get(m) || []).length >= MIN_WHEN);
@@ -2327,7 +2327,7 @@ function hubPageEn() {
   const sotto = `What's on in ${CITY_NAME} and its province, today, tonight and this weekend: ${joinIt(topKinds(6))}. Pick one and go with other people.`;
   const descr = cut(`Things to do in ${CITY_NAME} today and this weekend: ${upcomingPages.length} events, ${types.length} kinds of activity, ${groups.length} groups. Town festivals, run clubs, classes, sports. You sign up and go with others.`, 160);
   const today = dateKey(NOW, DEFAULT_TZ);
-  const dow = (d) => new Intl.DateTimeFormat("en-US", { timeZone: DEFAULT_TZ, weekday: "short" }).format(d);
+  const dow = (d) => DTF("en-US", { timeZone: DEFAULT_TZ, weekday: "short" }).format(d);
   const todayList = upcomingPages.filter(p => p.up.some(d => dateKey(d.start, d.tz) === today));
   const wkEnd = new Date(NOW.getTime() + 7 * 86400e3);
   const isWk = (d) => d.start >= NOW && d.start <= wkEnd && ["Sat", "Sun"].includes(dow(d.start));
@@ -2368,7 +2368,7 @@ function hubPageIt() {
   const descr = cut(`${hubSotto()} ${upcomingPages.length} eventi in programma, ${types.length} tipi di attività${groups.length ? `, ${groups.length} gruppi` : ""}.`, 160);
   // "cosa fare a Bergamo oggi / questo weekend": the page is rebuilt every night, so "today" is right at 03:30
   const today = dateKey(NOW, DEFAULT_TZ);
-  const dow = (d) => new Intl.DateTimeFormat("en-US", { timeZone: DEFAULT_TZ, weekday: "short" }).format(d);
+  const dow = (d) => DTF("en-US", { timeZone: DEFAULT_TZ, weekday: "short" }).format(d);
   const todayList = upcomingPages.filter(p => p.up.some(d => dateKey(d.start, d.tz) === today));
   const wkEnd = new Date(NOW.getTime() + 7 * 86400e3);
   const isWk = (d) => d.start >= NOW && d.start <= wkEnd && ["Sat", "Sun"].includes(dow(d.start));
@@ -2463,7 +2463,7 @@ const CHIP_LABEL = { it: { sport: "Sport", tavola: "A tavola", lab: "Laboratori"
                      en: { sport: "Sports", tavola: "Food", lab: "Workshops", serate: "Nights out", cultura: "Culture", giochi: "Games", feste: "Festivals", mercati: "Markets", altro: "Other" } };
 // "Ven 9": il giorno della settimana corto col numero, per le schede dei giorni nelle categorie
 const dayShortLabel = (k) => { const [y, m, d] = k.split("-"); const dt = new Date(Date.UTC(+y, +m - 1, +d, 12));
-  return cap(new Intl.DateTimeFormat(L.intl, { timeZone: DEFAULT_TZ, weekday: "short" }).format(dt).replace(".", "")) + " " + (+d); };
+  return cap(DTF(L.intl, { timeZone: DEFAULT_TZ, weekday: "short" }).format(dt).replace(".", "")) + " " + (+d); };
 const fasciaOf = (hh) => hh < 12 ? "mat" : hh < 18 ? "pom" : "sera";
 
 // una riga per evento in un dato giorno (l'ora è quella della prima data di quel giorno)
