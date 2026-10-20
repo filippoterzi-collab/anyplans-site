@@ -141,13 +141,7 @@ footer a:hover{color:var(--ink)}
 <h1>Biagio Antonacci</h1>
 
 <p class="lead">Concerts &amp; live music in Teatro Grande Pompei, Pompei: it already took place, the last date was Tuesday, 22 September 2026.</p>
-<div class="box in"><h2>This event is over</h2><div class="m">The last date was Tuesday, 22 September 2026. If it comes back, the new dates appear here.</div><div class="cta"><a class="btn" href="/?citta=napoli">See what's on now</a></div></div><section class="nearby" id="vicino" data-past="1" data-place="Pompei">
-<h2 id="vicino-h">It's over, but tonight there's more nearby</h2>
-<p class="m" id="vicino-sub">Within 10 km of Pompei.</p>
-<ul id="vicino-list"><li><a href="/en/napoli/tablodonneetero-da-lido-risorgimento/" aria-label="Tablodonneetero da Lido Risorgimento: 13 posti liberi, 09:30, Lido Risorgimento, Torre Annunziata, 4 km"><span class="em" aria-hidden="true">🍽️</span><span class="c"><span class="t">Tablodonneetero da Lido Risorgimento: 13 posti liberi</span><span class="m">09:30 · Lido Risorgimento, Torre Annunziata · 4 km</span><span class="m3"><span class="chip solo">You can go alone</span></span></span><span class="ar" aria-hidden="true">›</span></a></li></ul>
-<a class="lnk" id="vicino-map" href="/?citta=napoli&quando=sera">All tonight's events on the map →</a>
-<script type="application/json" id="vicino-data">[{"u":"/en/napoli/tablodonneetero-da-lido-risorgimento/","t":"Tablodonneetero da Lido Risorgimento: 13 posti liberi","e":"🍽️","s":"2026-10-18T07:30:00.000Z","en":"2026-10-18T09:00:00.000Z","w":"Lido Risorgimento, Torre Annunziata","km":4,"g":0,"x":1,"solo":"auto"}]</script>
-</section>
+<div class="box in"><h2>This event is over</h2><div class="m">The last date was Tuesday, 22 September 2026. If it comes back, the new dates appear here.</div><div class="cta"><a class="btn" href="/?citta=napoli">See what's on now</a></div></div>
 <div class="box">
   <h2>When</h2>
   
@@ -179,37 +173,11 @@ footer a:hover{color:var(--ink)}
 
 <div class="box" id="domande"><h2>Frequently asked questions</h2><details><summary>When was Biagio Antonacci?</summary><p>Biagio Antonacci already took place: the last date was Tuesday, 22 September 2026. If it comes back, the new dates appear on this anyplans page.</p></details><details><summary>Where is Biagio Antonacci?</summary><p>The meeting point is Teatro Grande Pompei, Pompei, in the province of Naples; the page has a link to the map.</p></details><details><summary>How much does Biagio Antonacci cost?</summary><p>Biagio Antonacci is free: no ticket needed (Ingresso: vedi la pagina del Tacco di Bacco).</p></details><details><summary>Who organises Biagio Antonacci?</summary><p>It is organised by Teatro Grande Pompei. anyplans collects the event and shows you who else is going.</p></details><details><summary>How do I join Biagio Antonacci?</summary><p>Sign up on anyplans with your email, open the event and say you&#39;re going: you see who organises it and who else is coming, so you don&#39;t go alone. You must be 18 or older.</p></details></div>
 
-<h2>Similar events</h2><div class="list"><a class="card" href="https://anyplans.in/en/napoli/otium-fest-2026-ingresso-gratuito-su-prenotazione/"><span class="em">🎸</span><span><span class="t">OTIUM fest 2026 | Ingresso gratuito su prenotazione</span><br><span class="m">Sunday 18 October at 10:00 · Masseria Tor Dei, Giugliano in Campania</span></span></a>
-<a class="card" href="https://anyplans.in/en/napoli/pranzo-at-casa/"><span class="em">🎸</span><span><span class="t">PRANZO AT CASA</span><br><span class="m">Sunday 18 October at 12:00 · Casa Azul, Pozzuoli</span></span></a>
-<a class="card" href="https://anyplans.in/en/napoli/the-hybrid-session/"><span class="em">🎸</span><span><span class="t">THE HYBRID SESSION</span><br><span class="m">Sunday 18 October at 16:00 · Via Campi Flegrei, 15, Pozzuoli</span></span></a>
-<a class="card" href="https://anyplans.in/en/napoli/note-d-autunno/"><span class="em">🎸</span><span><span class="t">Note d&#39;autunno</span><br><span class="m">Sunday 18 October at 17:00 · Reggia di Capodimonte, Napoli</span></span></a></div>
-<script>
-(function(){ var sec = document.getElementById("vicino"), raw = document.getElementById("vicino-data"); if (!sec || !raw) return;
-  var C; try { C = JSON.parse(raw.textContent); } catch (_) { return; }
-  var T = {"tonight":"More things nearby, tonight","tomorrow":"More things nearby, tomorrow evening","pastT":"It's over, but tonight there's more nearby","pastTm":"It's over, but tomorrow evening there's more nearby","mapT":"All tonight's events on the map →","mapTm":"All tomorrow's events on the map →","empty":"Nothing else nearby tonight.","next":"The next few days on the map →","inMin":"in ","min":" min","now":"happening now","solo":"You can go alone","g1":" is going","gN":" are going","from":" from anyplans"};
-  var past = sec.dataset.past === "1", esc = function(t){ return String(t).replace(/[&<>"]/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
-  var fmt = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
-  var dk = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" });
-  function gp(x){ if (!x.g) return ""; return x.g + (x.x ? T.from : "") + (x.g === 1 ? T.g1 : T.gN); }
-  function build(){
-    var now = new Date(), today = dk.format(now), tom = dk.format(new Date(now.getTime() + 864e5));
-    var live = C.filter(function(x){ var s = new Date(x.s), e = x.en ? new Date(x.en) : new Date(s.getTime() + 3 * 36e5); return e > now && s.getTime() >= now.getTime() - 30 * 6e4; });
-    var hour = function(x){ return +fmt.format(new Date(x.s)).slice(0, 2); };
-    var ton = live.filter(function(x){ return dk.format(new Date(x.s)) === today && hour(x) >= 18; }), day = "sera", rows = ton;
-    if (ton.length < 2) { var tm = live.filter(function(x){ return dk.format(new Date(x.s)) === tom; }), tme = tm.filter(function(x){ return hour(x) >= 18; }); rows = tme.length >= 2 ? tme : tme.concat(tm.filter(function(x){ return hour(x) < 18; })); day = "domani"; if (!rows.length && ton.length) { rows = ton; day = "sera"; } }
-    var h = document.getElementById("vicino-h"), sub = document.getElementById("vicino-sub"), ul = document.getElementById("vicino-list"), mp = document.getElementById("vicino-map");
-    if (!rows.length) { h.textContent = past ? T.pastT : T.tonight; ul.innerHTML = ""; sub.textContent = T.empty; mp.textContent = T.next; mp.href = "/?citta=napoli"; return; }
-    h.textContent = past ? (day === "sera" ? T.pastT : T.pastTm) : (day === "sera" ? T.tonight : T.tomorrow);
-    mp.textContent = day === "sera" ? T.mapT : T.mapTm; mp.href = "/?citta=napoli&quando=" + day;
-    ul.innerHTML = rows.slice(0, 4).map(function(x, i){ var s = new Date(x.s), min = Math.round((s - now) / 6e4), rel = min < 0 ? '<b class="now">' + T.now + '</b>' : min <= 90 ? '<b class="soon">' + T.inMin + min + T.min + '</b>' : "";
-      return '<li><a href="' + esc(x.u) + '" data-pos="' + (i + 1) + '"><span class="em" aria-hidden="true">' + x.e + '</span><span class="c"><span class="t">' + esc(x.t) + '</span><span class="m">' + fmt.format(s) + (rel ? " · " + rel : "") + (x.w ? " · " + esc(x.w) : "") + (x.km >= 1 ? " · " + x.km + " km" : "") + '</span>' + (x.g > 0 || x.solo ? '<span class="m3">' + (x.g > 0 ? '<span class="g">' + gp(x) + '</span>' : '') + (x.solo ? '<span class="chip solo' + (x.solo === "pick" ? " pick" : "") + '">' + T.solo + '</span>' : '') + '</span>' : '') + '</span><span class="ar" aria-hidden="true">›</span></a></li>'; }).join("");
-    ul.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ if (window.apTrack) apTrack("seo_vicino_tap", a.getAttribute("href") + "?pos=" + a.dataset.pos); }); });
-    mp.onclick = function(){ if (window.apTrack) apTrack("seo_vicino_mappa", location.pathname + "?d=" + day); };
-    if (!build.seen && "IntersectionObserver" in window) { build.seen = true; new IntersectionObserver(function(en, o){ if (en.some(function(x){ return x.isIntersecting; })) { o.disconnect(); if (window.apTrack) apTrack("seo_vicino_view", location.pathname + "?n=" + Math.min(rows.length, 4) + "&d=" + day); } }, { threshold: .5 }).observe(sec); }
-  }
-  build(); setInterval(build, 60e3);
-})();
-</script>
+<h2>Similar events</h2><div class="list"><a class="card" href="https://anyplans.in/en/napoli/ciccio-merolla-in-napoli/"><span class="em">🎸</span><span><span class="t">Ciccio Merolla in Napoli</span><br><span class="m">Tuesday 20 October at 21:00 · Teatro Augusteo, Napoli</span></span></a>
+<a class="card" href="https://anyplans.in/en/napoli/o-sole-mio/"><span class="em">🎸</span><span><span class="t">O&#39; SOLE MIO</span><br><span class="m">Wednesday 21 October at 20:00 · Parco di Villa Fiorentino, Sorrento</span></span></a>
+<a class="card" href="https://anyplans.in/en/napoli/i-tre-tenori-a-sorrento-the-three-tenors-in-sorrento/"><span class="em">🎸</span><span><span class="t">I Tre Tenori a Sorrento - The Three Tenors in Sorrento</span><br><span class="m">Wednesday 21 October at 21:00 · Museo Correale Sorrento, Sorrento</span></span></a>
+<a class="card" href="https://anyplans.in/en/napoli/rodney-whitaker-quartet-con-greg-burk-gianluca-figliola-e-ma/"><span class="em">🎸</span><span><span class="t">Rodney Whitaker Quartet con Greg Burk, Gianluca Figliola e Marco Valeri</span><br><span class="m">Wednesday 21 October at 21:00 · Teatro Sebeto Aversa, Aversa</span></span></a></div>
+
 </main>
 <footer><div class="wrap">
   <span>© 2026 Filippo Terzi · anyplans</span>
