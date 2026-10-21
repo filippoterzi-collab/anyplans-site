@@ -139,7 +139,13 @@ footer a:hover{color:var(--ink)}
 <h1>Mantova: navigazione alla scoperta della natura autunnale</h1>
 
 <p class="lead">Visite guidate a Mantova, Mantova: si è già svolto, l&#39;ultima data è stata sabato 10 ottobre 2026.</p>
-<div class="box in"><h2>Questo evento è passato</h2><div class="m">L'ultima data è stata sabato 10 ottobre 2026. Se torna, le date nuove compaiono qui.</div><div class="cta"><a class="btn" href="/?citta=mantova">Vedi cosa c'è adesso</a></div></div>
+<div class="box in"><h2>Questo evento è passato</h2><div class="m">L'ultima data è stata sabato 10 ottobre 2026. Se torna, le date nuove compaiono qui.</div><div class="cta"><a class="btn" href="/?citta=mantova">Vedi cosa c'è adesso</a></div></div><section class="nearby" id="vicino" data-past="1" data-place="">
+<h2 id="vicino-h">È già passato, ma stasera qui vicino c'è altro</h2>
+<p class="m" id="vicino-sub">A meno di 10 km da qui.</p>
+<ul id="vicino-list"><li><a href="/mantova/la-forza-delle-idee-la-bellezza-delle-parole/" aria-label="La forza delle idee, la bellezza delle parole., 10:30, Via Carlo Montanari, 1, 1 km"><span class="em" aria-hidden="true">📚</span><span class="c"><span class="t">La forza delle idee, la bellezza delle parole.</span><span class="m">10:30 · Via Carlo Montanari, 1 · 1 km</span><span class="m3"><span class="chip solo">Ci puoi andare da solo</span></span></span><span class="ar" aria-hidden="true">›</span></a></li></ul>
+<a class="lnk" id="vicino-map" href="/?citta=mantova&quando=sera">Tutti gli eventi di stasera sulla mappa →</a>
+<script type="application/json" id="vicino-data">[{"u":"/mantova/la-forza-delle-idee-la-bellezza-delle-parole/","t":"La forza delle idee, la bellezza delle parole.","e":"📚","s":"2026-10-22T08:30:00.000Z","en":"2026-10-22T11:00:00.000Z","w":"Via Carlo Montanari, 1","km":1,"g":0,"x":1,"solo":"auto"}]</script>
+</section>
 <div class="box">
   <h2>Quando</h2>
   
@@ -185,7 +191,33 @@ Saremo guidati da un esperto del territorio, che ci aiuterà a leggere questo pa
 <a class="card" href="https://anyplans.in/mantova/visita-guidata-a-palazzo-te-lo-scrigno-dei-gonzaga/"><span class="em">🏛️</span><span><span class="t">Visita Guidata a Palazzo Te: lo scrigno dei Gonzaga</span><br><span class="m">Dal 31 ottobre al 31 ottobre, 2 date · Viale Te, 13, 46100 Mantova MN, Italia, Mantova</span></span></a>
 <a class="card" href="https://anyplans.in/mantova/halloween-a-mantova-ghost-tour/"><span class="em">🏛️</span><span><span class="t">Halloween a Mantova: Ghost Tour</span><br><span class="m">Sabato 31 ottobre alle 20:30 · Mantova, Mantova</span></span></a>
 <a class="card" href="https://anyplans.in/mantova/visita-guidata-al-palazzo-ducale-di-mantova/"><span class="em">🏛️</span><span><span class="t">Visita Guidata al Palazzo Ducale di Mantova</span><br><span class="m">Dal 1 novembre al 1 novembre, 2 date · Piazza Sordello, 40, 46100 Mantova MN, Italia, Mantova</span></span></a></div>
-
+<script>
+(function(){ var sec = document.getElementById("vicino"), raw = document.getElementById("vicino-data"); if (!sec || !raw) return;
+  var C; try { C = JSON.parse(raw.textContent); } catch (_) { return; }
+  var T = {"tonight":"Altre cose vicino, stasera","tomorrow":"Altre cose vicino, domani sera","pastT":"È già passato, ma stasera qui vicino c'è altro","pastTm":"È già passato, ma domani sera qui vicino c'è altro","mapT":"Tutti gli eventi di stasera sulla mappa →","mapTm":"Tutti gli eventi di domani sulla mappa →","empty":"Per stasera qui vicino non c'è altro.","next":"I prossimi giorni sulla mappa →","inMin":"tra ","min":" min","now":"in corso"};
+  var past = sec.dataset.past === "1", esc = function(t){ return String(t).replace(/[&<>"]/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var fmt = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+  var dk = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" });
+  function gp(x){ if (!x.g) return ""; return x.x ? (x.g === 1 ? "1 da anyplans ci va" : x.g + " da anyplans ci vanno") : (x.g === 1 ? "1 persona ci va" : x.g + " persone ci vanno")}; }
+  function build(){
+    var now = new Date(), today = dk.format(now), tom = dk.format(new Date(now.getTime() + 864e5));
+    var live = C.filter(function(x){ var s = new Date(x.s), e = x.en ? new Date(x.en) : new Date(s.getTime() + 3 * 36e5); return e > now && s.getTime() >= now.getTime() - 30 * 6e4; });
+    var hour = function(x){ return +fmt.format(new Date(x.s)).slice(0, 2); };
+    var ton = live.filter(function(x){ return dk.format(new Date(x.s)) === today && hour(x) >= 18; }), day = "sera", rows = ton;
+    if (ton.length < 2) { var tm = live.filter(function(x){ return dk.format(new Date(x.s)) === tom; }), tme = tm.filter(function(x){ return hour(x) >= 18; }); rows = tme.length >= 2 ? tme : tme.concat(tm.filter(function(x){ return hour(x) < 18; })); day = "domani"; if (!rows.length && ton.length) { rows = ton; day = "sera"; } }
+    var h = document.getElementById("vicino-h"), sub = document.getElementById("vicino-sub"), ul = document.getElementById("vicino-list"), mp = document.getElementById("vicino-map");
+    if (!rows.length) { h.textContent = past ? T.pastT : T.tonight; ul.innerHTML = ""; sub.textContent = T.empty; mp.textContent = T.next; mp.href = "/?citta=mantova"; return; }
+    h.textContent = past ? (day === "sera" ? T.pastT : T.pastTm) : (day === "sera" ? T.tonight : T.tomorrow);
+    mp.textContent = day === "sera" ? T.mapT : T.mapTm; mp.href = "/?citta=mantova&quando=" + day;
+    ul.innerHTML = rows.slice(0, 4).map(function(x, i){ var s = new Date(x.s), min = Math.round((s - now) / 6e4), rel = min < 0 ? '<b class="now">' + T.now + '</b>' : min <= 90 ? '<b class="soon">' + T.inMin + min + T.min + '</b>' : "";
+      return '<li><a href="' + esc(x.u) + '" data-pos="' + (i + 1) + '"><span class="em" aria-hidden="true">' + x.e + '</span><span class="c"><span class="t">' + esc(x.t) + '</span><span class="m">' + fmt.format(s) + (rel ? " · " + rel : "") + (x.w ? " · " + esc(x.w) : "") + (x.km >= 1 ? " · " + x.km + " km" : "") + '</span>' + (x.g > 0 || x.solo ? '<span class="m3">' + (x.g > 0 ? '<span class="g">' + gp(x) + '</span>' : '') + (x.solo ? '<span class="chip solo' + (x.solo === "pick" ? " pick" : "") + '">' + T.solo + '</span>' : '') + '</span>' : '') + '</span><span class="ar" aria-hidden="true">›</span></a></li>'; }).join("");
+    ul.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ if (window.apTrack) apTrack("seo_vicino_tap", a.getAttribute("href") + "?pos=" + a.dataset.pos); }); });
+    mp.onclick = function(){ if (window.apTrack) apTrack("seo_vicino_mappa", location.pathname + "?d=" + day); };
+    if (!build.seen && "IntersectionObserver" in window) { build.seen = true; new IntersectionObserver(function(en, o){ if (en.some(function(x){ return x.isIntersecting; })) { o.disconnect(); if (window.apTrack) apTrack("seo_vicino_view", location.pathname + "?n=" + Math.min(rows.length, 4) + "&d=" + day); } }, { threshold: .5 }).observe(sec); }
+  }
+  build(); setInterval(build, 60e3);
+})();
+</script>
 </main>
 <footer><div class="wrap">
   <span>© 2026 Filippo Terzi · anyplans</span>

@@ -141,7 +141,13 @@ footer a:hover{color:var(--ink)}
 <h1>Incontro di Costellazioni Familiari</h1>
 
 <p class="lead">Yoga &amp; pilates in Sala 14, Monterotondo: it already took place, the last date was Saturday, 10 October 2026.</p>
-<div class="box in"><h2>This event is over</h2><div class="m">The last date was Saturday, 10 October 2026. If it comes back, the new dates appear here.</div><div class="cta"><a class="btn" href="/?citta=roma">See what's on now</a></div></div>
+<div class="box in"><h2>This event is over</h2><div class="m">The last date was Saturday, 10 October 2026. If it comes back, the new dates appear here.</div><div class="cta"><a class="btn" href="/?citta=roma">See what's on now</a></div></div><section class="nearby" id="vicino" data-past="1" data-place="Monterotondo">
+<h2 id="vicino-h">It's over, but tonight there's more nearby</h2>
+<p class="m" id="vicino-sub">Within 10 km of Monterotondo.</p>
+<ul id="vicino-list"><li><a href="/en/roma/open-day-corso-sommelier-con-degustazione-gratuita-mentana/" aria-label="Open Day Corso Sommelier con Degustazione Gratuita – Mentana, 18:30, Life Ristorante, Mentana, 2 km"><span class="em" aria-hidden="true">🍽️</span><span class="c"><span class="t">Open Day Corso Sommelier con Degustazione Gratuita – Mentana</span><span class="m">18:30 · Life Ristorante, Mentana · 2 km</span></span><span class="ar" aria-hidden="true">›</span></a></li></ul>
+<a class="lnk" id="vicino-map" href="/?citta=roma&quando=sera">All tonight's events on the map →</a>
+<script type="application/json" id="vicino-data">[{"u":"/en/roma/open-day-corso-sommelier-con-degustazione-gratuita-mentana/","t":"Open Day Corso Sommelier con Degustazione Gratuita – Mentana","e":"🍽️","s":"2026-10-22T16:30:00.000Z","en":"2026-10-22T18:30:00.000Z","w":"Life Ristorante, Mentana","km":2,"g":0,"x":1,"solo":null}]</script>
+</section>
 <div class="box">
   <h2>When</h2>
   
@@ -177,11 +183,37 @@ Orari, prezzo e biglietti sulla pagina Eventbrite dell&#39;evento: l&#39;iscrizi
 
 <div class="box" id="domande"><h2>Frequently asked questions</h2><details><summary>When was Incontro di Costellazioni Familiari?</summary><p>Incontro di Costellazioni Familiari already took place: the last date was Saturday, 10 October 2026. If it comes back, the new dates appear on this anyplans page.</p></details><details><summary>Where is Incontro di Costellazioni Familiari?</summary><p>The meeting point is Sala 14, Monterotondo, in the province of Rome; the page has a link to the map.</p></details><details><summary>How much does Incontro di Costellazioni Familiari cost?</summary><p>Incontro di Costellazioni Familiari is free: no ticket needed (Biglietti su Eventbrite).</p></details><details><summary>Who organises Incontro di Costellazioni Familiari?</summary><p>It is organised by a member of anyplans.</p></details><details><summary>How do I join Incontro di Costellazioni Familiari?</summary><p>Sign up on anyplans with your email, open the event and say you&#39;re going: you see who organises it and who else is coming, so you don&#39;t go alone. You must be 18 or older.</p></details></div>
 
-<h2>Similar events</h2><div class="list"><a class="card" href="https://anyplans.in/en/roma/b2bookingsmed/"><span class="em">🧘</span><span><span class="t">B2BOOKINGSMED</span><br><span class="m">Tuesday 20 October at 16:00 · Hilton Rome Airport, Fiumicino</span></span></a>
-<a class="card" href="https://anyplans.in/en/roma/lezioni-gratuite-di-hatha-yoga-mart-giov-18-19/"><span class="em">🧘</span><span><span class="t">Lezioni GRATUITE di Hatha YOGA mart-giov 18-19</span><br><span class="m">Tuesday 20 October at 18:00 · Roma, roma appio tuscolano metro A Furio Camillo</span></span></a>
-<a class="card" href="https://anyplans.in/en/roma/lezioni-gratuite-di-hatha-yoga-mart-giov-20-21/"><span class="em">🧘</span><span><span class="t">Lezioni GRATUITE di Hatha YOGA mart-giov 20-21</span><br><span class="m">Tuesday 20 October at 20:00 · Roma, roma appio tuscolano metro A Furio Camillo</span></span></a>
+<h2>Similar events</h2><div class="list"><a class="card" href="https://anyplans.in/en/roma/yoga-on-line-lezione-gratuita-di-prova/"><span class="em">🧘</span><span><span class="t">YOGA ON-LINE: Lezione GRATUITA di prova</span><br><span class="m">Wednesday 21 October at 19:00 · Roma, roma appio tuscolano metro A Furio Camillo</span></span></a>
+<a class="card" href="https://anyplans.in/en/roma/join-our-online-meditation-community/"><span class="em">🧘</span><span><span class="t">🧘‍♂️ 🧘‍♀️ 🧘 Join our online Meditation Community!</span><br><span class="m">Wednesday 21 October at 20:00 · Italy-Rome, Rome</span></span></a>
+<a class="card" href="https://anyplans.in/en/roma/liberta-da-liberta-di-il-training-autogeno-per-autorigenerar/"><span class="em">🧘</span><span><span class="t">Libertà da..., libertà di... Il training autogeno per autorigenerarsi</span><br><span class="m">Thursday 22 October at 19:00 · Tuttoteatro.Com Associazione Culturale, Roma</span></span></a>
 <a class="card" href="https://anyplans.in/en/roma/open-day-scleroterapia/"><span class="em">🧘</span><span><span class="t">Open Day Scleroterapia</span><br><span class="m">Friday 23 October at 14:00 · Torrino, Rome</span></span></a></div>
-
+<script>
+(function(){ var sec = document.getElementById("vicino"), raw = document.getElementById("vicino-data"); if (!sec || !raw) return;
+  var C; try { C = JSON.parse(raw.textContent); } catch (_) { return; }
+  var T = {"tonight":"More things nearby, tonight","tomorrow":"More things nearby, tomorrow evening","pastT":"It's over, but tonight there's more nearby","pastTm":"It's over, but tomorrow evening there's more nearby","mapT":"All tonight's events on the map →","mapTm":"All tomorrow's events on the map →","empty":"Nothing else nearby tonight.","next":"The next few days on the map →","inMin":"in ","min":" min","now":"happening now","solo":"You can go alone","g1":" is going","gN":" are going","from":" from anyplans"};
+  var past = sec.dataset.past === "1", esc = function(t){ return String(t).replace(/[&<>"]/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var fmt = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+  var dk = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" });
+  function gp(x){ if (!x.g) return ""; return x.g + (x.x ? T.from : "") + (x.g === 1 ? T.g1 : T.gN); }
+  function build(){
+    var now = new Date(), today = dk.format(now), tom = dk.format(new Date(now.getTime() + 864e5));
+    var live = C.filter(function(x){ var s = new Date(x.s), e = x.en ? new Date(x.en) : new Date(s.getTime() + 3 * 36e5); return e > now && s.getTime() >= now.getTime() - 30 * 6e4; });
+    var hour = function(x){ return +fmt.format(new Date(x.s)).slice(0, 2); };
+    var ton = live.filter(function(x){ return dk.format(new Date(x.s)) === today && hour(x) >= 18; }), day = "sera", rows = ton;
+    if (ton.length < 2) { var tm = live.filter(function(x){ return dk.format(new Date(x.s)) === tom; }), tme = tm.filter(function(x){ return hour(x) >= 18; }); rows = tme.length >= 2 ? tme : tme.concat(tm.filter(function(x){ return hour(x) < 18; })); day = "domani"; if (!rows.length && ton.length) { rows = ton; day = "sera"; } }
+    var h = document.getElementById("vicino-h"), sub = document.getElementById("vicino-sub"), ul = document.getElementById("vicino-list"), mp = document.getElementById("vicino-map");
+    if (!rows.length) { h.textContent = past ? T.pastT : T.tonight; ul.innerHTML = ""; sub.textContent = T.empty; mp.textContent = T.next; mp.href = "/?citta=roma"; return; }
+    h.textContent = past ? (day === "sera" ? T.pastT : T.pastTm) : (day === "sera" ? T.tonight : T.tomorrow);
+    mp.textContent = day === "sera" ? T.mapT : T.mapTm; mp.href = "/?citta=roma&quando=" + day;
+    ul.innerHTML = rows.slice(0, 4).map(function(x, i){ var s = new Date(x.s), min = Math.round((s - now) / 6e4), rel = min < 0 ? '<b class="now">' + T.now + '</b>' : min <= 90 ? '<b class="soon">' + T.inMin + min + T.min + '</b>' : "";
+      return '<li><a href="' + esc(x.u) + '" data-pos="' + (i + 1) + '"><span class="em" aria-hidden="true">' + x.e + '</span><span class="c"><span class="t">' + esc(x.t) + '</span><span class="m">' + fmt.format(s) + (rel ? " · " + rel : "") + (x.w ? " · " + esc(x.w) : "") + (x.km >= 1 ? " · " + x.km + " km" : "") + '</span>' + (x.g > 0 || x.solo ? '<span class="m3">' + (x.g > 0 ? '<span class="g">' + gp(x) + '</span>' : '') + (x.solo ? '<span class="chip solo' + (x.solo === "pick" ? " pick" : "") + '">' + T.solo + '</span>' : '') + '</span>' : '') + '</span><span class="ar" aria-hidden="true">›</span></a></li>'; }).join("");
+    ul.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ if (window.apTrack) apTrack("seo_vicino_tap", a.getAttribute("href") + "?pos=" + a.dataset.pos); }); });
+    mp.onclick = function(){ if (window.apTrack) apTrack("seo_vicino_mappa", location.pathname + "?d=" + day); };
+    if (!build.seen && "IntersectionObserver" in window) { build.seen = true; new IntersectionObserver(function(en, o){ if (en.some(function(x){ return x.isIntersecting; })) { o.disconnect(); if (window.apTrack) apTrack("seo_vicino_view", location.pathname + "?n=" + Math.min(rows.length, 4) + "&d=" + day); } }, { threshold: .5 }).observe(sec); }
+  }
+  build(); setInterval(build, 60e3);
+})();
+</script>
 </main>
 <footer><div class="wrap">
   <span>© 2026 Filippo Terzi · anyplans</span>
