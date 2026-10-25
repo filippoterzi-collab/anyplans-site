@@ -141,13 +141,7 @@ footer a:hover{color:var(--ink)}
 <h1>Corso Reiki 1 livello</h1>
 
 <p class="lead">Yoga / pilates a Via Aragona, 40, Bagheria: si è già svolto, l&#39;ultima data è stata sabato 3 ottobre 2026.</p>
-<div class="box in"><h2>Questo evento è passato</h2><div class="m">L'ultima data è stata sabato 3 ottobre 2026. Se torna, le date nuove compaiono qui.</div><div class="cta"><a class="btn" href="/?citta=palermo">Vedi cosa c'è adesso</a></div></div><section class="nearby" id="vicino" data-past="1" data-place="Bagheria">
-<h2 id="vicino-h">È già passato, ma stasera qui vicino c'è altro</h2>
-<p class="m" id="vicino-sub">A meno di 10 km da Bagheria.</p>
-<ul id="vicino-list"><li><a href="/palermo/from-ground-zero-proiezione-gratuita-palermo/" aria-label="From ground zero - proiezione gratuita Palermo, 18:00, Via Piersanti Mattarella, 10/R, 1 km"><span class="em" aria-hidden="true">🎬</span><span class="c"><span class="t">From ground zero - proiezione gratuita Palermo</span><span class="m">18:00 · Via Piersanti Mattarella, 10/R · 1 km</span></span><span class="ar" aria-hidden="true">›</span></a></li><li><a href="/palermo/giochi-da-tavolo-da-verdone-drink-food-e-delivery/" aria-label="Giochi da tavolo da Verdone - Drink, Food e Delivery: 9 posti liberi, 20:00, Verdone - Drink, Food e Delivery"><span class="em" aria-hidden="true">📚</span><span class="c"><span class="t">Giochi da tavolo da Verdone - Drink, Food e Delivery: 9 posti liberi</span><span class="m">20:00 · Verdone - Drink, Food e Delivery</span><span class="m3"><span class="chip solo">Ci puoi andare da solo</span></span></span><span class="ar" aria-hidden="true">›</span></a></li></ul>
-<a class="lnk" id="vicino-map" href="/?citta=palermo&quando=sera">Tutti gli eventi di stasera sulla mappa →</a>
-<script type="application/json" id="vicino-data">[{"u":"/palermo/from-ground-zero-proiezione-gratuita-palermo/","t":"From ground zero - proiezione gratuita Palermo","e":"🎬","s":"2026-10-24T16:00:00.000Z","en":"2026-10-24T18:00:00.000Z","w":"Via Piersanti Mattarella, 10/R","km":1,"g":0,"x":1,"solo":null},{"u":"/palermo/giochi-da-tavolo-da-verdone-drink-food-e-delivery/","t":"Giochi da tavolo da Verdone - Drink, Food e Delivery: 9 posti liberi","e":"📚","s":"2026-10-24T18:00:00.000Z","en":"2026-10-24T20:30:00.000Z","w":"Verdone - Drink, Food e Delivery","km":0,"g":0,"x":1,"solo":"auto"}]</script>
-</section>
+<div class="box in"><h2>Questo evento è passato</h2><div class="m">L'ultima data è stata sabato 3 ottobre 2026. Se torna, le date nuove compaiono qui.</div><div class="cta"><a class="btn" href="/?citta=palermo">Vedi cosa c'è adesso</a></div></div>
 <div class="box">
   <h2>Quando</h2>
   
@@ -187,33 +181,7 @@ Orari, prezzo e biglietti sulla pagina Eventbrite dell&#39;evento: l&#39;iscrizi
 <a class="card" href="https://anyplans.in/palermo/the-attraction-lab-la-legge-della-manifestazione-con-marite-/"><span class="em">🧘</span><span><span class="t">The Attraction Lab | La legge della manifestazione con Maritè Salatiello</span><br><span class="m">Mercoledì 4 novembre alle 19:00 · Magnisi Studio, Palermo</span></span></a>
 <a class="card" href="https://anyplans.in/palermo/corso-di-pranic-healing-livello-base/"><span class="em">🧘</span><span><span class="t">Corso di Pranic Healing livello base</span><br><span class="m">Sabato 7 novembre alle 09:30 · Via Mauro Ciaula, 90129 Palermo PA, Italia, Palermo</span></span></a>
 <a class="card" href="https://anyplans.in/palermo/walkzone-palermo-parco-della-favorita/"><span class="em">🧘</span><span><span class="t">WALKZONE® Palermo &quot;Parco della Favorita&quot;</span><br><span class="m">Domenica 15 novembre alle 09:00 · Ingresso Parco della Favorita - Giardino Vincenzo Florio - Viale del Fante, PA, Palermo</span></span></a></div>
-<script>
-(function(){ var sec = document.getElementById("vicino"), raw = document.getElementById("vicino-data"); if (!sec || !raw) return;
-  var C; try { C = JSON.parse(raw.textContent); } catch (_) { return; }
-  var T = {"tonight":"Altre cose vicino, stasera","tomorrow":"Altre cose vicino, domani sera","pastT":"È già passato, ma stasera qui vicino c'è altro","pastTm":"È già passato, ma domani sera qui vicino c'è altro","mapT":"Tutti gli eventi di stasera sulla mappa →","mapTm":"Tutti gli eventi di domani sulla mappa →","empty":"Per stasera qui vicino non c'è altro.","next":"I prossimi giorni sulla mappa →","inMin":"tra ","min":" min","now":"in corso"};
-  var past = sec.dataset.past === "1", esc = function(t){ return String(t).replace(/[&<>"]/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
-  var fmt = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
-  var dk = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" });
-  function gp(x){ if (!x.g) return ""; return x.x ? (x.g === 1 ? "1 da anyplans ci va" : x.g + " da anyplans ci vanno") : (x.g === 1 ? "1 persona ci va" : x.g + " persone ci vanno")}; }
-  function build(){
-    var now = new Date(), today = dk.format(now), tom = dk.format(new Date(now.getTime() + 864e5));
-    var live = C.filter(function(x){ var s = new Date(x.s), e = x.en ? new Date(x.en) : new Date(s.getTime() + 3 * 36e5); return e > now && s.getTime() >= now.getTime() - 30 * 6e4; });
-    var hour = function(x){ return +fmt.format(new Date(x.s)).slice(0, 2); };
-    var ton = live.filter(function(x){ return dk.format(new Date(x.s)) === today && hour(x) >= 18; }), day = "sera", rows = ton;
-    if (ton.length < 2) { var tm = live.filter(function(x){ return dk.format(new Date(x.s)) === tom; }), tme = tm.filter(function(x){ return hour(x) >= 18; }); rows = tme.length >= 2 ? tme : tme.concat(tm.filter(function(x){ return hour(x) < 18; })); day = "domani"; if (!rows.length && ton.length) { rows = ton; day = "sera"; } }
-    var h = document.getElementById("vicino-h"), sub = document.getElementById("vicino-sub"), ul = document.getElementById("vicino-list"), mp = document.getElementById("vicino-map");
-    if (!rows.length) { h.textContent = past ? T.pastT : T.tonight; ul.innerHTML = ""; sub.textContent = T.empty; mp.textContent = T.next; mp.href = "/?citta=palermo"; return; }
-    h.textContent = past ? (day === "sera" ? T.pastT : T.pastTm) : (day === "sera" ? T.tonight : T.tomorrow);
-    mp.textContent = day === "sera" ? T.mapT : T.mapTm; mp.href = "/?citta=palermo&quando=" + day;
-    ul.innerHTML = rows.slice(0, 4).map(function(x, i){ var s = new Date(x.s), min = Math.round((s - now) / 6e4), rel = min < 0 ? '<b class="now">' + T.now + '</b>' : min <= 90 ? '<b class="soon">' + T.inMin + min + T.min + '</b>' : "";
-      return '<li><a href="' + esc(x.u) + '" data-pos="' + (i + 1) + '"><span class="em" aria-hidden="true">' + x.e + '</span><span class="c"><span class="t">' + esc(x.t) + '</span><span class="m">' + fmt.format(s) + (rel ? " · " + rel : "") + (x.w ? " · " + esc(x.w) : "") + (x.km >= 1 ? " · " + x.km + " km" : "") + '</span>' + (x.g > 0 || x.solo ? '<span class="m3">' + (x.g > 0 ? '<span class="g">' + gp(x) + '</span>' : '') + (x.solo ? '<span class="chip solo' + (x.solo === "pick" ? " pick" : "") + '">' + T.solo + '</span>' : '') + '</span>' : '') + '</span><span class="ar" aria-hidden="true">›</span></a></li>'; }).join("");
-    ul.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ if (window.apTrack) apTrack("seo_vicino_tap", a.getAttribute("href") + "?pos=" + a.dataset.pos); }); });
-    mp.onclick = function(){ if (window.apTrack) apTrack("seo_vicino_mappa", location.pathname + "?d=" + day); };
-    if (!build.seen && "IntersectionObserver" in window) { build.seen = true; new IntersectionObserver(function(en, o){ if (en.some(function(x){ return x.isIntersecting; })) { o.disconnect(); if (window.apTrack) apTrack("seo_vicino_view", location.pathname + "?n=" + Math.min(rows.length, 4) + "&d=" + day); } }, { threshold: .5 }).observe(sec); }
-  }
-  build(); setInterval(build, 60e3);
-})();
-</script>
+
 </main>
 <footer><div class="wrap">
   <span>© 2026 Filippo Terzi · anyplans</span>
