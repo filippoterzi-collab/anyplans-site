@@ -3363,6 +3363,16 @@ if (CITY !== HOME_CITY) {
   }
 }
 
+// /en/bergamo/ rimanda all'hub inglese (25/10/2026): l'hub inglese di Bergamo sta in /en/bergamo/things-to-do/
+// perché /bergamo/ è l'app, ma Google mandava 50 persone a settimana su /en/bergamo/, che era un 404.
+if (CITY === HOME_CITY) {
+  setLocale("en");
+  const to = hubUrl();
+  await mkdir(path.join(OUT, "en", CITY), { recursive: true });
+  await writeFile(path.join(OUT, "en", CITY, "index.html"), redirectPage(`${SITE}/en/${CITY}/`, to, true));
+  setLocale("it");
+}
+
 await writeFile(path.join(OUT, `sitemap-${CITY}.xml`), sitemapXml());
 await indexNow();
 await writeFile(path.join(OUT, LLMS_FILE), llmsTxt() + "\n---\n\n# Tutte le pagine di anyplans a " + CITY_NAME + " (italiano, poi inglese)\n\n" + fullTxt.join("\n"));
