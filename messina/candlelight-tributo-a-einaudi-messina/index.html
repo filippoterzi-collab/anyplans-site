@@ -139,13 +139,7 @@ footer a:hover{color:var(--ink)}
 <h1>Candlelight: Tributo a Einaudi | Messina</h1>
 
 <p class="lead">Concerti e musica dal vivo a Teatro Annibale Di Francia, Piazza Spirito Santo, 5, Messina, Messina: si è già svolto, l&#39;ultima data è stata sabato 26 settembre 2026.</p>
-<div class="box in"><h2>Questo evento è passato</h2><div class="m">L'ultima data è stata sabato 26 settembre 2026. Se torna, le date nuove compaiono qui.</div><div class="cta"><a class="btn" href="/?citta=messina">Vedi cosa c'è adesso</a></div></div><section class="nearby" id="vicino" data-past="1" data-place="">
-<h2 id="vicino-h">È già passato, ma stasera qui vicino c'è altro</h2>
-<p class="m" id="vicino-sub">A meno di 10 km da qui.</p>
-<ul id="vicino-list"><li><a href="/messina/paesaggi-stellari-laboratorio-per-bambini-al-forte-petrazza/" aria-label="Paesaggi Stellari – Laboratorio per bambini al Forte Petrazza, 16:30, Forte Petrazza, Camaro Superiore, 2 km"><span class="em" aria-hidden="true">📚</span><span class="c"><span class="t">Paesaggi Stellari – Laboratorio per bambini al Forte Petrazza</span><span class="m">16:30 · Forte Petrazza, Camaro Superiore · 2 km</span><span class="m3"><span class="chip solo">Ci puoi andare da solo</span></span></span><span class="ar" aria-hidden="true">›</span></a></li><li><a href="/messina/green-one-lady/" aria-label="Green One | Lady, 19:30, Green Padel Center, Viale Gazzi snc, 3 km"><span class="em" aria-hidden="true">🏸</span><span class="c"><span class="t">Green One | Lady</span><span class="m">19:30 · Green Padel Center, Viale Gazzi snc · 3 km</span></span><span class="ar" aria-hidden="true">›</span></a></li></ul>
-<a class="lnk" id="vicino-map" href="/?citta=messina&quando=sera">Tutti gli eventi di stasera sulla mappa →</a>
-<script type="application/json" id="vicino-data">[{"u":"/messina/paesaggi-stellari-laboratorio-per-bambini-al-forte-petrazza/","t":"Paesaggi Stellari – Laboratorio per bambini al Forte Petrazza","e":"📚","s":"2026-10-25T15:30:00.000Z","en":"2026-10-25T16:45:00.000Z","w":"Forte Petrazza, Camaro Superiore","km":2,"g":0,"x":1,"solo":"auto"},{"u":"/messina/green-one-lady/","t":"Green One | Lady","e":"🏸","s":"2026-10-26T18:30:00.000Z","en":"2026-10-26T20:30:00.000Z","w":"Green Padel Center, Viale Gazzi snc","km":3,"g":0,"x":1,"solo":null}]</script>
-</section>
+<div class="box in"><h2>Questo evento è passato</h2><div class="m">L'ultima data è stata sabato 26 settembre 2026. Se torna, le date nuove compaiono qui.</div><div class="cta"><a class="btn" href="/?citta=messina">Vedi cosa c'è adesso</a></div></div>
 <div class="box">
   <h2>Quando</h2>
   
@@ -184,34 +178,8 @@ Dettagli, orari e biglietti sulla pagina di AllEvents.</div></div>
 <h2>Eventi simili</h2><div class="list"><a class="card" href="https://anyplans.in/messina/journeys-concerto-di-erika-la-fauci-pianoforte-e-voce/"><span class="em">🎸</span><span><span class="t">&quot;Journeys&quot; concerto di Erika La Fauci, pianoforte e voce</span><br><span class="m">Sabato 14 novembre alle 21:00 · Associazione Culturale ARB - ETS, Messina</span></span></a>
 <a class="card" href="https://anyplans.in/messina/candlelight-tributo-a-einaudi/"><span class="em">🎸</span><span><span class="t">Candlelight: Tributo a Einaudi</span><br><span class="m">Sabato 14 novembre alle 21:00 · Teatro Annibale Di Francia, messina</span></span></a>
 <a class="card" href="https://anyplans.in/messina/gigi-d-alessio-in-messina/"><span class="em">🎸</span><span><span class="t">Gigi D&#39;Alessio in Messina</span><br><span class="m">Martedì 1 dicembre alle 21:00 · PalaRescifina, messina</span></span></a>
-<a class="card" href="https://anyplans.in/messina/c-era-una-volta-disney-il-concerto/"><span class="em">🎸</span><span><span class="t">C&#39;era una volta...Disney Il Concerto</span><br><span class="m">Venerdì 4 dicembre alle 21:00 · Retronouveau, Messina</span></span></a></div>
-<script>
-(function(){ var sec = document.getElementById("vicino"), raw = document.getElementById("vicino-data"); if (!sec || !raw) return;
-  var C; try { C = JSON.parse(raw.textContent); } catch (_) { return; }
-  var T = {"tonight":"Altre cose vicino, stasera","tomorrow":"Altre cose vicino, domani sera","pastT":"È già passato, ma stasera qui vicino c'è altro","pastTm":"È già passato, ma domani sera qui vicino c'è altro","mapT":"Tutti gli eventi di stasera sulla mappa →","mapTm":"Tutti gli eventi di domani sulla mappa →","empty":"Per stasera qui vicino non c'è altro.","next":"I prossimi giorni sulla mappa →","inMin":"tra ","min":" min","now":"in corso"};
-  var past = sec.dataset.past === "1", esc = function(t){ return String(t).replace(/[&<>"]/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
-  var fmt = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
-  var dk = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" });
-  function gp(x){ if (!x.g) return ""; return x.x ? (x.g === 1 ? "1 da anyplans ci va" : x.g + " da anyplans ci vanno") : (x.g === 1 ? "1 persona ci va" : x.g + " persone ci vanno")}; }
-  function build(){
-    var now = new Date(), today = dk.format(now), tom = dk.format(new Date(now.getTime() + 864e5));
-    var live = C.filter(function(x){ var s = new Date(x.s), e = x.en ? new Date(x.en) : new Date(s.getTime() + 3 * 36e5); return e > now && s.getTime() >= now.getTime() - 30 * 6e4; });
-    var hour = function(x){ return +fmt.format(new Date(x.s)).slice(0, 2); };
-    var ton = live.filter(function(x){ return dk.format(new Date(x.s)) === today && hour(x) >= 18; }), day = "sera", rows = ton;
-    if (ton.length < 2) { var tm = live.filter(function(x){ return dk.format(new Date(x.s)) === tom; }), tme = tm.filter(function(x){ return hour(x) >= 18; }); rows = tme.length >= 2 ? tme : tme.concat(tm.filter(function(x){ return hour(x) < 18; })); day = "domani"; if (!rows.length && ton.length) { rows = ton; day = "sera"; } }
-    var h = document.getElementById("vicino-h"), sub = document.getElementById("vicino-sub"), ul = document.getElementById("vicino-list"), mp = document.getElementById("vicino-map");
-    if (!rows.length) { h.textContent = past ? T.pastT : T.tonight; ul.innerHTML = ""; sub.textContent = T.empty; mp.textContent = T.next; mp.href = "/?citta=messina"; return; }
-    h.textContent = past ? (day === "sera" ? T.pastT : T.pastTm) : (day === "sera" ? T.tonight : T.tomorrow);
-    mp.textContent = day === "sera" ? T.mapT : T.mapTm; mp.href = "/?citta=messina&quando=" + day;
-    ul.innerHTML = rows.slice(0, 4).map(function(x, i){ var s = new Date(x.s), min = Math.round((s - now) / 6e4), rel = min < 0 ? '<b class="now">' + T.now + '</b>' : min <= 90 ? '<b class="soon">' + T.inMin + min + T.min + '</b>' : "";
-      return '<li><a href="' + esc(x.u) + '" data-pos="' + (i + 1) + '"><span class="em" aria-hidden="true">' + x.e + '</span><span class="c"><span class="t">' + esc(x.t) + '</span><span class="m">' + fmt.format(s) + (rel ? " · " + rel : "") + (x.w ? " · " + esc(x.w) : "") + (x.km >= 1 ? " · " + x.km + " km" : "") + '</span>' + (x.g > 0 || x.solo ? '<span class="m3">' + (x.g > 0 ? '<span class="g">' + gp(x) + '</span>' : '') + (x.solo ? '<span class="chip solo' + (x.solo === "pick" ? " pick" : "") + '">' + T.solo + '</span>' : '') + '</span>' : '') + '</span><span class="ar" aria-hidden="true">›</span></a></li>'; }).join("");
-    ul.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ if (window.apTrack) apTrack("seo_vicino_tap", a.getAttribute("href") + "?pos=" + a.dataset.pos); }); });
-    mp.onclick = function(){ if (window.apTrack) apTrack("seo_vicino_mappa", location.pathname + "?d=" + day); };
-    if (!build.seen && "IntersectionObserver" in window) { build.seen = true; new IntersectionObserver(function(en, o){ if (en.some(function(x){ return x.isIntersecting; })) { o.disconnect(); if (window.apTrack) apTrack("seo_vicino_view", location.pathname + "?n=" + Math.min(rows.length, 4) + "&d=" + day); } }, { threshold: .5 }).observe(sec); }
-  }
-  build(); setInterval(build, 60e3);
-})();
-</script>
+<a class="card" href="https://anyplans.in/messina/candlelight-queen-vs-abba/"><span class="em">🎸</span><span><span class="t">Candlelight: Queen vs. ABBA</span><br><span class="m">Giovedì 3 dicembre alle 21:00 · Teatro Annibale Di Francia, messina</span></span></a></div>
+
 </main>
 <footer><div class="wrap">
   <span>© 2026 Filippo Terzi · anyplans</span>
