@@ -2278,7 +2278,7 @@ function indexPageIt(ix) {
     const gg = giornoRic(occ);
     h1 = `${cap(occ.nome)} ${annoRic(occ)} a ${CITY_NAME} e provincia: feste ed eventi`;
     title = cut(`${cap(occ.nome)} ${annoRic(occ)} a ${CITY_NAME}: ${up.length} feste ed eventi${gg ? ` (${gg})` : ""}`, 70) + " | anyplans";
-    intro = intro.replace(" nei prossimi mesi.", ` per ${occ.nome} ${annoRic(occ)}${gg ? `, ${gg}` : ""}.`);
+    intro = intro.replace(" nei prossimi mesi.", `, ${occ.periodo} ${annoRic(occ)}.`);
   }
   const descr = cut(intro, 160);
   // "Quali camminata ci sono" era sgrammaticato: si usa il plurale di testi.json ("camminate")
@@ -2801,11 +2801,19 @@ function whenPage(kind) {
   // per quella domanda citava L'Eco e VisitBergamo. L'h1 resta "Cosa fare a Bergamo oggi", la forma di Google.
   // nei giorni di Halloween, dell'Immacolata e di Capodanno la ricorrenza va nel titolo: è quello che la gente cerca
   const occ = en() ? null : ricorrenzaDi(w.keys, true);
+  // e la data del weekend e della sera (26/10/2026): su Google si cerca "manifestazioni torino sabato 24 ottobre 2026"
+  // (297 impressioni in una settimana, posizione 9) e i titoli non avevano la data.
+  const dateWeekend = (() => { const f = days.map(d => fmtShort(d, DEFAULT_TZ)); const m = f.map(x => x.replace(/^\d+\s*/, ""));
+    return m.every(x => x === m[0]) ? `${joinIt(f.map(x => x.split(" ")[0]))} ${m[0]}` : joinIt(f); })();
+  const dataTitolo0 = kind === "weekend" ? dateWeekend : kind === "stasera" ? (en() ? fmtDay(days[0], DEFAULT_TZ) : fmtDay(days[0], DEFAULT_TZ).toLowerCase()) : "";
+  // la data entra solo se il titolo resta intero (in inglese "31 October and 1 November" lo faceva tagliare)
+  const dataTitolo = dataTitolo0 && (en() ? `Events ${W_EN[kind]} in ${CITY_NAME}, ${dataTitolo0}: what to do (${list.length})`
+    : `Eventi ${W_IT[kind]} a ${CITY_NAME}, ${dataTitolo0}: cosa fare (${list.length})`).length <= 68 ? dataTitolo0 : "";
   const title = cut(en()
-    ? `Events ${W_EN[kind]} in ${CITY_NAME}${giornata ? `, ${fmtDay(days[0], DEFAULT_TZ)}` : ""}: what to do (${list.length})`
+    ? `Events ${W_EN[kind]} in ${CITY_NAME}${giornata ? `, ${fmtDay(days[0], DEFAULT_TZ)}` : dataTitolo ? `, ${dataTitolo}` : ""}: what to do (${list.length})`
     : occ && kind === "weekend" ? `Eventi nel weekend ${occ.key === "immacolata" ? "del" : "di"} ${occ.nome} a ${CITY_NAME}: cosa fare (${list.length})`
     : occ ? `Eventi ${W_IT[kind]} a ${CITY_NAME}${giornata ? `, ${dataBreve}` : ""} (${cap(occ.nome)}): cosa fare (${list.length})`
-    : `Eventi ${W_IT[kind]} a ${CITY_NAME}${giornata ? `, ${dataBreve}` : ""}: cosa fare (${list.length})`, 68) + " | anyplans";
+    : `Eventi ${W_IT[kind]} a ${CITY_NAME}${giornata ? `, ${dataBreve}` : dataTitolo ? `, ${dataTitolo}` : ""}: cosa fare (${list.length})`, 68) + " | anyplans";
   const lead = en()
     ? `${list.length} events in ${CITY_NAME} and its province ${when}: ${joinIt(towns.slice(0, 4).map(t => t.replace(/ \(\d+\)$/, "")))} and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.`
     : `${list.length} eventi a ${CITY_NAME} e provincia ${when}: ${joinIt(towns.slice(0, 4).map(t => t.replace(/ \(\d+\)$/, "")))} e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.`;
