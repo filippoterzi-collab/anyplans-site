@@ -50,8 +50,8 @@
   <url><loc>https://anyplans.in/bergamo/tornei/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/classica-e-jazz/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/carnevale/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/festa-della-donna/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/brunch/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/all-aperto/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/castelli-e-borghi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/stelle-e-astronomia/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/montagna/</loc><lastmod>2026-10-26</lastmod></url>
@@ -182,8 +182,8 @@
   <url><loc>https://anyplans.in/bergamo/presezzo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/mornico-al-serio/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/villa-di-serio/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/valbrembo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/villongo/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/canonica-d-adda/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/peia/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/almenno-san-salvatore/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gazzaniga/</loc><lastmod>2026-10-26</lastmod></url>
@@ -203,7 +203,6 @@
   <url><loc>https://anyplans.in/bergamo/calvenzano/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/lallio/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/choruslife/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/serina/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/world-cheese-capital/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/casirate-d-adda/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/darfo-boario-terme/</loc><lastmod>2026-10-26</lastmod></url>
@@ -223,19 +222,16 @@
   <url><loc>https://anyplans.in/bergamo/corsa-oggi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/camminata-oggi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/padel-oggi/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/mercatini-oggi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/incontri-culturali-oggi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/biblioteca-oggi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gratis-oggi/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/libri-e-letture-oggi/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/castelli-e-borghi-oggi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/sport-oggi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/run-club-oggi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/27-padel/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/bergamo-biblioteca-civica-antonio-tiraboschi/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/wemeet-by-weroad/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/wemeet-by-weroad/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/biblioteca-rita-levi-montalcini-dalmine/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/molte-fedi-sotto-lo-stesso-cielo/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/the-cheese-valleys/</loc><lastmod>2026-10-14</lastmod></url>
@@ -246,7 +242,7 @@
   <url><loc>https://anyplans.in/bergamo/locali/kira-padel-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/bobadilla/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/m-ur-a-festival/</loc><lastmod>2026-10-14</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/ninfea-social-club/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/ninfea-social-club/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/padel-star-veduggio/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/capogiro/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/into-the-woods/</loc><lastmod>2026-10-26</lastmod></url>
@@ -256,40 +252,39 @@
   <url><loc>https://anyplans.in/bergamo/locali/garota-de-ipanema/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/queen-club/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/cafeteria/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/teatro-donizetti/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/palapadel-seriate/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/arya-lounge/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/decibel-club/</loc><lastmod>2026-10-18</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/teatro-donizetti/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/padel-time-treviglio/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/museo-diocesano-adriano-bernareggi-il-bernareggi/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/museo-diocesano-adriano-bernareggi-il-bernareggi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/vibe-club/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/sabbie-mobili/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/bergamo-padel-club/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/apc-active-padel-club-brignano-gera-d-adda-bg/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/yep-albano-sant-alessandro/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/nikita/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/oriocenter/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/teatro-nuovo-treviglio-tnt/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/oriocenter/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/bombonera-social-pub/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/padel-academy-manenti-malgaroli/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/brina-bistrot/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/bar-san-marco/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/bolgia/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/loft/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/teatro-nuovo-treviglio-tnt/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/treviglio-anteo-spaziocinema/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/parco-della-trucca/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/baia-del-re/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/charleston/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/thanka/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/teatro-san-giorgio/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/circolo-maite/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/gnam/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/santini-store/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/teatro-san-giorgio/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/santini-store/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/ponte-san-pietro-marzio-tremaglia/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/tiky-klub/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/palazzo-terzi/</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/cards-realm/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/compagnia-la-pulce/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/gnam/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/live-music-club/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/wsc-padel-medolago/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/cittadella-dello-sport/</loc><lastmod>2026-10-26</lastmod></url>
@@ -301,52 +296,48 @@
   <url><loc>https://anyplans.in/bergamo/locali/corner-bar/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/setai-garden/</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/cosmo-food-club/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/castello-di-malpaga/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/castello-di-malpaga/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/caffettiera-nuova-rotonda/</loc><lastmod>2026-10-23</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/bergamo-gavazzeni/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/ex-oratorio-di-s-lupo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/biblioteca-bambini-e-ragazzi-treviglio/</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/setai-club/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/oronero/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/orto-botanico-di-bergamo-lorenzo-rota/</loc><lastmod>2026-10-18</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/circolo-maite/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/centro-vivere-insieme-2-marigold-curno/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/bergamo-galizzi/</loc><lastmod>2026-10-22</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/susanna-alberti-studio/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/choruslife-arena/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/ex-oratorio-di-s-lupo/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/choruslife-arena/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/padel-house-bergamo/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/bergamo-caversazzi/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/druso/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/daste-bergamo/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/le-cucine-di-curno/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/libreria-l-alchimista/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/kampobase-lombardia-vagabonda/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/feverup-events/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/fondazione-banca-popolare-di-bergamo-ef/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/teatro-san-filippo-neri/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/museo-civico-d-arte-e-del-territorio-gianni-bellini/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/druso/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/daste-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/libreria-l-alchimista/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/kampobase-lombardia-vagabonda/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/feverup-events/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/teatro-san-filippo-neri/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/museo-civico-d-arte-e-del-territorio-gianni-bellini/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/bergamo-ambiveri/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/cineteatro-gavazzeni/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/c-a-nerd-corner/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/cineteatro-gavazzeni/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/c-a-nerd-corner/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/capanu-culture-club/</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/teatro-nuovo-treviglio/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/biblioteca-treviglio/</loc><lastmod>2026-10-22</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/sala-viscontea/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/monastero-di-astino/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/centro-sportivo-comunale/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/sala-viscontea/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/centro-sportivo-comunale/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/sistema-bibliotecario-valle-seriana/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/bergamo-regeni-colognola/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/al-tagliere-di-nese/</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/scuola-sb-capitanio/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/0-6-valsecchi/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/parco-di-villa-concordia/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/scuola-sb-capitanio/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/0-6-valsecchi/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/parco-di-villa-concordia/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/le-scalette-del-martedi/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/berga-padel/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/dalmine-frazione-mariano/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/urgnano-frazione-basella/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/berga-padel/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/dalmine-frazione-mariano/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/urgnano-frazione-basella/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/sopra-la-biblioteca-vismara/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/locali/circolo-scacchistico-excelsior/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/cor-straight-to-the-cor/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/locali/berghem-freestyle/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/cor-straight-to-the-cor/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/locali/berghem-freestyle/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/running-club/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/running-club/lunedi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/running-club/martedi/</loc><lastmod>2026-10-26</lastmod></url>
@@ -366,36 +357,36 @@
   <url><loc>https://anyplans.in/bergamo/gruppi/seriana-run-club/</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/sabato-alla-trucca/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/le-scalette-del-martedi/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/gruppi/ninfea-social-club/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/gruppi/ninfea-social-club/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/gruppi/cor-run/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/gruppi/giovedipista/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/gruppi/inpistaamozzo/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/gruppi/marathon-training/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/susanna-alberti-studio/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/gruppi/cor-run/</loc><lastmod>2026-10-22</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/gruppi/giovedipista/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/gruppi/inpistaamozzo/</loc><lastmod>2026-10-22</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/gruppi/marathon-training/</loc><lastmod>2026-10-22</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/sahaja-yoga/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/gruppi/moss-punto-di-contatto/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/gruppi/moss-punto-di-contatto/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/bergamo-walking/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/nxt-bergamo/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/gruppi/edone/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/gruppi/edone/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/aegee-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/circolino-astino/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/bar-broseta-47/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/asd-runners-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/via-per-monti/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/pazzi-del-mercoledi/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/gruppi/spritz-and-burger/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/fuorisede-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/gruppi/spritz-and-burger/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/cus-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/gruppi/estivo-goisis/</loc><lastmod>2026-10-22</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/fabric-cascina-carlinga/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/gruppi/estivo-goisis/</loc><lastmod>2026-10-22</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/bgr-bergamo-running/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/bombonera-social-pub/</loc><lastmod>2026-10-22</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/carducci7-hub-design/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/bergamo-olistica/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/filippo-social-club/</loc><lastmod>2026-10-18</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/gruppi/adda-running-club/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/gruppi/socialrunbergamo/</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/girly-running-club/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/gruppi/socialrunbergamo/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/gruppi/adda-running-club/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/neurostretching/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/sipario-il-mio-racconto/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/gruppo-di-uncinetto-2/</loc><lastmod>2026-10-22</lastmod></url>
@@ -411,13 +402,14 @@
   <url><loc>https://anyplans.in/bergamo/gruppi/kontrol/</loc><lastmod>2026-10-22</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/burraco-bergamo-aps/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/unplug-cocktail-bar/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/gruppi/capanu-culture-club/</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/trust-running-club/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/gruppi/capanu-culture-club/</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/fast2gether-run-gang/</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/ciclofficina-bianzana/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/marianna-zanardi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/mamma-e-figlia/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppi/ecp-concept-store-events-pop-up/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/gruppi/camminata-metabolica/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/festa-dell-oratorio/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/festa-dell-oratorio-alzano-sopra-alzano-lombardo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/festa-sforzafesta-oratorio-sforzatica-dalmine/</loc><lastmod>2026-10-26</lastmod></url>
@@ -1269,7 +1261,7 @@
   <url><loc>https://anyplans.in/bergamo/lezione/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/torneo-repadel-avanzati/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/daste-bergamo-in-vino/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/memorial-eugenio-mercorio-a-foppolo-15-edizione/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/memorial-eugenio-mercorio-a-foppolo-15-edizione/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/vivi-la-corte-visita-in-abiti-d-epoca/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/visita-guidata-museo-paleontologico-cene/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/il-tempo-del-silter-dalle-malghe-di-case-di-viso-alla-val-ca/</loc><lastmod>2026-10-26</lastmod></url>
@@ -1528,7 +1520,7 @@
   <url><loc>https://anyplans.in/bergamo/gruppo-di-cammino-di-scanzorosciate-2026-10-22-2/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppo-di-cammino-di-scanzorosciate-2026-10-21/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppo-di-cammino-di-santa-lucia/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/gruppo-di-cammino-di-santa-lucia-2026-10-26/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/gruppo-di-cammino-di-santa-lucia-2026-10-26/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppo-di-cammino-di-santa-lucia-2026-10-21/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppo-di-cammino-di-almenno-san-salvatore/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppo-di-cammino-di-capriate-san-gervasio/</loc><lastmod>2026-10-26</lastmod></url>
@@ -1564,7 +1556,6 @@
   <url><loc>https://anyplans.in/bergamo/gruppo-di-cammino-di-grumello-del-monte-2026-10-21/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/hata-yoga-lezione-di-prova-della-sera/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/aperitivi-con-la-storia-storie-di-donne-storie-d-italia-la-l/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/aperitivi-con-la-storia-storie-di-donne-storie-d-italia-la-l-2026-11-11/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/aperitivi-con-la-storia-storie-di-donne-storie-d-italia-la-l-2026-10-14/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/aperitivi-con-la-storia-storie-di-donne-storie-d-italia-la-l-2026-09-30/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/allenamento-di-gruppo-del-mercoledi/</loc><lastmod>2026-10-26</lastmod></url>
@@ -2036,6 +2027,7 @@
   <url><loc>https://anyplans.in/bergamo/39a-sagra-del-raviolo-nostrano-di-covo-e-xii-medioevo-covo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/torneo-open/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/castagnata-alpina/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/castagnata-alpina-2026-10-11/</loc><lastmod>2026-10-10</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/kontrol-x-balzer/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/badalasco-in-festa/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/cena-da-il-consorzio-galletto-e-pizza/</loc><lastmod>2026-10-26</lastmod></url>
@@ -2584,6 +2576,8 @@
   <url><loc>https://anyplans.in/bergamo/castagnata-a-santa-maria/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/castagnata-e-giochi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/festa-d-autunno/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/festa-d-autunno-2026-11-01/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/festa-d-autunno-2026-10-18/</loc><lastmod>2026-10-18</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/incontro-con-maura-gancitano-sala-polivalente-castel-rozzone/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/karaoke-con-francy-bar-movida-chiuduno/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/insieme/</loc><lastmod>2026-10-26</lastmod></url>
@@ -2945,6 +2939,8 @@
   <url><loc>https://anyplans.in/bergamo/gruppo-di-lettura-del-lunedi-mattina-2026-10-26/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gruppo-di-lettura-del-lunedi-mattina-la-figlia-della-liberta/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/che-lettore-sei-fantasy-e-fantascienza/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/pilates-reformer-ritrova-forza-e-postura-con-il-nostro-appun/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/pilates-reformer-ritrova-forza-e-postura-con-il-nostro-appun-2026-10-31/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/aperitivo-e-conosciamoci/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/spezie-e-bugie-la-piccola-cucina-di-mehdi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/matteo-nicodemo-cabaret-biblioteca-grassobbio/</loc><lastmod>2026-10-26</lastmod></url>
@@ -2956,6 +2952,7 @@
   <url><loc>https://anyplans.in/bergamo/chi-ride-e-fuori-da-da-freddi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gdl-kilegge-stupore-e-tremori-di-amelie-nothomb/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/cogito-ergo-tablo-da-bowling-merate/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/zustissia-francesco-piras-film/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/alessandro-lupo-pasini-in-concerto-accademia-upgrade-san-pel/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/raccontare-la-crisi-climatica/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/dr-why-quiz-interattivo-bar-spritz-dalmine/</loc><lastmod>2026-10-26</lastmod></url>
@@ -2965,8 +2962,8 @@
   <url><loc>https://anyplans.in/bergamo/festa-delle-zucche-area-feste-solza/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/laboratorio-di-fotografia-aperitivo-guardare-la-luce/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/tablo-eng-da-giustospirito-curno/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/miscusi-watch-party-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/corso-di-meditazione-sahaja-yoga-completamente-gratuito/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/la-voce-dei-giovani-al-cinema/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/international-meetings-in-bergamo-on-wednedays-recurrent-lin/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/fabio-de-luigi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/fabio-de-luigi-biol-in-carne-e-ossa-tour/</loc><lastmod>2026-10-26</lastmod></url>
@@ -2997,6 +2994,7 @@
   <url><loc>https://anyplans.in/bergamo/lost-in-translation/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/festa-gin-festival-area-fiera-treviglio/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/street-food-da-paura/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/street-food-da-paura-halloween-edition/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/bellafresca-iper-seriate/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/padelween/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/festa-agrifest-area-festa-ghisalba/</loc><lastmod>2026-10-26</lastmod></url>
@@ -3085,10 +3083,16 @@
   <url><loc>https://anyplans.in/bergamo/ingresso-halloween-in-villa-concordia-robbiate/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/invidia-spettacolo-auditorium-cuminetti-albino/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/cena-da-area-feste-ghisalba/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/halloween-dia-de-muertos/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/tabloween-da-s-mart-san-martino/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/cena-mostruosa-halloween-in-villa-2026/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/la-stupidera-di-halloween/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/halloween-in-piazza/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/halloween-il-paese-delle-zucche/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/halloween-a-bergamo-tour-speciale-di-racconti-segreti/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/halloween-2026-10-31/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/zucche-in-piazza/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/pomeriggio-di-halloween/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/trick-or-treat-halloween-skate-sesh/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/max-vavassori-in-concerto-agriturismo-lucchetti-cene/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/festa-di-halloween-cadelfoglia-val-brembilla/</loc><lastmod>2026-10-26</lastmod></url>
@@ -3152,7 +3156,10 @@
   <url><loc>https://anyplans.in/bergamo/visita-guidata-di-palazzo-terzi-meraviglia-nel-cuore-di-berg/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/e-vietato-piangere-spettacolo-teatro-di-loreto-bergamo-citta/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/la-casa-del-lavoro-laboratorio-maledonne/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/lvf-a1-fineco-pallavolo-femminile-choruslife-volley-bergamo-/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/cena-da-peperi-ristorante-pizzeria-cocktail-bar/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/halloween-con-berto/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/castagnata-tradizionale/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/muriel-villa-in-concerto-chiesa-vecchia-calusco-d-adda/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/karaoke-open-mic-nxt-piazzale-alpini-bergamo-citta/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/naif-in-concerto-festa-agrifest-ghisalba/</loc><lastmod>2026-10-26</lastmod></url>
@@ -3169,6 +3176,7 @@
   <url><loc>https://anyplans.in/bergamo/tributo-dire-straits-legacy-dsl-in-concerto-choruslife-berga/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/jack-nobile-spettacolo-teatro-colognola-bergamo-citta/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/dire-straits-legacy-world-tour/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/amalia-del-ponte-litofonie-dialoghi-intorno-alla-scultura/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/tech-drinks-abb-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/masterclass-la-nouvelle-vague-con-andrea-chimento/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/nostra-solitudine/</loc><lastmod>2026-10-26</lastmod></url>
@@ -3200,6 +3208,7 @@
   <url><loc>https://anyplans.in/bergamo/le-travolgenti-vicende-di-un-monastero/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/mani-agye-video-shoot/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/dizionario-poetico-dell-umano/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/pinocchio-readymade-lettura-teatrale-con-improvvisazioni-al-/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/belle-e-la-bestia-il-musical/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/belle-e-la-bestia-musical-choruslife-bergamo-citta/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gabriella-dal-lago-buon-tempo-festival-2026/</loc><lastmod>2026-10-26</lastmod></url>
@@ -3223,6 +3232,7 @@
   <url><loc>https://anyplans.in/bergamo/tributo-lucio-battisti-maledetti-gatti-sagra-taragna-spirano/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/shary-band-in-concerto-festa-agrifest-ghisalba/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/tributo-olly-zona-olly-festa-agrifest-ghisalba/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/bergamo/80s-never-die-la-festa-anni-80/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/gita-sociale-2026-cremona-e-i-suoi-torroni/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/fiera-di-san-martino-centro-paese-alzano-lombardo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/trek-experience-falconiere-per-un-giorno/</loc><lastmod>2026-10-26</lastmod></url>
@@ -3259,40 +3269,6 @@
   <url><loc>https://anyplans.in/bergamo/l-esule-di-roma/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/casa-palazzolo-cena-etnica-2026-under-35/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/nuovi-capitali-al-servizio-delle-pmi/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/gruppo-di-lettura-di-filosofia-il-mito-di-sisifo-di-a-camus/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/matteo-angioletti-in-concerto-chiesa-parrocchiale-carvico/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/tante-mani/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/storico-chi-legge-novembre-2026/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/saracasa-sala-giochi-2026/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/laboratorio-di-automassaggio-viso-aperitivo/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/la-bellezza-nel-respiro/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/sinfonia-fantastica-le-eta-della-vita/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/sinfonia-fantastica/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/le-convenienze-ed-inconvenienze-teatrali/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/costruire-la-pace/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/casa-palazzolo-cena-etnica-2026/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/porsellere-ol-mahadur-in-da-curt/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/aperitivo-skincare-experience/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/cinema-e-cena-da-le-cucine-di-curno/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/una-notte-al-dormitorio-maschile-zabulon-under-35/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/una-notte-al-dormitorio-femminile-madre-teresa-di-calcutta-u/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/serata-vinile-hivan-paolo-sax/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/maite-risate-presenta-regola-n-6-di-e-con-giulio-oldrati/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/tributo-francesco-guccini-eskimo-revel-treviglio/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/convegno-acrb-innovazione-socio-sanitaria/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/lunch-del-convegno/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/laboratorio-musicale-al-punto-sosta-under-35/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/cara-bolletta/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/claudun-beer-fest/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/festa-noemberfest-piazzale-mercato-serina/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/l-esule-di-roma-melodramma-teatro-donizetti-bergamo-citta/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/una-notte-al-dormitorio-galgario-under-35/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/incontro-con-fabrizio-roncalli-teatro-oratorio-villa-d-adda/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/antifascistour-di-e-con-massimiliano-loizzi/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/magika-90-in-concerto-noemberfest-serina/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/tributo-abba-abbaclub-like-it-cenate-sotto/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/santamarea-in-concerto-druso-ranica/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/bergamo/reformer-1-corso-per-trainer-pilates-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/domande/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/cosa-fare-a-capodanno/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/bergamo/cosa-fare-a-halloween/</loc><lastmod>2026-10-26</lastmod></url>
@@ -3329,7 +3305,7 @@
   <url><loc>https://anyplans.in/en/bergamo/what-to-do-this-weekend/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/events-october-2026/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/events-november-2026/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/yoga/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/yoga/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/festivals/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/running/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/walking/</loc><lastmod>2026-10-26</lastmod></url>
@@ -3350,11 +3326,11 @@
   <url><loc>https://anyplans.in/en/bergamo/hiking/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/painting/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/cinema/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/volunteering/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/volleyball/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/volunteering/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/volleyball/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/fairs/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/pottery/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/road-cycling/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/road-cycling/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/skating/</loc><lastmod>2026-10-17</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/halloween/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/wine-tastings/</loc><lastmod>2026-10-26</lastmod></url>
@@ -3368,12 +3344,12 @@
   <url><loc>https://anyplans.in/en/bergamo/vintage/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/beer/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/comedy/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/wellness/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/wellness/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/tournaments/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/classical-and-jazz/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/carnival/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/womens-day/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/carnival/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/brunch/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/outdoors/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/castles-and-villages/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/stargazing/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/mountains/</loc><lastmod>2026-10-26</lastmod></url>
@@ -3381,157 +3357,156 @@
   <url><loc>https://anyplans.in/en/bergamo/run-clubs/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/races/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/osio-sopra/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/ciserano/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/ciserano/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/dalmine/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/fornovo-san-giovanni/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/fornovo-san-giovanni/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/nembro/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/gorle/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/pognano/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/pognano/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/alzano-lombardo/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/cavernago/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/cavernago/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/albano-sant-alessandro/</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/solza/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/pianico/</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/bagnatica/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/solza/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/pianico/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/bagnatica/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/zanica/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/ponteranica/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/gorlago/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/calcinate/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/carvico/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/alme/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/ponteranica/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/gorlago/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/calcinate/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/carvico/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/alme/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/martinengo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/albino/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/cividate-al-piano/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/cividate-al-piano/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/cologno-al-serio/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/zogno/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/scanzorosciate/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/zogno/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/scanzorosciate/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/stezzano/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/comun-nuovo/</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/pontirolo-nuovo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/torre-de-roveri/</loc><lastmod>2026-10-20</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/grassobbio/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/bariano/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/bariano/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/palazzago/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/urgnano/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/urgnano/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/filago/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/clusone/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/clusone/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/arcene/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/curno/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/verdello/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/merate/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/merate/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/sorisole/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/chiuduno/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/azzano-san-paolo/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/foresto-sparso/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/brignano-gera-d-adda/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/grumello-del-monte/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/brusaporto/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/foresto-sparso/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/brignano-gera-d-adda/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/grumello-del-monte/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/brusaporto/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/rovetta/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/fiorano-al-serio/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/fiorano-al-serio/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/treviglio/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/pontida/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/pontida/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/treviolo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/romano-di-lombardia/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/sarnico/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/seriate/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/orio-al-serio/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/san-giovanni-bianco/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/san-giovanni-bianco/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/brembate/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/endine-gaiano/</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/verdellino/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/almenno-san-bartolomeo/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/pagazzano/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/costa-di-mezzate/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/valbondione/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/endine-gaiano/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/verdellino/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/almenno-san-bartolomeo/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/pagazzano/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/costa-di-mezzate/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/valbondione/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/spirano/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/castelli-calepio/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/osio-sotto/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/bonate-sopra/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/ponte-san-pietro/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/sovere/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/sotto-il-monte-giovanni-xxiii/</loc><lastmod>2026-10-21</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/castel-rozzone/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/sovere/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/sotto-il-monte-giovanni-xxiii/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/castel-rozzone/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/trescore-balneario/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/carobbio-degli-angeli/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/ambivere/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/torre-boldone/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/costa-volpino/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/villa-d-adda/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/bottanuco/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/paladina/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/calcio/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/covo/</loc><lastmod>2026-10-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/pedrengo/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/bonate-sotto/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/parre/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/mozzanica/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/villa-d-adda/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/bottanuco/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/paladina/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/calcio/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/covo/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/pedrengo/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/bonate-sotto/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/parre/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/mozzanica/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/castione-della-presolana/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/mapello/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/mapello/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/san-pellegrino-terme/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/lurano/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/cenate-sopra/</loc><lastmod>2026-10-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/casazza/</loc><lastmod>2026-10-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/brembate-di-sopra/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/capriate-san-gervasio/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/calusco-d-adda/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/cenate-sopra/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/casazza/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/brembate-di-sopra/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/capriate-san-gervasio/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/calusco-d-adda/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/casnigo/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/cenate-sotto/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/cusio/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/cenate-sotto/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/cusio/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/mozzo/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/montello/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/premolo/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/suisio/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/bolgare/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/chignolo-d-isola/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/terno-d-isola/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/cassano-d-adda/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/onore/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/montello/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/premolo/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/suisio/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/bolgare/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/chignolo-d-isola/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/terno-d-isola/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/cassano-d-adda/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/onore/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/levate/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/antegnate/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/antegnate/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/ranica/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/fara-gera-d-adda/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/caravaggio/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/caravaggio/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/cene/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/morengo/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/colzate/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/morengo/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/colzate/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/pradalunga/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/gandellino/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/leffe/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/leffe/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/spinone-al-lago/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/cernusco-lombardone/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/donna-volley/</loc><lastmod>2026-10-14</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/palazzolo-sull-oglio/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/presezzo/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/mornico-al-serio/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/villa-di-serio/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/villongo/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/canonica-d-adda/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/peia/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/almenno-san-salvatore/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/gazzaniga/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/palazzolo-sull-oglio/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/presezzo/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/mornico-al-serio/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/villa-di-serio/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/valbrembo/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/villongo/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/peia/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/almenno-san-salvatore/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/gazzaniga/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/lovere/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/boltiere/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/gandino/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/boltiere/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/gandino/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/malpaga/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/trezzo-sull-adda/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/trezzo-sull-adda/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/ghisalba/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/vaprio-d-adda/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/vaprio-d-adda/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/zandobbio/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/madone/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/san-paolo-d-argon/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/madone/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/san-paolo-d-argon/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/sedrina/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/fontanella/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/palosco/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/calvenzano/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/lallio/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/palosco/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/calvenzano/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/lallio/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/choruslife/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/serina/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/world-cheese-capital/</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/casirate-d-adda/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/darfo-boario-terme/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/darfo-boario-terme/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/brembate-sopra/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/bracca/</loc><lastmod>2026-10-10</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/val-brembilla/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/val-brembilla/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/santa-lucia/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/italia/</loc><lastmod>2026-10-16</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/cassinone/</loc><lastmod>2026-10-26</lastmod></url>
@@ -3539,25 +3514,22 @@
   <url><loc>https://anyplans.in/en/bergamo/inzago/</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/sotto-il-monte/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/paratico/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/piazza-brembana/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/selvino/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/piazza-brembana/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/selvino/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/monasterolo-del-castello/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/running-today/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/running-today/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/walking-today/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/padel-today/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/markets-today/</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/talks-and-culture-today/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/libraries-today/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/free-today/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/books-today/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/castles-and-villages-today/</loc><lastmod>2026-10-19</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/sports-today/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/run-clubs-today/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/run-clubs-today/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/27-padel/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/bergamo-biblioteca-civica-antonio-tiraboschi/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/wemeet-by-weroad/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/wemeet-by-weroad/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/biblioteca-rita-levi-montalcini-dalmine/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/molte-fedi-sotto-lo-stesso-cielo/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/the-cheese-valleys/</loc><lastmod>2026-10-14</lastmod></url>
@@ -3568,7 +3540,7 @@
   <url><loc>https://anyplans.in/en/bergamo/venues/kira-padel-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/bobadilla/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/m-ur-a-festival/</loc><lastmod>2026-10-14</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/ninfea-social-club/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/ninfea-social-club/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/padel-star-veduggio/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/capogiro/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/into-the-woods/</loc><lastmod>2026-10-26</lastmod></url>
@@ -3578,40 +3550,39 @@
   <url><loc>https://anyplans.in/en/bergamo/venues/garota-de-ipanema/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/queen-club/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/cafeteria/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/teatro-donizetti/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/palapadel-seriate/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/arya-lounge/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/decibel-club/</loc><lastmod>2026-10-18</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/teatro-donizetti/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/padel-time-treviglio/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/museo-diocesano-adriano-bernareggi-il-bernareggi/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/museo-diocesano-adriano-bernareggi-il-bernareggi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/vibe-club/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/sabbie-mobili/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/bergamo-padel-club/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/apc-active-padel-club-brignano-gera-d-adda-bg/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/yep-albano-sant-alessandro/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/nikita/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/oriocenter/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/teatro-nuovo-treviglio-tnt/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/oriocenter/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/bombonera-social-pub/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/padel-academy-manenti-malgaroli/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/brina-bistrot/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/bar-san-marco/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/bolgia/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/loft/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/teatro-nuovo-treviglio-tnt/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/treviglio-anteo-spaziocinema/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/parco-della-trucca/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/baia-del-re/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/charleston/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/thanka/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/teatro-san-giorgio/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/circolo-maite/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/gnam/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/santini-store/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/teatro-san-giorgio/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/santini-store/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/ponte-san-pietro-marzio-tremaglia/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/tiky-klub/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/palazzo-terzi/</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/cards-realm/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/compagnia-la-pulce/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/gnam/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/live-music-club/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/wsc-padel-medolago/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/cittadella-dello-sport/</loc><lastmod>2026-10-26</lastmod></url>
@@ -3623,52 +3594,48 @@
   <url><loc>https://anyplans.in/en/bergamo/venues/corner-bar/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/setai-garden/</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/cosmo-food-club/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/castello-di-malpaga/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/castello-di-malpaga/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/caffettiera-nuova-rotonda/</loc><lastmod>2026-10-23</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/bergamo-gavazzeni/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/ex-oratorio-di-s-lupo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/biblioteca-bambini-e-ragazzi-treviglio/</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/setai-club/</loc><lastmod>2026-10-25</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/oronero/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/orto-botanico-di-bergamo-lorenzo-rota/</loc><lastmod>2026-10-18</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/circolo-maite/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/centro-vivere-insieme-2-marigold-curno/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/bergamo-galizzi/</loc><lastmod>2026-10-22</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/susanna-alberti-studio/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/choruslife-arena/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/ex-oratorio-di-s-lupo/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/choruslife-arena/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/padel-house-bergamo/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/bergamo-caversazzi/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/druso/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/daste-bergamo/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/le-cucine-di-curno/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/libreria-l-alchimista/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/kampobase-lombardia-vagabonda/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/feverup-events/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/fondazione-banca-popolare-di-bergamo-ef/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/teatro-san-filippo-neri/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/museo-civico-d-arte-e-del-territorio-gianni-bellini/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/druso/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/daste-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/libreria-l-alchimista/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/kampobase-lombardia-vagabonda/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/feverup-events/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/teatro-san-filippo-neri/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/museo-civico-d-arte-e-del-territorio-gianni-bellini/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/bergamo-ambiveri/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/cineteatro-gavazzeni/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/c-a-nerd-corner/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/cineteatro-gavazzeni/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/c-a-nerd-corner/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/capanu-culture-club/</loc><lastmod>2026-10-20</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/teatro-nuovo-treviglio/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/biblioteca-treviglio/</loc><lastmod>2026-10-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/sala-viscontea/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/monastero-di-astino/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/centro-sportivo-comunale/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/sala-viscontea/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/centro-sportivo-comunale/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/sistema-bibliotecario-valle-seriana/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/bergamo-regeni-colognola/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/al-tagliere-di-nese/</loc><lastmod>2026-10-17</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/scuola-sb-capitanio/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/0-6-valsecchi/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/parco-di-villa-concordia/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/scuola-sb-capitanio/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/0-6-valsecchi/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/parco-di-villa-concordia/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/le-scalette-del-martedi/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/berga-padel/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/dalmine-frazione-mariano/</loc><lastmod>2026-10-25</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/urgnano-frazione-basella/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/berga-padel/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/dalmine-frazione-mariano/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/urgnano-frazione-basella/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/sopra-la-biblioteca-vismara/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/venues/circolo-scacchistico-excelsior/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/cor-straight-to-the-cor/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/venues/berghem-freestyle/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/cor-straight-to-the-cor/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/venues/berghem-freestyle/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/running-clubs/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/running-clubs/monday/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/running-clubs/tuesday/</loc><lastmod>2026-10-26</lastmod></url>
@@ -3688,36 +3655,36 @@
   <url><loc>https://anyplans.in/en/bergamo/groups/seriana-run-club/</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/sabato-alla-trucca/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/le-scalette-del-martedi/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/groups/ninfea-social-club/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/groups/ninfea-social-club/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/groups/cor-run/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/groups/giovedipista/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/groups/inpistaamozzo/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/groups/marathon-training/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/susanna-alberti-studio/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/groups/cor-run/</loc><lastmod>2026-10-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/groups/giovedipista/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/groups/inpistaamozzo/</loc><lastmod>2026-10-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/groups/marathon-training/</loc><lastmod>2026-10-22</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/sahaja-yoga/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/groups/moss-punto-di-contatto/</loc><lastmod>2026-10-22</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/groups/moss-punto-di-contatto/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/bergamo-walking/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/nxt-bergamo/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/groups/edone/</loc><lastmod>2026-10-24</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/groups/edone/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/aegee-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/circolino-astino/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/bar-broseta-47/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/asd-runners-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/via-per-monti/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/pazzi-del-mercoledi/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/groups/spritz-and-burger/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/fuorisede-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/groups/spritz-and-burger/</loc><lastmod>2026-10-24</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/cus-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/groups/estivo-goisis/</loc><lastmod>2026-10-22</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/fabric-cascina-carlinga/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/groups/estivo-goisis/</loc><lastmod>2026-10-22</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/bgr-bergamo-running/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/bombonera-social-pub/</loc><lastmod>2026-10-22</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/carducci7-hub-design/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/bergamo-olistica/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/filippo-social-club/</loc><lastmod>2026-10-18</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/groups/adda-running-club/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/groups/socialrunbergamo/</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/girly-running-club/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/groups/socialrunbergamo/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/groups/adda-running-club/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/neurostretching/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/sipario-il-mio-racconto/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/gruppo-di-uncinetto-2/</loc><lastmod>2026-10-22</lastmod></url>
@@ -3733,13 +3700,14 @@
   <url><loc>https://anyplans.in/en/bergamo/groups/kontrol/</loc><lastmod>2026-10-22</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/burraco-bergamo-aps/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/unplug-cocktail-bar/</loc><lastmod>2026-10-24</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/groups/capanu-culture-club/</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/trust-running-club/</loc><lastmod>2026-10-21</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/groups/capanu-culture-club/</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/fast2gether-run-gang/</loc><lastmod>2026-10-21</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/ciclofficina-bianzana/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/marianna-zanardi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/mamma-e-figlia/</loc><lastmod>2026-10-09</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/groups/ecp-concept-store-events-pop-up/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/groups/camminata-metabolica/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/festa-dell-oratorio/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/festa-dell-oratorio-alzano-sopra-alzano-lombardo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/festa-sforzafesta-oratorio-sforzatica-dalmine/</loc><lastmod>2026-10-26</lastmod></url>
@@ -4591,7 +4559,7 @@
   <url><loc>https://anyplans.in/en/bergamo/lezione/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/torneo-repadel-avanzati/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/daste-bergamo-in-vino/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/memorial-eugenio-mercorio-a-foppolo-15-edizione/</loc><lastmod>2026-10-25</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/memorial-eugenio-mercorio-a-foppolo-15-edizione/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/vivi-la-corte-visita-in-abiti-d-epoca/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/visita-guidata-museo-paleontologico-cene/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/il-tempo-del-silter-dalle-malghe-di-case-di-viso-alla-val-ca/</loc><lastmod>2026-10-26</lastmod></url>
@@ -4850,7 +4818,7 @@
   <url><loc>https://anyplans.in/en/bergamo/gruppo-di-cammino-di-scanzorosciate-2026-10-22-2/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/gruppo-di-cammino-di-scanzorosciate-2026-10-21/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/gruppo-di-cammino-di-santa-lucia/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/gruppo-di-cammino-di-santa-lucia-2026-10-26/</loc><lastmod>2026-09-29</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/gruppo-di-cammino-di-santa-lucia-2026-10-26/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/gruppo-di-cammino-di-santa-lucia-2026-10-21/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/gruppo-di-cammino-di-almenno-san-salvatore/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/gruppo-di-cammino-di-capriate-san-gervasio/</loc><lastmod>2026-10-26</lastmod></url>
@@ -4886,7 +4854,6 @@
   <url><loc>https://anyplans.in/en/bergamo/gruppo-di-cammino-di-grumello-del-monte-2026-10-21/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/hata-yoga-lezione-di-prova-della-sera/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/aperitivi-con-la-storia-storie-di-donne-storie-d-italia-la-l/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/aperitivi-con-la-storia-storie-di-donne-storie-d-italia-la-l-2026-11-11/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/aperitivi-con-la-storia-storie-di-donne-storie-d-italia-la-l-2026-10-14/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/aperitivi-con-la-storia-storie-di-donne-storie-d-italia-la-l-2026-09-30/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/allenamento-di-gruppo-del-mercoledi/</loc><lastmod>2026-10-26</lastmod></url>
@@ -5358,6 +5325,7 @@
   <url><loc>https://anyplans.in/en/bergamo/39a-sagra-del-raviolo-nostrano-di-covo-e-xii-medioevo-covo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/torneo-open/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/castagnata-alpina/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/castagnata-alpina-2026-10-11/</loc><lastmod>2026-10-10</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/kontrol-x-balzer/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/badalasco-in-festa/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/cena-da-il-consorzio-galletto-e-pizza/</loc><lastmod>2026-10-26</lastmod></url>
@@ -5906,6 +5874,8 @@
   <url><loc>https://anyplans.in/en/bergamo/castagnata-a-santa-maria/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/castagnata-e-giochi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/festa-d-autunno/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/festa-d-autunno-2026-11-01/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/festa-d-autunno-2026-10-18/</loc><lastmod>2026-10-18</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/incontro-con-maura-gancitano-sala-polivalente-castel-rozzone/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/karaoke-con-francy-bar-movida-chiuduno/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/insieme/</loc><lastmod>2026-10-26</lastmod></url>
@@ -6267,6 +6237,8 @@
   <url><loc>https://anyplans.in/en/bergamo/gruppo-di-lettura-del-lunedi-mattina-2026-10-26/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/gruppo-di-lettura-del-lunedi-mattina-la-figlia-della-liberta/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/che-lettore-sei-fantasy-e-fantascienza/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/pilates-reformer-ritrova-forza-e-postura-con-il-nostro-appun/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/pilates-reformer-ritrova-forza-e-postura-con-il-nostro-appun-2026-10-31/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/aperitivo-e-conosciamoci/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/spezie-e-bugie-la-piccola-cucina-di-mehdi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/matteo-nicodemo-cabaret-biblioteca-grassobbio/</loc><lastmod>2026-10-26</lastmod></url>
@@ -6278,6 +6250,7 @@
   <url><loc>https://anyplans.in/en/bergamo/chi-ride-e-fuori-da-da-freddi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/gdl-kilegge-stupore-e-tremori-di-amelie-nothomb/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/cogito-ergo-tablo-da-bowling-merate/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/zustissia-francesco-piras-film/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/alessandro-lupo-pasini-in-concerto-accademia-upgrade-san-pel/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/raccontare-la-crisi-climatica/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/dr-why-quiz-interattivo-bar-spritz-dalmine/</loc><lastmod>2026-10-26</lastmod></url>
@@ -6287,8 +6260,8 @@
   <url><loc>https://anyplans.in/en/bergamo/festa-delle-zucche-area-feste-solza/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/laboratorio-di-fotografia-aperitivo-guardare-la-luce/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/tablo-eng-da-giustospirito-curno/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/miscusi-watch-party-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/corso-di-meditazione-sahaja-yoga-completamente-gratuito/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/la-voce-dei-giovani-al-cinema/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/international-meetings-in-bergamo-on-wednedays-recurrent-lin/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/fabio-de-luigi/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/fabio-de-luigi-biol-in-carne-e-ossa-tour/</loc><lastmod>2026-10-26</lastmod></url>
@@ -6319,6 +6292,7 @@
   <url><loc>https://anyplans.in/en/bergamo/lost-in-translation/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/festa-gin-festival-area-fiera-treviglio/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/street-food-da-paura/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/street-food-da-paura-halloween-edition/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/bellafresca-iper-seriate/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/padelween/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/festa-agrifest-area-festa-ghisalba/</loc><lastmod>2026-10-26</lastmod></url>
@@ -6407,10 +6381,16 @@
   <url><loc>https://anyplans.in/en/bergamo/ingresso-halloween-in-villa-concordia-robbiate/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/invidia-spettacolo-auditorium-cuminetti-albino/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/cena-da-area-feste-ghisalba/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/halloween-dia-de-muertos/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/tabloween-da-s-mart-san-martino/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/cena-mostruosa-halloween-in-villa-2026/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/la-stupidera-di-halloween/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/halloween-in-piazza/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/halloween-il-paese-delle-zucche/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/halloween-a-bergamo-tour-speciale-di-racconti-segreti/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/halloween-2026-10-31/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/zucche-in-piazza/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/pomeriggio-di-halloween/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/trick-or-treat-halloween-skate-sesh/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/max-vavassori-in-concerto-agriturismo-lucchetti-cene/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/festa-di-halloween-cadelfoglia-val-brembilla/</loc><lastmod>2026-10-26</lastmod></url>
@@ -6474,7 +6454,10 @@
   <url><loc>https://anyplans.in/en/bergamo/visita-guidata-di-palazzo-terzi-meraviglia-nel-cuore-di-berg/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/e-vietato-piangere-spettacolo-teatro-di-loreto-bergamo-citta/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/la-casa-del-lavoro-laboratorio-maledonne/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/lvf-a1-fineco-pallavolo-femminile-choruslife-volley-bergamo-/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/cena-da-peperi-ristorante-pizzeria-cocktail-bar/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/halloween-con-berto/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/castagnata-tradizionale/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/muriel-villa-in-concerto-chiesa-vecchia-calusco-d-adda/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/karaoke-open-mic-nxt-piazzale-alpini-bergamo-citta/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/naif-in-concerto-festa-agrifest-ghisalba/</loc><lastmod>2026-10-26</lastmod></url>
@@ -6491,6 +6474,7 @@
   <url><loc>https://anyplans.in/en/bergamo/tributo-dire-straits-legacy-dsl-in-concerto-choruslife-berga/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/jack-nobile-spettacolo-teatro-colognola-bergamo-citta/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/dire-straits-legacy-world-tour/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/amalia-del-ponte-litofonie-dialoghi-intorno-alla-scultura/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/tech-drinks-abb-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/masterclass-la-nouvelle-vague-con-andrea-chimento/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/nostra-solitudine/</loc><lastmod>2026-10-26</lastmod></url>
@@ -6522,6 +6506,7 @@
   <url><loc>https://anyplans.in/en/bergamo/le-travolgenti-vicende-di-un-monastero/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/mani-agye-video-shoot/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/dizionario-poetico-dell-umano/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/pinocchio-readymade-lettura-teatrale-con-improvvisazioni-al-/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/belle-e-la-bestia-il-musical/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/belle-e-la-bestia-musical-choruslife-bergamo-citta/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/gabriella-dal-lago-buon-tempo-festival-2026/</loc><lastmod>2026-10-26</lastmod></url>
@@ -6545,6 +6530,7 @@
   <url><loc>https://anyplans.in/en/bergamo/tributo-lucio-battisti-maledetti-gatti-sagra-taragna-spirano/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/shary-band-in-concerto-festa-agrifest-ghisalba/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/tributo-olly-zona-olly-festa-agrifest-ghisalba/</loc><lastmod>2026-10-26</lastmod></url>
+  <url><loc>https://anyplans.in/en/bergamo/80s-never-die-la-festa-anni-80/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/gita-sociale-2026-cremona-e-i-suoi-torroni/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/fiera-di-san-martino-centro-paese-alzano-lombardo/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/trek-experience-falconiere-per-un-giorno/</loc><lastmod>2026-10-26</lastmod></url>
@@ -6581,38 +6567,4 @@
   <url><loc>https://anyplans.in/en/bergamo/l-esule-di-roma/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/casa-palazzolo-cena-etnica-2026-under-35/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/en/bergamo/nuovi-capitali-al-servizio-delle-pmi/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/gruppo-di-lettura-di-filosofia-il-mito-di-sisifo-di-a-camus/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/matteo-angioletti-in-concerto-chiesa-parrocchiale-carvico/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/tante-mani/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/storico-chi-legge-novembre-2026/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/saracasa-sala-giochi-2026/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/laboratorio-di-automassaggio-viso-aperitivo/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/la-bellezza-nel-respiro/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/sinfonia-fantastica-le-eta-della-vita/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/sinfonia-fantastica/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/le-convenienze-ed-inconvenienze-teatrali/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/costruire-la-pace/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/casa-palazzolo-cena-etnica-2026/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/porsellere-ol-mahadur-in-da-curt/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/aperitivo-skincare-experience/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/cinema-e-cena-da-le-cucine-di-curno/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/una-notte-al-dormitorio-maschile-zabulon-under-35/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/una-notte-al-dormitorio-femminile-madre-teresa-di-calcutta-u/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/serata-vinile-hivan-paolo-sax/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/maite-risate-presenta-regola-n-6-di-e-con-giulio-oldrati/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/tributo-francesco-guccini-eskimo-revel-treviglio/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/convegno-acrb-innovazione-socio-sanitaria/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/lunch-del-convegno/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/laboratorio-musicale-al-punto-sosta-under-35/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/cara-bolletta/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/claudun-beer-fest/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/festa-noemberfest-piazzale-mercato-serina/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/l-esule-di-roma-melodramma-teatro-donizetti-bergamo-citta/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/una-notte-al-dormitorio-galgario-under-35/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/incontro-con-fabrizio-roncalli-teatro-oratorio-villa-d-adda/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/antifascistour-di-e-con-massimiliano-loizzi/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/magika-90-in-concerto-noemberfest-serina/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/tributo-abba-abbaclub-like-it-cenate-sotto/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/santamarea-in-concerto-druso-ranica/</loc><lastmod>2026-10-26</lastmod></url>
-  <url><loc>https://anyplans.in/en/bergamo/reformer-1-corso-per-trainer-pilates-bergamo/</loc><lastmod>2026-10-26</lastmod></url>
 </urlset>
