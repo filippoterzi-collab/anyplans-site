@@ -1,0 +1,68 @@
+{
+  "tipo": "articolo",
+  "data": "2026-10-26",
+  "aggiornato": "2026-10-26",
+  "slug": "run-club-milano",
+  "titolo": "Run club a Milano: tutti, giorno per giorno",
+  "h1": "Tutti i run club di Milano, giorno per giorno: dove e quando si corre in gruppo",
+  "descrizione": "I run club di Milano con giorno, ora e punto di ritrovo, aggiornati dal database: Global Runners, Running Rebels, NoLo Runners, Naviglio Run Club e gli altri. Quasi tutti gratis e aperti a chiunque.",
+  "lead": "A Milano si può correre in gruppo quasi ogni giorno della settimana, gratis e senza conoscere nessuno: è uno dei modi più semplici per farsi degli amici appena arrivati in città. Qui ci sono i run club di Milano giorno per giorno, con l'ora e il posto del ritrovo, e quello che c'è da sapere prima della prima uscita.",
+  "sezioni": [
+    {
+      "h2": "Come funziona la prima volta",
+      "testo": [
+        "Ci si presenta al ritrovo dieci minuti prima, con scarpe da corsa e una giacca leggera. Non serve iscriversi né essere allenati: quasi tutti i gruppi corrono a ritmo tranquillo e spesso si dividono per passo, così nessuno resta indietro. Si fanno di solito tra i 5 e i 10 chilometri, e dopo spesso si va a bere qualcosa insieme.",
+        "Molti run club milanesi parlano anche inglese, perché tanti iscritti sono arrivati da poco in città. Per sapere se il gruppo esce davvero quella settimana, guarda l'Instagram del club: lo trovi sotto, su ogni scheda."
+      ]
+    },
+    {
+      "h2": "Quanto costa",
+      "testo": [
+        "Nella maggior parte dei casi niente. Alcuni gruppi chiedono un tesseramento o una piccola quota: quando c'è, è scritto sulla scheda del club."
+      ]
+    },
+    {
+      "h2": "Se preferisci la bici",
+      "testo": [
+        "A Milano ci sono anche uscite in bici di gruppo, come Critical Mass, Ciclocaffè e Toastino Cycling Club: sono nella pagina dei gruppi di anyplans, con giorno e ritrovo."
+      ]
+    }
+  ],
+  "runclub": true,
+  "eventi": {
+    "tipi": [
+      "running",
+      "trail"
+    ],
+    "titolo": "Le prossime corse e gare",
+    "max": 8
+  },
+  "faq": [
+    {
+      "q": "Quali run club ci sono a Milano?",
+      "a": "Tra gli altri Global Runners Milano, Running Rebels Milano, Social Miles Milan, NoLo Runners, MarteRun, One More K, History Run Club, Naviglio Run Club e Aperitivo Runners Club. In questa pagina ci sono tutti, con giorno, ora e ritrovo, aggiornati dal database."
+    },
+    {
+      "q": "Serve essere allenati per correre con un run club?",
+      "a": "No: quasi tutti sono aperti a chiunque, corrono a ritmo tranquillo e spesso si dividono per passo. Basta presentarsi al ritrovo."
+    },
+    {
+      "q": "I run club di Milano sono gratis?",
+      "a": "Quasi tutti sì. Alcuni chiedono un tesseramento o una piccola quota, indicata sulla scheda del club."
+    },
+    {
+      "q": "È un buon modo per conoscere gente a Milano?",
+      "a": "Sì, è uno dei più semplici: si corre insieme ogni settimana, e dopo la corsa spesso si va a bere qualcosa. Molti iscritti sono nuovi in città."
+    }
+  ],
+  "fonti": [
+    {
+      "nome": "I run club di Milano, su anyplans",
+      "url": "https://anyplans.in/milano/running-club/"
+    }
+  ],
+  "correlate": [
+    "cena-da-soli-milano",
+    "halloween-a-milano"
+  ]
+}

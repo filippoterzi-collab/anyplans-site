@@ -1,0 +1,59 @@
+{
+  "tipo": "articolo",
+  "data": "2026-10-26",
+  "aggiornato": "2026-10-26",
+  "slug": "mercatini-di-natale-milano",
+  "titolo": "Mercatini di Natale 2026 a Milano e l'Oh Bej! Oh Bej!",
+  "h1": "Mercatini di Natale 2026 a Milano: l'Oh Bej! Oh Bej! e gli altri mercatini",
+  "descrizione": "I mercatini di Natale 2026 a Milano e provincia: l'Oh Bej! Oh Bej! di Sant'Ambrogio al Castello Sforzesco e gli altri mercatini, con data, ora e posto. Elenco aggiornato ogni notte man mano che escono.",
+  "lead": "A Milano il Natale comincia con la fiera di Sant'Ambrogio, l'Oh Bej! Oh Bej!, intorno al 7 dicembre. Poi ci sono i mercatini dei quartieri e quelli della provincia. Qui sotto ci sono quelli già in calendario, aggiornati ogni notte man mano che escono le date del 2026.",
+  "sezioni": [
+    {
+      "h2": "L'Oh Bej! Oh Bej!",
+      "testo": [
+        "È la fiera più antica di Milano, legata a Sant'Ambrogio, il patrono della città, che si festeggia il 7 dicembre. Si tiene intorno al Castello Sforzesco, con centinaia di bancarelle di artigianato, dolci, libri, giocattoli e decorazioni di Natale. L'ingresso è libero.",
+        "Le date ufficiali del 2026 le annuncia il Comune di Milano: di solito sono i giorni intorno al 7 dicembre. Nel 2026 il 7 cade di lunedì e l'8, l'Immacolata, di martedì."
+      ]
+    },
+    {
+      "h2": "Gli altri mercatini",
+      "testo": [
+        "Tra novembre e dicembre si aggiungono i mercatini dei quartieri, quelli nelle piazze della provincia e i mercati dell'artigianato. Nell'elenco qui sotto ognuno ha la data, l'ora e il posto."
+      ]
+    }
+  ],
+  "eventi": {
+    "tipo": "raccolta:natale",
+    "titolo": "Mercatini e feste di Natale in programma a Milano",
+    "tutti": "Tutti gli eventi di Natale a Milano",
+    "max": 15
+  },
+  "faq": [
+    {
+      "q": "Quando è l'Oh Bej! Oh Bej! nel 2026?",
+      "a": "Le date ufficiali le annuncia il Comune di Milano. La fiera si tiene di solito nei giorni intorno al 7 dicembre, festa di Sant'Ambrogio: nel 2026 il 7 dicembre è un lunedì."
+    },
+    {
+      "q": "Dove si tiene l'Oh Bej! Oh Bej!?",
+      "a": "Intorno al Castello Sforzesco, a Milano."
+    },
+    {
+      "q": "Quali sono i mercatini di Natale a Milano?",
+      "a": "Il più famoso è l'Oh Bej! Oh Bej! di Sant'Ambrogio. Gli altri, nei quartieri e in provincia, sono nell'elenco di questa pagina con data, ora e posto, e si aggiornano ogni notte."
+    }
+  ],
+  "fonti": [
+    {
+      "nome": "MenteLocale, Oh Bej Oh Bej 2025",
+      "url": "https://www.mentelocale.it/milano/101507-oh-bej-oh-bej-2025-fiera-di-sant-ambrogio.htm"
+    },
+    {
+      "nome": "Eventi di Natale a Milano, su anyplans",
+      "url": "https://anyplans.in/milano/natale/"
+    }
+  ],
+  "correlate": [
+    "halloween-a-milano",
+    "cena-da-soli-milano"
+  ]
+}

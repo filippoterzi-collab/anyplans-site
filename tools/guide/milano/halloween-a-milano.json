@@ -1,0 +1,70 @@
+{
+  "tipo": "articolo",
+  "data": "2026-10-26",
+  "aggiornato": "2026-10-26",
+  "slug": "halloween-a-milano",
+  "titolo": "Halloween 2026 a Milano: feste, serate e cose per bambini",
+  "h1": "Halloween 2026 a Milano: le feste e le serate, per grandi e bambini",
+  "descrizione": "Halloween 2026 a Milano e provincia: le feste nei club, le serate a tema, le cene in maschera e le feste per bambini, con data, ora e posto. Elenco aggiornato ogni notte fino al 31 ottobre.",
+  "lead": "Halloween cade di sabato, il 31 ottobre 2026, e il giorno dopo è festa: a Milano vuol dire un weekend intero di feste, da venerdì 30. Qui sotto ci sono quelle di Milano e provincia, dai club alle cene in maschera alle feste per bambini, aggiornate ogni notte man mano che escono.",
+  "sezioni": [
+    {
+      "h2": "Quando cade",
+      "testo": [
+        "Sabato 31 ottobre 2026. Domenica 1 novembre è Ognissanti, festa nazionale: le feste della notte di Halloween possono finire tardi, e molte cominciano già venerdì 30."
+      ]
+    },
+    {
+      "h2": "Club, cene e serate a tema",
+      "testo": [
+        "A Milano Halloween si festeggia soprattutto la sera di sabato: feste nei club e nelle discoteche, cene con delitto, serate horror e karaoke a tema. Nell'elenco qui sotto ognuna ha l'ora, il posto e il prezzo quando c'è un biglietto."
+      ]
+    },
+    {
+      "h2": "Per i bambini",
+      "testo": [
+        "Laboratori per intagliare le zucche, campi di zucche fuori città, spettacoli e feste negli oratori e nelle biblioteche: sono nell'elenco insieme alle serate per adulti, guarda il titolo e l'ora."
+      ]
+    },
+    {
+      "h2": "Se non sai con chi andare",
+      "testo": [
+        "Su ogni festa di anyplans vedi chi altro ci va, e puoi andarci insieme a loro invece che da solo. Molte serate di Halloween sono pensate per chi vuole conoscere gente nuova: cene in maschera, feste nei locali, serate a tema."
+      ]
+    }
+  ],
+  "eventi": {
+    "tipo": "raccolta:halloween",
+    "titolo": "Le feste di Halloween in programma a Milano",
+    "tutti": "Tutti gli eventi di Halloween a Milano",
+    "max": 20
+  },
+  "faq": [
+    {
+      "q": "Quando è Halloween nel 2026?",
+      "a": "Sabato 31 ottobre 2026. Domenica 1 novembre è Ognissanti, festa nazionale."
+    },
+    {
+      "q": "Dove festeggiare Halloween a Milano?",
+      "a": "L'elenco in questa pagina raccoglie le feste di Halloween 2026 a Milano e provincia, nei club, nei locali e nei quartieri, con data, ora e luogo, e si aggiorna ogni notte."
+    },
+    {
+      "q": "Ci sono feste di Halloween per bambini a Milano?",
+      "a": "Sì: laboratori con le zucche, campi di zucche, spettacoli e feste negli oratori e nelle biblioteche. Sono nell'elenco con l'ora e il posto."
+    },
+    {
+      "q": "Posso andare a una festa di Halloween da solo?",
+      "a": "Sì. Su anyplans vedi chi altro ci va e ti unisci a loro: registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni."
+    }
+  ],
+  "fonti": [
+    {
+      "nome": "Eventi di Halloween a Milano, su anyplans",
+      "url": "https://anyplans.in/milano/halloween/"
+    }
+  ],
+  "correlate": [
+    "cena-da-soli-milano",
+    "run-club-milano"
+  ]
+}
