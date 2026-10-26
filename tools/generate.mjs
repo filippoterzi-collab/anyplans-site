@@ -734,6 +734,7 @@ function occasionePage(o) {
 ${crumbs([["anyplans", L.home], [CITY_NAME, rel(hubUrl())], ["Domande", rel(domandeUrl())], [cap(o.nome), null]])}
 <h1>${o.emoji} ${esc(h1)}</h1>
 <p class="lead">${esc(lead)}</p>
+${o.tema ? "" : ricorrenzaBox(o, url)}
 <div class="cta"><a class="btn" href="${MAP_URL}">Vedi la mappa</a><a class="btn ghost" href="${rel(hubUrl())}">Tutti gli eventi a ${esc(CITY_NAME)}</a></div>
 ${tema.length ? `<h2>${o.emoji} A tema: ${esc(o.nome)} a ${esc(CITY_NAME)}</h2>${listHtml(tema.slice(0, 40))}` : ""}
 ${altri.length ? `<h2>Gli altri eventi di quei giorni</h2><p class="subl">Feste, concerti, serate, spettacoli e mercati ${esc(o.periodo)}.</p>${listHtml(altri.slice(0, 30))}` : ""}
@@ -788,6 +789,35 @@ ${D.map(d => `<section class="box"><h2>${esc(d.q)}</h2><p>${esc(d.a)}</p>${d.lin
   const ld = [jsonld({ "@context": "https://schema.org", "@type": "Article", headline: h1, description: cut(lead, 158), url, inLanguage: "it-IT", dateModified: dateKey(NOW, DEFAULT_TZ), author: { "@type": "Organization", name: "anyplans", url: SITE } }),
     faqLd(D.map(d => ({ q: d.q, a: d.a })))].join("\n");
   return { html: layout({ title: `Cosa fare a ${CITY_NAME}: ${D.length} domande e le risposte di oggi | anyplans`, description: cut(lead, 160), url, image: OG_DEFAULT, jsonLd: ld, body, alt: null }), lastmod: NOW };
+}
+
+// ── le ricorrenze nelle pagine vicine (26/10/2026) ───────────────────────────
+// A cinque giorni da Halloween le tre pagine sulla ricorrenza (la lista /bergamo/halloween/, la domanda
+// /bergamo/cosa-fare-a-halloween/ e la guida) non si linkavano fra loro, la lista si chiamava «Halloween: feste ed
+// eventi a Bergamo: 50 eventi» e la pagina del weekend del 31 ottobre non nominava Halloween. Vale anche per
+// Immacolata, Natale e Capodanno.
+const GIORNO_CLOU = { halloween: "10-31", natale: "12-25", capodanno: "12-31", immacolata: "12-08" };
+function giornoClou(o) { const g = GIORNO_CLOU[o.key]; if (!g || !o.da) return null; return `${g >= o.da.slice(5) ? o.da.slice(0, 4) : o.a.slice(0, 4)}-${g}`; }
+const ricorrenze = () => OCCASIONI.filter(o => !o.tema && o.da && o.a);
+const finestra = (o) => (Date.parse(o.a) - Date.parse(o.da)) / 86400e3;
+// la ricorrenza che cade in uno di questi giorni; a parità la più corta (il weekend del 5 dicembre è l'Immacolata, non Natale)
+function ricorrenzaDi(keys, soloBrevi) {
+  return ricorrenze().filter(o => (!soloBrevi || finestra(o) <= 4) && keys.some(k => k >= o.da && k <= o.a))
+    .sort((a, b) => finestra(a) - finestra(b))[0] || null;
+}
+const annoRic = (o) => (giornoClou(o) || o.da).slice(0, 4);
+const giornoRic = (o) => { const g = giornoClou(o); if (!g) return ""; const [y, m, d] = g.split("-"); return fmtDay(new Date(Date.UTC(+y, +m - 1, +d, 12)), DEFAULT_TZ).toLowerCase(); };
+function ricorrenzaBox(o, qui) {
+  if (en() || !o) return "";
+  const links = [];
+  const ix = o.raccolta ? types.find(x => x.sport === o.raccolta) : null;
+  const n = ix ? ix.list.filter(p => !p.isPast).length : 0;
+  if (ix && n) links.push([indexUrl(ix), `Le ${n} feste ed eventi di ${o.nome}`]);
+  if (occasioneUtile(o)) links.push([occasioneUrl(o), `Cosa fare ${o.quando}: tutti gli eventi di quei giorni`]);
+  for (const g of GUIDE.filter(g => g.eventi && g.eventi.tipo === o.raccolta).slice(0, 2)) links.push([guideUrl(g), g.titolo]);
+  const altri = links.filter(([u]) => u !== qui);
+  if (!altri.length) return "";
+  return `<div class="box"><h2>${o.emoji} ${esc(cap(o.nome))} ${annoRic(o)} a ${esc(CITY_NAME)}</h2><div class="tags">${altri.map(([u, t]) => `<a href="${esc(rel(u))}">${esc(t)}</a>`).join("")}</div></div>`;
 }
 
 // ── le guide: il blog che non si vede (PRODUCT.md "Le guide", UI.md §3.12, 04/10/2026) ───────
@@ -870,6 +900,7 @@ function guidePage(g) {
 ${crumbs([["anyplans", "/"], [CITY_NAME, rel(hubUrl())], ["Guide", rel(guideIndexUrl())], [g.titolo, null]])}
 <h1>${esc(g.h1 || g.titolo)}</h1>
 <p class="lead">${esc(g.lead || g.descrizione)}</p>
+${g.eventi ? ricorrenzaBox(ricorrenze().find(o => o.raccolta === g.eventi.tipo), url) : ""}
 <div class="m">${esc(fmtLong(data, DEFAULT_TZ))}${+agg !== +data ? ` · aggiornato ${esc(fmtShort(agg, DEFAULT_TZ))}` : ""} · di Filippo Terzi${g.instagram ? ` · <a class="lnk" href="${esc(g.instagram)}" rel="noopener">il post su Instagram</a>` : ""}</div>
 ${g.copertina ? `<div class="cover"><img src="${esc(g.copertina)}" alt="${esc(g.copertina_alt || g.titolo)}" width="800" height="450" loading="eager" decoding="async" style="object-fit:cover"></div>${g.copertina_credito ? `<div class="m" style="font-size:12.5px">${esc(g.copertina_credito)}</div>` : ""}` : ""}
 ${g.posto ? postoHtml(g.posto, g) : ""}
@@ -2242,6 +2273,13 @@ function indexPageIt(ix) {
     title = cut(`Feste ed eventi a ${ix.town}${up.length ? ": " + up.length + " in programma" : ""}`, 49) + " | anyplans";
     intro = `${up.length ? `A ${ix.town} ${up.length === 1 ? "c'è 1 evento" : "ci sono " + up.length + " eventi"} nei prossimi mesi.` : `A ${ix.town} non c'è niente in programma adesso: qui sotto le feste già passate, che spesso tornano ogni anno.`} ${TESTI.paese.frase.replace("{paese}", ix.town)}`;
   }
+  const occ = ix.kind === "tipo" ? ricorrenze().find(o => o.raccolta === ix.sport) : null;
+  if (occ && up.length) {
+    const gg = giornoRic(occ);
+    h1 = `${cap(occ.nome)} ${annoRic(occ)} a ${CITY_NAME} e provincia: feste ed eventi`;
+    title = cut(`${cap(occ.nome)} ${annoRic(occ)} a ${CITY_NAME}: ${up.length} feste ed eventi${gg ? ` (${gg})` : ""}`, 70) + " | anyplans";
+    intro = intro.replace(" nei prossimi mesi.", ` per ${occ.nome} ${annoRic(occ)}${gg ? `, ${gg}` : ""}.`);
+  }
   const descr = cut(intro, 160);
   // "Quali camminata ci sono" era sgrammaticato: si usa il plurale di testi.json ("camminate")
   const plurale = String(ix.kind === "tipo" ? (ix.t.conta || "") : "").split("|")[1] || (ix.kind === "tipo" ? ix.t.label.toLowerCase() : "");
@@ -2261,6 +2299,7 @@ ${crumbs([["anyplans", "/"], [CITY_NAME, rel(hubUrl())], [ix.kind === "tipo" ? i
 <div class="chips"><span class="chip">${emoji} ${esc(ix.kind === "tipo" ? ix.t.c ? cap(ix.t.c) : "" : "Paese")}</span></div>
 <h1>${esc(h1)}</h1>
 <p class="lead">${esc(intro)}</p>
+${occ && up.length ? ricorrenzaBox(occ, url) : ""}
 ${app ? "" : `<div class="cta"><a class="btn" href="${MAP_URL}">Vedi tutti gli eventi</a></div>`}
 ${app ? app.html + (app.later.length ? `<h2>Più avanti</h2>${listHtml(app.later)}` : "") : up.length ? `<h2>Prossimi</h2>${listHtml(up)}` : ""}
 ${past.length ? `<h2>Già passati</h2>${listHtml(past)}` : ""}
@@ -2760,8 +2799,12 @@ function whenPage(kind) {
   // Il titolo comincia con "Eventi oggi a …" e tiene "cosa fare" in coda (07/10/2026). Su ChatGPT la gente
   // scrive "eventi oggi a Bergamo" e ChatGPT cerca su Bing, che pesa le parole esatte del titolo più di Google:
   // per quella domanda citava L'Eco e VisitBergamo. L'h1 resta "Cosa fare a Bergamo oggi", la forma di Google.
+  // nei giorni di Halloween, dell'Immacolata e di Capodanno la ricorrenza va nel titolo: è quello che la gente cerca
+  const occ = en() ? null : ricorrenzaDi(w.keys, true);
   const title = cut(en()
     ? `Events ${W_EN[kind]} in ${CITY_NAME}${giornata ? `, ${fmtDay(days[0], DEFAULT_TZ)}` : ""}: what to do (${list.length})`
+    : occ && kind === "weekend" ? `Eventi nel weekend ${occ.key === "immacolata" ? "del" : "di"} ${occ.nome} a ${CITY_NAME}: cosa fare (${list.length})`
+    : occ ? `Eventi ${W_IT[kind]} a ${CITY_NAME}${giornata ? `, ${dataBreve}` : ""} (${cap(occ.nome)}): cosa fare (${list.length})`
     : `Eventi ${W_IT[kind]} a ${CITY_NAME}${giornata ? `, ${dataBreve}` : ""}: cosa fare (${list.length})`, 68) + " | anyplans";
   const lead = en()
     ? `${list.length} events in ${CITY_NAME} and its province ${when}: ${joinIt(towns.slice(0, 4).map(t => t.replace(/ \(\d+\)$/, "")))} and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.`
@@ -2795,6 +2838,7 @@ ${crumbs([["anyplans", L.home], [CITY_NAME, rel(hubUrl())], [en() ? (W_EN_CAP[ki
 <h1>${esc(h1)}</h1>
 ${whenAppHtml(kind, w, list)}
 <p class="lead">${esc(lead)}</p>
+${ricorrenzaBox(en() ? null : ricorrenzaDi(w.keys, false), url)}
 ${list.length ? `<h2>${en() ? "By kind" : "Per tipo"}</h2><div class="tags">${typeChips(list, kind === "oggi")}</div>` : ""}
 ${others ? `<h2>${en() ? "Other days" : "Altri giorni"}</h2><div class="tags">${others}</div>` : ""}
 ${faqHtml(faq)}
