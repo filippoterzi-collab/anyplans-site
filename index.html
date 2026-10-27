@@ -983,7 +983,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
     </div>
     <div class="dates" aria-label="Quando">
       <div class="chips" data-f="day">
-        <button class="chip" data-v="oggi" data-gate="quando">Oggi</button><button class="chip" data-v="domani" data-gate="quando">Domani</button><button class="chip" data-v="weekend" data-gate="quando">Fine settimana</button>
+        <button class="chip" data-v="oggi" data-gate="quando">Oggi</button><button class="chip" data-v="halloween" data-gate="quando" id="hallochip">🎃 Halloween</button><button class="chip" data-v="domani" data-gate="quando">Domani</button><button class="chip" data-v="weekend" data-gate="quando">Fine settimana</button>
         <button class="chip wheelchip" id="wheelopen2" type="button" aria-haspopup="dialog">Se non lo sai, tira a sorte</button>
         <label class="chip" data-gate="quando"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15.5" rx="3"/><path d="M3.5 10 L20.5 10"/><path d="M8 3 L8 7"/><path d="M16 3 L16 7"/></svg><span id="date-txt">Un altro giorno</span><input type="date" id="freedate2" aria-label="Scegli un giorno"></label>
       </div>
@@ -1139,7 +1139,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1791402505"></script>
+<script src="/bergamo/app.js?v=1793125816"></script>
 <script src="/bergamo/iab.js" defer></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
@@ -1249,6 +1249,12 @@ const fmtDayLong = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", w
 const fmtHM = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit" });
 function romeParts(d){ const p = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", hour12: false }).formatToParts(d); const o = {}; p.forEach(x => o[x.type] = x.value); return { ymd: `${o.year}-${o.month}-${o.day}`, h: +o.hour }; }
 const TODAY = romeParts(NOW).ymd;
+// 🎃 Halloween come giorno, subito dopo "Oggi" (Filippo, 27/10/2026): eventi dal 28/10 al 1/11 con la stessa
+// espressione della raccolta /bergamo/halloween/ (branding/seo/testi.json). Sparisce da sola dopo il 1° novembre.
+const HALLO_DAYS = ["2026-10-28","2026-10-29","2026-10-30","2026-10-31","2026-11-01"];
+const HALLO_ON = TODAY <= "2026-11-01";
+const HALLO_RX = /halloween|\bzucc|horror|streg|dolcetto|muertos|maschera|spook|terrore|orrori/i;
+const isHallo = e => HALLO_DAYS.includes(e.ymd) && HALLO_RX.test(e.title + " " + (e.meeting_point_text || ""));
 const addDays = (ymd, n) => { const d = new Date(ymd + "T12:00:00Z"); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
 const GRID_LAST = addDays(TODAY, 13);   // ultimo giorno della griglia "Quando" (14 caselle)
 const ymdLabel = ymd => ymd === TODAY ? "Oggi" : ymd === addDays(TODAY, 1) ? "Domani" : fmtDay.format(new Date(ymd + "T12:00:00Z"));
@@ -1362,7 +1368,7 @@ function passes(e, ignoreDay, ignoreCat){
   if (e.km > 30) return false;   // il feed copre 50 km: la home mostra la città e i dintorni
   if (ignoreDay) {}
   else if (F.date.size) { if (!F.date.has(e.ymd)) return false; }
-  else if (F.day.size) { const d = [...F.day][0]; if (d === "oggi" && e.ymd !== TODAY) return false; if (d === "domani" && e.ymd !== addDays(TODAY, 1)) return false; if (d === "weekend" && !WEEKEND.includes(e.ymd)) return false; if (d === "sera" && !(e.ymd === TODAY && e.h >= 18)) return false; }
+  else if (F.day.size) { const d = [...F.day][0]; if (d === "oggi" && e.ymd !== TODAY) return false; if (d === "domani" && e.ymd !== addDays(TODAY, 1)) return false; if (d === "weekend" && !WEEKEND.includes(e.ymd)) return false; if (d === "sera" && !(e.ymd === TODAY && e.h >= 18)) return false; if (d === "halloween" && !isHallo(e)) return false; }
   if (F.cat.size && !ignoreCat) { const c = CATBY[[...F.cat][0]]; if (c && c.s && !c.s.includes(e.sport)) return false; }
   if (QTEXT) { const q = QTEXT.toLowerCase(); if (!(e.title + " " + (e.meeting_point_text || "") + " " + (e.community_name || e.club_name || e.host_name || "")).toLowerCase().includes(q)) return false; }
   if (F.price.size) { const p = [...F.price][0]; const c = e.price_cents || 0; if (p === "free" && !isFree(e)) return false; if (p === "cheap" && !(isFree(e) || (c > 0 && c <= 1000))) return false; if (p === "paid" && !c) return false; }   // (22/09/2026) "gratis" = gratis davvero, non prezzo ignoto
@@ -1374,7 +1380,7 @@ function passes(e, ignoreDay, ignoreCat){
 let visibleN = 30, lastToggled = null, lastRows = [];
 function summarize(){ const p = [];
   if (F.town.size) p.push(`da ${[...F.town][0]} (${CENTER.nome})`); else if (PLACE) p.push(PLACE.name); else if (F.city.size) p.push(CITYBY[[...F.city][0]]); else if (F.where.size) p.push("vicino a te");
-  if (F.date.size) p.push([...F.date].map(d => fmtDay.format(new Date(d + "T12:00:00Z"))).join(", ")); else if (F.day.size) { const d = [...F.day][0]; p.push(d === "oggi" ? "oggi" : d === "domani" ? "domani" : d === "weekend" ? "nel fine settimana" : "stasera"); }
+  if (F.date.size) p.push([...F.date].map(d => fmtDay.format(new Date(d + "T12:00:00Z"))).join(", ")); else if (F.day.size) { const d = [...F.day][0]; p.push(d === "oggi" ? "oggi" : d === "domani" ? "domani" : d === "weekend" ? "nel fine settimana" : d === "halloween" ? "ad Halloween" : "stasera"); }
   if (F.cat.size) p.push(CATBY[[...F.cat][0]].n.toLowerCase());
   if (QTEXT) p.push(`"${QTEXT}"`);
   if (F.price.size) p.push({ free: "gratis", cheap: "fino a 10 €", paid: "a pagamento" }[[...F.price][0]]);
@@ -1448,8 +1454,8 @@ function syncMapBar(){
   // il giorno: Oggi, Domani, poi i 12 giorni seguenti con la data (chiesto il 29/09/2026: "non solo fine settimana"), Fine settimana, Stasera, Tutti
   const dayV = F.date.size ? [...F.date][0] : F.day.size ? [...F.day][0] : MAP_ALL ? "tutti" : "oggi";
   const dayLab = y => capFirst(fmtDay.format(new Date(y + "T12:00:00Z")));
-  const dayTxt = F.date.size ? dayLab(dayV) : { oggi: MAP_TODAY || F.day.size ? "Oggi" : "Prossimi", domani: "Domani", weekend: "Fine settimana", sera: "Stasera", tutti: "Tutti i giorni" }[dayV];
-  const opts = [["oggi","Oggi"],["domani","Domani"]];
+  const dayTxt = F.date.size ? dayLab(dayV) : { oggi: MAP_TODAY || F.day.size ? "Oggi" : "Prossimi", halloween: "🎃 Halloween", domani: "Domani", weekend: "Fine settimana", sera: "Stasera", tutti: "Tutti i giorni" }[dayV];
+  const opts = HALLO_ON ? [["oggi","Oggi"],["halloween","🎃 Halloween"],["domani","Domani"]] : [["oggi","Oggi"],["domani","Domani"]];
   for (let i = 2; i < 14; i++) { const y = addDays(TODAY, i); opts.push([y, dayLab(y)]); }
   if (F.date.size && !opts.some(o => o[0] === dayV)) opts.push([dayV, dayTxt]);
   opts.push(["weekend","Fine settimana"],["sera","Stasera"],["tutti","Tutti i giorni"]);
@@ -1468,6 +1474,7 @@ function syncMapBar(){
 
 // ---------- pannelli, categorie, città ----------
 function buildStatic(){
+  { const hc = document.getElementById("hallochip"); if (hc && !HALLO_ON) hc.remove(); }
   document.getElementById("citylinks").innerHTML = "Le città con la loro pagina: " + CITIES.map(c => `<a href="/${c.slug}/">${c.nome}</a>`).join(" · ");
   let h = ""; for (let i = 0; i < 14; i++) { const y = addDays(TODAY, i); const d = new Date(y + "T12:00:00Z"); h += `<button class="chip" data-v="${y}" data-ymd="${y}" title="${GG[d.getUTCDay()]} ${d.getUTCDate()}">${i === 0 ? "Oggi" : i === 1 ? "Domani" : GG[d.getUTCDay()] + " " + d.getUTCDate()}<small>0</small></button>`; }
   document.getElementById("dgrid").innerHTML = h;
@@ -1732,7 +1739,7 @@ function bindAll(){
     const parts = [];
     if (QTEXT) parts.push(QTEXT);
     else if (F.cat.size) { const k = [...F.cat][0]; const c = CATS.find(x => x.k === k); if (c) parts.push(c.n.toLowerCase()); }
-    if (F.day.size) { const d = [...F.day][0]; parts.push({ oggi: "oggi", domani: "domani", weekend: "nel weekend", sera: "stasera" }[d] || d); }
+    if (F.day.size) { const d = [...F.day][0]; parts.push({ oggi: "oggi", domani: "domani", weekend: "nel weekend", sera: "stasera", halloween: "ad Halloween" }[d] || d); }
     else if (F.date.size) parts.push("in una data scelta");
     if (F.price.has("free")) parts.push("gratis");
     if (F.where.size) parts.push("vicino a me");
