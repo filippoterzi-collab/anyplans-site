@@ -2,11 +2,11 @@
 
 > anyplans (anyplans.in) è la mappa degli eventi veri di Venezia e provincia: feste di paese e sagre, teatro e spettacoli, concerti, mercati, incontri e conferenze, visite guidate, camminate e gruppi di cammino, mostre, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Venezia: il sito copre 52 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce, Monza, Prato, Como, Lecco, Lodi, Modena, Reggio Emilia, Treviso, Vicenza, Novara, Lucca, Mantova, Ferrara, Pistoia, Pavia, Ancona, Pordenone, Cremona, Messina, Reggio Calabria, Alessandria, Latina), l'indice è https://anyplans.in/llms.txt.
 
-Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-10-26. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
+Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-10-27. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Venezia](https://anyplans.in/venezia/cosa-fare/): tutti gli eventi in programma (209), per tipo e per paese; risponde a "cosa fare a Venezia oggi / questo weekend"
+- [Cosa fare a Venezia](https://anyplans.in/venezia/cosa-fare/): tutti gli eventi in programma (202), per tipo e per paese; risponde a "cosa fare a Venezia oggi / questo weekend"
 - [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
@@ -14,15 +14,16 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## Eventi per tipo e per paese
 
-- [Incontri culturali a Venezia](https://anyplans.in/venezia/incontri-culturali/): 47 in programma
-- [Cena / aperitivo a Venezia](https://anyplans.in/venezia/cene-e-aperitivi/): 22 in programma
-- [Spettacoli e teatro a Venezia](https://anyplans.in/venezia/spettacoli/): 18 in programma
+- [Incontri culturali a Venezia](https://anyplans.in/venezia/incontri-culturali/): 44 in programma
+- [Cena / aperitivo a Venezia](https://anyplans.in/venezia/cene-e-aperitivi/): 21 in programma
+- [Spettacoli e teatro a Venezia](https://anyplans.in/venezia/spettacoli/): 17 in programma
 - [Escursionismo a Venezia](https://anyplans.in/venezia/escursioni/): 5 in programma
 - [Visite guidate a Venezia](https://anyplans.in/venezia/visite-guidate/): 23 in programma
 - [Feste, sagre ed eventi di paese a Venezia](https://anyplans.in/venezia/feste/): 36 in programma
-- [Concerti e musica dal vivo a Venezia](https://anyplans.in/venezia/concerti/): 22 in programma
+- [Karaoke a Venezia](https://anyplans.in/venezia/karaoke/): 2 in programma
+- [Concerti e musica dal vivo a Venezia](https://anyplans.in/venezia/concerti/): 21 in programma
 - [Padel a Venezia](https://anyplans.in/venezia/padel/): 2 in programma
-- [Mostre a Venezia](https://anyplans.in/venezia/mostre/): 11 in programma
+- [Mostre a Venezia](https://anyplans.in/venezia/mostre/): 10 in programma
 - [Cinema a Venezia](https://anyplans.in/venezia/cinema/): 1 in programma
 - [Pittura / arte a Venezia](https://anyplans.in/venezia/pittura/): 4 in programma
 - [Yoga / pilates a Venezia](https://anyplans.in/venezia/yoga/): 9 in programma
@@ -34,7 +35,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Aperitivi a Venezia](https://anyplans.in/venezia/aperitivi/): 3 in programma
 - [Natale e mercatini a Venezia](https://anyplans.in/venezia/natale/): 3 in programma
 - [Sagre a Venezia](https://anyplans.in/venezia/sagre/): 36 in programma
-- [Gratis a Venezia](https://anyplans.in/venezia/gratis/): 203 in programma
+- [Gratis a Venezia](https://anyplans.in/venezia/gratis/): 196 in programma
 - [Libri e letture a Venezia](https://anyplans.in/venezia/libri-e-letture/): 5 in programma
 - [Arte a Venezia](https://anyplans.in/venezia/arte/): 11 in programma
 - [Benessere a Venezia](https://anyplans.in/venezia/meditazione-e-benessere/): 6 in programma
@@ -44,29 +45,19 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Montagna ed escursioni a Venezia](https://anyplans.in/venezia/montagna/): 5 in programma
 - [Sport a Venezia](https://anyplans.in/venezia/sport/): 17 in programma
 - [Feste ed eventi a Mestre](https://anyplans.in/venezia/mestre/): 20 in programma
-- [Feste ed eventi a Mira](https://anyplans.in/venezia/mira/): 3 in programma
-- [Feste ed eventi a Spinea](https://anyplans.in/venezia/spinea/): 2 in programma
+- [Feste ed eventi a Mira](https://anyplans.in/venezia/mira/): 2 in programma
+- [Feste ed eventi a Spinea](https://anyplans.in/venezia/spinea/): 1 in programma
 - [Feste ed eventi a Chirignago-Zelarino](https://anyplans.in/venezia/chirignago-zelarino/): 3 in programma
 - [Feste ed eventi a Mirano](https://anyplans.in/venezia/mirano/): 0 in programma
 - [Feste ed eventi a loc. Castello](https://anyplans.in/venezia/loc-castello/): 10 in programma
 - [Feste ed eventi a Marcon](https://anyplans.in/venezia/marcon/): 1 in programma
-- [Feste ed eventi a Venice](https://anyplans.in/venezia/venice/): 4 in programma
+- [Feste ed eventi a Venice](https://anyplans.in/venezia/venice/): 3 in programma
 - [Feste ed eventi a Maerne](https://anyplans.in/venezia/maerne/): 0 in programma
 - [Feste ed eventi a Provincia di Treviso](https://anyplans.in/venezia/provincia-di-treviso/): 0 in programma
 - [Feste ed eventi a Roncade](https://anyplans.in/venezia/roncade/): 3 in programma
 
 ## Prossimi eventi
 
-- [CONTEMPORARY VENICE – 19TH EDITION 2026](https://anyplans.in/venezia/contemporary-venice-19th-edition-2026/): Lunedì 26 ottobre alle 09:30, Palazzo Albrizzi-Capello, Venezia, Gratis
-- [AI Hospitality Lab: Persone, tecnologie e nuovi modelli per l'ospitalità](https://anyplans.in/venezia/ai-hospitality-lab-persone-tecnologie-e-nuovi-modelli-per-l-/): Lunedì 26 ottobre alle 14:00, NH Collection Venezia, Venezia, Gratis
-- [THE VENICE ONLY THE LOCALS KNOW! (northern Venice)](https://anyplans.in/venezia/the-venice-only-the-locals-know-northern-venice/): Dal 26 ottobre al 27 ottobre, 2 date, Chiesa di Santa Maria della Fava o della Consolazione, Castello, Venezia, Gratis
-- [Choral music from europe](https://anyplans.in/venezia/choral-music-from-europe/): Lunedì 26 ottobre alle 15:00, Basilica dei Santi Maria e Donato, Venice, Gratis
-- [Plissé. Workshop per docenti](https://anyplans.in/venezia/plisse-workshop-per-docenti/): Lunedì 26 ottobre alle 16:00, Collezione Peggy Guggenheim, Venezia, Gratis
-- [Gala Night Masterpiece Award 2026-Mostra e Cena di Gala](https://anyplans.in/venezia/gala-night-masterpiece-award-2026-mostra-e-cena-di-gala/): Lunedì 26 ottobre alle 18:00, Villa Widmann, Mira, Gratis
-- [Padel: mancano 2 giocatori (competitiva)](https://anyplans.in/venezia/padel-competitiva/): Lunedì 26 ottobre alle 18:30, SPH - Venezia, Via Linghindal 7, 30172 Venezia (VE), 30172 Venezia, 15 €
-- [Tavolo genitori single da Semaforo Rosso: 11 posti liberi](https://anyplans.in/venezia/tavolo-genitori-single-da-semaforo-rosso/): Lunedì 26 ottobre alle 18:30, Semaforo Rosso, Spinea, Gratis
-- [Lezione Prova di Improvvisazione teatrale Mirano (VE)  - Corsi 2026/27](https://anyplans.in/venezia/lezione-prova-di-improvvisazione-teatrale-mirano-ve-corsi/): Lunedì 26 ottobre alle 20:30, Via Vetrego, 116, Vetrego, Gratis
-- [Karaoke Night (gratuito!)](https://anyplans.in/venezia/karaoke-night-gratuito/): Lunedì 26 ottobre alle 21:30, Anda Venice, Venezia Mestre, Gratis
 - [Lino Tagliapietra Showroom - Glass Week 2026](https://anyplans.in/venezia/lino-tagliapietra-showroom-glass-week-2026/): Martedì 27 ottobre alle 09:00, Murano Showroom, Venezia, Gratis
 - [Il tuo ingresso in Coworking Cr.Hub](https://anyplans.in/venezia/il-tuo-ingresso-in-coworking-cr-hub/): Martedì 27 ottobre alle 09:00, The Cr.Hub, Venezia, Gratis
 - [VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT!](https://anyplans.in/venezia/venice-highlights-you-don-t-know-about/): Martedì 27 ottobre alle 10:00, Campo Sant'Agnese, Venezia, Gratis
@@ -75,6 +66,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Consolato REM Brega presenta Baile, Botella y Baraja. Evento Collaterale, 6](https://anyplans.in/venezia/consolato-rem-brega-presenta-baile-botella-y-baraja-evento-c/): Martedì 27 ottobre alle 11:00, Via Giuseppe Garibaldi, 1735, Venezia, Gratis
 - [VISITA GUIDATA A GRAFICHE VENEZIANE - FESTIVAL DELLA SALUTE 2026](https://anyplans.in/venezia/visita-guidata-a-grafiche-veneziane-festival-della-salute-20/): Martedì 27 ottobre alle 14:30, Grafiche Veneziane, Venezia, Gratis
 - [VANTAGGI DEL WELFARE TERRITORIALE - Mestre](https://anyplans.in/venezia/vantaggi-del-welfare-territoriale-mestre/): Martedì 27 ottobre alle 14:30, Vle Ancona, 9, Venezia, Gratis
+- [THE VENICE ONLY THE LOCALS KNOW! (northern Venice)](https://anyplans.in/venezia/the-venice-only-the-locals-know-northern-venice/): Martedì 27 ottobre alle 15:00, Chiesa di Santa Maria della Fava o della Consolazione, Castello, Venezia, Gratis
 - [PAINTINGS ABOUT THE ORIGIN OF LIFE by Peer](https://anyplans.in/venezia/paintings-about-the-origin-of-life-by-peer/): Martedì 27 ottobre alle 18:00, Palazzo Pisani Revedin, Venezia, Gratis
 - [New Argonauts of Attention - Jonardon Ganeri](https://anyplans.in/venezia/new-argonauts-of-attention-jonardon-ganeri/): Martedì 27 ottobre alle 18:00, Casa dei Tre Oci, Venezia, Gratis
 - [Four Solo Exhibitions at Palazzo Pisani-Revedin](https://anyplans.in/venezia/four-solo-exhibitions-at-palazzo-pisani-revedin/): Martedì 27 ottobre alle 18:00, Palazzo Pisani Revedin, Venezia, Gratis
@@ -95,8 +87,17 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Guided tours of the Palazzetto Bru Zane](https://anyplans.in/venezia/guided-tours-of-the-palazzetto-bru-zane/): Giovedì 29 ottobre alle 15:30, Palazzetto Bru Zane, Venezia, Gratis
 - [Operazione anti acciacco](https://anyplans.in/venezia/operazione-anti-acciacco/): Giovedì 29 ottobre alle 19:00, Via Don Federico Tosatto, 115, Venezia, Gratis
 - [Cena da Fermenti: 11 posti liberi](https://anyplans.in/venezia/cena-da-fermenti/): Giovedì 29 ottobre alle 20:15, Fermenti, Venezia, Gratis
+- [Padel: mancano 3 giocatori (competitiva)](https://anyplans.in/venezia/padel-competitiva/): Giovedì 29 ottobre alle 20:30, SPH - Venezia, Via Linghindal 7, 30172 Venezia (VE), 30172 Venezia, 30 €
 - [APERIMOVIE Halloween Edition](https://anyplans.in/venezia/aperimovie-halloween-edition/): Giovedì 29 ottobre alle 20:30, The Cr.Hub, Venezia, Gratis
 - [Padel: manca 1 giocatore (competitiva)](https://anyplans.in/venezia/padel-competitiva-2026-10-29/): Giovedì 29 ottobre alle 21:00, SPH - Venezia, Via Linghindal 7, 30172 Venezia (VE), 30172 Venezia, 15 €
+- [Beerpong!](https://anyplans.in/venezia/beerpong/): Giovedì 29 ottobre alle 21:30, Anda Venice, Venezia Mestre, Gratis
+- [GAME CHANGER ITALY](https://anyplans.in/venezia/game-changer-italy/): Venerdì 30 ottobre alle 10:00, H-FARM CAMPUS, Roncade, Gratis
+- [Vision Board Night – Crea la tua Vision Board / Create Yours, Venezia](https://anyplans.in/venezia/vision-board-night-crea-la-tua-vision-board-create-yours-ven/): Venerdì 30 ottobre alle 13:00, Art and Wine Lab Venezia, Venezia, Gratis
+- [Venetian Masks and Wine – Maschere Veneziane e Vino, Venezia](https://anyplans.in/venezia/venetian-masks-and-wine-maschere-veneziane-e-vino-venezia/): Venerdì 30 ottobre alle 16:30, Art and Wine Lab Venezia, Venezia, Gratis
+- [INTERVISTA A BORGATO E VISITA AL SANCTA SANCTORUM - FESTIVAL DELLA SALUTE](https://anyplans.in/venezia/intervista-a-borgato-e-visita-al-sancta-sanctorum-festival-d/): Venerdì 30 ottobre alle 16:30, Scuola Grande di San Marco, Venezia, Gratis
+- [EcoSwap Party @ Anda - Mercatino dello scambio ♻️](https://anyplans.in/venezia/ecoswap-party-anda-mercatino-dello-scambio/): Venerdì 30 ottobre alle 18:00, Anda Venice, Venezia Mestre, Gratis
+- [Venice Talks #1 | Venezia città viva](https://anyplans.in/venezia/venice-talks-1-venezia-citta-viva/): Venerdì 30 ottobre alle 18:00, Scuola dei Laneri, Venezia, Gratis
+- [DARDUST - Desiderio, risonanze tra arte e musica - Festival delle Idee](https://anyplans.in/venezia/dardust-desiderio-risonanze-tra-arte-e-musica-festival-delle/): Venerdì 30 ottobre alle 18:30, The Home of The Human Safety Net Venice, Venezia, Gratis
 
 ## Optional
 
@@ -113,6 +114,7 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Hiking in Venezia](https://anyplans.in/en/venezia/hiking/)
 - [Guided tours in Venezia](https://anyplans.in/en/venezia/guided-tours/)
 - [Town festivals & fairs in Venezia](https://anyplans.in/en/venezia/festivals/)
+- [Karaoke in Venezia](https://anyplans.in/en/venezia/karaoke/)
 - [Concerts & live music in Venezia](https://anyplans.in/en/venezia/concerts/)
 - [Padel in Venezia](https://anyplans.in/en/venezia/padel/)
 - [Exhibitions in Venezia](https://anyplans.in/en/venezia/exhibitions/)
@@ -141,66 +143,32 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 # Tutte le pagine di anyplans a Venezia (italiano, poi inglese)
 
-## Cosa fare a Venezia e provincia: 209 eventi
+## Cosa fare a Venezia e provincia: 202 eventi
 https://anyplans.in/venezia/cosa-fare/
 
 Gratis, incontri culturali, cena / aperitivo, feste, sagre ed eventi di paese e sagre: quello che succede a Venezia e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
 
 **Cosa fare a Venezia questo fine settimana?**
-Questo fine settimana a Venezia e provincia ci sono 17 eventi su anyplans: Venice Art Talks  | Il Silenzio come Possibilità | 31.10.2026 (Venezia, 31 ottobre), Art and Zodiac – Aperitivo Astrologico a Venezia / Paint and Sip (31 ottobre), La Serra dei Bimbi (loc. Castello, 31 ottobre), CACCIA ALLA ZUCCA (loc. Castello, 31 ottobre), Il Grimorio (Venezia, 31 ottobre) e A SCENA APERTA - Gaber - Mi fa male il mondo (Venezia, 31 ottobre) e altri. Le date complete sono nella lista qui sopra.
+Questo fine settimana a Venezia e provincia ci sono 18 eventi su anyplans: Venice Art Talks  | Il Silenzio come Possibilità | 31.10.2026 (Venezia, 31 ottobre), Art and Zodiac – Aperitivo Astrologico a Venezia / Paint and Sip (31 ottobre), La Serra dei Bimbi (loc. Castello, 31 ottobre), CACCIA ALLA ZUCCA (loc. Castello, 31 ottobre), Il Grimorio (Venezia, 31 ottobre) e A SCENA APERTA - Gaber - Mi fa male il mondo (Venezia, 31 ottobre) e altri. Le date complete sono nella lista qui sopra.
 
 **Cosa fare a Venezia oggi?**
-Oggi, 26 ottobre 2026, a Venezia e provincia ci sono 10 eventi su anyplans: CONTEMPORARY VENICE – 19TH EDITION 2026 a Venezia, AI Hospitality Lab: Persone, tecnologie e nuovi modelli per l'ospitalità a Venezia, THE VENICE ONLY THE LOCALS KNOW! (northern Venice) a Venezia, Choral music from europe a Venice, Plissé. Workshop per docenti a Venezia e Gala Night Masterpiece Award 2026-Mostra e Cena di Gala a Mira.
+Oggi, 27 ottobre 2026, a Venezia e provincia ci sono 13 eventi su anyplans: Lino Tagliapietra Showroom - Glass Week 2026 a Venezia, Il tuo ingresso in Coworking Cr.Hub a Venezia, VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! a Venezia, Thresholds of Being – Collective Exhibition a Venezia, Hidden Venice: Secrets and Stories a Venezia e Consolato REM Brega presenta Baile, Botella y Baraja. Evento Collaterale, 6 a Venezia.
 
 **Che tipo di eventi ci sono a Venezia su anyplans?**
-Gratis, incontri culturali, cena / aperitivo, feste, sagre ed eventi di paese, sagre, visite guidate, sport e concerti e musica dal vivo. In questo momento sono in programma 209 eventi, raccolti ogni giorno da chi li organizza, dai comuni e dalle piattaforme dove vengono annunciati.
+Gratis, incontri culturali, cena / aperitivo, feste, sagre ed eventi di paese, sagre, visite guidate, sport e concerti e musica dal vivo. In questo momento sono in programma 202 eventi, raccolti ogni giorno da chi li organizza, dai comuni e dalle piattaforme dove vengono annunciati.
 
 **Gli eventi a Venezia su anyplans sono gratis?**
-203 dei 209 eventi in programma sono gratis. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento. Registrarsi su anyplans è gratis e serve solo la tua email; bisogna avere almeno 18 anni.
+196 dei 202 eventi in programma sono gratis. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento. Registrarsi su anyplans è gratis e serve solo la tua email; bisogna avere almeno 18 anni.
 
-## Eventi oggi a Venezia, lunedì 26 ottobre: cosa fare (10)
+## Eventi oggi a Venezia, martedì 27 ottobre: cosa fare (13)
 https://anyplans.in/venezia/cosa-fare-oggi/
 
-10 eventi a Venezia e provincia oggi, 26 ottobre 2026: Venezia, Venice, Mira e Spinea e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+13 eventi a Venezia e provincia oggi, 27 ottobre 2026: Venezia e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
 **Cosa si fa a Venezia oggi?**
-10 eventi oggi, 26 ottobre 2026: CONTEMPORARY VENICE – 19TH EDITION 2026 a Venezia, AI Hospitality Lab: Persone, tecnologie e nuovi modelli per l'ospitalità a Venezia, THE VENICE ONLY THE LOCALS KNOW! (northern Venice) a Venezia, Choral music from europe a Venice, Plissé. Workshop per docenti a Venezia, Gala Night Masterpiece Award 2026-Mostra e Cena di Gala a Mira, Padel: mancano 2 giocatori (competitiva) a Venezia e Tavolo genitori single da Semaforo Rosso: 11 posti liberi a Spinea e altri, tutti nella lista qui sopra.
+13 eventi oggi, 27 ottobre 2026: Lino Tagliapietra Showroom - Glass Week 2026 a Venezia, Il tuo ingresso in Coworking Cr.Hub a Venezia, VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! a Venezia, Thresholds of Being – Collective Exhibition a Venezia, Hidden Venice: Secrets and Stories a Venezia, Consolato REM Brega presenta Baile, Botella y Baraja. Evento Collaterale, 6 a Venezia, VISITA GUIDATA A GRAFICHE VENEZIANE - FESTIVAL DELLA SALUTE 2026 e VANTAGGI DEL WELFARE TERRITORIALE - Mestre a Venezia e altri, tutti nella lista qui sopra.
 
 **C'è qualcosa di gratis oggi a Venezia?**
-9 eventi su 10 sono gratis: soprattutto feste di paese, mercati e camminate di gruppo. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
-
-**In che paesi?**
-A Venezia e in provincia: Venezia (6), Venice (1), Mira (1), Spinea (1) e Vetrego (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
-
-**Ci posso andare da solo?**
-Sì, è il senso di anyplans: vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
-
-## Eventi stasera a Venezia, lunedì 26 ottobre: cosa fare (5)
-https://anyplans.in/venezia/cosa-fare-stasera/
-
-5 eventi a Venezia e provincia stasera, 26 ottobre 2026, dalle 18: Venezia, Mira, Spinea e Vetrego e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
-
-**Cosa si fa a Venezia stasera?**
-5 eventi stasera, 26 ottobre 2026, dalle 18: Gala Night Masterpiece Award 2026-Mostra e Cena di Gala a Mira, Padel: mancano 2 giocatori (competitiva) a Venezia, Tavolo genitori single da Semaforo Rosso: 11 posti liberi a Spinea, Lezione Prova di Improvvisazione teatrale Mirano (VE)  - Corsi 2026/27 a Vetrego e Karaoke Night (gratuito!) a Venezia.
-
-**C'è qualcosa di gratis stasera a Venezia?**
-4 eventi su 5 sono gratis: soprattutto feste di paese, mercati e camminate di gruppo. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
-
-**In che paesi?**
-A Venezia e in provincia: Venezia (2), Mira (1), Spinea (1) e Vetrego (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
-
-**Ci posso andare da solo?**
-Sì, è il senso di anyplans: vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
-
-## Eventi domani a Venezia, martedì 27 ottobre: cosa fare (13)
-https://anyplans.in/venezia/cosa-fare-domani/
-
-13 eventi a Venezia e provincia domani, 27 ottobre 2026: Venezia e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
-
-**Cosa si fa a Venezia domani?**
-13 eventi domani, 27 ottobre 2026: THE VENICE ONLY THE LOCALS KNOW! (northern Venice) a Venezia, Lino Tagliapietra Showroom - Glass Week 2026 a Venezia, Il tuo ingresso in Coworking Cr.Hub a Venezia, VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! a Venezia, Thresholds of Being – Collective Exhibition a Venezia, Hidden Venice: Secrets and Stories a Venezia, Consolato REM Brega presenta Baile, Botella y Baraja. Evento Collaterale, 6 a Venezia e VISITA GUIDATA A GRAFICHE VENEZIANE - FESTIVAL DELLA SALUTE 2026 e altri, tutti nella lista qui sopra.
-
-**C'è qualcosa di gratis domani a Venezia?**
 13 eventi su 13 sono gratis: soprattutto feste di paese, mercati e camminate di gruppo. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
 **In che paesi?**
@@ -209,50 +177,84 @@ A Venezia e in provincia: Venezia (13). In ogni pagina c'è il punto di ritrovo 
 **Ci posso andare da solo?**
 Sì, è il senso di anyplans: vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
 
-## Eventi nel weekend di Halloween a Venezia: cosa fare (17)
-https://anyplans.in/venezia/cosa-fare-nel-weekend/
+## Eventi stasera a Venezia, martedì 27 ottobre: cosa fare (4)
+https://anyplans.in/venezia/cosa-fare-stasera/
 
-17 eventi a Venezia e provincia nel weekend (Sabato 31 ottobre e Domenica 1 novembre): Venezia, loc. Castello, Venedik e Lido e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+4 eventi a Venezia e provincia stasera, 27 ottobre 2026, dalle 18: Venezia e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
-**Cosa si fa a Venezia questo weekend?**
-17 eventi nel weekend (Sabato 31 ottobre e Domenica 1 novembre): Venice Art Talks  | Il Silenzio come Possibilità | 31.10.2026 a Venezia, Art and Zodiac – Aperitivo Astrologico a Venezia / Paint and Sip, La Serra dei Bimbi a loc. Castello, CACCIA ALLA ZUCCA a loc. Castello, Il Grimorio a Venezia, A SCENA APERTA - Gaber - Mi fa male il mondo a Venezia, «L'OCCHIO DELLA MADRE» La Resurrezione Cristo, di Pieter Paul Rubens a Venezia e Venetian Dream – Aperitivo e Pittura a Venezia / Paint and Sip e altri, tutti nella lista qui sopra.
+**Cosa si fa a Venezia stasera?**
+4 eventi stasera, 27 ottobre 2026, dalle 18: PAINTINGS ABOUT THE ORIGIN OF LIFE by Peer a Venezia, New Argonauts of Attention - Jonardon Ganeri a Venezia, Four Solo Exhibitions at Palazzo Pisani-Revedin a Venezia e Music Bingo a Venezia.
 
-**C'è qualcosa di gratis questo weekend a Venezia?**
-16 eventi su 17 sono gratis: soprattutto feste di paese, mercati e camminate di gruppo. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
+**C'è qualcosa di gratis stasera a Venezia?**
+4 eventi su 4 sono gratis: soprattutto feste di paese, mercati e camminate di gruppo. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
 **In che paesi?**
-A Venezia e in provincia: Venezia (13), loc. Castello (2), Venedik (1) e Lido (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
+A Venezia e in provincia: Venezia (4). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
 
 **Ci posso andare da solo?**
 Sì, è il senso di anyplans: vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
 
-## Eventi a Venezia a ottobre 2026: 65
+## Eventi domani a Venezia, mercoledì 28 ottobre: cosa fare (10)
+https://anyplans.in/venezia/cosa-fare-domani/
+
+10 eventi a Venezia e provincia domani, 28 ottobre 2026: Venezia e Mestre e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+
+**Cosa si fa a Venezia domani?**
+10 eventi domani, 28 ottobre 2026: Hidden Venice: Secrets and Stories a Venezia, TINTORETTO E LA BASILICA DI SAN GIORGIO MAGGIORE a Venezia, "DA TUCIDIDE A AVICENNA" - FESTIVAL DELLA SALUTE 2026 a Venezia, Cena da MAJER Via Garibaldi: 9 posti liberi a Venezia, GENITORI NELLA RETE - Patti digitali Mestre a Venezia, Arancio Vivo in Vez - Pink Armada - Live Rock Show a Venezia, Drink & Clay a Venezia e Cena da Hostaria Vite Rossa: 9 posti liberi a Venezia e altri, tutti nella lista qui sopra.
+
+**C'è qualcosa di gratis domani a Venezia?**
+9 eventi su 10 sono gratis: soprattutto feste di paese, mercati e camminate di gruppo. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
+
+**In che paesi?**
+A Venezia e in provincia: Venezia (9) e Mestre (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
+
+**Ci posso andare da solo?**
+Sì, è il senso di anyplans: vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
+
+## Eventi nel weekend di Halloween a Venezia: cosa fare (18)
+https://anyplans.in/venezia/cosa-fare-nel-weekend/
+
+18 eventi a Venezia e provincia nel weekend (Sabato 31 ottobre e Domenica 1 novembre): Venezia, loc. Castello, Chirignago-Zelarino e Venedik e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+
+**Cosa si fa a Venezia questo weekend?**
+18 eventi nel weekend (Sabato 31 ottobre e Domenica 1 novembre): Venice Art Talks  | Il Silenzio come Possibilità | 31.10.2026 a Venezia, Art and Zodiac – Aperitivo Astrologico a Venezia / Paint and Sip, La Serra dei Bimbi a loc. Castello, CACCIA ALLA ZUCCA a loc. Castello, Il Grimorio a Venezia, A SCENA APERTA - Gaber - Mi fa male il mondo a Venezia, «L'OCCHIO DELLA MADRE» La Resurrezione Cristo, di Pieter Paul Rubens a Venezia e Venetian Dream – Aperitivo e Pittura a Venezia / Paint and Sip e altri, tutti nella lista qui sopra.
+
+**C'è qualcosa di gratis questo weekend a Venezia?**
+17 eventi su 18 sono gratis: soprattutto feste di paese, mercati e camminate di gruppo. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
+
+**In che paesi?**
+A Venezia e in provincia: Venezia (13), loc. Castello (2), Chirignago-Zelarino (1), Venedik (1) e Lido (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
+
+**Ci posso andare da solo?**
+Sì, è il senso di anyplans: vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
+
+## Eventi a Venezia a ottobre 2026: 59
 https://anyplans.in/venezia/eventi-ottobre-2026/
 
-65 eventi a Venezia e provincia a ottobre 2026: incontri culturali, escursionismo, concerti e musica dal vivo, mostre e padel. Giorno per giorno, con orari, luogo e prezzo, a Venezia, loc. Castello, Venice e Mira e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+59 eventi a Venezia e provincia a ottobre 2026: incontri culturali, escursionismo, mostre, visite guidate e concerti e musica dal vivo. Giorno per giorno, con orari, luogo e prezzo, a Venezia, loc. Castello, Mestre e Roncade e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 **Cosa c'è a Venezia a ottobre 2026?**
-65 eventi: CONTEMPORARY VENICE – 19TH EDITION 2026 (Venezia, lunedì 26 ottobre alle 09:30), AI Hospitality Lab: Persone, tecnologie e nuovi modelli per l'ospitalità (Venezia, lunedì 26 ottobre alle 14:00), THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, dal 26 ottobre al 27 ottobre, 2 date), Choral music from europe (Venice, lunedì 26 ottobre alle 15:00), Plissé. Workshop per docenti (Venezia, lunedì 26 ottobre alle 16:00), Gala Night Masterpiece Award 2026-Mostra e Cena di Gala (Mira, lunedì 26 ottobre alle 18:00), Padel: mancano 2 giocatori (competitiva) (Venezia, lunedì 26 ottobre alle 18:30) e Tavolo genitori single da Semaforo Rosso: 11 posti liberi (Spinea, lunedì 26 ottobre alle 18:30) e altri, tutti nella lista qui sopra.
+59 eventi: Lino Tagliapietra Showroom - Glass Week 2026 (Venezia, martedì 27 ottobre alle 09:00), Il tuo ingresso in Coworking Cr.Hub (Venezia, martedì 27 ottobre alle 09:00), VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, martedì 27 ottobre alle 10:00), Thresholds of Being – Collective Exhibition (Venezia, martedì 27 ottobre alle 10:00), Hidden Venice: Secrets and Stories (Venezia, dal 27 ottobre al 28 ottobre, 2 date), Consolato REM Brega presenta Baile, Botella y Baraja. Evento Collaterale, 6 (Venezia, martedì 27 ottobre alle 11:00), VISITA GUIDATA A GRAFICHE VENEZIANE - FESTIVAL DELLA SALUTE 2026 (martedì 27 ottobre alle 14:30) e VANTAGGI DEL WELFARE TERRITORIALE - Mestre (Venezia, martedì 27 ottobre alle 14:30) e altri, tutti nella lista qui sopra.
 
 **In che paesi?**
-Venezia (55), loc. Castello (2), Venice (1), Mira (1), Spinea (1), Vetrego (1), Mestre (1) e Roncade (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
+Venezia (52), loc. Castello (2), Mestre (1), Roncade (1), Chirignago-Zelarino (1), Venedik (1) e Lido (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
 
 **Quanto costano?**
-61 su 65 sono gratis. Quando c'è un biglietto o una quota il prezzo è nella pagina dell'evento: si paga a chi organizza, non ad anyplans.
+55 su 59 sono gratis. Quando c'è un biglietto o una quota il prezzo è nella pagina dell'evento: si paga a chi organizza, non ad anyplans.
 
-## Eventi a Venezia a novembre 2026: 107
+## Eventi a Venezia a novembre 2026: 106
 https://anyplans.in/venezia/eventi-novembre-2026/
 
-107 eventi a Venezia e provincia a novembre 2026: cena / aperitivo, incontri culturali, yoga / pilates, concerti e musica dal vivo e mostre. Giorno per giorno, con orari, luogo e prezzo, a Venezia, loc. Castello, Mestre e Chirignago-Zelarino e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+106 eventi a Venezia e provincia a novembre 2026: cena / aperitivo, incontri culturali, yoga / pilates, concerti e musica dal vivo e mostre. Giorno per giorno, con orari, luogo e prezzo, a Venezia, loc. Castello, Mestre e Mira e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 **Cosa c'è a Venezia a novembre 2026?**
-107 eventi: L'Edoardo aperitivo, il primo format dedicato ad adulti e bambini (Venezia, domenica 1 novembre alle 11:00), Venice Art Talks | Arte Contemporanea e Mito Mediterraneo | 01.11.2026 (Venezia, domenica 1 novembre alle 11:30), Mezz'ora per Tè - Pratica gratuita di mindfulness (Venezia, lunedì 2 novembre alle 08:00), Hans Zimmer by Ensemble Symphony Orchestra (Venezia, martedì 3 novembre alle 20:00), Venezia 1966-2026 (mercoledì 4 novembre alle 09:00), Ricevimento - Office Hours. Prof. Fabrizio Panozzo (Venezia, mercoledì 4 novembre alle 11:00), MINI STAGE / SETTORE MEM / 05.11.26 (Mestre, giovedì 5 novembre alle 14:00) e Dialoghi sul mosaico contemporaneo con Omar Mismar (Venezia, giovedì 5 novembre alle 18:00) e altri, tutti nella lista qui sopra.
+106 eventi: L'Edoardo aperitivo, il primo format dedicato ad adulti e bambini (Venezia, domenica 1 novembre alle 11:00), Venice Art Talks | Arte Contemporanea e Mito Mediterraneo | 01.11.2026 (Venezia, domenica 1 novembre alle 11:30), Mezz'ora per Tè - Pratica gratuita di mindfulness (Venezia, lunedì 2 novembre alle 08:00), Hans Zimmer by Ensemble Symphony Orchestra (Venezia, martedì 3 novembre alle 20:00), Venezia 1966-2026 (mercoledì 4 novembre alle 09:00), Ricevimento - Office Hours. Prof. Fabrizio Panozzo (Venezia, mercoledì 4 novembre alle 11:00), MINI STAGE / SETTORE MEM / 05.11.26 (Mestre, giovedì 5 novembre alle 14:00) e Dialoghi sul mosaico contemporaneo con Omar Mismar (Venezia, giovedì 5 novembre alle 18:00) e altri, tutti nella lista qui sopra.
 
 **In che paesi?**
-Venezia (84), loc. Castello (6), Mestre (4), Chirignago-Zelarino (3), Mira (2), Roncade (2), Mestre Venezia (1) e Dolo (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
+Venezia (84), loc. Castello (6), Mestre (4), Mira (2), Chirignago-Zelarino (2), Roncade (2), Mestre Venezia (1) e Dolo (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
 
 **Quanto costano?**
-106 su 107 sono gratis. Quando c'è un biglietto o una quota il prezzo è nella pagina dell'evento: si paga a chi organizza, non ad anyplans.
+105 su 106 sono gratis. Quando c'è un biglietto o una quota il prezzo è nella pagina dell'evento: si paga a chi organizza, non ad anyplans.
 
 ## Eventi a Venezia a dicembre 2026: 18
 https://anyplans.in/venezia/eventi-dicembre-2026/
@@ -268,44 +270,44 @@ Venezia (7), Mestre (6), loc. Castello (2), Venice (2) e venice (1). In ogni pag
 **Quanto costano?**
 17 su 18 sono gratis. Quando c'è un biglietto o una quota il prezzo è nella pagina dell'evento: si paga a chi organizza, non ad anyplans.
 
-## Incontri, corsi e conferenze a Venezia: 47 eventi
+## Incontri, corsi e conferenze a Venezia: 44 eventi
 https://anyplans.in/venezia/incontri-culturali/
 
-A Venezia e provincia ci sono 47 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Venezia e provincia ci sono 44 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali incontri a Venezia e provincia ci sono in programma?**
-Ci sono 47 eventi: CONTEMPORARY VENICE – 19TH EDITION 2026 (Venezia, lunedì 26 ottobre alle 09:30), AI Hospitality Lab: Persone, tecnologie e nuovi modelli per l'ospitalità (Venezia, lunedì 26 ottobre alle 14:00), Plissé. Workshop per docenti (Venezia, lunedì 26 ottobre alle 16:00), Lino Tagliapietra Showroom - Glass Week 2026 (Venezia, martedì 27 ottobre alle 09:00), Il tuo ingresso in Coworking Cr.Hub (Venezia, martedì 27 ottobre alle 09:00) e Hidden Venice: Secrets and Stories (Venezia, dal 27 ottobre al 28 ottobre, 2 date) e altri, tutti nella lista qui sopra.
+Ci sono 44 eventi: Lino Tagliapietra Showroom - Glass Week 2026 (Venezia, martedì 27 ottobre alle 09:00), Il tuo ingresso in Coworking Cr.Hub (Venezia, martedì 27 ottobre alle 09:00), Hidden Venice: Secrets and Stories (Venezia, dal 27 ottobre al 28 ottobre, 2 date), VANTAGGI DEL WELFARE TERRITORIALE - Mestre (Venezia, martedì 27 ottobre alle 14:30), PAINTINGS ABOUT THE ORIGIN OF LIFE by Peer (Venezia, martedì 27 ottobre alle 18:00) e New Argonauts of Attention - Jonardon Ganeri (Venezia, martedì 27 ottobre alle 18:00) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di incontri culturali?**
-CONTEMPORARY VENICE – 19TH EDITION 2026, lunedì 26 ottobre alle 09:30, a Venezia. Gratis.
+Lino Tagliapietra Showroom - Glass Week 2026, martedì 27 ottobre alle 09:00, a Venezia. Gratis.
 
 **Incontri a Venezia e provincia: sono gratis?**
-43 su 47. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
+40 su 44. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Cene e aperitivi a Venezia: 22 eventi
+## Cene e aperitivi a Venezia: 21 eventi
 https://anyplans.in/venezia/cene-e-aperitivi/
 
-A Venezia e provincia ci sono 22 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Venezia e provincia ci sono 21 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali cene e aperitivi a Venezia e provincia ci sono in programma?**
-Ci sono 22 eventi: Tavolo genitori single da Semaforo Rosso: 11 posti liberi (Spinea, lunedì 26 ottobre alle 18:30), Cena da MAJER Via Garibaldi: 9 posti liberi (Venezia, mercoledì 28 ottobre alle 17:30), Cena da Hostaria Vite Rossa: 9 posti liberi (Venezia, mercoledì 28 ottobre alle 19:30), Cena da Fermenti: 11 posti liberi (Venezia, giovedì 29 ottobre alle 20:15), Beerpong! (Venezia, giovedì 29 ottobre alle 21:30) e Vision Board Night – Crea la tua Vision Board / Create Yours, Venezia (venerdì 30 ottobre alle 13:00) e altri, tutti nella lista qui sopra.
+Ci sono 21 eventi: Cena da MAJER Via Garibaldi: 9 posti liberi (Venezia, mercoledì 28 ottobre alle 17:30), Cena da Hostaria Vite Rossa: 9 posti liberi (Venezia, mercoledì 28 ottobre alle 19:30), Cena da Fermenti: 11 posti liberi (Venezia, giovedì 29 ottobre alle 20:15), Beerpong! (Venezia, giovedì 29 ottobre alle 21:30), Vision Board Night – Crea la tua Vision Board / Create Yours, Venezia (venerdì 30 ottobre alle 13:00) e Venetian Masks and Wine – Maschere Veneziane e Vino, Venezia (venerdì 30 ottobre alle 16:30) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di cena / aperitivo?**
-Tavolo genitori single da Semaforo Rosso: 11 posti liberi, lunedì 26 ottobre alle 18:30, a Spinea. Gratis.
+Cena da MAJER Via Garibaldi: 9 posti liberi, mercoledì 28 ottobre alle 17:30, a Venezia. Gratis.
 
 **Cene e aperitivi a Venezia e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Teatro e spettacoli a Venezia: 18 eventi
+## Teatro e spettacoli a Venezia: 17 eventi
 https://anyplans.in/venezia/spettacoli/
 
-A Venezia e provincia ci sono 18 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Venezia e provincia ci sono 17 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali spettacoli a Venezia e provincia ci sono in programma?**
-Ci sono 18 eventi: Lezione Prova di Improvvisazione teatrale Mirano (VE)  - Corsi 2026/27 (Vetrego, lunedì 26 ottobre alle 20:30), Corsi di improvvisazione teatrale Wonderform (Venezia, giovedì 29 ottobre alle 10:00), A SCENA APERTA - Gaber - Mi fa male il mondo (Venezia, sabato 31 ottobre alle 17:00), BàCARO CON DELITTO - VENEZIA (sabato 31 ottobre alle 19:00), Street Storytelling: Workshop itinerante di Fotografia a Venezia (sabato 7 novembre alle 09:00) e A SCENA APERTA -  Incendi (Venezia, sabato 14 novembre alle 17:00) e altri, tutti nella lista qui sopra.
+Ci sono 17 eventi: Corsi di improvvisazione teatrale Wonderform (Venezia, giovedì 29 ottobre alle 10:00), A SCENA APERTA - Gaber - Mi fa male il mondo (Venezia, sabato 31 ottobre alle 17:00), BàCARO CON DELITTO - VENEZIA (sabato 31 ottobre alle 19:00), Street Storytelling: Workshop itinerante di Fotografia a Venezia (sabato 7 novembre alle 09:00), A SCENA APERTA -  Incendi (Venezia, sabato 14 novembre alle 17:00) e Solidarity in Flux (Venezia, venerdì 20 novembre alle 16:00) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di spettacoli e teatro?**
-Lezione Prova di Improvvisazione teatrale Mirano (VE)  - Corsi 2026/27, lunedì 26 ottobre alle 20:30, a Vetrego. Gratis.
+Corsi di improvvisazione teatrale Wonderform, giovedì 29 ottobre alle 10:00, a Venezia. Gratis.
 
 **Spettacoli a Venezia e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -316,10 +318,10 @@ https://anyplans.in/venezia/escursioni/
 A Venezia e provincia ci sono 5 escursioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali escursioni a Venezia e provincia ci sono in programma?**
-Ci sono 5 eventi: THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, dal 26 ottobre al 27 ottobre, 2 date), VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, martedì 27 ottobre alle 10:00), Lazzaretto Nuovo - Il Sentiero delle Saline (Venezia, dal 8 novembre al 8 novembre, 2 date), LUSSO DI VALORE (Venezia, lunedì 9 novembre alle 11:30) e Venise (mercoledì 18 novembre alle 18:00).
+Ci sono 5 eventi: VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, martedì 27 ottobre alle 10:00), THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, martedì 27 ottobre alle 15:00), Lazzaretto Nuovo - Il Sentiero delle Saline (Venezia, dal 8 novembre al 8 novembre, 2 date), LUSSO DI VALORE (Venezia, lunedì 9 novembre alle 11:30) e Venise (mercoledì 18 novembre alle 18:00).
 
 **Quando è il prossimo evento di escursionismo?**
-THE VENICE ONLY THE LOCALS KNOW! (northern Venice), dal 26 ottobre al 27 ottobre, 2 date, a Venezia. Gratis.
+VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT!, martedì 27 ottobre alle 10:00, a Venezia. Gratis.
 
 **Escursioni a Venezia e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -352,16 +354,30 @@ GENITORI NELLA RETE - Patti digitali Mestre, mercoledì 28 ottobre alle 17:30, a
 **Feste a Venezia e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Concerti e musica dal vivo a Venezia: 22 eventi
+## Karaoke a Venezia: 2 eventi
+https://anyplans.in/venezia/karaoke/
+
+A Venezia e provincia ci sono 2 serate karaoke nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+
+**Quali serate karaoke a Venezia e provincia ci sono in programma?**
+Ci sono 2 eventi: Karaoke at a&o Venezia Mestre (mercoledì 28 ottobre alle 21:00) e Karaoke da Alla Grotta Risto-Pub: 11 posti liberi (Chirignago-Zelarino, sabato 31 ottobre alle 19:30).
+
+**Quando è il prossimo evento di karaoke?**
+Karaoke at a&o Venezia Mestre, mercoledì 28 ottobre alle 21:00. Gratis.
+
+**Serate karaoke a Venezia e provincia: sono gratis?**
+Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
+
+## Concerti e musica dal vivo a Venezia: 21 eventi
 https://anyplans.in/venezia/concerti/
 
-A Venezia e provincia ci sono 22 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Venezia e provincia ci sono 21 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali concerti a Venezia e provincia ci sono in programma?**
-Ci sono 22 eventi: Choral music from europe (Venice, lunedì 26 ottobre alle 15:00), Music Bingo (Venezia, martedì 27 ottobre alle 21:30), Arancio Vivo in Vez - Pink Armada - Live Rock Show (Venezia, mercoledì 28 ottobre alle 18:00), OGNI MERCOLEDI' ANDA VENICE HOSTEL - FREE ENTRY (Mestre, mercoledì 28 ottobre alle 21:30), Visite guidate in italiano del Palazzetto Bru Zane (Venezia, giovedì 29 ottobre alle 14:30) e Visites guidées en français du Palazzetto Bru Zane (Venezia, giovedì 29 ottobre alle 15:00) e altri, tutti nella lista qui sopra.
+Ci sono 21 eventi: Music Bingo (Venezia, martedì 27 ottobre alle 21:30), Arancio Vivo in Vez - Pink Armada - Live Rock Show (Venezia, mercoledì 28 ottobre alle 18:00), OGNI MERCOLEDI' ANDA VENICE HOSTEL - FREE ENTRY (Mestre, mercoledì 28 ottobre alle 21:30), Visite guidate in italiano del Palazzetto Bru Zane (Venezia, giovedì 29 ottobre alle 14:30), Visites guidées en français du Palazzetto Bru Zane (Venezia, giovedì 29 ottobre alle 15:00) e Live Music at a&o Venezia Mestre (venerdì 30 ottobre alle 21:00) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di concerti e musica dal vivo?**
-Choral music from europe, lunedì 26 ottobre alle 15:00, a Venice. Gratis.
+Music Bingo, martedì 27 ottobre alle 21:30, a Venezia. Gratis.
 
 **Concerti a Venezia e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -372,24 +388,24 @@ https://anyplans.in/venezia/padel/
 A Venezia e provincia ci sono 2 partite di padel nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali partite di padel a Venezia e provincia ci sono in programma?**
-Ci sono 2 eventi: Padel: mancano 2 giocatori (competitiva) (Venezia, lunedì 26 ottobre alle 18:30) e Padel: manca 1 giocatore (competitiva) (Venezia, giovedì 29 ottobre alle 21:00).
+Ci sono 2 eventi: Padel: mancano 3 giocatori (competitiva) (Venezia, giovedì 29 ottobre alle 20:30) e Padel: manca 1 giocatore (competitiva) (Venezia, giovedì 29 ottobre alle 21:00).
 
 **Quando è il prossimo evento di padel?**
-Padel: mancano 2 giocatori (competitiva), lunedì 26 ottobre alle 18:30, a Venezia. 15 €.
+Padel: mancano 3 giocatori (competitiva), giovedì 29 ottobre alle 20:30, a Venezia. 30 €.
 
 **Partite di padel a Venezia e provincia: sono gratis?**
 0 su 2. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Mostre ed esposizioni a Venezia: 11 eventi
+## Mostre ed esposizioni a Venezia: 10 eventi
 https://anyplans.in/venezia/mostre/
 
-A Venezia e provincia ci sono 11 mostre nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Venezia e provincia ci sono 10 mostre nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali mostre a Venezia e provincia ci sono in programma?**
-Ci sono 11 eventi: Gala Night Masterpiece Award 2026-Mostra e Cena di Gala (Mira, lunedì 26 ottobre alle 18:00), Thresholds of Being – Collective Exhibition (Venezia, martedì 27 ottobre alle 10:00), Guided tours of the Palazzetto Bru Zane (Venezia, giovedì 29 ottobre alle 15:30), Venice Art Talks  | Il Silenzio come Possibilità | 31.10.2026 (Venezia, sabato 31 ottobre alle 10:30), «L'OCCHIO DELLA MADRE» La Resurrezione Cristo, di Pieter Paul Rubens (Venezia, sabato 31 ottobre alle 17:00) e Venezia 1966-2026 (mercoledì 4 novembre alle 09:00) e altri, tutti nella lista qui sopra.
+Ci sono 10 eventi: Thresholds of Being – Collective Exhibition (Venezia, martedì 27 ottobre alle 10:00), Guided tours of the Palazzetto Bru Zane (Venezia, giovedì 29 ottobre alle 15:30), Venice Art Talks  | Il Silenzio come Possibilità | 31.10.2026 (Venezia, sabato 31 ottobre alle 10:30), «L'OCCHIO DELLA MADRE» La Resurrezione Cristo, di Pieter Paul Rubens (Venezia, sabato 31 ottobre alle 17:00), Venezia 1966-2026 (mercoledì 4 novembre alle 09:00) e Arte Laguna Prize Exhibition - Opening Night (Venezia, venerdì 6 novembre alle 17:00) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di mostre?**
-Gala Night Masterpiece Award 2026-Mostra e Cena di Gala, lunedì 26 ottobre alle 18:00, a Mira. Gratis.
+Thresholds of Being – Collective Exhibition, martedì 27 ottobre alle 10:00, a Venezia. Gratis.
 
 **Mostre a Venezia e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -548,16 +564,16 @@ GENITORI NELLA RETE - Patti digitali Mestre, mercoledì 28 ottobre alle 17:30, a
 **Sagre a Venezia e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Eventi gratis a Venezia: 203 eventi
+## Eventi gratis a Venezia: 196 eventi
 https://anyplans.in/venezia/gratis/
 
-A Venezia e provincia ci sono 203 eventi gratis nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Venezia e provincia ci sono 196 eventi gratis nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali eventi gratis a Venezia e provincia ci sono in programma?**
-Ci sono 203 eventi: CONTEMPORARY VENICE – 19TH EDITION 2026 (Venezia, lunedì 26 ottobre alle 09:30), AI Hospitality Lab: Persone, tecnologie e nuovi modelli per l'ospitalità (Venezia, lunedì 26 ottobre alle 14:00), THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, dal 26 ottobre al 27 ottobre, 2 date), Choral music from europe (Venice, lunedì 26 ottobre alle 15:00), Plissé. Workshop per docenti (Venezia, lunedì 26 ottobre alle 16:00) e Gala Night Masterpiece Award 2026-Mostra e Cena di Gala (Mira, lunedì 26 ottobre alle 18:00) e altri, tutti nella lista qui sopra.
+Ci sono 196 eventi: Lino Tagliapietra Showroom - Glass Week 2026 (Venezia, martedì 27 ottobre alle 09:00), Il tuo ingresso in Coworking Cr.Hub (Venezia, martedì 27 ottobre alle 09:00), VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, martedì 27 ottobre alle 10:00), Thresholds of Being – Collective Exhibition (Venezia, martedì 27 ottobre alle 10:00), Hidden Venice: Secrets and Stories (Venezia, dal 27 ottobre al 28 ottobre, 2 date) e Consolato REM Brega presenta Baile, Botella y Baraja. Evento Collaterale, 6 (Venezia, martedì 27 ottobre alle 11:00) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di gratis?**
-CONTEMPORARY VENICE – 19TH EDITION 2026, lunedì 26 ottobre alle 09:30, a Venezia. Gratis.
+Lino Tagliapietra Showroom - Glass Week 2026, martedì 27 ottobre alle 09:00, a Venezia. Gratis.
 
 **Eventi gratis a Venezia e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -652,10 +668,10 @@ https://anyplans.in/venezia/montagna/
 A Venezia e provincia ci sono 5 uscite in montagna nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali uscite in montagna a Venezia e provincia ci sono in programma?**
-Ci sono 5 eventi: THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, dal 26 ottobre al 27 ottobre, 2 date), VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, martedì 27 ottobre alle 10:00), Lazzaretto Nuovo - Il Sentiero delle Saline (Venezia, dal 8 novembre al 8 novembre, 2 date), LUSSO DI VALORE (Venezia, lunedì 9 novembre alle 11:30) e Venise (mercoledì 18 novembre alle 18:00).
+Ci sono 5 eventi: VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, martedì 27 ottobre alle 10:00), THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, martedì 27 ottobre alle 15:00), Lazzaretto Nuovo - Il Sentiero delle Saline (Venezia, dal 8 novembre al 8 novembre, 2 date), LUSSO DI VALORE (Venezia, lunedì 9 novembre alle 11:30) e Venise (mercoledì 18 novembre alle 18:00).
 
 **Quando è il prossimo evento di montagna ed escursioni?**
-THE VENICE ONLY THE LOCALS KNOW! (northern Venice), dal 26 ottobre al 27 ottobre, 2 date, a Venezia. Gratis.
+VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT!, martedì 27 ottobre alle 10:00, a Venezia. Gratis.
 
 **Uscite in montagna a Venezia e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -666,10 +682,10 @@ https://anyplans.in/venezia/sport/
 A Venezia e provincia ci sono 17 eventi di sport nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali eventi di sport a Venezia e provincia ci sono in programma?**
-Ci sono 17 eventi: THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, dal 26 ottobre al 27 ottobre, 2 date), Padel: mancano 2 giocatori (competitiva) (Venezia, lunedì 26 ottobre alle 18:30), VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, martedì 27 ottobre alle 10:00), Padel: manca 1 giocatore (competitiva) (Venezia, giovedì 29 ottobre alle 21:00), Mezz'ora per Tè - Pratica gratuita di mindfulness (Venezia, lunedì 2 novembre alle 08:00) e Lazzaretto Nuovo - Il Sentiero delle Saline (Venezia, dal 8 novembre al 8 novembre, 2 date) e altri, tutti nella lista qui sopra.
+Ci sono 17 eventi: VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, martedì 27 ottobre alle 10:00), THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, martedì 27 ottobre alle 15:00), Padel: mancano 3 giocatori (competitiva) (Venezia, giovedì 29 ottobre alle 20:30), Padel: manca 1 giocatore (competitiva) (Venezia, giovedì 29 ottobre alle 21:00), Mezz'ora per Tè - Pratica gratuita di mindfulness (Venezia, lunedì 2 novembre alle 08:00) e Lazzaretto Nuovo - Il Sentiero delle Saline (Venezia, dal 8 novembre al 8 novembre, 2 date) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di sport?**
-THE VENICE ONLY THE LOCALS KNOW! (northern Venice), dal 26 ottobre al 27 ottobre, 2 date, a Venezia. Gratis.
+VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT!, martedì 27 ottobre alle 10:00, a Venezia. Gratis.
 
 **Eventi di sport a Venezia e provincia: sono gratis?**
 15 su 17. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -688,30 +704,30 @@ OGNI MERCOLEDI' ANDA VENICE HOSTEL - FREE ENTRY, mercoledì 28 ottobre alle 21:3
 **Feste ed eventi a Mestre: sono gratis?**
 19 su 20. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Feste ed eventi a Mira: 3 in programma
+## Feste ed eventi a Mira: 2 in programma
 https://anyplans.in/venezia/mira/
 
-A Mira ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Mira con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Mira ci sono 2 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Mira con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 **Quali feste ed eventi a Mira ci sono in programma?**
-Ci sono 3 eventi: Gala Night Masterpiece Award 2026-Mostra e Cena di Gala (Mira, lunedì 26 ottobre alle 18:00), Sebastiano Zanolli - Fare la grande differenza oggi. (Mira, venerdì 6 novembre alle 17:30) e CONFERENZA PUBBLICA - LA MEDITAZIONE YOGA E IL BENESSERE PSICOFISICO (Mira, domenica 29 novembre alle 16:00).
+Ci sono 2 eventi: Sebastiano Zanolli - Fare la grande differenza oggi. (Mira, venerdì 6 novembre alle 17:30) e CONFERENZA PUBBLICA - LA MEDITAZIONE YOGA E IL BENESSERE PSICOFISICO (Mira, domenica 29 novembre alle 16:00).
 
 **Quando è la prossima festa a Mira?**
-Gala Night Masterpiece Award 2026-Mostra e Cena di Gala, lunedì 26 ottobre alle 18:00, a Mira. Gratis.
+Sebastiano Zanolli - Fare la grande differenza oggi., venerdì 6 novembre alle 17:30, a Mira. Gratis.
 
 **Feste ed eventi a Mira: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Feste ed eventi a Spinea: 2 in programma
+## Feste ed eventi a Spinea: 1 in programma
 https://anyplans.in/venezia/spinea/
 
-A Spinea ci sono 2 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Spinea con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Spinea c'è 1 evento nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Spinea con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 **Quali feste ed eventi a Spinea ci sono in programma?**
-Ci sono 2 eventi: Tavolo genitori single da Semaforo Rosso: 11 posti liberi (Spinea, lunedì 26 ottobre alle 18:30) e La Compliance Normativa per una Rigenerazione Evolutiva (Spinea, mercoledì 18 novembre alle 16:00).
+C'è 1 evento: La Compliance Normativa per una Rigenerazione Evolutiva (Spinea, mercoledì 18 novembre alle 16:00).
 
 **Quando è la prossima festa a Spinea?**
-Tavolo genitori single da Semaforo Rosso: 11 posti liberi, lunedì 26 ottobre alle 18:30, a Spinea. Gratis.
+La Compliance Normativa per una Rigenerazione Evolutiva, mercoledì 18 novembre alle 16:00, a Spinea. Gratis.
 
 **Feste ed eventi a Spinea: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -722,10 +738,10 @@ https://anyplans.in/venezia/chirignago-zelarino/
 A Chirignago-Zelarino ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Chirignago-Zelarino con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 **Quali feste ed eventi a Chirignago-Zelarino ci sono in programma?**
-Ci sono 3 eventi: Tablo & live music da Alla Grotta Risto-Pub: 1 posto libero (Chirignago-Zelarino, venerdì 6 novembre alle 19:00), .NET Conf 2026 XE (Chirignago-Zelarino, sabato 14 novembre alle 09:00) e Forte Gazzera - Presenze oltre le mura - "Spettacoli di Mistero" (Chirignago-Zelarino, domenica 22 novembre alle 10:00).
+Ci sono 3 eventi: Karaoke da Alla Grotta Risto-Pub: 11 posti liberi (Chirignago-Zelarino, sabato 31 ottobre alle 19:30), .NET Conf 2026 XE (Chirignago-Zelarino, sabato 14 novembre alle 09:00) e Forte Gazzera - Presenze oltre le mura - "Spettacoli di Mistero" (Chirignago-Zelarino, domenica 22 novembre alle 10:00).
 
 **Quando è la prossima festa a Chirignago-Zelarino?**
-Tablo & live music da Alla Grotta Risto-Pub: 1 posto libero, venerdì 6 novembre alle 19:00, a Chirignago-Zelarino. Gratis.
+Karaoke da Alla Grotta Risto-Pub: 11 posti liberi, sabato 31 ottobre alle 19:30, a Chirignago-Zelarino. Gratis.
 
 **Feste ed eventi a Chirignago-Zelarino: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -772,16 +788,16 @@ IA ACT e Impresa, mercoledì 11 novembre alle 16:00, a Marcon. Gratis.
 **Feste ed eventi a Marcon: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Feste ed eventi a Venice: 4 in programma
+## Feste ed eventi a Venice: 3 in programma
 https://anyplans.in/venezia/venice/
 
-A Venice ci sono 4 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Venice con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Venice ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Venice con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 **Quali feste ed eventi a Venice ci sono in programma?**
-Ci sono 4 eventi: Choral music from europe (Venice, lunedì 26 ottobre alle 15:00), GHIRLANDE NATALIZIE (venice, sabato 5 dicembre alle 10:30), Venetian-Inspired Tapas and Small Local Bites - Cooking Class in Venice | Cozymeal™ (lunedì 7 dicembre alle 10:00) e Savoring Venice With Wine and Bites - Food Tour in Venice | Cozymeal™ (venerdì 25 dicembre alle 11:00).
+Ci sono 3 eventi: GHIRLANDE NATALIZIE (venice, sabato 5 dicembre alle 10:30), Venetian-Inspired Tapas and Small Local Bites - Cooking Class in Venice | Cozymeal™ (lunedì 7 dicembre alle 10:00) e Savoring Venice With Wine and Bites - Food Tour in Venice | Cozymeal™ (venerdì 25 dicembre alle 11:00).
 
 **Quando è la prossima festa a Venice?**
-Choral music from europe, lunedì 26 ottobre alle 15:00, a Venice. Gratis.
+GHIRLANDE NATALIZIE, sabato 5 dicembre alle 10:30, a venice. Gratis.
 
 **Feste ed eventi a Venice: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -828,41 +844,41 @@ GAME CHANGER ITALY, venerdì 30 ottobre alle 10:00, a Roncade. Gratis.
 **Feste ed eventi a Roncade: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Incontri, corsi e conferenze oggi a Venezia: 3 eventi
+## Incontri, corsi e conferenze oggi a Venezia: 7 eventi
 https://anyplans.in/venezia/incontri-culturali-oggi/
 
-Oggi, 26 ottobre 2026, a Venezia e provincia: 3 incontri. Di ognuno ora, posto, prezzo e come iscriversi.
+Oggi, 27 ottobre 2026, a Venezia e provincia: 7 incontri. Di ognuno ora, posto, prezzo e come iscriversi.
 
 **Quali incontri a Venezia e provincia ci sono in programma?**
-Ci sono 3 eventi: CONTEMPORARY VENICE – 19TH EDITION 2026 (Venezia, lunedì 26 ottobre alle 09:30), AI Hospitality Lab: Persone, tecnologie e nuovi modelli per l'ospitalità (Venezia, lunedì 26 ottobre alle 14:00) e Plissé. Workshop per docenti (Venezia, lunedì 26 ottobre alle 16:00).
+Ci sono 7 eventi: Lino Tagliapietra Showroom - Glass Week 2026 (Venezia, martedì 27 ottobre alle 09:00), Il tuo ingresso in Coworking Cr.Hub (Venezia, martedì 27 ottobre alle 09:00), Hidden Venice: Secrets and Stories (Venezia, dal 27 ottobre al 28 ottobre, 2 date), VANTAGGI DEL WELFARE TERRITORIALE - Mestre (Venezia, martedì 27 ottobre alle 14:30), PAINTINGS ABOUT THE ORIGIN OF LIFE by Peer (Venezia, martedì 27 ottobre alle 18:00) e New Argonauts of Attention - Jonardon Ganeri (Venezia, martedì 27 ottobre alle 18:00) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di incontri culturali?**
-CONTEMPORARY VENICE – 19TH EDITION 2026, lunedì 26 ottobre alle 09:30, a Venezia. Gratis.
+Lino Tagliapietra Showroom - Glass Week 2026, martedì 27 ottobre alle 09:00, a Venezia. Gratis.
 
 **Incontri a Venezia e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Eventi gratis oggi a Venezia: 9 eventi
+## Eventi gratis oggi a Venezia: 13 eventi
 https://anyplans.in/venezia/gratis-oggi/
 
-Oggi, 26 ottobre 2026, a Venezia e provincia: 9 eventi gratis. Di ognuno ora, posto, prezzo e come iscriversi.
+Oggi, 27 ottobre 2026, a Venezia e provincia: 13 eventi gratis. Di ognuno ora, posto, prezzo e come iscriversi.
 
 **Quali eventi gratis a Venezia e provincia ci sono in programma?**
-Ci sono 9 eventi: CONTEMPORARY VENICE – 19TH EDITION 2026 (Venezia, lunedì 26 ottobre alle 09:30), AI Hospitality Lab: Persone, tecnologie e nuovi modelli per l'ospitalità (Venezia, lunedì 26 ottobre alle 14:00), THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, dal 26 ottobre al 27 ottobre, 2 date), Choral music from europe (Venice, lunedì 26 ottobre alle 15:00), Plissé. Workshop per docenti (Venezia, lunedì 26 ottobre alle 16:00) e Gala Night Masterpiece Award 2026-Mostra e Cena di Gala (Mira, lunedì 26 ottobre alle 18:00) e altri, tutti nella lista qui sopra.
+Ci sono 13 eventi: Lino Tagliapietra Showroom - Glass Week 2026 (Venezia, martedì 27 ottobre alle 09:00), Il tuo ingresso in Coworking Cr.Hub (Venezia, martedì 27 ottobre alle 09:00), VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, martedì 27 ottobre alle 10:00), Thresholds of Being – Collective Exhibition (Venezia, martedì 27 ottobre alle 10:00), Hidden Venice: Secrets and Stories (Venezia, dal 27 ottobre al 28 ottobre, 2 date) e Consolato REM Brega presenta Baile, Botella y Baraja. Evento Collaterale, 6 (Venezia, martedì 27 ottobre alle 11:00) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di gratis?**
-CONTEMPORARY VENICE – 19TH EDITION 2026, lunedì 26 ottobre alle 09:30, a Venezia. Gratis.
+Lino Tagliapietra Showroom - Glass Week 2026, martedì 27 ottobre alle 09:00, a Venezia. Gratis.
 
 **Eventi gratis a Venezia e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Locali a Venezia: 50
+## Locali a Venezia: 47
 https://anyplans.in/venezia/locali/
 
-50 locali a Venezia e provincia dove c'è qualcosa in programma: circoli, bar, centri sportivi, teatri e piazze. Ognuno ha la sua pagina con le prossime date.
+47 locali a Venezia e provincia dove c'è qualcosa in programma: circoli, bar, centri sportivi, teatri e piazze. Ognuno ha la sua pagina con le prossime date.
 
 **Quali locali ci sono su anyplans a Venezia?**
-50: M9 - Museo del '900, Scuola Grande di San Marco, Serra dei Giardini, Ateneo Veneto, Palazzetto Bru Zane, Art and Wine Lab Venezia, Teatro Toniolo e Teatro Corso e altri. Ognuno ha la sua pagina con le prossime date.
+47: M9 - Museo del '900, Scuola Grande di San Marco, Serra dei Giardini, Ateneo Veneto, Palazzetto Bru Zane, Art and Wine Lab Venezia, Teatro Toniolo e Teatro Corso e altri. Ognuno ha la sua pagina con le prossime date.
 
 **Ho un locale: come ci finisco?**
 Pubblicando le tue date su anyplans: ti registri, crei il tuo gruppo e inserisci gli eventi. La pagina del locale si costruisce da sola con le date che pubblichi.
@@ -1026,7 +1042,7 @@ https://anyplans.in/venezia/locali/sph-venezia/
 SPH - Venezia: 2 eventi in programma — padel. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 **SPH - Venezia: che eventi ci sono?**
-Ci sono 2 eventi in programma: Padel: mancano 2 giocatori (competitiva) (lunedì 26 ottobre alle 18:30) e Padel: manca 1 giocatore (competitiva) (giovedì 29 ottobre alle 21:00).
+Ci sono 2 eventi in programma: Padel: mancano 3 giocatori (competitiva) (giovedì 29 ottobre alle 20:30) e Padel: manca 1 giocatore (competitiva) (giovedì 29 ottobre alle 21:00).
 
 **SPH - Venezia: dove si trova?**
 SPH - Venezia, Via Linghindal 7, 30172 Venezia (VE), 30172 Venezia. In ogni pagina dell'evento c'è il punto di ritrovo e il link alla mappa.
@@ -1091,10 +1107,10 @@ Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve 
 ## Alla Grotta Risto-Pub: eventi e serate a…
 https://anyplans.in/venezia/locali/alla-grotta-risto-pub/
 
-Alla Grotta Risto-Pub a Chirignago-Zelarino: 1 evento in programma — cena / aperitivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Alla Grotta Risto-Pub a Chirignago-Zelarino: 1 evento in programma — karaoke. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 **Alla Grotta Risto-Pub: che eventi ci sono?**
-C'è 1 evento in programma: Tablo & live music da Alla Grotta Risto-Pub: 1 posto libero (venerdì 6 novembre alle 19:00).
+C'è 1 evento in programma: Karaoke da Alla Grotta Risto-Pub: 11 posti liberi (sabato 31 ottobre alle 19:30).
 
 **Alla Grotta Risto-Pub: dove si trova?**
 Alla Grotta Risto-Pub, Chirignago-Zelarino. In ogni pagina dell'evento c'è il punto di ritrovo e il link alla mappa.
@@ -1244,10 +1260,10 @@ Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve 
 ## Villa Widmann: eventi in programma a Mira
 https://anyplans.in/venezia/locali/villa-widmann/
 
-Villa Widmann a Mira: 3 eventi in programma — mostre, feste, sagre ed eventi di paese e yoga / pilates. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Villa Widmann a Mira: 2 eventi in programma — feste, sagre ed eventi di paese e yoga / pilates. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 **Villa Widmann: che eventi ci sono?**
-Ci sono 3 eventi in programma: Gala Night Masterpiece Award 2026-Mostra e Cena di Gala (lunedì 26 ottobre alle 18:00), Sebastiano Zanolli - Fare la grande differenza oggi. (venerdì 6 novembre alle 17:30) e CONFERENZA PUBBLICA - LA MEDITAZIONE YOGA E IL BENESSERE PSICOFISICO (domenica 29 novembre alle 16:00).
+Ci sono 2 eventi in programma: Sebastiano Zanolli - Fare la grande differenza oggi. (venerdì 6 novembre alle 17:30) e CONFERENZA PUBBLICA - LA MEDITAZIONE YOGA E IL BENESSERE PSICOFISICO (domenica 29 novembre alle 16:00).
 
 **Villa Widmann: dove si trova?**
 Villa Widmann, Mira. In ogni pagina dell'evento c'è il punto di ritrovo e il link alla mappa.
@@ -1261,10 +1277,10 @@ Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve 
 ## Anda Venice: eventi e serate a Venezia
 https://anyplans.in/venezia/locali/anda-venice/
 
-Anda Venice a Venezia: 4 eventi in programma — karaoke, concerti e musica dal vivo, cena / aperitivo e feste, sagre ed eventi di paese. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Anda Venice a Venezia: 3 eventi in programma — concerti e musica dal vivo, cena / aperitivo e feste, sagre ed eventi di paese. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 **Anda Venice: che eventi ci sono?**
-Ci sono 4 eventi in programma: Karaoke Night (gratuito!) (lunedì 26 ottobre alle 21:30), Music Bingo (martedì 27 ottobre alle 21:30), Beerpong! (giovedì 29 ottobre alle 21:30) e EcoSwap Party @ Anda - Mercatino dello scambio ♻️ (venerdì 30 ottobre alle 18:00).
+Ci sono 3 eventi in programma: Music Bingo (martedì 27 ottobre alle 21:30), Beerpong! (giovedì 29 ottobre alle 21:30) e EcoSwap Party @ Anda - Mercatino dello scambio ♻️ (venerdì 30 ottobre alle 18:00).
 
 **Anda Venice: dove si trova?**
 Anda Venice, Venezia Mestre. In ogni pagina dell'evento c'è il punto di ritrovo e il link alla mappa.
@@ -1377,23 +1393,6 @@ Gli eventi in programma sono tutti gratis. Il prezzo è scritto nella pagina di 
 **Location provided after booking: ci posso andare da solo?**
 Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
 
-## Palazzo Albrizzi-Capello: eventi in programma a Venezia
-https://anyplans.in/venezia/locali/palazzo-albrizzi-capello/
-
-Palazzo Albrizzi-Capello a Venezia: 1 evento in programma — incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-**Palazzo Albrizzi-Capello: che eventi ci sono?**
-C'è 1 evento in programma: CONTEMPORARY VENICE – 19TH EDITION 2026 (lunedì 26 ottobre alle 09:30).
-
-**Palazzo Albrizzi-Capello: dove si trova?**
-Palazzo Albrizzi-Capello, Venezia. In ogni pagina dell'evento c'è il punto di ritrovo e il link alla mappa.
-
-**Palazzo Albrizzi-Capello: si paga?**
-Gli eventi in programma sono tutti gratis. Il prezzo è scritto nella pagina di ogni evento.
-
-**Palazzo Albrizzi-Capello: ci posso andare da solo?**
-Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
-
 ## Palazzo Pisani Revedin: eventi in programma a Venezia
 https://anyplans.in/venezia/locali/palazzo-pisani-revedin/
 
@@ -1409,23 +1408,6 @@ Palazzo Pisani Revedin, Venezia. In ogni pagina dell'evento c'è il punto di rit
 Gli eventi in programma sono tutti gratis. Il prezzo è scritto nella pagina di ogni evento.
 
 **Palazzo Pisani Revedin: ci posso andare da solo?**
-Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
-
-## Semaforo Rosso: eventi e serate a Spinea
-https://anyplans.in/venezia/locali/semaforo-rosso/
-
-Semaforo Rosso a Spinea: 1 evento in programma — cena / aperitivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-**Semaforo Rosso: che eventi ci sono?**
-C'è 1 evento in programma: Tavolo genitori single da Semaforo Rosso: 11 posti liberi (lunedì 26 ottobre alle 18:30).
-
-**Semaforo Rosso: dove si trova?**
-Semaforo Rosso, Spinea. In ogni pagina dell'evento c'è il punto di ritrovo e il link alla mappa.
-
-**Semaforo Rosso: si paga?**
-Gli eventi in programma sono tutti gratis. Il prezzo è scritto nella pagina di ogni evento.
-
-**Semaforo Rosso: ci posso andare da solo?**
 Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
 
 ## Calle dei Vedei: eventi in programma a Venezia
@@ -1683,23 +1665,6 @@ Gli eventi in programma sono tutti gratis. Il prezzo è scritto nella pagina di 
 **Teatro Del Parco: ci posso andare da solo?**
 Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
 
-## Chiesa di Santa Maria della Fava o della Consolazione:…
-https://anyplans.in/venezia/locali/chiesa-di-santa-maria-della-fava-o-della-consolazione/
-
-Chiesa di Santa Maria della Fava o della Consolazione a Venezia: 1 evento in programma — escursionismo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-**Chiesa di Santa Maria della Fava o della Consolazione: che eventi ci sono?**
-C'è 1 evento in programma: THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (dal 26 ottobre al 27 ottobre, 2 date).
-
-**Chiesa di Santa Maria della Fava o della Consolazione: dove si trova?**
-Chiesa di Santa Maria della Fava o della Consolazione, Castello, Venezia. In ogni pagina dell'evento c'è il punto di ritrovo e il link alla mappa.
-
-**Chiesa di Santa Maria della Fava o della Consolazione: si paga?**
-Gli eventi in programma sono tutti gratis. Il prezzo è scritto nella pagina di ogni evento.
-
-**Chiesa di Santa Maria della Fava o della Consolazione: ci posso andare da solo?**
-Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
-
 ## Campo della Maddalena: eventi in programma a Venezia
 https://anyplans.in/venezia/locali/campo-della-maddalena/
 
@@ -1745,7 +1710,7 @@ Incontri culturali a Murano Showroom, Venezia, martedì 27 ottobre alle 09:00. G
 ## The Venice Only the Locals Know! (northern Venice) – Venezia
 https://anyplans.in/venezia/the-venice-only-the-locals-know-northern-venice/
 
-Escursionismo a Chiesa di Santa Maria della Fava o della Consolazione, Castello, Venezia, lunedì 26 ottobre alle 15:00 (2 date, fino al 27 ottobre). Gratis (Biglietti su Eventbrite).
+Escursionismo a Chiesa di Santa Maria della Fava o della Consolazione, Castello, Venezia, martedì 27 ottobre alle 15:00. Gratis (Biglietti su Eventbrite).
 
 ## Venice: Sunset Boat Aperitif with Music on the Lagoon – Venezia
 https://anyplans.in/venezia/venice-sunset-boat-aperitif-with-music-on-the-lagoon/
@@ -1992,20 +1957,20 @@ https://anyplans.in/venezia/lazzaretto-nuovo-i-graffiti-del-tezon-grande/
 
 Visite guidate a Lazzareto Nuovo, Venezia: si è già svolto, l'ultima data è stata sabato 19 settembre 2026.
 
-## Padel: mancano 2 giocatori (competitiva) – SPH - Venezia
+## Padel: mancano 3 giocatori (competitiva) – SPH - Venezia
 https://anyplans.in/venezia/padel-competitiva/
 
-Padel a SPH - Venezia, Via Linghindal 7, 30172 Venezia (VE), 30172 Venezia, lunedì 26 ottobre alle 18:30. 15 € (Si chiede il posto e si paga su Playtomic).
+Padel a SPH - Venezia, Via Linghindal 7, 30172 Venezia (VE), 30172 Venezia, giovedì 29 ottobre alle 20:30. 30 € (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: manca 1 giocatore (competitiva) – SPH - Venezia
 https://anyplans.in/venezia/padel-competitiva-2026-10-29/
 
 Padel a SPH - Venezia, Via Linghindal 7, 30172 Venezia (VE), 30172 Venezia, giovedì 29 ottobre alle 21:00. 15 € (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (competitiva) – SPH - Venezia
-https://anyplans.in/venezia/padel-competitiva-2026-10-22/
+## Padel: mancano 2 giocatori (competitiva) – SPH - Venezia
+https://anyplans.in/venezia/padel-competitiva-2026-10-20/
 
-Padel a SPH - Venezia, Via Linghindal 7, 30172 Venezia (VE), 30172 Venezia: si è già svolto, l'ultima data è stata giovedì 22 ottobre 2026.
+Padel a SPH - Venezia, Via Linghindal 7, 30172 Venezia (VE), 30172 Venezia: si è già svolto, l'ultima data è stata martedì 20 ottobre 2026.
 
 ## Visita Guidata (in italiano) | The Transparent Breath 2026 – Venezia
 https://anyplans.in/venezia/visita-guidata-in-italiano-the-transparent-breath-2026/
@@ -2105,12 +2070,12 @@ Mostre a Venezia, Venezia: si è già svolto, l'ultima data è stata lunedì 21 
 ## Lezione Prova di Improvvisazione teatrale Mirano (VE) - Corsi 2026/27 – Vetrego
 https://anyplans.in/venezia/lezione-prova-di-improvvisazione-teatrale-mirano-ve-corsi/
 
-Spettacoli e teatro a Via Vetrego, 116, Vetrego, lunedì 26 ottobre alle 20:30. Gratis (Biglietti su Eventbrite).
+Spettacoli e teatro a Via Vetrego, 116, Vetrego: si è già svolto, l'ultima data è stata lunedì 26 ottobre 2026.
 
 ## Karaoke Night (gratuito!) – Anda Venice
 https://anyplans.in/venezia/karaoke-night-gratuito/
 
-Karaoke a Anda Venice, Venezia Mestre, lunedì 26 ottobre alle 21:30. Gratis (Biglietti su Eventbrite).
+Karaoke a Anda Venice, Venezia Mestre: si è già svolto, l'ultima data è stata lunedì 26 ottobre 2026.
 
 ## Venice Highlights Audio Tour: Grandeur of the Serenissima – Venezia
 https://anyplans.in/venezia/venice-highlights-audio-tour-grandeur-of-the-serenissima/
@@ -2955,7 +2920,7 @@ Cena / aperitivo a Hostaria Vite Rossa, Venezia: si è già svolto, l'ultima dat
 ## Contemporary Venice – Palazzo Albrizzi-Capello
 https://anyplans.in/venezia/contemporary-venice-19th-edition-2026/
 
-Incontri culturali a Palazzo Albrizzi-Capello, Venezia, lunedì 26 ottobre alle 09:30. Gratis (Biglietti su Eventbrite).
+Incontri culturali a Palazzo Albrizzi-Capello, Venezia: si è già svolto, l'ultima data è stata lunedì 26 ottobre 2026.
 
 ## Inspirational Talk w/ Julian Brown from @naturejab_ – Roncade
 https://anyplans.in/venezia/inspirational-talk-w-julian-brown-from-naturejab/
@@ -3335,27 +3300,22 @@ Spettacoli e teatro a Villa Belvedere, Mirano: si è già svolto, l'ultima data 
 ## AI Hospitality Lab: Persone – NH Collection Venezia
 https://anyplans.in/venezia/ai-hospitality-lab-persone-tecnologie-e-nuovi-modelli-per-l-/
 
-Incontri culturali a NH Collection Venezia, Venezia, lunedì 26 ottobre alle 14:00. Gratis (Biglietti su Eventbrite).
+Incontri culturali a NH Collection Venezia, Venezia: si è già svolto, l'ultima data è stata lunedì 26 ottobre 2026.
 
 ## Choral music from europe – Basilica dei Santi Maria e Donato
 https://anyplans.in/venezia/choral-music-from-europe/
 
-Concerti e musica dal vivo a Basilica dei Santi Maria e Donato, Venice, lunedì 26 ottobre alle 15:00. Gratis (Biglietti su Eventbrite).
+Concerti e musica dal vivo a Basilica dei Santi Maria e Donato, Venice: si è già svolto, l'ultima data è stata lunedì 26 ottobre 2026.
 
 ## Plissé. Workshop per docenti – Collezione Peggy Guggenheim
 https://anyplans.in/venezia/plisse-workshop-per-docenti/
 
-Incontri culturali a Collezione Peggy Guggenheim, Venezia, lunedì 26 ottobre alle 16:00. Gratis (Biglietti su Eventbrite).
+Incontri culturali a Collezione Peggy Guggenheim, Venezia: si è già svolto, l'ultima data è stata lunedì 26 ottobre 2026.
 
 ## Gala Night Masterpiece Award 2026-Mostra e Cena di Gala – Mira
 https://anyplans.in/venezia/gala-night-masterpiece-award-2026-mostra-e-cena-di-gala/
 
-Mostre a Villa Widmann, Mira, lunedì 26 ottobre alle 18:00. Gratis (Biglietti su Eventbrite).
-
-## Tavolo genitori single da Semaforo Rosso: 11 posti liberi
-https://anyplans.in/venezia/tavolo-genitori-single-da-semaforo-rosso/
-
-Cena / aperitivo a Semaforo Rosso, Spinea, lunedì 26 ottobre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+Mostre a Villa Widmann, Mira: si è già svolto, l'ultima data è stata lunedì 26 ottobre 2026.
 
 ## Il tuo ingresso in Coworking Cr.Hub – The Cr.Hub
 https://anyplans.in/venezia/il-tuo-ingresso-in-coworking-cr-hub/
@@ -3457,6 +3417,11 @@ https://anyplans.in/venezia/dardust-desiderio-risonanze-tra-arte-e-musica-festiv
 
 Festa di paese a The Home of The Human Safety Net Venice, Venezia, venerdì 30 ottobre alle 18:30. Gratis (Biglietti su Eventbrite).
 
+## Cena da Terminal 2.0: 3 posti liberi
+https://anyplans.in/venezia/cena-da-terminal-2-0/
+
+Cena / aperitivo a Terminal 2.0, Venezia, venerdì 30 ottobre alle 18:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
 ## Venice Art Talks | Il Silenzio come Possibilità | 31.10.2026 – Venezia
 https://anyplans.in/venezia/venice-art-talks-il-silenzio-come-possibilita-31-10-2026/
 
@@ -3486,6 +3451,11 @@ Mostre a Basilica dei Santi Giovanni e Paolo, Venezia, sabato 31 ottobre alle 17
 https://anyplans.in/venezia/mystery-masks-painting-venice-in-watercolor-with-karen-schaa/
 
 Pittura / arte a Centro Culturale Don Orione Artigianelli, Venezia, sabato 31 ottobre alle 19:00. Gratis (Biglietti su Eventbrite).
+
+## Karaoke da Alla Grotta Risto-Pub: 11 posti liberi
+https://anyplans.in/venezia/karaoke-da-alla-grotta-risto-pub/
+
+Karaoke a Alla Grotta Risto-Pub, Chirignago-Zelarino, sabato 31 ottobre alle 19:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## "Bridges" Concerto Jazz dei Docenti del Cons. B.…
 https://anyplans.in/venezia/bridges-concerto-jazz-dei-docenti-del-cons-b-marcello-di-ven/
@@ -3562,12 +3532,7 @@ https://anyplans.in/venezia/sebastiano-zanolli-fare-la-grande-differenza-oggi/
 
 Festa di paese a Villa Widmann, Mira, venerdì 6 novembre alle 17:30. Gratis (Biglietti su Eventbrite).
 
-## Tablo & live music da Alla Grotta Risto-Pub: 1 posto…
-https://anyplans.in/venezia/tablo-live-music-da-alla-grotta-risto-pub-o-libero/
-
-Cena / aperitivo a Alla Grotta Risto-Pub, Chirignago-Zelarino, venerdì 6 novembre alle 19:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Cena da Ristorante Kalispera: 6 posti liberi
+## Cena da Ristorante Kalispera: 5 posti liberi
 https://anyplans.in/venezia/cena-da-ristorante-kalispera/
 
 Cena / aperitivo a Ristorante Kalispera, Dolo, venerdì 6 novembre alle 19:15. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
@@ -4185,7 +4150,7 @@ Spettacoli e teatro a Teatro Corso, Mestre, sabato 17 aprile alle 21:00. Gratis 
 ## Cosa fare a Venezia: 16 domande e le risposte di oggi
 https://anyplans.in/venezia/domande/
 
-Le domande che si fanno su Venezia, a Google e agli assistenti, con le risposte fatte sui dati di stanotte: 209 eventi in programma a Venezia e provincia.
+Le domande che si fanno su Venezia, a Google e agli assistenti, con le risposte fatte sui dati di stanotte: 202 eventi in programma a Venezia e provincia.
 
 ## Cosa fare a Capodanno 2027 a Venezia: 1 eventi
 https://anyplans.in/venezia/cosa-fare-a-capodanno/
@@ -4204,16 +4169,16 @@ Su anyplans vedi chi altro va a ogni evento e ti unisci: è pensato per chi esce
 **Dove andare a Capodanno 2027 partendo da Venezia?**
 Ci sono 1211 viaggi di gruppo per quei giorni. Le mete e i prezzi sono qui sotto e nella pagina dei viaggi.
 
-## Cosa fare ad Halloween 2026 a Venezia: 21 eventi
+## Cosa fare ad Halloween 2026 a Venezia: 23 eventi
 https://anyplans.in/venezia/cosa-fare-a-halloween/
 
-Ad Halloween 2026 a Venezia e provincia ci sono, per ora, 21 eventi in calendario (21 gratis), 4 a tema: APERIMOVIE Halloween Edition, CACCIA ALLA ZUCCA e ️ VENİCE — HALLOWEEN AFTER DARK PARTY e altri. Le feste di Halloween si annunciano nelle ultime settimane di ottobre: questa pagina si aggiorna ogni notte. Se invece vuoi partire, ci sono 223 viaggi di gruppo per quei giorni: si va con un gruppo e un coordinatore, anche da soli.
+Ad Halloween 2026 a Venezia e provincia ci sono, per ora, 23 eventi in calendario (23 gratis), 4 a tema: APERIMOVIE Halloween Edition, CACCIA ALLA ZUCCA e ️ VENİCE — HALLOWEEN AFTER DARK PARTY e altri. Le feste di Halloween si annunciano nelle ultime settimane di ottobre: questa pagina si aggiorna ogni notte. Se invece vuoi partire, ci sono 223 viaggi di gruppo per quei giorni: si va con un gruppo e un coordinatore, anche da soli.
 
 **Cosa fare ad Halloween 2026 a Venezia?**
-Ad Halloween 2026 a Venezia e provincia ci sono, per ora, 21 eventi in calendario (21 gratis), 4 a tema: APERIMOVIE Halloween Edition, CACCIA ALLA ZUCCA e ️ VENİCE — HALLOWEEN AFTER DARK PARTY e altri. Le feste di Halloween si annunciano nelle ultime settimane di ottobre: questa pagina si aggiorna ogni notte. Se invece vuoi partire, ci sono 223 viaggi di gruppo per quei giorni: si va con un gruppo e un coordinatore, anche da soli.
+Ad Halloween 2026 a Venezia e provincia ci sono, per ora, 23 eventi in calendario (23 gratis), 4 a tema: APERIMOVIE Halloween Edition, CACCIA ALLA ZUCCA e ️ VENİCE — HALLOWEEN AFTER DARK PARTY e altri. Le feste di Halloween si annunciano nelle ultime settimane di ottobre: questa pagina si aggiorna ogni notte. Se invece vuoi partire, ci sono 223 viaggi di gruppo per quei giorni: si va con un gruppo e un coordinatore, anche da soli.
 
 **Ci sono eventi gratis ad Halloween 2026 a Venezia?**
-21 eventi sono gratis su 21. Quando c'è un biglietto il prezzo è nella pagina dell'evento.
+23 eventi sono gratis su 23. Quando c'è un biglietto il prezzo è nella pagina dell'evento.
 
 **Cosa fare ad Halloween 2026 a Venezia da soli?**
 Su anyplans vedi chi altro va a ogni evento e ti unisci: è pensato per chi esce da solo. Se vuoi partire, i viaggi di gruppo sono fatti apposta per chi viaggia da solo.
@@ -4269,69 +4234,35 @@ A Venezia e provincia ci sono 4 degustazioni di vino in programma nelle prossime
 **Ci posso andare da solo?**
 Sì: su anyplans vedi chi altro ci va e ti unisci. Alle feste di paese si mangia alle tavolate, insieme a chi c'è.
 
-## Things to do in Venice: 209 events
+## Things to do in Venice: 202 events
 https://anyplans.in/en/venezia/
 
 What's on in Venice and its province, today, tonight and this weekend: free events, talks & culture, dinners & aperitivo, town festivals & fairs, food fairs and village festivals and guided tours. Pick one and go with other people.
 
 **What to do in Venice this weekend?**
-This weekend in Venice and its province there are 17 events on anyplans: Venice Art Talks  | Il Silenzio come Possibilità | 31.10.2026 (Venezia, 31 October), Art and Zodiac – Aperitivo Astrologico a Venezia / Paint and Sip (31 October), La Serra dei Bimbi (loc. Castello, 31 October), CACCIA ALLA ZUCCA (loc. Castello, 31 October), Il Grimorio (Venezia, 31 October) and A SCENA APERTA - Gaber - Mi fa male il mondo (Venezia, 31 October) and more. The full dates are in the list above.
+This weekend in Venice and its province there are 18 events on anyplans: Venice Art Talks  | Il Silenzio come Possibilità | 31.10.2026 (Venezia, 31 October), Art and Zodiac – Aperitivo Astrologico a Venezia / Paint and Sip (31 October), La Serra dei Bimbi (loc. Castello, 31 October), CACCIA ALLA ZUCCA (loc. Castello, 31 October), Il Grimorio (Venezia, 31 October) and A SCENA APERTA - Gaber - Mi fa male il mondo (Venezia, 31 October) and more. The full dates are in the list above.
 
 **What's on in Venice today and tonight?**
-Today, 26 October 2026, in Venice and its province there are 10 events on anyplans: CONTEMPORARY VENICE – 19TH EDITION 2026 in Venezia, AI Hospitality Lab: Persone, tecnologie e nuovi modelli per l'ospitalità in Venezia, THE VENICE ONLY THE LOCALS KNOW! (northern Venice) in Venezia, Choral music from europe in Venice, Plissé. Workshop per docenti in Venezia and Gala Night Masterpiece Award 2026-Mostra e Cena di Gala in Mira.
+Today, 27 October 2026, in Venice and its province there are 13 events on anyplans: Lino Tagliapietra Showroom - Glass Week 2026 in Venezia, Il tuo ingresso in Coworking Cr.Hub in Venezia, VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! in Venezia, Thresholds of Being – Collective Exhibition in Venezia, Hidden Venice: Secrets and Stories in Venezia and Consolato REM Brega presenta Baile, Botella y Baraja. Evento Collaterale, 6 in Venezia.
 
 **What kind of events are there in Venice on anyplans?**
-Free events, talks & culture, dinners & aperitivo, town festivals & fairs, food fairs and village festivals, guided tours, sports and concerts & live music. Right now 209 events are scheduled,  collected every day from the organisers, the town councils and the platforms where they are announced.
+Free events, talks & culture, dinners & aperitivo, town festivals & fairs, food fairs and village festivals, guided tours, sports and concerts & live music. Right now 202 events are scheduled,  collected every day from the organisers, the town councils and the platforms where they are announced.
 
 **Are the events in Venice on anyplans free?**
-203 of the 209 upcoming events are free. When there is a ticket or a fee, the price is on the event's page. Signing up on anyplans is free and only needs your email; you must be 18 or older.
+196 of the 202 upcoming events are free. When there is a ticket or a fee, the price is on the event's page. Signing up on anyplans is free and only needs your email; you must be 18 or older.
 
 **I'm a tourist in Venice: can I join?**
 Yes: run clubs, walks, festivals and dinners are open to everyone, for one evening too. Most descriptions are in Italian because the organisers write them, but times, places and prices are on every page in English, and you can see who else is going before you show up.
 
-## Events today in Venice, Monday 26 October: what to do (10)
+## Events today in Venice, Tuesday 27 October: what to do (13)
 https://anyplans.in/en/venezia/what-to-do-today/
 
-10 events in Venice and its province today, 26 October 2026: Venezia, Venice, Mira and Spinea and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+13 events in Venice and its province today, 27 October 2026: Venezia and Venezia Mestre and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
 **What is on in Venice today?**
-10 events today, 26 October 2026: CONTEMPORARY VENICE – 19TH EDITION 2026 in Venezia, AI Hospitality Lab: Persone, tecnologie e nuovi modelli per l'ospitalità in Venezia, THE VENICE ONLY THE LOCALS KNOW! (northern Venice) in Venezia, Choral music from europe in Venice, Plissé. Workshop per docenti in Venezia, Gala Night Masterpiece Award 2026-Mostra e Cena di Gala in Mira, Padel: mancano 2 giocatori (competitiva) in Venice and Tavolo genitori single da Semaforo Rosso: 11 posti liberi in Spinea and more, all in the list above.
+13 events today, 27 October 2026: Lino Tagliapietra Showroom - Glass Week 2026 in Venezia, Il tuo ingresso in Coworking Cr.Hub in Venezia, VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! in Venezia, Thresholds of Being – Collective Exhibition in Venezia, Hidden Venice: Secrets and Stories in Venezia, Consolato REM Brega presenta Baile, Botella y Baraja. Evento Collaterale, 6 in Venezia, VISITA GUIDATA A GRAFICHE VENEZIANE - FESTIVAL DELLA SALUTE 2026 and VANTAGGI DEL WELFARE TERRITORIALE - Mestre in Venezia and more, all in the list above.
 
 **Is there anything free today in Venice?**
-9 of the 10 are free, mostly town festivals, markets and group walks. When there is a ticket or a fee, the price is on the event page.
-
-**Where are they?**
-In Venice and its province: Venezia (4), Venice (2), Mira (1), Spinea (1), Vetrego (1) and Venezia Mestre (1). Every page has the meeting point and a link to the map.
-
-**Can I go alone?**
-Yes, that is the point: on anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
-
-## Events tonight in Venice, Monday 26 October: what to do (5)
-https://anyplans.in/en/venezia/what-to-do-tonight/
-
-5 events in Venice and its province tonight, 26 October 2026, from 6 pm: Mira, Venice, Spinea and Vetrego and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
-
-**What is on in Venice tonight?**
-5 events tonight, 26 October 2026, from 6 pm: Gala Night Masterpiece Award 2026-Mostra e Cena di Gala in Mira, Padel: mancano 2 giocatori (competitiva) in Venice, Tavolo genitori single da Semaforo Rosso: 11 posti liberi in Spinea, Lezione Prova di Improvvisazione teatrale Mirano (VE)  - Corsi 2026/27 in Vetrego and Karaoke Night (gratuito!) in Venezia Mestre.
-
-**Is there anything free tonight in Venice?**
-4 of the 5 are free, mostly town festivals, markets and group walks. When there is a ticket or a fee, the price is on the event page.
-
-**Where are they?**
-In Venice and its province: Mira (1), Venice (1), Spinea (1), Vetrego (1) and Venezia Mestre (1). Every page has the meeting point and a link to the map.
-
-**Can I go alone?**
-Yes, that is the point: on anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
-
-## Events tomorrow in Venice, Tuesday 27 October: what to do (13)
-https://anyplans.in/en/venezia/what-to-do-tomorrow/
-
-13 events in Venice and its province tomorrow, 27 October 2026: Venezia and Venezia Mestre and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
-
-**What is on in Venice tomorrow?**
-13 events tomorrow, 27 October 2026: THE VENICE ONLY THE LOCALS KNOW! (northern Venice) in Venezia, Lino Tagliapietra Showroom - Glass Week 2026 in Venezia, Il tuo ingresso in Coworking Cr.Hub in Venezia, VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! in Venezia, Thresholds of Being – Collective Exhibition in Venezia, Hidden Venice: Secrets and Stories in Venezia, Consolato REM Brega presenta Baile, Botella y Baraja. Evento Collaterale, 6 in Venezia and VISITA GUIDATA A GRAFICHE VENEZIANE - FESTIVAL DELLA SALUTE 2026 and more, all in the list above.
-
-**Is there anything free tomorrow in Venice?**
 13 of the 13 are free, mostly town festivals, markets and group walks. When there is a ticket or a fee, the price is on the event page.
 
 **Where are they?**
@@ -4340,50 +4271,84 @@ In Venice and its province: Venezia (12) and Venezia Mestre (1). Every page has 
 **Can I go alone?**
 Yes, that is the point: on anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
 
-## Events this weekend in Venice: what to do (17)
-https://anyplans.in/en/venezia/what-to-do-this-weekend/
+## Events tonight in Venice, Tuesday 27 October: what to do (4)
+https://anyplans.in/en/venezia/what-to-do-tonight/
 
-17 events in Venice and its province this weekend (Saturday 31 October and Sunday 1 November): Venezia, loc. Castello, Venedik and Lido and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+4 events in Venice and its province tonight, 27 October 2026, from 6 pm: Venezia and Venezia Mestre and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
-**What is on in Venice this weekend?**
-17 events this weekend (Saturday 31 October and Sunday 1 November): Venice Art Talks  | Il Silenzio come Possibilità | 31.10.2026 in Venezia, Art and Zodiac – Aperitivo Astrologico a Venezia / Paint and Sip, La Serra dei Bimbi in loc. Castello, CACCIA ALLA ZUCCA in loc. Castello, Il Grimorio in Venezia, A SCENA APERTA - Gaber - Mi fa male il mondo in Venezia, «L'OCCHIO DELLA MADRE» La Resurrezione Cristo, di Pieter Paul Rubens in Venezia and Venetian Dream – Aperitivo e Pittura a Venezia / Paint and Sip and more, all in the list above.
+**What is on in Venice tonight?**
+4 events tonight, 27 October 2026, from 6 pm: PAINTINGS ABOUT THE ORIGIN OF LIFE by Peer in Venezia, New Argonauts of Attention - Jonardon Ganeri in Venezia, Four Solo Exhibitions at Palazzo Pisani-Revedin in Venezia and Music Bingo in Venezia Mestre.
 
-**Is there anything free this weekend in Venice?**
-16 of the 17 are free, mostly town festivals, markets and group walks. When there is a ticket or a fee, the price is on the event page.
+**Is there anything free tonight in Venice?**
+4 of the 4 are free, mostly town festivals, markets and group walks. When there is a ticket or a fee, the price is on the event page.
 
 **Where are they?**
-In Venice and its province: Venezia (13), loc. Castello (2), Venedik (1) and Lido (1). Every page has the meeting point and a link to the map.
+In Venice and its province: Venezia (3) and Venezia Mestre (1). Every page has the meeting point and a link to the map.
 
 **Can I go alone?**
 Yes, that is the point: on anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
 
-## Events in Venice in October 2026: 65
+## Events tomorrow in Venice, Wednesday 28 October: what to do (10)
+https://anyplans.in/en/venezia/what-to-do-tomorrow/
+
+10 events in Venice and its province tomorrow, 28 October 2026: Venezia and Mestre and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+
+**What is on in Venice tomorrow?**
+10 events tomorrow, 28 October 2026: Hidden Venice: Secrets and Stories in Venezia, TINTORETTO E LA BASILICA DI SAN GIORGIO MAGGIORE in Venezia, "DA TUCIDIDE A AVICENNA" - FESTIVAL DELLA SALUTE 2026 in Venezia, Cena da MAJER Via Garibaldi: 9 posti liberi in Venezia, GENITORI NELLA RETE - Patti digitali Mestre in Venezia, Arancio Vivo in Vez - Pink Armada - Live Rock Show in Venezia, Drink & Clay in Venezia and Cena da Hostaria Vite Rossa: 9 posti liberi in Venezia and more, all in the list above.
+
+**Is there anything free tomorrow in Venice?**
+9 of the 10 are free, mostly town festivals, markets and group walks. When there is a ticket or a fee, the price is on the event page.
+
+**Where are they?**
+In Venice and its province: Venezia (9) and Mestre (1). Every page has the meeting point and a link to the map.
+
+**Can I go alone?**
+Yes, that is the point: on anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
+
+## Events this weekend in Venice: what to do (18)
+https://anyplans.in/en/venezia/what-to-do-this-weekend/
+
+18 events in Venice and its province this weekend (Saturday 31 October and Sunday 1 November): Venezia, loc. Castello, Chirignago-Zelarino and Venedik and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+
+**What is on in Venice this weekend?**
+18 events this weekend (Saturday 31 October and Sunday 1 November): Venice Art Talks  | Il Silenzio come Possibilità | 31.10.2026 in Venezia, Art and Zodiac – Aperitivo Astrologico a Venezia / Paint and Sip, La Serra dei Bimbi in loc. Castello, CACCIA ALLA ZUCCA in loc. Castello, Il Grimorio in Venezia, A SCENA APERTA - Gaber - Mi fa male il mondo in Venezia, «L'OCCHIO DELLA MADRE» La Resurrezione Cristo, di Pieter Paul Rubens in Venezia and Venetian Dream – Aperitivo e Pittura a Venezia / Paint and Sip and more, all in the list above.
+
+**Is there anything free this weekend in Venice?**
+17 of the 18 are free, mostly town festivals, markets and group walks. When there is a ticket or a fee, the price is on the event page.
+
+**Where are they?**
+In Venice and its province: Venezia (13), loc. Castello (2), Chirignago-Zelarino (1), Venedik (1) and Lido (1). Every page has the meeting point and a link to the map.
+
+**Can I go alone?**
+Yes, that is the point: on anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
+
+## Events in Venice in October 2026: 59
 https://anyplans.in/en/venezia/events-october-2026/
 
-65 events in Venice and its province in October 2026: talks & culture, hiking, concerts & live music, exhibitions and padel. Day by day, with times, place and price, in Venezia, Venezia Mestre, Venice and loc. Castello and other towns. You sign up and go with other people.
+59 events in Venice and its province in October 2026: talks & culture, hiking, exhibitions, guided tours and concerts & live music. Day by day, with times, place and price, in Venezia, Venezia Mestre, Venice and loc. Castello and other towns. You sign up and go with other people.
 
 **What is on in Venice in October 2026?**
-65 events: CONTEMPORARY VENICE – 19TH EDITION 2026 (Venezia, monday 26 october at 09:30), AI Hospitality Lab: Persone, tecnologie e nuovi modelli per l'ospitalità (Venezia, monday 26 october at 14:00), THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, from 26 october to 27 october, 2 dates), Choral music from europe (Venice, monday 26 october at 15:00), Plissé. Workshop per docenti (Venezia, monday 26 october at 16:00), Gala Night Masterpiece Award 2026-Mostra e Cena di Gala (Mira, monday 26 october at 18:00), Padel: mancano 2 giocatori (competitiva) (Venice, monday 26 october at 18:30) and Tavolo genitori single da Semaforo Rosso: 11 posti liberi (Spinea, monday 26 october at 18:30) and more, all in the list above.
+59 events: Lino Tagliapietra Showroom - Glass Week 2026 (Venezia, tuesday 27 october at 09:00), Il tuo ingresso in Coworking Cr.Hub (Venezia, tuesday 27 october at 09:00), VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, tuesday 27 october at 10:00), Thresholds of Being – Collective Exhibition (Venezia, tuesday 27 october at 10:00), Hidden Venice: Secrets and Stories (Venezia, from 27 october to 28 october, 2 dates), Consolato REM Brega presenta Baile, Botella y Baraja. Evento Collaterale, 6 (Venezia, tuesday 27 october at 11:00), VISITA GUIDATA A GRAFICHE VENEZIANE - FESTIVAL DELLA SALUTE 2026 (tuesday 27 october at 14:30) and VANTAGGI DEL WELFARE TERRITORIALE - Mestre (Venezia, tuesday 27 october at 14:30) and more, all in the list above.
 
 **Which towns?**
-Venezia (49), Venezia Mestre (4), Venice (3), loc. Castello (2), Mira (1), Spinea (1), Vetrego (1) and Mestre (1). Every page has the meeting point and a link to the map.
+Venezia (47), Venezia Mestre (3), Venice (2), loc. Castello (2), Mestre (1), Roncade (1), Chirignago-Zelarino (1) and Venedik (1). Every page has the meeting point and a link to the map.
 
 **How much do they cost?**
-61 of the 65 are free. When there is a ticket or a fee, the price is on the event page; you pay the organiser, not anyplans.
+55 of the 59 are free. When there is a ticket or a fee, the price is on the event page; you pay the organiser, not anyplans.
 
-## Events in Venice in November 2026: 107
+## Events in Venice in November 2026: 106
 https://anyplans.in/en/venezia/events-november-2026/
 
-107 events in Venice and its province in November 2026: dinners & aperitivo, talks & culture, yoga & pilates, concerts & live music and exhibitions. Day by day, with times, place and price, in Venezia, loc. Castello, Mestre and Chirignago-Zelarino and other towns. You sign up and go with other people.
+106 events in Venice and its province in November 2026: dinners & aperitivo, talks & culture, yoga & pilates, concerts & live music and exhibitions. Day by day, with times, place and price, in Venezia, loc. Castello, Mestre and venezia and other towns. You sign up and go with other people.
 
 **What is on in Venice in November 2026?**
-107 events: L'Edoardo aperitivo, il primo format dedicato ad adulti e bambini (Venezia, sunday 1 november at 11:00), Venice Art Talks | Arte Contemporanea e Mito Mediterraneo | 01.11.2026 (Venezia, sunday 1 november at 11:30), Mezz'ora per Tè - Pratica gratuita di mindfulness (Venezia, monday 2 november at 08:00), Hans Zimmer by Ensemble Symphony Orchestra (Venezia, tuesday 3 november at 20:00), Venezia 1966-2026 (wednesday 4 november at 09:00), Ricevimento - Office Hours. Prof. Fabrizio Panozzo (Venezia, wednesday 4 november at 11:00), MINI STAGE / SETTORE MEM / 05.11.26 (Mestre, thursday 5 november at 14:00) and Dialoghi sul mosaico contemporaneo con Omar Mismar (Venezia, thursday 5 november at 18:00) and more, all in the list above.
+106 events: L'Edoardo aperitivo, il primo format dedicato ad adulti e bambini (Venezia, sunday 1 november at 11:00), Venice Art Talks | Arte Contemporanea e Mito Mediterraneo | 01.11.2026 (Venezia, sunday 1 november at 11:30), Mezz'ora per Tè - Pratica gratuita di mindfulness (Venezia, monday 2 november at 08:00), Hans Zimmer by Ensemble Symphony Orchestra (Venezia, tuesday 3 november at 20:00), Venezia 1966-2026 (wednesday 4 november at 09:00), Ricevimento - Office Hours. Prof. Fabrizio Panozzo (Venezia, wednesday 4 november at 11:00), MINI STAGE / SETTORE MEM / 05.11.26 (Mestre, thursday 5 november at 14:00) and Dialoghi sul mosaico contemporaneo con Omar Mismar (Venezia, thursday 5 november at 18:00) and more, all in the list above.
 
 **Which towns?**
-Venezia (80), loc. Castello (6), Mestre (4), Chirignago-Zelarino (3), venezia (3), Mira (2), Roncade (2) and Mestre Venezia (1). Every page has the meeting point and a link to the map.
+Venezia (80), loc. Castello (6), Mestre (4), venezia (3), Mira (2), Chirignago-Zelarino (2), Roncade (2) and Mestre Venezia (1). Every page has the meeting point and a link to the map.
 
 **How much do they cost?**
-106 of the 107 are free. When there is a ticket or a fee, the price is on the event page; you pay the organiser, not anyplans.
+105 of the 106 are free. When there is a ticket or a fee, the price is on the event page; you pay the organiser, not anyplans.
 
 ## Events in Venice in December 2026: 18
 https://anyplans.in/en/venezia/events-december-2026/
@@ -4399,44 +4364,44 @@ Venezia (7), Mestre (6), Venice (3) and loc. Castello (2). Every page has the me
 **How much do they cost?**
 17 of the 18 are free. When there is a ticket or a fee, the price is on the event page; you pay the organiser, not anyplans.
 
-## Talks & culture in Venice: 47 events
+## Talks & culture in Venice: 44 events
 https://anyplans.in/en/venezia/talks-and-culture/
 
-In Venice and its province there are 47 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Venice and its province there are 44 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which talks & culture events in Venice and its province are coming up?**
-There are 47 events: CONTEMPORARY VENICE – 19TH EDITION 2026 (Venezia, Monday 26 October at 09:30), AI Hospitality Lab: Persone, tecnologie e nuovi modelli per l'ospitalità (Venezia, Monday 26 October at 14:00), Plissé. Workshop per docenti (Venezia, Monday 26 October at 16:00), Lino Tagliapietra Showroom - Glass Week 2026 (Venezia, Tuesday 27 October at 09:00), Il tuo ingresso in Coworking Cr.Hub (Venezia, Tuesday 27 October at 09:00) and Hidden Venice: Secrets and Stories (Venezia, from 27 October to 28 October, 2 dates) and more, all in the list above.
+There are 44 events: Lino Tagliapietra Showroom - Glass Week 2026 (Venezia, Tuesday 27 October at 09:00), Il tuo ingresso in Coworking Cr.Hub (Venezia, Tuesday 27 October at 09:00), Hidden Venice: Secrets and Stories (Venezia, from 27 October to 28 October, 2 dates), VANTAGGI DEL WELFARE TERRITORIALE - Mestre (Venezia, Tuesday 27 October at 14:30), PAINTINGS ABOUT THE ORIGIN OF LIFE by Peer (Venezia, Tuesday 27 October at 18:00) and New Argonauts of Attention - Jonardon Ganeri (Venezia, Tuesday 27 October at 18:00) and more, all in the list above.
 
 **When is the next talks & culture event?**
-CONTEMPORARY VENICE – 19TH EDITION 2026, Monday 26 October at 09:30, in Venezia. Free.
+Lino Tagliapietra Showroom - Glass Week 2026, Tuesday 27 October at 09:00, in Venezia. Free.
 
 **Talks & culture events in Venice and its province: are they free?**
-43 out of 47. When there is a ticket or a fee, the price is on the event's page.
+40 out of 44. When there is a ticket or a fee, the price is on the event's page.
 
-## Dinners & aperitivo in Venice: 22 events
+## Dinners & aperitivo in Venice: 21 events
 https://anyplans.in/en/venezia/dinners/
 
-In Venice and its province there are 22 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Venice and its province there are 21 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which dinners and aperitivo in Venice and its province are coming up?**
-There are 22 events: Tavolo genitori single da Semaforo Rosso: 11 posti liberi (Spinea, Monday 26 October at 18:30), Cena da MAJER Via Garibaldi: 9 posti liberi (Venezia, Wednesday 28 October at 17:30), Cena da Hostaria Vite Rossa: 9 posti liberi (Venezia, Wednesday 28 October at 19:30), Cena da Fermenti: 11 posti liberi (Venezia, Thursday 29 October at 20:15), Beerpong! (Venezia Mestre, Thursday 29 October at 21:30) and Vision Board Night – Crea la tua Vision Board / Create Yours, Venezia (Friday 30 October at 13:00) and more, all in the list above.
+There are 21 events: Cena da MAJER Via Garibaldi: 9 posti liberi (Venezia, Wednesday 28 October at 17:30), Cena da Hostaria Vite Rossa: 9 posti liberi (Venezia, Wednesday 28 October at 19:30), Cena da Fermenti: 11 posti liberi (Venezia, Thursday 29 October at 20:15), Beerpong! (Venezia Mestre, Thursday 29 October at 21:30), Vision Board Night – Crea la tua Vision Board / Create Yours, Venezia (Friday 30 October at 13:00) and Venetian Masks and Wine – Maschere Veneziane e Vino, Venezia (Friday 30 October at 16:30) and more, all in the list above.
 
 **When is the next dinner or aperitivo?**
-Tavolo genitori single da Semaforo Rosso: 11 posti liberi, Monday 26 October at 18:30, in Spinea. Free.
+Cena da MAJER Via Garibaldi: 9 posti liberi, Wednesday 28 October at 17:30, in Venezia. Free.
 
 **Dinners and aperitivo in Venice and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Shows & theatre in Venice: 18 events
+## Shows & theatre in Venice: 17 events
 https://anyplans.in/en/venezia/shows/
 
-In Venice and its province there are 18 shows & theatre events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Venice and its province there are 17 shows & theatre events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which shows & theatre events in Venice and its province are coming up?**
-There are 18 events: Lezione Prova di Improvvisazione teatrale Mirano (VE)  - Corsi 2026/27 (Vetrego, Monday 26 October at 20:30), Corsi di improvvisazione teatrale Wonderform (Venezia, Thursday 29 October at 10:00), A SCENA APERTA - Gaber - Mi fa male il mondo (Venezia, Saturday 31 October at 17:00), BàCARO CON DELITTO - VENEZIA (Saturday 31 October at 19:00), Street Storytelling: Workshop itinerante di Fotografia a Venezia (Saturday 7 November at 09:00) and A SCENA APERTA -  Incendi (Venezia, Saturday 14 November at 17:00) and more, all in the list above.
+There are 17 events: Corsi di improvvisazione teatrale Wonderform (Venezia, Thursday 29 October at 10:00), A SCENA APERTA - Gaber - Mi fa male il mondo (Venezia, Saturday 31 October at 17:00), BàCARO CON DELITTO - VENEZIA (Saturday 31 October at 19:00), Street Storytelling: Workshop itinerante di Fotografia a Venezia (Saturday 7 November at 09:00), A SCENA APERTA -  Incendi (Venezia, Saturday 14 November at 17:00) and Solidarity in Flux (Venezia, Friday 20 November at 16:00) and more, all in the list above.
 
 **When is the next shows & theatre event?**
-Lezione Prova di Improvvisazione teatrale Mirano (VE)  - Corsi 2026/27, Monday 26 October at 20:30, in Vetrego. Free.
+Corsi di improvvisazione teatrale Wonderform, Thursday 29 October at 10:00, in Venezia. Free.
 
 **Shows & theatre events in Venice and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -4447,10 +4412,10 @@ https://anyplans.in/en/venezia/hiking/
 In Venice and its province there are 5 hiking events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which hiking events in Venice and its province are coming up?**
-There are 5 events: THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, from 26 October to 27 October, 2 dates), VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, Tuesday 27 October at 10:00), Lazzaretto Nuovo - Il Sentiero delle Saline (Venezia, from 8 November to 8 November, 2 dates), LUSSO DI VALORE (Venezia, Monday 9 November at 11:30) and Venise (Wednesday 18 November at 18:00).
+There are 5 events: VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, Tuesday 27 October at 10:00), THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, Tuesday 27 October at 15:00), Lazzaretto Nuovo - Il Sentiero delle Saline (Venezia, from 8 November to 8 November, 2 dates), LUSSO DI VALORE (Venezia, Monday 9 November at 11:30) and Venise (Wednesday 18 November at 18:00).
 
 **When is the next hiking event?**
-THE VENICE ONLY THE LOCALS KNOW! (northern Venice), from 26 October to 27 October, 2 dates, in Venezia. Free.
+VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT!, Tuesday 27 October at 10:00, in Venezia. Free.
 
 **Hiking events in Venice and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -4483,16 +4448,30 @@ GENITORI NELLA RETE - Patti digitali Mestre, Wednesday 28 October at 17:30, in V
 **Town festivals and sagre in Venice and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Concerts & live music in Venice: 22 events
+## Karaoke in Venice: 2 events
+https://anyplans.in/en/venezia/karaoke/
+
+In Venice and its province there are 2 karaoke events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+
+**Which karaoke events in Venice and its province are coming up?**
+There are 2 events: Karaoke at a&o Venezia Mestre (Wednesday 28 October at 21:00) and Karaoke da Alla Grotta Risto-Pub: 11 posti liberi (Chirignago-Zelarino, Saturday 31 October at 19:30).
+
+**When is the next karaoke event?**
+Karaoke at a&o Venezia Mestre, Wednesday 28 October at 21:00. Free.
+
+**Karaoke events in Venice and its province: are they free?**
+Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
+
+## Concerts & live music in Venice: 21 events
 https://anyplans.in/en/venezia/concerts/
 
-In Venice and its province there are 22 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Venice and its province there are 21 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which concerts & live music events in Venice and its province are coming up?**
-There are 22 events: Choral music from europe (Venice, Monday 26 October at 15:00), Music Bingo (Venezia Mestre, Tuesday 27 October at 21:30), Arancio Vivo in Vez - Pink Armada - Live Rock Show (Venezia, Wednesday 28 October at 18:00), OGNI MERCOLEDI' ANDA VENICE HOSTEL - FREE ENTRY (Mestre, Wednesday 28 October at 21:30), Visite guidate in italiano del Palazzetto Bru Zane (Venezia, Thursday 29 October at 14:30) and Visites guidées en français du Palazzetto Bru Zane (Venezia, Thursday 29 October at 15:00) and more, all in the list above.
+There are 21 events: Music Bingo (Venezia Mestre, Tuesday 27 October at 21:30), Arancio Vivo in Vez - Pink Armada - Live Rock Show (Venezia, Wednesday 28 October at 18:00), OGNI MERCOLEDI' ANDA VENICE HOSTEL - FREE ENTRY (Mestre, Wednesday 28 October at 21:30), Visite guidate in italiano del Palazzetto Bru Zane (Venezia, Thursday 29 October at 14:30), Visites guidées en français du Palazzetto Bru Zane (Venezia, Thursday 29 October at 15:00) and Live Music at a&o Venezia Mestre (Friday 30 October at 21:00) and more, all in the list above.
 
 **When is the next concerts & live music event?**
-Choral music from europe, Monday 26 October at 15:00, in Venice. Free.
+Music Bingo, Tuesday 27 October at 21:30, in Venezia Mestre. Free.
 
 **Concerts & live music events in Venice and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -4503,24 +4482,24 @@ https://anyplans.in/en/venezia/padel/
 In Venice and its province there are 2 padel matches and tournaments in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which padel matches and tournaments in Venice and its province are coming up?**
-There are 2 events: Padel: mancano 2 giocatori (competitiva) (Venice, Monday 26 October at 18:30) and Padel: manca 1 giocatore (competitiva) (Venice, Thursday 29 October at 21:00).
+There are 2 events: Padel: mancano 3 giocatori (competitiva) (Venice, Thursday 29 October at 20:30) and Padel: manca 1 giocatore (competitiva) (Venice, Thursday 29 October at 21:00).
 
 **When is the next padel match?**
-Padel: mancano 2 giocatori (competitiva), Monday 26 October at 18:30, in Venice. €15.
+Padel: mancano 3 giocatori (competitiva), Thursday 29 October at 20:30, in Venice. €30.
 
 **Padel matches and tournaments in Venice and its province: are they free?**
 0 out of 2. When there is a ticket or a fee, the price is on the event's page.
 
-## Exhibitions in Venice: 11 events
+## Exhibitions in Venice: 10 events
 https://anyplans.in/en/venezia/exhibitions/
 
-In Venice and its province there are 11 exhibitions in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Venice and its province there are 10 exhibitions in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which exhibitions events in Venice and its province are coming up?**
-There are 11 events: Gala Night Masterpiece Award 2026-Mostra e Cena di Gala (Mira, Monday 26 October at 18:00), Thresholds of Being – Collective Exhibition (Venezia, Tuesday 27 October at 10:00), Guided tours of the Palazzetto Bru Zane (Venezia, Thursday 29 October at 15:30), Venice Art Talks  | Il Silenzio come Possibilità | 31.10.2026 (Venezia, Saturday 31 October at 10:30), «L'OCCHIO DELLA MADRE» La Resurrezione Cristo, di Pieter Paul Rubens (Venezia, Saturday 31 October at 17:00) and Venezia 1966-2026 (Wednesday 4 November at 09:00) and more, all in the list above.
+There are 10 events: Thresholds of Being – Collective Exhibition (Venezia, Tuesday 27 October at 10:00), Guided tours of the Palazzetto Bru Zane (Venezia, Thursday 29 October at 15:30), Venice Art Talks  | Il Silenzio come Possibilità | 31.10.2026 (Venezia, Saturday 31 October at 10:30), «L'OCCHIO DELLA MADRE» La Resurrezione Cristo, di Pieter Paul Rubens (Venezia, Saturday 31 October at 17:00), Venezia 1966-2026 (Wednesday 4 November at 09:00) and Arte Laguna Prize Exhibition - Opening Night (Venezia, Friday 6 November at 17:00) and more, all in the list above.
 
 **When is the next exhibitions event?**
-Gala Night Masterpiece Award 2026-Mostra e Cena di Gala, Monday 26 October at 18:00, in Mira. Free.
+Thresholds of Being – Collective Exhibition, Tuesday 27 October at 10:00, in Venezia. Free.
 
 **Exhibitions events in Venice and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -4679,16 +4658,16 @@ GENITORI NELLA RETE - Patti digitali Mestre, Wednesday 28 October at 17:30, in V
 **Food fairs and village festivals events in Venice and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Free events in Venice: 203 events
+## Free events in Venice: 196 events
 https://anyplans.in/en/venezia/free/
 
-In Venice and its province there are 203 free events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Venice and its province there are 196 free events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which free events events in Venice and its province are coming up?**
-There are 203 events: CONTEMPORARY VENICE – 19TH EDITION 2026 (Venezia, Monday 26 October at 09:30), AI Hospitality Lab: Persone, tecnologie e nuovi modelli per l'ospitalità (Venezia, Monday 26 October at 14:00), THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, from 26 October to 27 October, 2 dates), Choral music from europe (Venice, Monday 26 October at 15:00), Plissé. Workshop per docenti (Venezia, Monday 26 October at 16:00) and Gala Night Masterpiece Award 2026-Mostra e Cena di Gala (Mira, Monday 26 October at 18:00) and more, all in the list above.
+There are 196 events: Lino Tagliapietra Showroom - Glass Week 2026 (Venezia, Tuesday 27 October at 09:00), Il tuo ingresso in Coworking Cr.Hub (Venezia, Tuesday 27 October at 09:00), VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, Tuesday 27 October at 10:00), Thresholds of Being – Collective Exhibition (Venezia, Tuesday 27 October at 10:00), Hidden Venice: Secrets and Stories (Venezia, from 27 October to 28 October, 2 dates) and Consolato REM Brega presenta Baile, Botella y Baraja. Evento Collaterale, 6 (Venezia, Tuesday 27 October at 11:00) and more, all in the list above.
 
 **When is the next free events event?**
-CONTEMPORARY VENICE – 19TH EDITION 2026, Monday 26 October at 09:30, in Venezia. Free.
+Lino Tagliapietra Showroom - Glass Week 2026, Tuesday 27 October at 09:00, in Venezia. Free.
 
 **Free events events in Venice and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -4783,10 +4762,10 @@ https://anyplans.in/en/venezia/mountains/
 In Venice and its province there are 5 hikes and mountain outings in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which mountains and hiking events in Venice and its province are coming up?**
-There are 5 events: THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, from 26 October to 27 October, 2 dates), VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, Tuesday 27 October at 10:00), Lazzaretto Nuovo - Il Sentiero delle Saline (Venezia, from 8 November to 8 November, 2 dates), LUSSO DI VALORE (Venezia, Monday 9 November at 11:30) and Venise (Wednesday 18 November at 18:00).
+There are 5 events: VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, Tuesday 27 October at 10:00), THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, Tuesday 27 October at 15:00), Lazzaretto Nuovo - Il Sentiero delle Saline (Venezia, from 8 November to 8 November, 2 dates), LUSSO DI VALORE (Venezia, Monday 9 November at 11:30) and Venise (Wednesday 18 November at 18:00).
 
 **When is the next mountains and hiking event?**
-THE VENICE ONLY THE LOCALS KNOW! (northern Venice), from 26 October to 27 October, 2 dates, in Venezia. Free.
+VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT!, Tuesday 27 October at 10:00, in Venezia. Free.
 
 **Mountains and hiking events in Venice and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -4797,10 +4776,10 @@ https://anyplans.in/en/venezia/sports/
 In Venice and its province there are 17 group sports in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which sports events in Venice and its province are coming up?**
-There are 17 events: THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, from 26 October to 27 October, 2 dates), Padel: mancano 2 giocatori (competitiva) (Venice, Monday 26 October at 18:30), VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, Tuesday 27 October at 10:00), Padel: manca 1 giocatore (competitiva) (Venice, Thursday 29 October at 21:00), Mezz'ora per Tè - Pratica gratuita di mindfulness (Venezia, Monday 2 November at 08:00) and Lazzaretto Nuovo - Il Sentiero delle Saline (Venezia, from 8 November to 8 November, 2 dates) and more, all in the list above.
+There are 17 events: VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, Tuesday 27 October at 10:00), THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, Tuesday 27 October at 15:00), Padel: mancano 3 giocatori (competitiva) (Venice, Thursday 29 October at 20:30), Padel: manca 1 giocatore (competitiva) (Venice, Thursday 29 October at 21:00), Mezz'ora per Tè - Pratica gratuita di mindfulness (Venezia, Monday 2 November at 08:00) and Lazzaretto Nuovo - Il Sentiero delle Saline (Venezia, from 8 November to 8 November, 2 dates) and more, all in the list above.
 
 **When is the next sports event?**
-THE VENICE ONLY THE LOCALS KNOW! (northern Venice), from 26 October to 27 October, 2 dates, in Venezia. Free.
+VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT!, Tuesday 27 October at 10:00, in Venezia. Free.
 
 **Sports events in Venice and its province: are they free?**
 15 out of 17. When there is a ticket or a fee, the price is on the event's page.
@@ -4819,30 +4798,30 @@ OGNI MERCOLEDI' ANDA VENICE HOSTEL - FREE ENTRY, Wednesday 28 October at 21:30, 
 **Festivals and events in Mestre: are they free?**
 19 out of 20. When there is a ticket or a fee, the price is on the event's page.
 
-## Festivals and events in Mira, Bergamo: 3 upcoming
+## Festivals and events in Mira, Bergamo: 2 upcoming
 https://anyplans.in/en/venezia/mira/
 
-In Mira there are 3 events in the coming months. On anyplans you find the festivals and events of Mira with dates, times and place. You sign up and go with others.
+In Mira there are 2 events in the coming months. On anyplans you find the festivals and events of Mira with dates, times and place. You sign up and go with others.
 
 **Which festivals and events in Mira are coming up?**
-There are 3 events: Gala Night Masterpiece Award 2026-Mostra e Cena di Gala (Mira, Monday 26 October at 18:00), Sebastiano Zanolli - Fare la grande differenza oggi. (Mira, Friday 6 November at 17:30) and CONFERENZA PUBBLICA - LA MEDITAZIONE YOGA E IL BENESSERE PSICOFISICO (Mira, Sunday 29 November at 16:00).
+There are 2 events: Sebastiano Zanolli - Fare la grande differenza oggi. (Mira, Friday 6 November at 17:30) and CONFERENZA PUBBLICA - LA MEDITAZIONE YOGA E IL BENESSERE PSICOFISICO (Mira, Sunday 29 November at 16:00).
 
 **When is the next festival in Mira?**
-Gala Night Masterpiece Award 2026-Mostra e Cena di Gala, Monday 26 October at 18:00, in Mira. Free.
+Sebastiano Zanolli - Fare la grande differenza oggi., Friday 6 November at 17:30, in Mira. Free.
 
 **Festivals and events in Mira: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Festivals and events in Spinea, Bergamo: 2…
+## Festivals and events in Spinea, Bergamo: 1…
 https://anyplans.in/en/venezia/spinea/
 
-In Spinea there are 2 events in the coming months. On anyplans you find the festivals and events of Spinea with dates, times and place. You sign up and go with others.
+In Spinea there is 1 event in the coming months. On anyplans you find the festivals and events of Spinea with dates, times and place. You sign up and go with others.
 
 **Which festivals and events in Spinea are coming up?**
-There are 2 events: Tavolo genitori single da Semaforo Rosso: 11 posti liberi (Spinea, Monday 26 October at 18:30) and La Compliance Normativa per una Rigenerazione Evolutiva (Spinea, Wednesday 18 November at 16:00).
+There is 1 event: La Compliance Normativa per una Rigenerazione Evolutiva (Spinea, Wednesday 18 November at 16:00).
 
 **When is the next festival in Spinea?**
-Tavolo genitori single da Semaforo Rosso: 11 posti liberi, Monday 26 October at 18:30, in Spinea. Free.
+La Compliance Normativa per una Rigenerazione Evolutiva, Wednesday 18 November at 16:00, in Spinea. Free.
 
 **Festivals and events in Spinea: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -4853,10 +4832,10 @@ https://anyplans.in/en/venezia/chirignago-zelarino/
 In Chirignago-Zelarino there are 3 events in the coming months. On anyplans you find the festivals and events of Chirignago-Zelarino with dates, times and place. You sign up and go with others.
 
 **Which festivals and events in Chirignago-Zelarino are coming up?**
-There are 3 events: Tablo & live music da Alla Grotta Risto-Pub: 1 posto libero (Chirignago-Zelarino, Friday 6 November at 19:00), .NET Conf 2026 XE (Chirignago-Zelarino, Saturday 14 November at 09:00) and Forte Gazzera - Presenze oltre le mura - "Spettacoli di Mistero" (Chirignago-Zelarino, Sunday 22 November at 10:00).
+There are 3 events: Karaoke da Alla Grotta Risto-Pub: 11 posti liberi (Chirignago-Zelarino, Saturday 31 October at 19:30), .NET Conf 2026 XE (Chirignago-Zelarino, Saturday 14 November at 09:00) and Forte Gazzera - Presenze oltre le mura - "Spettacoli di Mistero" (Chirignago-Zelarino, Sunday 22 November at 10:00).
 
 **When is the next festival in Chirignago-Zelarino?**
-Tablo & live music da Alla Grotta Risto-Pub: 1 posto libero, Friday 6 November at 19:00, in Chirignago-Zelarino. Free.
+Karaoke da Alla Grotta Risto-Pub: 11 posti liberi, Saturday 31 October at 19:30, in Chirignago-Zelarino. Free.
 
 **Festivals and events in Chirignago-Zelarino: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -4903,16 +4882,16 @@ IA ACT e Impresa, Wednesday 11 November at 16:00, in Marcon. Free.
 **Festivals and events in Marcon: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Festivals and events in Venice, Bergamo: 4…
+## Festivals and events in Venice, Bergamo: 3…
 https://anyplans.in/en/venezia/venice/
 
-In Venice there are 4 events in the coming months. On anyplans you find the festivals and events of Venice with dates, times and place. You sign up and go with others.
+In Venice there are 3 events in the coming months. On anyplans you find the festivals and events of Venice with dates, times and place. You sign up and go with others.
 
 **Which festivals and events in Venice are coming up?**
-There are 4 events: Choral music from europe (Venice, Monday 26 October at 15:00), GHIRLANDE NATALIZIE (Venice, Saturday 5 December at 10:30), Venetian-Inspired Tapas and Small Local Bites - Cooking Class in Venice | Cozymeal™ (Monday 7 December at 10:00) and Savoring Venice With Wine and Bites - Food Tour in Venice | Cozymeal™ (Friday 25 December at 11:00).
+There are 3 events: GHIRLANDE NATALIZIE (Venice, Saturday 5 December at 10:30), Venetian-Inspired Tapas and Small Local Bites - Cooking Class in Venice | Cozymeal™ (Monday 7 December at 10:00) and Savoring Venice With Wine and Bites - Food Tour in Venice | Cozymeal™ (Friday 25 December at 11:00).
 
 **When is the next festival in Venice?**
-Choral music from europe, Monday 26 October at 15:00, in Venice. Free.
+GHIRLANDE NATALIZIE, Saturday 5 December at 10:30, in Venice. Free.
 
 **Festivals and events in Venice: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -4959,41 +4938,41 @@ GAME CHANGER ITALY, Friday 30 October at 10:00, in Roncade. Free.
 **Festivals and events in Roncade: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Talks & culture in Venice today: 3 events
+## Talks & culture in Venice today: 7 events
 https://anyplans.in/en/venezia/talks-and-culture-today/
 
-Today, 26 October 2026, in Venice and its province: 3 talks & culture events. Each with time, place, price and how to join.
+Today, 27 October 2026, in Venice and its province: 7 talks & culture events. Each with time, place, price and how to join.
 
 **Which talks & culture events in Venice and its province are coming up?**
-There are 3 events: CONTEMPORARY VENICE – 19TH EDITION 2026 (Venezia, Monday 26 October at 09:30), AI Hospitality Lab: Persone, tecnologie e nuovi modelli per l'ospitalità (Venezia, Monday 26 October at 14:00) and Plissé. Workshop per docenti (Venezia, Monday 26 October at 16:00).
+There are 7 events: Lino Tagliapietra Showroom - Glass Week 2026 (Venezia, Tuesday 27 October at 09:00), Il tuo ingresso in Coworking Cr.Hub (Venezia, Tuesday 27 October at 09:00), Hidden Venice: Secrets and Stories (Venezia, from 27 October to 28 October, 2 dates), VANTAGGI DEL WELFARE TERRITORIALE - Mestre (Venezia, Tuesday 27 October at 14:30), PAINTINGS ABOUT THE ORIGIN OF LIFE by Peer (Venezia, Tuesday 27 October at 18:00) and New Argonauts of Attention - Jonardon Ganeri (Venezia, Tuesday 27 October at 18:00) and more, all in the list above.
 
 **When is the next talks & culture event?**
-CONTEMPORARY VENICE – 19TH EDITION 2026, Monday 26 October at 09:30, in Venezia. Free.
+Lino Tagliapietra Showroom - Glass Week 2026, Tuesday 27 October at 09:00, in Venezia. Free.
 
 **Talks & culture events in Venice and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Free events in Venice today: 9 events
+## Free events in Venice today: 13 events
 https://anyplans.in/en/venezia/free-today/
 
-Today, 26 October 2026, in Venice and its province: 9 free events. Each with time, place, price and how to join.
+Today, 27 October 2026, in Venice and its province: 13 free events. Each with time, place, price and how to join.
 
 **Which free events events in Venice and its province are coming up?**
-There are 9 events: CONTEMPORARY VENICE – 19TH EDITION 2026 (Venezia, Monday 26 October at 09:30), AI Hospitality Lab: Persone, tecnologie e nuovi modelli per l'ospitalità (Venezia, Monday 26 October at 14:00), THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (Venezia, from 26 October to 27 October, 2 dates), Choral music from europe (Venice, Monday 26 October at 15:00), Plissé. Workshop per docenti (Venezia, Monday 26 October at 16:00) and Gala Night Masterpiece Award 2026-Mostra e Cena di Gala (Mira, Monday 26 October at 18:00) and more, all in the list above.
+There are 13 events: Lino Tagliapietra Showroom - Glass Week 2026 (Venezia, Tuesday 27 October at 09:00), Il tuo ingresso in Coworking Cr.Hub (Venezia, Tuesday 27 October at 09:00), VENICE HIGHLIGHTS YOU DON'T KNOW ABOUT! (Venezia, Tuesday 27 October at 10:00), Thresholds of Being – Collective Exhibition (Venezia, Tuesday 27 October at 10:00), Hidden Venice: Secrets and Stories (Venezia, from 27 October to 28 October, 2 dates) and Consolato REM Brega presenta Baile, Botella y Baraja. Evento Collaterale, 6 (Venezia, Tuesday 27 October at 11:00) and more, all in the list above.
 
 **When is the next free events event?**
-CONTEMPORARY VENICE – 19TH EDITION 2026, Monday 26 October at 09:30, in Venezia. Free.
+Lino Tagliapietra Showroom - Glass Week 2026, Tuesday 27 October at 09:00, in Venezia. Free.
 
 **Free events events in Venice and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Venues in Venice: 50
+## Venues in Venice: 47
 https://anyplans.in/en/venezia/venues/
 
-50 venues in Venice and its province with something on: clubs, bars, sports centres, theatres and squares. One page each, with the upcoming dates.
+47 venues in Venice and its province with something on: clubs, bars, sports centres, theatres and squares. One page each, with the upcoming dates.
 
 **Which venues are on anyplans in Venice?**
-50: M9 - Museo del '900, Scuola Grande di San Marco, Serra dei Giardini, Ateneo Veneto, Palazzetto Bru Zane, Art and Wine Lab Venezia, Teatro Toniolo and Teatro Corso and more. Each has its own page with the upcoming dates.
+47: M9 - Museo del '900, Scuola Grande di San Marco, Serra dei Giardini, Ateneo Veneto, Palazzetto Bru Zane, Art and Wine Lab Venezia, Teatro Toniolo and Teatro Corso and more. Each has its own page with the upcoming dates.
 
 **I run a venue: how do I get on here?**
 Publish your dates on anyplans: sign up, create your group and add the events. The page of your venue builds itself from the dates you publish.
@@ -5157,7 +5136,7 @@ https://anyplans.in/en/venezia/venues/sph-venezia/
 SPH - Venezia in Venice: 2 upcoming events — padel. Date, time, price and how to join, one page each. You go with other people.
 
 **SPH - Venezia: what's on?**
-2 upcoming events: Padel: mancano 2 giocatori (competitiva) (monday 26 october at 18:30) and Padel: manca 1 giocatore (competitiva) (thursday 29 october at 21:00).
+2 upcoming events: Padel: mancano 3 giocatori (competitiva) (thursday 29 october at 20:30) and Padel: manca 1 giocatore (competitiva) (thursday 29 october at 21:00).
 
 **SPH - Venezia: where is it?**
 SPH - Venezia, Via Linghindal 7, 30172 Venezia (VE), 30172 Venezia, Venice. Every event page has the meeting point and a link to the map.
@@ -5222,10 +5201,10 @@ Yes. On anyplans you see who else is going and you join them. Sign-up is free, y
 ## Alla Grotta Risto-Pub: events and nights out in…
 https://anyplans.in/en/venezia/venues/alla-grotta-risto-pub/
 
-Alla Grotta Risto-Pub in Chirignago-Zelarino: 1 upcoming event — dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
+Alla Grotta Risto-Pub in Chirignago-Zelarino: 1 upcoming event — karaoke. Date, time, price and how to join, one page each. You go with other people.
 
 **Alla Grotta Risto-Pub: what's on?**
-1 upcoming event: Tablo & live music da Alla Grotta Risto-Pub: 1 posto libero (friday 6 november at 19:00).
+1 upcoming event: Karaoke da Alla Grotta Risto-Pub: 11 posti liberi (saturday 31 october at 19:30).
 
 **Alla Grotta Risto-Pub: where is it?**
 Alla Grotta Risto-Pub, Chirignago-Zelarino. Every event page has the meeting point and a link to the map.
@@ -5375,10 +5354,10 @@ Yes. On anyplans you see who else is going and you join them. Sign-up is free, y
 ## Villa Widmann: what's on in Mira
 https://anyplans.in/en/venezia/venues/villa-widmann/
 
-Villa Widmann in Mira: 3 upcoming events — exhibitions, town festivals & fairs and yoga & pilates. Date, time, price and how to join, one page each. You go with other people.
+Villa Widmann in Mira: 2 upcoming events — town festivals & fairs and yoga & pilates. Date, time, price and how to join, one page each. You go with other people.
 
 **Villa Widmann: what's on?**
-3 upcoming events: Gala Night Masterpiece Award 2026-Mostra e Cena di Gala (monday 26 october at 18:00), Sebastiano Zanolli - Fare la grande differenza oggi. (friday 6 november at 17:30) and CONFERENZA PUBBLICA - LA MEDITAZIONE YOGA E IL BENESSERE PSICOFISICO (sunday 29 november at 16:00).
+2 upcoming events: Sebastiano Zanolli - Fare la grande differenza oggi. (friday 6 november at 17:30) and CONFERENZA PUBBLICA - LA MEDITAZIONE YOGA E IL BENESSERE PSICOFISICO (sunday 29 november at 16:00).
 
 **Villa Widmann: where is it?**
 Villa Widmann, Mira. Every event page has the meeting point and a link to the map.
@@ -5392,10 +5371,10 @@ Yes. On anyplans you see who else is going and you join them. Sign-up is free, y
 ## Anda Venice: events and nights out in Venezia Mestre
 https://anyplans.in/en/venezia/venues/anda-venice/
 
-Anda Venice in Venezia Mestre: 4 upcoming events — karaoke, concerts & live music, dinners & aperitivo and town festivals & fairs. Date, time, price and how to join, one page each. You go with other people.
+Anda Venice in Venezia Mestre: 3 upcoming events — concerts & live music, dinners & aperitivo and town festivals & fairs. Date, time, price and how to join, one page each. You go with other people.
 
 **Anda Venice: what's on?**
-4 upcoming events: Karaoke Night (gratuito!) (monday 26 october at 21:30), Music Bingo (tuesday 27 october at 21:30), Beerpong! (thursday 29 october at 21:30) and EcoSwap Party @ Anda - Mercatino dello scambio ♻️ (friday 30 october at 18:00).
+3 upcoming events: Music Bingo (tuesday 27 october at 21:30), Beerpong! (thursday 29 october at 21:30) and EcoSwap Party @ Anda - Mercatino dello scambio ♻️ (friday 30 october at 18:00).
 
 **Anda Venice: where is it?**
 Anda Venice, Venezia Mestre. Every event page has the meeting point and a link to the map.
@@ -5508,23 +5487,6 @@ All the upcoming events are free. The price is on each event page.
 **Location provided after booking: can I go alone?**
 Yes. On anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
 
-## Palazzo Albrizzi-Capello: what's on in Venezia
-https://anyplans.in/en/venezia/venues/palazzo-albrizzi-capello/
-
-Palazzo Albrizzi-Capello in Venezia: 1 upcoming event — talks & culture. Date, time, price and how to join, one page each. You go with other people.
-
-**Palazzo Albrizzi-Capello: what's on?**
-1 upcoming event: CONTEMPORARY VENICE – 19TH EDITION 2026 (monday 26 october at 09:30).
-
-**Palazzo Albrizzi-Capello: where is it?**
-Palazzo Albrizzi-Capello, Venezia. Every event page has the meeting point and a link to the map.
-
-**Palazzo Albrizzi-Capello: how much is it?**
-All the upcoming events are free. The price is on each event page.
-
-**Palazzo Albrizzi-Capello: can I go alone?**
-Yes. On anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
-
 ## Palazzo Pisani Revedin: what's on in Venezia
 https://anyplans.in/en/venezia/venues/palazzo-pisani-revedin/
 
@@ -5540,23 +5502,6 @@ Palazzo Pisani Revedin, Venezia. Every event page has the meeting point and a li
 All the upcoming events are free. The price is on each event page.
 
 **Palazzo Pisani Revedin: can I go alone?**
-Yes. On anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
-
-## Semaforo Rosso: events and nights out in Spinea
-https://anyplans.in/en/venezia/venues/semaforo-rosso/
-
-Semaforo Rosso in Spinea: 1 upcoming event — dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
-
-**Semaforo Rosso: what's on?**
-1 upcoming event: Tavolo genitori single da Semaforo Rosso: 11 posti liberi (monday 26 october at 18:30).
-
-**Semaforo Rosso: where is it?**
-Semaforo Rosso, Spinea. Every event page has the meeting point and a link to the map.
-
-**Semaforo Rosso: how much is it?**
-All the upcoming events are free. The price is on each event page.
-
-**Semaforo Rosso: can I go alone?**
 Yes. On anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
 
 ## Calle dei Vedei: what's on in Venezia
@@ -5814,23 +5759,6 @@ All the upcoming events are free. The price is on each event page.
 **Teatro Del Parco: can I go alone?**
 Yes. On anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
 
-## Chiesa di Santa Maria della Fava o della Consolazione:…
-https://anyplans.in/en/venezia/venues/chiesa-di-santa-maria-della-fava-o-della-consolazione/
-
-Chiesa di Santa Maria della Fava o della Consolazione in Venezia: 1 upcoming event — hiking. Date, time, price and how to join, one page each. You go with other people.
-
-**Chiesa di Santa Maria della Fava o della Consolazione: what's on?**
-1 upcoming event: THE VENICE ONLY THE LOCALS KNOW! (northern Venice) (from 26 october to 27 october, 2 dates).
-
-**Chiesa di Santa Maria della Fava o della Consolazione: where is it?**
-Chiesa di Santa Maria della Fava o della Consolazione, Castello, Venezia. Every event page has the meeting point and a link to the map.
-
-**Chiesa di Santa Maria della Fava o della Consolazione: how much is it?**
-All the upcoming events are free. The price is on each event page.
-
-**Chiesa di Santa Maria della Fava o della Consolazione: can I go alone?**
-Yes. On anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
-
 ## Campo della Maddalena: what's on in Venezia
 https://anyplans.in/en/venezia/venues/campo-della-maddalena/
 
@@ -5876,7 +5804,7 @@ Talks & culture in Murano Showroom, Venezia, Tuesday 27 October at 09:00. Free (
 ## The Venice Only the Locals Know! (northern Venice) – Venezia
 https://anyplans.in/en/venezia/the-venice-only-the-locals-know-northern-venice/
 
-Hiking in Chiesa di Santa Maria della Fava o della Consolazione, Castello, Venezia, Monday 26 October at 15:00 (2 dates, until 27 October). Free (Biglietti su Eventbrite).
+Hiking in Chiesa di Santa Maria della Fava o della Consolazione, Castello, Venezia, Tuesday 27 October at 15:00. Free (Biglietti su Eventbrite).
 
 ## Venice: Sunset Boat Aperitif with Music on the Lagoon – Venezia
 https://anyplans.in/en/venezia/venice-sunset-boat-aperitif-with-music-on-the-lagoon/
@@ -6123,20 +6051,20 @@ https://anyplans.in/en/venezia/lazzaretto-nuovo-i-graffiti-del-tezon-grande/
 
 Guided tours in Lazzareto Nuovo, Venezia: it already took place, the last date was Saturday, 19 September 2026.
 
-## Padel: mancano 2 giocatori (competitiva) – SPH - Venezia
+## Padel: mancano 3 giocatori (competitiva) – SPH - Venezia
 https://anyplans.in/en/venezia/padel-competitiva/
 
-Padel in SPH - Venezia, Via Linghindal 7, 30172 Venezia (VE), 30172 Venezia, Monday 26 October at 18:30. €15 (Si chiede il posto e si paga su Playtomic).
+Padel in SPH - Venezia, Via Linghindal 7, 30172 Venezia (VE), 30172 Venezia, Thursday 29 October at 20:30. €30 (Si chiede il posto e si paga su Playtomic).
 
 ## Padel: manca 1 giocatore (competitiva) – SPH - Venezia
 https://anyplans.in/en/venezia/padel-competitiva-2026-10-29/
 
 Padel in SPH - Venezia, Via Linghindal 7, 30172 Venezia (VE), 30172 Venezia, Thursday 29 October at 21:00. €15 (Si chiede il posto e si paga su Playtomic).
 
-## Padel: mancano 3 giocatori (competitiva) – SPH - Venezia
-https://anyplans.in/en/venezia/padel-competitiva-2026-10-22/
+## Padel: mancano 2 giocatori (competitiva) – SPH - Venezia
+https://anyplans.in/en/venezia/padel-competitiva-2026-10-20/
 
-Padel in SPH - Venezia, Via Linghindal 7, 30172 Venezia (VE), 30172 Venezia: it already took place, the last date was Thursday, 22 October 2026.
+Padel in SPH - Venezia, Via Linghindal 7, 30172 Venezia (VE), 30172 Venezia: it already took place, the last date was Tuesday, 20 October 2026.
 
 ## Visita Guidata (in italiano) | The Transparent Breath 2026 – Venezia
 https://anyplans.in/en/venezia/visita-guidata-in-italiano-the-transparent-breath-2026/
@@ -6236,12 +6164,12 @@ Exhibitions in Venezia, Venezia: it already took place, the last date was Monday
 ## Lezione Prova di Improvvisazione teatrale Mirano (VE) - Corsi 2026/27 – Vetrego
 https://anyplans.in/en/venezia/lezione-prova-di-improvvisazione-teatrale-mirano-ve-corsi/
 
-Shows & theatre in Via Vetrego, 116, Vetrego, Monday 26 October at 20:30. Free (Biglietti su Eventbrite).
+Shows & theatre in Via Vetrego, 116, Vetrego: it already took place, the last date was Monday, 26 October 2026.
 
 ## Karaoke Night (gratuito!) – Anda Venice
 https://anyplans.in/en/venezia/karaoke-night-gratuito/
 
-Karaoke in Anda Venice, Venezia Mestre, Monday 26 October at 21:30. Free (Biglietti su Eventbrite).
+Karaoke in Anda Venice, Venezia Mestre: it already took place, the last date was Monday, 26 October 2026.
 
 ## Venice Highlights Audio Tour: Grandeur of the Serenissima – Venezia
 https://anyplans.in/en/venezia/venice-highlights-audio-tour-grandeur-of-the-serenissima/
@@ -7086,7 +7014,7 @@ Dinners & aperitivo in Hostaria Vite Rossa, Venezia: it already took place, the 
 ## Contemporary Venice – Palazzo Albrizzi-Capello
 https://anyplans.in/en/venezia/contemporary-venice-19th-edition-2026/
 
-Talks & culture in Palazzo Albrizzi-Capello, Venezia, Monday 26 October at 09:30. Free (Biglietti su Eventbrite).
+Talks & culture in Palazzo Albrizzi-Capello, Venezia: it already took place, the last date was Monday, 26 October 2026.
 
 ## Inspirational Talk w/ Julian Brown from @naturejab_ – Roncade
 https://anyplans.in/en/venezia/inspirational-talk-w-julian-brown-from-naturejab/
@@ -7466,27 +7394,22 @@ Shows & theatre in Villa Belvedere, Mirano: it already took place, the last date
 ## AI Hospitality Lab: Persone – NH Collection Venezia
 https://anyplans.in/en/venezia/ai-hospitality-lab-persone-tecnologie-e-nuovi-modelli-per-l-/
 
-Talks & culture in NH Collection Venezia, Venezia, Monday 26 October at 14:00. Free (Biglietti su Eventbrite).
+Talks & culture in NH Collection Venezia, Venezia: it already took place, the last date was Monday, 26 October 2026.
 
 ## Choral music from europe – Basilica dei Santi Maria e Donato
 https://anyplans.in/en/venezia/choral-music-from-europe/
 
-Concerts & live music in Basilica dei Santi Maria e Donato, Venice, Monday 26 October at 15:00. Free (Biglietti su Eventbrite).
+Concerts & live music in Basilica dei Santi Maria e Donato, Venice: it already took place, the last date was Monday, 26 October 2026.
 
 ## Plissé. Workshop per docenti – Collezione Peggy Guggenheim
 https://anyplans.in/en/venezia/plisse-workshop-per-docenti/
 
-Talks & culture in Collezione Peggy Guggenheim, Venezia, Monday 26 October at 16:00. Free (Biglietti su Eventbrite).
+Talks & culture in Collezione Peggy Guggenheim, Venezia: it already took place, the last date was Monday, 26 October 2026.
 
 ## Gala Night Masterpiece Award 2026-Mostra e Cena di Gala – Mira
 https://anyplans.in/en/venezia/gala-night-masterpiece-award-2026-mostra-e-cena-di-gala/
 
-Exhibitions in Villa Widmann, Mira, Monday 26 October at 18:00. Free (Biglietti su Eventbrite).
-
-## Tavolo genitori single da Semaforo Rosso: 11 posti liberi
-https://anyplans.in/en/venezia/tavolo-genitori-single-da-semaforo-rosso/
-
-Dinners & aperitivo in Semaforo Rosso, Spinea, Monday 26 October at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+Exhibitions in Villa Widmann, Mira: it already took place, the last date was Monday, 26 October 2026.
 
 ## Il tuo ingresso in Coworking Cr.Hub – The Cr.Hub
 https://anyplans.in/en/venezia/il-tuo-ingresso-in-coworking-cr-hub/
@@ -7588,6 +7511,11 @@ https://anyplans.in/en/venezia/dardust-desiderio-risonanze-tra-arte-e-musica-fes
 
 Town festival in The Home of The Human Safety Net Venice, Venezia, Friday 30 October at 18:30. Free (Biglietti su Eventbrite).
 
+## Cena da Terminal 2.0: 3 posti liberi
+https://anyplans.in/en/venezia/cena-da-terminal-2-0/
+
+Dinners & aperitivo in Terminal 2.0, Venezia, Friday 30 October at 18:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
 ## Venice Art Talks | Il Silenzio come Possibilità | 31.10.2026 – Venezia
 https://anyplans.in/en/venezia/venice-art-talks-il-silenzio-come-possibilita-31-10-2026/
 
@@ -7617,6 +7545,11 @@ Exhibitions in Basilica dei Santi Giovanni e Paolo, Venezia, Saturday 31 October
 https://anyplans.in/en/venezia/mystery-masks-painting-venice-in-watercolor-with-karen-schaa/
 
 Painting & art in Centro Culturale Don Orione Artigianelli, Venezia, Saturday 31 October at 19:00. Free (Biglietti su Eventbrite).
+
+## Karaoke da Alla Grotta Risto-Pub: 11 posti liberi
+https://anyplans.in/en/venezia/karaoke-da-alla-grotta-risto-pub/
+
+Karaoke in Alla Grotta Risto-Pub, Chirignago-Zelarino, Saturday 31 October at 19:30. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## "Bridges" Concerto Jazz dei Docenti del Cons. B.…
 https://anyplans.in/en/venezia/bridges-concerto-jazz-dei-docenti-del-cons-b-marcello-di-ven/
@@ -7693,12 +7626,7 @@ https://anyplans.in/en/venezia/sebastiano-zanolli-fare-la-grande-differenza-oggi
 
 Town festival in Villa Widmann, Mira, Friday 6 November at 17:30. Free (Biglietti su Eventbrite).
 
-## Tablo & live music da Alla Grotta Risto-Pub: 1 posto…
-https://anyplans.in/en/venezia/tablo-live-music-da-alla-grotta-risto-pub-o-libero/
-
-Dinners & aperitivo in Alla Grotta Risto-Pub, Chirignago-Zelarino, Friday 6 November at 19:00. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Cena da Ristorante Kalispera: 6 posti liberi
+## Cena da Ristorante Kalispera: 5 posti liberi
 https://anyplans.in/en/venezia/cena-da-ristorante-kalispera/
 
 Dinners & aperitivo in Ristorante Kalispera, Dolo, Friday 6 November at 19:15. Free (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).

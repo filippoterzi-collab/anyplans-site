@@ -139,7 +139,13 @@ footer a:hover{color:var(--ink)}
 <h1>☕🍰 Un dolce incontro da Toffolo! da Pasticceria Caffetteria Toffolo: 3 posti liberi</h1>
 
 <p class="lead">Cena / aperitivo a Pasticceria Caffetteria Toffolo, Portogruaro: si è già svolto, l&#39;ultima data è stata domenica 25 ottobre 2026.</p>
-<div class="box in"><h2>Questo evento è passato</h2><div class="m">L'ultima data è stata domenica 25 ottobre 2026. Se torna, le date nuove compaiono qui.</div><div class="cta"><a class="btn" href="/?citta=pordenone">Vedi cosa c'è adesso</a></div></div>
+<div class="box in"><h2>Questo evento è passato</h2><div class="m">L'ultima data è stata domenica 25 ottobre 2026. Se torna, le date nuove compaiono qui.</div><div class="cta"><a class="btn" href="/?citta=pordenone">Vedi cosa c'è adesso</a></div></div><section class="nearby" id="vicino" data-past="1" data-place="Portogruaro">
+<h2 id="vicino-h">È già passato, ma stasera qui vicino c'è altro</h2>
+<p class="m" id="vicino-sub">A meno di 10 km da Portogruaro.</p>
+<ul id="vicino-list"><li><a href="/pordenone/vantaggi-del-welfare-territoriale-portogruaro/" aria-label="VANTAGGI DEL WELFARE TERRITORIALE - Portogruaro, 20:30, Borgo Sant&#39;Agnese, 23"><span class="em" aria-hidden="true">📚</span><span class="c"><span class="t">VANTAGGI DEL WELFARE TERRITORIALE - Portogruaro</span><span class="m">20:30 · Borgo Sant&#39;Agnese, 23</span><span class="m3"><span class="chip solo">Ci puoi andare da solo</span></span></span><span class="ar" aria-hidden="true">›</span></a></li></ul>
+<a class="lnk" id="vicino-map" href="/?citta=pordenone&quando=sera">Tutti gli eventi di stasera sulla mappa →</a>
+<script type="application/json" id="vicino-data">[{"u":"/pordenone/vantaggi-del-welfare-territoriale-portogruaro/","t":"VANTAGGI DEL WELFARE TERRITORIALE - Portogruaro","e":"📚","s":"2026-10-28T19:30:00.000Z","en":"2026-10-28T21:00:00.000Z","w":"Borgo Sant'Agnese, 23","km":0,"g":0,"x":1,"solo":"auto"}]</script>
+</section>
 <div class="box">
   <h2>Quando</h2>
   
@@ -174,9 +180,35 @@ Un&#39;occasione per conoscere nuove persone, ritrovare vecchi amici perché in 
 
 <h2>Eventi simili</h2><div class="list"><a class="card" href="https://anyplans.in/pordenone/oracle-bistrot-polo-cucine-lainox-26-by-daniel-donolato/"><span class="em">🍽️</span><span><span class="t">ORACLE BISTROT- POLO CUCINE| LAINOX | 27/10/26 by DANIEL DONOLATO</span><br><span class="m">Martedì 27 ottobre alle 14:30 · Via Cal de Prade, 107, Vittorio Veneto</span></span></a>
 <a class="card" href="https://anyplans.in/pordenone/kitchen-triathlon-gastronomia-2026-by-daniel-donolato/"><span class="em">🍽️</span><span><span class="t">KITCHEN TRIATHLON- GASTRONOMIA | 28/10/2026 by Daniel Donolato</span><br><span class="m">Mercoledì 28 ottobre alle 14:30 · LAINOX Ali Group, San Giacomo di Veglia</span></span></a>
-<a class="card" href="https://anyplans.in/pordenone/cena-da-molo-o-libero/"><span class="em">🍽️</span><span><span class="t">Cena da Molo: 1 posto libero</span><br><span class="m">Mercoledì 28 ottobre alle 19:00 · Molo, Pordenone</span></span></a>
-<a class="card" href="https://anyplans.in/pordenone/cena-da-molo/"><span class="em">🍽️</span><span><span class="t">Cena da Molo: 6 posti liberi</span><br><span class="m">Mercoledì 28 ottobre alle 19:30 · Molo, Pordenone</span></span></a></div>
-
+<a class="card" href="https://anyplans.in/pordenone/cena-da-molo/"><span class="em">🍽️</span><span><span class="t">Cena da Molo: 6 posti liberi</span><br><span class="m">Mercoledì 28 ottobre alle 19:30 · Molo, Pordenone</span></span></a>
+<a class="card" href="https://anyplans.in/pordenone/cena-da-neko-izakaya-trattoria-giapponese/"><span class="em">🍽️</span><span><span class="t">Cena da NEKO IZAKAYA - TRATTORIA GIAPPONESE: 4 posti liberi</span><br><span class="m">Giovedì 29 ottobre alle 19:00 · NEKO IZAKAYA - TRATTORIA GIAPPONESE, Porcia</span></span></a></div>
+<script>
+(function(){ var sec = document.getElementById("vicino"), raw = document.getElementById("vicino-data"); if (!sec || !raw) return;
+  var C; try { C = JSON.parse(raw.textContent); } catch (_) { return; }
+  var T = {"tonight":"Altre cose vicino, stasera","tomorrow":"Altre cose vicino, domani sera","pastT":"È già passato, ma stasera qui vicino c'è altro","pastTm":"È già passato, ma domani sera qui vicino c'è altro","mapT":"Tutti gli eventi di stasera sulla mappa →","mapTm":"Tutti gli eventi di domani sulla mappa →","empty":"Per stasera qui vicino non c'è altro.","next":"I prossimi giorni sulla mappa →","inMin":"tra ","min":" min","now":"in corso"};
+  var past = sec.dataset.past === "1", esc = function(t){ return String(t).replace(/[&<>"]/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var fmt = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+  var dk = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" });
+  function gp(x){ if (!x.g) return ""; return x.x ? (x.g === 1 ? "1 da anyplans ci va" : x.g + " da anyplans ci vanno") : (x.g === 1 ? "1 persona ci va" : x.g + " persone ci vanno")}; }
+  function build(){
+    var now = new Date(), today = dk.format(now), tom = dk.format(new Date(now.getTime() + 864e5));
+    var live = C.filter(function(x){ var s = new Date(x.s), e = x.en ? new Date(x.en) : new Date(s.getTime() + 3 * 36e5); return e > now && s.getTime() >= now.getTime() - 30 * 6e4; });
+    var hour = function(x){ return +fmt.format(new Date(x.s)).slice(0, 2); };
+    var ton = live.filter(function(x){ return dk.format(new Date(x.s)) === today && hour(x) >= 18; }), day = "sera", rows = ton;
+    if (ton.length < 2) { var tm = live.filter(function(x){ return dk.format(new Date(x.s)) === tom; }), tme = tm.filter(function(x){ return hour(x) >= 18; }); rows = tme.length >= 2 ? tme : tme.concat(tm.filter(function(x){ return hour(x) < 18; })); day = "domani"; if (!rows.length && ton.length) { rows = ton; day = "sera"; } }
+    var h = document.getElementById("vicino-h"), sub = document.getElementById("vicino-sub"), ul = document.getElementById("vicino-list"), mp = document.getElementById("vicino-map");
+    if (!rows.length) { h.textContent = past ? T.pastT : T.tonight; ul.innerHTML = ""; sub.textContent = T.empty; mp.textContent = T.next; mp.href = "/?citta=pordenone"; return; }
+    h.textContent = past ? (day === "sera" ? T.pastT : T.pastTm) : (day === "sera" ? T.tonight : T.tomorrow);
+    mp.textContent = day === "sera" ? T.mapT : T.mapTm; mp.href = "/?citta=pordenone&quando=" + day;
+    ul.innerHTML = rows.slice(0, 4).map(function(x, i){ var s = new Date(x.s), min = Math.round((s - now) / 6e4), rel = min < 0 ? '<b class="now">' + T.now + '</b>' : min <= 90 ? '<b class="soon">' + T.inMin + min + T.min + '</b>' : "";
+      return '<li><a href="' + esc(x.u) + '" data-pos="' + (i + 1) + '"><span class="em" aria-hidden="true">' + x.e + '</span><span class="c"><span class="t">' + esc(x.t) + '</span><span class="m">' + fmt.format(s) + (rel ? " · " + rel : "") + (x.w ? " · " + esc(x.w) : "") + (x.km >= 1 ? " · " + x.km + " km" : "") + '</span>' + (x.g > 0 || x.solo ? '<span class="m3">' + (x.g > 0 ? '<span class="g">' + gp(x) + '</span>' : '') + (x.solo ? '<span class="chip solo' + (x.solo === "pick" ? " pick" : "") + '">' + T.solo + '</span>' : '') + '</span>' : '') + '</span><span class="ar" aria-hidden="true">›</span></a></li>'; }).join("");
+    ul.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ if (window.apTrack) apTrack("seo_vicino_tap", a.getAttribute("href") + "?pos=" + a.dataset.pos); }); });
+    mp.onclick = function(){ if (window.apTrack) apTrack("seo_vicino_mappa", location.pathname + "?d=" + day); };
+    if (!build.seen && "IntersectionObserver" in window) { build.seen = true; new IntersectionObserver(function(en, o){ if (en.some(function(x){ return x.isIntersecting; })) { o.disconnect(); if (window.apTrack) apTrack("seo_vicino_view", location.pathname + "?n=" + Math.min(rows.length, 4) + "&d=" + day); } }, { threshold: .5 }).observe(sec); }
+  }
+  build(); setInterval(build, 60e3);
+})();
+</script>
 </main>
 <footer><div class="wrap">
   <span>© 2026 Filippo Terzi · anyplans</span>
