@@ -169,7 +169,13 @@ footer a:hover{color:var(--ink)}
   <a class="btn ghost" href="/?citta=bari">See all events</a>
   
 </div>
-
+<section class="nearby" id="vicino" data-past="0" data-place="Bitonto">
+<h2 id="vicino-h">More things nearby</h2>
+<p class="m" id="vicino-sub">Within 10 km of Bitonto.</p>
+<ul id="vicino-list"><li><a href="/en/bari/padel-competitiva-2026-10-29-2/" aria-label="Padel: mancano 2 giocatori (competitiva), 19:00, FEMily Padel Club, Via Bitetto, 9 km"><span class="em" aria-hidden="true">🏸</span><span class="c"><span class="t">Padel: mancano 2 giocatori (competitiva)</span><span class="m">19:00 · FEMily Padel Club, Via Bitetto · 9 km</span></span><span class="ar" aria-hidden="true">›</span></a></li></ul>
+<a class="lnk" id="vicino-map" href="/?citta=bari&quando=sera">All tonight's events on the map →</a>
+<script type="application/json" id="vicino-data">[{"u":"/en/bari/padel-competitiva-2026-10-29-2/","t":"Padel: mancano 2 giocatori (competitiva)","e":"🏸","s":"2026-10-29T18:00:00.000Z","en":"2026-10-29T19:30:00.000Z","w":"FEMily Padel Club, Via Bitetto","km":9,"g":0,"x":1,"solo":null}]</script>
+</section>
 <div class="box" id="domande"><h2>Frequently asked questions</h2><details><summary>When is &quot;Ri-comincio da me: Aldilà del dolore e dei casi umani, inizi ad amarti&quot;?</summary><p>&quot;Ri-comincio da me: Aldilà del dolore e dei casi umani, inizi ad amarti&quot; takes place on Tuesday 29 December at 18:30, in Salotto Letterario De Gennaro, Bitonto.</p></details><details><summary>Where is &quot;Ri-comincio da me: Aldilà del dolore e dei casi umani, inizi ad amarti&quot;?</summary><p>The meeting point is Salotto Letterario De Gennaro, Bitonto, in the province of Bari; the page has a link to the map.</p></details><details><summary>How much does &quot;Ri-comincio da me: Aldilà del dolore e dei casi umani, inizi ad amarti&quot; cost?</summary><p>&quot;Ri-comincio da me: Aldilà del dolore e dei casi umani, inizi ad amarti&quot; is free: no ticket needed (Ingresso: vedi la pagina del Tacco di Bacco).</p></details><details><summary>Who organises &quot;Ri-comincio da me: Aldilà del dolore e dei casi umani, inizi ad amarti&quot;?</summary><p>It is organised by Salotto Letterario De Gennaro. anyplans collects the event and shows you who else is going.</p></details><details><summary>How do I join &quot;Ri-comincio da me: Aldilà del dolore e dei casi umani, inizi ad amarti&quot;?</summary><p>Sign up on anyplans with your email, open the event and say you&#39;re going: you see who organises it and who else is coming, so you don&#39;t go alone. You must be 18 or older.</p></details></div>
 
 <h2>Similar events</h2><div class="list"><a class="card" href="https://anyplans.in/en/bari/sei-personaggi-in-cerca-d-autore/"><span class="em">🎭</span><span><span class="t">Sei personaggi in cerca d&#39;autore</span><br><span class="m">Thursday 29 October at 20:30 · Teatro Comunale Luciani, Acquaviva delle Fonti</span></span></a>
@@ -198,6 +204,32 @@ footer a:hover{color:var(--ink)}
     else if (min > 0 && diffDays <= 7) txt = T.in + diffDays + (diffDays === 1 ? T.day : T.days);
     el.textContent = txt ? "· " + txt : "";
   })();
+</script><script>
+(function(){ var sec = document.getElementById("vicino"), raw = document.getElementById("vicino-data"); if (!sec || !raw) return;
+  var C; try { C = JSON.parse(raw.textContent); } catch (_) { return; }
+  var T = {"tonight":"More things nearby, tonight","tomorrow":"More things nearby, tomorrow evening","pastT":"It's over, but tonight there's more nearby","pastTm":"It's over, but tomorrow evening there's more nearby","mapT":"All tonight's events on the map →","mapTm":"All tomorrow's events on the map →","empty":"Nothing else nearby tonight.","next":"The next few days on the map →","inMin":"in ","min":" min","now":"happening now","solo":"You can go alone","g1":" is going","gN":" are going","from":" from anyplans"};
+  var past = sec.dataset.past === "1", esc = function(t){ return String(t).replace(/[&<>"]/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var fmt = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+  var dk = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" });
+  function gp(x){ if (!x.g) return ""; return x.g + (x.x ? T.from : "") + (x.g === 1 ? T.g1 : T.gN); }
+  function build(){
+    var now = new Date(), today = dk.format(now), tom = dk.format(new Date(now.getTime() + 864e5));
+    var live = C.filter(function(x){ var s = new Date(x.s), e = x.en ? new Date(x.en) : new Date(s.getTime() + 3 * 36e5); return e > now && s.getTime() >= now.getTime() - 30 * 6e4; });
+    var hour = function(x){ return +fmt.format(new Date(x.s)).slice(0, 2); };
+    var ton = live.filter(function(x){ return dk.format(new Date(x.s)) === today && hour(x) >= 18; }), day = "sera", rows = ton;
+    if (ton.length < 2) { var tm = live.filter(function(x){ return dk.format(new Date(x.s)) === tom; }), tme = tm.filter(function(x){ return hour(x) >= 18; }); rows = tme.length >= 2 ? tme : tme.concat(tm.filter(function(x){ return hour(x) < 18; })); day = "domani"; if (!rows.length && ton.length) { rows = ton; day = "sera"; } }
+    var h = document.getElementById("vicino-h"), sub = document.getElementById("vicino-sub"), ul = document.getElementById("vicino-list"), mp = document.getElementById("vicino-map");
+    if (!rows.length) { h.textContent = past ? T.pastT : T.tonight; ul.innerHTML = ""; sub.textContent = T.empty; mp.textContent = T.next; mp.href = "/?citta=bari"; return; }
+    h.textContent = past ? (day === "sera" ? T.pastT : T.pastTm) : (day === "sera" ? T.tonight : T.tomorrow);
+    mp.textContent = day === "sera" ? T.mapT : T.mapTm; mp.href = "/?citta=bari&quando=" + day;
+    ul.innerHTML = rows.slice(0, 4).map(function(x, i){ var s = new Date(x.s), min = Math.round((s - now) / 6e4), rel = min < 0 ? '<b class="now">' + T.now + '</b>' : min <= 90 ? '<b class="soon">' + T.inMin + min + T.min + '</b>' : "";
+      return '<li><a href="' + esc(x.u) + '" data-pos="' + (i + 1) + '"><span class="em" aria-hidden="true">' + x.e + '</span><span class="c"><span class="t">' + esc(x.t) + '</span><span class="m">' + fmt.format(s) + (rel ? " · " + rel : "") + (x.w ? " · " + esc(x.w) : "") + (x.km >= 1 ? " · " + x.km + " km" : "") + '</span>' + (x.g > 0 || x.solo ? '<span class="m3">' + (x.g > 0 ? '<span class="g">' + gp(x) + '</span>' : '') + (x.solo ? '<span class="chip solo' + (x.solo === "pick" ? " pick" : "") + '">' + T.solo + '</span>' : '') + '</span>' : '') + '</span><span class="ar" aria-hidden="true">›</span></a></li>'; }).join("");
+    ul.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ if (window.apTrack) apTrack("seo_vicino_tap", a.getAttribute("href") + "?pos=" + a.dataset.pos); }); });
+    mp.onclick = function(){ if (window.apTrack) apTrack("seo_vicino_mappa", location.pathname + "?d=" + day); };
+    if (!build.seen && "IntersectionObserver" in window) { build.seen = true; new IntersectionObserver(function(en, o){ if (en.some(function(x){ return x.isIntersecting; })) { o.disconnect(); if (window.apTrack) apTrack("seo_vicino_view", location.pathname + "?n=" + Math.min(rows.length, 4) + "&d=" + day); } }, { threshold: .5 }).observe(sec); }
+  }
+  build(); setInterval(build, 60e3);
+})();
 </script>
 </main>
 <footer><div class="wrap">

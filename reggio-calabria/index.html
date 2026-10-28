@@ -1140,7 +1140,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1793125816"></script>
+<script src="/bergamo/app.js?v=1793165091"></script>
 <script src="/bergamo/iab.js" defer></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
@@ -1173,8 +1173,11 @@ if (GATE_EVENTS) {
   addEventListener("DOMContentLoaded", () => { const lk = document.getElementById("maplock"); if (lk) lk.hidden = false; });
 }
 track("home_view");
+// la home di una città (/milano/) rimanda alla sua radice, non a "/" (28/10/2026: i milanesi dopo
+// la registrazione atterravano sulla home di Bergamo)
+function cityHome(){ try { const s = String(window.ANYPLANS_CITY || "").toLowerCase().trim(); if (s && s !== "bergamo") return "/" + s + "/"; } catch (_) {} return "/"; }
 function toLogin(why, next){
-  try { sessionStorage.setItem("anyplans_next", next || "/"); } catch (_) {}
+  try { sessionStorage.setItem("anyplans_next", next || cityHome()); } catch (_) {}
   track("wall_tap", "/?" + (why || "tap") + (WALL ? "" : "&open"));   // "&open" = home aperta (Google/diretto), per confrontare i due muri
   location.href = "/bergamo/login.html";
 }
@@ -1182,8 +1185,13 @@ function toLogin(why, next){
 document.addEventListener("click", e => {
   const g = e.target.closest("[data-gate]"); if (!g) return;
   if (LOCKED) { e.preventDefault(); e.stopPropagation(); toLogin(g.dataset.gate); return; }
-  // home aperta: il tocco su un evento (o su "Ci sono") porta a registrarsi e, dopo, dritti a quell'evento
-  if (GATE_EVENTS && (g.dataset.gate === "evento" || g.dataset.gate === "ci-sono")) { e.preventDefault(); e.stopPropagation(); toLogin(g.dataset.gate, g.getAttribute("href") || "/"); }
+  // home aperta: il tocco su un evento (o su "Ci sono") porta a registrarsi e, dopo, dritti a quell'evento;
+  // gli altri muri (mappa, lista) passano anche loro da toLogin, così il tap si conta e si torna alla città
+  if (GATE_EVENTS) {
+    e.preventDefault(); e.stopPropagation();
+    const ev = g.dataset.gate === "evento" || g.dataset.gate === "ci-sono";
+    toLogin(g.dataset.gate, ev ? (g.getAttribute("href") || cityHome()) : null);
+  }
 }, true);
 document.addEventListener("mousedown", e => { if (LOCKED && e.target.closest("#sort")) { e.preventDefault(); toLogin("ordina"); } }, true);
 document.addEventListener("focusin", e => { if (LOCKED && e.target.closest("#tsearch, #qsearch, #freedate")) { e.target.blur(); toLogin("cerca"); } }, true);

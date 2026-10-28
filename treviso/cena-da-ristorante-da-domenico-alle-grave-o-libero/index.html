@@ -139,7 +139,13 @@ footer a:hover{color:var(--ink)}
 <h1>Cena da Ristorante da Domenico alle Grave: 1 posto libero</h1>
 
 <p class="lead">Cena / aperitivo a Ristorante da Domenico alle Grave, Lovadina: si è già svolto, l&#39;ultima data è stata martedì 20 ottobre 2026.</p>
-<div class="box in"><h2>Questo evento è passato</h2><div class="m">L'ultima data è stata martedì 20 ottobre 2026. Se torna, le date nuove compaiono qui.</div><div class="cta"><a class="btn" href="/?citta=treviso">Vedi cosa c'è adesso</a></div></div>
+<div class="box in"><h2>Questo evento è passato</h2><div class="m">L'ultima data è stata martedì 20 ottobre 2026. Se torna, le date nuove compaiono qui.</div><div class="cta"><a class="btn" href="/?citta=treviso">Vedi cosa c'è adesso</a></div></div><section class="nearby" id="vicino" data-past="1" data-place="Lovadina">
+<h2 id="vicino-h">È già passato, ma stasera qui vicino c'è altro</h2>
+<p class="m" id="vicino-sub">A meno di 10 km da Lovadina.</p>
+<ul id="vicino-list"><li><a href="/treviso/cena-da-ristorante-da-domenico-alle-grave/" aria-label="Cena da Ristorante da Domenico alle Grave: 3 posti liberi, 18:45, Ristorante da Domenico alle Grave, Lovadina"><span class="em" aria-hidden="true">🍽️</span><span class="c"><span class="t">Cena da Ristorante da Domenico alle Grave: 3 posti liberi</span><span class="m">18:45 · Ristorante da Domenico alle Grave, Lovadina</span><span class="m3"><span class="chip solo">Ci puoi andare da solo</span></span></span><span class="ar" aria-hidden="true">›</span></a></li></ul>
+<a class="lnk" id="vicino-map" href="/?citta=treviso&quando=sera">Tutti gli eventi di stasera sulla mappa →</a>
+<script type="application/json" id="vicino-data">[{"u":"/treviso/cena-da-ristorante-da-domenico-alle-grave/","t":"Cena da Ristorante da Domenico alle Grave: 3 posti liberi","e":"🍽️","s":"2026-10-29T17:45:00.000Z","en":"2026-10-29T19:15:00.000Z","w":"Ristorante da Domenico alle Grave, Lovadina","km":0,"g":0,"x":1,"solo":"auto"}]</script>
+</section>
 <div class="box">
   <h2>Quando</h2>
   
@@ -173,9 +179,35 @@ footer a:hover{color:var(--ink)}
 <p class="m"><a class="lnk" href="/treviso/locali/ristorante-da-domenico-alle-grave/">Tutti gli eventi al Ristorante da Domenico alle Grave (1)</a></p>
 <h2>Eventi simili</h2><div class="list"><a class="card" href="https://anyplans.in/treviso/cena-da-jacky-s-parlour-pub/"><span class="em">🍽️</span><span><span class="t">Cena da Jacky&#39;S Parlour Pub: 9 posti liberi</span><br><span class="m">Mercoledì 28 ottobre alle 17:00 · Jacky&#39;S Parlour Pub, Castelfranco Veneto</span></span></a>
 <a class="card" href="https://anyplans.in/treviso/giapponese-corso-di-cucina-con-la-cuoca-di-tokyo-miki-hiura/"><span class="em">🍽️</span><span><span class="t">GIAPPONESE • Corso di Cucina con la Cuoca di Tokyo Miki Hiura</span><br><span class="m">Mercoledì 28 ottobre alle 20:00 · Corte San Francesco, Viale Burchiellati 12, 31100 Treviso, Italy, Treviso</span></span></a>
-<a class="card" href="https://anyplans.in/treviso/cena-da-ristorante-da-domenico-alle-grave/"><span class="em">🍽️</span><span><span class="t">Cena da Ristorante da Domenico alle Grave: 3 posti liberi</span><br><span class="m">Giovedì 29 ottobre alle 18:45 · Ristorante da Domenico alle Grave, Lovadina</span></span></a>
-<a class="card" href="https://anyplans.in/treviso/tablo-eng-da-birrificio-barch/"><span class="em">🍽️</span><span><span class="t">Tablo - ENG da Birrificio Barch: 8 posti liberi</span><br><span class="m">Giovedì 29 ottobre alle 20:30 · Birrificio Barch, Barcon</span></span></a></div>
-
+<a class="card" href="https://anyplans.in/treviso/tablo-eng-da-birrificio-barch/"><span class="em">🍽️</span><span><span class="t">Tablo - ENG da Birrificio Barch: 8 posti liberi</span><br><span class="m">Giovedì 29 ottobre alle 20:30 · Birrificio Barch, Barcon</span></span></a>
+<a class="card" href="https://anyplans.in/treviso/cena-da-ristorante-sanshi-mogliano-veneto/"><span class="em">🍽️</span><span><span class="t">Cena da Ristorante Sanshi Mogliano Veneto: 7 posti liberi</span><br><span class="m">Venerdì 30 ottobre alle 18:30 · Ristorante Sanshi Mogliano Veneto</span></span></a></div>
+<script>
+(function(){ var sec = document.getElementById("vicino"), raw = document.getElementById("vicino-data"); if (!sec || !raw) return;
+  var C; try { C = JSON.parse(raw.textContent); } catch (_) { return; }
+  var T = {"tonight":"Altre cose vicino, stasera","tomorrow":"Altre cose vicino, domani sera","pastT":"È già passato, ma stasera qui vicino c'è altro","pastTm":"È già passato, ma domani sera qui vicino c'è altro","mapT":"Tutti gli eventi di stasera sulla mappa →","mapTm":"Tutti gli eventi di domani sulla mappa →","empty":"Per stasera qui vicino non c'è altro.","next":"I prossimi giorni sulla mappa →","inMin":"tra ","min":" min","now":"in corso"};
+  var past = sec.dataset.past === "1", esc = function(t){ return String(t).replace(/[&<>"]/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var fmt = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+  var dk = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" });
+  function gp(x){ if (!x.g) return ""; return x.x ? (x.g === 1 ? "1 da anyplans ci va" : x.g + " da anyplans ci vanno") : (x.g === 1 ? "1 persona ci va" : x.g + " persone ci vanno")}; }
+  function build(){
+    var now = new Date(), today = dk.format(now), tom = dk.format(new Date(now.getTime() + 864e5));
+    var live = C.filter(function(x){ var s = new Date(x.s), e = x.en ? new Date(x.en) : new Date(s.getTime() + 3 * 36e5); return e > now && s.getTime() >= now.getTime() - 30 * 6e4; });
+    var hour = function(x){ return +fmt.format(new Date(x.s)).slice(0, 2); };
+    var ton = live.filter(function(x){ return dk.format(new Date(x.s)) === today && hour(x) >= 18; }), day = "sera", rows = ton;
+    if (ton.length < 2) { var tm = live.filter(function(x){ return dk.format(new Date(x.s)) === tom; }), tme = tm.filter(function(x){ return hour(x) >= 18; }); rows = tme.length >= 2 ? tme : tme.concat(tm.filter(function(x){ return hour(x) < 18; })); day = "domani"; if (!rows.length && ton.length) { rows = ton; day = "sera"; } }
+    var h = document.getElementById("vicino-h"), sub = document.getElementById("vicino-sub"), ul = document.getElementById("vicino-list"), mp = document.getElementById("vicino-map");
+    if (!rows.length) { h.textContent = past ? T.pastT : T.tonight; ul.innerHTML = ""; sub.textContent = T.empty; mp.textContent = T.next; mp.href = "/?citta=treviso"; return; }
+    h.textContent = past ? (day === "sera" ? T.pastT : T.pastTm) : (day === "sera" ? T.tonight : T.tomorrow);
+    mp.textContent = day === "sera" ? T.mapT : T.mapTm; mp.href = "/?citta=treviso&quando=" + day;
+    ul.innerHTML = rows.slice(0, 4).map(function(x, i){ var s = new Date(x.s), min = Math.round((s - now) / 6e4), rel = min < 0 ? '<b class="now">' + T.now + '</b>' : min <= 90 ? '<b class="soon">' + T.inMin + min + T.min + '</b>' : "";
+      return '<li><a href="' + esc(x.u) + '" data-pos="' + (i + 1) + '"><span class="em" aria-hidden="true">' + x.e + '</span><span class="c"><span class="t">' + esc(x.t) + '</span><span class="m">' + fmt.format(s) + (rel ? " · " + rel : "") + (x.w ? " · " + esc(x.w) : "") + (x.km >= 1 ? " · " + x.km + " km" : "") + '</span>' + (x.g > 0 || x.solo ? '<span class="m3">' + (x.g > 0 ? '<span class="g">' + gp(x) + '</span>' : '') + (x.solo ? '<span class="chip solo' + (x.solo === "pick" ? " pick" : "") + '">' + T.solo + '</span>' : '') + '</span>' : '') + '</span><span class="ar" aria-hidden="true">›</span></a></li>'; }).join("");
+    ul.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ if (window.apTrack) apTrack("seo_vicino_tap", a.getAttribute("href") + "?pos=" + a.dataset.pos); }); });
+    mp.onclick = function(){ if (window.apTrack) apTrack("seo_vicino_mappa", location.pathname + "?d=" + day); };
+    if (!build.seen && "IntersectionObserver" in window) { build.seen = true; new IntersectionObserver(function(en, o){ if (en.some(function(x){ return x.isIntersecting; })) { o.disconnect(); if (window.apTrack) apTrack("seo_vicino_view", location.pathname + "?n=" + Math.min(rows.length, 4) + "&d=" + day); } }, { threshold: .5 }).observe(sec); }
+  }
+  build(); setInterval(build, 60e3);
+})();
+</script>
 </main>
 <footer><div class="wrap">
   <span>© 2026 Filippo Terzi · anyplans</span>

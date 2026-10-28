@@ -171,13 +171,19 @@ Orari, prezzo e biglietti sulla pagina Eventbrite dell&#39;evento: l&#39;iscrizi
   <a class="btn ghost" href="/?citta=trento">Vedi tutti gli eventi</a>
   
 </div>
-
+<section class="nearby" id="vicino" data-past="0" data-place="Rovereto">
+<h2 id="vicino-h">Altre cose da fare qui vicino</h2>
+<p class="m" id="vicino-sub">A meno di 10 km da Rovereto.</p>
+<ul id="vicino-list"><li><a href="/trento/non-e-solo-esg-e-impresa/" aria-label="Non è solo ESG. È impresa., 16:00, Tspace, Rovereto"><span class="em" aria-hidden="true">📚</span><span class="c"><span class="t">Non è solo ESG. È impresa.</span><span class="m">16:00 · Tspace, Rovereto</span><span class="m3"><span class="chip solo">Ci puoi andare da solo</span></span></span><span class="ar" aria-hidden="true">›</span></a></li></ul>
+<a class="lnk" id="vicino-map" href="/?citta=trento&quando=sera">Tutti gli eventi di stasera sulla mappa →</a>
+<script type="application/json" id="vicino-data">[{"u":"/trento/non-e-solo-esg-e-impresa/","t":"Non è solo ESG. È impresa.","e":"📚","s":"2026-10-29T15:00:00.000Z","en":"2026-10-29T17:00:00.000Z","w":"Tspace, Rovereto","km":0,"g":0,"x":1,"solo":"auto"}]</script>
+</section>
 <div class="box" id="domande"><h2>Domande frequenti</h2><details><summary>Quando si tiene Evoluzione, sostituzione, manipolazione??</summary><p>Evoluzione, sostituzione, manipolazione? si tiene venerdì 6 novembre alle 15:30 (fino alle 18:00), a IPRASE, Rovereto.</p></details><details><summary>Dove si trova Evoluzione, sostituzione, manipolazione??</summary><p>Il ritrovo è a IPRASE, Rovereto, in provincia di Trento; nella pagina c&#39;è il collegamento alle mappe.</p></details><details><summary>Quanto costa Evoluzione, sostituzione, manipolazione??</summary><p>Evoluzione, sostituzione, manipolazione? è gratis: non serve biglietto (Biglietti su Eventbrite).</p></details><details><summary>Chi organizza Evoluzione, sostituzione, manipolazione??</summary><p>Lo organizza una persona registrata su anyplans.</p></details><details><summary>Come faccio a partecipare a Evoluzione, sostituzione, manipolazione??</summary><p>Ti registri su anyplans con la tua email, apri l&#39;evento e dici che ci vai: così vedi chi organizza e chi altro viene, e non ci vai da solo. Serve avere almeno 18 anni.</p></details></div>
 <p class="m"><a class="lnk" href="/trento/locali/iprase/">Tutti gli eventi al Iprase (6)</a></p>
 <h2>Eventi simili</h2><div class="list"><a class="card" href="https://anyplans.in/trento/sophie-tarbouriech-7th-colloquium-roberto-tempo-in-automatic/"><span class="em">📚</span><span><span class="t">Sophie Tarbouriech, 7th Colloquium Roberto Tempo in Automatica</span><br><span class="m">Mercoledì 28 ottobre alle 11:00 · Dipartimento di Sociologia e Ricerca Sociale - Università di Trento, Trento</span></span></a>
 <a class="card" href="https://anyplans.in/trento/buonarroti-istituto-tecnico-tecnologico-open-day-2026-29-ott/"><span class="em">📚</span><span><span class="t">Buonarroti Istituto Tecnico Tecnologico Open Day 2026 - 29 Ottobre</span><br><span class="m">Giovedì 29 ottobre alle 16:00 · ITT Buonarroti - Trento, Trento</span></span></a>
 <a class="card" href="https://anyplans.in/trento/fbk-isig-barbara-di-gennaro-perche-si-sa-cosi-poco-dei-fungh/"><span class="em">📚</span><span><span class="t">FBK-ISIG | Barbara Di Gennaro |  Perché si sa così poco dei funghi?</span><br><span class="m">Giovedì 29 ottobre alle 16:00 · Fondazione Bruno Kessler _ FBK Aula Piccola, Trento</span></span></a>
-<a class="card" href="https://anyplans.in/trento/non-e-solo-esg-e-impresa/"><span class="em">📚</span><span><span class="t">Non è solo ESG. È impresa.</span><br><span class="m">Giovedì 29 ottobre alle 16:00 · Tspace, Rovereto</span></span></a></div>
+<a class="card" href="https://anyplans.in/trento/sussurri-dalla-tana/"><span class="em">📚</span><span><span class="t">Sussurri dalla Tana</span><br><span class="m">Sabato 31 ottobre alle 10:00 · Volkan, Trento</span></span></a></div>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
 <script>
   (function(){ var lat = 45.8891997, lng = 11.0427313;
@@ -200,6 +206,32 @@ Orari, prezzo e biglietti sulla pagina Eventbrite dell&#39;evento: l&#39;iscrizi
     else if (min > 0 && diffDays <= 7) txt = T.in + diffDays + (diffDays === 1 ? T.day : T.days);
     el.textContent = txt ? "· " + txt : "";
   })();
+</script><script>
+(function(){ var sec = document.getElementById("vicino"), raw = document.getElementById("vicino-data"); if (!sec || !raw) return;
+  var C; try { C = JSON.parse(raw.textContent); } catch (_) { return; }
+  var T = {"tonight":"Altre cose vicino, stasera","tomorrow":"Altre cose vicino, domani sera","pastT":"È già passato, ma stasera qui vicino c'è altro","pastTm":"È già passato, ma domani sera qui vicino c'è altro","mapT":"Tutti gli eventi di stasera sulla mappa →","mapTm":"Tutti gli eventi di domani sulla mappa →","empty":"Per stasera qui vicino non c'è altro.","next":"I prossimi giorni sulla mappa →","inMin":"tra ","min":" min","now":"in corso"};
+  var past = sec.dataset.past === "1", esc = function(t){ return String(t).replace(/[&<>"]/g, function(c){ return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); };
+  var fmt = new Intl.DateTimeFormat("it-IT", { timeZone: "Europe/Rome", hour: "2-digit", minute: "2-digit", hourCycle: "h23" });
+  var dk = new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome", year: "numeric", month: "2-digit", day: "2-digit" });
+  function gp(x){ if (!x.g) return ""; return x.x ? (x.g === 1 ? "1 da anyplans ci va" : x.g + " da anyplans ci vanno") : (x.g === 1 ? "1 persona ci va" : x.g + " persone ci vanno")}; }
+  function build(){
+    var now = new Date(), today = dk.format(now), tom = dk.format(new Date(now.getTime() + 864e5));
+    var live = C.filter(function(x){ var s = new Date(x.s), e = x.en ? new Date(x.en) : new Date(s.getTime() + 3 * 36e5); return e > now && s.getTime() >= now.getTime() - 30 * 6e4; });
+    var hour = function(x){ return +fmt.format(new Date(x.s)).slice(0, 2); };
+    var ton = live.filter(function(x){ return dk.format(new Date(x.s)) === today && hour(x) >= 18; }), day = "sera", rows = ton;
+    if (ton.length < 2) { var tm = live.filter(function(x){ return dk.format(new Date(x.s)) === tom; }), tme = tm.filter(function(x){ return hour(x) >= 18; }); rows = tme.length >= 2 ? tme : tme.concat(tm.filter(function(x){ return hour(x) < 18; })); day = "domani"; if (!rows.length && ton.length) { rows = ton; day = "sera"; } }
+    var h = document.getElementById("vicino-h"), sub = document.getElementById("vicino-sub"), ul = document.getElementById("vicino-list"), mp = document.getElementById("vicino-map");
+    if (!rows.length) { h.textContent = past ? T.pastT : T.tonight; ul.innerHTML = ""; sub.textContent = T.empty; mp.textContent = T.next; mp.href = "/?citta=trento"; return; }
+    h.textContent = past ? (day === "sera" ? T.pastT : T.pastTm) : (day === "sera" ? T.tonight : T.tomorrow);
+    mp.textContent = day === "sera" ? T.mapT : T.mapTm; mp.href = "/?citta=trento&quando=" + day;
+    ul.innerHTML = rows.slice(0, 4).map(function(x, i){ var s = new Date(x.s), min = Math.round((s - now) / 6e4), rel = min < 0 ? '<b class="now">' + T.now + '</b>' : min <= 90 ? '<b class="soon">' + T.inMin + min + T.min + '</b>' : "";
+      return '<li><a href="' + esc(x.u) + '" data-pos="' + (i + 1) + '"><span class="em" aria-hidden="true">' + x.e + '</span><span class="c"><span class="t">' + esc(x.t) + '</span><span class="m">' + fmt.format(s) + (rel ? " · " + rel : "") + (x.w ? " · " + esc(x.w) : "") + (x.km >= 1 ? " · " + x.km + " km" : "") + '</span>' + (x.g > 0 || x.solo ? '<span class="m3">' + (x.g > 0 ? '<span class="g">' + gp(x) + '</span>' : '') + (x.solo ? '<span class="chip solo' + (x.solo === "pick" ? " pick" : "") + '">' + T.solo + '</span>' : '') + '</span>' : '') + '</span><span class="ar" aria-hidden="true">›</span></a></li>'; }).join("");
+    ul.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", function(){ if (window.apTrack) apTrack("seo_vicino_tap", a.getAttribute("href") + "?pos=" + a.dataset.pos); }); });
+    mp.onclick = function(){ if (window.apTrack) apTrack("seo_vicino_mappa", location.pathname + "?d=" + day); };
+    if (!build.seen && "IntersectionObserver" in window) { build.seen = true; new IntersectionObserver(function(en, o){ if (en.some(function(x){ return x.isIntersecting; })) { o.disconnect(); if (window.apTrack) apTrack("seo_vicino_view", location.pathname + "?n=" + Math.min(rows.length, 4) + "&d=" + day); } }, { threshold: .5 }).observe(sec); }
+  }
+  build(); setInterval(build, 60e3);
+})();
 </script>
 </main>
 <footer><div class="wrap">
