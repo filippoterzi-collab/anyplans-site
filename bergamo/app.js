@@ -527,6 +527,19 @@ function visitorId(){
     return v;
   } catch (_) { return null; }
 }
+// Città dell'evento sito (28/10/2026): prima era "bergamo" fissa, così /milano/ e le iscrizioni dei
+// milanesi finivano contate come Bergamo (1.915 visitatori di Milano in 14 giorni, 0 profili visibili).
+// Ordine: la città della pagina (window.ANYPLANS_CITY, messa dal generatore su /<citta>/), poi la
+// città scelta nella home (localStorage anyplans_city), altrimenti Bergamo.
+function trackCity(){
+  try {
+    const s = String(window.ANYPLANS_CITY || "").toLowerCase().trim();
+    if (s) return s;
+    const c = JSON.parse(localStorage.getItem("anyplans_city") || "null");
+    if (c && c.slug) return String(c.slug).toLowerCase();
+  } catch (_) {}
+  return "bergamo";
+}
 function track(name, path){
   if (location.protocol === "file:") return;
   let ref = "";
@@ -536,7 +549,7 @@ function track(name, path){
     fetch(SB_URL + "/rest/v1/rpc/log_site_event", {
       method: "POST", keepalive: true,
       headers: {"apikey": SB_ANON, "Content-Type": "application/json"},
-      body: JSON.stringify({ p_name: name, p_path: path || location.pathname, p_ref: ref || null, p_city: "bergamo", p_visitor: visitorId() })
+      body: JSON.stringify({ p_name: name, p_path: path || location.pathname, p_ref: ref || null, p_city: trackCity(), p_visitor: visitorId() })
     }).catch(() => {});
   } catch (_) {}
 }

@@ -220,7 +220,7 @@
   </div>
 </main>
 
-<script src="app.js?v=1793125816"></script>
+<script src="app.js?v=1793165091"></script>
 <script>
   requireLogin();
   mountTabbar("profilo");
@@ -228,6 +228,8 @@
   // ?edit=1 = modifica del profilo esistente; senza parametri = vista profilo (o onboarding se manca)
   const editMode = new URLSearchParams(location.search).get("edit") === "1";
   if (editMode || !location.search) mountNav("", { col: 760, card: true });
+  // città precompilata = quella scelta sul sito (home o pagina di città), non "Bergamo" fissa (28/10/2026)
+  if (!editMode) { try { const c = JSON.parse(localStorage.getItem("anyplans_city") || "null"); if (c && c.nome) document.getElementById("city").value = c.nome; } catch (_) {} }
   if (editMode) {
     { const le = document.getElementById("lnk-events"); if (le) le.hidden = false; }
     document.getElementById("extra").hidden = false;

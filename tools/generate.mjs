@@ -2549,6 +2549,7 @@ function whenAppHtml(kind, w, list) {
               : { regT: "Registrati, è gratis", reg: "Registrati gratis", more: "altri eventi", only: "Ti basta l'email.", map: "Apri la mappa", wheel: "Se non lo sai, tira a sorte", nuovo: "Nuovo",
                   wheelT: "Ci penso io", wheelS: "Ti scelgo io una cosa di oggi o domani, qui vicino. Tu devi solo presentarti.", pick: "Scegli tu", go: "Vai qui", another: "Un'altra · ne restano ", left: "", none: "Per oggi non c'è più niente: prova domani.", all: "Tutto", solo: "Da solo", f: { Gratis: "Gratis", Sport: "Sport", Serata: "Serata", Cena: "Cena" }, ci: "Ci sono", soloL: "Ci puoi andare da solo" };
   const cfg = { kind, keys, tz: DEFAULT_TZ, city: [CITY_CENTER.lng, CITY_CENTER.lat], login: `${APP}/login.html`, map: MAP_URL, city_slug: CITY,
+    citta: { slug: CITY, nome: C.nome, lat: CITY_CENTER.lat, lng: CITY_CENTER.lng },   // salvata al tap sul muro: profilo e tracking sulla città giusta (28/10/2026)
     h1: keys.map(k => E ? `What to do in ${CITY_NAME} ${W_EN[kind]}${kind === "weekend" ? "" : ", " + dayName(k)}` : `Cosa fare a ${CITY_NAME} ${W_IT[kind]}${kind === "weekend" ? "" : ", " + dayName(k).toLowerCase()}`),
     T, chips: CHIP_LABEL[E ? "en" : "it"], fasce: E ? { mat: "Morning", pom: "Afternoon", sera: "Evening" } : { mat: "Mattina", pom: "Pomeriggio", sera: "Sera" },
     when: E ? { mat: "this morning", pom: "this afternoon", sera: "tonight" } : { mat: "stamattina", pom: "oggi pomeriggio", sera: "stasera" },
@@ -2635,6 +2636,7 @@ const WHEN_JS = String.raw`<script>
   var track = function(n, p){ try { window.apTrack && window.apTrack(n, p); } catch (e) {} };
   function toLogin(why, next){
     try { sessionStorage.setItem("anyplans_next", next || location.pathname); } catch (e) {}
+    try { localStorage.setItem("anyplans_city", JSON.stringify(cfg.citta)); } catch (e) {}
     track("wall_tap", location.pathname + "?" + why + "&quando");
     location.href = cfg.login;
   }
