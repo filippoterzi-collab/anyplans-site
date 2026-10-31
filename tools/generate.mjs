@@ -1606,7 +1606,9 @@ function eventFaqIt(p, org) {
 // attualmente non indicizzate" — 1.319 sono eventi già passati, e chiedere l'indicizzazione di roba
 // che non si può più fare consuma la scansione che serve alle altre. I primi 45 giorni restano
 // indicizzabili perché dopo una festa la gente la cerca ancora ("conca fiorita in festa", 12 impressioni).
-const GIORNI_VECCHIO = 45;
+// 31/10/2026: da 45 a 7 giorni (Filippo). Dal 26/10 Google mostra il sito quasi solo per "anyplans": migliaia di
+// pagine di eventi finiti da settimane sono il profilo delle "pagine generate in massa" che il filtro anti-spam colpisce.
+const GIORNI_VECCHIO = 7;
 const vecchioDi = (p) => {
   if (!p.isPast) return false;
   const ultima = p.dates.length ? p.dates[p.dates.length - 1].start : null;
