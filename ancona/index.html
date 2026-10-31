@@ -389,8 +389,10 @@ body.locked .mk,body.locked .strip{display:none}
   body.mapmode .list,body.mapmode .countrow,body.mapmode .showmore,body.mapmode .strip,body.mapmode .sec,body.mapmode .crea,body.mapmode footer,body.mapmode .hero{visibility:hidden}
   body.mapmode{overflow:hidden}
   body.mapmode .mock{display:none}
-body.mapmode .mapbtn{background:var(--ink);color:#fff}
-.mapbtn{position:absolute;left:12px;top:12px;z-index:5;display:inline-flex;align-items:center;gap:7px;height:42px;padding:0 18px;border-radius:999px;background:#fff;font-size:14px;font-weight:800;box-shadow:0 3px 12px rgba(25,25,25,.2)}
+/* 31/10/2026: il bottone sta al centro della mappa, blu e grande, anche da computer: in alto a
+   sinistra quasi nessuno lo apriva (committente). A schermo intero torna in alto a sinistra come "Chiudi". */
+body.mapmode .mapbtn{left:12px;top:12px;transform:none;height:42px;padding:0 18px;font-size:14px;background:var(--ink);color:#fff;box-shadow:0 3px 12px rgba(25,25,25,.2)}
+.mapbtn{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);z-index:5;display:inline-flex;align-items:center;gap:7px;height:50px;padding:0 24px;border-radius:999px;background:var(--blue);color:#fff;font-size:16px;font-weight:800;white-space:nowrap;box-shadow:0 8px 24px rgba(27,79,216,.4)}
 .mapinfo{left:auto;right:64px}
 /* 17/09/2026: da computer la mappa a tutto schermo aveva la barra di ricerca trasparente sopra le
    tile (illeggibile), il bottone e lo zoom sotto la barra, e la pillola del contatore allungata per
@@ -694,9 +696,9 @@ body.locked .mk{display:block}
   body.maponly.mapmode .map,body.maponly.mapmode.mapgate .map{height:100%!important;max-height:none;border-radius:0}
   body.maponly.mapmode .mapcol{position:fixed;left:0;right:0;top:60px;bottom:0;margin:0;z-index:25}
   body.maponly.mapgate .mapbtn{display:none}   /* da sloggati comanda il banner, non il bottone */
-  /* il bottone sta in alto al centro: in basso finiva sotto la barra e non si vedeva aprendo la pagina (17/09/2026) */
-  body.maponly .mapbtn{display:inline-flex;left:50%;right:auto;top:12px;bottom:auto;
-                       transform:translateX(-50%);height:48px;padding:0 22px;font-size:15.5px;
+  /* al centro della mappa (31/10/2026, prima in alto al centro: in basso finiva sotto la barra, 17/09/2026) */
+  body.maponly .mapbtn{display:inline-flex;left:50%;right:auto;top:50%;bottom:auto;
+                       transform:translate(-50%,-50%);height:48px;padding:0 22px;font-size:15.5px;
                        background:var(--blue);color:#fff;box-shadow:0 8px 24px rgba(27,79,216,.4)}
   body.maponly.mapmode .mapbtn{left:12px;top:12px;bottom:auto;transform:none;
                                background:var(--ink);height:44px;font-size:14.5px}
@@ -1140,7 +1142,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1793165091"></script>
+<script src="/bergamo/app.js?v=1793436904"></script>
 <script src="/bergamo/iab.js" defer></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
@@ -1972,17 +1974,17 @@ document.getElementById("list").addEventListener("mouseover", e => { const c = e
 document.getElementById("list").addEventListener("mouseout", e => { const c = e.target.closest(".ev"); if (c) hl(c.dataset.id, false); });
 function setSbh(){ const sb = document.querySelector(".sbwrap"); if (sb) document.documentElement.style.setProperty("--sbh", sb.offsetHeight + "px"); }
 window.addEventListener("resize", () => { if (document.body.classList.contains("mapmode")) setSbh(); });
-function toggleMap(){ const on = document.body.classList.toggle("mapmode"); document.body.classList.remove("pinpicked"); closeSheet("mapclose"); markers.forEach(m => { const p = m.getPopup(); if (p && p.isOpen()) m.togglePopup(); }); if (on) setSbh();
+function toggleMap(src){ const on = document.body.classList.toggle("mapmode"); if (on && !(typeof GATE_EVENTS !== "undefined" && GATE_EVENTS)) track("mappa_apri", src || "altro");   // 31/10/2026: per contare chi la apre davvero (bottone / pillola / tastiera) document.body.classList.remove("pinpicked"); closeSheet("mapclose"); markers.forEach(m => { const p = m.getPopup(); if (p && p.isOpen()) m.togglePopup(); }); if (on) setSbh();
   if (typeof GATE_EVENTS !== "undefined" && GATE_EVENTS && on) track("wall_view", "mappa"); document.getElementById("mapfab").textContent = on ? "☰ Lista" : "🗺️ Mappa"; document.getElementById("mapbtn").textContent = on ? "✕ Chiudi la mappa" : "🗺️ Apri la mappa"; window.scrollTo({ top: 0 });   // anche alla chiusura: su iPhone la pagina sotto la mappa fissa scorre lo stesso e si riapriva su "Viaggi di gruppo" (17/09/2026)
   if (on) syncMapBar();
   setTimeout(() => { if (map) { map.resize(); fitMap(mapRows(lastRows)); } }, 80); }
-document.getElementById("mapfab").addEventListener("click", () => { if (!LOCKED) toggleMap(); });
+document.getElementById("mapfab").addEventListener("click", () => { if (!LOCKED) toggleMap("pillola"); });
 document.getElementById("mapbtn").addEventListener("click", e => {
   if (LOCKED) return; e.stopPropagation();
   if (typeof GATE_EVENTS !== "undefined" && GATE_EVENTS) { toLogin("mappa"); return; }
-  toggleMap();
+  toggleMap("bottone");
 });
-document.addEventListener("keydown", e => { if (e.key !== "Escape") return; if (!document.getElementById("evsheet").hidden) { closeSheet("esc"); return; } if (document.body.classList.contains("mapmode")) toggleMap(); });
+document.addEventListener("keydown", e => { if (e.key !== "Escape") return; if (!document.getElementById("evsheet").hidden) { closeSheet("esc"); return; } if (document.body.classList.contains("mapmode")) toggleMap("tastiera"); });
 function loadMapLib(){
   const css = document.createElement("link"); css.rel = "stylesheet"; css.href = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.css"; document.head.appendChild(css);
   const js = document.createElement("script"); js.src = "https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"; js.onload = initMap; document.head.appendChild(js);
