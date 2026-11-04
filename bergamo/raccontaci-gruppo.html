@@ -185,7 +185,7 @@
   </form>
 </main>
 
-<script src="app.js?v=1793436904"></script>
+<script src="app.js?v=1793801808"></script>
 <script>
   requireLogin();
 
@@ -199,7 +199,7 @@
   // select categorie dal catalogo, come "che tipo di evento è?" in crea.html (gruppo prima, poi sport).
   // p_category riceve lo slug del catalogo (es. "running", "ceramics"); l'emoji la assegna il backend
   const sel = document.getElementById("category");
-  const first = ["dinner","festival","ceramics","cooking","painting","gardening","yoga"];
+  const first = ["dinner","aperitivo","lunch","wine","festival","ceramics","cooking","painting","gardening","yoga"];
   const order = [...first, ...Object.keys(CATALOG).filter(s => !first.includes(s))];
   order.forEach(slug => {
     const o = document.createElement("option");

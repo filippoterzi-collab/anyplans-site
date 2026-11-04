@@ -124,7 +124,7 @@
   </form>
 </main>
 
-<script src="app.js?v=1793436904"></script>
+<script src="app.js?v=1793801808"></script>
 <script>
   requireLogin();
   mountTabbar("crea");
@@ -141,7 +141,7 @@
   });
 
   // categoria: tutto il catalogo attività (come "che tipo di evento è?"), gruppi/corsi prima
-  const first = ["dinner","festival","ceramics","cooking","painting","gardening","yoga"];
+  const first = ["dinner","aperitivo","lunch","wine","festival","ceramics","cooking","painting","gardening","yoga"];
   const order = [...first, ...Object.keys(CATALOG).filter(s => !first.includes(s))];
   const catSel = document.getElementById("cats");
   catSel.innerHTML = '<option value="">Scegli…</option>' + order.map(s => `<option value="${s}">${CATALOG[s].e}  ${CATALOG[s].l}</option>`).join("");

@@ -155,6 +155,15 @@
   </div>
   <p class="hint" style="margin-top:-6px">Lascia vuoto se non sai quando finisce. Solo l'ora = finisce lo stesso giorno.</p>
 
+  <!-- ripeti ogni settimana (0104): crea il ritrovo fisso sul gruppo, le date le genera materialize_schedules -->
+  <div class="toggle-row" id="rep" hidden onclick="toggleRepeat()" role="switch" aria-checked="false" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); toggleRepeat()}">
+    <div>
+      <div class="t">Ripeti ogni settimana</div>
+      <div class="s" id="rep-s">Stesso giorno, stessa ora, stesso posto. Le date delle prossime settimane compaiono da sole sulla mappa.</div>
+    </div>
+    <div class="sw"><div class="k"></div></div>
+  </div>
+
   <div>
     <label for="place">Punto di ritrovo</label>
     <input id="place" type="text" required placeholder="Scrivi un posto: parco, bar, via, paese…" autocomplete="off" oninput="placeSearch()">
@@ -275,7 +284,7 @@
 </main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/maplibre-gl/4.7.1/maplibre-gl.min.js"></script>
-<script src="app.js?v=1793436904"></script>
+<script src="app.js?v=1793801808"></script>
 <script>
   requireLogin();
   mountNav("", { col: 760 });
@@ -310,7 +319,7 @@
 
   // select categorie dal catalogo (gruppo prima, poi sport)
   const sel = document.getElementById("sport");
-  const first = ["dinner","festival","ceramics","cooking","painting","gardening","yoga"];
+  const first = ["dinner","aperitivo","lunch","wine","festival","ceramics","cooking","painting","gardening","yoga"];
   const order = [...first, ...Object.keys(CATALOG).filter(s => !first.includes(s))];
   order.forEach(slug => {
     const o = document.createElement("option");
@@ -447,6 +456,14 @@
     editVisibility = a.visibility || "open"; editApproval = !!a.approval_required;
     editShowP = a.show_participants !== false; setShowP(editShowP);
     editGender = a.gender_allowed || null; setGender(editGender);
+    if (a.is_mine) {   // ripeti ogni settimana: solo chi l'ha creato (repeat_activity_weekly, p_repeat null = leggi)
+      const rrep = await rpc("repeat_activity_weekly", { p_activity_id: editId, p_repeat: null });
+      editRepeat = !!(rrep && rrep.ok && await rrep.json().catch(() => null));
+      repeatOn = editRepeat;
+      const row = document.getElementById("rep"); row.hidden = false;
+      row.classList.toggle("on", repeatOn); row.setAttribute("aria-checked", String(repeatOn));
+      if (repeatOn) document.getElementById("rep-s").textContent = "Si ripete ogni settimana. Spegni per fermare le prossime date: quelle dove c'è già qualcuno restano.";
+    }
     const rco = await rpc("activity_coorganizers", { p_activity_id: editId });
     editCo = rco && rco.ok ? (await rco.json().catch(() => [])).map(x => x.id) : [];
     coSel = new Set(editCo); syncCo();
@@ -589,10 +606,28 @@
     if (!r || !r.ok) toast("Salvato, ma i gruppi \"insieme a\" no. Riprova da \"Modifica l'evento\".");
   }
   const wantCommunity = new URLSearchParams(location.search).get("community");
+  // ripeti ogni settimana: serve un gruppo (il ritrovo fisso vive lì). Senza gruppo la spunta porta a crearlo.
+  let myGroups = [], repeatOn = false, editRepeat = false;
+  function toggleRepeat(){
+    const row = document.getElementById("rep");
+    if (!myGroups.length && !editRepeat) {
+      document.getElementById("rep-s").innerHTML = 'Per ripeterlo serve la pagina del tuo gruppo. <a href="crea-community.html" onclick="event.stopPropagation()">Creala qui</a>, ci vuole un minuto, poi torna a creare l\'evento.';
+      return;
+    }
+    repeatOn = !repeatOn;
+    row.classList.toggle("on", repeatOn); row.setAttribute("aria-checked", String(repeatOn));
+    const selAs = document.getElementById("as");
+    if (repeatOn && !selAs.value) selAs.value = myGroups[0].id;
+    document.getElementById("rep-s").textContent = repeatOn
+      ? "Le date delle prossime 3 settimane compaiono da sole, a nome del gruppo. La ripetizione si toglie da \"Modifica l'evento\"."
+      : "Stesso giorno, stessa ora, stesso posto. Le date delle prossime settimane compaiono da sole sulla mappa.";
+  }
+  if (!editId && !fromId) document.getElementById("rep").hidden = false;
   rpc("my_communities").then(async r => {
-    if (!r || !r.ok || editId) return;
+    if (!r || !r.ok) return;
     const mine = (await r.json().catch(() => [])).filter(x => x.role === "owner" || x.role === "admin");
-    if (!mine.length) return;
+    myGroups = mine;
+    if (editId || !mine.length) return;
     const selAs = document.getElementById("as");
     mine.forEach(x => { const o = document.createElement("option"); o.value = x.id; o.textContent = (x.emoji || "") + "  " + x.name; selAs.appendChild(o); });
     if (wantCommunity && mine.some(x => x.id === wantCommunity)) selAs.value = wantCommunity;
@@ -855,6 +890,10 @@
         }
         const rq = await rpc("set_activity_questions", { p_activity_id: editId, p_questions: collectQuestions() });
         if (!rq || !rq.ok) toast("Salvato, ma le domande no. Riprova da \"Modifica l'evento\".");
+        if (repeatOn !== editRepeat) {
+          const rr = await rpc("repeat_activity_weekly", { p_activity_id: editId, p_repeat: repeatOn });
+          if (!rr || !rr.ok) toast(repeatOn ? "Salvato, ma la ripetizione no. Riprova." : "Salvato, ma la ripetizione non si è fermata. Riprova.");
+        }
         track("event_edit");
         location.href = "evento.html?id=" + editId;
         return;
@@ -895,6 +934,11 @@
       if (asC) {
         const rc = await rpc("set_activity_community", { p_activity_id: newId, p_community_id: asC });
         if (!rc || !rc.ok) toast("Evento pubblicato, ma non risulta del gruppo. Riprova da \"Modifica l'evento\".");
+      }
+      if (repeatOn) {
+        const rr = await rpc("repeat_activity_weekly", { p_activity_id: newId, p_repeat: true });
+        if (!rr || !rr.ok) toast("Evento pubblicato, ma la ripetizione no. Riprova da \"Modifica l'evento\".");
+        else track("event_repeat_weekly");
       }
       track("event_create");
       location.href = "evento.html?id=" + newId;

@@ -169,7 +169,11 @@ const CATALOG = {
   bowling:   { e:"🎳", l:"Bowling",                   c:"sport" },
   ceramics:  { e:"🏺", l:"Ceramica",                  c:"creatività" },
   cooking:   { e:"🍳", l:"Cucina",                    c:"cucina" },
-  dinner:    { e:"🍽️", l:"Cena / aperitivo",          c:"cucina" },
+  dinner:    { e:"🍽️", l:"Cena",                      c:"cucina" },
+  // 04/11/2026 (migrazione 0103): aperitivo, pranzo e degustazione vini non sono più "cena"
+  aperitivo: { e:"🥂", l:"Aperitivo",                 c:"cucina" },
+  lunch:     { e:"🍝", l:"Pranzo",                    c:"cucina" },
+  wine:      { e:"🍷", l:"Degustazione vini",         c:"cucina" },
   painting:  { e:"🎨", l:"Pittura / arte",            c:"creatività" },
   gardening: { e:"🌱", l:"Giardinaggio / volontariato", c:"giardinaggio" },
   festival:  { e:"🎉", l:"Feste, sagre ed eventi di paese",     c:"cultura" },
@@ -192,7 +196,7 @@ const CATALOG = {
 };
 
 // categoria del sito per ogni slug non sportivo; tutto il resto è "sport"
-const CAT_BY_SLUG = { cooking:"cucina", dinner:"cucina", ceramics:"creatività", painting:"creatività",
+const CAT_BY_SLUG = { cooking:"cucina", dinner:"cucina", aperitivo:"cucina", lunch:"cucina", wine:"cucina", ceramics:"creatività", painting:"creatività",
                       gardening:"giardinaggio", festival:"cultura", estivo:"cultura", yoga:"benessere",
                       concert:"cultura", show:"cultura", market:"cultura", karaoke:"cultura", tour:"cultura", culture:"cultura", fair:"cultura",
                       dancing:"cultura", nightlife:"cultura", cinema:"cultura", games:"cultura", exhibition:"cultura",
@@ -226,7 +230,10 @@ const SEARCH_WORDS = {
   bowling: "bowling birilli boccia sala giochi",
   ceramics: "ceramica argilla tornio corso creativo pottery clay laboratorio manuale scultura modellare terracotta smalto raku",
   cooking: "cucina cucinare corso pasta chef cooking cena pranzo ricetta food mangiare cibo aperitivo",
-  dinner: "cena aperitivo pranzo mangiare ristorante pizzeria pizza dinner apericena bere birra vino compagnia tavolata",
+  dinner: "cena mangiare ristorante pizzeria pizza dinner compagnia tavolata",
+  aperitivo: "aperitivo apericena spritz bere birra drink cocktail happy hour",
+  lunch: "pranzo pranzare brunch lunch mangiare ristorante trattoria",
+  wine: "vino vini degustazione cantina enoteca sommelier wine tasting calici",
   painting: "pittura disegno arte corso creativo painting drawing art acquerello quadro laboratorio scultura scolpire modellare mosaico incisione calligrafia illustrazione fumetto",
   gardening: "giardinaggio orto volontariato verde gardening garden piante natura pulizia ambiente",
   festival: "festa sagra festival evento paese party serata luna park oratorio alpini",
@@ -437,7 +444,7 @@ const SOLO_GROUPS = {
   corso: ["culture", "yoga", "dancing"],
   gioco: ["games"],
   squadra: ["padel", "tennis", "volleyball", "football"],
-  tavolo: ["dinner"],
+  tavolo: ["dinner", "aperitivo", "lunch", "wine"],
 };
 const SOLO_WHY = {
   corsa: "Si parte tutti insieme dal ritrovo: non serve conoscere nessuno.",

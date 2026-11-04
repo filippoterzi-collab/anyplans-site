@@ -148,6 +148,9 @@ const EN_TYPES = {
   ceramics: ["pottery", "Pottery", "Pottery classes, also for beginners."],
   cooking: ["cooking", "Cooking classes", "Cooking classes and dinners cooked together."],
   dinner: ["dinners", "Dinners & aperitivo", "Dinners and aperitivo with people you don't know yet."],
+  aperitivo: ["aperitivo", "Aperitivo", "Aperitivo with a group: a spritz at a table with whoever shows up."],
+  lunch: ["lunches", "Lunches", "Lunches and brunches at an open table."],
+  wine: ["wine-tasting", "Wine tasting", "Wine tastings in cellars and wine bars, with someone telling the story of each glass."],
   painting: ["painting", "Painting & art", "Painting and art workshops."],
   gardening: ["volunteering", "Gardening & volunteering", "Community gardens and volunteering mornings."],
   festival: ["festivals", "Town festivals & fairs", "The parish festivals (feste dell'oratorio), food fairs (sagre) and village events of the Bergamo area, with the dates of every evening."],
@@ -686,7 +689,7 @@ const domandeUrl = () => `${SITE}/${CITY}/domande/`;
 // "a tema" sono gli eventi della raccolta (Capodanno, Halloween, Natale: le parole nel titolo); "in quei giorni"
 // gli altri eventi del periodo, ma solo quelli da serata o da festa: una tombola del giovedì che cade il 31
 // dicembre non risponde a "cosa fare a Capodanno"
-const SPORT_FESTA = new Set(["festival", "concert", "nightlife", "dinner", "show", "market", "fair", "tour", "exhibition", "dancing", "karaoke", "cinema"]);
+const SPORT_FESTA = new Set(["festival", "concert", "nightlife", "dinner", "aperitivo", "wine", "show", "market", "fair", "tour", "exhibition", "dancing", "karaoke", "cinema"]);
 function eventiOccasioneDiviso(o) {
   const ix = o.raccolta ? types.find(x => x.sport === o.raccolta) : null;
   const tema = (ix ? ix.list.filter(p => !p.isPast) : []).sort(byDate);
@@ -1340,7 +1343,7 @@ const listHtml = (list) => `<div class="list">${list.map(cardHtml).join("\n")}</
 
 // ── "Ci puoi andare da solo" (UI.md §3.14). COPIA della regola di branding/legal/bergamo/app.js (soloLevel): se cambia lì, cambia qui ─
 const SOLO_GROUPS = { corsa: ["running", "trail", "walking", "hiking"], lab: ["ceramics", "painting", "cooking"], corso: ["culture", "yoga", "dancing"],
-  gioco: ["games"], squadra: ["padel", "tennis", "volleyball", "football"], tavolo: ["dinner"] };
+  gioco: ["games"], squadra: ["padel", "tennis", "volleyball", "football"], tavolo: ["dinner", "aperitivo", "lunch", "wine"] };
 const SOLO_WHY = {
   corsa: "Si parte tutti insieme dal ritrovo: non serve conoscere nessuno.",
   lab: "Ognuno ha il suo posto al tavolo da lavoro: si viene anche senza compagnia.",
@@ -2497,7 +2500,7 @@ const groupOf = (p) => p.sport === "market" ? "mercati" : (p.sport === "walking"
 // categorie dei filtri: poche e larghe, come le cerca la gente
 const CHIP_OF = { running: "sport", trail: "sport", walking: "sport", hiking: "sport", cycling: "sport", mtb: "sport", padel: "sport", tennis: "sport", football: "sport",
   volleyball: "sport", basketball: "sport", gym: "sport", climbing: "sport", swimming: "sport", yoga: "sport", hyrox: "sport", skating: "sport",
-  dinner: "tavola", cooking: "lab", ceramics: "lab", painting: "lab", gardening: "lab",
+  dinner: "tavola", aperitivo: "tavola", lunch: "tavola", wine: "tavola", cooking: "lab", ceramics: "lab", painting: "lab", gardening: "lab",
   concert: "serate", karaoke: "serate", nightlife: "serate", dancing: "serate", show: "serate", cinema: "serate", singles: "serate",
   culture: "cultura", tour: "cultura", exhibition: "cultura", games: "giochi", festival: "feste", fair: "feste", estivo: "feste", market: "mercati", match: "sport" };
 const CHIP_LABEL = { it: { sport: "Sport", tavola: "A tavola", lab: "Laboratori", serate: "Serate", cultura: "Cultura", giochi: "Giochi", feste: "Feste", mercati: "Mercati", altro: "Altro" },
