@@ -1142,7 +1142,7 @@ body.mapgate.mapmode .map .lock{position:fixed;inset:60px 0 0}
   <p class="copy">© 2026 anyplans · solo maggiorenni</p>
 </div></footer>
 
-<script src="/bergamo/app.js?v=1793436904"></script>
+<script src="/bergamo/app.js?v=1793801808"></script>
 <script src="/bergamo/iab.js" defer></script>
 <script>
 // ---------- il muro (deciso 15/09/2026 sera): senza account si vede l'assaggio, ogni tocco porta alla registrazione ----------
@@ -1235,7 +1235,7 @@ let CENTER = { ...HOME };                 // centro del feed (la città scelta, 
 let REF = { lat: HOME.lat, lng: HOME.lng }; // punto da cui si misurano i km (paese scelto, o il centro)
 let EV = [];
 const NOW = new Date();
-const EMOJI = { running:"🏃", trail:"⛰️", hyrox:"🏋️", walking:"🚶", cycling:"🚴", mtb:"🚵", moto:"🏍️", hiking:"🥾", climbing:"🧗", skitouring:"🎿", gym:"💪", yoga:"🧘", football:"⚽", basketball:"🏀", volleyball:"🏐", tennis:"🎾", padel:"🏸", swimming:"🏊", surf:"🏄", paddling:"🚣", skiing:"⛷️", snowboard:"🏂", skating:"⛸️", ceramics:"🏺", cooking:"🍳", painting:"🎨", gardening:"🌱", festival:"🎉", dinner:"🍽️", golf:"⛳", bowling:"🎳", estivo:"☀️", concert:"🎸", show:"🎭", market:"🛍️", karaoke:"🎤", tour:"🏛️", culture:"📚", fair:"🎡", dancing:"💃", nightlife:"🌙", match:"🏟️", cinema:"🎬", games:"🎲", exhibition:"🖼️", singles:"💘" };
+const EMOJI = { running:"🏃", trail:"⛰️", hyrox:"🏋️", walking:"🚶", cycling:"🚴", mtb:"🚵", moto:"🏍️", hiking:"🥾", climbing:"🧗", skitouring:"🎿", gym:"💪", yoga:"🧘", football:"⚽", basketball:"🏀", volleyball:"🏐", tennis:"🎾", padel:"🏸", swimming:"🏊", surf:"🏄", paddling:"🚣", skiing:"⛷️", snowboard:"🏂", skating:"⛸️", ceramics:"🏺", cooking:"🍳", painting:"🎨", gardening:"🌱", festival:"🎉", dinner:"🍽️", aperitivo:"🥂", lunch:"🍝", wine:"🍷", golf:"⛳", bowling:"🎳", estivo:"☀️", concert:"🎸", show:"🎭", market:"🛍️", karaoke:"🎤", tour:"🏛️", culture:"📚", fair:"🎡", dancing:"💃", nightlife:"🌙", match:"🏟️", cinema:"🎬", games:"🎲", exhibition:"🖼️", singles:"💘" };
 const SPORTS = ["running","trail","hyrox","walking","cycling","mtb","hiking","climbing","skitouring","gym","football","basketball","volleyball","tennis","padel","swimming","surf","paddling","skiing","snowboard","skating","golf","bowling"];
 const CATS = [
   { k:"", n:"Tutti", i:"✨" },
@@ -1243,7 +1243,7 @@ const CATS = [
   { k:"sport", n:"Sport", i:"🏃", s:SPORTS },
   { k:"padel", n:"Padel", i:"🏸", s:["padel"] },
   { k:"running", n:"Corsa", i:"👟", s:["running","trail","walking"] },
-  { k:"cucina", n:"Cucina e cene", i:"🍳", s:["cooking","dinner"] },
+  { k:"cucina", n:"Cucina e cene", i:"🍳", s:["cooking","dinner","aperitivo","lunch","wine"] },
   { k:"serate", n:"Serate", i:"🎤", s:["karaoke","nightlife","dancing","concert"] },
   { k:"concert", n:"Concerti", i:"🎸", s:["concert"] },
   { k:"cultura", n:"Cultura", i:"📚", s:["culture","tour","exhibition","show","cinema","games","fair"] },
@@ -2127,7 +2127,7 @@ setTimeout(loadMapLib, 200);   // la mappa è nella prima schermata: si carica s
   const SLICES = [
     { e: "🏃", s: ["running","trail","walking","hiking","cycling","mtb","padel","tennis","football","volleyball","basketball","gym","climbing","swimming","yoga"] },
     { e: "🎨", s: ["ceramics","painting","cooking","gardening"] },
-    { e: "🍽️", s: ["dinner"] },
+    { e: "🍽️", s: ["dinner","aperitivo","lunch","wine"] },
     { e: "🎲", s: ["games"] },
     { e: "🎤", s: ["concert","karaoke","nightlife","dancing","show","cinema"] },
     { e: "📚", s: ["culture","tour","festival","fair","match"] }
@@ -2152,7 +2152,7 @@ setTimeout(loadMapLib, 200);   // la mappa è nella prima schermata: si carica s
       if (FW.has("free") && !isFree(e)) return false;
       if (FW.has("sport") && !SPORT.includes(e.sport)) return false;
       if (FW.has("sera") && e.h < 18) return false;
-      if (FW.has("cena") && !["dinner","cooking"].includes(e.sport)) return false;
+      if (FW.has("cena") && !["dinner","aperitivo","lunch","wine","cooking"].includes(e.sport)) return false;
       return true;
     });
   }
