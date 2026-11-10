@@ -345,9 +345,14 @@ async function rpcRetry(name, body, tentativi = 6) {
 // PostgREST restituisce al massimo 1000 righe per chiamata (db-max-rows) e per le FUNZIONI ignora l'header
 // Range: si pagina con il parametro p_offset (migrazione 0086). Senza, il sito vedeva solo le prime 1000
 // righe della finestra — cioè quasi solo passato — e perdeva tutte le date oltre pochi giorni.
-async function rpcPaged(name, body, page = 500, max = 20000) {
+// 06/11/2026: il tetto era 20.000 righe. Intorno a Bergamo (50 km) la finestra di 13 mesi ne aveva 27.154, e
+// siccome escono dalla più vecchia alla più nuova, le ultime 7.000 — tutti gli eventi futuri — non arrivavano
+// mai: i futuri di Bergamo sono scesi da 698 (28/10) a 35 (6/11), e 2.115 pagine sono diventate lapidi
+// "evento non più in programma". Il tetto resta solo contro un ciclo infinito, e se si tocca lo dice.
+async function rpcPaged(name, body, page = 500, max = 200000) {
   const out = [];
   for (let off = 0; off < max; off += page) {
+    if (off + page > max) console.error(`rpc ${name}: raggiunto il tetto di ${max} righe, le più recenti mancano: alzare max in rpcPaged`);
     const rows = await rpcRetry(name, { ...body, p_limit: page, p_offset: off });
     if (!Array.isArray(rows)) throw new Error(`rpc ${name}: risposta inattesa`);
     out.push(...rows);
