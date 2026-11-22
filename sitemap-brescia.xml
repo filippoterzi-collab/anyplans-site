@@ -2,7 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://anyplans.in/brescia/cosa-fare/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/cosa-fare-oggi/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/cosa-fare-stasera/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/cosa-fare-domani/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/cosa-fare-nel-weekend/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/eventi-novembre-2026/</loc><lastmod>2026-11-22</lastmod></url>
@@ -31,7 +30,6 @@
   <url><loc>https://anyplans.in/brescia/karaoke/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/camminata/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/volontariato/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/bambini/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/vino-e-degustazioni/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/aperitivi/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/natale/</loc><lastmod>2026-11-22</lastmod></url>
@@ -40,6 +38,7 @@
   <url><loc>https://anyplans.in/brescia/biblioteca/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/gratis/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/arte/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://anyplans.in/brescia/birra/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/scambi-linguistici/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/tornei/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/classica-e-jazz/</loc><lastmod>2026-11-22</lastmod></url>
@@ -69,7 +68,7 @@
   <url><loc>https://anyplans.in/brescia/visano/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://anyplans.in/brescia/castegnato/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/rezzato/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/corte-franca/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://anyplans.in/brescia/corte-franca/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/montichiari/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/saiano/</loc><lastmod>2026-10-26</lastmod></url>
   <url><loc>https://anyplans.in/brescia/sarezzo/</loc><lastmod>2026-11-22</lastmod></url>
@@ -110,15 +109,10 @@
   <url><loc>https://anyplans.in/brescia/castelcovati/</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://anyplans.in/brescia/dello/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://anyplans.in/brescia/bovezzo/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/feste-oggi/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/cene-e-aperitivi-oggi/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/aperitivi-oggi/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/natale-oggi/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/sagre-oggi/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/gratis-oggi/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/open-week-sanclemente/</loc><lastmod>2026-10-14</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/locali/wemeet-by-weroad/</loc><lastmod>2026-11-19</lastmod></url>
+  <url><loc>https://anyplans.in/brescia/locali/wemeet-by-weroad/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/mo-ca-centro-per-le-nuove-culture/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/gardana/</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/otium-caffe/</loc><lastmod>2026-11-22</lastmod></url>
@@ -135,8 +129,8 @@
   <url><loc>https://anyplans.in/brescia/locali/the-villains-pub/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/ambienteparco/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/piastra-pendolina/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/locali/convento-ristorante-music-dance/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/peperoncino-brescia/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://anyplans.in/brescia/locali/convento-ristorante-music-dance/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/mariuccia-club/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/castello-di-brescia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/teatro-santa-giulia/</loc><lastmod>2026-11-22</lastmod></url>
@@ -151,11 +145,10 @@
   <url><loc>https://anyplans.in/brescia/locali/auditorium-di-san-barnaba/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/party-k/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/teatro-dis-play-brixia-forum/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/locali/signorvino/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/masseria-locale/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/informagiovani-brescia/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/locali/il-sogno-dell-anima-aps/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/thesundayrun-club/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://anyplans.in/brescia/locali/areadocks/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/liceo-di-stato-girolamo-bagatta/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/museo-di-santa-giulia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/ciukito/</loc><lastmod>2026-11-22</lastmod></url>
@@ -165,7 +158,6 @@
   <url><loc>https://anyplans.in/brescia/locali/chiesa-di-san-giuseppe/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/ac-hotel-brescia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/q-fun-lasergame-brescia/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/locali/areadocks/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/lumine/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/barutz/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/temporary-band/</loc><lastmod>2026-11-22</lastmod></url>
@@ -178,7 +170,6 @@
   <url><loc>https://anyplans.in/brescia/locali/cinema-teatro-corallo/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/babbo-running/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/gio-del-bianco/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/locali/brescia-bs/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/locali/teatro-centro-lucia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/mercato-di-torre-pallavicina/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/mercato-di-tavernola-bergamasca/</loc><lastmod>2026-11-22</lastmod></url>
@@ -190,24 +181,23 @@
   <url><loc>https://anyplans.in/brescia/brescia-magica-tra-stregoneria-veggenza-e-antichi-segreti-es/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/rimedi-oscuri-e-ferite-di-guerra-storie-atroci-della-medicin/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/cena-da-otium-caffe/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/cena-da-otium-caffe-2026-11-20/</loc><lastmod>2026-11-20</lastmod></url>
+  <url><loc>https://anyplans.in/brescia/cena-da-otium-caffe-2026-11-20/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/visita-guidata-al-cimitero-monumentale-di-brescia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/aperitivo-artistico-da-signorvino/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/mercantico/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://anyplans.in/brescia/cena-da-peperoncino-brescia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/brescia-proibita-alla-scoperta-della-storia-ose-della-citta/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/brescia-oscura-sangue-blu-anime-nere-quattro-secoli-di-fatti/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/chi-vince-beve/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/brescia-esoterica-simboli-luoghi-segreti-e-misteri-nascosti/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/el-nostra/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/salo-creativa/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://anyplans.in/brescia/cena-da-atelier-sushi/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/mercato-agricolo-a-ome/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/speed-date-brescia-vincenzo-capuano-nowmeet/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/cena-da-new-fashion-bar/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/cena-da-miho-sushi/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/cena-da-golf-bistrot/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/brescia-noir-un-tour-nella-cronaca-nera-e-storia-inquietante/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/cena-da-convento-ristorante-music-dance/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/cena-da-convento-ristorante-music-dance-2026-11-15/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/bunkervik/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/bunkervik-2026-11-16/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/aperitivi-in-english/</loc><lastmod>2026-11-22</lastmod></url>
@@ -223,9 +213,6 @@
   <url><loc>https://anyplans.in/brescia/tra-profumi-e-veleni-alchimisti-e-speziali-di-brescia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/lunaria-5-1-stagione-teatrale/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/visita-guidata-al-vittoriale-degli-italiani-il-labirinto-seg/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/visita-guidata-alla-chiesa-di-s-francesco/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/voci-a-san-martino/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/cena-da-osteria-valle-bresciana/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/karaoke-da-party-k/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/tandem-linguistici/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/brescia-misteriosa-sangue-blu-anime-nere-quattro-secoli-di-f/</loc><lastmod>2026-11-22</lastmod></url>
@@ -237,49 +224,19 @@
   <url><loc>https://anyplans.in/brescia/brescia-sotto-le-bombe-storie-aneddoti-e-curiosita-della-sec/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/brescia-sotto-le-bombe-storie-aneddoti-e-curiosita-della-sec-2027-02-20/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/brescia-a-tavola-storia-di-osterie-trani-trattorie-e-licinsi/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/brunch-da-otium-caffe/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/novembre-mese-del-manzo-all-olio-de-co/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/castagnata/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/castagnata-2026-11-15/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/autoscontri-in-oratorio/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/visita-guidata-di-villa-torreggiani-tra-segreti-torture-le-c/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/manerbio-jazz-festival/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/sunday-run/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/sunday-run-2026-11-15/</loc><lastmod>2026-11-15</lastmod></url>
   <url><loc>https://anyplans.in/brescia/festa-del-ringraziamento/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/festa-del-ringraziamento-2026-11-15/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/corso-gratuito-di-elettricista/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/be-kind-rewind-3-edizione/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/riusa-ricrea/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/cena-da-terrazza-coin/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/cena-da-ciukito/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/open-day-2026-centro-di-formazione-professionale-casa-del-gi/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/open-day-liceo-bagatta-indirizzo-scientifico/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/castagnata-in-fattoria/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/san-martino/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/piramidi-di-zone-quando-la-natura-da-spettacolo/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/2-verita-e-1-bugia-da-aperivino-bar-enoteca/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/chiari-da-scoprire/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/aperitivo-da-pasticceria-roberto/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/enzo-pedretti-organo/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/concerto-pop-jazz-a-lume-di-candela-a-rovato/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/banda-musicale-pietro-lonati-di-mazzano/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/gloria-il-musical/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/e-che-ci-vuole/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/aperitivo-da-terrazza-coin/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/apertitvo-e-tarocchie-da-peperoncino-brescia/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/english-aperitivo-in-brescia-theblacksheep-18-30-20-00/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/festa-villaggio-d-autunno-orzivecchi/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/caccia-al-tesoro-itinerante/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/cena-da-old-wild-west-erbusco-porte-franche/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/giornata-del-ringraziamento/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/giornata-del-ringraziamento-2026-11-15/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/menu-spiedo-polenta/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/concorso-dei-presepi/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/stage-bachata-e-latinis-da-oh-vecio/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/guess-my-tablo-da-the-villains-pub/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/siamo-tutti-figli/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/inner-words-tita-tekeyan/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/corona-per-3ds-max-brescia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/v-ray-per-3ds-max-corso-completo-brescia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/meet-up-dbm-brescia/</loc><lastmod>2026-11-22</lastmod></url>
@@ -347,7 +304,7 @@
   <url><loc>https://anyplans.in/brescia/concerto-di-santa-cecilia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/live-football-discussions/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/templari-brescia/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/tavolo-genitori-single-da-castello-di-brescia/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://anyplans.in/brescia/tavolo-genitori-single-da-castello-di-brescia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/teenage-dream-party-da-lattepiu/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/21-11-rooftop-club-night-eclipse-x-hml/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/magnetica-festival-3a-giornata/</loc><lastmod>2026-11-22</lastmod></url>
@@ -365,6 +322,7 @@
   <url><loc>https://anyplans.in/brescia/workshop-bhangra-vibes-second-edition/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/la-domenica-italiana-da-lumine/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/cena-da-gusport/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://anyplans.in/brescia/soleil-party-22-anniversario-areadocks-da-areadocks/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/l-impatto-di-un-idea-la-rivoluzione-della-nonviolenza/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/open-day-di-natale/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/ragazze-improva/</loc><lastmod>2026-11-22</lastmod></url>
@@ -387,9 +345,10 @@
   <url><loc>https://anyplans.in/brescia/corso-origami-brescia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/biografia-di-carlotta-orlando-fra-due-epoche-e-due-mondi/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/ape-con-musica-da-osteria-n-1/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://anyplans.in/brescia/birra-dopo-il-lavoro-da-the-purty-kitchen-di-ghidori-ombrett/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/cena-sconnessi-da-birreria-3-corone/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/suminagashi-experience-l-arte-di-dipingere-sull-acqua/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/brescia/cena-da-sushi-club-castel-mella/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://anyplans.in/brescia/cena-da-yang-asian-restaurant-rovato/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/weroad-afterwork-travel-stories-edition/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/candlelight-tributo-a-vasco-rossi/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/lo-schiaccianoci-european-classical-ballet/</loc><lastmod>2026-11-22</lastmod></url>
@@ -403,8 +362,10 @@
   <url><loc>https://anyplans.in/brescia/alfi-x-astrolabio/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/legami/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/90-s-2000-s-hits-party-paolino-radio-105-da-lumine/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://anyplans.in/brescia/cena-da-azienda-agricola-al-berlinghetto/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/spettacolo-apri-gli-occhi/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/25-anni-di-malghesetti/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://anyplans.in/brescia/karaoke-da-retroscena/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/art-connecting-people-lab-luce-dentro-luce-fuori/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/incontrare-la-luna/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/bazar-di-natale/</loc><lastmod>2026-11-22</lastmod></url>
@@ -606,10 +567,10 @@
   <url><loc>https://anyplans.in/brescia/cosa-fare-a-capodanno/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/cosa-fare-a-natale/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/ponte-dell-immacolata/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://anyplans.in/brescia/feste-della-birra/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/vino-e-degustazioni-dove/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/what-to-do-today/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/brescia/what-to-do-tonight/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/what-to-do-tomorrow/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/what-to-do-this-weekend/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/events-november-2026/</loc><lastmod>2026-11-22</lastmod></url>
@@ -638,7 +599,6 @@
   <url><loc>https://anyplans.in/en/brescia/karaoke/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/walking/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/volunteering/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/brescia/kids/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/wine-tastings/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/aperitivo/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/christmas/</loc><lastmod>2026-11-22</lastmod></url>
@@ -647,6 +607,7 @@
   <url><loc>https://anyplans.in/en/brescia/libraries/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/free/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/arts/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://anyplans.in/en/brescia/beer/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/language-exchange/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/tournaments/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/classical-and-jazz/</loc><lastmod>2026-11-22</lastmod></url>
@@ -676,7 +637,7 @@
   <url><loc>https://anyplans.in/en/brescia/visano/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/castegnato/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/rezzato/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/brescia/corte-franca/</loc><lastmod>2026-11-21</lastmod></url>
+  <url><loc>https://anyplans.in/en/brescia/corte-franca/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/montichiari/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/saiano/</loc><lastmod>2026-10-14</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/sarezzo/</loc><lastmod>2026-11-22</lastmod></url>
@@ -717,15 +678,10 @@
   <url><loc>https://anyplans.in/en/brescia/castelcovati/</loc><lastmod>2026-11-20</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/dello/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/bovezzo/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/brescia/festivals-today/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/brescia/dinners-today/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/brescia/aperitivo-today/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/brescia/christmas-today/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/brescia/food-fairs-today/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/free-today/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/open-week-sanclemente/</loc><lastmod>2026-10-14</lastmod></url>
-  <url><loc>https://anyplans.in/en/brescia/venues/wemeet-by-weroad/</loc><lastmod>2026-11-19</lastmod></url>
+  <url><loc>https://anyplans.in/en/brescia/venues/wemeet-by-weroad/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/mo-ca-centro-per-le-nuove-culture/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/gardana/</loc><lastmod>2026-11-19</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/otium-caffe/</loc><lastmod>2026-11-22</lastmod></url>
@@ -742,8 +698,8 @@
   <url><loc>https://anyplans.in/en/brescia/venues/the-villains-pub/</loc><lastmod>2026-11-21</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/ambienteparco/</loc><lastmod>2026-11-10</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/piastra-pendolina/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/brescia/venues/convento-ristorante-music-dance/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/peperoncino-brescia/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://anyplans.in/en/brescia/venues/convento-ristorante-music-dance/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/mariuccia-club/</loc><lastmod>2026-11-16</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/castello-di-brescia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/teatro-santa-giulia/</loc><lastmod>2026-11-22</lastmod></url>
@@ -758,11 +714,10 @@
   <url><loc>https://anyplans.in/en/brescia/venues/auditorium-di-san-barnaba/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/party-k/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/teatro-dis-play-brixia-forum/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/brescia/venues/signorvino/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/masseria-locale/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/informagiovani-brescia/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/brescia/venues/il-sogno-dell-anima-aps/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/thesundayrun-club/</loc><lastmod>2026-11-22</lastmod></url>
+  <url><loc>https://anyplans.in/en/brescia/venues/areadocks/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/liceo-di-stato-girolamo-bagatta/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/museo-di-santa-giulia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/ciukito/</loc><lastmod>2026-11-22</lastmod></url>
@@ -772,7 +727,6 @@
   <url><loc>https://anyplans.in/en/brescia/venues/chiesa-di-san-giuseppe/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/ac-hotel-brescia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/q-fun-lasergame-brescia/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/brescia/venues/areadocks/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/lumine/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/barutz/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/temporary-band/</loc><lastmod>2026-11-22</lastmod></url>
@@ -785,7 +739,6 @@
   <url><loc>https://anyplans.in/en/brescia/venues/cinema-teatro-corallo/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/babbo-running/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/gio-del-bianco/</loc><lastmod>2026-11-22</lastmod></url>
-  <url><loc>https://anyplans.in/en/brescia/venues/brescia-bs/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/en/brescia/venues/teatro-centro-lucia/</loc><lastmod>2026-11-22</lastmod></url>
   <url><loc>https://anyplans.in/brescia/</loc><lastmod>2026-11-22</lastmod></url>
 </urlset>
