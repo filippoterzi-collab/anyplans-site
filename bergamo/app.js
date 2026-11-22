@@ -192,7 +192,8 @@ const CATALOG = {
   cinema:    { e:"🎬", l:"Cinema",                    c:"cultura" },
   games:     { e:"🎲", l:"Giochi da tavolo",          c:"cultura" },
   exhibition:{ e:"🖼️", l:"Mostre",                    c:"cultura" },
-  singles:   { e:"💘", l:"Serate per single",         c:"cultura" }
+  singles:   { e:"💘", l:"Serate per single",         c:"cultura" },
+  networking:{ e:"🤝", l:"Networking",                c:"cultura" }
 };
 
 // categoria del sito per ogni slug non sportivo; tutto il resto è "sport"
@@ -200,7 +201,7 @@ const CAT_BY_SLUG = { cooking:"cucina", dinner:"cucina", aperitivo:"cucina", lun
                       gardening:"giardinaggio", festival:"cultura", estivo:"cultura", yoga:"benessere",
                       concert:"cultura", show:"cultura", market:"cultura", karaoke:"cultura", tour:"cultura", culture:"cultura", fair:"cultura",
                       dancing:"cultura", nightlife:"cultura", cinema:"cultura", games:"cultura", exhibition:"cultura",
-                      singles:"cultura", match:"sport" };
+                      singles:"cultura", networking:"cultura", match:"sport" };
 // parole con cui la gente cerca ogni attività (il titolo da solo non basta: "corsa" vs "corro 10k")
 const SEARCH_WORDS = {
   running: "corsa correre corro run running jogging km parco allenamento",
@@ -251,7 +252,8 @@ const SEARCH_WORDS = {
   cinema: "cinema film proiezione rassegna corto documentario schermo arena estiva",
   games: "giochi gioco tavolo board game quiz trivia burraco scacchi carte escape room bingo",
   exhibition: "mostra mostre esposizione vernissage galleria quadri fotografia biennale museo",
-  singles: "single singles speed date speed dating cuori solitari conoscere gente appuntamento"
+  singles: "single singles speed date speed dating cuori solitari conoscere gente appuntamento",
+  networking: "networking aperitivo di lavoro meetup business freelance startup imprenditori professionisti contatti"
 };
 // parole simili: "corse" trova "corsa", "scalate" trova "scalata" (si confronta anche la radice)
 const stem = w => w.length > 4 ? w.replace(/(ando|endo|are|ere|ire|ate|ata|ato|ati|ing|s|e|a|o|i)$/, "") : w;
