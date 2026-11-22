@@ -2,11 +2,11 @@
 
 > anyplans (anyplans.in) è la mappa degli eventi veri di Vicenza e provincia: feste di paese e sagre, teatro e spettacoli, concerti, mercati, incontri e conferenze, visite guidate, camminate e gruppi di cammino, mostre, corsi di cucina e di ceramica, volontariato, uscite sportive, cene con sconosciuti. Raccoglie gli eventi già esistenti dai siti dei comuni, delle associazioni e delle piattaforme dove vengono annunciati, più quelli pubblicati dai gruppi; chi li vede si iscrive e ci va insieme ad altri. Solo maggiorenni. Registrazione gratuita con email. Questo file parla di Vicenza: il sito copre 52 città italiane (Milano, Bergamo, Torino, Roma, Bologna, Brescia, Napoli, Verona, Padova, Varese, Firenze, Genova, Bari, Perugia, Parma, Cagliari, Palermo, Trieste, Trento, Pescara, Catania, Ravenna, Udine, Rimini, Bolzano, Pisa, Taranto, Salerno, Lecce, Monza, Prato, Como, Lecco, Lodi, Modena, Reggio Emilia, Treviso, Venezia, Novara, Lucca, Mantova, Ferrara, Pistoia, Pavia, Ancona, Pordenone, Cremona, Messina, Reggio Calabria, Alessandria, Latina), l'indice è https://anyplans.in/llms.txt.
 
-Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-11-21. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
+Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono quelli pubblicati da chi organizza. Ultimo aggiornamento: 2026-11-22. Instagram: https://instagram.com/anyplans_bergamo. Contatto: hello@anyplans.in.
 
 ## Pagine principali
 
-- [Cosa fare a Vicenza](https://anyplans.in/vicenza/cosa-fare/): tutti gli eventi in programma (140), per tipo e per paese; risponde a "cosa fare a Vicenza oggi / questo weekend"
+- [Cosa fare a Vicenza](https://anyplans.in/vicenza/cosa-fare/): tutti gli eventi in programma (128), per tipo e per paese; risponde a "cosa fare a Vicenza oggi / questo weekend"
 - [Tutte le città](https://anyplans.in/citta/): l'elenco delle città con quanti eventi ha ognuna
 - [Le regole di anyplans](https://anyplans.in/guidelines.html)
 - [Privacy](https://anyplans.in/privacy-it.html)
@@ -14,68 +14,49 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 
 ## Eventi per tipo e per paese
 
-- [Cena a Vicenza](https://anyplans.in/vicenza/cene-e-aperitivi/): 12 in programma
-- [Incontri culturali a Vicenza](https://anyplans.in/vicenza/incontri-culturali/): 31 in programma
+- [Cena a Vicenza](https://anyplans.in/vicenza/cene-e-aperitivi/): 10 in programma
+- [Incontri culturali a Vicenza](https://anyplans.in/vicenza/incontri-culturali/): 30 in programma
 - [Cinema a Vicenza](https://anyplans.in/vicenza/cinema/): 2 in programma
-- [Concerti e musica dal vivo a Vicenza](https://anyplans.in/vicenza/concerti/): 30 in programma
+- [Concerti e musica dal vivo a Vicenza](https://anyplans.in/vicenza/concerti/): 27 in programma
 - [Yoga / pilates a Vicenza](https://anyplans.in/vicenza/yoga/): 2 in programma
 - [Padel a Vicenza](https://anyplans.in/vicenza/padel/): 0 in programma
 - [Mercatini a Vicenza](https://anyplans.in/vicenza/mercatini/): 0 in programma
 - [Feste, sagre ed eventi di paese a Vicenza](https://anyplans.in/vicenza/feste/): 3 in programma
 - [Ballo e danza a Vicenza](https://anyplans.in/vicenza/ballo/): 2 in programma
-- [Spettacoli e teatro a Vicenza](https://anyplans.in/vicenza/spettacoli/): 37 in programma
+- [Spettacoli e teatro a Vicenza](https://anyplans.in/vicenza/spettacoli/): 33 in programma
 - [Pittura / arte a Vicenza](https://anyplans.in/vicenza/pittura/): 2 in programma
 - [Mostre a Vicenza](https://anyplans.in/vicenza/mostre/): 1 in programma
-- [Escursionismo a Vicenza](https://anyplans.in/vicenza/escursioni/): 2 in programma
+- [Escursionismo a Vicenza](https://anyplans.in/vicenza/escursioni/): 1 in programma
 - [Visite guidate a Vicenza](https://anyplans.in/vicenza/visite-guidate/): 5 in programma
 - [Giardinaggio / volontariato a Vicenza](https://anyplans.in/vicenza/volontariato/): 2 in programma
 - [Palestra a Vicenza](https://anyplans.in/vicenza/palestra/): 4 in programma
 - [Serate per single a Vicenza](https://anyplans.in/vicenza/single/): 2 in programma
 - [Serate e discoteca a Vicenza](https://anyplans.in/vicenza/serate/): 0 in programma
 - [Sagre a Vicenza](https://anyplans.in/vicenza/sagre/): 3 in programma
-- [Gratis a Vicenza](https://anyplans.in/vicenza/gratis/): 135 in programma
+- [Gratis a Vicenza](https://anyplans.in/vicenza/gratis/): 123 in programma
 - [Benessere a Vicenza](https://anyplans.in/vicenza/meditazione-e-benessere/): 4 in programma
-- [Classica, jazz e opera a Vicenza](https://anyplans.in/vicenza/classica-e-jazz/): 9 in programma
-- [8 marzo a Vicenza](https://anyplans.in/vicenza/festa-della-donna/): 4 in programma
-- [Stelle e astronomia a Vicenza](https://anyplans.in/vicenza/stelle-e-astronomia/): 3 in programma
-- [Montagna ed escursioni a Vicenza](https://anyplans.in/vicenza/montagna/): 3 in programma
-- [Sport a Vicenza](https://anyplans.in/vicenza/sport/): 10 in programma
-- [Feste ed eventi a Trissino](https://anyplans.in/vicenza/trissino/): 9 in programma
+- [Classica, jazz e opera a Vicenza](https://anyplans.in/vicenza/classica-e-jazz/): 8 in programma
+- [8 marzo a Vicenza](https://anyplans.in/vicenza/festa-della-donna/): 3 in programma
+- [Sport a Vicenza](https://anyplans.in/vicenza/sport/): 8 in programma
+- [Feste ed eventi a Trissino](https://anyplans.in/vicenza/trissino/): 7 in programma
 - [Feste ed eventi a Altavilla Vicentina](https://anyplans.in/vicenza/altavilla-vicentina/): 1 in programma
 - [Feste ed eventi a Malo](https://anyplans.in/vicenza/malo/): 1 in programma
 - [Feste ed eventi a Caldogno](https://anyplans.in/vicenza/caldogno/): 1 in programma
-- [Feste ed eventi a Arcugnano](https://anyplans.in/vicenza/arcugnano/): 5 in programma
+- [Feste ed eventi a Arcugnano](https://anyplans.in/vicenza/arcugnano/): 3 in programma
 - [Feste ed eventi a Motta](https://anyplans.in/vicenza/motta/): 1 in programma
-- [Feste ed eventi a Torri di Quartesolo](https://anyplans.in/vicenza/torri-di-quartesolo/): 3 in programma
+- [Feste ed eventi a Torri di Quartesolo](https://anyplans.in/vicenza/torri-di-quartesolo/): 1 in programma
 - [Feste ed eventi a Thiene](https://anyplans.in/vicenza/thiene/): 3 in programma
 - [Feste ed eventi a Arzignano](https://anyplans.in/vicenza/arzignano/): 3 in programma
 - [Feste ed eventi a Creazzo](https://anyplans.in/vicenza/creazzo/): 0 in programma
 - [Feste ed eventi a Montecchio Maggiore](https://anyplans.in/vicenza/montecchio-maggiore/): 1 in programma
 - [Feste ed eventi a Montegalda](https://anyplans.in/vicenza/montegalda/): 8 in programma
 - [Feste ed eventi a Isola Vicentina](https://anyplans.in/vicenza/isola-vicentina/): 1 in programma
-- [Feste ed eventi a Marano Vicentino](https://anyplans.in/vicenza/marano-vicentino/): 1 in programma
+- [Feste ed eventi a Marano Vicentino](https://anyplans.in/vicenza/marano-vicentino/): 0 in programma
 - [Feste ed eventi a Carmignano di Brenta](https://anyplans.in/vicenza/carmignano-di-brenta/): 1 in programma
 
 ## Prossimi eventi
 
-- [Open Day - Discover H-FARM International School Vicenza](https://anyplans.in/vicenza/open-day-discover-h-farm-international-school-vicenza/): Sabato 21 novembre alle 09:00, H-FARM International School Vicenza, Vicenza, Gratis
-- [Alchimie in Atelier – Salotto aromatico](https://anyplans.in/vicenza/alchimie-in-atelier-salotto-aromatico/): Sabato 21 novembre alle 10:00, Cosmetici BIO Atelier Nativa, Marano Vicentino, Gratis
-- [R&B Brunch n Day Party](https://anyplans.in/vicenza/r-b-brunch-n-day-party/): Sabato 21 novembre alle 13:30, Nu Club, Vicenza, Gratis
-- [La Via Lattea • Laboratorio didattico da 4 a 10 anni](https://anyplans.in/vicenza/la-via-lattea-laboratorio-didattico-da-4-a-10-anni/): Sabato 21 novembre alle 15:30, Osservatorio Astronomico “G. Beltrame”, Arcugnano, Gratis
-- [OUVERTURE DES SAPONETTES](https://anyplans.in/vicenza/ouverture-des-saponettes/): Sabato 21 novembre alle 16:00, Via Rovigo, 47, Trissino, Gratis
-- [La rivoluzione linguistica per il genere femminile dei testi antichi](https://anyplans.in/vicenza/la-rivoluzione-linguistica-per-il-genere-femminile-dei-testi/): Sabato 21 novembre alle 17:00, Via Roma, 174, Torri di Quartesolo, Gratis
-- [VDH3 Trail #158 "Let's get basted" - UPDATE!!!](https://anyplans.in/vicenza/vdh3-trail-158-let-s-get-basted-update/): Sabato 21 novembre alle 18:00, Via Antonio Pizzocaro, 47, 36100 Vicenza VI, Italia, Vicenza, Gratis
-- [OPENING 192 ORE D'ARIA](https://anyplans.in/vicenza/opening-192-ore-d-aria/): Sabato 21 novembre alle 18:00, Via Rovigo, 47, Trissino, Gratis
-- [Mengoni tributo band da Miami Sound Café: 5 posti liberi](https://anyplans.in/vicenza/mengoni-tributo-band-da-miami-sound-cafe/): Sabato 21 novembre alle 19:00, Miami Sound Café, Torri di Quartesolo, Gratis
-- [Cena "porta un amico single" da Dai Tosi-Thiene: 3 posti liberi](https://anyplans.in/vicenza/cena-porta-un-amico-single-da-dai-tosi-thiene/): Sabato 21 novembre alle 19:30, Dai Tosi-Thiene, Gratis
-- [Osservazione della Luna](https://anyplans.in/vicenza/osservazione-della-luna/): Sabato 21 novembre alle 20:30, Osservatorio Astronomico “G. Beltrame”, Arcugnano, Gratis
-- [NIENTE DI GRAVE voci della violenza contro le donne](https://anyplans.in/vicenza/niente-di-grave-voci-della-violenza-contro-le-donne/): Sabato 21 novembre alle 21:00, Kitchen Teatro Indipendente, Vicenza, Gratis
-- [NADT ORCHESTRA - PROXIMA The Young Side fall edition](https://anyplans.in/vicenza/nadt-orchestra-proxima-the-young-side-fall-edition/): Sabato 21 novembre alle 21:00, La Centrale, Vicenza, Gratis
-- [Mutazioni 07 – stagione teatrale Theama Teatro](https://anyplans.in/vicenza/mutazioni-07-stagione-teatrale-theama-teatro/): Sabato 21 novembre alle 21:00, Spazio Teatro Bixio, Vicenza, Gratis
-- [Bleeding Me - MetallicA Acoustic Experience - Live At Nevermind Café](https://anyplans.in/vicenza/bleeding-me-metallica-acoustic-experience-live-at-nevermind-/): Sabato 21 novembre alle 21:30, Nevermind Cafè, Via Antonio Fogazzaro, Grumolo delle Abbadesse VI, Italia, Vicenza, Gratis
-- [Mothership Live! Led Zeppelin Tribute @ Mamaloca!](https://anyplans.in/vicenza/mothership-live-led-zeppelin-tribute-mamaloca/): Sabato 21 novembre alle 22:00, Mamaloca, Vicenza, Gratis
 - [Osservazione del Sole](https://anyplans.in/vicenza/osservazione-del-sole/): Domenica 22 novembre alle 10:00, Osservatorio Astronomico “G. Beltrame”, Arcugnano, Gratis
-- [Uscita fuori porta da Wamy Sushi Dueville: 3 posti liberi](https://anyplans.in/vicenza/uscita-fuori-porta-da-wamy-sushi-dueville/): Domenica 22 novembre alle 11:30, Wamy Sushi Dueville, Gratis
 - [DARE FORMA ALL'ARIA](https://anyplans.in/vicenza/dare-forma-all-aria/): Domenica 22 novembre alle 14:00, Via Rovigo, 47, Trissino, Gratis
 - [MULTITAVOLO DIFFUSA](https://anyplans.in/vicenza/multitavolo-diffusa/): Domenica 22 novembre alle 15:00, Centro Giovani, Montecchio Maggiore, Gratis
 - [LA FISICA DELL'ARIA](https://anyplans.in/vicenza/la-fisica-dell-aria/): Domenica 22 novembre alle 15:30, Via Rovigo, 47, Trissino, Gratis
@@ -98,6 +79,23 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [FAB Dentistry Revolution](https://anyplans.in/vicenza/fab-dentistry-revolution/): Giovedì 26 novembre alle 09:00, Thiene, Thiene, Gratis
 - [D-AIR LAB TALK](https://anyplans.in/vicenza/d-air-lab-talk/): Giovedì 26 novembre alle 19:00, Via Rovigo, 47, Trissino, Gratis
 - [Cena da Mama L'oca Street Bar: 9 posti liberi](https://anyplans.in/vicenza/cena-da-mama-l-oca-street-bar/): Giovedì 26 novembre alle 19:15, Mama L'oca Street Bar, Vicenza, Gratis
+- [Cadillac/Tower | Corso per trainer Pilates - Vicenza](https://anyplans.in/vicenza/cadillac-tower-corso-per-trainer-pilates-vicenza/): Venerdì 27 novembre alle 14:00, Idea Pilates, Vicenza, Gratis
+- [Visita Museo](https://anyplans.in/vicenza/visita-museo/): Dal 27 novembre al 27 novembre, 2 date, Via Attilio Zordan, Valdagno, Gratis
+- [Candlelight: Le Quattro Stagioni di Vivaldi](https://anyplans.in/vicenza/candlelight-le-quattro-stagioni-di-vivaldi/): Venerdì 27 novembre alle 18:00, Spazio Roma, Vicenza, 24 €
+- [Cena da Villa Bonin Club & Dinner: 4 posti liberi](https://anyplans.in/vicenza/cena-da-villa-bonin-club-dinner/): Venerdì 27 novembre alle 19:00, Villa Bonin Club & Dinner, Vicenza, Gratis
+- [Altre Latitudini: sulle orme di Lhote e le pitture rupestri del Tassili](https://anyplans.in/vicenza/altre-latitudini-sulle-orme-di-lhote-e-le-pitture-rupestri-d/): Venerdì 27 novembre alle 19:30, Parco delle Stagioni Bistrot Caffetteria, Motta, Gratis
+- [Workshop di Ceramica AmanoLibera](https://anyplans.in/vicenza/workshop-di-ceramica-amanolibera/): Venerdì 27 novembre alle 20:00, BRUNCH REPUBLIC Vicenza, Vicenza, 35 €
+- [Candlelight: Queen & ABBA](https://anyplans.in/vicenza/candlelight-queen-abba/): Venerdì 27 novembre alle 20:00, Spazio Roma, Vicenza, 36 €
+- [Venerdì di Ruolo in Biblioteca](https://anyplans.in/vicenza/venerdi-di-ruolo-in-biblioteca/): Venerdì 27 novembre alle 20:30, Biblioteca di Arzignano “Giulio Bedeschi”, Arzignano, Gratis
+- [I venerdì in compagnia ✨ da Hosteria Al Gallo: 4 posti liberi](https://anyplans.in/vicenza/i-venerdi-in-compagnia-da-hosteria-al-gallo/): Venerdì 27 novembre alle 20:30, Hosteria Al Gallo, Vicenza, Gratis
+- [Corpi sotto assedio: storie di donne che resistono](https://anyplans.in/vicenza/corpi-sotto-assedio-storie-di-donne-che-resistono/): Venerdì 27 novembre alle 20:30, Auditorium "G. Zanella", Arzignano, Gratis
+- [Funky Remember + Gaggia & Visona + Remember Ciao Ciao con Alberto Castaman @ Villa Bonin, Vicenza](https://anyplans.in/vicenza/funky-remember-gaggia-visona-remember-ciao-ciao-con-alberto-/): Venerdì 27 novembre alle 21:00, VILLA BONIN - Club & Dinner, Vicenza, Gratis
+- [ATTI DEGLI APOSTOLI | Baladam B-Side](https://anyplans.in/vicenza/atti-degli-apostoli-baladam-b-side/): Venerdì 27 novembre alle 21:00, Teatro Astra, Vicenza, Gratis
+- [Cena da Caffè Vero House: 7 posti liberi](https://anyplans.in/vicenza/cena-da-caffe-vero-house/): Venerdì 27 novembre alle 21:00, Caffè Vero House, Vicenza, Gratis
+- [ILLYRIAN at YOU CLUB VICENZA](https://anyplans.in/vicenza/illyrian-at-you-club-vicenza/): Venerdì 27 novembre alle 23:00, YOU Club Vicenza, Vicenza, Gratis
+- [Lo Sport in Sicurezza](https://anyplans.in/vicenza/lo-sport-in-sicurezza/): Sabato 28 novembre alle 10:00, Centro Congressi Confartigianato Vicenza, Vicenza, Gratis
+- [Bilancio di Sostenibilità - Istituto Galilei Arzignano](https://anyplans.in/vicenza/bilancio-di-sostenibilita-istituto-galilei-arzignano/): Sabato 28 novembre alle 10:30, Istituto Tecnico Tecnologico Economico Galileo Galilei, Arzignano, Gratis
+- [ARRIVA A BOLZANO VICENTINO THE HUNTRIX EXPERIENCE](https://anyplans.in/vicenza/arriva-a-bolzano-vicentino-the-huntrix-experience/): Sabato 28 novembre alle 16:30, Piazza Roma 9 Bolzano Vicentino, Bolzano Vicentino, Gratis
 
 ## Optional
 
@@ -131,165 +129,163 @@ Le pagine si rigenerano ogni notte dai dati: date, orari, luoghi e prezzi sono q
 - [Benessere in Vicenza](https://anyplans.in/en/vicenza/meditazione-e-benessere/)
 - [Classica, jazz e opera in Vicenza](https://anyplans.in/en/vicenza/classica-e-jazz/)
 - [8 marzo in Vicenza](https://anyplans.in/en/vicenza/festa-della-donna/)
-- [Stelle e astronomia in Vicenza](https://anyplans.in/en/vicenza/stelle-e-astronomia/)
-- [Montagna ed escursioni in Vicenza](https://anyplans.in/en/vicenza/montagna/)
 - [Sport in Vicenza](https://anyplans.in/en/vicenza/sport/)
 
 ---
 
 # Tutte le pagine di anyplans a Vicenza (italiano, poi inglese)
 
-## Cosa fare a Vicenza e provincia: 140 eventi
+## Cosa fare a Vicenza e provincia: 128 eventi
 https://anyplans.in/vicenza/cosa-fare/
 
 Gratis, incontri culturali, cena, concerti e musica dal vivo e spettacoli e teatro: quello che succede a Vicenza e dintorni, in un posto solo. Scegli un evento e ci vai insieme ad altre persone.
 
 **Cosa fare a Vicenza questo fine settimana?**
-Questo fine settimana a Vicenza e provincia ci sono 25 eventi su anyplans: Alchimie in Atelier – Salotto aromatico (Marano Vicentino, 21 novembre), R&B Brunch n Day Party (Vicenza, 21 novembre), La Via Lattea • Laboratorio didattico da 4 a 10 anni (Arcugnano, 21 novembre), OUVERTURE DES SAPONETTES (Trissino, 21 novembre), La rivoluzione linguistica per il genere femminile dei testi antichi (Torri di Quartesolo, 21 novembre) e VDH3 Trail #158 "Let's get basted" - UPDATE!!! (Vicenza, 21 novembre) e altri. Le date complete sono nella lista qui sopra.
+Questo fine settimana a Vicenza e provincia ci sono 17 eventi su anyplans: Osservazione del Sole (Arcugnano, 22 novembre), DARE FORMA ALL'ARIA (Trissino, 22 novembre), MULTITAVOLO DIFFUSA (Montecchio Maggiore, 22 novembre), LA FISICA DELL'ARIA (Trissino, 22 novembre), Giacomo Zanus  - PROXIMA The Young Side fall edition (Vicenza, 22 novembre) e Speed Date Vicenza 30-49 (22 novembre) e altri. Le date complete sono nella lista qui sopra.
 
 **Cosa fare a Vicenza oggi?**
-Oggi, 21 novembre 2026, a Vicenza e provincia ci sono 16 eventi su anyplans: Open Day - Discover H-FARM International School Vicenza, Alchimie in Atelier – Salotto aromatico a Marano Vicentino, R&B Brunch n Day Party a Vicenza, La Via Lattea • Laboratorio didattico da 4 a 10 anni a Arcugnano, OUVERTURE DES SAPONETTES a Trissino e La rivoluzione linguistica per il genere femminile dei testi antichi a Torri di Quartesolo.
+Oggi, 22 novembre 2026, a Vicenza e provincia ci sono 9 eventi su anyplans: Osservazione del Sole a Arcugnano, DARE FORMA ALL'ARIA a Trissino, MULTITAVOLO DIFFUSA a Montecchio Maggiore, LA FISICA DELL'ARIA a Trissino, Giacomo Zanus  - PROXIMA The Young Side fall edition a Vicenza e Speed Date Vicenza 30-49.
 
 **Che tipo di eventi ci sono a Vicenza su anyplans?**
-Gratis, incontri culturali, cena, concerti e musica dal vivo, spettacoli e teatro, mostre, sport e sagre. In questo momento sono in programma 140 eventi, raccolti ogni giorno da chi li organizza, dai comuni e dalle piattaforme dove vengono annunciati.
+Gratis, incontri culturali, cena, concerti e musica dal vivo, spettacoli e teatro, mostre, sport e sagre. In questo momento sono in programma 128 eventi, raccolti ogni giorno da chi li organizza, dai comuni e dalle piattaforme dove vengono annunciati.
 
 **Gli eventi a Vicenza su anyplans sono gratis?**
-135 dei 140 eventi in programma sono gratis. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento. Registrarsi su anyplans è gratis e serve solo la tua email; bisogna avere almeno 18 anni.
+123 dei 128 eventi in programma sono gratis. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento. Registrarsi su anyplans è gratis e serve solo la tua email; bisogna avere almeno 18 anni.
 
-## Eventi oggi a Vicenza, sabato 21 novembre: cosa fare (16)
+## Eventi oggi a Vicenza, domenica 22 novembre: cosa fare (9)
 https://anyplans.in/vicenza/cosa-fare-oggi/
 
-16 eventi a Vicenza e provincia oggi, 21 novembre 2026: Vicenza, Arcugnano, Trissino e Torri di Quartesolo e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+9 eventi a Vicenza e provincia oggi, 22 novembre 2026: Trissino, Vicenza, Arcugnano e Montecchio Maggiore e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
 **Cosa si fa a Vicenza oggi?**
-16 eventi oggi, 21 novembre 2026: Open Day - Discover H-FARM International School Vicenza, Alchimie in Atelier – Salotto aromatico a Marano Vicentino, R&B Brunch n Day Party a Vicenza, La Via Lattea • Laboratorio didattico da 4 a 10 anni a Arcugnano, OUVERTURE DES SAPONETTES a Trissino, La rivoluzione linguistica per il genere femminile dei testi antichi a Torri di Quartesolo, VDH3 Trail #158 "Let's get basted" - UPDATE!!! a Vicenza e OPENING 192 ORE D'ARIA a Trissino e altri, tutti nella lista qui sopra.
+9 eventi oggi, 22 novembre 2026: Osservazione del Sole a Arcugnano, DARE FORMA ALL'ARIA a Trissino, MULTITAVOLO DIFFUSA a Montecchio Maggiore, LA FISICA DELL'ARIA a Trissino, Giacomo Zanus  - PROXIMA The Young Side fall edition a Vicenza, Speed Date Vicenza 30-49, Tablo experience⚡ da Spiller | Vicenza: 2 posti liberi e 🌟⚡ da Mini Moment: 2 posti liberi a Torri di Quartesolo e altri, tutti nella lista qui sopra.
 
 **C'è qualcosa di gratis oggi a Vicenza?**
-16 eventi su 16 sono gratis: soprattutto feste di paese, mercati e camminate di gruppo. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
+9 eventi su 9 sono gratis: soprattutto feste di paese, mercati e camminate di gruppo. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
 **In che paesi?**
-A Vicenza e in provincia: Vicenza (9), Arcugnano (2), Trissino (2), Torri di Quartesolo (2) e Marano Vicentino (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
+A Vicenza e in provincia: Trissino (3), Vicenza (3), Arcugnano (1), Montecchio Maggiore (1) e Torri di Quartesolo (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
 
 **Ci posso andare da solo?**
 Sì, è il senso di anyplans: vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
 
-## Eventi stasera a Vicenza, sabato 21 novembre: cosa fare (10)
+## Eventi stasera a Vicenza, domenica 22 novembre: cosa fare (5)
 https://anyplans.in/vicenza/cosa-fare-stasera/
 
-10 eventi a Vicenza e provincia stasera, 21 novembre 2026, dalle 18: Vicenza, Trissino, Torri di Quartesolo e Arcugnano e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+5 eventi a Vicenza e provincia stasera, 22 novembre 2026, dalle 18: Vicenza, Torri di Quartesolo e Trissino e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
 **Cosa si fa a Vicenza stasera?**
-10 eventi stasera, 21 novembre 2026, dalle 18: VDH3 Trail #158 "Let's get basted" - UPDATE!!! a Vicenza, OPENING 192 ORE D'ARIA a Trissino, Mengoni tributo band da Miami Sound Café: 5 posti liberi a Torri di Quartesolo, Cena "porta un amico single" da Dai Tosi-Thiene: 3 posti liberi a Vicenza, Osservazione della Luna a Arcugnano, NIENTE DI GRAVE voci della violenza contro le donne a Vicenza, NADT ORCHESTRA - PROXIMA The Young Side fall edition a Vicenza e Mutazioni 07 – stagione teatrale Theama Teatro a Vicenza e altri, tutti nella lista qui sopra.
+5 eventi stasera, 22 novembre 2026, dalle 18: Giacomo Zanus  - PROXIMA The Young Side fall edition a Vicenza, Speed Date Vicenza 30-49, Tablo experience⚡ da Spiller | Vicenza: 2 posti liberi, 🌟⚡ da Mini Moment: 2 posti liberi a Torri di Quartesolo e NAZA a Trissino.
 
 **C'è qualcosa di gratis stasera a Vicenza?**
-10 eventi su 10 sono gratis: soprattutto feste di paese, mercati e camminate di gruppo. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
+5 eventi su 5 sono gratis: soprattutto feste di paese, mercati e camminate di gruppo. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
 **In che paesi?**
-A Vicenza e in provincia: Vicenza (7), Trissino (1), Torri di Quartesolo (1) e Arcugnano (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
+A Vicenza e in provincia: Vicenza (3), Torri di Quartesolo (1) e Trissino (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
 
 **Ci posso andare da solo?**
 Sì, è il senso di anyplans: vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
 
-## Eventi domani a Vicenza, domenica 22 novembre: cosa fare (10)
+## Eventi domani a Vicenza, lunedì 23 novembre: cosa fare (3)
 https://anyplans.in/vicenza/cosa-fare-domani/
 
-10 eventi a Vicenza e provincia domani, 22 novembre 2026: Vicenza, Trissino, Arcugnano e Montecchio Maggiore e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+3 eventi a Vicenza e provincia domani, 23 novembre 2026: Carmignano di Brenta, Trissino e Vancimuglio e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
 **Cosa si fa a Vicenza domani?**
-10 eventi domani, 22 novembre 2026: Osservazione del Sole a Arcugnano, Uscita fuori porta da Wamy Sushi Dueville: 3 posti liberi a Vicenza, DARE FORMA ALL'ARIA a Trissino, MULTITAVOLO DIFFUSA a Montecchio Maggiore, LA FISICA DELL'ARIA a Trissino, Giacomo Zanus  - PROXIMA The Young Side fall edition a Vicenza, Speed Date Vicenza 30-49 e Tablo experience⚡ da Spiller | Vicenza: 2 posti liberi e altri, tutti nella lista qui sopra.
+3 eventi domani, 23 novembre 2026: MERITO E FRAGILITA' POSSONO CONVIVERE? a Carmignano di Brenta, CINEMA FILANDA a Trissino e Il Gruppo Consiliare FDI incontra i cittadini a Vancimuglio.
 
 **C'è qualcosa di gratis domani a Vicenza?**
-10 eventi su 10 sono gratis: soprattutto feste di paese, mercati e camminate di gruppo. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
+3 eventi su 3 sono gratis: soprattutto feste di paese, mercati e camminate di gruppo. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
 **In che paesi?**
-A Vicenza e in provincia: Vicenza (4), Trissino (3), Arcugnano (1), Montecchio Maggiore (1) e Torri di Quartesolo (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
+A Vicenza e in provincia: Carmignano di Brenta (1), Trissino (1) e Vancimuglio (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
 
 **Ci posso andare da solo?**
 Sì, è il senso di anyplans: vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
 
-## Eventi nel weekend a Vicenza, 21 e 22 novembre: cosa fare (26)
+## Eventi nel weekend a Vicenza, 22 e 28 novembre: cosa fare (17)
 https://anyplans.in/vicenza/cosa-fare-nel-weekend/
 
-26 eventi a Vicenza e provincia nel weekend (Sabato 21 novembre e Domenica 22 novembre): Vicenza, Trissino, Arcugnano e Torri di Quartesolo e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
+17 eventi a Vicenza e provincia nel weekend (Domenica 22 novembre e Sabato 28 novembre): Vicenza, Trissino, Arcugnano e Montecchio Maggiore e altri. Feste di paese, mercati, concerti, uscite di corsa, cene: ne scegli uno e ci vai insieme ad altre persone. Aggiornato ogni notte.
 
 **Cosa si fa a Vicenza questo weekend?**
-26 eventi nel weekend (Sabato 21 novembre e Domenica 22 novembre): Open Day - Discover H-FARM International School Vicenza, Alchimie in Atelier – Salotto aromatico a Marano Vicentino, R&B Brunch n Day Party a Vicenza, La Via Lattea • Laboratorio didattico da 4 a 10 anni a Arcugnano, OUVERTURE DES SAPONETTES a Trissino, La rivoluzione linguistica per il genere femminile dei testi antichi a Torri di Quartesolo, VDH3 Trail #158 "Let's get basted" - UPDATE!!! a Vicenza e OPENING 192 ORE D'ARIA a Trissino e altri, tutti nella lista qui sopra.
+17 eventi nel weekend (Domenica 22 novembre e Sabato 28 novembre): Osservazione del Sole a Arcugnano, DARE FORMA ALL'ARIA a Trissino, MULTITAVOLO DIFFUSA a Montecchio Maggiore, LA FISICA DELL'ARIA a Trissino, Giacomo Zanus  - PROXIMA The Young Side fall edition a Vicenza, Speed Date Vicenza 30-49, Tablo experience⚡ da Spiller | Vicenza: 2 posti liberi e 🌟⚡ da Mini Moment: 2 posti liberi a Torri di Quartesolo e altri, tutti nella lista qui sopra.
 
 **C'è qualcosa di gratis questo weekend a Vicenza?**
-26 eventi su 26 sono gratis: soprattutto feste di paese, mercati e camminate di gruppo. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
+17 eventi su 17 sono gratis: soprattutto feste di paese, mercati e camminate di gruppo. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
 **In che paesi?**
-A Vicenza e in provincia: Vicenza (13), Trissino (5), Arcugnano (3), Torri di Quartesolo (3), Marano Vicentino (1) e Montecchio Maggiore (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
+A Vicenza e in provincia: Vicenza (6), Trissino (5), Arcugnano (1), Montecchio Maggiore (1), Torri di Quartesolo (1), Arzignano (1), Bolzano Vicentino (1) e Zona Industriale Nord (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
 
 **Ci posso andare da solo?**
 Sì, è il senso di anyplans: vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
 
-## Eventi a Vicenza a novembre 2026: 62
+## Eventi a Vicenza a novembre 2026: 45
 https://anyplans.in/vicenza/eventi-novembre-2026/
 
-62 eventi a Vicenza e provincia a novembre 2026: incontri culturali, cena, concerti e musica dal vivo, spettacoli e teatro e corsa. Giorno per giorno, con orari, luogo e prezzo, a Vicenza, Trissino, Arcugnano e Torri di Quartesolo e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+45 eventi a Vicenza e provincia a novembre 2026: incontri culturali, arrampicata, serate per single, concerti e musica dal vivo e cena. Giorno per giorno, con orari, luogo e prezzo, a Vicenza, Trissino, Arzignano e Arcugnano e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 **Cosa c'è a Vicenza a novembre 2026?**
-62 eventi: Open Day - Discover H-FARM International School Vicenza (sabato 21 novembre alle 09:00), Alchimie in Atelier – Salotto aromatico (Marano Vicentino, sabato 21 novembre alle 10:00), R&B Brunch n Day Party (Vicenza, sabato 21 novembre alle 13:30), La Via Lattea • Laboratorio didattico da 4 a 10 anni (Arcugnano, sabato 21 novembre alle 15:30), OUVERTURE DES SAPONETTES (Trissino, sabato 21 novembre alle 16:00), La rivoluzione linguistica per il genere femminile dei testi antichi (Torri di Quartesolo, sabato 21 novembre alle 17:00), VDH3 Trail #158 "Let's get basted" - UPDATE!!! (Vicenza, sabato 21 novembre alle 18:00) e OPENING 192 ORE D'ARIA (Trissino, sabato 21 novembre alle 18:00) e altri, tutti nella lista qui sopra.
+45 eventi: Osservazione del Sole (Arcugnano, domenica 22 novembre alle 10:00), DARE FORMA ALL'ARIA (Trissino, domenica 22 novembre alle 14:00), MULTITAVOLO DIFFUSA (Montecchio Maggiore, domenica 22 novembre alle 15:00), LA FISICA DELL'ARIA (Trissino, domenica 22 novembre alle 15:30), Giacomo Zanus  - PROXIMA The Young Side fall edition (Vicenza, domenica 22 novembre alle 18:30), Speed Date Vicenza 30-49 (domenica 22 novembre alle 18:30), Tablo experience⚡ da Spiller | Vicenza: 2 posti liberi (domenica 22 novembre alle 18:45) e 🌟⚡ da Mini Moment: 2 posti liberi (Torri di Quartesolo, domenica 22 novembre alle 20:30) e altri, tutti nella lista qui sopra.
 
 **In che paesi?**
-Vicenza (31), Trissino (9), Arcugnano (4), Torri di Quartesolo (3), Arzignano (3), Marano Vicentino (1), Montecchio Maggiore (1) e Carmignano di Brenta (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
+Vicenza (21), Trissino (7), Arzignano (3), Arcugnano (2), Montecchio Maggiore (1), Torri di Quartesolo (1), Carmignano di Brenta (1) e Vancimuglio (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
 
 **Quanto costano?**
-59 su 62 sono gratis. Quando c'è un biglietto o una quota il prezzo è nella pagina dell'evento: si paga a chi organizza, non ad anyplans.
+42 su 45 sono gratis. Quando c'è un biglietto o una quota il prezzo è nella pagina dell'evento: si paga a chi organizza, non ad anyplans.
 
-## Eventi a Vicenza a dicembre 2026: 28
+## Eventi a Vicenza a dicembre 2026: 29
 https://anyplans.in/vicenza/eventi-dicembre-2026/
 
-28 eventi a Vicenza e provincia a dicembre 2026: yoga / pilates, incontri culturali, concerti e musica dal vivo, visite guidate e feste, sagre ed eventi di paese. Giorno per giorno, con orari, luogo e prezzo, a Vicenza, Montegalda, Thiene e Brogliano e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+29 eventi a Vicenza e provincia a dicembre 2026: yoga / pilates, incontri culturali, concerti e musica dal vivo, cena e visite guidate. Giorno per giorno, con orari, luogo e prezzo, a Vicenza, Montegalda, Thiene e Brogliano e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 **Cosa c'è a Vicenza a dicembre 2026?**
-28 eventi: Gloria Soldà presenta PosturalMente felici | Brogliano (martedì 1 dicembre alle 18:00), Paolo Gentiloni presenta “Diventare una potenza” (Vicenza, martedì 1 dicembre alle 18:30), Antiche Melodie di Irlanda – Home Concert (Montegalda, mercoledì 2 dicembre alle 21:00), Candlelight: le più belle colonne sonore di Hans Zimmer (Vicenza, venerdì 4 dicembre alle 18:00), Vicenza Suona Walt Disney | Gran Concerto al Teatro San Marco (venerdì 4 dicembre alle 21:00), CORSO DI PRANOTERAPIA A VICENZA: LEZIONE APERTA (sabato 5 dicembre alle 10:00), FreedOM - Convegno Esperienziale (Thiene, domenica 6 dicembre alle 14:00) e Winter Country Tour 26/27 - Vicenza Birreria Lowengrube (lunedì 7 dicembre alle 16:00) e altri, tutti nella lista qui sopra.
+29 eventi: Gloria Soldà presenta PosturalMente felici | Brogliano (martedì 1 dicembre alle 18:00), Paolo Gentiloni presenta “Diventare una potenza” (Vicenza, martedì 1 dicembre alle 18:30), Antiche Melodie di Irlanda – Home Concert (Montegalda, mercoledì 2 dicembre alle 21:00), Candlelight: le più belle colonne sonore di Hans Zimmer (Vicenza, venerdì 4 dicembre alle 18:00), ••• MINI BRASILIANO ••• da Canacaiana Cocktail Gastro Bar: 4 posti liberi (Vicenza, venerdì 4 dicembre alle 19:00), Vicenza Suona Walt Disney | Gran Concerto al Teatro San Marco (venerdì 4 dicembre alle 21:00), CORSO DI PRANOTERAPIA A VICENZA: LEZIONE APERTA (sabato 5 dicembre alle 10:00) e FreedOM - Convegno Esperienziale (Thiene, domenica 6 dicembre alle 14:00) e altri, tutti nella lista qui sopra.
 
 **In che paesi?**
-Vicenza (19), Montegalda (2), Thiene (2), Brogliano (1), Brendola (1), Arcugnano (1), Chiampo (1) e Isola Vicentina (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
+Vicenza (20), Montegalda (2), Thiene (2), Brogliano (1), Brendola (1), Arcugnano (1), Chiampo (1) e Isola Vicentina (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
 
 **Quanto costano?**
-26 su 28 sono gratis. Quando c'è un biglietto o una quota il prezzo è nella pagina dell'evento: si paga a chi organizza, non ad anyplans.
+27 su 29 sono gratis. Quando c'è un biglietto o una quota il prezzo è nella pagina dell'evento: si paga a chi organizza, non ad anyplans.
 
-## Eventi a Vicenza a gennaio 2027: 17
+## Eventi a Vicenza a gennaio 2027: 18
 https://anyplans.in/vicenza/eventi-gennaio-2027/
 
-17 eventi a Vicenza e provincia a gennaio 2027: concerti e musica dal vivo, spettacoli e teatro, incontri culturali e palestra. Giorno per giorno, con orari, luogo e prezzo, a Vicenza, Montegalda, Vigo e Pedocchio e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
+18 eventi a Vicenza e provincia a gennaio 2027: concerti e musica dal vivo, spettacoli e teatro, incontri culturali e palestra. Giorno per giorno, con orari, luogo e prezzo, a Vicenza, Montegalda, Vigo e Pedocchio e in altri paesi. Ti iscrivi e ci vai insieme ad altre persone.
 
 **Cosa c'è a Vicenza a gennaio 2027?**
-17 eventi: Gospel in Vicenza 2027 (domenica 3 gennaio alle 18:00), Cenerentola- Il musical (Vicenza, domenica 10 gennaio alle 17:00), Yuki Serino e Martin Nöbauer | Stagione Concertistica 2026/27 (Vicenza, lunedì 11 gennaio alle 20:45), Multisonor – Home Concert (Montegalda, lunedì 11 gennaio alle 21:00), Presentazione del progetto educativo Flow Education (Vigo, mercoledì 13 gennaio alle 18:10), Vicenzaoro (giovedì 14 gennaio alle 18:30), T- Gold (Vicenza, giovedì 14 gennaio alle 18:30) e Bestiario idrico (Vicenza, giovedì 14 gennaio alle 20:45) e altri, tutti nella lista qui sopra.
+18 eventi: Concerto Gospel "Joy to the World" (Vicenza, sabato 2 gennaio alle 21:00), Gospel in Vicenza 2027 (domenica 3 gennaio alle 18:00), Cenerentola- Il musical (Vicenza, domenica 10 gennaio alle 17:00), Yuki Serino e Martin Nöbauer | Stagione Concertistica 2026/27 (Vicenza, lunedì 11 gennaio alle 20:45), Multisonor – Home Concert (Montegalda, lunedì 11 gennaio alle 21:00), Presentazione del progetto educativo Flow Education (Vigo, mercoledì 13 gennaio alle 18:10), Vicenzaoro (giovedì 14 gennaio alle 18:30) e T- Gold (Vicenza, giovedì 14 gennaio alle 18:30) e altri, tutti nella lista qui sopra.
 
 **In che paesi?**
-Vicenza (13), Montegalda (2), Vigo (1) e Pedocchio (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
+Vicenza (14), Montegalda (2), Vigo (1) e Pedocchio (1). In ogni pagina c'è il punto di ritrovo e il link alla mappa.
 
 **Quanto costano?**
-17 su 17 sono gratis. Quando c'è un biglietto o una quota il prezzo è nella pagina dell'evento: si paga a chi organizza, non ad anyplans.
+18 su 18 sono gratis. Quando c'è un biglietto o una quota il prezzo è nella pagina dell'evento: si paga a chi organizza, non ad anyplans.
 
-## Cene e aperitivi a Vicenza: 12 eventi
+## Cene e aperitivi a Vicenza: 10 eventi
 https://anyplans.in/vicenza/cene-e-aperitivi/
 
-A Vicenza e provincia ci sono 12 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Vicenza e provincia ci sono 10 cene e aperitivi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali cene e aperitivi a Vicenza e provincia ci sono in programma?**
-Ci sono 12 eventi: Alchimie in Atelier – Salotto aromatico (Marano Vicentino, sabato 21 novembre alle 10:00), Mengoni tributo band da Miami Sound Café: 5 posti liberi (Torri di Quartesolo, sabato 21 novembre alle 19:00), Cena "porta un amico single" da Dai Tosi-Thiene: 3 posti liberi (Vicenza, sabato 21 novembre alle 19:30), Tablo experience⚡ da Spiller | Vicenza: 2 posti liberi (domenica 22 novembre alle 18:45), 🌟⚡ da Mini Moment: 2 posti liberi (Torri di Quartesolo, domenica 22 novembre alle 20:30) e Una dolce serata in compagnia 🧁🍰🍩☕ da STRA 2025: 1 posto libero (Vicenza, mercoledì 25 novembre alle 20:00) e altri, tutti nella lista qui sopra.
+Ci sono 10 eventi: Tablo experience⚡ da Spiller | Vicenza: 2 posti liberi (domenica 22 novembre alle 18:45), 🌟⚡ da Mini Moment: 2 posti liberi (Torri di Quartesolo, domenica 22 novembre alle 20:30), Una dolce serata in compagnia 🧁🍰🍩☕ da STRA 2025: 1 posto libero (Vicenza, mercoledì 25 novembre alle 20:00), Cena da Mama L'oca Street Bar: 9 posti liberi (Vicenza, giovedì 26 novembre alle 19:15), Cena da Villa Bonin Club & Dinner: 4 posti liberi (Vicenza, venerdì 27 novembre alle 19:00) e I venerdì in compagnia ✨ da Hosteria Al Gallo: 4 posti liberi (Vicenza, venerdì 27 novembre alle 20:30) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di cena?**
-Alchimie in Atelier – Salotto aromatico, sabato 21 novembre alle 10:00, a Marano Vicentino. Gratis.
+Tablo experience⚡ da Spiller | Vicenza: 2 posti liberi, domenica 22 novembre alle 18:45. Gratis.
 
 **Cene e aperitivi a Vicenza e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Incontri, corsi e conferenze a Vicenza: 31 eventi
+## Incontri, corsi e conferenze a Vicenza: 30 eventi
 https://anyplans.in/vicenza/incontri-culturali/
 
-A Vicenza e provincia ci sono 31 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Vicenza e provincia ci sono 30 incontri nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali incontri a Vicenza e provincia ci sono in programma?**
-Ci sono 31 eventi: Open Day - Discover H-FARM International School Vicenza (sabato 21 novembre alle 09:00), La Via Lattea • Laboratorio didattico da 4 a 10 anni (Arcugnano, sabato 21 novembre alle 15:30), La rivoluzione linguistica per il genere femminile dei testi antichi (Torri di Quartesolo, sabato 21 novembre alle 17:00), Osservazione della Luna (Arcugnano, sabato 21 novembre alle 20:30), Osservazione del Sole (Arcugnano, domenica 22 novembre alle 10:00) e LA FISICA DELL'ARIA (Trissino, domenica 22 novembre alle 15:30) e altri, tutti nella lista qui sopra.
+Ci sono 30 eventi: Osservazione del Sole (Arcugnano, domenica 22 novembre alle 10:00), LA FISICA DELL'ARIA (Trissino, domenica 22 novembre alle 15:30), MERITO E FRAGILITA' POSSONO CONVIVERE? (Carmignano di Brenta, lunedì 23 novembre alle 18:00), Il Gruppo Consiliare FDI incontra i cittadini (Vancimuglio, lunedì 23 novembre alle 20:30), TREASURY & FINANCE FORUM DAY 2026 (Altavilla Vicentina, martedì 24 novembre alle 00:00) e Visita all’osservatorio ed osservazione del cielo (Arcugnano, martedì 24 novembre alle 20:30) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di incontri culturali?**
-Open Day - Discover H-FARM International School Vicenza, sabato 21 novembre alle 09:00. Gratis.
+Osservazione del Sole, domenica 22 novembre alle 10:00, a Arcugnano. Gratis.
 
 **Incontri a Vicenza e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -308,19 +304,19 @@ NAZA, domenica 22 novembre alle 20:30, a Trissino. Gratis.
 **Proiezioni a Vicenza e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Concerti e musica dal vivo a Vicenza: 30 eventi
+## Concerti e musica dal vivo a Vicenza: 27 eventi
 https://anyplans.in/vicenza/concerti/
 
-A Vicenza e provincia ci sono 30 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Vicenza e provincia ci sono 27 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali concerti a Vicenza e provincia ci sono in programma?**
-Ci sono 30 eventi: R&B Brunch n Day Party (Vicenza, sabato 21 novembre alle 13:30), NADT ORCHESTRA - PROXIMA The Young Side fall edition (Vicenza, sabato 21 novembre alle 21:00), Bleeding Me - MetallicA Acoustic Experience - Live At Nevermind Café (Vicenza, sabato 21 novembre alle 21:30), Mothership Live! Led Zeppelin Tribute @ Mamaloca! (Vicenza, sabato 21 novembre alle 22:00), Giacomo Zanus  - PROXIMA The Young Side fall edition (Vicenza, domenica 22 novembre alle 18:30) e Candlelight: Le Quattro Stagioni di Vivaldi (Vicenza, venerdì 27 novembre alle 18:00) e altri, tutti nella lista qui sopra.
+Ci sono 27 eventi: Giacomo Zanus  - PROXIMA The Young Side fall edition (Vicenza, domenica 22 novembre alle 18:30), Candlelight: Le Quattro Stagioni di Vivaldi (Vicenza, venerdì 27 novembre alle 18:00), Candlelight: Queen & ABBA (Vicenza, venerdì 27 novembre alle 20:00), ILLYRIAN at YOU CLUB VICENZA (venerdì 27 novembre alle 23:00), THUONO: FREQUENZE N°3 (Trissino, sabato 28 novembre alle 19:00) e Antiche Melodie di Irlanda – Home Concert (Montegalda, mercoledì 2 dicembre alle 21:00) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di concerti e musica dal vivo?**
-R&B Brunch n Day Party, sabato 21 novembre alle 13:30, a Vicenza. Gratis.
+Giacomo Zanus  - PROXIMA The Young Side fall edition, domenica 22 novembre alle 18:30, a Vicenza. Gratis.
 
 **Concerti a Vicenza e provincia: sono gratis?**
-26 su 30. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
+23 su 27. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
 ## Yoga e pilates a Vicenza: 2 eventi
 https://anyplans.in/vicenza/yoga/
@@ -392,16 +388,16 @@ Faun - la morte del cigno - atto bianco, sabato 6 febbraio alle 20:45, a Vicenza
 **Serate di ballo a Vicenza e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Teatro e spettacoli a Vicenza: 37 eventi
+## Teatro e spettacoli a Vicenza: 33 eventi
 https://anyplans.in/vicenza/spettacoli/
 
-A Vicenza e provincia ci sono 37 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Vicenza e provincia ci sono 33 spettacoli nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali spettacoli a Vicenza e provincia ci sono in programma?**
-Ci sono 37 eventi: OUVERTURE DES SAPONETTES (Trissino, sabato 21 novembre alle 16:00), OPENING 192 ORE D'ARIA (Trissino, sabato 21 novembre alle 18:00), NIENTE DI GRAVE voci della violenza contro le donne (Vicenza, sabato 21 novembre alle 21:00), Mutazioni 07 – stagione teatrale Theama Teatro (Vicenza, sabato 21 novembre alle 21:00), Viaggio al centro del teatro (Vicenza, martedì 24 novembre alle 20:45) e ATTI DEGLI APOSTOLI | Baladam B-Side (Vicenza, venerdì 27 novembre alle 21:00) e altri, tutti nella lista qui sopra.
+Ci sono 33 eventi: Viaggio al centro del teatro (Vicenza, martedì 24 novembre alle 20:45), ATTI DEGLI APOSTOLI | Baladam B-Side (Vicenza, venerdì 27 novembre alle 21:00), ARRIVA A BOLZANO VICENTINO THE HUNTRIX EXPERIENCE (sabato 28 novembre alle 16:30), IL CANE DEAN (Trissino, sabato 28 novembre alle 17:00), Giselle (Vicenza, sabato 28 novembre alle 20:45) e Totalmente incompatibili (Vicenza, sabato 12 dicembre alle 20:45) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di spettacoli e teatro?**
-OUVERTURE DES SAPONETTES, sabato 21 novembre alle 16:00, a Trissino. Gratis.
+Viaggio al centro del teatro, martedì 24 novembre alle 20:45, a Vicenza. Gratis.
 
 **Spettacoli a Vicenza e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -434,16 +430,16 @@ Bruno Meneguzzo – Doppia trama. Ritorno a casa | Vernissage, sabato 20 febbrai
 **Mostre a Vicenza e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Escursioni e trekking a Vicenza: 2 eventi
+## Escursioni e trekking a Vicenza: 1 evento
 https://anyplans.in/vicenza/escursioni/
 
-A Vicenza e provincia ci sono 2 escursioni nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Vicenza e provincia ci sono 1 escursione nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali escursioni a Vicenza e provincia ci sono in programma?**
-Ci sono 2 eventi: Uscita fuori porta da Wamy Sushi Dueville: 3 posti liberi (Vicenza, domenica 22 novembre alle 11:30) e Altre Latitudini: sulle orme di Lhote e le pitture rupestri del Tassili (Motta, venerdì 27 novembre alle 19:30).
+C'è 1 evento: Altre Latitudini: sulle orme di Lhote e le pitture rupestri del Tassili (Motta, venerdì 27 novembre alle 19:30).
 
 **Quando è il prossimo evento di escursionismo?**
-Uscita fuori porta da Wamy Sushi Dueville: 3 posti liberi, domenica 22 novembre alle 11:30, a Vicenza. Gratis.
+Altre Latitudini: sulle orme di Lhote e le pitture rupestri del Tassili, venerdì 27 novembre alle 19:30, a Motta. Gratis.
 
 **Escursioni a Vicenza e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -532,16 +528,16 @@ Visita Museo, dal 27 novembre al 27 novembre, 2 date, a Valdagno. Gratis.
 **Sagre a Vicenza e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Eventi gratis a Vicenza: 135 eventi
+## Eventi gratis a Vicenza: 123 eventi
 https://anyplans.in/vicenza/gratis/
 
-A Vicenza e provincia ci sono 135 eventi gratis nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Vicenza e provincia ci sono 123 eventi gratis nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali eventi gratis a Vicenza e provincia ci sono in programma?**
-Ci sono 135 eventi: Open Day - Discover H-FARM International School Vicenza (sabato 21 novembre alle 09:00), Alchimie in Atelier – Salotto aromatico (Marano Vicentino, sabato 21 novembre alle 10:00), R&B Brunch n Day Party (Vicenza, sabato 21 novembre alle 13:30), La Via Lattea • Laboratorio didattico da 4 a 10 anni (Arcugnano, sabato 21 novembre alle 15:30), OUVERTURE DES SAPONETTES (Trissino, sabato 21 novembre alle 16:00) e La rivoluzione linguistica per il genere femminile dei testi antichi (Torri di Quartesolo, sabato 21 novembre alle 17:00) e altri, tutti nella lista qui sopra.
+Ci sono 123 eventi: Osservazione del Sole (Arcugnano, domenica 22 novembre alle 10:00), DARE FORMA ALL'ARIA (Trissino, domenica 22 novembre alle 14:00), MULTITAVOLO DIFFUSA (Montecchio Maggiore, domenica 22 novembre alle 15:00), LA FISICA DELL'ARIA (Trissino, domenica 22 novembre alle 15:30), Giacomo Zanus  - PROXIMA The Young Side fall edition (Vicenza, domenica 22 novembre alle 18:30) e Speed Date Vicenza 30-49 (domenica 22 novembre alle 18:30) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di gratis?**
-Open Day - Discover H-FARM International School Vicenza, sabato 21 novembre alle 09:00. Gratis.
+Osservazione del Sole, domenica 22 novembre alle 10:00, a Arcugnano. Gratis.
 
 **Eventi gratis a Vicenza e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -560,86 +556,58 @@ Cadillac/Tower | Corso per trainer Pilates - Vicenza, venerdì 27 novembre alle 
 **Incontri a Vicenza e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Musica classica, jazz e opera a Vicenza: 9 eventi
+## Musica classica, jazz e opera a Vicenza: 8 eventi
 https://anyplans.in/vicenza/classica-e-jazz/
 
-A Vicenza e provincia ci sono 9 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Vicenza e provincia ci sono 8 concerti nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali concerti a Vicenza e provincia ci sono in programma?**
-Ci sono 9 eventi: NADT ORCHESTRA - PROXIMA The Young Side fall edition (Vicenza, sabato 21 novembre alle 21:00), Candlelight: Le Quattro Stagioni di Vivaldi (Vicenza, venerdì 27 novembre alle 18:00), Candlelight: Le Quattro Stagioni di Vivaldi | Vicenza (venerdì 11 dicembre alle 18:00), Centrale del Jazz autumn edition | ThelOrchestra (Vicenza, venerdì 18 dicembre alle 19:00), Oratorio di Natale BWV 248 di Johann Sebastian Bach - Vicenza (domenica 20 dicembre alle 20:30) e Gran Concerto di San Silvestro | Fuori Stagione Sinfonica 2026/27 (Vicenza, giovedì 31 dicembre alle 22:00) e altri, tutti nella lista qui sopra.
+Ci sono 8 eventi: Candlelight: Le Quattro Stagioni di Vivaldi (Vicenza, venerdì 27 novembre alle 18:00), Candlelight: Le Quattro Stagioni di Vivaldi | Vicenza (venerdì 11 dicembre alle 18:00), Centrale del Jazz autumn edition | ThelOrchestra (Vicenza, venerdì 18 dicembre alle 19:00), Oratorio di Natale BWV 248 di Johann Sebastian Bach - Vicenza (domenica 20 dicembre alle 20:30), Gran Concerto di San Silvestro | Fuori Stagione Sinfonica 2026/27 (Vicenza, giovedì 31 dicembre alle 22:00) e Frida-Opera musical (Vicenza, domenica 31 gennaio alle 17:00) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di classica, jazz e opera?**
-NADT ORCHESTRA - PROXIMA The Young Side fall edition, sabato 21 novembre alle 21:00, a Vicenza. Gratis.
+Candlelight: Le Quattro Stagioni di Vivaldi, venerdì 27 novembre alle 18:00, a Vicenza. 24 €.
 
 **Concerti a Vicenza e provincia: sono gratis?**
-8 su 9. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
+7 su 8. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## 8 marzo, festa della donna a Vicenza: 4 eventi
+## 8 marzo, festa della donna a Vicenza: 3 eventi
 https://anyplans.in/vicenza/festa-della-donna/
 
-A Vicenza e provincia ci sono 4 eventi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Vicenza e provincia ci sono 3 eventi nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali eventi a Vicenza e provincia ci sono in programma?**
-Ci sono 4 eventi: NIENTE DI GRAVE voci della violenza contro le donne (Vicenza, sabato 21 novembre alle 21:00), Corpi sotto assedio: storie di donne che resistono (Arzignano, venerdì 27 novembre alle 20:30), Potere, Desiderio e Trasgressione: Storie di Donne a Vicenza (domenica 27 dicembre alle 14:30) e Cori di donne | Stagione Concertistica 2026/27 (Vicenza, lunedì 8 marzo alle 20:45).
+Ci sono 3 eventi: Corpi sotto assedio: storie di donne che resistono (Arzignano, venerdì 27 novembre alle 20:30), Potere, Desiderio e Trasgressione: Storie di Donne a Vicenza (domenica 27 dicembre alle 14:30) e Cori di donne | Stagione Concertistica 2026/27 (Vicenza, lunedì 8 marzo alle 20:45).
 
 **Quando è il prossimo evento di 8 marzo?**
-NIENTE DI GRAVE voci della violenza contro le donne, sabato 21 novembre alle 21:00, a Vicenza. Gratis.
+Corpi sotto assedio: storie di donne che resistono, venerdì 27 novembre alle 20:30, a Arzignano. Gratis.
 
 **Eventi a Vicenza e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Stelle, astronomia e planetario a Vicenza: 3 eventi
-https://anyplans.in/vicenza/stelle-e-astronomia/
-
-A Vicenza e provincia ci sono 3 serate nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
-
-**Quali serate a Vicenza e provincia ci sono in programma?**
-Ci sono 3 eventi: Osservazione della Luna (Arcugnano, sabato 21 novembre alle 20:30), Visita all’osservatorio ed osservazione del cielo (Arcugnano, martedì 24 novembre alle 20:30) e Fratello sole, sorella luna (Vicenza, domenica 17 gennaio alle 17:00).
-
-**Quando è il prossimo evento di stelle e astronomia?**
-Osservazione della Luna, sabato 21 novembre alle 20:30, a Arcugnano. Gratis.
-
-**Serate a Vicenza e provincia: sono gratis?**
-Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
-
-## Montagna, escursioni e trekking a Vicenza: 3 eventi
-https://anyplans.in/vicenza/montagna/
-
-A Vicenza e provincia ci sono 3 uscite in montagna nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
-
-**Quali uscite in montagna a Vicenza e provincia ci sono in programma?**
-Ci sono 3 eventi: Uscita fuori porta da Wamy Sushi Dueville: 3 posti liberi (Vicenza, domenica 22 novembre alle 11:30), DARE FORMA ALL'ARIA (Trissino, domenica 22 novembre alle 14:00) e Altre Latitudini: sulle orme di Lhote e le pitture rupestri del Tassili (Motta, venerdì 27 novembre alle 19:30).
-
-**Quando è il prossimo evento di montagna ed escursioni?**
-Uscita fuori porta da Wamy Sushi Dueville: 3 posti liberi, domenica 22 novembre alle 11:30, a Vicenza. Gratis.
-
-**Uscite in montagna a Vicenza e provincia: sono gratis?**
-Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
-
-## Sport di gruppo: corsa, padel, calcetto,…: 10 eventi
+## Sport di gruppo: corsa, padel, calcetto,…: 8 eventi
 https://anyplans.in/vicenza/sport/
 
-A Vicenza e provincia ci sono 10 eventi di sport nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
+A Vicenza e provincia ci sono 8 eventi di sport nei prossimi mesi. In ogni pagina ci sono data, ora, posto e prezzo, e ci vai insieme ad altre persone.
 
 **Quali eventi di sport a Vicenza e provincia ci sono in programma?**
-Ci sono 10 eventi: VDH3 Trail #158 "Let's get basted" - UPDATE!!! (Vicenza, sabato 21 novembre alle 18:00), Uscita fuori porta da Wamy Sushi Dueville: 3 posti liberi (Vicenza, domenica 22 novembre alle 11:30), DARE FORMA ALL'ARIA (Trissino, domenica 22 novembre alle 14:00), Altre Latitudini: sulle orme di Lhote e le pitture rupestri del Tassili (Motta, venerdì 27 novembre alle 19:30), Lo Sport in Sicurezza (Vicenza, sabato 28 novembre alle 10:00) e Gloria Soldà presenta PosturalMente felici | Brogliano (martedì 1 dicembre alle 18:00) e altri, tutti nella lista qui sopra.
+Ci sono 8 eventi: DARE FORMA ALL'ARIA (Trissino, domenica 22 novembre alle 14:00), Altre Latitudini: sulle orme di Lhote e le pitture rupestri del Tassili (Motta, venerdì 27 novembre alle 19:30), Lo Sport in Sicurezza (Vicenza, sabato 28 novembre alle 10:00), Gloria Soldà presenta PosturalMente felici | Brogliano (martedì 1 dicembre alle 18:00), CORSO DI PRANOTERAPIA A VICENZA: LEZIONE APERTA (sabato 5 dicembre alle 10:00) e SFB StrongFirst Bodyweight Instructor Certification—Brendola, Vicenza, IT (sabato 12 dicembre alle 08:00) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di sport?**
-VDH3 Trail #158 "Let's get basted" - UPDATE!!!, sabato 21 novembre alle 18:00, a Vicenza. Gratis.
+DARE FORMA ALL'ARIA, domenica 22 novembre alle 14:00, a Trissino. Gratis.
 
 **Eventi di sport a Vicenza e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Feste ed eventi a Trissino: 9 in programma
+## Feste ed eventi a Trissino: 7 in programma
 https://anyplans.in/vicenza/trissino/
 
-A Trissino ci sono 9 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Trissino con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Trissino ci sono 7 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Trissino con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 **Quali feste ed eventi a Trissino ci sono in programma?**
-Ci sono 9 eventi: OUVERTURE DES SAPONETTES (Trissino, sabato 21 novembre alle 16:00), OPENING 192 ORE D'ARIA (Trissino, sabato 21 novembre alle 18:00), DARE FORMA ALL'ARIA (Trissino, domenica 22 novembre alle 14:00), LA FISICA DELL'ARIA (Trissino, domenica 22 novembre alle 15:30), NAZA (Trissino, domenica 22 novembre alle 20:30) e CINEMA FILANDA (Trissino, lunedì 23 novembre alle 20:30) e altri, tutti nella lista qui sopra.
+Ci sono 7 eventi: DARE FORMA ALL'ARIA (Trissino, domenica 22 novembre alle 14:00), LA FISICA DELL'ARIA (Trissino, domenica 22 novembre alle 15:30), NAZA (Trissino, domenica 22 novembre alle 20:30), CINEMA FILANDA (Trissino, lunedì 23 novembre alle 20:30), D-AIR LAB TALK (Trissino, giovedì 26 novembre alle 19:00) e IL CANE DEAN (Trissino, sabato 28 novembre alle 17:00) e altri, tutti nella lista qui sopra.
 
 **Quando è la prossima festa a Trissino?**
-OUVERTURE DES SAPONETTES, sabato 21 novembre alle 16:00, a Trissino. Gratis.
+DARE FORMA ALL'ARIA, domenica 22 novembre alle 14:00, a Trissino. Gratis.
 
 **Feste ed eventi a Trissino: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -686,16 +654,16 @@ Bruno Meneguzzo – Doppia trama. Ritorno a casa | Vernissage, sabato 20 febbrai
 **Feste ed eventi a Caldogno: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Feste ed eventi a Arcugnano: 5 in programma
+## Feste ed eventi a Arcugnano: 3 in programma
 https://anyplans.in/vicenza/arcugnano/
 
-A Arcugnano ci sono 5 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Arcugnano con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Arcugnano ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Arcugnano con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 **Quali feste ed eventi a Arcugnano ci sono in programma?**
-Ci sono 5 eventi: La Via Lattea • Laboratorio didattico da 4 a 10 anni (Arcugnano, sabato 21 novembre alle 15:30), Osservazione della Luna (Arcugnano, sabato 21 novembre alle 20:30), Osservazione del Sole (Arcugnano, domenica 22 novembre alle 10:00), Visita all’osservatorio ed osservazione del cielo (Arcugnano, martedì 24 novembre alle 20:30) e Il corpo come guida-Workshop di Biodanza aperto a tutti (Arcugnano, sabato 12 dicembre alle 10:00).
+Ci sono 3 eventi: Osservazione del Sole (Arcugnano, domenica 22 novembre alle 10:00), Visita all’osservatorio ed osservazione del cielo (Arcugnano, martedì 24 novembre alle 20:30) e Il corpo come guida-Workshop di Biodanza aperto a tutti (Arcugnano, sabato 12 dicembre alle 10:00).
 
 **Quando è la prossima festa a Arcugnano?**
-La Via Lattea • Laboratorio didattico da 4 a 10 anni, sabato 21 novembre alle 15:30, a Arcugnano. Gratis.
+Osservazione del Sole, domenica 22 novembre alle 10:00, a Arcugnano. Gratis.
 
 **Feste ed eventi a Arcugnano: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -714,16 +682,16 @@ Altre Latitudini: sulle orme di Lhote e le pitture rupestri del Tassili, venerd�
 **Feste ed eventi a Motta: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Feste ed eventi a Torri di Quartesolo: 3 in…
+## Feste ed eventi a Torri di Quartesolo: 1 in…
 https://anyplans.in/vicenza/torri-di-quartesolo/
 
-A Torri di Quartesolo ci sono 3 eventi nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Torri di Quartesolo con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Torri di Quartesolo c'è 1 evento nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Torri di Quartesolo con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 **Quali feste ed eventi a Torri di Quartesolo ci sono in programma?**
-Ci sono 3 eventi: La rivoluzione linguistica per il genere femminile dei testi antichi (Torri di Quartesolo, sabato 21 novembre alle 17:00), Mengoni tributo band da Miami Sound Café: 5 posti liberi (Torri di Quartesolo, sabato 21 novembre alle 19:00) e 🌟⚡ da Mini Moment: 2 posti liberi (Torri di Quartesolo, domenica 22 novembre alle 20:30).
+C'è 1 evento: 🌟⚡ da Mini Moment: 2 posti liberi (Torri di Quartesolo, domenica 22 novembre alle 20:30).
 
 **Quando è la prossima festa a Torri di Quartesolo?**
-La rivoluzione linguistica per il genere femminile dei testi antichi, sabato 21 novembre alle 17:00, a Torri di Quartesolo. Gratis.
+🌟⚡ da Mini Moment: 2 posti liberi, domenica 22 novembre alle 20:30, a Torri di Quartesolo. Gratis.
 
 **Feste ed eventi a Torri di Quartesolo: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -812,19 +780,19 @@ CHRISTMAS THING CdV Lab, domenica 20 dicembre alle 17:00, a Isola Vicentina. Gra
 **Feste ed eventi a Isola Vicentina: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Feste ed eventi a Marano Vicentino: 1 in…
+## Feste ed eventi a Marano Vicentino
 https://anyplans.in/vicenza/marano-vicentino/
 
-A Marano Vicentino c'è 1 evento nei prossimi mesi. Su anyplans trovi le feste e gli eventi di Marano Vicentino con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
+A Marano Vicentino non c'è niente in programma adesso: qui sotto le feste già passate, che spesso tornano ogni anno. Su anyplans trovi le feste e gli eventi di Marano Vicentino con date, orari e luogo. Ti iscrivi e ci vai insieme ad altri.
 
 **Quali feste ed eventi a Marano Vicentino ci sono in programma?**
-C'è 1 evento: Alchimie in Atelier – Salotto aromatico (Marano Vicentino, sabato 21 novembre alle 10:00).
+Adesso nessuno. Le ultime date sono state Alchimie in Atelier – Salotto aromatico (Marano Vicentino, sabato 21 novembre alle 10:00), 📖🎬 da Cutty Sark Scottish Pub: 2 posti liberi (Marano Vicentino, mercoledì 11 novembre alle 19:40) e 🍻🎬 da Cutty Sark Scottish Pub: 1 posto libero (Marano Vicentino, mercoledì 28 ottobre alle 19:40): spesso tornano ogni anno, e le date nuove compaiono qui.
 
 **Quando è la prossima festa a Marano Vicentino?**
-Alchimie in Atelier – Salotto aromatico, sabato 21 novembre alle 10:00, a Marano Vicentino. Gratis.
+Non c'è ancora una data pubblicata. Registrati su anyplans: quando esce, la vedi sulla mappa.
 
 **Feste ed eventi a Marano Vicentino: sono gratis?**
-Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
+Quasi sempre sì: feste di paese, sagre e uscite di gruppo sono gratis; se c'è una quota è scritta nella pagina dell'evento.
 
 ## Feste ed eventi a Carmignano di Brenta: 1 in…
 https://anyplans.in/vicenza/carmignano-di-brenta/
@@ -840,72 +808,16 @@ MERITO E FRAGILITA' POSSONO CONVIVERE?, lunedì 23 novembre alle 18:00, a Carmig
 **Feste ed eventi a Carmignano di Brenta: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
 
-## Cene e aperitivi oggi a Vicenza: 3 eventi
-https://anyplans.in/vicenza/cene-e-aperitivi-oggi/
-
-Oggi, 21 novembre 2026, a Vicenza e provincia: 3 cene e aperitivi. Di ognuno ora, posto, prezzo e come iscriversi.
-
-**Quali cene e aperitivi a Vicenza e provincia ci sono in programma?**
-Ci sono 3 eventi: Alchimie in Atelier – Salotto aromatico (Marano Vicentino, sabato 21 novembre alle 10:00), Mengoni tributo band da Miami Sound Café: 5 posti liberi (Torri di Quartesolo, sabato 21 novembre alle 19:00) e Cena "porta un amico single" da Dai Tosi-Thiene: 3 posti liberi (Vicenza, sabato 21 novembre alle 19:30).
-
-**Quando è il prossimo evento di cena?**
-Alchimie in Atelier – Salotto aromatico, sabato 21 novembre alle 10:00, a Marano Vicentino. Gratis.
-
-**Cene e aperitivi a Vicenza e provincia: sono gratis?**
-Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
-
-## Incontri, corsi e conferenze oggi a Vicenza: 4 eventi
-https://anyplans.in/vicenza/incontri-culturali-oggi/
-
-Oggi, 21 novembre 2026, a Vicenza e provincia: 4 incontri. Di ognuno ora, posto, prezzo e come iscriversi.
-
-**Quali incontri a Vicenza e provincia ci sono in programma?**
-Ci sono 4 eventi: Open Day - Discover H-FARM International School Vicenza (sabato 21 novembre alle 09:00), La Via Lattea • Laboratorio didattico da 4 a 10 anni (Arcugnano, sabato 21 novembre alle 15:30), La rivoluzione linguistica per il genere femminile dei testi antichi (Torri di Quartesolo, sabato 21 novembre alle 17:00) e Osservazione della Luna (Arcugnano, sabato 21 novembre alle 20:30).
-
-**Quando è il prossimo evento di incontri culturali?**
-Open Day - Discover H-FARM International School Vicenza, sabato 21 novembre alle 09:00. Gratis.
-
-**Incontri a Vicenza e provincia: sono gratis?**
-Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
-
-## Concerti e musica dal vivo oggi a Vicenza: 4 eventi
-https://anyplans.in/vicenza/concerti-oggi/
-
-Oggi, 21 novembre 2026, a Vicenza e provincia: 4 concerti. Di ognuno ora, posto, prezzo e come iscriversi.
-
-**Quali concerti a Vicenza e provincia ci sono in programma?**
-Ci sono 4 eventi: R&B Brunch n Day Party (Vicenza, sabato 21 novembre alle 13:30), NADT ORCHESTRA - PROXIMA The Young Side fall edition (Vicenza, sabato 21 novembre alle 21:00), Bleeding Me - MetallicA Acoustic Experience - Live At Nevermind Café (Vicenza, sabato 21 novembre alle 21:30) e Mothership Live! Led Zeppelin Tribute @ Mamaloca! (Vicenza, sabato 21 novembre alle 22:00).
-
-**Quando è il prossimo evento di concerti e musica dal vivo?**
-R&B Brunch n Day Party, sabato 21 novembre alle 13:30, a Vicenza. Gratis.
-
-**Concerti a Vicenza e provincia: sono gratis?**
-Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
-
-## Teatro e spettacoli oggi a Vicenza: 4 eventi
-https://anyplans.in/vicenza/spettacoli-oggi/
-
-Oggi, 21 novembre 2026, a Vicenza e provincia: 4 spettacoli. Di ognuno ora, posto, prezzo e come iscriversi.
-
-**Quali spettacoli a Vicenza e provincia ci sono in programma?**
-Ci sono 4 eventi: OUVERTURE DES SAPONETTES (Trissino, sabato 21 novembre alle 16:00), OPENING 192 ORE D'ARIA (Trissino, sabato 21 novembre alle 18:00), NIENTE DI GRAVE voci della violenza contro le donne (Vicenza, sabato 21 novembre alle 21:00) e Mutazioni 07 – stagione teatrale Theama Teatro (Vicenza, sabato 21 novembre alle 21:00).
-
-**Quando è il prossimo evento di spettacoli e teatro?**
-OUVERTURE DES SAPONETTES, sabato 21 novembre alle 16:00, a Trissino. Gratis.
-
-**Spettacoli a Vicenza e provincia: sono gratis?**
-Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
-
-## Eventi gratis oggi a Vicenza: 16 eventi
+## Eventi gratis oggi a Vicenza: 9 eventi
 https://anyplans.in/vicenza/gratis-oggi/
 
-Oggi, 21 novembre 2026, a Vicenza e provincia: 16 eventi gratis. Di ognuno ora, posto, prezzo e come iscriversi.
+Oggi, 22 novembre 2026, a Vicenza e provincia: 9 eventi gratis. Di ognuno ora, posto, prezzo e come iscriversi.
 
 **Quali eventi gratis a Vicenza e provincia ci sono in programma?**
-Ci sono 16 eventi: Open Day - Discover H-FARM International School Vicenza (sabato 21 novembre alle 09:00), Alchimie in Atelier – Salotto aromatico (Marano Vicentino, sabato 21 novembre alle 10:00), R&B Brunch n Day Party (Vicenza, sabato 21 novembre alle 13:30), La Via Lattea • Laboratorio didattico da 4 a 10 anni (Arcugnano, sabato 21 novembre alle 15:30), OUVERTURE DES SAPONETTES (Trissino, sabato 21 novembre alle 16:00) e La rivoluzione linguistica per il genere femminile dei testi antichi (Torri di Quartesolo, sabato 21 novembre alle 17:00) e altri, tutti nella lista qui sopra.
+Ci sono 9 eventi: Osservazione del Sole (Arcugnano, domenica 22 novembre alle 10:00), DARE FORMA ALL'ARIA (Trissino, domenica 22 novembre alle 14:00), MULTITAVOLO DIFFUSA (Montecchio Maggiore, domenica 22 novembre alle 15:00), LA FISICA DELL'ARIA (Trissino, domenica 22 novembre alle 15:30), Giacomo Zanus  - PROXIMA The Young Side fall edition (Vicenza, domenica 22 novembre alle 18:30) e Speed Date Vicenza 30-49 (domenica 22 novembre alle 18:30) e altri, tutti nella lista qui sopra.
 
 **Quando è il prossimo evento di gratis?**
-Open Day - Discover H-FARM International School Vicenza, sabato 21 novembre alle 09:00. Gratis.
+Osservazione del Sole, domenica 22 novembre alle 10:00, a Arcugnano. Gratis.
 
 **Eventi gratis a Vicenza e provincia: sono gratis?**
 Sì, tutti. Quando c'è un biglietto o una quota, il prezzo è scritto nella pagina dell'evento.
@@ -1043,10 +955,10 @@ Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve 
 ## Osservatorio Astronomico “G. Beltrame”: eventi in…
 https://anyplans.in/vicenza/locali/osservatorio-astronomico-g-beltrame/
 
-Osservatorio Astronomico “G. Beltrame” a Arcugnano: 4 eventi in programma — incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Osservatorio Astronomico “G. Beltrame” a Arcugnano: 2 eventi in programma — incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 **Osservatorio Astronomico “G. Beltrame”: che eventi ci sono?**
-Ci sono 4 eventi in programma: La Via Lattea • Laboratorio didattico da 4 a 10 anni (sabato 21 novembre alle 15:30), Osservazione della Luna (sabato 21 novembre alle 20:30), Osservazione del Sole (domenica 22 novembre alle 10:00) e Visita all’osservatorio ed osservazione del cielo (martedì 24 novembre alle 20:30).
+Ci sono 2 eventi in programma: Osservazione del Sole (domenica 22 novembre alle 10:00) e Visita all’osservatorio ed osservazione del cielo (martedì 24 novembre alle 20:30).
 
 **Osservatorio Astronomico “G. Beltrame”: dove si trova?**
 Osservatorio Astronomico “G. Beltrame”, Arcugnano. In ogni pagina dell'evento c'è il punto di ritrovo e il link alla mappa.
@@ -1264,10 +1176,10 @@ Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve 
 ## La Centrale: eventi e serate a Vicenza
 https://anyplans.in/vicenza/locali/la-centrale/
 
-La Centrale a Vicenza: 2 eventi in programma — concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+La Centrale a Vicenza: 1 evento in programma — concerti e musica dal vivo. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
 **La Centrale: che eventi ci sono?**
-Ci sono 2 eventi in programma: NADT ORCHESTRA - PROXIMA The Young Side fall edition (sabato 21 novembre alle 21:00) e Giacomo Zanus  - PROXIMA The Young Side fall edition (domenica 22 novembre alle 18:30).
+C'è 1 evento in programma: Giacomo Zanus  - PROXIMA The Young Side fall edition (domenica 22 novembre alle 18:30).
 
 **La Centrale: dove si trova?**
 La Centrale, Vicenza. In ogni pagina dell'evento c'è il punto di ritrovo e il link alla mappa.
@@ -1312,21 +1224,21 @@ Gli eventi in programma sono tutti gratis. Il prezzo è scritto nella pagina di 
 **YOU Club Vicenza: ci posso andare da solo?**
 Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
 
-## Doppio Malto Thiene: eventi e serate a Vicenza
-https://anyplans.in/vicenza/locali/doppio-malto-thiene/
+## Caffè Vero House: eventi e serate a Vicenza
+https://anyplans.in/vicenza/locali/caffe-vero-house/
 
-Doppio Malto Thiene a Vicenza: 1 evento in programma — cena. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+Caffè Vero House a Vicenza: 1 evento in programma — cena. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
 
-**Doppio Malto Thiene: che eventi ci sono?**
-C'è 1 evento in programma: Cena da Doppio Malto Thiene: 1 posto libero (sabato 28 novembre alle 19:00).
+**Caffè Vero House: che eventi ci sono?**
+C'è 1 evento in programma: Cena da Caffè Vero House: 7 posti liberi (venerdì 27 novembre alle 21:00).
 
-**Doppio Malto Thiene: dove si trova?**
-A Vicenza. In ogni pagina dell'evento c'è il punto di ritrovo esatto e il link alla mappa.
+**Caffè Vero House: dove si trova?**
+Caffè Vero House, Vicenza. In ogni pagina dell'evento c'è il punto di ritrovo e il link alla mappa.
 
-**Doppio Malto Thiene: si paga?**
+**Caffè Vero House: si paga?**
 Gli eventi in programma sono tutti gratis. Il prezzo è scritto nella pagina di ogni evento.
 
-**Doppio Malto Thiene: ci posso andare da solo?**
+**Caffè Vero House: ci posso andare da solo?**
 Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
 
 ## Temporary Band: eventi e serate a Vicenza
@@ -1361,23 +1273,6 @@ Trap House Lounge, Thiene. In ogni pagina dell'evento c'è il punto di ritrovo e
 Gli eventi in programma sono tutti gratis. Il prezzo è scritto nella pagina di ogni evento.
 
 **Trap House Lounge: ci posso andare da solo?**
-Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
-
-## Kitchen Teatro Indipendente: eventi in programma a…
-https://anyplans.in/vicenza/locali/kitchen-teatro-indipendente/
-
-Kitchen Teatro Indipendente a Vicenza: 1 evento in programma — spettacoli e teatro. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
-
-**Kitchen Teatro Indipendente: che eventi ci sono?**
-C'è 1 evento in programma: NIENTE DI GRAVE voci della violenza contro le donne (sabato 21 novembre alle 21:00).
-
-**Kitchen Teatro Indipendente: dove si trova?**
-Kitchen Teatro Indipendente, Vicenza. In ogni pagina dell'evento c'è il punto di ritrovo e il link alla mappa.
-
-**Kitchen Teatro Indipendente: si paga?**
-Gli eventi in programma sono tutti gratis. Il prezzo è scritto nella pagina di ogni evento.
-
-**Kitchen Teatro Indipendente: ci posso andare da solo?**
 Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
 
 ## Centro Congressi Confartigianato Vicenza: eventi in…
@@ -1480,6 +1375,23 @@ ITALIAN EXHIBITION GROUP S P, Vicenza. In ogni pagina dell'evento c'è il punto 
 Gli eventi in programma sono tutti gratis. Il prezzo è scritto nella pagina di ogni evento.
 
 **ITALIAN EXHIBITION GROUP SpA: ci posso andare da solo?**
+Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
+
+## Borgo Casale: eventi in programma a Vicenza
+https://anyplans.in/vicenza/locali/borgo-casale/
+
+Borgo Casale a Vicenza: 2 eventi in programma — incontri culturali. Di ognuno data, ora, prezzo e come iscriversi. Ci vai insieme ad altri.
+
+**Borgo Casale: che eventi ci sono?**
+Ci sono 2 eventi in programma: AI & DATA PER LA DIGITAL FACTORY - Sede di Vicenza (martedì 9 febbraio alle 14:30) e DESIGN E TECNOLOGIE DEI MATERIALI - Sede di Vicenza (mercoledì 17 febbraio alle 15:00).
+
+**Borgo Casale: dove si trova?**
+Borgo Casale, Vicenza. In ogni pagina dell'evento c'è il punto di ritrovo e il link alla mappa.
+
+**Borgo Casale: si paga?**
+Gli eventi in programma sono tutti gratis. Il prezzo è scritto nella pagina di ogni evento.
+
+**Borgo Casale: ci posso andare da solo?**
 Sì. Su anyplans vedi chi altro ci va e ti unisci. Registrarsi è gratis, serve solo l'email, e bisogna avere almeno 18 anni.
 
 ## Giro Pizza di fine estate da Tourlè LaPizzeria e…
@@ -2515,7 +2427,7 @@ Incontri culturali a Idea Pilates, Vicenza, sabato 30 gennaio alle 09:00. Gratis
 ## Open Day - Discover H-Farm International School Vicenza
 https://anyplans.in/vicenza/open-day-discover-h-farm-international-school-vicenza/
 
-Incontri culturali a H-FARM International School Vicenza, Vicenza, sabato 21 novembre alle 09:00. Gratis (Biglietti su Eventbrite).
+Incontri culturali a H-FARM International School Vicenza, Vicenza: si è già svolto, l'ultima data è stata sabato 21 novembre 2026.
 
 ## Atelier d'Autunno – Rozzampia
 https://anyplans.in/vicenza/atelier-d-autunno/
@@ -3910,82 +3822,77 @@ Cena a Caffè Vero House, Vicenza: si è già svolto, l'ultima data è stata ven
 ## Alchimie in Atelier – Cosmetici BIO Atelier Nativa
 https://anyplans.in/vicenza/alchimie-in-atelier-salotto-aromatico/
 
-Cena a Cosmetici BIO Atelier Nativa, Marano Vicentino, sabato 21 novembre alle 10:00. Gratis (Biglietti su Eventbrite).
+Cena a Cosmetici BIO Atelier Nativa, Marano Vicentino: si è già svolto, l'ultima data è stata sabato 21 novembre 2026.
 
 ## R&B Brunch n Day Party – Nu Club
 https://anyplans.in/vicenza/r-b-brunch-n-day-party/
 
-Concerti e musica dal vivo a Nu Club, Vicenza, sabato 21 novembre alle 13:30. Gratis (Biglietti su Eventbrite).
+Concerti e musica dal vivo a Nu Club, Vicenza: si è già svolto, l'ultima data è stata sabato 21 novembre 2026.
 
 ## La Via Lattea • Laboratorio didattico da 4 a 10 anni – Arcugnano
 https://anyplans.in/vicenza/la-via-lattea-laboratorio-didattico-da-4-a-10-anni/
 
-Incontri culturali a Osservatorio Astronomico “G. Beltrame”, Arcugnano, sabato 21 novembre alle 15:30. Gratis (Biglietti su Eventbrite).
+Incontri culturali a Osservatorio Astronomico “G. Beltrame”, Arcugnano: si è già svolto, l'ultima data è stata sabato 21 novembre 2026.
 
 ## Ouverture DES Saponettes – Trissino
 https://anyplans.in/vicenza/ouverture-des-saponettes/
 
-Spettacoli e teatro a Via Rovigo, 47, Trissino, sabato 21 novembre alle 16:00. Gratis (Biglietti su Eventbrite).
+Spettacoli e teatro a Via Rovigo, 47, Trissino: si è già svolto, l'ultima data è stata sabato 21 novembre 2026.
 
 ## La rivoluzione linguistica per il genere femminile dei testi antichi – Torri di Quartesolo
 https://anyplans.in/vicenza/la-rivoluzione-linguistica-per-il-genere-femminile-dei-testi/
 
-Incontri culturali a Via Roma, 174, Torri di Quartesolo, sabato 21 novembre alle 17:00. Gratis (Biglietti su Eventbrite).
+Incontri culturali a Via Roma, 174, Torri di Quartesolo: si è già svolto, l'ultima data è stata sabato 21 novembre 2026.
 
 ## VDH3 Trail #158 "Let's get basted" - Update!!! – Vicenza
 https://anyplans.in/vicenza/vdh3-trail-158-let-s-get-basted-update/
 
-Corsa a Via Antonio Pizzocaro, 47, 36100 Vicenza VI, Italia, Vicenza, sabato 21 novembre alle 18:00. Gratis (Ingresso: vedi la pagina AllEvents).
+Corsa a Via Antonio Pizzocaro, 47, 36100 Vicenza VI, Italia, Vicenza: si è già svolto, l'ultima data è stata sabato 21 novembre 2026.
 
 ## Opening 192 ORE D'aria – Trissino
 https://anyplans.in/vicenza/opening-192-ore-d-aria/
 
-Spettacoli e teatro a Via Rovigo, 47, Trissino, sabato 21 novembre alle 18:00. Gratis (Biglietti su Eventbrite).
+Spettacoli e teatro a Via Rovigo, 47, Trissino: si è già svolto, l'ultima data è stata sabato 21 novembre 2026.
 
 ## Mengoni tributo band da Miami Sound Café: 5 posti liberi
 https://anyplans.in/vicenza/mengoni-tributo-band-da-miami-sound-cafe/
 
-Cena a Miami Sound Café, Torri di Quartesolo, sabato 21 novembre alle 19:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+Cena a Miami Sound Café, Torri di Quartesolo: si è già svolto, l'ultima data è stata sabato 21 novembre 2026.
 
-## Cena "porta un amico single" da Dai Tosi-Thiene: 3…
+## Cena "porta un amico single" da Dai Tosi-Thiene: 2…
 https://anyplans.in/vicenza/cena-porta-un-amico-single-da-dai-tosi-thiene/
 
-Cena a Dai Tosi-Thiene, sabato 21 novembre alle 19:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+Cena a Dai Tosi-Thiene: si è già svolto, l'ultima data è stata sabato 21 novembre 2026.
 
 ## Osservazione della Luna – Arcugnano
 https://anyplans.in/vicenza/osservazione-della-luna/
 
-Incontri culturali a Osservatorio Astronomico “G. Beltrame”, Arcugnano, sabato 21 novembre alle 20:30. Gratis (Biglietti su Eventbrite).
+Incontri culturali a Osservatorio Astronomico “G. Beltrame”, Arcugnano: si è già svolto, l'ultima data è stata sabato 21 novembre 2026.
 
 ## Niente di Grave voci della violenza contro le donne – Vicenza
 https://anyplans.in/vicenza/niente-di-grave-voci-della-violenza-contro-le-donne/
 
-Spettacoli e teatro a Kitchen Teatro Indipendente, Vicenza, sabato 21 novembre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
+Spettacoli e teatro a Kitchen Teatro Indipendente, Vicenza: si è già svolto, l'ultima data è stata sabato 21 novembre 2026.
 
 ## Nadt Orchestra - Proxima The Young Side fall edition – Vicenza
 https://anyplans.in/vicenza/nadt-orchestra-proxima-the-young-side-fall-edition/
 
-Concerti e musica dal vivo a La Centrale, Vicenza, sabato 21 novembre alle 21:00. Gratis (Biglietti su Eventbrite).
+Concerti e musica dal vivo a La Centrale, Vicenza: si è già svolto, l'ultima data è stata sabato 21 novembre 2026.
 
 ## Mutazioni 07 – Spazio Teatro Bixio
 https://anyplans.in/vicenza/mutazioni-07-stagione-teatrale-theama-teatro/
 
-Spettacoli e teatro a Spazio Teatro Bixio, Vicenza, sabato 21 novembre alle 21:00. Gratis (Ingresso: vedi la pagina del Tacco di Bacco).
+Spettacoli e teatro a Spazio Teatro Bixio, Vicenza: si è già svolto, l'ultima data è stata sabato 21 novembre 2026.
 
 ## Bleeding Me - MetallicA Acoustic Experience - Live At…
 https://anyplans.in/vicenza/bleeding-me-metallica-acoustic-experience-live-at-nevermind-/
 
-Concerti e musica dal vivo a Nevermind Cafè, Via Antonio Fogazzaro, Grumolo delle Abbadesse VI, Italia, Vicenza, sabato 21 novembre alle 21:30. Gratis (Ingresso: vedi la pagina AllEvents).
+Concerti e musica dal vivo a Nevermind Cafè, Via Antonio Fogazzaro, Grumolo delle Abbadesse VI, Italia, Vicenza: si è già svolto, l'ultima data è stata sabato 21 novembre 2026.
 
 ## Mothership Live! Led Zeppelin Tribute @ Mamaloca!
 https://anyplans.in/vicenza/mothership-live-led-zeppelin-tribute-mamaloca/
 
-Concerti e musica dal vivo a Mamaloca, Vicenza, sabato 21 novembre alle 22:00. Gratis (Ingresso: vedi la pagina AllEvents).
-
-## Uscita fuori porta da Wamy Sushi Dueville: 3 posti liberi
-https://anyplans.in/vicenza/uscita-fuori-porta-da-wamy-sushi-dueville/
-
-Escursionismo a Wamy Sushi Dueville, domenica 22 novembre alle 11:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+Concerti e musica dal vivo a Mamaloca, Vicenza: si è già svolto, l'ultima data è stata sabato 21 novembre 2026.
 
 ## Dare Forma All'aria – Trissino
 https://anyplans.in/vicenza/dare-forma-all-aria/
@@ -4117,6 +4024,11 @@ https://anyplans.in/vicenza/atti-degli-apostoli-baladam-b-side/
 
 Spettacoli e teatro a Teatro Astra, Vicenza, venerdì 27 novembre alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## Cena da Caffè Vero House: 7 posti liberi
+https://anyplans.in/vicenza/cena-da-caffe-vero-house/
+
+Cena a Caffè Vero House, Vicenza, venerdì 27 novembre alle 21:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
+
 ## Illyrian at YOU Club Vicenza, 27 novembre
 https://anyplans.in/vicenza/illyrian-at-you-club-vicenza/
 
@@ -4152,12 +4064,7 @@ https://anyplans.in/vicenza/thuono-frequenze-n-3/
 
 Concerti e musica dal vivo a Via Rovigo, 47, Trissino, sabato 28 novembre alle 19:00. Gratis (Biglietti su Eventbrite).
 
-## Cena da Doppio Malto Thiene: 1 posto libero
-https://anyplans.in/vicenza/cena-da-doppio-malto-thiene-o-libero/
-
-Cena a Doppio Malto Thiene, sabato 28 novembre alle 19:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
-
-## Cena da Wild Turkey Pub: 3 posti liberi
+## Cena da Wild Turkey Pub: 2 posti liberi
 https://anyplans.in/vicenza/cena-da-wild-turkey-pub/
 
 Cena a Wild Turkey Pub, Zona Industriale Nord, sabato 28 novembre alle 19:30. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
@@ -4186,6 +4093,11 @@ Concerti e musica dal vivo a Pop Corner Academy, Montegalda, mercoledì 2 dicemb
 https://anyplans.in/vicenza/candlelight-le-piu-belle-colonne-sonore-di-hans-zimmer/
 
 Concerti e musica dal vivo a Spazio Roma, Vicenza, venerdì 4 dicembre alle 18:00. 24 € (Biglietti su AllEvents).
+
+## ••• Mini Brasiliano ••• da Canacaiana Cocktail Gastro…
+https://anyplans.in/vicenza/mini-brasiliano-da-canacaiana-cocktail-gastro-bar/
+
+Cena a Canacaiana Cocktail Gastro Bar, Vicenza, venerdì 4 dicembre alle 19:00. Gratis (Ognuno paga il suo al ristorante; ci si unisce nell'app Tablo).
 
 ## Vicenza Suona Walt Disney | Gran Concerto al Teatro San…
 https://anyplans.in/vicenza/vicenza-suona-walt-disney-gran-concerto-al-teatro-san-marco/
@@ -4292,6 +4204,11 @@ https://anyplans.in/vicenza/gran-concerto-di-san-silvestro-fuori-stagione-sinfon
 
 Concerti e musica dal vivo a Teatro Comunale Città di Vicenza, Vicenza, giovedì 31 dicembre alle 22:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## Concerto Gospel "Joy to the World" – Contrà Barche
+https://anyplans.in/vicenza/concerto-gospel-joy-to-the-world/
+
+Concerti e musica dal vivo a Contrà Barche, 55, Vicenza, sabato 2 gennaio alle 21:00. Gratis (Biglietti su Eventbrite).
+
 ## Gospel in Vicenza 2027
 https://anyplans.in/vicenza/gospel-in-vicenza-2027/
 
@@ -4377,6 +4294,11 @@ https://anyplans.in/vicenza/il-talento-porta-lontano-2026-27/
 
 Spettacoli e teatro a Confartigianato Imprese Vicenza, Vicenza, mercoledì 3 febbraio alle 08:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## Automazione E Sistemi Meccatronici - Sede di Vicenza
+https://anyplans.in/vicenza/automazione-e-sistemi-meccatronici-sede-di-vicenza/
+
+Incontri culturali a Borgo Casale, Vicenza, mercoledì 3 febbraio alle 14:30. Gratis (Ingresso: vedi la pagina AllEvents).
+
 ## Madre Courage e i suoi figli – Vicenza
 https://anyplans.in/vicenza/madre-courage-e-i-suoi-figli/
 
@@ -4402,6 +4324,11 @@ https://anyplans.in/vicenza/c-e-chi-dice-no-rock-star-vasco-tribute-band-vicenza
 
 Spettacoli e teatro a Teatro San Marco, Vicenza, sabato 6 febbraio alle 21:00. Gratis (Ingresso: vedi la pagina AllEvents).
 
+## AI & Data per la Digital Factory - Sede di Vicenza
+https://anyplans.in/vicenza/ai-data-per-la-digital-factory-sede-di-vicenza/
+
+Incontri culturali a Borgo Casale, Vicenza, martedì 9 febbraio alle 14:30. Gratis (Biglietti su Eventbrite).
+
 ## Minimi sistemi e poco altro – Vicenza
 https://anyplans.in/vicenza/minimi-sistemi-e-poco-altro/
 
@@ -4421,6 +4348,11 @@ Spettacoli e teatro a Mamaloca, Vicenza, venerdì 12 febbraio alle 22:00. Gratis
 https://anyplans.in/vicenza/igf29-29th-international-conference-on-fracture-and-structur/
 
 Incontri culturali a Vicenza Città Universitaria, Vicenza, lunedì 15 febbraio alle 14:00. Gratis (Ingresso: vedi la pagina AllEvents).
+
+## Design E Tecnologie dei Materiali - Sede di Vicenza
+https://anyplans.in/vicenza/design-e-tecnologie-dei-materiali-sede-di-vicenza/
+
+Incontri culturali a Borgo Casale, Vicenza, mercoledì 17 febbraio alle 15:00. Gratis (Biglietti su Eventbrite).
 
 ## MI SA CHE Fuori È Primavera - Gaia Saitta / Giorgio Barberio Corsetti /… – Vicenza
 https://anyplans.in/vicenza/mi-sa-che-fuori-e-primavera-gaia-saitta-giorgio-barberio-cor/
@@ -4540,15 +4472,15 @@ Ballo e danza a Viale Giuseppe Mazzini 39, 36100 Vicenza, Italy, Vicenza, domeni
 ## Cosa fare a Vicenza: 13 domande e le risposte di oggi
 https://anyplans.in/vicenza/domande/
 
-Le domande che si fanno su Vicenza, a Google e agli assistenti, con le risposte fatte sui dati di stanotte: 140 eventi in programma a Vicenza e provincia.
+Le domande che si fanno su Vicenza, a Google e agli assistenti, con le risposte fatte sui dati di stanotte: 128 eventi in programma a Vicenza e provincia.
 
 ## Cosa fare a Capodanno 2027 a Vicenza: 2 eventi
 https://anyplans.in/vicenza/cosa-fare-a-capodanno/
 
-A Capodanno 2027 a Vicenza e provincia ci sono, per ora, 2 eventi in calendario (2 gratis): Trap Active Capodano ( Free Drink ) e Gran Concerto di San Silvestro | Fuori Stagione Sinfonica 2026/27. I programmi di Capodanno escono di solito tra novembre e dicembre: questa pagina si aggiorna ogni notte. Se invece vuoi partire, ci sono 1061 viaggi di gruppo per quei giorni: si va con un gruppo e un coordinatore, anche da soli.
+A Capodanno 2027 a Vicenza e provincia ci sono, per ora, 2 eventi in calendario (2 gratis): Trap Active Capodano ( Free Drink ) e Gran Concerto di San Silvestro | Fuori Stagione Sinfonica 2026/27. I programmi di Capodanno escono di solito tra novembre e dicembre: questa pagina si aggiorna ogni notte. Se invece vuoi partire, ci sono 1046 viaggi di gruppo per quei giorni: si va con un gruppo e un coordinatore, anche da soli.
 
 **Cosa fare a Capodanno 2027 a Vicenza?**
-A Capodanno 2027 a Vicenza e provincia ci sono, per ora, 2 eventi in calendario (2 gratis): Trap Active Capodano ( Free Drink ) e Gran Concerto di San Silvestro | Fuori Stagione Sinfonica 2026/27. I programmi di Capodanno escono di solito tra novembre e dicembre: questa pagina si aggiorna ogni notte. Se invece vuoi partire, ci sono 1061 viaggi di gruppo per quei giorni: si va con un gruppo e un coordinatore, anche da soli.
+A Capodanno 2027 a Vicenza e provincia ci sono, per ora, 2 eventi in calendario (2 gratis): Trap Active Capodano ( Free Drink ) e Gran Concerto di San Silvestro | Fuori Stagione Sinfonica 2026/27. I programmi di Capodanno escono di solito tra novembre e dicembre: questa pagina si aggiorna ogni notte. Se invece vuoi partire, ci sono 1046 viaggi di gruppo per quei giorni: si va con un gruppo e un coordinatore, anche da soli.
 
 **Ci sono eventi gratis a Capodanno 2027 a Vicenza?**
 2 eventi sono gratis su 2. Quando c'è un biglietto il prezzo è nella pagina dell'evento.
@@ -4557,179 +4489,179 @@ A Capodanno 2027 a Vicenza e provincia ci sono, per ora, 2 eventi in calendario 
 Su anyplans vedi chi altro va a ogni evento e ti unisci: è pensato per chi esce da solo. Se vuoi partire, i viaggi di gruppo sono fatti apposta per chi viaggia da solo.
 
 **Dove andare a Capodanno 2027 partendo da Vicenza?**
-Ci sono 1061 viaggi di gruppo per quei giorni. Le mete e i prezzi sono qui sotto e nella pagina dei viaggi.
+Ci sono 1046 viaggi di gruppo per quei giorni. Le mete e i prezzi sono qui sotto e nella pagina dei viaggi.
 
-## Cosa fare a Natale 2026 a Vicenza: 13 eventi
+## Cosa fare a Natale 2026 a Vicenza: 14 eventi
 https://anyplans.in/vicenza/cosa-fare-a-natale/
 
-A Natale 2026 a Vicenza e provincia ci sono, per ora, 13 eventi in calendario (11 gratis): Antiche Melodie di Irlanda – Home Concert, Candlelight: le più belle colonne sonore di Hans Zimmer e Vicenza Suona Walt Disney | Gran Concerto al Teatro San Marco e altri. Mercatini, presepi e concerti di Natale si annunciano tra novembre e dicembre: questa pagina si aggiorna ogni notte. Se invece vuoi partire, ci sono 444 viaggi di gruppo per quei giorni: si va con un gruppo e un coordinatore, anche da soli.
+A Natale 2026 a Vicenza e provincia ci sono, per ora, 14 eventi in calendario (12 gratis): Antiche Melodie di Irlanda – Home Concert, Candlelight: le più belle colonne sonore di Hans Zimmer e ••• MINI BRASILIANO ••• da Canacaiana Cocktail Gastro Bar: 4 posti liberi e altri. Mercatini, presepi e concerti di Natale si annunciano tra novembre e dicembre: questa pagina si aggiorna ogni notte. Se invece vuoi partire, ci sono 443 viaggi di gruppo per quei giorni: si va con un gruppo e un coordinatore, anche da soli.
 
 **Cosa fare a Natale 2026 a Vicenza?**
-A Natale 2026 a Vicenza e provincia ci sono, per ora, 13 eventi in calendario (11 gratis): Antiche Melodie di Irlanda – Home Concert, Candlelight: le più belle colonne sonore di Hans Zimmer e Vicenza Suona Walt Disney | Gran Concerto al Teatro San Marco e altri. Mercatini, presepi e concerti di Natale si annunciano tra novembre e dicembre: questa pagina si aggiorna ogni notte. Se invece vuoi partire, ci sono 444 viaggi di gruppo per quei giorni: si va con un gruppo e un coordinatore, anche da soli.
+A Natale 2026 a Vicenza e provincia ci sono, per ora, 14 eventi in calendario (12 gratis): Antiche Melodie di Irlanda – Home Concert, Candlelight: le più belle colonne sonore di Hans Zimmer e ••• MINI BRASILIANO ••• da Canacaiana Cocktail Gastro Bar: 4 posti liberi e altri. Mercatini, presepi e concerti di Natale si annunciano tra novembre e dicembre: questa pagina si aggiorna ogni notte. Se invece vuoi partire, ci sono 443 viaggi di gruppo per quei giorni: si va con un gruppo e un coordinatore, anche da soli.
 
 **Ci sono eventi gratis a Natale 2026 a Vicenza?**
-11 eventi sono gratis su 13. Quando c'è un biglietto il prezzo è nella pagina dell'evento.
+12 eventi sono gratis su 14. Quando c'è un biglietto il prezzo è nella pagina dell'evento.
 
 **Cosa fare a Natale 2026 a Vicenza da soli?**
 Su anyplans vedi chi altro va a ogni evento e ti unisci: è pensato per chi esce da solo. Se vuoi partire, i viaggi di gruppo sono fatti apposta per chi viaggia da solo.
 
 **Dove andare a Natale 2026 partendo da Vicenza?**
-Ci sono 444 viaggi di gruppo per quei giorni. Le mete e i prezzi sono qui sotto e nella pagina dei viaggi.
+Ci sono 443 viaggi di gruppo per quei giorni. Le mete e i prezzi sono qui sotto e nella pagina dei viaggi.
 
-## Things to do in Vicenza: 140 events
+## Things to do in Vicenza: 128 events
 https://anyplans.in/en/vicenza/
 
 What's on in Vicenza and its province, today, tonight and this weekend: free events, talks & culture, dinners & aperitivo, concerts & live music, shows & theatre and exhibitions. Pick one and go with other people.
 
 **What to do in Vicenza this weekend?**
-This weekend in Vicenza and its province there are 25 events on anyplans: Alchimie in Atelier – Salotto aromatico (Marano Vicentino, 21 November), R&B Brunch n Day Party (Vicenza, 21 November), La Via Lattea • Laboratorio didattico da 4 a 10 anni (Arcugnano, 21 November), OUVERTURE DES SAPONETTES (Trissino, 21 November), La rivoluzione linguistica per il genere femminile dei testi antichi (Torri di Quartesolo, 21 November) and VDH3 Trail #158 "Let's get basted" - UPDATE!!! (Vicenza, 21 November) and more. The full dates are in the list above.
+This weekend in Vicenza and its province there are 17 events on anyplans: Osservazione del Sole (Arcugnano, 22 November), DARE FORMA ALL'ARIA (Trissino, 22 November), MULTITAVOLO DIFFUSA (Montecchio Maggiore, 22 November), LA FISICA DELL'ARIA (Trissino, 22 November), Giacomo Zanus  - PROXIMA The Young Side fall edition (Vicenza, 22 November) and Speed Date Vicenza 30-49 (22 November) and more. The full dates are in the list above.
 
 **What's on in Vicenza today and tonight?**
-Today, 21 November 2026, in Vicenza and its province there are 16 events on anyplans: Open Day - Discover H-FARM International School Vicenza, Alchimie in Atelier – Salotto aromatico in Marano Vicentino, R&B Brunch n Day Party in Vicenza, La Via Lattea • Laboratorio didattico da 4 a 10 anni in Arcugnano, OUVERTURE DES SAPONETTES in Trissino and La rivoluzione linguistica per il genere femminile dei testi antichi in Torri di Quartesolo.
+Today, 22 November 2026, in Vicenza and its province there are 9 events on anyplans: Osservazione del Sole in Arcugnano, DARE FORMA ALL'ARIA in Trissino, MULTITAVOLO DIFFUSA in Montecchio Maggiore, LA FISICA DELL'ARIA in Trissino, Giacomo Zanus  - PROXIMA The Young Side fall edition in Vicenza and Speed Date Vicenza 30-49.
 
 **What kind of events are there in Vicenza on anyplans?**
-Free events, talks & culture, dinners & aperitivo, concerts & live music, shows & theatre, exhibitions, sports and food fairs and village festivals. Right now 140 events are scheduled,  collected every day from the organisers, the town councils and the platforms where they are announced.
+Free events, talks & culture, dinners & aperitivo, concerts & live music, shows & theatre, exhibitions, sports and food fairs and village festivals. Right now 128 events are scheduled,  collected every day from the organisers, the town councils and the platforms where they are announced.
 
 **Are the events in Vicenza on anyplans free?**
-135 of the 140 upcoming events are free. When there is a ticket or a fee, the price is on the event's page. Signing up on anyplans is free and only needs your email; you must be 18 or older.
+123 of the 128 upcoming events are free. When there is a ticket or a fee, the price is on the event's page. Signing up on anyplans is free and only needs your email; you must be 18 or older.
 
 **I'm a tourist in Vicenza: can I join?**
 Yes: run clubs, walks, festivals and dinners are open to everyone, for one evening too. Most descriptions are in Italian because the organisers write them, but times, places and prices are on every page in English, and you can see who else is going before you show up.
 
-## Events today in Vicenza, Saturday 21 November: what to do (16)
+## Events today in Vicenza, Sunday 22 November: what to do (9)
 https://anyplans.in/en/vicenza/what-to-do-today/
 
-16 events in Vicenza and its province today, 21 November 2026: Vicenza, Arcugnano, Trissino and Torri di Quartesolo and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+9 events in Vicenza and its province today, 22 November 2026: Trissino, Vicenza, Arcugnano and Montecchio Maggiore and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
 **What is on in Vicenza today?**
-16 events today, 21 November 2026: Open Day - Discover H-FARM International School Vicenza, Alchimie in Atelier – Salotto aromatico in Marano Vicentino, R&B Brunch n Day Party in Vicenza, La Via Lattea • Laboratorio didattico da 4 a 10 anni in Arcugnano, OUVERTURE DES SAPONETTES in Trissino, La rivoluzione linguistica per il genere femminile dei testi antichi in Torri di Quartesolo, VDH3 Trail #158 "Let's get basted" - UPDATE!!! in Vicenza and OPENING 192 ORE D'ARIA in Trissino and more, all in the list above.
+9 events today, 22 November 2026: Osservazione del Sole in Arcugnano, DARE FORMA ALL'ARIA in Trissino, MULTITAVOLO DIFFUSA in Montecchio Maggiore, LA FISICA DELL'ARIA in Trissino, Giacomo Zanus  - PROXIMA The Young Side fall edition in Vicenza, Speed Date Vicenza 30-49, Tablo experience⚡ da Spiller | Vicenza: 2 posti liberi and 🌟⚡ da Mini Moment: 2 posti liberi in Torri di Quartesolo and more, all in the list above.
 
 **Is there anything free today in Vicenza?**
-16 of the 16 are free, mostly town festivals, markets and group walks. When there is a ticket or a fee, the price is on the event page.
+9 of the 9 are free, mostly town festivals, markets and group walks. When there is a ticket or a fee, the price is on the event page.
 
 **Where are they?**
-In Vicenza and its province: Vicenza (9), Arcugnano (2), Trissino (2), Torri di Quartesolo (2) and Marano Vicentino (1). Every page has the meeting point and a link to the map.
+In Vicenza and its province: Trissino (3), Vicenza (3), Arcugnano (1), Montecchio Maggiore (1) and Torri di Quartesolo (1). Every page has the meeting point and a link to the map.
 
 **Can I go alone?**
 Yes, that is the point: on anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
 
-## Events tonight in Vicenza, Saturday 21 November: what to do (10)
+## Events tonight in Vicenza, Sunday 22 November: what to do (5)
 https://anyplans.in/en/vicenza/what-to-do-tonight/
 
-10 events in Vicenza and its province tonight, 21 November 2026, from 6 pm: Vicenza, Trissino, Torri di Quartesolo and Arcugnano and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+5 events in Vicenza and its province tonight, 22 November 2026, from 6 pm: Vicenza, Torri di Quartesolo and Trissino and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
 **What is on in Vicenza tonight?**
-10 events tonight, 21 November 2026, from 6 pm: VDH3 Trail #158 "Let's get basted" - UPDATE!!! in Vicenza, OPENING 192 ORE D'ARIA in Trissino, Mengoni tributo band da Miami Sound Café: 5 posti liberi in Torri di Quartesolo, Cena "porta un amico single" da Dai Tosi-Thiene: 3 posti liberi in Vicenza, Osservazione della Luna in Arcugnano, NIENTE DI GRAVE voci della violenza contro le donne in Vicenza, NADT ORCHESTRA - PROXIMA The Young Side fall edition in Vicenza and Mutazioni 07 – stagione teatrale Theama Teatro in Vicenza and more, all in the list above.
+5 events tonight, 22 November 2026, from 6 pm: Giacomo Zanus  - PROXIMA The Young Side fall edition in Vicenza, Speed Date Vicenza 30-49, Tablo experience⚡ da Spiller | Vicenza: 2 posti liberi, 🌟⚡ da Mini Moment: 2 posti liberi in Torri di Quartesolo and NAZA in Trissino.
 
 **Is there anything free tonight in Vicenza?**
-10 of the 10 are free, mostly town festivals, markets and group walks. When there is a ticket or a fee, the price is on the event page.
+5 of the 5 are free, mostly town festivals, markets and group walks. When there is a ticket or a fee, the price is on the event page.
 
 **Where are they?**
-In Vicenza and its province: Vicenza (7), Trissino (1), Torri di Quartesolo (1) and Arcugnano (1). Every page has the meeting point and a link to the map.
+In Vicenza and its province: Vicenza (3), Torri di Quartesolo (1) and Trissino (1). Every page has the meeting point and a link to the map.
 
 **Can I go alone?**
 Yes, that is the point: on anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
 
-## Events tomorrow in Vicenza, Sunday 22 November: what to do (10)
+## Events tomorrow in Vicenza, Monday 23 November: what to do (3)
 https://anyplans.in/en/vicenza/what-to-do-tomorrow/
 
-10 events in Vicenza and its province tomorrow, 22 November 2026: Vicenza, Trissino, Arcugnano and Montecchio Maggiore and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+3 events in Vicenza and its province tomorrow, 23 November 2026: Carmignano di Brenta, Trissino and Vancimuglio and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
 **What is on in Vicenza tomorrow?**
-10 events tomorrow, 22 November 2026: Osservazione del Sole in Arcugnano, Uscita fuori porta da Wamy Sushi Dueville: 3 posti liberi in Vicenza, DARE FORMA ALL'ARIA in Trissino, MULTITAVOLO DIFFUSA in Montecchio Maggiore, LA FISICA DELL'ARIA in Trissino, Giacomo Zanus  - PROXIMA The Young Side fall edition in Vicenza, Speed Date Vicenza 30-49 and Tablo experience⚡ da Spiller | Vicenza: 2 posti liberi and more, all in the list above.
+3 events tomorrow, 23 November 2026: MERITO E FRAGILITA' POSSONO CONVIVERE? in Carmignano di Brenta, CINEMA FILANDA in Trissino and Il Gruppo Consiliare FDI incontra i cittadini in Vancimuglio.
 
 **Is there anything free tomorrow in Vicenza?**
-10 of the 10 are free, mostly town festivals, markets and group walks. When there is a ticket or a fee, the price is on the event page.
+3 of the 3 are free, mostly town festivals, markets and group walks. When there is a ticket or a fee, the price is on the event page.
 
 **Where are they?**
-In Vicenza and its province: Vicenza (4), Trissino (3), Arcugnano (1), Montecchio Maggiore (1) and Torri di Quartesolo (1). Every page has the meeting point and a link to the map.
+In Vicenza and its province: Carmignano di Brenta (1), Trissino (1) and Vancimuglio (1). Every page has the meeting point and a link to the map.
 
 **Can I go alone?**
 Yes, that is the point: on anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
 
-## Events this weekend in Vicenza, 21 and 22 November: what to do (26)
+## Events this weekend in Vicenza, 22 and 28 November: what to do (17)
 https://anyplans.in/en/vicenza/what-to-do-this-weekend/
 
-26 events in Vicenza and its province this weekend (Saturday 21 November and Sunday 22 November): Vicenza, Trissino, Arcugnano and Torri di Quartesolo and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
+17 events in Vicenza and its province this weekend (Sunday 22 November and Saturday 28 November): Vicenza, Trissino, Arcugnano and Montecchio Maggiore and more. Town festivals, markets, concerts, runs, dinners: pick one and go with other people. Updated every night.
 
 **What is on in Vicenza this weekend?**
-26 events this weekend (Saturday 21 November and Sunday 22 November): Open Day - Discover H-FARM International School Vicenza, Alchimie in Atelier – Salotto aromatico in Marano Vicentino, R&B Brunch n Day Party in Vicenza, La Via Lattea • Laboratorio didattico da 4 a 10 anni in Arcugnano, OUVERTURE DES SAPONETTES in Trissino, La rivoluzione linguistica per il genere femminile dei testi antichi in Torri di Quartesolo, VDH3 Trail #158 "Let's get basted" - UPDATE!!! in Vicenza and OPENING 192 ORE D'ARIA in Trissino and more, all in the list above.
+17 events this weekend (Sunday 22 November and Saturday 28 November): Osservazione del Sole in Arcugnano, DARE FORMA ALL'ARIA in Trissino, MULTITAVOLO DIFFUSA in Montecchio Maggiore, LA FISICA DELL'ARIA in Trissino, Giacomo Zanus  - PROXIMA The Young Side fall edition in Vicenza, Speed Date Vicenza 30-49, Tablo experience⚡ da Spiller | Vicenza: 2 posti liberi and 🌟⚡ da Mini Moment: 2 posti liberi in Torri di Quartesolo and more, all in the list above.
 
 **Is there anything free this weekend in Vicenza?**
-26 of the 26 are free, mostly town festivals, markets and group walks. When there is a ticket or a fee, the price is on the event page.
+17 of the 17 are free, mostly town festivals, markets and group walks. When there is a ticket or a fee, the price is on the event page.
 
 **Where are they?**
-In Vicenza and its province: Vicenza (13), Trissino (5), Arcugnano (3), Torri di Quartesolo (3), Marano Vicentino (1) and Montecchio Maggiore (1). Every page has the meeting point and a link to the map.
+In Vicenza and its province: Vicenza (6), Trissino (5), Arcugnano (1), Montecchio Maggiore (1), Torri di Quartesolo (1), Arzignano (1), Bolzano Vicentino (1) and Zona Industriale Nord (1). Every page has the meeting point and a link to the map.
 
 **Can I go alone?**
 Yes, that is the point: on anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
 
-## Events in Vicenza in November 2026: 62
+## Events in Vicenza in November 2026: 45
 https://anyplans.in/en/vicenza/events-november-2026/
 
-62 events in Vicenza and its province in November 2026: talks & culture, dinners & aperitivo, concerts & live music, shows & theatre and running. Day by day, with times, place and price, in Vicenza, Trissino, Arcugnano and Torri di Quartesolo and other towns. You sign up and go with other people.
+45 events in Vicenza and its province in November 2026: talks & culture, climbing, singles nights, concerts & live music and dinners & aperitivo. Day by day, with times, place and price, in Vicenza, Trissino, Arzignano and Arcugnano and other towns. You sign up and go with other people.
 
 **What is on in Vicenza in November 2026?**
-62 events: Open Day - Discover H-FARM International School Vicenza (saturday 21 november at 09:00), Alchimie in Atelier – Salotto aromatico (Marano Vicentino, saturday 21 november at 10:00), R&B Brunch n Day Party (Vicenza, saturday 21 november at 13:30), La Via Lattea • Laboratorio didattico da 4 a 10 anni (Arcugnano, saturday 21 november at 15:30), OUVERTURE DES SAPONETTES (Trissino, saturday 21 november at 16:00), La rivoluzione linguistica per il genere femminile dei testi antichi (Torri di Quartesolo, saturday 21 november at 17:00), VDH3 Trail #158 "Let's get basted" - UPDATE!!! (Vicenza, saturday 21 november at 18:00) and OPENING 192 ORE D'ARIA (Trissino, saturday 21 november at 18:00) and more, all in the list above.
+45 events: Osservazione del Sole (Arcugnano, sunday 22 november at 10:00), DARE FORMA ALL'ARIA (Trissino, sunday 22 november at 14:00), MULTITAVOLO DIFFUSA (Montecchio Maggiore, sunday 22 november at 15:00), LA FISICA DELL'ARIA (Trissino, sunday 22 november at 15:30), Giacomo Zanus  - PROXIMA The Young Side fall edition (Vicenza, sunday 22 november at 18:30), Speed Date Vicenza 30-49 (sunday 22 november at 18:30), Tablo experience⚡ da Spiller | Vicenza: 2 posti liberi (sunday 22 november at 18:45) and 🌟⚡ da Mini Moment: 2 posti liberi (Torri di Quartesolo, sunday 22 november at 20:30) and more, all in the list above.
 
 **Which towns?**
-Vicenza (31), Trissino (9), Arcugnano (4), Torri di Quartesolo (3), Arzignano (3), Marano Vicentino (1), Montecchio Maggiore (1) and Carmignano di Brenta (1). Every page has the meeting point and a link to the map.
+Vicenza (21), Trissino (7), Arzignano (3), Arcugnano (2), Montecchio Maggiore (1), Torri di Quartesolo (1), Carmignano di Brenta (1) and Vancimuglio (1). Every page has the meeting point and a link to the map.
 
 **How much do they cost?**
-59 of the 62 are free. When there is a ticket or a fee, the price is on the event page; you pay the organiser, not anyplans.
+42 of the 45 are free. When there is a ticket or a fee, the price is on the event page; you pay the organiser, not anyplans.
 
-## Events in Vicenza in December 2026: 28
+## Events in Vicenza in December 2026: 29
 https://anyplans.in/en/vicenza/events-december-2026/
 
-28 events in Vicenza and its province in December 2026: yoga & pilates, talks & culture, concerts & live music, guided tours and town festivals & fairs. Day by day, with times, place and price, in Vicenza, Montegalda, Thiene and Brogliano and other towns. You sign up and go with other people.
+29 events in Vicenza and its province in December 2026: yoga & pilates, talks & culture, concerts & live music, dinners & aperitivo and guided tours. Day by day, with times, place and price, in Vicenza, Montegalda, Thiene and Brogliano and other towns. You sign up and go with other people.
 
 **What is on in Vicenza in December 2026?**
-28 events: Gloria Soldà presenta PosturalMente felici | Brogliano (tuesday 1 december at 18:00), Paolo Gentiloni presenta “Diventare una potenza” (Vicenza, tuesday 1 december at 18:30), Antiche Melodie di Irlanda – Home Concert (Montegalda, wednesday 2 december at 21:00), Candlelight: le più belle colonne sonore di Hans Zimmer (Vicenza, friday 4 december at 18:00), Vicenza Suona Walt Disney | Gran Concerto al Teatro San Marco (friday 4 december at 21:00), CORSO DI PRANOTERAPIA A VICENZA: LEZIONE APERTA (saturday 5 december at 10:00), FreedOM - Convegno Esperienziale (Thiene, sunday 6 december at 14:00) and Winter Country Tour 26/27 - Vicenza Birreria Lowengrube (monday 7 december at 16:00) and more, all in the list above.
+29 events: Gloria Soldà presenta PosturalMente felici | Brogliano (tuesday 1 december at 18:00), Paolo Gentiloni presenta “Diventare una potenza” (Vicenza, tuesday 1 december at 18:30), Antiche Melodie di Irlanda – Home Concert (Montegalda, wednesday 2 december at 21:00), Candlelight: le più belle colonne sonore di Hans Zimmer (Vicenza, friday 4 december at 18:00), ••• MINI BRASILIANO ••• da Canacaiana Cocktail Gastro Bar: 4 posti liberi (Vicenza, friday 4 december at 19:00), Vicenza Suona Walt Disney | Gran Concerto al Teatro San Marco (friday 4 december at 21:00), CORSO DI PRANOTERAPIA A VICENZA: LEZIONE APERTA (saturday 5 december at 10:00) and FreedOM - Convegno Esperienziale (Thiene, sunday 6 december at 14:00) and more, all in the list above.
 
 **Which towns?**
-Vicenza (19), Montegalda (2), Thiene (2), Brogliano (1), Brendola (1), Arcugnano (1), Chiampo (1) and Isola Vicentina (1). Every page has the meeting point and a link to the map.
+Vicenza (20), Montegalda (2), Thiene (2), Brogliano (1), Brendola (1), Arcugnano (1), Chiampo (1) and Isola Vicentina (1). Every page has the meeting point and a link to the map.
 
 **How much do they cost?**
-26 of the 28 are free. When there is a ticket or a fee, the price is on the event page; you pay the organiser, not anyplans.
+27 of the 29 are free. When there is a ticket or a fee, the price is on the event page; you pay the organiser, not anyplans.
 
-## Events in Vicenza in January 2027: 17
+## Events in Vicenza in January 2027: 18
 https://anyplans.in/en/vicenza/events-january-2027/
 
-17 events in Vicenza and its province in January 2027: concerts & live music, shows & theatre, talks & culture and gym. Day by day, with times, place and price, in Vicenza, Montegalda, Vigo and Pedocchio and other towns. You sign up and go with other people.
+18 events in Vicenza and its province in January 2027: concerts & live music, shows & theatre, talks & culture and gym. Day by day, with times, place and price, in Vicenza, Montegalda, Vigo and Pedocchio and other towns. You sign up and go with other people.
 
 **What is on in Vicenza in January 2027?**
-17 events: Gospel in Vicenza 2027 (sunday 3 january at 18:00), Cenerentola- Il musical (Vicenza, sunday 10 january at 17:00), Yuki Serino e Martin Nöbauer | Stagione Concertistica 2026/27 (Vicenza, monday 11 january at 20:45), Multisonor – Home Concert (Montegalda, monday 11 january at 21:00), Presentazione del progetto educativo Flow Education (Vigo, wednesday 13 january at 18:10), Vicenzaoro (thursday 14 january at 18:30), T- Gold (Vicenza, thursday 14 january at 18:30) and Bestiario idrico (Vicenza, thursday 14 january at 20:45) and more, all in the list above.
+18 events: Concerto Gospel "Joy to the World" (Vicenza, saturday 2 january at 21:00), Gospel in Vicenza 2027 (sunday 3 january at 18:00), Cenerentola- Il musical (Vicenza, sunday 10 january at 17:00), Yuki Serino e Martin Nöbauer | Stagione Concertistica 2026/27 (Vicenza, monday 11 january at 20:45), Multisonor – Home Concert (Montegalda, monday 11 january at 21:00), Presentazione del progetto educativo Flow Education (Vigo, wednesday 13 january at 18:10), Vicenzaoro (thursday 14 january at 18:30) and T- Gold (Vicenza, thursday 14 january at 18:30) and more, all in the list above.
 
 **Which towns?**
-Vicenza (13), Montegalda (2), Vigo (1) and Pedocchio (1). Every page has the meeting point and a link to the map.
+Vicenza (14), Montegalda (2), Vigo (1) and Pedocchio (1). Every page has the meeting point and a link to the map.
 
 **How much do they cost?**
-17 of the 17 are free. When there is a ticket or a fee, the price is on the event page; you pay the organiser, not anyplans.
+18 of the 18 are free. When there is a ticket or a fee, the price is on the event page; you pay the organiser, not anyplans.
 
-## Dinners & aperitivo in Vicenza: 12 events
+## Dinners & aperitivo in Vicenza: 10 events
 https://anyplans.in/en/vicenza/dinners/
 
-In Vicenza and its province there are 12 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Vicenza and its province there are 10 dinners and aperitivo in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which dinners and aperitivo in Vicenza and its province are coming up?**
-There are 12 events: Alchimie in Atelier – Salotto aromatico (Marano Vicentino, Saturday 21 November at 10:00), Mengoni tributo band da Miami Sound Café: 5 posti liberi (Torri di Quartesolo, Saturday 21 November at 19:00), Cena "porta un amico single" da Dai Tosi-Thiene: 3 posti liberi (Vicenza, Saturday 21 November at 19:30), Tablo experience⚡ da Spiller | Vicenza: 2 posti liberi (Sunday 22 November at 18:45), 🌟⚡ da Mini Moment: 2 posti liberi (Torri di Quartesolo, Sunday 22 November at 20:30) and Una dolce serata in compagnia 🧁🍰🍩☕ da STRA 2025: 1 posto libero (Vicenza, Wednesday 25 November at 20:00) and more, all in the list above.
+There are 10 events: Tablo experience⚡ da Spiller | Vicenza: 2 posti liberi (Sunday 22 November at 18:45), 🌟⚡ da Mini Moment: 2 posti liberi (Torri di Quartesolo, Sunday 22 November at 20:30), Una dolce serata in compagnia 🧁🍰🍩☕ da STRA 2025: 1 posto libero (Vicenza, Wednesday 25 November at 20:00), Cena da Mama L'oca Street Bar: 9 posti liberi (Vicenza, Thursday 26 November at 19:15), Cena da Villa Bonin Club & Dinner: 4 posti liberi (Vicenza, Friday 27 November at 19:00) and I venerdì in compagnia ✨ da Hosteria Al Gallo: 4 posti liberi (Vicenza, Friday 27 November at 20:30) and more, all in the list above.
 
 **When is the next dinner or aperitivo?**
-Alchimie in Atelier – Salotto aromatico, Saturday 21 November at 10:00, in Marano Vicentino. Free.
+Tablo experience⚡ da Spiller | Vicenza: 2 posti liberi, Sunday 22 November at 18:45. Free.
 
 **Dinners and aperitivo in Vicenza and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Talks & culture in Vicenza: 31 events
+## Talks & culture in Vicenza: 30 events
 https://anyplans.in/en/vicenza/talks-and-culture/
 
-In Vicenza and its province there are 31 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Vicenza and its province there are 30 talks & culture events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which talks & culture events in Vicenza and its province are coming up?**
-There are 31 events: Open Day - Discover H-FARM International School Vicenza (Saturday 21 November at 09:00), La Via Lattea • Laboratorio didattico da 4 a 10 anni (Arcugnano, Saturday 21 November at 15:30), La rivoluzione linguistica per il genere femminile dei testi antichi (Torri di Quartesolo, Saturday 21 November at 17:00), Osservazione della Luna (Arcugnano, Saturday 21 November at 20:30), Osservazione del Sole (Arcugnano, Sunday 22 November at 10:00) and LA FISICA DELL'ARIA (Trissino, Sunday 22 November at 15:30) and more, all in the list above.
+There are 30 events: Osservazione del Sole (Arcugnano, Sunday 22 November at 10:00), LA FISICA DELL'ARIA (Trissino, Sunday 22 November at 15:30), MERITO E FRAGILITA' POSSONO CONVIVERE? (Carmignano di Brenta, Monday 23 November at 18:00), Il Gruppo Consiliare FDI incontra i cittadini (Vancimuglio, Monday 23 November at 20:30), TREASURY & FINANCE FORUM DAY 2026 (Altavilla Vicentina, Tuesday 24 November at 00:00) and Visita all’osservatorio ed osservazione del cielo (Arcugnano, Tuesday 24 November at 20:30) and more, all in the list above.
 
 **When is the next talks & culture event?**
-Open Day - Discover H-FARM International School Vicenza, Saturday 21 November at 09:00. Free.
+Osservazione del Sole, Sunday 22 November at 10:00, in Arcugnano. Free.
 
 **Talks & culture events in Vicenza and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -4748,19 +4680,19 @@ NAZA, Sunday 22 November at 20:30, in Trissino. Free.
 **Cinema events in Vicenza and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Concerts & live music in Vicenza: 30 events
+## Concerts & live music in Vicenza: 27 events
 https://anyplans.in/en/vicenza/concerts/
 
-In Vicenza and its province there are 30 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Vicenza and its province there are 27 concerts & live music events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which concerts & live music events in Vicenza and its province are coming up?**
-There are 30 events: R&B Brunch n Day Party (Vicenza, Saturday 21 November at 13:30), NADT ORCHESTRA - PROXIMA The Young Side fall edition (Vicenza, Saturday 21 November at 21:00), Bleeding Me - MetallicA Acoustic Experience - Live At Nevermind Café (Vicenza, Saturday 21 November at 21:30), Mothership Live! Led Zeppelin Tribute @ Mamaloca! (Vicenza, Saturday 21 November at 22:00), Giacomo Zanus  - PROXIMA The Young Side fall edition (Vicenza, Sunday 22 November at 18:30) and Candlelight: Le Quattro Stagioni di Vivaldi (Vicenza, Friday 27 November at 18:00) and more, all in the list above.
+There are 27 events: Giacomo Zanus  - PROXIMA The Young Side fall edition (Vicenza, Sunday 22 November at 18:30), Candlelight: Le Quattro Stagioni di Vivaldi (Vicenza, Friday 27 November at 18:00), Candlelight: Queen & ABBA (Vicenza, Friday 27 November at 20:00), ILLYRIAN at YOU CLUB VICENZA (Friday 27 November at 23:00), THUONO: FREQUENZE N°3 (Trissino, Saturday 28 November at 19:00) and Antiche Melodie di Irlanda – Home Concert (Montegalda, Wednesday 2 December at 21:00) and more, all in the list above.
 
 **When is the next concerts & live music event?**
-R&B Brunch n Day Party, Saturday 21 November at 13:30, in Vicenza. Free.
+Giacomo Zanus  - PROXIMA The Young Side fall edition, Sunday 22 November at 18:30, in Vicenza. Free.
 
 **Concerts & live music events in Vicenza and its province: are they free?**
-26 out of 30. When there is a ticket or a fee, the price is on the event's page.
+23 out of 27. When there is a ticket or a fee, the price is on the event's page.
 
 ## Yoga & pilates in Vicenza: 2 events
 https://anyplans.in/en/vicenza/yoga/
@@ -4832,16 +4764,16 @@ Faun - la morte del cigno - atto bianco, Saturday 6 February at 20:45, in Vicenz
 **Dancing events in Vicenza and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Shows & theatre in Vicenza: 37 events
+## Shows & theatre in Vicenza: 33 events
 https://anyplans.in/en/vicenza/shows/
 
-In Vicenza and its province there are 37 shows & theatre events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Vicenza and its province there are 33 shows & theatre events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which shows & theatre events in Vicenza and its province are coming up?**
-There are 37 events: OUVERTURE DES SAPONETTES (Trissino, Saturday 21 November at 16:00), OPENING 192 ORE D'ARIA (Trissino, Saturday 21 November at 18:00), NIENTE DI GRAVE voci della violenza contro le donne (Vicenza, Saturday 21 November at 21:00), Mutazioni 07 – stagione teatrale Theama Teatro (Vicenza, Saturday 21 November at 21:00), Viaggio al centro del teatro (Vicenza, Tuesday 24 November at 20:45) and ATTI DEGLI APOSTOLI | Baladam B-Side (Vicenza, Friday 27 November at 21:00) and more, all in the list above.
+There are 33 events: Viaggio al centro del teatro (Vicenza, Tuesday 24 November at 20:45), ATTI DEGLI APOSTOLI | Baladam B-Side (Vicenza, Friday 27 November at 21:00), ARRIVA A BOLZANO VICENTINO THE HUNTRIX EXPERIENCE (Saturday 28 November at 16:30), IL CANE DEAN (Trissino, Saturday 28 November at 17:00), Giselle (Vicenza, Saturday 28 November at 20:45) and Totalmente incompatibili (Vicenza, Saturday 12 December at 20:45) and more, all in the list above.
 
 **When is the next shows & theatre event?**
-OUVERTURE DES SAPONETTES, Saturday 21 November at 16:00, in Trissino. Free.
+Viaggio al centro del teatro, Tuesday 24 November at 20:45, in Vicenza. Free.
 
 **Shows & theatre events in Vicenza and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -4874,16 +4806,16 @@ Bruno Meneguzzo – Doppia trama. Ritorno a casa | Vernissage, Saturday 20 Febru
 **Exhibitions events in Vicenza and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Hiking in Vicenza: 2 events
+## Hiking in Vicenza: 1 event
 https://anyplans.in/en/vicenza/hiking/
 
-In Vicenza and its province there are 2 hiking events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Vicenza and its province there are 1 hiking events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which hiking events in Vicenza and its province are coming up?**
-There are 2 events: Uscita fuori porta da Wamy Sushi Dueville: 3 posti liberi (Vicenza, Sunday 22 November at 11:30) and Altre Latitudini: sulle orme di Lhote e le pitture rupestri del Tassili (Motta, Friday 27 November at 19:30).
+There is 1 event: Altre Latitudini: sulle orme di Lhote e le pitture rupestri del Tassili (Motta, Friday 27 November at 19:30).
 
 **When is the next hiking event?**
-Uscita fuori porta da Wamy Sushi Dueville: 3 posti liberi, Sunday 22 November at 11:30, in Vicenza. Free.
+Altre Latitudini: sulle orme di Lhote e le pitture rupestri del Tassili, Friday 27 November at 19:30, in Motta. Free.
 
 **Hiking events in Vicenza and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -4972,16 +4904,16 @@ Visita Museo, from 27 November to 27 November, 2 dates, in Valdagno. Free.
 **Food fairs and village festivals events in Vicenza and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Free events in Vicenza: 135 events
+## Free events in Vicenza: 123 events
 https://anyplans.in/en/vicenza/free/
 
-In Vicenza and its province there are 135 free events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Vicenza and its province there are 123 free events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which free events events in Vicenza and its province are coming up?**
-There are 135 events: Open Day - Discover H-FARM International School Vicenza (Saturday 21 November at 09:00), Alchimie in Atelier – Salotto aromatico (Marano Vicentino, Saturday 21 November at 10:00), R&B Brunch n Day Party (Vicenza, Saturday 21 November at 13:30), La Via Lattea • Laboratorio didattico da 4 a 10 anni (Arcugnano, Saturday 21 November at 15:30), OUVERTURE DES SAPONETTES (Trissino, Saturday 21 November at 16:00) and La rivoluzione linguistica per il genere femminile dei testi antichi (Torri di Quartesolo, Saturday 21 November at 17:00) and more, all in the list above.
+There are 123 events: Osservazione del Sole (Arcugnano, Sunday 22 November at 10:00), DARE FORMA ALL'ARIA (Trissino, Sunday 22 November at 14:00), MULTITAVOLO DIFFUSA (Montecchio Maggiore, Sunday 22 November at 15:00), LA FISICA DELL'ARIA (Trissino, Sunday 22 November at 15:30), Giacomo Zanus  - PROXIMA The Young Side fall edition (Vicenza, Sunday 22 November at 18:30) and Speed Date Vicenza 30-49 (Sunday 22 November at 18:30) and more, all in the list above.
 
 **When is the next free events event?**
-Open Day - Discover H-FARM International School Vicenza, Saturday 21 November at 09:00. Free.
+Osservazione del Sole, Sunday 22 November at 10:00, in Arcugnano. Free.
 
 **Free events events in Vicenza and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -5000,86 +4932,58 @@ Cadillac/Tower | Corso per trainer Pilates - Vicenza, Friday 27 November at 14:0
 **Meditation and wellness events in Vicenza and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Classical, jazz and opera in Vicenza: 9 events
+## Classical, jazz and opera in Vicenza: 8 events
 https://anyplans.in/en/vicenza/classical-and-jazz/
 
-In Vicenza and its province there are 9 classical concerts, jazz nights and opera in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Vicenza and its province there are 8 classical concerts, jazz nights and opera in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which classical, jazz and opera events in Vicenza and its province are coming up?**
-There are 9 events: NADT ORCHESTRA - PROXIMA The Young Side fall edition (Vicenza, Saturday 21 November at 21:00), Candlelight: Le Quattro Stagioni di Vivaldi (Vicenza, Friday 27 November at 18:00), Candlelight: Le Quattro Stagioni di Vivaldi | Vicenza (Friday 11 December at 18:00), Centrale del Jazz autumn edition | ThelOrchestra (Vicenza, Friday 18 December at 19:00), Oratorio di Natale BWV 248 di Johann Sebastian Bach - Vicenza (Sunday 20 December at 20:30) and Gran Concerto di San Silvestro | Fuori Stagione Sinfonica 2026/27 (Vicenza, Thursday 31 December at 22:00) and more, all in the list above.
+There are 8 events: Candlelight: Le Quattro Stagioni di Vivaldi (Vicenza, Friday 27 November at 18:00), Candlelight: Le Quattro Stagioni di Vivaldi | Vicenza (Friday 11 December at 18:00), Centrale del Jazz autumn edition | ThelOrchestra (Vicenza, Friday 18 December at 19:00), Oratorio di Natale BWV 248 di Johann Sebastian Bach - Vicenza (Sunday 20 December at 20:30), Gran Concerto di San Silvestro | Fuori Stagione Sinfonica 2026/27 (Vicenza, Thursday 31 December at 22:00) and Frida-Opera musical (Vicenza, Sunday 31 January at 17:00) and more, all in the list above.
 
 **When is the next classical, jazz and opera event?**
-NADT ORCHESTRA - PROXIMA The Young Side fall edition, Saturday 21 November at 21:00, in Vicenza. Free.
+Candlelight: Le Quattro Stagioni di Vivaldi, Friday 27 November at 18:00, in Vicenza. €24.
 
 **Classical, jazz and opera events in Vicenza and its province: are they free?**
-8 out of 9. When there is a ticket or a fee, the price is on the event's page.
+7 out of 8. When there is a ticket or a fee, the price is on the event's page.
 
-## Women's Day in Vicenza: 4 events
+## Women's Day in Vicenza: 3 events
 https://anyplans.in/en/vicenza/womens-day/
 
-In Vicenza and its province there are 4 International Women's Day events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Vicenza and its province there are 3 International Women's Day events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which women's day events in Vicenza and its province are coming up?**
-There are 4 events: NIENTE DI GRAVE voci della violenza contro le donne (Vicenza, Saturday 21 November at 21:00), Corpi sotto assedio: storie di donne che resistono (Arzignano, Friday 27 November at 20:30), Potere, Desiderio e Trasgressione: Storie di Donne a Vicenza (Sunday 27 December at 14:30) and Cori di donne | Stagione Concertistica 2026/27 (Vicenza, Monday 8 March at 20:45).
+There are 3 events: Corpi sotto assedio: storie di donne che resistono (Arzignano, Friday 27 November at 20:30), Potere, Desiderio e Trasgressione: Storie di Donne a Vicenza (Sunday 27 December at 14:30) and Cori di donne | Stagione Concertistica 2026/27 (Vicenza, Monday 8 March at 20:45).
 
 **When is the next women's day event?**
-NIENTE DI GRAVE voci della violenza contro le donne, Saturday 21 November at 21:00, in Vicenza. Free.
+Corpi sotto assedio: storie di donne che resistono, Friday 27 November at 20:30, in Arzignano. Free.
 
 **Women's day events in Vicenza and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Stargazing and astronomy in Vicenza: 3 events
-https://anyplans.in/en/vicenza/stargazing/
-
-In Vicenza and its province there are 3 stargazing nights and astronomy events in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
-
-**Which stargazing and astronomy events in Vicenza and its province are coming up?**
-There are 3 events: Osservazione della Luna (Arcugnano, Saturday 21 November at 20:30), Visita all’osservatorio ed osservazione del cielo (Arcugnano, Tuesday 24 November at 20:30) and Fratello sole, sorella luna (Vicenza, Sunday 17 January at 17:00).
-
-**When is the next stargazing and astronomy event?**
-Osservazione della Luna, Saturday 21 November at 20:30, in Arcugnano. Free.
-
-**Stargazing and astronomy events in Vicenza and its province: are they free?**
-Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
-
-## Mountains and hiking in Vicenza: 3 events
-https://anyplans.in/en/vicenza/mountains/
-
-In Vicenza and its province there are 3 hikes and mountain outings in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
-
-**Which mountains and hiking events in Vicenza and its province are coming up?**
-There are 3 events: Uscita fuori porta da Wamy Sushi Dueville: 3 posti liberi (Vicenza, Sunday 22 November at 11:30), DARE FORMA ALL'ARIA (Trissino, Sunday 22 November at 14:00) and Altre Latitudini: sulle orme di Lhote e le pitture rupestri del Tassili (Motta, Friday 27 November at 19:30).
-
-**When is the next mountains and hiking event?**
-Uscita fuori porta da Wamy Sushi Dueville: 3 posti liberi, Sunday 22 November at 11:30, in Vicenza. Free.
-
-**Mountains and hiking events in Vicenza and its province: are they free?**
-Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
-
-## Sports in Vicenza: 10 events
+## Sports in Vicenza: 8 events
 https://anyplans.in/en/vicenza/sports/
 
-In Vicenza and its province there are 10 group sports in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
+In Vicenza and its province there are 8 group sports in the coming months. Each one has the date, the time, the place and the price; you sign up and go with other people.
 
 **Which sports events in Vicenza and its province are coming up?**
-There are 10 events: VDH3 Trail #158 "Let's get basted" - UPDATE!!! (Vicenza, Saturday 21 November at 18:00), Uscita fuori porta da Wamy Sushi Dueville: 3 posti liberi (Vicenza, Sunday 22 November at 11:30), DARE FORMA ALL'ARIA (Trissino, Sunday 22 November at 14:00), Altre Latitudini: sulle orme di Lhote e le pitture rupestri del Tassili (Motta, Friday 27 November at 19:30), Lo Sport in Sicurezza (Vicenza, Saturday 28 November at 10:00) and Gloria Soldà presenta PosturalMente felici | Brogliano (Tuesday 1 December at 18:00) and more, all in the list above.
+There are 8 events: DARE FORMA ALL'ARIA (Trissino, Sunday 22 November at 14:00), Altre Latitudini: sulle orme di Lhote e le pitture rupestri del Tassili (Motta, Friday 27 November at 19:30), Lo Sport in Sicurezza (Vicenza, Saturday 28 November at 10:00), Gloria Soldà presenta PosturalMente felici | Brogliano (Tuesday 1 December at 18:00), CORSO DI PRANOTERAPIA A VICENZA: LEZIONE APERTA (Saturday 5 December at 10:00) and SFB StrongFirst Bodyweight Instructor Certification—Brendola, Vicenza, IT (Saturday 12 December at 08:00) and more, all in the list above.
 
 **When is the next sports event?**
-VDH3 Trail #158 "Let's get basted" - UPDATE!!!, Saturday 21 November at 18:00, in Vicenza. Free.
+DARE FORMA ALL'ARIA, Sunday 22 November at 14:00, in Trissino. Free.
 
 **Sports events in Vicenza and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Festivals and events in Trissino, Bergamo: 9…
+## Festivals and events in Trissino, Bergamo: 7…
 https://anyplans.in/en/vicenza/trissino/
 
-In Trissino there are 9 events in the coming months. On anyplans you find the festivals and events of Trissino with dates, times and place. You sign up and go with others.
+In Trissino there are 7 events in the coming months. On anyplans you find the festivals and events of Trissino with dates, times and place. You sign up and go with others.
 
 **Which festivals and events in Trissino are coming up?**
-There are 9 events: OUVERTURE DES SAPONETTES (Trissino, Saturday 21 November at 16:00), OPENING 192 ORE D'ARIA (Trissino, Saturday 21 November at 18:00), DARE FORMA ALL'ARIA (Trissino, Sunday 22 November at 14:00), LA FISICA DELL'ARIA (Trissino, Sunday 22 November at 15:30), NAZA (Trissino, Sunday 22 November at 20:30) and CINEMA FILANDA (Trissino, Monday 23 November at 20:30) and more, all in the list above.
+There are 7 events: DARE FORMA ALL'ARIA (Trissino, Sunday 22 November at 14:00), LA FISICA DELL'ARIA (Trissino, Sunday 22 November at 15:30), NAZA (Trissino, Sunday 22 November at 20:30), CINEMA FILANDA (Trissino, Monday 23 November at 20:30), D-AIR LAB TALK (Trissino, Thursday 26 November at 19:00) and IL CANE DEAN (Trissino, Saturday 28 November at 17:00) and more, all in the list above.
 
 **When is the next festival in Trissino?**
-OUVERTURE DES SAPONETTES, Saturday 21 November at 16:00, in Trissino. Free.
+DARE FORMA ALL'ARIA, Sunday 22 November at 14:00, in Trissino. Free.
 
 **Festivals and events in Trissino: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -5126,16 +5030,16 @@ Bruno Meneguzzo – Doppia trama. Ritorno a casa | Vernissage, Saturday 20 Febru
 **Festivals and events in Caldogno: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Festivals and events in Arcugnano, Bergamo: 5…
+## Festivals and events in Arcugnano, Bergamo: 3…
 https://anyplans.in/en/vicenza/arcugnano/
 
-In Arcugnano there are 5 events in the coming months. On anyplans you find the festivals and events of Arcugnano with dates, times and place. You sign up and go with others.
+In Arcugnano there are 3 events in the coming months. On anyplans you find the festivals and events of Arcugnano with dates, times and place. You sign up and go with others.
 
 **Which festivals and events in Arcugnano are coming up?**
-There are 5 events: La Via Lattea • Laboratorio didattico da 4 a 10 anni (Arcugnano, Saturday 21 November at 15:30), Osservazione della Luna (Arcugnano, Saturday 21 November at 20:30), Osservazione del Sole (Arcugnano, Sunday 22 November at 10:00), Visita all’osservatorio ed osservazione del cielo (Arcugnano, Tuesday 24 November at 20:30) and Il corpo come guida-Workshop di Biodanza aperto a tutti (Arcugnano, Saturday 12 December at 10:00).
+There are 3 events: Osservazione del Sole (Arcugnano, Sunday 22 November at 10:00), Visita all’osservatorio ed osservazione del cielo (Arcugnano, Tuesday 24 November at 20:30) and Il corpo come guida-Workshop di Biodanza aperto a tutti (Arcugnano, Saturday 12 December at 10:00).
 
 **When is the next festival in Arcugnano?**
-La Via Lattea • Laboratorio didattico da 4 a 10 anni, Saturday 21 November at 15:30, in Arcugnano. Free.
+Osservazione del Sole, Sunday 22 November at 10:00, in Arcugnano. Free.
 
 **Festivals and events in Arcugnano: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -5157,13 +5061,13 @@ Yes, all of them. When there is a ticket or a fee, the price is on the event's p
 ## Festivals and events in Torri di Quartesolo,…
 https://anyplans.in/en/vicenza/torri-di-quartesolo/
 
-In Torri di Quartesolo there are 3 events in the coming months. On anyplans you find the festivals and events of Torri di Quartesolo with dates, times and place. You sign up and go with others.
+In Torri di Quartesolo there is 1 event in the coming months. On anyplans you find the festivals and events of Torri di Quartesolo with dates, times and place. You sign up and go with others.
 
 **Which festivals and events in Torri di Quartesolo are coming up?**
-There are 3 events: La rivoluzione linguistica per il genere femminile dei testi antichi (Torri di Quartesolo, Saturday 21 November at 17:00), Mengoni tributo band da Miami Sound Café: 5 posti liberi (Torri di Quartesolo, Saturday 21 November at 19:00) and 🌟⚡ da Mini Moment: 2 posti liberi (Torri di Quartesolo, Sunday 22 November at 20:30).
+There is 1 event: 🌟⚡ da Mini Moment: 2 posti liberi (Torri di Quartesolo, Sunday 22 November at 20:30).
 
 **When is the next festival in Torri di Quartesolo?**
-La rivoluzione linguistica per il genere femminile dei testi antichi, Saturday 21 November at 17:00, in Torri di Quartesolo. Free.
+🌟⚡ da Mini Moment: 2 posti liberi, Sunday 22 November at 20:30, in Torri di Quartesolo. Free.
 
 **Festivals and events in Torri di Quartesolo: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -5252,19 +5156,19 @@ CHRISTMAS THING CdV Lab, Sunday 20 December at 17:00, in Isola Vicentina. Free.
 **Festivals and events in Isola Vicentina: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Festivals and events in Marano Vicentino,…
+## Festivals and events in Marano Vicentino, Bergamo
 https://anyplans.in/en/vicenza/marano-vicentino/
 
-In Marano Vicentino there is 1 event in the coming months. On anyplans you find the festivals and events of Marano Vicentino with dates, times and place. You sign up and go with others.
+Nothing is scheduled in Marano Vicentino right now: below, the past festivals, which often come back every year. On anyplans you find the festivals and events of Marano Vicentino with dates, times and place. You sign up and go with others.
 
 **Which festivals and events in Marano Vicentino are coming up?**
-There is 1 event: Alchimie in Atelier – Salotto aromatico (Marano Vicentino, Saturday 21 November at 10:00).
+None right now. The last dates were Alchimie in Atelier – Salotto aromatico (Marano Vicentino, Saturday 21 November at 10:00), 📖🎬 da Cutty Sark Scottish Pub: 2 posti liberi (Marano Vicentino, Wednesday 11 November at 19:40) and 🍻🎬 da Cutty Sark Scottish Pub: 1 posto libero (Marano Vicentino, Wednesday 28 October at 19:40): they often come back every year, and the new dates appear here.
 
 **When is the next festival in Marano Vicentino?**
-Alchimie in Atelier – Salotto aromatico, Saturday 21 November at 10:00, in Marano Vicentino. Free.
+No date has been published yet. Sign up on anyplans: when it comes out, you see it on the map.
 
 **Festivals and events in Marano Vicentino: are they free?**
-Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
+Almost always yes: town festivals, food fairs and group outings are free; if there is a fee it is on the event's page.
 
 ## Festivals and events in Carmignano di Brenta,…
 https://anyplans.in/en/vicenza/carmignano-di-brenta/
@@ -5280,72 +5184,16 @@ MERITO E FRAGILITA' POSSONO CONVIVERE?, Monday 23 November at 18:00, in Carmigna
 **Festivals and events in Carmignano di Brenta: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
 
-## Dinners & aperitivo in Vicenza today: 3 events
-https://anyplans.in/en/vicenza/dinners-today/
-
-Today, 21 November 2026, in Vicenza and its province: 3 dinners and aperitivo. Each with time, place, price and how to join.
-
-**Which dinners and aperitivo in Vicenza and its province are coming up?**
-There are 3 events: Alchimie in Atelier – Salotto aromatico (Marano Vicentino, Saturday 21 November at 10:00), Mengoni tributo band da Miami Sound Café: 5 posti liberi (Torri di Quartesolo, Saturday 21 November at 19:00) and Cena "porta un amico single" da Dai Tosi-Thiene: 3 posti liberi (Vicenza, Saturday 21 November at 19:30).
-
-**When is the next dinner or aperitivo?**
-Alchimie in Atelier – Salotto aromatico, Saturday 21 November at 10:00, in Marano Vicentino. Free.
-
-**Dinners and aperitivo in Vicenza and its province: are they free?**
-Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
-
-## Talks & culture in Vicenza today: 4 events
-https://anyplans.in/en/vicenza/talks-and-culture-today/
-
-Today, 21 November 2026, in Vicenza and its province: 4 talks & culture events. Each with time, place, price and how to join.
-
-**Which talks & culture events in Vicenza and its province are coming up?**
-There are 4 events: Open Day - Discover H-FARM International School Vicenza (Saturday 21 November at 09:00), La Via Lattea • Laboratorio didattico da 4 a 10 anni (Arcugnano, Saturday 21 November at 15:30), La rivoluzione linguistica per il genere femminile dei testi antichi (Torri di Quartesolo, Saturday 21 November at 17:00) and Osservazione della Luna (Arcugnano, Saturday 21 November at 20:30).
-
-**When is the next talks & culture event?**
-Open Day - Discover H-FARM International School Vicenza, Saturday 21 November at 09:00. Free.
-
-**Talks & culture events in Vicenza and its province: are they free?**
-Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
-
-## Concerts & live music in Vicenza today: 4 events
-https://anyplans.in/en/vicenza/concerts-today/
-
-Today, 21 November 2026, in Vicenza and its province: 4 concerts & live music events. Each with time, place, price and how to join.
-
-**Which concerts & live music events in Vicenza and its province are coming up?**
-There are 4 events: R&B Brunch n Day Party (Vicenza, Saturday 21 November at 13:30), NADT ORCHESTRA - PROXIMA The Young Side fall edition (Vicenza, Saturday 21 November at 21:00), Bleeding Me - MetallicA Acoustic Experience - Live At Nevermind Café (Vicenza, Saturday 21 November at 21:30) and Mothership Live! Led Zeppelin Tribute @ Mamaloca! (Vicenza, Saturday 21 November at 22:00).
-
-**When is the next concerts & live music event?**
-R&B Brunch n Day Party, Saturday 21 November at 13:30, in Vicenza. Free.
-
-**Concerts & live music events in Vicenza and its province: are they free?**
-Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
-
-## Shows & theatre in Vicenza today: 4 events
-https://anyplans.in/en/vicenza/shows-today/
-
-Today, 21 November 2026, in Vicenza and its province: 4 shows & theatre events. Each with time, place, price and how to join.
-
-**Which shows & theatre events in Vicenza and its province are coming up?**
-There are 4 events: OUVERTURE DES SAPONETTES (Trissino, Saturday 21 November at 16:00), OPENING 192 ORE D'ARIA (Trissino, Saturday 21 November at 18:00), NIENTE DI GRAVE voci della violenza contro le donne (Vicenza, Saturday 21 November at 21:00) and Mutazioni 07 – stagione teatrale Theama Teatro (Vicenza, Saturday 21 November at 21:00).
-
-**When is the next shows & theatre event?**
-OUVERTURE DES SAPONETTES, Saturday 21 November at 16:00, in Trissino. Free.
-
-**Shows & theatre events in Vicenza and its province: are they free?**
-Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
-
-## Free events in Vicenza today: 16 events
+## Free events in Vicenza today: 9 events
 https://anyplans.in/en/vicenza/free-today/
 
-Today, 21 November 2026, in Vicenza and its province: 16 free events. Each with time, place, price and how to join.
+Today, 22 November 2026, in Vicenza and its province: 9 free events. Each with time, place, price and how to join.
 
 **Which free events events in Vicenza and its province are coming up?**
-There are 16 events: Open Day - Discover H-FARM International School Vicenza (Saturday 21 November at 09:00), Alchimie in Atelier – Salotto aromatico (Marano Vicentino, Saturday 21 November at 10:00), R&B Brunch n Day Party (Vicenza, Saturday 21 November at 13:30), La Via Lattea • Laboratorio didattico da 4 a 10 anni (Arcugnano, Saturday 21 November at 15:30), OUVERTURE DES SAPONETTES (Trissino, Saturday 21 November at 16:00) and La rivoluzione linguistica per il genere femminile dei testi antichi (Torri di Quartesolo, Saturday 21 November at 17:00) and more, all in the list above.
+There are 9 events: Osservazione del Sole (Arcugnano, Sunday 22 November at 10:00), DARE FORMA ALL'ARIA (Trissino, Sunday 22 November at 14:00), MULTITAVOLO DIFFUSA (Montecchio Maggiore, Sunday 22 November at 15:00), LA FISICA DELL'ARIA (Trissino, Sunday 22 November at 15:30), Giacomo Zanus  - PROXIMA The Young Side fall edition (Vicenza, Sunday 22 November at 18:30) and Speed Date Vicenza 30-49 (Sunday 22 November at 18:30) and more, all in the list above.
 
 **When is the next free events event?**
-Open Day - Discover H-FARM International School Vicenza, Saturday 21 November at 09:00. Free.
+Osservazione del Sole, Sunday 22 November at 10:00, in Arcugnano. Free.
 
 **Free events events in Vicenza and its province: are they free?**
 Yes, all of them. When there is a ticket or a fee, the price is on the event's page.
@@ -5483,10 +5331,10 @@ Yes. On anyplans you see who else is going and you join them. Sign-up is free, y
 ## Osservatorio Astronomico “G. Beltrame”: what's on in…
 https://anyplans.in/en/vicenza/venues/osservatorio-astronomico-g-beltrame/
 
-Osservatorio Astronomico “G. Beltrame” in Arcugnano: 4 upcoming events — talks & culture. Date, time, price and how to join, one page each. You go with other people.
+Osservatorio Astronomico “G. Beltrame” in Arcugnano: 2 upcoming events — talks & culture. Date, time, price and how to join, one page each. You go with other people.
 
 **Osservatorio Astronomico “G. Beltrame”: what's on?**
-4 upcoming events: La Via Lattea • Laboratorio didattico da 4 a 10 anni (saturday 21 november at 15:30), Osservazione della Luna (saturday 21 november at 20:30), Osservazione del Sole (sunday 22 november at 10:00) and Visita all’osservatorio ed osservazione del cielo (tuesday 24 november at 20:30).
+2 upcoming events: Osservazione del Sole (sunday 22 november at 10:00) and Visita all’osservatorio ed osservazione del cielo (tuesday 24 november at 20:30).
 
 **Osservatorio Astronomico “G. Beltrame”: where is it?**
 Osservatorio Astronomico “G. Beltrame”, Arcugnano. Every event page has the meeting point and a link to the map.
@@ -5704,10 +5552,10 @@ Yes. On anyplans you see who else is going and you join them. Sign-up is free, y
 ## La Centrale: events and nights out in Vicenza
 https://anyplans.in/en/vicenza/venues/la-centrale/
 
-La Centrale in Vicenza: 2 upcoming events — concerts & live music. Date, time, price and how to join, one page each. You go with other people.
+La Centrale in Vicenza: 1 upcoming event — concerts & live music. Date, time, price and how to join, one page each. You go with other people.
 
 **La Centrale: what's on?**
-2 upcoming events: NADT ORCHESTRA - PROXIMA The Young Side fall edition (saturday 21 november at 21:00) and Giacomo Zanus  - PROXIMA The Young Side fall edition (sunday 22 november at 18:30).
+1 upcoming event: Giacomo Zanus  - PROXIMA The Young Side fall edition (sunday 22 november at 18:30).
 
 **La Centrale: where is it?**
 La Centrale, Vicenza. Every event page has the meeting point and a link to the map.
@@ -5752,21 +5600,21 @@ All the upcoming events are free. The price is on each event page.
 **YOU Club Vicenza: can I go alone?**
 Yes. On anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
 
-## Doppio Malto Thiene: events and nights out in Vicenza
-https://anyplans.in/en/vicenza/venues/doppio-malto-thiene/
+## Caffè Vero House: events and nights out in Vicenza
+https://anyplans.in/en/vicenza/venues/caffe-vero-house/
 
-Doppio Malto Thiene in Vicenza: 1 upcoming event — dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
+Caffè Vero House in Vicenza: 1 upcoming event — dinners & aperitivo. Date, time, price and how to join, one page each. You go with other people.
 
-**Doppio Malto Thiene: what's on?**
-1 upcoming event: Cena da Doppio Malto Thiene: 1 posto libero (saturday 28 november at 19:00).
+**Caffè Vero House: what's on?**
+1 upcoming event: Cena da Caffè Vero House: 7 posti liberi (friday 27 november at 21:00).
 
-**Doppio Malto Thiene: where is it?**
-In Vicenza. Every event page has the exact meeting point and a link to the map.
+**Caffè Vero House: where is it?**
+Caffè Vero House, Vicenza. Every event page has the meeting point and a link to the map.
 
-**Doppio Malto Thiene: how much is it?**
+**Caffè Vero House: how much is it?**
 All the upcoming events are free. The price is on each event page.
 
-**Doppio Malto Thiene: can I go alone?**
+**Caffè Vero House: can I go alone?**
 Yes. On anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
 
 ## Temporary Band: events and nights out in Vicenza
@@ -5801,23 +5649,6 @@ Trap House Lounge, Thiene. Every event page has the meeting point and a link to 
 All the upcoming events are free. The price is on each event page.
 
 **Trap House Lounge: can I go alone?**
-Yes. On anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
-
-## Kitchen Teatro Indipendente: what's on in Vicenza
-https://anyplans.in/en/vicenza/venues/kitchen-teatro-indipendente/
-
-Kitchen Teatro Indipendente in Vicenza: 1 upcoming event — shows & theatre. Date, time, price and how to join, one page each. You go with other people.
-
-**Kitchen Teatro Indipendente: what's on?**
-1 upcoming event: NIENTE DI GRAVE voci della violenza contro le donne (saturday 21 november at 21:00).
-
-**Kitchen Teatro Indipendente: where is it?**
-Kitchen Teatro Indipendente, Vicenza. Every event page has the meeting point and a link to the map.
-
-**Kitchen Teatro Indipendente: how much is it?**
-All the upcoming events are free. The price is on each event page.
-
-**Kitchen Teatro Indipendente: can I go alone?**
 Yes. On anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
 
 ## Centro Congressi Confartigianato Vicenza: what's on
@@ -5920,4 +5751,21 @@ ITALIAN EXHIBITION GROUP S P, Vicenza. Every event page has the meeting point an
 All the upcoming events are free. The price is on each event page.
 
 **ITALIAN EXHIBITION GROUP SpA: can I go alone?**
+Yes. On anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
+
+## Borgo Casale: what's on in Vicenza
+https://anyplans.in/en/vicenza/venues/borgo-casale/
+
+Borgo Casale in Vicenza: 2 upcoming events — talks & culture. Date, time, price and how to join, one page each. You go with other people.
+
+**Borgo Casale: what's on?**
+2 upcoming events: AI & DATA PER LA DIGITAL FACTORY - Sede di Vicenza (tuesday 9 february at 14:30) and DESIGN E TECNOLOGIE DEI MATERIALI - Sede di Vicenza (wednesday 17 february at 15:00).
+
+**Borgo Casale: where is it?**
+Borgo Casale, Vicenza. Every event page has the meeting point and a link to the map.
+
+**Borgo Casale: how much is it?**
+All the upcoming events are free. The price is on each event page.
+
+**Borgo Casale: can I go alone?**
 Yes. On anyplans you see who else is going and you join them. Sign-up is free, you only need an email, and you must be 18 or older.
