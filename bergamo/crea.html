@@ -118,10 +118,10 @@
       </div>
       <div class="sw"><div class="k"></div></div>
     </div>
-    <div class="toggle-row on" id="showp" style="margin-top:12px" onclick="toggleShowP()" role="switch" aria-checked="true" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); toggleShowP()}">
+    <div class="toggle-row" id="showp" style="margin-top:12px" onclick="toggleShowP()" role="switch" aria-checked="false" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault(); toggleShowP()}">
       <div>
         <div class="t">Chi partecipa si vede</div>
-        <div class="s" id="showp-s">Nella pagina dell'evento si vedono i nomi di chi ci va.</div>
+        <div class="s" id="showp-s">I nomi di chi ci va li vedete solo tu e i collaboratori. Il numero resta visibile.</div>
       </div>
       <div class="sw"><div class="k"></div></div>
     </div>
@@ -927,7 +927,7 @@
       await savePhoto(newId);
       if (chosenVisibility() === "private") { await saveVisibility(newId, "private", "open"); if (chosenApproval()) await saveApproval(newId, true, false); }
       if (genderChoice) await saveGender(newId, genderChoice, null);
-      if (!chosenShowP()) await saveShowP(newId, false, true);
+      if (chosenShowP()) await saveShowP(newId, true, false);   // default false dal 25/11/2026 (0108)
       await saveCo(newId);
       if (hasCap && !chosenApproval() && !chosenWaitlist()) await saveWaitlist(newId, false, true);
       const asC = document.getElementById("as").value;
